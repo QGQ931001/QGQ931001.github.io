@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>秦国庆的小站</title>
+  <title>Hexo</title>
   
-  <subtitle>思想汇聚</subtitle>
+  
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://qgq931001.github.io/"/>
+  <link href="http://yoursite.com/"/>
   <updated>2020-05-24T19:24:17.782Z</updated>
-  <id>https://qgq931001.github.io/</id>
+  <id>http://yoursite.com/</id>
   
   <author>
-    <name>秦国庆</name>
+    <name>John Doe</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>math</title>
-    <link href="https://qgq931001.github.io/2020/05/25/math/"/>
-    <id>https://qgq931001.github.io/2020/05/25/math/</id>
+    <link href="http://yoursite.com/2020/05/25/math/"/>
+    <id>http://yoursite.com/2020/05/25/math/</id>
     <published>2020-05-24T17:42:14.000Z</published>
     <updated>2020-05-24T19:24:17.782Z</updated>
     
@@ -44,8 +44,8 @@
   
   <entry>
     <title>文章名称</title>
-    <link href="https://qgq931001.github.io/2020/05/25/%E6%96%87%E7%AB%A0%E5%90%8D%E7%A7%B0/"/>
-    <id>https://qgq931001.github.io/2020/05/25/%E6%96%87%E7%AB%A0%E5%90%8D%E7%A7%B0/</id>
+    <link href="http://yoursite.com/2020/05/25/%E6%96%87%E7%AB%A0%E5%90%8D%E7%A7%B0/"/>
+    <id>http://yoursite.com/2020/05/25/%E6%96%87%E7%AB%A0%E5%90%8D%E7%A7%B0/</id>
     <published>2020-05-24T16:03:25.000Z</published>
     <updated>2020-05-24T17:21:46.265Z</updated>
     
@@ -66,9 +66,31 @@
   </entry>
   
   <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2019/04/12/hello-world/"/>
+    <id>http://yoursite.com/2019/04/12/hello-world/</id>
+    <published>2019-04-12T12:42:06.000Z</published>
+    <updated>2020-05-24T20:02:14.883Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="quick-start">Quick Start</h2><h3 id="create-a-new-post">Create a new post</h3><p><span class="math display">\[    \frac{\partial f(\mathbf{x})}{\partial\mathbf{x}}\]</span></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="run-server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="generate-static-files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="deploy-to-remote-sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>致BERRY</title>
-    <link href="https://qgq931001.github.io/1970/01/01/berry/"/>
-    <id>https://qgq931001.github.io/1970/01/01/berry/</id>
+    <link href="http://yoursite.com/1970/01/01/berry/"/>
+    <id>http://yoursite.com/1970/01/01/berry/</id>
     <published>1970-01-01T00:00:00.000Z</published>
     <updated>2020-05-24T17:04:34.252Z</updated>
     
