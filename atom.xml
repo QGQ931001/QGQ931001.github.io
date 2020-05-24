@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://qgq931001.github.io/"/>
-  <updated>2020-05-24T18:22:25.078Z</updated>
+  <updated>2020-05-24T19:24:17.782Z</updated>
   <id>https://qgq931001.github.io/</id>
   
   <author>
@@ -21,16 +21,19 @@
     <link href="https://qgq931001.github.io/2020/05/25/math/"/>
     <id>https://qgq931001.github.io/2020/05/25/math/</id>
     <published>2020-05-24T17:42:14.000Z</published>
-    <updated>2020-05-24T18:22:25.078Z</updated>
+    <updated>2020-05-24T19:24:17.782Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="测试mathjax"><a href="#测试mathjax" class="headerlink" title="测试mathjax"></a>测试mathjax</h2><script type="math/tex; mode=display">    \frac{\partial f(\mathbf{x})}{\partial\mathbf{x}}</script><script type="math/tex; mode=display">Y = X^{\top}\beta + \epsilon, \mathrm{E}(\epsilon) = 0, \mathrm{Cov}(\epsilon) = \sigma^2\mathbf{I}  (\#eq:LM)</script>]]></content>
+    <content type="html"><![CDATA[<h2 id="测试mathjax">测试mathjax</h2><p><span class="math display">\[\frac{\partial f(\mathbf{x})}{\partial\mathbf{x}}\]</span></p><p><span class="math display">\[Y = X^{\top}\beta + \epsilon, \mathrm{E}(\epsilon) = 0, \mathrm{Cov}(\epsilon) = \sigma^2\mathbf{I}  (\#eq:LM)\]</span></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;测试mathjax&quot;&gt;&lt;a href=&quot;#测试mathjax&quot; class=&quot;headerlink&quot; title=&quot;测试mathjax&quot;&gt;&lt;/a&gt;测试mathjax&lt;/h2&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-    \f
+        &lt;h2 id=&quot;测试mathjax&quot;&gt;测试mathjax&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;\[
+\frac{\partial f(\mathbf{x})}{\partial\mathbf{x}}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span 
       
     
     </summary>
@@ -46,7 +49,15 @@
     <published>2020-05-24T16:03:25.000Z</published>
     <updated>2020-05-24T17:21:46.265Z</updated>
     
+    <content type="html"><![CDATA[]]></content>
+    
     <summary type="html">
+    
+      
+      
+        
+
+      
     
     </summary>
     
@@ -61,14 +72,15 @@
     <published>1970-01-01T00:00:00.000Z</published>
     <updated>2020-05-24T17:04:34.252Z</updated>
     
-    <content type="html"><![CDATA[<p>Love You.</p><h2 id="Berry"><a href="#Berry" class="headerlink" title="Berry"></a>Berry</h2>]]></content>
+    <content type="html"><![CDATA[<p>Love You.</p><h2 id="berry">Berry</h2>]]></content>
     
     <summary type="html">
     
       
       
         &lt;p&gt;Love You.&lt;/p&gt;
-&lt;h2 id=&quot;Berry&quot;&gt;&lt;a href=&quot;#Berry&quot; class=&quot;headerlink&quot; title=&quot;Berry&quot;&gt;&lt;/a&gt;Berry&lt;/h2&gt;
+&lt;h2 id=&quot;berry&quot;&gt;Berry&lt;/h2&gt;
+
       
     
     </summary>
