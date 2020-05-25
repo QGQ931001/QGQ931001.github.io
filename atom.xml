@@ -23,16 +23,14 @@
     <published>2020-05-24T16:00:00.000Z</published>
     <updated>2020-05-25T04:58:15.218Z</updated>
     
-    <content type="html"><![CDATA[<hr><p><strong>Love You.</strong><br><strong>Berry</strong></p><script type="math/tex; mode=display">x^2</script><hr>]]></content>
+    <content type="html"><![CDATA[<hr /><p><strong>Love You.</strong> <strong>Berry</strong> <span class="math display">\[x^2 \]</span> **********************************</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Love You.&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;Berry&lt;/strong&gt;&lt;/p&gt;
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;x^2&lt;/script&gt;&lt;hr&gt;
-
+        &lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;Love You.&lt;/strong&gt; &lt;strong&gt;Berry&lt;/strong&gt; &lt;span class=&quot;math display&quot;&gt;\[x^2 \]&lt;/span&gt; **********************************&lt;/p
       
     
     </summary>
