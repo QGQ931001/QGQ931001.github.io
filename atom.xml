@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/QGQ931001/"/>
-  <updated>2020-05-25T13:03:52.992Z</updated>
+  <updated>2020-05-25T13:07:01.744Z</updated>
   <id>https://github.com/QGQ931001/</id>
   
   <author>
@@ -15,30 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Shell脚本笔记一（）</title>
-    <link href="https://github.com/QGQ931001/2020/05/25/shell_1/"/>
-    <id>https://github.com/QGQ931001/2020/05/25/shell_1/</id>
-    <published>2020-05-24T16:00:00.000Z</published>
-    <updated>2020-05-25T13:03:52.992Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;hr /&gt;
-&lt;h1 id=&quot;引言&quot;&gt;引言&lt;/h1&gt;
-&lt;p&gt;shell是用C语言编写的程序，但它自身同时也是一种程序设计语言。你可能经常听说“shell脚本”，但实际上shell编程并非等同于“shell脚本”编程，前者指shell程序本身的开发，后者则是利用shell程序进行开
-      
-    
-    </summary>
-    
-    
-    
-      <category term="shell" scheme="https://github.com/QGQ931001/tags/shell/"/>
-    
-  </entry>
   
   <entry>
     <title>致Berry</title>
@@ -67,6 +43,55 @@
     
     
       <category term="妳" scheme="https://github.com/QGQ931001/tags/%E5%A6%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Shell脚本笔记（1）</title>
+    <link href="https://github.com/QGQ931001/2020/05/25/shell_1/"/>
+    <id>https://github.com/QGQ931001/2020/05/25/shell_1/</id>
+    <published>2020-05-24T16:00:00.000Z</published>
+    <updated>2020-05-25T13:16:23.250Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr /&gt;
+&lt;h1 id=&quot;引言&quot;&gt;引言&lt;/h1&gt;
+&lt;p&gt;shell是用C语言编写的程序，但它自身同时也是一种程序设计语言。你可能经常听说“shell脚本”，但实际上shell编程并非等同于“shell脚本”编程，前者指shell程序本身的开发，后者则是利用shell程序进行开
+      
+    
+    </summary>
+    
+    
+    
+      <category term="shell" scheme="https://github.com/QGQ931001/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何在双变量Probit中使用工具变量法IV估计</title>
+    <link href="https://github.com/QGQ931001/2020/05/25/biprobit_iv/"/>
+    <id>https://github.com/QGQ931001/2020/05/25/biprobit_iv/</id>
+    <published>2020-05-24T16:00:00.000Z</published>
+    <updated>2020-05-25T13:23:53.655Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr /&gt;
+&lt;h1 id=&quot;ml两步法&quot;&gt;ML两步法&lt;/h1&gt;
+&lt;p&gt;可以采用二步法进行ML估计，以下将会以一段样例代码展示：&lt;/p&gt;
+&lt;figure class=&quot;highlight stata&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;spa
+      
+    
+    </summary>
+    
+    
+    
+      <category term="stata" scheme="https://github.com/QGQ931001/tags/stata/"/>
     
   </entry>
   
