@@ -136,7 +136,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">4</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">5</span></a>
 
   </li>
         <li class="menu-item menu-item-tools">
@@ -165,6 +165,98 @@
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh_CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/QGQ931001/2020/05/27/bubblemap/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/qgq.png">
+      <meta itemprop="name" content="QGQ">
+      <meta itemprop="description" content="写东西的地方">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="QGQ的小站">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/27/bubblemap/" class="post-title-link" itemprop="url">大城市人口增长速度（一个气泡图作业）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-05-27 08:00:00 / Modified: 03:05:13" itemprop="dateCreated datePublished" datetime="2020-05-27T08:00:00+08:00">2020-05-27</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="效果展示">效果展示</h2>
+<img src="figure/bubblemap.png" width="80%" height="80%" align="middle" />
+<center>
+上图即为最终效果
+</center>
+<h2 id="下载数据">下载数据</h2>
+<p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录。 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">download.file(<span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span>, destfile = <span class="string">"~/文档/data-bKvwd.csv"</span> )</span><br><span class="line">download.file(<span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span>, destfile = <span class="string">"~/文档/world.geo.json"</span> )</span><br></pre></td></tr></table></figure></p>
+<h2 id="加载r包">加载R包</h2>
+<p>需要的R包如下所示。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(sf)</span><br><span class="line"><span class="keyword">library</span>(readr)</span><br><span class="line"><span class="keyword">library</span>(tidyverse)</span><br><span class="line"><span class="keyword">library</span>(hrbrthemes)</span><br><span class="line"><span class="keyword">library</span>(ggtext)</span><br></pre></td></tr></table></figure>
+<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
+<p><code>worldmap</code>为<code>josn</code>格式的地图数据，<code>st_transform</code>为进行投影坐标变换的函数。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">worldmap &lt;- read_sf(<span class="string">'/home/qgq/文档/world.geo.json'</span>) %&gt;%</span><br><span class="line">  st_transform(crs = <span class="number">4326</span>)</span><br></pre></td></tr></table></figure>
+<ol type="1">
+<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据。</li>
+<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量，包含经纬度(Lon, Lat)，以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据。</li>
+<li><code>st_as_sf</code>是<code>sf</code>包中的函数，其将外来对象转换为<code>sf</code>对象，最终数据存储为<code>con_df</code>。</li>
+<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>中添加一个<code>growth.rate</code>变量，也可以进行对数增长率的计算。</li>
+</ol>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">read_csv(<span class="string">'~/文档/data-bKvwd.csv'</span>) %&gt;%</span><br><span class="line">  dplyr::select(Lat, Lon, `2000`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c(<span class="string">"Lon"</span>, <span class="string">"Lat"</span>), crs = <span class="number">4326</span>) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/<span class="number">17</span></span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/<span class="number">17</span></span><br></pre></td></tr></table></figure>
+<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
+<p>连续的数据虽然包含更多信息，但是糅合一些离散化的策略，使用颜色或其它图形属性表征，能呈现出更直观的信息。 使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">con_df &lt;- con_df %&gt;% mutate(</span><br><span class="line">    interval = case_when(</span><br><span class="line">      growth.rate &lt; <span class="number">0</span> ~ <span class="string">"负增长"</span>,</span><br><span class="line">      growth.rate &gt;= <span class="number">0</span> &amp; growth.rate &lt; <span class="number">0.025</span> ~ <span class="string">"0～2.5%"</span>,</span><br><span class="line">      growth.rate &gt;= <span class="number">0.025</span> &amp; growth.rate &lt; <span class="number">0.05</span> ~ <span class="string">"2.5%～5%"</span>,</span><br><span class="line">      growth.rate &gt;= <span class="number">0.05</span>  ~ <span class="string">"5%以上"</span></span><br><span class="line">    )</span><br><span class="line">  )</span><br></pre></td></tr></table></figure>
+<p>与此同时，计算出<code>growth.rate</code>的最大值用于辅助分段。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">max.gr &lt;- as.numeric(</span><br><span class="line">  max(con_df$growth.rate,na.rm = <span class="literal">T</span>))  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks &lt;- c(<span class="number">0</span>, <span class="number">0.025</span>, <span class="number">0.05</span>,max.gr) <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></table></figure>
+<h2 id="绘图">绘图</h2>
+<p>代码如下，图见上文。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">ggplot(worldmap) +</span><br><span class="line">  geom_sf(size = <span class="number">0.1</span>, color = <span class="string">"#708090"</span>, fill = <span class="string">"grey"</span>,alpha=<span class="number">0.05</span>) +</span><br><span class="line">  geom_sf(data = con_df,  aes(size = abs(growth.rate),</span><br><span class="line">                              color = interval,</span><br><span class="line">                              alpha = abs(growth.rate))) +</span><br><span class="line">  scale_size_continuous(name = <span class="string">"Average Growth Rate"</span>,</span><br><span class="line">                        range = c(<span class="number">2</span>,<span class="number">2.41</span>*<span class="number">4</span>),</span><br><span class="line">                        breaks = mybreaks)  +</span><br><span class="line">  scale_alpha_continuous(name = <span class="string">"Average Growth Rate"</span>,</span><br><span class="line">                         range = c(<span class="number">0.4</span>,<span class="number">0.7</span>),</span><br><span class="line">                         breaks = mybreaks) +</span><br><span class="line">  scale_color_manual(values = c(<span class="string">"#D9EF8B"</span>, <span class="string">"#A6D96A"</span>, <span class="string">"#66BD63"</span>,<span class="string">"#D73027"</span>)) +</span><br><span class="line">  coord_sf(crs = <span class="string">"+proj=eck4"</span>)+</span><br><span class="line">  theme_minimal(base_family = <span class="string">"Roboto"</span>) +</span><br><span class="line">  theme(</span><br><span class="line">    axis.text = element_blank(),</span><br><span class="line">    axis.title = element_blank(),</span><br><span class="line">    panel.grid = element_blank(),</span><br><span class="line">    legend.position = <span class="string">"none"</span>,</span><br><span class="line">    plot.caption = element_text(color = <span class="string">"#708090"</span>, face = <span class="string">"italic"</span>,family = <span class="string">"Times New Roman"</span>,size = <span class="number">11</span>,hjust = <span class="number">0.95</span>),</span><br><span class="line">    plot.title = element_text(color = <span class="string">"#708090"</span>,family = <span class="string">"Times New Roman"</span>, size = <span class="number">19</span>))+</span><br><span class="line">  labs(title = <span class="string">"How fast do big cities grow?"</span>,</span><br><span class="line">       subtitle = <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span>,</span><br><span class="line">       caption = <span class="string">"Data Source: How fast do big cities grow?"</span>)+</span><br><span class="line">  theme(plot.subtitle = element_markdown(lineheight = <span class="number">1.1</span>))</span><br></pre></td></tr></table></figure>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back">↩</a></p></li>
+</ol>
+</section>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -411,6 +503,68 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh_CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/QGQ931001/2020/05/25/biprobit_iv/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/qgq.png">
+      <meta itemprop="name" content="QGQ">
+      <meta itemprop="description" content="写东西的地方">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="QGQ的小站">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/25/biprobit_iv/" class="post-title-link" itemprop="url">如何在双变量Probit中使用工具变量法IV估计</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-05-25 00:00:00 / Modified: 21:23:53" itemprop="dateCreated datePublished" datetime="2020-05-25T00:00:00+08:00">2020-05-25</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <hr />
+<h1 id="ml两步法">ML两步法</h1>
+<p>可以采用二步法进行ML估计，以下将会以一段样例代码展示：</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">webuse</span> school, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">set</span> seed 1</span><br><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobit</span><br><span class="line"><span class="keyword">program</span> mybiprobit</span><br><span class="line"><span class="keyword">args</span> lnf m1   m2  athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"><span class="comment">**Here I am creating an artificial IV</span></span><br><span class="line"><span class="keyword">gen</span> z=logptax-rnormal()</span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobit (private:private=logptax loginc years)   (vote:vote=logptax loginc years)   /athrho (zb1:logptax=loginc  years z) /lns1</span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> maximize,</span><br><span class="line"><span class="keyword">matrix</span> b=<span class="built_in">e</span>(b)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobitiv</span><br><span class="line"><span class="keyword">program</span> mybiprobitiv</span><br><span class="line"><span class="keyword">args</span> lnf mm1 g1  mm2  g2 athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">tempvar</span> m1 m2</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m1'</span>=<span class="symbol">`mm1'</span>+<span class="symbol">`g1'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m2'</span>=<span class="symbol">`mm2'</span>+<span class="symbol">`g2'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobitiv (private:private=logptax loginc years) (g1:)  (vote:vote=logptax loginc years)  (g2:) /athrho (zb1:logptax=loginc  years z  ) /lns1, init(b)</span><br><span class="line"><span class="keyword">ml</span> maximize</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh_CN">
     <link itemprop="mainEntityOfPage" href="https://github.com/QGQ931001/2020/05/25/berry/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -466,68 +620,6 @@
 <center>
 <img src="/image/berry.jpg" width="66%" height="66%" title="妳" alt="妳"/>
 </center>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh_CN">
-    <link itemprop="mainEntityOfPage" href="https://github.com/QGQ931001/2020/05/25/biprobit_iv/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/qgq.png">
-      <meta itemprop="name" content="QGQ">
-      <meta itemprop="description" content="写东西的地方">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="QGQ的小站">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/25/biprobit_iv/" class="post-title-link" itemprop="url">如何在双变量Probit中使用工具变量法IV估计</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-05-25 00:00:00 / Modified: 21:23:53" itemprop="dateCreated datePublished" datetime="2020-05-25T00:00:00+08:00">2020-05-25</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <hr />
-<h1 id="ml两步法">ML两步法</h1>
-<p>可以采用二步法进行ML估计，以下将会以一段样例代码展示：</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">webuse</span> school, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">set</span> seed 1</span><br><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobit</span><br><span class="line"><span class="keyword">program</span> mybiprobit</span><br><span class="line"><span class="keyword">args</span> lnf m1   m2  athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"><span class="comment">**Here I am creating an artificial IV</span></span><br><span class="line"><span class="keyword">gen</span> z=logptax-rnormal()</span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobit (private:private=logptax loginc years)   (vote:vote=logptax loginc years)   /athrho (zb1:logptax=loginc  years z) /lns1</span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> maximize,</span><br><span class="line"><span class="keyword">matrix</span> b=<span class="built_in">e</span>(b)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobitiv</span><br><span class="line"><span class="keyword">program</span> mybiprobitiv</span><br><span class="line"><span class="keyword">args</span> lnf mm1 g1  mm2  g2 athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">tempvar</span> m1 m2</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m1'</span>=<span class="symbol">`mm1'</span>+<span class="symbol">`g1'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m2'</span>=<span class="symbol">`mm2'</span>+<span class="symbol">`g2'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobitiv (private:private=logptax loginc years) (g1:)  (vote:vote=logptax loginc years)  (g2:) /athrho (zb1:logptax=loginc  years z  ) /lns1, init(b)</span><br><span class="line"><span class="keyword">ml</span> maximize</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -678,7 +770,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
