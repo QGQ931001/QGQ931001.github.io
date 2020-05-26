@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/QGQ931001/"/>
-  <updated>2020-05-25T13:54:25.077Z</updated>
+  <updated>2020-05-26T07:10:47.230Z</updated>
   <id>https://github.com/QGQ931001/</id>
   
   <author>
@@ -17,26 +17,25 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Shell脚本笔记（1）</title>
-    <link href="https://github.com/QGQ931001/2020/05/25/shell_1/"/>
-    <id>https://github.com/QGQ931001/2020/05/25/shell_1/</id>
-    <published>2020-05-24T16:00:00.000Z</published>
-    <updated>2020-05-25T13:54:25.077Z</updated>
+    <title>R数据科学——ggplot2笔记（1）</title>
+    <link href="https://github.com/QGQ931001/2020/05/26/r_for_data_science/"/>
+    <id>https://github.com/QGQ931001/2020/05/26/r_for_data_science/</id>
+    <published>2020-05-26T00:00:00.000Z</published>
+    <updated>2020-05-26T07:10:47.230Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;hr /&gt;
-&lt;h1 id=&quot;引言&quot;&gt;引言&lt;/h1&gt;
-&lt;p&gt;shell是用C语言编写的程序，但它自身同时也是一种程序设计语言。你可能经常听说“shell脚本”，但实际上shell编程并非等同于“shell脚本”编程，前者指shell程序本身的开发，后者则是利用shell程序进行开
+        &lt;h2 id=&quot;一个说明&quot;&gt;一个说明&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;ggplot2::ggplot()&lt;/code&gt;指使用&lt;a href=&quot;https://ggplot2.tidyverse.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;strong&gt;
       
     
     </summary>
     
     
     
-      <category term="shell" scheme="https://github.com/QGQ931001/tags/shell/"/>
+      <category term="R" scheme="https://github.com/QGQ931001/tags/R/"/>
     
   </entry>
   
@@ -67,6 +66,30 @@
     
     
       <category term="妳" scheme="https://github.com/QGQ931001/tags/%E5%A6%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Shell脚本笔记（1）</title>
+    <link href="https://github.com/QGQ931001/2020/05/25/shell_1/"/>
+    <id>https://github.com/QGQ931001/2020/05/25/shell_1/</id>
+    <published>2020-05-24T16:00:00.000Z</published>
+    <updated>2020-05-25T13:54:25.077Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr /&gt;
+&lt;h1 id=&quot;引言&quot;&gt;引言&lt;/h1&gt;
+&lt;p&gt;shell是用C语言编写的程序，但它自身同时也是一种程序设计语言。你可能经常听说“shell脚本”，但实际上shell编程并非等同于“shell脚本”编程，前者指shell程序本身的开发，后者则是利用shell程序进行开
+      
+    
+    </summary>
+    
+    
+    
+      <category term="shell" scheme="https://github.com/QGQ931001/tags/shell/"/>
     
   </entry>
   
