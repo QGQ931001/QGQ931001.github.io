@@ -401,7 +401,7 @@ show_date_time();
       var url = decodeURI(visitors.id);
       var title = visitors.dataset.flagTitle;
 
-      Counter('get', `/classes/Counter?where=${encodeURIComponent(JSON.stringify({ url }))}&limit=1`)
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
         .then(response => response.json())
         .then(({ results }) => {
           if (results.length > 0) {
@@ -433,7 +433,7 @@ show_date_time();
         return decodeURI(element.id);
       });
 
-      Counter('get', `?where=${encodeURIComponent(JSON.stringify({ url: { '$in': entries } }))}`)
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
         .then(response => response.json())
         .then(({ results }) => {
           for (let url of entries) {
@@ -446,7 +446,7 @@ show_date_time();
         });
     }
 
-    let { app_id, app_key, server_url } = {"enable":true,"app_id":"eDE9PqqkB3QVUfQcgQTIVIXD-MdYXbMMI","app_key":"vdbRJbBEp4khRA7rS3huGocy","Dependencies":"https://github.com/theme-next/hexo-leancloud-counter-security","security":false};
+    let { app_id, app_key, server_url } = {"enable":true,"app_id":"eDE9PqqkB3QVUfQcgQTIVIXD-MdYXbMMI","app_key":"vdbRJbBEp4khRA7rS3huGocy","security":false};
     function fetchData(api_server) {
       var Counter = (method, url, data) => {
         return fetch(`${api_server}/1.1${url}`, {
