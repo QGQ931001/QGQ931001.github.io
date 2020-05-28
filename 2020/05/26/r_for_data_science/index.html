@@ -529,8 +529,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/05/25/biprobit_iv/" rel="prev" title="如何在双变量Probit中使用工具变量法IV估计">
-      <i class="fa fa-chevron-left"></i> 如何在双变量Probit中使用工具变量法IV估计
+    <a href="/2020/05/25/berry/" rel="prev" title="致Berry">
+      <i class="fa fa-chevron-left"></i> 致Berry
     </a></div>
       <div class="post-nav-item">
     <a href="/2020/05/27/bubblemap/" rel="next" title="大城市人口增长速度（一个气泡图作业）">
@@ -755,7 +755,8 @@ show_date_time();
       var url = decodeURI(visitors.id);
       var title = visitors.dataset.flagTitle;
 
-      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
+      { # Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url }))) # }
+      Counter('get', `/classes/Counter?where=${encodeURIComponent(JSON.stringify({ url }))}&limit=1`)
         .then(response => response.json())
         .then(({ results }) => {
           if (results.length > 0) {
@@ -782,7 +783,8 @@ show_date_time();
         return decodeURI(element.id);
       });
 
-      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
+      { # Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } }))) # }
+      Counter('get', `?where=${encodeURIComponent(JSON.stringify({ url: { '$in': entries } }))}`)
         .then(response => response.json())
         .then(({ results }) => {
           for (let url of entries) {
