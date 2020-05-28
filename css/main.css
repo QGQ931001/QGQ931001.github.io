@@ -1207,7 +1207,7 @@ pre .javascript .function {
 .github-corner svg {
   border: 0;
   color: #fff;
-  fill: #F2B944;
+  fill: #BD4F24;
   position: absolute;
   right: 0;
   top: 0;
@@ -1215,7 +1215,7 @@ pre .javascript .function {
 }
 @media (max-width: 991px) {
   .github-corner svg {
-    color: #F2B944;
+    color: #BD4F24;
     fill: #fff;
   }
   .github-corner .github-corner:hover .octo-arm {
@@ -1334,7 +1334,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #c9c8ff;
+  background: #93aaff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
