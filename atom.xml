@@ -224,28 +224,30 @@
   </entry>
   
   <entry>
-    <title>致Berry</title>
-    <link href="https://github.com/QGQ931001/2020/05/25/berry/"/>
-    <id>https://github.com/QGQ931001/2020/05/25/berry/</id>
+    <title>Shell脚本笔记（1）</title>
+    <link href="https://github.com/QGQ931001/2020/05/25/shell_1/"/>
+    <id>https://github.com/QGQ931001/2020/05/25/shell_1/</id>
     <published>2020-05-24T16:00:00.000Z</published>
-    <updated>2020-05-27T05:17:51.821Z</updated>
+    <updated>2020-05-27T05:13:13.415Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;hr /&gt;
-&lt;center&gt;
-&lt;strong&gt;Love You.&lt;/strong
-      
+      &lt;hr /&gt;
+&lt;h1 id=&quot;引言&quot;&gt;引言&lt;/h1&gt;
+&lt;p&gt;shell是用C语言编写的程序，但它自身同时也是一种程序设计语言。你可能经常听说“shell脚本”，但实际上shell编程并非等同于“shell脚本”编程，前者指shell程序本身的开发，后者则是利用shell程序进行开发。都说java和javascript的区别是周杰和周杰伦的区别，shell和shell script或许也有那么点意思。&lt;/p&gt;
+&lt;h1 id=&quot;shell脚本&quot;&gt;shell脚本&lt;/h1&gt;
+&lt;p&gt;似乎任何程序学习都是从&amp;quot;Hello World!&amp;quot;开始的，对于&lt;strong&gt;shell&lt;/strong&gt;而言：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#!/bin/bash&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;Hello World !&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;#!&lt;/strong&gt;是个标记，告知这段命令将用bash执行。echo则是一个向窗口展示文本的命令。 你可以将以上代码框的内容存为一个以.sh为后缀的文件，比如&lt;strong&gt;hw.sh&lt;/strong&gt;，并赋予文件执行权限：&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;chmod +x ./hw.sh         #赋予执行权限&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bash hw.sh               #执行脚本&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
     
-      <category term="领导" scheme="https://github.com/QGQ931001/categories/%E9%A2%86%E5%AF%BC/"/>
+      <category term="编程" scheme="https://github.com/QGQ931001/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
-      <category term="妳" scheme="https://github.com/QGQ931001/tags/%E5%A6%B3/"/>
+      <category term="shell" scheme="https://github.com/QGQ931001/tags/shell/"/>
     
   </entry>
   
@@ -276,30 +278,28 @@
   </entry>
   
   <entry>
-    <title>Shell脚本笔记（1）</title>
-    <link href="https://github.com/QGQ931001/2020/05/25/shell_1/"/>
-    <id>https://github.com/QGQ931001/2020/05/25/shell_1/</id>
+    <title>致Berry</title>
+    <link href="https://github.com/QGQ931001/2020/05/25/berry/"/>
+    <id>https://github.com/QGQ931001/2020/05/25/berry/</id>
     <published>2020-05-24T16:00:00.000Z</published>
-    <updated>2020-05-27T05:13:13.415Z</updated>
+    <updated>2020-05-27T05:17:51.821Z</updated>
     
     <summary type="html">
     
-      &lt;hr /&gt;
-&lt;h1 id=&quot;引言&quot;&gt;引言&lt;/h1&gt;
-&lt;p&gt;shell是用C语言编写的程序，但它自身同时也是一种程序设计语言。你可能经常听说“shell脚本”，但实际上shell编程并非等同于“shell脚本”编程，前者指shell程序本身的开发，后者则是利用shell程序进行开发。都说java和javascript的区别是周杰和周杰伦的区别，shell和shell script或许也有那么点意思。&lt;/p&gt;
-&lt;h1 id=&quot;shell脚本&quot;&gt;shell脚本&lt;/h1&gt;
-&lt;p&gt;似乎任何程序学习都是从&amp;quot;Hello World!&amp;quot;开始的，对于&lt;strong&gt;shell&lt;/strong&gt;而言：&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#!/bin/bash&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;Hello World !&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;strong&gt;#!&lt;/strong&gt;是个标记，告知这段命令将用bash执行。echo则是一个向窗口展示文本的命令。 你可以将以上代码框的内容存为一个以.sh为后缀的文件，比如&lt;strong&gt;hw.sh&lt;/strong&gt;，并赋予文件执行权限：&lt;/p&gt;
-&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;chmod +x ./hw.sh         #赋予执行权限&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bash hw.sh               #执行脚本&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;hr /&gt;
+&lt;center&gt;
+&lt;strong&gt;Love You.&lt;/strong
+      
     
     </summary>
     
     
-      <category term="编程" scheme="https://github.com/QGQ931001/categories/%E7%BC%96%E7%A8%8B/"/>
+      <category term="领导" scheme="https://github.com/QGQ931001/categories/%E9%A2%86%E5%AF%BC/"/>
     
     
-      <category term="shell" scheme="https://github.com/QGQ931001/tags/shell/"/>
+      <category term="妳" scheme="https://github.com/QGQ931001/tags/%E5%A6%B3/"/>
     
   </entry>
   
