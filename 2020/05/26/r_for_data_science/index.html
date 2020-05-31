@@ -44,7 +44,7 @@
 <meta property="og:image" content="https://github.com/figure_rdata_science/unnamed-chunk-15-1.png">
 <meta property="og:image" content="https://github.com/figure_rdata_science/unnamed-chunk-16-1.png">
 <meta property="article:published_time" content="2020-05-26T00:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-31T04:41:32.854Z">
+<meta property="article:modified_time" content="2020-05-31T04:49:50.896Z">
 <meta property="article:author" content="QGQ">
 <meta property="article:tag" content="R">
 <meta name="twitter:card" content="summary">
@@ -226,7 +226,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-05-31 12:41:32" itemprop="dateModified" datetime="2020-05-31T12:41:32+08:00">2020-05-31</time>
+                <time title="Modified: 2020-05-31 12:49:50" itemprop="dateModified" datetime="2020-05-31T12:49:50+08:00">2020-05-31</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -464,16 +464,16 @@
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ggplot(data = diamonds) +</span><br><span class="line">  geom_bar(mapping = aes(x = cut))</span><br></pre></td></tr></table></figure>
 <p><img data-src="/figure_rdata_science/unnamed-chunk-13-1.png" title="plot of chunk unnamed-chunk-13" alt="plot of chunk unnamed-chunk-13" style="display: block; margin: auto;" /></p>
 <p>条形图 <code>x</code> 轴显示的是 <code>cut</code> ，这是 <code>diamonds</code> 数据集中的一个变量。 <code>y</code> 轴显示的是 <code>count</code> ，但 <code>count</code> 不是 <code>diamonds</code> 中的变量！ <code>count</code> 来自哪里呢？很多图形绘制的是数据集的原始数据，比如散点图。另外一些图形则可以绘制那些计算出的新数据，比如条形图。</p>
-<p>绘图时用来计算新数据的算法称为stat（statistical transformation），即统计变换。你可能想要覆盖默认的统计变换。在以下代码中，我们将 <code>geom_bar()</code> 函数的统计变换 从计数（默认值）修改为标识。这样我们就可以将条形的高度映射为 <code>y</code> 轴变量的初始值。 遗憾的是，当随意说起条形图时，人们指的可能就是这种条形图，其中条形高度已经存 在于数据中，而不是像前一个图一样，条形高度由对行进行计数来生成：</p>
+<p>绘图时用来计算新数据的算法称为stat（statistical transformation），即统计变换。你可能想要覆盖默认的统计变换。在以下代码中，我们将<code>geom_bar()</code>函数的统计变换从计数（默认值）修改为标识。这样我们就可以将条形的高度映射为<code>y</code>轴变量的初始值。遗憾的是，当随意说起条形图时，人们指的可能就是这种条形图，其中条形高度已经存在于数据中，而不是像前一个图一样，条形高度由对行进行计数来生成：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">demo &lt;- tribble(</span><br><span class="line">  ~a,      ~b,</span><br><span class="line">  <span class="string">"bar_1"</span>, <span class="number">20</span>,</span><br><span class="line">  <span class="string">"bar_2"</span>, <span class="number">30</span>,</span><br><span class="line">  <span class="string">"bar_3"</span>, <span class="number">40</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">ggplot(data = demo) +</span><br><span class="line">  geom_bar(</span><br><span class="line">    mapping = aes(x = a, y = b), stat = <span class="string">"identity"</span></span><br><span class="line">  )</span><br></pre></td></tr></table></figure>
 <p><img data-src="/figure_rdata_science/unnamed-chunk-14-1.png" title="plot of chunk unnamed-chunk-14" alt="plot of chunk unnamed-chunk-14" style="display: block; margin: auto;" /></p>
 <p>也可以改变统计变换的默认映射：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ggplot(data = diamonds) +</span><br><span class="line">  geom_bar(</span><br><span class="line">    mapping = aes(x = cut, y = ..prop.., group = <span class="number">1</span>)</span><br><span class="line">  )</span><br></pre></td></tr></table></figure>
 <p><img data-src="/figure_rdata_science/unnamed-chunk-15-1.png" title="plot of chunk unnamed-chunk-15" alt="plot of chunk unnamed-chunk-15" style="display: block; margin: auto;" /></p>
-<p>你可能想要在代码中强调统计变换。例如，你可以使用 <code>stat_summary()</code> 函数将人们的 注意力吸引到你计算出的那些摘要统计量上。 <code>stat_summary()</code> 函数为 <code>x</code> 的每个唯一值计 算 <code>y</code> 值的摘要统计：</p>
+<p>你可能想要在代码中强调统计变换。例如，你可以使用<code>stat_summary()</code>函数将人们的注意力吸引到你计算出的那些摘要统计量上。<code>stat_summary()</code>函数为<code>x</code>的每个唯一值计算<code>y</code>值的摘要统计：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ggplot(data = diamonds) +</span><br><span class="line">  stat_summary(</span><br><span class="line">    mapping = aes(x = cut, y = depth),</span><br><span class="line">        fun.ymin = min,</span><br><span class="line">    fun.ymax = max,</span><br><span class="line">    fun.y = median</span><br><span class="line">  )</span><br></pre></td></tr></table></figure>
 <p><img data-src="/figure_rdata_science/unnamed-chunk-16-1.png" title="plot of chunk unnamed-chunk-16" alt="plot of chunk unnamed-chunk-16" style="display: block; margin: auto;" /></p>
-<p><code>ggplot2</code> 提供了 20 多个统计变换以供你使用。每个统计变换都是一个函数，因此你可以按 照通用方式获得帮助，例如 <code>?stat_bin</code></p>
+<p><code>ggplot2</code>提供了20多个统计变换以供你使用。每个统计变换都是一个函数，因此你可以按照通用方式获得帮助，例如<code>?stat_bin</code></p>
 
     </div>
 
@@ -554,8 +554,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/05/25/biprobit_iv/" rel="prev" title="如何在双变量Probit中使用工具变量法IV估计">
-      <i class="fa fa-chevron-left"></i> 如何在双变量Probit中使用工具变量法IV估计
+    <a href="/2020/05/25/berry/" rel="prev" title="致Berry">
+      <i class="fa fa-chevron-left"></i> 致Berry
     </a></div>
       <div class="post-nav-item">
     <a href="/2020/05/27/bubblemap/" rel="next" title="大城市人口增长速度（一个气泡图作业）">
