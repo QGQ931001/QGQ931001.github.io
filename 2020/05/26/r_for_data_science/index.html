@@ -29,20 +29,26 @@
 <meta property="og:site_name" content="QGQ的小站">
 <meta property="og:description" content="一个说明 ggplot2::ggplot()指使用ggplot2包中的ggplot函数，::表示快速调用某个包里的函数。 示例 使用ggplot2包中的mpg数据框，这份数据是一份汽车资料： 1knitr::kable(head(ggplot2::mpg, 10))    manufacturer model displ year cyl trans drv cty hwy fl class">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://github.com/figure/unnamed-chunk-2-1.png">
-<meta property="og:image" content="https://github.com/figure/unnamed-chunk-3-1.png">
-<meta property="og:image" content="https://github.com/figure/unnamed-chunk-5-1.png">
-<meta property="og:image" content="https://github.com/figure/unnamed-chunk-6-1.png">
-<meta property="og:image" content="https://github.com/figure/unnamed-chunk-7-1.png">
-<meta property="og:image" content="https://github.com/figure/unnamed-chunk-8-1.png">
-<meta property="og:image" content="https://github.com/figure/unnamed-chunk-9-1.png">
-<meta property="og:image" content="https://github.com/figure/unnamed-chunk-10-1.png">
+<meta property="og:image" content="https://github.com/figure_rdata_science/unnamed-chunk-2-1.png">
+<meta property="og:image" content="https://github.com/figure_rdata_science/unnamed-chunk-3-1.png">
+<meta property="og:image" content="https://github.com/figure_rdata_science/unnamed-chunk-5-1.png">
+<meta property="og:image" content="https://github.com/figure_rdata_science/unnamed-chunk-6-1.png">
+<meta property="og:image" content="https://github.com/figure_rdata_science/unnamed-chunk-7-1.png">
+<meta property="og:image" content="https://github.com/figure_rdata_science/unnamed-chunk-8-1.png">
+<meta property="og:image" content="https://github.com/figure_rdata_science/unnamed-chunk-9-1.png">
+<meta property="og:image" content="https://github.com/figure_rdata_science/unnamed-chunk-10-1.png">
+<meta property="og:image" content="https://github.com/figure_rdata_science/unnamed-chunk-11-1.png">
+<meta property="og:image" content="https://github.com/figure_rdata_science/unnamed-chunk-12-1.png">
+<meta property="og:image" content="https://github.com/figure_rdata_science/unnamed-chunk-13-1.png">
+<meta property="og:image" content="https://github.com/figure_rdata_science/unnamed-chunk-14-1.png">
+<meta property="og:image" content="https://github.com/figure_rdata_science/unnamed-chunk-15-1.png">
+<meta property="og:image" content="https://github.com/figure_rdata_science/unnamed-chunk-16-1.png">
 <meta property="article:published_time" content="2020-05-26T00:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-27T05:16:58.052Z">
+<meta property="article:modified_time" content="2020-05-31T04:41:32.854Z">
 <meta property="article:author" content="QGQ">
 <meta property="article:tag" content="R">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://github.com/figure/unnamed-chunk-2-1.png">
+<meta name="twitter:image" content="https://github.com/figure_rdata_science/unnamed-chunk-2-1.png">
 
 <link rel="canonical" href="https://github.com/QGQ931001/2020/05/26/r_for_data_science/">
 
@@ -220,7 +226,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-05-27 13:16:58" itemprop="dateModified" datetime="2020-05-27T13:16:58+08:00">2020-05-27</time>
+                <time title="Modified: 2020-05-31 12:41:32" itemprop="dateModified" datetime="2020-05-31T12:41:32+08:00">2020-05-31</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -418,37 +424,56 @@
 </tr>
 </tbody>
 </table>
-<p>创建<code>ggplot2</code>图形,散点图：</p>
 <a id="more"></a>
+<p>创建<code>ggplot2</code>图形,散点图：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ggplot(data = mpg) +</span><br><span class="line">  geom_point(mapping = aes(x = displ, y = hwy)) -&gt; p</span><br><span class="line">p</span><br></pre></td></tr></table></figure>
-<p><img data-src="/figure/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" /></p>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" /></p>
 <p>其中<code>mapping</code>是映射的意思，在<code>ggplot()</code>的<code>()</code>中出现的内容将传递之后的绘图函数，<code>p</code>保存了绘制好的图形，可以进一步进行美化和调整：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">p + theme_minimal(base_family = enfont) +</span><br><span class="line">      theme(axis.text.x = element_blank(),</span><br><span class="line">            axis.text.y = element_blank(),</span><br><span class="line">            axis.title = element_text(size = <span class="number">12</span>))</span><br></pre></td></tr></table></figure>
-<p><img data-src="/figure/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;" /> 可以将一些图片调整的代码存放在<code>modify</code>命名的一个对象中：</p>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;" /> 可以将一些图片调整的代码存放在<code>modify</code>命名的一个对象中：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">theme_minimal(base_family = enfont) +</span><br><span class="line">  theme(axis.text.x = element_blank(),</span><br><span class="line">        axis.text.y = element_blank(),</span><br><span class="line">        axis.title = element_text(size = <span class="number">12</span>)) -&gt; modify</span><br></pre></td></tr></table></figure>
 <p>实际上，<code>ggplot2</code>的魅力之一在于通过颜色(<strong>color</strong>)、形状(<strong>shape</strong>)、透明度(<strong>alpha</strong>)等等属性展示超越<strong>2</strong>维的信息，比如：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ggplot(data = mpg) +</span><br><span class="line">  geom_point(mapping = aes(x = displ, y = hwy, color = class)) +</span><br><span class="line">  modify</span><br></pre></td></tr></table></figure>
-<p><img data-src="/figure/unnamed-chunk-5-1.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" style="display: block; margin: auto;" /></p>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-5-1.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" style="display: block; margin: auto;" /></p>
 <p>另外一种展示超越2维属性的方法就是<strong>分面</strong>：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ggplot(data = mpg) +</span><br><span class="line">  geom_point(mapping = aes(x = displ, y = hwy)) +</span><br><span class="line">  facet_wrap(~ class, nrow = <span class="number">2</span>) +</span><br><span class="line">  modify</span><br></pre></td></tr></table></figure>
-<p><img data-src="/figure/unnamed-chunk-6-1.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" style="display: block; margin: auto;" /></p>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-6-1.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" style="display: block; margin: auto;" /></p>
 <p><code>facet_wrap()</code>中的第一个参数是<strong>R</strong>中的一种数据结构，叫作“公式”，并非数学意义上的意思。也可以使用2个变量进行分面：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ggplot(data = mpg) +</span><br><span class="line">  geom_point(mapping = aes(x = displ, y = hwy, color = class)) +</span><br><span class="line">  facet_wrap(drv ~ cyl, nrow = <span class="number">2</span>) +</span><br><span class="line">  modify</span><br></pre></td></tr></table></figure>
-<p><img data-src="/figure/unnamed-chunk-7-1.png" title="plot of chunk unnamed-chunk-7" alt="plot of chunk unnamed-chunk-7" style="display: block; margin: auto;" /></p>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-7-1.png" title="plot of chunk unnamed-chunk-7" alt="plot of chunk unnamed-chunk-7" style="display: block; margin: auto;" /></p>
 <p>可以使用占位符<code>.</code>来代替<code>facet_wrap()</code>第一个参数中的<code>drv</code>，效果如下：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ggplot(data = mpg) +</span><br><span class="line">  geom_point(mapping = aes(x = displ, y = hwy, color = class)) +</span><br><span class="line">  facet_wrap(. ~ cyl, nrow = <span class="number">2</span>) +</span><br><span class="line">  modify</span><br></pre></td></tr></table></figure>
-<p><img data-src="/figure/unnamed-chunk-8-1.png" title="plot of chunk unnamed-chunk-8" alt="plot of chunk unnamed-chunk-8" style="display: block; margin: auto;" /></p>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-8-1.png" title="plot of chunk unnamed-chunk-8" alt="plot of chunk unnamed-chunk-8" style="display: block; margin: auto;" /></p>
 <h2 id="几何对象">几何对象</h2>
 <p>R并非只有<code>ggplot2</code>一种绘图方案，比如：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">set.seed(<span class="number">123</span>)</span><br><span class="line">n &lt;- <span class="number">1000</span></span><br><span class="line">x1  &lt;- matrix(rnorm(n), ncol = <span class="number">2</span>)</span><br><span class="line">x2  &lt;- matrix(rnorm(n, mean = <span class="number">3</span>, sd = <span class="number">1.5</span>), ncol = <span class="number">2</span>)</span><br><span class="line">x   &lt;- rbind(x1, x2)</span><br><span class="line">head(x)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">##             [,1]        [,2]</span><br><span class="line">## [1,] -0.56047565 -0.60189285</span><br><span class="line">## [2,] -0.23017749 -0.99369859</span><br><span class="line">## [3,]  1.55870831  1.02678506</span><br><span class="line">## [4,]  0.07050839  0.75106130</span><br><span class="line">## [5,]  0.12928774 -1.50916654</span><br><span class="line">## [6,]  1.71506499 -0.09514745</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#&gt;             [,1]        [,2]</span><br><span class="line">#&gt; [1,] -0.56047565 -0.60189285</span><br><span class="line">#&gt; [2,] -0.23017749 -0.99369859</span><br><span class="line">#&gt; [3,]  1.55870831  1.02678506</span><br><span class="line">#&gt; [4,]  0.07050839  0.75106130</span><br><span class="line">#&gt; [5,]  0.12928774 -1.50916654</span><br><span class="line">#&gt; [6,]  1.71506499 -0.09514745</span><br></pre></td></tr></table></figure>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">smoothScatter(x, xlab = <span class="string">"x1"</span>, ylab = <span class="string">"x2"</span>)</span><br></pre></td></tr></table></figure>
-<p><img data-src="/figure/unnamed-chunk-9-1.png" title="plot of chunk unnamed-chunk-9" alt="plot of chunk unnamed-chunk-9" style="display: block; margin: auto;" /></p>
-<p>而ggplot2肯定并非只有一种几何对象，比如<code>geom_smooth</code>、<code>geom_line</code>、<code>geom_bar</code>等等，而这些对象生成的图层可以覆盖，比如：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ggplot(data = mpg) +</span><br><span class="line">  geom_point(mapping = aes(x = displ, y = hwy, color = drv)) +</span><br><span class="line">  geom_smooth(mapping = aes(x = displ, y = hwy, linetype = drv))</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">## &#96;geom_smooth()&#96; using method &#x3D; &#39;loess&#39; and formula &#39;y ~ x&#39;</span><br></pre></td></tr></table></figure>
-<p><img data-src="/figure/unnamed-chunk-10-1.png" title="plot of chunk unnamed-chunk-10" alt="plot of chunk unnamed-chunk-10" style="display: block; margin: auto;" /></p>
-<p>未完待续</p>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-9-1.png" title="plot of chunk unnamed-chunk-9" alt="plot of chunk unnamed-chunk-9" style="display: block; margin: auto;" /></p>
+<p>而ggplot2肯定并非只有一类几何对象，比如<code>geom_smooth</code>、<code>geom_line</code>、<code>geom_bar</code>等等，而这些对象生成的图层可以堆叠，比如：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ggplot(data = mpg) +</span><br><span class="line">  geom_point(mapping = aes(x = displ, y = hwy, color = drv),</span><br><span class="line">             show.legend = <span class="literal">FALSE</span>) +</span><br><span class="line">  geom_smooth(mapping = aes(x = displ, y = hwy, linetype = drv),</span><br><span class="line">              show.legend = <span class="literal">FALSE</span>)</span><br></pre></td></tr></table></figure>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-10-1.png" title="plot of chunk unnamed-chunk-10" alt="plot of chunk unnamed-chunk-10" style="display: block; margin: auto;" /></p>
+<p><code>geom_smooth()</code>使用单个几何对象表示多行数据(一条曲线)，而<code>geom_bar()</code>和<code>geom_point</code>则是多个几何对象（多个矩形或点），将<code>geom_smooth()</code>的<code>group</code>属性映射为一个离散变量时，这样<code>ggplot2</code>就会为这个分类变量的每个唯一值绘制一个独立的几何对象。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ggplot(data = mpg) +</span><br><span class="line">  geom_smooth(mapping = aes(x = displ, y = hwy, group = drv)</span><br><span class="line"> )</span><br></pre></td></tr></table></figure>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-11-1.png" title="plot of chunk unnamed-chunk-11" alt="plot of chunk unnamed-chunk-11" style="display: block; margin: auto;" /></p>
+<p>也可以为不同的图层指定不同的数据:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ggplot(data = mpg) +</span><br><span class="line">  geom_point(mapping = aes(x = displ, y = hwy, color = drv)) +</span><br><span class="line">  geom_smooth(data = dplyr::filter(mpg, class == <span class="string">"subcompact"</span>),</span><br><span class="line">              mapping = aes(x = displ, y = hwy),</span><br><span class="line">              se = <span class="literal">FALSE</span>,</span><br><span class="line">              show.legend = <span class="literal">FALSE</span></span><br><span class="line"> )</span><br></pre></td></tr></table></figure>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-12-1.png" title="plot of chunk unnamed-chunk-12" alt="plot of chunk unnamed-chunk-12" style="display: block; margin: auto;" /></p>
+<h2 id="统计变换">统计变换</h2>
+<p><code>geom_bar()</code>函数可以绘制的基本条形图。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ggplot(data = diamonds) +</span><br><span class="line">  geom_bar(mapping = aes(x = cut))</span><br></pre></td></tr></table></figure>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-13-1.png" title="plot of chunk unnamed-chunk-13" alt="plot of chunk unnamed-chunk-13" style="display: block; margin: auto;" /></p>
+<p>条形图 <code>x</code> 轴显示的是 <code>cut</code> ，这是 <code>diamonds</code> 数据集中的一个变量。 <code>y</code> 轴显示的是 <code>count</code> ，但 <code>count</code> 不是 <code>diamonds</code> 中的变量！ <code>count</code> 来自哪里呢？很多图形绘制的是数据集的原始数据，比如散点图。另外一些图形则可以绘制那些计算出的新数据，比如条形图。</p>
+<p>绘图时用来计算新数据的算法称为stat（statistical transformation），即统计变换。你可能想要覆盖默认的统计变换。在以下代码中，我们将 <code>geom_bar()</code> 函数的统计变换 从计数（默认值）修改为标识。这样我们就可以将条形的高度映射为 <code>y</code> 轴变量的初始值。 遗憾的是，当随意说起条形图时，人们指的可能就是这种条形图，其中条形高度已经存 在于数据中，而不是像前一个图一样，条形高度由对行进行计数来生成：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">demo &lt;- tribble(</span><br><span class="line">  ~a,      ~b,</span><br><span class="line">  <span class="string">"bar_1"</span>, <span class="number">20</span>,</span><br><span class="line">  <span class="string">"bar_2"</span>, <span class="number">30</span>,</span><br><span class="line">  <span class="string">"bar_3"</span>, <span class="number">40</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">ggplot(data = demo) +</span><br><span class="line">  geom_bar(</span><br><span class="line">    mapping = aes(x = a, y = b), stat = <span class="string">"identity"</span></span><br><span class="line">  )</span><br></pre></td></tr></table></figure>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-14-1.png" title="plot of chunk unnamed-chunk-14" alt="plot of chunk unnamed-chunk-14" style="display: block; margin: auto;" /></p>
+<p>也可以改变统计变换的默认映射：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ggplot(data = diamonds) +</span><br><span class="line">  geom_bar(</span><br><span class="line">    mapping = aes(x = cut, y = ..prop.., group = <span class="number">1</span>)</span><br><span class="line">  )</span><br></pre></td></tr></table></figure>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-15-1.png" title="plot of chunk unnamed-chunk-15" alt="plot of chunk unnamed-chunk-15" style="display: block; margin: auto;" /></p>
+<p>你可能想要在代码中强调统计变换。例如，你可以使用 <code>stat_summary()</code> 函数将人们的 注意力吸引到你计算出的那些摘要统计量上。 <code>stat_summary()</code> 函数为 <code>x</code> 的每个唯一值计 算 <code>y</code> 值的摘要统计：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ggplot(data = diamonds) +</span><br><span class="line">  stat_summary(</span><br><span class="line">    mapping = aes(x = cut, y = depth),</span><br><span class="line">        fun.ymin = min,</span><br><span class="line">    fun.ymax = max,</span><br><span class="line">    fun.y = median</span><br><span class="line">  )</span><br></pre></td></tr></table></figure>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-16-1.png" title="plot of chunk unnamed-chunk-16" alt="plot of chunk unnamed-chunk-16" style="display: block; margin: auto;" /></p>
+<p><code>ggplot2</code> 提供了 20 多个统计变换以供你使用。每个统计变换都是一个函数，因此你可以按 照通用方式获得帮助，例如 <code>?stat_bin</code></p>
 
     </div>
 
@@ -595,7 +620,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一个说明"><span class="nav-number">1.</span> <span class="nav-text">一个说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例"><span class="nav-number">2.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#几何对象"><span class="nav-number">3.</span> <span class="nav-text">几何对象</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一个说明"><span class="nav-number">1.</span> <span class="nav-text">一个说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例"><span class="nav-number">2.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#几何对象"><span class="nav-number">3.</span> <span class="nav-text">几何对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#统计变换"><span class="nav-number">4.</span> <span class="nav-text">统计变换</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
