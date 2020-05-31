@@ -107,7 +107,7 @@
     <link href="https://github.com/QGQ931001/2020/05/26/r_for_data_science/"/>
     <id>https://github.com/QGQ931001/2020/05/26/r_for_data_science/</id>
     <published>2020-05-26T00:00:00.000Z</published>
-    <updated>2020-05-31T04:49:50.896Z</updated>
+    <updated>2020-05-31T12:47:48.812Z</updated>
     
     <summary type="html">
     
@@ -121,7 +121,7 @@
 &lt;tr class=&quot;header&quot;&gt;
 &lt;th style=&quot;text-align: left;&quot;&gt;manufacturer&lt;/th&gt;
 &lt;th style=&quot;text-align: left;&quot;&gt;model&lt;/th&gt;
-&lt;th style=&quot;text-align: right;&quot;&gt;displ&lt;/th&gt;
+&lt;th style=&quot;text-align: left;&quot;&gt;displ&lt;/th&gt;
 &lt;th style=&quot;text-align: right;&quot;&gt;year&lt;/th&gt;
 &lt;th style=&quot;text-align: right;&quot;&gt;cyl&lt;/th&gt;
 &lt;th style=&quot;text-align: left;&quot;&gt;trans&lt;/th&gt;
@@ -136,7 +136,7 @@
 &lt;tr class=&quot;odd&quot;&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;audi&lt;/td&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;a4&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;1.8&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;1.8&lt;/td&gt;
 &lt;td style=&quot;text-align: right;&quot;&gt;1999&lt;/td&gt;
 &lt;td style=&quot;text-align: right;&quot;&gt;4&lt;/td&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;auto(l5)&lt;/td&gt;
@@ -149,7 +149,7 @@
 &lt;tr class=&quot;even&quot;&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;audi&lt;/td&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;a4&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;1.8&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;1.8&lt;/td&gt;
 &lt;td style=&quot;text-align: right;&quot;&gt;1999&lt;/td&gt;
 &lt;td style=&quot;text-align: right;&quot;&gt;4&lt;/td&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;manual(m5)&lt;/td&gt;
@@ -162,7 +162,7 @@
 &lt;tr class=&quot;odd&quot;&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;audi&lt;/td&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;a4&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;2.0&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;2.0&lt;/td&gt;
 &lt;td style=&quot;text-align: right;&quot;&gt;2008&lt;/td&gt;
 &lt;td style=&quot;text-align: right;&quot;&gt;4&lt;/td&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;manual(m6)&lt;/td&gt;
@@ -175,7 +175,7 @@
 &lt;tr class=&quot;even&quot;&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;audi&lt;/td&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;a4&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;2.0&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;2.0&lt;/td&gt;
 &lt;td style=&quot;text-align: right;&quot;&gt;2008&lt;/td&gt;
 &lt;td style=&quot;text-align: right;&quot;&gt;4&lt;/td&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;auto(av)&lt;/td&gt;
@@ -188,7 +188,7 @@
 &lt;tr class=&quot;odd&quot;&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;audi&lt;/td&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;a4&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;2.8&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;2.8&lt;/td&gt;
 &lt;td style=&quot;text-align: right;&quot;&gt;1999&lt;/td&gt;
 &lt;td style=&quot;text-align: right;&quot;&gt;6&lt;/td&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;auto(l5)&lt;/td&gt;
@@ -201,7 +201,7 @@
 &lt;tr class=&quot;even&quot;&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;audi&lt;/td&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;a4&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;2.8&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;2.8&lt;/td&gt;
 &lt;td style=&quot;text-align: right;&quot;&gt;1999&lt;/td&gt;
 &lt;td style=&quot;text-align: right;&quot;&gt;6&lt;/td&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;manual(m5)&lt;/td&gt;
@@ -214,7 +214,7 @@
 &lt;tr class=&quot;odd&quot;&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;audi&lt;/td&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;a4&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;3.1&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;3.1&lt;/td&gt;
 &lt;td style=&quot;text-align: right;&quot;&gt;2008&lt;/td&gt;
 &lt;td style=&quot;text-align: right;&quot;&gt;6&lt;/td&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;auto(av)&lt;/td&gt;
@@ -227,7 +227,7 @@
 &lt;tr class=&quot;even&quot;&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;audi&lt;/td&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;a4 quattro&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;1.8&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;1.8&lt;/td&gt;
 &lt;td style=&quot;text-align: right;&quot;&gt;1999&lt;/td&gt;
 &lt;td style=&quot;text-align: right;&quot;&gt;4&lt;/td&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;manual(m5)&lt;/td&gt;
@@ -240,7 +240,7 @@
 &lt;tr class=&quot;odd&quot;&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;audi&lt;/td&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;a4 quattro&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;1.8&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;1.8&lt;/td&gt;
 &lt;td style=&quot;text-align: right;&quot;&gt;1999&lt;/td&gt;
 &lt;td style=&quot;text-align: right;&quot;&gt;4&lt;/td&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;auto(l5)&lt;/td&gt;
@@ -253,7 +253,7 @@
 &lt;tr class=&quot;even&quot;&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;audi&lt;/td&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;a4 quattro&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;2.0&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;2.0&lt;/td&gt;
 &lt;td style=&quot;text-align: right;&quot;&gt;2008&lt;/td&gt;
 &lt;td style=&quot;text-align: right;&quot;&gt;4&lt;/td&gt;
 &lt;td style=&quot;text-align: left;&quot;&gt;manual(m6)&lt;/td&gt;
