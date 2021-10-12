@@ -7,14 +7,14 @@ set matsize 7000
 
 set scheme s1mono
 
-cd "/Users/nnunn/Dropbox/Food Aid/AER_Publication_Materials/Replication Files"
+
 
 log using "FoodAidReg.log", replace
 
 ************************************
 *** Some basic coding & cleaning ***
 ************************************
-use "FAid_Final.dta", clear
+use "nunn_qian_2014.dta", clear
 tsset obs year
 
 /* Converting wheat aid measure & production to thousands of tonnes - coefficients are easier to read */
@@ -162,14 +162,14 @@ local cereals_controls "rcereal_y2-rcereal_y36 rimport_y2-rimport_y36"
 local baseline_controls "oil_fadum_avg US_income_fadum_avg US_democ_pres_fadum_avg gdp_y2-gdp_y36 usmil_y2-usmil_y36 usec_y2-usec_y36 rcereal_y2-rcereal_y36 rimport_y2-rimport_y36 all_Precip_jan-all_Precip_dec all_Temp_jan-all_Temp_dec all_Precip_jan_faavg-all_Precip_dec_faavg all_Temp_jan_faavg-all_Temp_dec_faavg"
 
 sor risocode year
-save "in_sample.dta", replace
+save "nunn_qian_2014_2.dta", replace
 
 
 ***********************************
 *** TABLE 1: Summary Statistics ***
 ***********************************
 
-use "in_sample.dta", clear
+use "nunn_qian_2014_2.dta", clear
 
 /* Generating in-sample indicator so that all specifications have the same number of observations */
 qui: xi: ivreg2 intra_state (wheat_aid=instrument) `baseline_controls' i.risocode i.year*i.wb_region if year>=1971 & year<=2006, cluster(risocode)
@@ -184,7 +184,7 @@ sum any_war intra_state inter_state wheat_aid fadum_avg instrument2 recipient_ce
 *** TABLE 2: Baseline OLS & IV ***
 **********************************
 
-use "in_sample.dta", clear
+use "nunn_qian_2014_2.dta", clear
 
 /* Generating in-sample indicator so that all specifications have the same number of observations */
 qui: xi: ivreg2 intra_state (wheat_aid=instrument) `baseline_controls' i.risocode i.year*i.wb_region if year>=1971 & year<=2006, cluster(risocode)
@@ -291,7 +291,7 @@ outreg2 instrument using "T2_PanelD_iv_first.xls", append se noast nocons lab de
 ********************************
 *** TABLE 3: Uninteracted IV ***
 ********************************
-use "in_sample.dta", clear
+use "nunn_qian_2014_2.dta", clear
 
 /* Generating analogous control variables variables */
 gen x1=year*real_usmilaid_avg
@@ -419,7 +419,7 @@ outreg2 instrument2 using "T3_uninteracted_PanelD_iv_first.xls", append se noast
 *** TABLE 4: Baseline with a LDV ***
 ************************************
 
-use "in_sample.dta", clear
+use "nunn_qian_2014_2.dta", clear
 
 /* Generating in-sample indicator so that all specifications have the same number of observations */
 qui: xi: ivreg2 intra_state l_intra_state (wheat_aid=instrument) `baseline_controls' i.risocode i.year*i.wb_region if year>=1971 & year<=2006, cluster(risocode)
@@ -527,7 +527,7 @@ outreg2 instrument l_intra_state using "T4_ldv_PanelD_iv_first.xls", append se n
 *** TABLE 5: Reduced Form Placebo Tests ***
 *******************************************
 
-use "in_sample.dta", clear
+use "nunn_qian_2014_2.dta", clear
 
 /* Changing units so coefficients are easier read */
 foreach x of varlist /*any_war*/ intra_state /*inter_state*/{
@@ -577,7 +577,7 @@ sum USprod_`x' if year>=1971 & year<=2006 & in_sample==1
 *******************************************
 *** TABLE 6: Alternative specifications ***
 *******************************************
-use "in_sample.dta", clear
+use "nunn_qian_2014_2.dta", clear
 tsset obs year
 
 /*Col 1: Baseline*/
@@ -680,7 +680,7 @@ outreg2 f_wheat_aid wheat_aid using "T6_alt_specs_beta.xls", append se noast noc
 *** TABLE 7: Onset & Duration ***
 *********************************
 
-use "FAid_Final.dta", clear
+use "nunn_qian_2014.dta", clear
 tsset obs year
 
 gen l_intra_state=l.intra_state
@@ -863,7 +863,7 @@ restore
 *******************************
 *** TABLE 8: Size Estimates ***
 *******************************
-use "in_sample.dta", clear
+use "nunn_qian_2014_2.dta", clear
 
 qui: xi: ivreg any_war (wheat_aid=instrument) `baseline_controls' i.risocode i.year*i.wb_region if year>=1971 & year<=2006, cluster(risocode)
 gen in_sample=1 if e(sample)==1
@@ -924,7 +924,7 @@ sum small_any_war small_civil_war small_inter_state_war big_any_war big_civil_wa
 *** TABLE 9: AID CROWD OUT ***
 ******************************
 
-use "in_sample.dta", clear
+use "nunn_qian_2014_2.dta", clear
 
 xi: ivreg2 intra_state (wheat_aid=instrument) `baseline_controls' i.risocode i.year*i.wb_region if year>=1971 & year<=2006, cluster(risocode)
 gen in_sample=1 if e(sample)==1
@@ -948,7 +948,7 @@ sum wheat_aid world_wheat_aid world_cereals_aid non_US_wheat_aid non_US_cereals_
 *********************************************************
 *** TABLE 10: IMPACTS ON DOMESTIC PRODUCTION & PRICES ***
 *********************************************************
-use "in_sample.dta", clear
+use "nunn_qian_2014_2.dta", clear
 
 *** Wheat production as the dependent variable ****
 xi: ivreg2 recipient_wheat_prod (wheat_aid=instrument) `baseline_controls' i.risocode i.year*i.wb_region if year>=1971 & year<=2006, cluster(risocode) ffirst
@@ -983,7 +983,7 @@ restore
 *** TABLE 11: Heterogeneity Regressions: Past Conflict ***
 **********************************************************
 /* Cannot use the "in_sample" dataset because we needs observations from earlier time periods to construct lagged conflict */
-use "FAid_Final.dta", clear
+use "nunn_qian_2014.dta", clear
 tsset obs year
 
 /* Converting wheat aid measure & production to thousands of tonnes - coefficients are easier to read */
@@ -1107,7 +1107,7 @@ restore
 ********************************************************************
 *** TABLE 12: Heterogeneity Regressions: Country Characteristics ***
 ********************************************************************
-use "in_sample.dta", clear
+use "nunn_qian_2014_2.dta", clear
 
 /* Baseline */
 xi: ivreg2 intra_state (wheat_aid=instrument) `baseline_controls' i.risocode i.wb_region*i.year if year>=1971 & year<=2006, cluster(risocode) ffirst
@@ -1201,7 +1201,7 @@ outreg2 wheat_aid wheat_aid_x_LowEPOL wheat_aid_x_LowEthnic using "T12_hetero.xl
 *** TABLE 13: Heterogeneity Regressions: Understanding Channels ***
 *******************************************************************
 
-use "in_sample.dta", clear
+use "nunn_qian_2014_2.dta", clear
 
 /* Baseline */
 xi: ivreg2 intra_state (wheat_aid=instrument) `baseline_controls' i.risocode i.wb_region*i.year if year>=1971 & year<=2006, cluster(risocode) ffirst
