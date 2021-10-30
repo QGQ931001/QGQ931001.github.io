@@ -13,8 +13,8 @@ prog define muselist
 
 	di in white "Data index: Beck et al.(2010) "
 	di in yellow "---------------------" in g "Data" in yellow "-----------------------------" 
-	di in blue "1. 在dofile中可直接调用"
-	di in blue "2. 作者提供数据不全"
+	di in white "1.  在dofile中可直接调用"
+	di in white "2.  作者提供数据不全"
 	di in yellow "--------------------" in g "Dofile" in yellow "----------------------------" 
 	di in green`"1. {view "https://qgq931001.github.io/muse/b/bbb_table.do": 点击预览do文档}："' in green "bbb_table.do"
 	di `"2. {view "https://qgq931001.github.io/muse/b/bbb_figure.do": 点击预览do文档}："' in green "bbb_figure.do"
