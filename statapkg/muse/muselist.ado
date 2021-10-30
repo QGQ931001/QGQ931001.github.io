@@ -11,6 +11,8 @@ prog define muselist
 	di "3. {stata doedit nunn_qian_2014.do: 请下载后再点击打开do文档}：" in green "nunn_qian_2014.do"
 	di in yellow "------------------------------------------------------"
 
+    dis in w _n(2)
+
 	di in white "Data index: Beck et al.(2010) "
 	di in yellow "---------------------" in g "Data" in yellow "-----------------------------" 
 	di in white "1.  在dofile中可直接调用"
