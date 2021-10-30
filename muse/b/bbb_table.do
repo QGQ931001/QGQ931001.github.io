@@ -17,7 +17,7 @@ set more off;
 
 log using TableI.log, replace;
 
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c
 
 keep if ks99==1;
 drop if inter1 == . | inter2 == .;
@@ -74,7 +74,7 @@ set more off;
 
 log using TableII.log, replace;
 
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c
 
 label var _intra "Bank deregulation";
 
@@ -157,8 +157,7 @@ set more off;
 
 log using TableIII.log, replace;
 
-muse macro_workfile.dta", clear;
-
+muse macro_workfile.dta, s w c
 generate Y = log(gini/(1-gini));
 
 tsset statefip wrkyr;
@@ -223,7 +222,7 @@ log using TableIV.log, replace;
 *******************************************;
 *** CALCULATING THEIL INDEX FOR PANEL A ***;
 *******************************************;
-muse micro_workfile.dta, clear;
+muse micro_workfile.dta, s w c
 keep if main_sample == 1;
 
 *** Group 1 -- self-employed;
@@ -1066,7 +1065,7 @@ erase theil2006.dta;
 *******************************************;
 *** CALCULATING THEIL INDEX FOR PANEL B ***;
 *******************************************;
-muse micro_workfile.dta, clear;
+muse micro_workfile.dta, s w c
 keep if main_sample == 1;
 keep if classwly>=22 & classwly<=28;
 
@@ -1909,7 +1908,7 @@ erase theil2006.dta;
 *******************************************************;
 *** DECOMPOSING THE IMPACT OF DEREGULATION, PANEL A ***;
 *******************************************************;
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c
 sort statefip wrkyr;
 merge statefip wrkyr using TableIVpanelA;
 drop _merge*;
@@ -1950,7 +1949,7 @@ starlevel(* 0.10 ** 0.05 *** 0.01) nolz nolegend;
 *******************************************************;
 *** DECOMPOSING THE IMPACT OF DEREGULATION, PANEL B ***;
 *******************************************************;
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c
 sort statefip wrkyr;
 merge statefip wrkyr using TableIVpanelB;
 drop _merge*;
@@ -2014,7 +2013,7 @@ log using TableV.log, replace;
 ******************************************;
 *** AGES 25-35, UNCONDITIONAL EARNINGS ***;
 ******************************************;
-muse micro_workfile.dta, clear;
+muse micro_workfile.dta, s w c
 keep if main_sample == 1;
 keep if _wageworker==1;
 keep if _agelyr>=25 & _agelyr<=35;
@@ -2051,7 +2050,7 @@ save ind_inequality_earnings2535, replace;
 ******************************************;
 *** AGES 36-45, UNCONDITIONAL EARNINGS ***;
 ******************************************;
-muse micro_workfile.dta, clear;
+muse micro_workfile.dta, s w c
 keep if main_sample == 1;
 keep if _wageworker==1;
 keep if _agelyr>=36 & _agelyr<=45;
@@ -2088,7 +2087,7 @@ save ind_inequality_earnings3645, replace;
 ******************************************;
 *** AGES 46-54, UNCONDITIONAL EARNINGS ***;
 ******************************************;
-muse micro_workfile.dta, clear;
+muse micro_workfile.dta, s w c
 keep if main_sample == 1;
 keep if _wageworker==1;
 keep if _agelyr>=46 & _agelyr<=54;
@@ -2144,7 +2143,7 @@ append using temp4654.dta;
 sort statefip wrkyr;
 save temp, replace;
 
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c
 keep statefip wrkyr _intra;
 sort statefip wrkyr;
 merge statefip wrkyr using temp;
@@ -2213,7 +2212,7 @@ starlevel(* 0.10 ** 0.05 *** 0.01);
 *****************************************************;
 *** AGES 25-35, EARNINGS CONDITIONAL ON EDUCATION ***;
 *****************************************************;
-muse micro_workfile.dta, clear;
+muse micro_workfile.dta, s w c
 keep if main_sample == 1;
 keep if _wageworker==1;
 keep if _agelyr>=25 & _agelyr<=35;
@@ -2255,7 +2254,7 @@ save ind_inequality_earnings2535, replace;
 *****************************************************;
 *** AGES 36-45, EARNINGS CONDITIONAL ON EDUCATION ***;
 *****************************************************;
-muse micro_workfile.dta, clear;
+muse micro_workfile.dta, s w c
 keep if main_sample == 1;
 keep if _wageworker==1;
 keep if _agelyr>=36 & _agelyr<=45;
@@ -2297,7 +2296,7 @@ save ind_inequality_earnings3645, replace;
 *****************************************************;
 *** AGES 46-54, EARNINGS CONDITIONAL ON EDUCATION ***;
 *****************************************************;
-muse micro_workfile.dta, clear;
+muse micro_workfile.dta, s w c
 keep if main_sample == 1;
 keep if _wageworker==1;
 keep if _agelyr>=46 & _agelyr<=54;
@@ -2357,7 +2356,7 @@ append using temp4654.dta;
 sort statefip wrkyr;
 save temp, replace;
 
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c
 keep statefip wrkyr _intra;
 sort statefip wrkyr;
 merge statefip wrkyr using temp;

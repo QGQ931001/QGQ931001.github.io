@@ -19,7 +19,7 @@ log using Figure1.log, replace;
 **************;
 *** LEVELS ***;
 **************;
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c
 generate log_gini = log(gini);
 xi: regress log_gini i.wrkyr;
 predict r, residual;
@@ -41,7 +41,7 @@ twoway (scatter branch_reform mean_gini, msymbol(circle_hollow) mcolor(navy) mla
 ***************;       
 *** CHANGES ***;
 ***************;
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c
 generate log_gini = log(gini);
 sort statefip wrkyr;
 bysort statefip: generate log_gini_lag = log_gini[_n-1]; 
@@ -79,7 +79,7 @@ set more off;
 
 log using Figure2.log, replace;
 
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c
 
 replace p1=log(p1);
 replace p2=log(p2);
@@ -673,7 +673,7 @@ set more off;
 
 log using Figure3.log, replace;
 
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c
 
 tsset statefip wrkyr;
 
@@ -941,7 +941,7 @@ set more off;
 
 log using Figure4.log, replace;
 
-muse wage_workfile.dta, clear;
+muse wage_workfile.dta, s w c 
 
 generate Y=log(_hourly_earnings_cpi);
 drop if Y==.;
@@ -1272,7 +1272,7 @@ set more off;
 
 log using Figure5.log, replace;
 
-muse wage_workfile.dta, clear;
+muse wage_workfile.dta, s w c 
 
 generate Y=_hours;
 drop if Y==.;
@@ -1598,7 +1598,7 @@ set memory 100m;
 
 log using Figure6.log, replace;
 
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c
 
 generate _tintra = wrkyr - branch_reform;
 replace  _tintra = -10 if _tintra <-10;

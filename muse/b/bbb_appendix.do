@@ -18,7 +18,7 @@ log using Appendix_TableIV.log, replace;
 **********************;
 *** LOGISTIC(GINI) ***;
 **********************;
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c 
 generate y = log(gini/(1-gini));
 bysort statefip: egen mean1 = mean(y);
 keep statefip mean1;
@@ -26,7 +26,7 @@ duplicates drop;
 sort statefip;
 save mean1, replace;
 
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c 
 generate y = log(gini/(1-gini));
 bysort wrkyr: egen mean2 = mean(y);
 keep wrkyr mean2;
@@ -34,7 +34,7 @@ duplicates drop;
 sort wrkyr;
 save mean2, replace;
 
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c 
 generate y = log(gini/(1-gini));
 sort statefip;
 merge statefip using mean1;
@@ -66,7 +66,7 @@ summarize state_wrkyr_de_trended;
 *****************;
 *** LOG(GINI) ***;
 *****************;
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c 
 generate y = log(gini);
 bysort statefip: egen mean1 = mean(y);
 keep statefip mean1;
@@ -74,7 +74,7 @@ duplicates drop;
 sort statefip;
 save mean1, replace;
 
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c 
 generate y = log(gini);
 bysort wrkyr: egen mean2 = mean(y);
 keep wrkyr mean2;
@@ -82,7 +82,7 @@ duplicates drop;
 sort wrkyr;
 save mean2, replace;
 
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c 
 generate y = log(gini);
 sort statefip;
 merge statefip using mean1;
@@ -114,7 +114,7 @@ summarize state_wrkyr_de_trended;
 ******************;
 *** LOG(THEIL) ***;
 ******************;
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c 
 generate y = log(theil);
 bysort statefip: egen mean1 = mean(y);
 keep statefip mean1;
@@ -122,7 +122,7 @@ duplicates drop;
 sort statefip;
 save mean1, replace;
 
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c 
 generate y = log(theil);
 bysort wrkyr: egen mean2 = mean(y);
 keep wrkyr mean2;
@@ -130,7 +130,7 @@ duplicates drop;
 sort wrkyr;
 save mean2, replace;
 
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c 
 generate y = log(theil);
 sort statefip;
 merge statefip using mean1;
@@ -162,7 +162,7 @@ summarize state_wrkyr_de_trended;
 ******************;
 *** LOG(90/10) ***;
 ******************;
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c 
 replace p10=1 if p10==0;
 generate y = log(p90)-log(p10);
 bysort statefip: egen mean1 = mean(y);
@@ -171,7 +171,7 @@ duplicates drop;
 sort statefip;
 save mean1, replace;
 
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c 
 replace p10=1 if p10==0;
 generate y = log(p90)-log(p10);
 bysort wrkyr: egen mean2 = mean(y);
@@ -180,7 +180,7 @@ duplicates drop;
 sort wrkyr;
 save mean2, replace;
 
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c 
 replace p10=1 if p10==0;
 generate y = log(p90)-log(p10);
 sort statefip;
@@ -213,7 +213,7 @@ summarize state_wrkyr_de_trended;
 ******************;
 *** LOG(75/25) ***;
 ******************;
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c 
 generate y = log(p75)-log(p25);
 bysort statefip: egen mean1 = mean(y);
 keep statefip mean1;
@@ -221,7 +221,7 @@ duplicates drop;
 sort statefip;
 save mean1, replace;
 
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c 
 generate y = log(p75)-log(p25);
 bysort wrkyr: egen mean2 = mean(y);
 keep wrkyr mean2;
@@ -229,7 +229,7 @@ duplicates drop;
 sort wrkyr;
 save mean2, replace;
 
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c 
 generate y = log(p75)-log(p25);
 sort statefip;
 merge statefip using mean1;
@@ -285,7 +285,7 @@ set more off;
 
 log using Appendix_TableV.log, replace;
 
-muse micro_workfile.dta, clear;
+muse micro_workfile.dta, s w c
 keep if main_sample == 1;
 
 *** drop the unemployed ***;
@@ -331,7 +331,7 @@ sort statefip wrkyr;
 save temp, replace;
 
 
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c 
 keep statefip wrkyr _intra;
 sort statefip wrkyr;
 merge statefip wrkyr using temp;
@@ -404,7 +404,7 @@ set more off;
 
 log using Appendix_TableVI.log, replace;
 
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c 
 
 label var _intra "Bank deregulation";
 
@@ -1005,7 +1005,7 @@ sort statefip wrkyr;
 save temp, replace;
 
 
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c 
 keep statefip wrkyr _intra;
 sort statefip wrkyr;
 merge statefip wrkyr using temp;
@@ -1529,7 +1529,7 @@ sort statefip wrkyr;
 save temp, replace;
 
 
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c 
 keep statefip wrkyr _intra;
 sort statefip wrkyr;
 merge statefip wrkyr using temp;
@@ -2070,7 +2070,7 @@ sort statefip wrkyr;
 save temp, replace;
 
 
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c 
 keep statefip wrkyr _intra;
 sort statefip wrkyr;
 merge statefip wrkyr using temp;
@@ -2200,7 +2200,7 @@ log using Appendix_TableIX.log, replace;
 *******************************************;
 *** CALCULATING THEIL INDEX FOR PANEL A ***;
 *******************************************;
-muse micro_workfile.dta, clear;
+muse micro_workfile.dta, s w c
 keep if main_sample == 1;
 
 generate ok=0;
@@ -3048,7 +3048,7 @@ erase theil2006.dta;
 *******************************************;
 *** CALCULATING THEIL INDEX FOR PANEL B ***;
 *******************************************;
-muse micro_workfile.dta, clear;
+muse micro_workfile.dta, s w c
 keep if main_sample == 1;
 
 generate ok=0;
@@ -3895,7 +3895,7 @@ erase theil2006.dta;
 *******************************************************;
 *** DECOMPOSING THE IMPACT OF DEREGULATION, PANEL A ***;
 *******************************************************;
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c 
 sort statefip wrkyr;
 merge statefip wrkyr using Appendix_TableIXpanelA;
 drop _merge*;
@@ -3936,7 +3936,7 @@ starlevel(* 0.10 ** 0.05 *** 0.01) nolz nolegend;
 *******************************************************;
 *** DECOMPOSING THE IMPACT OF DEREGULATION, PANEL B ***;
 *******************************************************;
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c 
 sort statefip wrkyr;
 merge statefip wrkyr using Appendix_TableIXpanelB;
 drop _merge*;
@@ -4013,7 +4013,7 @@ set more off;
 
 log using Appendix_TableX.log, replace;
 
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c 
 generate base=1;
 sort statefip wrkyr;
 save temp, replace;
@@ -4022,7 +4022,7 @@ save temp, replace;
 *************************;
 *** unemployment rate ***;
 *************************;
-muse bls.dta, clear;
+muse bls.dta, s w c
 rename year wrkyr;
 keep statefip wrkyr unemploymentrate;
 sort statefip wrkyr;
@@ -4149,7 +4149,7 @@ set matsize 10000;
 
 log using Appendix_Figure1.log, replace;
 
-muse macro_workfile.dta, clear;
+muse macro_workfile.dta, s w c 
 tsset statefip wrkyr;
 
 tabulate wrkyr, gen(wrkyr_dumm);
