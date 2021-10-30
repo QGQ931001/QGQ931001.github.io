@@ -11,7 +11,7 @@ prog define muselist
 	di "3. {stata doedit nunn_qian_2014.do: 请下载后再点击打开do文档}：" in green "nunn_qian_2014.do"
 	di in yellow "------------------------------------------------------"
 
-    dis in w _n(2)
+    dis in w _n(1)
 
 	di in white "Data index: Beck et al.(2010) "
 	di in yellow "---------------------" in g "Data" in yellow "-----------------------------" 
@@ -21,6 +21,7 @@ prog define muselist
 	di in green`"1. {view "https://qgq931001.github.io/muse/b/bbb_table.do": 点击预览do文档}："' in green "bbb_table.do"
 	di `"2. {view "https://qgq931001.github.io/muse/b/bbb_figure.do": 点击预览do文档}："' in green "bbb_figure.do"
 	di `"3. {view "https://qgq931001.github.io/muse/b/bbb_appendix.do": 点击预览do文档}："' in green "bbb_appendix.do"
+	dis in w _n "   "
 	di `"4. {stata "copy https://qgq931001.github.io/muse/b/bbb_table.do bbb_table.do,replace" : 点击下载do文档}："' in green "bbb_table.do"
 	di `"5. {stata "copy https://qgq931001.github.io/muse/b/bbb_figure.do bbb_figure.do,replace" : 点击下载do文档}："' in green "bbb_figure.do"
 	di `"6. {stata "copy https://qgq931001.github.io/muse/b/bbb_appendix.do bbb_appendix.do,replace" : 点击下载do文档}："' in green "bbb_appendix.do"

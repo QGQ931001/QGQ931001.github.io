@@ -22,12 +22,12 @@
     var CONFIG = {"hostname":"github.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":380,"display":"post","padding":18,"offset":12,"onmobile":"fasle"},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":true,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="一个说明 ggplot2::ggplot()指使用ggplot2包中的ggplot函数，::表示快速调用某个包里的函数。 示例 使用ggplot2包中的mpg数据框，这份数据是一份汽车资料： 1knitr::kable(head(ggplot2::mpg, 10))    manufacturer model displ year cyl trans drv cty hwy fl class">
+  <meta name="description" content="一个说明ggplot2::ggplot()指使用ggplot2包中的ggplot函数，::表示快速调用某个包里的函数。 示例使用ggplot2包中的mpg数据框，这份数据是一份汽车资料： 1knitr::kable(head(ggplot2::mpg, 10))     manufacturer model displ year cyl trans drv cty hwy fl class">
 <meta property="og:type" content="article">
 <meta property="og:title" content="R数据科学——ggplot2笔记（1）">
 <meta property="og:url" content="https://github.com/QGQ931001/2020/05/26/r_for_data_science/index.html">
 <meta property="og:site_name" content="QGQ的小站">
-<meta property="og:description" content="一个说明 ggplot2::ggplot()指使用ggplot2包中的ggplot函数，::表示快速调用某个包里的函数。 示例 使用ggplot2包中的mpg数据框，这份数据是一份汽车资料： 1knitr::kable(head(ggplot2::mpg, 10))    manufacturer model displ year cyl trans drv cty hwy fl class">
+<meta property="og:description" content="一个说明ggplot2::ggplot()指使用ggplot2包中的ggplot函数，::表示快速调用某个包里的函数。 示例使用ggplot2包中的mpg数据框，这份数据是一份汽车资料： 1knitr::kable(head(ggplot2::mpg, 10))     manufacturer model displ year cyl trans drv cty hwy fl class">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://github.com/figure_rdata_science/unnamed-chunk-2-1.png">
 <meta property="og:image" content="https://github.com/figure_rdata_science/unnamed-chunk-3-1.png">
@@ -92,9 +92,9 @@
   .use-motion .logo-line-before i { left: initial; }
   .use-motion .logo-line-after i { right: initial; }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
-<link rel="alternate" href="/atom.xml" title="QGQ的小站" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="alternate" href="/atom.xml" title="QGQ的小站" type="application/atom+xml">
 </head>
 
 
@@ -270,167 +270,167 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="一个说明">一个说明</h2>
-<p><code>ggplot2::ggplot()</code>指使用<a href="https://ggplot2.tidyverse.org/" target="_blank" rel="noopener"><strong>ggplot2</strong></a>包中的<code>ggplot</code>函数，<code>::</code>表示快速调用某个包里的函数。</p>
-<h2 id="示例">示例</h2>
-<p>使用<code>ggplot2</code>包中的<code>mpg</code>数据框，这份数据是一份汽车资料：</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="一个说明"><a href="#一个说明" class="headerlink" title="一个说明"></a>一个说明</h2><p><code>ggplot2::ggplot()</code>指使用<a href="https://ggplot2.tidyverse.org/" target="_blank" rel="noopener"><strong>ggplot2</strong></a>包中的<code>ggplot</code>函数，<code>::</code>表示快速调用某个包里的函数。</p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>使用<code>ggplot2</code>包中的<code>mpg</code>数据框，这份数据是一份汽车资料：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">knitr::kable(head(ggplot2::mpg, <span class="number">10</span>))</span><br></pre></td></tr></table></figure>
+<div class="table-container">
 <table>
 <thead>
-<tr class="header">
-<th style="text-align: left;">manufacturer</th>
-<th style="text-align: left;">model</th>
-<th style="text-align: left;">displ</th>
-<th style="text-align: right;">year</th>
-<th style="text-align: right;">cyl</th>
-<th style="text-align: left;">trans</th>
-<th style="text-align: left;">drv</th>
-<th style="text-align: right;">cty</th>
-<th style="text-align: right;">hwy</th>
-<th style="text-align: left;">fl</th>
-<th style="text-align: left;">class</th>
+<tr>
+<th style="text-align:left">manufacturer</th>
+<th style="text-align:left">model</th>
+<th style="text-align:left">displ</th>
+<th style="text-align:right">year</th>
+<th style="text-align:right">cyl</th>
+<th style="text-align:left">trans</th>
+<th style="text-align:left">drv</th>
+<th style="text-align:right">cty</th>
+<th style="text-align:right">hwy</th>
+<th style="text-align:left">fl</th>
+<th style="text-align:left">class</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: left;">audi</td>
-<td style="text-align: left;">a4</td>
-<td style="text-align: left;">1.8</td>
-<td style="text-align: right;">1999</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: left;">auto(l5)</td>
-<td style="text-align: left;">f</td>
-<td style="text-align: right;">18</td>
-<td style="text-align: right;">29</td>
-<td style="text-align: left;">p</td>
-<td style="text-align: left;">compact</td>
+<tr>
+<td style="text-align:left">audi</td>
+<td style="text-align:left">a4</td>
+<td style="text-align:left">1.8</td>
+<td style="text-align:right">1999</td>
+<td style="text-align:right">4</td>
+<td style="text-align:left">auto(l5)</td>
+<td style="text-align:left">f</td>
+<td style="text-align:right">18</td>
+<td style="text-align:right">29</td>
+<td style="text-align:left">p</td>
+<td style="text-align:left">compact</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">audi</td>
-<td style="text-align: left;">a4</td>
-<td style="text-align: left;">1.8</td>
-<td style="text-align: right;">1999</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: left;">manual(m5)</td>
-<td style="text-align: left;">f</td>
-<td style="text-align: right;">21</td>
-<td style="text-align: right;">29</td>
-<td style="text-align: left;">p</td>
-<td style="text-align: left;">compact</td>
+<tr>
+<td style="text-align:left">audi</td>
+<td style="text-align:left">a4</td>
+<td style="text-align:left">1.8</td>
+<td style="text-align:right">1999</td>
+<td style="text-align:right">4</td>
+<td style="text-align:left">manual(m5)</td>
+<td style="text-align:left">f</td>
+<td style="text-align:right">21</td>
+<td style="text-align:right">29</td>
+<td style="text-align:left">p</td>
+<td style="text-align:left">compact</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">audi</td>
-<td style="text-align: left;">a4</td>
-<td style="text-align: left;">2.0</td>
-<td style="text-align: right;">2008</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: left;">manual(m6)</td>
-<td style="text-align: left;">f</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: right;">31</td>
-<td style="text-align: left;">p</td>
-<td style="text-align: left;">compact</td>
+<tr>
+<td style="text-align:left">audi</td>
+<td style="text-align:left">a4</td>
+<td style="text-align:left">2.0</td>
+<td style="text-align:right">2008</td>
+<td style="text-align:right">4</td>
+<td style="text-align:left">manual(m6)</td>
+<td style="text-align:left">f</td>
+<td style="text-align:right">20</td>
+<td style="text-align:right">31</td>
+<td style="text-align:left">p</td>
+<td style="text-align:left">compact</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">audi</td>
-<td style="text-align: left;">a4</td>
-<td style="text-align: left;">2.0</td>
-<td style="text-align: right;">2008</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: left;">auto(av)</td>
-<td style="text-align: left;">f</td>
-<td style="text-align: right;">21</td>
-<td style="text-align: right;">30</td>
-<td style="text-align: left;">p</td>
-<td style="text-align: left;">compact</td>
+<tr>
+<td style="text-align:left">audi</td>
+<td style="text-align:left">a4</td>
+<td style="text-align:left">2.0</td>
+<td style="text-align:right">2008</td>
+<td style="text-align:right">4</td>
+<td style="text-align:left">auto(av)</td>
+<td style="text-align:left">f</td>
+<td style="text-align:right">21</td>
+<td style="text-align:right">30</td>
+<td style="text-align:left">p</td>
+<td style="text-align:left">compact</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">audi</td>
-<td style="text-align: left;">a4</td>
-<td style="text-align: left;">2.8</td>
-<td style="text-align: right;">1999</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: left;">auto(l5)</td>
-<td style="text-align: left;">f</td>
-<td style="text-align: right;">16</td>
-<td style="text-align: right;">26</td>
-<td style="text-align: left;">p</td>
-<td style="text-align: left;">compact</td>
+<tr>
+<td style="text-align:left">audi</td>
+<td style="text-align:left">a4</td>
+<td style="text-align:left">2.8</td>
+<td style="text-align:right">1999</td>
+<td style="text-align:right">6</td>
+<td style="text-align:left">auto(l5)</td>
+<td style="text-align:left">f</td>
+<td style="text-align:right">16</td>
+<td style="text-align:right">26</td>
+<td style="text-align:left">p</td>
+<td style="text-align:left">compact</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">audi</td>
-<td style="text-align: left;">a4</td>
-<td style="text-align: left;">2.8</td>
-<td style="text-align: right;">1999</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: left;">manual(m5)</td>
-<td style="text-align: left;">f</td>
-<td style="text-align: right;">18</td>
-<td style="text-align: right;">26</td>
-<td style="text-align: left;">p</td>
-<td style="text-align: left;">compact</td>
+<tr>
+<td style="text-align:left">audi</td>
+<td style="text-align:left">a4</td>
+<td style="text-align:left">2.8</td>
+<td style="text-align:right">1999</td>
+<td style="text-align:right">6</td>
+<td style="text-align:left">manual(m5)</td>
+<td style="text-align:left">f</td>
+<td style="text-align:right">18</td>
+<td style="text-align:right">26</td>
+<td style="text-align:left">p</td>
+<td style="text-align:left">compact</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">audi</td>
-<td style="text-align: left;">a4</td>
-<td style="text-align: left;">3.1</td>
-<td style="text-align: right;">2008</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: left;">auto(av)</td>
-<td style="text-align: left;">f</td>
-<td style="text-align: right;">18</td>
-<td style="text-align: right;">27</td>
-<td style="text-align: left;">p</td>
-<td style="text-align: left;">compact</td>
+<tr>
+<td style="text-align:left">audi</td>
+<td style="text-align:left">a4</td>
+<td style="text-align:left">3.1</td>
+<td style="text-align:right">2008</td>
+<td style="text-align:right">6</td>
+<td style="text-align:left">auto(av)</td>
+<td style="text-align:left">f</td>
+<td style="text-align:right">18</td>
+<td style="text-align:right">27</td>
+<td style="text-align:left">p</td>
+<td style="text-align:left">compact</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">audi</td>
-<td style="text-align: left;">a4 quattro</td>
-<td style="text-align: left;">1.8</td>
-<td style="text-align: right;">1999</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: left;">manual(m5)</td>
-<td style="text-align: left;">4</td>
-<td style="text-align: right;">18</td>
-<td style="text-align: right;">26</td>
-<td style="text-align: left;">p</td>
-<td style="text-align: left;">compact</td>
+<tr>
+<td style="text-align:left">audi</td>
+<td style="text-align:left">a4 quattro</td>
+<td style="text-align:left">1.8</td>
+<td style="text-align:right">1999</td>
+<td style="text-align:right">4</td>
+<td style="text-align:left">manual(m5)</td>
+<td style="text-align:left">4</td>
+<td style="text-align:right">18</td>
+<td style="text-align:right">26</td>
+<td style="text-align:left">p</td>
+<td style="text-align:left">compact</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">audi</td>
-<td style="text-align: left;">a4 quattro</td>
-<td style="text-align: left;">1.8</td>
-<td style="text-align: right;">1999</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: left;">auto(l5)</td>
-<td style="text-align: left;">4</td>
-<td style="text-align: right;">16</td>
-<td style="text-align: right;">25</td>
-<td style="text-align: left;">p</td>
-<td style="text-align: left;">compact</td>
+<tr>
+<td style="text-align:left">audi</td>
+<td style="text-align:left">a4 quattro</td>
+<td style="text-align:left">1.8</td>
+<td style="text-align:right">1999</td>
+<td style="text-align:right">4</td>
+<td style="text-align:left">auto(l5)</td>
+<td style="text-align:left">4</td>
+<td style="text-align:right">16</td>
+<td style="text-align:right">25</td>
+<td style="text-align:left">p</td>
+<td style="text-align:left">compact</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">audi</td>
-<td style="text-align: left;">a4 quattro</td>
-<td style="text-align: left;">2.0</td>
-<td style="text-align: right;">2008</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: left;">manual(m6)</td>
-<td style="text-align: left;">4</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: right;">28</td>
-<td style="text-align: left;">p</td>
-<td style="text-align: left;">compact</td>
+<tr>
+<td style="text-align:left">audi</td>
+<td style="text-align:left">a4 quattro</td>
+<td style="text-align:left">2.0</td>
+<td style="text-align:right">2008</td>
+<td style="text-align:right">4</td>
+<td style="text-align:left">manual(m6)</td>
+<td style="text-align:left">4</td>
+<td style="text-align:right">20</td>
+<td style="text-align:right">28</td>
+<td style="text-align:left">p</td>
+<td style="text-align:left">compact</td>
 </tr>
 </tbody>
 </table>
+</div>
 <a id="more"></a>
 <p>创建<code>ggplot2</code>图形,散点图：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ggplot(data = mpg) +</span><br><span class="line">  geom_point(mapping = aes(x = displ, y = hwy)) -&gt; p</span><br><span class="line">p</span><br></pre></td></tr></table></figure>
 <p><img data-src="/figure_rdata_science/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" /></p>
 <p>其中<code>mapping</code>是映射的意思，在<code>ggplot()</code>的<code>()</code>中出现的内容将传递之后的绘图函数，<code>p</code>保存了绘制好的图形，可以进一步进行美化和调整：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">p + theme_minimal(base_family = enfont) +</span><br><span class="line">      theme(axis.text.x = element_blank(),</span><br><span class="line">            axis.text.y = element_blank(),</span><br><span class="line">            axis.title = element_text(size = <span class="number">12</span>))</span><br></pre></td></tr></table></figure>
-<p><img data-src="/figure_rdata_science/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;" /> 可以将一些图片调整的代码存放在<code>modify</code>命名的一个对象中：</p>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;" /><br>可以将一些图片调整的代码存放在<code>modify</code>命名的一个对象中：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">theme_minimal(base_family = enfont) +</span><br><span class="line">  theme(axis.text.x = element_blank(),</span><br><span class="line">        axis.text.y = element_blank(),</span><br><span class="line">        axis.title = element_text(size = <span class="number">12</span>)) -&gt; modify</span><br></pre></td></tr></table></figure>
 <p>实际上，<code>ggplot2</code>的魅力之一在于通过颜色(<strong>color</strong>)、形状(<strong>shape</strong>)、透明度(<strong>alpha</strong>)等等属性展示超越<strong>2</strong>维的信息，比如：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ggplot(data = mpg) +</span><br><span class="line">  geom_point(mapping = aes(x = displ, y = hwy, color = class)) +</span><br><span class="line">  modify</span><br></pre></td></tr></table></figure>
@@ -444,8 +444,7 @@
 <p>可以使用占位符<code>.</code>来代替<code>facet_wrap()</code>第一个参数中的<code>drv</code>，效果如下：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ggplot(data = mpg) +</span><br><span class="line">  geom_point(mapping = aes(x = displ, y = hwy, color = class)) +</span><br><span class="line">  facet_wrap(. ~ cyl, nrow = <span class="number">2</span>) +</span><br><span class="line">  modify</span><br></pre></td></tr></table></figure>
 <p><img data-src="/figure_rdata_science/unnamed-chunk-8-1.png" title="plot of chunk unnamed-chunk-8" alt="plot of chunk unnamed-chunk-8" style="display: block; margin: auto;" /></p>
-<h2 id="几何对象">几何对象</h2>
-<p>R并非只有<code>ggplot2</code>一种绘图方案，比如：</p>
+<h2 id="几何对象"><a href="#几何对象" class="headerlink" title="几何对象"></a>几何对象</h2><p>R并非只有<code>ggplot2</code>一种绘图方案，比如：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">set.seed(<span class="number">123</span>)</span><br><span class="line">n &lt;- <span class="number">1000</span></span><br><span class="line">x1  &lt;- matrix(rnorm(n), ncol = <span class="number">2</span>)</span><br><span class="line">x2  &lt;- matrix(rnorm(n, mean = <span class="number">3</span>, sd = <span class="number">1.5</span>), ncol = <span class="number">2</span>)</span><br><span class="line">x   &lt;- rbind(x1, x2)</span><br><span class="line">head(x)</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#&gt;             [,1]        [,2]</span><br><span class="line">#&gt; [1,] -0.56047565 -0.60189285</span><br><span class="line">#&gt; [2,] -0.23017749 -0.99369859</span><br><span class="line">#&gt; [3,]  1.55870831  1.02678506</span><br><span class="line">#&gt; [4,]  0.07050839  0.75106130</span><br><span class="line">#&gt; [5,]  0.12928774 -1.50916654</span><br><span class="line">#&gt; [6,]  1.71506499 -0.09514745</span><br></pre></td></tr></table></figure>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">smoothScatter(x, xlab = <span class="string">"x1"</span>, ylab = <span class="string">"x2"</span>)</span><br></pre></td></tr></table></figure>
@@ -459,11 +458,10 @@
 <p>也可以为不同的图层指定不同的数据:</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ggplot(data = mpg) +</span><br><span class="line">  geom_point(mapping = aes(x = displ, y = hwy, color = drv)) +</span><br><span class="line">  geom_smooth(data = dplyr::filter(mpg, class == <span class="string">"subcompact"</span>),</span><br><span class="line">              mapping = aes(x = displ, y = hwy),</span><br><span class="line">              se = <span class="literal">FALSE</span>,</span><br><span class="line">              show.legend = <span class="literal">FALSE</span></span><br><span class="line"> )</span><br></pre></td></tr></table></figure>
 <p><img data-src="/figure_rdata_science/unnamed-chunk-12-1.png" title="plot of chunk unnamed-chunk-12" alt="plot of chunk unnamed-chunk-12" style="display: block; margin: auto;" /></p>
-<h2 id="统计变换">统计变换</h2>
-<p><code>geom_bar()</code>函数可以绘制的基本条形图。</p>
+<h2 id="统计变换"><a href="#统计变换" class="headerlink" title="统计变换"></a>统计变换</h2><p><code>geom_bar()</code>函数可以绘制的基本条形图。</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ggplot(data = diamonds) +</span><br><span class="line">  geom_bar(mapping = aes(x = cut))</span><br></pre></td></tr></table></figure>
 <p><img data-src="/figure_rdata_science/unnamed-chunk-13-1.png" title="plot of chunk unnamed-chunk-13" alt="plot of chunk unnamed-chunk-13" style="display: block; margin: auto;" /></p>
-<p>条形图 <code>x</code> 轴显示的是 <code>cut</code> ，这是 <code>diamonds</code> 数据集中的一个变量。 <code>y</code> 轴显示的是 <code>count</code> ，但 <code>count</code> 不是 <code>diamonds</code> 中的变量！ <code>count</code> 来自哪里呢？很多图形绘制的是数据集的原始数据，比如散点图。另外一些图形则可以绘制那些计算出的新数据，比如条形图。</p>
+<p>条形图<br><code>x</code><br>轴显示的是<br><code>cut</code><br>，这是<br><code>diamonds</code><br>数据集中的一个变量。<br><code>y</code><br>轴显示的是<br><code>count</code><br>，但<br><code>count</code><br>不是<br><code>diamonds</code><br>中的变量！<br><code>count</code><br>来自哪里呢？很多图形绘制的是数据集的原始数据，比如散点图。另外一些图形则可以绘制那些计算出的新数据，比如条形图。</p>
 <p>绘图时用来计算新数据的算法称为stat（statistical transformation），即统计变换。你可能想要覆盖默认的统计变换。在以下代码中，我们将<code>geom_bar()</code>函数的统计变换从计数（默认值）修改为标识。这样我们就可以将条形的高度映射为<code>y</code>轴变量的初始值。遗憾的是，当随意说起条形图时，人们指的可能就是这种条形图，其中条形高度已经存在于数据中，而不是像前一个图一样，条形高度由对行进行计数来生成：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">demo &lt;- tribble(</span><br><span class="line">  ~a,      ~b,</span><br><span class="line">  <span class="string">"bar_1"</span>, <span class="number">20</span>,</span><br><span class="line">  <span class="string">"bar_2"</span>, <span class="number">30</span>,</span><br><span class="line">  <span class="string">"bar_3"</span>, <span class="number">40</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">ggplot(data = demo) +</span><br><span class="line">  geom_bar(</span><br><span class="line">    mapping = aes(x = a, y = b), stat = <span class="string">"identity"</span></span><br><span class="line">  )</span><br></pre></td></tr></table></figure>
 <p><img data-src="/figure_rdata_science/unnamed-chunk-14-1.png" title="plot of chunk unnamed-chunk-14" alt="plot of chunk unnamed-chunk-14" style="display: block; margin: auto;" /></p>
@@ -554,8 +552,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/05/25/biprobit_iv/" rel="prev" title="如何在双变量Probit中使用工具变量法IV估计">
-      <i class="fa fa-chevron-left"></i> 如何在双变量Probit中使用工具变量法IV估计
+    <a href="/2020/05/25/berry/" rel="prev" title="致Berry">
+      <i class="fa fa-chevron-left"></i> 致Berry
     </a></div>
       <div class="post-nav-item">
     <a href="/2020/05/27/bubblemap/" rel="next" title="大城市人口增长速度（一个气泡图作业）">
