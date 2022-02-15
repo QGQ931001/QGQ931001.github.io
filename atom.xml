@@ -154,6 +154,34 @@
   </entry>
   
   <entry>
+    <title>大城市人口增长速度（一个气泡图作业）</title>
+    <link href="https://github.com/QGQ931001/2020/05/27/bubblemap/"/>
+    <id>https://github.com/QGQ931001/2020/05/27/bubblemap/</id>
+    <published>2020-05-27T00:00:00.000Z</published>
+    <updated>2022-02-15T14:53:10.420Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;效果展示&quot;&gt;效果展示&lt;/h2&gt;&lt;img data-src=&quot;/figure/bubblemap.png&quot; width=&quot;80%&quot; height=&quot;80%&quot; align=&quot;middle&quot;&gt;&lt;center&gt;上图即为最终效果&lt;/center&gt;&lt;h2 id=&quot;下载数据&quot;&gt;下载数据&lt;/h2&gt;&lt;p&gt;将代码中的&lt;strong&gt;&lt;code&gt;~/文档/&lt;/code&gt;&lt;/strong&gt;更换为要保存的目录。&lt;/p&gt;&lt;div class=&quot;sourceCode&quot; id=&quot;cb1&quot;&gt;&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span id=&quot;cb1-1&quot;&gt;&lt;a href=&quot;#cb1-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;download.file&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv&amp;quot;&lt;/span&gt;, &lt;span class=&quot;at&quot;&gt;destfile =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;~/文档/data-bKvwd.csv&amp;quot;&lt;/span&gt; )&lt;/span&gt;
+&lt;span id=&quot;cb1-2&quot;&gt;&lt;a href=&quot;#cb1-2&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;download.file&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json&amp;quot;&lt;/span&gt;, &lt;span class=&quot;at&quot;&gt;destfile =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;~/文档/world.geo.json&amp;quot;&lt;/span&gt; )&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&quot;加载r包&quot;&gt;加载R包&lt;/h2&gt;&lt;p&gt;需要的R包如下所示。&lt;/p&gt;&lt;div class=&quot;sourceCode&quot; id=&quot;cb2&quot;&gt;&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span id=&quot;cb2-1&quot;&gt;&lt;a href=&quot;#cb2-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;library&lt;/span&gt;(sf)&lt;/span&gt;
+&lt;span id=&quot;cb2-2&quot;&gt;&lt;a href=&quot;#cb2-2&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;library&lt;/span&gt;(readr)&lt;/span&gt;
+&lt;span id=&quot;cb2-3&quot;&gt;&lt;a href=&quot;#cb2-3&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;library&lt;/span&gt;(tidyverse)&lt;/span&gt;
+&lt;span id=&quot;cb2-4&quot;&gt;&lt;a href=&quot;#cb2-4&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;library&lt;/span&gt;(hrbrthemes)&lt;/span&gt;
+&lt;span id=&quot;cb2-5&quot;&gt;&lt;a href=&quot;#cb2-5&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;library&lt;/span&gt;(ggtext)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="绘图" scheme="https://github.com/QGQ931001/categories/%E7%BB%98%E5%9B%BE/"/>
+    
+      <category term="map&amp;sf" scheme="https://github.com/QGQ931001/categories/%E7%BB%98%E5%9B%BE/map-sf/"/>
+    
+    
+      <category term="R" scheme="https://github.com/QGQ931001/tags/R/"/>
+    
+  </entry>
+  
+  <entry>
     <title>R数据科学——ggplot2笔记（1）</title>
     <link href="https://github.com/QGQ931001/2020/05/26/r_for_data_science/"/>
     <id>https://github.com/QGQ931001/2020/05/26/r_for_data_science/</id>
@@ -404,28 +432,6 @@
     
     
       <category term="shell" scheme="https://github.com/QGQ931001/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Bubblemap</title>
-    <link href="https://github.com/QGQ931001/1970/01/01/bubblemap/"/>
-    <id>https://github.com/QGQ931001/1970/01/01/bubblemap/</id>
-    <published>1970-01-01T00:00:00.000Z</published>
-    <updated>2022-02-15T14:49:48.060Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;效果展示&quot;&gt;效果展示&lt;/h2&gt;&lt;img data-src=&quot;/figure/bubblemap.png&quot; width=&quot;80%&quot; height=&quot;80%&quot; align=&quot;middle&quot;&gt;&lt;center&gt;上图即为最终效果&lt;/center&gt;&lt;h2 id=&quot;下载数据&quot;&gt;下载数据&lt;/h2&gt;&lt;p&gt;将代码中的&lt;strong&gt;&lt;code&gt;~/文档/&lt;/code&gt;&lt;/strong&gt;更换为要保存的目录。&lt;/p&gt;&lt;div class=&quot;sourceCode&quot; id=&quot;cb1&quot;&gt;&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span id=&quot;cb1-1&quot;&gt;&lt;a href=&quot;#cb1-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;download.file&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv&amp;quot;&lt;/span&gt;, &lt;span class=&quot;at&quot;&gt;destfile =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;~/文档/data-bKvwd.csv&amp;quot;&lt;/span&gt; )&lt;/span&gt;
-&lt;span id=&quot;cb1-2&quot;&gt;&lt;a href=&quot;#cb1-2&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;download.file&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json&amp;quot;&lt;/span&gt;, &lt;span class=&quot;at&quot;&gt;destfile =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;~/文档/world.geo.json&amp;quot;&lt;/span&gt; )&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&quot;加载r包&quot;&gt;加载R包&lt;/h2&gt;&lt;p&gt;需要的R包如下所示。&lt;/p&gt;&lt;div class=&quot;sourceCode&quot; id=&quot;cb2&quot;&gt;&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span id=&quot;cb2-1&quot;&gt;&lt;a href=&quot;#cb2-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;library&lt;/span&gt;(sf)&lt;/span&gt;
-&lt;span id=&quot;cb2-2&quot;&gt;&lt;a href=&quot;#cb2-2&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;library&lt;/span&gt;(readr)&lt;/span&gt;
-&lt;span id=&quot;cb2-3&quot;&gt;&lt;a href=&quot;#cb2-3&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;library&lt;/span&gt;(tidyverse)&lt;/span&gt;
-&lt;span id=&quot;cb2-4&quot;&gt;&lt;a href=&quot;#cb2-4&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;library&lt;/span&gt;(hrbrthemes)&lt;/span&gt;
-&lt;span id=&quot;cb2-5&quot;&gt;&lt;a href=&quot;#cb2-5&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;library&lt;/span&gt;(ggtext)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-    
-    </summary>
-    
-    
     
   </entry>
   
