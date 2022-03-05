@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>大城市人口增长速度（一个气泡图作业）</title>
+    <title>大城市人口增长速度</title>
     <url>/2020/05/27/bubblemap/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2><img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle"><center>上图即为最终效果</center><h2 id="下载数据">下载数据</h2><p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录。</p><div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">&quot;https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv&quot;</span>, <span class="at">destfile =</span> <span class="st">&quot;~/文档/data-bKvwd.csv&quot;</span> )</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">&quot;https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json&quot;</span>, <span class="at">destfile =</span> <span class="st">&quot;~/文档/world.geo.json&quot;</span> )</span></code></pre></div><h2 id="加载r包">加载R包</h2><p>需要的R包如下所示。</p><div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
