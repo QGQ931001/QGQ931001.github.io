@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/QGQ931001/"/>
-  <updated>2022-04-22T14:54:40.342Z</updated>
+  <updated>2022-08-26T20:11:54.077Z</updated>
   <id>https://github.com/QGQ931001/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>学术讲座# 中国人民大学经济学院江艇：渐进DID的最新进展</title>
+    <link href="https://github.com/QGQ931001/2022/08/24/DID1/"/>
+    <id>https://github.com/QGQ931001/2022/08/24/DID1/</id>
+    <published>2022-08-24T00:00:00.000Z</published>
+    <updated>2022-08-26T20:11:54.077Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;     &lt;/p&gt;&lt;p&gt;&lt;strong&gt;关于DID因果识别&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Imbens: 任何的因果识别归根结底都是做&lt;strong&gt;差值&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;传统&lt;span class=&quot;math inline&quot;&gt;\(DID\)&lt;/span&gt;最大的两类威胁是：①平行趋势不成立；②存在混淆政策&lt;/li&gt;&lt;li&gt;&lt;span class=&quot;math inline&quot;&gt;\(DID\)&lt;/span&gt;的重要前提是平行趋势，但这种前提实际并不能完全验证：事前平行并不意味着事后平行趋势，但事前不平行一定能验证平行趋势不成立&lt;/li&gt;&lt;li&gt;最经典的例子就是经济特区，深圳在改革开放前可能和中原地区的一个小村庄没有什么不同，但是即使深圳没有被划为经济特区，改革开放后其经济增长趋势也有可能因为地缘优势而呈现较快的增长趋势&lt;/li&gt;&lt;li&gt;两期的数据做&lt;span class=&quot;math inline&quot;&gt;\(DID\)&lt;/span&gt;会退化为&lt;span class=&quot;math inline&quot;&gt;\(FD\)&lt;/span&gt;，此时的截距项代表时间变化趋势&lt;/li&gt;&lt;li&gt;Good control: 既影响&lt;span class=&quot;math inline&quot;&gt;\(y\)&lt;/span&gt;，又影响&lt;span class=&quot;math inline&quot;&gt;\(D \cdot T\)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;Bad control: 既影响&lt;span class=&quot;math inline&quot;&gt;\(y\)&lt;/span&gt;，又被&lt;span class=&quot;math inline&quot;&gt;\(D \cdot T\)&lt;/span&gt;影响&lt;/li&gt;&lt;li&gt;无法判断影响样本进入处理组的因素是否还影响其变化趋势&lt;/li&gt;&lt;li&gt;潜在结果：使用上标表示，想象中的结果&lt;/li&gt;&lt;li&gt;&lt;span class=&quot;math inline&quot;&gt;\(ATT\)&lt;/span&gt;：处理组接受处理后的平均处理效应&lt;/li&gt;&lt;li&gt;&lt;span class=&quot;math inline&quot;&gt;\(D\)&lt;/span&gt;实际可以理解为处理组的固定效应&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+    
+    </summary>
+    
+    
+      <category term="计量" scheme="https://github.com/QGQ931001/categories/%E8%AE%A1%E9%87%8F/"/>
+    
+      <category term="DID" scheme="https://github.com/QGQ931001/categories/%E8%AE%A1%E9%87%8F/DID/"/>
+    
+    
+      <category term="学术讲座" scheme="https://github.com/QGQ931001/tags/%E5%AD%A6%E6%9C%AF%E8%AE%B2%E5%BA%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>2014到2021年:淘宝村分布散点图😲</title>
