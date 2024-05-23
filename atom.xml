@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>秦国庆的小站</title>
+  
+  <subtitle>思考 驻足 回首</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://github.com/QGQ931001/"/>
+  <updated>2022-09-26T15:11:20.541Z</updated>
+  <id>https://github.com/QGQ931001/</id>
+  
+  <author>
+    <name>QGQ</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>学术讲座# 中国人民大学经济学院江艇：因果推断Ⅰ</title>
+    <link href="https://github.com/QGQ931001/2022/09/12/jiangting1/"/>
+    <id>https://github.com/QGQ931001/2022/09/12/jiangting1/</id>
+    <published>2022-09-12T00:00:00.000Z</published>
+    <updated>2022-09-26T15:11:20.541Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;     &lt;/p&gt;&lt;p&gt;&lt;strong&gt;因果推断&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;因果识别+统计推断&lt;/li&gt;&lt;li&gt;因果识别（causal identification）：如果拥有总体，能否确定总体因果关系&lt;/li&gt;&lt;li&gt;统计推断（statistical inference）：如何从样本数据获取总体因果关系信息，实际是一种相关性事实&lt;/li&gt;&lt;li&gt;识别假设，实际就是对&lt;span class=&quot;math inline&quot;&gt;\(D\)&lt;/span&gt;和&lt;span class=&quot;math inline&quot;&gt;\(\epsilon\)&lt;/span&gt;的关系作出表述，但这种过程是无法从理论上验证的&lt;/li&gt;&lt;li&gt;随机实验：研究者主动介入了数据生成过程，以确保干净的干预效应生成过程。在平均意义上，只有&lt;span class=&quot;math inline&quot;&gt;\(D\)&lt;/span&gt;是两者之间唯一的系统性差别&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+    
+    </summary>
+    
+    
+      <category term="计量" scheme="https://github.com/QGQ931001/categories/%E8%AE%A1%E9%87%8F/"/>
+    
+    
+      <category term="学术讲座" scheme="https://github.com/QGQ931001/tags/%E5%AD%A6%E6%9C%AF%E8%AE%B2%E5%BA%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>学术讲座# 中国人民大学经济学院江艇：渐进DID的最新进展</title>
+    <link href="https://github.com/QGQ931001/2022/08/24/DID1/"/>
+    <id>https://github.com/QGQ931001/2022/08/24/DID1/</id>
+    <published>2022-08-24T00:00:00.000Z</published>
+    <updated>2022-09-12T05:58:08.917Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;     &lt;/p&gt;&lt;p&gt;&lt;strong&gt;关于DID因果识别&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Imbens: 任何的因果识别归根结底都是做&lt;strong&gt;差值&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;传统&lt;span class=&quot;math inline&quot;&gt;\(DID\)&lt;/span&gt;最大的两类威胁是：①平行趋势不成立；②存在混淆政策&lt;/li&gt;&lt;li&gt;&lt;span class=&quot;math inline&quot;&gt;\(DID\)&lt;/span&gt;的重要前提是平行趋势，但这种前提实际并不能完全验证：事前平行并不意味着事后平行趋势，但事前不平行一定能验证平行趋势不成立&lt;/li&gt;&lt;li&gt;最经典的例子就是经济特区，深圳在改革开放前可能和中原地区的一个小村庄没有什么不同，但是即使深圳没有被划为经济特区，改革开放后其经济增长趋势也有可能因为地缘优势而呈现较快的增长趋势&lt;/li&gt;&lt;li&gt;两期的数据做&lt;span class=&quot;math inline&quot;&gt;\(DID\)&lt;/span&gt;会退化为&lt;span class=&quot;math inline&quot;&gt;\(FD\)&lt;/span&gt;，此时的截距项代表时间变化趋势&lt;/li&gt;&lt;li&gt;Good control: 既影响&lt;span class=&quot;math inline&quot;&gt;\(y\)&lt;/span&gt;，又影响&lt;span class=&quot;math inline&quot;&gt;\(D \cdot T\)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;Bad control: 既影响&lt;span class=&quot;math inline&quot;&gt;\(y\)&lt;/span&gt;，又被&lt;span class=&quot;math inline&quot;&gt;\(D \cdot T\)&lt;/span&gt;影响&lt;/li&gt;&lt;li&gt;无法判断影响样本进入处理组的因素是否还影响其变化趋势&lt;/li&gt;&lt;li&gt;潜在结果：使用上标表示，想象中的结果&lt;/li&gt;&lt;li&gt;&lt;span class=&quot;math inline&quot;&gt;\(ATT\)&lt;/span&gt;：处理组接受处理后的平均处理效应&lt;/li&gt;&lt;li&gt;&lt;span class=&quot;math inline&quot;&gt;\(D\)&lt;/span&gt;实际可以理解为处理组的固定效应&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+    
+    </summary>
+    
+    
+      <category term="计量" scheme="https://github.com/QGQ931001/categories/%E8%AE%A1%E9%87%8F/"/>
+    
+      <category term="DID" scheme="https://github.com/QGQ931001/categories/%E8%AE%A1%E9%87%8F/DID/"/>
+    
+    
+      <category term="学术讲座" scheme="https://github.com/QGQ931001/tags/%E5%AD%A6%E6%9C%AF%E8%AE%B2%E5%BA%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2014到2021年:淘宝村分布散点图😲</title>
+    <link href="https://github.com/QGQ931001/2022/02/12/taobao/"/>
+    <id>https://github.com/QGQ931001/2022/02/12/taobao/</id>
+    <published>2022-02-12T00:00:00.000Z</published>
+    <updated>2022-04-22T14:54:40.342Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;效果展示&quot;&gt;效果展示&lt;/h2&gt;&lt;img data-src=&quot;/figure/2014.svg&quot; width=&quot;70%&quot; height=&quot;70%&quot; align=&quot;middle&quot;&gt;&lt;center&gt;2014年的淘宝村分布&lt;/center&gt;
+    
+    </summary>
+    
+    
+      <category term="绘图" scheme="https://github.com/QGQ931001/categories/%E7%BB%98%E5%9B%BE/"/>
+    
+      <category term="map&amp;sf" scheme="https://github.com/QGQ931001/categories/%E7%BB%98%E5%9B%BE/map-sf/"/>
+    
+    
+      <category term="R" scheme="https://github.com/QGQ931001/tags/R/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
+    <link href="https://github.com/QGQ931001/2020/06/08/paper1/"/>
+    <id>https://github.com/QGQ931001/2020/06/08/paper1/</id>
+    <published>2020-06-08T00:00:00.000Z</published>
+    <updated>2020-08-08T05:11:31.352Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;     &lt;/p&gt;&lt;h2 id=&quot;研究问题&quot;&gt;&lt;strong&gt;1. 研究问题&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;本文以江苏省12个地级市“河长制”政策转移案例(2006 — 2016)为研究对象,在识别政策转移案例中“复制”和“再生产”两种程度差异的基础上,应用定性比较分析(&lt;code&gt;QCA&lt;/code&gt;)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对“河长制”转移程度的影响。研究发现“河长制”政策转移中的“政策再生产”的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局。通过&lt;code&gt;QCA&lt;/code&gt;软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策“再生产”的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产。&lt;/p&gt;&lt;p&gt; &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="公共管理" scheme="https://github.com/QGQ931001/categories/%E5%85%AC%E5%85%B1%E7%AE%A1%E7%90%86/"/>
+    
+      <category term="政策转移" scheme="https://github.com/QGQ931001/categories/%E5%85%AC%E5%85%B1%E7%AE%A1%E7%90%86/%E6%94%BF%E7%AD%96%E8%BD%AC%E7%A7%BB/"/>
+    
+    
+      <category term="文献阅读" scheme="https://github.com/QGQ931001/tags/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>文献阅读# the Effect of Microinsurance on Economic Activities: Evidence From a Randomized Field Experiment</title>
+    <link href="https://github.com/QGQ931001/2020/06/06/paper2/"/>
+    <id>https://github.com/QGQ931001/2020/06/06/paper2/</id>
+    <published>2020-06-06T00:00:00.000Z</published>
+    <updated>2022-08-23T11:57:10.973Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;     &lt;/p&gt;&lt;p&gt;&lt;strong&gt;需要提前了解的生猪养殖知识背景&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;市场上常见的肉猪基本均为经过绝育的猪。一般而言，养殖户会在猪仔1个月大小的时候进行绝育，对公猪进行阉割，对母猪则切除卵巢。这种做法能够增加肉猪的成长速度，减少猪发情带来的成本，并减小猪肉的膻腥味、提升口感。&lt;/li&gt;&lt;li&gt;如果养殖户存养未绝育的种猪或母猪，其用途主要为繁育猪仔。&lt;/li&gt;&lt;li&gt;对于农村的小型散养户而言，每个村庄一般会有一个村兽医、或养殖技术联络员为其提供“猪的绝育”服务，村兽医、或养殖技术联络员基本 对应本文中的&quot;Animal Husbandry Workers (AHW)&quot;。&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;     &lt;/p&gt;&lt;h2 id=&quot;研究问题&quot;&gt;&lt;strong&gt;1. 研究问题&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;本文旨在对“小额保险”（“普惠型保险”）对农户农业生产决策的作用进行因果识别。&lt;/p&gt;&lt;p&gt;具体而言，作者以“母猪保险”这一险种为例，以贵州省毕节市金沙县27个乡镇的480个村为实验场域，采用田野实验的方法，在中国人民财产保险股份有限公司（PCC）所推出的“母猪保险”产品基础上，结合金沙县“保险公司产推--&amp;gt;畜牧局地推--&amp;gt;养殖技术联络员村推”的保险推广模式，为村养殖技术联络员（AHW）随机分配“绩效激励”，进而设置了村级层面的处理组和控制组，基于“组别”设置了一个村级层面的外生变量，对“母猪保险”村庄覆盖差异与后期“母猪存栏量”之间的因果关系进行因果识别。&lt;/p&gt;&lt;p&gt; &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="实验经济学" scheme="https://github.com/QGQ931001/categories/%E5%AE%9E%E9%AA%8C%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+    
+      <category term="保险" scheme="https://github.com/QGQ931001/categories/%E5%AE%9E%E9%AA%8C%E7%BB%8F%E6%B5%8E%E5%AD%A6/%E4%BF%9D%E9%99%A9/"/>
+    
+    
+      <category term="文献阅读" scheme="https://github.com/QGQ931001/tags/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>字体和公式的Display</title>
+    <link href="https://github.com/QGQ931001/2020/05/30/testof_mathequation_fontface/"/>
+    <id>https://github.com/QGQ931001/2020/05/30/testof_mathequation_fontface/</id>
+    <published>2020-05-29T16:00:00.000Z</published>
+    <updated>2020-05-31T08:50:32.391Z</updated>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&lt;p style=&quot;text-align:justify&quot;&gt;&lt;b&gt;“Evaluating the employment impact of a mandatory job search program”&lt;/b&gt;&lt;/p&gt;&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&lt;p style=&quot;text-align:justify&quot;&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;What treatment do the authors evaluate?&lt;/b&gt;&lt;/p&gt;&lt;/font&gt;&lt;br&gt;&lt;p&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="调试" scheme="https://github.com/QGQ931001/categories/%E8%B0%83%E8%AF%95/"/>
+    
+    
+      <category term="blog_test" scheme="https://github.com/QGQ931001/tags/blog-test/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>画一幅我农所在地的道路图</title>
+    <link href="https://github.com/QGQ931001/2020/05/29/yanglingmap/"/>
+    <id>https://github.com/QGQ931001/2020/05/29/yanglingmap/</id>
+    <published>2020-05-28T16:00:00.000Z</published>
+    <updated>2020-05-28T18:12:03.882Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;效果展示&quot;&gt;效果展示&lt;/h2&gt;&lt;img data-src=&quot;/figure/yanglingroad.png&quot; width=&quot;80%&quot; height=&quot;80%&quot; align=&quot;middle&quot; style=&quot;display:block;margin:auto&quot;&gt;&lt;center&gt;上图即为最终效果&lt;/center&gt;&lt;h2 id=&quot;一些必备的工具&quot;&gt;一些必备的工具&lt;/h2&gt;&lt;p&gt;一张json格式的我农地图，或者杨陵地图,可从&lt;a href=&quot;https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json&quot;&gt;我的github仓库下载&lt;/a&gt;&lt;/p&gt;&lt;div class=&quot;sourceCode&quot; id=&quot;cb1&quot;&gt;&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span id=&quot;cb1-1&quot;&gt;&lt;a href=&quot;#cb1-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;download.file&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json&amp;quot;&lt;/span&gt;, &lt;span class=&quot;at&quot;&gt;destfile =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;~/文档/yangling.json&amp;quot;&lt;/span&gt; )&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="绘图" scheme="https://github.com/QGQ931001/categories/%E7%BB%98%E5%9B%BE/"/>
+    
+    
+      <category term="R" scheme="https://github.com/QGQ931001/tags/R/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>🙃大城市人口增长速度🔦</title>
+    <link href="https://github.com/QGQ931001/2020/05/27/bubblemap/"/>
+    <id>https://github.com/QGQ931001/2020/05/27/bubblemap/</id>
+    <published>2020-05-27T00:00:00.000Z</published>
+    <updated>2022-04-29T15:07:31.725Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;效果展示&quot;&gt;效果展示&lt;/h2&gt;&lt;img data-src=&quot;/figure/bubblemap.png&quot; width=&quot;80%&quot; height=&quot;80%&quot; align=&quot;middle&quot;&gt;&lt;center&gt;上图即为最终效果&lt;/center&gt;&lt;h2 id=&quot;下载数据&quot;&gt;下载数据&lt;/h2&gt;&lt;p&gt;将代码中的&lt;strong&gt;&lt;code&gt;~/文档/&lt;/code&gt;&lt;/strong&gt;更换为要保存的目录。&lt;/p&gt;&lt;div class=&quot;sourceCode&quot; id=&quot;cb1&quot;&gt;&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span id=&quot;cb1-1&quot;&gt;&lt;a href=&quot;#cb1-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;download.file&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv&amp;quot;&lt;/span&gt;, &lt;span class=&quot;at&quot;&gt;destfile =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;~/文档/data-bKvwd.csv&amp;quot;&lt;/span&gt; )&lt;/span&gt;
+&lt;span id=&quot;cb1-2&quot;&gt;&lt;a href=&quot;#cb1-2&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;download.file&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json&amp;quot;&lt;/span&gt;, &lt;span class=&quot;at&quot;&gt;destfile =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;~/文档/world.geo.json&amp;quot;&lt;/span&gt; )&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&quot;加载r包&quot;&gt;加载R包&lt;/h2&gt;&lt;p&gt;需要的R包如下所示。&lt;/p&gt;&lt;div class=&quot;sourceCode&quot; id=&quot;cb2&quot;&gt;&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span id=&quot;cb2-1&quot;&gt;&lt;a href=&quot;#cb2-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;library&lt;/span&gt;(sf)&lt;/span&gt;
+&lt;span id=&quot;cb2-2&quot;&gt;&lt;a href=&quot;#cb2-2&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;library&lt;/span&gt;(readr)&lt;/span&gt;
+&lt;span id=&quot;cb2-3&quot;&gt;&lt;a href=&quot;#cb2-3&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;library&lt;/span&gt;(tidyverse)&lt;/span&gt;
+&lt;span id=&quot;cb2-4&quot;&gt;&lt;a href=&quot;#cb2-4&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;library&lt;/span&gt;(hrbrthemes)&lt;/span&gt;
+&lt;span id=&quot;cb2-5&quot;&gt;&lt;a href=&quot;#cb2-5&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;library&lt;/span&gt;(ggtext)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="绘图" scheme="https://github.com/QGQ931001/categories/%E7%BB%98%E5%9B%BE/"/>
+    
+      <category term="map&amp;sf" scheme="https://github.com/QGQ931001/categories/%E7%BB%98%E5%9B%BE/map-sf/"/>
+    
+    
+      <category term="R" scheme="https://github.com/QGQ931001/tags/R/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>R数据科学——ggplot2笔记（1）</title>
+    <link href="https://github.com/QGQ931001/2020/05/26/r_for_data_science/"/>
+    <id>https://github.com/QGQ931001/2020/05/26/r_for_data_science/</id>
+    <published>2020-05-26T00:00:00.000Z</published>
+    <updated>2020-05-31T12:47:48.812Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;一个说明&quot;&gt;一个说明&lt;/h2&gt;&lt;p&gt;&lt;code&gt;ggplot2::ggplot()&lt;/code&gt;指使用&lt;a href=&quot;https://ggplot2.tidyverse.org/&quot;&gt;&lt;strong&gt;ggplot2&lt;/strong&gt;&lt;/a&gt;包中的&lt;code&gt;ggplot&lt;/code&gt;函数，&lt;code&gt;::&lt;/code&gt;表示快速调用某个包里的函数。&lt;/p&gt;&lt;h2 id=&quot;示例&quot;&gt;示例&lt;/h2&gt;&lt;p&gt;使用&lt;code&gt;ggplot2&lt;/code&gt;包中的&lt;code&gt;mpg&lt;/code&gt;数据框，这份数据是一份汽车资料：&lt;/p&gt;&lt;div class=&quot;sourceCode&quot; id=&quot;cb1&quot;&gt;&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span id=&quot;cb1-1&quot;&gt;&lt;a href=&quot;#cb1-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;knitr&lt;span class=&quot;sc&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;kable&lt;/span&gt;(&lt;span class=&quot;fu&quot;&gt;head&lt;/span&gt;(ggplot2&lt;span class=&quot;sc&quot;&gt;::&lt;/span&gt;mpg, &lt;span class=&quot;dv&quot;&gt;10&lt;/span&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;table style=&quot;width:100%&quot;&gt;&lt;colgroup&gt;&lt;col style=&quot;width:17%&quot;&gt;&lt;col style=&quot;width:15%&quot;&gt;&lt;col style=&quot;width:8%&quot;&gt;&lt;col style=&quot;width:6%&quot;&gt;&lt;col style=&quot;width:5%&quot;&gt;&lt;col style=&quot;width:15%&quot;&gt;&lt;col style=&quot;width:5%&quot;&gt;&lt;col style=&quot;width:5%&quot;&gt;&lt;col style=&quot;width:5%&quot;&gt;&lt;col style=&quot;width:4%&quot;&gt;&lt;col style=&quot;width:10%&quot;&gt;&lt;/colgroup&gt;&lt;thead&gt;&lt;tr class=&quot;header&quot;&gt;&lt;th style=&quot;text-align:left&quot;&gt;manufacturer&lt;/th&gt;&lt;th style=&quot;text-align:left&quot;&gt;model&lt;/th&gt;&lt;th style=&quot;text-align:left&quot;&gt;displ&lt;/th&gt;&lt;th style=&quot;text-align:right&quot;&gt;year&lt;/th&gt;&lt;th style=&quot;text-align:right&quot;&gt;cyl&lt;/th&gt;&lt;th style=&quot;text-align:left&quot;&gt;trans&lt;/th&gt;&lt;th style=&quot;text-align:left&quot;&gt;drv&lt;/th&gt;&lt;th style=&quot;text-align:right&quot;&gt;cty&lt;/th&gt;&lt;th style=&quot;text-align:right&quot;&gt;hwy&lt;/th&gt;&lt;th style=&quot;text-align:left&quot;&gt;fl&lt;/th&gt;&lt;th style=&quot;text-align:left&quot;&gt;class&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr class=&quot;odd&quot;&gt;&lt;td style=&quot;text-align:left&quot;&gt;audi&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;a4&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;1.8&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;1999&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;4&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;auto(l5)&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;f&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;18&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;29&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;p&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;compact&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&quot;even&quot;&gt;&lt;td style=&quot;text-align:left&quot;&gt;audi&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;a4&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;1.8&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;1999&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;4&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;manual(m5)&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;f&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;21&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;29&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;p&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;compact&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&quot;odd&quot;&gt;&lt;td style=&quot;text-align:left&quot;&gt;audi&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;a4&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;2.0&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;2008&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;4&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;manual(m6)&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;f&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;20&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;31&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;p&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;compact&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&quot;even&quot;&gt;&lt;td style=&quot;text-align:left&quot;&gt;audi&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;a4&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;2.0&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;2008&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;4&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;auto(av)&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;f&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;21&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;30&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;p&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;compact&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&quot;odd&quot;&gt;&lt;td style=&quot;text-align:left&quot;&gt;audi&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;a4&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;2.8&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;1999&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;6&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;auto(l5)&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;f&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;16&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;26&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;p&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;compact&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&quot;even&quot;&gt;&lt;td style=&quot;text-align:left&quot;&gt;audi&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;a4&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;2.8&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;1999&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;6&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;manual(m5)&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;f&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;18&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;26&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;p&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;compact&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&quot;odd&quot;&gt;&lt;td style=&quot;text-align:left&quot;&gt;audi&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;a4&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;3.1&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;2008&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;6&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;auto(av)&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;f&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;18&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;27&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;p&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;compact&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&quot;even&quot;&gt;&lt;td style=&quot;text-align:left&quot;&gt;audi&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;a4 quattro&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;1.8&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;1999&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;4&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;manual(m5)&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;4&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;18&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;26&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;p&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;compact&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&quot;odd&quot;&gt;&lt;td style=&quot;text-align:left&quot;&gt;audi&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;a4 quattro&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;1.8&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;1999&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;4&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;auto(l5)&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;4&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;16&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;25&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;p&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;compact&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&quot;even&quot;&gt;&lt;td style=&quot;text-align:left&quot;&gt;audi&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;a4 quattro&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;2.0&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;2008&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;4&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;manual(m6)&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;4&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;20&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;28&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;p&lt;/td&gt;&lt;td style=&quot;text-align:left&quot;&gt;compact&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+    
+    </summary>
+    
+    
+      <category term="绘图" scheme="https://github.com/QGQ931001/categories/%E7%BB%98%E5%9B%BE/"/>
+    
+    
+      <category term="R" scheme="https://github.com/QGQ931001/tags/R/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何在双变量Probit中使用工具变量法IV估计</title>
+    <link href="https://github.com/QGQ931001/2020/05/25/biprobit_iv/"/>
+    <id>https://github.com/QGQ931001/2020/05/25/biprobit_iv/</id>
+    <published>2020-05-24T16:00:00.000Z</published>
+    <updated>2020-05-27T06:52:00.995Z</updated>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;&lt;h1 id=&quot;ml两步法&quot;&gt;ML两步法&lt;/h1&gt;&lt;p&gt;可以采用二步法进行ML估计，以下将会以一段样例代码展示：&lt;/p&gt;&lt;div class=&quot;sourceCode&quot; id=&quot;cb1&quot;&gt;&lt;pre class=&quot;sourceCode stata&quot;&gt;&lt;code class=&quot;sourceCode stata&quot;&gt;&lt;span id=&quot;cb1-1&quot;&gt;&lt;a href=&quot;#cb1-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;kw&quot;&gt;webuse&lt;/span&gt; school, &lt;span class=&quot;kw&quot;&gt;clear&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-2&quot;&gt;&lt;a href=&quot;#cb1-2&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;kw&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;seed&lt;/span&gt; 1&lt;/span&gt;
+&lt;span id=&quot;cb1-3&quot;&gt;&lt;a href=&quot;#cb1-3&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;kw&quot;&gt;capture&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;program&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;drop&lt;/span&gt; mybiprobit&lt;/span&gt;
+&lt;span id=&quot;cb1-4&quot;&gt;&lt;a href=&quot;#cb1-4&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;kw&quot;&gt;program&lt;/span&gt; mybiprobit&lt;/span&gt;
+&lt;span id=&quot;cb1-5&quot;&gt;&lt;a href=&quot;#cb1-5&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;kw&quot;&gt;args&lt;/span&gt; lnf m1   m2  athrho  zb1 lns1&lt;/span&gt;
+&lt;span id=&quot;cb1-6&quot;&gt;&lt;a href=&quot;#cb1-6&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;kw&quot;&gt;tempvar&lt;/span&gt; rho&lt;/span&gt;
+&lt;span id=&quot;cb1-7&quot;&gt;&lt;a href=&quot;#cb1-7&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;kw&quot;&gt;qui&lt;/span&gt;:&lt;span class=&quot;kw&quot;&gt;gen&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;ot&quot;&gt;`rho&amp;#39;&lt;/span&gt;=&lt;span class=&quot;fu&quot;&gt;tanh&lt;/span&gt;(&lt;span class=&quot;ot&quot;&gt;`athrho&amp;#39;&lt;/span&gt;)&lt;/span&gt;
+&lt;span id=&quot;cb1-8&quot;&gt;&lt;a href=&quot;#cb1-8&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;kw&quot;&gt;qui&lt;/span&gt;:&lt;span class=&quot;kw&quot;&gt;replace&lt;/span&gt; &lt;span class=&quot;ot&quot;&gt;`lnf&amp;#39;&lt;/span&gt;=&lt;span class=&quot;fu&quot;&gt;ln&lt;/span&gt;(&lt;span class=&quot;fu&quot;&gt;normalden&lt;/span&gt;(&lt;span class=&quot;ot&quot;&gt;$ML_y3&lt;/span&gt;,&lt;span class=&quot;ot&quot;&gt;`zb1&amp;#39;&lt;/span&gt;,&lt;span class=&quot;fu&quot;&gt;exp&lt;/span&gt;(&lt;span class=&quot;ot&quot;&gt;`lns1&amp;#39;&lt;/span&gt;)))&lt;/span&gt;
+&lt;span id=&quot;cb1-9&quot;&gt;&lt;a href=&quot;#cb1-9&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;kw&quot;&gt;qui&lt;/span&gt;:&lt;span class=&quot;kw&quot;&gt;replace&lt;/span&gt; &lt;span class=&quot;ot&quot;&gt;`lnf&amp;#39;&lt;/span&gt;=&lt;span class=&quot;ot&quot;&gt;`lnf&amp;#39;&lt;/span&gt;+&lt;span class=&quot;fu&quot;&gt;ln&lt;/span&gt;(&lt;span class=&quot;fu&quot;&gt;binormal&lt;/span&gt;(&lt;span class=&quot;ot&quot;&gt;`m1&amp;#39;&lt;/span&gt;,&lt;span class=&quot;ot&quot;&gt;`m2&amp;#39;&lt;/span&gt;,&lt;span class=&quot;ot&quot;&gt;`rho&amp;#39;&lt;/span&gt;)) &lt;span class=&quot;kw&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ot&quot;&gt;$ML_y1&lt;/span&gt;==1 &amp;amp; &lt;span class=&quot;ot&quot;&gt;$ML_y2&lt;/span&gt;==1&lt;/span&gt;
+&lt;span id=&quot;cb1-10&quot;&gt;&lt;a href=&quot;#cb1-10&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;kw&quot;&gt;qui&lt;/span&gt;:&lt;span class=&quot;kw&quot;&gt;replace&lt;/span&gt; &lt;span class=&quot;ot&quot;&gt;`lnf&amp;#39;&lt;/span&gt;=&lt;span class=&quot;ot&quot;&gt;`lnf&amp;#39;&lt;/span&gt;+&lt;span class=&quot;fu&quot;&gt;ln&lt;/span&gt;(&lt;span class=&quot;fu&quot;&gt;binormal&lt;/span&gt;(&lt;span class=&quot;ot&quot;&gt;`m1&amp;#39;&lt;/span&gt;,-&lt;span class=&quot;ot&quot;&gt;`m2&amp;#39;&lt;/span&gt;,-&lt;span class=&quot;ot&quot;&gt;`rho&amp;#39;&lt;/span&gt;)) &lt;span class=&quot;kw&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ot&quot;&gt;$ML_y1&lt;/span&gt;==1 &amp;amp; &lt;span class=&quot;ot&quot;&gt;$ML_y2&lt;/span&gt;==0&lt;/span&gt;
+&lt;span id=&quot;cb1-11&quot;&gt;&lt;a href=&quot;#cb1-11&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;kw&quot;&gt;qui&lt;/span&gt;:&lt;span class=&quot;kw&quot;&gt;replace&lt;/span&gt; &lt;span class=&quot;ot&quot;&gt;`lnf&amp;#39;&lt;/span&gt;=&lt;span class=&quot;ot&quot;&gt;`lnf&amp;#39;&lt;/span&gt;+&lt;span class=&quot;fu&quot;&gt;ln&lt;/span&gt;(&lt;span class=&quot;fu&quot;&gt;binormal&lt;/span&gt;(-&lt;span class=&quot;ot&quot;&gt;`m1&amp;#39;&lt;/span&gt;,&lt;span class=&quot;ot&quot;&gt;`m2&amp;#39;&lt;/span&gt;,-&lt;span class=&quot;ot&quot;&gt;`rho&amp;#39;&lt;/span&gt;)) &lt;span class=&quot;kw&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ot&quot;&gt;$ML_y1&lt;/span&gt;==0 &amp;amp; &lt;span class=&quot;ot&quot;&gt;$ML_y2&lt;/span&gt;==1&lt;/span&gt;
+&lt;span id=&quot;cb1-12&quot;&gt;&lt;a href=&quot;#cb1-12&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;kw&quot;&gt;qui&lt;/span&gt;:&lt;span class=&quot;kw&quot;&gt;replace&lt;/span&gt; &lt;span class=&quot;ot&quot;&gt;`lnf&amp;#39;&lt;/span&gt;=&lt;span class=&quot;ot&quot;&gt;`lnf&amp;#39;&lt;/span&gt;+&lt;span class=&quot;fu&quot;&gt;ln&lt;/span&gt;(&lt;span class=&quot;fu&quot;&gt;binormal&lt;/span&gt;(-&lt;span class=&quot;ot&quot;&gt;`m1&amp;#39;&lt;/span&gt;,-&lt;span class=&quot;ot&quot;&gt;`m2&amp;#39;&lt;/span&gt;,&lt;span class=&quot;ot&quot;&gt;`rho&amp;#39;&lt;/span&gt;)) &lt;span class=&quot;kw&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ot&quot;&gt;$ML_y1&lt;/span&gt;==0 &amp;amp; &lt;span class=&quot;ot&quot;&gt;$ML_y2&lt;/span&gt;==0&lt;/span&gt;
+&lt;span id=&quot;cb1-13&quot;&gt;&lt;a href=&quot;#cb1-13&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;kw&quot;&gt;end&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-14&quot;&gt;&lt;a href=&quot;#cb1-14&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;**Here &lt;span class=&quot;fu&quot;&gt;I&lt;/span&gt; am creating an artificial IV&lt;/span&gt;
+&lt;span id=&quot;cb1-15&quot;&gt;&lt;a href=&quot;#cb1-15&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;kw&quot;&gt;gen&lt;/span&gt; z=logptax-rnormal()&lt;/span&gt;
+&lt;span id=&quot;cb1-16&quot;&gt;&lt;a href=&quot;#cb1-16&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;kw&quot;&gt;ml&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;model&lt;/span&gt; lf mybiprobit (&lt;span class=&quot;kw&quot;&gt;private&lt;/span&gt;:&lt;span class=&quot;kw&quot;&gt;private&lt;/span&gt;=logptax loginc years)   (vote:vote=logptax loginc years)   /athrho (zb1:logptax=loginc  years z) /lns1&lt;/span&gt;
+&lt;span id=&quot;cb1-17&quot;&gt;&lt;a href=&quot;#cb1-17&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-18&quot;&gt;&lt;a href=&quot;#cb1-18&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;kw&quot;&gt;ml&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;maximize&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&quot;cb1-19&quot;&gt;&lt;a href=&quot;#cb1-19&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;matrix&lt;/span&gt; b=&lt;span class=&quot;fu&quot;&gt;e&lt;/span&gt;(b)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="计量" scheme="https://github.com/QGQ931001/categories/%E8%AE%A1%E9%87%8F/"/>
+    
+      <category term="内生性问题" scheme="https://github.com/QGQ931001/categories/%E8%AE%A1%E9%87%8F/%E5%86%85%E7%94%9F%E6%80%A7%E9%97%AE%E9%A2%98/"/>
+    
+    
+      <category term="stata" scheme="https://github.com/QGQ931001/tags/stata/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>致Berry</title>
+    <link href="https://github.com/QGQ931001/2020/05/25/berry/"/>
+    <id>https://github.com/QGQ931001/2020/05/25/berry/</id>
+    <published>2020-05-24T16:00:00.000Z</published>
+    <updated>2020-05-27T05:17:51.821Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;hr&gt;&lt;center&gt;&lt;strong&gt;Love You.&lt;/strong&gt;&lt;/c
+      
+    
+    </summary>
+    
+    
+      <category term="领导" scheme="https://github.com/QGQ931001/categories/%E9%A2%86%E5%AF%BC/"/>
+    
+    
+      <category term="妳" scheme="https://github.com/QGQ931001/tags/%E5%A6%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Shell脚本笔记（1）</title>
+    <link href="https://github.com/QGQ931001/2020/05/25/shell_1/"/>
+    <id>https://github.com/QGQ931001/2020/05/25/shell_1/</id>
+    <published>2020-05-24T16:00:00.000Z</published>
+    <updated>2020-05-27T05:13:13.415Z</updated>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;&lt;h1 id=&quot;引言&quot;&gt;引言&lt;/h1&gt;&lt;p&gt;shell是用C语言编写的程序，但它自身同时也是一种程序设计语言。你可能经常听说“shell脚本”，但实际上shell编程并非等同于“shell脚本”编程，前者指shell程序本身的开发，后者则是利用shell程序进行开发。都说java和javascript的区别是周杰和周杰伦的区别，shell和shell script或许也有那么点意思。&lt;/p&gt;&lt;h1 id=&quot;shell脚本&quot;&gt;shell脚本&lt;/h1&gt;&lt;p&gt;似乎任何程序学习都是从&quot;Hello World!&quot;开始的，对于&lt;strong&gt;shell&lt;/strong&gt;而言：&lt;/p&gt;&lt;div class=&quot;sourceCode&quot; id=&quot;cb1&quot;&gt;&lt;pre class=&quot;sourceCode bash&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span id=&quot;cb1-1&quot;&gt;&lt;a href=&quot;#cb1-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;co&quot;&gt;#!/bin/bash&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&quot;cb1-2&quot;&gt;&lt;a href=&quot;#cb1-2&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;bu&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;Hello World !&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;#!&lt;/strong&gt;是个标记，告知这段命令将用bash执行。echo则是一个向窗口展示文本的命令。 你可以将以上代码框的内容存为一个以.sh为后缀的文件，比如&lt;strong&gt;hw.sh&lt;/strong&gt;，并赋予文件执行权限：&lt;/p&gt;&lt;pre class=&quot;shell&quot;&gt;&lt;code&gt;chmod +x ./hw.sh         #赋予执行权限
+bash hw.sh               #执行脚本&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+    
+      <category term="编程" scheme="https://github.com/QGQ931001/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="shell" scheme="https://github.com/QGQ931001/tags/shell/"/>
+    
+  </entry>
+  
+</feed>
