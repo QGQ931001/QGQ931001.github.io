@@ -248,19 +248,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Shell脚本笔记（1）</title>
-    <url>/2020/05/25/shell_1/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr><h1 id="引言">引言</h1><p>shell是用C语言编写的程序，但它自身同时也是一种程序设计语言。你可能经常听说“shell脚本”，但实际上shell编程并非等同于“shell脚本”编程，前者指shell程序本身的开发，后者则是利用shell程序进行开发。都说java和javascript的区别是周杰和周杰伦的区别，shell和shell script或许也有那么点意思。</p><h1 id="shell脚本">shell脚本</h1><p>似乎任何程序学习都是从"Hello World!"开始的，对于<strong>shell</strong>而言：</p><div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Hello World !"</span></span></code></pre></div><p><strong>#!</strong>是个标记，告知这段命令将用bash执行。echo则是一个向窗口展示文本的命令。 你可以将以上代码框的内容存为一个以.sh为后缀的文件，比如<strong>hw.sh</strong>，并赋予文件执行权限：</p><pre class="shell"><code>chmod +x ./hw.sh         #赋予执行权限
-bash hw.sh               #执行脚本</code></pre><a id="more"></a><p>未完待续</p>]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>shell</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>如何在双变量Probit中使用工具变量法IV估计</title>
     <url>/2020/05/25/biprobit_iv/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr><h1 id="ml两步法">ML两步法</h1><p>可以采用二步法进行ML估计，以下将会以一段样例代码展示：</p><div class="sourceCode" id="cb1"><pre class="sourceCode stata"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">webuse</span> school, <span class="kw">clear</span></span>
@@ -305,6 +292,19 @@ bash hw.sh               #执行脚本</code></pre><a id="more"></a><p>未完待
       </categories>
       <tags>
         <tag>stata</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Shell脚本笔记（1）</title>
+    <url>/2020/05/25/shell_1/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr><h1 id="引言">引言</h1><p>shell是用C语言编写的程序，但它自身同时也是一种程序设计语言。你可能经常听说“shell脚本”，但实际上shell编程并非等同于“shell脚本”编程，前者指shell程序本身的开发，后者则是利用shell程序进行开发。都说java和javascript的区别是周杰和周杰伦的区别，shell和shell script或许也有那么点意思。</p><h1 id="shell脚本">shell脚本</h1><p>似乎任何程序学习都是从"Hello World!"开始的，对于<strong>shell</strong>而言：</p><div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Hello World !"</span></span></code></pre></div><p><strong>#!</strong>是个标记，告知这段命令将用bash执行。echo则是一个向窗口展示文本的命令。 你可以将以上代码框的内容存为一个以.sh为后缀的文件，比如<strong>hw.sh</strong>，并赋予文件执行权限：</p><pre class="shell"><code>chmod +x ./hw.sh         #赋予执行权限
+bash hw.sh               #执行脚本</code></pre><a id="more"></a><p>未完待续</p>]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
       </tags>
   </entry>
 </search>
