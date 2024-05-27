@@ -237,6 +237,17 @@
       </tags>
   </entry>
   <entry>
+    <title>致Berry</title>
+    <url>/2020/05/25/berry/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr><center><strong>Love You.</strong></center><center><strong>Berry!</strong></center><center><img data-src="/image/berry.jpg" width="66%" height="66%" title="妳" alt="妳"></center>]]></content>
+      <categories>
+        <category>领导</category>
+      </categories>
+      <tags>
+        <tag>妳</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>如何在双变量Probit中使用工具变量法IV估计</title>
     <url>/2020/05/25/biprobit_iv/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr><h1 id="ml两步法">ML两步法</h1><p>可以采用二步法进行ML估计，以下将会以一段样例代码展示：</p><div class="sourceCode" id="cb1"><pre class="sourceCode stata"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">webuse</span> school, <span class="kw">clear</span></span>
@@ -281,17 +292,6 @@
       </categories>
       <tags>
         <tag>stata</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>致Berry</title>
-    <url>/2020/05/25/berry/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr><center><strong>Love You.</strong></center><center><strong>Berry!</strong></center><center><img data-src="/image/berry.jpg" width="66%" height="66%" title="妳" alt="妳"></center>]]></content>
-      <categories>
-        <category>领导</category>
-      </categories>
-      <tags>
-        <tag>妳</tag>
       </tags>
   </entry>
   <entry>
