@@ -25,7 +25,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;     &lt;/p&gt;&lt;p&gt;&lt;strong&gt;因果推断&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;因果识别+统计推断&lt;/li&gt;&lt;li&gt;因果识别（causal identification）：如果拥有总体，能否确定总体因果关系&lt;/li&gt;&lt;li&gt;统计推断（statistical inference）：如何从样本数据获取总体因果关系信息，实际是一种相关性事实&lt;/li&gt;&lt;li&gt;识别假设，实际就是对&lt;span class=&quot;math inline&quot;&gt;\(D\)&lt;/span&gt;和&lt;span class=&quot;math inline&quot;&gt;\(\epsilon\)&lt;/span&gt;的关系作出表述，但这种过程是无法从理论上验证的&lt;/li&gt;&lt;li&gt;随机实验：研究者主动介入了数据生成过程，以确保干净的干预效应生成过程。在平均意义上，只有&lt;span class=&quot;math inline&quot;&gt;\(D\)&lt;/span&gt;是两者之间唯一的系统性差别&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+      &lt;p&gt;     &lt;/p&gt;&lt;p&gt;&lt;strong&gt;因果推断&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;因果识别+统计推断&lt;/li&gt;&lt;li&gt;因果识别（causal identification）：如果拥有总体，能否确定总体因果关系&lt;/li&gt;&lt;li&gt;统计推断（statistical inference）：如何从样本数据获取总体因果关系信息，实际是一种相关性事实&lt;/li&gt;&lt;li&gt;识别假设，实际就是对&lt;span class=&quot;math inline&quot;&gt;&#92;(D&#92;)&lt;/span&gt;和&lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;epsilon&#92;)&lt;/span&gt;的关系作出表述，但这种过程是无法从理论上验证的&lt;/li&gt;&lt;li&gt;随机实验：研究者主动介入了数据生成过程，以确保干净的干预效应生成过程。在平均意义上，只有&lt;span class=&quot;math inline&quot;&gt;&#92;(D&#92;)&lt;/span&gt;是两者之间唯一的系统性差别&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
     
     </summary>
     
@@ -46,7 +46,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;     &lt;/p&gt;&lt;p&gt;&lt;strong&gt;关于DID因果识别&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Imbens: 任何的因果识别归根结底都是做&lt;strong&gt;差值&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;传统&lt;span class=&quot;math inline&quot;&gt;\(DID\)&lt;/span&gt;最大的两类威胁是：①平行趋势不成立；②存在混淆政策&lt;/li&gt;&lt;li&gt;&lt;span class=&quot;math inline&quot;&gt;\(DID\)&lt;/span&gt;的重要前提是平行趋势，但这种前提实际并不能完全验证：事前平行并不意味着事后平行趋势，但事前不平行一定能验证平行趋势不成立&lt;/li&gt;&lt;li&gt;最经典的例子就是经济特区，深圳在改革开放前可能和中原地区的一个小村庄没有什么不同，但是即使深圳没有被划为经济特区，改革开放后其经济增长趋势也有可能因为地缘优势而呈现较快的增长趋势&lt;/li&gt;&lt;li&gt;两期的数据做&lt;span class=&quot;math inline&quot;&gt;\(DID\)&lt;/span&gt;会退化为&lt;span class=&quot;math inline&quot;&gt;\(FD\)&lt;/span&gt;，此时的截距项代表时间变化趋势&lt;/li&gt;&lt;li&gt;Good control: 既影响&lt;span class=&quot;math inline&quot;&gt;\(y\)&lt;/span&gt;，又影响&lt;span class=&quot;math inline&quot;&gt;\(D \cdot T\)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;Bad control: 既影响&lt;span class=&quot;math inline&quot;&gt;\(y\)&lt;/span&gt;，又被&lt;span class=&quot;math inline&quot;&gt;\(D \cdot T\)&lt;/span&gt;影响&lt;/li&gt;&lt;li&gt;无法判断影响样本进入处理组的因素是否还影响其变化趋势&lt;/li&gt;&lt;li&gt;潜在结果：使用上标表示，想象中的结果&lt;/li&gt;&lt;li&gt;&lt;span class=&quot;math inline&quot;&gt;\(ATT\)&lt;/span&gt;：处理组接受处理后的平均处理效应&lt;/li&gt;&lt;li&gt;&lt;span class=&quot;math inline&quot;&gt;\(D\)&lt;/span&gt;实际可以理解为处理组的固定效应&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+      &lt;p&gt;     &lt;/p&gt;&lt;p&gt;&lt;strong&gt;关于DID因果识别&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Imbens: 任何的因果识别归根结底都是做&lt;strong&gt;差值&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;传统&lt;span class=&quot;math inline&quot;&gt;&#92;(DID&#92;)&lt;/span&gt;最大的两类威胁是：①平行趋势不成立；②存在混淆政策&lt;/li&gt;&lt;li&gt;&lt;span class=&quot;math inline&quot;&gt;&#92;(DID&#92;)&lt;/span&gt;的重要前提是平行趋势，但这种前提实际并不能完全验证：事前平行并不意味着事后平行趋势，但事前不平行一定能验证平行趋势不成立&lt;/li&gt;&lt;li&gt;最经典的例子就是经济特区，深圳在改革开放前可能和中原地区的一个小村庄没有什么不同，但是即使深圳没有被划为经济特区，改革开放后其经济增长趋势也有可能因为地缘优势而呈现较快的增长趋势&lt;/li&gt;&lt;li&gt;两期的数据做&lt;span class=&quot;math inline&quot;&gt;&#92;(DID&#92;)&lt;/span&gt;会退化为&lt;span class=&quot;math inline&quot;&gt;&#92;(FD&#92;)&lt;/span&gt;，此时的截距项代表时间变化趋势&lt;/li&gt;&lt;li&gt;Good control: 既影响&lt;span class=&quot;math inline&quot;&gt;&#92;(y&#92;)&lt;/span&gt;，又影响&lt;span class=&quot;math inline&quot;&gt;&#92;(D &#92;cdot T&#92;)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;Bad control: 既影响&lt;span class=&quot;math inline&quot;&gt;&#92;(y&#92;)&lt;/span&gt;，又被&lt;span class=&quot;math inline&quot;&gt;&#92;(D &#92;cdot T&#92;)&lt;/span&gt;影响&lt;/li&gt;&lt;li&gt;无法判断影响样本进入处理组的因素是否还影响其变化趋势&lt;/li&gt;&lt;li&gt;潜在结果：使用上标表示，想象中的结果&lt;/li&gt;&lt;li&gt;&lt;span class=&quot;math inline&quot;&gt;&#92;(ATT&#92;)&lt;/span&gt;：处理组接受处理后的平均处理效应&lt;/li&gt;&lt;li&gt;&lt;span class=&quot;math inline&quot;&gt;&#92;(D&#92;)&lt;/span&gt;实际可以理解为处理组的固定效应&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
     
     </summary>
     
@@ -221,30 +221,6 @@
   </entry>
   
   <entry>
-    <title>致Berry</title>
-    <link href="https://github.com/QGQ931001/2020/05/25/berry/"/>
-    <id>https://github.com/QGQ931001/2020/05/25/berry/</id>
-    <published>2020-05-24T16:00:00.000Z</published>
-    <updated>2024-05-27T12:35:20.012Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;hr&gt;&lt;center&gt;&lt;strong&gt;Love You.&lt;/strong&gt;&lt;/c
-      
-    
-    </summary>
-    
-    
-      <category term="领导" scheme="https://github.com/QGQ931001/categories/%E9%A2%86%E5%AF%BC/"/>
-    
-    
-      <category term="妳" scheme="https://github.com/QGQ931001/tags/%E5%A6%B3/"/>
-    
-  </entry>
-  
-  <entry>
     <title>如何在双变量Probit中使用工具变量法IV估计</title>
     <link href="https://github.com/QGQ931001/2020/05/25/biprobit_iv/"/>
     <id>https://github.com/QGQ931001/2020/05/25/biprobit_iv/</id>
@@ -282,6 +258,30 @@
     
     
       <category term="stata" scheme="https://github.com/QGQ931001/tags/stata/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>致Berry</title>
+    <link href="https://github.com/QGQ931001/2020/05/25/berry/"/>
+    <id>https://github.com/QGQ931001/2020/05/25/berry/</id>
+    <published>2020-05-24T16:00:00.000Z</published>
+    <updated>2024-05-27T12:35:20.012Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;hr&gt;&lt;center&gt;&lt;strong&gt;Love You.&lt;/strong&gt;&lt;/c
+      
+    
+    </summary>
+    
+    
+      <category term="领导" scheme="https://github.com/QGQ931001/categories/%E9%A2%86%E5%AF%BC/"/>
+    
+    
+      <category term="妳" scheme="https://github.com/QGQ931001/tags/%E5%A6%B3/"/>
     
   </entry>
   
