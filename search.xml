@@ -1,6 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>致Berry</title>
+    <url>/2020/05/25/berry/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr><center><strong>Love You.</strong></center><center><strong>Berry!</strong></center><center><img data-src="/image/berry.jpg" width="66%" height="66%" title="妳" alt="妳"></center>]]></content>
+      <categories>
+        <category>领导</category>
+      </categories>
+      <tags>
+        <tag>妳</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学术讲座# 中国人民大学经济学院江艇：渐进DID的最新进展</title>
+    <url>/2022/08/24/DID1/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p><p><strong>关于DID因果识别</strong></p><ul><li>Imbens: 任何的因果识别归根结底都是做<strong>差值</strong></li><li>传统<span class="math inline">\(DID\)</span>最大的两类威胁是：①平行趋势不成立；②存在混淆政策</li><li><span class="math inline">\(DID\)</span>的重要前提是平行趋势，但这种前提实际并不能完全验证：事前平行并不意味着事后平行趋势，但事前不平行一定能验证平行趋势不成立</li><li>最经典的例子就是经济特区，深圳在改革开放前可能和中原地区的一个小村庄没有什么不同，但是即使深圳没有被划为经济特区，改革开放后其经济增长趋势也有可能因为地缘优势而呈现较快的增长趋势</li><li>两期的数据做<span class="math inline">\(DID\)</span>会退化为<span class="math inline">\(FD\)</span>，此时的截距项代表时间变化趋势</li><li>Good control: 既影响<span class="math inline">\(y\)</span>，又影响<span class="math inline">\(D \cdot T\)</span></li><li>Bad control: 既影响<span class="math inline">\(y\)</span>，又被<span class="math inline">\(D \cdot T\)</span>影响</li><li>无法判断影响样本进入处理组的因素是否还影响其变化趋势</li><li>潜在结果：使用上标表示，想象中的结果</li><li><span class="math inline">\(ATT\)</span>：处理组接受处理后的平均处理效应</li><li><span class="math inline">\(D\)</span>实际可以理解为处理组的固定效应</li></ul><p>&nbsp; &nbsp;<a id="more"></a> &nbsp;</p><h2 id="交错型didstaggered-did"><strong>1. 交错型DID(staggered DID)</strong></h2><ul><li>没有办法构造<span class="math inline">\(D \cdot T\)</span>，可以直接定义<span class="math inline">\(D \cdot T\)</span>，表示接受处理的虚拟变量</li><li>干预事件的发生时间不一致，极可能意味着，事后趋势不一致。为此，应尽量控制影响<span class="math inline">\(X_i\)</span>，避免控制既影响<span class="math inline">\(y\)</span>，又被<span class="math inline">\(D \cdot T\)</span>影响的<span class="math inline">\(X_{it}\)</span></li><li>为了能够控制<span class="math inline">\(X_i\)</span>，需要将其乘以一个时间趋势项<span class="math inline">\(t\)</span>，或者设置<span class="math inline">\(X_i\)</span>与时间固定效应<span class="math inline">\(\mu_t\)</span>的交互项</li><li>Goodman-Bacon定理：任何一个交错<span class="math inline">\(DID\)</span>的双向固定效应模型都可以分解为<span class="math inline">\(K^2\)</span>个传统双重差分估计结果的加权平均</li><li>导致偏误的原因在于：以晚处理组为处理组，以早处理组为对照组，此时双重差分估计中包含了一项<span class="math inline">\(\Delta ATT\)</span>，即早处理组的政策效应存在明显的动态变化</li><li>交错<span class="math inline">\(DID\)</span>估计出的<span class="math inline">\(\beta\)</span>究竟意味着什么？由三部分构成：①方差加权的<span class="math inline">\(ATT\)</span>；②方差加权的趋势差异；③<span class="math inline">\(\Delta ATT\)</span></li></ul><p>&nbsp;</p><h2 id="改进策略基于事件研究法"><strong>2. 改进策略</strong>——基于事件研究法</h2><p><strong>2.1 </strong>进行<span class="math inline">\(bacondecommp\)</span>分解，观察以早处理组为控制组的系数和权重，判断其是否影响了最终系数的估计</p><p><strong>2.2</strong> 进行协变量的平衡性检验。在交错<span class="math inline">\(DID\)</span>的情形下，平行趋势检验没办法做。干预时间的不一致，平衡性检验可作为一种替代手段。此做法的目的在于判断事前变量与干预处理进度之间的关系。进行匹配时，都可以以政策执行前某一期为准</p><p><strong>2.3</strong> 进一步，可以按照各组作为控制组的贡献作为权重，对事前变量与干预处理进度进行加权<span class="math inline">\(OLS\)</span></p><p><strong>2.4</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解，必须是平衡面板数据，所以要删除一些样本</p><p><strong>2.5</strong> 事件研究法：变日历时间为相对时间。按照相对时间进行校准，如果存在非常明显的趋势，则<span class="math inline">\(\Delta ATT\)</span>一定会比较大，基准模型会存在低估偏误</p><p><strong>2.6</strong> 可以根据事件研究法的结果，将核心解释变量乘以一个<span class="math inline">\(t-T^*\)</span></p><p>&nbsp;&nbsp;</p><h2 id="改进策略堆叠didstacked-did"><strong>3.改进策略</strong>——堆叠<span class="math inline">\(DID\)</span>(Stacked <span class="math inline">\(DID\)</span>)</h2><p><strong>3.1 </strong>假定存在K个处理时点，构造K个数据集。每个数据集中只保留可以为处理组服务的控制组，比如晚处理组和一直未处理的组。标准误需要聚类到数据集上面</p><p><strong>3.2</strong> 从构造上保证了早处理组不能作为控制组</p><p>&nbsp;&nbsp;</p><h2 id="改进策略对事件研究法的反思寻找干净的控制组"><strong>4.改进策略</strong>——对事件研究法的反思，寻找干净的控制组</h2><p><strong>4.1 </strong>仅不同时间队列样本的动态处理效应变化方式是一样的，事件研究法的估计才是有效的</p><p>&nbsp;&nbsp;</p>]]></content>
+      <categories>
+        <category>计量</category>
+        <category>DID</category>
+      </categories>
+      <tags>
+        <tag>学术讲座</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
+    <url>/2020/06/08/paper1/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p><h2 id="研究问题"><strong>1. 研究问题</strong></h2><p>本文以江苏省12个地级市“河长制”政策转移案例(2006 — 2016)为研究对象,在识别政策转移案例中“复制”和“再生产”两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对“河长制”转移程度的影响。研究发现“河长制”政策转移中的“政策再生产”的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局。通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策“再生产”的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产。</p><p>&nbsp;</p><a id="more"></a><h2 id="问题的提出"><strong>2. 问题的提出</strong></h2><p><strong>2.1 政策转移的必要性</strong></p><p>现实状况：政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有“后发优势”的意味、地区间的合作与竞争</p><p>转移情形：政策转移并不意味着全盘复制，可分为“复制”和“再生产”两种形式</p><p>核心问题：什么因素能够促成政策“再生产”，政策“再生产”又体现出那些维度特征</p><p><strong>2.2 河长制的背景介绍</strong></p><p>河湖治理是跨界特性最典型的领域之一，涉及上下游、左右岸、不同行政区域和行业，呈现出高度的复杂性。河长制最早发轫于太湖蓝藻危机，2016年之前是一项地方政策，经政策扩散至多地。</p><p>现实调查显示河长制在江苏省内的扩散过程中呈现出“复制”和“再生产”的典型差异。</p><p>&nbsp;</p><h2 id="研究思路和方法"><strong>3. 研究思路和方法</strong></h2><p><strong>3.1 QCA</strong></p><p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles Ragin)于<code>1987</code>年提出，适用于案例数量大于10小于60的研究。</p><p>其使用布尔代数和集合论的思想来进行中小数量的跨案例比较，从而处理多个原因和一个结果之间的因果关系。</p><p><strong>3.2 转移程度的刻画</strong></p><p>道洛维茨和马什最早借鉴rose（1993）的连续统来划分政策转移程度：复制、模仿、混合、启发。</p><p>本文简单划分为：“复制”和“再生产”</p><p><strong>3.3 解释变量的选择</strong></p><p>行政压力、资源禀赋、政策需求、外部力量</p><p>&nbsp;</p><h2 id="结论"><strong>4. 结论</strong></h2><p>政策转移中政策“再生产”的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素。</p>]]></content>
+      <categories>
+        <category>公共管理</category>
+        <category>政策转移</category>
+      </categories>
+      <tags>
+        <tag>文献阅读</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何在双变量Probit中使用工具变量法IV估计</title>
+    <url>/2020/05/25/biprobit_iv/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr><h1 id="ml两步法">ML两步法</h1><p>可以采用二步法进行ML估计，以下将会以一段样例代码展示：</p><div class="sourceCode" id="cb1"><pre class="sourceCode stata"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">webuse</span> school, <span class="kw">clear</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">set</span> <span class="dv">seed</span> 1</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">capture</span> <span class="kw">program</span> <span class="kw">drop</span> mybiprobit</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">program</span> mybiprobit</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">args</span> lnf m1   m2  athrho  zb1 lns1</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">tempvar</span> rho</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">gen</span> <span class="kw">double</span> <span class="ot">`rho'</span>=<span class="fu">tanh</span>(<span class="ot">`athrho'</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">replace</span> <span class="ot">`lnf'</span>=<span class="fu">ln</span>(<span class="fu">normalden</span>(<span class="ot">$ML_y3</span>,<span class="ot">`zb1'</span>,<span class="fu">exp</span>(<span class="ot">`lns1'</span>)))</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">replace</span> <span class="ot">`lnf'</span>=<span class="ot">`lnf'</span>+<span class="fu">ln</span>(<span class="fu">binormal</span>(<span class="ot">`m1'</span>,<span class="ot">`m2'</span>,<span class="ot">`rho'</span>)) <span class="kw">if</span> <span class="ot">$ML_y1</span>==1 &amp; <span class="ot">$ML_y2</span>==1</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">replace</span> <span class="ot">`lnf'</span>=<span class="ot">`lnf'</span>+<span class="fu">ln</span>(<span class="fu">binormal</span>(<span class="ot">`m1'</span>,-<span class="ot">`m2'</span>,-<span class="ot">`rho'</span>)) <span class="kw">if</span> <span class="ot">$ML_y1</span>==1 &amp; <span class="ot">$ML_y2</span>==0</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">replace</span> <span class="ot">`lnf'</span>=<span class="ot">`lnf'</span>+<span class="fu">ln</span>(<span class="fu">binormal</span>(-<span class="ot">`m1'</span>,<span class="ot">`m2'</span>,-<span class="ot">`rho'</span>)) <span class="kw">if</span> <span class="ot">$ML_y1</span>==0 &amp; <span class="ot">$ML_y2</span>==1</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">replace</span> <span class="ot">`lnf'</span>=<span class="ot">`lnf'</span>+<span class="fu">ln</span>(<span class="fu">binormal</span>(-<span class="ot">`m1'</span>,-<span class="ot">`m2'</span>,<span class="ot">`rho'</span>)) <span class="kw">if</span> <span class="ot">$ML_y1</span>==0 &amp; <span class="ot">$ML_y2</span>==0</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>**Here <span class="fu">I</span> am creating an artificial IV</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="kw">gen</span> z=logptax-rnormal()</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="kw">ml</span> <span class="kw">model</span> lf mybiprobit (<span class="kw">private</span>:<span class="kw">private</span>=logptax loginc years)   (vote:vote=logptax loginc years)   /athrho (zb1:logptax=loginc  years z) /lns1</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="kw">ml</span> <span class="kw">maximize</span>,</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span> b=<span class="fu">e</span>(b)</span></code></pre></div><a id="more"></a><div class="sourceCode" id="cb2"><pre class="sourceCode stata"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">capture</span> <span class="kw">program</span> <span class="kw">drop</span> mybiprobitiv</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">program</span> mybiprobitiv</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">args</span> lnf mm1 g1  mm2  g2 athrho  zb1 lns1</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">tempvar</span> rho</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">gen</span> <span class="kw">double</span> <span class="ot">`rho'</span>=<span class="fu">tanh</span>(<span class="ot">`athrho'</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">replace</span> <span class="ot">`lnf'</span>=<span class="fu">ln</span>(<span class="fu">normalden</span>(<span class="ot">$ML_y3</span>,<span class="ot">`zb1'</span>,<span class="fu">exp</span>(<span class="ot">`lns1'</span>)))</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">tempvar</span> m1 m2</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">gen</span> <span class="kw">double</span> <span class="ot">`m1'</span>=<span class="ot">`mm1'</span>+<span class="ot">`g1'</span>*(<span class="ot">$ML_y3</span>-<span class="ot">`zb1'</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">gen</span> <span class="kw">double</span> <span class="ot">`m2'</span>=<span class="ot">`mm2'</span>+<span class="ot">`g2'</span>*(<span class="ot">$ML_y3</span>-<span class="ot">`zb1'</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">replace</span> <span class="ot">`lnf'</span>=<span class="ot">`lnf'</span>+<span class="fu">ln</span>(<span class="fu">binormal</span>(<span class="ot">`m1'</span>,<span class="ot">`m2'</span>,<span class="ot">`rho'</span>)) <span class="kw">if</span> <span class="ot">$ML_y1</span>==1 &amp; <span class="ot">$ML_y2</span>==1</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">replace</span> <span class="ot">`lnf'</span>=<span class="ot">`lnf'</span>+<span class="fu">ln</span>(<span class="fu">binormal</span>(<span class="ot">`m1'</span>,-<span class="ot">`m2'</span>,-<span class="ot">`rho'</span>)) <span class="kw">if</span> <span class="ot">$ML_y1</span>==1 &amp; <span class="ot">$ML_y2</span>==0</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">replace</span> <span class="ot">`lnf'</span>=<span class="ot">`lnf'</span>+<span class="fu">ln</span>(<span class="fu">binormal</span>(-<span class="ot">`m1'</span>,<span class="ot">`m2'</span>,-<span class="ot">`rho'</span>)) <span class="kw">if</span> <span class="ot">$ML_y1</span>==0 &amp; <span class="ot">$ML_y2</span>==1</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">replace</span> <span class="ot">`lnf'</span>=<span class="ot">`lnf'</span>+<span class="fu">ln</span>(<span class="fu">binormal</span>(-<span class="ot">`m1'</span>,-<span class="ot">`m2'</span>,<span class="ot">`rho'</span>)) <span class="kw">if</span> <span class="ot">$ML_y1</span>==0 &amp; <span class="ot">$ML_y2</span>==0</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="kw">ml</span> <span class="kw">model</span> lf mybiprobitiv (<span class="kw">private</span>:<span class="kw">private</span>=logptax loginc years) (g1:)  (vote:vote=logptax loginc years)  (g2:) /athrho (zb1:logptax=loginc  years z  ) /lns1, init(b)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="kw">ml</span> <span class="kw">maximize</span></span></code></pre></div>]]></content>
+      <categories>
+        <category>计量</category>
+        <category>内生性问题</category>
+      </categories>
+      <tags>
+        <tag>stata</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Shell脚本笔记（1）</title>
+    <url>/2020/05/25/shell_1/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr><h1 id="引言">引言</h1><p>shell是用C语言编写的程序，但它自身同时也是一种程序设计语言。你可能经常听说“shell脚本”，但实际上shell编程并非等同于“shell脚本”编程，前者指shell程序本身的开发，后者则是利用shell程序进行开发。都说java和javascript的区别是周杰和周杰伦的区别，shell和shell script或许也有那么点意思。</p><h1 id="shell脚本">shell脚本</h1><p>似乎任何程序学习都是从"Hello World!"开始的，对于<strong>shell</strong>而言：</p><div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Hello World !"</span></span></code></pre></div><p><strong>#!</strong>是个标记，告知这段命令将用bash执行。echo则是一个向窗口展示文本的命令。 你可以将以上代码框的内容存为一个以.sh为后缀的文件，比如<strong>hw.sh</strong>，并赋予文件执行权限：</p><pre class="shell"><code>chmod +x ./hw.sh         #赋予执行权限
+bash hw.sh               #执行脚本</code></pre><a id="more"></a><p>未完待续</p>]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学术讲座# 中国人民大学经济学院江艇：因果推断Ⅰ</title>
+    <url>/2022/09/12/jiangting1/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p><p><strong>因果推断</strong></p><ul><li>因果识别+统计推断</li><li>因果识别（<em>causal identification</em>）：如果拥有总体，能否确定总体因果关系</li><li>统计推断（<em>statistical inference</em>）：如何从样本数据获取总体因果关系信息，实际是一种相关性事实</li><li>识别假设，实际就是对<span class="math inline">\(D\)</span>和<span class="math inline">\(\epsilon\)</span>的关系作出表述，但这种过程是无法从理论上验证的</li><li>随机实验：研究者主动介入了数据生成过程，以确保干净的干预效应生成过程。在平均意义上，只有<span class="math inline">\(D\)</span>是两者之间唯一的系统性差别</li></ul><p>&nbsp; &nbsp;<a id="more"></a> &nbsp;</p><h2 id="section"><strong>1</strong></h2><p><strong>1.1</strong> 因果效应的定义：干预与否、处理与否时，潜在结果之间的差值。潜在结果一定是同一个时间点上的结果</p><p><strong>1.2</strong> 潜在结果永远无法完全观测，除非存在平行宇宙</p><p><strong>1.3</strong> 通过识别假设可以进行“插值”，可以化“相关关系”识别场景为“因果关系”识别场景</p><p><strong>1.4</strong> 鲁宾因果模型（潜在因果框架），一套描述因果关系的新语言</p><p>&nbsp;</p><h2 id="section-1"><strong>2</strong></h2><p><strong>2.1</strong> 第一类识别假设：潜在结果均值独立于处理状态</p><p><strong>2.2</strong> 从干扰项中剥离出控制变量；或者寻找一个与干扰项不相关的工具变量</p><p><strong>2.3</strong> 第二类识别假设：潜在结果条件均值独立于处理状态</p><p><strong>2.4</strong> 好的控制变量：既影响<span class="math inline">\(Y\)</span>，又影响<span class="math inline">\(D\)</span>。其本身和干扰项是否相关是不重要的，不是研究者关注的中心</p><p><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</p><p><strong>2.6</strong> 无需过渡阐释控制变量的系数</p><p>&nbsp;&nbsp;</p><h2 id="section-2"><strong>3</strong></h2><p><strong>3.1 </strong>鲁宾因果模型并未规定具体的函数形式</p><p><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</p><p>&nbsp;&nbsp;</p><h2 id="section-3"><strong>4</strong></h2><p><strong>4.1 </strong>选择性又称之为分配机制，每个个体如何接受处理，可以用倾向得分来表示</p><p><strong>4.2 </strong>建议现实使用IV、DID、RDD等识别方法时，称之为准实验</p><p>&nbsp;&nbsp;</p>]]></content>
+      <categories>
+        <category>计量</category>
+      </categories>
+      <tags>
+        <tag>学术讲座</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>🙃大城市人口增长速度🔦</title>
     <url>/2020/05/27/bubblemap/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2><img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle"><center>上图即为最终效果</center><h2 id="下载数据">下载数据</h2><p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录。</p><div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span>, <span class="at">destfile =</span> <span class="st">"~/文档/data-bKvwd.csv"</span> )</span>
@@ -47,7 +153,7 @@
 <span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span>
 <span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="st">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span>,</span>
 <span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption =</span> <span class="st">"Data Source: How fast do big cities grow?"</span>)<span class="sc">+</span></span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.subtitle =</span> <span class="fu">element_markdown</span>(<span class="at">lineheight =</span> <span class="fl">1.1</span>))</span></code></pre></div><aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><hr><ol><li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li></ol></aside>]]></content>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.subtitle =</span> <span class="fu">element_markdown</span>(<span class="at">lineheight =</span> <span class="fl">1.1</span>))</span></code></pre></div><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><hr><ol><li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li></ol></section>]]></content>
       <categories>
         <category>绘图</category>
         <category>map&amp;sf</category>
@@ -63,101 +169,6 @@
       <categories>
         <category>绘图</category>
         <category>map&amp;sf</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>学术讲座# 中国人民大学经济学院江艇：因果推断Ⅰ</title>
-    <url>/2022/09/12/jiangting1/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p><p><strong>因果推断</strong></p><ul><li>因果识别+统计推断</li><li>因果识别（<em>causal identification</em>）：如果拥有总体，能否确定总体因果关系</li><li>统计推断（<em>statistical inference</em>）：如何从样本数据获取总体因果关系信息，实际是一种相关性事实</li><li>识别假设，实际就是对<span class="math inline">\(D\)</span>和<span class="math inline">\(\epsilon\)</span>的关系作出表述，但这种过程是无法从理论上验证的</li><li>随机实验：研究者主动介入了数据生成过程，以确保干净的干预效应生成过程。在平均意义上，只有<span class="math inline">\(D\)</span>是两者之间唯一的系统性差别</li></ul><p>&nbsp; &nbsp;<a id="more"></a> &nbsp;</p><h2 id="section"><strong>1</strong></h2><p><strong>1.1</strong> 因果效应的定义：干预与否、处理与否时，潜在结果之间的差值。潜在结果一定是同一个时间点上的结果</p><p><strong>1.2</strong> 潜在结果永远无法完全观测，除非存在平行宇宙</p><p><strong>1.3</strong> 通过识别假设可以进行“插值”，可以化“相关关系”识别场景为“因果关系”识别场景</p><p><strong>1.4</strong> 鲁宾因果模型（潜在因果框架），一套描述因果关系的新语言</p><p>&nbsp;</p><h2 id="section-1"><strong>2</strong></h2><p><strong>2.1</strong> 第一类识别假设：潜在结果均值独立于处理状态</p><p><strong>2.2</strong> 从干扰项中剥离出控制变量；或者寻找一个与干扰项不相关的工具变量</p><p><strong>2.3</strong> 第二类识别假设：潜在结果条件均值独立于处理状态</p><p><strong>2.4</strong> 好的控制变量：既影响<span class="math inline">\(Y\)</span>，又影响<span class="math inline">\(D\)</span>。其本身和干扰项是否相关是不重要的，不是研究者关注的中心</p><p><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</p><p><strong>2.6</strong> 无需过渡阐释控制变量的系数</p><p>&nbsp;&nbsp;</p><h2 id="section-2"><strong>3</strong></h2><p><strong>3.1 </strong>鲁宾因果模型并未规定具体的函数形式</p><p><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</p><p>&nbsp;&nbsp;</p><h2 id="section-3"><strong>4</strong></h2><p><strong>4.1 </strong>选择性又称之为分配机制，每个个体如何接受处理，可以用倾向得分来表示</p><p><strong>4.2 </strong>建议现实使用IV、DID、RDD等识别方法时，称之为准实验</p><p>&nbsp;&nbsp;</p>]]></content>
-      <categories>
-        <category>计量</category>
-      </categories>
-      <tags>
-        <tag>学术讲座</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>学术讲座# 中国人民大学经济学院江艇：渐进DID的最新进展</title>
-    <url>/2022/08/24/DID1/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p><p><strong>关于DID因果识别</strong></p><ul><li>Imbens: 任何的因果识别归根结底都是做<strong>差值</strong></li><li>传统<span class="math inline">\(DID\)</span>最大的两类威胁是：①平行趋势不成立；②存在混淆政策</li><li><span class="math inline">\(DID\)</span>的重要前提是平行趋势，但这种前提实际并不能完全验证：事前平行并不意味着事后平行趋势，但事前不平行一定能验证平行趋势不成立</li><li>最经典的例子就是经济特区，深圳在改革开放前可能和中原地区的一个小村庄没有什么不同，但是即使深圳没有被划为经济特区，改革开放后其经济增长趋势也有可能因为地缘优势而呈现较快的增长趋势</li><li>两期的数据做<span class="math inline">\(DID\)</span>会退化为<span class="math inline">\(FD\)</span>，此时的截距项代表时间变化趋势</li><li>Good control: 既影响<span class="math inline">\(y\)</span>，又影响<span class="math inline">\(D \cdot T\)</span></li><li>Bad control: 既影响<span class="math inline">\(y\)</span>，又被<span class="math inline">\(D \cdot T\)</span>影响</li><li>无法判断影响样本进入处理组的因素是否还影响其变化趋势</li><li>潜在结果：使用上标表示，想象中的结果</li><li><span class="math inline">\(ATT\)</span>：处理组接受处理后的平均处理效应</li><li><span class="math inline">\(D\)</span>实际可以理解为处理组的固定效应</li></ul><p>&nbsp; &nbsp;<a id="more"></a> &nbsp;</p><h2 id="交错型didstaggered-did"><strong>1. 交错型DID(staggered DID)</strong></h2><ul><li>没有办法构造<span class="math inline">\(D \cdot T\)</span>，可以直接定义<span class="math inline">\(D \cdot T\)</span>，表示接受处理的虚拟变量</li><li>干预事件的发生时间不一致，极可能意味着，事后趋势不一致。为此，应尽量控制影响<span class="math inline">\(X_i\)</span>，避免控制既影响<span class="math inline">\(y\)</span>，又被<span class="math inline">\(D \cdot T\)</span>影响的<span class="math inline">\(X_{it}\)</span></li><li>为了能够控制<span class="math inline">\(X_i\)</span>，需要将其乘以一个时间趋势项<span class="math inline">\(t\)</span>，或者设置<span class="math inline">\(X_i\)</span>与时间固定效应<span class="math inline">\(\mu_t\)</span>的交互项</li><li>Goodman-Bacon定理：任何一个交错<span class="math inline">\(DID\)</span>的双向固定效应模型都可以分解为<span class="math inline">\(K^2\)</span>个传统双重差分估计结果的加权平均</li><li>导致偏误的原因在于：以晚处理组为处理组，以早处理组为对照组，此时双重差分估计中包含了一项<span class="math inline">\(\Delta ATT\)</span>，即早处理组的政策效应存在明显的动态变化</li><li>交错<span class="math inline">\(DID\)</span>估计出的<span class="math inline">\(\beta\)</span>究竟意味着什么？由三部分构成：①方差加权的<span class="math inline">\(ATT\)</span>；②方差加权的趋势差异；③<span class="math inline">\(\Delta ATT\)</span></li></ul><p>&nbsp;</p><h2 id="改进策略基于事件研究法"><strong>2. 改进策略</strong>——基于事件研究法</h2><p><strong>2.1 </strong>进行<span class="math inline">\(bacondecommp\)</span>分解，观察以早处理组为控制组的系数和权重，判断其是否影响了最终系数的估计</p><p><strong>2.2</strong> 进行协变量的平衡性检验。在交错<span class="math inline">\(DID\)</span>的情形下，平行趋势检验没办法做。干预时间的不一致，平衡性检验可作为一种替代手段。此做法的目的在于判断事前变量与干预处理进度之间的关系。进行匹配时，都可以以政策执行前某一期为准</p><p><strong>2.3</strong> 进一步，可以按照各组作为控制组的贡献作为权重，对事前变量与干预处理进度进行加权<span class="math inline">\(OLS\)</span></p><p><strong>2.4</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解，必须是平衡面板数据，所以要删除一些样本</p><p><strong>2.5</strong> 事件研究法：变日历时间为相对时间。按照相对时间进行校准，如果存在非常明显的趋势，则<span class="math inline">\(\Delta ATT\)</span>一定会比较大，基准模型会存在低估偏误</p><p><strong>2.6</strong> 可以根据事件研究法的结果，将核心解释变量乘以一个<span class="math inline">\(t-T^*\)</span></p><p>&nbsp;&nbsp;</p><h2 id="改进策略堆叠didstacked-did"><strong>3.改进策略</strong>——堆叠<span class="math inline">\(DID\)</span>(Stacked <span class="math inline">\(DID\)</span>)</h2><p><strong>3.1 </strong>假定存在K个处理时点，构造K个数据集。每个数据集中只保留可以为处理组服务的控制组，比如晚处理组和一直未处理的组。标准误需要聚类到数据集上面</p><p><strong>3.2</strong> 从构造上保证了早处理组不能作为控制组</p><p>&nbsp;&nbsp;</p><h2 id="改进策略对事件研究法的反思寻找干净的控制组"><strong>4.改进策略</strong>——对事件研究法的反思，寻找干净的控制组</h2><p><strong>4.1 </strong>仅不同时间队列样本的动态处理效应变化方式是一样的，事件研究法的估计才是有效的</p><p>&nbsp;&nbsp;</p>]]></content>
-      <categories>
-        <category>计量</category>
-        <category>DID</category>
-      </categories>
-      <tags>
-        <tag>学术讲座</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
-    <url>/2020/06/08/paper1/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p><h2 id="研究问题"><strong>1. 研究问题</strong></h2><p>本文以江苏省12个地级市“河长制”政策转移案例(2006 — 2016)为研究对象,在识别政策转移案例中“复制”和“再生产”两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对“河长制”转移程度的影响。研究发现“河长制”政策转移中的“政策再生产”的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局。通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策“再生产”的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产。</p><p>&nbsp;</p><a id="more"></a><h2 id="问题的提出"><strong>2. 问题的提出</strong></h2><p><strong>2.1 政策转移的必要性</strong></p><p>现实状况：政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有“后发优势”的意味、地区间的合作与竞争</p><p>转移情形：政策转移并不意味着全盘复制，可分为“复制”和“再生产”两种形式</p><p>核心问题：什么因素能够促成政策“再生产”，政策“再生产”又体现出那些维度特征</p><p><strong>2.2 河长制的背景介绍</strong></p><p>河湖治理是跨界特性最典型的领域之一，涉及上下游、左右岸、不同行政区域和行业，呈现出高度的复杂性。河长制最早发轫于太湖蓝藻危机，2016年之前是一项地方政策，经政策扩散至多地。</p><p>现实调查显示河长制在江苏省内的扩散过程中呈现出“复制”和“再生产”的典型差异。</p><p>&nbsp;</p><h2 id="研究思路和方法"><strong>3. 研究思路和方法</strong></h2><p><strong>3.1 QCA</strong></p><p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles Ragin)于<code>1987</code>年提出，适用于案例数量大于10小于60的研究。</p><p>其使用布尔代数和集合论的思想来进行中小数量的跨案例比较，从而处理多个原因和一个结果之间的因果关系。</p><p><strong>3.2 转移程度的刻画</strong></p><p>道洛维茨和马什最早借鉴rose（1993）的连续统来划分政策转移程度：复制、模仿、混合、启发。</p><p>本文简单划分为：“复制”和“再生产”</p><p><strong>3.3 解释变量的选择</strong></p><p>行政压力、资源禀赋、政策需求、外部力量</p><p>&nbsp;</p><h2 id="结论"><strong>4. 结论</strong></h2><p>政策转移中政策“再生产”的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素。</p>]]></content>
-      <categories>
-        <category>公共管理</category>
-        <category>政策转移</category>
-      </categories>
-      <tags>
-        <tag>文献阅读</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文献阅读# the Effect of Microinsurance on Economic Activities: Evidence From a Randomized Field Experiment</title>
-    <url>/2020/06/06/paper2/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p><p><strong>需要提前了解的生猪养殖知识背景</strong></p><ul><li>市场上常见的肉猪基本均为经过绝育的猪。一般而言，养殖户会在猪仔1个月大小的时候进行绝育，对公猪进行阉割，对母猪则切除卵巢。这种做法能够增加肉猪的成长速度，减少猪发情带来的成本，并减小猪肉的膻腥味、提升口感。</li><li>如果养殖户存养未绝育的种猪或母猪，其用途主要为繁育猪仔。</li><li>对于农村的小型散养户而言，每个村庄一般会有一个村兽医、或养殖技术联络员为其提供“猪的绝育”服务，村兽医、或养殖技术联络员基本 对应本文中的"Animal Husbandry Workers (AHW)"。</li></ul><p>&nbsp; &nbsp; &nbsp;</p><h2 id="研究问题"><strong>1. 研究问题</strong></h2><p>本文旨在对“小额保险”（“普惠型保险”）对农户农业生产决策的作用进行因果识别。</p><p>具体而言，作者以“母猪保险”这一险种为例，以贵州省毕节市金沙县27个乡镇的480个村为实验场域，采用田野实验的方法，在中国人民财产保险股份有限公司（PCC）所推出的“母猪保险”产品基础上，结合金沙县“保险公司产推--&gt;畜牧局地推--&gt;养殖技术联络员村推”的保险推广模式，为村养殖技术联络员（AHW）随机分配“绩效激励”，进而设置了村级层面的处理组和控制组，基于“组别”设置了一个村级层面的外生变量，对“母猪保险”村庄覆盖差异与后期“母猪存栏量”之间的因果关系进行因果识别。</p><p>&nbsp;</p><a id="more"></a><h2 id="研究内容"><strong>2. 研究内容</strong></h2><p><strong>2.1 设计田野实验并获得具有外生性的村庄“母猪保险”覆盖指标</strong></p><p>具体包含实验可行性分析、随机干预策略选择以及潜在作用机制及威胁分析三个部分，详见下图</p><p><img data-src="/paper_source/1.png"></p><p><strong>2.2 结合可获数据识别村庄“母猪保险”覆盖指标与“母猪存栏决策”之间的因果关系，并对识别效果进行有效性检验</strong></p><p>具体包含数据整合、特征性事实提炼、实证分析以及实验有效性分析四个部分，详见下图</p><p><img data-src="/paper_source/2.png"></p><p><strong>2.3 因果关系背后的作用机制、长期特征、溢出效应</strong></p><p>具体包含作用机制检验、长期效应及溢出效应分析，详见下图</p><p><img data-src="/paper_source/3.png"></p><p>&nbsp;</p><h2 id="研究思路"><strong>3. 研究思路</strong></h2><p>文章研究思路如下图所示</p><p><img data-src="/paper_source/Diagram1.png"></p><p>&nbsp;</p><h2 id="研究方法"><strong>4. 研究方法</strong></h2><p><strong>4.1 田野实验法：</strong>文章采用田野实验的方法产生了一个外生的随机干预效果，即养殖技术联络员（AHW）“绩效激励”差异引致的“母猪保险”村庄覆盖差异。</p><p><strong>4.2 统计分析与计量经济模型方法：</strong>文章进一步整合了地方畜牧局统计数据、中国农业普查数据，并以衡量“绩效激励”差异的变量LIG与HIG为工具变量，识别了村庄“母猪保险”覆盖指标与后期“母猪存栏量”之间的因果关系。</p><p>&nbsp;</p><h2 id="评述以及改进建议"><strong>5. 评述以及改进建议</strong></h2><p><strong>5.1 评述</strong></p><p><strong>5.1.1</strong> 文章采用田野实验的方法，结合金沙县“保险公司产推--&gt;畜牧局地推--&gt;养殖技术联络员村推”保险推广模式，以及该地村庄间交通不便等现实特征，通过为村养殖技术联络员（AHW）随机分配“绩效激励”精妙地设置了外生随机干预，并以其作为投保“母猪保险”头数的工具变量，整合多方数据，识别了投保“母猪保险”与后期“母猪存栏量”之间的因果关系，并进行了有效性分析，并利用2008年南方雪灾造成母猪死亡数进行了机制分析。最终验证了“小额保险”对农户农业生产决策的作用。</p><p><strong>5.1.2</strong> 一方面，随机分配“绩效激励”的设置十分巧妙，其外生性以及与村庄总体投保数的相关性都可以得到充分的事实支撑。此外，作者以2008年南方雪灾造成的母猪死亡数作为“村庄发生‘母猪保险’赔付”的情景代理变量，验证了信任机制的重要性。</p><p><strong>5.1.3</strong> 另一方面，随机分配“绩效激励”的设置也可能面临异质性问题，村养殖技术联络员（AHW）个体特征的不同可能会影响其推广保险的绩效；此外，村庄的某些特征的差异也可能引起异质性，比如，人均受教育程度高的村庄可能更容易理解“母猪保险”的保险机制，进而体现出更高的投保率；最后，利用2008年南方雪灾造成的母猪死亡数进行机制分析的做法有些许勉强，或许可以直接从PCC获取相关赔付数据进行机制分析。</p><p><strong>5.2 改进建议</strong></p><p><strong>5.2.1</strong> 文章声明测度了村养殖技术联络员（AHW）的人口统计学变量，可依据这些变量进行异质性分析，因为AHW个人的某些特质，比如责任感、受教育程度可能会影响其推广保险的努力程度抑或有效程度。因此，可设置AWH特征变量与低“绩效激励”组（LIG）、高“绩效激励”组（HIG）的交互项，考察由AHW特征引起的“母猪保险”对“母猪存栏决策”的作用异质性。</p><p><strong>5.2.2</strong> 文章获得了村级层面的特征变量，却仅在所有模型中加入了乡镇（town）层面的哑变量，在模型中控制村庄特征变量比如村庄农户数、人均受教育程度等可能更有意义。再者，村庄的某些特征的差异也可能引起异质性，可设置村庄特征变量与低“绩效激励”组（LIG）、高“绩效激励”组（HIG）的交互项，考察由村庄特征引起的“母猪保险”对“母猪存栏决策”的作用异质性。</p><p><strong>5.2.3</strong> 文章认为2008年雪灾造成的母猪死亡数较多的村庄，可能发生了实际的“母猪保险”赔付，进而为村民提供了一种情景互动，提高了村民对保险机构的信任，这一机制仅为猜测。作者既然声明可从PCC获得保单，那么赔付数据也应该能够获取，应该基于真实的赔付数据进行机制检验。</p>]]></content>
-      <categories>
-        <category>实验经济学</category>
-        <category>保险</category>
-      </categories>
-      <tags>
-        <tag>文献阅读</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>字体和公式的Display</title>
-    <url>/2020/05/30/testof_mathequation_fontface/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr><font face="Times New Roman"><p style="text-align:justify"><b>“Evaluating the employment impact of a mandatory job search program”</b></p></font><br><br><font face="Times New Roman"><p style="text-align:justify"></p><p><b>What treatment do the authors evaluate?</b></p></font><br><p></p><a id="more"></a> <font face="Tex Gyre Pagella"><p style="text-align:justify"></p><p><b>Answer: </b>In the parametric methods, the common trend assumption is:</p><p><span class="math display">\[\begin{array}{l} f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=0\right)\right] \\ =f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=0\right)\right] \end{array}\]</span> In the non-parametric methods, the common trend assumption is:</p><p><span class="math display">\[\begin{array}{l} E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=0\right) \\ =E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=1\right)-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right) \end{array}\]</span></p><p></p></font><p></p>]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>blog_test</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>画一幅我农所在地的道路图</title>
-    <url>/2020/05/29/yanglingmap/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2><img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display:block;margin:auto"><center>上图即为最终效果</center><h2 id="一些必备的工具">一些必备的工具</h2><p>一张json格式的我农地图，或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p><div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span>, <span class="at">destfile =</span> <span class="st">"~/文档/yangling.json"</span> )</span></code></pre></div><a id="more"></a><h2 id="绘制路网地图">绘制路网地图</h2><p>导入以下R 包：</p><div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(osmdata)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dodgr)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span></code></pre></div><p>读入杨陵区的数据：</p><div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>yl <span class="ot">&lt;-</span> <span class="fu">read_sf</span>(<span class="st">"~/文档/yangling.json"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_make_valid</span>()</span></code></pre></div><p>获取杨陵区的经纬度范围:</p><div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">st_bbox</span>(yl) <span class="sc">%&gt;%</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">matrix</span>(<span class="at">nrow =</span> <span class="dv">2</span>,</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">dimnames =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"y"</span>),</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>                         <span class="fu">c</span>(<span class="st">"min"</span>, <span class="st">"max"</span>))) <span class="ot">-&gt;</span> ebox</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>ebox</span></code></pre></div><pre><code>#&gt;         min       max
-#&gt; x 107.94598 108.13869
-#&gt; y  34.22145  34.33377</code></pre><p>提取杨陵区的街道路线：</p><div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>sraw <span class="ot">&lt;-</span> <span class="fu">dodgr_streetnet</span>(ebox)</span></code></pre></div><p>把数据保存为<strong>rds</strong>:</p><div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>sraw <span class="sc">%&gt;%</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_rds</span>(<span class="st">'sraw.rds'</span>)</span></code></pre></div><p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域：</p><div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>streets <span class="ot">&lt;-</span> sraw <span class="sc">%&gt;%</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_make_valid</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_intersection</span>(yl)</span></code></pre></div><p>然后绘图：</p><div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> streets, <span class="at">show.legend =</span> F, <span class="at">size =</span> <span class="fl">0.2</span> ,<span class="at">color =</span> <span class="st">"#DDE080"</span> ) <span class="sc">+</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_ipsum</span>(<span class="at">base_family =</span> <span class="st">"Times New Roman"</span>) <span class="sc">+</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>          <span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>          <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>          <span class="at">axis.title.x =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>          <span class="at">axis.title.y =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>          <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"#140035"</span>,</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>                                         <span class="at">color =</span> <span class="st">"#140035"</span>),</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>          <span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"#140035"</span>,</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>                                          <span class="at">color =</span> <span class="st">"#140035"</span>)) <span class="sc">+</span></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">""</span>)</span></code></pre></div>]]></content>
-      <categories>
-        <category>绘图</category>
       </categories>
       <tags>
         <tag>R</tag>
@@ -237,74 +248,63 @@
       </tags>
   </entry>
   <entry>
-    <title>致Berry</title>
-    <url>/2020/05/25/berry/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr><center><strong>Love You.</strong></center><center><strong>Berry!</strong></center><center><img data-src="/image/berry.jpg" width="66%" height="66%" title="妳" alt="妳"></center>]]></content>
+    <title>文献阅读# the Effect of Microinsurance on Economic Activities: Evidence From a Randomized Field Experiment</title>
+    <url>/2020/06/06/paper2/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p><p><strong>需要提前了解的生猪养殖知识背景</strong></p><ul><li>市场上常见的肉猪基本均为经过绝育的猪。一般而言，养殖户会在猪仔1个月大小的时候进行绝育，对公猪进行阉割，对母猪则切除卵巢。这种做法能够增加肉猪的成长速度，减少猪发情带来的成本，并减小猪肉的膻腥味、提升口感。</li><li>如果养殖户存养未绝育的种猪或母猪，其用途主要为繁育猪仔。</li><li>对于农村的小型散养户而言，每个村庄一般会有一个村兽医、或养殖技术联络员为其提供“猪的绝育”服务，村兽医、或养殖技术联络员基本 对应本文中的"Animal Husbandry Workers (AHW)"。</li></ul><p>&nbsp; &nbsp; &nbsp;</p><h2 id="研究问题"><strong>1. 研究问题</strong></h2><p>本文旨在对“小额保险”（“普惠型保险”）对农户农业生产决策的作用进行因果识别。</p><p>具体而言，作者以“母猪保险”这一险种为例，以贵州省毕节市金沙县27个乡镇的480个村为实验场域，采用田野实验的方法，在中国人民财产保险股份有限公司（PCC）所推出的“母猪保险”产品基础上，结合金沙县“保险公司产推--&gt;畜牧局地推--&gt;养殖技术联络员村推”的保险推广模式，为村养殖技术联络员（AHW）随机分配“绩效激励”，进而设置了村级层面的处理组和控制组，基于“组别”设置了一个村级层面的外生变量，对“母猪保险”村庄覆盖差异与后期“母猪存栏量”之间的因果关系进行因果识别。</p><p>&nbsp;</p><a id="more"></a><h2 id="研究内容"><strong>2. 研究内容</strong></h2><p><strong>2.1 设计田野实验并获得具有外生性的村庄“母猪保险”覆盖指标</strong></p><p>具体包含实验可行性分析、随机干预策略选择以及潜在作用机制及威胁分析三个部分，详见下图</p><p><img data-src="/paper_source/1.png"></p><p><strong>2.2 结合可获数据识别村庄“母猪保险”覆盖指标与“母猪存栏决策”之间的因果关系，并对识别效果进行有效性检验</strong></p><p>具体包含数据整合、特征性事实提炼、实证分析以及实验有效性分析四个部分，详见下图</p><p><img data-src="/paper_source/2.png"></p><p><strong>2.3 因果关系背后的作用机制、长期特征、溢出效应</strong></p><p>具体包含作用机制检验、长期效应及溢出效应分析，详见下图</p><p><img data-src="/paper_source/3.png"></p><p>&nbsp;</p><h2 id="研究思路"><strong>3. 研究思路</strong></h2><p>文章研究思路如下图所示</p><p><img data-src="/paper_source/Diagram1.png"></p><p>&nbsp;</p><h2 id="研究方法"><strong>4. 研究方法</strong></h2><p><strong>4.1 田野实验法：</strong>文章采用田野实验的方法产生了一个外生的随机干预效果，即养殖技术联络员（AHW）“绩效激励”差异引致的“母猪保险”村庄覆盖差异。</p><p><strong>4.2 统计分析与计量经济模型方法：</strong>文章进一步整合了地方畜牧局统计数据、中国农业普查数据，并以衡量“绩效激励”差异的变量LIG与HIG为工具变量，识别了村庄“母猪保险”覆盖指标与后期“母猪存栏量”之间的因果关系。</p><p>&nbsp;</p><h2 id="评述以及改进建议"><strong>5. 评述以及改进建议</strong></h2><p><strong>5.1 评述</strong></p><p><strong>5.1.1</strong> 文章采用田野实验的方法，结合金沙县“保险公司产推--&gt;畜牧局地推--&gt;养殖技术联络员村推”保险推广模式，以及该地村庄间交通不便等现实特征，通过为村养殖技术联络员（AHW）随机分配“绩效激励”精妙地设置了外生随机干预，并以其作为投保“母猪保险”头数的工具变量，整合多方数据，识别了投保“母猪保险”与后期“母猪存栏量”之间的因果关系，并进行了有效性分析，并利用2008年南方雪灾造成母猪死亡数进行了机制分析。最终验证了“小额保险”对农户农业生产决策的作用。</p><p><strong>5.1.2</strong> 一方面，随机分配“绩效激励”的设置十分巧妙，其外生性以及与村庄总体投保数的相关性都可以得到充分的事实支撑。此外，作者以2008年南方雪灾造成的母猪死亡数作为“村庄发生‘母猪保险’赔付”的情景代理变量，验证了信任机制的重要性。</p><p><strong>5.1.3</strong> 另一方面，随机分配“绩效激励”的设置也可能面临异质性问题，村养殖技术联络员（AHW）个体特征的不同可能会影响其推广保险的绩效；此外，村庄的某些特征的差异也可能引起异质性，比如，人均受教育程度高的村庄可能更容易理解“母猪保险”的保险机制，进而体现出更高的投保率；最后，利用2008年南方雪灾造成的母猪死亡数进行机制分析的做法有些许勉强，或许可以直接从PCC获取相关赔付数据进行机制分析。</p><p><strong>5.2 改进建议</strong></p><p><strong>5.2.1</strong> 文章声明测度了村养殖技术联络员（AHW）的人口统计学变量，可依据这些变量进行异质性分析，因为AHW个人的某些特质，比如责任感、受教育程度可能会影响其推广保险的努力程度抑或有效程度。因此，可设置AWH特征变量与低“绩效激励”组（LIG）、高“绩效激励”组（HIG）的交互项，考察由AHW特征引起的“母猪保险”对“母猪存栏决策”的作用异质性。</p><p><strong>5.2.2</strong> 文章获得了村级层面的特征变量，却仅在所有模型中加入了乡镇（town）层面的哑变量，在模型中控制村庄特征变量比如村庄农户数、人均受教育程度等可能更有意义。再者，村庄的某些特征的差异也可能引起异质性，可设置村庄特征变量与低“绩效激励”组（LIG）、高“绩效激励”组（HIG）的交互项，考察由村庄特征引起的“母猪保险”对“母猪存栏决策”的作用异质性。</p><p><strong>5.2.3</strong> 文章认为2008年雪灾造成的母猪死亡数较多的村庄，可能发生了实际的“母猪保险”赔付，进而为村民提供了一种情景互动，提高了村民对保险机构的信任，这一机制仅为猜测。作者既然声明可从PCC获得保单，那么赔付数据也应该能够获取，应该基于真实的赔付数据进行机制检验。</p>]]></content>
       <categories>
-        <category>领导</category>
+        <category>实验经济学</category>
+        <category>保险</category>
       </categories>
       <tags>
-        <tag>妳</tag>
+        <tag>文献阅读</tag>
       </tags>
   </entry>
   <entry>
-    <title>如何在双变量Probit中使用工具变量法IV估计</title>
-    <url>/2020/05/25/biprobit_iv/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr><h1 id="ml两步法">ML两步法</h1><p>可以采用二步法进行ML估计，以下将会以一段样例代码展示：</p><div class="sourceCode" id="cb1"><pre class="sourceCode stata"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">webuse</span> school, <span class="kw">clear</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">set</span> <span class="dv">seed</span> 1</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">capture</span> <span class="kw">program</span> <span class="kw">drop</span> mybiprobit</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">program</span> mybiprobit</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">args</span> lnf m1   m2  athrho  zb1 lns1</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">tempvar</span> rho</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">gen</span> <span class="kw">double</span> <span class="ot">`rho'</span>=<span class="fu">tanh</span>(<span class="ot">`athrho'</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">replace</span> <span class="ot">`lnf'</span>=<span class="fu">ln</span>(<span class="fu">normalden</span>(<span class="ot">$ML_y3</span>,<span class="ot">`zb1'</span>,<span class="fu">exp</span>(<span class="ot">`lns1'</span>)))</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">replace</span> <span class="ot">`lnf'</span>=<span class="ot">`lnf'</span>+<span class="fu">ln</span>(<span class="fu">binormal</span>(<span class="ot">`m1'</span>,<span class="ot">`m2'</span>,<span class="ot">`rho'</span>)) <span class="kw">if</span> <span class="ot">$ML_y1</span>==1 &amp; <span class="ot">$ML_y2</span>==1</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">replace</span> <span class="ot">`lnf'</span>=<span class="ot">`lnf'</span>+<span class="fu">ln</span>(<span class="fu">binormal</span>(<span class="ot">`m1'</span>,-<span class="ot">`m2'</span>,-<span class="ot">`rho'</span>)) <span class="kw">if</span> <span class="ot">$ML_y1</span>==1 &amp; <span class="ot">$ML_y2</span>==0</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">replace</span> <span class="ot">`lnf'</span>=<span class="ot">`lnf'</span>+<span class="fu">ln</span>(<span class="fu">binormal</span>(-<span class="ot">`m1'</span>,<span class="ot">`m2'</span>,-<span class="ot">`rho'</span>)) <span class="kw">if</span> <span class="ot">$ML_y1</span>==0 &amp; <span class="ot">$ML_y2</span>==1</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">replace</span> <span class="ot">`lnf'</span>=<span class="ot">`lnf'</span>+<span class="fu">ln</span>(<span class="fu">binormal</span>(-<span class="ot">`m1'</span>,-<span class="ot">`m2'</span>,<span class="ot">`rho'</span>)) <span class="kw">if</span> <span class="ot">$ML_y1</span>==0 &amp; <span class="ot">$ML_y2</span>==0</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>**Here <span class="fu">I</span> am creating an artificial IV</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="kw">gen</span> z=logptax-rnormal()</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="kw">ml</span> <span class="kw">model</span> lf mybiprobit (<span class="kw">private</span>:<span class="kw">private</span>=logptax loginc years)   (vote:vote=logptax loginc years)   /athrho (zb1:logptax=loginc  years z) /lns1</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="kw">ml</span> <span class="kw">maximize</span>,</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span> b=<span class="fu">e</span>(b)</span></code></pre></div><a id="more"></a><div class="sourceCode" id="cb2"><pre class="sourceCode stata"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">capture</span> <span class="kw">program</span> <span class="kw">drop</span> mybiprobitiv</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">program</span> mybiprobitiv</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">args</span> lnf mm1 g1  mm2  g2 athrho  zb1 lns1</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">tempvar</span> rho</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">gen</span> <span class="kw">double</span> <span class="ot">`rho'</span>=<span class="fu">tanh</span>(<span class="ot">`athrho'</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">replace</span> <span class="ot">`lnf'</span>=<span class="fu">ln</span>(<span class="fu">normalden</span>(<span class="ot">$ML_y3</span>,<span class="ot">`zb1'</span>,<span class="fu">exp</span>(<span class="ot">`lns1'</span>)))</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">tempvar</span> m1 m2</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">gen</span> <span class="kw">double</span> <span class="ot">`m1'</span>=<span class="ot">`mm1'</span>+<span class="ot">`g1'</span>*(<span class="ot">$ML_y3</span>-<span class="ot">`zb1'</span>)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">gen</span> <span class="kw">double</span> <span class="ot">`m2'</span>=<span class="ot">`mm2'</span>+<span class="ot">`g2'</span>*(<span class="ot">$ML_y3</span>-<span class="ot">`zb1'</span>)</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">replace</span> <span class="ot">`lnf'</span>=<span class="ot">`lnf'</span>+<span class="fu">ln</span>(<span class="fu">binormal</span>(<span class="ot">`m1'</span>,<span class="ot">`m2'</span>,<span class="ot">`rho'</span>)) <span class="kw">if</span> <span class="ot">$ML_y1</span>==1 &amp; <span class="ot">$ML_y2</span>==1</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">replace</span> <span class="ot">`lnf'</span>=<span class="ot">`lnf'</span>+<span class="fu">ln</span>(<span class="fu">binormal</span>(<span class="ot">`m1'</span>,-<span class="ot">`m2'</span>,-<span class="ot">`rho'</span>)) <span class="kw">if</span> <span class="ot">$ML_y1</span>==1 &amp; <span class="ot">$ML_y2</span>==0</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">replace</span> <span class="ot">`lnf'</span>=<span class="ot">`lnf'</span>+<span class="fu">ln</span>(<span class="fu">binormal</span>(-<span class="ot">`m1'</span>,<span class="ot">`m2'</span>,-<span class="ot">`rho'</span>)) <span class="kw">if</span> <span class="ot">$ML_y1</span>==0 &amp; <span class="ot">$ML_y2</span>==1</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span>:<span class="kw">replace</span> <span class="ot">`lnf'</span>=<span class="ot">`lnf'</span>+<span class="fu">ln</span>(<span class="fu">binormal</span>(-<span class="ot">`m1'</span>,-<span class="ot">`m2'</span>,<span class="ot">`rho'</span>)) <span class="kw">if</span> <span class="ot">$ML_y1</span>==0 &amp; <span class="ot">$ML_y2</span>==0</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="kw">ml</span> <span class="kw">model</span> lf mybiprobitiv (<span class="kw">private</span>:<span class="kw">private</span>=logptax loginc years) (g1:)  (vote:vote=logptax loginc years)  (g2:) /athrho (zb1:logptax=loginc  years z  ) /lns1, init(b)</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="kw">ml</span> <span class="kw">maximize</span></span></code></pre></div>]]></content>
+    <title>字体和公式的Display</title>
+    <url>/2020/05/30/testof_mathequation_fontface/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr><font face="Times New Roman"><p style="text-align:justify"><b>“Evaluating the employment impact of a mandatory job search program”</b></p></font><br><br><font face="Times New Roman"><p style="text-align:justify"></p><p><b>What treatment do the authors evaluate?</b></p></font><br><p></p><a id="more"></a> <font face="Tex Gyre Pagella"><p style="text-align:justify"></p><p><b>Answer: </b>In the parametric methods, the common trend assumption is:</p><p><span class="math display">\[\begin{array}{l} f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=0\right)\right] \\ =f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=0\right)\right] \end{array}\]</span> In the non-parametric methods, the common trend assumption is:</p><p><span class="math display">\[\begin{array}{l} E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=0\right) \\ =E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=1\right)-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right) \end{array}\]</span></p><p></p></font><p></p>]]></content>
       <categories>
-        <category>计量</category>
-        <category>内生性问题</category>
+        <category>调试</category>
       </categories>
       <tags>
-        <tag>stata</tag>
+        <tag>blog_test</tag>
       </tags>
   </entry>
   <entry>
-    <title>Shell脚本笔记（1）</title>
-    <url>/2020/05/25/shell_1/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr><h1 id="引言">引言</h1><p>shell是用C语言编写的程序，但它自身同时也是一种程序设计语言。你可能经常听说“shell脚本”，但实际上shell编程并非等同于“shell脚本”编程，前者指shell程序本身的开发，后者则是利用shell程序进行开发。都说java和javascript的区别是周杰和周杰伦的区别，shell和shell script或许也有那么点意思。</p><h1 id="shell脚本">shell脚本</h1><p>似乎任何程序学习都是从"Hello World!"开始的，对于<strong>shell</strong>而言：</p><div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Hello World !"</span></span></code></pre></div><p><strong>#!</strong>是个标记，告知这段命令将用bash执行。echo则是一个向窗口展示文本的命令。 你可以将以上代码框的内容存为一个以.sh为后缀的文件，比如<strong>hw.sh</strong>，并赋予文件执行权限：</p><pre class="shell"><code>chmod +x ./hw.sh         #赋予执行权限
-bash hw.sh               #执行脚本</code></pre><a id="more"></a><p>未完待续</p>]]></content>
+    <title>画一幅我农所在地的道路图</title>
+    <url>/2020/05/29/yanglingmap/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2><img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display:block;margin:auto"><center>上图即为最终效果</center><h2 id="一些必备的工具">一些必备的工具</h2><p>一张json格式的我农地图，或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p><div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span>, <span class="at">destfile =</span> <span class="st">"~/文档/yangling.json"</span> )</span></code></pre></div><a id="more"></a><h2 id="绘制路网地图">绘制路网地图</h2><p>导入以下R 包：</p><div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(osmdata)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dodgr)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span></code></pre></div><p>读入杨陵区的数据：</p><div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>yl <span class="ot">&lt;-</span> <span class="fu">read_sf</span>(<span class="st">"~/文档/yangling.json"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_make_valid</span>()</span></code></pre></div><p>获取杨陵区的经纬度范围:</p><div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">st_bbox</span>(yl) <span class="sc">%&gt;%</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">matrix</span>(<span class="at">nrow =</span> <span class="dv">2</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">dimnames =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"y"</span>),</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>                         <span class="fu">c</span>(<span class="st">"min"</span>, <span class="st">"max"</span>))) <span class="ot">-&gt;</span> ebox</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>ebox</span></code></pre></div><pre><code>#&gt;         min       max
+#&gt; x 107.94598 108.13869
+#&gt; y  34.22145  34.33377</code></pre><p>提取杨陵区的街道路线：</p><div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>sraw <span class="ot">&lt;-</span> <span class="fu">dodgr_streetnet</span>(ebox)</span></code></pre></div><p>把数据保存为<strong>rds</strong>:</p><div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>sraw <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_rds</span>(<span class="st">'sraw.rds'</span>)</span></code></pre></div><p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域：</p><div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>streets <span class="ot">&lt;-</span> sraw <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_make_valid</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_intersection</span>(yl)</span></code></pre></div><p>然后绘图：</p><div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> streets, <span class="at">show.legend =</span> F, <span class="at">size =</span> <span class="fl">0.2</span> ,<span class="at">color =</span> <span class="st">"#DDE080"</span> ) <span class="sc">+</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_ipsum</span>(<span class="at">base_family =</span> <span class="st">"Times New Roman"</span>) <span class="sc">+</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>          <span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>          <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>          <span class="at">axis.title.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>          <span class="at">axis.title.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>          <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"#140035"</span>,</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>                                         <span class="at">color =</span> <span class="st">"#140035"</span>),</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>          <span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"#140035"</span>,</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>                                          <span class="at">color =</span> <span class="st">"#140035"</span>)) <span class="sc">+</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">""</span>)</span></code></pre></div>]]></content>
       <categories>
-        <category>编程</category>
+        <category>绘图</category>
       </categories>
       <tags>
-        <tag>shell</tag>
+        <tag>R</tag>
       </tags>
   </entry>
 </search>
