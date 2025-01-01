@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh_CN">
+<html lang="zh_cn">
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#BD4F24">
-<meta name="generator" content="Hexo 4.2.1">
+<meta name="generator" content="Hexo 7.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -22,16 +22,16 @@
     var CONFIG = {"hostname":"github.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":380,"display":"post","padding":18,"offset":12,"onmobile":"fasle"},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":true,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="效果展示   上图即为最终效果  一些必备的工具 一张json格式的我农地图，或者杨陵地图,可从我的github仓库下载 1download.file(&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;QGQ931001&#x2F;git-tutorial&#x2F;master&#x2F;yangling_map&#x2F;yangling.json&quot;, destfile &#x3D; &quot;~&#x2F;文档&#x2F;yangling.json">
+  <meta name="description" content="效果展示   上图即为最终效果  一些必备的工具 一张json格式的我农地图，或者杨陵地图,可从我的github仓库下载 1download.file(&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;QGQ931001&#x2F;git-tutorial&#x2F;master&#x2F;yangling_map&#x2F;yangling.json&quot;, destfile &#x3D; &quot;~&#x2F;文">
 <meta property="og:type" content="article">
 <meta property="og:title" content="画一幅我农所在地的道路图">
 <meta property="og:url" content="https://github.com/QGQ931001/2020/05/29/yanglingmap/index.html">
 <meta property="og:site_name" content="QGQ的小站">
-<meta property="og:description" content="效果展示   上图即为最终效果  一些必备的工具 一张json格式的我农地图，或者杨陵地图,可从我的github仓库下载 1download.file(&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;QGQ931001&#x2F;git-tutorial&#x2F;master&#x2F;yangling_map&#x2F;yangling.json&quot;, destfile &#x3D; &quot;~&#x2F;文档&#x2F;yangling.json">
+<meta property="og:description" content="效果展示   上图即为最终效果  一些必备的工具 一张json格式的我农地图，或者杨陵地图,可从我的github仓库下载 1download.file(&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;QGQ931001&#x2F;git-tutorial&#x2F;master&#x2F;yangling_map&#x2F;yangling.json&quot;, destfile &#x3D; &quot;~&#x2F;文">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://github.com/figure/yanglingroad.png">
 <meta property="article:published_time" content="2020-05-28T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-28T18:12:03.882Z">
+<meta property="article:modified_time" content="2020-05-28T18:12:03.000Z">
 <meta property="article:author" content="QGQ">
 <meta property="article:tag" content="R">
 <meta name="twitter:card" content="summary">
@@ -46,7 +46,7 @@
     sidebar: "",
     isHome : false,
     isPost : true,
-    lang   : 'zh_CN'
+    lang   : 'zh_cn'
   };
 </script>
 
@@ -93,7 +93,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
+    <div class="toggle" aria-label="تشغيل شريط التصفح">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -128,22 +128,22 @@
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>معلومات</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">6</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>الوسوم<span class="badge">6</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">11</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>التصنيفات<span class="badge">11</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">9</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>الأرشيفات<span class="badge">9</span></a>
 
   </li>
         <li class="menu-item menu-item-tools">
@@ -182,7 +182,7 @@
     
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh_CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh_cn">
     <link itemprop="mainEntityOfPage" href="https://github.com/QGQ931001/2020/05/29/yanglingmap/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -204,27 +204,27 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">نُشر في</span>
               
 
-              <time title="Created: 2020-05-29 00:00:00 / Modified: 02:12:03" itemprop="dateCreated datePublished" datetime="2020-05-29T00:00:00+08:00">2020-05-29</time>
+              <time title="أُنشأ: 2020-05-29 00:00:00 / عُدل: 02:12:03" itemprop="dateCreated datePublished" datetime="2020-05-29T00:00:00+08:00">2020-05-29</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
+              <span class="post-meta-item-text">في</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/%E7%BB%98%E5%9B%BE/" itemprop="url" rel="index"><span itemprop="name">绘图</span></a>
                 </span>
             </span>
 
           
-            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+            <span class="post-meta-item" title="مشاهدات" id="busuanzi_container_page_pv" style="display: none;">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
-              <span class="post-meta-item-text">Views: </span>
+              <span class="post-meta-item-text">مشاهدات: </span>
               <span id="busuanzi_value_page_pv"></span>
             </span>
   
@@ -257,25 +257,26 @@
 上图即为最终效果
 </center>
 <h2 id="一些必备的工具">一些必备的工具</h2>
-<p>一张json格式的我农地图，或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json" target="_blank" rel="noopener">我的github仓库下载</a></p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">download.file(<span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span>, destfile = <span class="string">"~/文档/yangling.json"</span> )</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
+<p>一张json格式的我农地图，或者杨陵地图,可从<a
+target="_blank" rel="noopener" href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">&quot;https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json&quot;</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">&quot;~/文档/yangling.json&quot;</span> <span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<span id="more"></span>
 <h2 id="绘制路网地图">绘制路网地图</h2>
 <p>导入以下R 包：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(osmdata)</span><br><span class="line"><span class="keyword">library</span>(dodgr)</span><br><span class="line"><span class="keyword">library</span>(tidyverse)</span><br><span class="line"><span class="keyword">library</span>(sf)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
 <p>读入杨陵区的数据：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yl &lt;- read_sf(<span class="string">"~/文档/yangling.json"</span>) %&gt;%</span><br><span class="line">  st_make_valid()</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">&quot;~/文档/yangling.json&quot;</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
 <p>获取杨陵区的经纬度范围:</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">st_bbox(yl) %&gt;%</span><br><span class="line">  matrix(nrow = <span class="number">2</span>,</span><br><span class="line">         dimnames = list(c(<span class="string">"x"</span>, <span class="string">"y"</span>),</span><br><span class="line">                         c(<span class="string">"min"</span>, <span class="string">"max"</span>))) -&gt; ebox</span><br><span class="line">ebox</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">&quot;x&quot;</span><span class="punctuation">,</span> <span class="string">&quot;y&quot;</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">&quot;min&quot;</span><span class="punctuation">,</span> <span class="string">&quot;max&quot;</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></table></figure>
 <p>提取杨陵区的街道路线：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sraw &lt;- dodgr_streetnet(ebox)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
 <p>把数据保存为<strong>rds</strong>:</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sraw %&gt;%</span><br><span class="line">  write_rds(<span class="string">'sraw.rds'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">&#x27;sraw.rds&#x27;</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
 <p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">streets &lt;- sraw %&gt;%</span><br><span class="line">  st_make_valid() %&gt;%</span><br><span class="line">  st_intersection(yl)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
 <p>然后绘图：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">ggplot() +</span><br><span class="line">  geom_sf(data = streets, show.legend = <span class="literal">F</span>, size = <span class="number">0.2</span> ,color = <span class="string">"#DDE080"</span> ) +</span><br><span class="line">  theme_ipsum(base_family = <span class="string">"Times New Roman"</span>) +</span><br><span class="line">  theme(panel.grid.major = element_blank(),</span><br><span class="line">          panel.grid.minor = element_blank(),</span><br><span class="line">          axis.text.x = element_blank(),</span><br><span class="line">          axis.text.y = element_blank(),</span><br><span class="line">          axis.title.x = element_blank(),</span><br><span class="line">          axis.title.y = element_blank(),</span><br><span class="line">          plot.background = element_rect(fill = <span class="string">"#140035"</span>,</span><br><span class="line">                                         color = <span class="string">"#140035"</span>),</span><br><span class="line">          panel.background = element_rect(fill = <span class="string">"#140035"</span>,</span><br><span class="line">                                          color = <span class="string">"#140035"</span>)) +</span><br><span class="line">    labs(y = <span class="string">""</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">&quot;#DDE080&quot;</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">&quot;Times New Roman&quot;</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">&quot;#140035&quot;</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">&quot;#140035&quot;</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">&quot;#140035&quot;</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">&quot;#140035&quot;</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">&quot;&quot;</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -285,7 +286,7 @@
         <div class="reward-container">
   <div>﻿﻿Thanks for sponsoring. 谢谢老板! 老板大气！身体健康!</div>
   <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
-    Donate
+    تبرّع
   </button>
   <div id="qr" style="display: none;">
       
@@ -302,14 +303,14 @@
 <div>
 <ul class="post-copyright">
   <li class="post-copyright-author">
-    <strong>Post author:  </strong>秦国庆
+    <strong>مؤلف المقال:  </strong>秦国庆
   </li>
   <li class="post-copyright-link">
-    <strong>Post link: </strong>
+    <strong>رابط المقال: </strong>
     <a href="https://github.com/QGQ931001/2020/05/29/yanglingmap/" title="画一幅我农所在地的道路图">https://github.com/QGQ931001/2020/05/29/yanglingmap/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+    <strong>حقوق الملكية:  </strong>حميع المقالات في هذه المدوّنة منشورة تحت رخصة <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> إلا عند التنويه بخلافه.
   </li>
 </ul>
 </div>
@@ -317,7 +318,7 @@
         
 
   <div class="followme">
-    <p>Welcome to my other publishing channels</p>
+    <p>مرحباً بك حيثُ أنشر أيضاً</p>
 
     <div class="social-list">
 
@@ -413,16 +414,16 @@
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          Table of Contents
+          المحتويات
         </li>
         <li class="sidebar-nav-overview">
-          Overview
+          عام
         </li>
       </ul>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#效果展示"><span class="nav-number">1.</span> <span class="nav-text">效果展示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些必备的工具"><span class="nav-number">2.</span> <span class="nav-text">一些必备的工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绘制路网地图"><span class="nav-number">3.</span> <span class="nav-text">绘制路网地图</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA"><span class="nav-number">1.</span> <span class="nav-text">效果展示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E5%BF%85%E5%A4%87%E7%9A%84%E5%B7%A5%E5%85%B7"><span class="nav-number">2.</span> <span class="nav-text">一些必备的工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E8%B7%AF%E7%BD%91%E5%9C%B0%E5%9B%BE"><span class="nav-number">3.</span> <span class="nav-text">绘制路网地图</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -439,20 +440,20 @@
           <a href="/archives/">
         
           <span class="site-state-item-count">9</span>
-          <span class="site-state-item-name">posts</span>
+          <span class="site-state-item-name">المقالات</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
         <span class="site-state-item-count">11</span>
-        <span class="site-state-item-name">categories</span></a>
+        <span class="site-state-item-name">التصنيفات</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
         <span class="site-state-item-count">6</span>
-        <span class="site-state-item-name">tags</span></a>
+        <span class="site-state-item-name">الوسوم</span></a>
       </div>
   </nav>
 </div>
@@ -509,7 +510,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -550,7 +551,7 @@ show_date_time();
       <span class="post-meta-item-icon">
         <i class="fa fa-user"></i>
       </span>
-      <span class="site-uv" title="Total Visitors">
+      <span class="site-uv" title="إجمالي الزوار">
         <span id="busuanzi_value_site_uv"></span>
       </span>
     </span>
@@ -559,7 +560,7 @@ show_date_time();
       <span class="post-meta-item-icon">
         <i class="fa fa-eye"></i>
       </span>
-      <span class="site-pv" title="Total Views">
+      <span class="site-pv" title="إجمالي المشاهدات">
         <span id="busuanzi_value_site_pv"></span>
       </span>
     </span>
