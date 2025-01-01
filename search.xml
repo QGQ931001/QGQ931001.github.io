@@ -130,6 +130,30 @@ Ragin)于<code>1987</code>年提出，适用于案例数量大于10小于60的�
       </tags>
   </entry>
   <entry>
+    <title>Shell脚本笔记（1）</title>
+    <url>/posts/2510/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<h1 id="引言">引言</h1>
+<p>shell是用C语言编写的程序，但它自身同时也是一种程序设计语言。你可能经常听说“shell脚本”，但实际上shell编程并非等同于“shell脚本”编程，前者指shell程序本身的开发，后者则是利用shell程序进行开发。都说java和javascript的区别是周杰和周杰伦的区别，shell和shell
+script或许也有那么点意思。</p>
+<h1 id="shell脚本">shell脚本</h1>
+<p>似乎任何程序学习都是从"Hello
+World!"开始的，对于<strong>shell</strong>而言：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Hello World !"</span></span><br></pre></td></tr></tbody></table></figure>
+<p><strong>#!</strong>是个标记，告知这段命令将用bash执行。echo则是一个向窗口展示文本的命令。
+你可以将以上代码框的内容存为一个以.sh为后缀的文件，比如<strong>hw.sh</strong>，并赋予文件执行权限：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">chmod +x ./hw.sh         #赋予执行权限</span><br><span class="line">bash hw.sh               #执行脚本</span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<p>未完待续</p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>文献阅读# the Effect of Microinsurance on Economic Activities: Evidence From a Randomized Field Experiment</title>
     <url>/posts/51245/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
@@ -191,6 +215,45 @@ Ragin)于<code>1987</code>年提出，适用于案例数量大于10小于60的�
       </categories>
       <tags>
         <tag>文献阅读</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>字体和公式的Display</title>
+    <url>/posts/15167/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<font face="Times New Roman">
+</font><p style="text-align:justify"><font face="Times New Roman">
+<b>“Evaluating the employment impact of a mandatory job search
+program”</b></font> <br> <br> <font face="Times New Roman">
+</font></p><p style="text-align:justify"><font face="Times New Roman">
+</font></p><p><font face="Times New Roman"><b>What treatment do the authors evaluate?</b></font> <br></p>
+<span id="more"></span>
+<font face="Tex Gyre Pagella">
+<p style="text-align:justify">
+</p><p><b>Answer: </b> In the parametric methods, the common trend
+assumption is:</p>
+<p><span class="math display">\[\begin{array}{l}
+f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
+t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
+t=0\right)\right] \\
+=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
+t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
+t=0\right)\right]
+\end{array}\]</span> In the non-parametric methods, the common trend
+assumption is:</p>
+<p><span class="math display">\[\begin{array}{l}
+E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i
+t}^{0} | P_{E X}, P_{t X}, N D=1, t=0\right) \\
+=E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=1\right)-E\left(Y_{i
+t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)
+\end{array}\]</span></p>
+</font><p><font face="Tex Gyre Pagella"></font></p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>blog_test</tag>
       </tags>
   </entry>
   <entry>
@@ -425,69 +488,6 @@ transformation），即统计变换。你可能想要覆盖默认的统计变换
       </categories>
       <tags>
         <tag>R</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Shell脚本笔记（1）</title>
-    <url>/posts/2510/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<h1 id="引言">引言</h1>
-<p>shell是用C语言编写的程序，但它自身同时也是一种程序设计语言。你可能经常听说“shell脚本”，但实际上shell编程并非等同于“shell脚本”编程，前者指shell程序本身的开发，后者则是利用shell程序进行开发。都说java和javascript的区别是周杰和周杰伦的区别，shell和shell
-script或许也有那么点意思。</p>
-<h1 id="shell脚本">shell脚本</h1>
-<p>似乎任何程序学习都是从"Hello
-World!"开始的，对于<strong>shell</strong>而言：</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Hello World !"</span></span><br></pre></td></tr></tbody></table></figure>
-<p><strong>#!</strong>是个标记，告知这段命令将用bash执行。echo则是一个向窗口展示文本的命令。
-你可以将以上代码框的内容存为一个以.sh为后缀的文件，比如<strong>hw.sh</strong>，并赋予文件执行权限：</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">chmod +x ./hw.sh         #赋予执行权限</span><br><span class="line">bash hw.sh               #执行脚本</span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<p>未完待续</p>
-]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>shell</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>字体和公式的Display</title>
-    <url>/posts/15167/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<font face="Times New Roman">
-</font><p style="text-align:justify"><font face="Times New Roman">
-<b>“Evaluating the employment impact of a mandatory job search
-program”</b></font> <br> <br> <font face="Times New Roman">
-</font></p><p style="text-align:justify"><font face="Times New Roman">
-</font></p><p><font face="Times New Roman"><b>What treatment do the authors evaluate?</b></font> <br></p>
-<span id="more"></span>
-<font face="Tex Gyre Pagella">
-<p style="text-align:justify">
-</p><p><b>Answer: </b> In the parametric methods, the common trend
-assumption is:</p>
-<p><span class="math display">\[\begin{array}{l}
-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
-t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
-t=0\right)\right] \\
-=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
-t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
-t=0\right)\right]
-\end{array}\]</span> In the non-parametric methods, the common trend
-assumption is:</p>
-<p><span class="math display">\[\begin{array}{l}
-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i
-t}^{0} | P_{E X}, P_{t X}, N D=1, t=0\right) \\
-=E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=1\right)-E\left(Y_{i
-t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)
-\end{array}\]</span></p>
-</font><p><font face="Tex Gyre Pagella"></font></p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>blog_test</tag>
       </tags>
   </entry>
   <entry>
