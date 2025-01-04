@@ -194,6 +194,30 @@ Lat)，以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据�
       </tags>
   </entry>
   <entry>
+    <title>Shell脚本笔记（1）</title>
+    <url>/posts/2510/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<h1 id="引言">引言</h1>
+<p>shell是用C语言编写的程序，但它自身同时也是一种程序设计语言。你可能经常听说“shell脚本”，但实际上shell编程并非等同于“shell脚本”编程，前者指shell程序本身的开发，后者则是利用shell程序进行开发。都说java和javascript的区别是周杰和周杰伦的区别，shell和shell
+script或许也有那么点意思。</p>
+<h1 id="shell脚本">shell脚本</h1>
+<p>似乎任何程序学习都是从"Hello
+World!"开始的，对于<strong>shell</strong>而言：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Hello World !"</span></span><br></pre></td></tr></tbody></table></figure>
+<p><strong>#!</strong>是个标记，告知这段命令将用bash执行。echo则是一个向窗口展示文本的命令。
+你可以将以上代码框的内容存为一个以.sh为后缀的文件，比如<strong>hw.sh</strong>，并赋予文件执行权限：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">chmod +x ./hw.sh         #赋予执行权限</span><br><span class="line">bash hw.sh               #执行脚本</span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<p>未完待续</p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>R数据科学——ggplot2笔记（1）</title>
     <url>/posts/29862/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="一个说明">一个说明</h2>
@@ -428,6 +452,42 @@ transformation），即统计变换。你可能想要覆盖默认的统计变换
       </tags>
   </entry>
   <entry>
+    <title>画一幅我农所在地的道路图</title>
+    <url>/posts/42027/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;">
+<center>
+上图即为最终效果
+</center>
+<h2 id="一些必备的工具">一些必备的工具</h2>
+<p>一张json格式的我农地图，或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="绘制路网地图">绘制路网地图</h2>
+<p>导入以下R 包：</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>读入杨陵区的数据：</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>获取杨陵区的经纬度范围:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
+<p>提取杨陵区的街道路线：</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>把数据保存为<strong>rds</strong>:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域：</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>然后绘图：</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>绘图</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>字体和公式的Display</title>
     <url>/posts/15167/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
@@ -464,66 +524,6 @@ t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)
       </categories>
       <tags>
         <tag>blog_test</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Shell脚本笔记（1）</title>
-    <url>/posts/2510/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<h1 id="引言">引言</h1>
-<p>shell是用C语言编写的程序，但它自身同时也是一种程序设计语言。你可能经常听说“shell脚本”，但实际上shell编程并非等同于“shell脚本”编程，前者指shell程序本身的开发，后者则是利用shell程序进行开发。都说java和javascript的区别是周杰和周杰伦的区别，shell和shell
-script或许也有那么点意思。</p>
-<h1 id="shell脚本">shell脚本</h1>
-<p>似乎任何程序学习都是从"Hello
-World!"开始的，对于<strong>shell</strong>而言：</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Hello World !"</span></span><br></pre></td></tr></tbody></table></figure>
-<p><strong>#!</strong>是个标记，告知这段命令将用bash执行。echo则是一个向窗口展示文本的命令。
-你可以将以上代码框的内容存为一个以.sh为后缀的文件，比如<strong>hw.sh</strong>，并赋予文件执行权限：</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">chmod +x ./hw.sh         #赋予执行权限</span><br><span class="line">bash hw.sh               #执行脚本</span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<p>未完待续</p>
-]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>shell</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>画一幅我农所在地的道路图</title>
-    <url>/posts/42027/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;">
-<center>
-上图即为最终效果
-</center>
-<h2 id="一些必备的工具">一些必备的工具</h2>
-<p>一张json格式的我农地图，或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="绘制路网地图">绘制路网地图</h2>
-<p>导入以下R 包：</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>读入杨陵区的数据：</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>获取杨陵区的经纬度范围:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
-<p>提取杨陵区的街道路线：</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>把数据保存为<strong>rds</strong>:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域：</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>然后绘图：</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>绘图</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
       </tags>
   </entry>
 </search>
