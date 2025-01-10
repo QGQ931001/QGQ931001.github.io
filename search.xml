@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>如何在双变量Probit中使用工具变量法IV估计</title>
-    <url>/posts/60676/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<h1 id="ml两步法">ML两步法</h1>
-<p>可以采用二步法进行ML估计，以下将会以一段样例代码展示：</p>
-<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">webuse</span> school, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">set</span> seed 1</span><br><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobit</span><br><span class="line"><span class="keyword">program</span> mybiprobit</span><br><span class="line"><span class="keyword">args</span> lnf m1   m2  athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"><span class="comment">**Here I am creating an artificial IV</span></span><br><span class="line"><span class="keyword">gen</span> z=logptax-rnormal()</span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobit (private:private=logptax loginc years)   (vote:vote=logptax loginc years)   /athrho (zb1:logptax=loginc  years z) /lns1</span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> maximize,</span><br><span class="line"><span class="keyword">matrix</span> b=<span class="built_in">e</span>(b)</span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobitiv</span><br><span class="line"><span class="keyword">program</span> mybiprobitiv</span><br><span class="line"><span class="keyword">args</span> lnf mm1 g1  mm2  g2 athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">tempvar</span> m1 m2</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m1'</span>=<span class="symbol">`mm1'</span>+<span class="symbol">`g1'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m2'</span>=<span class="symbol">`mm2'</span>+<span class="symbol">`g2'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobitiv (private:private=logptax loginc years) (g1:)  (vote:vote=logptax loginc years)  (g2:) /athrho (zb1:logptax=loginc  years z  ) /lns1, init(b)</span><br><span class="line"><span class="keyword">ml</span> maximize</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>计量</category>
-        <category>内生性问题</category>
-      </categories>
-      <tags>
-        <tag>stata</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>学术讲座# 中国人民大学经济学院江艇：渐进DID的最新进展</title>
     <url>/posts/836/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="关于did因果识别"><strong>关于DID因果识别</strong></h2>
@@ -106,6 +88,24 @@ ATT\)</span>一定会比较大，基准模型会存在低估偏误</li>
       </tags>
   </entry>
   <entry>
+    <title>如何在双变量Probit中使用工具变量法IV估计</title>
+    <url>/posts/60676/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<h1 id="ml两步法">ML两步法</h1>
+<p>可以采用二步法进行ML估计，以下将会以一段样例代码展示：</p>
+<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">webuse</span> school, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">set</span> seed 1</span><br><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobit</span><br><span class="line"><span class="keyword">program</span> mybiprobit</span><br><span class="line"><span class="keyword">args</span> lnf m1   m2  athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"><span class="comment">**Here I am creating an artificial IV</span></span><br><span class="line"><span class="keyword">gen</span> z=logptax-rnormal()</span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobit (private:private=logptax loginc years)   (vote:vote=logptax loginc years)   /athrho (zb1:logptax=loginc  years z) /lns1</span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> maximize,</span><br><span class="line"><span class="keyword">matrix</span> b=<span class="built_in">e</span>(b)</span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobitiv</span><br><span class="line"><span class="keyword">program</span> mybiprobitiv</span><br><span class="line"><span class="keyword">args</span> lnf mm1 g1  mm2  g2 athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">tempvar</span> m1 m2</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m1'</span>=<span class="symbol">`mm1'</span>+<span class="symbol">`g1'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m2'</span>=<span class="symbol">`mm2'</span>+<span class="symbol">`g2'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobitiv (private:private=logptax loginc years) (g1:)  (vote:vote=logptax loginc years)  (g2:) /athrho (zb1:logptax=loginc  years z  ) /lns1, init(b)</span><br><span class="line"><span class="keyword">ml</span> maximize</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>计量</category>
+        <category>内生性问题</category>
+      </categories>
+      <tags>
+        <tag>stata</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>大城市人口增长速度🦚</title>
     <url>/posts/15523/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
@@ -153,6 +153,46 @@ Lat)，以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据�
       </categories>
       <tags>
         <tag>R</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
+    <url>/posts/32262/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
+<h2 id="研究问题"><strong>1. 研究问题</strong></h2>
+<p>本文以江苏省12个地级市“河长制”政策转移案例(2006 —
+2016)为研究对象,在识别政策转移案例中“复制”和“再生产”两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对“河长制”转移程度的影响。研究发现“河长制”政策转移中的“政策再生产”的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局。通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策“再生产”的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产。</p>
+<p>&nbsp;</p>
+<span id="more"></span>
+<h2 id="问题的提出"><strong>2. 问题的提出</strong></h2>
+<p><strong>2.1 政策转移的必要性</strong></p>
+<p>现实状况：政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有“后发优势”的意味、地区间的合作与竞争</p>
+<p>转移情形：政策转移并不意味着全盘复制，可分为“复制”和“再生产”两种形式</p>
+<p>核心问题：什么因素能够促成政策“再生产”，政策“再生产”又体现出那些维度特征</p>
+<p><strong>2.2 河长制的背景介绍</strong></p>
+<p>河湖治理是跨界特性最典型的领域之一，涉及上下游、左右岸、不同行政区域和行业，呈现出高度的复杂性。河长制最早发轫于太湖蓝藻危机，2016年之前是一项地方政策，经政策扩散至多地。</p>
+<p>现实调查显示河长制在江苏省内的扩散过程中呈现出“复制”和“再生产”的典型差异。</p>
+<p>&nbsp;</p>
+<h2 id="研究思路和方法"><strong>3. 研究思路和方法</strong></h2>
+<p><strong>3.1 QCA</strong></p>
+<p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles
+Ragin)于<code>1987</code>年提出，适用于案例数量大于10小于60的研究。</p>
+<p>其使用布尔代数和集合论的思想来进行中小数量的跨案例比较，从而处理多个原因和一个结果之间的因果关系。</p>
+<p><strong>3.2 转移程度的刻画</strong></p>
+<p>道洛维茨和马什最早借鉴rose（1993）的连续统来划分政策转移程度：复制、模仿、混合、启发。</p>
+<p>本文简单划分为：“复制”和“再生产”</p>
+<p><strong>3.3 解释变量的选择</strong></p>
+<p>行政压力、资源禀赋、政策需求、外部力量</p>
+<p>&nbsp;</p>
+<h2 id="结论"><strong>4. 结论</strong></h2>
+<p>政策转移中政策“再生产”的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素。</p>
+]]></content>
+      <categories>
+        <category>公共管理</category>
+        <category>政策转移</category>
+      </categories>
+      <tags>
+        <tag>文献阅读</tag>
       </tags>
   </entry>
   <entry>
@@ -208,46 +248,6 @@ inference</em></strong>）：如何从样本数据获取总体因果关系信息
       </categories>
       <tags>
         <tag>学术讲座</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
-    <url>/posts/32262/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
-<h2 id="研究问题"><strong>1. 研究问题</strong></h2>
-<p>本文以江苏省12个地级市“河长制”政策转移案例(2006 —
-2016)为研究对象,在识别政策转移案例中“复制”和“再生产”两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对“河长制”转移程度的影响。研究发现“河长制”政策转移中的“政策再生产”的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局。通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策“再生产”的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产。</p>
-<p>&nbsp;</p>
-<span id="more"></span>
-<h2 id="问题的提出"><strong>2. 问题的提出</strong></h2>
-<p><strong>2.1 政策转移的必要性</strong></p>
-<p>现实状况：政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有“后发优势”的意味、地区间的合作与竞争</p>
-<p>转移情形：政策转移并不意味着全盘复制，可分为“复制”和“再生产”两种形式</p>
-<p>核心问题：什么因素能够促成政策“再生产”，政策“再生产”又体现出那些维度特征</p>
-<p><strong>2.2 河长制的背景介绍</strong></p>
-<p>河湖治理是跨界特性最典型的领域之一，涉及上下游、左右岸、不同行政区域和行业，呈现出高度的复杂性。河长制最早发轫于太湖蓝藻危机，2016年之前是一项地方政策，经政策扩散至多地。</p>
-<p>现实调查显示河长制在江苏省内的扩散过程中呈现出“复制”和“再生产”的典型差异。</p>
-<p>&nbsp;</p>
-<h2 id="研究思路和方法"><strong>3. 研究思路和方法</strong></h2>
-<p><strong>3.1 QCA</strong></p>
-<p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles
-Ragin)于<code>1987</code>年提出，适用于案例数量大于10小于60的研究。</p>
-<p>其使用布尔代数和集合论的思想来进行中小数量的跨案例比较，从而处理多个原因和一个结果之间的因果关系。</p>
-<p><strong>3.2 转移程度的刻画</strong></p>
-<p>道洛维茨和马什最早借鉴rose（1993）的连续统来划分政策转移程度：复制、模仿、混合、启发。</p>
-<p>本文简单划分为：“复制”和“再生产”</p>
-<p><strong>3.3 解释变量的选择</strong></p>
-<p>行政压力、资源禀赋、政策需求、外部力量</p>
-<p>&nbsp;</p>
-<h2 id="结论"><strong>4. 结论</strong></h2>
-<p>政策转移中政策“再生产”的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素。</p>
-]]></content>
-      <categories>
-        <category>公共管理</category>
-        <category>政策转移</category>
-      </categories>
-      <tags>
-        <tag>文献阅读</tag>
       </tags>
   </entry>
   <entry>
