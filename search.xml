@@ -106,6 +106,61 @@ ATT\)</span>一定会比较大，基准模型会存在低估偏误</li>
       </tags>
   </entry>
   <entry>
+    <title>学术讲座# 中国人民大学经济学院江艇：因果推断Ⅰ</title>
+    <url>/posts/48526/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
+<ul>
+<li>因果识别+统计推断</li>
+<li>因果识别（<strong><em>causal
+identification</em></strong>）：如果拥有总体，能否确定总体因果关系</li>
+<li>统计推断（<strong><em>statistical
+inference</em></strong>）：如何从样本数据获取总体因果关系信息，实际是一种相关性事实</li>
+<li>识别假设，实际就是对 <span class="math inline">\(D\)</span> 和 <span class="math inline">\(\varepsilon\)</span>
+的关系作出表述，但这种过程是无法从理论上验证的</li>
+</ul>
+<span id="more"></span>
+<h2 id="section"><strong>1</strong></h2>
+<ul>
+<li><strong>1.1</strong>
+因果效应的定义：干预与否、处理与否时，潜在结果之间的差值。潜在结果一定是同一个时间点上的结果</li>
+<li><strong>1.2</strong> 潜在结果永远无法完全观测，除非存在平行宇宙</li>
+<li><strong>1.3</strong>
+通过识别假设可以进行“插值”，可以化“相关关系”识别场景为“因果关系”识别场景</li>
+<li><strong>1.4</strong>
+鲁宾因果模型（潜在因果框架），一套描述因果关系的新语言</li>
+</ul>
+<h2 id="section-1"><strong>2</strong></h2>
+<ul>
+<li><strong>2.1</strong> 第一类识别假设：潜在结果均值独立于处理状态</li>
+<li><strong>2.2</strong>
+从干扰项中剥离出控制变量；或者寻找一个与干扰项不相关的工具变量</li>
+<li><strong>2.3</strong>
+第二类识别假设：潜在结果条件均值独立于处理状态</li>
+<li><strong>2.4</strong> 好的控制变量：既影响<span class="math inline">\(Y\)</span>，又影响<span class="math inline">\(D\)</span>。其本身和干扰项是否相关是不重要的，不是研究者关注的中心</li>
+<li><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</li>
+<li><strong>2.6</strong> 无需过渡阐释控制变量的系数</li>
+</ul>
+<h2 id="section-2"><strong>3</strong></h2>
+<ul>
+<li><strong>3.1</strong> 鲁宾因果模型并未规定具体的函数形式</li>
+<li><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</li>
+</ul>
+<h2 id="section-3"><strong>4</strong></h2>
+<ul>
+<li><strong>4.1</strong>
+选择性又称之为分配机制，每个个体如何接受处理，可以用倾向得分来表示</li>
+<li><strong>4.2</strong>
+建议现实使用IV、DID、RDD等识别方法时，称之为准实验</li>
+</ul>
+]]></content>
+      <categories>
+        <category>计量</category>
+      </categories>
+      <tags>
+        <tag>学术讲座</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>大城市人口增长速度🦚</title>
     <url>/posts/15523/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
@@ -196,61 +251,6 @@ Ragin)于<code>1987</code>年提出，适用于案例数量大于10小于60的�
       </tags>
   </entry>
   <entry>
-    <title>学术讲座# 中国人民大学经济学院江艇：因果推断Ⅰ</title>
-    <url>/posts/48526/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
-<ul>
-<li>因果识别+统计推断</li>
-<li>因果识别（<strong><em>causal
-identification</em></strong>）：如果拥有总体，能否确定总体因果关系</li>
-<li>统计推断（<strong><em>statistical
-inference</em></strong>）：如何从样本数据获取总体因果关系信息，实际是一种相关性事实</li>
-<li>识别假设，实际就是对 <span class="math inline">\(D\)</span> 和 <span class="math inline">\(\varepsilon\)</span>
-的关系作出表述，但这种过程是无法从理论上验证的</li>
-</ul>
-<span id="more"></span>
-<h2 id="section"><strong>1</strong></h2>
-<ul>
-<li><strong>1.1</strong>
-因果效应的定义：干预与否、处理与否时，潜在结果之间的差值。潜在结果一定是同一个时间点上的结果</li>
-<li><strong>1.2</strong> 潜在结果永远无法完全观测，除非存在平行宇宙</li>
-<li><strong>1.3</strong>
-通过识别假设可以进行“插值”，可以化“相关关系”识别场景为“因果关系”识别场景</li>
-<li><strong>1.4</strong>
-鲁宾因果模型（潜在因果框架），一套描述因果关系的新语言</li>
-</ul>
-<h2 id="section-1"><strong>2</strong></h2>
-<ul>
-<li><strong>2.1</strong> 第一类识别假设：潜在结果均值独立于处理状态</li>
-<li><strong>2.2</strong>
-从干扰项中剥离出控制变量；或者寻找一个与干扰项不相关的工具变量</li>
-<li><strong>2.3</strong>
-第二类识别假设：潜在结果条件均值独立于处理状态</li>
-<li><strong>2.4</strong> 好的控制变量：既影响<span class="math inline">\(Y\)</span>，又影响<span class="math inline">\(D\)</span>。其本身和干扰项是否相关是不重要的，不是研究者关注的中心</li>
-<li><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</li>
-<li><strong>2.6</strong> 无需过渡阐释控制变量的系数</li>
-</ul>
-<h2 id="section-2"><strong>3</strong></h2>
-<ul>
-<li><strong>3.1</strong> 鲁宾因果模型并未规定具体的函数形式</li>
-<li><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</li>
-</ul>
-<h2 id="section-3"><strong>4</strong></h2>
-<ul>
-<li><strong>4.1</strong>
-选择性又称之为分配机制，每个个体如何接受处理，可以用倾向得分来表示</li>
-<li><strong>4.2</strong>
-建议现实使用IV、DID、RDD等识别方法时，称之为准实验</li>
-</ul>
-]]></content>
-      <categories>
-        <category>计量</category>
-      </categories>
-      <tags>
-        <tag>学术讲座</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>文献阅读# the Effect of Microinsurance on Economic Activities: Evidence From a Randomized Field Experiment</title>
     <url>/posts/51245/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
@@ -312,6 +312,30 @@ inference</em></strong>）：如何从样本数据获取总体因果关系信息
       </categories>
       <tags>
         <tag>文献阅读</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Shell脚本笔记（1）</title>
+    <url>/posts/2510/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<h1 id="引言">引言</h1>
+<p>shell是用C语言编写的程序，但它自身同时也是一种程序设计语言。你可能经常听说“shell脚本”，但实际上shell编程并非等同于“shell脚本”编程，前者指shell程序本身的开发，后者则是利用shell程序进行开发。都说java和javascript的区别是周杰和周杰伦的区别，shell和shell
+script或许也有那么点意思。</p>
+<h1 id="shell脚本">shell脚本</h1>
+<p>似乎任何程序学习都是从"Hello
+World!"开始的，对于<strong>shell</strong>而言：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Hello World !"</span></span><br></pre></td></tr></tbody></table></figure>
+<p><strong>#!</strong>是个标记，告知这段命令将用bash执行。echo则是一个向窗口展示文本的命令。
+你可以将以上代码框的内容存为一个以.sh为后缀的文件，比如<strong>hw.sh</strong>，并赋予文件执行权限：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">chmod +x ./hw.sh         #赋予执行权限</span><br><span class="line">bash hw.sh               #执行脚本</span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<p>未完待续</p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
       </tags>
   </entry>
   <entry>
@@ -546,30 +570,6 @@ transformation），即统计变换。你可能想要覆盖默认的统计变换
       </categories>
       <tags>
         <tag>R</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Shell脚本笔记（1）</title>
-    <url>/posts/2510/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<h1 id="引言">引言</h1>
-<p>shell是用C语言编写的程序，但它自身同时也是一种程序设计语言。你可能经常听说“shell脚本”，但实际上shell编程并非等同于“shell脚本”编程，前者指shell程序本身的开发，后者则是利用shell程序进行开发。都说java和javascript的区别是周杰和周杰伦的区别，shell和shell
-script或许也有那么点意思。</p>
-<h1 id="shell脚本">shell脚本</h1>
-<p>似乎任何程序学习都是从"Hello
-World!"开始的，对于<strong>shell</strong>而言：</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Hello World !"</span></span><br></pre></td></tr></tbody></table></figure>
-<p><strong>#!</strong>是个标记，告知这段命令将用bash执行。echo则是一个向窗口展示文本的命令。
-你可以将以上代码框的内容存为一个以.sh为后缀的文件，比如<strong>hw.sh</strong>，并赋予文件执行权限：</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">chmod +x ./hw.sh         #赋予执行权限</span><br><span class="line">bash hw.sh               #执行脚本</span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<p>未完待续</p>
-]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>shell</tag>
       </tags>
   </entry>
   <entry>
