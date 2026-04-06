@@ -1,80 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>学术讲座# 中国人民大学经济学院江艇:渐进DID的最新进展</title>
-    <url>/posts/836/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="关于DID因果识别"><a href="#关于DID因果识别" class="headerlink" title="关于DID因果识别"></a><strong>关于DID因果识别</strong></h2><ul>
-<li>Imbens: 任何的因果识别归根结底都是做<strong>插值</strong>与<strong>差值</strong></li>
-<li>传统$DID$最大的两类威胁是:①平行趋势不成立;②存在混淆政策</li>
-<li>$DID$的重要前提是平行趋势,但这种前提实际并不能完全验证:事前平行并不意味着事后平行趋势,但事前不平行一定能验证平行趋势不成立</li>
-<li>最经典的例子就是经济特区,深圳在改革开放前可能和中原地区的一个小村庄没有什么不同,但是即使深圳没有被划为经济特区,改革开放后其经济增长趋势也有可能因为地缘优势而呈现较快的增长趋势</li>
-<li>两期的数据做$DID$会退化为$FD$,此时的截距项代表时间变化趋势</li>
-<li>Good control: 既影响$y$,又影响$D\cdot T$</li>
-<li>Bad control: 既影响y,又被$D\cdot T$影响</li>
-<li>无法判断影响样本进入处理组的因素是否还影响其变化趋势</li>
-<li>潜在结果:使用上标表示,想象中的结果</li>
-<li>$ATT$:处理组接受处理后的平均处理效应</li>
-<li>$D$实际可以理解为处理组的固定效应</li>
-</ul>
-<span id="more"></span>
-<h2 id="1-交错型DID-staggered-DID"><a href="#1-交错型DID-staggered-DID" class="headerlink" title="1. 交错型DID(staggered DID)"></a><strong>1. 交错型DID(staggered DID)</strong></h2><ul>
-<li>没有办法构造$D\cdot T$,可以直接定义$D\cdot T$,表示接受处理的虚拟变量</li>
-<li>干预事件的发生时间不一致,极可能意味着,事后趋势不一致.为此,应尽量控制影响$X<em>i$,避免控制既影响$y$,又被$D⋅T$影响的$X</em>{it}$</li>
-<li>Goodman-Bacon定理:任何一个交错$DID$的双向固定效应模型都可以分解为$K^2$个传统双重差分估计结果的加权平均</li>
-<li>导致偏误的原因在于:以晚处理组为处理组,以早处理组为对照组,此时双重差分估计中包含了一项$\Delta ATT$,即早处理组的政策效应存在明显的动态变化</li>
-<li>交错$DID$估计出的$\beta$究竟意味着什么?由三部分构成:①方差加权的$ATT$;②方差加权的趋势差异;③$\Delta ATT$</li>
-</ul>
-<h2 id="2-改进策略-基于事件研究法"><a href="#2-改进策略-基于事件研究法" class="headerlink" title="2. 改进策略_基于事件研究法"></a><strong>2. 改进策略_基于事件研究法</strong></h2><ul>
-<li><strong>2.1</strong> 进行$bacondecommp$分解,观察以早处理组为控制组的系数和权重,判断其是否影响了最终系数的估计</li>
-<li><strong>2.2</strong> 进行协变量的平衡性检验.在交错$DID$的情形下,平行趋势检验没办法做.干预时间的不一致,平衡性检验可作为一种替代手段.此做法的目的在于判断事前变量与干预处理进度之间的关系.进行匹配时,都可以以政策执行前某一期为准</li>
-<li><strong>2.3</strong> 进一步,可以按照各组作为控制组的贡献作为权重,对事前变量与干预处理进度进行加权$OLS$</li>
-<li><strong>2.4</strong> 进行$bacondecommp$分解,必须是平衡面板数据,所以要删除一些样本</li>
-<li><strong>2.5</strong> 事件研究法:变日历时间为相对时间.按照相对时间进行校准,如果存在非常明显的趋势,则$\Delta ATT$一定会比较大,基准模型会存在低估偏误</li>
-<li><strong>2.6</strong> 可以根据事件研究法的结果,将核心解释变量乘以一个$(t-T^*)$</li>
-</ul>
-<h2 id="3-改进策略-堆叠-DID-Stacked-DID"><a href="#3-改进策略-堆叠-DID-Stacked-DID" class="headerlink" title="3.改进策略_堆叠$DID$(Stacked $DID$)"></a><strong>3.改进策略_堆叠$DID$(Stacked $DID$)</strong></h2><ul>
-<li><strong>3.1</strong> 假定存在K个处理时点,构造K个数据集.每个数据集中只保留可以为处理组服务的控制组,比如晚处理组和一直未处理的组.标准误需要聚类到数据集上面</li>
-<li><strong>3.2</strong> 从构造上保证了早处理组不能作为控制组</li>
-</ul>
-<h2 id="4-改进策略-对事件研究法的反思-寻找干净的控制组"><a href="#4-改进策略-对事件研究法的反思-寻找干净的控制组" class="headerlink" title="4.改进策略_对事件研究法的反思,寻找干净的控制组"></a><strong>4.改进策略_对事件研究法的反思,寻找干净的控制组</strong></h2><ul>
-<li><strong>4.1</strong> 仅不同时间队列样本的动态处理效应变化方式是一样的,事件研究法的估计才是有效的</li>
-</ul>
-]]></content>
-      <categories>
-        <category>计量</category>
-        <category>DID</category>
-      </categories>
-      <tags>
-        <tag>学术讲座</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何在双变量Probit中使用工具变量法IV估计</title>
-    <url>/posts/60676/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<h1 id="ML两步法"><a href="#ML两步法" class="headerlink" title="ML两步法"></a>ML两步法</h1><p>可以采用二步法进行ML估计,以下将会以一段样例代码展示:</p>
-<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">webuse</span> school, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">set</span> seed 1</span><br><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobit</span><br><span class="line"><span class="keyword">program</span> mybiprobit</span><br><span class="line"><span class="keyword">args</span> lnf m1   m2  athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"><span class="comment">**Here I am creating an artificial IV</span></span><br><span class="line"><span class="keyword">gen</span> z=logptax-rnormal()</span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobit (private:private=logptax loginc years)   (vote:vote=logptax loginc years)   /athrho (zb1:logptax=loginc  years z) /lns1</span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> maximize,</span><br><span class="line"><span class="keyword">matrix</span> b=<span class="built_in">e</span>(b)</span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobitiv</span><br><span class="line"><span class="keyword">program</span> mybiprobitiv</span><br><span class="line"><span class="keyword">args</span> lnf mm1 g1  mm2  g2 athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">tempvar</span> m1 m2</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m1'</span>=<span class="symbol">`mm1'</span>+<span class="symbol">`g1'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m2'</span>=<span class="symbol">`mm2'</span>+<span class="symbol">`g2'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobitiv (private:private=logptax loginc years) (g1:)  (vote:vote=logptax loginc years)  (g2:) /athrho (zb1:logptax=loginc  years z  ) /lns1, init(b)</span><br><span class="line"><span class="keyword">ml</span> maximize</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>计量</category>
-        <category>内生性问题</category>
-      </categories>
-      <tags>
-        <tag>stata</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>致Berry</title>
     <url>/posts/51392/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<center> **Love You.** </center>
-<center> **Berry!** </center>
-
-
-
-
+<center>
+<strong>Love You.</strong>
+</center>
+<center>
+<strong>Berry!</strong>
+</center>
 <center>
 <img data-src="/image/berry.jpg" width="66%" height="66%" title="妳" alt="妳">
 </center>
@@ -87,489 +22,367 @@
       </tags>
   </entry>
   <entry>
-    <title>大城市人口增长速度🦚</title>
-    <url>/posts/15523/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h2><p><img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle"></p>
-<center>上图即为最终效果</center>
-
-<h2 id="下载数据"><a href="#下载数据" class="headerlink" title="下载数据"></a>下载数据</h2><p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录.<br></p><figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<h2 id="加载R包"><a href="#加载R包" class="headerlink" title="加载R包"></a>加载R包</h2><p>需要的R包如下所示.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+    <title>学术讲座# 中国人民大学经济学院江艇:渐进DID的最新进展</title>
+    <url>/posts/836/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="关于did因果识别"><strong>关于DID因果识别</strong></h2>
+<ul>
+<li>Imbens:
+任何的因果识别归根结底都是做<strong>插值</strong>与<strong>差值</strong></li>
+<li>传统<span class="math inline">\(DID\)</span>最大的两类威胁是:①平行趋势不成立;②存在混淆政策</li>
+<li><span class="math inline">\(DID\)</span>的重要前提是平行趋势,但这种前提实际并不能完全验证:事前平行并不意味着事后平行趋势,但事前不平行一定能验证平行趋势不成立</li>
+<li>最经典的例子就是经济特区,深圳在改革开放前可能和中原地区的一个小村庄没有什么不同,但是即使深圳没有被划为经济特区,改革开放后其经济增长趋势也有可能因为地缘优势而呈现较快的增长趋势</li>
+<li>两期的数据做<span class="math inline">\(DID\)</span>会退化为<span class="math inline">\(FD\)</span>,此时的截距项代表时间变化趋势</li>
+<li>Good control: 既影响<span class="math inline">\(y\)</span>,又影响<span class="math inline">\(D\cdot T\)</span></li>
+<li>Bad control: 既影响y,又被<span class="math inline">\(D\cdot
+T\)</span>影响</li>
+<li>无法判断影响样本进入处理组的因素是否还影响其变化趋势</li>
+<li>潜在结果:使用上标表示,想象中的结果</li>
+<li><span class="math inline">\(ATT\)</span>:处理组接受处理后的平均处理效应</li>
+<li><span class="math inline">\(D\)</span>实际可以理解为处理组的固定效应</li>
+</ul>
 <span id="more"></span>
-<h2 id="读取各大城市人口数据并计算年平均人口增长率"><a href="#读取各大城市人口数据并计算年平均人口增长率" class="headerlink" title="读取各大城市人口数据并计算年平均人口增长率"></a>读取各大城市人口数据并计算年平均人口增长率</h2><p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<ol>
-<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
-<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon, Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
-<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
-<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框^[可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类]中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
-</ol>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="对数据进行离散化处理"><a href="#对数据进行离散化处理" class="headerlink" title="对数据进行离散化处理"></a>对数据进行离散化处理</h2><p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.<br>使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="绘图"><a href="#绘图" class="headerlink" title="绘图"></a>绘图</h2><p>代码如下,图见上文.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="交错型didstaggered-did"><strong>1. 交错型DID(staggered
+DID)</strong></h2>
+<ul>
+<li>没有办法构造<span class="math inline">\(D\cdot
+T\)</span>,可以直接定义<span class="math inline">\(D\cdot
+T\)</span>,表示接受处理的虚拟变量</li>
+<li>干预事件的发生时间不一致,极可能意味着,事后趋势不一致.为此,应尽量控制影响<span class="math inline">\(X_i\)</span>,避免控制既影响<span class="math inline">\(y\)</span>,又被<span class="math inline">\(D⋅T\)</span>影响的<span class="math inline">\(X_{it}\)</span></li>
+<li>Goodman-Bacon定理:任何一个交错<span class="math inline">\(DID\)</span>的双向固定效应模型都可以分解为<span class="math inline">\(K^2\)</span>个传统双重差分估计结果的加权平均</li>
+<li>导致偏误的原因在于:以晚处理组为处理组,以早处理组为对照组,此时双重差分估计中包含了一项<span class="math inline">\(\Delta
+ATT\)</span>,即早处理组的政策效应存在明显的动态变化</li>
+<li>交错<span class="math inline">\(DID\)</span>估计出的<span class="math inline">\(\beta\)</span>究竟意味着什么?由三部分构成:①方差加权的<span class="math inline">\(ATT\)</span>;②方差加权的趋势差异;③<span class="math inline">\(\Delta ATT\)</span></li>
+</ul>
+<h2 id="改进策略_基于事件研究法"><strong>2.
+改进策略_基于事件研究法</strong></h2>
+<ul>
+<li><strong>2.1</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解,观察以早处理组为控制组的系数和权重,判断其是否影响了最终系数的估计</li>
+<li><strong>2.2</strong> 进行协变量的平衡性检验.在交错<span class="math inline">\(DID\)</span>的情形下,平行趋势检验没办法做.干预时间的不一致,平衡性检验可作为一种替代手段.此做法的目的在于判断事前变量与干预处理进度之间的关系.进行匹配时,都可以以政策执行前某一期为准</li>
+<li><strong>2.3</strong>
+进一步,可以按照各组作为控制组的贡献作为权重,对事前变量与干预处理进度进行加权<span class="math inline">\(OLS\)</span></li>
+<li><strong>2.4</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解,必须是平衡面板数据,所以要删除一些样本</li>
+<li><strong>2.5</strong>
+事件研究法:变日历时间为相对时间.按照相对时间进行校准,如果存在非常明显的趋势,则<span class="math inline">\(\Delta
+ATT\)</span>一定会比较大,基准模型会存在低估偏误</li>
+<li><strong>2.6</strong>
+可以根据事件研究法的结果,将核心解释变量乘以一个<span class="math inline">\((t-T^*)\)</span></li>
+</ul>
+<h2 id="改进策略_堆叠didstacked-did"><strong>3.改进策略_堆叠<span class="math inline">\(DID\)</span>(Stacked <span class="math inline">\(DID\)</span>)</strong></h2>
+<ul>
+<li><strong>3.1</strong>
+假定存在K个处理时点,构造K个数据集.每个数据集中只保留可以为处理组服务的控制组,比如晚处理组和一直未处理的组.标准误需要聚类到数据集上面</li>
+<li><strong>3.2</strong> 从构造上保证了早处理组不能作为控制组</li>
+</ul>
+<h2 id="改进策略_对事件研究法的反思寻找干净的控制组"><strong>4.改进策略_对事件研究法的反思,寻找干净的控制组</strong></h2>
+<ul>
+<li><strong>4.1</strong>
+仅不同时间队列样本的动态处理效应变化方式是一样的,事件研究法的估计才是有效的</li>
+</ul>
 ]]></content>
       <categories>
-        <category>绘图</category>
-        <category>map&amp;sf</category>
+        <category>计量</category>
+        <category>DID</category>
       </categories>
       <tags>
-        <tag>R</tag>
+        <tag>学术讲座</tag>
       </tags>
   </entry>
   <entry>
     <title>&lt;中国的历史之路&gt;深度阅读笔记 — 伊懋可 Mark Elvin</title>
     <url>/posts/elvin1973/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="深度阅读笔记"><a href="#深度阅读笔记" class="headerlink" title="- 深度阅读笔记"></a><the pattern="" of="" the="" chinese="" past:="" a="" social="" and="" economic="" interpretation="">- 深度阅读笔记</the></h1><h2 id="书籍信息"><a href="#书籍信息" class="headerlink" title="书籍信息"></a>书籍信息</h2><ul>
-<li><strong>书名</strong>: The Pattern of the Chinese Past: A Social and Economic Interpretation(中国过去的模式:社会与经济诠释)</li>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="深度阅读笔记"><the pattern="" of="" the="" chinese="" past:="" a="" social="" and="" economic="" interpretation="">-
+深度阅读笔记</the></h1>
+<h2 id="书籍信息">书籍信息</h2>
+<ul>
+<li><strong>书名</strong>: The Pattern of the Chinese Past: A Social and
+Economic Interpretation(中国过去的模式:社会与经济诠释)</li>
 <li><strong>作者</strong>: Mark Elvin(伊懋可)</li>
 <li><strong>类型</strong>: 学术专著 / 经济史 / 中国研究</li>
 <li><strong>出版年份</strong>: 1973</li>
-<li><strong>出版机构</strong>: Stanford University Press(斯坦福大学出版社)</li>
-<li><strong>难度评估</strong>: 高 - 需要经济学、历史学、计量史学基础<span id="more"></span>
-</li>
+<li><strong>出版机构</strong>: Stanford University
+Press(斯坦福大学出版社)</li>
+<li><strong>难度评估</strong>: 高 - 需要经济学、历史学、计量史学基础
+<span id="more"></span> ---</li>
 </ul>
+<h2 id="整体评价">整体评价</h2>
+<p>伊懋可(Mark Elvin,
+1918-2000)的&lt;中国过去的模式&gt;是20世纪中国史研究的里程碑式著作,1973年由斯坦福大学出版社出版.本书以技术经济的变迁为核心视角,系统解释了从古代到20世纪中国社会经济的独特发展轨迹.</p>
+<p>伊懋可最著名的理论贡献是<strong>"高水平均衡陷阱"(High-Level
+Equilibrium
+Trap)</strong>_他认为14世纪之后中国虽然经济规模持续扩张、人口继续增长,但由于农业和运输技术已臻化境、资源近乎耗尽、人口压力巨大,导致任何简单的技术改良都无利可图,从而抑制了工业革命的自主发生.这一理论至今仍是理解中国近代化迟滞的核心范式之一.</p>
+<p>全书以三个核心问题贯穿: 1.
+为什么中华帝国能够维系,而罗马帝国等古代帝国却崩溃了? 2.
+是什么导致了中世纪革命,使1100年后中国经济成为世界最先进? 3.
+为什么1350年后中国未能保持早期的技术进步步伐?</p>
 <hr>
-<h2 id="整体评价"><a href="#整体评价" class="headerlink" title="整体评价"></a>整体评价</h2><p>伊懋可(Mark Elvin, 1918-2000)的&lt;中国过去的模式&gt;是20世纪中国史研究的里程碑式著作,1973年由斯坦福大学出版社出版.本书以技术经济的变迁为核心视角,系统解释了从古代到20世纪中国社会经济的独特发展轨迹.</p>
-<p>伊懋可最著名的理论贡献是<strong>“高水平均衡陷阱”(High-Level Equilibrium Trap)</strong>_他认为14世纪之后中国虽然经济规模持续扩张、人口继续增长,但由于农业和运输技术已臻化境、资源近乎耗尽、人口压力巨大,导致任何简单的技术改良都无利可图,从而抑制了工业革命的自主发生.这一理论至今仍是理解中国近代化迟滞的核心范式之一.</p>
-<p>全书以三个核心问题贯穿:</p>
-<ol>
-<li>为什么中华帝国能够维系,而罗马帝国等古代帝国却崩溃了?</li>
-<li>是什么导致了中世纪革命,使1100年后中国经济成为世界最先进?</li>
-<li>为什么1350年后中国未能保持早期的技术进步步伐?</li>
-</ol>
+<h2 id="内容总览">内容总览</h2>
+<p>本书共分三大部分、十八章:</p>
+<p><strong>第一部分:世界最大持久性国家的形成(第1-8章)</strong> -
+帝国与其规模 - 早期中华帝国 - 公元前三世纪的危机 - 华北的胡汉融合 -
+中期帝国 - 无封建制的庄园制度 - 铁、 火药与蒙古人 -
+明朝的军事后勤体系</p>
+<p><strong>第二部分:中世纪经济革命(第9-13章)</strong> - 农业革命 -
+水运革命 - 货币与信贷革命 - 市场结构与城市化革命 - 科学和技术革命</p>
+<p><strong>第三部分:没有技术变革的经济发展(第14-18章)</strong> -
+14世纪的转折点 - 农奴制的消失 - 农村市场与农村工业 - 量的增长,质的停滞 -
+结论</p>
 <hr>
-<h2 id="内容总览"><a href="#内容总览" class="headerlink" title="内容总览"></a>内容总览</h2><p>本书共分三大部分、十八章:</p>
-<p><strong>第一部分:世界最大持久性国家的形成(第1-8章)</strong></p>
-<ul>
-<li>帝国与其规模</li>
-<li>早期中华帝国</li>
-<li>公元前三世纪的危机</li>
-<li>华北的胡汉融合</li>
-<li>中期帝国</li>
-<li>无封建制的庄园制度</li>
-<li>铁、 火药与蒙古人</li>
-<li>明朝的军事后勤体系</li>
-</ul>
-<p><strong>第二部分:中世纪经济革命(第9-13章)</strong></p>
-<ul>
-<li>农业革命</li>
-<li>水运革命</li>
-<li>货币与信贷革命</li>
-<li>市场结构与城市化革命</li>
-<li>科学和技术革命</li>
-</ul>
-<p><strong>第三部分:没有技术变革的经济发展(第14-18章)</strong></p>
-<ul>
-<li>14世纪的转折点</li>
-<li>农奴制的消失</li>
-<li>农村市场与农村工业</li>
-<li>量的增长,质的停滞</li>
-<li>结论</li>
-</ul>
-<hr>
-<h2 id="第一部分-核心论点"><a href="#第一部分-核心论点" class="headerlink" title="第一部分:核心论点"></a>第一部分:核心论点</h2><h3 id="一、帝国的规模与维系"><a href="#一、帝国的规模与维系" class="headerlink" title="一、帝国的规模与维系"></a>一、帝国的规模与维系</h3><p><strong>核心论点:帝国的稳定取决于规模、生产力与国防行政成本之间的平衡</strong></p>
-<p>伊懋可提出了一个简洁而有力的分析框架:</p>
-<ul>
-<li><strong>规模</strong>:领土范围与通讯成本</li>
-<li><strong>生产力</strong>:每人能生产的剩余产品</li>
-<li><strong>国防行政成本</strong>:维护帝国统一所需的军事和行政开支</li>
-</ul>
-<p><strong>帝国的扩张条件</strong>:</p>
-<ol>
-<li>组织能力更有效(识字率、意识形态)</li>
-<li>劳动生产率更高,能支撑更大的非生产性军事和行政机构</li>
-<li>军事技术更先进</li>
-</ol>
+<h2 id="第一部分核心论点">第一部分:核心论点</h2>
+<h3 id="一帝国的规模与维系">一、帝国的规模与维系</h3>
+<p><strong>核心论点:帝国的稳定取决于规模、生产力与国防行政成本之间的平衡</strong></p>
+<p>伊懋可提出了一个简洁而有力的分析框架: -
+<strong>规模</strong>:领土范围与通讯成本 -
+<strong>生产力</strong>:每人能生产的剩余产品 -
+<strong>国防行政成本</strong>:维护帝国统一所需的军事和行政开支</p>
+<p><strong>帝国的扩张条件</strong>: 1. 组织能力更有效(识字率、意识形态)
+2. 劳动生产率更高,能支撑更大的非生产性军事和行政机构 3.
+军事技术更先进</p>
 <p>这些优势可以相互补偿:技术优势可以弥补规模劣势.</p>
-<p><strong>帝国的稳定条件</strong>:</p>
-<ul>
-<li>帝国必须不断改进技术,以抵消邻国或臣民的改进</li>
-<li>任何技术扩散最终都无法阻止</li>
-<li>帝国的扩张极限由”技术水平决定的国防成本”决定</li>
-</ul>
-<p><strong>中华帝国的特殊性</strong>:<br>中华帝国是世界前现代史上”最大却最持久”的政治单位.秦朝建立于公元前3世纪,经历了多次分裂但最终重组,这一现象需要特殊解释.</p>
-<p>伊懋可认为关键在于:</p>
-<ol>
-<li><strong>运河系统</strong>:将华北与华南连为一体,解决了大规模帝国的通讯问题</li>
-<li><strong>汉字系统</strong>:超越了方言的障碍,成为帝国统一的文化纽带</li>
-<li><strong>儒家意识形态</strong>:提供了一套正当化帝国统治合法性的话语体系</li>
-<li><strong>军事技术</strong>:始终保持对草原民族的相对优势</li>
-</ol>
-<h3 id="二、中华帝国的形成与维系"><a href="#二、中华帝国的形成与维系" class="headerlink" title="二、中华帝国的形成与维系"></a>二、中华帝国的形成与维系</h3><p><strong>秦汉帝国(第1-3章)</strong></p>
-<p><strong>秦帝国的统一(前221年)</strong>:</p>
-<ul>
-<li>秦朝建立中央集权的郡县制</li>
-<li>统一度量衡、货币、文字</li>
-<li>修建道路和运河系统</li>
-</ul>
-<p><strong>汉帝国的维系(前206-220年)</strong>:</p>
-<ul>
-<li>丝绸之路的开辟</li>
-<li>儒家意识形态的制度化</li>
-<li>对匈奴的军事胜利</li>
-</ul>
-<p><strong>第3世纪的危机</strong>:</p>
-<ul>
-<li>东汉末年的黄巾起义</li>
-<li>三国鼎立</li>
-<li>军事贵族化与中央政府弱化</li>
-</ul>
-<h3 id="三、胡汉融合与北魏孝文帝改革-第4章"><a href="#三、胡汉融合与北魏孝文帝改革-第4章" class="headerlink" title="三、胡汉融合与北魏孝文帝改革(第4章)"></a>三、胡汉融合与北魏孝文帝改革(第4章)</h3><p><strong>核心论点</strong>:北方游牧民族与汉族的融合,为中华帝国注入了新的活力</p>
-<p>孝文帝改革(471-499年):</p>
-<ul>
-<li>强制汉化政策</li>
-<li>迁都洛阳</li>
-<li>采用汉族官制和礼仪</li>
-</ul>
-<p>这一改革的重要性在于:</p>
-<ul>
-<li>北方政权通过汉化获得统治合法性</li>
-<li>游牧民族的军事传统与汉族的制度文明结合</li>
-<li>为后来的隋唐帝国奠定基础</li>
-</ul>
-<h3 id="四、唐朝的军事后勤体系-第5-7章"><a href="#四、唐朝的军事后勤体系-第5-7章" class="headerlink" title="四、唐朝的军事后勤体系(第5-7章)"></a>四、唐朝的军事后勤体系(第5-7章)</h3><p><strong>均田制与府兵制</strong>:</p>
-<ul>
-<li>均田制:国家分配土地给农民,,农民承担兵役</li>
-<li>府兵制:军事与农业结合的制度</li>
-</ul>
-<p><strong>安史之乱的后果</strong>:</p>
-<ul>
-<li>藩镇割据</li>
-<li>府兵制瓦解</li>
-<li>职业军队取代义务兵役</li>
-</ul>
-<h3 id="五、蒙古帝国与技术传播-第7章"><a href="#五、蒙古帝国与技术传播-第7章" class="headerlink" title="五、蒙古帝国与技术传播(第7章)"></a>五、蒙古帝国与技术传播(第7章)</h3><p><strong>核心论点</strong>:蒙古帝国的扩张伴随着技术的大规模传播</p>
-<p><strong>蒙古对中国的技术获取</strong>:</p>
-<ul>
-<li>获得汉族冶铁技术</li>
-<li>获得攻城技术和武器制造</li>
-<li>火药技术的西传</li>
-</ul>
-<p><strong>蒙古帝国崩溃后的技术遗产</strong>:</p>
-<ul>
-<li>火药武器的普及改变了战争形态</li>
-<li>印刷术的改进促进了文化传播</li>
-</ul>
-<h3 id="六、明朝的军事后勤体系-第8章"><a href="#六、明朝的军事后勤体系-第8章" class="headerlink" title="六、明朝的军事后勤体系(第8章)"></a>六、明朝的军事后勤体系(第8章)</h3><p><strong>大运河系统</strong>:</p>
-<ul>
-<li>世界上最长的人工运河</li>
-<li>解决了南北物资调配问题</li>
-<li>维持了帝国的政治统一</li>
-</ul>
-<p><strong>明朝的军事体系</strong>:</p>
-<ul>
-<li>卫所制度:军户与土地绑定</li>
-<li>军事后勤的集中化管理</li>
-<li>火器的大规模使用</li>
-</ul>
+<p><strong>帝国的稳定条件</strong>: -
+帝国必须不断改进技术,以抵消邻国或臣民的改进 - 任何技术扩散最终都无法阻止
+- 帝国的扩张极限由"技术水平决定的国防成本"决定</p>
+<p><strong>中华帝国的特殊性</strong>:
+中华帝国是世界前现代史上"最大却最持久"的政治单位.秦朝建立于公元前3世纪,经历了多次分裂但最终重组,这一现象需要特殊解释.</p>
+<p>伊懋可认为关键在于: 1.
+<strong>运河系统</strong>:将华北与华南连为一体,解决了大规模帝国的通讯问题
+2. <strong>汉字系统</strong>:超越了方言的障碍,成为帝国统一的文化纽带 3.
+<strong>儒家意识形态</strong>:提供了一套正当化帝国统治合法性的话语体系
+4. <strong>军事技术</strong>:始终保持对草原民族的相对优势</p>
+<h3 id="二中华帝国的形成与维系">二、中华帝国的形成与维系</h3>
+<p><strong>秦汉帝国(第1-3章)</strong></p>
+<p><strong>秦帝国的统一(前221年)</strong>: - 秦朝建立中央集权的郡县制 -
+统一度量衡、货币、文字 - 修建道路和运河系统</p>
+<p><strong>汉帝国的维系(前206-220年)</strong>: - 丝绸之路的开辟 -
+儒家意识形态的制度化 - 对匈奴的军事胜利</p>
+<p><strong>第3世纪的危机</strong>: - 东汉末年的黄巾起义 - 三国鼎立 -
+军事贵族化与中央政府弱化</p>
+<h3 id="三胡汉融合与北魏孝文帝改革第4章">三、胡汉融合与北魏孝文帝改革(第4章)</h3>
+<p><strong>核心论点</strong>:北方游牧民族与汉族的融合,为中华帝国注入了新的活力</p>
+<p>孝文帝改革(471-499年): - 强制汉化政策 - 迁都洛阳 -
+采用汉族官制和礼仪</p>
+<p>这一改革的重要性在于: - 北方政权通过汉化获得统治合法性 -
+游牧民族的军事传统与汉族的制度文明结合 - 为后来的隋唐帝国奠定基础</p>
+<h3 id="四唐朝的军事后勤体系第5-7章">四、唐朝的军事后勤体系(第5-7章)</h3>
+<p><strong>均田制与府兵制</strong>: -
+均田制:国家分配土地给农民,,农民承担兵役 -
+府兵制:军事与农业结合的制度</p>
+<p><strong>安史之乱的后果</strong>: - 藩镇割据 - 府兵制瓦解 -
+职业军队取代义务兵役</p>
+<h3 id="五蒙古帝国与技术传播第7章">五、蒙古帝国与技术传播(第7章)</h3>
+<p><strong>核心论点</strong>:蒙古帝国的扩张伴随着技术的大规模传播</p>
+<p><strong>蒙古对中国的技术获取</strong>: - 获得汉族冶铁技术 -
+获得攻城技术和武器制造 - 火药技术的西传</p>
+<p><strong>蒙古帝国崩溃后的技术遗产</strong>: -
+火药武器的普及改变了战争形态 - 印刷术的改进促进了文化传播</p>
+<h3 id="六明朝的军事后勤体系第8章">六、明朝的军事后勤体系(第8章)</h3>
+<p><strong>大运河系统</strong>: - 世界上最长的人工运河 -
+解决了南北物资调配问题 - 维持了帝国的政治统一</p>
+<p><strong>明朝的军事体系</strong>: - 卫所制度:军户与土地绑定 -
+军事后勤的集中化管理 - 火器的大规模使用</p>
 <hr>
-<h2 id="第二部分-中世纪经济革命"><a href="#第二部分-中世纪经济革命" class="headerlink" title="第二部分:中世纪经济革命"></a>第二部分:中世纪经济革命</h2><h3 id="一、中世纪革命的总体特征"><a href="#一、中世纪革命的总体特征" class="headerlink" title="一、中世纪革命的总体特征"></a>一、中世纪革命的总体特征</h3><p>伊懋可认为,1100年后中国经济经历了一场深刻的”中世纪革命”,这场革命使中国经济在技术、组织和制度上都领先于世界.</p>
-<p><strong>革命的五大领域</strong>:</p>
-<ol>
-<li>农业革命</li>
-<li>水运革命</li>
-<li>货币与信贷革命</li>
-<li>市场结构与城市化革命</li>
-<li>科学和技术革命</li>
-</ol>
-<h3 id="二、农业革命-第9章"><a href="#二、农业革命-第9章" class="headerlink" title="二、农业革命(第9章)"></a>二、农业革命(第9章)</h3><p><strong>核心论点:农业技术的突破支撑了人口增长和经济繁荣</strong></p>
-<p><strong>宋朝农业革命的特征</strong>:</p>
-<ol>
-<li><p><strong>早熟稻的推广</strong>:</p>
-<ul>
-<li>占城稻从越南传入</li>
-<li>生长周期短,可种双季稻</li>
-<li>大幅提高了单位面积产量</li>
-</ul>
-</li>
-<li><p><strong>水利系统的完善</strong>:</p>
+<h2 id="第二部分中世纪经济革命">第二部分:中世纪经济革命</h2>
+<h3 id="一中世纪革命的总体特征">一、中世纪革命的总体特征</h3>
+<p>伊懋可认为,1100年后中国经济经历了一场深刻的"中世纪革命",这场革命使中国经济在技术、组织和制度上都领先于世界.</p>
+<p><strong>革命的五大领域</strong>: 1. 农业革命 2. 水运革命 3.
+货币与信贷革命 4. 市场结构与城市化革命 5. 科学和技术革命</p>
+<h3 id="二农业革命第9章">二、农业革命(第9章)</h3>
+<p><strong>核心论点:农业技术的突破支撑了人口增长和经济繁荣</strong></p>
+<p><strong>宋朝农业革命的特征</strong>: 1.
+<strong>早熟稻的推广</strong>: - 占城稻从越南传入 -
+生长周期短,可种双季稻 - 大幅提高了单位面积产量</p>
+<ol start="2" type="1">
+<li><strong>水利系统的完善</strong>:
 <ul>
 <li>圩田、梯田的大规模开发</li>
 <li>灌溉技术的进步</li>
 <li>防洪排涝能力的增强</li>
-</ul>
-</li>
-<li><p><strong>农业工具的改进</strong>:</p>
+</ul></li>
+<li><strong>农业工具的改进</strong>:
 <ul>
 <li>铁制农具的普及</li>
 <li>犁的结构优化</li>
 <li>肥料使用技术的改进</li>
-</ul>
-</li>
-<li><p><strong>土地利用效率的提高</strong>:</p>
+</ul></li>
+<li><strong>土地利用效率的提高</strong>:
 <ul>
 <li>多熟制的推广</li>
 <li>农业与手工业的结合(稻桑轮作)</li>
 <li>土地利用集约化</li>
-</ul>
-</li>
+</ul></li>
 </ol>
-<h3 id="三、水运革命-第10章"><a href="#三、水运革命-第10章" class="headerlink" title="三、水运革命(第10章)"></a>三、水运革命(第10章)</h3><p><strong>核心论点:内河航运技术的突破使全国市场得以整合</strong></p>
-<p><strong>大运河的扩建</strong>:</p>
-<ul>
-<li>隋朝大运河的开凿(6世纪末)</li>
-<li>唐朝进一步扩建</li>
-<li>宋代运河系统的完善</li>
-</ul>
-<p><strong>船只技术的改进</strong>:</p>
-<ul>
-<li>四大发明中的指南针应用于航海</li>
-<li>船体结构的优化</li>
-<li>帆装的改进</li>
-</ul>
-<p><strong>水运革命的经济影响</strong>:</p>
-<ol>
-<li>降低了长途运输成本</li>
-<li>促进了区域间贸易</li>
-<li>使全国性市场的整合成为可能</li>
-</ol>
-<h3 id="四、货币与信贷革命-第11章"><a href="#四、货币与信贷革命-第11章" class="headerlink" title="四、货币与信贷革命(第11章)"></a>四、货币与信贷革命(第11章)</h3><p><strong>核心论点:纸币的使用和信用制度的创新标志着货币经济的成熟</strong></p>
-<p><strong>宋朝货币革命</strong>:</p>
-<ol>
-<li><strong>铜钱的广泛流通</strong></li>
-<li><strong>铁钱的区域性使用</strong></li>
-<li><strong>纸币(交子、会子)的出现</strong></li>
-</ol>
-<p><strong>信用制度的创新</strong>:</p>
-<ol>
-<li><strong>飞钱</strong>:最早的纸币形式</li>
-<li><strong>柜坊</strong>:存款机构</li>
-<li><strong>商铺</strong>:早期银行雏形</li>
-</ol>
-<p><strong>货币革命的意义</strong>:</p>
-<ul>
-<li>降低了交易成本</li>
-<li>促进了商业繁荣</li>
-<li>为城市化提供了金融基础</li>
-</ul>
-<h3 id="五、市场结构与城市化革命-第12章"><a href="#五、市场结构与城市化革命-第12章" class="headerlink" title="五、市场结构与城市化革命(第12章)"></a>五、市场结构与城市化革命(第12章)</h3><p><strong>核心论点:市场层级的完善和城市化水平的提高反映了经济的深度整合</strong></p>
-<p><strong>宋朝城市化特征</strong>:</p>
-<ol>
-<li><p><strong>城市数量激增</strong>:</p>
-<ul>
-<li>10万以上人口城市超过10个</li>
-<li>出现了专门的手工业城市</li>
-</ul>
-</li>
-<li><p><strong>市场层级结构</strong>:</p>
+<h3 id="三水运革命第10章">三、水运革命(第10章)</h3>
+<p><strong>核心论点:内河航运技术的突破使全国市场得以整合</strong></p>
+<p><strong>大运河的扩建</strong>: - 隋朝大运河的开凿(6世纪末) -
+唐朝进一步扩建 - 宋代运河系统的完善</p>
+<p><strong>船只技术的改进</strong>: - 四大发明中的指南针应用于航海 -
+船体结构的优化 - 帆装的改进</p>
+<p><strong>水运革命的经济影响</strong>: 1. 降低了长途运输成本 2.
+促进了区域间贸易 3. 使全国性市场的整合成为可能</p>
+<h3 id="四货币与信贷革命第11章">四、货币与信贷革命(第11章)</h3>
+<p><strong>核心论点:纸币的使用和信用制度的创新标志着货币经济的成熟</strong></p>
+<p><strong>宋朝货币革命</strong>: 1. <strong>铜钱的广泛流通</strong> 2.
+<strong>铁钱的区域性使用</strong> 3.
+<strong>纸币(交子、会子)的出现</strong></p>
+<p><strong>信用制度的创新</strong>: 1.
+<strong>飞钱</strong>:最早的纸币形式 2. <strong>柜坊</strong>:存款机构
+3. <strong>商铺</strong>:早期银行雏形</p>
+<p><strong>货币革命的意义</strong>: - 降低了交易成本 - 促进了商业繁荣 -
+为城市化提供了金融基础</p>
+<h3 id="五市场结构与城市化革命第12章">五、市场结构与城市化革命(第12章)</h3>
+<p><strong>核心论点:市场层级的完善和城市化水平的提高反映了经济的深度整合</strong></p>
+<p><strong>宋朝城市化特征</strong>: 1. <strong>城市数量激增</strong>: -
+10万以上人口城市超过10个 - 出现了专门的手工业城市</p>
+<ol start="2" type="1">
+<li><strong>市场层级结构</strong>:
 <ul>
 <li>中央市场(京城)</li>
 <li>区域市场(州府)</li>
 <li>地方市场(县城、集市)</li>
-</ul>
-</li>
-<li><p><strong>城市功能分化</strong>:</p>
+</ul></li>
+<li><strong>城市功能分化</strong>:
 <ul>
 <li>政治中心</li>
 <li>商业中心</li>
 <li>手工业中心</li>
-</ul>
-</li>
+</ul></li>
 </ol>
-<h3 id="六、科学和技术革命-第13章"><a href="#六、科学和技术革命-第13章" class="headerlink" title="六、科学和技术革命(第13章)"></a>六、科学和技术革命(第13章)</h3><p><strong>核心论点:宋朝在科学和技术方面取得了令世界瞩目的成就</strong></p>
-<p><strong>四大发明的完善与应用</strong>:</p>
-<ol>
-<li><strong>活字印刷</strong>:毕升的发明(1040年代)</li>
-<li><strong>指南针</strong>:应用于航海和军事</li>
-<li><strong>火药</strong>:武器制造和爆破</li>
-<li><strong>造纸术</strong>:传播到中亚和欧洲</li>
-</ol>
-<p><strong>其他技术成就</strong>:</p>
-<ul>
-<li>冶铁技术的改进</li>
-<li>瓷器制造工艺的提高</li>
-<li>纺织机械的改进</li>
-<li>水利工程技术的进步</li>
-</ul>
-<p><strong>科学理论的发展</strong>:</p>
-<ul>
-<li>沈括的科学成就</li>
-<li>医药学的发展</li>
-<li>天文历法的精确化</li>
-</ul>
+<h3 id="六科学和技术革命第13章">六、科学和技术革命(第13章)</h3>
+<p><strong>核心论点:宋朝在科学和技术方面取得了令世界瞩目的成就</strong></p>
+<p><strong>四大发明的完善与应用</strong>: 1.
+<strong>活字印刷</strong>:毕升的发明(1040年代) 2.
+<strong>指南针</strong>:应用于航海和军事 3.
+<strong>火药</strong>:武器制造和爆破 4.
+<strong>造纸术</strong>:传播到中亚和欧洲</p>
+<p><strong>其他技术成就</strong>: - 冶铁技术的改进 - 瓷器制造工艺的提高
+- 纺织机械的改进 - 水利工程技术的进步</p>
+<p><strong>科学理论的发展</strong>: - 沈括的科学成就 - 医药学的发展 -
+天文历法的精确化</p>
 <hr>
-<h2 id="第三部分-高水平均衡陷阱"><a href="#第三部分-高水平均衡陷阱" class="headerlink" title="第三部分:高水平均衡陷阱"></a>第三部分:高水平均衡陷阱</h2><h3 id="一、第14章-14世纪的转折点"><a href="#一、第14章-14世纪的转折点" class="headerlink" title="一、第14章:14世纪的转折点"></a>一、第14章:14世纪的转折点</h3><p><strong>核心论点:14世纪是中国历史的转折点,此后中国进入了”量的增长,质的停滞”阶段</strong></p>
-<p><strong>元末明初的社会危机</strong>:</p>
-<ol>
-<li><p><strong>人口锐减</strong>:</p>
-<ul>
-<li>蒙古征服和统治期间的人口损失</li>
-<li>瘟疫和自然灾害的影响</li>
-</ul>
-</li>
-<li><p><strong>经济崩溃</strong>:</p>
+<h2 id="第三部分高水平均衡陷阱">第三部分:高水平均衡陷阱</h2>
+<h3 id="一第14章14世纪的转折点">一、第14章:14世纪的转折点</h3>
+<p><strong>核心论点:14世纪是中国历史的转折点,此后中国进入了"量的增长,质的停滞"阶段</strong></p>
+<p><strong>元末明初的社会危机</strong>: 1. <strong>人口锐减</strong>: -
+蒙古征服和统治期间的人口损失 - 瘟疫和自然灾害的影响</p>
+<ol start="2" type="1">
+<li><strong>经济崩溃</strong>:
 <ul>
 <li>货币体系的混乱</li>
 <li>贸易网络的破坏</li>
 <li>农业生产的衰退</li>
-</ul>
-</li>
-<li><p><strong>政治动荡</strong>:</p>
+</ul></li>
+<li><strong>政治动荡</strong>:
 <ul>
 <li>农民起义</li>
 <li>蒙古统治的崩溃</li>
 <li>明朝的建立</li>
-</ul>
-</li>
+</ul></li>
 </ol>
-<h3 id="二、第15章-农奴制的消失"><a href="#二、第15章-农奴制的消失" class="headerlink" title="二、第15章:农奴制的消失"></a>二、第15章:农奴制的消失</h3><p><strong>核心论点:明清时期佃农地位的变化反映了土地制度的深层变革</strong></p>
-<p><strong>永佃制的发展</strong>:</p>
-<ul>
-<li>佃农获得了永久耕作权</li>
-<li>“田底权”与”田面权”的分离</li>
-<li>地主与佃农关系的契约化</li>
-</ul>
-<p><strong>人身依附关系的松弛</strong>:</p>
-<ul>
-<li>贱民身份的废除</li>
-<li>匠籍制度的松弛</li>
-<li>人口流动的增加</li>
-</ul>
-<h3 id="三、第16章-农村市场与农村工业"><a href="#三、第16章-农村市场与农村工业" class="headerlink" title="三、第16章:农村市场与农村工业"></a>三、第16章:农村市场与农村工业</h3><p><strong>核心论点:农村市场的密集化和手工业的发展是晚期传统中国经济的显著特征</strong></p>
-<p><strong>市镇网络的发展</strong>:</p>
-<ul>
-<li>每县平均有数十个集市</li>
-<li>集市间距通常在5-15里之间</li>
-<li>形成了完整的基层市场体系</li>
-</ul>
-<p><strong>农村手工业的繁荣</strong>:</p>
-<ol>
-<li><p><strong>棉纺织业</strong>:</p>
-<ul>
-<li>松江府成为棉纺织中心</li>
-<li>“松江布”行销全国</li>
-<li>大量农村劳动力从事纺织</li>
-</ul>
-</li>
-<li><p><strong>丝绸业</strong>:</p>
+<h3 id="二第15章农奴制的消失">二、第15章:农奴制的消失</h3>
+<p><strong>核心论点:明清时期佃农地位的变化反映了土地制度的深层变革</strong></p>
+<p><strong>永佃制的发展</strong>: - 佃农获得了永久耕作权 -
+"田底权"与"田面权"的分离 - 地主与佃农关系的契约化</p>
+<p><strong>人身依附关系的松弛</strong>: - 贱民身份的废除 -
+匠籍制度的松弛 - 人口流动的增加</p>
+<h3 id="三第16章农村市场与农村工业">三、第16章:农村市场与农村工业</h3>
+<p><strong>核心论点:农村市场的密集化和手工业的发展是晚期传统中国经济的显著特征</strong></p>
+<p><strong>市镇网络的发展</strong>: - 每县平均有数十个集市 -
+集市间距通常在5-15里之间 - 形成了完整的基层市场体系</p>
+<p><strong>农村手工业的繁荣</strong>: 1. <strong>棉纺织业</strong>: -
+松江府成为棉纺织中心 - "松江布"行销全国 - 大量农村劳动力从事纺织</p>
+<ol start="2" type="1">
+<li><strong>丝绸业</strong>:
 <ul>
 <li>江南丝绸业的专业化</li>
 <li>苏州、杭州成为丝织业中心</li>
-</ul>
-</li>
-<li><p><strong>其他手工业</strong>:</p>
+</ul></li>
+<li><strong>其他手工业</strong>:
 <ul>
 <li>造纸业</li>
 <li>制茶业</li>
 <li>陶瓷业</li>
-</ul>
-</li>
+</ul></li>
 </ol>
-<h3 id="四、第17章-量的增长与质的停滞-高水平均衡陷阱"><a href="#四、第17章-量的增长与质的停滞-高水平均衡陷阱" class="headerlink" title="四、第17章:量的增长与质的停滞_高水平均衡陷阱"></a>四、第17章:量的增长与质的停滞_高水平均衡陷阱</h3><p><strong>这是本书最核心、最具影响力的章节</strong></p>
-<h4 id="高水平均衡陷阱理论"><a href="#高水平均衡陷阱理论" class="headerlink" title="高水平均衡陷阱理论"></a>高水平均衡陷阱理论</h4><p>伊懋可提出的<strong>“高水平均衡陷阱”</strong>是理解中国近代化迟滞的经典理论.</p>
-<p><strong>问题的核心</strong>:<br>为什么在人口继续增长、经济规模继续扩大的同时,中国却未能像英国那样发生工业革命?</p>
+<h3 id="四第17章量的增长与质的停滞_高水平均衡陷阱">四、第17章:量的增长与质的停滞_高水平均衡陷阱</h3>
+<p><strong>这是本书最核心、最具影响力的章节</strong></p>
+<h4 id="高水平均衡陷阱理论">高水平均衡陷阱理论</h4>
+<p>伊懋可提出的<strong>"高水平均衡陷阱"</strong>是理解中国近代化迟滞的经典理论.</p>
+<p><strong>问题的核心</strong>:
+为什么在人口继续增长、经济规模继续扩大的同时,中国却未能像英国那样发生工业革命?</p>
 <p><strong>陷阱的形成机制</strong>:</p>
-<p><strong>第一阶段:中世纪的技术突破</strong></p>
-<ul>
-<li>农业技术达到极高水平</li>
-<li>水路运输效率接近物理极限</li>
-<li>农业生产率极高</li>
-</ul>
-<p><strong>第二阶段:人口压力累积</strong></p>
-<ul>
-<li>人口从1400年的约6500万增长到1850年的约4.3亿</li>
-<li>人均耕地面积持续下降</li>
-<li>劳动力变得廉价而资源日趋昂贵</li>
-</ul>
+<p><strong>第一阶段:中世纪的技术突破</strong> - 农业技术达到极高水平 -
+水路运输效率接近物理极限 - 农业生产率极高</p>
+<p><strong>第二阶段:人口压力累积</strong> -
+人口从1400年的约6500万增长到1850年的约4.3亿 - 人均耕地面积持续下降 -
+劳动力变得廉价而资源日趋昂贵</p>
 <p><strong>第三阶段:均衡陷阱形成</strong></p>
-<p>当农业生产率和运输效率已经”非常之高,以至于无法通过简单的改进来提高产量”时:</p>
-<ol>
-<li><p><strong>资源瓶颈</strong>:</p>
+<p>当农业生产率和运输效率已经"非常之高,以至于无法通过简单的改进来提高产量"时:</p>
+<ol type="1">
+<li><strong>资源瓶颈</strong>:
 <ul>
 <li>木材短缺(建筑、船只、机械)</li>
 <li>燃料短缺(沿海芦苇沼泽被改为稻田)</li>
 <li>金属短缺(特别是铜)</li>
 <li>土地短缺(优质耕地耗尽)</li>
-</ul>
-</li>
-<li><p><strong>资本成本上升</strong>:</p>
+</ul></li>
+<li><strong>资本成本上升</strong>:
 <ul>
 <li>建造即使简单的机器也可能超出农民承受能力</li>
 <li>金属价格高昂(铜泵成本太高)</li>
 <li>投资回报率低</li>
-</ul>
-</li>
-<li><p><strong>劳动力的特点</strong>:</p>
+</ul></li>
+<li><strong>劳动力的特点</strong>:
 <ul>
 <li>人口持续增长</li>
 <li>劳动力相对廉价</li>
 <li>缺乏采用劳动节约型机械的动力</li>
-</ul>
-</li>
-<li><p><strong>市场特征</strong>:</p>
+</ul></li>
+<li><strong>市场特征</strong>:
 <ul>
 <li>庞大但近乎静态的市场</li>
 <li>生产系统不存在瓶颈来激发创新</li>
 <li>商人资本倾向于流通而非固定投资</li>
-</ul>
-</li>
+</ul></li>
 </ol>
-<p><strong>理性策略的转变</strong>:<br>面对这种情况,农民和商人的理性策略不是投资节省劳动力的机械,而是:</p>
-<ul>
-<li>节约资源和固定资本</li>
-<li>利用 mercantile 灵活性(基于廉价运输)</li>
-<li>寻找速效但有限的解决方案</li>
-</ul>
-<p><strong>理论的含义</strong>:</p>
-<blockquote>
-<p>“这种情况可以描述为一种’高水平均衡陷阱’.在一个具有强烈经济理性意识、对发明有深刻欣赏(会为历史发明家建立祠堂,虽然没有专利法)的文明中,在机械方面有显著天赋,这可能是中国技术进步迟缓的一个充分解释.”</p>
-</blockquote>
-<h3 id="五、突破陷阱-西方的冲击"><a href="#五、突破陷阱-西方的冲击" class="headerlink" title="五、突破陷阱:西方的冲击"></a>五、突破陷阱:西方的冲击</h3><p><strong>核心论点:西方的冲击打破了中国的技术水平均衡陷阱</strong></p>
-<p><strong>19世纪中叶开放通商</strong>:</p>
-<ul>
-<li>五口通商</li>
-<li>外国机器的引入</li>
-<li>现代交通和通讯技术的传入</li>
-</ul>
-<p><strong>技术转移的机制</strong>:</p>
-<ol>
-<li><p><strong>直接引进</strong>:</p>
-<ul>
-<li>蒸汽轮船</li>
-<li>棉纺织机械</li>
-<li>电信设备</li>
-</ul>
-</li>
-<li><p><strong>模仿与创新</strong>:</p>
+<p><strong>理性策略的转变</strong>:
+面对这种情况,农民和商人的理性策略不是投资节省劳动力的机械,而是: -
+节约资源和固定资本 - 利用 mercantile 灵活性(基于廉价运输) -
+寻找速效但有限的解决方案</p>
+<p><strong>理论的含义</strong>: &gt;
+"这种情况可以描述为一种'高水平均衡陷阱'.在一个具有强烈经济理性意识、对发明有深刻欣赏(会为历史发明家建立祠堂,虽然没有专利法)的文明中,在机械方面有显著天赋,这可能是中国技术进步迟缓的一个充分解释."</p>
+<h3 id="五突破陷阱西方的冲击">五、突破陷阱:西方的冲击</h3>
+<p><strong>核心论点:西方的冲击打破了中国的技术水平均衡陷阱</strong></p>
+<p><strong>19世纪中叶开放通商</strong>: - 五口通商 - 外国机器的引入 -
+现代交通和通讯技术的传入</p>
+<p><strong>技术转移的机制</strong>: 1. <strong>直接引进</strong>: -
+蒸汽轮船 - 棉纺织机械 - 电信设备</p>
+<ol start="2" type="1">
+<li><strong>模仿与创新</strong>:
 <ul>
 <li>在外国机器基础上改进</li>
 <li>结合传统元素</li>
 <li>本土适应性创新</li>
-</ul>
-</li>
+</ul></li>
 </ol>
-<p><strong>丝绸工业案例</strong>:<br>陈启元(1870年代):</p>
-<ul>
-<li>访问法属安南,看到现代蒸汽缫丝机</li>
-<li>回国后仿建,使用人力</li>
-<li>后来改进为蒸汽动力</li>
-<li>雇用600多人</li>
-</ul>
-<p><strong>土布工业案例</strong>:<br>高阳手工织布业(河北):</p>
-<ul>
-<li>1909年引入机器纱线</li>
-<li>木织机被”铁轮织机”取代</li>
-<li>多次技术改进</li>
-<li>但始终面临需求不足问题</li>
-</ul>
-<h3 id="六、第18章-结论"><a href="#六、第18章-结论" class="headerlink" title="六、第18章:结论"></a>六、第18章:结论</h3><p><strong>核心论点:技术与社会的互动是理解中国历史独特性的关键</strong></p>
+<p><strong>丝绸工业案例</strong>: 陈启元(1870年代): -
+访问法属安南,看到现代蒸汽缫丝机 - 回国后仿建,使用人力 -
+后来改进为蒸汽动力 - 雇用600多人</p>
+<p><strong>土布工业案例</strong>: 高阳手工织布业(河北): -
+1909年引入机器纱线 - 木织机被"铁轮织机"取代 - 多次技术改进 -
+但始终面临需求不足问题</p>
+<h3 id="六第18章结论">六、第18章:结论</h3>
+<p><strong>核心论点:技术与社会的互动是理解中国历史独特性的关键</strong></p>
 <p>伊懋可总结了他的核心洞见:</p>
-<ol>
-<li><p><strong>技术与帝国的规模</strong>:<br>中华帝国的持久性部分归因于其运河系统解决了通讯问题,使中央政府能够有效管理庞大领土.</p>
-</li>
-<li><p><strong>中世纪革命的原因</strong>:</p>
-</li>
+<ol type="1">
+<li><p><strong>技术与帝国的规模</strong>:
+中华帝国的持久性部分归因于其运河系统解决了通讯问题,使中央政府能够有效管理庞大领土.</p></li>
+<li><p><strong>中世纪革命的原因</strong>:</p></li>
 </ol>
 <ul>
 <li>高水平的农业和运输技术</li>
 <li>庞大但功能分化的市场网络</li>
 <li>货币和信贷体系的支持</li>
 </ul>
-<ol>
+<ol start="3" type="1">
 <li><strong>高水平均衡陷阱的机制</strong>:</li>
 </ol>
 <ul>
@@ -578,32 +391,30 @@
 <li>人口持续增长</li>
 <li>缺乏技术突破的动力</li>
 </ul>
-<ol>
-<li><strong>西方的历史角色</strong>:<br>现代西方打破了中国的高水平均衡陷阱,引入新技术和新组织方式,为中国的现代化奠定了基础.</li>
+<ol start="4" type="1">
+<li><strong>西方的历史角色</strong>:
+现代西方打破了中国的高水平均衡陷阱,引入新技术和新组织方式,为中国的现代化奠定了基础.</li>
 </ol>
-<p><strong>方法论贡献</strong>:<br>伊懋以及技术经济学为切入点,整合了政治史、军事史、经济史和制度史,提供了一个连贯的分析框架.</p>
+<p><strong>方法论贡献</strong>:
+伊懋以及技术经济学为切入点,整合了政治史、军事史、经济史和制度史,提供了一个连贯的分析框架.</p>
 <hr>
-<h2 id="核心概念解析"><a href="#核心概念解析" class="headerlink" title="核心概念解析"></a>核心概念解析</h2><h3 id="高水平均衡陷阱-High-Level-Equilibrium-Trap"><a href="#高水平均衡陷阱-High-Level-Equilibrium-Trap" class="headerlink" title="高水平均衡陷阱(High-Level Equilibrium Trap)"></a>高水平均衡陷阱(High-Level Equilibrium Trap)</h3><p><strong>定义</strong>:当一个经济体的技术已达到极高水平、资源近乎充分利用、人口压力巨大时,任何简单的技术改进都无法产生足够的回报来激励进一步的创新,从而形成一种停滞状态.</p>
-<p><strong>图示</strong>:<br></p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">农业技术极高</span><br><span class="line">     ↓</span><br><span class="line">资源利用近乎100%</span><br><span class="line">     ↓</span><br><span class="line">人口继续增长</span><br><span class="line">     ↓</span><br><span class="line">人均资源下降</span><br><span class="line">     ↓</span><br><span class="line">投资技术改良无利可图</span><br><span class="line">     ↓</span><br><span class="line">缺乏工业革命的动力</span><br></pre></td></tr></tbody></table></figure><p></p>
-<h3 id="中世纪经济革命"><a href="#中世纪经济革命" class="headerlink" title="中世纪经济革命"></a>中世纪经济革命</h3><p><strong>定义</strong>:1100-1350年期间中国经济在农业、运输、货币、市场和技术方面经历的全面突破,使中国经济领先于世界.</p>
-<p><strong>五大领域</strong>:</p>
-<ol>
-<li>农业革命</li>
-<li>水运革命</li>
-<li>货币与信贷革命</li>
-<li>市场结构与城市化革命</li>
-<li>科学和技术革命</li>
-</ol>
-<h3 id="帝国的稳定性条件"><a href="#帝国的稳定性条件" class="headerlink" title="帝国的稳定性条件"></a>帝国的稳定性条件</h3><p><strong>伊懋可公式</strong>:<br></p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">帝国稳定性 ∝ (技术优势) / (规模成本 × 国防需求)</span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>帝国必须不断改进技术以抵消:</p>
-<ul>
-<li>邻国的改进</li>
-<li>臣民的技术扩散</li>
-<li>通讯成本的增加</li>
-</ul>
+<h2 id="核心概念解析">核心概念解析</h2>
+<h3 id="高水平均衡陷阱high-level-equilibrium-trap">高水平均衡陷阱(High-Level
+Equilibrium Trap)</h3>
+<p><strong>定义</strong>:当一个经济体的技术已达到极高水平、资源近乎充分利用、人口压力巨大时,任何简单的技术改进都无法产生足够的回报来激励进一步的创新,从而形成一种停滞状态.</p>
+<p><strong>图示</strong>: </p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">农业技术极高</span><br><span class="line">     ↓</span><br><span class="line">资源利用近乎100%</span><br><span class="line">     ↓</span><br><span class="line">人口继续增长</span><br><span class="line">     ↓</span><br><span class="line">人均资源下降</span><br><span class="line">     ↓</span><br><span class="line">投资技术改良无利可图</span><br><span class="line">     ↓</span><br><span class="line">缺乏工业革命的动力</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h3 id="中世纪经济革命">中世纪经济革命</h3>
+<p><strong>定义</strong>:1100-1350年期间中国经济在农业、运输、货币、市场和技术方面经历的全面突破,使中国经济领先于世界.</p>
+<p><strong>五大领域</strong>: 1. 农业革命 2. 水运革命 3. 货币与信贷革命
+4. 市场结构与城市化革命 5. 科学和技术革命</p>
+<h3 id="帝国的稳定性条件">帝国的稳定性条件</h3>
+<p><strong>伊懋可公式</strong>: </p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">帝国稳定性 ∝ (技术优势) / (规模成本 × 国防需求)</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>帝国必须不断改进技术以抵消: - 邻国的改进 - 臣民的技术扩散 -
+通讯成本的增加</p>
 <hr>
-<h2 id="数据与统计"><a href="#数据与统计" class="headerlink" title="数据与统计"></a>数据与统计</h2><h3 id="人口变化-AD-2-1953"><a href="#人口变化-AD-2-1953" class="headerlink" title="人口变化(AD 2-1953)"></a>人口变化(AD 2-1953)</h3><p>根据书中引用的数据:</p>
-<div class="table-container">
+<h2 id="数据与统计">数据与统计</h2>
+<h3 id="人口变化ad-2-1953">人口变化(AD 2-1953)</h3>
+<p>根据书中引用的数据:</p>
 <table>
 <thead>
 <tr>
@@ -665,129 +476,122 @@
 </tr>
 </tbody>
 </table>
-</div>
-<h3 id="明清经济发展数据"><a href="#明清经济发展数据" class="headerlink" title="明清经济发展数据"></a>明清经济发展数据</h3><p><strong>棉纺织业</strong>:</p>
-<ul>
-<li>松江府:17-18世纪成为棉纺织中心</li>
-<li>仅上海地区就有”十万织布工”</li>
-<li>产品远销全国乃至出口</li>
-</ul>
-<p><strong>丝绸业</strong>:</p>
-<ul>
-<li>扬州盐商1750-1800年利润:约2.5亿两白银</li>
-<li>个别盐商身家超过1000万两</li>
-</ul>
+<h3 id="明清经济发展数据">明清经济发展数据</h3>
+<p><strong>棉纺织业</strong>: - 松江府:17-18世纪成为棉纺织中心 -
+仅上海地区就有"十万织布工" - 产品远销全国乃至出口</p>
+<p><strong>丝绸业</strong>: - 扬州盐商1750-1800年利润:约2.5亿两白银 -
+个别盐商身家超过1000万两</p>
 <hr>
-<h2 id="案例分析"><a href="#案例分析" class="headerlink" title="案例分析"></a>案例分析</h2><h3 id="案例一-山西煤炭运输案例-1629年"><a href="#案例一-山西煤炭运输案例-1629年" class="headerlink" title="案例一:山西煤炭运输案例(1629年)"></a>案例一:山西煤炭运输案例(1629年)</h3><p><strong>背景</strong>:陕西同官县煤炭运输成本高昂</p>
-<p><strong>问题</strong>:</p>
-<ul>
-<li>每担煤价不低于0.4两银子</li>
-<li>运输成本占主要部分</li>
-<li>民众负担沉重</li>
-</ul>
-<p><strong>解决方案</strong>:</p>
-<ul>
-<li>改善河道通航</li>
-<li>用船代替陆路运输</li>
-<li>成本降至原来的70%</li>
-</ul>
-<p><strong>结果</strong>:<br>每担煤价从0.4两降至0.25两</p>
+<h2 id="案例分析">案例分析</h2>
+<h3 id="案例一山西煤炭运输案例1629年">案例一:山西煤炭运输案例(1629年)</h3>
+<p><strong>背景</strong>:陕西同官县煤炭运输成本高昂</p>
+<p><strong>问题</strong>: - 每担煤价不低于0.4两银子 - 运输成本占主要部分
+- 民众负担沉重</p>
+<p><strong>解决方案</strong>: - 改善河道通航 - 用船代替陆路运输 -
+成本降至原来的70%</p>
+<p><strong>结果</strong>: 每担煤价从0.4两降至0.25两</p>
 <p><strong>分析</strong>:这展示了晚明商业意识和企业家精神的存在.</p>
-<h3 id="案例二-盐业生产技术变革"><a href="#案例二-盐业生产技术变革" class="headerlink" title="案例二:盐业生产技术变革"></a>案例二:盐业生产技术变革</h3><p><strong>背景</strong>:从煎熬法到日晒法的技术转变</p>
-<p><strong>煎熬法</strong>:</p>
-<ul>
-<li>利用每月两次高潮留下的盐</li>
-<li>需要大量柴火</li>
-<li>每担盐成本约10文钱</li>
-</ul>
-<p><strong>日晒法</strong>:</p>
-<ul>
-<li>利用太阳蒸发</li>
-<li>不需要柴火</li>
-<li>每担盐成本降至2文钱</li>
-</ul>
+<h3 id="案例二盐业生产技术变革">案例二:盐业生产技术变革</h3>
+<p><strong>背景</strong>:从煎熬法到日晒法的技术转变</p>
+<p><strong>煎熬法</strong>: - 利用每月两次高潮留下的盐 - 需要大量柴火 -
+每担盐成本约10文钱</p>
+<p><strong>日晒法</strong>: - 利用太阳蒸发 - 不需要柴火 -
+每担盐成本降至2文钱</p>
 <p><strong>分析</strong>:展示了技术选择如何受到资源相对价格的影响.</p>
-<h3 id="案例三-铜泵的未使用"><a href="#案例三-铜泵的未使用" class="headerlink" title="案例三:铜泵的未使用"></a>案例三:铜泵的未使用</h3><p><strong>背景</strong>:西方cylinder pump(活塞泵)17世纪传入中国,但未被农业生产采用.</p>
-<p><strong>原因分析</strong>:</p>
-<ul>
-<li>需要大量铜材</li>
-<li>铜价昂贵(“solid money in a Chinese peasant’s eyes”)</li>
-<li>投资回报不确定</li>
-</ul>
+<h3 id="案例三铜泵的未使用">案例三:铜泵的未使用</h3>
+<p><strong>背景</strong>:西方cylinder
+pump(活塞泵)17世纪传入中国,但未被农业生产采用.</p>
+<p><strong>原因分析</strong>: - 需要大量铜材 - 铜价昂贵("solid money in
+a Chinese peasant's eyes") - 投资回报不确定</p>
 <p><strong>含义</strong>:这可能是高水平均衡陷阱的一个具体例证.</p>
-<h3 id="案例四-高阳土布业现代化-1909年后"><a href="#案例四-高阳土布业现代化-1909年后" class="headerlink" title="案例四:高阳土布业现代化(1909年后)"></a>案例四:高阳土布业现代化(1909年后)</h3><p><strong>背景</strong>:河北高阳县约400个村庄的纺织业</p>
-<p><strong>技术变革</strong>:</p>
-<ol>
-<li>木织机 → “铁轮织机”(从日本引进)</li>
-<li>效率提高数倍</li>
-<li>宽度增加</li>
-</ol>
-<p><strong>市场演变</strong>:</p>
-<ul>
-<li>1909年:进口棉纱打破原材料短缺</li>
-<li>一战后衰退</li>
-<li>1930年代:再度繁荣(rayon经纱技术)</li>
-</ul>
+<h3 id="案例四高阳土布业现代化1909年后">案例四:高阳土布业现代化(1909年后)</h3>
+<p><strong>背景</strong>:河北高阳县约400个村庄的纺织业</p>
+<p><strong>技术变革</strong>: 1. 木织机 → "铁轮织机"(从日本引进) 2.
+效率提高数倍 3. 宽度增加</p>
+<p><strong>市场演变</strong>: - 1909年:进口棉纱打破原材料短缺 -
+一战后衰退 - 1930年代:再度繁荣(rayon经纱技术)</p>
 <p><strong>分析</strong>:展示了传统因素与现代技术结合的可能性,以及持续的需求不足问题.</p>
 <hr>
-<h2 id="学术贡献"><a href="#学术贡献" class="headerlink" title="学术贡献"></a>学术贡献</h2><h3 id="一、理论贡献"><a href="#一、理论贡献" class="headerlink" title="一、理论贡献"></a>一、理论贡献</h3><ol>
-<li><p><strong>高水平均衡陷阱理论</strong>:<br>提出了解释中国近代化迟滞的经典理论,至今仍被广泛引用和讨论.</p>
-</li>
-<li><p><strong>中世纪经济革命概念</strong>:<br>系统论证了宋朝经济革命的五大领域,为理解中国前现代经济发展提供了框架.</p>
-</li>
-<li><p><strong>帝国稳定性分析框架</strong>:<br>将技术、规模、生产力和国防成本整合为一个分析帝国兴衰的统一框架.</p>
-</li>
+<h2 id="学术贡献">学术贡献</h2>
+<h3 id="一理论贡献">一、理论贡献</h3>
+<ol type="1">
+<li><p><strong>高水平均衡陷阱理论</strong>:
+提出了解释中国近代化迟滞的经典理论,至今仍被广泛引用和讨论.</p></li>
+<li><p><strong>中世纪经济革命概念</strong>:
+系统论证了宋朝经济革命的五大领域,为理解中国前现代经济发展提供了框架.</p></li>
+<li><p><strong>帝国稳定性分析框架</strong>:
+将技术、规模、生产力和国防成本整合为一个分析帝国兴衰的统一框架.</p></li>
 </ol>
-<h3 id="二、方法论贡献"><a href="#二、方法论贡献" class="headerlink" title="二、方法论贡献"></a>二、方法论贡献</h3><ol>
-<li><p><strong>跨学科方法</strong>:<br>整合经济学、技术史、社会史和政治史.</p>
-</li>
-<li><p><strong>比较视角</strong>:<br>始终将中国与欧洲进行比较,揭示两者的差异.</p>
-</li>
-<li><p><strong>定量分析</strong>:<br>运用数据和统计支持论点.</p>
-</li>
+<h3 id="二方法论贡献">二、方法论贡献</h3>
+<ol type="1">
+<li><p><strong>跨学科方法</strong>:
+整合经济学、技术史、社会史和政治史.</p></li>
+<li><p><strong>比较视角</strong>:
+始终将中国与欧洲进行比较,揭示两者的差异.</p></li>
+<li><p><strong>定量分析</strong>: 运用数据和统计支持论点.</p></li>
 </ol>
-<h3 id="三、史料贡献"><a href="#三、史料贡献" class="headerlink" title="三、史料贡献"></a>三、史料贡献</h3><ol>
-<li><p><strong>地方志的广泛运用</strong>:<br>利用大量地方志资料支撑论点.</p>
-</li>
-<li><p><strong>文献批判</strong>:<br>对传统史料的局限有清醒认识.</p>
-</li>
-</ol>
-<hr>
-<h2 id="批判性评价"><a href="#批判性评价" class="headerlink" title="批判性评价"></a>批判性评价</h2><h3 id="一、理论局限"><a href="#一、理论局限" class="headerlink" title="一、理论局限"></a>一、理论局限</h3><ol>
-<li><p><strong>高水平均衡陷阱的适用性</strong>:<br>一些学者认为该理论过度强调了技术因素,忽视了制度和文化因素.</p>
-</li>
-<li><p><strong>欧洲比较的问题</strong>:<br>部分学者质疑将英国模式作为参照系是否合适.</p>
-</li>
-<li><p><strong>忽视了需求侧</strong>:<br>一些研究强调了劳动力便宜的一面,但未充分考虑市场规模和消费需求.</p>
-</li>
-</ol>
-<h3 id="二、史料问题"><a href="#二、史料问题" class="headerlink" title="二、史料问题"></a>二、史料问题</h3><ol>
-<li><p><strong>数据的不确定性</strong>:<br>明清人口数据存在广泛争议.</p>
-</li>
-<li><p><strong>地方志的代表性</strong>:<br>不同地区差异巨大,概括需谨慎.</p>
-</li>
-</ol>
-<h3 id="三、后续发展"><a href="#三、后续发展" class="headerlink" title="三、后续发展"></a>三、后续发展</h3><ol>
-<li><p><strong>彭慕兰的挑战</strong>:<br>&lt;大分流&gt;对高水平均衡陷阱理论提出了修正.</p>
-</li>
-<li><p><strong>加州学派</strong>:<br>以黄宗智、彭慕兰为代表的加州学派提出了不同的解释框架.</p>
-</li>
+<h3 id="三史料贡献">三、史料贡献</h3>
+<ol type="1">
+<li><p><strong>地方志的广泛运用</strong>:
+利用大量地方志资料支撑论点.</p></li>
+<li><p><strong>文献批判</strong>: 对传统史料的局限有清醒认识.</p></li>
 </ol>
 <hr>
-<h2 id="重要引文摘录"><a href="#重要引文摘录" class="headerlink" title="重要引文摘录"></a>重要引文摘录</h2><h3 id="关于高水平均衡陷阱"><a href="#关于高水平均衡陷阱" class="headerlink" title="关于高水平均衡陷阱"></a>关于高水平均衡陷阱</h3><blockquote>
-<p>“With falling surplus in agriculture, and so falling per capita income and per capita demand, with cheapening labour but increasingly expensive resources and capital, with farming and transport technologies so good that no simple improvements could be made, rational strategy for peasant and merchant alike tended in the direction not so much of labour-saving machinery as of economizing on resources and fixed capital.”<br>_(p. 305)</p>
+<h2 id="批判性评价">批判性评价</h2>
+<h3 id="一理论局限">一、理论局限</h3>
+<ol type="1">
+<li><p><strong>高水平均衡陷阱的适用性</strong>:
+一些学者认为该理论过度强调了技术因素,忽视了制度和文化因素.</p></li>
+<li><p><strong>欧洲比较的问题</strong>:
+部分学者质疑将英国模式作为参照系是否合适.</p></li>
+<li><p><strong>忽视了需求侧</strong>:
+一些研究强调了劳动力便宜的一面,但未充分考虑市场规模和消费需求.</p></li>
+</ol>
+<h3 id="二史料问题">二、史料问题</h3>
+<ol type="1">
+<li><p><strong>数据的不确定性</strong>:
+明清人口数据存在广泛争议.</p></li>
+<li><p><strong>地方志的代表性</strong>:
+不同地区差异巨大,概括需谨慎.</p></li>
+</ol>
+<h3 id="三后续发展">三、后续发展</h3>
+<ol type="1">
+<li><p><strong>彭慕兰的挑战</strong>:
+&lt;大分流&gt;对高水平均衡陷阱理论提出了修正.</p></li>
+<li><p><strong>加州学派</strong>:
+以黄宗智、彭慕兰为代表的加州学派提出了不同的解释框架.</p></li>
+</ol>
+<hr>
+<h2 id="重要引文摘录">重要引文摘录</h2>
+<h3 id="关于高水平均衡陷阱">关于高水平均衡陷阱</h3>
+<blockquote>
+<p>"With falling surplus in agriculture, and so falling per capita
+income and per capita demand, with cheapening labour but increasingly
+expensive resources and capital, with farming and transport technologies
+so good that no simple improvements could be made, rational strategy for
+peasant and merchant alike tended in the direction not so much of
+labour-saving machinery as of economizing on resources and fixed
+capital." _(p. 305)</p>
 </blockquote>
-<h3 id="关于技术停滞"><a href="#关于技术停滞" class="headerlink" title="关于技术停滞"></a>关于技术停滞</h3><blockquote>
-<p>“Clearly, the term ‘technological stagnation’ is a misleadingly oversimple description of this period.”<br>_(p. 298)</p>
+<h3 id="关于技术停滞">关于技术停滞</h3>
+<blockquote>
+<p>"Clearly, the term 'technological stagnation' is a misleadingly
+oversimple description of this period." _(p. 298)</p>
 </blockquote>
-<h3 id="关于西方冲击"><a href="#关于西方冲击" class="headerlink" title="关于西方冲击"></a>关于西方冲击</h3><blockquote>
-<p>“It was the historic contribution of the modern West to ease and then break the high-level equilibrium trap in China.”<br>_(p. 315)</p>
+<h3 id="关于西方冲击">关于西方冲击</h3>
+<blockquote>
+<p>"It was the historic contribution of the modern West to ease and then
+break the high-level equilibrium trap in China." _(p. 315)</p>
 </blockquote>
-<h3 id="关于中世纪革命的原因"><a href="#关于中世纪革命的原因" class="headerlink" title="关于中世纪革命的原因"></a>关于中世纪革命的原因</h3><blockquote>
-<p>“The booming medieval Chinese economy, and especially its advanced metallurgical sector, could provide all its soldiery with armour and the best-known weapons, a luxury limited in the West by higher costs to a select minority.”<br>_(p. 319)</p>
+<h3 id="关于中世纪革命的原因">关于中世纪革命的原因</h3>
+<blockquote>
+<p>"The booming medieval Chinese economy, and especially its advanced
+metallurgical sector, could provide all its soldiery with armour and the
+best-known weapons, a luxury limited in the West by higher costs to a
+select minority." _(p. 319)</p>
 </blockquote>
 <hr>
-<h2 id="与何炳棣著作的比较"><a href="#与何炳棣著作的比较" class="headerlink" title="与何炳棣著作的比较"></a>与何炳棣著作的比较</h2><div class="table-container">
+<h2 id="与何炳棣著作的比较">与何炳棣著作的比较</h2>
 <table>
 <thead>
 <tr>
@@ -829,46 +633,52 @@
 </tr>
 </tbody>
 </table>
-</div>
-<p><strong>互补性</strong>:</p>
-<ul>
-<li>何炳棣解释了为什么中国人口如此众多</li>
-<li>伊懋可解释了为什么经济持续发展却没有技术突破</li>
-<li>两者共同构成了理解中国前现代经济的完整图景</li>
-</ul>
+<p><strong>互补性</strong>: - 何炳棣解释了为什么中国人口如此众多 -
+伊懋可解释了为什么经济持续发展却没有技术突破 -
+两者共同构成了理解中国前现代经济的完整图景</p>
 <hr>
-<h2 id="延伸阅读"><a href="#延伸阅读" class="headerlink" title="延伸阅读"></a>延伸阅读</h2><ol>
-<li><strong>Kenneth Pomeranz</strong>, <em>The Great Divergence: China, Europe, and the Making of the Modern World Economy</em> (2000)</li>
-<li><strong>Philip Huang</strong>, <em>The Peasant Family and Rural Development in the Yangzi Delta, 1350-1988</em> (1990)</li>
-<li><strong>Dwight Perkins</strong>, <em>Agricultural Development in China, 1368-1968</em> (1969)</li>
-<li><strong>R. H. Tawney</strong>, <em>Land and Labour in China</em> (1932)</li>
+<h2 id="延伸阅读">延伸阅读</h2>
+<ol type="1">
+<li><strong>Kenneth Pomeranz</strong>, <em>The Great Divergence: China,
+Europe, and the Making of the Modern World Economy</em> (2000)</li>
+<li><strong>Philip Huang</strong>, <em>The Peasant Family and Rural
+Development in the Yangzi Delta, 1350-1988</em> (1990)</li>
+<li><strong>Dwight Perkins</strong>, <em>Agricultural Development in
+China, 1368-1968</em> (1969)</li>
+<li><strong>R. H. Tawney</strong>, <em>Land and Labour in China</em>
+(1932)</li>
 </ol>
 <hr>
-<h2 id="学术思考"><a href="#学术思考" class="headerlink" title="学术思考"></a>学术思考</h2><ol>
-<li><p><strong>高水平均衡陷阱的现代意义</strong>:<br>当代中国是否正在经历某种形式的”高水平均衡陷阱”?在哪些领域?</p>
-</li>
-<li><p><strong>技术创新的路径依赖</strong>:<br>早期的技术成功是否反而成为后续创新的障碍?</p>
-</li>
-<li><p><strong>东西方比较的方法论</strong>:<br>以欧洲经验为参照系是否会导致对中国历史的误读?</p>
-</li>
-<li><p><strong>制度的角色</strong>:<br>高水平均衡陷阱理论是否过度强调了技术因素而忽视了制度约束?</p>
-</li>
-<li><p><strong>改革开放的历史背景</strong>:<br>如果理解了高水平均衡陷阱的形成机制,如何理解1978年后的改革开放在打破这一陷阱中的作用?</p>
-</li>
+<h2 id="学术思考">学术思考</h2>
+<ol type="1">
+<li><p><strong>高水平均衡陷阱的现代意义</strong>:
+当代中国是否正在经历某种形式的"高水平均衡陷阱"?在哪些领域?</p></li>
+<li><p><strong>技术创新的路径依赖</strong>:
+早期的技术成功是否反而成为后续创新的障碍?</p></li>
+<li><p><strong>东西方比较的方法论</strong>:
+以欧洲经验为参照系是否会导致对中国历史的误读?</p></li>
+<li><p><strong>制度的角色</strong>:
+高水平均衡陷阱理论是否过度强调了技术因素而忽视了制度约束?</p></li>
+<li><p><strong>改革开放的历史背景</strong>:
+如果理解了高水平均衡陷阱的形成机制,如何理解1978年后的改革开放在打破这一陷阱中的作用?</p></li>
 </ol>
 <hr>
-<h2 id="附录-伊懋可其人"><a href="#附录-伊懋可其人" class="headerlink" title="附录:伊懋可其人"></a>附录:伊懋可其人</h2><h3 id="学术背景"><a href="#学术背景" class="headerlink" title="学术背景"></a>学术背景</h3><p><strong>Mark Elvin(伊懋可,1918-2000)</strong>:</p>
-<ul>
-<li>英国历史学家、经济史学家</li>
-<li>曾在剑桥大学、悉尼大学任教</li>
-<li>专长:中国经济史、技术史</li>
-</ul>
-<h3 id="主要著作"><a href="#主要著作" class="headerlink" title="主要著作"></a>主要著作</h3><ol>
+<h2 id="附录伊懋可其人">附录:伊懋可其人</h2>
+<h3 id="学术背景">学术背景</h3>
+<p><strong>Mark Elvin(伊懋可,1918-2000)</strong>: -
+英国历史学家、经济史学家 - 曾在剑桥大学、悉尼大学任教 -
+专长:中国经济史、技术史</p>
+<h3 id="主要著作">主要著作</h3>
+<ol type="1">
 <li><em>The Pattern of the Chinese Past</em> (1973)</li>
-<li><em>The Retreat of the Elephants: An Environmental History of China</em> (2004)</li>
-<li><em>The Third Thousand Years: One Hundred and Seventy-Seven Fragments of Curious and Useful Knowledge from the Chinese Past</em> (1999)</li>
+<li><em>The Retreat of the Elephants: An Environmental History of
+China</em> (2004)</li>
+<li><em>The Third Thousand Years: One Hundred and Seventy-Seven
+Fragments of Curious and Useful Knowledge from the Chinese Past</em>
+(1999)</li>
 </ol>
-<h3 id="学术地位"><a href="#学术地位" class="headerlink" title="学术地位"></a>学术地位</h3><p>伊懋可是20世纪后半叶最重要的中国史学家之一,&lt;中国过去的模式&gt;是其最具影响力的著作,其”高水平均衡陷阱”理论至今仍是理解中国近代化迟滞的核心范式之一.</p>
+<h3 id="学术地位">学术地位</h3>
+<p>伊懋可是20世纪后半叶最重要的中国史学家之一,&lt;中国过去的模式&gt;是其最具影响力的著作,其"高水平均衡陷阱"理论至今仍是理解中国近代化迟滞的核心范式之一.</p>
 ]]></content>
       <categories>
         <category>历史</category>
@@ -881,69 +691,79 @@
       </tags>
   </entry>
   <entry>
+    <title>如何在双变量Probit中使用工具变量法IV估计</title>
+    <url>/posts/60676/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<h1 id="ml两步法">ML两步法</h1>
+<p>可以采用二步法进行ML估计,以下将会以一段样例代码展示:</p>
+<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">webuse</span> school, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">set</span> seed 1</span><br><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobit</span><br><span class="line"><span class="keyword">program</span> mybiprobit</span><br><span class="line"><span class="keyword">args</span> lnf m1   m2  athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"><span class="comment">**Here I am creating an artificial IV</span></span><br><span class="line"><span class="keyword">gen</span> z=logptax-rnormal()</span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobit (private:private=logptax loginc years)   (vote:vote=logptax loginc years)   /athrho (zb1:logptax=loginc  years z) /lns1</span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> maximize,</span><br><span class="line"><span class="keyword">matrix</span> b=<span class="built_in">e</span>(b)</span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobitiv</span><br><span class="line"><span class="keyword">program</span> mybiprobitiv</span><br><span class="line"><span class="keyword">args</span> lnf mm1 g1  mm2  g2 athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">tempvar</span> m1 m2</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m1'</span>=<span class="symbol">`mm1'</span>+<span class="symbol">`g1'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m2'</span>=<span class="symbol">`mm2'</span>+<span class="symbol">`g2'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobitiv (private:private=logptax loginc years) (g1:)  (vote:vote=logptax loginc years)  (g2:) /athrho (zb1:logptax=loginc  years z  ) /lns1, init(b)</span><br><span class="line"><span class="keyword">ml</span> maximize</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>计量</category>
+        <category>内生性问题</category>
+      </categories>
+      <tags>
+        <tag>stata</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>&lt;中国人口研究 1368-1953&gt;深度阅读笔记 — 何炳棣 Ping-Ti Ho</title>
     <url>/posts/ho1959/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="深度阅读笔记"><a href="#深度阅读笔记" class="headerlink" title="- 深度阅读笔记"></a><studies on="" the="" population="" of="" china,="" 1368-1953="">- 深度阅读笔记</studies></h1><h2 id="书籍信息"><a href="#书籍信息" class="headerlink" title="书籍信息"></a>书籍信息</h2><ul>
-<li><strong>书名</strong>: Studies on the Population of China, 1368-1953(中国人口研究,1368-1953)</li>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="studies-on-the-population-of-china-1368-1953--深度阅读笔记">&lt;Studies
+on the Population of China, 1368-1953&gt;- 深度阅读笔记</h1>
+<h2 id="书籍信息">书籍信息</h2>
+<ul>
+<li><strong>书名</strong>: Studies on the Population of China,
+1368-1953(中国人口研究,1368-1953)</li>
 <li><strong>作者</strong>: Ping-ti Ho(何炳棣),Bingdi He(协助)</li>
 <li><strong>类型</strong>: 学术专著 / 经济史 / 人口史 / 计量史学</li>
 <li><strong>出版年份</strong>: 1959</li>
-<li><strong>出版机构</strong>: Harvard University Press(哈佛大学出版社)</li>
+<li><strong>出版机构</strong>: Harvard University
+Press(哈佛大学出版社)</li>
 <li><strong>所属系列</strong>: Harvard East Asian Studies</li>
-<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、历史学基础<span id="more"></span>
-</li>
+<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、历史学基础
+<span id="more"></span> ---</li>
 </ul>
+<h2 id="整体评价">整体评价</h2>
+<p>何炳棣的这部著作是研究中国人口史的开创性巨著,1959年由哈佛大学出版社出版,至今仍是该领域的必读经典.作者利用浩繁的中国地方志(fang
+chih/gazetteers)资料,系统梳理了1368年至1953年近六百年间中国人口的发展脉络.</p>
+<p>本书最重要的贡献在于揭示了<strong>1650-1850年间中国人口从约1亿增长至4.3亿的"人口革命"</strong>,并深入探讨了其背后的制度性因素、经济动因及灾难性制约.作者敢于挑战权威,对"人口过剩"等流行观点提出系统性质疑,展现了真正的学术勇气.本书虽成书于1959年,但其研究方法与核心论点至今仍深刻影响着中国史研究.</p>
 <hr>
-<h2 id="整体评价"><a href="#整体评价" class="headerlink" title="整体评价"></a>整体评价</h2><p>何炳棣的这部著作是研究中国人口史的开创性巨著,1959年由哈佛大学出版社出版,至今仍是该领域的必读经典.作者利用浩繁的中国地方志(fang chih/gazetteers)资料,系统梳理了1368年至1953年近六百年间中国人口的发展脉络.</p>
-<p>本书最重要的贡献在于揭示了<strong>1650-1850年间中国人口从约1亿增长至4.3亿的”人口革命”</strong>,并深入探讨了其背后的制度性因素、经济动因及灾难性制约.作者敢于挑战权威,对”人口过剩”等流行观点提出系统性质疑,展现了真正的学术勇气.本书虽成书于1959年,但其研究方法与核心论点至今仍深刻影响着中国史研究.</p>
-<hr>
-<h2 id="内容总览"><a href="#内容总览" class="headerlink" title="内容总览"></a>内容总览</h2><p>本书正文共十一章,分为两大部分:</p>
-<p><strong>第一部分:官方人口记录(The Official Population Record)</strong></p>
-<ul>
-<li>第一章:明代人口数据性质</li>
-<li>第二章:”丁”的性质</li>
-<li>第三章:1741-1775年人口数据</li>
-<li>第四章:1776-1850年人口数据</li>
-<li>第五章:1851-1953年人口数据</li>
-</ul>
-<p><strong>第二部分:影响人口的因素(Factors Affecting Population)</strong></p>
-<ul>
-<li>第六章:人口-土地关系(明代至现代)</li>
-<li>第七章:人口-土地关系:区域迁移</li>
-<li>第八章:土地利用与粮食生产</li>
-<li>第九章:其他经济与制度因素</li>
-<li>第十章:灾难性制约因素</li>
-<li>第十一章:结论</li>
-</ul>
+<h2 id="内容总览">内容总览</h2>
+<p>本书正文共十一章,分为两大部分:</p>
+<p><strong>第一部分:官方人口记录(The Official Population
+Record)</strong> - 第一章:明代人口数据性质 - 第二章:"丁"的性质 -
+第三章:1741-1775年人口数据 - 第四章:1776-1850年人口数据 -
+第五章:1851-1953年人口数据</p>
+<p><strong>第二部分:影响人口的因素(Factors Affecting
+Population)</strong> - 第六章:人口-土地关系(明代至现代) -
+第七章:人口-土地关系:区域迁移 - 第八章:土地利用与粮食生产 -
+第九章:其他经济与制度因素 - 第十章:灾难性制约因素 - 第十一章:结论</p>
 <p><strong>核心问题意识</strong>:中国人口为何在近代早期(1650-1850)能够如此迅速增长?</p>
 <hr>
-<h2 id="第一部分-历史事实整理"><a href="#第一部分-历史事实整理" class="headerlink" title="第一部分:历史事实整理"></a>第一部分:历史事实整理</h2><h3 id="一、明代人口登记制度-1368-1644"><a href="#一、明代人口登记制度-1368-1644" class="headerlink" title="一、明代人口登记制度(1368-1644)"></a>一、明代人口登记制度(1368-1644)</h3><h4 id="1-1-洪武皇帝的人口普查"><a href="#1-1-洪武皇帝的人口普查" class="headerlink" title="1.1 洪武皇帝的人口普查"></a>1.1 洪武皇帝的人口普查</h4><p><strong>1370年:户帖制度(Household Certificate)的开端</strong></p>
-<p>朱元璋于1370年下令颁发”户帖”(hu-t’ieh),这是一项具有现代人口普查雏形的重要制度.户帖详细记录每个家庭的成员信息、财产状况.</p>
-<p>户帖采用”半印”制度_每户持有户帖的一半,政府持有另一半,两者吻合方为有效.这体现了明代户籍管理的严谨性.</p>
-<p><strong>1371年郎氏户帖实物</strong>:<br>这是研究明代家庭结构的珍贵史料.郎氏户帖显示:</p>
-<ul>
-<li>户主:郎利青</li>
-<li>住址:兴化县桂集镇杏花村</li>
-<li>家庭成员:6人<ul>
-<li>男4人(成人2:户主54岁、其子28岁;儿童2:7岁、7岁)</li>
-<li>女2人(妻子42岁、儿媳28岁)</li>
-</ul>
-</li>
-<li>财产:5间房,占地0.8亩</li>
-</ul>
+<h2 id="第一部分历史事实整理">第一部分:历史事实整理</h2>
+<h3 id="一明代人口登记制度1368-1644">一、明代人口登记制度(1368-1644)</h3>
+<h4 id="洪武皇帝的人口普查">1.1 洪武皇帝的人口普查</h4>
+<p><strong>1370年:户帖制度(Household Certificate)的开端</strong></p>
+<p>朱元璋于1370年下令颁发"户帖"(hu-t'ieh),这是一项具有现代人口普查雏形的重要制度.户帖详细记录每个家庭的成员信息、财产状况.</p>
+<p>户帖采用"半印"制度_每户持有户帖的一半,政府持有另一半,两者吻合方为有效.这体现了明代户籍管理的严谨性.</p>
+<p><strong>1371年郎氏户帖实物</strong>:
+这是研究明代家庭结构的珍贵史料.郎氏户帖显示: - 户主:郎利青 -
+住址:兴化县桂集镇杏花村 - 家庭成员:6人 -
+男4人(成人2:户主54岁、其子28岁;儿童2:7岁、7岁) -
+女2人(妻子42岁、儿媳28岁) - 财产:5间房,占地0.8亩</p>
 <p><strong>1381-1392年:黄册(Yellow Registers)编制</strong></p>
-<p>朱元璋在位期间最伟大的成就之一是建立了系统的人口普查制度.1381-1382年,全国编制”黄册”,以110户为”里”为单位进行人口登记.每10年修订一次.</p>
-<p>黄册登记内容包括:</p>
-<ul>
-<li>年龄(按”岁”计算)</li>
-<li>性别</li>
-<li>职业(军户、匠户、民户等)</li>
-<li>家庭财产</li>
-</ul>
-<h4 id="1-2-明代”户”的定义"><a href="#1-2-明代”户”的定义" class="headerlink" title="1.2 明代”户”的定义"></a>1.2 明代”户”的定义</h4><p><strong>关键洞见</strong>:中国传统”户”是习惯性<strong>复合家庭</strong>(compound family),而非西方”核心家庭”.</p>
+<p>朱元璋在位期间最伟大的成就之一是建立了系统的人口普查制度.1381-1382年,全国编制"黄册",以110户为"里"为单位进行人口登记.每10年修订一次.</p>
+<p>黄册登记内容包括: - 年龄(按"岁"计算) - 性别 -
+职业(军户、匠户、民户等) - 家庭财产</p>
+<h4 id="明代户的定义">1.2 明代"户"的定义</h4>
+<p><strong>关键洞见</strong>:中国传统"户"是习惯性<strong>复合家庭</strong>(compound
+family),而非西方"核心家庭".</p>
 <p>法律规定:成年子孙除非分家析产并获得户主特殊许可,否则必须生活在同一屋顶下,视为同一户.这一法律定义对于研究中国历史人口和家庭规模至关重要.</p>
-<h4 id="1-3-明代人口数据"><a href="#1-3-明代人口数据" class="headerlink" title="1.3 明代人口数据"></a>1.3 明代人口数据</h4><p><strong>1393年全国人口数据</strong>(最可靠的明代数据):</p>
-<div class="table-container">
+<h4 id="明代人口数据">1.3 明代人口数据</h4>
+<p><strong>1393年全国人口数据</strong>(最可靠的明代数据):</p>
 <table>
 <thead>
 <tr>
@@ -974,60 +794,54 @@
 </tr>
 </tbody>
 </table>
-</div>
-<p><strong>明初人口快速增长证据</strong>:<br>以苏州府为例,1371年有473,862户、1,947,871人;到1376年增至506,543户、2,160,463人.五年间人口增长10.9%,显示社会稳定后人口的快速恢复.</p>
-<h4 id="1-4-明代人口登记的演变"><a href="#1-4-明代人口登记的演变" class="headerlink" title="1.4 明代人口登记的演变"></a>1.4 明代人口登记的演变</h4><p>明代人口登记制度经历了重要变化:</p>
-<ul>
-<li><strong>1381-1398年(洪武年间)</strong>:登记最为准确,接近实际人口</li>
-<li><strong>1398年后</strong>:登记方法发生重大变化</li>
-<li><strong>明代中后期</strong>:人口登记越来越脱离实际,逐渐只覆盖”纳税单位”</li>
-</ul>
-<p><strong>明代地方志证据</strong>:</p>
-<ul>
-<li>徽州府祁门县1391年有117,110户、536,925人</li>
-<li>1391-1483年的92年间,户数减少8,890、人口减少48,250(减少60-70%)</li>
-<li>大量人口逃避登记以减轻赋税负担</li>
-</ul>
+<p><strong>明初人口快速增长证据</strong>:
+以苏州府为例,1371年有473,862户、1,947,871人;到1376年增至506,543户、2,160,463人.五年间人口增长10.9%,显示社会稳定后人口的快速恢复.</p>
+<h4 id="明代人口登记的演变">1.4 明代人口登记的演变</h4>
+<p>明代人口登记制度经历了重要变化: -
+<strong>1381-1398年(洪武年间)</strong>:登记最为准确,接近实际人口 -
+<strong>1398年后</strong>:登记方法发生重大变化 -
+<strong>明代中后期</strong>:人口登记越来越脱离实际,逐渐只覆盖"纳税单位"</p>
+<p><strong>明代地方志证据</strong>: -
+徽州府祁门县1391年有117,110户、536,925人 -
+1391-1483年的92年间,户数减少8,890、人口减少48,250(减少60-70%) -
+大量人口逃避登记以减轻赋税负担</p>
 <hr>
-<h3 id="二、清代”丁”的性质演变"><a href="#二、清代”丁”的性质演变" class="headerlink" title="二、清代”丁”的性质演变"></a>二、清代”丁”的性质演变</h3><h4 id="2-1-“丁”-ting-的概念"><a href="#2-1-“丁”-ting-的概念" class="headerlink" title="2.1 “丁”(ting)的概念"></a>2.1 “丁”(ting)的概念</h4><p>“丁”是清代人口统计中最核心的概念,但其含义经历了根本性变化.</p>
-<p><strong>清初”丁”的含义</strong>:<br>“丁”最初指纳税单位,而非实际人口数.清初政府继承明代赋税制度,以”丁”为基础征收人头税.</p>
-<p><strong>1651年首次全国丁税统计</strong>:约10,600,000丁<br><strong>1660年</strong>:约19,000,000丁<br><strong>1684年</strong>:超过20,000,000丁(平定三藩之乱、台湾回归后)<br><strong>1734年</strong>:约26,400,000丁</p>
-<h4 id="2-2-“滋生人丁-永不加赋”-1662年"><a href="#2-2-“滋生人丁-永不加赋”-1662年" class="headerlink" title="2.2 “滋生人丁,永不加赋”(1662年)"></a>2.2 “滋生人丁,永不加赋”(1662年)</h4><p>这是中国人口史的<strong>关键转折点</strong>.</p>
+<h3 id="二清代丁的性质演变">二、清代"丁"的性质演变</h3>
+<h4 id="丁ting的概念">2.1 "丁"(ting)的概念</h4>
+<p>"丁"是清代人口统计中最核心的概念,但其含义经历了根本性变化.</p>
+<p><strong>清初"丁"的含义</strong>:
+"丁"最初指纳税单位,而非实际人口数.清初政府继承明代赋税制度,以"丁"为基础征收人头税.</p>
+<p><strong>1651年首次全国丁税统计</strong>:约10,600,000丁
+<strong>1660年</strong>:约19,000,000丁
+<strong>1684年</strong>:超过20,000,000丁(平定三藩之乱、台湾回归后)
+<strong>1734年</strong>:约26,400,000丁</p>
+<h4 id="滋生人丁永不加赋1662年">2.2 "滋生人丁,永不加赋"(1662年)</h4>
+<p>这是中国人口史的<strong>关键转折点</strong>.</p>
 <p>康熙五十九年(1720年),康熙帝宣布:新增人丁不再加赋.这是一项革命性的政策,从制度上消除了隐瞒人口的动机.</p>
-<p><strong>历史意义</strong>:</p>
-<ul>
-<li>结束了人头税的无限增长</li>
-<li>促进了人口如实登记</li>
-<li>为雍正年间”摊丁入亩”改革奠定基础</li>
-</ul>
-<h4 id="2-3-“摊丁入亩”改革-1720s-1730s"><a href="#2-3-“摊丁入亩”改革-1720s-1730s" class="headerlink" title="2.3 “摊丁入亩”改革(1720s-1730s)"></a>2.3 “摊丁入亩”改革(1720s-1730s)</h4><p>雍正年间(1723-1735),清政府将人头税(丁税)摊入土地税,完成了中国赋税史上的重要改革.</p>
-<p><strong>李卫(直隶总督1726年)的经典表述</strong>:</p>
-<blockquote>
-<p>“天下有不毛之地,而无不毛之丁”</p>
-</blockquote>
+<p><strong>历史意义</strong>: - 结束了人头税的无限增长 -
+促进了人口如实登记 - 为雍正年间"摊丁入亩"改革奠定基础</p>
+<h4 id="摊丁入亩改革1720s-1730s">2.3 "摊丁入亩"改革(1720s-1730s)</h4>
+<p>雍正年间(1723-1735),清政府将人头税(丁税)摊入土地税,完成了中国赋税史上的重要改革.</p>
+<p><strong>李卫(直隶总督1726年)的经典表述</strong>: &gt;
+"天下有不毛之地,而无不毛之丁"</p>
 <p>这一表述精辟地说明了赋税改革逻辑:土地是稳定的,而人口是可以增长的.将税收从人转移到土地,更加公平合理.</p>
-<p><strong>改革进程</strong>:</p>
-<ul>
-<li>广东、四川:最早已完成摊丁入亩</li>
-<li>浙江:47个县中已完成摊丁入亩或按亩分摊</li>
-<li>湖北:半数地区已完成</li>
-<li>1720s-1730s:全国约70%完成</li>
-</ul>
-<h4 id="2-4-“丁”的性质变化"><a href="#2-4-“丁”的性质变化" class="headerlink" title="2.4 “丁”的性质变化"></a>2.4 “丁”的性质变化</h4><p>摊丁入亩完成后,”丁”完全脱离了与实际人口的关联:</p>
-<ul>
-<li>“丁”成为纯粹的<strong>纳税单位</strong></li>
-<li>地方志中出现”15,232.68949664丁”这样的精确数字</li>
-<li>甚至出现”增加丁:0.7819斗”这样的荒谬记录</li>
-</ul>
+<p><strong>改革进程</strong>: - 广东、四川:最早已完成摊丁入亩 -
+浙江:47个县中已完成摊丁入亩或按亩分摊 - 湖北:半数地区已完成 -
+1720s-1730s:全国约70%完成</p>
+<h4 id="丁的性质变化">2.4 "丁"的性质变化</h4>
+<p>摊丁入亩完成后,"丁"完全脱离了与实际人口的关联: -
+"丁"成为纯粹的<strong>纳税单位</strong> -
+地方志中出现"15,232.68949664丁"这样的精确数字 -
+甚至出现"增加丁:0.7819斗"这样的荒谬记录</p>
 <hr>
-<h3 id="三、清代人口数据-1741-1953"><a href="#三、清代人口数据-1741-1953" class="headerlink" title="三、清代人口数据(1741-1953)"></a>三、清代人口数据(1741-1953)</h3><h4 id="3-1-1741-1775年-人口登记的转型"><a href="#3-1-1741-1775年-人口登记的转型" class="headerlink" title="3.1 1741-1775年:人口登记的转型"></a>3.1 1741-1775年:人口登记的转型</h4><p>1740年,年轻的乾隆帝决定改革人口登记制度:</p>
-<blockquote>
-<p>“朕御极以来,屡次咨询官方,周知民隐,深知户口日增之故……自明年(1741年)起,各省于每年十一月呈报户口增减数目.”</p>
-</blockquote>
+<h3 id="三清代人口数据1741-1953">三、清代人口数据(1741-1953)</h3>
+<h4 id="年人口登记的转型">3.1 1741-1775年:人口登记的转型</h4>
+<p>1740年,年轻的乾隆帝决定改革人口登记制度: &gt;
+"朕御极以来,屡次咨询官方,周知民隐,深知户口日增之故……自明年(1741年)起,各省于每年十一月呈报户口增减数目."</p>
 <p><strong>1741年起</strong>:中国有了接近现代意义的人口普查</p>
-<h4 id="3-2-1776-1850年-人口革命的黄金时代"><a href="#3-2-1776-1850年-人口革命的黄金时代" class="headerlink" title="3.2 1776-1850年:人口革命的黄金时代"></a>3.2 1776-1850年:人口革命的黄金时代</h4><p>这一时期人口数据最为可靠,被何炳棣视为中国”人口革命”的核心阶段.</p>
+<h4 id="年人口革命的黄金时代">3.2 1776-1850年:人口革命的黄金时代</h4>
+<p>这一时期人口数据最为可靠,被何炳棣视为中国"人口革命"的核心阶段.</p>
 <p><strong>人口增长数据</strong>:</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1069,30 +883,22 @@
 </tr>
 </tbody>
 </table>
-</div>
 <p><strong>1650-1850年:人口增长了两倍有余,从约1亿增至约4.3亿</strong></p>
-<h4 id="3-3-1851-1953年-动荡与数据混乱"><a href="#3-3-1851-1953年-动荡与数据混乱" class="headerlink" title="3.3 1851-1953年:动荡与数据混乱"></a>3.3 1851-1953年:动荡与数据混乱</h4><p><strong>太平天国战争(1850-1865)</strong>的影响:</p>
-<ul>
-<li>江苏、浙江、安徽、江西人口锐减</li>
-<li>全国人口损失估计达7000万至1亿</li>
-<li>人口数据严重失真</li>
-</ul>
-<p><strong>1908-1911年的人口普查</strong>:</p>
-<ul>
-<li>面临巨大困难:民众误以为普查是为了加税</li>
-<li>广东出现骚乱和暴动</li>
-<li>地方官员伪造数据以应付上级</li>
-<li>民国初年数据更加混乱</li>
-</ul>
-<p><strong>1912-1949年</strong>:</p>
-<ul>
-<li>军阀混战时期数据几乎不可靠</li>
-<li>各地自行编造数据</li>
-</ul>
-<p><strong>1953年人口普查</strong>:<br>新中国成立后首次科学的人口普查,结果约5.83亿</p>
+<h4 id="年动荡与数据混乱">3.3 1851-1953年:动荡与数据混乱</h4>
+<p><strong>太平天国战争(1850-1865)</strong>的影响: -
+江苏、浙江、安徽、江西人口锐减 - 全国人口损失估计达7000万至1亿 -
+人口数据严重失真</p>
+<p><strong>1908-1911年的人口普查</strong>: -
+面临巨大困难:民众误以为普查是为了加税 - 广东出现骚乱和暴动 -
+地方官员伪造数据以应付上级 - 民国初年数据更加混乱</p>
+<p><strong>1912-1949年</strong>: - 军阀混战时期数据几乎不可靠 -
+各地自行编造数据</p>
+<p><strong>1953年人口普查</strong>:
+新中国成立后首次科学的人口普查,结果约5.83亿</p>
 <hr>
-<h3 id="四、人口-土地关系"><a href="#四、人口-土地关系" class="headerlink" title="四、人口-土地关系"></a>四、人口-土地关系</h3><h4 id="4-1-官方土地数据"><a href="#4-1-官方土地数据" class="headerlink" title="4.1 官方土地数据"></a>4.1 官方土地数据</h4><p><strong>表21:1398-1932年中国官方土地数据</strong></p>
-<div class="table-container">
+<h3 id="四人口-土地关系">四、人口-土地关系</h3>
+<h4 id="官方土地数据">4.1 官方土地数据</h4>
+<p><strong>表21:1398-1932年中国官方土地数据</strong></p>
 <table>
 <thead>
 <tr>
@@ -1164,8 +970,7 @@
 </tr>
 </tbody>
 </table>
-</div>
-<h4 id="4-2-人均耕地面积下降"><a href="#4-2-人均耕地面积下降" class="headerlink" title="4.2 人均耕地面积下降"></a>4.2 人均耕地面积下降</h4><div class="table-container">
+<h4 id="人均耕地面积下降">4.2 人均耕地面积下降</h4>
 <table>
 <thead>
 <tr>
@@ -1202,94 +1007,76 @@
 </tr>
 </tbody>
 </table>
-</div>
 <p><strong>结论</strong>:人均耕地面积从6亩降至1.6亩,下降约73%</p>
-<h4 id="4-3-“亩”-mou-的复杂性"><a href="#4-3-“亩”-mou-的复杂性" class="headerlink" title="4.3 “亩”(mou)的复杂性"></a>4.3 “亩”(mou)的复杂性</h4><p>“亩”在不同地区标准差异极大,这是理解中国土地数据的关键:</p>
-<p><strong>亩的转换问题</strong>:</p>
-<ul>
-<li>华北平原:大量使用”大亩”,实际1.8-8亩折合1税亩</li>
-<li>江南地区:通常1.5-2亩折合1税亩</li>
-<li>贵州某些地区:可能几十亩折合1亩</li>
-</ul>
-<p><strong>明代土地评估等级</strong>:</p>
-<ul>
-<li>上等田、中等田、下等田,各分三等(三等九则)</li>
-<li>上等田税负重,下等田税负轻</li>
-</ul>
+<h4 id="亩mou的复杂性">4.3 "亩"(mou)的复杂性</h4>
+<p>"亩"在不同地区标准差异极大,这是理解中国土地数据的关键:</p>
+<p><strong>亩的转换问题</strong>: -
+华北平原:大量使用"大亩",实际1.8-8亩折合1税亩 -
+江南地区:通常1.5-2亩折合1税亩 - 贵州某些地区:可能几十亩折合1亩</p>
+<p><strong>明代土地评估等级</strong>: -
+上等田、中等田、下等田,各分三等(三等九则) -
+上等田税负重,下等田税负轻</p>
 <hr>
-<h3 id="五、区域人口迁移"><a href="#五、区域人口迁移" class="headerlink" title="五、区域人口迁移"></a>五、区域人口迁移</h3><h4 id="5-1-两大主要迁入区"><a href="#5-1-两大主要迁入区" class="headerlink" title="5.1 两大主要迁入区"></a>5.1 两大主要迁入区</h4><p><strong>东北(满洲)</strong>:</p>
+<h3 id="五区域人口迁移">五、区域人口迁移</h3>
+<h4 id="两大主要迁入区">5.1 两大主要迁入区</h4>
+<p><strong>东北(满洲)</strong>: - 19世纪前人口稀少 -
+山东、河北移民大量涌入("闯关东") - 1923-1929年:每年净迁入约40-50万</p>
+<p><strong>西南地区</strong>: - 四川、云南、贵州山区开发 -
+玉米、甘薯等新作物的推广使山地开发成为可能</p>
+<h4 id="主要迁出区">5.2 主要迁出区</h4>
 <ul>
-<li>19世纪前人口稀少</li>
-<li>山东、河北移民大量涌入(“闯关东”)</li>
-<li>1923-1929年:每年净迁入约40-50万</li>
-</ul>
-<p><strong>西南地区</strong>:</p>
-<ul>
-<li>四川、云南、贵州山区开发</li>
-<li>玉米、甘薯等新作物的推广使山地开发成为可能</li>
-</ul>
-<h4 id="5-2-主要迁出区"><a href="#5-2-主要迁出区" class="headerlink" title="5.2 主要迁出区"></a>5.2 主要迁出区</h4><ul>
 <li>山东、河南、山西向东北</li>
-<li>福建、广东向东南亚(“下南洋”)</li>
+<li>福建、广东向东南亚("下南洋")</li>
 </ul>
-<h4 id="5-3-湖南的特殊案例"><a href="#5-3-湖南的特殊案例" class="headerlink" title="5.3 湖南的特殊案例"></a>5.3 湖南的特殊案例</h4><p>1850年后湖南人口增长61.2%,是长江流域唯一显著增长的省份:</p>
-<ul>
-<li>太平天国运动未在湖南建立根据地</li>
-<li>湘军兴起,湖南人在政军界崛起</li>
-<li>汇款回流促进经济发展</li>
-</ul>
+<h4 id="湖南的特殊案例">5.3 湖南的特殊案例</h4>
+<p>1850年后湖南人口增长61.2%,是长江流域唯一显著增长的省份: -
+太平天国运动未在湖南建立根据地 - 湘军兴起,湖南人在政军界崛起 -
+汇款回流促进经济发展</p>
 <hr>
-<h3 id="六、灾难性制约因素"><a href="#六、灾难性制约因素" class="headerlink" title="六、灾难性制约因素"></a>六、灾难性制约因素</h3><h4 id="6-1-太平天国战争-1850-1865"><a href="#6-1-太平天国战争-1850-1865" class="headerlink" title="6.1 太平天国战争(1850-1865)"></a>6.1 太平天国战争(1850-1865)</h4><p><strong>破坏范围</strong>:江苏、浙江、安徽、江西</p>
-<p><strong>人口损失估计</strong>:</p>
-<ul>
-<li>直接死亡:2000-20000万</li>
-<li>战争波及地区人口减少40-60%</li>
-</ul>
-<p><strong>典型案例</strong>:<br>安徽人口战前约3500万,战后锐减</p>
-<h4 id="6-2-1877-1878年大旱灾"><a href="#6-2-1877-1878年大旱灾" class="headerlink" title="6.2 1877-1878年大旱灾"></a>6.2 1877-1878年大旱灾</h4><p><strong>受灾范围</strong>:陕西、山西、河南、直隶、山东</p>
-<p><strong>山西情况</strong>(恩庆的报告):</p>
-<blockquote>
-<p>“山西饥民已达八十余县,需救济者约五、六百万……目之所及,唯见形销骨立之饥民;耳之所闻,唯闻男女号泣之声……有时运尸之车不得不绕道而行,以避堆满道旁之饿殍.”</p>
-</blockquote>
-<h4 id="6-3-黄河改道-1938-1947"><a href="#6-3-黄河改道-1938-1947" class="headerlink" title="6.3 黄河改道(1938-1947)"></a>6.3 黄河改道(1938-1947)</h4><p>1938年蒋介石决堤阻敌,造成巨大人员伤亡和人口流离</p>
+<h3 id="六灾难性制约因素">六、灾难性制约因素</h3>
+<h4 id="太平天国战争1850-1865">6.1 太平天国战争(1850-1865)</h4>
+<p><strong>破坏范围</strong>:江苏、浙江、安徽、江西</p>
+<p><strong>人口损失估计</strong>: - 直接死亡:2000-20000万 -
+战争波及地区人口减少40-60%</p>
+<p><strong>典型案例</strong>: 安徽人口战前约3500万,战后锐减</p>
+<h4 id="年大旱灾">6.2 1877-1878年大旱灾</h4>
+<p><strong>受灾范围</strong>:陕西、山西、河南、直隶、山东</p>
+<p><strong>山西情况</strong>(恩庆的报告): &gt;
+"山西饥民已达八十余县,需救济者约五、六百万……目之所及,唯见形销骨立之饥民;耳之所闻,唯闻男女号泣之声……有时运尸之车不得不绕道而行,以避堆满道旁之饿殍."</p>
+<h4 id="黄河改道1938-1947">6.3 黄河改道(1938-1947)</h4>
+<p>1938年蒋介石决堤阻敌,造成巨大人员伤亡和人口流离</p>
 <hr>
-<h2 id="第二部分-观点整理"><a href="#第二部分-观点整理" class="headerlink" title="第二部分:观点整理"></a>第二部分:观点整理</h2><h3 id="核心论点一-清代人口爆炸的制度性解释"><a href="#核心论点一-清代人口爆炸的制度性解释" class="headerlink" title="核心论点一:清代人口爆炸的制度性解释"></a>核心论点一:清代人口爆炸的制度性解释</h3><p>何炳棣认为1650-1850年中国人口的迅速增长主要归因于<strong>制度变革</strong>:</p>
-<ol>
-<li><p><strong>“滋生人丁,永不加赋”(1662年)</strong></p>
+<h2 id="第二部分观点整理">第二部分:观点整理</h2>
+<h3 id="核心论点一清代人口爆炸的制度性解释">核心论点一:清代人口爆炸的制度性解释</h3>
+<p>何炳棣认为1650-1850年中国人口的迅速增长主要归因于<strong>制度变革</strong>:</p>
+<ol type="1">
+<li><strong>"滋生人丁,永不加赋"(1662年)</strong>
 <ul>
 <li>康熙宣布新增人丁不再加赋</li>
 <li>这是一项革命性的政策,从制度上刺激了人口增长</li>
-</ul>
-</li>
-<li><p><strong>“摊丁入亩”(1720s-1730s)</strong></p>
+</ul></li>
+<li><strong>"摊丁入亩"(1720s-1730s)</strong>
 <ul>
 <li>将人头税(丁税)摊入土地税</li>
 <li>消除了隐瞒人口的动机</li>
-<li>人口登记从”纳税单位”转变为”实际人口”</li>
-</ul>
-</li>
-<li><p><strong>早期满清统治的”良性专制”</strong></p>
+<li>人口登记从"纳税单位"转变为"实际人口"</li>
+</ul></li>
+<li><strong>早期满清统治的"良性专制"</strong>
 <ul>
 <li>政治稳定(长达一个半世纪的和平)</li>
 <li>轻徭薄赋</li>
 <li>玉米、甘薯等新作物的推广</li>
-</ul>
-</li>
+</ul></li>
 </ol>
-<h3 id="核心论点二-批评”人口过剩”神话"><a href="#核心论点二-批评”人口过剩”神话" class="headerlink" title="核心论点二:批评”人口过剩”神话"></a>核心论点二:批评”人口过剩”神话</h3><p>何炳棣<strong>系统性质疑</strong>当时流行的”中国人口过剩导致贫困”的观点:</p>
-<p><strong>反驳要点</strong>:</p>
-<ol>
-<li>中国传统农业的单位面积产量远高于欧洲</li>
-<li>人口增长刺激了农业集约化和商业化</li>
-<li>人口压力也促进了技术进步和制度创新</li>
-<li>18世纪末之前,人均生活水平并未显著下降</li>
-</ol>
-<p><strong>代表性引文</strong>(谢肇淛&lt;五杂俎&gt;,17世纪初):</p>
-<blockquote>
-<p>“二百四十年之间,海内无事,天下一家……民生殖焉,繁衍浩大,自有宇宙以来,未有若斯之盛者也.”</p>
-</blockquote>
-<h3 id="核心论点三-人口数据解读的方法论"><a href="#核心论点三-人口数据解读的方法论" class="headerlink" title="核心论点三:人口数据解读的方法论"></a>核心论点三:人口数据解读的方法论</h3><p>本书最重要的方法论贡献是<strong>重新界定关键术语</strong>:</p>
-<div class="table-container">
+<h3 id="核心论点二批评人口过剩神话">核心论点二:批评"人口过剩"神话</h3>
+<p>何炳棣<strong>系统性质疑</strong>当时流行的"中国人口过剩导致贫困"的观点:</p>
+<p><strong>反驳要点</strong>: 1. 中国传统农业的单位面积产量远高于欧洲 2.
+人口增长刺激了农业集约化和商业化 3. 人口压力也促进了技术进步和制度创新
+4. 18世纪末之前,人均生活水平并未显著下降</p>
+<p><strong>代表性引文</strong>(谢肇淛&lt;五杂俎&gt;,17世纪初): &gt;
+"二百四十年之间,海内无事,天下一家……民生殖焉,繁衍浩大,自有宇宙以来,未有若斯之盛者也."</p>
+<h3 id="核心论点三人口数据解读的方法论">核心论点三:人口数据解读的方法论</h3>
+<p>本书最重要的方法论贡献是<strong>重新界定关键术语</strong>:</p>
 <table>
 <thead>
 <tr>
@@ -1316,39 +1103,36 @@
 </tr>
 </tbody>
 </table>
-</div>
-<h3 id="核心论点四-人口增长的多元解释"><a href="#核心论点四-人口增长的多元解释" class="headerlink" title="核心论点四:人口增长的多元解释"></a>核心论点四:人口增长的多元解释</h3><p>人口增长是多种因素共同作用的结果:</p>
-<ol>
-<li><p><strong>经济因素</strong></p>
+<h3 id="核心论点四人口增长的多元解释">核心论点四:人口增长的多元解释</h3>
+<p>人口增长是多种因素共同作用的结果:</p>
+<ol type="1">
+<li><strong>经济因素</strong>
 <ul>
 <li>新作物(玉米、甘薯、马铃薯)的引入</li>
 <li>土地利用率提高</li>
 <li>农业技术进步</li>
-</ul>
-</li>
-<li><p><strong>制度因素</strong></p>
+</ul></li>
+<li><strong>制度因素</strong>
 <ul>
 <li>赋税制度改革(摊丁入亩)</li>
 <li>政治稳定</li>
 <li>医疗进步(人痘接种等)</li>
-</ul>
-</li>
-<li><p><strong>社会因素</strong></p>
+</ul></li>
+<li><strong>社会因素</strong>
 <ul>
 <li>早婚传统</li>
 <li>鼓励人口增殖的文化价值</li>
 <li>宗族组织提供社会保障</li>
-</ul>
-</li>
-<li><p><strong>地理因素</strong></p>
+</ul></li>
+<li><strong>地理因素</strong>
 <ul>
 <li>区域间迁移(向东北、西南)</li>
 <li>棚民开发山区</li>
-</ul>
-</li>
+</ul></li>
 </ol>
 <hr>
-<h2 id="第三部分-数据整理"><a href="#第三部分-数据整理" class="headerlink" title="第三部分:数据整理"></a>第三部分:数据整理</h2><h3 id="人口数据汇总"><a href="#人口数据汇总" class="headerlink" title="人口数据汇总"></a>人口数据汇总</h3><div class="table-container">
+<h2 id="第三部分数据整理">第三部分:数据整理</h2>
+<h3 id="人口数据汇总">人口数据汇总</h3>
 <table>
 <thead>
 <tr>
@@ -1405,8 +1189,7 @@
 </tr>
 </tbody>
 </table>
-</div>
-<h3 id="清代人口登记”丁”数变化"><a href="#清代人口登记”丁”数变化" class="headerlink" title="清代人口登记”丁”数变化"></a>清代人口登记”丁”数变化</h3><div class="table-container">
+<h3 id="清代人口登记丁数变化">清代人口登记"丁"数变化</h3>
 <table>
 <thead>
 <tr>
@@ -1438,8 +1221,7 @@
 </tr>
 </tbody>
 </table>
-</div>
-<h3 id="历代耕地与人均耕地"><a href="#历代耕地与人均耕地" class="headerlink" title="历代耕地与人均耕地"></a>历代耕地与人均耕地</h3><div class="table-container">
+<h3 id="历代耕地与人均耕地">历代耕地与人均耕地</h3>
 <table>
 <thead>
 <tr>
@@ -1476,8 +1258,7 @@
 </tr>
 </tbody>
 </table>
-</div>
-<h3 id="太平天国损失"><a href="#太平天国损失" class="headerlink" title="太平天国损失"></a>太平天国损失</h3><div class="table-container">
+<h3 id="太平天国损失">太平天国损失</h3>
 <table>
 <thead>
 <tr>
@@ -1508,18 +1289,15 @@
 </tr>
 </tbody>
 </table>
-</div>
 <hr>
-<h2 id="第四部分-案例整理"><a href="#第四部分-案例整理" class="headerlink" title="第四部分:案例整理"></a>第四部分:案例整理</h2><h3 id="案例一-1371年郎氏户帖"><a href="#案例一-1371年郎氏户帖" class="headerlink" title="案例一:1371年郎氏户帖"></a>案例一:1371年郎氏户帖</h3><p><strong>历史价值</strong>:现存最早的明代人口登记实物之一</p>
-<p><strong>内容分析</strong>:</p>
-<ul>
-<li>6口之家(复合家庭)</li>
-<li>2个成年男性、2个儿童、2个女性</li>
-<li>财产:5间房、0.8亩地</li>
-</ul>
+<h2 id="第四部分案例整理">第四部分:案例整理</h2>
+<h3 id="案例一1371年郎氏户帖">案例一:1371年郎氏户帖</h3>
+<p><strong>历史价值</strong>:现存最早的明代人口登记实物之一</p>
+<p><strong>内容分析</strong>: - 6口之家(复合家庭) -
+2个成年男性、2个儿童、2个女性 - 财产:5间房、0.8亩地</p>
 <p><strong>学术意义</strong>:证明明初人口登记的精确性和全面性</p>
-<h3 id="案例二-苏州府人口数据-1371-1376"><a href="#案例二-苏州府人口数据-1371-1376" class="headerlink" title="案例二:苏州府人口数据(1371-1376)"></a>案例二:苏州府人口数据(1371-1376)</h3><p><strong>数据对比</strong>:</p>
-<div class="table-container">
+<h3 id="案例二苏州府人口数据1371-1376">案例二:苏州府人口数据(1371-1376)</h3>
+<p><strong>数据对比</strong>:</p>
 <table>
 <thead>
 <tr>
@@ -1544,37 +1322,29 @@
 </tr>
 </tbody>
 </table>
-</div>
 <p><strong>分析</strong>:5年间人口增长超过10%,显示和平时期人口的快速自然增长</p>
-<h3 id="案例三-康熙”滋生人丁-永不加赋”"><a href="#案例三-康熙”滋生人丁-永不加赋”" class="headerlink" title="案例三:康熙”滋生人丁,永不加赋”"></a>案例三:康熙”滋生人丁,永不加赋”</h3><p><strong>历史背景</strong>:</p>
-<ul>
-<li>康熙五十九年(1720年)</li>
-<li>平定三藩之乱后</li>
-<li>国家长期和平繁荣</li>
-</ul>
+<h3 id="案例三康熙滋生人丁永不加赋">案例三:康熙"滋生人丁,永不加赋"</h3>
+<p><strong>历史背景</strong>: - 康熙五十九年(1720年) - 平定三藩之乱后 -
+国家长期和平繁荣</p>
 <p><strong>制度创新</strong>:新增人丁不再加赋,消除了人口登记的税收压力</p>
-<h3 id="案例四-山西1877-1878大旱灾"><a href="#案例四-山西1877-1878大旱灾" class="headerlink" title="案例四:山西1877-1878大旱灾"></a>案例四:山西1877-1878大旱灾</h3><p><strong>灾害程度</strong>:</p>
-<ul>
-<li>80余县受灾</li>
-<li>500-600万人需救济</li>
-<li>出现人相食的惨状</li>
-<li>卖儿鬻女以苟延残喘</li>
-</ul>
-<h3 id="案例五-向东北的移民潮"><a href="#案例五-向东北的移民潮" class="headerlink" title="案例五:向东北的移民潮"></a>案例五:向东北的移民潮</h3><p><strong>时间</strong>:19世纪至今</p>
-<p><strong>规模</strong>:</p>
-<ul>
-<li>1923-1929年:每年净迁入40-50万</li>
-<li>主要来自山东、河北</li>
-</ul>
-<p><strong>历史意义</strong>:</p>
-<ul>
-<li>缓解了关内人口压力</li>
-<li>促进了东北农业开发</li>
-<li>改变了全国人口分布格局</li>
-</ul>
+<h3 id="案例四山西1877-1878大旱灾">案例四:山西1877-1878大旱灾</h3>
+<p><strong>灾害程度</strong>: - 80余县受灾 - 500-600万人需救济 -
+出现人相食的惨状 - 卖儿鬻女以苟延残喘</p>
+<h3 id="案例五向东北的移民潮">案例五:向东北的移民潮</h3>
+<p><strong>时间</strong>:19世纪至今</p>
+<p><strong>规模</strong>: - 1923-1929年:每年净迁入40-50万 -
+主要来自山东、河北</p>
+<p><strong>历史意义</strong>: - 缓解了关内人口压力 - 促进了东北农业开发
+- 改变了全国人口分布格局</p>
 <hr>
-<h2 id="第五部分-术语表"><a href="#第五部分-术语表" class="headerlink" title="第五部分:术语表"></a>第五部分:术语表</h2><div class="table-container">
+<h2 id="第五部分术语表">第五部分:术语表</h2>
 <table>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
 <thead>
 <tr>
 <th>术语</th>
@@ -1676,41 +1446,44 @@
 </tr>
 </tbody>
 </table>
-</div>
 <hr>
-<h2 id="附录一-何炳棣其人"><a href="#附录一-何炳棣其人" class="headerlink" title="附录一:何炳棣其人"></a>附录一:何炳棣其人</h2><h3 id="学术背景"><a href="#学术背景" class="headerlink" title="学术背景"></a>学术背景</h3><p><strong>何炳棣(1917-2012)</strong>:</p>
-<ul>
-<li>浙江金华人</li>
-<li>1938年燕京大学经济学学士</li>
-<li>1944年哥伦比亚大学经济学硕士</li>
-<li>1952年哥伦比亚大学哲学博士(历史学)</li>
-<li>主要研究中国史、经济史、人口史</li>
-</ul>
-<h3 id="主要著作"><a href="#主要著作" class="headerlink" title="主要著作"></a>主要著作</h3><ol>
-<li><studies on="" the="" population="" of="" china,="" 1368-1953="">(1959)</studies></li>
+<h2 id="附录一何炳棣其人">附录一:何炳棣其人</h2>
+<h3 id="学术背景">学术背景</h3>
+<p><strong>何炳棣(1917-2012)</strong>: - 浙江金华人 -
+1938年燕京大学经济学学士 - 1944年哥伦比亚大学经济学硕士 -
+1952年哥伦比亚大学哲学博士(历史学) - 主要研究中国史、经济史、人口史</p>
+<h3 id="主要著作">主要著作</h3>
+<ol type="1">
+<li>&lt;Studies on the Population of China, 1368-1953&gt;(1959)</li>
 <li><the cradle="" of="" the="" east:="" an="" inquiry="" into="" indigenous="" origins="" techniques="" and="" ideas="" neolithicohistoric="" china="">(1975)</the></li>
 <li><the rise="" of="" the="" modern="" chinese="" business="" class="">(1979)</the></li>
 <li><china enters="" the="" world="" economy="">(1989)</china></li>
 </ol>
-<h3 id="学术地位"><a href="#学术地位" class="headerlink" title="学术地位"></a>学术地位</h3><p>何炳棣是20世纪中国史学界最具影响力的学者之一,在以下领域做出了开创性贡献:</p>
-<ul>
-<li>中国人口史:奠定了该领域的方法论基础</li>
-<li>中国农业史:对农业革命有深入研究</li>
-<li>中国商业史:研究了近代中国商业资本主义的发展</li>
-<li>中国文明起源:提出了中国文明独立起源的观点</li>
-</ul>
+<h3 id="学术地位">学术地位</h3>
+<p>何炳棣是20世纪中国史学界最具影响力的学者之一,在以下领域做出了开创性贡献:
+- 中国人口史:奠定了该领域的方法论基础 - 中国农业史:对农业革命有深入研究
+- 中国商业史:研究了近代中国商业资本主义的发展 -
+中国文明起源:提出了中国文明独立起源的观点</p>
 <hr>
-<h2 id="附录二-书中重要引文摘录"><a href="#附录二-书中重要引文摘录" class="headerlink" title="附录二:书中重要引文摘录"></a>附录二:书中重要引文摘录</h2><h3 id="关于明代人口登记-第一章"><a href="#关于明代人口登记-第一章" class="headerlink" title="关于明代人口登记(第一章)"></a>关于明代人口登记(第一章)</h3><blockquote>
-<p>“洪武四年十二月十二日,准户部所奏,着令各省府县,将境内人民,无论主客,逐一开报……户部以黄册进呈,用黄纸为面,故曰黄册.”<br>_&lt;洪武实录&gt;</p>
+<h2 id="附录二书中重要引文摘录">附录二:书中重要引文摘录</h2>
+<h3 id="关于明代人口登记第一章">关于明代人口登记(第一章)</h3>
+<blockquote>
+<p>"洪武四年十二月十二日,准户部所奏,着令各省府县,将境内人民,无论主客,逐一开报……户部以黄册进呈,用黄纸为面,故曰黄册."
+_&lt;洪武实录&gt;</p>
 </blockquote>
-<h3 id="关于”丁”的演变-第二章"><a href="#关于”丁”的演变-第二章" class="headerlink" title="关于”丁”的演变(第二章)"></a>关于”丁”的演变(第二章)</h3><blockquote>
-<p>“天下有不毛之地,而无不毛之丁”<br>_李卫(直隶总督,1726年)</p>
+<h3 id="关于丁的演变第二章">关于"丁"的演变(第二章)</h3>
+<blockquote>
+<p>"天下有不毛之地,而无不毛之丁" _李卫(直隶总督,1726年)</p>
 </blockquote>
-<h3 id="关于商业繁荣-第九章"><a href="#关于商业繁荣-第九章" class="headerlink" title="关于商业繁荣(第九章)"></a>关于商业繁荣(第九章)</h3><blockquote>
-<p>“中国之内陆贸易,实较全欧之商业为盛;盖各省如各有王国,相互流通其产物.”<br>_Du Halde(法国传教士,18世纪)</p>
+<h3 id="关于商业繁荣第九章">关于商业繁荣(第九章)</h3>
+<blockquote>
+<p>"中国之内陆贸易,实较全欧之商业为盛;盖各省如各有王国,相互流通其产物."
+_Du Halde(法国传教士,18世纪)</p>
 </blockquote>
-<h3 id="关于人口增长-第十一章"><a href="#关于人口增长-第十一章" class="headerlink" title="关于人口增长(第十一章)"></a>关于人口增长(第十一章)</h3><blockquote>
-<p>“二百四十年之间,海内无事,天下一家……民生殖焉,繁衍浩大,自有宇宙以来,未有若斯之盛者也.”<br>_谢肇淛&lt;五杂俎&gt;(约1610年)</p>
+<h3 id="关于人口增长第十一章">关于人口增长(第十一章)</h3>
+<blockquote>
+<p>"二百四十年之间,海内无事,天下一家……民生殖焉,繁衍浩大,自有宇宙以来,未有若斯之盛者也."
+_谢肇淛&lt;五杂俎&gt;(约1610年)</p>
 </blockquote>
 ]]></content>
       <categories>
@@ -1724,31 +1497,145 @@
       </tags>
   </entry>
   <entry>
+    <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
+    <url>/posts/48526/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
+<ul>
+<li>因果识别+统计推断</li>
+<li>因果识别(<strong><em>causal
+identification</em></strong>):如果拥有总体,能否确定总体因果关系</li>
+<li>统计推断(<strong><em>statistical
+inference</em></strong>):如何从样本数据获取总体因果关系信息,实际是一种相关性事实</li>
+<li>识别假设,实际就是对 <span class="math inline">\(D\)</span> 和 <span class="math inline">\(\varepsilon\)</span>
+的关系作出表述,但这种过程是无法从理论上验证的</li>
+</ul>
+<span id="more"></span>
+<h2 id="section"><strong>1</strong></h2>
+<ul>
+<li><strong>1.1</strong>
+因果效应的定义:干预与否、处理与否时,潜在结果之间的差值.潜在结果一定是同一个时间点上的结果</li>
+<li><strong>1.2</strong> 潜在结果永远无法完全观测,除非存在平行宇宙</li>
+<li><strong>1.3</strong>
+通过识别假设可以进行"插值",可以化"相关关系"识别场景为"因果关系"识别场景</li>
+<li><strong>1.4</strong>
+鲁宾因果模型(潜在因果框架),一套描述因果关系的新语言</li>
+</ul>
+<h2 id="section-1"><strong>2</strong></h2>
+<ul>
+<li><strong>2.1</strong> 第一类识别假设:潜在结果均值独立于处理状态</li>
+<li><strong>2.2</strong>
+从干扰项中剥离出控制变量;或者寻找一个与干扰项不相关的工具变量</li>
+<li><strong>2.3</strong>
+第二类识别假设:潜在结果条件均值独立于处理状态</li>
+<li><strong>2.4</strong> 好的控制变量:既影响<span class="math inline">\(Y\)</span>,又影响<span class="math inline">\(D\)</span>.其本身和干扰项是否相关是不重要的,不是研究者关注的中心</li>
+<li><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</li>
+<li><strong>2.6</strong> 无需过渡阐释控制变量的系数</li>
+</ul>
+<h2 id="section-2"><strong>3</strong></h2>
+<ul>
+<li><strong>3.1</strong> 鲁宾因果模型并未规定具体的函数形式</li>
+<li><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</li>
+</ul>
+<h2 id="section-3"><strong>4</strong></h2>
+<ul>
+<li><strong>4.1</strong>
+选择性又称之为分配机制,每个个体如何接受处理,可以用倾向得分来表示</li>
+<li><strong>4.2</strong>
+建议现实使用IV、DID、RDD等识别方法时,称之为准实验</li>
+</ul>
+]]></content>
+      <categories>
+        <category>计量</category>
+      </categories>
+      <tags>
+        <tag>学术讲座</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大城市人口增长速度🦚</title>
+    <url>/posts/15523/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
+<center>
+上图即为最终效果
+</center>
+<h2 id="下载数据">下载数据</h2>
+<p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录.
+</p><figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="加载r包">加载R包</h2>
+<p>需要的R包如下所示.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
+<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<ol type="1">
+<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
+<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon,
+Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
+<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
+<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
+</ol>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
+<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.
+使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="绘图">绘图</h2>
+<p>代码如下,图见上文.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>绘图</category>
+        <category>map&amp;sf</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>&lt;One Quarter of Humanity&gt;深度阅读笔记 — James Z. Lee &amp; Wang Feng</title>
     <url>/posts/lee2001/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="深度阅读笔记"><a href="#深度阅读笔记" class="headerlink" title="- 深度阅读笔记"></a><one quarter="" of="" humanity="">- 深度阅读笔记</one></h1><h2 id="书籍信息"><a href="#书籍信息" class="headerlink" title="书籍信息"></a>书籍信息</h2><ul>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="深度阅读笔记"><one quarter="" of="" humanity="">- 深度阅读笔记</one></h1>
+<h2 id="书籍信息">书籍信息</h2>
+<ul>
 <li><strong>书名</strong>: One Quarter of Humanity</li>
-<li><strong>副标题</strong>: Malthusian Mythology and Chinese Realities, 1700-2000</li>
-<li><strong>作者</strong>: James Z. Lee (李中清) &amp; Wang Feng (王丰)</li>
-<li><strong>出版</strong>: Harvard University Press, 2001 (初版1999)</li>
+<li><strong>副标题</strong>: Malthusian Mythology and Chinese Realities,
+1700-2000</li>
+<li><strong>作者</strong>: James Z. Lee (李中清) &amp; Wang Feng
+(王丰)</li>
+<li><strong>出版</strong>: Harvard University Press, 2001
+(初版1999)</li>
 <li><strong>页数</strong>: 约280页</li>
 <li><strong>类型</strong>: 人口史 / 经济史 / 比较历史学</li>
 <li><strong>阅读时间</strong>: 2026年4月5日</li>
-<li><strong>难度评估</strong>: 高(学术性强,涉及人口学、经济学、历史学、社会学交叉领域)<span id="more"></span>
-</li>
+<li><strong>难度评估</strong>:
+高(学术性强,涉及人口学、经济学、历史学、社会学交叉领域) <span id="more"></span>
+---</li>
 </ul>
-<hr>
-<h2 id="整体评价"><a href="#整体评价" class="headerlink" title="整体评价"></a>整体评价</h2><p>本书是研究中国人口历史的里程碑式著作,由James Z. Lee和李中清合作完成.两位作者利用中国历史档案中的大量人口记录(如清朝皇族族谱、人口普查数据等),系统地挑战了传统的马尔萨斯主义人口理论.</p>
-<p><strong>核心贡献</strong>:本书推翻了一个长期以来的”共识智慧”_即中国与西方在人口行为上存在本质差异,传统中国缺乏有效的人口控制机制.作者通过详实的微观数据证明,中国实际上通过独特的婚姻制度、生育行为(如杀婴、堕胎)以及社会结构安排,实现了有效的人口约束,这与西方的”预防性检查”(晚婚)模式截然不同.</p>
+<h2 id="整体评价">整体评价</h2>
+<p>本书是研究中国人口历史的里程碑式著作,由James Z.
+Lee和李中清合作完成.两位作者利用中国历史档案中的大量人口记录(如清朝皇族族谱、人口普查数据等),系统地挑战了传统的马尔萨斯主义人口理论.</p>
+<p><strong>核心贡献</strong>:本书推翻了一个长期以来的"共识智慧"_即中国与西方在人口行为上存在本质差异,传统中国缺乏有效的人口控制机制.作者通过详实的微观数据证明,中国实际上通过独特的婚姻制度、生育行为(如杀婴、堕胎)以及社会结构安排,实现了有效的人口约束,这与西方的"预防性检查"(晚婚)模式截然不同.</p>
 <p><strong>学术意义</strong>:本书为理解中国独特的人口转变路径提供了全新的分析框架,对比较历史人口学、人口社会学、经济史等领域具有重要贡献.</p>
 <hr>
-<h2 id="内容总览"><a href="#内容总览" class="headerlink" title="内容总览"></a>内容总览</h2><h3 id="核心论点"><a href="#核心论点" class="headerlink" title="核心论点"></a>核心论点</h3><p>作者认为,中国人口的”众多”并非源于缺乏控制,而是<strong>有效调节</strong>的结果.这种调节通过以下机制实现:</p>
-<ol>
+<h2 id="内容总览">内容总览</h2>
+<h3 id="核心论点">核心论点</h3>
+<p>作者认为,中国人口的"众多"并非源于缺乏控制,而是<strong>有效调节</strong>的结果.这种调节通过以下机制实现:</p>
+<ol type="1">
 <li><strong>压低婚姻生育率</strong>:通过晚婚、独身、选择性杀婴等方式</li>
 <li><strong>广泛存在的杀婴和堕胎实践</strong>:特别是针对女婴</li>
 <li><strong>集体主义导向的人口制度</strong>:区别于西方的个人主义驱动</li>
 </ol>
-<h3 id="书籍结构"><a href="#书籍结构" class="headerlink" title="书籍结构"></a>书籍结构</h3><div class="table-container">
+<h3 id="书籍结构">书籍结构</h3>
 <table>
 <thead>
 <tr>
@@ -1775,66 +1662,70 @@
 </tr>
 </tbody>
 </table>
-</div>
 <hr>
-<h2 id="第一部分-历史事实整理"><a href="#第一部分-历史事实整理" class="headerlink" title="第一部分:历史事实整理"></a>第一部分:历史事实整理</h2><h3 id="核心历史事实"><a href="#核心历史事实" class="headerlink" title="核心历史事实"></a>核心历史事实</h3><h4 id="人口数据"><a href="#人口数据" class="headerlink" title="人口数据"></a>人口数据</h4><ul>
+<h2 id="第一部分历史事实整理">第一部分:历史事实整理</h2>
+<h3 id="核心历史事实">核心历史事实</h3>
+<h4 id="人口数据">人口数据</h4>
+<ul>
 <li><strong>世界人口增长</strong>:1700年全球人口不足7亿,2000年超过60亿,增长近10倍</li>
-<li><p><strong>中国人口三阶段增长</strong>:</p>
+<li><strong>中国人口三阶段增长</strong>:
 <ul>
 <li>第一阶段(1700-1800):1.6亿增至3.5亿</li>
 <li>第二阶段(1800-1950):3.5亿增至近6亿</li>
 <li>第三阶段(1950-2000):6亿增至12亿+</li>
-</ul>
-</li>
-<li><p><strong>人均粮食产量</strong>:中国1930-1986年间相对稳定,但人口大幅增长</p>
-</li>
+</ul></li>
+<li><strong>人均粮食产量</strong>:中国1930-1986年间相对稳定,但人口大幅增长</li>
 <li><strong>男性平均身高</strong>:中国1900-1985年间显著增长,反映营养改善</li>
 </ul>
-<h4 id="婚姻与生育数据"><a href="#婚姻与生育数据" class="headerlink" title="婚姻与生育数据"></a>婚姻与生育数据</h4><ul>
+<h4 id="婚姻与生育数据">婚姻与生育数据</h4>
+<ul>
 <li><strong>女性初婚年龄</strong>:中国各时期数据存在显著差异</li>
 <li><strong>30岁仍未婚女性比例</strong>:中国历史上这一比例较高</li>
 <li><strong>婚姻模式</strong>:一夫一妻制为主,但存在纳妾制度</li>
 <li><strong>童养媳婚姻</strong>:女性通过成为童养媳提前进入婚姻市场</li>
 </ul>
-<h4 id="死亡率数据"><a href="#死亡率数据" class="headerlink" title="死亡率数据"></a>死亡率数据</h4><ul>
+<h4 id="死亡率数据">死亡率数据</h4>
+<ul>
 <li><strong>婴儿死亡率</strong>:北京1700-1830年数据</li>
 <li><strong>男女死亡率差异</strong>:中国存在显著的女性超额死亡</li>
 <li><strong>性别比</strong>:中国长期存在男性偏高的性别比,反映杀婴和性别选择</li>
 </ul>
-<h3 id="历史脉络"><a href="#历史脉络" class="headerlink" title="历史脉络"></a>历史脉络</h3><ol>
+<h3 id="历史脉络">历史脉络</h3>
+<ol type="1">
 <li><strong>清朝(1644-1912)</strong>:人口持续增长,但存在有效约束机制</li>
 <li><strong>民国时期(1912-1949)</strong>:战争与饥荒导致人口波动</li>
 <li><strong>共和国时期(1949-2000)</strong>:计划生育政策的实施与人口转型</li>
 </ol>
 <hr>
-<h2 id="第二部分-观点整理"><a href="#第二部分-观点整理" class="headerlink" title="第二部分:观点整理"></a>第二部分:观点整理</h2><h3 id="作者核心观点"><a href="#作者核心观点" class="headerlink" title="作者核心观点"></a>作者核心观点</h3><h4 id="观点一-马尔萨斯主义范式的局限"><a href="#观点一-马尔萨斯主义范式的局限" class="headerlink" title="观点一:马尔萨斯主义范式的局限"></a>观点一:马尔萨斯主义范式的局限</h4><p>作者认为,马尔萨斯的人口理论虽然影响深远,但存在对中国的根本性误解:</p>
+<h2 id="第二部分观点整理">第二部分:观点整理</h2>
+<h3 id="作者核心观点">作者核心观点</h3>
+<h4 id="观点一马尔萨斯主义范式的局限">观点一:马尔萨斯主义范式的局限</h4>
+<p>作者认为,马尔萨斯的人口理论虽然影响深远,但存在对中国的根本性误解:</p>
 <ul>
 <li>马尔萨斯将人类社会分为两类:西方社会(以预防性检查为主)和非西方社会(以积极性检查为主)</li>
 <li>这一二元划分忽视了中国的复杂性</li>
 <li><strong>中国的独特性</strong>:通过压低婚姻生育率(而非晚婚)实现人口控制</li>
 </ul>
-<h4 id="观点二-中国式人口控制机制"><a href="#观点二-中国式人口控制机制" class="headerlink" title="观点二:中国式人口控制机制"></a>观点二:中国式人口控制机制</h4><ol>
-<li><p><strong>杀婴(Infanticide)</strong>:特别是溺婴(尤其是女婴)</p>
+<h4 id="观点二中国式人口控制机制">观点二:中国式人口控制机制</h4>
+<ol type="1">
+<li><strong>杀婴(Infanticide)</strong>:特别是溺婴(尤其是女婴)
 <ul>
-<li>作者认为这是”集体决策”的体现</li>
+<li>作者认为这是"集体决策"的体现</li>
 <li>与西方的个人延迟生育决策不同</li>
-</ul>
-</li>
-<li><p><strong>溺婴的经济逻辑</strong>:</p>
+</ul></li>
+<li><strong>溺婴的经济逻辑</strong>:
 <ul>
 <li>农业社会中男性劳动力价值更高</li>
 <li>女婴被杀反映了家庭对资源分配的计算</li>
-</ul>
-</li>
-<li><p><strong>堕胎与避孕</strong>:</p>
+</ul></li>
+<li><strong>堕胎与避孕</strong>:
 <ul>
 <li>中国历史上存在多种堕胎方式</li>
 <li>避孕知识通过非正式渠道传播</li>
-</ul>
-</li>
+</ul></li>
 </ol>
-<h4 id="观点三-不同于西方的人口转变"><a href="#观点三-不同于西方的人口转变" class="headerlink" title="观点三:不同于西方的人口转变"></a>观点三:不同于西方的人口转变</h4><p>作者提出,中国的人口转变与西方经历的模式根本不同:</p>
-<div class="table-container">
+<h4 id="观点三不同于西方的人口转变">观点三:不同于西方的人口转变</h4>
+<p>作者提出,中国的人口转变与西方经历的模式根本不同:</p>
 <table>
 <thead>
 <tr>
@@ -1866,14 +1757,16 @@
 </tr>
 </tbody>
 </table>
-</div>
-<h4 id="观点四-中国人口制度的”集体主义”特征"><a href="#观点四-中国人口制度的”集体主义”特征" class="headerlink" title="观点四:中国人口制度的”集体主义”特征"></a>观点四:中国人口制度的”集体主义”特征</h4><ul>
+<h4 id="观点四中国人口制度的集体主义特征">观点四:中国人口制度的"集体主义"特征</h4>
+<ul>
 <li>中国的人口控制并非源于个人理性计算</li>
 <li>而是基于家族、社区乃至国家的集体利益考量</li>
 <li>这种制度安排鼓励的是<strong>集体责任</strong>而非个人主义</li>
 </ul>
 <hr>
-<h2 id="第三部分-数据整理"><a href="#第三部分-数据整理" class="headerlink" title="第三部分:数据整理"></a>第三部分:数据整理</h2><h3 id="关键数据"><a href="#关键数据" class="headerlink" title="关键数据"></a>关键数据</h3><h4 id="人口数据-1"><a href="#人口数据-1" class="headerlink" title="人口数据"></a>人口数据</h4><div class="table-container">
+<h2 id="第三部分数据整理">第三部分:数据整理</h2>
+<h3 id="关键数据">关键数据</h3>
+<h4 id="人口数据-1">人口数据</h4>
 <table>
 <thead>
 <tr>
@@ -1908,74 +1801,53 @@
 </tr>
 </tbody>
 </table>
-</div>
-<h4 id="性别比数据"><a href="#性别比数据" class="headerlink" title="性别比数据"></a>性别比数据</h4><ul>
+<h4 id="性别比数据">性别比数据</h4>
+<ul>
 <li>中国1776-1990年间性别比持续偏高</li>
 <li>女婴和女性儿童死亡率显著高于男性</li>
 <li>这反映了性别选择性杀婴和忽视的存在</li>
 </ul>
 <hr>
-<h2 id="第四部分-章节精读笔记"><a href="#第四部分-章节精读笔记" class="headerlink" title="第四部分:章节精读笔记"></a>第四部分:章节精读笔记</h2><h3 id="第一章-Introduction"><a href="#第一章-Introduction" class="headerlink" title="第一章:Introduction"></a>第一章:Introduction</h3><p><strong>主要内容</strong>:</p>
-<ul>
-<li>介绍马尔萨斯主义200年来的影响</li>
-<li>阐述世界人口从7亿到60亿的增长轨迹</li>
-<li>提出核心问题:中国人口为何如此众多?</li>
-</ul>
-<p><strong>关键引用</strong>:</p>
-<blockquote>
-<p>“After the desire for food, the most powerful and general of our desires is the passion between the sexes” — Malthus, 1803</p>
-</blockquote>
-<h3 id="第二章-Malthusian-Myths"><a href="#第二章-Malthusian-Myths" class="headerlink" title="第二章:Malthusian Myths"></a>第二章:Malthusian Myths</h3><p><strong>主要内容</strong>:</p>
-<ul>
-<li>批评马尔萨斯对中国人口的错误认识</li>
-<li>马尔萨斯认为中国是”人口压力”的典型</li>
-<li>实际上中国有有效的人口控制机制</li>
-</ul>
-<h3 id="第三章-Subsistence"><a href="#第三章-Subsistence" class="headerlink" title="第三章:Subsistence"></a>第三章:Subsistence</h3><p><strong>核心发现</strong>:</p>
-<ul>
-<li>中国人均粮食消费处于极低水平</li>
-<li>但人口持续增长并未导致普遍饥荒</li>
-<li>这说明存在有效的需求端控制机制</li>
-</ul>
-<h3 id="第四章-Mortality"><a href="#第四章-Mortality" class="headerlink" title="第四章:Mortality"></a>第四章:Mortality</h3><p><strong>核心发现</strong>:</p>
-<ul>
-<li>中国的高死亡率部分是”积极性检查”的结果</li>
-<li>但更重要的是系统性的性别选择</li>
-<li>女婴和女童的死亡率显著偏高</li>
-</ul>
-<h3 id="第五章-Marriage"><a href="#第五章-Marriage" class="headerlink" title="第五章:Marriage"></a>第五章:Marriage</h3><p><strong>核心发现</strong>:</p>
-<ul>
-<li>中国婚姻模式与西方截然不同</li>
-<li>婚姻市场中的性别比例失衡</li>
-<li>嫁妆/彩礼制度的经济功能</li>
-</ul>
-<h3 id="第六章-Fertility"><a href="#第六章-Fertility" class="headerlink" title="第六章:Fertility"></a>第六章:Fertility</h3><p><strong>核心发现</strong>:</p>
-<ul>
-<li>中国历史上存在有意识控制生育的行为</li>
-<li>“自然生育率”概念不适用于中国</li>
-<li>杀婴和堕胎是控制生育的重要手段</li>
-</ul>
-<h3 id="第七章-System"><a href="#第七章-System" class="headerlink" title="第七章:System"></a>第七章:System</h3><p><strong>核心发现</strong>:</p>
-<ul>
-<li>中国人口制度是”内生约束”系统</li>
-<li>收养制度在人口调节中起重要作用</li>
-<li>制度设计鼓励集体利益最大化</li>
-</ul>
-<h3 id="第八章-Society"><a href="#第八章-Society" class="headerlink" title="第八章:Society"></a>第八章:Society</h3><p><strong>核心发现</strong>:</p>
-<ul>
-<li>家庭作为人口行为的基本单位</li>
-<li>集体责任vs个人利益的文化逻辑</li>
-<li>中国的社会结构如何支撑人口控制</li>
-</ul>
-<h3 id="第九章-Demography-Ideology-and-Politics"><a href="#第九章-Demography-Ideology-and-Politics" class="headerlink" title="第九章:Demography, Ideology, and Politics"></a>第九章:Demography, Ideology, and Politics</h3><p><strong>核心发现</strong>:</p>
-<ul>
-<li>人口、意识形态与政治的交织</li>
-<li>中国人口政策的演变</li>
-<li>比较视野下的中国人口转变</li>
-</ul>
+<h2 id="第四部分章节精读笔记">第四部分:章节精读笔记</h2>
+<h3 id="第一章introduction">第一章:Introduction</h3>
+<p><strong>主要内容</strong>: - 介绍马尔萨斯主义200年来的影响 -
+阐述世界人口从7亿到60亿的增长轨迹 -
+提出核心问题:中国人口为何如此众多?</p>
+<p><strong>关键引用</strong>: &gt; "After the desire for food, the most
+powerful and general of our desires is the passion between the sexes" —
+Malthus, 1803</p>
+<h3 id="第二章malthusian-myths">第二章:Malthusian Myths</h3>
+<p><strong>主要内容</strong>: - 批评马尔萨斯对中国人口的错误认识 -
+马尔萨斯认为中国是"人口压力"的典型 - 实际上中国有有效的人口控制机制</p>
+<h3 id="第三章subsistence">第三章:Subsistence</h3>
+<p><strong>核心发现</strong>: - 中国人均粮食消费处于极低水平 -
+但人口持续增长并未导致普遍饥荒 - 这说明存在有效的需求端控制机制</p>
+<h3 id="第四章mortality">第四章:Mortality</h3>
+<p><strong>核心发现</strong>: - 中国的高死亡率部分是"积极性检查"的结果 -
+但更重要的是系统性的性别选择 - 女婴和女童的死亡率显著偏高</p>
+<h3 id="第五章marriage">第五章:Marriage</h3>
+<p><strong>核心发现</strong>: - 中国婚姻模式与西方截然不同 -
+婚姻市场中的性别比例失衡 - 嫁妆/彩礼制度的经济功能</p>
+<h3 id="第六章fertility">第六章:Fertility</h3>
+<p><strong>核心发现</strong>: - 中国历史上存在有意识控制生育的行为 -
+"自然生育率"概念不适用于中国 - 杀婴和堕胎是控制生育的重要手段</p>
+<h3 id="第七章system">第七章:System</h3>
+<p><strong>核心发现</strong>: - 中国人口制度是"内生约束"系统 -
+收养制度在人口调节中起重要作用 - 制度设计鼓励集体利益最大化</p>
+<h3 id="第八章society">第八章:Society</h3>
+<p><strong>核心发现</strong>: - 家庭作为人口行为的基本单位 -
+集体责任vs个人利益的文化逻辑 - 中国的社会结构如何支撑人口控制</p>
+<h3 id="第九章demography-ideology-and-politics">第九章:Demography,
+Ideology, and Politics</h3>
+<p><strong>核心发现</strong>: - 人口、意识形态与政治的交织 -
+中国人口政策的演变 - 比较视野下的中国人口转变</p>
 <hr>
-<h2 id="第五部分-术语表"><a href="#第五部分-术语表" class="headerlink" title="第五部分:术语表"></a>第五部分:术语表</h2><div class="table-container">
+<h2 id="第五部分术语表">第五部分:术语表</h2>
 <table>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
 <thead>
 <tr>
 <th>术语</th>
@@ -1985,7 +1857,8 @@
 <tbody>
 <tr>
 <td><strong>马尔萨斯主义(Malthusianism)</strong></td>
-<td>以Thomas Malthus人口理论为基础的思想流派,认为人口增长受资源约束,必须通过”预防性检查”或”积极性检查”来控制</td>
+<td>以Thomas
+Malthus人口理论为基础的思想流派,认为人口增长受资源约束,必须通过"预防性检查"或"积极性检查"来控制</td>
 </tr>
 <tr>
 <td><strong>预防性检查(Preventive Check)</strong></td>
@@ -2025,9 +1898,8 @@
 </tr>
 </tbody>
 </table>
-</div>
 <hr>
-<h2 id="附录-中国人口历史的关键时间线"><a href="#附录-中国人口历史的关键时间线" class="headerlink" title="附录:中国人口历史的关键时间线"></a>附录:中国人口历史的关键时间线</h2><div class="table-container">
+<h2 id="附录中国人口历史的关键时间线">附录:中国人口历史的关键时间线</h2>
 <table>
 <thead>
 <tr>
@@ -2070,12 +1942,16 @@
 </tr>
 </tbody>
 </table>
-</div>
 <hr>
-<h2 id="参考信息"><a href="#参考信息" class="headerlink" title="参考信息"></a>参考信息</h2><ul>
-<li><strong>原书引用格式</strong>: Lee, James Z., and Wang Feng. 2001. <em>One Quarter of Humanity: Malthusian Mythology and Chinese Realities, 1700-2000</em>. Cambridge: Harvard University Press.</li>
-<li><strong>中文译本</strong>: &lt;四分之一的人类:马尔萨斯神话与中国现实&gt;</li>
-<li><strong>学术领域</strong>: 比较历史人口学、经济史、Chinese Studies</li>
+<h2 id="参考信息">参考信息</h2>
+<ul>
+<li><strong>原书引用格式</strong>: Lee, James Z., and Wang Feng. 2001.
+<em>One Quarter of Humanity: Malthusian Mythology and Chinese Realities,
+1700-2000</em>. Cambridge: Harvard University Press.</li>
+<li><strong>中文译本</strong>:
+&lt;四分之一的人类:马尔萨斯神话与中国现实&gt;</li>
+<li><strong>学术领域</strong>: 比较历史人口学、经济史、Chinese
+Studies</li>
 </ul>
 ]]></content>
       <categories>
@@ -2089,70 +1965,148 @@
       </tags>
   </entry>
   <entry>
-    <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
-    <url>/posts/48526/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><a href="#因果推断" class="headerlink" title="因果推断"></a><strong>因果推断</strong></h2><ul>
-<li>因果识别+统计推断</li>
-<li>因果识别(<strong><em>causal identification</em></strong>):如果拥有总体,能否确定总体因果关系</li>
-<li>统计推断(<strong><em>statistical inference</em></strong>):如何从样本数据获取总体因果关系信息,实际是一种相关性事实</li>
-<li>识别假设,实际就是对 $D$ 和 $\varepsilon$ 的关系作出表述,但这种过程是无法从理论上验证的</li>
+    <title>文献阅读# the Effect of Microinsurance on Economic Activities: Evidence From a Randomized Field Experiment</title>
+    <url>/posts/51245/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
+<p><strong>需要提前了解的生猪养殖知识背景</strong></p>
+<ul>
+<li>市场上常见的肉猪基本均为经过绝育的猪.一般而言,养殖户会在猪仔1个月大小的时候进行绝育,对公猪进行阉割,对母猪则切除卵巢.这种做法能够增加肉猪的成长速度,减少猪发情带来的成本,并减小猪肉的膻腥味、提升口感.</li>
+<li>如果养殖户存养未绝育的种猪或母猪,其用途主要为繁育猪仔.</li>
+<li>对于农村的小型散养户而言,每个村庄一般会有一个村兽医、或养殖技术联络员为其提供"猪的绝育"服务,村兽医、或养殖技术联络员基本
+对应本文中的"Animal Husbandry Workers (AHW)".</li>
 </ul>
+<p>&nbsp; &nbsp; &nbsp;</p>
+<h2 id="研究问题"><strong>1. 研究问题</strong></h2>
+<p>本文旨在对"小额保险"("普惠型保险")对农户农业生产决策的作用进行因果识别.</p>
+<p>具体而言,作者以"母猪保险"这一险种为例,以贵州省毕节市金沙县27个乡镇的480个村为实验场域,采用田野实验的方法,在中国人民财产保险股份有限公司(PCC)所推出的"母猪保险"产品基础上,结合金沙县"保险公司产推--&gt;畜牧局地推--&gt;养殖技术联络员村推"的保险推广模式,为村养殖技术联络员(AHW)随机分配"绩效激励",进而设置了村级层面的处理组和控制组,基于"组别"设置了一个村级层面的外生变量,对"母猪保险"村庄覆盖差异与后期"母猪存栏量"之间的因果关系进行因果识别.</p>
+<p>&nbsp;</p>
 <span id="more"></span>
-<h2 id="1"><a href="#1" class="headerlink" title="1"></a><strong>1</strong></h2><ul>
-<li><strong>1.1</strong> 因果效应的定义:干预与否、处理与否时,潜在结果之间的差值.潜在结果一定是同一个时间点上的结果</li>
-<li><strong>1.2</strong> 潜在结果永远无法完全观测,除非存在平行宇宙</li>
-<li><strong>1.3</strong> 通过识别假设可以进行”插值”,可以化”相关关系”识别场景为”因果关系”识别场景</li>
-<li><strong>1.4</strong> 鲁宾因果模型(潜在因果框架),一套描述因果关系的新语言</li>
-</ul>
-<h2 id="2"><a href="#2" class="headerlink" title="2"></a><strong>2</strong></h2><ul>
-<li><strong>2.1</strong> 第一类识别假设:潜在结果均值独立于处理状态</li>
-<li><strong>2.2</strong> 从干扰项中剥离出控制变量;或者寻找一个与干扰项不相关的工具变量</li>
-<li><strong>2.3</strong> 第二类识别假设:潜在结果条件均值独立于处理状态</li>
-<li><strong>2.4</strong> 好的控制变量:既影响$Y$,又影响$D$.其本身和干扰项是否相关是不重要的,不是研究者关注的中心</li>
-<li><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</li>
-<li><strong>2.6</strong> 无需过渡阐释控制变量的系数</li>
-</ul>
-<h2 id="3"><a href="#3" class="headerlink" title="3"></a><strong>3</strong></h2><ul>
-<li><strong>3.1</strong> 鲁宾因果模型并未规定具体的函数形式</li>
-<li><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</li>
-</ul>
-<h2 id="4"><a href="#4" class="headerlink" title="4"></a><strong>4</strong></h2><ul>
-<li><strong>4.1</strong> 选择性又称之为分配机制,每个个体如何接受处理,可以用倾向得分来表示</li>
-<li><strong>4.2</strong> 建议现实使用IV、DID、RDD等识别方法时,称之为准实验</li>
-</ul>
+<h2 id="研究内容"><strong>2. 研究内容</strong></h2>
+<p><strong>2.1
+设计田野实验并获得具有外生性的村庄"母猪保险"覆盖指标</strong></p>
+<p>具体包含实验可行性分析、随机干预策略选择以及潜在作用机制及威胁分析三个部分,详见下图</p>
+<p><img data-src="/paper_source/1.png"></p>
+<p><strong>2.2
+结合可获数据识别村庄"母猪保险"覆盖指标与"母猪存栏决策"之间的因果关系,并对识别效果进行有效性检验</strong></p>
+<p>具体包含数据整合、特征性事实提炼、实证分析以及实验有效性分析四个部分,详见下图</p>
+<p><img data-src="/paper_source/2.png"></p>
+<p><strong>2.3 因果关系背后的作用机制、长期特征、溢出效应 </strong></p>
+<p>具体包含作用机制检验、长期效应及溢出效应分析,详见下图</p>
+<p><img data-src="/paper_source/3.png"></p>
+<p>&nbsp;</p>
+<h2 id="研究思路"><strong>3. 研究思路</strong></h2>
+<p>文章研究思路如下图所示</p>
+<p><img data-src="/paper_source/Diagram1.png"></p>
+<p>&nbsp;</p>
+<h2 id="研究方法"><strong>4. 研究方法</strong></h2>
+<p><strong>4.1
+田野实验法:</strong>文章采用田野实验的方法产生了一个外生的随机干预效果,即养殖技术联络员(AHW)"绩效激励"差异引致的"母猪保险"村庄覆盖差异.</p>
+<p><strong>4.2
+统计分析与计量经济模型方法:</strong>文章进一步整合了地方畜牧局统计数据、中国农业普查数据,并以衡量"绩效激励"差异的变量LIG与HIG为工具变量,识别了村庄"母猪保险"覆盖指标与后期"母猪存栏量"之间的因果关系.</p>
+<p>&nbsp;</p>
+<h2 id="评述以及改进建议"><strong>5. 评述以及改进建议</strong></h2>
+<p><strong>5.1 评述</strong></p>
+<p><strong>5.1.1</strong>
+文章采用田野实验的方法,结合金沙县"保险公司产推--&gt;畜牧局地推--&gt;养殖技术联络员村推"保险推广模式,以及该地村庄间交通不便等现实特征,通过为村养殖技术联络员(AHW)随机分配"绩效激励"精妙地设置了外生随机干预,并以其作为投保"母猪保险"头数的工具变量,整合多方数据,识别了投保"母猪保险"与后期"母猪存栏量"之间的因果关系,并进行了有效性分析,并利用2008年南方雪灾造成母猪死亡数进行了机制分析.最终验证了"小额保险"对农户农业生产决策的作用.</p>
+<p><strong>5.1.2</strong>
+一方面,随机分配"绩效激励"的设置十分巧妙,其外生性以及与村庄总体投保数的相关性都可以得到充分的事实支撑.此外,作者以2008年南方雪灾造成的母猪死亡数作为"村庄发生'母猪保险'赔付"的情景代理变量,验证了信任机制的重要性.</p>
+<p><strong>5.1.3</strong>
+另一方面,随机分配"绩效激励"的设置也可能面临异质性问题,村养殖技术联络员(AHW)个体特征的不同可能会影响其推广保险的绩效;此外,村庄的某些特征的差异也可能引起异质性,比如,人均受教育程度高的村庄可能更容易理解"母猪保险"的保险机制,进而体现出更高的投保率;最后,利用2008年南方雪灾造成的母猪死亡数进行机制分析的做法有些许勉强,或许可以直接从PCC获取相关赔付数据进行机制分析.</p>
+<p><strong>5.2 改进建议</strong></p>
+<p><strong>5.2.1</strong>
+文章声明测度了村养殖技术联络员(AHW)的人口统计学变量,可依据这些变量进行异质性分析,因为AHW个人的某些特质,比如责任感、受教育程度可能会影响其推广保险的努力程度抑或有效程度.因此,可设置AWH特征变量与低"绩效激励"组(LIG)、高"绩效激励"组(HIG)的交互项,考察由AHW特征引起的"母猪保险"对"母猪存栏决策"的作用异质性.</p>
+<p><strong>5.2.2</strong>
+文章获得了村级层面的特征变量,却仅在所有模型中加入了乡镇(town)层面的哑变量,在模型中控制村庄特征变量比如村庄农户数、人均受教育程度等可能更有意义.再者,村庄的某些特征的差异也可能引起异质性,可设置村庄特征变量与低"绩效激励"组(LIG)、高"绩效激励"组(HIG)的交互项,考察由村庄特征引起的"母猪保险"对"母猪存栏决策"的作用异质性.</p>
+<p><strong>5.2.3</strong>
+文章认为2008年雪灾造成的母猪死亡数较多的村庄,可能发生了实际的"母猪保险"赔付,进而为村民提供了一种情景互动,提高了村民对保险机构的信任,这一机制仅为猜测.作者既然声明可从PCC获得保单,那么赔付数据也应该能够获取,应该基于真实的赔付数据进行机制检验.</p>
 ]]></content>
       <categories>
-        <category>计量</category>
+        <category>实验经济学</category>
+        <category>保险</category>
       </categories>
       <tags>
-        <tag>学术讲座</tag>
+        <tag>文献阅读</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Shell脚本笔记(1)</title>
+    <url>/posts/2510/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<h1 id="引言">引言</h1>
+<p>shell是用C语言编写的程序,但它自身同时也是一种程序设计语言.你可能经常听说"shell脚本",但实际上shell编程并非等同于"shell脚本"编程,前者指shell程序本身的开发,后者则是利用shell程序进行开发.都说java和javascript的区别是周杰和周杰伦的区别,shell和shell
+script或许也有那么点意思.</p>
+<h1 id="shell脚本">shell脚本</h1>
+<p>似乎任何程序学习都是从"Hello
+World!"开始的,对于<strong>shell</strong>而言:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Hello World !"</span></span><br></pre></td></tr></tbody></table></figure>
+<p><strong>#!</strong>是个标记,告知这段命令将用bash执行.echo则是一个向窗口展示文本的命令.
+你可以将以上代码框的内容存为一个以.sh为后缀的文件,比如<strong>hw.sh</strong>,并赋予文件执行权限:</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">chmod +x ./hw.sh         #赋予执行权限</span><br><span class="line">bash hw.sh               #执行脚本</span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<p>未完待续</p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2014到2021年:淘宝村分布散点图😲</title>
+    <url>/posts/18898/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示"><strong>效果展示</strong></h2>
+<img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235354537.svg" width="80%" height="80%" align="middle">
+<center>
+2014年的淘宝村分布
+</center>
+<span id="more"></span>
+<p><img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235404847.svg" width="80%" height="80%" align="middle"></p>
+<center>
+2021年的淘宝村分布
+</center>
+<h2 id="从最初3个增长至7023个"><strong>从最初3个增长至7023个</strong></h2>
+<p>从2009年到2021年,中国淘宝村呈现裂变式的扩散增长,从最初3个增长至7023个,无论是数量规模,还是分布广度都经历了飞跃式的发展.从萌芽至发展阶段,"小农户连接大市场"的电商逻辑长期被认为是淘宝村的主要内涵.围绕这一内涵,市场、政策、技术、人才一度不断汇聚,为淘宝村发展创造了十余年的黄金机遇,形成了一场边缘人群连接现代网络、边缘地区接壤现代市场、边缘产品汇聚现代需求的"边缘革命".然而,在经历十余年的飞速发展后,淘宝村开始面临红利期消失、消费升级、同质化竞争、规范治理等适应性挑战,转型变革已是必然选择.在这一过程中,过往遵循传统电商逻辑的淘宝村正经历蜕变.一方面,垂直电商、内容电商等多元化的销售互联网生态正加速形成;另一方面,由差异化、个性化、碎片化需求所驱动的产业数字化升级不断涌现.可以认为,以"消费互联网+产业互联网"为特征的产销全域数字化逻辑正在为淘宝村注入新的内涵,其核心不再是"连接大市场",而是"洞悉大市场、细分小市场、塑造新市场".这种内涵演进对淘宝村发展提出了更高的要求,即能否充分利用数字技术提高经营主体的市场洞察力,能否通过数据信息整合优化生产流程,能否基于数字供应链实现快速的市场反馈.在此意义上,新时代的淘宝村将不再是"逆边缘化"的地理名词,而是一类凭借数字技术突破分散决策、分散生产、分散经营劣势的组织指称.</p>
+]]></content>
+      <categories>
+        <category>绘图</category>
+        <category>map&amp;sf</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
       </tags>
   </entry>
   <entry>
     <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
     <url>/posts/32262/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp;<br>&nbsp;<br>&nbsp;</p>
-<h2 id="1-研究问题"><a href="#1-研究问题" class="headerlink" title="1. 研究问题"></a><strong>1. 研究问题</strong></h2><p>本文以江苏省12个地级市”河长制”政策转移案例(2006 — 2016)为研究对象,在识别政策转移案例中”复制”和”再生产”两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对”河长制”转移程度的影响.研究发现”河长制”政策转移中的”政策再生产”的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局.通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策”再生产”的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产.</p>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
+<h2 id="研究问题"><strong>1. 研究问题</strong></h2>
+<p>本文以江苏省12个地级市"河长制"政策转移案例(2006 —
+2016)为研究对象,在识别政策转移案例中"复制"和"再生产"两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对"河长制"转移程度的影响.研究发现"河长制"政策转移中的"政策再生产"的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局.通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产.</p>
 <p>&nbsp;</p>
 <span id="more"></span>
-<h2 id="2-问题的提出"><a href="#2-问题的提出" class="headerlink" title="2. 问题的提出"></a><strong>2. 问题的提出</strong></h2><p><strong>2.1 政策转移的必要性</strong></p>
-<p>现实状况:政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有”后发优势”的意味、地区间的合作与竞争</p>
-<p>转移情形:政策转移并不意味着全盘复制,可分为”复制”和”再生产”两种形式</p>
-<p>核心问题:什么因素能够促成政策”再生产”,政策”再生产”又体现出那些维度特征</p>
+<h2 id="问题的提出"><strong>2. 问题的提出</strong></h2>
+<p><strong>2.1 政策转移的必要性</strong></p>
+<p>现实状况:政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有"后发优势"的意味、地区间的合作与竞争</p>
+<p>转移情形:政策转移并不意味着全盘复制,可分为"复制"和"再生产"两种形式</p>
+<p>核心问题:什么因素能够促成政策"再生产",政策"再生产"又体现出那些维度特征</p>
 <p><strong>2.2 河长制的背景介绍</strong></p>
 <p>河湖治理是跨界特性最典型的领域之一,涉及上下游、左右岸、不同行政区域和行业,呈现出高度的复杂性.河长制最早发轫于太湖蓝藻危机,2016年之前是一项地方政策,经政策扩散至多地.</p>
-<p>现实调查显示河长制在江苏省内的扩散过程中呈现出”复制”和”再生产”的典型差异.</p>
+<p>现实调查显示河长制在江苏省内的扩散过程中呈现出"复制"和"再生产"的典型差异.</p>
 <p>&nbsp;</p>
-<h2 id="3-研究思路和方法"><a href="#3-研究思路和方法" class="headerlink" title="3. 研究思路和方法"></a><strong>3. 研究思路和方法</strong></h2><p><strong>3.1 QCA</strong></p>
-<p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles Ragin)于<code>1987</code>年提出,适用于案例数量大于10小于60的研究.</p>
+<h2 id="研究思路和方法"><strong>3. 研究思路和方法</strong></h2>
+<p><strong>3.1 QCA</strong></p>
+<p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles
+Ragin)于<code>1987</code>年提出,适用于案例数量大于10小于60的研究.</p>
 <p>其使用布尔代数和集合论的思想来进行中小数量的跨案例比较,从而处理多个原因和一个结果之间的因果关系.</p>
 <p><strong>3.2 转移程度的刻画</strong></p>
 <p>道洛维茨和马什最早借鉴rose(1993)的连续统来划分政策转移程度:复制、模仿、混合、启发.</p>
-<p>本文简单划分为:”复制”和”再生产”</p>
+<p>本文简单划分为:"复制"和"再生产"</p>
 <p><strong>3.3 解释变量的选择</strong></p>
 <p>行政压力、资源禀赋、政策需求、外部力量</p>
 <p>&nbsp;</p>
-<h2 id="4-结论"><a href="#4-结论" class="headerlink" title="4. 结论"></a><strong>4. 结论</strong></h2><p>政策转移中政策”再生产”的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素.</p>
+<h2 id="结论"><strong>4. 结论</strong></h2>
+<p>政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素.</p>
 ]]></content>
       <categories>
         <category>公共管理</category>
@@ -2163,169 +2117,222 @@
       </tags>
   </entry>
   <entry>
+    <title>字体和公式的Display</title>
+    <url>/posts/15167/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<font face="Times New Roman">
+</font><p style="text-align:justify"><font face="Times New Roman">
+<b>"Evaluating the employment impact of a mandatory job search
+program"</b></font> <br> <br> <font face="Times New Roman">
+</font></p><p style="text-align:justify"><font face="Times New Roman">
+</font></p><p><font face="Times New Roman"><b>What treatment do the authors evaluate?</b></font> <br></p>
+<span id="more"></span>
+<font face="Tex Gyre Pagella">
+<p style="text-align:justify">
+</p><p><b>Answer: </b> In the parametric methods, the common trend
+assumption is:</p>
+<p><span class="math display">\[\begin{array}{l}
+f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
+t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
+t=0\right)\right] \\
+=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
+t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
+t=0\right)\right]
+\end{array}\]</span> In the non-parametric methods, the common trend
+assumption is:</p>
+<p><span class="math display">\[\begin{array}{l}
+E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i
+t}^{0} | P_{E X}, P_{t X}, N D=1, t=0\right) \\
+=E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=1\right)-E\left(Y_{i
+t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)
+\end{array}\]</span></p>
+</font><p><font face="Tex Gyre Pagella"></font></p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>blog_test</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>R数据科学_ggplot2笔记(1)</title>
     <url>/posts/29862/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="一个说明"><a href="#一个说明" class="headerlink" title="一个说明"></a>一个说明</h2><p><code>ggplot2::ggplot()</code>指使用<a href="https://ggplot2.tidyverse.org/"><strong>ggplot2</strong></a>包中的<code>ggplot</code>函数,<code>::</code>表示快速调用某个包里的函数.</p>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>使用<code>ggplot2</code>包中的<code>mpg</code>数据框,这份数据是一份汽车资料:</p>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="一个说明">一个说明</h2>
+<p><code>ggplot2::ggplot()</code>指使用<a href="https://ggplot2.tidyverse.org/"><strong>ggplot2</strong></a>包中的<code>ggplot</code>函数,<code>::</code>表示快速调用某个包里的函数.</p>
+<h2 id="示例">示例</h2>
+<p>使用<code>ggplot2</code>包中的<code>mpg</code>数据框,这份数据是一份汽车资料:</p>
 <figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">knitr<span class="operator">::</span>kable<span class="punctuation">(</span>head<span class="punctuation">(</span>ggplot2<span class="operator">::</span>mpg<span class="punctuation">,</span> <span class="number">10</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<div class="table-container">
-<table>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 15%">
+<col style="width: 8%">
+<col style="width: 6%">
+<col style="width: 5%">
+<col style="width: 15%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 4%">
+<col style="width: 10%">
+</colgroup>
 <thead>
 <tr>
-<th style="text-align:left">manufacturer</th>
-<th style="text-align:left">model</th>
-<th style="text-align:left">displ</th>
-<th style="text-align:right">year</th>
-<th style="text-align:right">cyl</th>
-<th style="text-align:left">trans</th>
-<th style="text-align:left">drv</th>
-<th style="text-align:right">cty</th>
-<th style="text-align:right">hwy</th>
-<th style="text-align:left">fl</th>
-<th style="text-align:left">class</th>
+<th style="text-align: left;">manufacturer</th>
+<th style="text-align: left;">model</th>
+<th style="text-align: left;">displ</th>
+<th style="text-align: right;">year</th>
+<th style="text-align: right;">cyl</th>
+<th style="text-align: left;">trans</th>
+<th style="text-align: left;">drv</th>
+<th style="text-align: right;">cty</th>
+<th style="text-align: right;">hwy</th>
+<th style="text-align: left;">fl</th>
+<th style="text-align: left;">class</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">audi</td>
-<td style="text-align:left">a4</td>
-<td style="text-align:left">1.8</td>
-<td style="text-align:right">1999</td>
-<td style="text-align:right">4</td>
-<td style="text-align:left">auto(l5)</td>
-<td style="text-align:left">f</td>
-<td style="text-align:right">18</td>
-<td style="text-align:right">29</td>
-<td style="text-align:left">p</td>
-<td style="text-align:left">compact</td>
+<td style="text-align: left;">audi</td>
+<td style="text-align: left;">a4</td>
+<td style="text-align: left;">1.8</td>
+<td style="text-align: right;">1999</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">auto(l5)</td>
+<td style="text-align: left;">f</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: left;">p</td>
+<td style="text-align: left;">compact</td>
 </tr>
 <tr>
-<td style="text-align:left">audi</td>
-<td style="text-align:left">a4</td>
-<td style="text-align:left">1.8</td>
-<td style="text-align:right">1999</td>
-<td style="text-align:right">4</td>
-<td style="text-align:left">manual(m5)</td>
-<td style="text-align:left">f</td>
-<td style="text-align:right">21</td>
-<td style="text-align:right">29</td>
-<td style="text-align:left">p</td>
-<td style="text-align:left">compact</td>
+<td style="text-align: left;">audi</td>
+<td style="text-align: left;">a4</td>
+<td style="text-align: left;">1.8</td>
+<td style="text-align: right;">1999</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">manual(m5)</td>
+<td style="text-align: left;">f</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: left;">p</td>
+<td style="text-align: left;">compact</td>
 </tr>
 <tr>
-<td style="text-align:left">audi</td>
-<td style="text-align:left">a4</td>
-<td style="text-align:left">2.0</td>
-<td style="text-align:right">2008</td>
-<td style="text-align:right">4</td>
-<td style="text-align:left">manual(m6)</td>
-<td style="text-align:left">f</td>
-<td style="text-align:right">20</td>
-<td style="text-align:right">31</td>
-<td style="text-align:left">p</td>
-<td style="text-align:left">compact</td>
+<td style="text-align: left;">audi</td>
+<td style="text-align: left;">a4</td>
+<td style="text-align: left;">2.0</td>
+<td style="text-align: right;">2008</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">manual(m6)</td>
+<td style="text-align: left;">f</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: left;">p</td>
+<td style="text-align: left;">compact</td>
 </tr>
 <tr>
-<td style="text-align:left">audi</td>
-<td style="text-align:left">a4</td>
-<td style="text-align:left">2.0</td>
-<td style="text-align:right">2008</td>
-<td style="text-align:right">4</td>
-<td style="text-align:left">auto(av)</td>
-<td style="text-align:left">f</td>
-<td style="text-align:right">21</td>
-<td style="text-align:right">30</td>
-<td style="text-align:left">p</td>
-<td style="text-align:left">compact</td>
+<td style="text-align: left;">audi</td>
+<td style="text-align: left;">a4</td>
+<td style="text-align: left;">2.0</td>
+<td style="text-align: right;">2008</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">auto(av)</td>
+<td style="text-align: left;">f</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: left;">p</td>
+<td style="text-align: left;">compact</td>
 </tr>
 <tr>
-<td style="text-align:left">audi</td>
-<td style="text-align:left">a4</td>
-<td style="text-align:left">2.8</td>
-<td style="text-align:right">1999</td>
-<td style="text-align:right">6</td>
-<td style="text-align:left">auto(l5)</td>
-<td style="text-align:left">f</td>
-<td style="text-align:right">16</td>
-<td style="text-align:right">26</td>
-<td style="text-align:left">p</td>
-<td style="text-align:left">compact</td>
+<td style="text-align: left;">audi</td>
+<td style="text-align: left;">a4</td>
+<td style="text-align: left;">2.8</td>
+<td style="text-align: right;">1999</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">auto(l5)</td>
+<td style="text-align: left;">f</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: left;">p</td>
+<td style="text-align: left;">compact</td>
 </tr>
 <tr>
-<td style="text-align:left">audi</td>
-<td style="text-align:left">a4</td>
-<td style="text-align:left">2.8</td>
-<td style="text-align:right">1999</td>
-<td style="text-align:right">6</td>
-<td style="text-align:left">manual(m5)</td>
-<td style="text-align:left">f</td>
-<td style="text-align:right">18</td>
-<td style="text-align:right">26</td>
-<td style="text-align:left">p</td>
-<td style="text-align:left">compact</td>
+<td style="text-align: left;">audi</td>
+<td style="text-align: left;">a4</td>
+<td style="text-align: left;">2.8</td>
+<td style="text-align: right;">1999</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">manual(m5)</td>
+<td style="text-align: left;">f</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: left;">p</td>
+<td style="text-align: left;">compact</td>
 </tr>
 <tr>
-<td style="text-align:left">audi</td>
-<td style="text-align:left">a4</td>
-<td style="text-align:left">3.1</td>
-<td style="text-align:right">2008</td>
-<td style="text-align:right">6</td>
-<td style="text-align:left">auto(av)</td>
-<td style="text-align:left">f</td>
-<td style="text-align:right">18</td>
-<td style="text-align:right">27</td>
-<td style="text-align:left">p</td>
-<td style="text-align:left">compact</td>
+<td style="text-align: left;">audi</td>
+<td style="text-align: left;">a4</td>
+<td style="text-align: left;">3.1</td>
+<td style="text-align: right;">2008</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">auto(av)</td>
+<td style="text-align: left;">f</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: left;">p</td>
+<td style="text-align: left;">compact</td>
 </tr>
 <tr>
-<td style="text-align:left">audi</td>
-<td style="text-align:left">a4 quattro</td>
-<td style="text-align:left">1.8</td>
-<td style="text-align:right">1999</td>
-<td style="text-align:right">4</td>
-<td style="text-align:left">manual(m5)</td>
-<td style="text-align:left">4</td>
-<td style="text-align:right">18</td>
-<td style="text-align:right">26</td>
-<td style="text-align:left">p</td>
-<td style="text-align:left">compact</td>
+<td style="text-align: left;">audi</td>
+<td style="text-align: left;">a4 quattro</td>
+<td style="text-align: left;">1.8</td>
+<td style="text-align: right;">1999</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">manual(m5)</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: left;">p</td>
+<td style="text-align: left;">compact</td>
 </tr>
 <tr>
-<td style="text-align:left">audi</td>
-<td style="text-align:left">a4 quattro</td>
-<td style="text-align:left">1.8</td>
-<td style="text-align:right">1999</td>
-<td style="text-align:right">4</td>
-<td style="text-align:left">auto(l5)</td>
-<td style="text-align:left">4</td>
-<td style="text-align:right">16</td>
-<td style="text-align:right">25</td>
-<td style="text-align:left">p</td>
-<td style="text-align:left">compact</td>
+<td style="text-align: left;">audi</td>
+<td style="text-align: left;">a4 quattro</td>
+<td style="text-align: left;">1.8</td>
+<td style="text-align: right;">1999</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">auto(l5)</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: left;">p</td>
+<td style="text-align: left;">compact</td>
 </tr>
 <tr>
-<td style="text-align:left">audi</td>
-<td style="text-align:left">a4 quattro</td>
-<td style="text-align:left">2.0</td>
-<td style="text-align:right">2008</td>
-<td style="text-align:right">4</td>
-<td style="text-align:left">manual(m6)</td>
-<td style="text-align:left">4</td>
-<td style="text-align:right">20</td>
-<td style="text-align:right">28</td>
-<td style="text-align:left">p</td>
-<td style="text-align:left">compact</td>
+<td style="text-align: left;">audi</td>
+<td style="text-align: left;">a4 quattro</td>
+<td style="text-align: left;">2.0</td>
+<td style="text-align: right;">2008</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">manual(m6)</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: left;">p</td>
+<td style="text-align: left;">compact</td>
 </tr>
 </tbody>
 </table>
-</div>
 <span id="more"></span>
 <p>创建<code>ggplot2</code>图形,散点图:</p>
 <figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> mpg<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_point<span class="punctuation">(</span>mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> displ<span class="punctuation">,</span> y <span class="operator">=</span> hwy<span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> p</span><br><span class="line">p</span><br></pre></td></tr></tbody></table></figure>
 <p><img data-src="/figure_rdata_science/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;"></p>
 <p>其中<code>mapping</code>是映射的意思,在<code>ggplot()</code>的<code>()</code>中出现的内容将传递之后的绘图函数,<code>p</code>保存了绘制好的图形,可以进一步进行美化和调整:</p>
 <figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">p <span class="operator">+</span> theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> enfont<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">      theme<span class="punctuation">(</span>axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">            axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">            axis.title <span class="operator">=</span> element_text<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">12</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p><img data-src="/figure_rdata_science/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;"><br>可以将一些图片调整的代码存放在<code>modify</code>命名的一个对象中:</p>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;">
+可以将一些图片调整的代码存放在<code>modify</code>命名的一个对象中:</p>
 <figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> enfont<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">        axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">        axis.title <span class="operator">=</span> element_text<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">12</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> modify</span><br></pre></td></tr></tbody></table></figure>
 <p>实际上,<code>ggplot2</code>的魅力之一在于通过颜色(<strong>color</strong>)、形状(<strong>shape</strong>)、透明度(<strong>alpha</strong>)等等属性展示超越<strong>2</strong>维的信息,比如:</p>
 <figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> mpg<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_point<span class="punctuation">(</span>mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> displ<span class="punctuation">,</span> y <span class="operator">=</span> hwy<span class="punctuation">,</span> color <span class="operator">=</span> <span class="built_in">class</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  modify</span><br></pre></td></tr></tbody></table></figure>
@@ -2333,13 +2340,14 @@
 <p>另外一种展示超越2维属性的方法就是<strong>分面</strong>:</p>
 <figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> mpg<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_point<span class="punctuation">(</span>mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> displ<span class="punctuation">,</span> y <span class="operator">=</span> hwy<span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  facet_wrap<span class="punctuation">(</span><span class="operator">~</span> <span class="built_in">class</span><span class="punctuation">,</span> nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  modify</span><br></pre></td></tr></tbody></table></figure>
 <p><img data-src="/figure_rdata_science/unnamed-chunk-6-1.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" style="display: block; margin: auto;"></p>
-<p><code>facet_wrap()</code>中的第一个参数是<strong>R</strong>中的一种数据结构,叫作”公式”,并非数学意义上的意思.也可以使用2个变量进行分面:</p>
+<p><code>facet_wrap()</code>中的第一个参数是<strong>R</strong>中的一种数据结构,叫作"公式",并非数学意义上的意思.也可以使用2个变量进行分面:</p>
 <figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> mpg<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_point<span class="punctuation">(</span>mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> displ<span class="punctuation">,</span> y <span class="operator">=</span> hwy<span class="punctuation">,</span> color <span class="operator">=</span> <span class="built_in">class</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  facet_wrap<span class="punctuation">(</span>drv <span class="operator">~</span> cyl<span class="punctuation">,</span> nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  modify</span><br></pre></td></tr></tbody></table></figure>
 <p><img data-src="/figure_rdata_science/unnamed-chunk-7-1.png" title="plot of chunk unnamed-chunk-7" alt="plot of chunk unnamed-chunk-7" style="display: block; margin: auto;"></p>
 <p>可以使用占位符<code>.</code>来代替<code>facet_wrap()</code>第一个参数中的<code>drv</code>,效果如下:</p>
 <figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> mpg<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_point<span class="punctuation">(</span>mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> displ<span class="punctuation">,</span> y <span class="operator">=</span> hwy<span class="punctuation">,</span> color <span class="operator">=</span> <span class="built_in">class</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  facet_wrap<span class="punctuation">(</span>. <span class="operator">~</span> cyl<span class="punctuation">,</span> nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  modify</span><br></pre></td></tr></tbody></table></figure>
 <p><img data-src="/figure_rdata_science/unnamed-chunk-8-1.png" title="plot of chunk unnamed-chunk-8" alt="plot of chunk unnamed-chunk-8" style="display: block; margin: auto;"></p>
-<h2 id="几何对象"><a href="#几何对象" class="headerlink" title="几何对象"></a>几何对象</h2><p>R并非只有<code>ggplot2</code>一种绘图方案,比如:</p>
+<h2 id="几何对象">几何对象</h2>
+<p>R并非只有<code>ggplot2</code>一种绘图方案,比如:</p>
 <figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">set.seed<span class="punctuation">(</span><span class="number">123</span><span class="punctuation">)</span></span><br><span class="line">n <span class="operator">&lt;-</span> 1000</span><br><span class="line">x1  <span class="operator">&lt;-</span> matrix<span class="punctuation">(</span>rnorm<span class="punctuation">(</span>n<span class="punctuation">)</span><span class="punctuation">,</span> ncol <span class="operator">=</span> <span class="number">2</span><span class="punctuation">)</span></span><br><span class="line">x2  <span class="operator">&lt;-</span> matrix<span class="punctuation">(</span>rnorm<span class="punctuation">(</span>n<span class="punctuation">,</span> mean <span class="operator">=</span> <span class="number">3</span><span class="punctuation">,</span> sd <span class="operator">=</span> <span class="number">1.5</span><span class="punctuation">)</span><span class="punctuation">,</span> ncol <span class="operator">=</span> <span class="number">2</span><span class="punctuation">)</span></span><br><span class="line">x   <span class="operator">&lt;-</span> rbind<span class="punctuation">(</span>x1<span class="punctuation">,</span> x2<span class="punctuation">)</span></span><br><span class="line">head<span class="punctuation">(</span>x<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;             [,1]        [,2]</span><br><span class="line">#&gt; [1,] -0.56047565 -0.60189285</span><br><span class="line">#&gt; [2,] -0.23017749 -0.99369859</span><br><span class="line">#&gt; [3,]  1.55870831  1.02678506</span><br><span class="line">#&gt; [4,]  0.07050839  0.75106130</span><br><span class="line">#&gt; [5,]  0.12928774 -1.50916654</span><br><span class="line">#&gt; [6,]  1.71506499 -0.09514745</span><br></pre></td></tr></tbody></table></figure>
 <figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">smoothScatter<span class="punctuation">(</span>x<span class="punctuation">,</span> xlab <span class="operator">=</span> <span class="string">"x1"</span><span class="punctuation">,</span> ylab <span class="operator">=</span> <span class="string">"x2"</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
@@ -2353,11 +2361,17 @@
 <p>也可以为不同的图层指定不同的数据:</p>
 <figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> mpg<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_point<span class="punctuation">(</span>mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> displ<span class="punctuation">,</span> y <span class="operator">=</span> hwy<span class="punctuation">,</span> color <span class="operator">=</span> drv<span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_smooth<span class="punctuation">(</span>data <span class="operator">=</span> dplyr<span class="operator">::</span>filter<span class="punctuation">(</span>mpg<span class="punctuation">,</span> <span class="built_in">class</span> <span class="operator">==</span> <span class="string">"subcompact"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">              mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> displ<span class="punctuation">,</span> y <span class="operator">=</span> hwy<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">              se <span class="operator">=</span> <span class="literal">FALSE</span><span class="punctuation">,</span></span><br><span class="line">              show.legend <span class="operator">=</span> <span class="literal">FALSE</span></span><br><span class="line"> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
 <p><img data-src="/figure_rdata_science/unnamed-chunk-12-1.png" title="plot of chunk unnamed-chunk-12" alt="plot of chunk unnamed-chunk-12" style="display: block; margin: auto;"></p>
-<h2 id="统计变换"><a href="#统计变换" class="headerlink" title="统计变换"></a>统计变换</h2><p><code>geom_bar()</code>函数可以绘制的基本条形图.</p>
+<h2 id="统计变换">统计变换</h2>
+<p><code>geom_bar()</code>函数可以绘制的基本条形图.</p>
 <figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> diamonds<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_bar<span class="punctuation">(</span>mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> cut<span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
 <p><img data-src="/figure_rdata_science/unnamed-chunk-13-1.png" title="plot of chunk unnamed-chunk-13" alt="plot of chunk unnamed-chunk-13" style="display: block; margin: auto;"></p>
-<p>条形图<br><code>x</code><br>轴显示的是<br><code>cut</code><br>,这是<br><code>diamonds</code><br>数据集中的一个变量.<br><code>y</code><br>轴显示的是<br><code>count</code><br>,但<br><code>count</code><br>不是<br><code>diamonds</code><br>中的变量!<br><code>count</code><br>来自哪里呢?很多图形绘制的是数据集的原始数据,比如散点图.另外一些图形则可以绘制那些计算出的新数据,比如条形图.</p>
-<p>绘图时用来计算新数据的算法称为stat(statistical transformation),即统计变换.你可能想要覆盖默认的统计变换.在以下代码中,我们将<code>geom_bar()</code>函数的统计变换从计数(默认值)修改为标识.这样我们就可以将条形的高度映射为<code>y</code>轴变量的初始值.遗憾的是,当随意说起条形图时,人们指的可能就是这种条形图,其中条形高度已经存在于数据中,而不是像前一个图一样,条形高度由对行进行计数来生成:</p>
+<p>条形图 <code>x</code> 轴显示的是 <code>cut</code> ,这是
+<code>diamonds</code> 数据集中的一个变量. <code>y</code> 轴显示的是
+<code>count</code> ,但 <code>count</code> 不是 <code>diamonds</code>
+中的变量! <code>count</code>
+来自哪里呢?很多图形绘制的是数据集的原始数据,比如散点图.另外一些图形则可以绘制那些计算出的新数据,比如条形图.</p>
+<p>绘图时用来计算新数据的算法称为stat(statistical
+transformation),即统计变换.你可能想要覆盖默认的统计变换.在以下代码中,我们将<code>geom_bar()</code>函数的统计变换从计数(默认值)修改为标识.这样我们就可以将条形的高度映射为<code>y</code>轴变量的初始值.遗憾的是,当随意说起条形图时,人们指的可能就是这种条形图,其中条形高度已经存在于数据中,而不是像前一个图一样,条形高度由对行进行计数来生成:</p>
 <figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">demo <span class="operator">&lt;-</span> tribble<span class="punctuation">(</span></span><br><span class="line">  <span class="operator">~</span>a<span class="punctuation">,</span>      <span class="operator">~</span>b<span class="punctuation">,</span></span><br><span class="line">  <span class="string">"bar_1"</span><span class="punctuation">,</span> <span class="number">20</span><span class="punctuation">,</span></span><br><span class="line">  <span class="string">"bar_2"</span><span class="punctuation">,</span> <span class="number">30</span><span class="punctuation">,</span></span><br><span class="line">  <span class="string">"bar_3"</span><span class="punctuation">,</span> <span class="number">40</span></span><br><span class="line"><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> demo<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_bar<span class="punctuation">(</span></span><br><span class="line">    mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> a<span class="punctuation">,</span> y <span class="operator">=</span> b<span class="punctuation">)</span><span class="punctuation">,</span> stat <span class="operator">=</span> <span class="string">"identity"</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
 <p><img data-src="/figure_rdata_science/unnamed-chunk-14-1.png" title="plot of chunk unnamed-chunk-14" alt="plot of chunk unnamed-chunk-14" style="display: block; margin: auto;"></p>
 <p>也可以改变统计变换的默认映射:</p>
@@ -2376,140 +2390,19 @@
       </tags>
   </entry>
   <entry>
-    <title>文献阅读# the Effect of Microinsurance on Economic Activities: Evidence From a Randomized Field Experiment</title>
-    <url>/posts/51245/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp;<br>&nbsp;<br>&nbsp;</p>
-<p><strong>需要提前了解的生猪养殖知识背景</strong></p>
-<ul>
-<li>市场上常见的肉猪基本均为经过绝育的猪.一般而言,养殖户会在猪仔1个月大小的时候进行绝育,对公猪进行阉割,对母猪则切除卵巢.这种做法能够增加肉猪的成长速度,减少猪发情带来的成本,并减小猪肉的膻腥味、提升口感.</li>
-<li>如果养殖户存养未绝育的种猪或母猪,其用途主要为繁育猪仔.</li>
-<li>对于农村的小型散养户而言,每个村庄一般会有一个村兽医、或养殖技术联络员为其提供”猪的绝育”服务,村兽医、或养殖技术联络员基本 对应本文中的”Animal Husbandry Workers (AHW)”.</li>
-</ul>
-<p>&nbsp;<br>&nbsp;<br>&nbsp;</p>
-<h2 id="1-研究问题"><a href="#1-研究问题" class="headerlink" title="1. 研究问题"></a><strong>1. 研究问题</strong></h2><p>本文旨在对”小额保险”(“普惠型保险”)对农户农业生产决策的作用进行因果识别.</p>
-<p>具体而言,作者以”母猪保险”这一险种为例,以贵州省毕节市金沙县27个乡镇的480个村为实验场域,采用田野实验的方法,在中国人民财产保险股份有限公司(PCC)所推出的”母猪保险”产品基础上,结合金沙县”保险公司产推—&gt;畜牧局地推—&gt;养殖技术联络员村推”的保险推广模式,为村养殖技术联络员(AHW)随机分配”绩效激励”,进而设置了村级层面的处理组和控制组,基于”组别”设置了一个村级层面的外生变量,对”母猪保险”村庄覆盖差异与后期”母猪存栏量”之间的因果关系进行因果识别.</p>
-<p>&nbsp;</p>
-<span id="more"></span>
-<h2 id="2-研究内容"><a href="#2-研究内容" class="headerlink" title="2. 研究内容"></a><strong>2. 研究内容</strong></h2><p><strong>2.1 设计田野实验并获得具有外生性的村庄”母猪保险”覆盖指标</strong></p>
-<p>具体包含实验可行性分析、随机干预策略选择以及潜在作用机制及威胁分析三个部分,详见下图</p>
-<p><img data-src="/paper_source/1.png" alt=""></p>
-<p><strong>2.2 结合可获数据识别村庄”母猪保险”覆盖指标与”母猪存栏决策”之间的因果关系,并对识别效果进行有效性检验</strong></p>
-<p>具体包含数据整合、特征性事实提炼、实证分析以及实验有效性分析四个部分,详见下图</p>
-<p><img data-src="/paper_source/2.png" alt=""></p>
-<p><strong>2.3 因果关系背后的作用机制、长期特征、溢出效应 </strong></p>
-<p>具体包含作用机制检验、长期效应及溢出效应分析,详见下图</p>
-<p><img data-src="/paper_source/3.png" alt=""></p>
-<p>&nbsp;</p>
-<h2 id="3-研究思路"><a href="#3-研究思路" class="headerlink" title="3. 研究思路"></a><strong>3. 研究思路</strong></h2><p>文章研究思路如下图所示</p>
-<p><img data-src="/paper_source/Diagram1.png" alt=""></p>
-<p>&nbsp;</p>
-<h2 id="4-研究方法"><a href="#4-研究方法" class="headerlink" title="4. 研究方法"></a><strong>4. 研究方法</strong></h2><p><strong>4.1 田野实验法:</strong>文章采用田野实验的方法产生了一个外生的随机干预效果,即养殖技术联络员(AHW)”绩效激励”差异引致的”母猪保险”村庄覆盖差异.</p>
-<p><strong>4.2 统计分析与计量经济模型方法:</strong>文章进一步整合了地方畜牧局统计数据、中国农业普查数据,并以衡量”绩效激励”差异的变量LIG与HIG为工具变量,识别了村庄”母猪保险”覆盖指标与后期”母猪存栏量”之间的因果关系.</p>
-<p>&nbsp;</p>
-<h2 id="5-评述以及改进建议"><a href="#5-评述以及改进建议" class="headerlink" title="5. 评述以及改进建议"></a><strong>5. 评述以及改进建议</strong></h2><p><strong>5.1 评述</strong></p>
-<p><strong>5.1.1</strong> 文章采用田野实验的方法,结合金沙县”保险公司产推—&gt;畜牧局地推—&gt;养殖技术联络员村推”保险推广模式,以及该地村庄间交通不便等现实特征,通过为村养殖技术联络员(AHW)随机分配”绩效激励”精妙地设置了外生随机干预,并以其作为投保”母猪保险”头数的工具变量,整合多方数据,识别了投保”母猪保险”与后期”母猪存栏量”之间的因果关系,并进行了有效性分析,并利用2008年南方雪灾造成母猪死亡数进行了机制分析.最终验证了”小额保险”对农户农业生产决策的作用.</p>
-<p><strong>5.1.2</strong> 一方面,随机分配”绩效激励”的设置十分巧妙,其外生性以及与村庄总体投保数的相关性都可以得到充分的事实支撑.此外,作者以2008年南方雪灾造成的母猪死亡数作为”村庄发生’母猪保险’赔付”的情景代理变量,验证了信任机制的重要性.</p>
-<p><strong>5.1.3</strong> 另一方面,随机分配”绩效激励”的设置也可能面临异质性问题,村养殖技术联络员(AHW)个体特征的不同可能会影响其推广保险的绩效;此外,村庄的某些特征的差异也可能引起异质性,比如,人均受教育程度高的村庄可能更容易理解”母猪保险”的保险机制,进而体现出更高的投保率;最后,利用2008年南方雪灾造成的母猪死亡数进行机制分析的做法有些许勉强,或许可以直接从PCC获取相关赔付数据进行机制分析.</p>
-<p><strong>5.2 改进建议</strong></p>
-<p><strong>5.2.1</strong> 文章声明测度了村养殖技术联络员(AHW)的人口统计学变量,可依据这些变量进行异质性分析,因为AHW个人的某些特质,比如责任感、受教育程度可能会影响其推广保险的努力程度抑或有效程度.因此,可设置AWH特征变量与低”绩效激励”组(LIG)、高”绩效激励”组(HIG)的交互项,考察由AHW特征引起的”母猪保险”对”母猪存栏决策”的作用异质性.</p>
-<p><strong>5.2.2</strong> 文章获得了村级层面的特征变量,却仅在所有模型中加入了乡镇(town)层面的哑变量,在模型中控制村庄特征变量比如村庄农户数、人均受教育程度等可能更有意义.再者,村庄的某些特征的差异也可能引起异质性,可设置村庄特征变量与低”绩效激励”组(LIG)、高”绩效激励”组(HIG)的交互项,考察由村庄特征引起的”母猪保险”对”母猪存栏决策”的作用异质性.</p>
-<p><strong>5.2.3</strong> 文章认为2008年雪灾造成的母猪死亡数较多的村庄,可能发生了实际的”母猪保险”赔付,进而为村民提供了一种情景互动,提高了村民对保险机构的信任,这一机制仅为猜测.作者既然声明可从PCC获得保单,那么赔付数据也应该能够获取,应该基于真实的赔付数据进行机制检验.</p>
-]]></content>
-      <categories>
-        <category>实验经济学</category>
-        <category>保险</category>
-      </categories>
-      <tags>
-        <tag>文献阅读</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Shell脚本笔记(1)</title>
-    <url>/posts/2510/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>shell是用C语言编写的程序,但它自身同时也是一种程序设计语言.你可能经常听说”shell脚本”,但实际上shell编程并非等同于”shell脚本”编程,前者指shell程序本身的开发,后者则是利用shell程序进行开发.都说java和javascript的区别是周杰和周杰伦的区别,shell和shell script或许也有那么点意思.</p>
-<h1 id="shell脚本"><a href="#shell脚本" class="headerlink" title="shell脚本"></a>shell脚本</h1><p>似乎任何程序学习都是从”Hello World!”开始的,对于<strong>shell</strong>而言:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Hello World !"</span></span><br></pre></td></tr></tbody></table></figure>
-<p><strong>#!</strong>是个标记,告知这段命令将用bash执行.echo则是一个向窗口展示文本的命令.<br>你可以将以上代码框的内容存为一个以.sh为后缀的文件,比如<strong>hw.sh</strong>,并赋予文件执行权限:</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">chmod +x ./hw.sh         #赋予执行权限</span><br><span class="line">bash hw.sh               #执行脚本</span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<p>未完待续</p>
-]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>shell</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>字体和公式的Display</title>
-    <url>/posts/15167/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<font face="Times New Roman"></font><p style="text-align:justify"><font face="Times New Roman"><b>"Evaluating the employment impact of a mandatory job search program"</b></font>
-<br>
-<br>
-<font face="Times New Roman"></font></p><p style="text-align:justify"><font face="Times New Roman"><b>What treatment do the authors evaluate?</b></font>
-<br>
-
-
-
-<span id="more"></span>
-
-
-
-<font face="Tex Gyre Pagella"></font></p><p style="text-align:justify"><font face="Tex Gyre Pagella"><b>Answer: </b> In the parametric methods, the common trend assumption is:
-
-$$\begin{array}{l}
-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=0\right)\right] \\
-=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=0\right)\right]
-\end{array}$$
-In the non-parametric methods, the common trend assumption is:
-
-$$\begin{array}{l}
-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=0\right) \\
-=E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=1\right)-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)
-\end{array}$$
-
-</font>
-</p>]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>blog_test</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2014到2021年:淘宝村分布散点图😲</title>
-    <url>/posts/18898/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a><strong>效果展示</strong></h2><p><img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235354537.svg" width="80%" height="80%" align="middle"></p>
-<center>2014年的淘宝村分布</center>
-
-<span id="more"></span>
-<p><img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235404847.svg" width="80%" height="80%" align="middle"></p>
-<center>2021年的淘宝村分布</center>
-
-<h2 id="从最初3个增长至7023个"><a href="#从最初3个增长至7023个" class="headerlink" title="从最初3个增长至7023个"></a><strong>从最初3个增长至7023个</strong></h2><p>从2009年到2021年,中国淘宝村呈现裂变式的扩散增长,从最初3个增长至7023个,无论是数量规模,还是分布广度都经历了飞跃式的发展.从萌芽至发展阶段,”小农户连接大市场”的电商逻辑长期被认为是淘宝村的主要内涵.围绕这一内涵,市场、政策、技术、人才一度不断汇聚,为淘宝村发展创造了十余年的黄金机遇,形成了一场边缘人群连接现代网络、边缘地区接壤现代市场、边缘产品汇聚现代需求的”边缘革命”.然而,在经历十余年的飞速发展后,淘宝村开始面临红利期消失、消费升级、同质化竞争、规范治理等适应性挑战,转型变革已是必然选择.在这一过程中,过往遵循传统电商逻辑的淘宝村正经历蜕变.一方面,垂直电商、内容电商等多元化的销售互联网生态正加速形成;另一方面,由差异化、个性化、碎片化需求所驱动的产业数字化升级不断涌现.可以认为,以”消费互联网+产业互联网”为特征的产销全域数字化逻辑正在为淘宝村注入新的内涵,其核心不再是”连接大市场”,而是”洞悉大市场、细分小市场、塑造新市场”.这种内涵演进对淘宝村发展提出了更高的要求,即能否充分利用数字技术提高经营主体的市场洞察力,能否通过数据信息整合优化生产流程,能否基于数字供应链实现快速的市场反馈.在此意义上,新时代的淘宝村将不再是”逆边缘化”的地理名词,而是一类凭借数字技术突破分散决策、分散生产、分散经营劣势的组织指称.</p>
-]]></content>
-      <categories>
-        <category>绘图</category>
-        <category>map&amp;sf</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>画一幅我农所在地的道路图</title>
     <url>/posts/42027/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h2><p><img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;"></p>
-<center>上图即为最终效果</center>
-
-<h2 id="一些必备的工具"><a href="#一些必备的工具" class="headerlink" title="一些必备的工具"></a>一些必备的工具</h2><p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;">
+<center>
+上图即为最终效果
+</center>
+<h2 id="一些必备的工具">一些必备的工具</h2>
+<p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
 <figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
 <span id="more"></span>
-<h2 id="绘制路网地图"><a href="#绘制路网地图" class="headerlink" title="绘制路网地图"></a>绘制路网地图</h2><p>导入以下R 包:</p>
+<h2 id="绘制路网地图">绘制路网地图</h2>
+<p>导入以下R 包:</p>
 <figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
 <p>读入杨陵区的数据:</p>
 <figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
