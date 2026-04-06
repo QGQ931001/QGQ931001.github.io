@@ -759,528 +759,6 @@ Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</
       </tags>
   </entry>
   <entry>
-    <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
-    <url>/posts/48526/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
-<ul>
-<li>因果识别+统计推断</li>
-<li>因果识别(<strong><em>causal
-identification</em></strong>):如果拥有总体,能否确定总体因果关系</li>
-<li>统计推断(<strong><em>statistical
-inference</em></strong>):如何从样本数据获取总体因果关系信息,实际是一种相关性事实</li>
-<li>识别假设,实际就是对 <span class="math inline">\(D\)</span> 和 <span class="math inline">\(\varepsilon\)</span>
-的关系作出表述,但这种过程是无法从理论上验证的</li>
-</ul>
-<span id="more"></span>
-<h2 id="section"><strong>1</strong></h2>
-<ul>
-<li><strong>1.1</strong>
-因果效应的定义:干预与否、处理与否时,潜在结果之间的差值.潜在结果一定是同一个时间点上的结果</li>
-<li><strong>1.2</strong> 潜在结果永远无法完全观测,除非存在平行宇宙</li>
-<li><strong>1.3</strong>
-通过识别假设可以进行"插值",可以化"相关关系"识别场景为"因果关系"识别场景</li>
-<li><strong>1.4</strong>
-鲁宾因果模型(潜在因果框架),一套描述因果关系的新语言</li>
-</ul>
-<h2 id="section-1"><strong>2</strong></h2>
-<ul>
-<li><strong>2.1</strong> 第一类识别假设:潜在结果均值独立于处理状态</li>
-<li><strong>2.2</strong>
-从干扰项中剥离出控制变量;或者寻找一个与干扰项不相关的工具变量</li>
-<li><strong>2.3</strong>
-第二类识别假设:潜在结果条件均值独立于处理状态</li>
-<li><strong>2.4</strong> 好的控制变量:既影响<span class="math inline">\(Y\)</span>,又影响<span class="math inline">\(D\)</span>.其本身和干扰项是否相关是不重要的,不是研究者关注的中心</li>
-<li><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</li>
-<li><strong>2.6</strong> 无需过渡阐释控制变量的系数</li>
-</ul>
-<h2 id="section-2"><strong>3</strong></h2>
-<ul>
-<li><strong>3.1</strong> 鲁宾因果模型并未规定具体的函数形式</li>
-<li><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</li>
-</ul>
-<h2 id="section-3"><strong>4</strong></h2>
-<ul>
-<li><strong>4.1</strong>
-选择性又称之为分配机制,每个个体如何接受处理,可以用倾向得分来表示</li>
-<li><strong>4.2</strong>
-建议现实使用IV、DID、RDD等识别方法时,称之为准实验</li>
-</ul>
-]]></content>
-      <categories>
-        <category>计量</category>
-      </categories>
-      <tags>
-        <tag>学术讲座</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>&lt;One Quarter of Humanity&gt;深度阅读笔记 — James Z. Lee &amp; Wang Feng</title>
-    <url>/posts/lee2001/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="深度阅读笔记"><one quarter="" of="" humanity="">- 深度阅读笔记</one></h1>
-<h2 id="书籍信息">书籍信息</h2>
-<ul>
-<li><strong>书名</strong>: One Quarter of Humanity</li>
-<li><strong>副标题</strong>: Malthusian Mythology and Chinese Realities,
-1700-2000</li>
-<li><strong>作者</strong>: James Z. Lee (李中清) &amp; Wang Feng
-(王丰)</li>
-<li><strong>出版</strong>: Harvard University Press, 2001
-(初版1999)</li>
-<li><strong>页数</strong>: 约280页</li>
-<li><strong>类型</strong>: 人口史 / 经济史 / 比较历史学</li>
-<li><strong>阅读时间</strong>: 2026年4月5日</li>
-<li><strong>难度评估</strong>:
-高(学术性强,涉及人口学、经济学、历史学、社会学交叉领域) <span id="more"></span>
----</li>
-</ul>
-<h2 id="整体评价">整体评价</h2>
-<p>本书是研究中国人口历史的里程碑式著作,由James Z.
-Lee和李中清合作完成.两位作者利用中国历史档案中的大量人口记录(如清朝皇族族谱、人口普查数据等),系统地挑战了传统的马尔萨斯主义人口理论.</p>
-<p><strong>核心贡献</strong>:本书推翻了一个长期以来的"共识智慧"_即中国与西方在人口行为上存在本质差异,传统中国缺乏有效的人口控制机制.作者通过详实的微观数据证明,中国实际上通过独特的婚姻制度、生育行为(如杀婴、堕胎)以及社会结构安排,实现了有效的人口约束,这与西方的"预防性检查"(晚婚)模式截然不同.</p>
-<p><strong>学术意义</strong>:本书为理解中国独特的人口转变路径提供了全新的分析框架,对比较历史人口学、人口社会学、经济史等领域具有重要贡献.</p>
-<hr>
-<h2 id="内容总览">内容总览</h2>
-<h3 id="核心论点">核心论点</h3>
-<p>作者认为,中国人口的"众多"并非源于缺乏控制,而是<strong>有效调节</strong>的结果.这种调节通过以下机制实现:</p>
-<ol type="1">
-<li><strong>压低婚姻生育率</strong>:通过晚婚、独身、选择性杀婴等方式</li>
-<li><strong>广泛存在的杀婴和堕胎实践</strong>:特别是针对女婴</li>
-<li><strong>集体主义导向的人口制度</strong>:区别于西方的个人主义驱动</li>
-</ol>
-<h3 id="书籍结构">书籍结构</h3>
-<table>
-<thead>
-<tr>
-<th>部分</th>
-<th>章节</th>
-<th>主题</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Part I: Mythologies</strong></td>
-<td>Chapter 1-2</td>
-<td>马尔萨斯主义的理论框架与批评</td>
-</tr>
-<tr>
-<td><strong>Part II: Realities</strong></td>
-<td>Chapter 3-6</td>
-<td>中国人口行为的实证分析</td>
-</tr>
-<tr>
-<td><strong>Part III: Implications</strong></td>
-<td>Chapter 7-9</td>
-<td>制度、社会与意识形态含义</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="第一部分历史事实整理">第一部分:历史事实整理</h2>
-<h3 id="核心历史事实">核心历史事实</h3>
-<h4 id="人口数据">人口数据</h4>
-<ul>
-<li><strong>世界人口增长</strong>:1700年全球人口不足7亿,2000年超过60亿,增长近10倍</li>
-<li><strong>中国人口三阶段增长</strong>:
-<ul>
-<li>第一阶段(1700-1800):1.6亿增至3.5亿</li>
-<li>第二阶段(1800-1950):3.5亿增至近6亿</li>
-<li>第三阶段(1950-2000):6亿增至12亿+</li>
-</ul></li>
-<li><strong>人均粮食产量</strong>:中国1930-1986年间相对稳定,但人口大幅增长</li>
-<li><strong>男性平均身高</strong>:中国1900-1985年间显著增长,反映营养改善</li>
-</ul>
-<h4 id="婚姻与生育数据">婚姻与生育数据</h4>
-<ul>
-<li><strong>女性初婚年龄</strong>:中国各时期数据存在显著差异</li>
-<li><strong>30岁仍未婚女性比例</strong>:中国历史上这一比例较高</li>
-<li><strong>婚姻模式</strong>:一夫一妻制为主,但存在纳妾制度</li>
-<li><strong>童养媳婚姻</strong>:女性通过成为童养媳提前进入婚姻市场</li>
-</ul>
-<h4 id="死亡率数据">死亡率数据</h4>
-<ul>
-<li><strong>婴儿死亡率</strong>:北京1700-1830年数据</li>
-<li><strong>男女死亡率差异</strong>:中国存在显著的女性超额死亡</li>
-<li><strong>性别比</strong>:中国长期存在男性偏高的性别比,反映杀婴和性别选择</li>
-</ul>
-<h3 id="历史脉络">历史脉络</h3>
-<ol type="1">
-<li><strong>清朝(1644-1912)</strong>:人口持续增长,但存在有效约束机制</li>
-<li><strong>民国时期(1912-1949)</strong>:战争与饥荒导致人口波动</li>
-<li><strong>共和国时期(1949-2000)</strong>:计划生育政策的实施与人口转型</li>
-</ol>
-<hr>
-<h2 id="第二部分观点整理">第二部分:观点整理</h2>
-<h3 id="作者核心观点">作者核心观点</h3>
-<h4 id="观点一马尔萨斯主义范式的局限">观点一:马尔萨斯主义范式的局限</h4>
-<p>作者认为,马尔萨斯的人口理论虽然影响深远,但存在对中国的根本性误解:</p>
-<ul>
-<li>马尔萨斯将人类社会分为两类:西方社会(以预防性检查为主)和非西方社会(以积极性检查为主)</li>
-<li>这一二元划分忽视了中国的复杂性</li>
-<li><strong>中国的独特性</strong>:通过压低婚姻生育率(而非晚婚)实现人口控制</li>
-</ul>
-<h4 id="观点二中国式人口控制机制">观点二:中国式人口控制机制</h4>
-<ol type="1">
-<li><strong>杀婴(Infanticide)</strong>:特别是溺婴(尤其是女婴)
-<ul>
-<li>作者认为这是"集体决策"的体现</li>
-<li>与西方的个人延迟生育决策不同</li>
-</ul></li>
-<li><strong>溺婴的经济逻辑</strong>:
-<ul>
-<li>农业社会中男性劳动力价值更高</li>
-<li>女婴被杀反映了家庭对资源分配的计算</li>
-</ul></li>
-<li><strong>堕胎与避孕</strong>:
-<ul>
-<li>中国历史上存在多种堕胎方式</li>
-<li>避孕知识通过非正式渠道传播</li>
-</ul></li>
-</ol>
-<h4 id="观点三不同于西方的人口转变">观点三:不同于西方的人口转变</h4>
-<p>作者提出,中国的人口转变与西方经历的模式根本不同:</p>
-<table>
-<thead>
-<tr>
-<th>维度</th>
-<th>西方模式</th>
-<th>中国模式</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>控制机制</td>
-<td>个人主义的预防性检查</td>
-<td>集体主义的多重约束</td>
-</tr>
-<tr>
-<td>核心策略</td>
-<td>晚婚、经济理性</td>
-<td>杀婴、堕胎、社会规范</td>
-</tr>
-<tr>
-<td>制度基础</td>
-<td>个人利益计算</td>
-<td>家族/社区利益</td>
-</tr>
-<tr>
-<td>转变路径</td>
-<td>死亡率下降→生育率下降</td>
-<td>多种机制并行</td>
-</tr>
-</tbody>
-</table>
-<h4 id="观点四中国人口制度的集体主义特征">观点四:中国人口制度的"集体主义"特征</h4>
-<ul>
-<li>中国的人口控制并非源于个人理性计算</li>
-<li>而是基于家族、社区乃至国家的集体利益考量</li>
-<li>这种制度安排鼓励的是<strong>集体责任</strong>而非个人主义</li>
-</ul>
-<hr>
-<h2 id="第三部分数据整理">第三部分:数据整理</h2>
-<h3 id="关键数据">关键数据</h3>
-<h4 id="人口数据-1">人口数据</h4>
-<table>
-<thead>
-<tr>
-<th>指标</th>
-<th>数据</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>中国1700年人口</td>
-<td>约1.6亿</td>
-</tr>
-<tr>
-<td>中国1800年人口</td>
-<td>约3.5亿</td>
-</tr>
-<tr>
-<td>中国1950年人口</td>
-<td>约6亿</td>
-</tr>
-<tr>
-<td>中国2000年人口</td>
-<td>约12.5亿</td>
-</tr>
-<tr>
-<td>世界1700年人口</td>
-<td>不足7亿</td>
-</tr>
-<tr>
-<td>世界2000年人口</td>
-<td>超过60亿</td>
-</tr>
-</tbody>
-</table>
-<h4 id="性别比数据">性别比数据</h4>
-<ul>
-<li>中国1776-1990年间性别比持续偏高</li>
-<li>女婴和女性儿童死亡率显著高于男性</li>
-<li>这反映了性别选择性杀婴和忽视的存在</li>
-</ul>
-<hr>
-<h2 id="第四部分章节精读笔记">第四部分:章节精读笔记</h2>
-<h3 id="第一章introduction">第一章:Introduction</h3>
-<p><strong>主要内容</strong>: - 介绍马尔萨斯主义200年来的影响 -
-阐述世界人口从7亿到60亿的增长轨迹 -
-提出核心问题:中国人口为何如此众多?</p>
-<p><strong>关键引用</strong>: &gt; "After the desire for food, the most
-powerful and general of our desires is the passion between the sexes" —
-Malthus, 1803</p>
-<h3 id="第二章malthusian-myths">第二章:Malthusian Myths</h3>
-<p><strong>主要内容</strong>: - 批评马尔萨斯对中国人口的错误认识 -
-马尔萨斯认为中国是"人口压力"的典型 - 实际上中国有有效的人口控制机制</p>
-<h3 id="第三章subsistence">第三章:Subsistence</h3>
-<p><strong>核心发现</strong>: - 中国人均粮食消费处于极低水平 -
-但人口持续增长并未导致普遍饥荒 - 这说明存在有效的需求端控制机制</p>
-<h3 id="第四章mortality">第四章:Mortality</h3>
-<p><strong>核心发现</strong>: - 中国的高死亡率部分是"积极性检查"的结果 -
-但更重要的是系统性的性别选择 - 女婴和女童的死亡率显著偏高</p>
-<h3 id="第五章marriage">第五章:Marriage</h3>
-<p><strong>核心发现</strong>: - 中国婚姻模式与西方截然不同 -
-婚姻市场中的性别比例失衡 - 嫁妆/彩礼制度的经济功能</p>
-<h3 id="第六章fertility">第六章:Fertility</h3>
-<p><strong>核心发现</strong>: - 中国历史上存在有意识控制生育的行为 -
-"自然生育率"概念不适用于中国 - 杀婴和堕胎是控制生育的重要手段</p>
-<h3 id="第七章system">第七章:System</h3>
-<p><strong>核心发现</strong>: - 中国人口制度是"内生约束"系统 -
-收养制度在人口调节中起重要作用 - 制度设计鼓励集体利益最大化</p>
-<h3 id="第八章society">第八章:Society</h3>
-<p><strong>核心发现</strong>: - 家庭作为人口行为的基本单位 -
-集体责任vs个人利益的文化逻辑 - 中国的社会结构如何支撑人口控制</p>
-<h3 id="第九章demography-ideology-and-politics">第九章:Demography,
-Ideology, and Politics</h3>
-<p><strong>核心发现</strong>: - 人口、意识形态与政治的交织 -
-中国人口政策的演变 - 比较视野下的中国人口转变</p>
-<hr>
-<h2 id="第五部分术语表">第五部分:术语表</h2>
-<table>
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr>
-<th>术语</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>马尔萨斯主义(Malthusianism)</strong></td>
-<td>以Thomas
-Malthus人口理论为基础的思想流派,认为人口增长受资源约束,必须通过"预防性检查"或"积极性检查"来控制</td>
-</tr>
-<tr>
-<td><strong>预防性检查(Preventive Check)</strong></td>
-<td>马尔萨斯理论中通过延迟婚姻或节欲来限制人口增长的手段</td>
-</tr>
-<tr>
-<td><strong>积极性检查(Positive Check)</strong></td>
-<td>马尔萨斯理论中通过死亡(饥荒、战争、疾病)来限制人口增长的手段</td>
-</tr>
-<tr>
-<td><strong>人口转变(Demographic Transition)</strong></td>
-<td>从高出生率、高死亡率向低出生率、低死亡率转变的历史过程</td>
-</tr>
-<tr>
-<td><strong>杀婴(Infanticide)</strong></td>
-<td>杀害婴儿的行为,在中国历史上特别是溺婴(尤其是女婴)较为普遍</td>
-</tr>
-<tr>
-<td><strong>性别比(Sex Ratio)</strong></td>
-<td>男性与女性人口的比例,通常以每100名女性对应的男性数量表示</td>
-</tr>
-<tr>
-<td><strong>内生约束(Endogenous Restraints)</strong></td>
-<td>来自系统内部的约束机制,如社会规范、制度安排等</td>
-</tr>
-<tr>
-<td><strong>集体主义(Collectivism)</strong></td>
-<td>强调集体利益优先于个人利益的社会价值取向</td>
-</tr>
-<tr>
-<td><strong>个人主义(Individualism)</strong></td>
-<td>强调个人权利和利益优先的社会价值取向</td>
-</tr>
-<tr>
-<td><strong>溺婴(Infanticide by drowning)</strong></td>
-<td>将婴儿放入水中溺死的杀婴方式,在中国历史上有文字记载</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="附录中国人口历史的关键时间线">附录:中国人口历史的关键时间线</h2>
-<table>
-<thead>
-<tr>
-<th>时间</th>
-<th>事件</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1700年</td>
-<td>中国人口约1.6亿</td>
-</tr>
-<tr>
-<td>1792年</td>
-<td>辽宁人口档案开始详细记录</td>
-</tr>
-<tr>
-<td>1800年</td>
-<td>中国人口达3.5亿</td>
-</tr>
-<tr>
-<td>1826年</td>
-<td>Malthus&lt;人口原理&gt;最终版出版</td>
-</tr>
-<tr>
-<td>1840年</td>
-<td>清朝结束(1912),人口档案达到高峰</td>
-</tr>
-<tr>
-<td>1950年</td>
-<td>中华人民共和国成立,人口约6亿</td>
-</tr>
-<tr>
-<td>1979年</td>
-<td>独生子女政策开始实施</td>
-</tr>
-<tr>
-<td>2000年</td>
-<td>中国人口超过12亿</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="参考信息">参考信息</h2>
-<ul>
-<li><strong>原书引用格式</strong>: Lee, James Z., and Wang Feng. 2001.
-<em>One Quarter of Humanity: Malthusian Mythology and Chinese Realities,
-1700-2000</em>. Cambridge: Harvard University Press.</li>
-<li><strong>中文译本</strong>:
-&lt;四分之一的人类:马尔萨斯神话与中国现实&gt;</li>
-<li><strong>学术领域</strong>: 比较历史人口学、经济史、Chinese
-Studies</li>
-</ul>
-]]></content>
-      <categories>
-        <category>历史</category>
-        <category>人口</category>
-      </categories>
-      <tags>
-        <tag>读书笔记</tag>
-        <tag>人口史</tag>
-        <tag>比较历史学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文献阅读# the Effect of Microinsurance on Economic Activities: Evidence From a Randomized Field Experiment</title>
-    <url>/posts/51245/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
-<p><strong>需要提前了解的生猪养殖知识背景</strong></p>
-<ul>
-<li>市场上常见的肉猪基本均为经过绝育的猪.一般而言,养殖户会在猪仔1个月大小的时候进行绝育,对公猪进行阉割,对母猪则切除卵巢.这种做法能够增加肉猪的成长速度,减少猪发情带来的成本,并减小猪肉的膻腥味、提升口感.</li>
-<li>如果养殖户存养未绝育的种猪或母猪,其用途主要为繁育猪仔.</li>
-<li>对于农村的小型散养户而言,每个村庄一般会有一个村兽医、或养殖技术联络员为其提供"猪的绝育"服务,村兽医、或养殖技术联络员基本
-对应本文中的"Animal Husbandry Workers (AHW)".</li>
-</ul>
-<p>&nbsp; &nbsp; &nbsp;</p>
-<h2 id="研究问题"><strong>1. 研究问题</strong></h2>
-<p>本文旨在对"小额保险"("普惠型保险")对农户农业生产决策的作用进行因果识别.</p>
-<p>具体而言,作者以"母猪保险"这一险种为例,以贵州省毕节市金沙县27个乡镇的480个村为实验场域,采用田野实验的方法,在中国人民财产保险股份有限公司(PCC)所推出的"母猪保险"产品基础上,结合金沙县"保险公司产推--&gt;畜牧局地推--&gt;养殖技术联络员村推"的保险推广模式,为村养殖技术联络员(AHW)随机分配"绩效激励",进而设置了村级层面的处理组和控制组,基于"组别"设置了一个村级层面的外生变量,对"母猪保险"村庄覆盖差异与后期"母猪存栏量"之间的因果关系进行因果识别.</p>
-<p>&nbsp;</p>
-<span id="more"></span>
-<h2 id="研究内容"><strong>2. 研究内容</strong></h2>
-<p><strong>2.1
-设计田野实验并获得具有外生性的村庄"母猪保险"覆盖指标</strong></p>
-<p>具体包含实验可行性分析、随机干预策略选择以及潜在作用机制及威胁分析三个部分,详见下图</p>
-<p><img data-src="/paper_source/1.png"></p>
-<p><strong>2.2
-结合可获数据识别村庄"母猪保险"覆盖指标与"母猪存栏决策"之间的因果关系,并对识别效果进行有效性检验</strong></p>
-<p>具体包含数据整合、特征性事实提炼、实证分析以及实验有效性分析四个部分,详见下图</p>
-<p><img data-src="/paper_source/2.png"></p>
-<p><strong>2.3 因果关系背后的作用机制、长期特征、溢出效应 </strong></p>
-<p>具体包含作用机制检验、长期效应及溢出效应分析,详见下图</p>
-<p><img data-src="/paper_source/3.png"></p>
-<p>&nbsp;</p>
-<h2 id="研究思路"><strong>3. 研究思路</strong></h2>
-<p>文章研究思路如下图所示</p>
-<p><img data-src="/paper_source/Diagram1.png"></p>
-<p>&nbsp;</p>
-<h2 id="研究方法"><strong>4. 研究方法</strong></h2>
-<p><strong>4.1
-田野实验法:</strong>文章采用田野实验的方法产生了一个外生的随机干预效果,即养殖技术联络员(AHW)"绩效激励"差异引致的"母猪保险"村庄覆盖差异.</p>
-<p><strong>4.2
-统计分析与计量经济模型方法:</strong>文章进一步整合了地方畜牧局统计数据、中国农业普查数据,并以衡量"绩效激励"差异的变量LIG与HIG为工具变量,识别了村庄"母猪保险"覆盖指标与后期"母猪存栏量"之间的因果关系.</p>
-<p>&nbsp;</p>
-<h2 id="评述以及改进建议"><strong>5. 评述以及改进建议</strong></h2>
-<p><strong>5.1 评述</strong></p>
-<p><strong>5.1.1</strong>
-文章采用田野实验的方法,结合金沙县"保险公司产推--&gt;畜牧局地推--&gt;养殖技术联络员村推"保险推广模式,以及该地村庄间交通不便等现实特征,通过为村养殖技术联络员(AHW)随机分配"绩效激励"精妙地设置了外生随机干预,并以其作为投保"母猪保险"头数的工具变量,整合多方数据,识别了投保"母猪保险"与后期"母猪存栏量"之间的因果关系,并进行了有效性分析,并利用2008年南方雪灾造成母猪死亡数进行了机制分析.最终验证了"小额保险"对农户农业生产决策的作用.</p>
-<p><strong>5.1.2</strong>
-一方面,随机分配"绩效激励"的设置十分巧妙,其外生性以及与村庄总体投保数的相关性都可以得到充分的事实支撑.此外,作者以2008年南方雪灾造成的母猪死亡数作为"村庄发生'母猪保险'赔付"的情景代理变量,验证了信任机制的重要性.</p>
-<p><strong>5.1.3</strong>
-另一方面,随机分配"绩效激励"的设置也可能面临异质性问题,村养殖技术联络员(AHW)个体特征的不同可能会影响其推广保险的绩效;此外,村庄的某些特征的差异也可能引起异质性,比如,人均受教育程度高的村庄可能更容易理解"母猪保险"的保险机制,进而体现出更高的投保率;最后,利用2008年南方雪灾造成的母猪死亡数进行机制分析的做法有些许勉强,或许可以直接从PCC获取相关赔付数据进行机制分析.</p>
-<p><strong>5.2 改进建议</strong></p>
-<p><strong>5.2.1</strong>
-文章声明测度了村养殖技术联络员(AHW)的人口统计学变量,可依据这些变量进行异质性分析,因为AHW个人的某些特质,比如责任感、受教育程度可能会影响其推广保险的努力程度抑或有效程度.因此,可设置AWH特征变量与低"绩效激励"组(LIG)、高"绩效激励"组(HIG)的交互项,考察由AHW特征引起的"母猪保险"对"母猪存栏决策"的作用异质性.</p>
-<p><strong>5.2.2</strong>
-文章获得了村级层面的特征变量,却仅在所有模型中加入了乡镇(town)层面的哑变量,在模型中控制村庄特征变量比如村庄农户数、人均受教育程度等可能更有意义.再者,村庄的某些特征的差异也可能引起异质性,可设置村庄特征变量与低"绩效激励"组(LIG)、高"绩效激励"组(HIG)的交互项,考察由村庄特征引起的"母猪保险"对"母猪存栏决策"的作用异质性.</p>
-<p><strong>5.2.3</strong>
-文章认为2008年雪灾造成的母猪死亡数较多的村庄,可能发生了实际的"母猪保险"赔付,进而为村民提供了一种情景互动,提高了村民对保险机构的信任,这一机制仅为猜测.作者既然声明可从PCC获得保单,那么赔付数据也应该能够获取,应该基于真实的赔付数据进行机制检验.</p>
-]]></content>
-      <categories>
-        <category>实验经济学</category>
-        <category>保险</category>
-      </categories>
-      <tags>
-        <tag>文献阅读</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
-    <url>/posts/32262/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
-<h2 id="研究问题"><strong>1. 研究问题</strong></h2>
-<p>本文以江苏省12个地级市"河长制"政策转移案例(2006 —
-2016)为研究对象,在识别政策转移案例中"复制"和"再生产"两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对"河长制"转移程度的影响.研究发现"河长制"政策转移中的"政策再生产"的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局.通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产.</p>
-<p>&nbsp;</p>
-<span id="more"></span>
-<h2 id="问题的提出"><strong>2. 问题的提出</strong></h2>
-<p><strong>2.1 政策转移的必要性</strong></p>
-<p>现实状况:政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有"后发优势"的意味、地区间的合作与竞争</p>
-<p>转移情形:政策转移并不意味着全盘复制,可分为"复制"和"再生产"两种形式</p>
-<p>核心问题:什么因素能够促成政策"再生产",政策"再生产"又体现出那些维度特征</p>
-<p><strong>2.2 河长制的背景介绍</strong></p>
-<p>河湖治理是跨界特性最典型的领域之一,涉及上下游、左右岸、不同行政区域和行业,呈现出高度的复杂性.河长制最早发轫于太湖蓝藻危机,2016年之前是一项地方政策,经政策扩散至多地.</p>
-<p>现实调查显示河长制在江苏省内的扩散过程中呈现出"复制"和"再生产"的典型差异.</p>
-<p>&nbsp;</p>
-<h2 id="研究思路和方法"><strong>3. 研究思路和方法</strong></h2>
-<p><strong>3.1 QCA</strong></p>
-<p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles
-Ragin)于<code>1987</code>年提出,适用于案例数量大于10小于60的研究.</p>
-<p>其使用布尔代数和集合论的思想来进行中小数量的跨案例比较,从而处理多个原因和一个结果之间的因果关系.</p>
-<p><strong>3.2 转移程度的刻画</strong></p>
-<p>道洛维茨和马什最早借鉴rose(1993)的连续统来划分政策转移程度:复制、模仿、混合、启发.</p>
-<p>本文简单划分为:"复制"和"再生产"</p>
-<p><strong>3.3 解释变量的选择</strong></p>
-<p>行政压力、资源禀赋、政策需求、外部力量</p>
-<p>&nbsp;</p>
-<h2 id="结论"><strong>4. 结论</strong></h2>
-<p>政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素.</p>
-]]></content>
-      <categories>
-        <category>公共管理</category>
-        <category>政策转移</category>
-      </categories>
-      <tags>
-        <tag>文献阅读</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>&lt;中国人口研究 1368-1953&gt;深度阅读笔记 — 何炳棣 Ping-Ti Ho</title>
     <url>/posts/ho1959/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="studies-on-the-population-of-china-1368-1953--深度阅读笔记">&lt;Studies
@@ -2069,6 +1547,528 @@ _谢肇淛&lt;五杂俎&gt;(约1610年)</p>
       </tags>
   </entry>
   <entry>
+    <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
+    <url>/posts/48526/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
+<ul>
+<li>因果识别+统计推断</li>
+<li>因果识别(<strong><em>causal
+identification</em></strong>):如果拥有总体,能否确定总体因果关系</li>
+<li>统计推断(<strong><em>statistical
+inference</em></strong>):如何从样本数据获取总体因果关系信息,实际是一种相关性事实</li>
+<li>识别假设,实际就是对 <span class="math inline">\(D\)</span> 和 <span class="math inline">\(\varepsilon\)</span>
+的关系作出表述,但这种过程是无法从理论上验证的</li>
+</ul>
+<span id="more"></span>
+<h2 id="section"><strong>1</strong></h2>
+<ul>
+<li><strong>1.1</strong>
+因果效应的定义:干预与否、处理与否时,潜在结果之间的差值.潜在结果一定是同一个时间点上的结果</li>
+<li><strong>1.2</strong> 潜在结果永远无法完全观测,除非存在平行宇宙</li>
+<li><strong>1.3</strong>
+通过识别假设可以进行"插值",可以化"相关关系"识别场景为"因果关系"识别场景</li>
+<li><strong>1.4</strong>
+鲁宾因果模型(潜在因果框架),一套描述因果关系的新语言</li>
+</ul>
+<h2 id="section-1"><strong>2</strong></h2>
+<ul>
+<li><strong>2.1</strong> 第一类识别假设:潜在结果均值独立于处理状态</li>
+<li><strong>2.2</strong>
+从干扰项中剥离出控制变量;或者寻找一个与干扰项不相关的工具变量</li>
+<li><strong>2.3</strong>
+第二类识别假设:潜在结果条件均值独立于处理状态</li>
+<li><strong>2.4</strong> 好的控制变量:既影响<span class="math inline">\(Y\)</span>,又影响<span class="math inline">\(D\)</span>.其本身和干扰项是否相关是不重要的,不是研究者关注的中心</li>
+<li><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</li>
+<li><strong>2.6</strong> 无需过渡阐释控制变量的系数</li>
+</ul>
+<h2 id="section-2"><strong>3</strong></h2>
+<ul>
+<li><strong>3.1</strong> 鲁宾因果模型并未规定具体的函数形式</li>
+<li><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</li>
+</ul>
+<h2 id="section-3"><strong>4</strong></h2>
+<ul>
+<li><strong>4.1</strong>
+选择性又称之为分配机制,每个个体如何接受处理,可以用倾向得分来表示</li>
+<li><strong>4.2</strong>
+建议现实使用IV、DID、RDD等识别方法时,称之为准实验</li>
+</ul>
+]]></content>
+      <categories>
+        <category>计量</category>
+      </categories>
+      <tags>
+        <tag>学术讲座</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>&lt;One Quarter of Humanity&gt;深度阅读笔记 — James Z. Lee &amp; Wang Feng</title>
+    <url>/posts/lee2001/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="深度阅读笔记"><one quarter="" of="" humanity="">- 深度阅读笔记</one></h1>
+<h2 id="书籍信息">书籍信息</h2>
+<ul>
+<li><strong>书名</strong>: One Quarter of Humanity</li>
+<li><strong>副标题</strong>: Malthusian Mythology and Chinese Realities,
+1700-2000</li>
+<li><strong>作者</strong>: James Z. Lee (李中清) &amp; Wang Feng
+(王丰)</li>
+<li><strong>出版</strong>: Harvard University Press, 2001
+(初版1999)</li>
+<li><strong>页数</strong>: 约280页</li>
+<li><strong>类型</strong>: 人口史 / 经济史 / 比较历史学</li>
+<li><strong>阅读时间</strong>: 2026年4月5日</li>
+<li><strong>难度评估</strong>:
+高(学术性强,涉及人口学、经济学、历史学、社会学交叉领域) <span id="more"></span>
+---</li>
+</ul>
+<h2 id="整体评价">整体评价</h2>
+<p>本书是研究中国人口历史的里程碑式著作,由James Z.
+Lee和李中清合作完成.两位作者利用中国历史档案中的大量人口记录(如清朝皇族族谱、人口普查数据等),系统地挑战了传统的马尔萨斯主义人口理论.</p>
+<p><strong>核心贡献</strong>:本书推翻了一个长期以来的"共识智慧"_即中国与西方在人口行为上存在本质差异,传统中国缺乏有效的人口控制机制.作者通过详实的微观数据证明,中国实际上通过独特的婚姻制度、生育行为(如杀婴、堕胎)以及社会结构安排,实现了有效的人口约束,这与西方的"预防性检查"(晚婚)模式截然不同.</p>
+<p><strong>学术意义</strong>:本书为理解中国独特的人口转变路径提供了全新的分析框架,对比较历史人口学、人口社会学、经济史等领域具有重要贡献.</p>
+<hr>
+<h2 id="内容总览">内容总览</h2>
+<h3 id="核心论点">核心论点</h3>
+<p>作者认为,中国人口的"众多"并非源于缺乏控制,而是<strong>有效调节</strong>的结果.这种调节通过以下机制实现:</p>
+<ol type="1">
+<li><strong>压低婚姻生育率</strong>:通过晚婚、独身、选择性杀婴等方式</li>
+<li><strong>广泛存在的杀婴和堕胎实践</strong>:特别是针对女婴</li>
+<li><strong>集体主义导向的人口制度</strong>:区别于西方的个人主义驱动</li>
+</ol>
+<h3 id="书籍结构">书籍结构</h3>
+<table>
+<thead>
+<tr>
+<th>部分</th>
+<th>章节</th>
+<th>主题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Part I: Mythologies</strong></td>
+<td>Chapter 1-2</td>
+<td>马尔萨斯主义的理论框架与批评</td>
+</tr>
+<tr>
+<td><strong>Part II: Realities</strong></td>
+<td>Chapter 3-6</td>
+<td>中国人口行为的实证分析</td>
+</tr>
+<tr>
+<td><strong>Part III: Implications</strong></td>
+<td>Chapter 7-9</td>
+<td>制度、社会与意识形态含义</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="第一部分历史事实整理">第一部分:历史事实整理</h2>
+<h3 id="核心历史事实">核心历史事实</h3>
+<h4 id="人口数据">人口数据</h4>
+<ul>
+<li><strong>世界人口增长</strong>:1700年全球人口不足7亿,2000年超过60亿,增长近10倍</li>
+<li><strong>中国人口三阶段增长</strong>:
+<ul>
+<li>第一阶段(1700-1800):1.6亿增至3.5亿</li>
+<li>第二阶段(1800-1950):3.5亿增至近6亿</li>
+<li>第三阶段(1950-2000):6亿增至12亿+</li>
+</ul></li>
+<li><strong>人均粮食产量</strong>:中国1930-1986年间相对稳定,但人口大幅增长</li>
+<li><strong>男性平均身高</strong>:中国1900-1985年间显著增长,反映营养改善</li>
+</ul>
+<h4 id="婚姻与生育数据">婚姻与生育数据</h4>
+<ul>
+<li><strong>女性初婚年龄</strong>:中国各时期数据存在显著差异</li>
+<li><strong>30岁仍未婚女性比例</strong>:中国历史上这一比例较高</li>
+<li><strong>婚姻模式</strong>:一夫一妻制为主,但存在纳妾制度</li>
+<li><strong>童养媳婚姻</strong>:女性通过成为童养媳提前进入婚姻市场</li>
+</ul>
+<h4 id="死亡率数据">死亡率数据</h4>
+<ul>
+<li><strong>婴儿死亡率</strong>:北京1700-1830年数据</li>
+<li><strong>男女死亡率差异</strong>:中国存在显著的女性超额死亡</li>
+<li><strong>性别比</strong>:中国长期存在男性偏高的性别比,反映杀婴和性别选择</li>
+</ul>
+<h3 id="历史脉络">历史脉络</h3>
+<ol type="1">
+<li><strong>清朝(1644-1912)</strong>:人口持续增长,但存在有效约束机制</li>
+<li><strong>民国时期(1912-1949)</strong>:战争与饥荒导致人口波动</li>
+<li><strong>共和国时期(1949-2000)</strong>:计划生育政策的实施与人口转型</li>
+</ol>
+<hr>
+<h2 id="第二部分观点整理">第二部分:观点整理</h2>
+<h3 id="作者核心观点">作者核心观点</h3>
+<h4 id="观点一马尔萨斯主义范式的局限">观点一:马尔萨斯主义范式的局限</h4>
+<p>作者认为,马尔萨斯的人口理论虽然影响深远,但存在对中国的根本性误解:</p>
+<ul>
+<li>马尔萨斯将人类社会分为两类:西方社会(以预防性检查为主)和非西方社会(以积极性检查为主)</li>
+<li>这一二元划分忽视了中国的复杂性</li>
+<li><strong>中国的独特性</strong>:通过压低婚姻生育率(而非晚婚)实现人口控制</li>
+</ul>
+<h4 id="观点二中国式人口控制机制">观点二:中国式人口控制机制</h4>
+<ol type="1">
+<li><strong>杀婴(Infanticide)</strong>:特别是溺婴(尤其是女婴)
+<ul>
+<li>作者认为这是"集体决策"的体现</li>
+<li>与西方的个人延迟生育决策不同</li>
+</ul></li>
+<li><strong>溺婴的经济逻辑</strong>:
+<ul>
+<li>农业社会中男性劳动力价值更高</li>
+<li>女婴被杀反映了家庭对资源分配的计算</li>
+</ul></li>
+<li><strong>堕胎与避孕</strong>:
+<ul>
+<li>中国历史上存在多种堕胎方式</li>
+<li>避孕知识通过非正式渠道传播</li>
+</ul></li>
+</ol>
+<h4 id="观点三不同于西方的人口转变">观点三:不同于西方的人口转变</h4>
+<p>作者提出,中国的人口转变与西方经历的模式根本不同:</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>西方模式</th>
+<th>中国模式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>控制机制</td>
+<td>个人主义的预防性检查</td>
+<td>集体主义的多重约束</td>
+</tr>
+<tr>
+<td>核心策略</td>
+<td>晚婚、经济理性</td>
+<td>杀婴、堕胎、社会规范</td>
+</tr>
+<tr>
+<td>制度基础</td>
+<td>个人利益计算</td>
+<td>家族/社区利益</td>
+</tr>
+<tr>
+<td>转变路径</td>
+<td>死亡率下降→生育率下降</td>
+<td>多种机制并行</td>
+</tr>
+</tbody>
+</table>
+<h4 id="观点四中国人口制度的集体主义特征">观点四:中国人口制度的"集体主义"特征</h4>
+<ul>
+<li>中国的人口控制并非源于个人理性计算</li>
+<li>而是基于家族、社区乃至国家的集体利益考量</li>
+<li>这种制度安排鼓励的是<strong>集体责任</strong>而非个人主义</li>
+</ul>
+<hr>
+<h2 id="第三部分数据整理">第三部分:数据整理</h2>
+<h3 id="关键数据">关键数据</h3>
+<h4 id="人口数据-1">人口数据</h4>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中国1700年人口</td>
+<td>约1.6亿</td>
+</tr>
+<tr>
+<td>中国1800年人口</td>
+<td>约3.5亿</td>
+</tr>
+<tr>
+<td>中国1950年人口</td>
+<td>约6亿</td>
+</tr>
+<tr>
+<td>中国2000年人口</td>
+<td>约12.5亿</td>
+</tr>
+<tr>
+<td>世界1700年人口</td>
+<td>不足7亿</td>
+</tr>
+<tr>
+<td>世界2000年人口</td>
+<td>超过60亿</td>
+</tr>
+</tbody>
+</table>
+<h4 id="性别比数据">性别比数据</h4>
+<ul>
+<li>中国1776-1990年间性别比持续偏高</li>
+<li>女婴和女性儿童死亡率显著高于男性</li>
+<li>这反映了性别选择性杀婴和忽视的存在</li>
+</ul>
+<hr>
+<h2 id="第四部分章节精读笔记">第四部分:章节精读笔记</h2>
+<h3 id="第一章introduction">第一章:Introduction</h3>
+<p><strong>主要内容</strong>: - 介绍马尔萨斯主义200年来的影响 -
+阐述世界人口从7亿到60亿的增长轨迹 -
+提出核心问题:中国人口为何如此众多?</p>
+<p><strong>关键引用</strong>: &gt; "After the desire for food, the most
+powerful and general of our desires is the passion between the sexes" —
+Malthus, 1803</p>
+<h3 id="第二章malthusian-myths">第二章:Malthusian Myths</h3>
+<p><strong>主要内容</strong>: - 批评马尔萨斯对中国人口的错误认识 -
+马尔萨斯认为中国是"人口压力"的典型 - 实际上中国有有效的人口控制机制</p>
+<h3 id="第三章subsistence">第三章:Subsistence</h3>
+<p><strong>核心发现</strong>: - 中国人均粮食消费处于极低水平 -
+但人口持续增长并未导致普遍饥荒 - 这说明存在有效的需求端控制机制</p>
+<h3 id="第四章mortality">第四章:Mortality</h3>
+<p><strong>核心发现</strong>: - 中国的高死亡率部分是"积极性检查"的结果 -
+但更重要的是系统性的性别选择 - 女婴和女童的死亡率显著偏高</p>
+<h3 id="第五章marriage">第五章:Marriage</h3>
+<p><strong>核心发现</strong>: - 中国婚姻模式与西方截然不同 -
+婚姻市场中的性别比例失衡 - 嫁妆/彩礼制度的经济功能</p>
+<h3 id="第六章fertility">第六章:Fertility</h3>
+<p><strong>核心发现</strong>: - 中国历史上存在有意识控制生育的行为 -
+"自然生育率"概念不适用于中国 - 杀婴和堕胎是控制生育的重要手段</p>
+<h3 id="第七章system">第七章:System</h3>
+<p><strong>核心发现</strong>: - 中国人口制度是"内生约束"系统 -
+收养制度在人口调节中起重要作用 - 制度设计鼓励集体利益最大化</p>
+<h3 id="第八章society">第八章:Society</h3>
+<p><strong>核心发现</strong>: - 家庭作为人口行为的基本单位 -
+集体责任vs个人利益的文化逻辑 - 中国的社会结构如何支撑人口控制</p>
+<h3 id="第九章demography-ideology-and-politics">第九章:Demography,
+Ideology, and Politics</h3>
+<p><strong>核心发现</strong>: - 人口、意识形态与政治的交织 -
+中国人口政策的演变 - 比较视野下的中国人口转变</p>
+<hr>
+<h2 id="第五部分术语表">第五部分:术语表</h2>
+<table>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr>
+<th>术语</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>马尔萨斯主义(Malthusianism)</strong></td>
+<td>以Thomas
+Malthus人口理论为基础的思想流派,认为人口增长受资源约束,必须通过"预防性检查"或"积极性检查"来控制</td>
+</tr>
+<tr>
+<td><strong>预防性检查(Preventive Check)</strong></td>
+<td>马尔萨斯理论中通过延迟婚姻或节欲来限制人口增长的手段</td>
+</tr>
+<tr>
+<td><strong>积极性检查(Positive Check)</strong></td>
+<td>马尔萨斯理论中通过死亡(饥荒、战争、疾病)来限制人口增长的手段</td>
+</tr>
+<tr>
+<td><strong>人口转变(Demographic Transition)</strong></td>
+<td>从高出生率、高死亡率向低出生率、低死亡率转变的历史过程</td>
+</tr>
+<tr>
+<td><strong>杀婴(Infanticide)</strong></td>
+<td>杀害婴儿的行为,在中国历史上特别是溺婴(尤其是女婴)较为普遍</td>
+</tr>
+<tr>
+<td><strong>性别比(Sex Ratio)</strong></td>
+<td>男性与女性人口的比例,通常以每100名女性对应的男性数量表示</td>
+</tr>
+<tr>
+<td><strong>内生约束(Endogenous Restraints)</strong></td>
+<td>来自系统内部的约束机制,如社会规范、制度安排等</td>
+</tr>
+<tr>
+<td><strong>集体主义(Collectivism)</strong></td>
+<td>强调集体利益优先于个人利益的社会价值取向</td>
+</tr>
+<tr>
+<td><strong>个人主义(Individualism)</strong></td>
+<td>强调个人权利和利益优先的社会价值取向</td>
+</tr>
+<tr>
+<td><strong>溺婴(Infanticide by drowning)</strong></td>
+<td>将婴儿放入水中溺死的杀婴方式,在中国历史上有文字记载</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="附录中国人口历史的关键时间线">附录:中国人口历史的关键时间线</h2>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>事件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1700年</td>
+<td>中国人口约1.6亿</td>
+</tr>
+<tr>
+<td>1792年</td>
+<td>辽宁人口档案开始详细记录</td>
+</tr>
+<tr>
+<td>1800年</td>
+<td>中国人口达3.5亿</td>
+</tr>
+<tr>
+<td>1826年</td>
+<td>Malthus&lt;人口原理&gt;最终版出版</td>
+</tr>
+<tr>
+<td>1840年</td>
+<td>清朝结束(1912),人口档案达到高峰</td>
+</tr>
+<tr>
+<td>1950年</td>
+<td>中华人民共和国成立,人口约6亿</td>
+</tr>
+<tr>
+<td>1979年</td>
+<td>独生子女政策开始实施</td>
+</tr>
+<tr>
+<td>2000年</td>
+<td>中国人口超过12亿</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="参考信息">参考信息</h2>
+<ul>
+<li><strong>原书引用格式</strong>: Lee, James Z., and Wang Feng. 2001.
+<em>One Quarter of Humanity: Malthusian Mythology and Chinese Realities,
+1700-2000</em>. Cambridge: Harvard University Press.</li>
+<li><strong>中文译本</strong>:
+&lt;四分之一的人类:马尔萨斯神话与中国现实&gt;</li>
+<li><strong>学术领域</strong>: 比较历史人口学、经济史、Chinese
+Studies</li>
+</ul>
+]]></content>
+      <categories>
+        <category>历史</category>
+        <category>人口</category>
+      </categories>
+      <tags>
+        <tag>读书笔记</tag>
+        <tag>人口史</tag>
+        <tag>比较历史学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
+    <url>/posts/32262/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
+<h2 id="研究问题"><strong>1. 研究问题</strong></h2>
+<p>本文以江苏省12个地级市"河长制"政策转移案例(2006 —
+2016)为研究对象,在识别政策转移案例中"复制"和"再生产"两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对"河长制"转移程度的影响.研究发现"河长制"政策转移中的"政策再生产"的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局.通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产.</p>
+<p>&nbsp;</p>
+<span id="more"></span>
+<h2 id="问题的提出"><strong>2. 问题的提出</strong></h2>
+<p><strong>2.1 政策转移的必要性</strong></p>
+<p>现实状况:政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有"后发优势"的意味、地区间的合作与竞争</p>
+<p>转移情形:政策转移并不意味着全盘复制,可分为"复制"和"再生产"两种形式</p>
+<p>核心问题:什么因素能够促成政策"再生产",政策"再生产"又体现出那些维度特征</p>
+<p><strong>2.2 河长制的背景介绍</strong></p>
+<p>河湖治理是跨界特性最典型的领域之一,涉及上下游、左右岸、不同行政区域和行业,呈现出高度的复杂性.河长制最早发轫于太湖蓝藻危机,2016年之前是一项地方政策,经政策扩散至多地.</p>
+<p>现实调查显示河长制在江苏省内的扩散过程中呈现出"复制"和"再生产"的典型差异.</p>
+<p>&nbsp;</p>
+<h2 id="研究思路和方法"><strong>3. 研究思路和方法</strong></h2>
+<p><strong>3.1 QCA</strong></p>
+<p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles
+Ragin)于<code>1987</code>年提出,适用于案例数量大于10小于60的研究.</p>
+<p>其使用布尔代数和集合论的思想来进行中小数量的跨案例比较,从而处理多个原因和一个结果之间的因果关系.</p>
+<p><strong>3.2 转移程度的刻画</strong></p>
+<p>道洛维茨和马什最早借鉴rose(1993)的连续统来划分政策转移程度:复制、模仿、混合、启发.</p>
+<p>本文简单划分为:"复制"和"再生产"</p>
+<p><strong>3.3 解释变量的选择</strong></p>
+<p>行政压力、资源禀赋、政策需求、外部力量</p>
+<p>&nbsp;</p>
+<h2 id="结论"><strong>4. 结论</strong></h2>
+<p>政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素.</p>
+]]></content>
+      <categories>
+        <category>公共管理</category>
+        <category>政策转移</category>
+      </categories>
+      <tags>
+        <tag>文献阅读</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>文献阅读# the Effect of Microinsurance on Economic Activities: Evidence From a Randomized Field Experiment</title>
+    <url>/posts/51245/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
+<p><strong>需要提前了解的生猪养殖知识背景</strong></p>
+<ul>
+<li>市场上常见的肉猪基本均为经过绝育的猪.一般而言,养殖户会在猪仔1个月大小的时候进行绝育,对公猪进行阉割,对母猪则切除卵巢.这种做法能够增加肉猪的成长速度,减少猪发情带来的成本,并减小猪肉的膻腥味、提升口感.</li>
+<li>如果养殖户存养未绝育的种猪或母猪,其用途主要为繁育猪仔.</li>
+<li>对于农村的小型散养户而言,每个村庄一般会有一个村兽医、或养殖技术联络员为其提供"猪的绝育"服务,村兽医、或养殖技术联络员基本
+对应本文中的"Animal Husbandry Workers (AHW)".</li>
+</ul>
+<p>&nbsp; &nbsp; &nbsp;</p>
+<h2 id="研究问题"><strong>1. 研究问题</strong></h2>
+<p>本文旨在对"小额保险"("普惠型保险")对农户农业生产决策的作用进行因果识别.</p>
+<p>具体而言,作者以"母猪保险"这一险种为例,以贵州省毕节市金沙县27个乡镇的480个村为实验场域,采用田野实验的方法,在中国人民财产保险股份有限公司(PCC)所推出的"母猪保险"产品基础上,结合金沙县"保险公司产推--&gt;畜牧局地推--&gt;养殖技术联络员村推"的保险推广模式,为村养殖技术联络员(AHW)随机分配"绩效激励",进而设置了村级层面的处理组和控制组,基于"组别"设置了一个村级层面的外生变量,对"母猪保险"村庄覆盖差异与后期"母猪存栏量"之间的因果关系进行因果识别.</p>
+<p>&nbsp;</p>
+<span id="more"></span>
+<h2 id="研究内容"><strong>2. 研究内容</strong></h2>
+<p><strong>2.1
+设计田野实验并获得具有外生性的村庄"母猪保险"覆盖指标</strong></p>
+<p>具体包含实验可行性分析、随机干预策略选择以及潜在作用机制及威胁分析三个部分,详见下图</p>
+<p><img data-src="/paper_source/1.png"></p>
+<p><strong>2.2
+结合可获数据识别村庄"母猪保险"覆盖指标与"母猪存栏决策"之间的因果关系,并对识别效果进行有效性检验</strong></p>
+<p>具体包含数据整合、特征性事实提炼、实证分析以及实验有效性分析四个部分,详见下图</p>
+<p><img data-src="/paper_source/2.png"></p>
+<p><strong>2.3 因果关系背后的作用机制、长期特征、溢出效应 </strong></p>
+<p>具体包含作用机制检验、长期效应及溢出效应分析,详见下图</p>
+<p><img data-src="/paper_source/3.png"></p>
+<p>&nbsp;</p>
+<h2 id="研究思路"><strong>3. 研究思路</strong></h2>
+<p>文章研究思路如下图所示</p>
+<p><img data-src="/paper_source/Diagram1.png"></p>
+<p>&nbsp;</p>
+<h2 id="研究方法"><strong>4. 研究方法</strong></h2>
+<p><strong>4.1
+田野实验法:</strong>文章采用田野实验的方法产生了一个外生的随机干预效果,即养殖技术联络员(AHW)"绩效激励"差异引致的"母猪保险"村庄覆盖差异.</p>
+<p><strong>4.2
+统计分析与计量经济模型方法:</strong>文章进一步整合了地方畜牧局统计数据、中国农业普查数据,并以衡量"绩效激励"差异的变量LIG与HIG为工具变量,识别了村庄"母猪保险"覆盖指标与后期"母猪存栏量"之间的因果关系.</p>
+<p>&nbsp;</p>
+<h2 id="评述以及改进建议"><strong>5. 评述以及改进建议</strong></h2>
+<p><strong>5.1 评述</strong></p>
+<p><strong>5.1.1</strong>
+文章采用田野实验的方法,结合金沙县"保险公司产推--&gt;畜牧局地推--&gt;养殖技术联络员村推"保险推广模式,以及该地村庄间交通不便等现实特征,通过为村养殖技术联络员(AHW)随机分配"绩效激励"精妙地设置了外生随机干预,并以其作为投保"母猪保险"头数的工具变量,整合多方数据,识别了投保"母猪保险"与后期"母猪存栏量"之间的因果关系,并进行了有效性分析,并利用2008年南方雪灾造成母猪死亡数进行了机制分析.最终验证了"小额保险"对农户农业生产决策的作用.</p>
+<p><strong>5.1.2</strong>
+一方面,随机分配"绩效激励"的设置十分巧妙,其外生性以及与村庄总体投保数的相关性都可以得到充分的事实支撑.此外,作者以2008年南方雪灾造成的母猪死亡数作为"村庄发生'母猪保险'赔付"的情景代理变量,验证了信任机制的重要性.</p>
+<p><strong>5.1.3</strong>
+另一方面,随机分配"绩效激励"的设置也可能面临异质性问题,村养殖技术联络员(AHW)个体特征的不同可能会影响其推广保险的绩效;此外,村庄的某些特征的差异也可能引起异质性,比如,人均受教育程度高的村庄可能更容易理解"母猪保险"的保险机制,进而体现出更高的投保率;最后,利用2008年南方雪灾造成的母猪死亡数进行机制分析的做法有些许勉强,或许可以直接从PCC获取相关赔付数据进行机制分析.</p>
+<p><strong>5.2 改进建议</strong></p>
+<p><strong>5.2.1</strong>
+文章声明测度了村养殖技术联络员(AHW)的人口统计学变量,可依据这些变量进行异质性分析,因为AHW个人的某些特质,比如责任感、受教育程度可能会影响其推广保险的努力程度抑或有效程度.因此,可设置AWH特征变量与低"绩效激励"组(LIG)、高"绩效激励"组(HIG)的交互项,考察由AHW特征引起的"母猪保险"对"母猪存栏决策"的作用异质性.</p>
+<p><strong>5.2.2</strong>
+文章获得了村级层面的特征变量,却仅在所有模型中加入了乡镇(town)层面的哑变量,在模型中控制村庄特征变量比如村庄农户数、人均受教育程度等可能更有意义.再者,村庄的某些特征的差异也可能引起异质性,可设置村庄特征变量与低"绩效激励"组(LIG)、高"绩效激励"组(HIG)的交互项,考察由村庄特征引起的"母猪保险"对"母猪存栏决策"的作用异质性.</p>
+<p><strong>5.2.3</strong>
+文章认为2008年雪灾造成的母猪死亡数较多的村庄,可能发生了实际的"母猪保险"赔付,进而为村民提供了一种情景互动,提高了村民对保险机构的信任,这一机制仅为猜测.作者既然声明可从PCC获得保单,那么赔付数据也应该能够获取,应该基于真实的赔付数据进行机制检验.</p>
+]]></content>
+      <categories>
+        <category>实验经济学</category>
+        <category>保险</category>
+      </categories>
+      <tags>
+        <tag>文献阅读</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>R数据科学_ggplot2笔记(1)</title>
     <url>/posts/29862/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="一个说明">一个说明</h2>
@@ -2351,42 +2351,6 @@ World!"开始的,对于<strong>shell</strong>而言:</p>
       </tags>
   </entry>
   <entry>
-    <title>画一幅我农所在地的道路图</title>
-    <url>/posts/42027/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;">
-<center>
-上图即为最终效果
-</center>
-<h2 id="一些必备的工具">一些必备的工具</h2>
-<p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="绘制路网地图">绘制路网地图</h2>
-<p>导入以下R 包:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>读入杨陵区的数据:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>获取杨陵区的经纬度范围:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
-<p>提取杨陵区的街道路线:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>把数据保存为<strong>rds</strong>:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>然后绘图:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>绘图</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>字体和公式的Display</title>
     <url>/posts/15167/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
@@ -2423,6 +2387,42 @@ t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)
       </categories>
       <tags>
         <tag>blog_test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>画一幅我农所在地的道路图</title>
+    <url>/posts/42027/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;">
+<center>
+上图即为最终效果
+</center>
+<h2 id="一些必备的工具">一些必备的工具</h2>
+<p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="绘制路网地图">绘制路网地图</h2>
+<p>导入以下R 包:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>读入杨陵区的数据:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>获取杨陵区的经纬度范围:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
+<p>提取杨陵区的街道路线:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>把数据保存为<strong>rds</strong>:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>然后绘图:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>绘图</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
       </tags>
   </entry>
 </search>
