@@ -67,6 +67,45 @@ ATT\)</span>一定会比较大,基准模型会存在低估偏误</li>
       </tags>
   </entry>
   <entry>
+    <title>如何在双变量Probit中使用工具变量法IV估计</title>
+    <url>/posts/60676/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<h1 id="ml两步法">ML两步法</h1>
+<p>可以采用二步法进行ML估计,以下将会以一段样例代码展示:</p>
+<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">webuse</span> school, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">set</span> seed 1</span><br><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobit</span><br><span class="line"><span class="keyword">program</span> mybiprobit</span><br><span class="line"><span class="keyword">args</span> lnf m1   m2  athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"><span class="comment">**Here I am creating an artificial IV</span></span><br><span class="line"><span class="keyword">gen</span> z=logptax-rnormal()</span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobit (private:private=logptax loginc years)   (vote:vote=logptax loginc years)   /athrho (zb1:logptax=loginc  years z) /lns1</span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> maximize,</span><br><span class="line"><span class="keyword">matrix</span> b=<span class="built_in">e</span>(b)</span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobitiv</span><br><span class="line"><span class="keyword">program</span> mybiprobitiv</span><br><span class="line"><span class="keyword">args</span> lnf mm1 g1  mm2  g2 athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">tempvar</span> m1 m2</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m1'</span>=<span class="symbol">`mm1'</span>+<span class="symbol">`g1'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m2'</span>=<span class="symbol">`mm2'</span>+<span class="symbol">`g2'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobitiv (private:private=logptax loginc years) (g1:)  (vote:vote=logptax loginc years)  (g2:) /athrho (zb1:logptax=loginc  years z  ) /lns1, init(b)</span><br><span class="line"><span class="keyword">ml</span> maximize</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>计量</category>
+        <category>内生性问题</category>
+      </categories>
+      <tags>
+        <tag>stata</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>致Berry</title>
+    <url>/posts/51392/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<center>
+<strong>Love You.</strong>
+</center>
+<center>
+<strong>Berry!</strong>
+</center>
+<center>
+<img data-src="/image/berry.jpg" width="66%" height="66%" title="妳" alt="妳">
+</center>
+]]></content>
+      <categories>
+        <category>领导</category>
+      </categories>
+      <tags>
+        <tag>妳</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>走出非洲假说、人类遗传多样性与比较经济发展 _ Ashraf &amp; Galor (2013) 笔记</title>
     <url>/posts/ashraf2013/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>本文是 Ashraf &amp; Galor 2013
@@ -210,45 +249,6 @@ Development. <em>American Economic Review</em>, 103(1), 1-46.</li>
         <tag>论文笔记</tag>
         <tag>经济史</tag>
         <tag>发展经济学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何在双变量Probit中使用工具变量法IV估计</title>
-    <url>/posts/60676/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<h1 id="ml两步法">ML两步法</h1>
-<p>可以采用二步法进行ML估计,以下将会以一段样例代码展示:</p>
-<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">webuse</span> school, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">set</span> seed 1</span><br><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobit</span><br><span class="line"><span class="keyword">program</span> mybiprobit</span><br><span class="line"><span class="keyword">args</span> lnf m1   m2  athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"><span class="comment">**Here I am creating an artificial IV</span></span><br><span class="line"><span class="keyword">gen</span> z=logptax-rnormal()</span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobit (private:private=logptax loginc years)   (vote:vote=logptax loginc years)   /athrho (zb1:logptax=loginc  years z) /lns1</span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> maximize,</span><br><span class="line"><span class="keyword">matrix</span> b=<span class="built_in">e</span>(b)</span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobitiv</span><br><span class="line"><span class="keyword">program</span> mybiprobitiv</span><br><span class="line"><span class="keyword">args</span> lnf mm1 g1  mm2  g2 athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">tempvar</span> m1 m2</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m1'</span>=<span class="symbol">`mm1'</span>+<span class="symbol">`g1'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m2'</span>=<span class="symbol">`mm2'</span>+<span class="symbol">`g2'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobitiv (private:private=logptax loginc years) (g1:)  (vote:vote=logptax loginc years)  (g2:) /athrho (zb1:logptax=loginc  years z  ) /lns1, init(b)</span><br><span class="line"><span class="keyword">ml</span> maximize</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>计量</category>
-        <category>内生性问题</category>
-      </categories>
-      <tags>
-        <tag>stata</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>致Berry</title>
-    <url>/posts/51392/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<center>
-<strong>Love You.</strong>
-</center>
-<center>
-<strong>Berry!</strong>
-</center>
-<center>
-<img data-src="/image/berry.jpg" width="66%" height="66%" title="妳" alt="妳">
-</center>
-]]></content>
-      <categories>
-        <category>领导</category>
-      </categories>
-      <tags>
-        <tag>妳</tag>
       </tags>
   </entry>
   <entry>
