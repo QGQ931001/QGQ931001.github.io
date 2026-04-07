@@ -252,56 +252,6 @@ Development. <em>American Economic Review</em>, 103(1), 1-46.</li>
       </tags>
   </entry>
   <entry>
-    <title>大城市人口增长速度🦚</title>
-    <url>/posts/15523/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
-<center>
-上图即为最终效果
-</center>
-<h2 id="下载数据">下载数据</h2>
-<p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录.
-</p><figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<h2 id="加载r包">加载R包</h2>
-<p>需要的R包如下所示.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
-<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<ol type="1">
-<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
-<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon,
-Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
-<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
-<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
-</ol>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
-<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.
-使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="绘图">绘图</h2>
-<p>代码如下,图见上文.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>绘图</category>
-        <category>map&amp;sf</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>A Practical Guide to Shift-Share Instruments 论文笔记 — Borusyak, Hull &amp; Jaravel</title>
     <url>/posts/boru2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -725,6 +675,56 @@ Instruments论文的深度笔记,由Claude AI辅助生成.</em></p>
         <tag>论文笔记</tag>
         <tag>计量经济学</tag>
         <tag>工具变量</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大城市人口增长速度🦚</title>
+    <url>/posts/15523/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
+<center>
+上图即为最终效果
+</center>
+<h2 id="下载数据">下载数据</h2>
+<p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录.
+</p><figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="加载r包">加载R包</h2>
+<p>需要的R包如下所示.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
+<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<ol type="1">
+<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
+<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon,
+Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
+<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
+<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
+</ol>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
+<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.
+使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="绘图">绘图</h2>
+<p>代码如下,图见上文.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>绘图</category>
+        <category>map&amp;sf</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
       </tags>
   </entry>
   <entry>
@@ -3776,6 +3776,45 @@ World!"开始的,对于<strong>shell</strong>而言:</p>
       </tags>
   </entry>
   <entry>
+    <title>字体和公式的Display</title>
+    <url>/posts/15167/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<font face="Times New Roman">
+</font><p style="text-align:justify"><font face="Times New Roman">
+<b>"Evaluating the employment impact of a mandatory job search
+program"</b></font> <br> <br> <font face="Times New Roman">
+</font></p><p style="text-align:justify"><font face="Times New Roman">
+</font></p><p><font face="Times New Roman"><b>What treatment do the authors evaluate?</b></font> <br></p>
+<span id="more"></span>
+<font face="Tex Gyre Pagella">
+<p style="text-align:justify">
+</p><p><b>Answer: </b> In the parametric methods, the common trend
+assumption is:</p>
+<p><span class="math display">\[\begin{array}{l}
+f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
+t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
+t=0\right)\right] \\
+=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
+t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
+t=0\right)\right]
+\end{array}\]</span> In the non-parametric methods, the common trend
+assumption is:</p>
+<p><span class="math display">\[\begin{array}{l}
+E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i
+t}^{0} | P_{E X}, P_{t X}, N D=1, t=0\right) \\
+=E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=1\right)-E\left(Y_{i
+t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)
+\end{array}\]</span></p>
+</font><p><font face="Tex Gyre Pagella"></font></p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>blog_test</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2014到2021年:淘宝村分布散点图😲</title>
     <url>/posts/18898/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示"><strong>效果展示</strong></h2>
@@ -3833,45 +3872,6 @@ World!"开始的,对于<strong>shell</strong>而言:</p>
       </categories>
       <tags>
         <tag>R</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>字体和公式的Display</title>
-    <url>/posts/15167/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<font face="Times New Roman">
-</font><p style="text-align:justify"><font face="Times New Roman">
-<b>"Evaluating the employment impact of a mandatory job search
-program"</b></font> <br> <br> <font face="Times New Roman">
-</font></p><p style="text-align:justify"><font face="Times New Roman">
-</font></p><p><font face="Times New Roman"><b>What treatment do the authors evaluate?</b></font> <br></p>
-<span id="more"></span>
-<font face="Tex Gyre Pagella">
-<p style="text-align:justify">
-</p><p><b>Answer: </b> In the parametric methods, the common trend
-assumption is:</p>
-<p><span class="math display">\[\begin{array}{l}
-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
-t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
-t=0\right)\right] \\
-=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
-t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
-t=0\right)\right]
-\end{array}\]</span> In the non-parametric methods, the common trend
-assumption is:</p>
-<p><span class="math display">\[\begin{array}{l}
-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i
-t}^{0} | P_{E X}, P_{t X}, N D=1, t=0\right) \\
-=E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=1\right)-E\left(Y_{i
-t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)
-\end{array}\]</span></p>
-</font><p><font face="Tex Gyre Pagella"></font></p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>blog_test</tag>
       </tags>
   </entry>
 </search>
