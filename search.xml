@@ -213,6 +213,24 @@ Development. <em>American Economic Review</em>, 103(1), 1-46.</li>
       </tags>
   </entry>
   <entry>
+    <title>如何在双变量Probit中使用工具变量法IV估计</title>
+    <url>/posts/60676/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<h1 id="ml两步法">ML两步法</h1>
+<p>可以采用二步法进行ML估计,以下将会以一段样例代码展示:</p>
+<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">webuse</span> school, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">set</span> seed 1</span><br><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobit</span><br><span class="line"><span class="keyword">program</span> mybiprobit</span><br><span class="line"><span class="keyword">args</span> lnf m1   m2  athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"><span class="comment">**Here I am creating an artificial IV</span></span><br><span class="line"><span class="keyword">gen</span> z=logptax-rnormal()</span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobit (private:private=logptax loginc years)   (vote:vote=logptax loginc years)   /athrho (zb1:logptax=loginc  years z) /lns1</span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> maximize,</span><br><span class="line"><span class="keyword">matrix</span> b=<span class="built_in">e</span>(b)</span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobitiv</span><br><span class="line"><span class="keyword">program</span> mybiprobitiv</span><br><span class="line"><span class="keyword">args</span> lnf mm1 g1  mm2  g2 athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">tempvar</span> m1 m2</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m1'</span>=<span class="symbol">`mm1'</span>+<span class="symbol">`g1'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m2'</span>=<span class="symbol">`mm2'</span>+<span class="symbol">`g2'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobitiv (private:private=logptax loginc years) (g1:)  (vote:vote=logptax loginc years)  (g2:) /athrho (zb1:logptax=loginc  years z  ) /lns1, init(b)</span><br><span class="line"><span class="keyword">ml</span> maximize</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>计量</category>
+        <category>内生性问题</category>
+      </categories>
+      <tags>
+        <tag>stata</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>致Berry</title>
     <url>/posts/51392/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
@@ -231,24 +249,6 @@ Development. <em>American Economic Review</em>, 103(1), 1-46.</li>
       </categories>
       <tags>
         <tag>妳</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何在双变量Probit中使用工具变量法IV估计</title>
-    <url>/posts/60676/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<h1 id="ml两步法">ML两步法</h1>
-<p>可以采用二步法进行ML估计,以下将会以一段样例代码展示:</p>
-<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">webuse</span> school, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">set</span> seed 1</span><br><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobit</span><br><span class="line"><span class="keyword">program</span> mybiprobit</span><br><span class="line"><span class="keyword">args</span> lnf m1   m2  athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"><span class="comment">**Here I am creating an artificial IV</span></span><br><span class="line"><span class="keyword">gen</span> z=logptax-rnormal()</span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobit (private:private=logptax loginc years)   (vote:vote=logptax loginc years)   /athrho (zb1:logptax=loginc  years z) /lns1</span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> maximize,</span><br><span class="line"><span class="keyword">matrix</span> b=<span class="built_in">e</span>(b)</span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobitiv</span><br><span class="line"><span class="keyword">program</span> mybiprobitiv</span><br><span class="line"><span class="keyword">args</span> lnf mm1 g1  mm2  g2 athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">tempvar</span> m1 m2</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m1'</span>=<span class="symbol">`mm1'</span>+<span class="symbol">`g1'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m2'</span>=<span class="symbol">`mm2'</span>+<span class="symbol">`g2'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobitiv (private:private=logptax loginc years) (g1:)  (vote:vote=logptax loginc years)  (g2:) /athrho (zb1:logptax=loginc  years z  ) /lns1, init(b)</span><br><span class="line"><span class="keyword">ml</span> maximize</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>计量</category>
-        <category>内生性问题</category>
-      </categories>
-      <tags>
-        <tag>stata</tag>
       </tags>
   </entry>
   <entry>
@@ -302,429 +302,323 @@ Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</
       </tags>
   </entry>
   <entry>
-    <title>A Practical Guide to Shift-Share Instruments 论文笔记 — Borusyak, Hull &amp; Jaravel</title>
-    <url>/posts/boru2025/</url>
+    <title>&lt;玉米与人口&gt;深度阅读笔记 — Chen &amp; Kung</title>
+    <url>/posts/chen2016/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
 <ul>
-<li><strong>标题</strong>: A Practical Guide to Shift-Share
-Instruments</li>
-<li><strong>作者</strong>: Kirill Borusyak(Kirill Borusyak is Assistant
-Professor of Agricultural and Resource Economics, University of
-California Berkeley), Peter Hull(Brown University), Xavier
-Jaravel(London School of Economics)</li>
-<li><strong>类型</strong>: 论文笔记 / 计量经济学 / 工具变量</li>
-<li><strong>出版年份</strong>: 2025</li>
-<li><strong>出版机构/期刊</strong>: Journal of Economic Perspectives,
-Volume 39, Issue 1, Pages 181-204</li>
-<li><strong>DOI</strong>: 10.1257/jep.20231370</li>
-<li><strong>难度评估</strong>: 中 - 需要经济学、计量经济学基础</li>
+<li><strong>标题</strong>: Of maize and men: the effect of a New World
+crop on population and economic growth in China</li>
+<li><strong>作者</strong>: Shuo Chen, James Kai-sing Kung</li>
+<li><strong>类型</strong>: 论文笔记 / 经济史 / 人口史 / 计量史学</li>
+<li><strong>出版年份</strong>: 2016</li>
+<li><strong>出版机构/期刊</strong>: Journal of Economic Growth</li>
+<li><strong>DOI</strong>: 10.1007/s10887-016-9125-8</li>
+<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量史学基础
+<span id="more"></span> ---</li>
 </ul>
-<span id="more"></span>
-<h2 id="引言背景和意义">1. 引言(背景和意义)</h2>
+<h2 id="引言马尔萨斯陷阱与中国">引言:马尔萨斯陷阱与中国</h2>
+<p>本研究聚焦于17世纪至20世纪初的中国,探讨在新大陆作物_特别是玉米_引入后,中国是否仍然深陷"马尔萨斯陷阱",以及这种新的农业技术对人口和经济增长产生了何种影响.</p>
 <h3 id="领域基础知识">领域基础知识</h3>
-<p>Shift-Share
-Instruments(转移份额工具变量)是一类在经济学实证研究中广泛使用的计量经济学工具,主要用于解决内生性问题.这类工具的核心结构是:将一组共同的"转移(shifts)"按照不同单位(units)的"份额(shares)"进行加权平均,从而构建一个工具变量.在贸易经济学、劳动经济学、区域经济学、公共经济学、金融学等领域都有大量应用.</p>
-<p>转移份额工具变量的基本思想可以追溯到Freeman(1975,
-1980)的工作,但近年来相关文献急剧增长.根据Goldsmith-Pinkham(2024)的统计,目前NBER工作论文中约八分之一的工具变量明确采用转移份额结构,还有更多隐含采用这一结构的工具.</p>
-<p>转移份额结构的核心公式为:</p>
-<p><span class="math display">\[{z_i = \sum_{k=1}^{K} s_{ik} \cdot
-g_k}\]</span></p>
-<p>其中: - <span class="math inline">\({z_i}\)</span> 是构建的工具变量 -
-<span class="math inline">\({s_{ik}}\)</span> 是单位 <span class="math inline">\({i}\)</span> 对转移 <span class="math inline">\({k}\)</span> 的暴露份额 - <span class="math inline">\({g_k}\)</span> 是一组对所有单位共同的转移</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p><strong>背景一:内生性问题的普遍性</strong></p>
-<p>许多经济研究关注的是不同单位如何以不同方式暴露于一组共同的冲击.例如,Autor等(2013)研究中国进口激增如何影响美国各地区的劳动力市场.他们用各地区在相关产业的就业份额加权其他高收入国家对中国的进口增长,构建了一个工具变量.这种做法背后的直觉是:美国从中国的进口可能受到美国特定的生产率和需求冲击的影响,因此存在内生性问题,需要工具变量来识别因果关系.</p>
-<p><strong>背景二:识别策略的双重来源</strong></p>
-<p>转移份额工具变量面临独特的挑战,因为它们利用两个不同的 variation
-来源:转移(shifts)和份额(shares).直觉上,人们可能认为转移是有帮助的,因为它们代表了系统中潜在的外生变化.然而,这些转移在与分析单位(例如地区劳动市场)不同的层面(例如产业)上变化.份额在不同单位之间变化,但通常是预先决定的(例如,就业份额是在前期测量的).因此,如何理解它们的外生性是一个重要问题.</p>
-<p><strong>背景三:文献的分歧与发展</strong></p>
-<p>最近的计量经济学文献显示了两种不同的识别路径: 1.
-Borusyak、Hull和Jaravel(2022)以及Adão等(2019)开发的路径,利用许多外生转移
-2. Goldsmith-Pinkham、Sorkin和Swift(2020)提出的路径,关注份额的外生性</p>
-<p>这两种方法在适当的估计量、进行有效推断的方法以及诊断检验方面有不同的实际含义.</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p>本文作者意识到,尽管转移份额工具变量的应用越来越广泛,但研究者往往对这类工具何时能成功解决内生性问题、何时可能失败缺乏清晰的认识.这是一个具有挑战性的问题,因为转移份额工具变量利用两个截然不同的
-variation 来源,而且这些来源各自的属性对识别的重要性并不明显.</p>
-<p>本文旨在为这一领域提供概念性的答案,并提供使用转移份额工具变量或评估他人使用此类工具的可信度的实际指导.作者希望通过简单的清单(checklists)形式,使研究者和读者能够更容易地理解和应用这些方法.</p>
-<h3 id="研究意义">研究意义</h3>
-<p><strong>理论意义</strong></p>
-<p>本文系统梳理了两条识别路径的核心逻辑,为理解转移份额工具变量的识别条件提供了清晰的概念框架.这有助于研究者理解:
-- 什么条件下转移份额工具变量是有效的 - 不同识别策略的假设有何不同 -
-如何评估现有研究的可信度</p>
-<p><strong>实践意义</strong></p>
-<p>本文提供了两个实用的清单,分别针对外生转移和外生份额的方法.这使得研究者可以在实际应用中有一个清晰的步骤指南,也使得论文审稿人和读者能够系统地评估研究设计的可信度.</p>
-<p><strong>教育意义</strong></p>
-<p>作为发表在Journal of Economic
-Perspectives上的论文,本文具有重要的教育价值.它帮助该领域的从业者(无论是研究者还是使用者)更好地理解这一广泛使用的工具.</p>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构(论文结构)</h2>
-<h3 id="论文的整体结构">论文的整体结构</h3>
-<p>本文共分为以下几个主要部分:</p>
-<p><strong>第一部分:引言与背景</strong> - 介绍转移份额工具变量的广泛应用
-- 阐述研究的问题意识 - 概述两种识别路径</p>
-<p><strong>第二部分:转移份额工具变量基础(Shift-Share Basics)</strong> -
-什么是转移份额工具变量及其来源 - 介绍Table 1,列举各领域应用实例 -
-形式化分析框架</p>
-<p><strong>第三部分:外生转移识别方法(Many Exogenous Shifts)</strong> -
-外生转移识别的核心逻辑 - 外生转移方法的实际检查清单 - 具体应用案例</p>
-<p><strong>第四部分:外生份额识别方法(Exogenous Shares)</strong> -
-外生份额识别的核心逻辑 - 外生份额方法的实际检查清单 - 具体应用案例</p>
-<p><strong>第五部分:结论(Conclusion)</strong> - 总结两种方法的核心见解 -
-讨论如何在不同方法间选择</p>
-<p><strong>附录部分</strong> - 附录A:关于转移份额工具变量的其他实际问题
-- 附录B:技术细节</p>
-<h3 id="各部分详细内容">各部分详细内容</h3>
-<p><strong>转移份额基础部分</strong>详细介绍了: -
-工具变量的标准形式:<span class="math inline">\({z_i = \sum_{k=1}^{K}
-s_{ik} \cdot g_k}\)</span> - 该结构如何应用于各种实证研究设计 -
-识别挑战的来源:两个不同的 variation 来源</p>
-<p><strong>外生转移方法部分</strong>提供了7步检查清单: 1.
-用转移层面的理想实验来激励转移份额策略 2.
-桥接受到的和理想的转移之间的差距 3. 包含"不完整份额"控制 4.
-将份额滞后到自然实验开始时 5. 报告转移的描述性统计 6. 对转移进行平衡检验
-7. 用正确的标准误产生主要估计并检查敏感性</p>
-<p><strong>外生份额方法部分</strong>提供了5步检查清单: 1.
-确定暴露份额是否适合作为工具变量 2. 选择必要的单位层面控制 3.
-表征哪些份额对估计最重要 4. 对单个份额进行平衡检验 5.
-检查对份额工具组合方式的敏感性</p>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文(逻辑梳理)</h2>
-<h3 id="背景与核心问题">3.1 背景与核心问题</h3>
-<h4 id="一个经典案例autor等2013的研究">3.1.1
-一个经典案例:Autor等(2013)的研究</h4>
-<p>为了帮助读者理解转移份额工具变量的逻辑,本文以Autor等(2013)关于"中国综合症"的研究为例进行说明.</p>
-<p><strong>研究问题</strong>:中国进口激增如何影响美国各地区的劳动力市场结果?</p>
-<p><strong>基本设定</strong>: - 分析单位:美国各地区(commuting zones) -
-结果变量 <span class="math inline">\({y_i}\)</span>:地区制造业就业增长 -
-处理变量 <span class="math inline">\({x_i}\)</span>:地区对中国进口的暴露程度</p>
-<p><strong>暴露程度的测量</strong>: - 定义 <span class="math inline">\({x_i = \sum_k s_{ik} \cdot g_k}\)</span> - 其中
-<span class="math inline">\({s_{ik}}\)</span> 是地区 <span class="math inline">\({i}\)</span> 在产业 <span class="math inline">\({k}\)</span> 的就业份额 - <span class="math inline">\({g_k}\)</span> 是产业 <span class="math inline">\({k}\)</span> 的美国从中国进口增长</p>
-<p><strong>内生性问题</strong>: -
-美国从中国的进口可能受到美国特定的生产率和需求冲击的影响 -
-因此,简单OLS估计可能存在偏误</p>
-<p><strong>工具变量的构建</strong>: -
-用其他国家(非美国)的中国进口增长作为工具变量 - <span class="math inline">\({z_i = \sum_k s_{ik} \cdot
-g_k^{non-US}}\)</span></p>
-<p>这一工具变量的结构是:地区就业份额(shift-share中的shares)乘以其他国家对中国的产业进口增长(shift-share中的shifts).</p>
-<h4 id="转移份额结构的形式化">3.1.2 转移份额结构的形式化</h4>
-<p>考虑以下形式模型:</p>
-<p><span class="math display">\[{y_i = \beta x_i + \gamma' w_i +
-\varepsilon_i}\]</span></p>
-<p>其中: - <span class="math inline">\({y_i}\)</span> 是结果变量 - <span class="math inline">\({x_i}\)</span> 是处理变量 - <span class="math inline">\({w_i}\)</span> 是控制变量向量 - <span class="math inline">\({\beta}\)</span>
-是我们关注的参数(假设在各单位间相同) - <span class="math inline">\({\varepsilon_i}\)</span>
-是误差项,包含了所有未观察到的结果决定因素</p>
-<p>标准解决方案是找到工具变量 <span class="math inline">\({z_i}\)</span>,满足: 1.
-工具变量与误差项不相关:<span class="math inline">\({Cov(z_i,
-\varepsilon_i) = 0}\)</span> 2. 工具变量与处理变量相关:<span class="math inline">\({Cov(z_i, x_i) \neq 0}\)</span></p>
-<p>转移份额工具变量的特殊结构在于:</p>
-<p><span class="math display">\[{z_i = \sum_{k=1}^{K} s_{ik} \cdot
-g_k}\]</span></p>
-<p>其中: - <span class="math inline">\({(g_1, ..., g_K)}\)</span>
-是一组对所有单位共同的转移 - <span class="math inline">\({(s_{i1}, ...,
-s_{iK})}\)</span> 是一组随单位变化的暴露份额</p>
-<h3 id="挑战识别问题的双重性">3.2 挑战:识别问题的双重性</h3>
-<p>转移份额工具变量面临独特的识别挑战,因为工具变量有两个截然不同的
-variation 来源:转移(shifts)和份额(shares).</p>
-<p><strong>份额(Shares)的特征</strong>: - 在不同单位间变化 -
-通常是预先决定的(pre-determined) - 例如:地区就业份额通常在前期测量</p>
-<p><strong>转移(Shifts)的特征</strong>: -
-通常在不同的层面变化(例如产业层面) - 代表了对系统的潜在外生冲击 -
-例如:产业层面的进口增长</p>
-<p><strong>核心问题</strong>:如何论证 <span class="math inline">\({z_i}\)</span> 是外生的(即 <span class="math inline">\({Cov(z_i, \varepsilon_i) =
-0}\)</span>)?研究者需要解释转移和份额的什么属性使得工具变量与误差项不相关.</p>
-<h3 id="方法一外生转移识别many-exogenous-shifts">3.3
-方法一:外生转移识别(Many Exogenous Shifts)</h3>
-<h4 id="核心逻辑">3.3.1 核心逻辑</h4>
-<p>外生转移方法的基本策略是确保转移 <span class="math inline">\({g_k}\)</span>
-是外生的.如果转移是外生的,那么即使份额是内生的(不同份额的单位可能系统性地有不同的未观察因素),转移份额工具变量也可能是有效的.</p>
-<p><strong>关键洞察</strong>:如果转移是"如同随机分配"的,那么份额加权平均后的转移变量本身也是"如同随机"的.即使份额是内生的,只要转移是外生的且数量足够多(K足够大),工具变量就是有效的.</p>
-<p><strong>直觉理解</strong>:考虑一个理想化的实验_对各产业随机分配补贴.如果补贴
-<span class="math inline">\({g_k}\)</span>
-是随机分配的,那么各地区得到的工具变量 <span class="math inline">\({z_i =
-\sum_k s_{ik} \cdot g_k}\)</span>
-也是如同随机的.即使某些地区专门从事高技能产业(这些地区的就业份额 <span class="math inline">\({s_{ik}}\)</span>
-可能与某些未观察到的冲击相关),但只要补贴在各产业间是随机分配的,专门从事高技能产业的地区平均而言会有典型的工具变量值.</p>
-<h4 id="技术条件">3.3.2 技术条件</h4>
-<p>外生转移方法的核心条件是:<span class="math inline">\({g_k}\)</span>
-与以 <span class="math inline">\({s_{ik}}\)</span> 为权重对各单位的
-<span class="math inline">\({\varepsilon_i}\)</span> 的平均值不相关.</p>
-<p>形式化表达:对于所有 <span class="math inline">\({k}\)</span>,要求
-<span class="math inline">\({Cov(g_k, \sum_i s_{ik} \varepsilon_i) =
-0}\)</span>.</p>
-<p>这一条件比简单的 <span class="math inline">\({Cov(z_i, \varepsilon_i)
-= 0}\)</span> 更强但更容易验证.它意味着: - 转移不能系统性地在那些份额
-<span class="math inline">\({s_{ik}}\)</span> 集中在高/低 <span class="math inline">\({\varepsilon_i}\)</span> 单位的产业中更高或更低 -
-如果 <span class="math inline">\({s_{ik}}\)</span> 与 <span class="math inline">\({\varepsilon_i}\)</span> 相关,我们需要确保 <span class="math inline">\({g_k}\)</span> 不包含与这种相关性对应的
-variation</p>
-<h4 id="外生转移方法的要求">3.3.3 外生转移方法的要求</h4>
-<p><strong>要求一:需要许多转移</strong></p>
-<p>外生转移方法要求有足够多的转移 <span class="math inline">\({g_1, ...,
-g_K}\)</span>.否则,如果 <span class="math inline">\({K}\)</span>
-是一个小的数字,即使 <span class="math inline">\({g_k}\)</span>
-是真正随机的,它们也可能与未观察变量相关.这可以看作是"大数定律不适用"的情况_无论观察到多少单位,实际上只有少数几个外生比较.</p>
-<p>注意:<span class="math inline">\({g_k}\)</span>
-是否取许多不同的值并不重要.例如,对许多产业中的某些分配10%的补贴(其他为0%)应被视为有许多转移.</p>
-<p><strong>要求二:份额通常需要加总为一</strong></p>
-<p>份额需要加总为一(<span class="math inline">\({\sum_k s_{ik} =
-1}\)</span>),这样转移份额工具变量才有"份额加权平均"的解释.否则,即使转移是完全随机抽取的,工具变量也可能系统性地在不同单位间变化.</p>
-<h4 id="外生转移方法的实际检查清单">3.3.4
-外生转移方法的实际检查清单</h4>
-<p><strong>步骤1:用转移层面的理想实验来激励转移份额策略</strong></p>
-<p>任何令人信服的工具变量设计都始于思考要解决什么内生性偏误:即具体哪些未观察变量(或混淆因素)可能偏倚简单的OLS估计.</p>
-<p>以劳动供给设定为例:假设我们试图估计局部劳动市场工资增长 <span class="math inline">\({y_i}\)</span> 与就业增长 <span class="math inline">\({x_i}\)</span> 之间的关系.误差项 <span class="math inline">\({\varepsilon_i}\)</span>
-将包含未观察到的局部劳动供给冲击(例如,外国工人向各地区的移民).均衡就业增长来自劳动供给和劳动需求冲击的共同作用,因此通常与
-<span class="math inline">\({\varepsilon_i}\)</span>
-相关,产生OLS估计的偏误.</p>
-<p>描述一个假设的转移层面实验会有所帮助:想象在各产业间随机分配新的联邦补贴.获得更大补贴的产业可能扩大生产,从而增加对当地工人的需求,提高当地就业
-<span class="math inline">\({x_i}\)</span>.由于随机分配,这些补贴转移与当地劳动供给条件无关.</p>
-<p><strong>步骤2:桥接受到的和理想的转移之间的差距</strong></p>
-<p>下一步是描述实际用于实证分析的转移份额设计如何近似理想化实验.这可能涉及:
-- 指定一些控制变量 - 描述观察到的转移如何代理理想转移</p>
-<p>有两种类型的控制变量:</p>
-<p><em>转移层面控制</em>:考虑转移层面可观测变量 <span class="math inline">\({q_k}\)</span>,它既与 <span class="math inline">\({g_k}\)</span>
-相关又能直接影响感兴趣的结果.例如,担心补贴在技能密集型产业系统性地更大,而这些产业又与来自技能充裕国家的移民冲击相关.在这种情况下,需要在转移份额回归中控制技能密集型产业的指示变量.控制方式是包含转移层面控制变量的份额加权聚合
-<span class="math inline">\({\sum_k s_{ik} q_k}\)</span>.</p>
-<p><em>单位层面控制</em>:从未观察到的混淆因素角度考虑,如果某些地区(如美国"锈带"地区)的劳动市场可能经历不同的未观察到的当地劳动供给冲击,而集中在这些地区的产业可能看到系统性地不同补贴.在这种情况下,控制一个锈带指示变量可能是解决方案.</p>
-<p><strong>步骤3:包含"不完整份额"控制</strong></p>
-<p>在暴露份额 <span class="math inline">\({s_{ik}}\)</span>
-不加总为一的情况下_Borusyak等(2022)称之为"不完整份额"情况_必须包含一个特殊控制:份额之和
-<span class="math inline">\({S_i = \sum_k s_{ik}}\)</span>.</p>
-<p>直觉理解:当份额是"完整的"(<span class="math inline">\({S_i =
-1}\)</span>)时,转移份额工具变量是转移的加权平均值,因此如果转移来自纯彩票,工具变量也像彩票结果一样.这一逻辑在不完整份额情况下失效_<span class="math inline">\({z_i}\)</span>
-是转移的加权和.即使转移是随机分配的(假设有正均值),具有更高 <span class="math inline">\({S_i}\)</span>
-的单位将系统地获得更高的工具变量值.因此需要控制 <span class="math inline">\({S_i}\)</span>.</p>
-<p><strong>步骤4:将份额滞后到自然实验开始时</strong></p>
-<p>当构建转移份额工具变量时,需要决定何时测量份额.虽然分解建议在感兴趣时期开始时测量它们,但实践中通常进一步滞后.这是合理的吗?</p>
-<p>在外生转移方法中,最好在自然实验开始时测量转移.这避免了转移影响份额的情况,这可能产生偏误.同时,滞后份额超过必要范围会降低工具强度.确定自然实验开始的简单原则:如果没有与
-<span class="math inline">\({g_k}\)</span> 相关的过去转移,那只是测量
-<span class="math inline">\({g_k}\)</span> 的时期的开始.</p>
-<p><strong>步骤5:报告转移的描述性统计</strong></p>
-<p>除了观察数量的描述性统计外,在分析中也要呈现转移的描述性统计.这包括: -
-<span class="math inline">\({g_k}\)</span> 的均值和标准差 -
-加权版本(例如有效转移数量,定义为冲击重要性权重Herfindahl指数的倒数)</p>
-<p>有效转移数量的概念很重要:当有效转移数量很小时,少数转移可能驱动实证分析,使结果可能有噪声且不可靠.</p>
-<p><strong>步骤6:对转移进行平衡检验</strong></p>
-<p>在每个研究设计中,执行平衡检验很有用:检查相信是外生的 variation
-确实不与混淆因素代理相关.</p>
-<p>在具有外生转移的转移份额设计中,这可以通过两种方式进行: 1.
-在单位层面检查工具变量的平衡 2. 直接在转移层面的 <span class="math inline">\({g_k}\)</span> 上检查平衡</p>
-<p>例如,在产业补贴场景中,可以检查转移是否与反映劳动供给因素的变量相关,如劳动力组成和产业中移民比例.</p>
-<p><strong>步骤7:用正确的标准误产生主要估计并检查敏感性</strong></p>
-<p>具有外生转移的转移份额设计中的有效统计推断需要一种特殊的"暴露稳健"方法.直觉上,推断必须考虑具有相似份额的单位在机械上相关性更强(因为份额定义)并且可能由于共同暴露于未观察冲击而具有相关性.</p>
-<p>Adão等(2019)提供了方差估计器,在转移相互不相关或以已知方式聚类时渐近有效.Borusyak等(2022)表明可以简单地运行特定的转移层面两阶段最小二乘回归,产生与转移份额回归完全相同的系数但给出有效的标准误.</p>
-<h3 id="方法二外生份额识别exogenous-shares">3.4
-方法二:外生份额识别(Exogenous Shares)</h3>
-<h4 id="核心逻辑-1">3.4.1 核心逻辑</h4>
-<p>外生份额方法的策略是确保份额 <span class="math inline">\({s_{ik}}\)</span> 是外生的.这是什么意思?</p>
-<p>一种理解方式是想象 <span class="math inline">\({s_{ik}}\)</span>
-是如同随机分配给单位的,满足排除限制(份额仅通过感兴趣的处理变量影响结果).或者,当结果以变化衡量时,可以将份额外生性理解为类似于双重差分中使用的平行趋势条件.</p>
-<p><strong>以外生份额视角理解工具变量</strong>:</p>
-<p>Goldsmith-Pinkham等(2020)表明,转移份额估计一般可以视为将K个"一次一个"估计池化在一起,每个使用单个
-<span class="math inline">\({s_{ik}}\)</span>
-份额作为工具变量.这意味着,如果每个份额都满足平行趋势条件,那么将它们与
-<span class="math inline">\({g_k}\)</span>
-权重组合的转移份额工具变量也是一个有效的工具变量.</p>
-<p><strong>直觉理解</strong>:考虑Card(2009)关于移民对工资影响的研究.假设在某段时期我们看到来自特定原籍国(如古巴)的国家移民流入突然增加.如果愿意假设更或更少暴露于这种流入的地区(由初始古巴移民份额
-<span class="math inline">\({s_{i\kappa}}\)</span>
-捕捉)本应看到劳动力需求的类似趋势,那么 <span class="math inline">\({s_{i\kappa}}\)</span> 就是一个有效的工具变量.</p>
-<h4 id="份额外生性的关键条件">3.4.2 份额外生性的关键条件</h4>
-<p><strong>条件一:份额是"定制的"(Tailored)</strong></p>
-<p>份额外生性的可信度因构建工具变量时份额是否"定制"于感兴趣的处理而增强.份额应该是"定制的",即仅介导对
-<span class="math inline">\({x_i}\)</span> 的冲击,而不是可能影响 <span class="math inline">\({y_i}\)</span> 的大量冲击.</p>
-<p>例如,在移民研究中,暴露份额定制于研究问题:它们衡量来自各原籍国的过往地方移民.这与使用反映地方产业组成的份额的研究形成对比,同时研究特定产业转移(如与中国的进口竞争)的影响.产业就业份额是"通用的"_它们可能潜在地衡量对其他冲击(基本上任何产业冲击)的单位暴露,其中许多未观察到.</p>
-<p><strong>条件二:平行趋势假设</strong></p>
-<p>当份额是外生的时,它们必须满足类似于双重差分中使用的平行趋势条件.即:对于每个
-<span class="math inline">\({k}\)</span>,假设_如果处理没有变化_具有更高与更低
-<span class="math inline">\({s_{ik}}\)</span>
-的单位的结果趋势应该类似.</p>
-<h4 id="外生份额方法的检查清单">3.4.3 外生份额方法的检查清单</h4>
-<p><strong>步骤1:确定暴露份额是否适合作为工具变量</strong></p>
-<p>开始时,研究者应该: - 激励结果方程并描述处理内生性的主要来源 -
-提供份额可能作为工具变量解决相应威胁的理由</p>
-<p>两个一般原则: 1. 工具变量外生性论证要求份额"定制"于处理 2.
-可以通过利用更可能满足外生性的初始份额中的 variation 来加强识别策略</p>
-<p><strong>步骤2:选择必要的单位层面控制</strong></p>
-<p>即使份额是定制的,其外生性也是一个 nontrivial
-的假设,类似于任何平行趋势假设.与往常一样,可以通过包含控制变量来放松外生性.例如,研究者可以控制某些份额之和,以仅在条件化这些和之后利用份额
-variation.</p>
-<p><strong>步骤3:表征哪些份额对估计最重要</strong></p>
-<p>当将转移份额估计视为
-K个一次一个份额工具估计的池化版本时,理解是否有一小部分份额驱动结果可能很重要.</p>
-<p>Goldsmith-Pinkham等(2020)表明如何衡量每个份额工具的重要性权重,他们称之为"Rotemberg权重".这些权重基于将转移份额估计量分解为具有权重之和为一的单个份额工具估计量的加权之和(尽管一些可以为负).</p>
-<p>Rotemberg权重可以解释为衡量每个份额工具对转移份额估计对外生性违反的敏感性.</p>
-<p><strong>步骤4:对单个份额进行平衡检验</strong></p>
-<p>与任何设计一样,检查工具在可能预期与误差项相关的可观测变量上的平衡值得做.可以使用不同变量进行有用的平衡检验:
-- 处理前期的结果变量变化(对应预趋势检验) - 时期开始时测量的单位特征 -
-不期望受处理因果影响的同期安慰剂结果变化</p>
-<p><strong>步骤5:检查对份额工具组合方式的敏感性</strong></p>
-<p>当份额是外生的时,参数 <span class="math inline">\({\beta}\)</span>
-是过度识别的:任何单个份额或其线性组合都是有效的工具变量.转移份额工具变量就是这样一个组合,但由于许多其他组合可用,检查转移份额估计不会过于依赖研究者的选择是有益的.</p>
-<p>可以执行的检验: - Sargan-Hansen过度识别检验 -
-视觉工具变量程序:绘制K个简化形式系数对相应一阶段系数的图 -
-使用仅少数份额的替代估计 - 有限信息最大似然(LIML)等稳健估计量</p>
-<h3 id="主要应用实例">3.5 主要应用实例</h3>
-<h4 id="外生转移方法案例franklin等2023">3.5.1
-外生转移方法案例:Franklin等(2023)</h4>
-<p>Franklin等(2023)利用随机转移来估计一项公共工程计划对私营部门工资的间接影响.他们研究在埃塞俄比亚亚的斯亚贝巴为居住在特定社区的低收入工人提供高工资公共工程就业机会的计划.</p>
-<p><strong>设定</strong>: - 转移 <span class="math inline">\({g_k}\)</span>:居住区 <span class="math inline">\({k}\)</span> 被选入该计划的随机指示 - 份额 <span class="math inline">\({s_{ik}}\)</span>:从居住区 <span class="math inline">\({k}\)</span> 通勤到劳动市场 <span class="math inline">\({i}\)</span> 的工人份额 - 工具变量 <span class="math inline">\({z_i = \sum_k s_{ik} \cdot
-g_k}\)</span>:衡量劳动市场 <span class="math inline">\({i}\)</span>
-对随机化推广的暴露</p>
-<p><strong>识别逻辑</strong>:由于转移是随机分配的,不需要引入控制.但如果某些居住区
-<span class="math inline">\({k}\)</span>
-不符合随机化资格,则需要控制符合条件的通勤者总份额.</p>
-<h4 id="外生转移方法案例autor等2013">3.5.2
-外生转移方法案例:Autor等(2013)</h4>
-<p>Autor等(2013)研究中国进口竞争对美国就业的影响.</p>
-<p><strong>设定</strong>: - 结果 <span class="math inline">\({y_i}\)</span>:美国各地区(通勤区)就业变化 - 处理
-<span class="math inline">\({x_i}\)</span>:各地区对中国进口的暴露程度 -
-转移 <span class="math inline">\({g_k}\)</span>:8个高收入国家(不包括美国)在产业
-<span class="math inline">\({k}\)</span> 的中国进口增长 - 份额 <span class="math inline">\({s_{ik}}\)</span>:地区 <span class="math inline">\({i}\)</span> 在产业 <span class="math inline">\({k}\)</span> 的就业份额</p>
-<p><strong>关键特征</strong>:暴露份额不加总为一,因为只有制造业暴露于与中国的贸易.</p>
-<p><strong>解决方案</strong>:控制份额之和(不完整份额控制)<span class="math inline">\({S_i = \sum_k s_{ik}}\)</span>.</p>
-<h4 id="外生份额方法案例card2009">3.5.3 外生份额方法案例:Card(2009)</h4>
-<p>Card(2009)估计移民对本地工人工资的影响.</p>
-<p><strong>设定</strong>: - 来自38个原籍国 <span class="math inline">\({k}\)</span> 的移民份额作为工具变量 - 份额 <span class="math inline">\({s_{ik}}\)</span>:1980年城市 <span class="math inline">\({i}\)</span> 中移民群体 <span class="math inline">\({k}\)</span> 的份额 - 转移 <span class="math inline">\({g_k}\)</span>:1990-2000年间来自群体 <span class="math inline">\({k}\)</span> 的移民数量(相对于1990年美国 <span class="math inline">\({k}\)</span> 国移民存量的标准化)</p>
-<p><strong>识别假设</strong>:来自各原籍国的初始移民份额满足平行趋势_即如果不发生移民流入冲击,具有不同移民份额的地区将有类似的相对工资趋势.</p>
-<h4 id="外生份额方法案例mohnen2024">3.5.4
-外生份额方法案例:Mohnen(2024)</h4>
-<p>Mohnen(2024)研究退休率对年轻一代劳动市场结果的影响.</p>
-<p><strong>设定</strong>: - 结果 <span class="math inline">\({y_i}\)</span>:各通勤区年轻工人的劳动市场结果 -
-处理 <span class="math inline">\({x_i}\)</span>:各通勤区10年退休率 -
-份额 <span class="math inline">\({s_{ik}}\)</span>:45-80岁人口中年龄组
-<span class="math inline">\({k}\)</span> 的本地份额 - 转移 <span class="math inline">\({g_k}\)</span>:按年龄分的国家10年退休率</p>
-<p><strong>识别假设</strong>:年龄份额(45岁以上人口中)是有效工具,条件是包含控制变量.</p>
-<hr>
-<h2 id="结论conclusion">4. 结论(Conclusion)</h2>
-<h3 id="核心结论">核心结论</h3>
-<p>本文回顾了转移份额研究设计的两个框架,包括工具变量有效性的充分条件、直观解释这些条件的叙述、平衡检验以及各种实际建议.</p>
-<h3 id="两种方法的对比总结">两种方法的对比总结</h3>
-<table>
-<colgroup>
-<col style="width: 19%">
-<col style="width: 38%">
-<col style="width: 41%">
-</colgroup>
-<thead>
-<tr>
-<th>方面</th>
-<th>外生转移方法</th>
-<th>外生份额方法</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>识别论证</td>
-<td>转移如同随机分配,仅通过处理影响结果</td>
-<td>每个份额满足平行趋势</td>
-</tr>
-<tr>
-<td>估计</td>
-<td>控制份额之和(如不为一)和任何转移层面控制的转移份额聚合</td>
-<td>直接使用份额工具检查稳健性</td>
-</tr>
-<tr>
-<td>统计推断</td>
-<td>从等效转移层面IV回归获取暴露稳健标准误</td>
-<td>使用常规异方差或聚类稳健标准误</td>
-</tr>
-<tr>
-<td>平衡检验</td>
-<td>工具变量和转移</td>
-<td>工具变量和高Rotemberg权重的份额</td>
-</tr>
-</tbody>
-</table>
-<h3 id="如何选择两种方法">如何选择两种方法</h3>
-<p>在某些情况下一种方法是"非启动器": -
-外生转移方法在转移太少或为内生时不能使用 -
-当处理是特定的而份额是"通用的"时,外生份额方法不合适</p>
-<p>在其他情况下,思考每种方法建议的工具变量的潜在偏误和效率属性之间的权衡是有益的.</p>
-<h3 id="主要贡献">主要贡献</h3>
 <ol type="1">
-<li><p><strong>理论贡献</strong>:清晰地区分了两条识别路径_外生转移和外生份额_并提供了直观的经济学解释.</p></li>
-<li><p><strong>实践贡献</strong>:提供了实用的检查清单,使研究者和读者能够系统地评估转移份额研究设计的可信度.</p></li>
-<li><p><strong>教育贡献</strong>:作为JEP论文,使更广泛的受众能够理解和使用这些方法.</p></li>
+<li><p><strong>马尔萨斯陷阱 (Malthusian Trap):</strong>
+人口总是倾向于以几何级数增长,而食物生产却只能以算术级数增长.任何技术进步或土地扩张带来的食物增加,最终都会被更快增长的人口所消耗殆尽.</p>
+<ul>
+<li><strong>积极抑制 (Positive Checks):</strong>
+增加死亡率的因素,如饥荒、瘟疫和战争.</li>
+<li><strong>预防性抑制 (Preventive Checks):</strong>
+降低出生率的因素,如晚婚、禁欲或生育控制.</li>
+</ul></li>
+<li><p><strong>现代经济增长 (Modern Economic Growth):</strong>
+人均收入能够持续、快速增长的经济发展阶段.通常伴随着工业化、技术创新、教育水平提升、人口结构转变以及城市化进程.</p></li>
+<li><p><strong>哥伦布大交换 (Columbian Exchange):</strong>
+15世纪末哥伦布发现新大陆后,欧洲、非洲和美洲之间动植物、病菌、思想和人口的大规模交流.</p></li>
+<li><p><strong>大分流 (Great Divergence):</strong>
+18世纪以来,西方欧洲(特别是英国)与东亚(特别是中国)在经济发展道路上出现的分岔.</p></li>
+</ol>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><strong>中国的人口爆炸性增长与人均收入停滞:</strong>
+<ul>
+<li>从1500年的1.3亿人口到1900年的4亿人口,中国人口在400年间几乎增长了两倍.然而,根据Maddison
+(2001)
+的数据,中国的人均GDP却长期停滞在约600美元(经调整),处于温饱水平.</li>
+<li>当时中国处于一种"高压人口体制",生产力的任何增长都极有可能被人口增长以远高于欧洲的速度所转化和消耗.</li>
+</ul></li>
+<li><strong>新大陆作物在旧世界的影响_以马铃薯为例:</strong>
+<ul>
+<li>Nunn 和 Qian (2011)
+的研究发现,马铃薯的引入在1700-1900年间使旧世界人口增长了25-26%,城市化率提高了27-34%.</li>
+<li>中国也引入了三种主要的新大陆作物_玉米、甘薯和马铃薯.其中玉米因其对中国地理条件的适应性(抗旱、耐寒,适合山地和丘陵种植),以及数据可得性,成为本研究的重点.</li>
+</ul></li>
+<li><strong>中国未能工业化之谜:</strong>
+<ul>
+<li>传统观点认为是中国农业剩余不足以支撑工业化.</li>
+<li>本研究观点认为,人口增长是农业生产力提高(部分归因于玉米的引入)的内生结果,而非导致农业剩余不足的根本原因.</li>
+</ul></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<ul>
+<li><strong>新大陆作物(特别是玉米)的引入,是否帮助中国摆脱了马尔萨斯陷阱,实现了人口和经济增长?</strong></li>
+<li><strong>或者,玉米的引入是否仅仅导致了人口增长,而人均收入和城市化水平仍然停滞不前?</strong></li>
+<li><strong>与欧洲马铃薯的经验相比,中国玉米的引入为何产生了不同的经济增长轨迹?</strong></li>
+</ul>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li>为马尔萨斯理论提供了丰富的经验支持</li>
+<li>对"统一增长理论"的重要贡献</li>
+<li>深化了对中欧"大分流"原因的理解</li>
+<li>构建了独特的历史数据集</li>
+<li>方法论上的严谨性</li>
+</ol>
+<h2 id="内容及结构">内容及结构</h2>
+<ol type="1">
+<li>引言 (Introduction)</li>
+<li>玉米在中国的传播,1600-1910年 (The diffusion of Maize in China)</li>
+<li>数据和测量 (Data and measurement)</li>
+<li>估计策略和实证结果 (Estimation strategy and empirical results)</li>
+<li>有效性和稳健性检验 (Validity and robustness checks)</li>
+<li>人口增长而无经济发展 (Population growth without economics
+development)</li>
+<li>结论 (Conclusion)</li>
+</ol>
+<h2 id="数据集">数据集</h2>
+<ul>
+<li><strong>地理单位:</strong>
+267个"府"(相当于今天的地级市),涵盖中国18个省</li>
+<li><strong>时间跨度:</strong> 1600年至1910年</li>
+</ul>
+<p><strong>主要数据来源:</strong></p>
+<ol type="1">
+<li>玉米种植(核心自变量):查阅了1119卷府级地方志</li>
+<li>人口密度(核心因变量):来源于梁方仲 (1980) 和曹树基 (2000)
+的历史人口数据</li>
+<li>内战和瘟疫:来源于&lt;中国历代战争年表&gt;和宋正海 (1992) 的灾害记录</li>
+<li>粮食价格:来源于清代粮食价格数据库</li>
+<li>城市化率:来源于曹树基 (2000) 和Stauffer (1922) 的数据</li>
+<li>实际工资:来源于清代借贷纠纷案件的判例</li>
+</ol>
+<h2 id="核心方法差分中差分-difference-in-differences-did">核心方法:差分中差分
+(Difference-in-Differences, DID)</h2>
+<p><strong>基本思想:</strong></p>
+<ol type="1">
+<li><strong>"处理":</strong> 玉米在某个府开始种植</li>
+<li><strong>"处理组":</strong> 玉米开始种植的府</li>
+<li><strong>"对照组":</strong> 尚未开始种植玉米的府</li>
+<li><strong>"处理前"与"处理后":</strong>
+基于玉米采用年份划分的时间段</li>
+</ol>
+<p><strong>计量模型:</strong></p>
+<p><span class="math display">\[\text{popden}_{it} = \alpha
+\text{Maize}_{it} + \beta X_{it} + f_i + p_t +
+\epsilon_{it}\]</span></p>
+<ul>
+<li><span class="math inline">\(\text{popden}_{it}\)</span>:府 <span class="math inline">\(i\)</span> 在时期 <span class="math inline">\(t\)</span> 的人口密度(取自然对数)</li>
+<li><span class="math inline">\(\text{Maize}_{it}\)</span>:核心解释变量,如果府
+<span class="math inline">\(i\)</span> 在时期 <span class="math inline">\(t\)</span> 已经采用了玉米则为1,否则为0.其系数
+<span class="math inline">\(\alpha\)</span> 是本研究关注的核心参数</li>
+<li><span class="math inline">\(X_{it}\)</span>:一系列控制变量,包括战争和瘟疫的发生频率</li>
+<li><span class="math inline">\(f_i\)</span>:<strong>府固定效应</strong></li>
+<li><span class="math inline">\(p_t\)</span>:<strong>时期固定效应</strong></li>
+<li><span class="math inline">\(\epsilon_{it}\)</span>:误差项</li>
+</ul>
+<p><strong>DID方法的关键假设:平行趋势假设 (Parallel Trend
+Assumption).</strong>
+即在没有玉米种植的情况下,玉米采用区和非采用区的人口密度变化趋势应该是平行的.</p>
+<h2 id="玉米扩散机制">玉米扩散机制</h2>
+<ul>
+<li><strong>引入路线:</strong>
+16世纪中叶,玉米经由三条路线传入中国:丝绸之路(进入甘肃)、印度/缅甸(进入云南)、葡萄牙海路(进入福建)</li>
+<li><strong>地理适宜性:</strong>
+中国超过55%的土地适宜种植玉米(相比甘薯20%,马铃薯10%)</li>
+<li><strong>扩散模式:</strong>
+早期(前200年)扩散缓慢,1750年后扩散速度显著加快,到20世纪初几乎遍布全国</li>
+<li><strong>影响:</strong>
+玉米种植面积和产量大幅增加,被誉为继占城稻引入后的"第二次农业革命"</li>
+</ul>
+<h2 id="稳健性检验">稳健性检验</h2>
+<ol type="1">
+<li>府特异性时间趋势</li>
+<li>标准误聚类:使用Conley标准误</li>
+<li>空间计量方法:广义空间二阶段最小二乘法(GS2SLS)</li>
+<li>子样本分析:限制样本到华北地区(北纬33度以北)</li>
+<li>离群值和数据敏感性</li>
+<li>粮食价格验证</li>
+</ol>
+<h2 id="主要结果">主要结果</h2>
+<h3 id="玉米显著促进了中国人口增长">1. 玉米显著促进了中国人口增长</h3>
+<ul>
+<li><strong>基线回归 (表3):</strong> 玉米种植使府级人口密度增加了约
+<strong>9.9%</strong></li>
+<li><strong>量化贡献:</strong>
+在1776-1910年间,玉米种植导致中国人口增长了约
+<strong>18.77%</strong></li>
+<li><strong>机制:</strong>
+玉米引入确实增加了粮食供给,导致粮食价格下降(玉米种植后粮食价格下降3.7%)</li>
+</ul>
+<h3 id="玉米未能带来显著的经济发展">2. 玉米未能带来显著的经济发展</h3>
+<ul>
+<li><strong>城市化率:</strong>
+玉米种植对府级城市化率没有统计学上的显著影响</li>
+<li><strong>实际工资:</strong>
+玉米种植对府级农业长期雇工的实际工资也没有统计学上的显著影响</li>
+<li><strong>长期效应:</strong>
+即使考虑滞后一期的玉米种植效应,对城市化率和实际工资的影响仍然不显著</li>
+</ul>
+<h3 id="与欧洲马铃薯的对比">3. 与欧洲马铃薯的对比</h3>
+<p>Nunn和Qian (2011)
+发现马铃薯在旧世界不仅促进了人口增长,也推动了城市化和经济增长.本研究的发现为这一论断提供了"反例":在中国,玉米带来的大规模人口增长并非工业革命的充分条件.</p>
+<h2 id="核心发现图示">核心发现图示</h2>
+<ul>
+<li><strong>图5:</strong>
+玉米采用前后人口密度变化趋势,验证了平行趋势假设,并显示采用后人口密度显著上升</li>
+<li><strong>图6:</strong> 玉米采用前后战乱发生频率变化趋势</li>
+<li><strong>图8:</strong> 玉米采用前后粮食价格变化趋势</li>
+<li><strong>图9:</strong>
+玉米采用前后城市化率变化趋势,显示没有显著变化</li>
+<li><strong>图11:</strong>
+玉米采用前后实际工资变化趋势,显示没有显著变化</li>
+</ul>
+<h2 id="结论">结论</h2>
+<ol type="1">
+<li><p><strong>玉米显著促进了中国人口增长,但未能提升人均收入:</strong>
+玉米的广泛种植在1776-1910年间使中国人口增加了近19%.然而,这一农业生产力的提升并未转化为人均收入的显著增加,也未能推动城市化进程或提高实际工资水平.</p></li>
+<li><p><strong>中国在18-19世纪仍深陷马尔萨斯陷阱:</strong>
+尽管引入了具有革命性潜力的新农业技术,中国经济仍然未能摆脱马尔萨斯力量的束缚.</p></li>
+<li><p><strong>与欧洲经验形成对比,为"大分流"提供反例:</strong>
+这强调了大规模人口增长并非工业革命或经济现代化的充分条件.</p></li>
+</ol>
+<p><strong>对领域的贡献:</strong>
+强化了马尔萨斯理论的实证基础、深化了对统一增长理论的理解、为历史经济学研究提供了宝贵的数据和方法、拓宽了对"哥伦布大交换"影响的认知</p>
+<h2 id="未来研究方向">未来研究方向</h2>
+<h3 id="文献中提及的方向">文献中提及的方向</h3>
+<ol type="1">
+<li>其他新大陆作物的影响:由于数据限制,本文只研究了玉米</li>
+<li>更细致的区域异质性分析:不同区域的社会经济结构和制度环境差异巨大</li>
+</ol>
+<h3 id="进一步思考">进一步思考</h3>
+<ol type="1">
+<li>玉米引入对中国社会结构和制度变迁的深层影响</li>
+<li>中欧"大分流"中技术扩散与制度环境的比较研究</li>
+<li>长期环境变化对新大陆作物效应的调节</li>
+<li>玉米与地方经济专业化和市场整合</li>
+<li>马尔萨斯陷阱中的"质量-数量权衡"</li>
+</ol>
+<h2 id="学术思考">学术思考</h2>
+<ol type="1">
+<li>**"马尔萨斯陷阱"的衡量边界与逃逸机制的复杂性问题</li>
+<li>**新大陆作物的异质性与"次级农业革命"的可能性</li>
+<li>**微观层面的农民采纳行为与宏观效应的联系</li>
+<li>**"经济增长"代理变量的局限性与替代指标的探索</li>
+<li>**中国内部区域异质性的深层机制</li>
 </ol>
 <hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向(Future work)</h2>
-<h3 id="论文中明确提及的未来研究方向">5.1
-论文中明确提及的未来研究方向</h3>
-<p><strong>面板数据中的转移份额设计</strong></p>
-<p>当在面板设置中使用转移份额工具变量时,会出现新的可能性和挑战: -
-可以"堆叠"多个时期的转移以获得更多估计强度 -
-时期固定效应与转移份额聚合的关系 - 转移序列相关问题</p>
-<p><strong>Bartik和Card类型设计的解释</strong></p>
-<p>Appendix
-A.11讨论了Bartik(1991)和Card(2009)的设计_它们将转移衡量为某些均衡结果的全国增长(如产业就业或总迁移)_是应该通过外生转移还是外生份额的视角来看待.</p>
-<p><strong>Leave-one-out转移构建的作用</strong></p>
-<p>是否应该在构建转移份额时使用leave-one-out构造来提高有效性.</p>
-<h3 id="基于论文内容的未来研究思考">5.2 基于论文内容的未来研究思考</h3>
-<p><strong>异质性处理效应下的识别与解释</strong></p>
-<p>当处理效应在各单位间异质时,转移份额估计的解释变得更加复杂.Mogstad等(2021)表明,不同的份额工具组合可能估计不同的因果效应组合,即使所有份额工具都是外生的.这提出了关于"平均处理效应"概念在转移份额背景下的有意义性的重要问题.</p>
-<p><strong>动态处理效应与转移序列相关</strong></p>
-<p>当转移序列相关时,静态规范存在遗漏变量偏误问题,因为过去处理的动态因果效应可能影响当前结果.如何在这种情况下稳健地识别和处理效应是一个重要的研究方向.</p>
-<p><strong>非线性处理与分数处理</strong></p>
-<p>本文假设线性处理效应模型.当处理变量是分数(如进口渗透率)或需要非线性模型时,识别策略如何调整是一个未被充分探索的领域.</p>
-<p><strong>多工具变量与过度识别检验</strong></p>
-<p>在有许多转移或份额的情况下,如何最优地组合它们,以及如何解释过度识别检验的失败,是一个值得进一步研究的问题.</p>
-<p><strong>跨学科应用</strong></p>
-<p>将转移份额设计应用于新的研究领域(如环境经济学、教育经济学,发展经济学)时,需要考虑这些领域的特殊性和潜在的特殊识别威胁.</p>
+<h2 id="深度评析玉米与人_新大陆作物对中国人口与经济增长的影响">深度评析:玉米与人_新大陆作物对中国人口与经济增长的影响</h2>
+<h3 id="领域基础知识什么是马尔萨斯陷阱">领域基础知识:什么是"马尔萨斯陷阱"?</h3>
+<p>在18世纪工业革命之前,人类社会普遍处于"马尔萨斯陷阱"(Malthusian
+Trap)中.简单来说,这个理论认为:<strong>技术进步带来的产出增加,最终会被人口增长所抵消.</strong></p>
+<ul>
+<li>如果农民发明了更好的耕作方法(比如引入了高产作物),短期内粮食多了,人均收入会提高</li>
+<li>但随后,人们会生更多的孩子,或者因为营养改善导致死亡率下降</li>
+<li>最终,新增的粮食养活了更多的人,但平均到每个人头上的粮食和收入又回到了"勉强维持生存"的水平(Subsistence
+Level)</li>
+</ul>
+<h3 id="研究背景新大陆作物的哥伦布大交换">研究背景:新大陆作物的"哥伦布大交换"</h3>
+<p>1492年哥伦布发现新大陆后,玉米、番薯、马铃薯等高产作物传向全世界.学术界(如
+Nunn 和
+Qian)曾发现,马铃薯在欧洲不仅促进了人口增长,还通过提高农业效率促进了城市化,从而助力欧洲开启了现代经济增长(工业革命).</p>
+<h3 id="作者的问题意识中国为什么是个例外">作者的问题意识:中国为什么是个例外?</h3>
+<p>中国在 1500 年到 1900 年间,人口从 1.3 亿激增到 4
+亿,约占全球增长的三分之一,但人均 GDP 却长期停滞在 600
+美元左右.作者想探究:<strong>玉米这种新技术的引入,在中国究竟是开启了"现代经济增长之门",还是仅仅让中国在马尔萨斯陷阱里越陷越深?</strong></p>
+<h2 id="内容及结构-1">内容及结构</h2>
+<p>论文共分为七个核心部分:</p>
+<ol type="1">
+<li>引言:提出核心议题</li>
+<li>玉米在中国的传播:梳理 1600-1910
+年玉米进入中国的路径及生态适应性</li>
+<li>数据与度量:利用历史地方志、粮价、人口密度等构建 267
+个府的面板数据</li>
+<li>实证策略与结果:使用"双重差分法"(DID)测算玉米对人口的影响</li>
+<li>稳健性检验:排除战乱、瘟疫及水稻改良等干扰因素</li>
+<li>经济增长分析:考察玉米对城市化率和实际工资的影响</li>
+<li>结论:总结发现</li>
+</ol>
+<h2 id="正文">正文</h2>
+<h3 id="背景与挑战如何证明是玉米导致了人口增长">1.
+背景与挑战:如何证明是"玉米"导致了人口增长?</h3>
+<p><strong>挑战:</strong> 18
+世纪中国人口在增长,农业技术也在进步,但我们怎么知道人口增长是因为种了玉米?</p>
+<p><strong>解决方法:</strong> 作者利用了玉米传播的"时空差异".</p>
+<ul>
+<li><strong>空间差异:</strong>
+有些府(地级市)适合种玉米,有些不适合(土地干旱程度、坡度不同)</li>
+<li><strong>时间差异:</strong> 玉米在不同府落户的时间有早有晚</li>
+</ul>
+<h3 id="方法地方志里的密码">2. 方法:地方志里的密码</h3>
+<ul>
+<li><strong>核心数据集:</strong> 作者查阅了 <strong>1119
+部地方志</strong>.地方志就像古代的"百科全书",如果某地的"物产"章节第一次出现了"玉蜀黍"或"包谷",作者就将其记录为该府开始采用玉米的时间</li>
+<li><strong>地理范围:</strong> 涵盖中国 18 个省的 267 个府,时间跨度 1600
+年到 1910 年</li>
+</ul>
+<h3 id="结果一人口19-的贡献率">3. 结果一(人口):19% 的贡献率</h3>
+<ul>
+<li><strong>发现:</strong>
+在控制了所有其他变量后,作者发现玉米的种植使得中国 1776 年至 1910
+年间的人口增长了近 <strong>19%</strong></li>
+<li><strong>逻辑:</strong>
+玉米耐旱、耐寒,且能在山坡地生长.它不与水稻抢夺肥沃的平原地,而是开辟了原本无法耕种的边际土地</li>
+<li><strong>粮价验证:</strong> 引入玉米后,粮价显著下降(约
+3.7%),这证明了玉米确实增加了食物供应</li>
+</ul>
+<h3 id="结果二经济人口多了钱没变多">4.
+结果二(经济):人口多了,钱没变多</h3>
+<p>这是本文最核心的发现.在欧洲,高产作物促进了城市化;但在中国:</p>
+<ul>
+<li><strong>城市化率:</strong>
+玉米种植对城市化率没有任何显著的正向推动.人们依然留在农村,只是人更多了</li>
+<li><strong>实际工资:</strong>
+玉米种植不仅没能提高实际工资,甚至因为人口过多导致劳动力边际报酬递减</li>
+<li><strong>边际报酬递减:</strong> 就像一亩地本来 2
+个人种,粮食够吃;现在种了玉米产出多了点,但也挤进来了 4
+个人种,虽然总粮食多了,但平分到每个人手里的粮食并没变多</li>
+</ul>
+<h2 id="结论-1">结论</h2>
+<ol type="1">
+<li><strong>实证结论</strong>:玉米在中国成功引发了"人口爆炸",贡献了约五分之一的人口增长</li>
+<li><strong>理论意义</strong>:玉米作为一项"新技术",在中国遭遇了典型的<strong>马尔萨斯结局</strong>_它只创造了"更多的中国人",而没有创造"更富裕的中国人"</li>
+<li><strong>大分流解释</strong>:中国的人口密度过高,将技术红利迅速吞噬,形成了"内卷化"(Involution)的自我循环</li>
+</ol>
+<h2 id="未来研究方向-1">未来研究方向</h2>
+<h3 id="文献中提及的方向-1">文献中提及的方向</h3>
+<ul>
+<li>其他新大陆作物:番薯(地瓜)为中国的推广作用</li>
+<li>质量-数量权衡:探究当时中国父母为何选择生更多孩子</li>
+</ul>
+<h3 id="学术思考-1">学术思考</h3>
+<ol type="1">
+<li>作物特性与工业化:作物的"生态属性"是否决定了一个国家的工业化命运?</li>
+<li>制度的调节作用:如果晚清政府拥有更强的产权保护或不同的土地税制,玉米产生的粮食盈余是否有可能转化为工业资本?</li>
+<li>内卷化的现代启示:如果高科技(如
+AI)的产出被某些社会因素抵消,我们会面临"数字化的马尔萨斯陷阱"吗?</li>
+</ol>
 <hr>
-<h2 id="学术思考">6. 学术思考</h2>
-<h3 id="关于识别策略的思考">关于识别策略的思考</h3>
-<p><strong>问题一:两种方法的选择是二元对立还是存在光谱?</strong></p>
-<p>论文将两种方法描述为有明确区别的路径,但现实中许多应用可能同时涉及两种逻辑.例如,一个设计可能既利用转移的外生
-variation,又利用份额的外生性,只是在程度和可信度上有所不同.这是否意味着存在一个连续光谱而非二元选择?</p>
-<p><strong>问题二:份额外生性假设的时变性</strong></p>
-<p>当使用前期份额作为工具时,我们隐含地假设在前期和处理期之间,份额与未观察冲击的关系保持稳定.但现实中经济结构可能发生变化.如何评估这种假设的稳健性?</p>
-<p><strong>问题三:"如同随机"的程度问题</strong></p>
-<p>论文强调转移需要"如同随机分配",但这只是程度问题.任何自然实验都只是近似随机.问题是:对于特定研究问题,需要多"随机"才能使偏误可接受?</p>
-<h3 id="关于推断方法的思考">关于推断方法的思考</h3>
-<p><strong>问题四:暴露稳健推断的实践重要性</strong></p>
-<p>Adão等(2019)强调的"暴露稳健"推断方法在实践中似乎并未被广泛采用.这可能是因为:
-1. 研究者不了解这种方法 2. 这种方法在某些设定下与常规方法差异不大 3.
-实现起来比较复杂</p>
-<p>如何在保持理论严谨性的同时使这种方法更易于应用?</p>
-<p><strong>问题五:聚类层面的选择</strong></p>
-<p>当转移在特定层面聚类时(如产业内相关),推断需要考虑这种聚类.但在实践中选择正确的聚类层面并不总是明确的.</p>
-<h3 id="关于研究设计的思考">关于研究设计的思考</h3>
-<p><strong>问题六:工具变量强度与有效性之间的权衡</strong></p>
-<p>使用更多的转移可以增加工具变量强度,但也可能引入无效性(因为更多的转移意味着更多可能与未观察变量相关的
-variation).如何在强度和有效性之间找到平衡?</p>
-<p><strong>问题七:替代设计 vs 转移份额设计</strong></p>
-<p>在什么情况下应该优先考虑其他研究设计(如双重差分、合成控制、断点回归)而不是转移份额设计?每种设计的优缺点如何在具体应用中选择?</p>
-<hr>
-<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
-<h3 id="问题1如何在实际操作中使用论文提供的检查清单">问题1:如何在实际操作中使用论文提供的检查清单?</h3>
-<p>用户可能想知道:在自己的研究中,如何具体执行这些检查清单步骤?有什么软件工具可以辅助?</p>
-<h3 id="问题2borusyak-hull-jaravel-2022-与-goldsmith-pinkham-et-al.-2020-两篇原始论文的核心区别是什么">问题2:Borusyak
-Hull Jaravel (2022) 与 Goldsmith-Pinkham et al. (2020)
-两篇原始论文的核心区别是什么?</h3>
-<p>用户可能希望更深入了解两篇开创性论文的方法论差异,以及如何在具体研究中选择.</p>
-<h3 id="问题3如何在我的中国研究背景如中国各省份的贸易开放产业结构转型等中应用转移份额设计">问题3:如何在我的中国研究背景(如中国各省份的贸易开放、产业结构转型等)中应用转移份额设计?</h3>
-<p>用户可能关心如何将这些西方文献中发展的方法应用于中国的实证研究,以及需要注意什么特殊问题.</p>
-<h3 id="问题4转移份额工具变量的-statar-实现代码是否有现成的包可用">问题4:转移份额工具变量的
-Stata/R 实现代码是否有现成的包可用?</h3>
-<p>用户可能希望获得实际操作的代码参考,如 ssaggregate、bartik_weight
-等命令的使用.</p>
-<h3 id="问题5当研究设计同时涉及地区和产业两个维度时如何正确处理固定效应和标准误">问题5:当研究设计同时涉及地区和产业两个维度时,如何正确处理固定效应和标准误?</h3>
-<p>用户可能遇到了多维度聚类、地区固定效应、产业固定效应同时存在的复杂情况,希望知道如何处理.</p>
-<h3 id="问题6在-bartik-类型的本地曝露设计中有哪些常见的识别威胁如何诊断和解决">问题6:在
-Bartik 类型的"本地曝露"设计中,有哪些常见的识别威胁?如何诊断和解决?</h3>
-<p>Bartanik设计(如中国进口对美国地区的影响)在实践中可能面临哪些特殊问题,如何进行检查.</p>
-<h3 id="问题7论文提到当处理效应异质时转移份额估计的解释会变得复杂.这种情况下应该如何理解估计结果">问题7:论文提到当处理效应异质时,转移份额估计的解释会变得复杂.这种情况下应该如何理解估计结果?</h3>
-<p>用户可能关心在异质性处理效应设定下,如何给转移份额系数赋予经济学解释,以及可能需要哪些额外的分析.</p>
-<hr>
-<p><em>本分析报告为A Practical Guide to Shift-Share
-Instruments论文的深度笔记,由Claude AI辅助生成.</em></p>
+<p><strong>文献信息:</strong></p>
+<ul>
+<li><strong>标题:</strong> Of maize and men: the effect of a New World
+crop on population and economic growth in China</li>
+<li><strong>作者:</strong> Shuo Chen, James Kai-sing Kung</li>
+<li><strong>期刊:</strong> Journal of Economic Growth, 2016, Vol. 21,
+Issue 1, pp. 71-99</li>
+<li><strong>DOI:</strong> 10.1007/s10887-016-9125-8</li>
+</ul>
 ]]></content>
       <categories>
-        <category>方法论</category>
+        <category>历史</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-        <tag>计量经济学</tag>
-        <tag>工具变量</tag>
+        <tag>经济史</tag>
       </tags>
   </entry>
   <entry>
@@ -1329,323 +1223,429 @@ Fragments of Curious and Useful Knowledge from the Chinese Past</em>
       </tags>
   </entry>
   <entry>
-    <title>&lt;玉米与人口&gt;深度阅读笔记 — Chen &amp; Kung</title>
-    <url>/posts/chen2016/</url>
+    <title>A Practical Guide to Shift-Share Instruments 论文笔记 — Borusyak, Hull &amp; Jaravel</title>
+    <url>/posts/boru2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
 <ul>
-<li><strong>标题</strong>: Of maize and men: the effect of a New World
-crop on population and economic growth in China</li>
-<li><strong>作者</strong>: Shuo Chen, James Kai-sing Kung</li>
-<li><strong>类型</strong>: 论文笔记 / 经济史 / 人口史 / 计量史学</li>
-<li><strong>出版年份</strong>: 2016</li>
-<li><strong>出版机构/期刊</strong>: Journal of Economic Growth</li>
-<li><strong>DOI</strong>: 10.1007/s10887-016-9125-8</li>
-<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量史学基础
-<span id="more"></span> ---</li>
+<li><strong>标题</strong>: A Practical Guide to Shift-Share
+Instruments</li>
+<li><strong>作者</strong>: Kirill Borusyak(Kirill Borusyak is Assistant
+Professor of Agricultural and Resource Economics, University of
+California Berkeley), Peter Hull(Brown University), Xavier
+Jaravel(London School of Economics)</li>
+<li><strong>类型</strong>: 论文笔记 / 计量经济学 / 工具变量</li>
+<li><strong>出版年份</strong>: 2025</li>
+<li><strong>出版机构/期刊</strong>: Journal of Economic Perspectives,
+Volume 39, Issue 1, Pages 181-204</li>
+<li><strong>DOI</strong>: 10.1257/jep.20231370</li>
+<li><strong>难度评估</strong>: 中 - 需要经济学、计量经济学基础</li>
 </ul>
-<h2 id="引言马尔萨斯陷阱与中国">引言:马尔萨斯陷阱与中国</h2>
-<p>本研究聚焦于17世纪至20世纪初的中国,探讨在新大陆作物_特别是玉米_引入后,中国是否仍然深陷"马尔萨斯陷阱",以及这种新的农业技术对人口和经济增长产生了何种影响.</p>
+<span id="more"></span>
+<h2 id="引言背景和意义">1. 引言(背景和意义)</h2>
 <h3 id="领域基础知识">领域基础知识</h3>
-<ol type="1">
-<li><p><strong>马尔萨斯陷阱 (Malthusian Trap):</strong>
-人口总是倾向于以几何级数增长,而食物生产却只能以算术级数增长.任何技术进步或土地扩张带来的食物增加,最终都会被更快增长的人口所消耗殆尽.</p>
-<ul>
-<li><strong>积极抑制 (Positive Checks):</strong>
-增加死亡率的因素,如饥荒、瘟疫和战争.</li>
-<li><strong>预防性抑制 (Preventive Checks):</strong>
-降低出生率的因素,如晚婚、禁欲或生育控制.</li>
-</ul></li>
-<li><p><strong>现代经济增长 (Modern Economic Growth):</strong>
-人均收入能够持续、快速增长的经济发展阶段.通常伴随着工业化、技术创新、教育水平提升、人口结构转变以及城市化进程.</p></li>
-<li><p><strong>哥伦布大交换 (Columbian Exchange):</strong>
-15世纪末哥伦布发现新大陆后,欧洲、非洲和美洲之间动植物、病菌、思想和人口的大规模交流.</p></li>
-<li><p><strong>大分流 (Great Divergence):</strong>
-18世纪以来,西方欧洲(特别是英国)与东亚(特别是中国)在经济发展道路上出现的分岔.</p></li>
-</ol>
+<p>Shift-Share
+Instruments(转移份额工具变量)是一类在经济学实证研究中广泛使用的计量经济学工具,主要用于解决内生性问题.这类工具的核心结构是:将一组共同的"转移(shifts)"按照不同单位(units)的"份额(shares)"进行加权平均,从而构建一个工具变量.在贸易经济学、劳动经济学、区域经济学、公共经济学、金融学等领域都有大量应用.</p>
+<p>转移份额工具变量的基本思想可以追溯到Freeman(1975,
+1980)的工作,但近年来相关文献急剧增长.根据Goldsmith-Pinkham(2024)的统计,目前NBER工作论文中约八分之一的工具变量明确采用转移份额结构,还有更多隐含采用这一结构的工具.</p>
+<p>转移份额结构的核心公式为:</p>
+<p><span class="math display">\[{z_i = \sum_{k=1}^{K} s_{ik} \cdot
+g_k}\]</span></p>
+<p>其中: - <span class="math inline">\({z_i}\)</span> 是构建的工具变量 -
+<span class="math inline">\({s_{ik}}\)</span> 是单位 <span class="math inline">\({i}\)</span> 对转移 <span class="math inline">\({k}\)</span> 的暴露份额 - <span class="math inline">\({g_k}\)</span> 是一组对所有单位共同的转移</p>
 <h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><strong>中国的人口爆炸性增长与人均收入停滞:</strong>
-<ul>
-<li>从1500年的1.3亿人口到1900年的4亿人口,中国人口在400年间几乎增长了两倍.然而,根据Maddison
-(2001)
-的数据,中国的人均GDP却长期停滞在约600美元(经调整),处于温饱水平.</li>
-<li>当时中国处于一种"高压人口体制",生产力的任何增长都极有可能被人口增长以远高于欧洲的速度所转化和消耗.</li>
-</ul></li>
-<li><strong>新大陆作物在旧世界的影响_以马铃薯为例:</strong>
-<ul>
-<li>Nunn 和 Qian (2011)
-的研究发现,马铃薯的引入在1700-1900年间使旧世界人口增长了25-26%,城市化率提高了27-34%.</li>
-<li>中国也引入了三种主要的新大陆作物_玉米、甘薯和马铃薯.其中玉米因其对中国地理条件的适应性(抗旱、耐寒,适合山地和丘陵种植),以及数据可得性,成为本研究的重点.</li>
-</ul></li>
-<li><strong>中国未能工业化之谜:</strong>
-<ul>
-<li>传统观点认为是中国农业剩余不足以支撑工业化.</li>
-<li>本研究观点认为,人口增长是农业生产力提高(部分归因于玉米的引入)的内生结果,而非导致农业剩余不足的根本原因.</li>
-</ul></li>
-</ol>
+<p><strong>背景一:内生性问题的普遍性</strong></p>
+<p>许多经济研究关注的是不同单位如何以不同方式暴露于一组共同的冲击.例如,Autor等(2013)研究中国进口激增如何影响美国各地区的劳动力市场.他们用各地区在相关产业的就业份额加权其他高收入国家对中国的进口增长,构建了一个工具变量.这种做法背后的直觉是:美国从中国的进口可能受到美国特定的生产率和需求冲击的影响,因此存在内生性问题,需要工具变量来识别因果关系.</p>
+<p><strong>背景二:识别策略的双重来源</strong></p>
+<p>转移份额工具变量面临独特的挑战,因为它们利用两个不同的 variation
+来源:转移(shifts)和份额(shares).直觉上,人们可能认为转移是有帮助的,因为它们代表了系统中潜在的外生变化.然而,这些转移在与分析单位(例如地区劳动市场)不同的层面(例如产业)上变化.份额在不同单位之间变化,但通常是预先决定的(例如,就业份额是在前期测量的).因此,如何理解它们的外生性是一个重要问题.</p>
+<p><strong>背景三:文献的分歧与发展</strong></p>
+<p>最近的计量经济学文献显示了两种不同的识别路径: 1.
+Borusyak、Hull和Jaravel(2022)以及Adão等(2019)开发的路径,利用许多外生转移
+2. Goldsmith-Pinkham、Sorkin和Swift(2020)提出的路径,关注份额的外生性</p>
+<p>这两种方法在适当的估计量、进行有效推断的方法以及诊断检验方面有不同的实际含义.</p>
 <h3 id="作者的问题意识">作者的问题意识</h3>
-<ul>
-<li><strong>新大陆作物(特别是玉米)的引入,是否帮助中国摆脱了马尔萨斯陷阱,实现了人口和经济增长?</strong></li>
-<li><strong>或者,玉米的引入是否仅仅导致了人口增长,而人均收入和城市化水平仍然停滞不前?</strong></li>
-<li><strong>与欧洲马铃薯的经验相比,中国玉米的引入为何产生了不同的经济增长轨迹?</strong></li>
-</ul>
+<p>本文作者意识到,尽管转移份额工具变量的应用越来越广泛,但研究者往往对这类工具何时能成功解决内生性问题、何时可能失败缺乏清晰的认识.这是一个具有挑战性的问题,因为转移份额工具变量利用两个截然不同的
+variation 来源,而且这些来源各自的属性对识别的重要性并不明显.</p>
+<p>本文旨在为这一领域提供概念性的答案,并提供使用转移份额工具变量或评估他人使用此类工具的可信度的实际指导.作者希望通过简单的清单(checklists)形式,使研究者和读者能够更容易地理解和应用这些方法.</p>
 <h3 id="研究意义">研究意义</h3>
+<p><strong>理论意义</strong></p>
+<p>本文系统梳理了两条识别路径的核心逻辑,为理解转移份额工具变量的识别条件提供了清晰的概念框架.这有助于研究者理解:
+- 什么条件下转移份额工具变量是有效的 - 不同识别策略的假设有何不同 -
+如何评估现有研究的可信度</p>
+<p><strong>实践意义</strong></p>
+<p>本文提供了两个实用的清单,分别针对外生转移和外生份额的方法.这使得研究者可以在实际应用中有一个清晰的步骤指南,也使得论文审稿人和读者能够系统地评估研究设计的可信度.</p>
+<p><strong>教育意义</strong></p>
+<p>作为发表在Journal of Economic
+Perspectives上的论文,本文具有重要的教育价值.它帮助该领域的从业者(无论是研究者还是使用者)更好地理解这一广泛使用的工具.</p>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构(论文结构)</h2>
+<h3 id="论文的整体结构">论文的整体结构</h3>
+<p>本文共分为以下几个主要部分:</p>
+<p><strong>第一部分:引言与背景</strong> - 介绍转移份额工具变量的广泛应用
+- 阐述研究的问题意识 - 概述两种识别路径</p>
+<p><strong>第二部分:转移份额工具变量基础(Shift-Share Basics)</strong> -
+什么是转移份额工具变量及其来源 - 介绍Table 1,列举各领域应用实例 -
+形式化分析框架</p>
+<p><strong>第三部分:外生转移识别方法(Many Exogenous Shifts)</strong> -
+外生转移识别的核心逻辑 - 外生转移方法的实际检查清单 - 具体应用案例</p>
+<p><strong>第四部分:外生份额识别方法(Exogenous Shares)</strong> -
+外生份额识别的核心逻辑 - 外生份额方法的实际检查清单 - 具体应用案例</p>
+<p><strong>第五部分:结论(Conclusion)</strong> - 总结两种方法的核心见解 -
+讨论如何在不同方法间选择</p>
+<p><strong>附录部分</strong> - 附录A:关于转移份额工具变量的其他实际问题
+- 附录B:技术细节</p>
+<h3 id="各部分详细内容">各部分详细内容</h3>
+<p><strong>转移份额基础部分</strong>详细介绍了: -
+工具变量的标准形式:<span class="math inline">\({z_i = \sum_{k=1}^{K}
+s_{ik} \cdot g_k}\)</span> - 该结构如何应用于各种实证研究设计 -
+识别挑战的来源:两个不同的 variation 来源</p>
+<p><strong>外生转移方法部分</strong>提供了7步检查清单: 1.
+用转移层面的理想实验来激励转移份额策略 2.
+桥接受到的和理想的转移之间的差距 3. 包含"不完整份额"控制 4.
+将份额滞后到自然实验开始时 5. 报告转移的描述性统计 6. 对转移进行平衡检验
+7. 用正确的标准误产生主要估计并检查敏感性</p>
+<p><strong>外生份额方法部分</strong>提供了5步检查清单: 1.
+确定暴露份额是否适合作为工具变量 2. 选择必要的单位层面控制 3.
+表征哪些份额对估计最重要 4. 对单个份额进行平衡检验 5.
+检查对份额工具组合方式的敏感性</p>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文(逻辑梳理)</h2>
+<h3 id="背景与核心问题">3.1 背景与核心问题</h3>
+<h4 id="一个经典案例autor等2013的研究">3.1.1
+一个经典案例:Autor等(2013)的研究</h4>
+<p>为了帮助读者理解转移份额工具变量的逻辑,本文以Autor等(2013)关于"中国综合症"的研究为例进行说明.</p>
+<p><strong>研究问题</strong>:中国进口激增如何影响美国各地区的劳动力市场结果?</p>
+<p><strong>基本设定</strong>: - 分析单位:美国各地区(commuting zones) -
+结果变量 <span class="math inline">\({y_i}\)</span>:地区制造业就业增长 -
+处理变量 <span class="math inline">\({x_i}\)</span>:地区对中国进口的暴露程度</p>
+<p><strong>暴露程度的测量</strong>: - 定义 <span class="math inline">\({x_i = \sum_k s_{ik} \cdot g_k}\)</span> - 其中
+<span class="math inline">\({s_{ik}}\)</span> 是地区 <span class="math inline">\({i}\)</span> 在产业 <span class="math inline">\({k}\)</span> 的就业份额 - <span class="math inline">\({g_k}\)</span> 是产业 <span class="math inline">\({k}\)</span> 的美国从中国进口增长</p>
+<p><strong>内生性问题</strong>: -
+美国从中国的进口可能受到美国特定的生产率和需求冲击的影响 -
+因此,简单OLS估计可能存在偏误</p>
+<p><strong>工具变量的构建</strong>: -
+用其他国家(非美国)的中国进口增长作为工具变量 - <span class="math inline">\({z_i = \sum_k s_{ik} \cdot
+g_k^{non-US}}\)</span></p>
+<p>这一工具变量的结构是:地区就业份额(shift-share中的shares)乘以其他国家对中国的产业进口增长(shift-share中的shifts).</p>
+<h4 id="转移份额结构的形式化">3.1.2 转移份额结构的形式化</h4>
+<p>考虑以下形式模型:</p>
+<p><span class="math display">\[{y_i = \beta x_i + \gamma' w_i +
+\varepsilon_i}\]</span></p>
+<p>其中: - <span class="math inline">\({y_i}\)</span> 是结果变量 - <span class="math inline">\({x_i}\)</span> 是处理变量 - <span class="math inline">\({w_i}\)</span> 是控制变量向量 - <span class="math inline">\({\beta}\)</span>
+是我们关注的参数(假设在各单位间相同) - <span class="math inline">\({\varepsilon_i}\)</span>
+是误差项,包含了所有未观察到的结果决定因素</p>
+<p>标准解决方案是找到工具变量 <span class="math inline">\({z_i}\)</span>,满足: 1.
+工具变量与误差项不相关:<span class="math inline">\({Cov(z_i,
+\varepsilon_i) = 0}\)</span> 2. 工具变量与处理变量相关:<span class="math inline">\({Cov(z_i, x_i) \neq 0}\)</span></p>
+<p>转移份额工具变量的特殊结构在于:</p>
+<p><span class="math display">\[{z_i = \sum_{k=1}^{K} s_{ik} \cdot
+g_k}\]</span></p>
+<p>其中: - <span class="math inline">\({(g_1, ..., g_K)}\)</span>
+是一组对所有单位共同的转移 - <span class="math inline">\({(s_{i1}, ...,
+s_{iK})}\)</span> 是一组随单位变化的暴露份额</p>
+<h3 id="挑战识别问题的双重性">3.2 挑战:识别问题的双重性</h3>
+<p>转移份额工具变量面临独特的识别挑战,因为工具变量有两个截然不同的
+variation 来源:转移(shifts)和份额(shares).</p>
+<p><strong>份额(Shares)的特征</strong>: - 在不同单位间变化 -
+通常是预先决定的(pre-determined) - 例如:地区就业份额通常在前期测量</p>
+<p><strong>转移(Shifts)的特征</strong>: -
+通常在不同的层面变化(例如产业层面) - 代表了对系统的潜在外生冲击 -
+例如:产业层面的进口增长</p>
+<p><strong>核心问题</strong>:如何论证 <span class="math inline">\({z_i}\)</span> 是外生的(即 <span class="math inline">\({Cov(z_i, \varepsilon_i) =
+0}\)</span>)?研究者需要解释转移和份额的什么属性使得工具变量与误差项不相关.</p>
+<h3 id="方法一外生转移识别many-exogenous-shifts">3.3
+方法一:外生转移识别(Many Exogenous Shifts)</h3>
+<h4 id="核心逻辑">3.3.1 核心逻辑</h4>
+<p>外生转移方法的基本策略是确保转移 <span class="math inline">\({g_k}\)</span>
+是外生的.如果转移是外生的,那么即使份额是内生的(不同份额的单位可能系统性地有不同的未观察因素),转移份额工具变量也可能是有效的.</p>
+<p><strong>关键洞察</strong>:如果转移是"如同随机分配"的,那么份额加权平均后的转移变量本身也是"如同随机"的.即使份额是内生的,只要转移是外生的且数量足够多(K足够大),工具变量就是有效的.</p>
+<p><strong>直觉理解</strong>:考虑一个理想化的实验_对各产业随机分配补贴.如果补贴
+<span class="math inline">\({g_k}\)</span>
+是随机分配的,那么各地区得到的工具变量 <span class="math inline">\({z_i =
+\sum_k s_{ik} \cdot g_k}\)</span>
+也是如同随机的.即使某些地区专门从事高技能产业(这些地区的就业份额 <span class="math inline">\({s_{ik}}\)</span>
+可能与某些未观察到的冲击相关),但只要补贴在各产业间是随机分配的,专门从事高技能产业的地区平均而言会有典型的工具变量值.</p>
+<h4 id="技术条件">3.3.2 技术条件</h4>
+<p>外生转移方法的核心条件是:<span class="math inline">\({g_k}\)</span>
+与以 <span class="math inline">\({s_{ik}}\)</span> 为权重对各单位的
+<span class="math inline">\({\varepsilon_i}\)</span> 的平均值不相关.</p>
+<p>形式化表达:对于所有 <span class="math inline">\({k}\)</span>,要求
+<span class="math inline">\({Cov(g_k, \sum_i s_{ik} \varepsilon_i) =
+0}\)</span>.</p>
+<p>这一条件比简单的 <span class="math inline">\({Cov(z_i, \varepsilon_i)
+= 0}\)</span> 更强但更容易验证.它意味着: - 转移不能系统性地在那些份额
+<span class="math inline">\({s_{ik}}\)</span> 集中在高/低 <span class="math inline">\({\varepsilon_i}\)</span> 单位的产业中更高或更低 -
+如果 <span class="math inline">\({s_{ik}}\)</span> 与 <span class="math inline">\({\varepsilon_i}\)</span> 相关,我们需要确保 <span class="math inline">\({g_k}\)</span> 不包含与这种相关性对应的
+variation</p>
+<h4 id="外生转移方法的要求">3.3.3 外生转移方法的要求</h4>
+<p><strong>要求一:需要许多转移</strong></p>
+<p>外生转移方法要求有足够多的转移 <span class="math inline">\({g_1, ...,
+g_K}\)</span>.否则,如果 <span class="math inline">\({K}\)</span>
+是一个小的数字,即使 <span class="math inline">\({g_k}\)</span>
+是真正随机的,它们也可能与未观察变量相关.这可以看作是"大数定律不适用"的情况_无论观察到多少单位,实际上只有少数几个外生比较.</p>
+<p>注意:<span class="math inline">\({g_k}\)</span>
+是否取许多不同的值并不重要.例如,对许多产业中的某些分配10%的补贴(其他为0%)应被视为有许多转移.</p>
+<p><strong>要求二:份额通常需要加总为一</strong></p>
+<p>份额需要加总为一(<span class="math inline">\({\sum_k s_{ik} =
+1}\)</span>),这样转移份额工具变量才有"份额加权平均"的解释.否则,即使转移是完全随机抽取的,工具变量也可能系统性地在不同单位间变化.</p>
+<h4 id="外生转移方法的实际检查清单">3.3.4
+外生转移方法的实际检查清单</h4>
+<p><strong>步骤1:用转移层面的理想实验来激励转移份额策略</strong></p>
+<p>任何令人信服的工具变量设计都始于思考要解决什么内生性偏误:即具体哪些未观察变量(或混淆因素)可能偏倚简单的OLS估计.</p>
+<p>以劳动供给设定为例:假设我们试图估计局部劳动市场工资增长 <span class="math inline">\({y_i}\)</span> 与就业增长 <span class="math inline">\({x_i}\)</span> 之间的关系.误差项 <span class="math inline">\({\varepsilon_i}\)</span>
+将包含未观察到的局部劳动供给冲击(例如,外国工人向各地区的移民).均衡就业增长来自劳动供给和劳动需求冲击的共同作用,因此通常与
+<span class="math inline">\({\varepsilon_i}\)</span>
+相关,产生OLS估计的偏误.</p>
+<p>描述一个假设的转移层面实验会有所帮助:想象在各产业间随机分配新的联邦补贴.获得更大补贴的产业可能扩大生产,从而增加对当地工人的需求,提高当地就业
+<span class="math inline">\({x_i}\)</span>.由于随机分配,这些补贴转移与当地劳动供给条件无关.</p>
+<p><strong>步骤2:桥接受到的和理想的转移之间的差距</strong></p>
+<p>下一步是描述实际用于实证分析的转移份额设计如何近似理想化实验.这可能涉及:
+- 指定一些控制变量 - 描述观察到的转移如何代理理想转移</p>
+<p>有两种类型的控制变量:</p>
+<p><em>转移层面控制</em>:考虑转移层面可观测变量 <span class="math inline">\({q_k}\)</span>,它既与 <span class="math inline">\({g_k}\)</span>
+相关又能直接影响感兴趣的结果.例如,担心补贴在技能密集型产业系统性地更大,而这些产业又与来自技能充裕国家的移民冲击相关.在这种情况下,需要在转移份额回归中控制技能密集型产业的指示变量.控制方式是包含转移层面控制变量的份额加权聚合
+<span class="math inline">\({\sum_k s_{ik} q_k}\)</span>.</p>
+<p><em>单位层面控制</em>:从未观察到的混淆因素角度考虑,如果某些地区(如美国"锈带"地区)的劳动市场可能经历不同的未观察到的当地劳动供给冲击,而集中在这些地区的产业可能看到系统性地不同补贴.在这种情况下,控制一个锈带指示变量可能是解决方案.</p>
+<p><strong>步骤3:包含"不完整份额"控制</strong></p>
+<p>在暴露份额 <span class="math inline">\({s_{ik}}\)</span>
+不加总为一的情况下_Borusyak等(2022)称之为"不完整份额"情况_必须包含一个特殊控制:份额之和
+<span class="math inline">\({S_i = \sum_k s_{ik}}\)</span>.</p>
+<p>直觉理解:当份额是"完整的"(<span class="math inline">\({S_i =
+1}\)</span>)时,转移份额工具变量是转移的加权平均值,因此如果转移来自纯彩票,工具变量也像彩票结果一样.这一逻辑在不完整份额情况下失效_<span class="math inline">\({z_i}\)</span>
+是转移的加权和.即使转移是随机分配的(假设有正均值),具有更高 <span class="math inline">\({S_i}\)</span>
+的单位将系统地获得更高的工具变量值.因此需要控制 <span class="math inline">\({S_i}\)</span>.</p>
+<p><strong>步骤4:将份额滞后到自然实验开始时</strong></p>
+<p>当构建转移份额工具变量时,需要决定何时测量份额.虽然分解建议在感兴趣时期开始时测量它们,但实践中通常进一步滞后.这是合理的吗?</p>
+<p>在外生转移方法中,最好在自然实验开始时测量转移.这避免了转移影响份额的情况,这可能产生偏误.同时,滞后份额超过必要范围会降低工具强度.确定自然实验开始的简单原则:如果没有与
+<span class="math inline">\({g_k}\)</span> 相关的过去转移,那只是测量
+<span class="math inline">\({g_k}\)</span> 的时期的开始.</p>
+<p><strong>步骤5:报告转移的描述性统计</strong></p>
+<p>除了观察数量的描述性统计外,在分析中也要呈现转移的描述性统计.这包括: -
+<span class="math inline">\({g_k}\)</span> 的均值和标准差 -
+加权版本(例如有效转移数量,定义为冲击重要性权重Herfindahl指数的倒数)</p>
+<p>有效转移数量的概念很重要:当有效转移数量很小时,少数转移可能驱动实证分析,使结果可能有噪声且不可靠.</p>
+<p><strong>步骤6:对转移进行平衡检验</strong></p>
+<p>在每个研究设计中,执行平衡检验很有用:检查相信是外生的 variation
+确实不与混淆因素代理相关.</p>
+<p>在具有外生转移的转移份额设计中,这可以通过两种方式进行: 1.
+在单位层面检查工具变量的平衡 2. 直接在转移层面的 <span class="math inline">\({g_k}\)</span> 上检查平衡</p>
+<p>例如,在产业补贴场景中,可以检查转移是否与反映劳动供给因素的变量相关,如劳动力组成和产业中移民比例.</p>
+<p><strong>步骤7:用正确的标准误产生主要估计并检查敏感性</strong></p>
+<p>具有外生转移的转移份额设计中的有效统计推断需要一种特殊的"暴露稳健"方法.直觉上,推断必须考虑具有相似份额的单位在机械上相关性更强(因为份额定义)并且可能由于共同暴露于未观察冲击而具有相关性.</p>
+<p>Adão等(2019)提供了方差估计器,在转移相互不相关或以已知方式聚类时渐近有效.Borusyak等(2022)表明可以简单地运行特定的转移层面两阶段最小二乘回归,产生与转移份额回归完全相同的系数但给出有效的标准误.</p>
+<h3 id="方法二外生份额识别exogenous-shares">3.4
+方法二:外生份额识别(Exogenous Shares)</h3>
+<h4 id="核心逻辑-1">3.4.1 核心逻辑</h4>
+<p>外生份额方法的策略是确保份额 <span class="math inline">\({s_{ik}}\)</span> 是外生的.这是什么意思?</p>
+<p>一种理解方式是想象 <span class="math inline">\({s_{ik}}\)</span>
+是如同随机分配给单位的,满足排除限制(份额仅通过感兴趣的处理变量影响结果).或者,当结果以变化衡量时,可以将份额外生性理解为类似于双重差分中使用的平行趋势条件.</p>
+<p><strong>以外生份额视角理解工具变量</strong>:</p>
+<p>Goldsmith-Pinkham等(2020)表明,转移份额估计一般可以视为将K个"一次一个"估计池化在一起,每个使用单个
+<span class="math inline">\({s_{ik}}\)</span>
+份额作为工具变量.这意味着,如果每个份额都满足平行趋势条件,那么将它们与
+<span class="math inline">\({g_k}\)</span>
+权重组合的转移份额工具变量也是一个有效的工具变量.</p>
+<p><strong>直觉理解</strong>:考虑Card(2009)关于移民对工资影响的研究.假设在某段时期我们看到来自特定原籍国(如古巴)的国家移民流入突然增加.如果愿意假设更或更少暴露于这种流入的地区(由初始古巴移民份额
+<span class="math inline">\({s_{i\kappa}}\)</span>
+捕捉)本应看到劳动力需求的类似趋势,那么 <span class="math inline">\({s_{i\kappa}}\)</span> 就是一个有效的工具变量.</p>
+<h4 id="份额外生性的关键条件">3.4.2 份额外生性的关键条件</h4>
+<p><strong>条件一:份额是"定制的"(Tailored)</strong></p>
+<p>份额外生性的可信度因构建工具变量时份额是否"定制"于感兴趣的处理而增强.份额应该是"定制的",即仅介导对
+<span class="math inline">\({x_i}\)</span> 的冲击,而不是可能影响 <span class="math inline">\({y_i}\)</span> 的大量冲击.</p>
+<p>例如,在移民研究中,暴露份额定制于研究问题:它们衡量来自各原籍国的过往地方移民.这与使用反映地方产业组成的份额的研究形成对比,同时研究特定产业转移(如与中国的进口竞争)的影响.产业就业份额是"通用的"_它们可能潜在地衡量对其他冲击(基本上任何产业冲击)的单位暴露,其中许多未观察到.</p>
+<p><strong>条件二:平行趋势假设</strong></p>
+<p>当份额是外生的时,它们必须满足类似于双重差分中使用的平行趋势条件.即:对于每个
+<span class="math inline">\({k}\)</span>,假设_如果处理没有变化_具有更高与更低
+<span class="math inline">\({s_{ik}}\)</span>
+的单位的结果趋势应该类似.</p>
+<h4 id="外生份额方法的检查清单">3.4.3 外生份额方法的检查清单</h4>
+<p><strong>步骤1:确定暴露份额是否适合作为工具变量</strong></p>
+<p>开始时,研究者应该: - 激励结果方程并描述处理内生性的主要来源 -
+提供份额可能作为工具变量解决相应威胁的理由</p>
+<p>两个一般原则: 1. 工具变量外生性论证要求份额"定制"于处理 2.
+可以通过利用更可能满足外生性的初始份额中的 variation 来加强识别策略</p>
+<p><strong>步骤2:选择必要的单位层面控制</strong></p>
+<p>即使份额是定制的,其外生性也是一个 nontrivial
+的假设,类似于任何平行趋势假设.与往常一样,可以通过包含控制变量来放松外生性.例如,研究者可以控制某些份额之和,以仅在条件化这些和之后利用份额
+variation.</p>
+<p><strong>步骤3:表征哪些份额对估计最重要</strong></p>
+<p>当将转移份额估计视为
+K个一次一个份额工具估计的池化版本时,理解是否有一小部分份额驱动结果可能很重要.</p>
+<p>Goldsmith-Pinkham等(2020)表明如何衡量每个份额工具的重要性权重,他们称之为"Rotemberg权重".这些权重基于将转移份额估计量分解为具有权重之和为一的单个份额工具估计量的加权之和(尽管一些可以为负).</p>
+<p>Rotemberg权重可以解释为衡量每个份额工具对转移份额估计对外生性违反的敏感性.</p>
+<p><strong>步骤4:对单个份额进行平衡检验</strong></p>
+<p>与任何设计一样,检查工具在可能预期与误差项相关的可观测变量上的平衡值得做.可以使用不同变量进行有用的平衡检验:
+- 处理前期的结果变量变化(对应预趋势检验) - 时期开始时测量的单位特征 -
+不期望受处理因果影响的同期安慰剂结果变化</p>
+<p><strong>步骤5:检查对份额工具组合方式的敏感性</strong></p>
+<p>当份额是外生的时,参数 <span class="math inline">\({\beta}\)</span>
+是过度识别的:任何单个份额或其线性组合都是有效的工具变量.转移份额工具变量就是这样一个组合,但由于许多其他组合可用,检查转移份额估计不会过于依赖研究者的选择是有益的.</p>
+<p>可以执行的检验: - Sargan-Hansen过度识别检验 -
+视觉工具变量程序:绘制K个简化形式系数对相应一阶段系数的图 -
+使用仅少数份额的替代估计 - 有限信息最大似然(LIML)等稳健估计量</p>
+<h3 id="主要应用实例">3.5 主要应用实例</h3>
+<h4 id="外生转移方法案例franklin等2023">3.5.1
+外生转移方法案例:Franklin等(2023)</h4>
+<p>Franklin等(2023)利用随机转移来估计一项公共工程计划对私营部门工资的间接影响.他们研究在埃塞俄比亚亚的斯亚贝巴为居住在特定社区的低收入工人提供高工资公共工程就业机会的计划.</p>
+<p><strong>设定</strong>: - 转移 <span class="math inline">\({g_k}\)</span>:居住区 <span class="math inline">\({k}\)</span> 被选入该计划的随机指示 - 份额 <span class="math inline">\({s_{ik}}\)</span>:从居住区 <span class="math inline">\({k}\)</span> 通勤到劳动市场 <span class="math inline">\({i}\)</span> 的工人份额 - 工具变量 <span class="math inline">\({z_i = \sum_k s_{ik} \cdot
+g_k}\)</span>:衡量劳动市场 <span class="math inline">\({i}\)</span>
+对随机化推广的暴露</p>
+<p><strong>识别逻辑</strong>:由于转移是随机分配的,不需要引入控制.但如果某些居住区
+<span class="math inline">\({k}\)</span>
+不符合随机化资格,则需要控制符合条件的通勤者总份额.</p>
+<h4 id="外生转移方法案例autor等2013">3.5.2
+外生转移方法案例:Autor等(2013)</h4>
+<p>Autor等(2013)研究中国进口竞争对美国就业的影响.</p>
+<p><strong>设定</strong>: - 结果 <span class="math inline">\({y_i}\)</span>:美国各地区(通勤区)就业变化 - 处理
+<span class="math inline">\({x_i}\)</span>:各地区对中国进口的暴露程度 -
+转移 <span class="math inline">\({g_k}\)</span>:8个高收入国家(不包括美国)在产业
+<span class="math inline">\({k}\)</span> 的中国进口增长 - 份额 <span class="math inline">\({s_{ik}}\)</span>:地区 <span class="math inline">\({i}\)</span> 在产业 <span class="math inline">\({k}\)</span> 的就业份额</p>
+<p><strong>关键特征</strong>:暴露份额不加总为一,因为只有制造业暴露于与中国的贸易.</p>
+<p><strong>解决方案</strong>:控制份额之和(不完整份额控制)<span class="math inline">\({S_i = \sum_k s_{ik}}\)</span>.</p>
+<h4 id="外生份额方法案例card2009">3.5.3 外生份额方法案例:Card(2009)</h4>
+<p>Card(2009)估计移民对本地工人工资的影响.</p>
+<p><strong>设定</strong>: - 来自38个原籍国 <span class="math inline">\({k}\)</span> 的移民份额作为工具变量 - 份额 <span class="math inline">\({s_{ik}}\)</span>:1980年城市 <span class="math inline">\({i}\)</span> 中移民群体 <span class="math inline">\({k}\)</span> 的份额 - 转移 <span class="math inline">\({g_k}\)</span>:1990-2000年间来自群体 <span class="math inline">\({k}\)</span> 的移民数量(相对于1990年美国 <span class="math inline">\({k}\)</span> 国移民存量的标准化)</p>
+<p><strong>识别假设</strong>:来自各原籍国的初始移民份额满足平行趋势_即如果不发生移民流入冲击,具有不同移民份额的地区将有类似的相对工资趋势.</p>
+<h4 id="外生份额方法案例mohnen2024">3.5.4
+外生份额方法案例:Mohnen(2024)</h4>
+<p>Mohnen(2024)研究退休率对年轻一代劳动市场结果的影响.</p>
+<p><strong>设定</strong>: - 结果 <span class="math inline">\({y_i}\)</span>:各通勤区年轻工人的劳动市场结果 -
+处理 <span class="math inline">\({x_i}\)</span>:各通勤区10年退休率 -
+份额 <span class="math inline">\({s_{ik}}\)</span>:45-80岁人口中年龄组
+<span class="math inline">\({k}\)</span> 的本地份额 - 转移 <span class="math inline">\({g_k}\)</span>:按年龄分的国家10年退休率</p>
+<p><strong>识别假设</strong>:年龄份额(45岁以上人口中)是有效工具,条件是包含控制变量.</p>
+<hr>
+<h2 id="结论conclusion">4. 结论(Conclusion)</h2>
+<h3 id="核心结论">核心结论</h3>
+<p>本文回顾了转移份额研究设计的两个框架,包括工具变量有效性的充分条件、直观解释这些条件的叙述、平衡检验以及各种实际建议.</p>
+<h3 id="两种方法的对比总结">两种方法的对比总结</h3>
+<table>
+<colgroup>
+<col style="width: 19%">
+<col style="width: 38%">
+<col style="width: 41%">
+</colgroup>
+<thead>
+<tr>
+<th>方面</th>
+<th>外生转移方法</th>
+<th>外生份额方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>识别论证</td>
+<td>转移如同随机分配,仅通过处理影响结果</td>
+<td>每个份额满足平行趋势</td>
+</tr>
+<tr>
+<td>估计</td>
+<td>控制份额之和(如不为一)和任何转移层面控制的转移份额聚合</td>
+<td>直接使用份额工具检查稳健性</td>
+</tr>
+<tr>
+<td>统计推断</td>
+<td>从等效转移层面IV回归获取暴露稳健标准误</td>
+<td>使用常规异方差或聚类稳健标准误</td>
+</tr>
+<tr>
+<td>平衡检验</td>
+<td>工具变量和转移</td>
+<td>工具变量和高Rotemberg权重的份额</td>
+</tr>
+</tbody>
+</table>
+<h3 id="如何选择两种方法">如何选择两种方法</h3>
+<p>在某些情况下一种方法是"非启动器": -
+外生转移方法在转移太少或为内生时不能使用 -
+当处理是特定的而份额是"通用的"时,外生份额方法不合适</p>
+<p>在其他情况下,思考每种方法建议的工具变量的潜在偏误和效率属性之间的权衡是有益的.</p>
+<h3 id="主要贡献">主要贡献</h3>
 <ol type="1">
-<li>为马尔萨斯理论提供了丰富的经验支持</li>
-<li>对"统一增长理论"的重要贡献</li>
-<li>深化了对中欧"大分流"原因的理解</li>
-<li>构建了独特的历史数据集</li>
-<li>方法论上的严谨性</li>
-</ol>
-<h2 id="内容及结构">内容及结构</h2>
-<ol type="1">
-<li>引言 (Introduction)</li>
-<li>玉米在中国的传播,1600-1910年 (The diffusion of Maize in China)</li>
-<li>数据和测量 (Data and measurement)</li>
-<li>估计策略和实证结果 (Estimation strategy and empirical results)</li>
-<li>有效性和稳健性检验 (Validity and robustness checks)</li>
-<li>人口增长而无经济发展 (Population growth without economics
-development)</li>
-<li>结论 (Conclusion)</li>
-</ol>
-<h2 id="数据集">数据集</h2>
-<ul>
-<li><strong>地理单位:</strong>
-267个"府"(相当于今天的地级市),涵盖中国18个省</li>
-<li><strong>时间跨度:</strong> 1600年至1910年</li>
-</ul>
-<p><strong>主要数据来源:</strong></p>
-<ol type="1">
-<li>玉米种植(核心自变量):查阅了1119卷府级地方志</li>
-<li>人口密度(核心因变量):来源于梁方仲 (1980) 和曹树基 (2000)
-的历史人口数据</li>
-<li>内战和瘟疫:来源于&lt;中国历代战争年表&gt;和宋正海 (1992) 的灾害记录</li>
-<li>粮食价格:来源于清代粮食价格数据库</li>
-<li>城市化率:来源于曹树基 (2000) 和Stauffer (1922) 的数据</li>
-<li>实际工资:来源于清代借贷纠纷案件的判例</li>
-</ol>
-<h2 id="核心方法差分中差分-difference-in-differences-did">核心方法:差分中差分
-(Difference-in-Differences, DID)</h2>
-<p><strong>基本思想:</strong></p>
-<ol type="1">
-<li><strong>"处理":</strong> 玉米在某个府开始种植</li>
-<li><strong>"处理组":</strong> 玉米开始种植的府</li>
-<li><strong>"对照组":</strong> 尚未开始种植玉米的府</li>
-<li><strong>"处理前"与"处理后":</strong>
-基于玉米采用年份划分的时间段</li>
-</ol>
-<p><strong>计量模型:</strong></p>
-<p><span class="math display">\[\text{popden}_{it} = \alpha
-\text{Maize}_{it} + \beta X_{it} + f_i + p_t +
-\epsilon_{it}\]</span></p>
-<ul>
-<li><span class="math inline">\(\text{popden}_{it}\)</span>:府 <span class="math inline">\(i\)</span> 在时期 <span class="math inline">\(t\)</span> 的人口密度(取自然对数)</li>
-<li><span class="math inline">\(\text{Maize}_{it}\)</span>:核心解释变量,如果府
-<span class="math inline">\(i\)</span> 在时期 <span class="math inline">\(t\)</span> 已经采用了玉米则为1,否则为0.其系数
-<span class="math inline">\(\alpha\)</span> 是本研究关注的核心参数</li>
-<li><span class="math inline">\(X_{it}\)</span>:一系列控制变量,包括战争和瘟疫的发生频率</li>
-<li><span class="math inline">\(f_i\)</span>:<strong>府固定效应</strong></li>
-<li><span class="math inline">\(p_t\)</span>:<strong>时期固定效应</strong></li>
-<li><span class="math inline">\(\epsilon_{it}\)</span>:误差项</li>
-</ul>
-<p><strong>DID方法的关键假设:平行趋势假设 (Parallel Trend
-Assumption).</strong>
-即在没有玉米种植的情况下,玉米采用区和非采用区的人口密度变化趋势应该是平行的.</p>
-<h2 id="玉米扩散机制">玉米扩散机制</h2>
-<ul>
-<li><strong>引入路线:</strong>
-16世纪中叶,玉米经由三条路线传入中国:丝绸之路(进入甘肃)、印度/缅甸(进入云南)、葡萄牙海路(进入福建)</li>
-<li><strong>地理适宜性:</strong>
-中国超过55%的土地适宜种植玉米(相比甘薯20%,马铃薯10%)</li>
-<li><strong>扩散模式:</strong>
-早期(前200年)扩散缓慢,1750年后扩散速度显著加快,到20世纪初几乎遍布全国</li>
-<li><strong>影响:</strong>
-玉米种植面积和产量大幅增加,被誉为继占城稻引入后的"第二次农业革命"</li>
-</ul>
-<h2 id="稳健性检验">稳健性检验</h2>
-<ol type="1">
-<li>府特异性时间趋势</li>
-<li>标准误聚类:使用Conley标准误</li>
-<li>空间计量方法:广义空间二阶段最小二乘法(GS2SLS)</li>
-<li>子样本分析:限制样本到华北地区(北纬33度以北)</li>
-<li>离群值和数据敏感性</li>
-<li>粮食价格验证</li>
-</ol>
-<h2 id="主要结果">主要结果</h2>
-<h3 id="玉米显著促进了中国人口增长">1. 玉米显著促进了中国人口增长</h3>
-<ul>
-<li><strong>基线回归 (表3):</strong> 玉米种植使府级人口密度增加了约
-<strong>9.9%</strong></li>
-<li><strong>量化贡献:</strong>
-在1776-1910年间,玉米种植导致中国人口增长了约
-<strong>18.77%</strong></li>
-<li><strong>机制:</strong>
-玉米引入确实增加了粮食供给,导致粮食价格下降(玉米种植后粮食价格下降3.7%)</li>
-</ul>
-<h3 id="玉米未能带来显著的经济发展">2. 玉米未能带来显著的经济发展</h3>
-<ul>
-<li><strong>城市化率:</strong>
-玉米种植对府级城市化率没有统计学上的显著影响</li>
-<li><strong>实际工资:</strong>
-玉米种植对府级农业长期雇工的实际工资也没有统计学上的显著影响</li>
-<li><strong>长期效应:</strong>
-即使考虑滞后一期的玉米种植效应,对城市化率和实际工资的影响仍然不显著</li>
-</ul>
-<h3 id="与欧洲马铃薯的对比">3. 与欧洲马铃薯的对比</h3>
-<p>Nunn和Qian (2011)
-发现马铃薯在旧世界不仅促进了人口增长,也推动了城市化和经济增长.本研究的发现为这一论断提供了"反例":在中国,玉米带来的大规模人口增长并非工业革命的充分条件.</p>
-<h2 id="核心发现图示">核心发现图示</h2>
-<ul>
-<li><strong>图5:</strong>
-玉米采用前后人口密度变化趋势,验证了平行趋势假设,并显示采用后人口密度显著上升</li>
-<li><strong>图6:</strong> 玉米采用前后战乱发生频率变化趋势</li>
-<li><strong>图8:</strong> 玉米采用前后粮食价格变化趋势</li>
-<li><strong>图9:</strong>
-玉米采用前后城市化率变化趋势,显示没有显著变化</li>
-<li><strong>图11:</strong>
-玉米采用前后实际工资变化趋势,显示没有显著变化</li>
-</ul>
-<h2 id="结论">结论</h2>
-<ol type="1">
-<li><p><strong>玉米显著促进了中国人口增长,但未能提升人均收入:</strong>
-玉米的广泛种植在1776-1910年间使中国人口增加了近19%.然而,这一农业生产力的提升并未转化为人均收入的显著增加,也未能推动城市化进程或提高实际工资水平.</p></li>
-<li><p><strong>中国在18-19世纪仍深陷马尔萨斯陷阱:</strong>
-尽管引入了具有革命性潜力的新农业技术,中国经济仍然未能摆脱马尔萨斯力量的束缚.</p></li>
-<li><p><strong>与欧洲经验形成对比,为"大分流"提供反例:</strong>
-这强调了大规模人口增长并非工业革命或经济现代化的充分条件.</p></li>
-</ol>
-<p><strong>对领域的贡献:</strong>
-强化了马尔萨斯理论的实证基础、深化了对统一增长理论的理解、为历史经济学研究提供了宝贵的数据和方法、拓宽了对"哥伦布大交换"影响的认知</p>
-<h2 id="未来研究方向">未来研究方向</h2>
-<h3 id="文献中提及的方向">文献中提及的方向</h3>
-<ol type="1">
-<li>其他新大陆作物的影响:由于数据限制,本文只研究了玉米</li>
-<li>更细致的区域异质性分析:不同区域的社会经济结构和制度环境差异巨大</li>
-</ol>
-<h3 id="进一步思考">进一步思考</h3>
-<ol type="1">
-<li>玉米引入对中国社会结构和制度变迁的深层影响</li>
-<li>中欧"大分流"中技术扩散与制度环境的比较研究</li>
-<li>长期环境变化对新大陆作物效应的调节</li>
-<li>玉米与地方经济专业化和市场整合</li>
-<li>马尔萨斯陷阱中的"质量-数量权衡"</li>
-</ol>
-<h2 id="学术思考">学术思考</h2>
-<ol type="1">
-<li>**"马尔萨斯陷阱"的衡量边界与逃逸机制的复杂性问题</li>
-<li>**新大陆作物的异质性与"次级农业革命"的可能性</li>
-<li>**微观层面的农民采纳行为与宏观效应的联系</li>
-<li>**"经济增长"代理变量的局限性与替代指标的探索</li>
-<li>**中国内部区域异质性的深层机制</li>
+<li><p><strong>理论贡献</strong>:清晰地区分了两条识别路径_外生转移和外生份额_并提供了直观的经济学解释.</p></li>
+<li><p><strong>实践贡献</strong>:提供了实用的检查清单,使研究者和读者能够系统地评估转移份额研究设计的可信度.</p></li>
+<li><p><strong>教育贡献</strong>:作为JEP论文,使更广泛的受众能够理解和使用这些方法.</p></li>
 </ol>
 <hr>
-<h2 id="深度评析玉米与人_新大陆作物对中国人口与经济增长的影响">深度评析:玉米与人_新大陆作物对中国人口与经济增长的影响</h2>
-<h3 id="领域基础知识什么是马尔萨斯陷阱">领域基础知识:什么是"马尔萨斯陷阱"?</h3>
-<p>在18世纪工业革命之前,人类社会普遍处于"马尔萨斯陷阱"(Malthusian
-Trap)中.简单来说,这个理论认为:<strong>技术进步带来的产出增加,最终会被人口增长所抵消.</strong></p>
-<ul>
-<li>如果农民发明了更好的耕作方法(比如引入了高产作物),短期内粮食多了,人均收入会提高</li>
-<li>但随后,人们会生更多的孩子,或者因为营养改善导致死亡率下降</li>
-<li>最终,新增的粮食养活了更多的人,但平均到每个人头上的粮食和收入又回到了"勉强维持生存"的水平(Subsistence
-Level)</li>
-</ul>
-<h3 id="研究背景新大陆作物的哥伦布大交换">研究背景:新大陆作物的"哥伦布大交换"</h3>
-<p>1492年哥伦布发现新大陆后,玉米、番薯、马铃薯等高产作物传向全世界.学术界(如
-Nunn 和
-Qian)曾发现,马铃薯在欧洲不仅促进了人口增长,还通过提高农业效率促进了城市化,从而助力欧洲开启了现代经济增长(工业革命).</p>
-<h3 id="作者的问题意识中国为什么是个例外">作者的问题意识:中国为什么是个例外?</h3>
-<p>中国在 1500 年到 1900 年间,人口从 1.3 亿激增到 4
-亿,约占全球增长的三分之一,但人均 GDP 却长期停滞在 600
-美元左右.作者想探究:<strong>玉米这种新技术的引入,在中国究竟是开启了"现代经济增长之门",还是仅仅让中国在马尔萨斯陷阱里越陷越深?</strong></p>
-<h2 id="内容及结构-1">内容及结构</h2>
-<p>论文共分为七个核心部分:</p>
-<ol type="1">
-<li>引言:提出核心议题</li>
-<li>玉米在中国的传播:梳理 1600-1910
-年玉米进入中国的路径及生态适应性</li>
-<li>数据与度量:利用历史地方志、粮价、人口密度等构建 267
-个府的面板数据</li>
-<li>实证策略与结果:使用"双重差分法"(DID)测算玉米对人口的影响</li>
-<li>稳健性检验:排除战乱、瘟疫及水稻改良等干扰因素</li>
-<li>经济增长分析:考察玉米对城市化率和实际工资的影响</li>
-<li>结论:总结发现</li>
-</ol>
-<h2 id="正文">正文</h2>
-<h3 id="背景与挑战如何证明是玉米导致了人口增长">1.
-背景与挑战:如何证明是"玉米"导致了人口增长?</h3>
-<p><strong>挑战:</strong> 18
-世纪中国人口在增长,农业技术也在进步,但我们怎么知道人口增长是因为种了玉米?</p>
-<p><strong>解决方法:</strong> 作者利用了玉米传播的"时空差异".</p>
-<ul>
-<li><strong>空间差异:</strong>
-有些府(地级市)适合种玉米,有些不适合(土地干旱程度、坡度不同)</li>
-<li><strong>时间差异:</strong> 玉米在不同府落户的时间有早有晚</li>
-</ul>
-<h3 id="方法地方志里的密码">2. 方法:地方志里的密码</h3>
-<ul>
-<li><strong>核心数据集:</strong> 作者查阅了 <strong>1119
-部地方志</strong>.地方志就像古代的"百科全书",如果某地的"物产"章节第一次出现了"玉蜀黍"或"包谷",作者就将其记录为该府开始采用玉米的时间</li>
-<li><strong>地理范围:</strong> 涵盖中国 18 个省的 267 个府,时间跨度 1600
-年到 1910 年</li>
-</ul>
-<h3 id="结果一人口19-的贡献率">3. 结果一(人口):19% 的贡献率</h3>
-<ul>
-<li><strong>发现:</strong>
-在控制了所有其他变量后,作者发现玉米的种植使得中国 1776 年至 1910
-年间的人口增长了近 <strong>19%</strong></li>
-<li><strong>逻辑:</strong>
-玉米耐旱、耐寒,且能在山坡地生长.它不与水稻抢夺肥沃的平原地,而是开辟了原本无法耕种的边际土地</li>
-<li><strong>粮价验证:</strong> 引入玉米后,粮价显著下降(约
-3.7%),这证明了玉米确实增加了食物供应</li>
-</ul>
-<h3 id="结果二经济人口多了钱没变多">4.
-结果二(经济):人口多了,钱没变多</h3>
-<p>这是本文最核心的发现.在欧洲,高产作物促进了城市化;但在中国:</p>
-<ul>
-<li><strong>城市化率:</strong>
-玉米种植对城市化率没有任何显著的正向推动.人们依然留在农村,只是人更多了</li>
-<li><strong>实际工资:</strong>
-玉米种植不仅没能提高实际工资,甚至因为人口过多导致劳动力边际报酬递减</li>
-<li><strong>边际报酬递减:</strong> 就像一亩地本来 2
-个人种,粮食够吃;现在种了玉米产出多了点,但也挤进来了 4
-个人种,虽然总粮食多了,但平分到每个人手里的粮食并没变多</li>
-</ul>
-<h2 id="结论-1">结论</h2>
-<ol type="1">
-<li><strong>实证结论</strong>:玉米在中国成功引发了"人口爆炸",贡献了约五分之一的人口增长</li>
-<li><strong>理论意义</strong>:玉米作为一项"新技术",在中国遭遇了典型的<strong>马尔萨斯结局</strong>_它只创造了"更多的中国人",而没有创造"更富裕的中国人"</li>
-<li><strong>大分流解释</strong>:中国的人口密度过高,将技术红利迅速吞噬,形成了"内卷化"(Involution)的自我循环</li>
-</ol>
-<h2 id="未来研究方向-1">未来研究方向</h2>
-<h3 id="文献中提及的方向-1">文献中提及的方向</h3>
-<ul>
-<li>其他新大陆作物:番薯(地瓜)为中国的推广作用</li>
-<li>质量-数量权衡:探究当时中国父母为何选择生更多孩子</li>
-</ul>
-<h3 id="学术思考-1">学术思考</h3>
-<ol type="1">
-<li>作物特性与工业化:作物的"生态属性"是否决定了一个国家的工业化命运?</li>
-<li>制度的调节作用:如果晚清政府拥有更强的产权保护或不同的土地税制,玉米产生的粮食盈余是否有可能转化为工业资本?</li>
-<li>内卷化的现代启示:如果高科技(如
-AI)的产出被某些社会因素抵消,我们会面临"数字化的马尔萨斯陷阱"吗?</li>
-</ol>
+<h2 id="未来研究方向future-work">5. 未来研究方向(Future work)</h2>
+<h3 id="论文中明确提及的未来研究方向">5.1
+论文中明确提及的未来研究方向</h3>
+<p><strong>面板数据中的转移份额设计</strong></p>
+<p>当在面板设置中使用转移份额工具变量时,会出现新的可能性和挑战: -
+可以"堆叠"多个时期的转移以获得更多估计强度 -
+时期固定效应与转移份额聚合的关系 - 转移序列相关问题</p>
+<p><strong>Bartik和Card类型设计的解释</strong></p>
+<p>Appendix
+A.11讨论了Bartik(1991)和Card(2009)的设计_它们将转移衡量为某些均衡结果的全国增长(如产业就业或总迁移)_是应该通过外生转移还是外生份额的视角来看待.</p>
+<p><strong>Leave-one-out转移构建的作用</strong></p>
+<p>是否应该在构建转移份额时使用leave-one-out构造来提高有效性.</p>
+<h3 id="基于论文内容的未来研究思考">5.2 基于论文内容的未来研究思考</h3>
+<p><strong>异质性处理效应下的识别与解释</strong></p>
+<p>当处理效应在各单位间异质时,转移份额估计的解释变得更加复杂.Mogstad等(2021)表明,不同的份额工具组合可能估计不同的因果效应组合,即使所有份额工具都是外生的.这提出了关于"平均处理效应"概念在转移份额背景下的有意义性的重要问题.</p>
+<p><strong>动态处理效应与转移序列相关</strong></p>
+<p>当转移序列相关时,静态规范存在遗漏变量偏误问题,因为过去处理的动态因果效应可能影响当前结果.如何在这种情况下稳健地识别和处理效应是一个重要的研究方向.</p>
+<p><strong>非线性处理与分数处理</strong></p>
+<p>本文假设线性处理效应模型.当处理变量是分数(如进口渗透率)或需要非线性模型时,识别策略如何调整是一个未被充分探索的领域.</p>
+<p><strong>多工具变量与过度识别检验</strong></p>
+<p>在有许多转移或份额的情况下,如何最优地组合它们,以及如何解释过度识别检验的失败,是一个值得进一步研究的问题.</p>
+<p><strong>跨学科应用</strong></p>
+<p>将转移份额设计应用于新的研究领域(如环境经济学、教育经济学,发展经济学)时,需要考虑这些领域的特殊性和潜在的特殊识别威胁.</p>
 <hr>
-<p><strong>文献信息:</strong></p>
-<ul>
-<li><strong>标题:</strong> Of maize and men: the effect of a New World
-crop on population and economic growth in China</li>
-<li><strong>作者:</strong> Shuo Chen, James Kai-sing Kung</li>
-<li><strong>期刊:</strong> Journal of Economic Growth, 2016, Vol. 21,
-Issue 1, pp. 71-99</li>
-<li><strong>DOI:</strong> 10.1007/s10887-016-9125-8</li>
-</ul>
+<h2 id="学术思考">6. 学术思考</h2>
+<h3 id="关于识别策略的思考">关于识别策略的思考</h3>
+<p><strong>问题一:两种方法的选择是二元对立还是存在光谱?</strong></p>
+<p>论文将两种方法描述为有明确区别的路径,但现实中许多应用可能同时涉及两种逻辑.例如,一个设计可能既利用转移的外生
+variation,又利用份额的外生性,只是在程度和可信度上有所不同.这是否意味着存在一个连续光谱而非二元选择?</p>
+<p><strong>问题二:份额外生性假设的时变性</strong></p>
+<p>当使用前期份额作为工具时,我们隐含地假设在前期和处理期之间,份额与未观察冲击的关系保持稳定.但现实中经济结构可能发生变化.如何评估这种假设的稳健性?</p>
+<p><strong>问题三:"如同随机"的程度问题</strong></p>
+<p>论文强调转移需要"如同随机分配",但这只是程度问题.任何自然实验都只是近似随机.问题是:对于特定研究问题,需要多"随机"才能使偏误可接受?</p>
+<h3 id="关于推断方法的思考">关于推断方法的思考</h3>
+<p><strong>问题四:暴露稳健推断的实践重要性</strong></p>
+<p>Adão等(2019)强调的"暴露稳健"推断方法在实践中似乎并未被广泛采用.这可能是因为:
+1. 研究者不了解这种方法 2. 这种方法在某些设定下与常规方法差异不大 3.
+实现起来比较复杂</p>
+<p>如何在保持理论严谨性的同时使这种方法更易于应用?</p>
+<p><strong>问题五:聚类层面的选择</strong></p>
+<p>当转移在特定层面聚类时(如产业内相关),推断需要考虑这种聚类.但在实践中选择正确的聚类层面并不总是明确的.</p>
+<h3 id="关于研究设计的思考">关于研究设计的思考</h3>
+<p><strong>问题六:工具变量强度与有效性之间的权衡</strong></p>
+<p>使用更多的转移可以增加工具变量强度,但也可能引入无效性(因为更多的转移意味着更多可能与未观察变量相关的
+variation).如何在强度和有效性之间找到平衡?</p>
+<p><strong>问题七:替代设计 vs 转移份额设计</strong></p>
+<p>在什么情况下应该优先考虑其他研究设计(如双重差分、合成控制、断点回归)而不是转移份额设计?每种设计的优缺点如何在具体应用中选择?</p>
+<hr>
+<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
+<h3 id="问题1如何在实际操作中使用论文提供的检查清单">问题1:如何在实际操作中使用论文提供的检查清单?</h3>
+<p>用户可能想知道:在自己的研究中,如何具体执行这些检查清单步骤?有什么软件工具可以辅助?</p>
+<h3 id="问题2borusyak-hull-jaravel-2022-与-goldsmith-pinkham-et-al.-2020-两篇原始论文的核心区别是什么">问题2:Borusyak
+Hull Jaravel (2022) 与 Goldsmith-Pinkham et al. (2020)
+两篇原始论文的核心区别是什么?</h3>
+<p>用户可能希望更深入了解两篇开创性论文的方法论差异,以及如何在具体研究中选择.</p>
+<h3 id="问题3如何在我的中国研究背景如中国各省份的贸易开放产业结构转型等中应用转移份额设计">问题3:如何在我的中国研究背景(如中国各省份的贸易开放、产业结构转型等)中应用转移份额设计?</h3>
+<p>用户可能关心如何将这些西方文献中发展的方法应用于中国的实证研究,以及需要注意什么特殊问题.</p>
+<h3 id="问题4转移份额工具变量的-statar-实现代码是否有现成的包可用">问题4:转移份额工具变量的
+Stata/R 实现代码是否有现成的包可用?</h3>
+<p>用户可能希望获得实际操作的代码参考,如 ssaggregate、bartik_weight
+等命令的使用.</p>
+<h3 id="问题5当研究设计同时涉及地区和产业两个维度时如何正确处理固定效应和标准误">问题5:当研究设计同时涉及地区和产业两个维度时,如何正确处理固定效应和标准误?</h3>
+<p>用户可能遇到了多维度聚类、地区固定效应、产业固定效应同时存在的复杂情况,希望知道如何处理.</p>
+<h3 id="问题6在-bartik-类型的本地曝露设计中有哪些常见的识别威胁如何诊断和解决">问题6:在
+Bartik 类型的"本地曝露"设计中,有哪些常见的识别威胁?如何诊断和解决?</h3>
+<p>Bartanik设计(如中国进口对美国地区的影响)在实践中可能面临哪些特殊问题,如何进行检查.</p>
+<h3 id="问题7论文提到当处理效应异质时转移份额估计的解释会变得复杂.这种情况下应该如何理解估计结果">问题7:论文提到当处理效应异质时,转移份额估计的解释会变得复杂.这种情况下应该如何理解估计结果?</h3>
+<p>用户可能关心在异质性处理效应设定下,如何给转移份额系数赋予经济学解释,以及可能需要哪些额外的分析.</p>
+<hr>
+<p><em>本分析报告为A Practical Guide to Shift-Share
+Instruments论文的深度笔记,由Claude AI辅助生成.</em></p>
 ]]></content>
       <categories>
-        <category>历史</category>
+        <category>方法论</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-        <tag>经济史</tag>
+        <tag>计量经济学</tag>
+        <tag>工具变量</tag>
       </tags>
   </entry>
   <entry>
@@ -2435,61 +2435,6 @@ _谢肇淛&lt;五杂俎&gt;(约1610年)</p>
       </tags>
   </entry>
   <entry>
-    <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
-    <url>/posts/48526/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
-<ul>
-<li>因果识别+统计推断</li>
-<li>因果识别(<strong><em>causal
-identification</em></strong>):如果拥有总体,能否确定总体因果关系</li>
-<li>统计推断(<strong><em>statistical
-inference</em></strong>):如何从样本数据获取总体因果关系信息,实际是一种相关性事实</li>
-<li>识别假设,实际就是对 <span class="math inline">\(D\)</span> 和 <span class="math inline">\(\varepsilon\)</span>
-的关系作出表述,但这种过程是无法从理论上验证的</li>
-</ul>
-<span id="more"></span>
-<h2 id="section"><strong>1</strong></h2>
-<ul>
-<li><strong>1.1</strong>
-因果效应的定义:干预与否、处理与否时,潜在结果之间的差值.潜在结果一定是同一个时间点上的结果</li>
-<li><strong>1.2</strong> 潜在结果永远无法完全观测,除非存在平行宇宙</li>
-<li><strong>1.3</strong>
-通过识别假设可以进行"插值",可以化"相关关系"识别场景为"因果关系"识别场景</li>
-<li><strong>1.4</strong>
-鲁宾因果模型(潜在因果框架),一套描述因果关系的新语言</li>
-</ul>
-<h2 id="section-1"><strong>2</strong></h2>
-<ul>
-<li><strong>2.1</strong> 第一类识别假设:潜在结果均值独立于处理状态</li>
-<li><strong>2.2</strong>
-从干扰项中剥离出控制变量;或者寻找一个与干扰项不相关的工具变量</li>
-<li><strong>2.3</strong>
-第二类识别假设:潜在结果条件均值独立于处理状态</li>
-<li><strong>2.4</strong> 好的控制变量:既影响<span class="math inline">\(Y\)</span>,又影响<span class="math inline">\(D\)</span>.其本身和干扰项是否相关是不重要的,不是研究者关注的中心</li>
-<li><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</li>
-<li><strong>2.6</strong> 无需过渡阐释控制变量的系数</li>
-</ul>
-<h2 id="section-2"><strong>3</strong></h2>
-<ul>
-<li><strong>3.1</strong> 鲁宾因果模型并未规定具体的函数形式</li>
-<li><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</li>
-</ul>
-<h2 id="section-3"><strong>4</strong></h2>
-<ul>
-<li><strong>4.1</strong>
-选择性又称之为分配机制,每个个体如何接受处理,可以用倾向得分来表示</li>
-<li><strong>4.2</strong>
-建议现实使用IV、DID、RDD等识别方法时,称之为准实验</li>
-</ul>
-]]></content>
-      <categories>
-        <category>计量</category>
-      </categories>
-      <tags>
-        <tag>学术讲座</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>&lt;住房与不平等&gt;深度阅读笔记 — Ioannides &amp; Ngai</title>
     <url>/posts/ioannides2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -2607,6 +2552,61 @@ Inequality - <strong>作者</strong>:Yannis M. Ioannides, L. Rachel Ngai -
       <tags>
         <tag>论文笔记</tag>
         <tag>城市经济学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
+    <url>/posts/48526/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
+<ul>
+<li>因果识别+统计推断</li>
+<li>因果识别(<strong><em>causal
+identification</em></strong>):如果拥有总体,能否确定总体因果关系</li>
+<li>统计推断(<strong><em>statistical
+inference</em></strong>):如何从样本数据获取总体因果关系信息,实际是一种相关性事实</li>
+<li>识别假设,实际就是对 <span class="math inline">\(D\)</span> 和 <span class="math inline">\(\varepsilon\)</span>
+的关系作出表述,但这种过程是无法从理论上验证的</li>
+</ul>
+<span id="more"></span>
+<h2 id="section"><strong>1</strong></h2>
+<ul>
+<li><strong>1.1</strong>
+因果效应的定义:干预与否、处理与否时,潜在结果之间的差值.潜在结果一定是同一个时间点上的结果</li>
+<li><strong>1.2</strong> 潜在结果永远无法完全观测,除非存在平行宇宙</li>
+<li><strong>1.3</strong>
+通过识别假设可以进行"插值",可以化"相关关系"识别场景为"因果关系"识别场景</li>
+<li><strong>1.4</strong>
+鲁宾因果模型(潜在因果框架),一套描述因果关系的新语言</li>
+</ul>
+<h2 id="section-1"><strong>2</strong></h2>
+<ul>
+<li><strong>2.1</strong> 第一类识别假设:潜在结果均值独立于处理状态</li>
+<li><strong>2.2</strong>
+从干扰项中剥离出控制变量;或者寻找一个与干扰项不相关的工具变量</li>
+<li><strong>2.3</strong>
+第二类识别假设:潜在结果条件均值独立于处理状态</li>
+<li><strong>2.4</strong> 好的控制变量:既影响<span class="math inline">\(Y\)</span>,又影响<span class="math inline">\(D\)</span>.其本身和干扰项是否相关是不重要的,不是研究者关注的中心</li>
+<li><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</li>
+<li><strong>2.6</strong> 无需过渡阐释控制变量的系数</li>
+</ul>
+<h2 id="section-2"><strong>3</strong></h2>
+<ul>
+<li><strong>3.1</strong> 鲁宾因果模型并未规定具体的函数形式</li>
+<li><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</li>
+</ul>
+<h2 id="section-3"><strong>4</strong></h2>
+<ul>
+<li><strong>4.1</strong>
+选择性又称之为分配机制,每个个体如何接受处理,可以用倾向得分来表示</li>
+<li><strong>4.2</strong>
+建议现实使用IV、DID、RDD等识别方法时,称之为准实验</li>
+</ul>
+]]></content>
+      <categories>
+        <category>计量</category>
+      </categories>
+      <tags>
+        <tag>学术讲座</tag>
       </tags>
   </entry>
   <entry>
@@ -3800,42 +3800,6 @@ World!"开始的,对于<strong>shell</strong>而言:</p>
       </tags>
   </entry>
   <entry>
-    <title>画一幅我农所在地的道路图</title>
-    <url>/posts/42027/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;">
-<center>
-上图即为最终效果
-</center>
-<h2 id="一些必备的工具">一些必备的工具</h2>
-<p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="绘制路网地图">绘制路网地图</h2>
-<p>导入以下R 包:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>读入杨陵区的数据:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>获取杨陵区的经纬度范围:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
-<p>提取杨陵区的街道路线:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>把数据保存为<strong>rds</strong>:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>然后绘图:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>绘图</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>字体和公式的Display</title>
     <url>/posts/15167/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
@@ -3872,6 +3836,42 @@ t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)
       </categories>
       <tags>
         <tag>blog_test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>画一幅我农所在地的道路图</title>
+    <url>/posts/42027/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;">
+<center>
+上图即为最终效果
+</center>
+<h2 id="一些必备的工具">一些必备的工具</h2>
+<p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="绘制路网地图">绘制路网地图</h2>
+<p>导入以下R 包:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>读入杨陵区的数据:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>获取杨陵区的经纬度范围:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
+<p>提取杨陵区的街道路线:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>把数据保存为<strong>rds</strong>:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>然后绘图:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>绘图</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
       </tags>
   </entry>
 </search>
