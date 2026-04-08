@@ -252,6 +252,56 @@ Development. <em>American Economic Review</em>, 103(1), 1-46.</li>
       </tags>
   </entry>
   <entry>
+    <title>大城市人口增长速度🦚</title>
+    <url>/posts/15523/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
+<center>
+上图即为最终效果
+</center>
+<h2 id="下载数据">下载数据</h2>
+<p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录.
+</p><figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="加载r包">加载R包</h2>
+<p>需要的R包如下所示.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
+<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<ol type="1">
+<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
+<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon,
+Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
+<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
+<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
+</ol>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
+<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.
+使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="绘图">绘图</h2>
+<p>代码如下,图见上文.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>绘图</category>
+        <category>map&amp;sf</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>A Practical Guide to Shift-Share Instruments 论文笔记 — Borusyak, Hull &amp; Jaravel</title>
     <url>/posts/boru2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -675,842 +725,6 @@ Instruments论文的深度笔记,由Claude AI辅助生成.</em></p>
         <tag>论文笔记</tag>
         <tag>计量经济学</tag>
         <tag>工具变量</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大城市人口增长速度🦚</title>
-    <url>/posts/15523/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
-<center>
-上图即为最终效果
-</center>
-<h2 id="下载数据">下载数据</h2>
-<p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录.
-</p><figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<h2 id="加载r包">加载R包</h2>
-<p>需要的R包如下所示.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
-<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<ol type="1">
-<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
-<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon,
-Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
-<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
-<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
-</ol>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
-<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.
-使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="绘图">绘图</h2>
-<p>代码如下,图见上文.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>绘图</category>
-        <category>map&amp;sf</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>&lt;中国人口研究 1368-1953&gt;深度阅读笔记 — 何炳棣 Ping-Ti Ho</title>
-    <url>/posts/ho1959/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="书籍信息">书籍信息</h2>
-<ul>
-<li><strong>书名</strong>: Studies on the Population of China,
-1368-1953(中国人口研究,1368-1953)</li>
-<li><strong>作者</strong>: Ping-ti Ho(何炳棣)</li>
-<li><strong>类型</strong>: 学术专著 / 经济史 / 人口史 / 计量史学</li>
-<li><strong>出版年份</strong>: 1959</li>
-<li><strong>出版机构</strong>: Harvard University
-Press(哈佛大学出版社)</li>
-<li><strong>所属系列</strong>: Harvard East Asian Studies</li>
-<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、历史学基础
-<span id="more"></span> ---</li>
-</ul>
-<h2 id="整体评价">整体评价</h2>
-<p>何炳棣的这部著作是研究中国人口史的开创性巨著,1959年由哈佛大学出版社出版,至今仍是该领域的必读经典.作者利用浩繁的中国地方志(fang
-chih/gazetteers)资料,系统梳理了1368年至1953年近六百年间中国人口的发展脉络.</p>
-<p>本书最重要的贡献在于揭示了<strong>1650-1850年间中国人口从约1亿增长至4.3亿的"人口革命"</strong>,并深入探讨了其背后的制度性因素、经济动因及灾难性制约.作者敢于挑战权威,对"人口过剩"等流行观点提出系统性质疑,展现了真正的学术勇气.本书虽成书于1959年,但其研究方法与核心论点至今仍深刻影响着中国史研究.</p>
-<hr>
-<h2 id="内容总览">内容总览</h2>
-<p>本书正文共十一章,分为两大部分:</p>
-<p><strong>第一部分:官方人口记录(The Official Population
-Record)</strong> - 第一章:明代人口数据性质 - 第二章:"丁"的性质 -
-第三章:1741-1775年人口数据 - 第四章:1776-1850年人口数据 -
-第五章:1851-1953年人口数据</p>
-<p><strong>第二部分:影响人口的因素(Factors Affecting
-Population)</strong> - 第六章:人口-土地关系(明代至现代) -
-第七章:人口-土地关系:区域迁移 - 第八章:土地利用与粮食生产 -
-第九章:其他经济与制度因素 - 第十章:灾难性制约因素 - 第十一章:结论</p>
-<p><strong>核心问题意识</strong>:中国人口为何在近代早期(1650-1850)能够如此迅速增长?</p>
-<hr>
-<h2 id="第一部分历史事实整理">第一部分:历史事实整理</h2>
-<h3 id="一明代人口登记制度1368-1644">一、明代人口登记制度(1368-1644)</h3>
-<h4 id="洪武皇帝的人口普查">1.1 洪武皇帝的人口普查</h4>
-<p><strong>1370年:户帖制度(Household Certificate)的开端</strong></p>
-<p>朱元璋于1370年下令颁发"户帖"(hu-t'ieh),这是一项具有现代人口普查雏形的重要制度.户帖详细记录每个家庭的成员信息、财产状况.</p>
-<p>户帖采用"半印"制度_每户持有户帖的一半,政府持有另一半,两者吻合方为有效.这体现了明代户籍管理的严谨性.</p>
-<p><strong>1371年郎氏户帖实物</strong>:
-这是研究明代家庭结构的珍贵史料.郎氏户帖显示: - 户主:郎利青 -
-住址:兴化县桂集镇杏花村 - 家庭成员:6人 -
-男4人(成人2:户主54岁、其子28岁;儿童2:7岁、7岁) -
-女2人(妻子42岁、儿媳28岁) - 财产:5间房,占地0.8亩</p>
-<p><strong>1381-1392年:黄册(Yellow Registers)编制</strong></p>
-<p>朱元璋在位期间最伟大的成就之一是建立了系统的人口普查制度.1381-1382年,全国编制"黄册",以110户为"里"为单位进行人口登记.每10年修订一次.</p>
-<p>黄册登记内容包括: - 年龄(按"岁"计算) - 性别 -
-职业(军户、匠户、民户等) - 家庭财产</p>
-<h4 id="明代户的定义">1.2 明代"户"的定义</h4>
-<p><strong>关键洞见</strong>:中国传统"户"是习惯性<strong>复合家庭</strong>(compound
-family),而非西方"核心家庭".</p>
-<p>法律规定:成年子孙除非分家析产并获得户主特殊许可,否则必须生活在同一屋顶下,视为同一户.这一法律定义对于研究中国历史人口和家庭规模至关重要.</p>
-<h4 id="明代人口数据">1.3 明代人口数据</h4>
-<p><strong>1393年全国人口数据</strong>(最可靠的明代数据):</p>
-<table>
-<thead>
-<tr>
-<th>地区</th>
-<th>户数</th>
-<th>人口数</th>
-<th>户均人口</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>全国</td>
-<td>约16,000,000户</td>
-<td>约60,000,000人</td>
-<td>约3.75人</td>
-</tr>
-<tr>
-<td>徽州府</td>
-<td>117,110户</td>
-<td>536,925人</td>
-<td>4.58人</td>
-</tr>
-<tr>
-<td>苏州府</td>
-<td>473,862户</td>
-<td>1,947,871人</td>
-<td>4.11人</td>
-</tr>
-</tbody>
-</table>
-<p><strong>明初人口快速增长证据</strong>:
-以苏州府为例,1371年有473,862户、1,947,871人;到1376年增至506,543户、2,160,463人.五年间人口增长10.9%,显示社会稳定后人口的快速恢复.</p>
-<h4 id="明代人口登记的演变">1.4 明代人口登记的演变</h4>
-<p>明代人口登记制度经历了重要变化: -
-<strong>1381-1398年(洪武年间)</strong>:登记最为准确,接近实际人口 -
-<strong>1398年后</strong>:登记方法发生重大变化 -
-<strong>明代中后期</strong>:人口登记越来越脱离实际,逐渐只覆盖"纳税单位"</p>
-<p><strong>明代地方志证据</strong>: -
-徽州府祁门县1391年有117,110户、536,925人 -
-1391-1483年的92年间,户数减少8,890、人口减少48,250(减少60-70%) -
-大量人口逃避登记以减轻赋税负担</p>
-<hr>
-<h3 id="二清代丁的性质演变">二、清代"丁"的性质演变</h3>
-<h4 id="丁ting的概念">2.1 "丁"(ting)的概念</h4>
-<p>"丁"是清代人口统计中最核心的概念,但其含义经历了根本性变化.</p>
-<p><strong>清初"丁"的含义</strong>:
-"丁"最初指纳税单位,而非实际人口数.清初政府继承明代赋税制度,以"丁"为基础征收人头税.</p>
-<p><strong>1651年首次全国丁税统计</strong>:约10,600,000丁
-<strong>1660年</strong>:约19,000,000丁
-<strong>1684年</strong>:超过20,000,000丁(平定三藩之乱、台湾回归后)
-<strong>1734年</strong>:约26,400,000丁</p>
-<h4 id="滋生人丁永不加赋1662年">2.2 "滋生人丁,永不加赋"(1662年)</h4>
-<p>这是中国人口史的<strong>关键转折点</strong>.</p>
-<p>康熙五十九年(1720年),康熙帝宣布:新增人丁不再加赋.这是一项革命性的政策,从制度上消除了隐瞒人口的动机.</p>
-<p><strong>历史意义</strong>: - 结束了人头税的无限增长 -
-促进了人口如实登记 - 为雍正年间"摊丁入亩"改革奠定基础</p>
-<h4 id="摊丁入亩改革1720s-1730s">2.3 "摊丁入亩"改革(1720s-1730s)</h4>
-<p>雍正年间(1723-1735),清政府将人头税(丁税)摊入土地税,完成了中国赋税史上的重要改革.</p>
-<p><strong>李卫(直隶总督1726年)的经典表述</strong>: &gt;
-"天下有不毛之地,而无不毛之丁"</p>
-<p>这一表述精辟地说明了赋税改革逻辑:土地是稳定的,而人口是可以增长的.将税收从人转移到土地,更加公平合理.</p>
-<p><strong>改革进程</strong>: - 广东、四川:最早已完成摊丁入亩 -
-浙江:47个县中已完成摊丁入亩或按亩分摊 - 湖北:半数地区已完成 -
-1720s-1730s:全国约70%完成</p>
-<h4 id="丁的性质变化">2.4 "丁"的性质变化</h4>
-<p>摊丁入亩完成后,"丁"完全脱离了与实际人口的关联: -
-"丁"成为纯粹的<strong>纳税单位</strong> -
-地方志中出现"15,232.68949664丁"这样的精确数字 -
-甚至出现"增加丁:0.7819斗"这样的荒谬记录</p>
-<hr>
-<h3 id="三清代人口数据1741-1953">三、清代人口数据(1741-1953)</h3>
-<h4 id="年人口登记的转型">3.1 1741-1775年:人口登记的转型</h4>
-<p>1740年,年轻的乾隆帝决定改革人口登记制度: &gt;
-"朕御极以来,屡次咨询官方,周知民隐,深知户口日增之故……自明年(1741年)起,各省于每年十一月呈报户口增减数目."</p>
-<p><strong>1741年起</strong>:中国有了接近现代意义的人口普查</p>
-<h4 id="年人口革命的黄金时代">3.2 1776-1850年:人口革命的黄金时代</h4>
-<p>这一时期人口数据最为可靠,被何炳棣视为中国"人口革命"的核心阶段.</p>
-<p><strong>人口增长数据</strong>:</p>
-<table>
-<thead>
-<tr>
-<th>年代</th>
-<th>人口数(百万)</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1650</td>
-<td>约100-150</td>
-<td>清初恢复期</td>
-</tr>
-<tr>
-<td>1700</td>
-<td>约150</td>
-<td></td>
-</tr>
-<tr>
-<td>1750</td>
-<td>约210</td>
-<td>乾隆盛世</td>
-</tr>
-<tr>
-<td>1776</td>
-<td>约270</td>
-<td>人口普查制度完善</td>
-</tr>
-<tr>
-<td>1800</td>
-<td>约300</td>
-<td></td>
-</tr>
-<tr>
-<td>1850</td>
-<td>约430</td>
-<td>人口革命顶峰</td>
-</tr>
-</tbody>
-</table>
-<p><strong>1650-1850年:人口增长了两倍有余,从约1亿增至约4.3亿</strong></p>
-<h4 id="年动荡与数据混乱">3.3 1851-1953年:动荡与数据混乱</h4>
-<p><strong>太平天国战争(1850-1865)</strong>的影响: -
-江苏、浙江、安徽、江西人口锐减 - 全国人口损失估计达7000万至1亿 -
-人口数据严重失真</p>
-<p><strong>1908-1911年的人口普查</strong>: -
-面临巨大困难:民众误以为普查是为了加税 - 广东出现骚乱和暴动 -
-地方官员伪造数据以应付上级 - 民国初年数据更加混乱</p>
-<p><strong>1912-1949年</strong>: - 军阀混战时期数据几乎不可靠 -
-各地自行编造数据</p>
-<p><strong>1953年人口普查</strong>:
-新中国成立后首次科学的人口普查,结果约5.83亿</p>
-<hr>
-<h3 id="四人口-土地关系">四、人口-土地关系</h3>
-<h4 id="官方土地数据">4.1 官方土地数据</h4>
-<p><strong>表21:1398-1932年中国官方土地数据</strong></p>
-<table>
-<thead>
-<tr>
-<th>年代</th>
-<th>报告面积(亩)</th>
-<th>报告面积(英亩)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1398</td>
-<td>813,187,917</td>
-<td>133,900,000</td>
-</tr>
-<tr>
-<td>1502</td>
-<td>422,805,881</td>
-<td>69,600,000</td>
-</tr>
-<tr>
-<td>1578</td>
-<td>701,397,628</td>
-<td>115,600,000</td>
-</tr>
-<tr>
-<td>1602</td>
-<td>1,161,894,881</td>
-<td>176,000,000</td>
-</tr>
-<tr>
-<td>1645</td>
-<td>405,690,504</td>
-<td>66,800,000</td>
-</tr>
-<tr>
-<td>1661</td>
-<td>549,357,640</td>
-<td>90,500,000</td>
-</tr>
-<tr>
-<td>1685</td>
-<td>607,843,001</td>
-<td>100,000,000</td>
-</tr>
-<tr>
-<td>1724</td>
-<td>683,791,427</td>
-<td>112,600,000</td>
-</tr>
-<tr>
-<td>1753</td>
-<td>708,114,288</td>
-<td>116,600,000</td>
-</tr>
-<tr>
-<td>1766</td>
-<td>741,449,550</td>
-<td>122,000,000</td>
-</tr>
-<tr>
-<td>1812</td>
-<td>791,525,100</td>
-<td>130,000,000</td>
-</tr>
-<tr>
-<td>1932</td>
-<td>1,248,781,000</td>
-<td>205,700,000</td>
-</tr>
-</tbody>
-</table>
-<h4 id="人均耕地面积下降">4.2 人均耕地面积下降</h4>
-<table>
-<thead>
-<tr>
-<th>年代</th>
-<th>估计人口(百万)</th>
-<th>估计耕地(百万亩)</th>
-<th>人均耕地(亩)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1393</td>
-<td>约60</td>
-<td>约360</td>
-<td>约6.0</td>
-</tr>
-<tr>
-<td>1700</td>
-<td>约150</td>
-<td>约500</td>
-<td>约3.3</td>
-</tr>
-<tr>
-<td>1750</td>
-<td>约210</td>
-<td>约600</td>
-<td>约2.9</td>
-</tr>
-<tr>
-<td>1850</td>
-<td>约430</td>
-<td>约700</td>
-<td>约1.6</td>
-</tr>
-</tbody>
-</table>
-<p><strong>结论</strong>:人均耕地面积从6亩降至1.6亩,下降约73%</p>
-<h4 id="亩mou的复杂性">4.3 "亩"(mou)的复杂性</h4>
-<p>"亩"在不同地区标准差异极大,这是理解中国土地数据的关键:</p>
-<p><strong>亩的转换问题</strong>: -
-华北平原:大量使用"大亩",实际1.8-8亩折合1税亩 -
-江南地区:通常1.5-2亩折合1税亩 - 贵州某些地区:可能几十亩折合1亩</p>
-<p><strong>明代土地评估等级</strong>: -
-上等田、中等田、下等田,各分三等(三等九则) -
-上等田税负重,下等田税负轻</p>
-<hr>
-<h3 id="五区域人口迁移">五、区域人口迁移</h3>
-<h4 id="两大主要迁入区">5.1 两大主要迁入区</h4>
-<p><strong>东北(满洲)</strong>: - 19世纪前人口稀少 -
-山东、河北移民大量涌入("闯关东") - 1923-1929年:每年净迁入约40-50万</p>
-<p><strong>西南地区</strong>: - 四川、云南、贵州山区开发 -
-玉米、甘薯等新作物的推广使山地开发成为可能</p>
-<h4 id="主要迁出区">5.2 主要迁出区</h4>
-<ul>
-<li>山东、河南、山西向东北</li>
-<li>福建、广东向东南亚("下南洋")</li>
-</ul>
-<h4 id="湖南的特殊案例">5.3 湖南的特殊案例</h4>
-<p>1850年后湖南人口增长61.2%,是长江流域唯一显著增长的省份: -
-太平天国运动未在湖南建立根据地 - 湘军兴起,湖南人在政军界崛起 -
-汇款回流促进经济发展</p>
-<hr>
-<h3 id="六灾难性制约因素">六、灾难性制约因素</h3>
-<h4 id="太平天国战争1850-1865">6.1 太平天国战争(1850-1865)</h4>
-<p><strong>破坏范围</strong>:江苏、浙江、安徽、江西</p>
-<p><strong>人口损失估计</strong>: - 直接死亡:2000-20000万 -
-战争波及地区人口减少40-60%</p>
-<p><strong>典型案例</strong>: 安徽人口战前约3500万,战后锐减</p>
-<h4 id="年大旱灾">6.2 1877-1878年大旱灾</h4>
-<p><strong>受灾范围</strong>:陕西、山西、河南、直隶、山东</p>
-<p><strong>山西情况</strong>(恩庆的报告): &gt;
-"山西饥民已达八十余县,需救济者约五、六百万……目之所及,唯见形销骨立之饥民;耳之所闻,唯闻男女号泣之声……有时运尸之车不得不绕道而行,以避堆满道旁之饿殍."</p>
-<h4 id="黄河改道1938-1947">6.3 黄河改道(1938-1947)</h4>
-<p>1938年蒋介石决堤阻敌,造成巨大人员伤亡和人口流离</p>
-<hr>
-<h2 id="第二部分观点整理">第二部分:观点整理</h2>
-<h3 id="核心论点一清代人口爆炸的制度性解释">核心论点一:清代人口爆炸的制度性解释</h3>
-<p>何炳棣认为1650-1850年中国人口的迅速增长主要归因于<strong>制度变革</strong>:</p>
-<ol type="1">
-<li><strong>"滋生人丁,永不加赋"(1662年)</strong>
-<ul>
-<li>康熙宣布新增人丁不再加赋</li>
-<li>这是一项革命性的政策,从制度上刺激了人口增长</li>
-</ul></li>
-<li><strong>"摊丁入亩"(1720s-1730s)</strong>
-<ul>
-<li>将人头税(丁税)摊入土地税</li>
-<li>消除了隐瞒人口的动机</li>
-<li>人口登记从"纳税单位"转变为"实际人口"</li>
-</ul></li>
-<li><strong>早期满清统治的"良性专制"</strong>
-<ul>
-<li>政治稳定(长达一个半世纪的和平)</li>
-<li>轻徭薄赋</li>
-<li>玉米、甘薯等新作物的推广</li>
-</ul></li>
-</ol>
-<h3 id="核心论点二批评人口过剩神话">核心论点二:批评"人口过剩"神话</h3>
-<p>何炳棣<strong>系统性质疑</strong>当时流行的"中国人口过剩导致贫困"的观点:</p>
-<p><strong>反驳要点</strong>: 1. 中国传统农业的单位面积产量远高于欧洲 2.
-人口增长刺激了农业集约化和商业化 3. 人口压力也促进了技术进步和制度创新
-4. 18世纪末之前,人均生活水平并未显著下降</p>
-<p><strong>代表性引文</strong>(谢肇淛&lt;五杂俎&gt;,17世纪初): &gt;
-"二百四十年之间,海内无事,天下一家……民生殖焉,繁衍浩大,自有宇宙以来,未有若斯之盛者也."</p>
-<h3 id="核心论点三人口数据解读的方法论">核心论点三:人口数据解读的方法论</h3>
-<p>本书最重要的方法论贡献是<strong>重新界定关键术语</strong>:</p>
-<table>
-<thead>
-<tr>
-<th>术语</th>
-<th>传统理解</th>
-<th>何炳棣的重新界定</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>丁 (ting)</td>
-<td>成年男性/人口单位</td>
-<td>纳税单位,非实际人口</td>
-</tr>
-<tr>
-<td>户 (hu)</td>
-<td>家庭</td>
-<td>复合大家庭</td>
-</tr>
-<tr>
-<td>亩 (mou)</td>
-<td>土地单位</td>
-<td>不同地区标准差异极大</td>
-</tr>
-</tbody>
-</table>
-<h3 id="核心论点四人口增长的多元解释">核心论点四:人口增长的多元解释</h3>
-<p>人口增长是多种因素共同作用的结果:</p>
-<ol type="1">
-<li><strong>经济因素</strong>
-<ul>
-<li>新作物(玉米、甘薯、马铃薯)的引入</li>
-<li>土地利用率提高</li>
-<li>农业技术进步</li>
-</ul></li>
-<li><strong>制度因素</strong>
-<ul>
-<li>赋税制度改革(摊丁入亩)</li>
-<li>政治稳定</li>
-<li>医疗进步(人痘接种等)</li>
-</ul></li>
-<li><strong>社会因素</strong>
-<ul>
-<li>早婚传统</li>
-<li>鼓励人口增殖的文化价值</li>
-<li>宗族组织提供社会保障</li>
-</ul></li>
-<li><strong>地理因素</strong>
-<ul>
-<li>区域间迁移(向东北、西南)</li>
-<li>棚民开发山区</li>
-</ul></li>
-</ol>
-<hr>
-<h2 id="第三部分数据整理">第三部分:数据整理</h2>
-<h3 id="人口数据汇总">人口数据汇总</h3>
-<table>
-<thead>
-<tr>
-<th>年代</th>
-<th>人口数(百万)</th>
-<th>数据来源/备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1393</td>
-<td>约60</td>
-<td>明代黄册,最可靠数据</td>
-</tr>
-<tr>
-<td>1500</td>
-<td>约100-125</td>
-<td>估计</td>
-</tr>
-<tr>
-<td>1600</td>
-<td>约150-200</td>
-<td>估计</td>
-</tr>
-<tr>
-<td>1650</td>
-<td>约100-150</td>
-<td>清初恢复</td>
-</tr>
-<tr>
-<td>1700</td>
-<td>约150</td>
-<td>估计</td>
-</tr>
-<tr>
-<td>1750</td>
-<td>约210</td>
-<td>官方记录</td>
-</tr>
-<tr>
-<td>1800</td>
-<td>约300</td>
-<td>官方记录</td>
-</tr>
-<tr>
-<td>1850</td>
-<td>约430</td>
-<td>官方记录,人口革命顶峰</td>
-</tr>
-<tr>
-<td>1953</td>
-<td>约583</td>
-<td>人口普查</td>
-</tr>
-</tbody>
-</table>
-<h3 id="清代人口登记丁数变化">清代人口登记"丁"数变化</h3>
-<table>
-<thead>
-<tr>
-<th>年代</th>
-<th>丁数(百万)</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1651</td>
-<td>10.6</td>
-<td>首次全国统计</td>
-</tr>
-<tr>
-<td>1660</td>
-<td>19.0</td>
-<td>战后恢复</td>
-</tr>
-<tr>
-<td>1684</td>
-<td>20.0+</td>
-<td>平定台湾后</td>
-</tr>
-<tr>
-<td>1734</td>
-<td>26.4</td>
-<td>改革前最高</td>
-</tr>
-</tbody>
-</table>
-<h3 id="历代耕地与人均耕地">历代耕地与人均耕地</h3>
-<table>
-<thead>
-<tr>
-<th>年代</th>
-<th>耕地(百万亩)</th>
-<th>人口(百万)</th>
-<th>人均耕地(亩)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1393</td>
-<td>360</td>
-<td>60</td>
-<td>6.0</td>
-</tr>
-<tr>
-<td>1700</td>
-<td>500</td>
-<td>150</td>
-<td>3.3</td>
-</tr>
-<tr>
-<td>1750</td>
-<td>600</td>
-<td>210</td>
-<td>2.9</td>
-</tr>
-<tr>
-<td>1850</td>
-<td>700</td>
-<td>430</td>
-<td>1.6</td>
-</tr>
-</tbody>
-</table>
-<h3 id="太平天国损失">太平天国损失</h3>
-<table>
-<thead>
-<tr>
-<th>省份</th>
-<th>战后情况</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>江苏</td>
-<td>人口锐减40-60%</td>
-</tr>
-<tr>
-<td>浙江</td>
-<td>重灾区</td>
-</tr>
-<tr>
-<td>安徽</td>
-<td>减少30-50%</td>
-</tr>
-<tr>
-<td>江西</td>
-<td>重灾区</td>
-</tr>
-<tr>
-<td>湖南</td>
-<td>湘军庇护,损失较小</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="第四部分案例整理">第四部分:案例整理</h2>
-<h3 id="案例一1371年郎氏户帖">案例一:1371年郎氏户帖</h3>
-<p><strong>历史价值</strong>:现存最早的明代人口登记实物之一</p>
-<p><strong>内容分析</strong>: - 6口之家(复合家庭) -
-2个成年男性、2个儿童、2个女性 - 财产:5间房、0.8亩地</p>
-<p><strong>学术意义</strong>:证明明初人口登记的精确性和全面性</p>
-<h3 id="案例二苏州府人口数据1371-1376">案例二:苏州府人口数据(1371-1376)</h3>
-<p><strong>数据对比</strong>:</p>
-<table>
-<thead>
-<tr>
-<th>年份</th>
-<th>户数</th>
-<th>人口数</th>
-<th>增长率</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1371</td>
-<td>473,862</td>
-<td>1,947,871</td>
-<td>-</td>
-</tr>
-<tr>
-<td>1376</td>
-<td>506,543</td>
-<td>2,160,463</td>
-<td>+10.9%</td>
-</tr>
-</tbody>
-</table>
-<p><strong>分析</strong>:5年间人口增长超过10%,显示和平时期人口的快速自然增长</p>
-<h3 id="案例三康熙滋生人丁永不加赋">案例三:康熙"滋生人丁,永不加赋"</h3>
-<p><strong>历史背景</strong>: - 康熙五十九年(1720年) - 平定三藩之乱后 -
-国家长期和平繁荣</p>
-<p><strong>制度创新</strong>:新增人丁不再加赋,消除了人口登记的税收压力</p>
-<h3 id="案例四山西1877-1878大旱灾">案例四:山西1877-1878大旱灾</h3>
-<p><strong>灾害程度</strong>: - 80余县受灾 - 500-600万人需救济 -
-出现人相食的惨状 - 卖儿鬻女以苟延残喘</p>
-<h3 id="案例五向东北的移民潮">案例五:向东北的移民潮</h3>
-<p><strong>时间</strong>:19世纪至今</p>
-<p><strong>规模</strong>: - 1923-1929年:每年净迁入40-50万 -
-主要来自山东、河北</p>
-<p><strong>历史意义</strong>: - 缓解了关内人口压力 - 促进了东北农业开发
-- 改变了全国人口分布格局</p>
-<hr>
-<h2 id="第五部分术语表">第五部分:术语表</h2>
-<table>
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr>
-<th>术语</th>
-<th>拼音</th>
-<th>英文</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>丁</td>
-<td>dīng</td>
-<td>ting</td>
-<td>纳税单位,清代逐渐脱离实际人口含义</td>
-</tr>
-<tr>
-<td>户</td>
-<td>hù</td>
-<td>household</td>
-<td>传统中国家庭单位,通常为复合家庭</td>
-</tr>
-<tr>
-<td>亩</td>
-<td>mǔ</td>
-<td>mou</td>
-<td>土地单位,各地标准不同(约0.5-0.7亩=1英亩)</td>
-</tr>
-<tr>
-<td>黄册</td>
-<td>huáng cè</td>
-<td>Yellow Registers</td>
-<td>明代人口普查登记册(1381年起)</td>
-</tr>
-<tr>
-<td>户帖</td>
-<td>hù tiē</td>
-<td>Household Certificate</td>
-<td>1370年起发放的人口登记凭证</td>
-</tr>
-<tr>
-<td>里甲</td>
-<td>lǐ jiǎ</td>
-<td>lijia</td>
-<td>明代基层行政单位,110户为一里</td>
-</tr>
-<tr>
-<td>摊丁入亩</td>
-<td>tān dīng rù mǔ</td>
-<td>Allocation of poll tax to land tax</td>
-<td>雍正年间的税制改革</td>
-</tr>
-<tr>
-<td>滋生人丁,永不加赋</td>
-<td></td>
-<td></td>
-<td>康熙五十九年宣布的政策</td>
-</tr>
-<tr>
-<td>地方志</td>
-<td>dì fāng zhì</td>
-<td>Gazetteer (fangzhilfang chih)</td>
-<td>记载地方历史、地理、人口的文献</td>
-</tr>
-<tr>
-<td>旗地</td>
-<td>qí dì</td>
-<td>Banner lands</td>
-<td>清初分配给旗人的土地</td>
-</tr>
-<tr>
-<td>棚民</td>
-<td>péng mín</td>
-<td>Shack people</td>
-<td>居住山区的流动人口</td>
-</tr>
-<tr>
-<td>闯关东</td>
-<td>chuǎng guān dōng</td>
-<td>Entering the Northeast</td>
-<td>清代民众多地迁往东北</td>
-</tr>
-<tr>
-<td>太平天国</td>
-<td>Tài píng tiān guó</td>
-<td>Taiping Rebellion</td>
-<td>1850-1864年大规模农民起义</td>
-</tr>
-<tr>
-<td>单一鞭法</td>
-<td>dān yī biān fǎ</td>
-<td>Single-whip system</td>
-<td>明代赋税改革,将各种税目合一</td>
-</tr>
-<tr>
-<td>里chai</td>
-<td>lǐ chái</td>
-<td>labor services</td>
-<td>劳役,以人力为主的税收形式</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="附录一何炳棣其人">附录一:何炳棣其人</h2>
-<h3 id="学术背景">学术背景</h3>
-<p><strong>何炳棣(1917-2012)</strong>: - 浙江金华人 -
-1938年燕京大学经济学学士 - 1944年哥伦比亚大学经济学硕士 -
-1952年哥伦比亚大学哲学博士(历史学) - 主要研究中国史、经济史、人口史</p>
-<h3 id="主要著作">主要著作</h3>
-<ol type="1">
-<li>&lt;Studies on the Population of China, 1368-1953&gt;(1959)</li>
-<li><the cradle="" of="" the="" east:="" an="" inquiry="" into="" indigenous="" origins="" techniques="" and="" ideas="" neolithicohistoric="" china="">(1975)</the></li>
-<li><the rise="" of="" the="" modern="" chinese="" business="" class="">(1979)</the></li>
-<li><china enters="" the="" world="" economy="">(1989)</china></li>
-</ol>
-<h3 id="学术地位">学术地位</h3>
-<p>何炳棣是20世纪中国史学界最具影响力的学者之一,在以下领域做出了开创性贡献:
-- 中国人口史:奠定了该领域的方法论基础 - 中国农业史:对农业革命有深入研究
-- 中国商业史:研究了近代中国商业资本主义的发展 -
-中国文明起源:提出了中国文明独立起源的观点</p>
-<hr>
-<h2 id="附录二书中重要引文摘录">附录二:书中重要引文摘录</h2>
-<h3 id="关于明代人口登记第一章">关于明代人口登记(第一章)</h3>
-<blockquote>
-<p>"洪武四年十二月十二日,准户部所奏,着令各省府县,将境内人民,无论主客,逐一开报……户部以黄册进呈,用黄纸为面,故曰黄册."
-_&lt;洪武实录&gt;</p>
-</blockquote>
-<h3 id="关于丁的演变第二章">关于"丁"的演变(第二章)</h3>
-<blockquote>
-<p>"天下有不毛之地,而无不毛之丁" _李卫(直隶总督,1726年)</p>
-</blockquote>
-<h3 id="关于商业繁荣第九章">关于商业繁荣(第九章)</h3>
-<blockquote>
-<p>"中国之内陆贸易,实较全欧之商业为盛;盖各省如各有王国,相互流通其产物."
-_Du Halde(法国传教士,18世纪)</p>
-</blockquote>
-<h3 id="关于人口增长第十一章">关于人口增长(第十一章)</h3>
-<blockquote>
-<p>"二百四十年之间,海内无事,天下一家……民生殖焉,繁衍浩大,自有宇宙以来,未有若斯之盛者也."
-_谢肇淛&lt;五杂俎&gt;(约1610年)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>历史</category>
-        <category>人口</category>
-      </categories>
-      <tags>
-        <tag>读书笔记</tag>
-        <tag>人口史</tag>
-        <tag>中国研究</tag>
       </tags>
   </entry>
   <entry>
@@ -2432,6 +1646,792 @@ Fragments of Curious and Useful Knowledge from the Chinese Past</em>
         <tag>经济史</tag>
         <tag>读书笔记</tag>
         <tag>中国研究</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>&lt;中国人口研究 1368-1953&gt;深度阅读笔记 — 何炳棣 Ping-Ti Ho</title>
+    <url>/posts/ho1959/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="书籍信息">书籍信息</h2>
+<ul>
+<li><strong>书名</strong>: Studies on the Population of China,
+1368-1953(中国人口研究,1368-1953)</li>
+<li><strong>作者</strong>: Ping-ti Ho(何炳棣)</li>
+<li><strong>类型</strong>: 学术专著 / 经济史 / 人口史 / 计量史学</li>
+<li><strong>出版年份</strong>: 1959</li>
+<li><strong>出版机构</strong>: Harvard University
+Press(哈佛大学出版社)</li>
+<li><strong>所属系列</strong>: Harvard East Asian Studies</li>
+<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、历史学基础
+<span id="more"></span> ---</li>
+</ul>
+<h2 id="整体评价">整体评价</h2>
+<p>何炳棣的这部著作是研究中国人口史的开创性巨著,1959年由哈佛大学出版社出版,至今仍是该领域的必读经典.作者利用浩繁的中国地方志(fang
+chih/gazetteers)资料,系统梳理了1368年至1953年近六百年间中国人口的发展脉络.</p>
+<p>本书最重要的贡献在于揭示了<strong>1650-1850年间中国人口从约1亿增长至4.3亿的"人口革命"</strong>,并深入探讨了其背后的制度性因素、经济动因及灾难性制约.作者敢于挑战权威,对"人口过剩"等流行观点提出系统性质疑,展现了真正的学术勇气.本书虽成书于1959年,但其研究方法与核心论点至今仍深刻影响着中国史研究.</p>
+<hr>
+<h2 id="内容总览">内容总览</h2>
+<p>本书正文共十一章,分为两大部分:</p>
+<p><strong>第一部分:官方人口记录(The Official Population
+Record)</strong> - 第一章:明代人口数据性质 - 第二章:"丁"的性质 -
+第三章:1741-1775年人口数据 - 第四章:1776-1850年人口数据 -
+第五章:1851-1953年人口数据</p>
+<p><strong>第二部分:影响人口的因素(Factors Affecting
+Population)</strong> - 第六章:人口-土地关系(明代至现代) -
+第七章:人口-土地关系:区域迁移 - 第八章:土地利用与粮食生产 -
+第九章:其他经济与制度因素 - 第十章:灾难性制约因素 - 第十一章:结论</p>
+<p><strong>核心问题意识</strong>:中国人口为何在近代早期(1650-1850)能够如此迅速增长?</p>
+<hr>
+<h2 id="第一部分历史事实整理">第一部分:历史事实整理</h2>
+<h3 id="一明代人口登记制度1368-1644">一、明代人口登记制度(1368-1644)</h3>
+<h4 id="洪武皇帝的人口普查">1.1 洪武皇帝的人口普查</h4>
+<p><strong>1370年:户帖制度(Household Certificate)的开端</strong></p>
+<p>朱元璋于1370年下令颁发"户帖"(hu-t'ieh),这是一项具有现代人口普查雏形的重要制度.户帖详细记录每个家庭的成员信息、财产状况.</p>
+<p>户帖采用"半印"制度_每户持有户帖的一半,政府持有另一半,两者吻合方为有效.这体现了明代户籍管理的严谨性.</p>
+<p><strong>1371年郎氏户帖实物</strong>:
+这是研究明代家庭结构的珍贵史料.郎氏户帖显示: - 户主:郎利青 -
+住址:兴化县桂集镇杏花村 - 家庭成员:6人 -
+男4人(成人2:户主54岁、其子28岁;儿童2:7岁、7岁) -
+女2人(妻子42岁、儿媳28岁) - 财产:5间房,占地0.8亩</p>
+<p><strong>1381-1392年:黄册(Yellow Registers)编制</strong></p>
+<p>朱元璋在位期间最伟大的成就之一是建立了系统的人口普查制度.1381-1382年,全国编制"黄册",以110户为"里"为单位进行人口登记.每10年修订一次.</p>
+<p>黄册登记内容包括: - 年龄(按"岁"计算) - 性别 -
+职业(军户、匠户、民户等) - 家庭财产</p>
+<h4 id="明代户的定义">1.2 明代"户"的定义</h4>
+<p><strong>关键洞见</strong>:中国传统"户"是习惯性<strong>复合家庭</strong>(compound
+family),而非西方"核心家庭".</p>
+<p>法律规定:成年子孙除非分家析产并获得户主特殊许可,否则必须生活在同一屋顶下,视为同一户.这一法律定义对于研究中国历史人口和家庭规模至关重要.</p>
+<h4 id="明代人口数据">1.3 明代人口数据</h4>
+<p><strong>1393年全国人口数据</strong>(最可靠的明代数据):</p>
+<table>
+<thead>
+<tr>
+<th>地区</th>
+<th>户数</th>
+<th>人口数</th>
+<th>户均人口</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>全国</td>
+<td>约16,000,000户</td>
+<td>约60,000,000人</td>
+<td>约3.75人</td>
+</tr>
+<tr>
+<td>徽州府</td>
+<td>117,110户</td>
+<td>536,925人</td>
+<td>4.58人</td>
+</tr>
+<tr>
+<td>苏州府</td>
+<td>473,862户</td>
+<td>1,947,871人</td>
+<td>4.11人</td>
+</tr>
+</tbody>
+</table>
+<p><strong>明初人口快速增长证据</strong>:
+以苏州府为例,1371年有473,862户、1,947,871人;到1376年增至506,543户、2,160,463人.五年间人口增长10.9%,显示社会稳定后人口的快速恢复.</p>
+<h4 id="明代人口登记的演变">1.4 明代人口登记的演变</h4>
+<p>明代人口登记制度经历了重要变化: -
+<strong>1381-1398年(洪武年间)</strong>:登记最为准确,接近实际人口 -
+<strong>1398年后</strong>:登记方法发生重大变化 -
+<strong>明代中后期</strong>:人口登记越来越脱离实际,逐渐只覆盖"纳税单位"</p>
+<p><strong>明代地方志证据</strong>: -
+徽州府祁门县1391年有117,110户、536,925人 -
+1391-1483年的92年间,户数减少8,890、人口减少48,250(减少60-70%) -
+大量人口逃避登记以减轻赋税负担</p>
+<hr>
+<h3 id="二清代丁的性质演变">二、清代"丁"的性质演变</h3>
+<h4 id="丁ting的概念">2.1 "丁"(ting)的概念</h4>
+<p>"丁"是清代人口统计中最核心的概念,但其含义经历了根本性变化.</p>
+<p><strong>清初"丁"的含义</strong>:
+"丁"最初指纳税单位,而非实际人口数.清初政府继承明代赋税制度,以"丁"为基础征收人头税.</p>
+<p><strong>1651年首次全国丁税统计</strong>:约10,600,000丁
+<strong>1660年</strong>:约19,000,000丁
+<strong>1684年</strong>:超过20,000,000丁(平定三藩之乱、台湾回归后)
+<strong>1734年</strong>:约26,400,000丁</p>
+<h4 id="滋生人丁永不加赋1662年">2.2 "滋生人丁,永不加赋"(1662年)</h4>
+<p>这是中国人口史的<strong>关键转折点</strong>.</p>
+<p>康熙五十九年(1720年),康熙帝宣布:新增人丁不再加赋.这是一项革命性的政策,从制度上消除了隐瞒人口的动机.</p>
+<p><strong>历史意义</strong>: - 结束了人头税的无限增长 -
+促进了人口如实登记 - 为雍正年间"摊丁入亩"改革奠定基础</p>
+<h4 id="摊丁入亩改革1720s-1730s">2.3 "摊丁入亩"改革(1720s-1730s)</h4>
+<p>雍正年间(1723-1735),清政府将人头税(丁税)摊入土地税,完成了中国赋税史上的重要改革.</p>
+<p><strong>李卫(直隶总督1726年)的经典表述</strong>: &gt;
+"天下有不毛之地,而无不毛之丁"</p>
+<p>这一表述精辟地说明了赋税改革逻辑:土地是稳定的,而人口是可以增长的.将税收从人转移到土地,更加公平合理.</p>
+<p><strong>改革进程</strong>: - 广东、四川:最早已完成摊丁入亩 -
+浙江:47个县中已完成摊丁入亩或按亩分摊 - 湖北:半数地区已完成 -
+1720s-1730s:全国约70%完成</p>
+<h4 id="丁的性质变化">2.4 "丁"的性质变化</h4>
+<p>摊丁入亩完成后,"丁"完全脱离了与实际人口的关联: -
+"丁"成为纯粹的<strong>纳税单位</strong> -
+地方志中出现"15,232.68949664丁"这样的精确数字 -
+甚至出现"增加丁:0.7819斗"这样的荒谬记录</p>
+<hr>
+<h3 id="三清代人口数据1741-1953">三、清代人口数据(1741-1953)</h3>
+<h4 id="年人口登记的转型">3.1 1741-1775年:人口登记的转型</h4>
+<p>1740年,年轻的乾隆帝决定改革人口登记制度: &gt;
+"朕御极以来,屡次咨询官方,周知民隐,深知户口日增之故……自明年(1741年)起,各省于每年十一月呈报户口增减数目."</p>
+<p><strong>1741年起</strong>:中国有了接近现代意义的人口普查</p>
+<h4 id="年人口革命的黄金时代">3.2 1776-1850年:人口革命的黄金时代</h4>
+<p>这一时期人口数据最为可靠,被何炳棣视为中国"人口革命"的核心阶段.</p>
+<p><strong>人口增长数据</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>年代</th>
+<th>人口数(百万)</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1650</td>
+<td>约100-150</td>
+<td>清初恢复期</td>
+</tr>
+<tr>
+<td>1700</td>
+<td>约150</td>
+<td></td>
+</tr>
+<tr>
+<td>1750</td>
+<td>约210</td>
+<td>乾隆盛世</td>
+</tr>
+<tr>
+<td>1776</td>
+<td>约270</td>
+<td>人口普查制度完善</td>
+</tr>
+<tr>
+<td>1800</td>
+<td>约300</td>
+<td></td>
+</tr>
+<tr>
+<td>1850</td>
+<td>约430</td>
+<td>人口革命顶峰</td>
+</tr>
+</tbody>
+</table>
+<p><strong>1650-1850年:人口增长了两倍有余,从约1亿增至约4.3亿</strong></p>
+<h4 id="年动荡与数据混乱">3.3 1851-1953年:动荡与数据混乱</h4>
+<p><strong>太平天国战争(1850-1865)</strong>的影响: -
+江苏、浙江、安徽、江西人口锐减 - 全国人口损失估计达7000万至1亿 -
+人口数据严重失真</p>
+<p><strong>1908-1911年的人口普查</strong>: -
+面临巨大困难:民众误以为普查是为了加税 - 广东出现骚乱和暴动 -
+地方官员伪造数据以应付上级 - 民国初年数据更加混乱</p>
+<p><strong>1912-1949年</strong>: - 军阀混战时期数据几乎不可靠 -
+各地自行编造数据</p>
+<p><strong>1953年人口普查</strong>:
+新中国成立后首次科学的人口普查,结果约5.83亿</p>
+<hr>
+<h3 id="四人口-土地关系">四、人口-土地关系</h3>
+<h4 id="官方土地数据">4.1 官方土地数据</h4>
+<p><strong>表21:1398-1932年中国官方土地数据</strong></p>
+<table>
+<thead>
+<tr>
+<th>年代</th>
+<th>报告面积(亩)</th>
+<th>报告面积(英亩)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1398</td>
+<td>813,187,917</td>
+<td>133,900,000</td>
+</tr>
+<tr>
+<td>1502</td>
+<td>422,805,881</td>
+<td>69,600,000</td>
+</tr>
+<tr>
+<td>1578</td>
+<td>701,397,628</td>
+<td>115,600,000</td>
+</tr>
+<tr>
+<td>1602</td>
+<td>1,161,894,881</td>
+<td>176,000,000</td>
+</tr>
+<tr>
+<td>1645</td>
+<td>405,690,504</td>
+<td>66,800,000</td>
+</tr>
+<tr>
+<td>1661</td>
+<td>549,357,640</td>
+<td>90,500,000</td>
+</tr>
+<tr>
+<td>1685</td>
+<td>607,843,001</td>
+<td>100,000,000</td>
+</tr>
+<tr>
+<td>1724</td>
+<td>683,791,427</td>
+<td>112,600,000</td>
+</tr>
+<tr>
+<td>1753</td>
+<td>708,114,288</td>
+<td>116,600,000</td>
+</tr>
+<tr>
+<td>1766</td>
+<td>741,449,550</td>
+<td>122,000,000</td>
+</tr>
+<tr>
+<td>1812</td>
+<td>791,525,100</td>
+<td>130,000,000</td>
+</tr>
+<tr>
+<td>1932</td>
+<td>1,248,781,000</td>
+<td>205,700,000</td>
+</tr>
+</tbody>
+</table>
+<h4 id="人均耕地面积下降">4.2 人均耕地面积下降</h4>
+<table>
+<thead>
+<tr>
+<th>年代</th>
+<th>估计人口(百万)</th>
+<th>估计耕地(百万亩)</th>
+<th>人均耕地(亩)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1393</td>
+<td>约60</td>
+<td>约360</td>
+<td>约6.0</td>
+</tr>
+<tr>
+<td>1700</td>
+<td>约150</td>
+<td>约500</td>
+<td>约3.3</td>
+</tr>
+<tr>
+<td>1750</td>
+<td>约210</td>
+<td>约600</td>
+<td>约2.9</td>
+</tr>
+<tr>
+<td>1850</td>
+<td>约430</td>
+<td>约700</td>
+<td>约1.6</td>
+</tr>
+</tbody>
+</table>
+<p><strong>结论</strong>:人均耕地面积从6亩降至1.6亩,下降约73%</p>
+<h4 id="亩mou的复杂性">4.3 "亩"(mou)的复杂性</h4>
+<p>"亩"在不同地区标准差异极大,这是理解中国土地数据的关键:</p>
+<p><strong>亩的转换问题</strong>: -
+华北平原:大量使用"大亩",实际1.8-8亩折合1税亩 -
+江南地区:通常1.5-2亩折合1税亩 - 贵州某些地区:可能几十亩折合1亩</p>
+<p><strong>明代土地评估等级</strong>: -
+上等田、中等田、下等田,各分三等(三等九则) -
+上等田税负重,下等田税负轻</p>
+<hr>
+<h3 id="五区域人口迁移">五、区域人口迁移</h3>
+<h4 id="两大主要迁入区">5.1 两大主要迁入区</h4>
+<p><strong>东北(满洲)</strong>: - 19世纪前人口稀少 -
+山东、河北移民大量涌入("闯关东") - 1923-1929年:每年净迁入约40-50万</p>
+<p><strong>西南地区</strong>: - 四川、云南、贵州山区开发 -
+玉米、甘薯等新作物的推广使山地开发成为可能</p>
+<h4 id="主要迁出区">5.2 主要迁出区</h4>
+<ul>
+<li>山东、河南、山西向东北</li>
+<li>福建、广东向东南亚("下南洋")</li>
+</ul>
+<h4 id="湖南的特殊案例">5.3 湖南的特殊案例</h4>
+<p>1850年后湖南人口增长61.2%,是长江流域唯一显著增长的省份: -
+太平天国运动未在湖南建立根据地 - 湘军兴起,湖南人在政军界崛起 -
+汇款回流促进经济发展</p>
+<hr>
+<h3 id="六灾难性制约因素">六、灾难性制约因素</h3>
+<h4 id="太平天国战争1850-1865">6.1 太平天国战争(1850-1865)</h4>
+<p><strong>破坏范围</strong>:江苏、浙江、安徽、江西</p>
+<p><strong>人口损失估计</strong>: - 直接死亡:2000-20000万 -
+战争波及地区人口减少40-60%</p>
+<p><strong>典型案例</strong>: 安徽人口战前约3500万,战后锐减</p>
+<h4 id="年大旱灾">6.2 1877-1878年大旱灾</h4>
+<p><strong>受灾范围</strong>:陕西、山西、河南、直隶、山东</p>
+<p><strong>山西情况</strong>(恩庆的报告): &gt;
+"山西饥民已达八十余县,需救济者约五、六百万……目之所及,唯见形销骨立之饥民;耳之所闻,唯闻男女号泣之声……有时运尸之车不得不绕道而行,以避堆满道旁之饿殍."</p>
+<h4 id="黄河改道1938-1947">6.3 黄河改道(1938-1947)</h4>
+<p>1938年蒋介石决堤阻敌,造成巨大人员伤亡和人口流离</p>
+<hr>
+<h2 id="第二部分观点整理">第二部分:观点整理</h2>
+<h3 id="核心论点一清代人口爆炸的制度性解释">核心论点一:清代人口爆炸的制度性解释</h3>
+<p>何炳棣认为1650-1850年中国人口的迅速增长主要归因于<strong>制度变革</strong>:</p>
+<ol type="1">
+<li><strong>"滋生人丁,永不加赋"(1662年)</strong>
+<ul>
+<li>康熙宣布新增人丁不再加赋</li>
+<li>这是一项革命性的政策,从制度上刺激了人口增长</li>
+</ul></li>
+<li><strong>"摊丁入亩"(1720s-1730s)</strong>
+<ul>
+<li>将人头税(丁税)摊入土地税</li>
+<li>消除了隐瞒人口的动机</li>
+<li>人口登记从"纳税单位"转变为"实际人口"</li>
+</ul></li>
+<li><strong>早期满清统治的"良性专制"</strong>
+<ul>
+<li>政治稳定(长达一个半世纪的和平)</li>
+<li>轻徭薄赋</li>
+<li>玉米、甘薯等新作物的推广</li>
+</ul></li>
+</ol>
+<h3 id="核心论点二批评人口过剩神话">核心论点二:批评"人口过剩"神话</h3>
+<p>何炳棣<strong>系统性质疑</strong>当时流行的"中国人口过剩导致贫困"的观点:</p>
+<p><strong>反驳要点</strong>: 1. 中国传统农业的单位面积产量远高于欧洲 2.
+人口增长刺激了农业集约化和商业化 3. 人口压力也促进了技术进步和制度创新
+4. 18世纪末之前,人均生活水平并未显著下降</p>
+<p><strong>代表性引文</strong>(谢肇淛&lt;五杂俎&gt;,17世纪初): &gt;
+"二百四十年之间,海内无事,天下一家……民生殖焉,繁衍浩大,自有宇宙以来,未有若斯之盛者也."</p>
+<h3 id="核心论点三人口数据解读的方法论">核心论点三:人口数据解读的方法论</h3>
+<p>本书最重要的方法论贡献是<strong>重新界定关键术语</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>术语</th>
+<th>传统理解</th>
+<th>何炳棣的重新界定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>丁 (ting)</td>
+<td>成年男性/人口单位</td>
+<td>纳税单位,非实际人口</td>
+</tr>
+<tr>
+<td>户 (hu)</td>
+<td>家庭</td>
+<td>复合大家庭</td>
+</tr>
+<tr>
+<td>亩 (mou)</td>
+<td>土地单位</td>
+<td>不同地区标准差异极大</td>
+</tr>
+</tbody>
+</table>
+<h3 id="核心论点四人口增长的多元解释">核心论点四:人口增长的多元解释</h3>
+<p>人口增长是多种因素共同作用的结果:</p>
+<ol type="1">
+<li><strong>经济因素</strong>
+<ul>
+<li>新作物(玉米、甘薯、马铃薯)的引入</li>
+<li>土地利用率提高</li>
+<li>农业技术进步</li>
+</ul></li>
+<li><strong>制度因素</strong>
+<ul>
+<li>赋税制度改革(摊丁入亩)</li>
+<li>政治稳定</li>
+<li>医疗进步(人痘接种等)</li>
+</ul></li>
+<li><strong>社会因素</strong>
+<ul>
+<li>早婚传统</li>
+<li>鼓励人口增殖的文化价值</li>
+<li>宗族组织提供社会保障</li>
+</ul></li>
+<li><strong>地理因素</strong>
+<ul>
+<li>区域间迁移(向东北、西南)</li>
+<li>棚民开发山区</li>
+</ul></li>
+</ol>
+<hr>
+<h2 id="第三部分数据整理">第三部分:数据整理</h2>
+<h3 id="人口数据汇总">人口数据汇总</h3>
+<table>
+<thead>
+<tr>
+<th>年代</th>
+<th>人口数(百万)</th>
+<th>数据来源/备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1393</td>
+<td>约60</td>
+<td>明代黄册,最可靠数据</td>
+</tr>
+<tr>
+<td>1500</td>
+<td>约100-125</td>
+<td>估计</td>
+</tr>
+<tr>
+<td>1600</td>
+<td>约150-200</td>
+<td>估计</td>
+</tr>
+<tr>
+<td>1650</td>
+<td>约100-150</td>
+<td>清初恢复</td>
+</tr>
+<tr>
+<td>1700</td>
+<td>约150</td>
+<td>估计</td>
+</tr>
+<tr>
+<td>1750</td>
+<td>约210</td>
+<td>官方记录</td>
+</tr>
+<tr>
+<td>1800</td>
+<td>约300</td>
+<td>官方记录</td>
+</tr>
+<tr>
+<td>1850</td>
+<td>约430</td>
+<td>官方记录,人口革命顶峰</td>
+</tr>
+<tr>
+<td>1953</td>
+<td>约583</td>
+<td>人口普查</td>
+</tr>
+</tbody>
+</table>
+<h3 id="清代人口登记丁数变化">清代人口登记"丁"数变化</h3>
+<table>
+<thead>
+<tr>
+<th>年代</th>
+<th>丁数(百万)</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1651</td>
+<td>10.6</td>
+<td>首次全国统计</td>
+</tr>
+<tr>
+<td>1660</td>
+<td>19.0</td>
+<td>战后恢复</td>
+</tr>
+<tr>
+<td>1684</td>
+<td>20.0+</td>
+<td>平定台湾后</td>
+</tr>
+<tr>
+<td>1734</td>
+<td>26.4</td>
+<td>改革前最高</td>
+</tr>
+</tbody>
+</table>
+<h3 id="历代耕地与人均耕地">历代耕地与人均耕地</h3>
+<table>
+<thead>
+<tr>
+<th>年代</th>
+<th>耕地(百万亩)</th>
+<th>人口(百万)</th>
+<th>人均耕地(亩)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1393</td>
+<td>360</td>
+<td>60</td>
+<td>6.0</td>
+</tr>
+<tr>
+<td>1700</td>
+<td>500</td>
+<td>150</td>
+<td>3.3</td>
+</tr>
+<tr>
+<td>1750</td>
+<td>600</td>
+<td>210</td>
+<td>2.9</td>
+</tr>
+<tr>
+<td>1850</td>
+<td>700</td>
+<td>430</td>
+<td>1.6</td>
+</tr>
+</tbody>
+</table>
+<h3 id="太平天国损失">太平天国损失</h3>
+<table>
+<thead>
+<tr>
+<th>省份</th>
+<th>战后情况</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>江苏</td>
+<td>人口锐减40-60%</td>
+</tr>
+<tr>
+<td>浙江</td>
+<td>重灾区</td>
+</tr>
+<tr>
+<td>安徽</td>
+<td>减少30-50%</td>
+</tr>
+<tr>
+<td>江西</td>
+<td>重灾区</td>
+</tr>
+<tr>
+<td>湖南</td>
+<td>湘军庇护,损失较小</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="第四部分案例整理">第四部分:案例整理</h2>
+<h3 id="案例一1371年郎氏户帖">案例一:1371年郎氏户帖</h3>
+<p><strong>历史价值</strong>:现存最早的明代人口登记实物之一</p>
+<p><strong>内容分析</strong>: - 6口之家(复合家庭) -
+2个成年男性、2个儿童、2个女性 - 财产:5间房、0.8亩地</p>
+<p><strong>学术意义</strong>:证明明初人口登记的精确性和全面性</p>
+<h3 id="案例二苏州府人口数据1371-1376">案例二:苏州府人口数据(1371-1376)</h3>
+<p><strong>数据对比</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>年份</th>
+<th>户数</th>
+<th>人口数</th>
+<th>增长率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1371</td>
+<td>473,862</td>
+<td>1,947,871</td>
+<td>-</td>
+</tr>
+<tr>
+<td>1376</td>
+<td>506,543</td>
+<td>2,160,463</td>
+<td>+10.9%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>分析</strong>:5年间人口增长超过10%,显示和平时期人口的快速自然增长</p>
+<h3 id="案例三康熙滋生人丁永不加赋">案例三:康熙"滋生人丁,永不加赋"</h3>
+<p><strong>历史背景</strong>: - 康熙五十九年(1720年) - 平定三藩之乱后 -
+国家长期和平繁荣</p>
+<p><strong>制度创新</strong>:新增人丁不再加赋,消除了人口登记的税收压力</p>
+<h3 id="案例四山西1877-1878大旱灾">案例四:山西1877-1878大旱灾</h3>
+<p><strong>灾害程度</strong>: - 80余县受灾 - 500-600万人需救济 -
+出现人相食的惨状 - 卖儿鬻女以苟延残喘</p>
+<h3 id="案例五向东北的移民潮">案例五:向东北的移民潮</h3>
+<p><strong>时间</strong>:19世纪至今</p>
+<p><strong>规模</strong>: - 1923-1929年:每年净迁入40-50万 -
+主要来自山东、河北</p>
+<p><strong>历史意义</strong>: - 缓解了关内人口压力 - 促进了东北农业开发
+- 改变了全国人口分布格局</p>
+<hr>
+<h2 id="第五部分术语表">第五部分:术语表</h2>
+<table>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr>
+<th>术语</th>
+<th>拼音</th>
+<th>英文</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>丁</td>
+<td>dīng</td>
+<td>ting</td>
+<td>纳税单位,清代逐渐脱离实际人口含义</td>
+</tr>
+<tr>
+<td>户</td>
+<td>hù</td>
+<td>household</td>
+<td>传统中国家庭单位,通常为复合家庭</td>
+</tr>
+<tr>
+<td>亩</td>
+<td>mǔ</td>
+<td>mou</td>
+<td>土地单位,各地标准不同(约0.5-0.7亩=1英亩)</td>
+</tr>
+<tr>
+<td>黄册</td>
+<td>huáng cè</td>
+<td>Yellow Registers</td>
+<td>明代人口普查登记册(1381年起)</td>
+</tr>
+<tr>
+<td>户帖</td>
+<td>hù tiē</td>
+<td>Household Certificate</td>
+<td>1370年起发放的人口登记凭证</td>
+</tr>
+<tr>
+<td>里甲</td>
+<td>lǐ jiǎ</td>
+<td>lijia</td>
+<td>明代基层行政单位,110户为一里</td>
+</tr>
+<tr>
+<td>摊丁入亩</td>
+<td>tān dīng rù mǔ</td>
+<td>Allocation of poll tax to land tax</td>
+<td>雍正年间的税制改革</td>
+</tr>
+<tr>
+<td>滋生人丁,永不加赋</td>
+<td></td>
+<td></td>
+<td>康熙五十九年宣布的政策</td>
+</tr>
+<tr>
+<td>地方志</td>
+<td>dì fāng zhì</td>
+<td>Gazetteer (fangzhilfang chih)</td>
+<td>记载地方历史、地理、人口的文献</td>
+</tr>
+<tr>
+<td>旗地</td>
+<td>qí dì</td>
+<td>Banner lands</td>
+<td>清初分配给旗人的土地</td>
+</tr>
+<tr>
+<td>棚民</td>
+<td>péng mín</td>
+<td>Shack people</td>
+<td>居住山区的流动人口</td>
+</tr>
+<tr>
+<td>闯关东</td>
+<td>chuǎng guān dōng</td>
+<td>Entering the Northeast</td>
+<td>清代民众多地迁往东北</td>
+</tr>
+<tr>
+<td>太平天国</td>
+<td>Tài píng tiān guó</td>
+<td>Taiping Rebellion</td>
+<td>1850-1864年大规模农民起义</td>
+</tr>
+<tr>
+<td>单一鞭法</td>
+<td>dān yī biān fǎ</td>
+<td>Single-whip system</td>
+<td>明代赋税改革,将各种税目合一</td>
+</tr>
+<tr>
+<td>里chai</td>
+<td>lǐ chái</td>
+<td>labor services</td>
+<td>劳役,以人力为主的税收形式</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="附录一何炳棣其人">附录一:何炳棣其人</h2>
+<h3 id="学术背景">学术背景</h3>
+<p><strong>何炳棣(1917-2012)</strong>: - 浙江金华人 -
+1938年燕京大学经济学学士 - 1944年哥伦比亚大学经济学硕士 -
+1952年哥伦比亚大学哲学博士(历史学) - 主要研究中国史、经济史、人口史</p>
+<h3 id="主要著作">主要著作</h3>
+<ol type="1">
+<li>&lt;Studies on the Population of China, 1368-1953&gt;(1959)</li>
+<li><the cradle="" of="" the="" east:="" an="" inquiry="" into="" indigenous="" origins="" techniques="" and="" ideas="" neolithicohistoric="" china="">(1975)</the></li>
+<li><the rise="" of="" the="" modern="" chinese="" business="" class="">(1979)</the></li>
+<li><china enters="" the="" world="" economy="">(1989)</china></li>
+</ol>
+<h3 id="学术地位">学术地位</h3>
+<p>何炳棣是20世纪中国史学界最具影响力的学者之一,在以下领域做出了开创性贡献:
+- 中国人口史:奠定了该领域的方法论基础 - 中国农业史:对农业革命有深入研究
+- 中国商业史:研究了近代中国商业资本主义的发展 -
+中国文明起源:提出了中国文明独立起源的观点</p>
+<hr>
+<h2 id="附录二书中重要引文摘录">附录二:书中重要引文摘录</h2>
+<h3 id="关于明代人口登记第一章">关于明代人口登记(第一章)</h3>
+<blockquote>
+<p>"洪武四年十二月十二日,准户部所奏,着令各省府县,将境内人民,无论主客,逐一开报……户部以黄册进呈,用黄纸为面,故曰黄册."
+_&lt;洪武实录&gt;</p>
+</blockquote>
+<h3 id="关于丁的演变第二章">关于"丁"的演变(第二章)</h3>
+<blockquote>
+<p>"天下有不毛之地,而无不毛之丁" _李卫(直隶总督,1726年)</p>
+</blockquote>
+<h3 id="关于商业繁荣第九章">关于商业繁荣(第九章)</h3>
+<blockquote>
+<p>"中国之内陆贸易,实较全欧之商业为盛;盖各省如各有王国,相互流通其产物."
+_Du Halde(法国传教士,18世纪)</p>
+</blockquote>
+<h3 id="关于人口增长第十一章">关于人口增长(第十一章)</h3>
+<blockquote>
+<p>"二百四十年之间,海内无事,天下一家……民生殖焉,繁衍浩大,自有宇宙以来,未有若斯之盛者也."
+_谢肇淛&lt;五杂俎&gt;(约1610年)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>历史</category>
+        <category>人口</category>
+      </categories>
+      <tags>
+        <tag>读书笔记</tag>
+        <tag>中国研究</tag>
+        <tag>人口史</tag>
       </tags>
   </entry>
   <entry>
