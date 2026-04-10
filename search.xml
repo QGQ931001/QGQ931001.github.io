@@ -1,93 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>学术讲座# 中国人民大学经济学院江艇:渐进DID的最新进展</title>
-    <url>/posts/836/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="关于did因果识别"><strong>关于DID因果识别</strong></h2>
-<ul>
-<li>Imbens:
-任何的因果识别归根结底都是做<strong>插值</strong>与<strong>差值</strong></li>
-<li>传统<span class="math inline">\(DID\)</span>最大的两类威胁是:①平行趋势不成立;②存在混淆政策</li>
-<li><span class="math inline">\(DID\)</span>的重要前提是平行趋势,但这种前提实际并不能完全验证:事前平行并不意味着事后平行趋势,但事前不平行一定能验证平行趋势不成立</li>
-<li>最经典的例子就是经济特区,深圳在改革开放前可能和中原地区的一个小村庄没有什么不同,但是即使深圳没有被划为经济特区,改革开放后其经济增长趋势也有可能因为地缘优势而呈现较快的增长趋势</li>
-<li>两期的数据做<span class="math inline">\(DID\)</span>会退化为<span class="math inline">\(FD\)</span>,此时的截距项代表时间变化趋势</li>
-<li>Good control: 既影响<span class="math inline">\(y\)</span>,又影响<span class="math inline">\(D\cdot T\)</span></li>
-<li>Bad control: 既影响y,又被<span class="math inline">\(D\cdot
-T\)</span>影响</li>
-<li>无法判断影响样本进入处理组的因素是否还影响其变化趋势</li>
-<li>潜在结果:使用上标表示,想象中的结果</li>
-<li><span class="math inline">\(ATT\)</span>:处理组接受处理后的平均处理效应</li>
-<li><span class="math inline">\(D\)</span>实际可以理解为处理组的固定效应</li>
-</ul>
-<span id="more"></span>
-<h2 id="交错型didstaggered-did"><strong>1. 交错型DID(staggered
-DID)</strong></h2>
-<ul>
-<li>没有办法构造<span class="math inline">\(D\cdot
-T\)</span>,可以直接定义<span class="math inline">\(D\cdot
-T\)</span>,表示接受处理的虚拟变量</li>
-<li>干预事件的发生时间不一致,极可能意味着,事后趋势不一致.为此,应尽量控制影响<span class="math inline">\(X_i\)</span>,避免控制既影响<span class="math inline">\(y\)</span>,又被<span class="math inline">\(D⋅T\)</span>影响的<span class="math inline">\(X_{it}\)</span></li>
-<li>Goodman-Bacon定理:任何一个交错<span class="math inline">\(DID\)</span>的双向固定效应模型都可以分解为<span class="math inline">\(K^2\)</span>个传统双重差分估计结果的加权平均</li>
-<li>导致偏误的原因在于:以晚处理组为处理组,以早处理组为对照组,此时双重差分估计中包含了一项<span class="math inline">\(\Delta
-ATT\)</span>,即早处理组的政策效应存在明显的动态变化</li>
-<li>交错<span class="math inline">\(DID\)</span>估计出的<span class="math inline">\(\beta\)</span>究竟意味着什么?由三部分构成:①方差加权的<span class="math inline">\(ATT\)</span>;②方差加权的趋势差异;③<span class="math inline">\(\Delta ATT\)</span></li>
-</ul>
-<h2 id="改进策略_基于事件研究法"><strong>2.
-改进策略_基于事件研究法</strong></h2>
-<ul>
-<li><strong>2.1</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解,观察以早处理组为控制组的系数和权重,判断其是否影响了最终系数的估计</li>
-<li><strong>2.2</strong> 进行协变量的平衡性检验.在交错<span class="math inline">\(DID\)</span>的情形下,平行趋势检验没办法做.干预时间的不一致,平衡性检验可作为一种替代手段.此做法的目的在于判断事前变量与干预处理进度之间的关系.进行匹配时,都可以以政策执行前某一期为准</li>
-<li><strong>2.3</strong>
-进一步,可以按照各组作为控制组的贡献作为权重,对事前变量与干预处理进度进行加权<span class="math inline">\(OLS\)</span></li>
-<li><strong>2.4</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解,必须是平衡面板数据,所以要删除一些样本</li>
-<li><strong>2.5</strong>
-事件研究法:变日历时间为相对时间.按照相对时间进行校准,如果存在非常明显的趋势,则<span class="math inline">\(\Delta
-ATT\)</span>一定会比较大,基准模型会存在低估偏误</li>
-<li><strong>2.6</strong>
-可以根据事件研究法的结果,将核心解释变量乘以一个<span class="math inline">\((t-T^*)\)</span></li>
-</ul>
-<h2 id="改进策略_堆叠didstacked-did"><strong>3.改进策略_堆叠<span class="math inline">\(DID\)</span>(Stacked <span class="math inline">\(DID\)</span>)</strong></h2>
-<ul>
-<li><strong>3.1</strong>
-假定存在K个处理时点,构造K个数据集.每个数据集中只保留可以为处理组服务的控制组,比如晚处理组和一直未处理的组.标准误需要聚类到数据集上面</li>
-<li><strong>3.2</strong> 从构造上保证了早处理组不能作为控制组</li>
-</ul>
-<h2 id="改进策略_对事件研究法的反思寻找干净的控制组"><strong>4.改进策略_对事件研究法的反思,寻找干净的控制组</strong></h2>
-<ul>
-<li><strong>4.1</strong>
-仅不同时间队列样本的动态处理效应变化方式是一样的,事件研究法的估计才是有效的</li>
-</ul>
-]]></content>
-      <categories>
-        <category>计量</category>
-        <category>DID</category>
-      </categories>
-      <tags>
-        <tag>学术讲座</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>致Berry</title>
-    <url>/posts/51392/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<center>
-<strong>Love You.</strong>
-</center>
-<center>
-<strong>Berry!</strong>
-</center>
-<center>
-<img data-src="/image/berry.jpg" width="66%" height="66%" title="妳" alt="妳">
-</center>
-]]></content>
-      <categories>
-        <category>领导</category>
-      </categories>
-      <tags>
-        <tag>妳</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>走出非洲假说、人类遗传多样性与比较经济发展 _ Ashraf &amp; Galor (2013) 笔记</title>
     <url>/posts/ashraf2013/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>本文是 Ashraf &amp; Galor 2013
@@ -231,6 +144,93 @@ Development. <em>American Economic Review</em>, 103(1), 1-46.</li>
         <tag>论文笔记</tag>
         <tag>经济史</tag>
         <tag>发展经济学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学术讲座# 中国人民大学经济学院江艇:渐进DID的最新进展</title>
+    <url>/posts/836/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="关于did因果识别"><strong>关于DID因果识别</strong></h2>
+<ul>
+<li>Imbens:
+任何的因果识别归根结底都是做<strong>插值</strong>与<strong>差值</strong></li>
+<li>传统<span class="math inline">\(DID\)</span>最大的两类威胁是:①平行趋势不成立;②存在混淆政策</li>
+<li><span class="math inline">\(DID\)</span>的重要前提是平行趋势,但这种前提实际并不能完全验证:事前平行并不意味着事后平行趋势,但事前不平行一定能验证平行趋势不成立</li>
+<li>最经典的例子就是经济特区,深圳在改革开放前可能和中原地区的一个小村庄没有什么不同,但是即使深圳没有被划为经济特区,改革开放后其经济增长趋势也有可能因为地缘优势而呈现较快的增长趋势</li>
+<li>两期的数据做<span class="math inline">\(DID\)</span>会退化为<span class="math inline">\(FD\)</span>,此时的截距项代表时间变化趋势</li>
+<li>Good control: 既影响<span class="math inline">\(y\)</span>,又影响<span class="math inline">\(D\cdot T\)</span></li>
+<li>Bad control: 既影响y,又被<span class="math inline">\(D\cdot
+T\)</span>影响</li>
+<li>无法判断影响样本进入处理组的因素是否还影响其变化趋势</li>
+<li>潜在结果:使用上标表示,想象中的结果</li>
+<li><span class="math inline">\(ATT\)</span>:处理组接受处理后的平均处理效应</li>
+<li><span class="math inline">\(D\)</span>实际可以理解为处理组的固定效应</li>
+</ul>
+<span id="more"></span>
+<h2 id="交错型didstaggered-did"><strong>1. 交错型DID(staggered
+DID)</strong></h2>
+<ul>
+<li>没有办法构造<span class="math inline">\(D\cdot
+T\)</span>,可以直接定义<span class="math inline">\(D\cdot
+T\)</span>,表示接受处理的虚拟变量</li>
+<li>干预事件的发生时间不一致,极可能意味着,事后趋势不一致.为此,应尽量控制影响<span class="math inline">\(X_i\)</span>,避免控制既影响<span class="math inline">\(y\)</span>,又被<span class="math inline">\(D⋅T\)</span>影响的<span class="math inline">\(X_{it}\)</span></li>
+<li>Goodman-Bacon定理:任何一个交错<span class="math inline">\(DID\)</span>的双向固定效应模型都可以分解为<span class="math inline">\(K^2\)</span>个传统双重差分估计结果的加权平均</li>
+<li>导致偏误的原因在于:以晚处理组为处理组,以早处理组为对照组,此时双重差分估计中包含了一项<span class="math inline">\(\Delta
+ATT\)</span>,即早处理组的政策效应存在明显的动态变化</li>
+<li>交错<span class="math inline">\(DID\)</span>估计出的<span class="math inline">\(\beta\)</span>究竟意味着什么?由三部分构成:①方差加权的<span class="math inline">\(ATT\)</span>;②方差加权的趋势差异;③<span class="math inline">\(\Delta ATT\)</span></li>
+</ul>
+<h2 id="改进策略_基于事件研究法"><strong>2.
+改进策略_基于事件研究法</strong></h2>
+<ul>
+<li><strong>2.1</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解,观察以早处理组为控制组的系数和权重,判断其是否影响了最终系数的估计</li>
+<li><strong>2.2</strong> 进行协变量的平衡性检验.在交错<span class="math inline">\(DID\)</span>的情形下,平行趋势检验没办法做.干预时间的不一致,平衡性检验可作为一种替代手段.此做法的目的在于判断事前变量与干预处理进度之间的关系.进行匹配时,都可以以政策执行前某一期为准</li>
+<li><strong>2.3</strong>
+进一步,可以按照各组作为控制组的贡献作为权重,对事前变量与干预处理进度进行加权<span class="math inline">\(OLS\)</span></li>
+<li><strong>2.4</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解,必须是平衡面板数据,所以要删除一些样本</li>
+<li><strong>2.5</strong>
+事件研究法:变日历时间为相对时间.按照相对时间进行校准,如果存在非常明显的趋势,则<span class="math inline">\(\Delta
+ATT\)</span>一定会比较大,基准模型会存在低估偏误</li>
+<li><strong>2.6</strong>
+可以根据事件研究法的结果,将核心解释变量乘以一个<span class="math inline">\((t-T^*)\)</span></li>
+</ul>
+<h2 id="改进策略_堆叠didstacked-did"><strong>3.改进策略_堆叠<span class="math inline">\(DID\)</span>(Stacked <span class="math inline">\(DID\)</span>)</strong></h2>
+<ul>
+<li><strong>3.1</strong>
+假定存在K个处理时点,构造K个数据集.每个数据集中只保留可以为处理组服务的控制组,比如晚处理组和一直未处理的组.标准误需要聚类到数据集上面</li>
+<li><strong>3.2</strong> 从构造上保证了早处理组不能作为控制组</li>
+</ul>
+<h2 id="改进策略_对事件研究法的反思寻找干净的控制组"><strong>4.改进策略_对事件研究法的反思,寻找干净的控制组</strong></h2>
+<ul>
+<li><strong>4.1</strong>
+仅不同时间队列样本的动态处理效应变化方式是一样的,事件研究法的估计才是有效的</li>
+</ul>
+]]></content>
+      <categories>
+        <category>计量</category>
+        <category>DID</category>
+      </categories>
+      <tags>
+        <tag>学术讲座</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>致Berry</title>
+    <url>/posts/51392/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<center>
+<strong>Love You.</strong>
+</center>
+<center>
+<strong>Berry!</strong>
+</center>
+<center>
+<img data-src="/image/berry.jpg" width="66%" height="66%" title="妳" alt="妳">
+</center>
+]]></content>
+      <categories>
+        <category>领导</category>
+      </categories>
+      <tags>
+        <tag>妳</tag>
       </tags>
   </entry>
   <entry>
@@ -725,6 +725,326 @@ Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</
       </categories>
       <tags>
         <tag>R</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>&lt;玉米与人口&gt;深度阅读笔记 — Chen &amp; Kung</title>
+    <url>/posts/chen2016/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Of maize and men: the effect of a New World
+crop on population and economic growth in China</li>
+<li><strong>作者</strong>: Shuo Chen, James Kai-sing Kung</li>
+<li><strong>类型</strong>: 论文笔记 / 经济史 / 人口史 / 计量史学</li>
+<li><strong>出版年份</strong>: 2016</li>
+<li><strong>出版机构/期刊</strong>: Journal of Economic Growth</li>
+<li><strong>DOI</strong>: 10.1007/s10887-016-9125-8</li>
+<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量史学基础
+<span id="more"></span> ---</li>
+</ul>
+<h2 id="引言马尔萨斯陷阱与中国">引言:马尔萨斯陷阱与中国</h2>
+<p>本研究聚焦于17世纪至20世纪初的中国,探讨在新大陆作物_特别是玉米_引入后,中国是否仍然深陷"马尔萨斯陷阱",以及这种新的农业技术对人口和经济增长产生了何种影响.</p>
+<h3 id="领域基础知识">领域基础知识</h3>
+<ol type="1">
+<li><p><strong>马尔萨斯陷阱 (Malthusian Trap):</strong>
+人口总是倾向于以几何级数增长,而食物生产却只能以算术级数增长.任何技术进步或土地扩张带来的食物增加,最终都会被更快增长的人口所消耗殆尽.</p>
+<ul>
+<li><strong>积极抑制 (Positive Checks):</strong>
+增加死亡率的因素,如饥荒、瘟疫和战争.</li>
+<li><strong>预防性抑制 (Preventive Checks):</strong>
+降低出生率的因素,如晚婚、禁欲或生育控制.</li>
+</ul></li>
+<li><p><strong>现代经济增长 (Modern Economic Growth):</strong>
+人均收入能够持续、快速增长的经济发展阶段.通常伴随着工业化、技术创新、教育水平提升、人口结构转变以及城市化进程.</p></li>
+<li><p><strong>哥伦布大交换 (Columbian Exchange):</strong>
+15世纪末哥伦布发现新大陆后,欧洲、非洲和美洲之间动植物、病菌、思想和人口的大规模交流.</p></li>
+<li><p><strong>大分流 (Great Divergence):</strong>
+18世纪以来,西方欧洲(特别是英国)与东亚(特别是中国)在经济发展道路上出现的分岔.</p></li>
+</ol>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><strong>中国的人口爆炸性增长与人均收入停滞:</strong>
+<ul>
+<li>从1500年的1.3亿人口到1900年的4亿人口,中国人口在400年间几乎增长了两倍.然而,根据Maddison
+(2001)
+的数据,中国的人均GDP却长期停滞在约600美元(经调整),处于温饱水平.</li>
+<li>当时中国处于一种"高压人口体制",生产力的任何增长都极有可能被人口增长以远高于欧洲的速度所转化和消耗.</li>
+</ul></li>
+<li><strong>新大陆作物在旧世界的影响_以马铃薯为例:</strong>
+<ul>
+<li>Nunn 和 Qian (2011)
+的研究发现,马铃薯的引入在1700-1900年间使旧世界人口增长了25-26%,城市化率提高了27-34%.</li>
+<li>中国也引入了三种主要的新大陆作物_玉米、甘薯和马铃薯.其中玉米因其对中国地理条件的适应性(抗旱、耐寒,适合山地和丘陵种植),以及数据可得性,成为本研究的重点.</li>
+</ul></li>
+<li><strong>中国未能工业化之谜:</strong>
+<ul>
+<li>传统观点认为是中国农业剩余不足以支撑工业化.</li>
+<li>本研究观点认为,人口增长是农业生产力提高(部分归因于玉米的引入)的内生结果,而非导致农业剩余不足的根本原因.</li>
+</ul></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<ul>
+<li><strong>新大陆作物(特别是玉米)的引入,是否帮助中国摆脱了马尔萨斯陷阱,实现了人口和经济增长?</strong></li>
+<li><strong>或者,玉米的引入是否仅仅导致了人口增长,而人均收入和城市化水平仍然停滞不前?</strong></li>
+<li><strong>与欧洲马铃薯的经验相比,中国玉米的引入为何产生了不同的经济增长轨迹?</strong></li>
+</ul>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li>为马尔萨斯理论提供了丰富的经验支持</li>
+<li>对"统一增长理论"的重要贡献</li>
+<li>深化了对中欧"大分流"原因的理解</li>
+<li>构建了独特的历史数据集</li>
+<li>方法论上的严谨性</li>
+</ol>
+<h2 id="内容及结构">内容及结构</h2>
+<ol type="1">
+<li>引言 (Introduction)</li>
+<li>玉米在中国的传播,1600-1910年 (The diffusion of Maize in China)</li>
+<li>数据和测量 (Data and measurement)</li>
+<li>估计策略和实证结果 (Estimation strategy and empirical results)</li>
+<li>有效性和稳健性检验 (Validity and robustness checks)</li>
+<li>人口增长而无经济发展 (Population growth without economics
+development)</li>
+<li>结论 (Conclusion)</li>
+</ol>
+<h2 id="数据集">数据集</h2>
+<ul>
+<li><strong>地理单位:</strong>
+267个"府"(相当于今天的地级市),涵盖中国18个省</li>
+<li><strong>时间跨度:</strong> 1600年至1910年</li>
+</ul>
+<p><strong>主要数据来源:</strong></p>
+<ol type="1">
+<li>玉米种植(核心自变量):查阅了1119卷府级地方志</li>
+<li>人口密度(核心因变量):来源于梁方仲 (1980) 和曹树基 (2000)
+的历史人口数据</li>
+<li>内战和瘟疫:来源于&lt;中国历代战争年表&gt;和宋正海 (1992) 的灾害记录</li>
+<li>粮食价格:来源于清代粮食价格数据库</li>
+<li>城市化率:来源于曹树基 (2000) 和Stauffer (1922) 的数据</li>
+<li>实际工资:来源于清代借贷纠纷案件的判例</li>
+</ol>
+<h2 id="核心方法差分中差分-difference-in-differences-did">核心方法:差分中差分
+(Difference-in-Differences, DID)</h2>
+<p><strong>基本思想:</strong></p>
+<ol type="1">
+<li><strong>"处理":</strong> 玉米在某个府开始种植</li>
+<li><strong>"处理组":</strong> 玉米开始种植的府</li>
+<li><strong>"对照组":</strong> 尚未开始种植玉米的府</li>
+<li><strong>"处理前"与"处理后":</strong>
+基于玉米采用年份划分的时间段</li>
+</ol>
+<p><strong>计量模型:</strong></p>
+<p><span class="math display">\[\text{popden}_{it} = \alpha
+\text{Maize}_{it} + \beta X_{it} + f_i + p_t +
+\epsilon_{it}\]</span></p>
+<ul>
+<li><span class="math inline">\(\text{popden}_{it}\)</span>:府 <span class="math inline">\(i\)</span> 在时期 <span class="math inline">\(t\)</span> 的人口密度(取自然对数)</li>
+<li><span class="math inline">\(\text{Maize}_{it}\)</span>:核心解释变量,如果府
+<span class="math inline">\(i\)</span> 在时期 <span class="math inline">\(t\)</span> 已经采用了玉米则为1,否则为0.其系数
+<span class="math inline">\(\alpha\)</span> 是本研究关注的核心参数</li>
+<li><span class="math inline">\(X_{it}\)</span>:一系列控制变量,包括战争和瘟疫的发生频率</li>
+<li><span class="math inline">\(f_i\)</span>:<strong>府固定效应</strong></li>
+<li><span class="math inline">\(p_t\)</span>:<strong>时期固定效应</strong></li>
+<li><span class="math inline">\(\epsilon_{it}\)</span>:误差项</li>
+</ul>
+<p><strong>DID方法的关键假设:平行趋势假设 (Parallel Trend
+Assumption).</strong>
+即在没有玉米种植的情况下,玉米采用区和非采用区的人口密度变化趋势应该是平行的.</p>
+<h2 id="玉米扩散机制">玉米扩散机制</h2>
+<ul>
+<li><strong>引入路线:</strong>
+16世纪中叶,玉米经由三条路线传入中国:丝绸之路(进入甘肃)、印度/缅甸(进入云南)、葡萄牙海路(进入福建)</li>
+<li><strong>地理适宜性:</strong>
+中国超过55%的土地适宜种植玉米(相比甘薯20%,马铃薯10%)</li>
+<li><strong>扩散模式:</strong>
+早期(前200年)扩散缓慢,1750年后扩散速度显著加快,到20世纪初几乎遍布全国</li>
+<li><strong>影响:</strong>
+玉米种植面积和产量大幅增加,被誉为继占城稻引入后的"第二次农业革命"</li>
+</ul>
+<h2 id="稳健性检验">稳健性检验</h2>
+<ol type="1">
+<li>府特异性时间趋势</li>
+<li>标准误聚类:使用Conley标准误</li>
+<li>空间计量方法:广义空间二阶段最小二乘法(GS2SLS)</li>
+<li>子样本分析:限制样本到华北地区(北纬33度以北)</li>
+<li>离群值和数据敏感性</li>
+<li>粮食价格验证</li>
+</ol>
+<h2 id="主要结果">主要结果</h2>
+<h3 id="玉米显著促进了中国人口增长">1. 玉米显著促进了中国人口增长</h3>
+<ul>
+<li><strong>基线回归 (表3):</strong> 玉米种植使府级人口密度增加了约
+<strong>9.9%</strong></li>
+<li><strong>量化贡献:</strong>
+在1776-1910年间,玉米种植导致中国人口增长了约
+<strong>18.77%</strong></li>
+<li><strong>机制:</strong>
+玉米引入确实增加了粮食供给,导致粮食价格下降(玉米种植后粮食价格下降3.7%)</li>
+</ul>
+<h3 id="玉米未能带来显著的经济发展">2. 玉米未能带来显著的经济发展</h3>
+<ul>
+<li><strong>城市化率:</strong>
+玉米种植对府级城市化率没有统计学上的显著影响</li>
+<li><strong>实际工资:</strong>
+玉米种植对府级农业长期雇工的实际工资也没有统计学上的显著影响</li>
+<li><strong>长期效应:</strong>
+即使考虑滞后一期的玉米种植效应,对城市化率和实际工资的影响仍然不显著</li>
+</ul>
+<h3 id="与欧洲马铃薯的对比">3. 与欧洲马铃薯的对比</h3>
+<p>Nunn和Qian (2011)
+发现马铃薯在旧世界不仅促进了人口增长,也推动了城市化和经济增长.本研究的发现为这一论断提供了"反例":在中国,玉米带来的大规模人口增长并非工业革命的充分条件.</p>
+<h2 id="核心发现图示">核心发现图示</h2>
+<ul>
+<li><strong>图5:</strong>
+玉米采用前后人口密度变化趋势,验证了平行趋势假设,并显示采用后人口密度显著上升</li>
+<li><strong>图6:</strong> 玉米采用前后战乱发生频率变化趋势</li>
+<li><strong>图8:</strong> 玉米采用前后粮食价格变化趋势</li>
+<li><strong>图9:</strong>
+玉米采用前后城市化率变化趋势,显示没有显著变化</li>
+<li><strong>图11:</strong>
+玉米采用前后实际工资变化趋势,显示没有显著变化</li>
+</ul>
+<h2 id="结论">结论</h2>
+<ol type="1">
+<li><p><strong>玉米显著促进了中国人口增长,但未能提升人均收入:</strong>
+玉米的广泛种植在1776-1910年间使中国人口增加了近19%.然而,这一农业生产力的提升并未转化为人均收入的显著增加,也未能推动城市化进程或提高实际工资水平.</p></li>
+<li><p><strong>中国在18-19世纪仍深陷马尔萨斯陷阱:</strong>
+尽管引入了具有革命性潜力的新农业技术,中国经济仍然未能摆脱马尔萨斯力量的束缚.</p></li>
+<li><p><strong>与欧洲经验形成对比,为"大分流"提供反例:</strong>
+这强调了大规模人口增长并非工业革命或经济现代化的充分条件.</p></li>
+</ol>
+<p><strong>对领域的贡献:</strong>
+强化了马尔萨斯理论的实证基础、深化了对统一增长理论的理解、为历史经济学研究提供了宝贵的数据和方法、拓宽了对"哥伦布大交换"影响的认知</p>
+<h2 id="未来研究方向">未来研究方向</h2>
+<h3 id="文献中提及的方向">文献中提及的方向</h3>
+<ol type="1">
+<li>其他新大陆作物的影响:由于数据限制,本文只研究了玉米</li>
+<li>更细致的区域异质性分析:不同区域的社会经济结构和制度环境差异巨大</li>
+</ol>
+<h3 id="进一步思考">进一步思考</h3>
+<ol type="1">
+<li>玉米引入对中国社会结构和制度变迁的深层影响</li>
+<li>中欧"大分流"中技术扩散与制度环境的比较研究</li>
+<li>长期环境变化对新大陆作物效应的调节</li>
+<li>玉米与地方经济专业化和市场整合</li>
+<li>马尔萨斯陷阱中的"质量-数量权衡"</li>
+</ol>
+<h2 id="学术思考">学术思考</h2>
+<ol type="1">
+<li>**"马尔萨斯陷阱"的衡量边界与逃逸机制的复杂性问题</li>
+<li>**新大陆作物的异质性与"次级农业革命"的可能性</li>
+<li>**微观层面的农民采纳行为与宏观效应的联系</li>
+<li>**"经济增长"代理变量的局限性与替代指标的探索</li>
+<li>**中国内部区域异质性的深层机制</li>
+</ol>
+<hr>
+<h2 id="深度评析玉米与人_新大陆作物对中国人口与经济增长的影响">深度评析:玉米与人_新大陆作物对中国人口与经济增长的影响</h2>
+<h3 id="领域基础知识什么是马尔萨斯陷阱">领域基础知识:什么是"马尔萨斯陷阱"?</h3>
+<p>在18世纪工业革命之前,人类社会普遍处于"马尔萨斯陷阱"(Malthusian
+Trap)中.简单来说,这个理论认为:<strong>技术进步带来的产出增加,最终会被人口增长所抵消.</strong></p>
+<ul>
+<li>如果农民发明了更好的耕作方法(比如引入了高产作物),短期内粮食多了,人均收入会提高</li>
+<li>但随后,人们会生更多的孩子,或者因为营养改善导致死亡率下降</li>
+<li>最终,新增的粮食养活了更多的人,但平均到每个人头上的粮食和收入又回到了"勉强维持生存"的水平(Subsistence
+Level)</li>
+</ul>
+<h3 id="研究背景新大陆作物的哥伦布大交换">研究背景:新大陆作物的"哥伦布大交换"</h3>
+<p>1492年哥伦布发现新大陆后,玉米、番薯、马铃薯等高产作物传向全世界.学术界(如
+Nunn 和
+Qian)曾发现,马铃薯在欧洲不仅促进了人口增长,还通过提高农业效率促进了城市化,从而助力欧洲开启了现代经济增长(工业革命).</p>
+<h3 id="作者的问题意识中国为什么是个例外">作者的问题意识:中国为什么是个例外?</h3>
+<p>中国在 1500 年到 1900 年间,人口从 1.3 亿激增到 4
+亿,约占全球增长的三分之一,但人均 GDP 却长期停滞在 600
+美元左右.作者想探究:<strong>玉米这种新技术的引入,在中国究竟是开启了"现代经济增长之门",还是仅仅让中国在马尔萨斯陷阱里越陷越深?</strong></p>
+<h2 id="内容及结构-1">内容及结构</h2>
+<p>论文共分为七个核心部分:</p>
+<ol type="1">
+<li>引言:提出核心议题</li>
+<li>玉米在中国的传播:梳理 1600-1910
+年玉米进入中国的路径及生态适应性</li>
+<li>数据与度量:利用历史地方志、粮价、人口密度等构建 267
+个府的面板数据</li>
+<li>实证策略与结果:使用"双重差分法"(DID)测算玉米对人口的影响</li>
+<li>稳健性检验:排除战乱、瘟疫及水稻改良等干扰因素</li>
+<li>经济增长分析:考察玉米对城市化率和实际工资的影响</li>
+<li>结论:总结发现</li>
+</ol>
+<h2 id="正文">正文</h2>
+<h3 id="背景与挑战如何证明是玉米导致了人口增长">1.
+背景与挑战:如何证明是"玉米"导致了人口增长?</h3>
+<p><strong>挑战:</strong> 18
+世纪中国人口在增长,农业技术也在进步,但我们怎么知道人口增长是因为种了玉米?</p>
+<p><strong>解决方法:</strong> 作者利用了玉米传播的"时空差异".</p>
+<ul>
+<li><strong>空间差异:</strong>
+有些府(地级市)适合种玉米,有些不适合(土地干旱程度、坡度不同)</li>
+<li><strong>时间差异:</strong> 玉米在不同府落户的时间有早有晚</li>
+</ul>
+<h3 id="方法地方志里的密码">2. 方法:地方志里的密码</h3>
+<ul>
+<li><strong>核心数据集:</strong> 作者查阅了 <strong>1119
+部地方志</strong>.地方志就像古代的"百科全书",如果某地的"物产"章节第一次出现了"玉蜀黍"或"包谷",作者就将其记录为该府开始采用玉米的时间</li>
+<li><strong>地理范围:</strong> 涵盖中国 18 个省的 267 个府,时间跨度 1600
+年到 1910 年</li>
+</ul>
+<h3 id="结果一人口19-的贡献率">3. 结果一(人口):19% 的贡献率</h3>
+<ul>
+<li><strong>发现:</strong>
+在控制了所有其他变量后,作者发现玉米的种植使得中国 1776 年至 1910
+年间的人口增长了近 <strong>19%</strong></li>
+<li><strong>逻辑:</strong>
+玉米耐旱、耐寒,且能在山坡地生长.它不与水稻抢夺肥沃的平原地,而是开辟了原本无法耕种的边际土地</li>
+<li><strong>粮价验证:</strong> 引入玉米后,粮价显著下降(约
+3.7%),这证明了玉米确实增加了食物供应</li>
+</ul>
+<h3 id="结果二经济人口多了钱没变多">4.
+结果二(经济):人口多了,钱没变多</h3>
+<p>这是本文最核心的发现.在欧洲,高产作物促进了城市化;但在中国:</p>
+<ul>
+<li><strong>城市化率:</strong>
+玉米种植对城市化率没有任何显著的正向推动.人们依然留在农村,只是人更多了</li>
+<li><strong>实际工资:</strong>
+玉米种植不仅没能提高实际工资,甚至因为人口过多导致劳动力边际报酬递减</li>
+<li><strong>边际报酬递减:</strong> 就像一亩地本来 2
+个人种,粮食够吃;现在种了玉米产出多了点,但也挤进来了 4
+个人种,虽然总粮食多了,但平分到每个人手里的粮食并没变多</li>
+</ul>
+<h2 id="结论-1">结论</h2>
+<ol type="1">
+<li><strong>实证结论</strong>:玉米在中国成功引发了"人口爆炸",贡献了约五分之一的人口增长</li>
+<li><strong>理论意义</strong>:玉米作为一项"新技术",在中国遭遇了典型的<strong>马尔萨斯结局</strong>_它只创造了"更多的中国人",而没有创造"更富裕的中国人"</li>
+<li><strong>大分流解释</strong>:中国的人口密度过高,将技术红利迅速吞噬,形成了"内卷化"(Involution)的自我循环</li>
+</ol>
+<h2 id="未来研究方向-1">未来研究方向</h2>
+<h3 id="文献中提及的方向-1">文献中提及的方向</h3>
+<ul>
+<li>其他新大陆作物:番薯(地瓜)为中国的推广作用</li>
+<li>质量-数量权衡:探究当时中国父母为何选择生更多孩子</li>
+</ul>
+<h3 id="学术思考-1">学术思考</h3>
+<ol type="1">
+<li>作物特性与工业化:作物的"生态属性"是否决定了一个国家的工业化命运?</li>
+<li>制度的调节作用:如果晚清政府拥有更强的产权保护或不同的土地税制,玉米产生的粮食盈余是否有可能转化为工业资本?</li>
+<li>内卷化的现代启示:如果高科技(如
+AI)的产出被某些社会因素抵消,我们会面临"数字化的马尔萨斯陷阱"吗?</li>
+</ol>
+<hr>
+<p><strong>文献信息:</strong></p>
+<ul>
+<li><strong>标题:</strong> Of maize and men: the effect of a New World
+crop on population and economic growth in China</li>
+<li><strong>作者:</strong> Shuo Chen, James Kai-sing Kung</li>
+<li><strong>期刊:</strong> Journal of Economic Growth, 2016, Vol. 21,
+Issue 1, pp. 71-99</li>
+<li><strong>DOI:</strong> 10.1007/s10887-016-9125-8</li>
+</ul>
+]]></content>
+      <categories>
+        <category>历史</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>经济史</tag>
       </tags>
   </entry>
   <entry>
@@ -1329,323 +1649,178 @@ Fragments of Curious and Useful Knowledge from the Chinese Past</em>
       </tags>
   </entry>
   <entry>
-    <title>&lt;玉米与人口&gt;深度阅读笔记 — Chen &amp; Kung</title>
-    <url>/posts/chen2016/</url>
+    <title>&lt;住房与不平等&gt;深度阅读笔记 — Ioannides &amp; Ngai</title>
+    <url>/posts/ioannides2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
 <ul>
-<li><strong>标题</strong>: Of maize and men: the effect of a New World
-crop on population and economic growth in China</li>
-<li><strong>作者</strong>: Shuo Chen, James Kai-sing Kung</li>
-<li><strong>类型</strong>: 论文笔记 / 经济史 / 人口史 / 计量史学</li>
-<li><strong>出版年份</strong>: 2016</li>
-<li><strong>出版机构/期刊</strong>: Journal of Economic Growth</li>
-<li><strong>DOI</strong>: 10.1007/s10887-016-9125-8</li>
-<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量史学基础
+<li><strong>标题</strong>: Housing and Inequality(住房与不平等)</li>
+<li><strong>作者</strong>: Yannis M. Ioannides(塔夫茨大学)、L. Rachel
+Ngai(伦敦政治经济学院)</li>
+<li><strong>类型</strong>: 论文笔记 / 城市经济学 / 不平等研究 /
+住房经济学</li>
+<li><strong>出版年份</strong>: 2025</li>
+<li><strong>出版机构/期刊</strong>: Journal of Economic Literature, Vol.
+63, No. 3, pp. 916-963</li>
+<li><strong>JEL分类号</strong>: D63, J15, J24, R21, R23, R31</li>
+<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、城市经济学基础
 <span id="more"></span> ---</li>
 </ul>
-<h2 id="引言马尔萨斯陷阱与中国">引言:马尔萨斯陷阱与中国</h2>
-<p>本研究聚焦于17世纪至20世纪初的中国,探讨在新大陆作物_特别是玉米_引入后,中国是否仍然深陷"马尔萨斯陷阱",以及这种新的农业技术对人口和经济增长产生了何种影响.</p>
-<h3 id="领域基础知识">领域基础知识</h3>
-<ol type="1">
-<li><p><strong>马尔萨斯陷阱 (Malthusian Trap):</strong>
-人口总是倾向于以几何级数增长,而食物生产却只能以算术级数增长.任何技术进步或土地扩张带来的食物增加,最终都会被更快增长的人口所消耗殆尽.</p>
-<ul>
-<li><strong>积极抑制 (Positive Checks):</strong>
-增加死亡率的因素,如饥荒、瘟疫和战争.</li>
-<li><strong>预防性抑制 (Preventive Checks):</strong>
-降低出生率的因素,如晚婚、禁欲或生育控制.</li>
-</ul></li>
-<li><p><strong>现代经济增长 (Modern Economic Growth):</strong>
-人均收入能够持续、快速增长的经济发展阶段.通常伴随着工业化、技术创新、教育水平提升、人口结构转变以及城市化进程.</p></li>
-<li><p><strong>哥伦布大交换 (Columbian Exchange):</strong>
-15世纪末哥伦布发现新大陆后,欧洲、非洲和美洲之间动植物、病菌、思想和人口的大规模交流.</p></li>
-<li><p><strong>大分流 (Great Divergence):</strong>
-18世纪以来,西方欧洲(特别是英国)与东亚(特别是中国)在经济发展道路上出现的分岔.</p></li>
-</ol>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><strong>中国的人口爆炸性增长与人均收入停滞:</strong>
-<ul>
-<li>从1500年的1.3亿人口到1900年的4亿人口,中国人口在400年间几乎增长了两倍.然而,根据Maddison
-(2001)
-的数据,中国的人均GDP却长期停滞在约600美元(经调整),处于温饱水平.</li>
-<li>当时中国处于一种"高压人口体制",生产力的任何增长都极有可能被人口增长以远高于欧洲的速度所转化和消耗.</li>
-</ul></li>
-<li><strong>新大陆作物在旧世界的影响_以马铃薯为例:</strong>
-<ul>
-<li>Nunn 和 Qian (2011)
-的研究发现,马铃薯的引入在1700-1900年间使旧世界人口增长了25-26%,城市化率提高了27-34%.</li>
-<li>中国也引入了三种主要的新大陆作物_玉米、甘薯和马铃薯.其中玉米因其对中国地理条件的适应性(抗旱、耐寒,适合山地和丘陵种植),以及数据可得性,成为本研究的重点.</li>
-</ul></li>
-<li><strong>中国未能工业化之谜:</strong>
-<ul>
-<li>传统观点认为是中国农业剩余不足以支撑工业化.</li>
-<li>本研究观点认为,人口增长是农业生产力提高(部分归因于玉米的引入)的内生结果,而非导致农业剩余不足的根本原因.</li>
-</ul></li>
-</ol>
+<h2 id="引言住房为何天然与不平等纠缠">引言:住房为何天然与不平等纠缠?</h2>
+<h3 id="领域基础知识住房的三重角色">领域基础知识:住房的三重角色</h3>
+<p>在经济学中,"住房"绝非普通消费品.它至少同时扮演<strong>三种角色</strong>:</p>
+<p><strong>第一,住房是消费品(Consumption)</strong>:住房为人们提供居住服务.无论租房还是买房,家庭都在"消费"住房这一服务.</p>
+<p><strong>第二,住房是资本品/资产(Capital)</strong>:对自住业主而言,住房往往是家庭最重要的财富形式,也是最重要的抵押品.</p>
+<p><strong>第三,住房是"地点/区位"(Location)</strong>:住房的地理位置将家庭绑定于特定的社区、学区与就业网络.</p>
+<p>这三重属性在现实中捆绑在同一个"主住房"上:住房经济学区别于其他商品经济学的核心在于其<strong>空间不可分割性</strong>.</p>
+<h3 id="研究背景住房成本上升与社会分化">研究背景:住房成本上升与社会分化</h3>
+<p><strong>核心现象:</strong>近几十年出现了全球性住房价格和租金长期持续上涨,且住房支出在家庭预算中的比重不断上升_对低收入群体上升更快.</p>
+<p><strong>三类政策与学术关切:</strong> 1.
+<strong>可负担性危机(Affordability
+Crisis)</strong>:低收入家庭住房支出占比更高,系统性挤压其非住房消费、储蓄与人力资本投资
+2. <strong>财富分化(Wealth
+Divergence)</strong>:房产是中产家庭最重要的资产形式,房价上涨使"房主"与"租客"之间的财富差距扩大
+3.
+<strong>空间分化和机会不平等</strong>:优质社区更贵,形成代际传递的自我循环</p>
 <h3 id="作者的问题意识">作者的问题意识</h3>
-<ul>
-<li><strong>新大陆作物(特别是玉米)的引入,是否帮助中国摆脱了马尔萨斯陷阱,实现了人口和经济增长?</strong></li>
-<li><strong>或者,玉米的引入是否仅仅导致了人口增长,而人均收入和城市化水平仍然停滞不前?</strong></li>
-<li><strong>与欧洲马铃薯的经验相比,中国玉米的引入为何产生了不同的经济增长轨迹?</strong></li>
-</ul>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li>为马尔萨斯理论提供了丰富的经验支持</li>
-<li>对"统一增长理论"的重要贡献</li>
-<li>深化了对中欧"大分流"原因的理解</li>
-<li>构建了独特的历史数据集</li>
-<li>方法论上的严谨性</li>
-</ol>
+<p><strong>问题一</strong>:不平等如何通过住房表现出来?
+<strong>问题二</strong>:住房又如何反过来扩大和固化不平等?</p>
+<p><strong>两种不平等视角:</strong> - <strong>禀赋不平等(Endowments
+Inequality)</strong>:收入、财富、信用条件等先天差异导致住房结果不同 -
+<strong>成员资格不平等(Membership
+Inequality)</strong>:住在哪里决定了社会网络和机会结构</p>
+<hr>
 <h2 id="内容及结构">内容及结构</h2>
-<ol type="1">
-<li>引言 (Introduction)</li>
-<li>玉米在中国的传播,1600-1910年 (The diffusion of Maize in China)</li>
-<li>数据和测量 (Data and measurement)</li>
-<li>估计策略和实证结果 (Estimation strategy and empirical results)</li>
-<li>有效性和稳健性检验 (Validity and robustness checks)</li>
-<li>人口增长而无经济发展 (Population growth without economics
-development)</li>
-<li>结论 (Conclusion)</li>
-</ol>
-<h2 id="数据集">数据集</h2>
-<ul>
-<li><strong>地理单位:</strong>
-267个"府"(相当于今天的地级市),涵盖中国18个省</li>
-<li><strong>时间跨度:</strong> 1600年至1910年</li>
-</ul>
-<p><strong>主要数据来源:</strong></p>
-<ol type="1">
-<li>玉米种植(核心自变量):查阅了1119卷府级地方志</li>
-<li>人口密度(核心因变量):来源于梁方仲 (1980) 和曹树基 (2000)
-的历史人口数据</li>
-<li>内战和瘟疫:来源于&lt;中国历代战争年表&gt;和宋正海 (1992) 的灾害记录</li>
-<li>粮食价格:来源于清代粮食价格数据库</li>
-<li>城市化率:来源于曹树基 (2000) 和Stauffer (1922) 的数据</li>
-<li>实际工资:来源于清代借贷纠纷案件的判例</li>
-</ol>
-<h2 id="核心方法差分中差分-difference-in-differences-did">核心方法:差分中差分
-(Difference-in-Differences, DID)</h2>
-<p><strong>基本思想:</strong></p>
-<ol type="1">
-<li><strong>"处理":</strong> 玉米在某个府开始种植</li>
-<li><strong>"处理组":</strong> 玉米开始种植的府</li>
-<li><strong>"对照组":</strong> 尚未开始种植玉米的府</li>
-<li><strong>"处理前"与"处理后":</strong>
-基于玉米采用年份划分的时间段</li>
-</ol>
-<p><strong>计量模型:</strong></p>
-<p><span class="math display">\[\text{popden}_{it} = \alpha
-\text{Maize}_{it} + \beta X_{it} + f_i + p_t +
-\epsilon_{it}\]</span></p>
-<ul>
-<li><span class="math inline">\(\text{popden}_{it}\)</span>:府 <span class="math inline">\(i\)</span> 在时期 <span class="math inline">\(t\)</span> 的人口密度(取自然对数)</li>
-<li><span class="math inline">\(\text{Maize}_{it}\)</span>:核心解释变量,如果府
-<span class="math inline">\(i\)</span> 在时期 <span class="math inline">\(t\)</span> 已经采用了玉米则为1,否则为0.其系数
-<span class="math inline">\(\alpha\)</span> 是本研究关注的核心参数</li>
-<li><span class="math inline">\(X_{it}\)</span>:一系列控制变量,包括战争和瘟疫的发生频率</li>
-<li><span class="math inline">\(f_i\)</span>:<strong>府固定效应</strong></li>
-<li><span class="math inline">\(p_t\)</span>:<strong>时期固定效应</strong></li>
-<li><span class="math inline">\(\epsilon_{it}\)</span>:误差项</li>
-</ul>
-<p><strong>DID方法的关键假设:平行趋势假设 (Parallel Trend
-Assumption).</strong>
-即在没有玉米种植的情况下,玉米采用区和非采用区的人口密度变化趋势应该是平行的.</p>
-<h2 id="玉米扩散机制">玉米扩散机制</h2>
-<ul>
-<li><strong>引入路线:</strong>
-16世纪中叶,玉米经由三条路线传入中国:丝绸之路(进入甘肃)、印度/缅甸(进入云南)、葡萄牙海路(进入福建)</li>
-<li><strong>地理适宜性:</strong>
-中国超过55%的土地适宜种植玉米(相比甘薯20%,马铃薯10%)</li>
-<li><strong>扩散模式:</strong>
-早期(前200年)扩散缓慢,1750年后扩散速度显著加快,到20世纪初几乎遍布全国</li>
-<li><strong>影响:</strong>
-玉米种植面积和产量大幅增加,被誉为继占城稻引入后的"第二次农业革命"</li>
-</ul>
-<h2 id="稳健性检验">稳健性检验</h2>
-<ol type="1">
-<li>府特异性时间趋势</li>
-<li>标准误聚类:使用Conley标准误</li>
-<li>空间计量方法:广义空间二阶段最小二乘法(GS2SLS)</li>
-<li>子样本分析:限制样本到华北地区(北纬33度以北)</li>
-<li>离群值和数据敏感性</li>
-<li>粮食价格验证</li>
-</ol>
-<h2 id="主要结果">主要结果</h2>
-<h3 id="玉米显著促进了中国人口增长">1. 玉米显著促进了中国人口增长</h3>
-<ul>
-<li><strong>基线回归 (表3):</strong> 玉米种植使府级人口密度增加了约
-<strong>9.9%</strong></li>
-<li><strong>量化贡献:</strong>
-在1776-1910年间,玉米种植导致中国人口增长了约
-<strong>18.77%</strong></li>
-<li><strong>机制:</strong>
-玉米引入确实增加了粮食供给,导致粮食价格下降(玉米种植后粮食价格下降3.7%)</li>
-</ul>
-<h3 id="玉米未能带来显著的经济发展">2. 玉米未能带来显著的经济发展</h3>
-<ul>
-<li><strong>城市化率:</strong>
-玉米种植对府级城市化率没有统计学上的显著影响</li>
-<li><strong>实际工资:</strong>
-玉米种植对府级农业长期雇工的实际工资也没有统计学上的显著影响</li>
-<li><strong>长期效应:</strong>
-即使考虑滞后一期的玉米种植效应,对城市化率和实际工资的影响仍然不显著</li>
-</ul>
-<h3 id="与欧洲马铃薯的对比">3. 与欧洲马铃薯的对比</h3>
-<p>Nunn和Qian (2011)
-发现马铃薯在旧世界不仅促进了人口增长,也推动了城市化和经济增长.本研究的发现为这一论断提供了"反例":在中国,玉米带来的大规模人口增长并非工业革命的充分条件.</p>
-<h2 id="核心发现图示">核心发现图示</h2>
-<ul>
-<li><strong>图5:</strong>
-玉米采用前后人口密度变化趋势,验证了平行趋势假设,并显示采用后人口密度显著上升</li>
-<li><strong>图6:</strong> 玉米采用前后战乱发生频率变化趋势</li>
-<li><strong>图8:</strong> 玉米采用前后粮食价格变化趋势</li>
-<li><strong>图9:</strong>
-玉米采用前后城市化率变化趋势,显示没有显著变化</li>
-<li><strong>图11:</strong>
-玉米采用前后实际工资变化趋势,显示没有显著变化</li>
-</ul>
+<table>
+<colgroup>
+<col style="width: 27%">
+<col style="width: 27%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr>
+<th>章节</th>
+<th>主题</th>
+<th>核心内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第1节 引言</td>
+<td>问题框架</td>
+<td>住房三特征与不平等双通道</td>
+</tr>
+<tr>
+<td>第2节 概念框架</td>
+<td>理论建模</td>
+<td>租买选择、抵押借贷、人力资本投资联动</td>
+</tr>
+<tr>
+<td>第3节 住房作为消费</td>
+<td>消费不平等</td>
+<td>住房支出比重上升的回归性、需求弹性、驱逐效应</td>
+</tr>
+<tr>
+<td>第4节 住房作为资本</td>
+<td>财富不平等</td>
+<td>住房财富结构、房价上涨与财富分化</td>
+</tr>
+<tr>
+<td>第5节 住房作为区位</td>
+<td>空间不平等</td>
+<td>邻里效应、教育渠道、城市排序</td>
+</tr>
+<tr>
+<td>第6节 种族与隔离</td>
+<td>市场失灵</td>
+<td>歧视实验、经纪人引导、算法歧视</td>
+</tr>
+<tr>
+<td>第7节 结论</td>
+<td>综合总结</td>
+<td>核心发现与政策含义</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="核心发现">核心发现</h2>
+<h3 id="住房支出比重对穷人更回归">住房支出比重对穷人更"回归"</h3>
+<p><strong>数据证据(OECD 2020):</strong> -
+2015年住房支出占比:底部五分位约37%,中间五分位约31%,顶部五分位约25% -
+2005-2015年:底部五分位上升9个百分点,是顶部的3倍</p>
+<h3 id="住房三重通道与不平等">住房三重通道与不平等</h3>
+<p><strong>消费通道</strong>:住房支出占比上升压迫低收入家庭
+<strong>资本通道</strong>:房价上涨使房主财富增加、租房者被排斥
+<strong>区位通道</strong>:好社区更贵,形成代际传递</p>
+<hr>
 <h2 id="结论">结论</h2>
-<ol type="1">
-<li><p><strong>玉米显著促进了中国人口增长,但未能提升人均收入:</strong>
-玉米的广泛种植在1776-1910年间使中国人口增加了近19%.然而,这一农业生产力的提升并未转化为人均收入的显著增加,也未能推动城市化进程或提高实际工资水平.</p></li>
-<li><p><strong>中国在18-19世纪仍深陷马尔萨斯陷阱:</strong>
-尽管引入了具有革命性潜力的新农业技术,中国经济仍然未能摆脱马尔萨斯力量的束缚.</p></li>
-<li><p><strong>与欧洲经验形成对比,为"大分流"提供反例:</strong>
-这强调了大规模人口增长并非工业革命或经济现代化的充分条件.</p></li>
-</ol>
-<p><strong>对领域的贡献:</strong>
-强化了马尔萨斯理论的实证基础、深化了对统一增长理论的理解、为历史经济学研究提供了宝贵的数据和方法、拓宽了对"哥伦布大交换"影响的认知</p>
-<h2 id="未来研究方向">未来研究方向</h2>
-<h3 id="文献中提及的方向">文献中提及的方向</h3>
-<ol type="1">
-<li>其他新大陆作物的影响:由于数据限制,本文只研究了玉米</li>
-<li>更细致的区域异质性分析:不同区域的社会经济结构和制度环境差异巨大</li>
-</ol>
-<h3 id="进一步思考">进一步思考</h3>
-<ol type="1">
-<li>玉米引入对中国社会结构和制度变迁的深层影响</li>
-<li>中欧"大分流"中技术扩散与制度环境的比较研究</li>
-<li>长期环境变化对新大陆作物效应的调节</li>
-<li>玉米与地方经济专业化和市场整合</li>
-<li>马尔萨斯陷阱中的"质量-数量权衡"</li>
-</ol>
-<h2 id="学术思考">学术思考</h2>
-<ol type="1">
-<li>**"马尔萨斯陷阱"的衡量边界与逃逸机制的复杂性问题</li>
-<li>**新大陆作物的异质性与"次级农业革命"的可能性</li>
-<li>**微观层面的农民采纳行为与宏观效应的联系</li>
-<li>**"经济增长"代理变量的局限性与替代指标的探索</li>
-<li>**中国内部区域异质性的深层机制</li>
-</ol>
+<p>住房同时扮演<strong>消费品、资产、区位</strong>三重角色,是不平等的"温度计"和"发电机".政策必须在一般均衡框架下评估,而非局部均衡.</p>
 <hr>
-<h2 id="深度评析玉米与人_新大陆作物对中国人口与经济增长的影响">深度评析:玉米与人_新大陆作物对中国人口与经济增长的影响</h2>
-<h3 id="领域基础知识什么是马尔萨斯陷阱">领域基础知识:什么是"马尔萨斯陷阱"?</h3>
-<p>在18世纪工业革命之前,人类社会普遍处于"马尔萨斯陷阱"(Malthusian
-Trap)中.简单来说,这个理论认为:<strong>技术进步带来的产出增加,最终会被人口增长所抵消.</strong></p>
-<ul>
-<li>如果农民发明了更好的耕作方法(比如引入了高产作物),短期内粮食多了,人均收入会提高</li>
-<li>但随后,人们会生更多的孩子,或者因为营养改善导致死亡率下降</li>
-<li>最终,新增的粮食养活了更多的人,但平均到每个人头上的粮食和收入又回到了"勉强维持生存"的水平(Subsistence
-Level)</li>
-</ul>
-<h3 id="研究背景新大陆作物的哥伦布大交换">研究背景:新大陆作物的"哥伦布大交换"</h3>
-<p>1492年哥伦布发现新大陆后,玉米、番薯、马铃薯等高产作物传向全世界.学术界(如
-Nunn 和
-Qian)曾发现,马铃薯在欧洲不仅促进了人口增长,还通过提高农业效率促进了城市化,从而助力欧洲开启了现代经济增长(工业革命).</p>
-<h3 id="作者的问题意识中国为什么是个例外">作者的问题意识:中国为什么是个例外?</h3>
-<p>中国在 1500 年到 1900 年间,人口从 1.3 亿激增到 4
-亿,约占全球增长的三分之一,但人均 GDP 却长期停滞在 600
-美元左右.作者想探究:<strong>玉米这种新技术的引入,在中国究竟是开启了"现代经济增长之门",还是仅仅让中国在马尔萨斯陷阱里越陷越深?</strong></p>
-<h2 id="内容及结构-1">内容及结构</h2>
-<p>论文共分为七个核心部分:</p>
-<ol type="1">
-<li>引言:提出核心议题</li>
-<li>玉米在中国的传播:梳理 1600-1910
-年玉米进入中国的路径及生态适应性</li>
-<li>数据与度量:利用历史地方志、粮价、人口密度等构建 267
-个府的面板数据</li>
-<li>实证策略与结果:使用"双重差分法"(DID)测算玉米对人口的影响</li>
-<li>稳健性检验:排除战乱、瘟疫及水稻改良等干扰因素</li>
-<li>经济增长分析:考察玉米对城市化率和实际工资的影响</li>
-<li>结论:总结发现</li>
-</ol>
-<h2 id="正文">正文</h2>
-<h3 id="背景与挑战如何证明是玉米导致了人口增长">1.
-背景与挑战:如何证明是"玉米"导致了人口增长?</h3>
-<p><strong>挑战:</strong> 18
-世纪中国人口在增长,农业技术也在进步,但我们怎么知道人口增长是因为种了玉米?</p>
-<p><strong>解决方法:</strong> 作者利用了玉米传播的"时空差异".</p>
-<ul>
-<li><strong>空间差异:</strong>
-有些府(地级市)适合种玉米,有些不适合(土地干旱程度、坡度不同)</li>
-<li><strong>时间差异:</strong> 玉米在不同府落户的时间有早有晚</li>
-</ul>
-<h3 id="方法地方志里的密码">2. 方法:地方志里的密码</h3>
-<ul>
-<li><strong>核心数据集:</strong> 作者查阅了 <strong>1119
-部地方志</strong>.地方志就像古代的"百科全书",如果某地的"物产"章节第一次出现了"玉蜀黍"或"包谷",作者就将其记录为该府开始采用玉米的时间</li>
-<li><strong>地理范围:</strong> 涵盖中国 18 个省的 267 个府,时间跨度 1600
-年到 1910 年</li>
-</ul>
-<h3 id="结果一人口19-的贡献率">3. 结果一(人口):19% 的贡献率</h3>
-<ul>
-<li><strong>发现:</strong>
-在控制了所有其他变量后,作者发现玉米的种植使得中国 1776 年至 1910
-年间的人口增长了近 <strong>19%</strong></li>
-<li><strong>逻辑:</strong>
-玉米耐旱、耐寒,且能在山坡地生长.它不与水稻抢夺肥沃的平原地,而是开辟了原本无法耕种的边际土地</li>
-<li><strong>粮价验证:</strong> 引入玉米后,粮价显著下降(约
-3.7%),这证明了玉米确实增加了食物供应</li>
-</ul>
-<h3 id="结果二经济人口多了钱没变多">4.
-结果二(经济):人口多了,钱没变多</h3>
-<p>这是本文最核心的发现.在欧洲,高产作物促进了城市化;但在中国:</p>
-<ul>
-<li><strong>城市化率:</strong>
-玉米种植对城市化率没有任何显著的正向推动.人们依然留在农村,只是人更多了</li>
-<li><strong>实际工资:</strong>
-玉米种植不仅没能提高实际工资,甚至因为人口过多导致劳动力边际报酬递减</li>
-<li><strong>边际报酬递减:</strong> 就像一亩地本来 2
-个人种,粮食够吃;现在种了玉米产出多了点,但也挤进来了 4
-个人种,虽然总粮食多了,但平分到每个人手里的粮食并没变多</li>
-</ul>
-<h2 id="结论-1">结论</h2>
-<ol type="1">
-<li><strong>实证结论</strong>:玉米在中国成功引发了"人口爆炸",贡献了约五分之一的人口增长</li>
-<li><strong>理论意义</strong>:玉米作为一项"新技术",在中国遭遇了典型的<strong>马尔萨斯结局</strong>_它只创造了"更多的中国人",而没有创造"更富裕的中国人"</li>
-<li><strong>大分流解释</strong>:中国的人口密度过高,将技术红利迅速吞噬,形成了"内卷化"(Involution)的自我循环</li>
-</ol>
-<h2 id="未来研究方向-1">未来研究方向</h2>
-<h3 id="文献中提及的方向-1">文献中提及的方向</h3>
-<ul>
-<li>其他新大陆作物:番薯(地瓜)为中国的推广作用</li>
-<li>质量-数量权衡:探究当时中国父母为何选择生更多孩子</li>
-</ul>
-<h3 id="学术思考-1">学术思考</h3>
-<ol type="1">
-<li>作物特性与工业化:作物的"生态属性"是否决定了一个国家的工业化命运?</li>
-<li>制度的调节作用:如果晚清政府拥有更强的产权保护或不同的土地税制,玉米产生的粮食盈余是否有可能转化为工业资本?</li>
-<li>内卷化的现代启示:如果高科技(如
-AI)的产出被某些社会因素抵消,我们会面临"数字化的马尔萨斯陷阱"吗?</li>
-</ol>
-<hr>
-<p><strong>文献信息:</strong></p>
-<ul>
-<li><strong>标题:</strong> Of maize and men: the effect of a New World
-crop on population and economic growth in China</li>
-<li><strong>作者:</strong> Shuo Chen, James Kai-sing Kung</li>
-<li><strong>期刊:</strong> Journal of Economic Growth, 2016, Vol. 21,
-Issue 1, pp. 71-99</li>
-<li><strong>DOI:</strong> 10.1007/s10887-016-9125-8</li>
-</ul>
+<p><strong>文献信息:</strong> - <strong>标题</strong>:Housing and
+Inequality - <strong>作者</strong>:Yannis M. Ioannides, L. Rachel Ngai -
+<strong>期刊</strong>:Journal of Economic Literature, 2025 -
+<strong>JEL分类号</strong>:D63, J15, J24, R21, R23, R31</p>
 ]]></content>
       <categories>
-        <category>历史</category>
+        <category>经济学</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-        <tag>经济史</tag>
+        <tag>城市经济学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
+    <url>/posts/48526/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
+<ul>
+<li>因果识别+统计推断</li>
+<li>因果识别(<strong><em>causal
+identification</em></strong>):如果拥有总体,能否确定总体因果关系</li>
+<li>统计推断(<strong><em>statistical
+inference</em></strong>):如何从样本数据获取总体因果关系信息,实际是一种相关性事实</li>
+<li>识别假设,实际就是对 <span class="math inline">\(D\)</span> 和 <span class="math inline">\(\varepsilon\)</span>
+的关系作出表述,但这种过程是无法从理论上验证的</li>
+</ul>
+<span id="more"></span>
+<h2 id="section"><strong>1</strong></h2>
+<ul>
+<li><strong>1.1</strong>
+因果效应的定义:干预与否、处理与否时,潜在结果之间的差值.潜在结果一定是同一个时间点上的结果</li>
+<li><strong>1.2</strong> 潜在结果永远无法完全观测,除非存在平行宇宙</li>
+<li><strong>1.3</strong>
+通过识别假设可以进行"插值",可以化"相关关系"识别场景为"因果关系"识别场景</li>
+<li><strong>1.4</strong>
+鲁宾因果模型(潜在因果框架),一套描述因果关系的新语言</li>
+</ul>
+<h2 id="section-1"><strong>2</strong></h2>
+<ul>
+<li><strong>2.1</strong> 第一类识别假设:潜在结果均值独立于处理状态</li>
+<li><strong>2.2</strong>
+从干扰项中剥离出控制变量;或者寻找一个与干扰项不相关的工具变量</li>
+<li><strong>2.3</strong>
+第二类识别假设:潜在结果条件均值独立于处理状态</li>
+<li><strong>2.4</strong> 好的控制变量:既影响<span class="math inline">\(Y\)</span>,又影响<span class="math inline">\(D\)</span>.其本身和干扰项是否相关是不重要的,不是研究者关注的中心</li>
+<li><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</li>
+<li><strong>2.6</strong> 无需过渡阐释控制变量的系数</li>
+</ul>
+<h2 id="section-2"><strong>3</strong></h2>
+<ul>
+<li><strong>3.1</strong> 鲁宾因果模型并未规定具体的函数形式</li>
+<li><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</li>
+</ul>
+<h2 id="section-3"><strong>4</strong></h2>
+<ul>
+<li><strong>4.1</strong>
+选择性又称之为分配机制,每个个体如何接受处理,可以用倾向得分来表示</li>
+<li><strong>4.2</strong>
+建议现实使用IV、DID、RDD等识别方法时,称之为准实验</li>
+</ul>
+]]></content>
+      <categories>
+        <category>计量</category>
+      </categories>
+      <tags>
+        <tag>学术讲座</tag>
       </tags>
   </entry>
   <entry>
@@ -2432,181 +2607,6 @@ _谢肇淛&lt;五杂俎&gt;(约1610年)</p>
         <tag>读书笔记</tag>
         <tag>中国研究</tag>
         <tag>人口史</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>&lt;住房与不平等&gt;深度阅读笔记 — Ioannides &amp; Ngai</title>
-    <url>/posts/ioannides2025/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Housing and Inequality(住房与不平等)</li>
-<li><strong>作者</strong>: Yannis M. Ioannides(塔夫茨大学)、L. Rachel
-Ngai(伦敦政治经济学院)</li>
-<li><strong>类型</strong>: 论文笔记 / 城市经济学 / 不平等研究 /
-住房经济学</li>
-<li><strong>出版年份</strong>: 2025</li>
-<li><strong>出版机构/期刊</strong>: Journal of Economic Literature, Vol.
-63, No. 3, pp. 916-963</li>
-<li><strong>JEL分类号</strong>: D63, J15, J24, R21, R23, R31</li>
-<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、城市经济学基础
-<span id="more"></span> ---</li>
-</ul>
-<h2 id="引言住房为何天然与不平等纠缠">引言:住房为何天然与不平等纠缠?</h2>
-<h3 id="领域基础知识住房的三重角色">领域基础知识:住房的三重角色</h3>
-<p>在经济学中,"住房"绝非普通消费品.它至少同时扮演<strong>三种角色</strong>:</p>
-<p><strong>第一,住房是消费品(Consumption)</strong>:住房为人们提供居住服务.无论租房还是买房,家庭都在"消费"住房这一服务.</p>
-<p><strong>第二,住房是资本品/资产(Capital)</strong>:对自住业主而言,住房往往是家庭最重要的财富形式,也是最重要的抵押品.</p>
-<p><strong>第三,住房是"地点/区位"(Location)</strong>:住房的地理位置将家庭绑定于特定的社区、学区与就业网络.</p>
-<p>这三重属性在现实中捆绑在同一个"主住房"上:住房经济学区别于其他商品经济学的核心在于其<strong>空间不可分割性</strong>.</p>
-<h3 id="研究背景住房成本上升与社会分化">研究背景:住房成本上升与社会分化</h3>
-<p><strong>核心现象:</strong>近几十年出现了全球性住房价格和租金长期持续上涨,且住房支出在家庭预算中的比重不断上升_对低收入群体上升更快.</p>
-<p><strong>三类政策与学术关切:</strong> 1.
-<strong>可负担性危机(Affordability
-Crisis)</strong>:低收入家庭住房支出占比更高,系统性挤压其非住房消费、储蓄与人力资本投资
-2. <strong>财富分化(Wealth
-Divergence)</strong>:房产是中产家庭最重要的资产形式,房价上涨使"房主"与"租客"之间的财富差距扩大
-3.
-<strong>空间分化和机会不平等</strong>:优质社区更贵,形成代际传递的自我循环</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>问题一</strong>:不平等如何通过住房表现出来?
-<strong>问题二</strong>:住房又如何反过来扩大和固化不平等?</p>
-<p><strong>两种不平等视角:</strong> - <strong>禀赋不平等(Endowments
-Inequality)</strong>:收入、财富、信用条件等先天差异导致住房结果不同 -
-<strong>成员资格不平等(Membership
-Inequality)</strong>:住在哪里决定了社会网络和机会结构</p>
-<hr>
-<h2 id="内容及结构">内容及结构</h2>
-<table>
-<colgroup>
-<col style="width: 27%">
-<col style="width: 27%">
-<col style="width: 45%">
-</colgroup>
-<thead>
-<tr>
-<th>章节</th>
-<th>主题</th>
-<th>核心内容</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>第1节 引言</td>
-<td>问题框架</td>
-<td>住房三特征与不平等双通道</td>
-</tr>
-<tr>
-<td>第2节 概念框架</td>
-<td>理论建模</td>
-<td>租买选择、抵押借贷、人力资本投资联动</td>
-</tr>
-<tr>
-<td>第3节 住房作为消费</td>
-<td>消费不平等</td>
-<td>住房支出比重上升的回归性、需求弹性、驱逐效应</td>
-</tr>
-<tr>
-<td>第4节 住房作为资本</td>
-<td>财富不平等</td>
-<td>住房财富结构、房价上涨与财富分化</td>
-</tr>
-<tr>
-<td>第5节 住房作为区位</td>
-<td>空间不平等</td>
-<td>邻里效应、教育渠道、城市排序</td>
-</tr>
-<tr>
-<td>第6节 种族与隔离</td>
-<td>市场失灵</td>
-<td>歧视实验、经纪人引导、算法歧视</td>
-</tr>
-<tr>
-<td>第7节 结论</td>
-<td>综合总结</td>
-<td>核心发现与政策含义</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="核心发现">核心发现</h2>
-<h3 id="住房支出比重对穷人更回归">住房支出比重对穷人更"回归"</h3>
-<p><strong>数据证据(OECD 2020):</strong> -
-2015年住房支出占比:底部五分位约37%,中间五分位约31%,顶部五分位约25% -
-2005-2015年:底部五分位上升9个百分点,是顶部的3倍</p>
-<h3 id="住房三重通道与不平等">住房三重通道与不平等</h3>
-<p><strong>消费通道</strong>:住房支出占比上升压迫低收入家庭
-<strong>资本通道</strong>:房价上涨使房主财富增加、租房者被排斥
-<strong>区位通道</strong>:好社区更贵,形成代际传递</p>
-<hr>
-<h2 id="结论">结论</h2>
-<p>住房同时扮演<strong>消费品、资产、区位</strong>三重角色,是不平等的"温度计"和"发电机".政策必须在一般均衡框架下评估,而非局部均衡.</p>
-<hr>
-<p><strong>文献信息:</strong> - <strong>标题</strong>:Housing and
-Inequality - <strong>作者</strong>:Yannis M. Ioannides, L. Rachel Ngai -
-<strong>期刊</strong>:Journal of Economic Literature, 2025 -
-<strong>JEL分类号</strong>:D63, J15, J24, R21, R23, R31</p>
-]]></content>
-      <categories>
-        <category>经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>城市经济学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
-    <url>/posts/48526/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
-<ul>
-<li>因果识别+统计推断</li>
-<li>因果识别(<strong><em>causal
-identification</em></strong>):如果拥有总体,能否确定总体因果关系</li>
-<li>统计推断(<strong><em>statistical
-inference</em></strong>):如何从样本数据获取总体因果关系信息,实际是一种相关性事实</li>
-<li>识别假设,实际就是对 <span class="math inline">\(D\)</span> 和 <span class="math inline">\(\varepsilon\)</span>
-的关系作出表述,但这种过程是无法从理论上验证的</li>
-</ul>
-<span id="more"></span>
-<h2 id="section"><strong>1</strong></h2>
-<ul>
-<li><strong>1.1</strong>
-因果效应的定义:干预与否、处理与否时,潜在结果之间的差值.潜在结果一定是同一个时间点上的结果</li>
-<li><strong>1.2</strong> 潜在结果永远无法完全观测,除非存在平行宇宙</li>
-<li><strong>1.3</strong>
-通过识别假设可以进行"插值",可以化"相关关系"识别场景为"因果关系"识别场景</li>
-<li><strong>1.4</strong>
-鲁宾因果模型(潜在因果框架),一套描述因果关系的新语言</li>
-</ul>
-<h2 id="section-1"><strong>2</strong></h2>
-<ul>
-<li><strong>2.1</strong> 第一类识别假设:潜在结果均值独立于处理状态</li>
-<li><strong>2.2</strong>
-从干扰项中剥离出控制变量;或者寻找一个与干扰项不相关的工具变量</li>
-<li><strong>2.3</strong>
-第二类识别假设:潜在结果条件均值独立于处理状态</li>
-<li><strong>2.4</strong> 好的控制变量:既影响<span class="math inline">\(Y\)</span>,又影响<span class="math inline">\(D\)</span>.其本身和干扰项是否相关是不重要的,不是研究者关注的中心</li>
-<li><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</li>
-<li><strong>2.6</strong> 无需过渡阐释控制变量的系数</li>
-</ul>
-<h2 id="section-2"><strong>3</strong></h2>
-<ul>
-<li><strong>3.1</strong> 鲁宾因果模型并未规定具体的函数形式</li>
-<li><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</li>
-</ul>
-<h2 id="section-3"><strong>4</strong></h2>
-<ul>
-<li><strong>4.1</strong>
-选择性又称之为分配机制,每个个体如何接受处理,可以用倾向得分来表示</li>
-<li><strong>4.2</strong>
-建议现实使用IV、DID、RDD等识别方法时,称之为准实验</li>
-</ul>
-]]></content>
-      <categories>
-        <category>计量</category>
-      </categories>
-      <tags>
-        <tag>学术讲座</tag>
       </tags>
   </entry>
   <entry>
@@ -3414,6 +3414,46 @@ Vol. 126, pp. 593-650</li>
       </tags>
   </entry>
   <entry>
+    <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
+    <url>/posts/32262/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
+<h2 id="研究问题"><strong>1. 研究问题</strong></h2>
+<p>本文以江苏省12个地级市"河长制"政策转移案例(2006 —
+2016)为研究对象,在识别政策转移案例中"复制"和"再生产"两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对"河长制"转移程度的影响.研究发现"河长制"政策转移中的"政策再生产"的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局.通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产.</p>
+<p>&nbsp;</p>
+<span id="more"></span>
+<h2 id="问题的提出"><strong>2. 问题的提出</strong></h2>
+<p><strong>2.1 政策转移的必要性</strong></p>
+<p>现实状况:政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有"后发优势"的意味、地区间的合作与竞争</p>
+<p>转移情形:政策转移并不意味着全盘复制,可分为"复制"和"再生产"两种形式</p>
+<p>核心问题:什么因素能够促成政策"再生产",政策"再生产"又体现出那些维度特征</p>
+<p><strong>2.2 河长制的背景介绍</strong></p>
+<p>河湖治理是跨界特性最典型的领域之一,涉及上下游、左右岸、不同行政区域和行业,呈现出高度的复杂性.河长制最早发轫于太湖蓝藻危机,2016年之前是一项地方政策,经政策扩散至多地.</p>
+<p>现实调查显示河长制在江苏省内的扩散过程中呈现出"复制"和"再生产"的典型差异.</p>
+<p>&nbsp;</p>
+<h2 id="研究思路和方法"><strong>3. 研究思路和方法</strong></h2>
+<p><strong>3.1 QCA</strong></p>
+<p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles
+Ragin)于<code>1987</code>年提出,适用于案例数量大于10小于60的研究.</p>
+<p>其使用布尔代数和集合论的思想来进行中小数量的跨案例比较,从而处理多个原因和一个结果之间的因果关系.</p>
+<p><strong>3.2 转移程度的刻画</strong></p>
+<p>道洛维茨和马什最早借鉴rose(1993)的连续统来划分政策转移程度:复制、模仿、混合、启发.</p>
+<p>本文简单划分为:"复制"和"再生产"</p>
+<p><strong>3.3 解释变量的选择</strong></p>
+<p>行政压力、资源禀赋、政策需求、外部力量</p>
+<p>&nbsp;</p>
+<h2 id="结论"><strong>4. 结论</strong></h2>
+<p>政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素.</p>
+]]></content>
+      <categories>
+        <category>公共管理</category>
+        <category>政策转移</category>
+      </categories>
+      <tags>
+        <tag>文献阅读</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>文献阅读# the Effect of Microinsurance on Economic Activities: Evidence From a Randomized Field Experiment</title>
     <url>/posts/51245/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
@@ -3472,46 +3512,6 @@ Vol. 126, pp. 593-650</li>
       <categories>
         <category>实验经济学</category>
         <category>保险</category>
-      </categories>
-      <tags>
-        <tag>文献阅读</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
-    <url>/posts/32262/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
-<h2 id="研究问题"><strong>1. 研究问题</strong></h2>
-<p>本文以江苏省12个地级市"河长制"政策转移案例(2006 —
-2016)为研究对象,在识别政策转移案例中"复制"和"再生产"两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对"河长制"转移程度的影响.研究发现"河长制"政策转移中的"政策再生产"的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局.通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产.</p>
-<p>&nbsp;</p>
-<span id="more"></span>
-<h2 id="问题的提出"><strong>2. 问题的提出</strong></h2>
-<p><strong>2.1 政策转移的必要性</strong></p>
-<p>现实状况:政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有"后发优势"的意味、地区间的合作与竞争</p>
-<p>转移情形:政策转移并不意味着全盘复制,可分为"复制"和"再生产"两种形式</p>
-<p>核心问题:什么因素能够促成政策"再生产",政策"再生产"又体现出那些维度特征</p>
-<p><strong>2.2 河长制的背景介绍</strong></p>
-<p>河湖治理是跨界特性最典型的领域之一,涉及上下游、左右岸、不同行政区域和行业,呈现出高度的复杂性.河长制最早发轫于太湖蓝藻危机,2016年之前是一项地方政策,经政策扩散至多地.</p>
-<p>现实调查显示河长制在江苏省内的扩散过程中呈现出"复制"和"再生产"的典型差异.</p>
-<p>&nbsp;</p>
-<h2 id="研究思路和方法"><strong>3. 研究思路和方法</strong></h2>
-<p><strong>3.1 QCA</strong></p>
-<p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles
-Ragin)于<code>1987</code>年提出,适用于案例数量大于10小于60的研究.</p>
-<p>其使用布尔代数和集合论的思想来进行中小数量的跨案例比较,从而处理多个原因和一个结果之间的因果关系.</p>
-<p><strong>3.2 转移程度的刻画</strong></p>
-<p>道洛维茨和马什最早借鉴rose(1993)的连续统来划分政策转移程度:复制、模仿、混合、启发.</p>
-<p>本文简单划分为:"复制"和"再生产"</p>
-<p><strong>3.3 解释变量的选择</strong></p>
-<p>行政压力、资源禀赋、政策需求、外部力量</p>
-<p>&nbsp;</p>
-<h2 id="结论"><strong>4. 结论</strong></h2>
-<p>政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素.</p>
-]]></content>
-      <categories>
-        <category>公共管理</category>
-        <category>政策转移</category>
       </categories>
       <tags>
         <tag>文献阅读</tag>
