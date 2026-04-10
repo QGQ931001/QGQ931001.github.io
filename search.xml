@@ -67,153 +67,28 @@ ATT\)</span>一定会比较大,基准模型会存在低估偏误</li>
       </tags>
   </entry>
   <entry>
-    <title>走出非洲假说、人类遗传多样性与比较经济发展 _ Ashraf &amp; Galor (2013) 笔记</title>
-    <url>/posts/ashraf2013/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>本文是 Ashraf &amp; Galor 2013
-年的论文笔记,探讨了一个很有意思的问题:为什么全球各地的经济发展水平差异这么大?作者们从人类迁徙的历史出发,提出了一个相当有冲击力的观点_遗传多样性可能才是那个"深层根源".</p>
-<span id="more"></span>
-<h2 id="领域基础知识">领域基础知识</h2>
-<p>理解这篇论文需要先搞清楚几个核心概念:</p>
-<p><strong>比较经济发展 (Comparative Economic
-Development)</strong>:经济学的一个领域,研究为什么不同国家在经济繁荣程度上差距这么大.传统上经济学家会关注地理、制度、文化、人力资本这些因素.</p>
-<p><strong>"走出非洲"假说 (Out of Africa
-Hypothesis)</strong>:关于现代人类起源的主流理论.大约15万年前现代人类在东非演化形成,7-9万年前开始分批迁徙,逐步扩散到全球.每次迁徙都只有一部分人离开,带走的遗传多样性只是一小部分.</p>
-<p><strong>遗传多样性 (Genetic
-Diversity)</strong>:一个群体内部基因变异的程度.多样性高意味着人群基因类型更丰富;低则意味着相对单一.本文用"期望杂合度"来衡量,可以理解为随机选两个人,他们在基因上不同的概率.</p>
-<p><strong>序列建立者效应 (Serial-Founder
-Effect)</strong>:在人类迁徙过程中,每批离开的人只携带祖先群体遗传多样性的一部分.这个过程反复发生,导致离非洲越远,遗传多样性越低.就像从一副牌里每次只抽几张出去建立新的牌堆,离原牌堆越远,牌种越少.</p>
-<h2 id="研究背景">研究背景</h2>
-<p>解释全球经济发展差异,传统研究主要聚焦这几类因素:</p>
-<ol type="1">
-<li><p><strong>地理因素</strong>:戴蒙德在&lt;枪炮、病菌与钢铁&gt;里强调的_农作物的地理分布、大陆轴线方向(东西向有利于技术传播)等,对新石器革命时机和农业发展速度有深远影响.</p></li>
-<li><p><strong>制度因素</strong>:产权保护、法治、政府效率等,被认为是现代经济增长的关键驱动力.</p></li>
-<li><p><strong>文化因素</strong>:宗教信仰、社会信任水平等对经济活动的影响.</p></li>
-<li><p><strong>人力资本</strong>:教育和技能的积累.</p></li>
-<li><p><strong>民族-语言碎片化</strong>:社会内部民族/语言群体多样性通常被认为会增加冲突、阻碍发展.</p></li>
-</ol>
-<p>但这些大多是"近端"因素,论文想找的是更"深层"的源头_人类自身的遗传构成.</p>
-<h2 id="作者的问题意识">作者的问题意识</h2>
-<p>作者注意到,虽然地理、制度、文化等因素在不同地区差异显著,但这些本身也可能是更深层历史过程的产物.于是他们想回答:</p>
-<ul>
-<li>遗传多样性是否在农业社会出现之前,就对经济发展产生了持久影响?</li>
-<li>这种影响是单纯正面的,还是复杂的(既有好处也有坏处)?</li>
-<li>遗传多样性与经济发展的关系,能否通过"走出非洲"的迁徙路径来解释?</li>
-<li>这种影响是否独立于地理、制度和文化等传统因素?</li>
-</ul>
-<p>作者特别区分了<strong>遗传多样性</strong>(群体内部基因差异)和<strong>民族多样性</strong>(通常通过语言文化差异衡量).他们认为遗传多样性既有益处也有成本,关系可能是"驼峰状"的_适度的多样性最好,过高或过低都不利.</p>
-<h2 id="研究意义">研究意义</h2>
-<ol type="1">
-<li><p><strong>挑战传统理论</strong>:把影响因素追溯到数万年前的人类遗传多样性,为理解全球发展不平等提供了全新视角.</p></li>
-<li><p><strong>揭示双重效应</strong>:提出并实证了"驼峰状"影响_适度多样性有益,过高或过低都阻碍发展.这颠覆了以往对多样性多为负面影响的认知.</p></li>
-<li><p><strong>解决内生性</strong>:用"走出非洲"迁徙距离作为遗传多样性的外生工具变量,有效解决了内生性问题.</p></li>
-<li><p><strong>解释区域差异</strong>:亚洲和欧洲适中的遗传多样性有利于发展;非洲过高、美洲原住民过低的多样性则构成阻碍.</p></li>
-<li><p><strong>开启新方向</strong>:为经济学、人类学、遗传学的交叉研究开辟了新路径.</p></li>
-</ol>
-<h2 id="论文结构">论文结构</h2>
-<p>论文结构清晰,逻辑严谨:</p>
-<ol type="1">
-<li><p><strong>引言</strong>:提出核心论点_数万年前的遗传多样性差异对经济发展有长期"驼峰状"影响,且独立于地理、制度和文化因素.</p></li>
-<li><p><strong>相关文献</strong>:回顾传统发展因素,特别区分了本文与关注"群体间遗传距离"的文献的不同.</p></li>
-<li><p><strong>理论模型</strong>:建立模型形式化遗传多样性对生产力的双重影响_既扩张生产可能性边界(收益),又降低生产效率(成本).</p></li>
-<li><p><strong>历史分析</strong>:</p>
-<ul>
-<li>因变量:1500年人口密度(马尔萨斯时代技术进步主要转化为人口增长)</li>
-<li>自变量:观察到的遗传多样性(53民族)和预测的遗传多样性(145国家,用迁徙距离预测)</li>
-<li>控制变量:新石器革命时机、土地生产力、大陆固定效应等</li>
-<li>确认了显著的"驼峰状"关系</li>
-</ul></li>
-<li><p><strong>当代分析</strong>:</p>
-<ul>
-<li>因变量:2000年人均收入</li>
-<li>构建了"祖先调整后的当代国家人口多样性指数"</li>
-<li>控制了大量制度、文化、地理因素后,"驼峰状"效应依然显著</li>
-<li>机制验证:遗传多样性与信任负相关(成本),与科学知识创造正相关(收益)</li>
-</ul></li>
-<li><p><strong>结论</strong>:重申核心发现和遗传多样性的双重效应.</p></li>
-</ol>
-<h2 id="背景为什么关注遗传多样性">背景:为什么关注遗传多样性?</h2>
-<p>论文起点是全球经济发展巨大差异的反思.传统解释虽然有力,但作者想追溯更根本的源头_人类自身的生物学特性,具体就是遗传多样性.</p>
-<p>面临的主要挑战:</p>
-<ol type="1">
-<li><p><strong>数据稀缺</strong>:可靠遗传多样性数据只覆盖53个民族群体,跨国研究远远不够.</p></li>
-<li><p><strong>内生性问题</strong>:经济发展可能吸引移民从而增加多样性,因果关系难以厘清.</p></li>
-<li><p><strong>区分两个概念</strong>:遗传多样性(基因层面)和民族多样性(文化语言层面)是不同的.</p></li>
-<li><p><strong>识别机制</strong>:需要解释为什么遗传多样性会影响生产力.</p></li>
-</ol>
-<h2 id="研究方法">研究方法</h2>
-<p><strong>核心思想:用"走出非洲"的迁徙距离来预测遗传多样性.</strong></p>
-<h3 id="理论基石">理论基石</h3>
-<ul>
-<li>现代人类起源于东非,逐步向全球扩散</li>
-<li>序列建立者效应:离东非越远,遗传多样性越低</li>
-<li>Ramachandran等(2005)发现东非迁徙距离可解释53个民族近86%的遗传多样性变异</li>
-<li>迁徙距离是史前事件,与现代经济发展无直接因果关系,可作为外生工具变量</li>
-</ul>
-<h3 id="遗传多样性测量">遗传多样性测量</h3>
-<p><strong>期望杂合度</strong>:随机选两个个体在基因位点不同的概率.</p>
-<p><strong>历史样本</strong>:21个国家,直接用HGDP-CEPH数据.</p>
-<p><strong>扩展样本</strong>:计算从亚的斯亚贝巴到各国首都的陆路迁徙距离(考虑五个强制中继点),预测145个国家的遗传多样性.</p>
-<h3 id="当代指数构建">当代指数构建</h3>
-<p>考虑殖民后人口流动,构建了综合指数: - 各祖先群体内部的遗传多样性 -
-不同祖先群体之间的遗传距离</p>
-<h3 id="产出变量">产出变量</h3>
-<ul>
-<li><strong>历史时期</strong>:人口密度(马尔萨斯时代技术进步主要导致人口增长)</li>
-<li><strong>当代</strong>:人均GDP</li>
-<li><strong>机制验证</strong>:人际信任水平、科学知识创造强度</li>
-</ul>
-<h3 id="控制变量">控制变量</h3>
-<p>历史分析:新石器革命时机、土地生产力、大陆固定效应</p>
-<p>当代分析:加上制度(社会基础设施、民主程度、法律起源)、文化(宗教份额、欧洲裔人口比例)、地理(疟疾风险、热带区域)等因素.</p>
-<h2 id="核心发现">核心发现</h2>
-<p><strong>遗传多样性对经济发展有显著的"驼峰状"影响</strong>,无论在史前还是当代都成立.存在一个最优遗传多样性水平.</p>
-<h3 id="历史分析结果1500年人口密度">历史分析结果(1500年人口密度)</h3>
-<ul>
-<li>最优遗传多样性约为0.683(与日本接近)</li>
-<li>低于最优:每增加1%多样性,人口密度增加约36%</li>
-<li>高于最优:每减少1%多样性,人口密度增加约29%</li>
-<li>东非多样性最高,美洲原住民最低,亚洲和欧洲处于中间(接近最优)</li>
-</ul>
-<h3 id="当代分析结果2000年人均收入">当代分析结果(2000年人均收入)</h3>
-<ul>
-<li>最优遗传多样性约为0.721(与美国接近),略高于历史时期</li>
-<li>低于最优:每增加1%多样性,人均收入增加约39%</li>
-<li>高于最优:每减少1%多样性,人均收入增加约21%</li>
-</ul>
-<h3 id="机制验证">机制验证</h3>
-<ul>
-<li><strong>成本端</strong>:遗传多样性与人际信任显著负相关</li>
-<li><strong>收益端</strong>:遗传多样性与科学知识创造强度显著正相关</li>
-</ul>
-<p>这与理论模型预测完全一致.</p>
-<h3 id="关键概念图示">关键概念图示</h3>
-<p>想象一条先升后降的曲线: - 横轴是遗传多样性水平 - 纵轴是生产力</p>
-<p>低多样性时,增加多样性带来的创新和适应性好处大于不合作的成本,生产力上升;高多样性后,不合作成本占主导,生产力下降.</p>
-<h2 id="个人读后感">个人读后感</h2>
-<p>读这篇论文最深的感受是:原来四五万年前的人类迁徙,居然还在以"基因指纹"的方式影响着今天的世界经济发展格局.这个视角确实宏大.</p>
-<p>论文的方法论也很有意思.用迁徙距离作为工具变量解决内生性,这个思路很巧妙_毕竟没有人能"穿越"回去操控史前人类的迁徙路线.</p>
-<p>但我比较好奇的是:这个研究结论在政策层面能怎么用?作者在Q&amp;A里也提到了伦理风险问题.遗传多样性不像制度那样容易改变,总不能制定政策让人"调整基因"吧?所以这个研究更像是一个"理解世界的窗口",而非"行动指南".</p>
-<p>另外论文区分遗传多样性和民族多样性这点也很重要.以前总觉得"民族多样性"被研究得差不多了,没想到从基因层面看是完全不同的故事.</p>
-<p>总体来说,这是一篇很有野心、视角独特的论文,把生物学和经济学结合得相当紧密.虽然有些结论还需要更多研究来验证,但"深层根源"这个研究思路确实给人启发.</p>
-<hr>
-<p><strong>参考信息</strong></p>
-<ul>
-<li>论文:Ashraf, Q. H., &amp; Galor, O. (2013). The "Out of Africa"
-Hypothesis, Human Genetic Diversity, and Comparative Economic
-Development. <em>American Economic Review</em>, 103(1), 1-46.</li>
-</ul>
+    <title>致Berry</title>
+    <url>/posts/51392/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<center>
+<strong>Love You.</strong>
+</center>
+<center>
+<strong>Berry!</strong>
+</center>
+<center>
+<img data-src="/image/berry.jpg" width="66%" height="66%" title="妳" alt="妳">
+</center>
 ]]></content>
       <categories>
-        <category>经济史</category>
+        <category>领导</category>
       </categories>
       <tags>
-        <tag>论文笔记</tag>
-        <tag>经济史</tag>
-        <tag>发展经济学</tag>
+        <tag>妳</tag>
       </tags>
   </entry>
   <entry>
-    <title>&lt;Macroeconomic Effects of Debt Relief&gt;深度阅读笔记 — Auclert, Dobbie &amp; Goldsmith-Pinkham</title>
+    <title>Macroeconomic Effects of Debt Relief 深度阅读笔记 — Auclert, Dobbie &amp; Goldsmith-Pinkham</title>
     <url>/posts/auclert2019/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
 <ul>
@@ -397,27 +272,6 @@ Economic Review.</li>
       </tags>
   </entry>
   <entry>
-    <title>致Berry</title>
-    <url>/posts/51392/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<center>
-<strong>Love You.</strong>
-</center>
-<center>
-<strong>Berry!</strong>
-</center>
-<center>
-<img data-src="/image/berry.jpg" width="66%" height="66%" title="妳" alt="妳">
-</center>
-]]></content>
-      <categories>
-        <category>领导</category>
-      </categories>
-      <tags>
-        <tag>妳</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>如何在双变量Probit中使用工具变量法IV估计</title>
     <url>/posts/60676/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
@@ -433,6 +287,152 @@ Economic Review.</li>
       </categories>
       <tags>
         <tag>stata</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>走出非洲假说、人类遗传多样性与比较经济发展 _ Ashraf &amp; Galor (2013) 笔记</title>
+    <url>/posts/ashraf2013/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>本文是 Ashraf &amp; Galor 2013
+年的论文笔记,探讨了一个很有意思的问题:为什么全球各地的经济发展水平差异这么大?作者们从人类迁徙的历史出发,提出了一个相当有冲击力的观点_遗传多样性可能才是那个"深层根源".</p>
+<span id="more"></span>
+<h2 id="领域基础知识">领域基础知识</h2>
+<p>理解这篇论文需要先搞清楚几个核心概念:</p>
+<p><strong>比较经济发展 (Comparative Economic
+Development)</strong>:经济学的一个领域,研究为什么不同国家在经济繁荣程度上差距这么大.传统上经济学家会关注地理、制度、文化、人力资本这些因素.</p>
+<p><strong>"走出非洲"假说 (Out of Africa
+Hypothesis)</strong>:关于现代人类起源的主流理论.大约15万年前现代人类在东非演化形成,7-9万年前开始分批迁徙,逐步扩散到全球.每次迁徙都只有一部分人离开,带走的遗传多样性只是一小部分.</p>
+<p><strong>遗传多样性 (Genetic
+Diversity)</strong>:一个群体内部基因变异的程度.多样性高意味着人群基因类型更丰富;低则意味着相对单一.本文用"期望杂合度"来衡量,可以理解为随机选两个人,他们在基因上不同的概率.</p>
+<p><strong>序列建立者效应 (Serial-Founder
+Effect)</strong>:在人类迁徙过程中,每批离开的人只携带祖先群体遗传多样性的一部分.这个过程反复发生,导致离非洲越远,遗传多样性越低.就像从一副牌里每次只抽几张出去建立新的牌堆,离原牌堆越远,牌种越少.</p>
+<h2 id="研究背景">研究背景</h2>
+<p>解释全球经济发展差异,传统研究主要聚焦这几类因素:</p>
+<ol type="1">
+<li><p><strong>地理因素</strong>:戴蒙德在&lt;枪炮、病菌与钢铁&gt;里强调的_农作物的地理分布、大陆轴线方向(东西向有利于技术传播)等,对新石器革命时机和农业发展速度有深远影响.</p></li>
+<li><p><strong>制度因素</strong>:产权保护、法治、政府效率等,被认为是现代经济增长的关键驱动力.</p></li>
+<li><p><strong>文化因素</strong>:宗教信仰、社会信任水平等对经济活动的影响.</p></li>
+<li><p><strong>人力资本</strong>:教育和技能的积累.</p></li>
+<li><p><strong>民族-语言碎片化</strong>:社会内部民族/语言群体多样性通常被认为会增加冲突、阻碍发展.</p></li>
+</ol>
+<p>但这些大多是"近端"因素,论文想找的是更"深层"的源头_人类自身的遗传构成.</p>
+<h2 id="作者的问题意识">作者的问题意识</h2>
+<p>作者注意到,虽然地理、制度、文化等因素在不同地区差异显著,但这些本身也可能是更深层历史过程的产物.于是他们想回答:</p>
+<ul>
+<li>遗传多样性是否在农业社会出现之前,就对经济发展产生了持久影响?</li>
+<li>这种影响是单纯正面的,还是复杂的(既有好处也有坏处)?</li>
+<li>遗传多样性与经济发展的关系,能否通过"走出非洲"的迁徙路径来解释?</li>
+<li>这种影响是否独立于地理、制度和文化等传统因素?</li>
+</ul>
+<p>作者特别区分了<strong>遗传多样性</strong>(群体内部基因差异)和<strong>民族多样性</strong>(通常通过语言文化差异衡量).他们认为遗传多样性既有益处也有成本,关系可能是"驼峰状"的_适度的多样性最好,过高或过低都不利.</p>
+<h2 id="研究意义">研究意义</h2>
+<ol type="1">
+<li><p><strong>挑战传统理论</strong>:把影响因素追溯到数万年前的人类遗传多样性,为理解全球发展不平等提供了全新视角.</p></li>
+<li><p><strong>揭示双重效应</strong>:提出并实证了"驼峰状"影响_适度多样性有益,过高或过低都阻碍发展.这颠覆了以往对多样性多为负面影响的认知.</p></li>
+<li><p><strong>解决内生性</strong>:用"走出非洲"迁徙距离作为遗传多样性的外生工具变量,有效解决了内生性问题.</p></li>
+<li><p><strong>解释区域差异</strong>:亚洲和欧洲适中的遗传多样性有利于发展;非洲过高、美洲原住民过低的多样性则构成阻碍.</p></li>
+<li><p><strong>开启新方向</strong>:为经济学、人类学、遗传学的交叉研究开辟了新路径.</p></li>
+</ol>
+<h2 id="论文结构">论文结构</h2>
+<p>论文结构清晰,逻辑严谨:</p>
+<ol type="1">
+<li><p><strong>引言</strong>:提出核心论点_数万年前的遗传多样性差异对经济发展有长期"驼峰状"影响,且独立于地理、制度和文化因素.</p></li>
+<li><p><strong>相关文献</strong>:回顾传统发展因素,特别区分了本文与关注"群体间遗传距离"的文献的不同.</p></li>
+<li><p><strong>理论模型</strong>:建立模型形式化遗传多样性对生产力的双重影响_既扩张生产可能性边界(收益),又降低生产效率(成本).</p></li>
+<li><p><strong>历史分析</strong>:</p>
+<ul>
+<li>因变量:1500年人口密度(马尔萨斯时代技术进步主要转化为人口增长)</li>
+<li>自变量:观察到的遗传多样性(53民族)和预测的遗传多样性(145国家,用迁徙距离预测)</li>
+<li>控制变量:新石器革命时机、土地生产力、大陆固定效应等</li>
+<li>确认了显著的"驼峰状"关系</li>
+</ul></li>
+<li><p><strong>当代分析</strong>:</p>
+<ul>
+<li>因变量:2000年人均收入</li>
+<li>构建了"祖先调整后的当代国家人口多样性指数"</li>
+<li>控制了大量制度、文化、地理因素后,"驼峰状"效应依然显著</li>
+<li>机制验证:遗传多样性与信任负相关(成本),与科学知识创造正相关(收益)</li>
+</ul></li>
+<li><p><strong>结论</strong>:重申核心发现和遗传多样性的双重效应.</p></li>
+</ol>
+<h2 id="背景为什么关注遗传多样性">背景:为什么关注遗传多样性?</h2>
+<p>论文起点是全球经济发展巨大差异的反思.传统解释虽然有力,但作者想追溯更根本的源头_人类自身的生物学特性,具体就是遗传多样性.</p>
+<p>面临的主要挑战:</p>
+<ol type="1">
+<li><p><strong>数据稀缺</strong>:可靠遗传多样性数据只覆盖53个民族群体,跨国研究远远不够.</p></li>
+<li><p><strong>内生性问题</strong>:经济发展可能吸引移民从而增加多样性,因果关系难以厘清.</p></li>
+<li><p><strong>区分两个概念</strong>:遗传多样性(基因层面)和民族多样性(文化语言层面)是不同的.</p></li>
+<li><p><strong>识别机制</strong>:需要解释为什么遗传多样性会影响生产力.</p></li>
+</ol>
+<h2 id="研究方法">研究方法</h2>
+<p><strong>核心思想:用"走出非洲"的迁徙距离来预测遗传多样性.</strong></p>
+<h3 id="理论基石">理论基石</h3>
+<ul>
+<li>现代人类起源于东非,逐步向全球扩散</li>
+<li>序列建立者效应:离东非越远,遗传多样性越低</li>
+<li>Ramachandran等(2005)发现东非迁徙距离可解释53个民族近86%的遗传多样性变异</li>
+<li>迁徙距离是史前事件,与现代经济发展无直接因果关系,可作为外生工具变量</li>
+</ul>
+<h3 id="遗传多样性测量">遗传多样性测量</h3>
+<p><strong>期望杂合度</strong>:随机选两个个体在基因位点不同的概率.</p>
+<p><strong>历史样本</strong>:21个国家,直接用HGDP-CEPH数据.</p>
+<p><strong>扩展样本</strong>:计算从亚的斯亚贝巴到各国首都的陆路迁徙距离(考虑五个强制中继点),预测145个国家的遗传多样性.</p>
+<h3 id="当代指数构建">当代指数构建</h3>
+<p>考虑殖民后人口流动,构建了综合指数: - 各祖先群体内部的遗传多样性 -
+不同祖先群体之间的遗传距离</p>
+<h3 id="产出变量">产出变量</h3>
+<ul>
+<li><strong>历史时期</strong>:人口密度(马尔萨斯时代技术进步主要导致人口增长)</li>
+<li><strong>当代</strong>:人均GDP</li>
+<li><strong>机制验证</strong>:人际信任水平、科学知识创造强度</li>
+</ul>
+<h3 id="控制变量">控制变量</h3>
+<p>历史分析:新石器革命时机、土地生产力、大陆固定效应</p>
+<p>当代分析:加上制度(社会基础设施、民主程度、法律起源)、文化(宗教份额、欧洲裔人口比例)、地理(疟疾风险、热带区域)等因素.</p>
+<h2 id="核心发现">核心发现</h2>
+<p><strong>遗传多样性对经济发展有显著的"驼峰状"影响</strong>,无论在史前还是当代都成立.存在一个最优遗传多样性水平.</p>
+<h3 id="历史分析结果1500年人口密度">历史分析结果(1500年人口密度)</h3>
+<ul>
+<li>最优遗传多样性约为0.683(与日本接近)</li>
+<li>低于最优:每增加1%多样性,人口密度增加约36%</li>
+<li>高于最优:每减少1%多样性,人口密度增加约29%</li>
+<li>东非多样性最高,美洲原住民最低,亚洲和欧洲处于中间(接近最优)</li>
+</ul>
+<h3 id="当代分析结果2000年人均收入">当代分析结果(2000年人均收入)</h3>
+<ul>
+<li>最优遗传多样性约为0.721(与美国接近),略高于历史时期</li>
+<li>低于最优:每增加1%多样性,人均收入增加约39%</li>
+<li>高于最优:每减少1%多样性,人均收入增加约21%</li>
+</ul>
+<h3 id="机制验证">机制验证</h3>
+<ul>
+<li><strong>成本端</strong>:遗传多样性与人际信任显著负相关</li>
+<li><strong>收益端</strong>:遗传多样性与科学知识创造强度显著正相关</li>
+</ul>
+<p>这与理论模型预测完全一致.</p>
+<h3 id="关键概念图示">关键概念图示</h3>
+<p>想象一条先升后降的曲线: - 横轴是遗传多样性水平 - 纵轴是生产力</p>
+<p>低多样性时,增加多样性带来的创新和适应性好处大于不合作的成本,生产力上升;高多样性后,不合作成本占主导,生产力下降.</p>
+<h2 id="个人读后感">个人读后感</h2>
+<p>读这篇论文最深的感受是:原来四五万年前的人类迁徙,居然还在以"基因指纹"的方式影响着今天的世界经济发展格局.这个视角确实宏大.</p>
+<p>论文的方法论也很有意思.用迁徙距离作为工具变量解决内生性,这个思路很巧妙_毕竟没有人能"穿越"回去操控史前人类的迁徙路线.</p>
+<p>但我比较好奇的是:这个研究结论在政策层面能怎么用?作者在Q&amp;A里也提到了伦理风险问题.遗传多样性不像制度那样容易改变,总不能制定政策让人"调整基因"吧?所以这个研究更像是一个"理解世界的窗口",而非"行动指南".</p>
+<p>另外论文区分遗传多样性和民族多样性这点也很重要.以前总觉得"民族多样性"被研究得差不多了,没想到从基因层面看是完全不同的故事.</p>
+<p>总体来说,这是一篇很有野心、视角独特的论文,把生物学和经济学结合得相当紧密.虽然有些结论还需要更多研究来验证,但"深层根源"这个研究思路确实给人启发.</p>
+<hr>
+<p><strong>参考信息</strong></p>
+<ul>
+<li>论文:Ashraf, Q. H., &amp; Galor, O. (2013). The "Out of Africa"
+Hypothesis, Human Genetic Diversity, and Comparative Economic
+Development. <em>American Economic Review</em>, 103(1), 1-46.</li>
+</ul>
+]]></content>
+      <categories>
+        <category>经济史</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>经济史</tag>
+        <tag>发展经济学</tag>
       </tags>
   </entry>
   <entry>
@@ -2128,6 +2128,126 @@ Fragments of Curious and Useful Knowledge from the Chinese Past</em>
       </tags>
   </entry>
   <entry>
+    <title>&lt;住房与不平等&gt;深度阅读笔记 — Ioannides &amp; Ngai</title>
+    <url>/posts/ioannides2025/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Housing and Inequality(住房与不平等)</li>
+<li><strong>作者</strong>: Yannis M. Ioannides(塔夫茨大学)、L. Rachel
+Ngai(伦敦政治经济学院)</li>
+<li><strong>类型</strong>: 论文笔记 / 城市经济学 / 不平等研究 /
+住房经济学</li>
+<li><strong>出版年份</strong>: 2025</li>
+<li><strong>出版机构/期刊</strong>: Journal of Economic Literature, Vol.
+63, No. 3, pp. 916-963</li>
+<li><strong>JEL分类号</strong>: D63, J15, J24, R21, R23, R31</li>
+<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、城市经济学基础
+<span id="more"></span> ---</li>
+</ul>
+<h2 id="引言住房为何天然与不平等纠缠">引言:住房为何天然与不平等纠缠?</h2>
+<h3 id="领域基础知识住房的三重角色">领域基础知识:住房的三重角色</h3>
+<p>在经济学中,"住房"绝非普通消费品.它至少同时扮演<strong>三种角色</strong>:</p>
+<p><strong>第一,住房是消费品(Consumption)</strong>:住房为人们提供居住服务.无论租房还是买房,家庭都在"消费"住房这一服务.</p>
+<p><strong>第二,住房是资本品/资产(Capital)</strong>:对自住业主而言,住房往往是家庭最重要的财富形式,也是最重要的抵押品.</p>
+<p><strong>第三,住房是"地点/区位"(Location)</strong>:住房的地理位置将家庭绑定于特定的社区、学区与就业网络.</p>
+<p>这三重属性在现实中捆绑在同一个"主住房"上:住房经济学区别于其他商品经济学的核心在于其<strong>空间不可分割性</strong>.</p>
+<h3 id="研究背景住房成本上升与社会分化">研究背景:住房成本上升与社会分化</h3>
+<p><strong>核心现象:</strong>近几十年出现了全球性住房价格和租金长期持续上涨,且住房支出在家庭预算中的比重不断上升_对低收入群体上升更快.</p>
+<p><strong>三类政策与学术关切:</strong> 1.
+<strong>可负担性危机(Affordability
+Crisis)</strong>:低收入家庭住房支出占比更高,系统性挤压其非住房消费、储蓄与人力资本投资
+2. <strong>财富分化(Wealth
+Divergence)</strong>:房产是中产家庭最重要的资产形式,房价上涨使"房主"与"租客"之间的财富差距扩大
+3.
+<strong>空间分化和机会不平等</strong>:优质社区更贵,形成代际传递的自我循环</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>问题一</strong>:不平等如何通过住房表现出来?
+<strong>问题二</strong>:住房又如何反过来扩大和固化不平等?</p>
+<p><strong>两种不平等视角:</strong> - <strong>禀赋不平等(Endowments
+Inequality)</strong>:收入、财富、信用条件等先天差异导致住房结果不同 -
+<strong>成员资格不平等(Membership
+Inequality)</strong>:住在哪里决定了社会网络和机会结构</p>
+<hr>
+<h2 id="内容及结构">内容及结构</h2>
+<table>
+<colgroup>
+<col style="width: 27%">
+<col style="width: 27%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr>
+<th>章节</th>
+<th>主题</th>
+<th>核心内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第1节 引言</td>
+<td>问题框架</td>
+<td>住房三特征与不平等双通道</td>
+</tr>
+<tr>
+<td>第2节 概念框架</td>
+<td>理论建模</td>
+<td>租买选择、抵押借贷、人力资本投资联动</td>
+</tr>
+<tr>
+<td>第3节 住房作为消费</td>
+<td>消费不平等</td>
+<td>住房支出比重上升的回归性、需求弹性、驱逐效应</td>
+</tr>
+<tr>
+<td>第4节 住房作为资本</td>
+<td>财富不平等</td>
+<td>住房财富结构、房价上涨与财富分化</td>
+</tr>
+<tr>
+<td>第5节 住房作为区位</td>
+<td>空间不平等</td>
+<td>邻里效应、教育渠道、城市排序</td>
+</tr>
+<tr>
+<td>第6节 种族与隔离</td>
+<td>市场失灵</td>
+<td>歧视实验、经纪人引导、算法歧视</td>
+</tr>
+<tr>
+<td>第7节 结论</td>
+<td>综合总结</td>
+<td>核心发现与政策含义</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="核心发现">核心发现</h2>
+<h3 id="住房支出比重对穷人更回归">住房支出比重对穷人更"回归"</h3>
+<p><strong>数据证据(OECD 2020):</strong> -
+2015年住房支出占比:底部五分位约37%,中间五分位约31%,顶部五分位约25% -
+2005-2015年:底部五分位上升9个百分点,是顶部的3倍</p>
+<h3 id="住房三重通道与不平等">住房三重通道与不平等</h3>
+<p><strong>消费通道</strong>:住房支出占比上升压迫低收入家庭
+<strong>资本通道</strong>:房价上涨使房主财富增加、租房者被排斥
+<strong>区位通道</strong>:好社区更贵,形成代际传递</p>
+<hr>
+<h2 id="结论">结论</h2>
+<p>住房同时扮演<strong>消费品、资产、区位</strong>三重角色,是不平等的"温度计"和"发电机".政策必须在一般均衡框架下评估,而非局部均衡.</p>
+<hr>
+<p><strong>文献信息:</strong> - <strong>标题</strong>:Housing and
+Inequality - <strong>作者</strong>:Yannis M. Ioannides, L. Rachel Ngai -
+<strong>期刊</strong>:Journal of Economic Literature, 2025 -
+<strong>JEL分类号</strong>:D63, J15, J24, R21, R23, R31</p>
+]]></content>
+      <categories>
+        <category>经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>城市经济学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>&lt;中国人口研究 1368-1953&gt;深度阅读笔记 — 何炳棣 Ping-Ti Ho</title>
     <url>/posts/ho1959/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="书籍信息">书籍信息</h2>
@@ -2914,126 +3034,6 @@ _谢肇淛&lt;五杂俎&gt;(约1610年)</p>
       </tags>
   </entry>
   <entry>
-    <title>&lt;住房与不平等&gt;深度阅读笔记 — Ioannides &amp; Ngai</title>
-    <url>/posts/ioannides2025/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Housing and Inequality(住房与不平等)</li>
-<li><strong>作者</strong>: Yannis M. Ioannides(塔夫茨大学)、L. Rachel
-Ngai(伦敦政治经济学院)</li>
-<li><strong>类型</strong>: 论文笔记 / 城市经济学 / 不平等研究 /
-住房经济学</li>
-<li><strong>出版年份</strong>: 2025</li>
-<li><strong>出版机构/期刊</strong>: Journal of Economic Literature, Vol.
-63, No. 3, pp. 916-963</li>
-<li><strong>JEL分类号</strong>: D63, J15, J24, R21, R23, R31</li>
-<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、城市经济学基础
-<span id="more"></span> ---</li>
-</ul>
-<h2 id="引言住房为何天然与不平等纠缠">引言:住房为何天然与不平等纠缠?</h2>
-<h3 id="领域基础知识住房的三重角色">领域基础知识:住房的三重角色</h3>
-<p>在经济学中,"住房"绝非普通消费品.它至少同时扮演<strong>三种角色</strong>:</p>
-<p><strong>第一,住房是消费品(Consumption)</strong>:住房为人们提供居住服务.无论租房还是买房,家庭都在"消费"住房这一服务.</p>
-<p><strong>第二,住房是资本品/资产(Capital)</strong>:对自住业主而言,住房往往是家庭最重要的财富形式,也是最重要的抵押品.</p>
-<p><strong>第三,住房是"地点/区位"(Location)</strong>:住房的地理位置将家庭绑定于特定的社区、学区与就业网络.</p>
-<p>这三重属性在现实中捆绑在同一个"主住房"上:住房经济学区别于其他商品经济学的核心在于其<strong>空间不可分割性</strong>.</p>
-<h3 id="研究背景住房成本上升与社会分化">研究背景:住房成本上升与社会分化</h3>
-<p><strong>核心现象:</strong>近几十年出现了全球性住房价格和租金长期持续上涨,且住房支出在家庭预算中的比重不断上升_对低收入群体上升更快.</p>
-<p><strong>三类政策与学术关切:</strong> 1.
-<strong>可负担性危机(Affordability
-Crisis)</strong>:低收入家庭住房支出占比更高,系统性挤压其非住房消费、储蓄与人力资本投资
-2. <strong>财富分化(Wealth
-Divergence)</strong>:房产是中产家庭最重要的资产形式,房价上涨使"房主"与"租客"之间的财富差距扩大
-3.
-<strong>空间分化和机会不平等</strong>:优质社区更贵,形成代际传递的自我循环</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>问题一</strong>:不平等如何通过住房表现出来?
-<strong>问题二</strong>:住房又如何反过来扩大和固化不平等?</p>
-<p><strong>两种不平等视角:</strong> - <strong>禀赋不平等(Endowments
-Inequality)</strong>:收入、财富、信用条件等先天差异导致住房结果不同 -
-<strong>成员资格不平等(Membership
-Inequality)</strong>:住在哪里决定了社会网络和机会结构</p>
-<hr>
-<h2 id="内容及结构">内容及结构</h2>
-<table>
-<colgroup>
-<col style="width: 27%">
-<col style="width: 27%">
-<col style="width: 45%">
-</colgroup>
-<thead>
-<tr>
-<th>章节</th>
-<th>主题</th>
-<th>核心内容</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>第1节 引言</td>
-<td>问题框架</td>
-<td>住房三特征与不平等双通道</td>
-</tr>
-<tr>
-<td>第2节 概念框架</td>
-<td>理论建模</td>
-<td>租买选择、抵押借贷、人力资本投资联动</td>
-</tr>
-<tr>
-<td>第3节 住房作为消费</td>
-<td>消费不平等</td>
-<td>住房支出比重上升的回归性、需求弹性、驱逐效应</td>
-</tr>
-<tr>
-<td>第4节 住房作为资本</td>
-<td>财富不平等</td>
-<td>住房财富结构、房价上涨与财富分化</td>
-</tr>
-<tr>
-<td>第5节 住房作为区位</td>
-<td>空间不平等</td>
-<td>邻里效应、教育渠道、城市排序</td>
-</tr>
-<tr>
-<td>第6节 种族与隔离</td>
-<td>市场失灵</td>
-<td>歧视实验、经纪人引导、算法歧视</td>
-</tr>
-<tr>
-<td>第7节 结论</td>
-<td>综合总结</td>
-<td>核心发现与政策含义</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="核心发现">核心发现</h2>
-<h3 id="住房支出比重对穷人更回归">住房支出比重对穷人更"回归"</h3>
-<p><strong>数据证据(OECD 2020):</strong> -
-2015年住房支出占比:底部五分位约37%,中间五分位约31%,顶部五分位约25% -
-2005-2015年:底部五分位上升9个百分点,是顶部的3倍</p>
-<h3 id="住房三重通道与不平等">住房三重通道与不平等</h3>
-<p><strong>消费通道</strong>:住房支出占比上升压迫低收入家庭
-<strong>资本通道</strong>:房价上涨使房主财富增加、租房者被排斥
-<strong>区位通道</strong>:好社区更贵,形成代际传递</p>
-<hr>
-<h2 id="结论">结论</h2>
-<p>住房同时扮演<strong>消费品、资产、区位</strong>三重角色,是不平等的"温度计"和"发电机".政策必须在一般均衡框架下评估,而非局部均衡.</p>
-<hr>
-<p><strong>文献信息:</strong> - <strong>标题</strong>:Housing and
-Inequality - <strong>作者</strong>:Yannis M. Ioannides, L. Rachel Ngai -
-<strong>期刊</strong>:Journal of Economic Literature, 2025 -
-<strong>JEL分类号</strong>:D63, J15, J24, R21, R23, R31</p>
-]]></content>
-      <categories>
-        <category>经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>城市经济学</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
     <url>/posts/48526/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
@@ -3086,6 +3086,187 @@ inference</em></strong>):如何从样本数据获取总体因果关系信息,实
       </categories>
       <tags>
         <tag>学术讲座</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>预算到期会导致年底浪费性支出吗?_ Liebman &amp; Mahoney (2017) 笔记</title>
+    <url>/posts/liebman2017/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Do Expiring Budgets Lead to Wasteful Year-End
+Spending? Evidence from Federal Procurement</li>
+<li><strong>作者</strong>: Jeffrey B. Liebman(哈佛大学), Neale
+Mahoney(芝加哥大学)</li>
+<li><strong>类型</strong>: 论文笔记 / 公共经济学 / 预算制度</li>
+<li><strong>出版年份</strong>: 2017</li>
+<li><strong>出版机构/期刊</strong>: American Economic Review</li>
+<li><strong>DOI</strong>: 10.1257/aer.20131296</li>
+<li><strong>难度评估</strong>: 高 -
+需要经济学、计量经济学、公共财政学基础</li>
+</ul>
+<span id="more"></span>
+<h2 id="引言">引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>本文属于公共经济学、行为经济学和管理学的交叉领域,探讨政府支出效率问题.核心概念包括:</p>
+<ul>
+<li><strong>预算约束</strong>: 政府机构在财政年度内可支配的资金总额</li>
+<li><strong>自由裁量支出</strong>:
+政府可以自行决定如何分配的预算部分,与法定支出(如社会保障)相对</li>
+<li><strong>公共采购</strong>: 政府购买商品和服务的行为</li>
+<li><strong>信息技术(IT)项目</strong>:
+政府对计算机硬件、软件和相关服务的投资</li>
+<li><strong>社会成本</strong>:
+指一项经济活动对整个社会造成的成本,包括直接成本和外部成本</li>
+<li><strong>滚动预算(Rollover Budget)</strong>:
+允许机构将未使用的预算资金转移到下一个财政年度</li>
+</ul>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<p>政府机构通常面临"不使用就失去"的预算规则,即在一个财政年度结束时,任何未使用的预算资金都将返回国库,而不是留给该机构使用.这种规则可能会导致机构在财政年度末
+rush 支出,即使这意味着投资于低价值的项目.</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p>作者认为,"不使用就失去"的预算规则可能会导致政府浪费性支出.他们试图通过实证分析来检验这一观点,并探讨解决这一问题的潜在政策,例如允许机构将未使用的资金转入下一个财政年度.</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><strong>揭示了政府支出中潜在的浪费现象</strong>:
+通过量化财政年度末的支出高峰和质量下降,为政府支出效率问题提供了有力证据</li>
+<li><strong>评估了滚动预算的有效性</strong>:
+通过研究美国司法部的滚动预算政策,为解决浪费性支出提供了一个可行的解决方案</li>
+<li><strong>为政府预算管理提供了政策建议</strong>:
+研究结果表明,允许机构将未使用的资金转入下一个财政年度可以提高政府支出效率</li>
+</ol>
+<h2 id="论文结构">论文结构</h2>
+<ol type="1">
+<li><strong>引言</strong>: 概述研究背景、问题意识和研究意义</li>
+<li><strong>理论模型</strong>:
+建立一个简单的模型来解释"不使用就失去"的预算规则如何导致浪费性支出</li>
+<li><strong>数据描述</strong>:
+介绍用于实证分析的数据集,包括联邦采购数据系统(FPDS)和IT仪表板</li>
+<li><strong>实证分析1</strong>:
+使用FPDS数据检验财政年度末是否存在支出高峰</li>
+<li><strong>实证分析2</strong>:
+使用IT仪表板数据检验财政年度末的支出质量是否下降</li>
+<li><strong>政策分析</strong>: 研究滚动预算政策对支出行为的影响</li>
+<li><strong>福利分析</strong>:
+使用校准后的模型评估滚动预算政策的福利效应</li>
+<li><strong>结论</strong>:
+总结研究结果,讨论政策含义,并提出未来研究方向</li>
+</ol>
+<h2 id="背景">背景</h2>
+<p>许多组织都有在财政年度末到期的预算,这可能导致在年底匆忙将资源用于低质量的项目.美国联邦政府的自由裁量支出预算也面临类似情况,机构必须在财政年度结束前完成拨款.</p>
+<h3 id="挑战">挑战</h3>
+<ol type="1">
+<li><strong>"不使用就失去"的预算规则</strong>:
+如果机构不花完预算,剩余的资金将返回国库,降低了年底花钱的机会成本</li>
+<li><strong>预防性储蓄的动机</strong>:
+机构倾向于在预算周期开始时保留资金,以应对未来不确定的支出需求</li>
+<li><strong>缺乏关于年底浪费性支出的硬性证据</strong>:
+尽管有传闻证据,但缺乏关于美国联邦政府年底支出激增以及年底支出价值低于其他时间段的证据</li>
+</ol>
+<h2 id="方法">方法</h2>
+<h3 id="理论模型">理论模型</h3>
+<ul>
+<li><strong>模型设定</strong>:
+作者建立了一个年度预算模型,包括国会和一个政府机构.国会为该机构选择预算,该机构在一年中的每个时期都会获得一个参数,该参数决定了支出的边际价值,并选择一个支出水平以最大化收益递减的目标</li>
+<li><strong>模型特征</strong>:
+具有三个关键特征_预算到期、未来支出价值的不确定性以及每个时期内支出的收益递减</li>
+<li><strong>模型预测</strong>:
+由于不确定性和收益递减,该机构将在年初进行预防性储蓄;在年底,资金到期的前景导致该机构花掉所有剩余资源,即使边际价值低于资金的社会成本,导致年底支出量激增和质量下降</li>
+</ul>
+<h3 id="数据集">数据集</h3>
+<p><strong>1. 联邦采购数据系统(FPDS)</strong> - 时间范围:
+2004年至2009年财政年度 - 数据量: 1460万份合同 - 总支出: 2.6万亿美元 -
+主要内容:
+合同层面信息,包括金额、产品/服务代码、机构、供应商、合同类型、招标机制等
+- 用途: 用于分析联邦采购支出的总体模式,特别是年底支出高峰</p>
+<p><strong>2. IT仪表板(IT Dashboard)</strong> - 数据时间: 截至2010年3月
+- 项目数量: 686个主要IT项目 - 总计划支出: 1300亿美元 - 主要内容:
+项目绩效数据,包括总体评级、成本评级、进度评级、CIO评估等 - 用途:
+用于评估IT项目的质量,特别是年底开始的项目的质量</p>
+<h3 id="实证策略">实证策略</h3>
+<ol type="1">
+<li><strong>支出高峰检验</strong>:
+使用FPDS数据,分析财政年度内每周的采购支出模式,确定是否存在年底支出高峰</li>
+<li><strong>质量下降检验</strong>:
+使用IT仪表板数据,比较在财政年度最后一周开始的项目与在其他时间开始的项目的质量评级</li>
+<li><strong>政策分析</strong>:
+研究美国司法部(DOJ)的滚动预算政策对支出行为的影响.DOJ有权将未使用的IT项目预算转入下一财政年度,作者比较了DOJ的IT和非IT支出,以及DOJ和其他机构之间的支出模式</li>
+<li><strong>福利分析</strong>:
+通过校准模型以适应支出高峰和质量下降,分析允许滚动预算的潜在福利收益</li>
+</ol>
+<h3 id="关键术语">关键术语</h3>
+<ul>
+<li><strong>FPDS (Federal Procurement Data System)</strong>:
+联邦采购数据系统,跟踪所有联邦合同的数据系统</li>
+<li><strong>IT仪表板 (IT Dashboard)</strong>:
+跟踪联邦政府主要IT项目绩效的网站</li>
+<li><strong>CIO (Chief Information Officer)</strong>:
+首席信息官,负责机构的信息技术战略和管理</li>
+<li><strong>Ordered Logit Regression</strong>:
+有序Logit回归,用于分析有序分类因变量的统计模型</li>
+<li><strong>Difference-in-Differences</strong>:
+双重差分法,用于评估政策或干预效果的统计方法</li>
+<li><strong>CRRA (Constant Relative Risk Aversion)</strong>:
+恒定相对风险厌恶效用函数</li>
+<li><strong>CARA (Constant Absolute Risk Aversion)</strong>:
+恒定绝对风险厌恶效用函数</li>
+</ul>
+<h2 id="结果">结果</h2>
+<ol type="1">
+<li><strong>支出高峰</strong>:
+数据显示年底支出大幅增加.在财政年度的最后一周,支出是平时每周平均水平的4.9倍</li>
+<li><strong>质量下降</strong>:
+年底开始的IT项目的质量评级明显较低.在财政年度最后一周开始的项目,获得较低质量分数的可能性要高出2.3到5.6倍</li>
+<li><strong>滚动预算的影响</strong>:
+DOJ的IT支出没有出现支出高峰,最后一周的IT支出仅占3.3%,而非IT支出为9.3%.差异分析表明滚动预算减少了年底支出量</li>
+<li><strong>福利分析</strong>:
+允许滚动预算可以带来福利收益.即使是允许机构在短时间内转入资金的中间政策,也可以产生接近全部滚动价值四分之三的福利收益</li>
+</ol>
+<h2 id="结论">结论</h2>
+<p>本文的核心结论是:由于"不使用就失去"的预算规则,美国联邦政府存在年底浪费性支出现象.具体表现为:</p>
+<ul>
+<li><strong>年底支出量激增</strong>:
+财政年度末的支出明显高于其他时间段</li>
+<li><strong>年底支出质量下降</strong>:
+财政年度末开始的IT项目质量较低</li>
+</ul>
+<p>允许滚动预算可以有效地解决这个问题.DOJ的经验表明滚动预算可以减少年底支出量,并可能提高项目质量.福利分析表明,即使是有限制的滚动预算政策也可以带来显著的福利收益.</p>
+<p>作者建议可以通过允许机构将未使用的资金延期到下个财政年度,用于四个月的宽限期,从而消除因年底浪费性支出造成的大部分效率低下问题.</p>
+<h2 id="未来研究方向">未来研究方向</h2>
+<ol type="1">
+<li><strong>研究国会预算决策对机构支出行为的影响</strong>:
+深入研究国会如何应对滚动预算,以及如何设计预算规则以实现最佳效果</li>
+<li><strong>考虑机构内部的异质性</strong>:
+研究机构内部不同部门的支出行为差异,以及如何设计更有针对性的预算政策</li>
+<li><strong>探索其他解决浪费性支出问题的政策</strong>:
+例如改进预算预测,加强项目管理,或引入竞争性招标</li>
+<li><strong>研究不同类型的资金结转政策</strong>:
+比较无限期结转、有条件结转等不同方案对支出效率的影响</li>
+<li><strong>行为因素的影响</strong>:
+考虑认知偏差、损失厌恶等行为因素对政府部门年底支出行为的影响</li>
+<li><strong>政治因素</strong>:
+研究资金结转政策的政治可行性,以及立法机构对预算控制的考量</li>
+</ol>
+<h2 id="学术思考">学术思考</h2>
+<ol type="1">
+<li><strong>预算制度与创新</strong>:
+"使用或失效"的预算规则是否会抑制政府部门的创新活动?如果政府部门知道它们必须在当年用完所有资金,它们是否会更倾向于投资于风险较低、回报较快的项目?</li>
+<li><strong>政治周期与支出行为</strong>:
+政府部门的支出行为是否会受到政治周期的影响?</li>
+<li><strong>绩效评估指标的设计</strong>:
+如何设计更有效的绩效评估指标,以准确衡量政府部门的支出质量?</li>
+<li><strong>资金结转政策的适用性</strong>:
+资金结转政策是否适用于所有类型的政府部门和项目?</li>
+<li><strong>公共部门与私营部门的对比</strong>:
+比较公共部门和私营部门在预算管理和支出效率方面的差异</li>
+</ol>
+]]></content>
+      <categories>
+        <category>公共经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>公共经济学</tag>
+        <tag>预算制度</tag>
       </tags>
   </entry>
   <entry>
@@ -3448,187 +3629,6 @@ Studies</li>
         <tag>读书笔记</tag>
         <tag>人口史</tag>
         <tag>比较历史学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>预算到期会导致年底浪费性支出吗?_ Liebman &amp; Mahoney (2017) 笔记</title>
-    <url>/posts/liebman2017/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Do Expiring Budgets Lead to Wasteful Year-End
-Spending? Evidence from Federal Procurement</li>
-<li><strong>作者</strong>: Jeffrey B. Liebman(哈佛大学), Neale
-Mahoney(芝加哥大学)</li>
-<li><strong>类型</strong>: 论文笔记 / 公共经济学 / 预算制度</li>
-<li><strong>出版年份</strong>: 2017</li>
-<li><strong>出版机构/期刊</strong>: American Economic Review</li>
-<li><strong>DOI</strong>: 10.1257/aer.20131296</li>
-<li><strong>难度评估</strong>: 高 -
-需要经济学、计量经济学、公共财政学基础</li>
-</ul>
-<span id="more"></span>
-<h2 id="引言">引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>本文属于公共经济学、行为经济学和管理学的交叉领域,探讨政府支出效率问题.核心概念包括:</p>
-<ul>
-<li><strong>预算约束</strong>: 政府机构在财政年度内可支配的资金总额</li>
-<li><strong>自由裁量支出</strong>:
-政府可以自行决定如何分配的预算部分,与法定支出(如社会保障)相对</li>
-<li><strong>公共采购</strong>: 政府购买商品和服务的行为</li>
-<li><strong>信息技术(IT)项目</strong>:
-政府对计算机硬件、软件和相关服务的投资</li>
-<li><strong>社会成本</strong>:
-指一项经济活动对整个社会造成的成本,包括直接成本和外部成本</li>
-<li><strong>滚动预算(Rollover Budget)</strong>:
-允许机构将未使用的预算资金转移到下一个财政年度</li>
-</ul>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p>政府机构通常面临"不使用就失去"的预算规则,即在一个财政年度结束时,任何未使用的预算资金都将返回国库,而不是留给该机构使用.这种规则可能会导致机构在财政年度末
-rush 支出,即使这意味着投资于低价值的项目.</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p>作者认为,"不使用就失去"的预算规则可能会导致政府浪费性支出.他们试图通过实证分析来检验这一观点,并探讨解决这一问题的潜在政策,例如允许机构将未使用的资金转入下一个财政年度.</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><strong>揭示了政府支出中潜在的浪费现象</strong>:
-通过量化财政年度末的支出高峰和质量下降,为政府支出效率问题提供了有力证据</li>
-<li><strong>评估了滚动预算的有效性</strong>:
-通过研究美国司法部的滚动预算政策,为解决浪费性支出提供了一个可行的解决方案</li>
-<li><strong>为政府预算管理提供了政策建议</strong>:
-研究结果表明,允许机构将未使用的资金转入下一个财政年度可以提高政府支出效率</li>
-</ol>
-<h2 id="论文结构">论文结构</h2>
-<ol type="1">
-<li><strong>引言</strong>: 概述研究背景、问题意识和研究意义</li>
-<li><strong>理论模型</strong>:
-建立一个简单的模型来解释"不使用就失去"的预算规则如何导致浪费性支出</li>
-<li><strong>数据描述</strong>:
-介绍用于实证分析的数据集,包括联邦采购数据系统(FPDS)和IT仪表板</li>
-<li><strong>实证分析1</strong>:
-使用FPDS数据检验财政年度末是否存在支出高峰</li>
-<li><strong>实证分析2</strong>:
-使用IT仪表板数据检验财政年度末的支出质量是否下降</li>
-<li><strong>政策分析</strong>: 研究滚动预算政策对支出行为的影响</li>
-<li><strong>福利分析</strong>:
-使用校准后的模型评估滚动预算政策的福利效应</li>
-<li><strong>结论</strong>:
-总结研究结果,讨论政策含义,并提出未来研究方向</li>
-</ol>
-<h2 id="背景">背景</h2>
-<p>许多组织都有在财政年度末到期的预算,这可能导致在年底匆忙将资源用于低质量的项目.美国联邦政府的自由裁量支出预算也面临类似情况,机构必须在财政年度结束前完成拨款.</p>
-<h3 id="挑战">挑战</h3>
-<ol type="1">
-<li><strong>"不使用就失去"的预算规则</strong>:
-如果机构不花完预算,剩余的资金将返回国库,降低了年底花钱的机会成本</li>
-<li><strong>预防性储蓄的动机</strong>:
-机构倾向于在预算周期开始时保留资金,以应对未来不确定的支出需求</li>
-<li><strong>缺乏关于年底浪费性支出的硬性证据</strong>:
-尽管有传闻证据,但缺乏关于美国联邦政府年底支出激增以及年底支出价值低于其他时间段的证据</li>
-</ol>
-<h2 id="方法">方法</h2>
-<h3 id="理论模型">理论模型</h3>
-<ul>
-<li><strong>模型设定</strong>:
-作者建立了一个年度预算模型,包括国会和一个政府机构.国会为该机构选择预算,该机构在一年中的每个时期都会获得一个参数,该参数决定了支出的边际价值,并选择一个支出水平以最大化收益递减的目标</li>
-<li><strong>模型特征</strong>:
-具有三个关键特征_预算到期、未来支出价值的不确定性以及每个时期内支出的收益递减</li>
-<li><strong>模型预测</strong>:
-由于不确定性和收益递减,该机构将在年初进行预防性储蓄;在年底,资金到期的前景导致该机构花掉所有剩余资源,即使边际价值低于资金的社会成本,导致年底支出量激增和质量下降</li>
-</ul>
-<h3 id="数据集">数据集</h3>
-<p><strong>1. 联邦采购数据系统(FPDS)</strong> - 时间范围:
-2004年至2009年财政年度 - 数据量: 1460万份合同 - 总支出: 2.6万亿美元 -
-主要内容:
-合同层面信息,包括金额、产品/服务代码、机构、供应商、合同类型、招标机制等
-- 用途: 用于分析联邦采购支出的总体模式,特别是年底支出高峰</p>
-<p><strong>2. IT仪表板(IT Dashboard)</strong> - 数据时间: 截至2010年3月
-- 项目数量: 686个主要IT项目 - 总计划支出: 1300亿美元 - 主要内容:
-项目绩效数据,包括总体评级、成本评级、进度评级、CIO评估等 - 用途:
-用于评估IT项目的质量,特别是年底开始的项目的质量</p>
-<h3 id="实证策略">实证策略</h3>
-<ol type="1">
-<li><strong>支出高峰检验</strong>:
-使用FPDS数据,分析财政年度内每周的采购支出模式,确定是否存在年底支出高峰</li>
-<li><strong>质量下降检验</strong>:
-使用IT仪表板数据,比较在财政年度最后一周开始的项目与在其他时间开始的项目的质量评级</li>
-<li><strong>政策分析</strong>:
-研究美国司法部(DOJ)的滚动预算政策对支出行为的影响.DOJ有权将未使用的IT项目预算转入下一财政年度,作者比较了DOJ的IT和非IT支出,以及DOJ和其他机构之间的支出模式</li>
-<li><strong>福利分析</strong>:
-通过校准模型以适应支出高峰和质量下降,分析允许滚动预算的潜在福利收益</li>
-</ol>
-<h3 id="关键术语">关键术语</h3>
-<ul>
-<li><strong>FPDS (Federal Procurement Data System)</strong>:
-联邦采购数据系统,跟踪所有联邦合同的数据系统</li>
-<li><strong>IT仪表板 (IT Dashboard)</strong>:
-跟踪联邦政府主要IT项目绩效的网站</li>
-<li><strong>CIO (Chief Information Officer)</strong>:
-首席信息官,负责机构的信息技术战略和管理</li>
-<li><strong>Ordered Logit Regression</strong>:
-有序Logit回归,用于分析有序分类因变量的统计模型</li>
-<li><strong>Difference-in-Differences</strong>:
-双重差分法,用于评估政策或干预效果的统计方法</li>
-<li><strong>CRRA (Constant Relative Risk Aversion)</strong>:
-恒定相对风险厌恶效用函数</li>
-<li><strong>CARA (Constant Absolute Risk Aversion)</strong>:
-恒定绝对风险厌恶效用函数</li>
-</ul>
-<h2 id="结果">结果</h2>
-<ol type="1">
-<li><strong>支出高峰</strong>:
-数据显示年底支出大幅增加.在财政年度的最后一周,支出是平时每周平均水平的4.9倍</li>
-<li><strong>质量下降</strong>:
-年底开始的IT项目的质量评级明显较低.在财政年度最后一周开始的项目,获得较低质量分数的可能性要高出2.3到5.6倍</li>
-<li><strong>滚动预算的影响</strong>:
-DOJ的IT支出没有出现支出高峰,最后一周的IT支出仅占3.3%,而非IT支出为9.3%.差异分析表明滚动预算减少了年底支出量</li>
-<li><strong>福利分析</strong>:
-允许滚动预算可以带来福利收益.即使是允许机构在短时间内转入资金的中间政策,也可以产生接近全部滚动价值四分之三的福利收益</li>
-</ol>
-<h2 id="结论">结论</h2>
-<p>本文的核心结论是:由于"不使用就失去"的预算规则,美国联邦政府存在年底浪费性支出现象.具体表现为:</p>
-<ul>
-<li><strong>年底支出量激增</strong>:
-财政年度末的支出明显高于其他时间段</li>
-<li><strong>年底支出质量下降</strong>:
-财政年度末开始的IT项目质量较低</li>
-</ul>
-<p>允许滚动预算可以有效地解决这个问题.DOJ的经验表明滚动预算可以减少年底支出量,并可能提高项目质量.福利分析表明,即使是有限制的滚动预算政策也可以带来显著的福利收益.</p>
-<p>作者建议可以通过允许机构将未使用的资金延期到下个财政年度,用于四个月的宽限期,从而消除因年底浪费性支出造成的大部分效率低下问题.</p>
-<h2 id="未来研究方向">未来研究方向</h2>
-<ol type="1">
-<li><strong>研究国会预算决策对机构支出行为的影响</strong>:
-深入研究国会如何应对滚动预算,以及如何设计预算规则以实现最佳效果</li>
-<li><strong>考虑机构内部的异质性</strong>:
-研究机构内部不同部门的支出行为差异,以及如何设计更有针对性的预算政策</li>
-<li><strong>探索其他解决浪费性支出问题的政策</strong>:
-例如改进预算预测,加强项目管理,或引入竞争性招标</li>
-<li><strong>研究不同类型的资金结转政策</strong>:
-比较无限期结转、有条件结转等不同方案对支出效率的影响</li>
-<li><strong>行为因素的影响</strong>:
-考虑认知偏差、损失厌恶等行为因素对政府部门年底支出行为的影响</li>
-<li><strong>政治因素</strong>:
-研究资金结转政策的政治可行性,以及立法机构对预算控制的考量</li>
-</ol>
-<h2 id="学术思考">学术思考</h2>
-<ol type="1">
-<li><strong>预算制度与创新</strong>:
-"使用或失效"的预算规则是否会抑制政府部门的创新活动?如果政府部门知道它们必须在当年用完所有资金,它们是否会更倾向于投资于风险较低、回报较快的项目?</li>
-<li><strong>政治周期与支出行为</strong>:
-政府部门的支出行为是否会受到政治周期的影响?</li>
-<li><strong>绩效评估指标的设计</strong>:
-如何设计更有效的绩效评估指标,以准确衡量政府部门的支出质量?</li>
-<li><strong>资金结转政策的适用性</strong>:
-资金结转政策是否适用于所有类型的政府部门和项目?</li>
-<li><strong>公共部门与私营部门的对比</strong>:
-比较公共部门和私营部门在预算管理和支出效率方面的差异</li>
-</ol>
-]]></content>
-      <categories>
-        <category>公共经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>公共经济学</tag>
-        <tag>预算制度</tag>
       </tags>
   </entry>
   <entry>
