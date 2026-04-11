@@ -1,0 +1,3362 @@
+European Economic Review 168 (2024) 104803
+Available online 18 July 2024
+0014-2921/©
+2024
+The
+Author(s).
+Published
+by
+Elsevier
+B.V.
+This
+is
+an
+open
+access
+article
+under
+the
+CC
+BY
+license
+(http://creativecommons.org/licenses/by/4.0/).
+Contents lists available at ScienceDirect
+European Economic Review
+journal homepage: www.elsevier.com/locate/eer
+Do governments crowd out governments? Evidence from a natural
+experiment✩
+Stuart Baumann a, Margaryta Klymak b,∗
+a Independent Researcher
+b King’s College London, United Kingdom
+A R T I C L E
+I N F O
+JEL classification:
+H50
+H61
+Keywords:
+Government spending
+Embassies
+Fiscal year-end
+A B S T R A C T
+Many governments operate budgets that expire at the end of the fiscal year and rush to spend
+large amounts at this time. The scale and breadth of this heightened spending raises the
+possibility of government departments crowding out each other at the year-end while competing
+with one another for limited suppliers. This may exacerbate the extent of year-end spending
+spikes. We investigate this possibility using expenditures of all overseas embassies and offices
+of the UK. We leverage a unique setting where embassies share the UK fiscal year for their
+budgeting but operate in countries with varying fiscal years. Our results show that: (1) in every
+country embassies spend more at the UK fiscal year-end than in the average month; (2) the
+extent of this extra spending is greater in countries that have a fiscal year that overlaps with
+the UK; (3) embassies spend more at the end of the fiscal years of local firms.
+1. Introduction
+Governments around the world typically operate under annually expiring budgets and spend substantially more at the end of
+the fiscal year than at any other time. This pattern has been observed in the United States (Liebman and Mahoney, 2017), the
+United Kingdom (Baumann, 2019) and across 27 OECD countries (Eichenauer, 2020). The size of this effect can be substantial. For
+instance, in the United Kingdom capital expenditure in the last month of the fiscal year is about twice as much as in the average
+month (Baumann, 2019), and the United States Government spends 4.9 times more in the last week of the fiscal year compared to the
+average week (Liebman and Mahoney, 2017). This phenomenon has recently attracted the attention of economists and policymakers
+due to the potential for waste.1
+Many government departments simultaneously spending at high levels can have congestion effects in the economy. Specifically,
+this simultaneous spending can cause the crowding out of suppliers, which can impact government departments in a number of ways.
+First, government suppliers may raise their prices due to high demand Klymak and Baumann (2022).2 If the quantity demanded is
+✩We thank the UK government for sharing the data with us. Daniel Schaefer, Carl Singleton, Simon Quinn, Fabrizio Santoro and Mishel Ghassibe provided
+useful comments. All errors are our own.
+∗Corresponding author.
+E-mail addresses:
+stuart@stuartbaumann.com (S. Baumann), margaryta.klymak@kcl.ac.uk (M. Klymak).
+1 For instance, drawing on United States Government IT procurement data, Liebman and Mahoney (2017) found that projects commissioned at the end of
+the fiscal year were 2.2 to 5.6 times more likely to receive a ‘‘low quality’’ score.
+2 Based on Ukrainian government procurement auctions, Klymak and Baumann (2022) showed that firms charged significantly higher margins at the end of
+the fiscal year relative to other times of the year. There is also anecdotal evidence for price increases at year end in the UK from Hyndman et al. (2007, page
+227). Specifically, an interview in the paper states ‘‘you do [end up paying over the odds for spending to get rid of money at short notice]. There’re two things —
+there are those [contractors] on our select list who have given us prices ... but you find in some years that none of them is willing to do it, as they are all fully committed
+and you end up paying over the odds (Interview K)’’.
+https://doi.org/10.1016/j.euroecorev.2024.104803
+Received 16 July 2023; Received in revised form 30 June 2024; Accepted 4 July 2024
+
+
+European Economic Review 168 (2024) 104803
+2
+S. Baumann and M. Klymak
+relatively inelastic to price increases this could result in bigger spending spikes. Second, due to supplier unavailability, government
+departments may also have to change the goods they buy or the suppliers they buy from Hyndman et al. (2007). If the department
+faces switching costs or if the substitute goods/suppliers are less economical then this will further increase year-end spending.
+Substitute goods may also be higher quality and hence more costly than they would be at other times of the year.34 Third, suppliers
+may hire more salespeople and change their good offerings at year-end to exploit a higher willingness to spend and induce greater
+spending. Salespeople may also intensify promotional campaigns and offer value-added services amidst heightened competition for
+government contracts.5 To the extent these efforts are successful we would expect higher spending at year-end. Fourth, departments
+may buy fewer items than they otherwise would as they move some expenditures to other times of the year to avoid price increases
+or supplier unavailability. The first three of these mechanisms suggest higher spending at the end of the local fiscal year while the
+fourth suggests lower spending at year-end.
+We study the impact of these crowding out effects on the sizes of observed year-end spending spikes. The identification challenge
+we face is to disentangle the impact of a department’s fiscal year away from the impact of the fiscal years of other government
+agencies in the economy. Most government entities in a country operate under the same fiscal year rules, so the budgetary fiscal
+year for a department is the same as for all government departments operating in that economy. To overcome this, we analyse
+the purchasing decisions of all United Kingdom’s (‘‘home’’) foreign office’s embassies, high commissions,6 consulates, missions and
+other offices (henceforth simply ‘‘overseas offices’’) that are located outside of the UK (in ‘‘host’’ countries) over the period from
+2008–2019. This setting is ideal to study our question as all overseas offices are operating under the home fiscal year but are
+located in countries with different fiscal year cycles which may or may not overlap with home.7 Thus the novelty of our study is
+that we can disentangle an individual government’s year-end spending behaviour from the competition they face from other the
+spending of other government departments at the year-end.8 Furthermore, our dataset covers a substantial number of countries as
+the UK has a large network of overseas offices to support its foreign policy. According to the latest ranking of the Lowy Institute,
+the UK was ranked as having the 11th highest level of international diplomatic engagement (Lowy Institute, 2019).
+We find that overseas offices on average spend more at the end of the UK fiscal year in March than in other months and we
+observe this pattern in all countries. Fiscal year-end spending is greater in countries that share a fiscal year with the UK. This finding
+is consistent with a crowding out effect coming from the year-end spending of the host government. Our results imply that greater
+spending in the economy can fuel even greater spending and in that sense, there is a multiplier effect on year-end spending coming
+from all government departments spending at the same time.9
+As a secondary aim we investigate the extent to which the fiscal years of firms in the local economy can influence year-end
+spending. One mechanism through which this can occur is that salespeople in supplier firms may attempt to move sales between
+fiscal years to maximise their commissions, given targets in their incentive structure (Oyer, 1998). This can be a sizable effect, Price
+Waterhouse Coopers (2023) suggests that one reason firms may want to change their fiscal year is to avoid year-end coinciding with
+that of other firms. They state that ‘‘Moving sales targets to a non-calendar year-end may reduce pricing pressures or resource constraints
+at customers that are typically driven by high volumes of vendors seeking to meet sales targets at the same time’’.10 Therefore in certain
+settings, we might expect higher spending right before the end of the firm fiscal year as accelerated sales are moved to these times.
+There is some evidence of increased advertising at year-end with Décaire and Sosyura (2022) using data on the adverting budgets of
+US firms to find that managers with surplus funds rush to spend before their budget would expire. More generally previous studies
+have highlighted the importance of fiscal year-end of firms in various other ways. It has been found that firms at the year-end
+strategically time investments to reduce taxes (Kinney and Trezevant, 1993); undertake more capital investments (Shin and Kim,
+2002); report lower working capital to signal greater efficiency (Frankel et al., 2017); strategically time asset sales as a low cost
+way to alter earnings (Bartov, 1993); and produce in excess to lower the reported cost of goods sold (Roychowdhury, 2006).
+While there is not in general one fiscal year used by all firms in any given country,11 there is often rough alignment in the fiscal
+year choices of each firm in a country. This alignment varies between countries and we exploit this variation to estimate the effect
+of a firm fiscal year on the spending patterns of overseas offices at the year-end. We find that overseas office spending increases
+later in the fiscal years of local firms.
+3 Note that while Liebman and Mahoney (2017) found that IT projects delivered at year-end are of lower quality than other spending (in terms of delivering
+value for taxpayers), this does not imply that the specific items being bought are of lower quality.
+4 This substitution may be more likely for types of procurements that deliver personal utility for the public sector workers. As an example a
+recent (OpenTheBooks.com, 2019) report found that in September 2018 US government departments spent $4.6 million on lobster. This may be higher quality
+catering (and at higher cost) than the department normally consumes.
+5 Some trade exhibitions, for instance the annual ‘‘Warrior Expo’’ in the defence procurement industry, are strategically scheduled to coincide with the
+spending increase at the end of the U.S. government’s fiscal year (U.S. Securities and Exchange Commission, 2011).
+6 The United Kingdom, as well as other commonwealth countries, have a naming convention of calling the principal diplomatic mission to other commonwealth
+countries a ‘‘High Commission’’ rather than an embassy.
+7 We examine how the local fiscal year-end affects the spending of each overseas office. While the scale of spending of an overseas office will generally
+be small in relation to their local economy, the spending of the host government will be significantly larger. We ascertain the crowding out effect of this host
+government’s spending on the overseas office’s spending patterns.
+8 We will disentangle a further mechanism of overlapping firms’ fiscal year-ends.
+9 More generally however our setting is an ideal one to study the extent to which government agencies crowd out other government agencies in the economy.
+Similar crowding out is also likely to occur at other times of heightened spending such as when there is an expansionist fiscal policy. The spending response of
+embassies, which do not have the same fiscal year as other governmental agencies in their local economy, provides a view on the extent of this crowding out.
+10 In certain countries (such as Australia) retailers advertise ‘‘year-end sales’’ with the ostensible goal to reduce inventory before the end of the fiscal year.
+11 For some countries, firms typically align with the national governmental fiscal year (e.g. Australia) while in other countries (e.g. the USA) they do not.
+
+
+European Economic Review 168 (2024) 104803
+3
+S. Baumann and M. Klymak
+Our findings contribute to the year-end spending literature, which has primarily attributed this behaviour to the budgeting
+of government departments at the fiscal year-end (i.e. internal factors) rather than external factors (e.g. spending of external
+government departments). Specifically, Liebman and Mahoney (2017) suggest that government departments build up precautionary
+savings funds which they expend at year-end when funds would otherwise expire. As they cannot roll over funds into the following
+fiscal year, these departments spend the remaining amount at the end of the year. Baumann (2019) suggested that the behaviour
+was motivated by procrastination on the part of government departments. Eichenauer (2020) proposed that year-end spending is
+a result of government departments being unable to effectively plan ahead. These explanations agree on spending being driven by
+a government department’s internal budgetary and reporting fiscal year and neither paper considers the impact of other agents
+in the economy (including other government departments) having their end of fiscal year at the same time.12 Our paper is the
+first to separate the impact of internal from external factors. We also find support for the importance of internal factors in driving
+end-of-year spending. Furthermore, our paper presents the novel finding that two external channels can influence year-end spending:
+the impact of the fiscal years of other government departments and of firms that operate in the same economy.
+Finally, our paper is also related to work examining fiscal spillovers focusing on the impact of the spending decisions of
+one jurisdiction on the decisions of another. Various types of strategic interactions between the fiscal and spending policies of
+neighbouring governments have been studied, including yardstick competition (Besley and Case, 1995), tax competition (Devereux
+et al., 2008; Parchet, 2019) and spending spillovers on other jurisdictions (Case et al., 1993; Baicker, 2005). In our paper we find
+an additional spillover: year-end spending of one government department can impact the year-end spending of another. We find
+this in the context of UK embassies being impacted by the spending of their host country.
+There are three main implications of this short paper. First, the home fiscal year is the most important for the pattern of spending
+over the year. This finding confirms that the focus of the literature on the role of the budgetary fiscal year in explaining year-end
+spending spikes. Second, the size of year-end spending is larger in countries that have overlapping fiscal years with home. This
+indicates that congestion effects exacerbate year-end spending. Third, home government spending is higher later in the fiscal year
+of local firms.
+2. Methodology
+2.1. Data
+We use a monthly spending dataset covering the spending of the UK Foreign and Commonwealth Office between the 2008–2009
+and 2018–2019 fiscal years. There are two budgets for each overseas office and year.13 The first is the resource budget, which is
+used for regular expenses such as stationery, staff training, diplomatic events, salaries and rent. The second is the capital budget,
+which is for office renovations, office furniture, new computers and other capital purchases.
+For each overseas office, we have one observation for each budget, each month and each year (i.e. overseas office-budget-
+month-year). Overall we rely on an unbalanced panel of 399 overseas offices, located over 180 countries, resulting in 4932 overseas
+office-budget-years.14 The majority of offices are located in countries operating under a calendar year fiscal year. This can be seen
+in the top panel of Fig. 1. We do however have many office-budget-years with different fiscal year-ends, with 16% of countries (and
+65 overseas offices) sharing the same fiscal year-end with the UK in March.
+Overseas offices in our sample tend to spend at very different scales.15 On one end is the Kabul Embassy, which spent more than
+100 million pounds in each fiscal year between 2015–2016 and 2018–2019. On the other extreme, there are many small offices,
+such as the embassy in Minsk where annual expenditures are around one million pounds per year. While our data is at an overseas
+office level, we also aggregate spending levels at a country level and present it in the middle panel of Fig. 1.16 Finally, the bottom
+panel of Fig. 1 presents home year-end capital expenditure for each country divided by the monthly average for overseas offices
+in that country. For example, a value of two for this ratio means the office is spending twice as much in March as in the average
+month. It shows that overseas offices spend more at the end of the UK fiscal year in every country.
+Several embassies in our data sold some assets and obtained revenues from the asset sales. Under the accounting conventions in
+place, these were recorded as negative expenditures. As a result, some months have negative total expenditures for some departments
+12 In the appendix of this paper, we extend previous models of Liebman and Mahoney (2017) and Baumann (2019) to explore their implications for how
+crowding out of suppliers can affect year-end spending spikes. We find that crowding out should reduce the size of spending spikes seen in practice as it is a
+mechanism which encourages departments to more evenly spread out spending throughout the year.
+13 United Kingdom departments have a limited ability to ‘‘rollover’’ funds between fiscal years. Prior to the 2010–2011 fiscal year, this ability to rollover
+was allowed under the ‘‘end of year flexibility’’ scheme which allowed UK departments to save unlimited funds between years. From the 2011–2012 fiscal year
+and onwards however the new ‘‘Budget Exchange System’’ was far more restrictive. Specifically, departments could only rollover funds up to a limit of between
+0.75% and 4% (depending on the department). In addition, funds could only be rolled over for one additional year. Evidence related in Crawford et al. (2009)
+and Baumann (2019) suggests that the UK year-end spending remained large despite the ability to save between years.
+14 This number is lower than the number of offices multiplied by ten years and two budgets per department, reflecting that some overseas offices did not
+exist for all ten years. We deflate the spending data with a monthly consumer price index obtained from the UK’s Office for National Statistics. We use this
+rather than host country inflation rates as budgets for overseas offices are denominated in pounds and are typically only exchanged for local currency at the
+time spending occurs. While UK departments are allowed to use derivatives to hedge against exchange rate exposure, the foreign and commonwealth typically
+only does this for some peacekeeping operation expenses denominated in USD and EUR.
+15 Appendix C presents the descriptive statistics of our sample.
+16 A similar figure is available in Appendix C which splits spending by capital and resource expenditures.
+
+
+European Economic Review 168 (2024) 104803
+4
+S. Baumann and M. Klymak
+Fig. 1. Fiscal year spending of UK overseas offices in 2008–2019.
+Note: The figure presents the fiscal year-end and spending for all UK overseas offices over the period 2008–2019. The first graph demonstrates the fiscal year
+cycles. The second graph depicts the average annual spending across countries. The third graph shows spending in March over the average monthly spending.
+For the second and third graphs, darker colours imply more spending. Note that while our data is at the level of an individual overseas office, we aggregated
+them to a country level for the purposes of these plots.
+and budgets. These are relatively few, however, with less than 3.5% of office-budget-year-month observations having negative
+total spending. As a result of the possibility of negative spending figures and different scales of spending, we use two different
+transformations of this variable. First, we calculate the mean and standard deviation for each office-budget-year, and use these to
+
+
+European Economic Review 168 (2024) 104803
+5
+S. Baumann and M. Klymak
+Fig. 2. Spending over the fiscal year.
+Note: The figure depicts the fiscal year spending pattern of all overseas offices depending on the fiscal year-end month (either March, June, September or
+December) and budget (either resource or capital). On the horizontal axis is the month of the year (where 1 is for January, 2 is for February, etc.). On the
+vertical axis is the month’s average Spending Z (on the top two panels) and average Spending Binary (for the bottom two panels).
+create a z-score for each month. We call this standardised variable ‘‘Spending Z’’. Second, for each office-budget-month, we create a
+dummy variable taking the value of one if more is spent that month than the monthly average for that office-budget-year. We call
+this variable17 ‘‘Spending Binary’’.18
+We present each of these two measures in Fig. 2, where we have separated overseas offices into four groups based on when the
+local fiscal year-ends.19 The profile of spending is dominated by a large spending spike occurring at the end of the UK fiscal year in
+March. We then observe lower spending in April and May. Spending picks up again at the end of the calendar year in December.
+In addition, the resource expenditure rises more in March for overseas offices operating in countries where the fiscal year-ends in
+March. This is suggestive evidence of a multiplier effect where an economy exhibiting heightened government spending leads to
+higher spending on the part of overseas offices. We will examine this more rigorously in the section that follows.
+Before progressing however it should be noted that the use of standardisation of our dependent variable means that results in this
+paper are expressed in units of standard deviations. As the standard deviation of resource expenditure is lower than that of capital
+expenditure that means that the size of year-end spending in the left and right panels in Fig. 2 cannot be easily compared. Capital
+expenditure increases more at year-end than resource expenditure however the lower standard deviation of resource expenditure
+hides this in Fig. 2.20 We provide additional data and explanation to help relate our regression results to aggregate spending figures
+in Appendix F.
+17 Specifically for each office-budget-year (where the year refers to a UK fiscal year running from April to March) we have 12 spending figures
+[𝑥𝑖,𝑏,𝑦,𝑚]𝑚=1∶12. With these figures we calculate a mean 𝜇𝑖,𝑏,𝑦, a standard deviation 𝜎𝑖,𝑏,𝑦and then calculate Spending Z𝑖,𝑏,𝑦,𝑚=
+[ 𝑥𝑖,𝑏,𝑦,𝑚−𝜇𝑖,𝑏,𝑦
+𝜎𝑖,𝑏,𝑦
+]
+𝑚=1∶12. We also calculate
+Spending Binary𝑖,𝑏,𝑦,𝑚= [Dummy (𝑥𝑖,𝑏,𝑦,𝑚> 𝜇𝑖,𝑏,𝑦
+)]
+𝑚=1∶12.
+18 Spending Binary throws away a large degree of variation which makes it more robust to outliers but it also means that the magnitude of spending spikes
+may be distorted. We hence primarily use Spending Binary as a robustness check on the Spending Z. As we will show however the results from the two dependent
+variable transformations are remarkably similar.
+19 Note that most countries have a fiscal year that ends at the end of a quarter. For instance, Australia has a fiscal year-ending at the end of June, while the
+United States fiscal year-ends at the end of September. There are five exceptions in our dataset, however, including Afghanistan (fiscal year-end December 20);
+Ethiopia (fiscal year-end July 7); Iran (fiscal year-end March 20), Nepal (fiscal year-end July 15) and Samoa (fiscal year-end May 31). For this chart we drop
+Samoa and round the other cases to the closest month-end which is always at the end of a quarter.
+20 This is also an issue for Spending Binary. This happens as a higher standard deviation means more early months have capital expenditure above the annual
+mean and hence there is a lower spending spike at year-end.
+
+
+European Economic Review 168 (2024) 104803
+6
+S. Baumann and M. Klymak
+2.2. Empirical strategy
+We examine the extent to which the home fiscal year, the host government fiscal year and local firm fiscal years can affect
+overseas offices expenditures with the following benchmark specification:
+Spending𝑖,𝑏,𝑚,𝑦= 𝛽0 + 𝛽1LFY End𝑖,𝑚× Home FY End𝑖,𝑚+ 𝛽2Home FY End𝑖,𝑚+
+(1)
++ 𝛽3LFY End𝑖,𝑚+ 𝛽4Firms LFY End𝑖,𝑚+ 𝑚+ 𝜓𝑖𝑦+ 𝜖𝑖,𝑏,𝑚,𝑦
+where 𝑆𝑝𝑒𝑛𝑑𝑖𝑛𝑔𝑖,𝑏,𝑚,𝑦is the spending for overseas office 𝑖, budget 𝑏, in month 𝑚and year 𝑦. We use both the Spending Z and Spending
+Binary as dependent variables. 𝐻𝑜𝑚𝑒𝐹𝑌𝐸𝑛𝑑𝑖,𝑚is a dummy variable taking value one in March (at the end of the UK fiscal year).
+We use two variables to control for the local fiscal year-end. First, 𝐿𝐹𝑌𝐸𝑛𝑑𝑖,𝑚is a dummy variable for the end of the local fiscal
+year. Second, 𝐿𝐹𝑌𝐸𝑛𝑑𝑖,𝑚× 𝐻𝑜𝑚𝑒𝐹𝑌𝐸𝑛𝑑𝑖,𝑚is an interaction between the UK fiscal year-end and the local fiscal year-end.
+We would expect that the local fiscal year would impact overseas office expenditure due to crowding out as the host government
+spends at high levels. While we do not have data on the amount of government spending happening in each country in each month,
+the literature has found heightened year-end spending in many countries around the world21 at various levels of development.22
+To the extent different groups of overseas offices exhibit different spending patterns we exploit the different spending patterns to
+identify the coefficients of 𝐿𝐹𝑌𝐸𝑛𝑑𝑖,𝑚and 𝐿𝐹𝑌𝐸𝑛𝑑𝑖,𝑚× 𝐻𝑜𝑚𝑒𝐹𝑌𝐸𝑛𝑑𝑖,𝑚. The behaviour and preferences of firms can also influence
+when governmental spending occurs (e.g. Oyer 1998). To examine this impact, we obtain the constituents of the major large-cap
+stock indices for 44 countries from the Bloomberg terminal.23 For each company, we obtain their fiscal year-end month. Then for
+each country and each month, we calculate the average (across firms) number of months until the end of the firm fiscal year. We
+normalise this to the [0, 1] range24 where a value near 𝑜𝑛𝑒means many firms are near the end of their fiscal years and a value near
+𝑧𝑒𝑟𝑜means most firms are near the start of their fiscal year. This is the 𝐹𝑖𝑟𝑚𝑠𝐿𝐹𝑌𝐸𝑛𝑑𝑖,𝑚variable in the regression.25
+We use the 𝑚vector of fixed effects for each calendar month. The role of this fixed effect is to separate the effect of the home
+fiscal year from the other effects we seek to study.26 Given the end of the home fiscal year is of particular interest we do explicitly
+control for March and hence the corresponding fixed effect drops out. Our baseline month for Home FY End𝑖,𝑚is January. 𝜓𝑜𝑦is a
+vector of fixed effects for each overseas office × year, which allows focusing on variation within a particular office and year rather
+than using variation between departments.27 Finally, 𝜖𝑖,𝑏,𝑚,𝑦is the statistical error term. We cluster standard errors at a country
+level.28
+3. Results
+We present the main results of this paper in Table 1. The top panel displays findings for the resource expenditure29 while the
+results for capital expenditures are reported in the bottom panel. In each panel the first three columns use Spending Z as the
+dependent variable while the last three columns rely on the binary spending variable. Columns 1 and 4 include only governmental
+(i.e. local and home) fiscal year-ends. Columns 2 and 5 include only the home fiscal year and the firm year-end variable. In these
+regressions there is a drop in sample size reflecting that this firm fiscal year variable cannot be calculated for all countries. Columns
+3 and 6 include all of these variables.
+Three main findings emerge from this table. First, the overseas offices spend more in the last month of the home fiscal year
+for both the capital and the resource expenditure budgets. Focusing on our full model in the resource budget panel, the result for
+21 To our knowledge there are no papers that have found examples of countries where the government does not spend more at fiscal year-end.
+22 Our identification comes from comparing between the spending patterns of different overseas offices. Note that as countries rarely change fiscal years (in the
+period of our data only Timor Leste and Fiji changed fiscal years) the local fiscal year-end is generally time invariant so we cannot use intertemporal variation
+to identify it. The key requirement for our results to be meaningful for examining the impact of local fiscal years is that spending patterns are broadly similar
+enough for overseas offices in other countries (with other fiscal year-ends) to provide a suitable counterfactual. We believe this is the case as all overseas offices
+have the same budgetary framework, management and oversight institutions and perform similar diplomatic tasks. Finally, we note that while this paper uses a
+type of cross country regression, our cross country dataset has similar advantages to that of Eichenauer (2020). Similarly to Eichenauer, all of our data is from
+one organisation (in our case the UK government), and we do not have the measurement error complications that are often encountered in such settings.
+23 Details on these indices can be found in Appendix B.
+24 Denoting the average number of months until the end of the fiscal year to be 𝑥which will be in the [0, 11] range the transformation is
+(11−𝑥)
+11
+.
+25 Note that given how this variable is constructed, it is only available for countries with a number of publicly traded companies. As a result, we carry out
+several regressions that exclude this variable. This variable works out to be roughly uniformly distributed with a minimum of 0, a maximum of 1.0 and the
+20%, 40%, 60%, and 80% quartiles being 0.236, 0.43, 0.61, 0.79 respectively. When the governmental fiscal year-ends in December most firm fiscal years also
+end around December. However, when the governmental fiscal year does not in December there is no clear relationship with firm fiscal year. For histograms of
+the distribution of firm and governmental fiscal years see Fig. D.1 in the appendix.
+26 If this is not done, there would be an important omitted variable. We would have obtained the result that the end of the local fiscal year coefficient is
+statistically significant because many overseas offices operate in countries with a calendar fiscal year and December tends to be a high spending month in the
+UK foreign office generally.
+27 These fixed effects are most important for the Spending Binary dependent variable. For the Spending Z score, we have already effectively done a within
+transformation by subtracting the mean annual spending while calculating the z score so the fixed effects in an OLS regression do not have a large impact.
+28 Note that conclusions of this paper are robust to bootstrapping of standard errors. This is presented in Table G.5, Appendix G.2.
+29 The resource spending includes both the Annually Managed Expenditure (AME) and the Departmental Expenditure Limit (DEL). The first budget, chosen
+annually, is intended for demand-driven costs, while the latter is allocated during spending reviews held approximately once every three years and is designated
+for planned expenditures. In our dataset, the UK FCO obtains approximately 91% of their funding through DEL funds and about 1.5% through AME funds. We
+further discuss the differences between these budgets and replicate our analysis for each separately in the appendix Table H.5.
+
+
+European Economic Review 168 (2024) 104803
+7
+S. Baumann and M. Klymak
+Table 1
+End of fiscal year spending effects.
+Spending
+Spending
+Spending
+Spending
+Spending
+Spending
+Z
+Z
+Z
+Binary
+Binary
+Binary
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+Panel A: Resource Budget
+Home FY End
+1.390∗∗∗
+1.395∗∗∗
+1.359∗∗∗
+0.499∗∗∗
+0.497∗∗∗
+0.488∗∗∗
+(0.061)
+(0.074)
+(0.082)
+(0.023)
+(0.029)
+(0.032)
+LFY End × Home FY End
+0.300∗∗∗
+0.335∗∗∗
+0.085∗∗
+0.099∗
+(0.102)
+(0.125)
+(0.040)
+(0.051)
+LFY End
+−0.047
+−0.090∗∗
+−0.022
+−0.040∗
+(0.034)
+(0.044)
+(0.016)
+(0.022)
+Firms LFY End
+0.138
+0.107
+0.060∗∗
+0.057∗∗
+(0.090)
+(0.075)
+(0.025)
+(0.022)
+Num Countries
+180
+68
+68
+180
+68
+68
+Observations
+39,996
+23,796
+23,796
+39,996
+23,796
+23,796
+R2
+0.224
+0.211
+0.212
+0.231
+0.221
+0.221
+Month FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Overs. Office × Year FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Panel B: Capital Budget
+Home FY End
+0.812∗∗∗
+0.844∗∗∗
+0.867∗∗∗
+0.280∗∗∗
+0.288∗∗∗
+0.298∗∗∗
+(0.053)
+(0.068)
+(0.066)
+(0.017)
+(0.023)
+(0.022)
+LFY End × Home FY End
+0.003
+−0.085
+−0.007
+−0.034
+(0.146)
+(0.199)
+(0.038)
+(0.053)
+LFY End
+−0.046
+−0.088∗∗
+−0.024
+−0.038∗
+(0.031)
+(0.041)
+(0.015)
+(0.022)
+Firms LFY End
+0.127∗∗∗
+0.187∗∗∗
+0.043
+0.068
+(0.047)
+(0.061)
+(0.036)
+(0.044)
+Num Countries
+166
+68
+68
+166
+68
+68
+Observations
+21,840
+12,468
+12,468
+21,840
+12,468
+12,468
+R2
+0.158
+0.165
+0.166
+0.305
+0.309
+0.309
+Month FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Overs. Office × Year FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Note: This table reports the estimates of home, overlapping and non-overlapping fiscal year-end months as well as local firms year-ends. The dependent variable
+in columns 1–3 is Spending Z; in the last three columns, it is Spending Binary. Panel A relies on the resource budget spending whilst panel B uses spending from
+the capital budget. FE refer to each calendar month and overseas office-times-year fixed effects. The omitted reference category is spending during January. We
+report a standard error in parenthesis below each coefficient. Standard errors allow for clustering at the country level. We denote significance using ∗p<0.1;
+∗∗p<0.05; ∗∗∗p<0.01.
+the home fiscal year-end indicates that spending is 1.359 standard deviations higher in the last month. This coefficient for the
+capital budget is 0.867 standard deviations. This result is robust in every specification for resource and capital expenditure. The
+significance and magnitude of this coefficient confirms the focus of the previous literature on the budgetary fiscal year as the key
+driver of year-end spending.
+The second key finding is that the LFY End × Home FY End coefficient is significantly positive in the resource expenditure case.
+In the benchmark specification, it shows that the size of the year-end spending spike is 0.335 standard deviations higher in countries
+with a fiscal year-end in March than in countries with a different fiscal year-end. Back of envelope calculations to convert this result
+from standard deviations units towards currency units suggests that March spending is higher by about 0.26 times average month
+spending in countries that have the same fiscal year-end as the home country.30 This finding indicates that crowding out effects
+exacerbate the size of year-end spending spikes. In addition, the LFY End coefficient is negative for capital expenditure. This is
+consistent with embassies moving capital expenditure to other times in the fiscal year where there is less crowding out from host
+country governmental spending.31
+Finally, in both cases but most strongly in the capital expenditure case there is greater spending later in the fiscal year of local
+firms.32 This finding is broadly in agreement with the findings of Oyer (1998) who found evidence of salespeople moving sales with
+respect to their firm’s fiscal year. One explanation for why this effect is stronger for capital expenditure is that capital expenditure
+items (e.g. computers, furniture, vehicles) are larger items and hence are more likely to be influenced by supplier sales efforts than
+resource expenditure items such as salaries, rents and office supplies.
+While there could be several mechanisms driving our findings (as discussed in the introduction), the dataset does not allow us
+to decompose which are more likely to be driving the effect. We can note however that overseas offices appear to have relatively
+inelastic spending patterns in that overall spending is higher at year-end despite congestion of governmental suppliers. In addition,
+30 These calculations are related in Appendix F.
+31 In the resource expenditure case the corresponding coefficients are not significantly different from zero. This may reflect a greater difficulty in moving the
+purchase of these goods/services within the fiscal year.
+32 Note that there is a similar effect is significant at the 10% level for some specifications of the resource budget regressions.
+
+
+European Economic Review 168 (2024) 104803
+8
+S. Baumann and M. Klymak
+firm fiscal years appear to play a significant role. This makes it likely that issues related to the actions and incentives of firms and
+salespeople may be important.
+We further confirm the robustness of our findings with a number of checks in Appendix G. First, one possible concern a reader
+might have is that findings are driven by outliers such as certain countries or years. To address this concern, we use a jackknife
+procedure reestimating our regressions after dropping each country and year, in turn, to ensure our results are not driven by any
+singular countries or years. We present our findings in Figs. G.1–G.4. These figures also include results of a placebo test to ensure that
+specification estimated coefficients are distributed around zero if we deliberately randomise the local host government fiscal year
+and firm fiscal years in the data. Second, combining non-overlapping local fiscal year-end into a single binary variable might hide
+an important heterogeneity or equally important might demonstrate that our findings only present for certain months. We separate
+each local fiscal year-end (i.e. March, June, September and December) and present our results in Table G.1. Third, Table G.2 shows
+that our findings are robust if we use log(𝐹𝑖𝑟𝑚𝑠𝐿𝐹𝑌𝐸𝑛𝑑𝑖,𝑚+ 1) in place of the firm fiscal year variable. Fourth, previous literature
+(e.g. Klymak and Baumann 2022) has identified that spending is the highest in the last month of the fiscal year but tends to be
+elevated near that time. We therefore change our end of fiscal year variables (LFY End × Home FY End, LFY End and Home FY
+End) to represent the last two months of the fiscal year. Our results remain robust in Table G.3. Fifth, it is possible that the start
+(rather than the end) of the host government fiscal year could be busy due to the arrangement of annual contracts. However, we do
+not support for this hypothesis in Table G.4. Finally, we replicate the benchmark findings presented in Table 1 with bootstrapped
+standard errors which we show in Table G.5.
+In Appendix H, we explore several extensions. First, in Table H.1 we test whether the level of economic development, distance
+between the UK and local economy, and the EU and Commonwealth membership matter for the pattern we identified in this section.
+Whilst the home fiscal year remains statistically significant in all specifications, there is no evidence that local fiscal year-end can be
+explained by these factors. Second, we separate the end of local fiscal year effect according to the income level of the host country
+in Table H.2. It can be easier to source certain goods and services in more advanced countries. Third, we interact uncertainty and
+unemployment with year-end spending in Table H.3.
+4. Conclusion
+Aside from the budgetary fiscal year, a government department’s expenditure pattern could in principle be affected by the fiscal
+year behaviour and spending of other government departments and firms in the economy. We study the impact of this crowding
+out using the spending behaviours of the overseas offices of the UK’s foreign and commonwealth offices.
+Crowding out could potentially affect spending in two contrasting ways. On one hand, compared to embassies in countries that do
+not share the fiscal year-end with the UK, embassies in countries that share the UK fiscal year-end may encounter higher prices and
+reduced supplier availability. Consequently, we would expect government departments to shift spending to other times of the year.
+For instance, we might expect that a UK overseas office in Australia (where the local fiscal year-ends in June) would have greater
+spending spikes in March than overseas offices in Canada (where Canadian government departments are spending at heightened
+levels in March). Indeed, we present simple extensions of these models to incorporate congestion effects in Appendix A and these
+model extensions confirm the intuition that suggests that congestion should decrease year-end spending as agents shift spending
+to other times of the year. On the other hand, embassies could be relatively insensitive to price in making intertemporal spending
+decisions and we would expect to observe increased year-end spending.
+We present three key findings that are new to the literature. First, the impact of the home budgetary fiscal year is strong in
+comparison to the impact of the other government and firm fiscal years. This is a strong result that can be seen in all countries.
+Second, government spending is higher later in the fiscal year of local firms. Third, the size of year-end spending is larger for
+overseas offices operating in countries which share the home’s end of the fiscal year in March. This suggests that the latter channel
+discussed in the previous paragraph is dominant over the former with crowding out from heightened spending of many government
+agencies exacerbating the size of year-end spending.
+Finally, our results have two main policy implications that could deter year-end spending. First, our findings suggest that
+measures to prevent year-end spending in one department could indirectly decrease year-end spending in another. Second, year-end
+spending could potentially be reduced if the fiscal years of different departments were unaligned. One way this unalignment could
+be achieved is by assigning departments different fiscal years so that only a small fraction has their year-end in any given month.
+Acknowledgment
+We thank Evi Pappa and the anonymous referees for their constructive and helpful comments that greatly improved this paper.
+Appendix A. Crowding out model
+This appendix extends previous models of Liebman and Mahoney (2017) and Baumann (2019) to explore their implications for
+how crowding out of suppliers can affect year-end spending spikes. To our knowledge, there is no other model to explain year-end
+spending in the literature.33 A model for year-end spending spikes requires two features. The first is an incentive for government
+33 Whilst Eichenauer (2020) has provided a behavioural explanation that government departments are unable to effectively plan ahead, the author solely took
+an empirical approach.
+
+
+European Economic Review 168 (2024) 104803
+9
+S. Baumann and M. Klymak
+departments to underspend in the early months of the year and hence build up a large amount of unspent funds. The second is an
+incentive for them to spend this money at the fiscal year’s end rather than saving it.
+The first model in the literature is that of Liebman and Mahoney (2017) who proposed a precautionary savings mechanism. In
+this model, government departments have a concave utility function that is subject to a stochastic production shock in each month.
+In addition, government departments cannot save unspent funds between fiscal years. In this setting, it is rational for a government
+department to build up a precautionary savings fund in the early months of the fiscal year so they can spend more when they receive
+beneficial production shocks. At the end of the year, it is rational for them to spend any unspent funds rather than let them expire.
+The second model in the literature is that of Baumann (2019) who proposed a procrastination mechanism. In this model,
+government departments get an immediate disutility from spending funds due to the effort required. They additionally get positive
+utility from spending funds as this improves how their performance is assessed. This positive utility is discounted until the end of
+the fiscal year when performance and financial reporting is done. In this setting, it is rational for a department to delay the effort
+in spending funds until later in the fiscal year.
+For the purposes of our paper, we seek to determine how the congestion effects (such as price increases and supplier unavailability
+caused by the heightened spending of other departments) in the final month of the fiscal year affect the size of spending spikes.
+The two aforementioned models include a representative government department but they do not consider the impact that one
+department may have on another. As a result, we make some modifications to each model to determine the implications of
+precautionary savings and procrastination for our research question.
+A.1. Precautionary savings
+We develop the simplest and most parsimonious model extensions that allow us to explore congestion effects. As a starting
+point, we separate department spending into having a quantity and a price component rather than the total spending figure which
+entered the utility functions in previous papers. All governments buy a single representative good where the price is set by general
+equilibrium. The utility is an increasing function of the quantity bought. There is a unit measure of departments and hence prices
+are exogenous of the decisions of a single government department. Specifically in the case of precautionary savings the departments
+face a consumption smoothing problem:
+𝑉𝑚(𝑏𝑚) = max
+𝑥𝑚≤𝑏𝑚
+𝑝𝑚
+𝜖𝑚𝑥1−𝛾
+𝑚
++ 𝛽𝐸[𝑉𝑚′(next budget𝑚′(𝑏𝑚, 𝑥𝑚))]
+(2)
+subject to: next budget𝑚′(𝑏𝑚, 𝑥𝑚) = 𝑏𝑚−𝑥𝑚𝑝𝑚
+for
+𝑚< 12
+next budget𝑚′(𝑏𝑚, 𝑥𝑚) = 𝐵0
+for
+𝑚= 12
+where 𝜖𝑚∼LogNormal(0, 𝜎) and draws are i.i.d. every month. 𝑝𝑚is the price level in month 𝑚and 𝑥𝑚is the number of goods
+bought. 𝑚′ is the next month in the fiscal year.34
+We additionally need to specify how prices respond to aggregate demand. Therefore we assume that supplying firms are in perfect
+competition and that there is increasing marginal cost. We choose the following form for the market marginal cost function:35
+MC(𝑄) = 𝑄𝜃+ 1
+(3)
+where 𝜃> 0 is a parameter reflecting how sharply cost reacts to increases in demanded quantity. Given the competitive environment,
+the market price will be equal to the marginal cost. Therefore Eq. (3) gives prices as a function of the quantity of demand in each
+month.
+Given Eqs. (2) and (3), we numerically solve the model by first assuming a price vector and then solving for the value functions
+of the representative department. We rely on this price vector and associated value functions to then simulate the spending of
+government departments and determine what prices should be given the spending profiles of government departments. We use this
+as an updated price vector and repeat these steps until we converge to a fixed point price vector.
+We then compare the spending profiles generated with an endogenous price vector with the spending profile we get by imposing
+even prices in each month of the fiscal year. In this way, we infer the implications of each mechanism for congestion effects between
+departments.
+A.2. Procrastination
+The procrastination model has identical assumptions as the precautionary savings except it relies on a different departmental
+utility function. Specifically, departments face a consumption smoothing problem of:
+𝑉𝑚(𝑏𝑚) = max
+𝑥𝑚≤𝑏𝑚
+𝑝𝑚
+𝑥∇
+𝑚𝐷(𝑚, 12) −𝛺𝑥𝑚+ 𝐷(𝑚, 𝑚′)𝐸[𝑉𝑚′(next budget𝑚′(𝑏𝑚, 𝑥𝑚))]
+(4)
+34 Note that while the UK does allow rollover of funds between fiscal years with some restrictions, the precautionary savings mechanism cannot explain end
+of year spending with an assumption rollover. As a result, we calibrate the model assuming no rollover.
+35 We use this market marginal cost function for parsimony and simplicity. We could alternatively assume each firm has a cost function of 𝑐(𝑞) = (𝑁𝑞)𝜃+1
+𝑁(𝜃+1) + 𝑞
+where 𝑞is one firm’s demand and there are 𝑁firms. This implies the market marginal cost function in Eq. (3).
+
+
+European Economic Review 168 (2024) 104803
+10
+S. Baumann and M. Klymak
+subject to: next budget𝑚′(𝑏𝑚, 𝑥𝑚) = 𝑏𝑚−𝑥𝑚𝑝𝑚
+for
+𝑚< 12
+next budget𝑚′(𝑏𝑚, 𝑥𝑚) = 𝐵0
+for
+𝑚= 12
+where ∇and 𝛺are parameters that represent the concavity of periodic utility and the disutility of effort respectively. 𝐷(𝑎, 𝑏) is
+a discounting between time 𝑎and time 𝑏. While the procrastination model implies increasing spending throughout the year if
+exponential discounting is imposed (so 𝐷(𝑎, 𝑏) = 𝛽𝑏−𝑎), a better fit with observed spending data is possible if quasi-hyperbolic
+discounting (Laibson, 1997) is used such that 𝐷(𝑎, 𝑏) = 𝑘𝛽𝑏−𝑎where 𝑘is a constant whenever 𝑏> 𝑎. For parsimony, we do not
+include a shock process in this case in calibration (although it is generally possible to achieve a reasonable model fit by calibrating
+∇, 𝛺and 𝜃while imposing a shock process).
+A.3. Parameterisation
+To parameterise the model we calibrate it to hit two moments. The first is that the final month’s spending ratio – the ratio of last
+month’s spending to the average month’s spending – should be 2.0. The second is that prices in the last month are 2% higher than
+average prices within the year. These calibration targets are designed to achieve a reasonable fit of the models to reality however it
+is notable that there is a wide range of price ratios and price increases that have been found in the literature. Liebman and Mahoney
+(2017) found a spending ratio of 2.18 in US federal government spending while Baumann (2019) found a spending ratio of 3.06
+for capital expenditure in Northern Ireland. Klymak and Baumann (2022) detected a price increase of between 1% and 7%.
+For the precautionary savings model, we calibrate 𝛾, 𝜎, 𝜃. We impose 5% annual discounting so that 𝛽= 0.996. We get 𝛾= 0.54,
+𝜎= 1.6 and 𝜃= 0.996.
+For the procrastination model, we calibrate two versions. The first uses exponential discounting and can replicate increasing
+spending throughout the year although it cannot replicate the shape increase in the last month of the year. The second uses the
+behavioural assumption of hyperbolic discounting (Laibson, 1997) and can better match the pattern seen in the data. For the
+exponential discounting version we calibrate ∇, 𝛺, 𝜃. For parsimony, we impose 𝜎= 0. We impose 5% annual discounting so
+that 𝛽= 0.996. We obtain ∇= 0.980, 𝛺= 0.923, 𝜃= 0.986. For the exponential discounting version we calibrate ∇, 𝛺, 𝜃. For
+parsimony, we impose 𝜎= 0. We impose 5% annual discounting with that 𝛽= 0.998 and 𝑘= 0.975. We obtain ∇= 0.961, 𝛺= 0.984,
+𝜃= 0.984.
+We simulate spending using the calibrated models to demonstrate the implications of these models for the impact of crowding
+out on the size of spending spikes. The results of these simulations are summarised in Fig. A.1. These simulations were done twice.
+In the first case we simulate the models with prices in each month being endogenous and determined by Eq. (3). In the second,
+‘‘exogenous prices’’, case we impose the same prices in every month of the fiscal year.36 We can compare the results of these two
+sets of simulations to determine the implications of each model for the impact of crowding out on the size of year-end spending
+spikes.
+Fig. A.1(b) shows that quantity demanded is lower in the last month of the fiscal year when prices are endogenous. This is a
+clearcut result and in line with departments buying less of the representative good as its price increases. Fig. A.1(c) demonstrates
+that total spending at year-end is also lower when prices are endogenous.37 These findings are observed in all three models and
+indicate that the effect of a demand reduction (in response to higher prices) outweighs the effect of the price increase so that total
+expenditure is reduced.
+Our findings demonstrate that spending at the end of the fiscal year is higher in the case where prices do not increase due
+to higher demand. These findings imply that congestion effects at year-end should lower the size of year-end spending spikes as
+forward looking agents move spending to less congested times of the year. Our empirical results do not support this implication
+which may suggest government departments are less price sensitive than has been implied in these models. One way to achieve this
+in these models is to assume that the utility of government departments is a function of spending rather than the quantity of the
+representative good.
+A.4. Regressions on simulated data
+To examine how well the empirical results of our paper correspond to the implications of these calibrated models, we repeated
+the first specification from Table 1 using data simulated from each of the three calibrated models. We used the following steps to
+generate simulation data in a way that is comparable to our real world data:
+1. We start by calculating the equilibrium prices in each month of the fiscal year. To achieve this we use the fixed point method
+described previously.
+2. We assume that every country has the same equilibrium price vector buy shifted so that the price is highest at the end of the
+local fiscal year.
+36 To ensure that each set of simulations have prices of similar scale the endogenous price simulations were first done and then the average prices (over the
+entire fiscal year) were then used in the exogenous price case.
+37 In the case of the precautionary savings model and procrastination it might be difficult to see that hyperbolic discounting models as the two spending
+profiles largely overlap each other. In the three cases of precautionary savings, procrastination and procrastination (hyperbolic discounting) we find expenditure
+in the exogenous cases is respectively 2.4%, 16.2% and 1.2% higher relative to the endogenous case.
+
+
+European Economic Review 168 (2024) 104803
+11
+S. Baumann and M. Klymak
+Fig. A.1. Simulation results for calibrated models of year-end spending.
+Note: In all of these plots the horizontal axis is the month of the year with month 12 being the final month. Subfigure (a) shows the average market prices for
+each month and each of the three calibrated models. Subfigure (b) shows the average quantity of the representative good that is demanded each month. This is
+done in two cases, the first when prices respond to demand (the ‘‘endogenous’’ case) and on average prices increase throughout the year as shown in subfigure
+(a). In the second case, prices do not respond to demand (the ‘‘exogenous’’ case) and prices are constant throughout the year. By contrasting these two cases
+we can see each model’s implications for how crowding out impacts year-end spending behaviour. Finally in subfigure (c) we see the average total expenditure
+(price times quantity demanded) in each month of the fiscal year.
+
+
+European Economic Review 168 (2024) 104803
+12
+S. Baumann and M. Klymak
+Table A.1
+Regressions on simulated data.
+Precautionary
+Procrastination
+Procrastination
+savings
+hyperbolic
+Spending
+Spending
+Spending
+Z
+Z
+Z
+(1)
+(2)
+(3)
+Panel A: Resource Budget
+Home FY End
+0.605
+3.106
+3.899
+(0.02697075)
+LFY End × Home FY End
+−0.000862
+0.279
+0.0325
+(0.0725)
+LFY End
+−0.0314
+−0.416
+−0.032
+(0.0313)
+Observations
+40,296
+40,296
+40,296
+R2
+0.030
+0.978
+0.999
+Month FE
+Yes
+Yes
+Yes
+Year FE
+Yes
+Yes
+Yes
+Note: The coefficients in this table were estimated based on data simulated in the method discussed in Appendix A.4. As the procrastination model was calibrated
+without a shock process every year of simulated data has the same spending values as other years. As a result bootstrapped coefficient standard errors are nearly
+zero in these cases (the only source of variation is the shifting equilibrium price vector) and we have chosen not to report them.
+3. We then note that for the regression in column one of Table 1 we have 567, 254, 233, 2304 office-years where the local fiscal
+year ends in March, June, September, December respectively.38 In the model the fiscal year ends in month 12. Making the
+connection that month 12 in the model lines up with March as the home country year-end in our real data, we can simulate
+567 years worth of data for the case when the local fiscal year ends in March using the unchanged price vector.
+4. We simulate 254 years of data for when the local fiscal year ends in June/ September/ December by rotating the price vector
+so that the price peaks 3/6/9 months after the end of the home fiscal year in months 3/6/9.
+5. For all simulated years of data we calculate Spending Binary in the same way as described in Section 2.1.
+6. We then create month dummies as well as the dummy variables: Home FY End; LFY End; LFY End × Home FY End. As the
+data is simulated with a representative office, we use year fixed effects rather than office-year fixed effects.
+7. We perform a regression and record the coefficients.
+We repeat the above procedure 50 times and record 50 different sets of coefficients. We then calculate the mean and standard
+deviation of coefficients and present them in Table A.1. We additionally record the sample size and the average 𝑅2 (calculated
+between these 50 regressions). Note that one limitation is that for simplicity we calibrated the procrastination model in the case
+where there are no production shocks. The absence of any randomness means that every simulated year spending is exactly the same
+as it is in the corresponding month of any other simulated year. This means that all coefficients are the same and our bootstrapped
+standard errors are zero. As a result, we do not report standard errors for the procrastination models.
+The 𝑅2 is close to one in the procrastination cases which is a result of the lack of any randomness in this model.39 On the other
+hand, the 𝑅2 for the precautionary savings model is far below the 𝑅2 found in Table 1 which is a result of this model needing a
+high variance shock process for the increase in spending in the final month to match the magnitude seen in the data.40
+Appendix B. Data sources
+Our primary data source for this analysis was the spending of the United Kingdom’s foreign office’s embassies, high commissions,
+consulates, missions and other offices. To determine governmental fiscal year dates we performed a number of searches for each
+country. Finally, we also obtained major large cap stock market indices for each country. Then for each constituent we found out
+their fiscal year-end month from the Bloomberg terminal (using EQY_FISCAL_YR_END field name). These stock market indices are
+included in Table B.1.
+Appendix C. Spending map for capital and resource expenditure
+See Fig. C.1.
+See Table C.1.
+38 These figures are considering the resource expenditure case. Note that as the models treat resource and capital expenditure symmetrically we do not
+separately consider the two for the purposes of running regressions on simulated data.
+39 The original paper on the procrastination model (Baumann, 2019) calibrated the ∇, 𝛺parameters as well as the variance of a shock process so that
+the variance of the spending data matched the variance of simulated spending. This was not done in this paper to avoid needing to do a four dimensional
+optimisation (as we additionally needed to calibrate 𝜃).
+40 This point is discussed further in Baumann (2019, pg 724).
+
+
+European Economic Review 168 (2024) 104803
+13
+S. Baumann and M. Klymak
+Table B.1
+Stock market indices.
+Bloomberg Index Ticker
+Country
+MERVAL
+Argentina
+AS51
+Australia
+ATX
+Austria
+BEL20
+Belgium
+IBOV
+Brazil
+SPTSX
+Canada
+IGPA
+Chile
+SHSZ300
+China
+PX
+Czechia
+OMXC25
+Denmark
+EGX30
+Egypt
+TALSE
+Estonia
+HEL25
+Finland
+CAC
+France
+DAX
+Germany
+HSI
+Hong Kong
+BUX
+Hungary
+ICEXI
+Iceland
+NIFTY
+India
+JCI
+Indonesia
+ISEQ
+Ireland
+TA-35
+Israel
+NKY
+Japan
+JOSMGNFF
+Jordan
+MEXBOL
+Mexico
+AMX
+Netherlands
+NZSE50FG
+New Zealand
+NSEASI
+Nigeria
+OBX
+Norway
+KSE100
+Pakistan
+PCOMP
+Philippines
+WIG20
+Poland
+PSI20
+Portugal
+SASEIDX
+Saudi Arabia
+STI
+Singapore
+TOP40
+South Africa
+IBEX
+Spain
+OMX
+Sweden
+TWSE
+Taiwan
+SET
+Thailand
+XU100
+Türkiye
+DFMGI
+United Arab Emirates
+SPX
+United States
+VNINDEX
+Vietnam
+Note: The table shows the list of stock market indices we use to create the
+local firm fiscal years. We choose a relatively broad stock market index for each
+country. In countries where there are multiple prominent indices (e.g. the USA
+has SPX, RUA and others) a larger cap index was chosen (e.g. SPX rather than
+RUA for the USA).
+Appendix D. How fiscal years are chosen
+Governmental and company fiscal years do not necessarily overlap as organisations often have the freedom to choose their fiscal
+year period. Government fiscal years are set for historical, climate, religious and political reasons that do not necessarily overlap
+with the reasons that firms may choose their own fiscal years. For instance, the fiscal year in Iran and Afghanistan starts on March
+21 for religious reasons. According to the International Monetary Fund (2016) in Mongolia public projects can only be undertaken
+in four months of the year when the soil temperature is above freezing. The timing of the fiscal year is arranged so that there is
+sufficient funding available at that time.
+Firm fiscal years are set for reasons that can be quite different. For example, agricultural firms tend to have the highest sales
+after the harvest season and may prefer to have the fiscal year-end just after this time. Firms may also choose fiscal years that align
+with their peers to allow analysts to more effectively cover their relative performance (Price Waterhouse Coopers, 2023). Seasonal
+firms may also choose for their fiscal year-end to be in a quieter time of the year (as typically a large amount of accounting needs
+to be done at year-end).
+Similarly, many retail businesses tend to earn the most revenue in the last quarter of the year and may therefore prefer to choose
+the fiscal year that reflects their revenue patterns the best. In addition, governments and firms can have different financial reporting
+requirements and fiscal goals which can further drive the discrepancy.
+
+
+European Economic Review 168 (2024) 104803
+14
+S. Baumann and M. Klymak
+Fig. C.1. Overseas offices expenditure by budget types.
+Note: The figure illustrates the average annual spending for overseas offices at a country level. The top panel shows the average annual resource expenditure
+while the bottom panel shows the average annual capital expenditure. These averages are calculated for the 2008–2018 period. Note that while our data is at
+the level of an individual overseas office, they have been aggregated to a country level for the purposes of these plots.
+This divergence can be seen in Fig. D.1 particularly for countries where the fiscal year is not the calendar year with Japan,
+Australia and Trinidad and Tobago being notable exceptions.
+Appendix E. Resource and capital expenditure rules
+The UK’s Consolidated budgetary guidance documents describe what types of expenditure can be undertaken by overseas offices
+under resource or capital designated budgets. The resource budget aims to capture current spending. Specifically, it is used for regular
+expenses such as salaries, current procurement, grants and subsidies, tangible (e.g. land) and intangible fixed assets (e.g. software),
+as well as current assets (e.g. inventory). The resource spending can have both an immediate effect on the embassy’s fiscal position
+(e.g. salaries) and the embassy’s future position (e.g. impairments and provisions) (Treasury, 2023).
+The main elements of the capital budget include expenditure on fixed assets, inventories and certain financial transactions (for
+instance long-term debt). In terms of determining if an expenditure item should be included as resource or capital expenditure
+the guidance states ‘‘departments should consistently follow agreed accounting policies when deciding what costs of a project should be
+capitalised. In most cases, this should be uncontroversial but there are a few categories of expenditure, such as some consultancy costs, that
+could be either capital or resource, and departments should approach this carefully (Treasury, 2023, section 6.3)’’.
+There are specific circumstances in which the resource and capital budgets can interact. As one example the procurement of
+inventories is generally always done as part of the capital budget. When these inventories are used then the resource budget
+effectively buys these items from the capital budget (and the capital budget is allowed to retain this ‘‘income’’) (Treasury, 2023,
+
+
+European Economic Review 168 (2024) 104803
+15
+S. Baumann and M. Klymak
+Table C.1
+Descriptive statistics.
+Variable
+Group
+All months except March
+Local
+Home
+N
+and local year-end
+year-end
+year-end
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+Budget
+Capital
+24, 025.01
+37, 297.19
+100, 657.70
+24,134
+Budget
+Resource
+206, 608.30
+331, 434.90
+445, 978.60
+40,863
+Commonwealth
+Yes
+118, 868.10
+197, 222.60
+303, 307.70
+16,342
+Commonwealth
+No
+145, 526.60
+230, 366.40
+322, 516.50
+48,655
+Distance from the UK
+High
+138, 961.60
+253, 227.70
+332, 346.50
+30,253
+Distance from the UK
+Low
+145, 530.20
+202, 711.40
+318, 796.70
+32,299
+GDP
+High
+134, 176.90
+202, 175.90
+285, 327.80
+29,690
+GDP
+Low
+154, 747.50
+256, 155.00
+363, 447.20
+29,829
+Inflation
+High
+138, 637.10
+196, 252.80
+333, 805.20
+21,905
+Inflation
+Low
+150, 332.00
+229, 386.70
+309, 642.80
+21,908
+UK fiscal year
+2008
+97, 828.70
+158, 400.40
+255, 141.30
+6025
+UK fiscal year
+2009
+110, 140.20
+145, 515.60
+275, 831.90
+5994
+UK fiscal year
+2010
+117, 864.50
+167, 016.50
+240, 797.50
+5917
+UK fiscal year
+2011
+122, 258.70
+159, 080.40
+265, 875.30
+6035
+UK fiscal year
+2012
+132, 271.50
+196, 244.90
+293, 187.00
+5824
+UK fiscal year
+2013
+128, 198.30
+201, 171.60
+298, 152.50
+6216
+UK fiscal year
+2014
+126, 663.60
+177, 068.70
+306, 214.60
+6136
+UK fiscal year
+2015
+155, 112.20
+210, 975.90
+338, 496.70
+5613
+UK fiscal year
+2016
+147, 433.40
+427, 040.70
+352, 542.40
+5673
+UK fiscal year
+2017
+189, 306.70
+281, 557.00
+373, 044.10
+5794
+UK fiscal year
+2018
+206, 085.40
+339, 353.90
+508, 901.50
+5770
+Note: This table describes the average spending (in GBP) for one overseas office in one month by budget, level of GDP per capita, distance from the UK, inflation
+and each fiscal year. For instance it can be seen that the average overseas office spend £24013.10 from their capital budgets in months that are not the local
+or home end of fiscal year. The budget is separated by type. GDP per capita, distance and inflation are divided into two groups depending on whether each
+variable is below or above the median value in our dataset. Column (3) presents expenditure for all months excluding March (i.e. the UK fiscal year-end) and
+the end of the local fiscal year, whilst column (4) shows spending in the last month of the local fiscal year. Column (5) describes expenditure for the UK fiscal
+year-end and the last column (6) reports the number of observations.
+section 7.2). As another example when a fixed asset is sold then the book value of the asset will flow into the capital budget while
+the difference between the sale price and the book value goes into the resource budget.
+Embassies could also earn income from selling goods and providing services. In some circumstances, the department can retain
+this income typically as part of the resource budget (Treasury, 2023, section 4.26).
+Appendix F. Interpretation of regression coefficients using spending Z
+All our regressions use either Spending Z or Spending Binary in place of actual spending figures. This was done primarily so that
+each overseas office’s spending figures are comparable even when their absolute spending amounts can differ by a large degree.
+It does complicate the interpretation of coefficients, however. If we define the ‘‘spending ratio’’ as the ratio between last month
+and average month spending then a naive interpretation of Table 1 would suggest that the spending ratio is larger for resource
+expenditure than for capital expenditure while the aggregate spending pattern of Fig. F.1 shows that this is not the case.
+The reason behind this is that a larger spending ratio does not necessarily translate to a greater magnitude Spending Z as it
+also increases the standard deviation of spending which offsets the magnitude increase. Resource spending tends to have a small
+standard deviation of spending while capital spending has a larger standard deviation. This is because a large portion of resource
+expenditure has to be spent at specified times that a budget manager cannot alter. Rent and salaries for instance cannot be paid at
+times other than when the rental/employment contracts specify. On the other hand capital expenditure is easier to move around
+the year. If computers are not replaced this month they can usually be replaced next month without the overseas office enduring a
+large inconvenience (assuming the computers to be replaced are still working).
+To illustrate the relationship between the spending ratio and Spending Z in the last month of the year, assume that budget
+managers have some an annual budget of 1. Each month they spend this we can assume that budget managers must spend 𝛼
+12 where
+𝛼< 1. This is non-discretionary spending. This leaves the amount 1−𝛼which is discretionary spending. They spend this in the same
+pattern as the smoothed capital expenditure line from Fig. F.1 but with the amounts normalised so total spending over the year is
+1−𝛼. We will not try to determine the optimality of budget managers spending in this way but we can use these simple assumptions
+on spending to relate the proportion of discretionary spending to the standard deviation of the resultant total spending figures.
+We present results for different values of 𝛼in Table F.1, where the second column shows the final month spending divided by
+the monthly mean spending. Comparing this to Fig. F.1, it can be seen that if 𝛼= 0.6 the March spending ratio is approximately
+equal to what we can see for resource spending. It is also notable that Spending Z does not change. In doing the standardisation
+any spending that is constant for all months does not contribute to the standard deviation and is subtracted away as part of the
+monthly mean.
+For the purposes of our analysis this is a useful feature as it allows us to focus on spending that changes through the year
+which is the goal of this paper. It does however mean that it is not possible to relate coefficients predicting Spending Z back to
+
+
+European Economic Review 168 (2024) 104803
+16
+S. Baumann and M. Klymak
+Fig. D.1. Histogram showing the relationship between governmental and firm fiscal years.
+Note: The figure above splits our sample into four buckets depending on when the local governmental fiscal year is closest to March, June, September, December.
+For each we then plotted a histogram of the average length of time between January and the end of the fiscal year for a firm in that country. Note that this
+table only includes countries where we have a stock market index (those countries in Table B.1). We can see that relatively few countries in this subsample
+have fiscal years that do not end in march, the names of these countries are affixed as labels to the histogram. In addition next to the names of these countries,
+we indicate the number of office-budget-years in our dataset. It can be seen that in countries where the fiscal year ends in December, most but not all firms
+have fiscal years ending near December. In other countries, the firm fiscal year has no clear relation to the country’s national fiscal year.
+Table F.1
+Raw and Z Scored Spending.
+alpha
+March Spending
+Monthly Mean
+Monthly Mean
+Standard Deviation
+March Spending Z
+0
+2.92
+0.083
+0.055
+2.927
+0.1
+2.728
+0.083
+0.049
+2.927
+0.2
+2.536
+0.083
+0.044
+2.927
+0.3
+2.344
+0.083
+0.038
+2.927
+0.4
+2.152
+0.083
+0.033
+2.927
+0.5
+1.96
+0.083
+0.027
+2.927
+0.6
+1.768
+0.083
+0.022
+2.927
+0.7
+1.576
+0.083
+0.016
+2.927
+0.8
+1.384
+0.083
+0.011
+2.927
+0.9
+1.192
+0.083
+0.005
+2.927
+Note: This data was generated using the method described in Appendix F. Notably, Spending Z for the last month of the year does not change as the proportion
+of flat spending, spending that does not change month to month, increases.
+
+
+European Economic Review 168 (2024) 104803
+17
+S. Baumann and M. Klymak
+Fig. F.1. Monthly total spending compared to monthly mean.
+Note: To create this chart we first calculate total spending taking place in each month (over all embassies and years in our dataset and without any rescaling
+being performed). We then average these 12 numbers for both resource and capital spending separately. We then divide the 12 monthly spending figures by
+the corresponding annual average to get the values on the vertical axis. The highest value is for capital expenditure in March which is 3.09. This indicates that
+together over the sample period, overseas offices spend 3.09 times more on capital goods than they do in the average month. The two smoothed lines were
+calculated by fitting the regression Spending moment = 𝛽0 + 𝛽1(month) + 𝛽2 exp(month) where month is 1 in April and 12 in March.
+the implied total spending ratios without further information. As a result, we have taken a selection of overseas-office budget years
+and presented them below in Table F.2. To illustrate how to interpret this we can note that from the first regression of Table 1
+the coefficient for Home FY End is 1.388 for Resource spending. In the case of Ottawa, mean spending was £253 062 while this
+coefficient suggests that March spending is higher at £253 062 + 1.388(£293 485) = £660 419.18. Comparing this March spending
+figure to mean spending suggests a spending ratio of 2.61.
+The coefficient for LFY End × Home FY End for resource spending is 0.299 while the LFY End coefficient is −0.044. Once these
+are taken into account (note that the Canadian fiscal year ends in March like the UK fiscal year) predicted March spending is £253
+062 + (1.388+0.299-0.044)(£293 485) = £735 258 which suggests a spending ratio of 2.91.
+We repeat this calculation for every overseas office, each year and each budget. To simplify the presentation of results we add
+the regression implied mean and March spending from each overseas office so we have one value for each year and each budget.
+We present our findings in Table F.3.41 This table suggests that in general the local fiscal year ending in March adds on average
+0.26 to the year-end spending ratio.
+Appendix G. Robustness
+G.1. Placebo and Jacknife tests
+We do a number of bootstrap, jackknife and placebo tests to ensure the robustness of our findings. These are presented in
+Figs. G.2–G.4. For all of the tests we use the same specification as in the first column of Table 1 with the exception of the tests on
+the 𝐹𝑖𝑟𝑚𝑠𝐿𝐹𝑌𝐸𝑛𝑑variable which use the specification of the third column of Table 1.
+In each case, we present the distribution of selected coefficients produced by a certain change to the dataset. For the bootstrap
+panels, this change is a sampling with the replacement of observations from the dataset. In all cases, we observe the centre of the
+distribution around the coefficient values presented in Table 1, with the spread of the distribution reflecting the standard errors.
+41 One point to note is that there is higher spending ratio in 2009 relative to other years. This is a result of higher variability in monthly spending figures
+in this year. The use of the z transform removes the higher variability at the regression stage but the impact returns once we use these standard deviations to
+calculate spending ratios.
+
+
+European Economic Review 168 (2024) 104803
+18
+S. Baumann and M. Klymak
+Table F.2
+Mean and standard deviations used in z-scoring for selected overseas offices in 2016.
+City
+Country
+Fiscal Year
+Resource
+Resource
+Capital
+Capital
+(mean)
+(std)
+(mean)
+(std)
+Canberra
+Australia
+1 July–30 June
+410,775
+341,245
+2785
+9243
+Ottawa
+Canada
+1 April–31 March
+253,062
+293,485
+2841
+6759
+Santiago
+Chile
+Calendar year
+141,772
+126,456
+1269
+2521
+Banjul
+The Gambia
+Calendar year
+76,951
+21,018
+2214
+7668
+New Delhi
+India
+1 April–31 March
+1567,219
+734,689
+11,565
+23,658
+Vientiane
+Laos
+1 October–30 September
+129,471
+54,209
+3974
+62,220
+Dar Es Salaam
+Tanzania
+1 July–30 June
+711,686
+1,338,183
+4034
+8909
+Montevideo
+Uruguay
+Calendar year
+129,862
+57,009
+2163
+7492
+Washington
+United States
+1 October–30 September
+1,842,810
+612,522
+29,083
+60,092
+Note: The above are the means and standard deviations (std) used in z-scoring for a sample of the overseas offices in the dataset. These are for the year of
+2016. The offices here were chosen to be geographically diverse, diverse in terms of income of the host country and also represent different fiscal year-ends.
+Table F.3
+Implied change in year-end spending ratio.
+Fiscal
+Year
+Resource
+Capital
+Spending ratio
+Spending ratio
+(March local year-end)
+Difference
+Spending ratio
+Spending ratio
+(March local year-end)
+Difference
+2008
+2.06
+2.25
+0.19
+2.76
+2.66
+−0.1
+2009
+4.8
+5.5
+0.7
+3.13
+3.02
+−0.12
+2010
+2.95
+3.31
+0.36
+2.98
+2.87
+−0.11
+2011
+2.05
+2.25
+0.19
+3.23
+3.11
+−0.12
+2012
+1.64
+1.75
+0.12
+2.13
+2.07
+−0.06
+2013
+2.81
+3.14
+0.33
+3.95
+3.78
+−0.16
+2014
+1.88
+2.04
+0.16
+3.01
+2.9
+−0.11
+2015
+2.26
+2.49
+0.23
+3.26
+3.13
+−0.12
+2016
+2.6
+2.89
+0.29
+3.41
+3.27
+−0.13
+2017
+1.79
+1.93
+0.14
+3.12
+3
+−0.12
+2018
+1.83
+1.98
+0.15
+2.36
+2.28
+−0.08
+0.26
+−0.11
+Note: A spending ratio is taking only overseas offices located in countries with a March year-end. For each such office we calculate a spending ratio by dividing
+regression implied spending (using the Home FY End coefficient of the first regression model of Table 1) in March against the annual average monthly spending
+figures. In the ‘‘March local year-end’’ columns we additionally add the effect of the LFY End × Home FY End and LFY End coefficients. We add across overseas
+offices for each budget and year and this addition is done for both the numerator and denominator of the spending ratio before the division is calculated. The
+difference is calculated as a simple difference between columns 2, 3 and 5, 6 above and reflects the extent to which the local fiscal year ending in March
+changes the spending ratio for UK government departments. One point to note is that there is a higher spending ratio in 2009 relative to other years. This is
+a result of higher variability in monthly spending figures in this year. The use of the z transform removes the higher variability at the regression stage but the
+impact returns once we use these standard deviations to calculate spending ratios.
+The panels immediately below the bootstrap results are for jackknifing. We present two jackknife findings. In the first case,
+we drop each country in turn from our dataset while estimating the coefficient based on the remaining countries. In the second
+jackknife, we drop each year in turn and estimate based on the remaining years. The results below show that the coefficients we
+estimate do not change much in any of the jackknife samples. This indicates that our results do not come from a single outlier
+country or year.
+Finally in the bottom panels (for all except Fig. G.1)42 we present a placebo test result which we undertake in two ways. First,
+we replace the end of the local host country fiscal years with a random month. Second, we also randomise the Firms LFY End𝑖,𝑚
+variable. This is done by adding a random number in the [0, 1] range to this variable which in effect rotates the local firm fiscal year
+a number of months in the year. The results of these placebos report coefficients around zero which indicates that our specification
+does not deliver significant coefficients on randomised data.
+G.2. Alternative regressors of interest and clustering
+In the paper’s main body, we demonstrated that our results are generally robust to two different dependent variables. We
+additionally show that our findings are robust to alternative variables defining the ends of fiscal years and clustering of standard
+errors.
+42 No placebo was done in this case as the UK fiscal year effect affects all observations in our dataset. The possible placebo techniques would be to randomise
+the UK fiscal year variable in a way that is not internally consistent, pretend that a different month was the end of the fiscal year, or shuffle the monthly
+spending figures. Whilst the results from these all deliver coefficients centred around 0, this is not surprising given how heavyhanded these randomisations were.
+As a result, we decided not to report them.
+
+
+European Economic Review 168 (2024) 104803
+19
+S. Baumann and M. Klymak
+Fig. G.1. Robustness of the home fiscal year-end.
+Note: The figure illustrates the findings of several robustness tests of the home fiscal year-end Home FY End for capital (on the left) and resource (on the right)
+budgets. The top panel presents bootstrap results, while the next two panels report the jackknife tests outcome for countries and years.
+Our first robustness check relies on specification where we separate each local fiscal year-end. Specifically, we have a different
+variable for each end of the local fiscal year depending on whether it happens in March, June, September or December. In the case
+of December the LFY End March dummy variable is one for observations taking place in March and where the overseas office is
+located in a country where the fiscal year ends in March.43 The other dummy variables are analogously encoded. We exhibit our
+results in Table G.1. The overlapping fiscal year-end (i.e. LFY End March) result for the resource budget remains robust. Within the
+same budget, we find negative effects for June and September. The findings for December year-end coefficients suggest no effect
+on the resource budget and negative spending for the capital budget.
+For our second robustness check, we take the logarithm of the variable representing the local firm fiscal year ends which we
+call Log Firms LFY End.44 We present our findings in Table G.2. In line with our benchmark results, there is higher spending at the
+local firms’ year-end for the capital budget and no statistically significant effect for the resource budget. Home and overlapping
+local year-end coefficients remained statistically significant.
+43 So LFY End March will be 1 in March for an overseas office in Canada but not for an overseas office in Australia. In this way, we can identify the coefficient
+for LFY End March separately from the coefficient for Home FY End.
+44 We take logarithm while adding one (i.e log(𝐹𝑖𝑟𝑚𝑠𝐿𝐹𝑌𝐸𝑛𝑑𝑖,𝑚+ 1).
+
+
+European Economic Review 168 (2024) 104803
+20
+S. Baumann and M. Klymak
+Fig. G.2. Robustness of the overlapping fiscal year-end.
+Note: The figure illustrates the findings of several robustness tests of the overlapping local fiscal year-end LFY End×Home FY End for capital (on the left) and
+resource (on the right) budgets. The top panel presents bootstrap results, while the next two panels report the jackknife tests outcome for countries and years.
+The bottom panel presents the results of placebo tests.
+For our third robustness check, we use the last two months of the local fiscal year rather than the last month of the local
+government fiscal year. This is presented in Table G.3 which shows coefficients that are in line with the benchmark specification.
+For our fourth robustness check, we control for the start of the local fiscal year along with our regular variables. There are
+plausible reasons why the start of the local fiscal year might have an impact on the spending of overseas offices. This could occur
+because annual contracting often takes place in the first month of the fiscal year (e.g. Klymak and Baumann 2022) which may lead
+to crowding out at this time. Our results are presented in Table G.4. The findings remain robust throughout all specifications and
+we do not find any evidence for the start of fiscal year effect.
+Our final robustness check is presented in Table G.5. We recreate Table 1 but use bootstrapped standard errors instead of
+standard errors clustered at the country level. All findings remain robust throughout all specifications and confirm the year-end
+effects presented before.
+Appendix H. Extensions
+One potential consideration is that the influence of a host country’s fiscal year on home overseas office spending patterns could
+depend on its economic conditions. To investigate this, we repeat the specifications controlling for home, overlapping and local
+
+
+European Economic Review 168 (2024) 104803
+21
+S. Baumann and M. Klymak
+Fig. G.3. Robustness of the local fiscal year-end.
+Note: The figure illustrates the findings of several robustness tests of the non-overlapping local fiscal year-end LFY End for capital (on the left) and resource (on
+the right) budgets. The top panel presents bootstrap results, while the next two panels report the jackknife tests outcome for countries and years. The bottom
+panel presents the results of placebo tests.
+fiscal year-end along with regular fixed effects (i.e. specification in column 1 of Table 1). We then interact the local fiscal year with
+several selected variables obtained from the dataset of Conte et al. (2022). Our specification is as follows:
+Spending𝑖,𝑏,𝑚,𝑦= 𝛽0 + 𝛽1LFY End𝑖,𝑚× Home FY End𝑖,𝑚× 𝑉𝑖,𝑚+ 𝛽2Home FY End𝑖,𝑚+
+(5)
++ 𝛽3LFY End𝑖,𝑚× 𝑉𝑖,𝑚+ 𝑚+ 𝜓𝑖𝑦+ 𝜖𝑖,𝑏,𝑚,𝑦
+where all variables have the same meaning as described below Eq. (1). The one addition is 𝑉𝑖,𝑚which stands in for one of our three
+selected interaction variables.45
+45 Note that 𝑉𝑖,𝑚is not included as a standalone regressor as a result of the fixed effects structure which causes it to drop out. In the EU membership case
+the interaction with LFY End × Home FY End also drops out as no EU countries have a March year-end.
+
+
+European Economic Review 168 (2024) 104803
+22
+S. Baumann and M. Klymak
+Fig. G.4. Robustness of firms local fiscal year-end.
+Note: The figure illustrates the findings of several robustness tests of the local firms fiscal year-end Firms LFY End for capital (on the left) and resource (on the
+right) budgets. The top panel presents bootstrap results, while the next two panels report the jackknife tests outcome for countries and years. The bottom panel
+presents the results of placebo tests.
+The first selected variable is logarithm GDP per capita (PPP).46 The motivation for this is that wealthier countries may have
+larger year-end spending spikes.47 These large year-end spending spikes may lead to more crowding out and hence more of an
+impact on the UK overseas offices located in these wealthier countries. The second selected variable is an EU membership dummy.
+Throughout the study period, the UK was a member of the European Union and hence had free trade with EU countries. In these
+circumstances, the overseas office might be expected to source more goods and services from the UK and hence have less exposure
+to the local fiscal year. The third selected variable is the logarithm of distance (measured in kilometres) between the UK and the
+overseas country. This is also a proxy for the ease of trade between the UK and the overseas country. Finally, we interact with
+Commonwealth membership where the majority of countries are former territories of the British Empire. This variable acts as a
+proxy for common historical ties and similar institutional set up.
+46 The coefficients in the table below use a z transform of this variable. Note that as a linear transformation, this will not affect significance but does moderate
+the size of coefficients.
+47 The extent to which year-end spending spikes occur in poorer countries has not been well studied. Most previous studies in the economics literature on
+this topic have only examined OECD countries with the exception of our previous paper examining the (transition economy) Ukraine (Klymak and Baumann,
+2022).
+
+
+European Economic Review 168 (2024) 104803
+23
+S. Baumann and M. Klymak
+Table G.1
+Separated end of fiscal year spending effects.
+Spending Z
+Spending Binary
+Resource
+Capital
+Resource
+Capital
+(1)
+(2)
+(3)
+(4)
+Home FY End
+1.148∗∗∗
+0.822∗∗∗
+0.497∗∗∗
+0.258∗∗∗
+(0.053)
+(0.043)
+(0.023)
+(0.016)
+LFY End March
+0.228∗∗∗
+−0.069
+0.064∗∗
+−0.028
+(0.081)
+(0.122)
+(0.031)
+(0.034)
+LFY End June
+−0.073
+−0.024
+−0.054∗
+−0.019
+(0.062)
+(0.046)
+(0.031)
+(0.021)
+LFY End September
+−0.100∗∗∗
+0.013
+−0.032∗
+0.008
+(0.032)
+(0.057)
+(0.019)
+(0.020)
+LFY End December
+−0.006
+−0.079∗∗
+−0.010
+−0.035∗∗
+(0.050)
+(0.040)
+(0.026)
+(0.017)
+Observations
+39,984
+21,840
+40,128
+23,652
+R2
+0.174
+0.084
+0.232
+0.310
+Month FE
+Yes
+Yes
+Yes
+Yes
+Overs. Office × Year FE
+Yes
+Yes
+Yes
+Yes
+Note: ∗p<0.1; ∗∗p<0.05; ∗∗∗p<0.01. This table reports the estimates of home, overlapping and non-overlapping fiscal year-end months. The dependent variable in
+(1) and (2) columns is Spending Z; in columns (3) and (4), it is Spending Binary. The first two specifications rely on the resource budget spending whilst the latter
+two use spending from the capital budget. FE refer to each calendar month and overseas office-times-year fixed effects. The omitted category is spending during
+January. We report a standard error in parenthesis below each coefficient. Standard errors allow for clustering at the country level. We denote significance using
+∗p<0.1; ∗∗p<0.05; ∗∗∗p<0.01.
+Table G.2
+Fiscal year-end effects for capital and resource expenditures with alternative local firms fiscal year-end.
+Spending
+Spending
+Spending
+Spending
+Spending
+Spending
+Z
+Z
+Z
+Binary
+Binary
+Binary
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+Panel A: Resource Budget
+Home FY End
+1.390∗∗∗
+1.389∗∗∗
+1.354∗∗∗
+0.499∗∗∗
+0.495∗∗∗
+0.486∗∗∗
+(0.061)
+(0.076)
+(0.083)
+(0.023)
+(0.029)
+(0.032)
+LFY End × Home FY End
+0.300∗∗∗
+0.335∗∗∗
+0.085∗∗
+0.099∗
+(0.102)
+(0.123)
+(0.040)
+(0.050)
+LFY End
+−0.047
+−0.087∗
+−0.022
+−0.039∗
+(0.034)
+(0.045)
+(0.016)
+(0.022)
+Log Firms LFY End
+0.205∗
+0.159
+0.089∗∗∗
+0.083∗∗∗
+(0.123)
+(0.102)
+(0.033)
+(0.029)
+Num Countries
+180
+68
+68
+180
+68
+68
+Observations
+39,996
+23,796
+23,796
+39,996
+23,796
+23,796
+R2
+0.224
+0.211
+0.212
+0.231
+0.221
+0.221
+Month FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Overs. Office × Year FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Panel B: Capital Budget
+Home FY End
+0.812∗∗∗
+0.838∗∗∗
+0.859∗∗∗
+0.280∗∗∗
+0.286∗∗∗
+0.295∗∗∗
+(0.053)
+(0.069)
+(0.066)
+(0.017)
+(0.024)
+(0.022)
+LFY End × Home FY End
+0.003
+−0.085
+−0.007
+−0.034
+(0.146)
+(0.198)
+(0.038)
+(0.052)
+LFY End
+−0.046
+−0.084∗∗
+−0.024
+−0.036∗
+(0.031)
+(0.040)
+(0.015)
+(0.021)
+Log Firms LFY End
+0.197∗∗∗
+0.273∗∗∗
+0.068
+0.100
+(0.068)
+(0.084)
+(0.054)
+(0.063)
+Num Countries
+166
+68
+68
+166
+68
+68
+Observations
+21,840
+12,468
+12,468
+21,840
+12,468
+12,468
+R2
+0.158
+0.165
+0.166
+0.305
+0.309
+0.309
+Month FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Overs. Office × Year FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Note: This table reports the estimates of home, overlapping and non-overlapping fiscal year-end months as well as local firms year-ends. The dependent variable
+in columns 1–3 is Spending Z; in the last three columns, it is Spending Binary. Panel A relies on the resource budget spending whilst panel B uses spending from
+the capital budget. FE refer to each calendar month and overseas office-times-year fixed effects. The omitted reference category is spending during January. We
+report a standard error in parenthesis below each coefficient. Standard errors allow for clustering at the country level. We denote significance using ∗p<0.1;
+∗∗p<0.05; ∗∗∗p<0.01.
+Our finding are presented in Table H.1. The results for logarithm GDP per capita in columns (1) and (4) indicate that in the
+resource expenditure case there is a greater impact of the host government fiscal year. This finding is intuitive and is consistent with
+wealthier countries having larger governmental sectors have a greater impact on overseas offices. The findings in columns (2) and
+
+
+European Economic Review 168 (2024) 104803
+24
+S. Baumann and M. Klymak
+Table G.3
+End of fiscal year spending with two months start and end dummies.
+Spending
+Spending
+Spending
+Spending
+Spending
+Spending
+Z
+Z
+Z
+Binary
+Binary
+Binary
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+Panel A: Resource Budget
+Home FY End
+1.400∗∗∗
+1.395∗∗∗
+1.371∗∗∗
+0.499∗∗∗
+0.497∗∗∗
+0.490∗∗∗
+(0.058)
+(0.074)
+(0.078)
+(0.022)
+(0.029)
+(0.031)
+Home 2nd Last Month FY End
+0.270∗∗∗
+0.303∗∗∗
+0.274∗∗∗
+0.143∗∗∗
+0.159∗∗∗
+0.150∗∗∗
+(0.032)
+(0.040)
+(0.045)
+(0.016)
+(0.021)
+(0.023)
+LFY End 2 Months
+−0.035
+−0.068∗∗
+−0.010
+−0.020
+(0.028)
+(0.031)
+(0.013)
+(0.016)
+LFY End × Home FY End 2 Months
+0.226∗∗∗
+0.265∗∗∗
+0.073∗∗
+0.081∗∗
+(0.070)
+(0.079)
+(0.030)
+(0.037)
+Log Firms LFY End
+0.138
+0.086
+0.060∗∗
+0.043∗∗
+(0.090)
+(0.052)
+(0.025)
+(0.019)
+Num Countries
+180
+68
+68
+180
+68
+68
+Observations
+39,996
+23,796
+23,796
+39,996
+23,796
+23,796
+R2
+0.224
+0.211
+0.212
+0.231
+0.221
+0.221
+Month FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Overs. Office × Year FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Panel B: Capital Budget
+Home FY End
+0.804∗∗∗
+0.844∗∗∗
+0.843∗∗∗
+0.279∗∗∗
+0.288∗∗∗
+0.291∗∗∗
+(0.053)
+(0.068)
+(0.069)
+(0.018)
+(0.023)
+(0.024)
+Home 2nd Last Month FY End
+0.146∗∗∗
+0.150∗∗∗
+0.154∗∗∗
+0.073∗∗∗
+0.075∗∗∗
+0.082∗∗∗
+(0.035)
+(0.045)
+(0.049)
+(0.014)
+(0.017)
+(0.019)
+LFY End 2 Months
+−0.045∗∗
+−0.082∗∗∗
+−0.026∗∗∗
+−0.042∗∗∗
+(0.022)
+(0.030)
+(0.009)
+(0.014)
+LFY End × Home FY End 2 Months
+0.051
+0.033
+−0.0001
+−0.012
+(0.076)
+(0.074)
+(0.036)
+(0.035)
+Log Firms LFY End
+0.127∗∗∗
+0.191∗∗∗
+0.043
+0.088∗∗
+(0.047)
+(0.045)
+(0.036)
+(0.038)
+Num Countries
+166
+68
+68
+166
+68
+68
+Observations
+21,840
+12,468
+12,468
+21,840
+12,468
+12,468
+R2
+0.158
+0.165
+0.166
+0.305
+0.309
+0.309
+Month FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Overs. Office × Year FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Note: This table reports the estimates of home, overlapping and non-overlapping fiscal year-end months as well as local firms year-ends. The dependent variable
+in columns 1–3 is Spending Z; in the last three columns, it is Spending Binary. Panel A relies on the resource budget spending whilst panel B uses spending from
+the capital budget. FE refer to each calendar month and overseas office-times-year fixed effects. The omitted reference category is spending during January. We
+report a standard error in parenthesis below each coefficient. Standard errors allow for clustering at the country level. We denote significance using ∗p<0.1;
+∗∗p<0.05; ∗∗∗p<0.01.
+(5) control for the EU membership show no statistically significant effect. This indicates that friction free access to the UK market
+does not have a large impact on our benchmark results. Finally, the results in columns (3) and (6) demonstrate that in the capital
+case larger distances mean a greater impact of the local fiscal year when that local fiscal year ends in March. This could reflect
+greater difficulty in avoiding crowded-out local suppliers by trading with the UK.48
+We also split the end of local fiscal year effect according to the income level of the host country in Table H.2. The income
+level of the host country is potentially important. It might be expected that UK overseas offices would be able to source a greater
+proportion of their office supplies locally in which case the local fiscal year may have a greater impact in richer countries. On the
+other hand end of year spending may be a greater or a smaller phenomenon in poorer countries — to our knowledge no previous
+studies have documented end of year spending in developing countries.49 Table H.2 shows that the UK overseas offices tend to spend
+less on resource expenditure in low income countries. One explanation that would be consistent with this coefficient would be if
+48 We note however that there are a small number of countries (notably including Japan and New Zealand) that are far away from the UK and with a fiscal
+year ending in March. This coefficient could be substantially influenced by a small number of such countries.
+49 To our knowledge the lowest income country in which year-end spending has been studied is our previous paper (Klymak and Baumann, 2022) using
+Ukrainian data. Ukraine is accounted for as a lower middle income country.
+
+
+European Economic Review 168 (2024) 104803
+25
+S. Baumann and M. Klymak
+Table G.4
+Fiscal year-end effects for capital and resource expenditures with start of local fiscal year.
+Spending
+Spending
+Spending
+Spending
+Spending
+Spending
+Z
+Z
+Z
+Binary
+Binary
+Binary
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+Panel A: Resource Budget
+Home FY End
+1.371∗∗∗
+1.395∗∗∗
+1.343∗∗∗
+0.493∗∗∗
+0.497∗∗∗
+0.479∗∗∗
+(0.067)
+(0.074)
+(0.091)
+(0.024)
+(0.029)
+(0.034)
+LFY Start
+−0.028
+−0.026
+−0.008
+−0.014
+(0.025)
+(0.037)
+(0.010)
+(0.012)
+LFY End × Home FY End
+0.301∗∗∗
+0.339∗∗∗
+0.085∗∗
+0.101∗
+(0.102)
+(0.126)
+(0.040)
+(0.051)
+LFY End
+−0.047
+−0.088∗∗
+−0.022
+−0.040∗
+(0.034)
+(0.044)
+(0.016)
+(0.022)
+Firms LFY End
+0.138
+0.096
+0.060∗∗
+0.051∗∗
+(0.090)
+(0.082)
+(0.025)
+(0.024)
+Num Countries
+180
+68
+68
+180
+68
+68
+Observations
+39,996
+23,796
+23,796
+39,996
+23,796
+23,796
+R2
+0.224
+0.211
+0.212
+0.231
+0.221
+0.221
+Month FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Overs. Office × Year FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Panel B: Capital Budget
+Home FY End
+0.810∗∗∗
+0.850∗∗∗
+0.882∗∗∗
+0.282∗∗∗
+0.288∗∗∗
+0.308∗∗∗
+(0.054)
+(0.066)
+(0.065)
+(0.020)
+(0.023)
+(0.023)
+LFY Start
+−0.003
+0.010
+0.024
+0.003
+0.017
+(0.029)
+(0.036)
+(0.040)
+(0.014)
+(0.015)
+LFY End × Home FY End
+0.004
+−0.089
+−0.008
+−0.037
+(0.146)
+(0.201)
+(0.038)
+(0.053)
+LFY End
+−0.046
+−0.090∗∗
+−0.024
+−0.039∗
+(0.031)
+(0.042)
+(0.015)
+(0.022)
+Firms LFY End
+0.130∗∗
+0.198∗∗∗
+0.043
+0.075
+(0.050)
+(0.068)
+(0.036)
+(0.046)
+Num Countries
+166
+68
+68
+166
+68
+68
+Observations
+21,840
+12,468
+12,468
+21,840
+12,468
+12,468
+R2
+0.158
+0.165
+0.166
+0.305
+0.309
+0.309
+Month FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Overs. Office × Year FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Note: This table reports the estimates of home, overlapping and non-overlapping fiscal year-end months as well as local firms year-ends. The dependent variable
+in columns 1–3 is Spending Z; in the last three columns, it is Spending Binary. Panel A relies on the resource budget spending whilst panel B uses spending from
+the capital budget. FE refer to each calendar month and overseas office-times-year fixed effects. The omitted reference category is spending during January. We
+report a standard error in parenthesis below each coefficient. Standard errors allow for clustering at the country level. We denote significance using ∗p<0.1;
+∗∗p<0.05; ∗∗∗p<0.01.
+year-end spending is particularly acute in low income countries and that UK overseas offices source resource expenditure items but
+not capital expenditure items locally. In the absence of any studies of year-end spending in low income countries however it is not
+possible to have a large degree of confidence in any such explanation. This remains for future research.
+Finally in Table H.3 we interact uncertainty (as measured by the World Uncertainty Index) and unemployment (using the average
+unemployment rate in the preceding twelve months, sourced from Bloomberg terminal) with year-end spending. Unemployment
+was potentially informative if it implied the private sector could better expand to meet heightened demand at the end of the fiscal
+year without crowding out. Unemployment plays a key role in the precautionary savings explanation for year-end spending. If this
+explanation is correct more local uncertainty would mean more precautionary savings on the part of the local government and
+greater year-end spending. We might then expect more of a local fiscal year effect. We cannot find evidence for any such effects
+however in Table H.3.
+Notably, the coefficients for the home, local and home× local fiscal years are broadly consistent between Tables H.1–H.3 and
+the benchmark in Table 1.
+Finally as discussed in the main body of the paper, our dataset has some negative expenditure figures. These are relatively rare
+with fewer than 3.5% of our spending values being negative. They are also relatively small with the sum of all positive expenditure
+items in our dataset being £10,779,913,723 while the absolute value of the sum of all negative expenditure items is 18.2 times
+smaller at £591,074,495. We perform a robustness check to ensure that these negative spending values are not driving our result,
+however. In Table H.4 we reestimate the results of Table 1 after having dropped any office-budget-year where at least one monthly
+spending figure has been recorded as negative. We get similar results as in the main paper.
+Table H.5 splits resource expenditure into its two components of Departmental Expenditure Limit (DEL) and Annually Managed
+Expenditure (AME). UK departments have their resource budgets allocated in one of these two systems (Treasury, 2013). DEL funds
+are allocated in spending reviews that take place about once every three years. These are intended for expenses that can be planned
+in advance such as staff salaries. AME funds are chosen annually and are intended for demand driven costs (such as welfare and
+pensions).
+
+
+European Economic Review 168 (2024) 104803
+26
+S. Baumann and M. Klymak
+Table G.5
+End of fiscal year spending effects with bootstrapped standard errors.
+Spending
+Spending
+Spending
+Spending
+Spending
+Spending
+Z
+Z
+Z
+Binary
+Binary
+Binary
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+Panel A: Resource Budget
+Home FY End
+1.390∗∗∗
+1.395∗∗∗
+1.359∗∗∗
+0.499∗∗∗
+0.497∗∗∗
+0.488∗∗∗
+(0.031)
+(0.039)
+(0.041)
+(0.012)
+(0.015)
+(0.016)
+LFY End × Home FY End
+0.300∗∗∗
+0.335∗∗∗
+0.085∗∗∗
+0.099∗∗∗
+(0.070)
+(0.091)
+(0.026)
+(0.034)
+LFY End
+−0.047
+−0.090∗∗
+−0.022
+−0.040∗∗
+(0.029)
+(0.038)
+(0.014)
+(0.019)
+Firms LFY End
+0.138∗∗∗
+0.107∗∗∗
+0.060∗∗∗
+0.057∗∗
+(0.035)
+(0.039)
+(0.022)
+(0.024)
+Num Countries
+180
+68
+68
+180
+68
+68
+Observations
+39,996
+23,796
+23,796
+39,996
+23,796
+23,796
+R2
+0.224
+0.211
+0.212
+0.231
+0.221
+0.221
+Month FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Overs. Office × Year FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Panel B: Capital Budget
+Home FY End
+0.812∗∗∗
+0.844∗∗∗
+0.867∗∗∗
+0.280∗∗∗
+0.288∗∗∗
+0.298∗∗∗
+(0.050)
+(0.059)
+(0.065)
+(0.016)
+(0.021)
+(0.022)
+LFY End × Home FY End
+0.003
+−0.085
+−0.007
+−0.034
+(0.113)
+(0.152)
+(0.033)
+(0.045)
+LFY End
+−0.046
+−0.088∗∗
+−0.024∗
+−0.038∗∗
+(0.032)
+(0.038)
+(0.013)
+(0.018)
+Firms LFY End
+0.127∗∗
+0.187∗∗∗
+0.043
+0.068∗
+(0.054)
+(0.058)
+(0.036)
+(0.038)
+Num Countries
+166
+68
+68
+166
+68
+68
+Observations
+21,840
+12,468
+12,468
+21,840
+12,468
+12,468
+R2
+0.158
+0.165
+0.166
+0.305
+0.309
+0.309
+Month FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Overs. Office × Year FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Note: This table reports the estimates of home, overlapping and non-overlapping fiscal year-end months as well as local firms year-ends. The dependent variable
+in columns 1–3 is Spending Z; in the last three columns, it is Spending Binary. Panel A relies on the resource budget spending whilst panel B uses spending from
+the capital budget. FE refer to each calendar month and overseas office-times-year fixed effects. The omitted reference category is spending during January. We
+report a standard error in parenthesis below each coefficient. Standard errors allow for bootstrapping. We denote significance using ∗p<0.1; ∗∗p<0.05; ∗∗∗p<0.01.
+
+
+European Economic Review 168 (2024) 104803
+27
+S. Baumann and M. Klymak
+Table H.1
+Extensions using Spending Z.
+Resource
+Resource
+Resource
+Resource
+Capital
+Capital
+Capital
+Capital
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+(7)
+(8)
+Home FY End
+1.370∗∗∗
+1.397∗∗∗
+1.390∗∗∗
+1.394∗∗∗
+0.836∗∗∗
+0.810∗∗∗
+0.812∗∗∗
+0.811∗∗∗
+(0.064)
+(0.062)
+(0.061)
+(0.062)
+(0.055)
+(0.053)
+(0.053)
+(0.053)
+LFY End × Home FY End
+0.440∗
+0.292∗∗∗
+0.325∗
+0.298∗∗∗
+−0.507
+−0.038
+0.298
+−0.160
+(0.223)
+(0.093)
+(0.172)
+(0.110)
+(0.323)
+(0.149)
+(0.233)
+(0.170)
+LFY End
+−0.264∗∗∗
+−0.044
+−0.042
+−0.045
+0.025
+−0.044
+−0.053
+−0.047
+(0.073)
+(0.032)
+(0.041)
+(0.036)
+(0.084)
+(0.033)
+(0.035)
+(0.032)
+LFY End × Home FY End × Log GDP Per Capita
+−0.057
+0.158
+(0.080)
+(0.117)
+LFY End × Log GDP Per Capita
+0.075∗∗∗
+−0.027
+(0.029)
+(0.026)
+LFY End × EU
+0.0001
+−0.018
+(0.106)
+(0.047)
+LFY End × Home FY End × Commonwealth
+−0.022
+−0.484∗
+(0.179)
+(0.257)
+LFY End × Commonwealth
+−0.023
+0.026
+(0.065)
+(0.054)
+LFY End × Home FY End × Log Distance
+0.006
+0.240
+(0.071)
+(0.182)
+LFY End × Log Distance
+−0.011
+−0.013
+(0.034)
+(0.021)
+Num Countries
+161
+171
+180
+169
+148
+158
+166
+157
+Observations
+36,210
+38,823
+39,996
+38,571
+19,722
+21,111
+21,840
+21,075
+R2
+0.218
+0.224
+0.224
+0.224
+0.160
+0.157
+0.159
+0.158
+Month FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Overs. Office × Year FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Note: This table reports the estimates of home, overlapping and non-overlapping fiscal year-end months as well as local firms year-ends. We interact each
+local fiscal year-end variable with the logarithm of GDP per capita, the logarithm of the distance between the UK and the overseas office country and the
+overseas office is based in the EU as well as whether the overseas office is the commonwealth country. The dependent variable in all columns is Spending Z.
+Columns (1)–(4) rely on the resource budget spending while columns (5)–(8) use spending from the capital budget. FE refer to each calendar month and overseas
+office-times-year fixed effects. The omitted reference category is spending during January. We report a standard error in parenthesis below each coefficient.
+Standard errors allow for clustering at the country level. We denote significance using ∗p<0.1; ∗∗p<0.05; ∗∗∗p<0.01.
+Table H.2
+Fiscal year-end effects for capital and resource expenditures by income.
+Resource expenditure
+Capital expenditure
+(1)
+(2)
+Home FY End
+1.393∗∗∗
+0.818∗∗∗
+(0.062)
+(0.053)
+Low income × LFY End
+−0.235∗∗∗
+0.037
+(0.058)
+(0.087)
+Lower middle income × LFY End
+−0.107∗∗
+−0.119∗
+(0.053)
+(0.067)
+Upper middle income × LFY End
+0.017
+−0.062
+(0.056)
+(0.052)
+High income × LFY End
+−0.006
+−0.041
+(0.060)
+(0.042)
+LFY End × Home FY End
+0.267∗∗∗
+0.034
+(0.102)
+(0.149)
+Num Countries
+168
+155
+Observations
+38,280
+20,940
+R2
+0.223
+0.158
+Month FE
+Yes
+Yes
+Overs. Office × Year FE
+Yes
+Yes
+Note: ∗p<0.1; ∗∗p<0.05; ∗∗∗p<0.01. This table reports the estimates of home and local fiscal year-end months. The dependent variable in (1) and (2) columns is
+Spending Z. The first specification relies on the resource budget spending whilst the second relies on spending from the capital budget. FE refer to each calendar
+month and overseas office-times-year fixed effects. The omitted category is spending during January. We report a standard error in parenthesis below each
+coefficient. Standard errors allow for clustering at the country level. We denote significance using ∗p<0.1; ∗∗p<0.05; ∗∗∗p<0.01.
+
+
+European Economic Review 168 (2024) 104803
+28
+S. Baumann and M. Klymak
+Table H.3
+Uncertainty, unemployment and the end of the fiscal year.
+Resource
+Resource
+Capital
+Capital
+expenditure
+expenditure
+expenditure
+expenditure
+(1)
+(2)
+(3)
+(4)
+Home FY End
+1.375∗∗∗
+1.352∗∗∗
+0.826∗∗∗
+0.832∗∗∗
+(0.066)
+(0.087)
+(0.057)
+(0.082)
+LFY End
+−0.024
+−0.003
+−0.094∗∗
+0.031
+(0.045)
+(0.088)
+(0.039)
+(0.068)
+LFY End ×
+Home FY End
+0.313∗∗∗
+0.503∗∗
+0.042
+0.191
+(0.102)
+(0.195)
+(0.170)
+(0.226)
+WUI Uncertainty
+0.055
+−0.035
+(0.052)
+(0.056)
+Unemployment
+0.012
+0.0003
+(0.011)
+(0.013)
+LFY End ×
+WUI Uncertainty
+−0.199
+0.224∗
+(0.139)
+(0.130)
+LFY End ×
+Unemployment
+−0.012
+−0.008
+(0.011)
+(0.008)
+Num Countries
+129
+64
+125
+64
+Observations
+33,696
+19,578
+18,576
+9805
+R2
+0.218
+0.217
+0.162
+0.185
+Month FE
+Yes
+Yes
+Yes
+Yes
+Overs. Office × Year FE
+Yes
+Yes
+Yes
+Yes
+Note: This table interacts with the local end of fiscal year effect with uncertainty (as measured by the World Uncertainty Index) and unemployment (average
+unemployment in preceding 12 months as reported in Bloomberg Terminal). The dependent variable in each column is Spending Z for Resource and Capital
+Expenditure. FE refer to each calendar month and overseas office-times-year fixed effects. The omitted reference category for the monthly fixed effects is spending
+during January. We report a standard error in parenthesis below each coefficient. Standard errors are clustered at a country level. We denote significance using
+∗p<0.1; ∗∗p<0.05; ∗∗∗p<0.01.
+
+
+European Economic Review 168 (2024) 104803
+29
+S. Baumann and M. Klymak
+Table H.4
+End of fiscal year spending effects excluding negative values.
+Spending
+Spending
+Spending
+Spending
+Spending
+Spending
+Z
+Z
+Z
+Binary
+Binary
+Binary
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+Panel A: Resource Budget
+Home FY End
+1.500∗∗∗
+1.490∗∗∗
+1.471∗∗∗
+0.530∗∗∗
+0.530∗∗∗
+0.522∗∗∗
+(0.066)
+(0.085)
+(0.094)
+(0.025)
+(0.033)
+(0.037)
+LFY End × Home FY End
+0.226∗∗
+0.212
+0.091∗∗
+0.085
+(0.109)
+(0.149)
+(0.040)
+(0.056)
+LFY End
+−0.043
+−0.104∗∗
+−0.019
+−0.043∗
+(0.035)
+(0.047)
+(0.017)
+(0.023)
+Firms LFY End
+0.121
+0.123
+0.069∗∗
+0.071∗∗
+(0.092)
+(0.089)
+(0.030)
+(0.028)
+Num Countries
+180
+68
+68
+180
+68
+68
+Observations
+31,899
+19,368
+19,368
+31,899
+19,368
+19,368
+R2
+0.273
+0.255
+0.255
+0.244
+0.231
+0.231
+Month FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Overs. Office × Year FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Panel B: Capital Budget
+Home FY End
+0.869∗∗∗
+0.896∗∗∗
+0.924∗∗∗
+0.287∗∗∗
+0.300∗∗∗
+0.309∗∗∗
+(0.063)
+(0.074)
+(0.079)
+(0.022)
+(0.024)
+(0.028)
+LFY End × Home FY End
+0.023
+−0.163
+0.017
+−0.038
+(0.153)
+(0.161)
+(0.048)
+(0.053)
+LFY End
+−0.021
+−0.043
+−0.024
+−0.037∗
+(0.040)
+(0.045)
+(0.018)
+(0.020)
+Firms LFY End
+0.145∗∗
+0.202∗∗
+0.072
+0.098∗∗
+(0.065)
+(0.080)
+(0.050)
+(0.049)
+Num Countries
+166
+68
+68
+166
+68
+68
+Observations
+12,111
+6642
+6642
+12,111
+6642
+6642
+R2
+0.197
+0.205
+0.206
+0.306
+0.312
+0.313
+Month FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Overs. Office × Year FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Note: This table reports the estimates of home, overlapping and non-overlapping fiscal year-end months as well as local firms year-ends. The dependent variable
+in columns 1–3 is Spending Z; in the last three columns, it is Spending Binary. Panel A relies on the resource budget spending whilst panel B uses spending from
+the capital budget. FE refer to each calendar month and overseas office-times-year fixed effects. The omitted reference category is spending during January.
+The sample excludes office-budget-year where at least one monthly spending figure has been negative. We report a standard error in parenthesis below each
+coefficient. Standard errors allow for clustering at the country level. We denote significance using ∗p<0.1; ∗∗p<0.05; ∗∗∗p<0.01.
+
+
+European Economic Review 168 (2024) 104803
+30
+S. Baumann and M. Klymak
+Table H.5
+End of fiscal year effect for resource spending by type.
+Spending
+Spending
+Spending
+Spending
+Spending
+Spending
+Z
+Z
+Z
+Binary
+Binary
+Binary
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+Panel A: Resource AME Budget
+Home FY End
+0.132∗∗
+0.091
+0.055
+0.075∗∗∗
+0.053∗∗
+0.045∗
+(0.062)
+(0.076)
+(0.079)
+(0.020)
+(0.024)
+(0.026)
+LFY End × Home FY End
+0.231∗
+0.249∗
+0.042
+0.053
+(0.121)
+(0.134)
+(0.043)
+(0.045)
+LFY End
+0.024
+0.034
+0.004
+0.004
+(0.044)
+(0.063)
+(0.016)
+(0.022)
+Firms LFY End
+−0.031
+−0.098
+0.013
+0.0001
+(0.055)
+(0.063)
+(0.020)
+(0.021)
+Num Countries
+163
+68
+68
+163
+68
+68
+Observations
+20,964
+11,520
+11,520
+20,964
+11,520
+11,520
+R2
+0.074
+0.072
+0.072
+0.457
+0.456
+0.456
+Month FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Overs. Office × Year FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Panel B: Resource DEL Budget
+Home FY End
+1.468∗∗∗
+1.471∗∗∗
+1.441∗∗∗
+0.518∗∗∗
+0.521∗∗∗
+0.514∗∗∗
+(0.067)
+(0.078)
+(0.087)
+(0.025)
+(0.030)
+(0.033)
+LFY End × Home FY End
+0.276∗∗
+0.297∗∗
+0.074∗
+0.082
+(0.107)
+(0.132)
+(0.042)
+(0.054)
+LFY End
+−0.036
+−0.098∗
+−0.018
+−0.041∗
+(0.032)
+(0.049)
+(0.017)
+(0.025)
+Firms LFY End
+0.157∗
+0.137∗
+0.063∗∗
+0.064∗∗
+(0.083)
+(0.073)
+(0.029)
+(0.027)
+Num Countries
+180
+68
+68
+180
+68
+68
+Observations
+39,996
+23,796
+23,796
+39,996
+23,796
+23,796
+R2
+0.239
+0.227
+0.228
+0.225
+0.217
+0.217
+Month FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Overs. Office × Year FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Note: This table reports the estimates of home, overlapping and non-overlapping fiscal year-end months as well as local firms year-ends. The dependent variable
+in columns 1–3 is Spending Z; in the last three columns, it is Spending Binary. Panel A relies on the resource AME budget spending whilst panel B uses spending
+from the resource DEL budget. FE refer to each calendar month and overseas office-times-year fixed effects. The omitted reference category is spending during
+January. We report a standard error in parenthesis below each coefficient. Standard errors allow for clustering at the country level. We denote significance using
+∗p<0.1; ∗∗p<0.05; ∗∗∗p<0.01.
+
+
+European Economic Review 168 (2024) 104803
+31
+S. Baumann and M. Klymak
+Table H.6
+End of fiscal year spending effects with alternative fixed effects.
+Spending
+Spending
+Spending
+Spending
+Spending
+Spending
+Z
+Z
+Z
+Binary
+Binary
+Binary
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+Panel A: Resource Budget
+Home FY End
+1.526∗∗∗
+1.255∗∗∗
+1.216∗∗∗
+0.508∗∗∗
+0.458∗∗∗
+0.448∗∗∗
+(0.362)
+(0.235)
+(0.223)
+(0.135)
+(0.077)
+(0.079)
+LFY End × Home FY End
+0.296∗∗∗
+0.336∗∗∗
+0.085∗∗∗
+0.099∗∗∗
+(0.070)
+(0.091)
+(0.026)
+(0.034)
+LFY End
+−0.043
+−0.089∗∗
+−0.021
+−0.040∗∗
+(0.028)
+(0.037)
+(0.014)
+(0.018)
+Firms LFY End
+0.143∗∗∗
+0.111∗∗∗
+0.061∗∗∗
+0.058∗∗
+(0.035)
+(0.039)
+(0.022)
+(0.024)
+Num Countries
+180
+68
+68
+180
+68
+68
+Observations
+39,996
+23,796
+23,796
+40,140
+23,832
+23,832
+R2
+0.239
+0.230
+0.231
+0.244
+0.236
+0.236
+Month × Year FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Overs. Office × Year FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Panel B: Capital Budget
+Home FY End
+0.735∗∗∗
+0.926∗∗∗
+1.161∗∗∗
+0.252∗∗∗
+0.230∗∗
+0.207∗
+(0.323)
+(0.331)
+(0.315)
+(0.095)
+(0.116)
+(0.109)
+LFY End × Home FY End
+−0.005
+−0.090
+−0.010
+−0.029
+(0.112)
+(0.151)
+(0.033)
+(0.045)
+LFY End
+−0.043
+−0.084∗∗
+−0.023∗
+−0.034∗
+(0.032)
+(0.038)
+(0.013)
+(0.018)
+Firms LFY End
+0.135∗∗
+0.194∗∗∗
+0.032
+0.055
+(0.054)
+(0.057)
+(0.036)
+(0.038)
+Num Countries
+166
+68
+68
+166
+68
+68
+Observations
+21,840
+12,468
+12,468
+23,652
+13,356
+13,356
+R2
+0.169
+0.182
+0.183
+0.318
+0.326
+0.326
+Month × Year FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Overs. Office × Year FE
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Note: ∗p<0.1; ∗∗p<0.05; ∗∗∗p<0.01. This table reports the estimates of home, overlapping and non-overlapping fiscal year-end months. The dependent variable
+in (1) and (2) columns is Spending Z; in columns (3) and (4), it is Spending Binary. The first two specifications rely on the resource budget spending whilst the
+latter two use spending from the capital budget. FE refer to each calendar month and overseas office-times-year fixed effects. The omitted category is spending
+during January. We report a standard error in parenthesis below each coefficient. Standard errors are bootstrapped (Note that errors clustered on a country level
+are available on request — they are generally smaller than these bootstrapped errors). We denote significance using ∗p<0.1; ∗∗p<0.05; ∗∗∗p<0.01.
+
+
+European Economic Review 168 (2024) 104803
+32
+S. Baumann and M. Klymak
+The UK government prefers DEL spending to AME funding and all expenditure items are in DEL unless the chief secretary to the
+treasury has decided the spending item is highly stochastic in nature and should instead be AME (Treasury, 2023, 1.47). The UK
+Foreign and Commonwealth office receives little AME funding. Collectively the overseas office over the period received 91.4% of
+their funds via DEL, 1.4% via AME with the remaining 7.2% from Capital.
+The results are broadly similar with the largest difference betting that the Firms LFY End coefficients are not significant in the
+AME case but are more significant in the DEL case. As a result of this similarity and the small scale of AME funding we decided to
+simplify the analysis in the main paper and add both forms of resource spending.
+As a final robustness check we repeat the benchmark specifications of Table 1 but with a separate fixed effect for each month-year
+combination (the benchmark specification uses one dummy for each month but the same December dummy would be used for all
+years in the sample). This means that the fixed effect removes one-off shocks for the data in addition to removing annual seasonality.
+It comes at the cost of the UK FY End variable in the regression however.50 The result can be seen in Table H.6.
+References
+Baicker, Katherine, 2005. The spillover effects of state spending. J. Public Econ. 89 (2–3), 529–544.
+Bartov, Eli, 1993. The timing of asset sales and earnings manipulation. Account. Rev. 840–855.
+Baumann, Stuart, 2019. Putting it off for later: Procrastination and end-of-fiscal-year spending spikes. Scand. J. Econ. 121 (2), 706–735.
+Besley, Timothy, Case, Anne, 1995. Does electoral accountability affect economic policy choices? Evidence from gubernatorial term limits. Q. J. Econ. 110 (3),
+769–798.
+Case, Anne C., Rosen, Harvey S., Hines, Jr., James R., 1993. Budget spillovers and fiscal policy interdependence: Evidence from the states. J. Public Econ. 52
+(3), 285–307.
+Conte, Maddalena, Cotterlaz, Pierre, Mayer, Thierry, 2022. The CEPII gravity database. CEPII Working Paper N 2022-05.
+Crawford, Rowena, Emmerson, Carl, Tetlow, Gemma, 2009. A survey of public spending in the UK. Institute for Fiscal Studies, Briefing Note BN43, 272–290.
+Décaire, Paul, Sosyura, Denis, 2022. On a spending spree: The real effects of heuristics in managerial budgets. https://papers.ssrn.com/sol3/papers.cfm?abstract_
+id=4242936.
+Devereux, Michael P., Lockwood, Ben, Redoano, Michela, 2008. Do countries compete over corporate tax rates? J. Public Econ. 92 (5–6), 1210–1235.
+Eichenauer, Vera, 2020. December fever in public finance, 470. KOF Working Papers, ETH Zurich.
+Frankel, Richard, Levy, Hagit, Shalev, Ron, 2017. Factors associated with the year-end decline in working capital. Manage. Sci. 63 (2), 438–458.
+Hyndman, Noel, Jones, Rowan, Pendlebury, Maurice, 2007. An exploratory study of annuality in the UK public sector: Plus CA change, plus c’est meme
+chose? Financ. Account. Manag. 23 (2), 215–237.
+International Monetary Fund, 2016. Blog post: The timing of the government’s fiscal year. https://blog-pfm.imf.org/en/pfmblog/2016/10/the-timing-of-the-
+governments-fiscal-year.
+Kinney, Michael, Trezevant, Robert H., 1993. Taxes and the timing of corporate capital expenditures. J. Am. Tax. Assoc. 15 (2).
+Klymak, Margaryta, Baumann, Stuart, 2022. Paying over the odds at the end of the fiscal year. Evidence from Ukraine. Department of Economics Discussion
+Paper Series, University of Oxford.
+Laibson, David, 1997. ‘‘Golden eggs and hyperbolic discounting’’. Q. J. Econ. 112 (2), 443–477.
+Liebman, Jeffrey, Mahoney, Neale, 2017. Do expiring budgets lead to wasteful year-end spending? Evidence from federal procurement. Amer. Econ. Rev. 107
+(11), 3510–3549.
+Lowy Institute, 2019. Global diplomacy index - 2019 country ranking. https://globaldiplomacyindex.lowyinstitute.org/country_rank.html.
+OpenTheBooks.com, 2019. The federal government’s use it or lose it spending spree. https://www.openthebooks.com/assets/1/7/UseItOrLoseIt_Final1.PDF.
+Oyer, Paul, 1998. Fiscal year ends and nonlinear incentive contracts: The effect on business seasonality. Q. J. Econ. 113 (1), 149–185.
+Parchet, Raphaël, 2019. Are local tax rates strategic complements or strategic substitutes? Am. Econ. J.: Econ. Policy 11 (2), 189–224.
+Price Waterhouse Coopers, 2023. Changing fiscal year end considerations. https://www.pwc.com/us/en/services/consulting/deals/accounting-advisory/changing-
+fiscal-year-end-considerations.html.
+Roychowdhury, Sugata, 2006. Earnings management through real activities manipulation. J. Account. Econ. 42 (3), 335–370.
+Shin, Hyun-Han, Kim, Yong H., 2002. Agency costs and efficiency of business capital investment: Evidence from quarterly capital expenditures. J. Corporate
+Finance 8 (2), 139–158.
+Treasury, H.M., 2013. How to understand public sector spending. https://www.gov.uk/government/publications/how-to-understand-public-sector-spending/how-
+to-understand-public-sector-spending#departmental-expenditure-limits-del.
+Treasury, H.M., 2023. Consolidated budgeting guidance: 2022-23. https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/
+file/1061788/CBG_2022-23.pdf.
+U.S. Securities and Exchange Commission, 2011. Amendment No. 4 to form S-1 registration statement under the securities act of 1933 ADS Tactical, Inc.
+https://www.sec.gov/Archives/edgar/data/1496129/000095012311066062/y03683a4sv1za.htm.
+50 This is because rather than having one coefficient for March we have a separate coefficient for each years march. For brevity we have not reported these.

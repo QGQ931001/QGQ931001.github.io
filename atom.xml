@@ -6,7 +6,7 @@
   <link href="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/atom.xml" rel="self"/>
   
   <link href="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/"/>
-  <updated>2026-04-10T13:57:54.000Z</updated>
+  <updated>2026-04-11T09:00:43.000Z</updated>
   <id>https://github.com/QGQ931001/QGQ931001.github.io/tree/master/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Do Governments Crowd Out Governments? 深度阅读笔记 — Baumann &amp; Klymak</title>
+    <link href="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/posts/baumann2024/"/>
+    <id>https://github.com/QGQ931001/QGQ931001.github.io/tree/master/posts/baumann2024/</id>
+    <published>2026-04-11T00:00:00.000Z</published>
+    <updated>2026-04-11T09:00:43.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;文献信息&quot;&gt;文献信息&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;标题&lt;/strong&gt;: Do governments crowd out governments?
+Evidence from a natural experiment&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;作者&lt;/strong&gt;: Stuart Baumann, Margaryta Klymak&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;类型&lt;/strong&gt;: 论文笔记 / 财政学 / 政府经济学&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;出版年份&lt;/strong&gt;: 2024&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;出版机构/期刊&lt;/strong&gt;: European Economic Review, Vol. 168,
+104803&lt;/li&gt;
+&lt;li&gt;&lt;h2 id=&quot;难度评估-中---需要计量经济学基础&quot;&gt;&lt;strong&gt;难度评估&lt;/strong&gt;:
+中 - 需要计量经济学基础&lt;/h2&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="财政学" scheme="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/categories/%E8%B4%A2%E6%94%BF%E5%AD%A6/"/>
+    
+    
+    <category term="论文笔记" scheme="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/tags/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="财政学" scheme="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/tags/%E8%B4%A2%E6%94%BF%E5%AD%A6/"/>
+    
+    <category term="政府支出" scheme="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/tags/%E6%94%BF%E5%BA%9C%E6%94%AF%E5%87%BA/"/>
+    
+    <category term="挤出效应" scheme="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/tags/%E6%8C%A4%E5%87%BA%E6%95%88%E5%BA%94/"/>
+    
+    <category term="自然实验" scheme="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/tags/%E8%87%AA%E7%84%B6%E5%AE%9E%E9%AA%8C/"/>
+    
+  </entry>
   
   <entry>
     <title>Macroeconomic Effects of Debt Relief 深度阅读笔记 — Auclert, Dobbie &amp; Goldsmith-Pinkham</title>
@@ -607,191 +645,6 @@ program&quot;&lt;/b&gt;&lt;/font&gt; &lt;br&gt; &lt;br&gt; &lt;font face=&quot;T
     <category term="绘图" scheme="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/categories/%E7%BB%98%E5%9B%BE/"/>
     
     <category term="map&amp;sf" scheme="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/categories/%E7%BB%98%E5%9B%BE/map-sf/"/>
-    
-    
-    <category term="R" scheme="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/tags/R/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>R数据科学_ggplot2笔记(1)</title>
-    <link href="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/posts/29862/"/>
-    <id>https://github.com/QGQ931001/QGQ931001.github.io/tree/master/posts/29862/</id>
-    <published>2020-05-26T00:00:00.000Z</published>
-    <updated>2026-04-06T05:29:22.000Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;一个说明&quot;&gt;一个说明&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;ggplot2::ggplot()&lt;/code&gt;指使用&lt;a href=&quot;https://ggplot2.tidyverse.org/&quot;&gt;&lt;strong&gt;ggplot2&lt;/strong&gt;&lt;/a&gt;包中的&lt;code&gt;ggplot&lt;/code&gt;函数,&lt;code&gt;::&lt;/code&gt;表示快速调用某个包里的函数.&lt;/p&gt;
-&lt;h2 id=&quot;示例&quot;&gt;示例&lt;/h2&gt;
-&lt;p&gt;使用&lt;code&gt;ggplot2&lt;/code&gt;包中的&lt;code&gt;mpg&lt;/code&gt;数据框,这份数据是一份汽车资料:&lt;/p&gt;
-&lt;figure class=&quot;highlight r&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;knitr&lt;span class=&quot;operator&quot;&gt;::&lt;/span&gt;kable&lt;span class=&quot;punctuation&quot;&gt;(&lt;/span&gt;head&lt;span class=&quot;punctuation&quot;&gt;(&lt;/span&gt;ggplot2&lt;span class=&quot;operator&quot;&gt;::&lt;/span&gt;mpg&lt;span class=&quot;punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;table style=&quot;width:100%;&quot;&gt;
-&lt;colgroup&gt;
-&lt;col style=&quot;width: 17%&quot;&gt;
-&lt;col style=&quot;width: 15%&quot;&gt;
-&lt;col style=&quot;width: 8%&quot;&gt;
-&lt;col style=&quot;width: 6%&quot;&gt;
-&lt;col style=&quot;width: 5%&quot;&gt;
-&lt;col style=&quot;width: 15%&quot;&gt;
-&lt;col style=&quot;width: 5%&quot;&gt;
-&lt;col style=&quot;width: 5%&quot;&gt;
-&lt;col style=&quot;width: 5%&quot;&gt;
-&lt;col style=&quot;width: 4%&quot;&gt;
-&lt;col style=&quot;width: 10%&quot;&gt;
-&lt;/colgroup&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align: left;&quot;&gt;manufacturer&lt;/th&gt;
-&lt;th style=&quot;text-align: left;&quot;&gt;model&lt;/th&gt;
-&lt;th style=&quot;text-align: left;&quot;&gt;displ&lt;/th&gt;
-&lt;th style=&quot;text-align: right;&quot;&gt;year&lt;/th&gt;
-&lt;th style=&quot;text-align: right;&quot;&gt;cyl&lt;/th&gt;
-&lt;th style=&quot;text-align: left;&quot;&gt;trans&lt;/th&gt;
-&lt;th style=&quot;text-align: left;&quot;&gt;drv&lt;/th&gt;
-&lt;th style=&quot;text-align: right;&quot;&gt;cty&lt;/th&gt;
-&lt;th style=&quot;text-align: right;&quot;&gt;hwy&lt;/th&gt;
-&lt;th style=&quot;text-align: left;&quot;&gt;fl&lt;/th&gt;
-&lt;th style=&quot;text-align: left;&quot;&gt;class&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;audi&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;a4&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;1.8&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;1999&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;4&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;auto(l5)&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;f&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;18&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;29&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;p&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;compact&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;audi&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;a4&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;1.8&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;1999&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;4&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;manual(m5)&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;f&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;21&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;29&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;p&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;compact&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;audi&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;a4&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;2.0&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;2008&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;4&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;manual(m6)&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;f&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;20&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;31&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;p&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;compact&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;audi&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;a4&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;2.0&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;2008&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;4&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;auto(av)&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;f&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;21&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;30&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;p&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;compact&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;audi&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;a4&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;2.8&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;1999&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;6&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;auto(l5)&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;f&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;16&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;26&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;p&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;compact&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;audi&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;a4&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;2.8&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;1999&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;6&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;manual(m5)&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;f&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;18&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;26&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;p&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;compact&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;audi&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;a4&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;3.1&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;2008&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;6&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;auto(av)&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;f&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;18&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;27&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;p&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;compact&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;audi&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;a4 quattro&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;1.8&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;1999&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;4&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;manual(m5)&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;4&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;18&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;26&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;p&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;compact&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;audi&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;a4 quattro&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;1.8&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;1999&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;4&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;auto(l5)&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;4&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;16&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;25&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;p&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;compact&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;audi&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;a4 quattro&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;2.0&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;2008&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;4&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;manual(m6)&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;4&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;20&lt;/td&gt;
-&lt;td style=&quot;text-align: right;&quot;&gt;28&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;p&lt;/td&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;compact&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;</summary>
-    
-    
-    
-    <category term="绘图" scheme="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/categories/%E7%BB%98%E5%9B%BE/"/>
     
     
     <category term="R" scheme="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/tags/R/"/>
