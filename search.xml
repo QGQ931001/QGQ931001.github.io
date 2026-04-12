@@ -1,72 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>学术讲座# 中国人民大学经济学院江艇:渐进DID的最新进展</title>
-    <url>/posts/836/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="关于did因果识别"><strong>关于DID因果识别</strong></h2>
-<ul>
-<li>Imbens:
-任何的因果识别归根结底都是做<strong>插值</strong>与<strong>差值</strong></li>
-<li>传统<span class="math inline">\(DID\)</span>最大的两类威胁是:①平行趋势不成立;②存在混淆政策</li>
-<li><span class="math inline">\(DID\)</span>的重要前提是平行趋势,但这种前提实际并不能完全验证:事前平行并不意味着事后平行趋势,但事前不平行一定能验证平行趋势不成立</li>
-<li>最经典的例子就是经济特区,深圳在改革开放前可能和中原地区的一个小村庄没有什么不同,但是即使深圳没有被划为经济特区,改革开放后其经济增长趋势也有可能因为地缘优势而呈现较快的增长趋势</li>
-<li>两期的数据做<span class="math inline">\(DID\)</span>会退化为<span class="math inline">\(FD\)</span>,此时的截距项代表时间变化趋势</li>
-<li>Good control: 既影响<span class="math inline">\(y\)</span>,又影响<span class="math inline">\(D\cdot T\)</span></li>
-<li>Bad control: 既影响y,又被<span class="math inline">\(D\cdot
-T\)</span>影响</li>
-<li>无法判断影响样本进入处理组的因素是否还影响其变化趋势</li>
-<li>潜在结果:使用上标表示,想象中的结果</li>
-<li><span class="math inline">\(ATT\)</span>:处理组接受处理后的平均处理效应</li>
-<li><span class="math inline">\(D\)</span>实际可以理解为处理组的固定效应</li>
-</ul>
-<span id="more"></span>
-<h2 id="交错型didstaggered-did"><strong>1. 交错型DID(staggered
-DID)</strong></h2>
-<ul>
-<li>没有办法构造<span class="math inline">\(D\cdot
-T\)</span>,可以直接定义<span class="math inline">\(D\cdot
-T\)</span>,表示接受处理的虚拟变量</li>
-<li>干预事件的发生时间不一致,极可能意味着,事后趋势不一致.为此,应尽量控制影响<span class="math inline">\(X_i\)</span>,避免控制既影响<span class="math inline">\(y\)</span>,又被<span class="math inline">\(D⋅T\)</span>影响的<span class="math inline">\(X_{it}\)</span></li>
-<li>Goodman-Bacon定理:任何一个交错<span class="math inline">\(DID\)</span>的双向固定效应模型都可以分解为<span class="math inline">\(K^2\)</span>个传统双重差分估计结果的加权平均</li>
-<li>导致偏误的原因在于:以晚处理组为处理组,以早处理组为对照组,此时双重差分估计中包含了一项<span class="math inline">\(\Delta
-ATT\)</span>,即早处理组的政策效应存在明显的动态变化</li>
-<li>交错<span class="math inline">\(DID\)</span>估计出的<span class="math inline">\(\beta\)</span>究竟意味着什么?由三部分构成:①方差加权的<span class="math inline">\(ATT\)</span>;②方差加权的趋势差异;③<span class="math inline">\(\Delta ATT\)</span></li>
-</ul>
-<h2 id="改进策略_基于事件研究法"><strong>2.
-改进策略_基于事件研究法</strong></h2>
-<ul>
-<li><strong>2.1</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解,观察以早处理组为控制组的系数和权重,判断其是否影响了最终系数的估计</li>
-<li><strong>2.2</strong> 进行协变量的平衡性检验.在交错<span class="math inline">\(DID\)</span>的情形下,平行趋势检验没办法做.干预时间的不一致,平衡性检验可作为一种替代手段.此做法的目的在于判断事前变量与干预处理进度之间的关系.进行匹配时,都可以以政策执行前某一期为准</li>
-<li><strong>2.3</strong>
-进一步,可以按照各组作为控制组的贡献作为权重,对事前变量与干预处理进度进行加权<span class="math inline">\(OLS\)</span></li>
-<li><strong>2.4</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解,必须是平衡面板数据,所以要删除一些样本</li>
-<li><strong>2.5</strong>
-事件研究法:变日历时间为相对时间.按照相对时间进行校准,如果存在非常明显的趋势,则<span class="math inline">\(\Delta
-ATT\)</span>一定会比较大,基准模型会存在低估偏误</li>
-<li><strong>2.6</strong>
-可以根据事件研究法的结果,将核心解释变量乘以一个<span class="math inline">\((t-T^*)\)</span></li>
-</ul>
-<h2 id="改进策略_堆叠didstacked-did"><strong>3.改进策略_堆叠<span class="math inline">\(DID\)</span>(Stacked <span class="math inline">\(DID\)</span>)</strong></h2>
-<ul>
-<li><strong>3.1</strong>
-假定存在K个处理时点,构造K个数据集.每个数据集中只保留可以为处理组服务的控制组,比如晚处理组和一直未处理的组.标准误需要聚类到数据集上面</li>
-<li><strong>3.2</strong> 从构造上保证了早处理组不能作为控制组</li>
-</ul>
-<h2 id="改进策略_对事件研究法的反思寻找干净的控制组"><strong>4.改进策略_对事件研究法的反思,寻找干净的控制组</strong></h2>
-<ul>
-<li><strong>4.1</strong>
-仅不同时间队列样本的动态处理效应变化方式是一样的,事件研究法的估计才是有效的</li>
-</ul>
-]]></content>
-      <categories>
-        <category>计量</category>
-        <category>DID</category>
-      </categories>
-      <tags>
-        <tag>学术讲座</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>走出非洲假说、人类遗传多样性与比较经济发展 _ Ashraf &amp; Galor (2013) 笔记</title>
     <url>/posts/ashraf2013/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>本文是 Ashraf &amp; Galor 2013
@@ -210,6 +144,72 @@ Development. <em>American Economic Review</em>, 103(1), 1-46.</li>
         <tag>论文笔记</tag>
         <tag>经济史</tag>
         <tag>发展经济学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学术讲座# 中国人民大学经济学院江艇:渐进DID的最新进展</title>
+    <url>/posts/836/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="关于did因果识别"><strong>关于DID因果识别</strong></h2>
+<ul>
+<li>Imbens:
+任何的因果识别归根结底都是做<strong>插值</strong>与<strong>差值</strong></li>
+<li>传统<span class="math inline">\(DID\)</span>最大的两类威胁是:①平行趋势不成立;②存在混淆政策</li>
+<li><span class="math inline">\(DID\)</span>的重要前提是平行趋势,但这种前提实际并不能完全验证:事前平行并不意味着事后平行趋势,但事前不平行一定能验证平行趋势不成立</li>
+<li>最经典的例子就是经济特区,深圳在改革开放前可能和中原地区的一个小村庄没有什么不同,但是即使深圳没有被划为经济特区,改革开放后其经济增长趋势也有可能因为地缘优势而呈现较快的增长趋势</li>
+<li>两期的数据做<span class="math inline">\(DID\)</span>会退化为<span class="math inline">\(FD\)</span>,此时的截距项代表时间变化趋势</li>
+<li>Good control: 既影响<span class="math inline">\(y\)</span>,又影响<span class="math inline">\(D\cdot T\)</span></li>
+<li>Bad control: 既影响y,又被<span class="math inline">\(D\cdot
+T\)</span>影响</li>
+<li>无法判断影响样本进入处理组的因素是否还影响其变化趋势</li>
+<li>潜在结果:使用上标表示,想象中的结果</li>
+<li><span class="math inline">\(ATT\)</span>:处理组接受处理后的平均处理效应</li>
+<li><span class="math inline">\(D\)</span>实际可以理解为处理组的固定效应</li>
+</ul>
+<span id="more"></span>
+<h2 id="交错型didstaggered-did"><strong>1. 交错型DID(staggered
+DID)</strong></h2>
+<ul>
+<li>没有办法构造<span class="math inline">\(D\cdot
+T\)</span>,可以直接定义<span class="math inline">\(D\cdot
+T\)</span>,表示接受处理的虚拟变量</li>
+<li>干预事件的发生时间不一致,极可能意味着,事后趋势不一致.为此,应尽量控制影响<span class="math inline">\(X_i\)</span>,避免控制既影响<span class="math inline">\(y\)</span>,又被<span class="math inline">\(D⋅T\)</span>影响的<span class="math inline">\(X_{it}\)</span></li>
+<li>Goodman-Bacon定理:任何一个交错<span class="math inline">\(DID\)</span>的双向固定效应模型都可以分解为<span class="math inline">\(K^2\)</span>个传统双重差分估计结果的加权平均</li>
+<li>导致偏误的原因在于:以晚处理组为处理组,以早处理组为对照组,此时双重差分估计中包含了一项<span class="math inline">\(\Delta
+ATT\)</span>,即早处理组的政策效应存在明显的动态变化</li>
+<li>交错<span class="math inline">\(DID\)</span>估计出的<span class="math inline">\(\beta\)</span>究竟意味着什么?由三部分构成:①方差加权的<span class="math inline">\(ATT\)</span>;②方差加权的趋势差异;③<span class="math inline">\(\Delta ATT\)</span></li>
+</ul>
+<h2 id="改进策略_基于事件研究法"><strong>2.
+改进策略_基于事件研究法</strong></h2>
+<ul>
+<li><strong>2.1</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解,观察以早处理组为控制组的系数和权重,判断其是否影响了最终系数的估计</li>
+<li><strong>2.2</strong> 进行协变量的平衡性检验.在交错<span class="math inline">\(DID\)</span>的情形下,平行趋势检验没办法做.干预时间的不一致,平衡性检验可作为一种替代手段.此做法的目的在于判断事前变量与干预处理进度之间的关系.进行匹配时,都可以以政策执行前某一期为准</li>
+<li><strong>2.3</strong>
+进一步,可以按照各组作为控制组的贡献作为权重,对事前变量与干预处理进度进行加权<span class="math inline">\(OLS\)</span></li>
+<li><strong>2.4</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解,必须是平衡面板数据,所以要删除一些样本</li>
+<li><strong>2.5</strong>
+事件研究法:变日历时间为相对时间.按照相对时间进行校准,如果存在非常明显的趋势,则<span class="math inline">\(\Delta
+ATT\)</span>一定会比较大,基准模型会存在低估偏误</li>
+<li><strong>2.6</strong>
+可以根据事件研究法的结果,将核心解释变量乘以一个<span class="math inline">\((t-T^*)\)</span></li>
+</ul>
+<h2 id="改进策略_堆叠didstacked-did"><strong>3.改进策略_堆叠<span class="math inline">\(DID\)</span>(Stacked <span class="math inline">\(DID\)</span>)</strong></h2>
+<ul>
+<li><strong>3.1</strong>
+假定存在K个处理时点,构造K个数据集.每个数据集中只保留可以为处理组服务的控制组,比如晚处理组和一直未处理的组.标准误需要聚类到数据集上面</li>
+<li><strong>3.2</strong> 从构造上保证了早处理组不能作为控制组</li>
+</ul>
+<h2 id="改进策略_对事件研究法的反思寻找干净的控制组"><strong>4.改进策略_对事件研究法的反思,寻找干净的控制组</strong></h2>
+<ul>
+<li><strong>4.1</strong>
+仅不同时间队列样本的动态处理效应变化方式是一样的,事件研究法的估计才是有效的</li>
+</ul>
+]]></content>
+      <categories>
+        <category>计量</category>
+        <category>DID</category>
+      </categories>
+      <tags>
+        <tag>学术讲座</tag>
       </tags>
   </entry>
   <entry>
@@ -560,74 +560,6 @@ governments?&gt;一文的核心内容、理论框架、实证发现和学术贡�
       </categories>
       <tags>
         <tag>妳</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何在双变量Probit中使用工具变量法IV估计</title>
-    <url>/posts/60676/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<h1 id="ml两步法">ML两步法</h1>
-<p>可以采用二步法进行ML估计,以下将会以一段样例代码展示:</p>
-<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">webuse</span> school, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">set</span> seed 1</span><br><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobit</span><br><span class="line"><span class="keyword">program</span> mybiprobit</span><br><span class="line"><span class="keyword">args</span> lnf m1   m2  athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"><span class="comment">**Here I am creating an artificial IV</span></span><br><span class="line"><span class="keyword">gen</span> z=logptax-rnormal()</span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobit (private:private=logptax loginc years)   (vote:vote=logptax loginc years)   /athrho (zb1:logptax=loginc  years z) /lns1</span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> maximize,</span><br><span class="line"><span class="keyword">matrix</span> b=<span class="built_in">e</span>(b)</span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobitiv</span><br><span class="line"><span class="keyword">program</span> mybiprobitiv</span><br><span class="line"><span class="keyword">args</span> lnf mm1 g1  mm2  g2 athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">tempvar</span> m1 m2</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m1'</span>=<span class="symbol">`mm1'</span>+<span class="symbol">`g1'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m2'</span>=<span class="symbol">`mm2'</span>+<span class="symbol">`g2'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobitiv (private:private=logptax loginc years) (g1:)  (vote:vote=logptax loginc years)  (g2:) /athrho (zb1:logptax=loginc  years z  ) /lns1, init(b)</span><br><span class="line"><span class="keyword">ml</span> maximize</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>计量</category>
-        <category>内生性问题</category>
-      </categories>
-      <tags>
-        <tag>stata</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大城市人口增长速度🦚</title>
-    <url>/posts/15523/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
-<center>
-上图即为最终效果
-</center>
-<h2 id="下载数据">下载数据</h2>
-<p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录.
-</p><figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<h2 id="加载r包">加载R包</h2>
-<p>需要的R包如下所示.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
-<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<ol type="1">
-<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
-<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon,
-Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
-<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
-<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
-</ol>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
-<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.
-使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="绘图">绘图</h2>
-<p>代码如下,图见上文.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>绘图</category>
-        <category>map&amp;sf</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
       </tags>
   </entry>
   <entry>
@@ -1054,6 +986,74 @@ Instruments论文的深度笔记,由Claude AI辅助生成.</em></p>
         <tag>论文笔记</tag>
         <tag>计量经济学</tag>
         <tag>工具变量</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何在双变量Probit中使用工具变量法IV估计</title>
+    <url>/posts/60676/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<h1 id="ml两步法">ML两步法</h1>
+<p>可以采用二步法进行ML估计,以下将会以一段样例代码展示:</p>
+<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">webuse</span> school, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">set</span> seed 1</span><br><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobit</span><br><span class="line"><span class="keyword">program</span> mybiprobit</span><br><span class="line"><span class="keyword">args</span> lnf m1   m2  athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"><span class="comment">**Here I am creating an artificial IV</span></span><br><span class="line"><span class="keyword">gen</span> z=logptax-rnormal()</span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobit (private:private=logptax loginc years)   (vote:vote=logptax loginc years)   /athrho (zb1:logptax=loginc  years z) /lns1</span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> maximize,</span><br><span class="line"><span class="keyword">matrix</span> b=<span class="built_in">e</span>(b)</span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobitiv</span><br><span class="line"><span class="keyword">program</span> mybiprobitiv</span><br><span class="line"><span class="keyword">args</span> lnf mm1 g1  mm2  g2 athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">tempvar</span> m1 m2</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m1'</span>=<span class="symbol">`mm1'</span>+<span class="symbol">`g1'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m2'</span>=<span class="symbol">`mm2'</span>+<span class="symbol">`g2'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobitiv (private:private=logptax loginc years) (g1:)  (vote:vote=logptax loginc years)  (g2:) /athrho (zb1:logptax=loginc  years z  ) /lns1, init(b)</span><br><span class="line"><span class="keyword">ml</span> maximize</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>计量</category>
+        <category>内生性问题</category>
+      </categories>
+      <tags>
+        <tag>stata</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大城市人口增长速度🦚</title>
+    <url>/posts/15523/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
+<center>
+上图即为最终效果
+</center>
+<h2 id="下载数据">下载数据</h2>
+<p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录.
+</p><figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="加载r包">加载R包</h2>
+<p>需要的R包如下所示.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
+<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<ol type="1">
+<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
+<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon,
+Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
+<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
+<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
+</ol>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
+<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.
+使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="绘图">绘图</h2>
+<p>代码如下,图见上文.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>绘图</category>
+        <category>map&amp;sf</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
       </tags>
   </entry>
   <entry>
@@ -3777,46 +3777,6 @@ DOJ的IT支出没有出现支出高峰,最后一周的IT支出仅占3.3%,而非I
       </tags>
   </entry>
   <entry>
-    <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
-    <url>/posts/32262/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
-<h2 id="研究问题"><strong>1. 研究问题</strong></h2>
-<p>本文以江苏省12个地级市"河长制"政策转移案例(2006 —
-2016)为研究对象,在识别政策转移案例中"复制"和"再生产"两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对"河长制"转移程度的影响.研究发现"河长制"政策转移中的"政策再生产"的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局.通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产.</p>
-<p>&nbsp;</p>
-<span id="more"></span>
-<h2 id="问题的提出"><strong>2. 问题的提出</strong></h2>
-<p><strong>2.1 政策转移的必要性</strong></p>
-<p>现实状况:政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有"后发优势"的意味、地区间的合作与竞争</p>
-<p>转移情形:政策转移并不意味着全盘复制,可分为"复制"和"再生产"两种形式</p>
-<p>核心问题:什么因素能够促成政策"再生产",政策"再生产"又体现出那些维度特征</p>
-<p><strong>2.2 河长制的背景介绍</strong></p>
-<p>河湖治理是跨界特性最典型的领域之一,涉及上下游、左右岸、不同行政区域和行业,呈现出高度的复杂性.河长制最早发轫于太湖蓝藻危机,2016年之前是一项地方政策,经政策扩散至多地.</p>
-<p>现实调查显示河长制在江苏省内的扩散过程中呈现出"复制"和"再生产"的典型差异.</p>
-<p>&nbsp;</p>
-<h2 id="研究思路和方法"><strong>3. 研究思路和方法</strong></h2>
-<p><strong>3.1 QCA</strong></p>
-<p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles
-Ragin)于<code>1987</code>年提出,适用于案例数量大于10小于60的研究.</p>
-<p>其使用布尔代数和集合论的思想来进行中小数量的跨案例比较,从而处理多个原因和一个结果之间的因果关系.</p>
-<p><strong>3.2 转移程度的刻画</strong></p>
-<p>道洛维茨和马什最早借鉴rose(1993)的连续统来划分政策转移程度:复制、模仿、混合、启发.</p>
-<p>本文简单划分为:"复制"和"再生产"</p>
-<p><strong>3.3 解释变量的选择</strong></p>
-<p>行政压力、资源禀赋、政策需求、外部力量</p>
-<p>&nbsp;</p>
-<h2 id="结论"><strong>4. 结论</strong></h2>
-<p>政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素.</p>
-]]></content>
-      <categories>
-        <category>公共管理</category>
-        <category>政策转移</category>
-      </categories>
-      <tags>
-        <tag>文献阅读</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>&lt;马铃薯与人口&gt;深度阅读笔记 — Nunn &amp; Qian</title>
     <url>/posts/nunn2011/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -4078,6 +4038,46 @@ Vol. 126, pp. 593-650</li>
       </tags>
   </entry>
   <entry>
+    <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
+    <url>/posts/32262/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
+<h2 id="研究问题"><strong>1. 研究问题</strong></h2>
+<p>本文以江苏省12个地级市"河长制"政策转移案例(2006 —
+2016)为研究对象,在识别政策转移案例中"复制"和"再生产"两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对"河长制"转移程度的影响.研究发现"河长制"政策转移中的"政策再生产"的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局.通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产.</p>
+<p>&nbsp;</p>
+<span id="more"></span>
+<h2 id="问题的提出"><strong>2. 问题的提出</strong></h2>
+<p><strong>2.1 政策转移的必要性</strong></p>
+<p>现实状况:政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有"后发优势"的意味、地区间的合作与竞争</p>
+<p>转移情形:政策转移并不意味着全盘复制,可分为"复制"和"再生产"两种形式</p>
+<p>核心问题:什么因素能够促成政策"再生产",政策"再生产"又体现出那些维度特征</p>
+<p><strong>2.2 河长制的背景介绍</strong></p>
+<p>河湖治理是跨界特性最典型的领域之一,涉及上下游、左右岸、不同行政区域和行业,呈现出高度的复杂性.河长制最早发轫于太湖蓝藻危机,2016年之前是一项地方政策,经政策扩散至多地.</p>
+<p>现实调查显示河长制在江苏省内的扩散过程中呈现出"复制"和"再生产"的典型差异.</p>
+<p>&nbsp;</p>
+<h2 id="研究思路和方法"><strong>3. 研究思路和方法</strong></h2>
+<p><strong>3.1 QCA</strong></p>
+<p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles
+Ragin)于<code>1987</code>年提出,适用于案例数量大于10小于60的研究.</p>
+<p>其使用布尔代数和集合论的思想来进行中小数量的跨案例比较,从而处理多个原因和一个结果之间的因果关系.</p>
+<p><strong>3.2 转移程度的刻画</strong></p>
+<p>道洛维茨和马什最早借鉴rose(1993)的连续统来划分政策转移程度:复制、模仿、混合、启发.</p>
+<p>本文简单划分为:"复制"和"再生产"</p>
+<p><strong>3.3 解释变量的选择</strong></p>
+<p>行政压力、资源禀赋、政策需求、外部力量</p>
+<p>&nbsp;</p>
+<h2 id="结论"><strong>4. 结论</strong></h2>
+<p>政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素.</p>
+]]></content>
+      <categories>
+        <category>公共管理</category>
+        <category>政策转移</category>
+      </categories>
+      <tags>
+        <tag>文献阅读</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>文献阅读# the Effect of Microinsurance on Economic Activities: Evidence From a Randomized Field Experiment</title>
     <url>/posts/51245/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
@@ -4139,6 +4139,54 @@ Vol. 126, pp. 593-650</li>
       </categories>
       <tags>
         <tag>文献阅读</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Shell脚本笔记(1)</title>
+    <url>/posts/2510/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<h1 id="引言">引言</h1>
+<p>shell是用C语言编写的程序,但它自身同时也是一种程序设计语言.你可能经常听说"shell脚本",但实际上shell编程并非等同于"shell脚本"编程,前者指shell程序本身的开发,后者则是利用shell程序进行开发.都说java和javascript的区别是周杰和周杰伦的区别,shell和shell
+script或许也有那么点意思.</p>
+<h1 id="shell脚本">shell脚本</h1>
+<p>似乎任何程序学习都是从"Hello
+World!"开始的,对于<strong>shell</strong>而言:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Hello World !"</span></span><br></pre></td></tr></tbody></table></figure>
+<p><strong>#!</strong>是个标记,告知这段命令将用bash执行.echo则是一个向窗口展示文本的命令.
+你可以将以上代码框的内容存为一个以.sh为后缀的文件,比如<strong>hw.sh</strong>,并赋予文件执行权限:</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">chmod +x ./hw.sh         #赋予执行权限</span><br><span class="line">bash hw.sh               #执行脚本</span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<p>未完待续</p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2014到2021年:淘宝村分布散点图😲</title>
+    <url>/posts/18898/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示"><strong>效果展示</strong></h2>
+<img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235354537.svg" width="80%" height="80%" align="middle">
+<center>
+2014年的淘宝村分布
+</center>
+<span id="more"></span>
+<p><img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235404847.svg" width="80%" height="80%" align="middle"></p>
+<center>
+2021年的淘宝村分布
+</center>
+<h2 id="从最初3个增长至7023个"><strong>从最初3个增长至7023个</strong></h2>
+<p>从2009年到2021年,中国淘宝村呈现裂变式的扩散增长,从最初3个增长至7023个,无论是数量规模,还是分布广度都经历了飞跃式的发展.从萌芽至发展阶段,"小农户连接大市场"的电商逻辑长期被认为是淘宝村的主要内涵.围绕这一内涵,市场、政策、技术、人才一度不断汇聚,为淘宝村发展创造了十余年的黄金机遇,形成了一场边缘人群连接现代网络、边缘地区接壤现代市场、边缘产品汇聚现代需求的"边缘革命".然而,在经历十余年的飞速发展后,淘宝村开始面临红利期消失、消费升级、同质化竞争、规范治理等适应性挑战,转型变革已是必然选择.在这一过程中,过往遵循传统电商逻辑的淘宝村正经历蜕变.一方面,垂直电商、内容电商等多元化的销售互联网生态正加速形成;另一方面,由差异化、个性化、碎片化需求所驱动的产业数字化升级不断涌现.可以认为,以"消费互联网+产业互联网"为特征的产销全域数字化逻辑正在为淘宝村注入新的内涵,其核心不再是"连接大市场",而是"洞悉大市场、细分小市场、塑造新市场".这种内涵演进对淘宝村发展提出了更高的要求,即能否充分利用数字技术提高经营主体的市场洞察力,能否通过数据信息整合优化生产流程,能否基于数字供应链实现快速的市场反馈.在此意义上,新时代的淘宝村将不再是"逆边缘化"的地理名词,而是一类凭借数字技术突破分散决策、分散生产、分散经营劣势的组织指称.</p>
+]]></content>
+      <categories>
+        <category>绘图</category>
+        <category>map&amp;sf</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
       </tags>
   </entry>
   <entry>
@@ -4376,48 +4424,36 @@ transformation),即统计变换.你可能想要覆盖默认的统计变换.在�
       </tags>
   </entry>
   <entry>
-    <title>Shell脚本笔记(1)</title>
-    <url>/posts/2510/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<h1 id="引言">引言</h1>
-<p>shell是用C语言编写的程序,但它自身同时也是一种程序设计语言.你可能经常听说"shell脚本",但实际上shell编程并非等同于"shell脚本"编程,前者指shell程序本身的开发,后者则是利用shell程序进行开发.都说java和javascript的区别是周杰和周杰伦的区别,shell和shell
-script或许也有那么点意思.</p>
-<h1 id="shell脚本">shell脚本</h1>
-<p>似乎任何程序学习都是从"Hello
-World!"开始的,对于<strong>shell</strong>而言:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Hello World !"</span></span><br></pre></td></tr></tbody></table></figure>
-<p><strong>#!</strong>是个标记,告知这段命令将用bash执行.echo则是一个向窗口展示文本的命令.
-你可以将以上代码框的内容存为一个以.sh为后缀的文件,比如<strong>hw.sh</strong>,并赋予文件执行权限:</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">chmod +x ./hw.sh         #赋予执行权限</span><br><span class="line">bash hw.sh               #执行脚本</span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<p>未完待续</p>
-]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>shell</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2014到2021年:淘宝村分布散点图😲</title>
-    <url>/posts/18898/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示"><strong>效果展示</strong></h2>
-<img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235354537.svg" width="80%" height="80%" align="middle">
+    <title>画一幅我农所在地的道路图</title>
+    <url>/posts/42027/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;">
 <center>
-2014年的淘宝村分布
+上图即为最终效果
 </center>
+<h2 id="一些必备的工具">一些必备的工具</h2>
+<p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
 <span id="more"></span>
-<p><img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235404847.svg" width="80%" height="80%" align="middle"></p>
-<center>
-2021年的淘宝村分布
-</center>
-<h2 id="从最初3个增长至7023个"><strong>从最初3个增长至7023个</strong></h2>
-<p>从2009年到2021年,中国淘宝村呈现裂变式的扩散增长,从最初3个增长至7023个,无论是数量规模,还是分布广度都经历了飞跃式的发展.从萌芽至发展阶段,"小农户连接大市场"的电商逻辑长期被认为是淘宝村的主要内涵.围绕这一内涵,市场、政策、技术、人才一度不断汇聚,为淘宝村发展创造了十余年的黄金机遇,形成了一场边缘人群连接现代网络、边缘地区接壤现代市场、边缘产品汇聚现代需求的"边缘革命".然而,在经历十余年的飞速发展后,淘宝村开始面临红利期消失、消费升级、同质化竞争、规范治理等适应性挑战,转型变革已是必然选择.在这一过程中,过往遵循传统电商逻辑的淘宝村正经历蜕变.一方面,垂直电商、内容电商等多元化的销售互联网生态正加速形成;另一方面,由差异化、个性化、碎片化需求所驱动的产业数字化升级不断涌现.可以认为,以"消费互联网+产业互联网"为特征的产销全域数字化逻辑正在为淘宝村注入新的内涵,其核心不再是"连接大市场",而是"洞悉大市场、细分小市场、塑造新市场".这种内涵演进对淘宝村发展提出了更高的要求,即能否充分利用数字技术提高经营主体的市场洞察力,能否通过数据信息整合优化生产流程,能否基于数字供应链实现快速的市场反馈.在此意义上,新时代的淘宝村将不再是"逆边缘化"的地理名词,而是一类凭借数字技术突破分散决策、分散生产、分散经营劣势的组织指称.</p>
+<h2 id="绘制路网地图">绘制路网地图</h2>
+<p>导入以下R 包:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>读入杨陵区的数据:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>获取杨陵区的经纬度范围:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
+<p>提取杨陵区的街道路线:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>把数据保存为<strong>rds</strong>:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>然后绘图:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
 ]]></content>
       <categories>
         <category>绘图</category>
-        <category>map&amp;sf</category>
       </categories>
       <tags>
         <tag>R</tag>
@@ -4460,42 +4496,6 @@ t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)
       </categories>
       <tags>
         <tag>blog_test</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>画一幅我农所在地的道路图</title>
-    <url>/posts/42027/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;">
-<center>
-上图即为最终效果
-</center>
-<h2 id="一些必备的工具">一些必备的工具</h2>
-<p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="绘制路网地图">绘制路网地图</h2>
-<p>导入以下R 包:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>读入杨陵区的数据:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>获取杨陵区的经纬度范围:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
-<p>提取杨陵区的街道路线:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>把数据保存为<strong>rds</strong>:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>然后绘图:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>绘图</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
       </tags>
   </entry>
 </search>
