@@ -6,7 +6,7 @@
   <link href="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/atom.xml" rel="self"/>
   
   <link href="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/"/>
-  <updated>2026-04-11T09:28:41.000Z</updated>
+  <updated>2026-04-13T17:01:50.000Z</updated>
   <id>https://github.com/QGQ931001/QGQ931001.github.io/tree/master/</id>
   
   <author>
@@ -15,6 +15,45 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>中国农业发展之路 — 深度阅读笔记 — Perkins</title>
+    <link href="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/posts/perkins1969/"/>
+    <id>https://github.com/QGQ931001/QGQ931001.github.io/tree/master/posts/perkins1969/</id>
+    <published>2026-04-14T00:00:00.000Z</published>
+    <updated>2026-04-13T17:01:50.000Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;中国农业发展之路-perkins&quot;&gt;中国农业发展之路 — Perkins&lt;/h1&gt;
+&lt;h2 id=&quot;书籍信息&quot;&gt;书籍信息&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;书名&lt;/strong&gt;: Agricultural Development in China,
+1368-1968（中国农业发展史，1368-1968）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;作者&lt;/strong&gt;: Dwight H. Perkins（德怀特·帕金斯）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;类型&lt;/strong&gt;: 经济史 / 农业史 / 中国研究 / 学术专著&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;出版年份&lt;/strong&gt;:
+1969年（初版）；本书引用的是2013年重印版&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;页数&lt;/strong&gt;: 424页（正文）+ 大量附录&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;出版机构&lt;/strong&gt;: Aldine Publishing Company, Chicago&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;所属系列&lt;/strong&gt;: Social Science Research Council Committee
+on the Economy of China系列专著&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;难度评估&lt;/strong&gt;:
+中高级（学术专著，需要经济学和历史学基础知识）&lt;/li&gt;&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="读书笔记" scheme="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="经济史" scheme="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/tags/%E7%BB%8F%E6%B5%8E%E5%8F%B2/"/>
+    
+    <category term="书籍" scheme="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/tags/%E4%B9%A6%E7%B1%8D/"/>
+    
+    <category term="农业史" scheme="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/tags/%E5%86%9C%E4%B8%9A%E5%8F%B2/"/>
+    
+    <category term="中国历史" scheme="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/tags/%E4%B8%AD%E5%9B%BD%E5%8E%86%E5%8F%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>Do Governments Crowd Out Governments? — 深度阅读笔记 — Baumann &amp; Klymak</title>
@@ -612,37 +651,6 @@ program&quot;&lt;/b&gt;&lt;/font&gt; &lt;br&gt; &lt;br&gt; &lt;font face=&quot;T
     
     
     <category term="绘图" scheme="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/categories/%E7%BB%98%E5%9B%BE/"/>
-    
-    
-    <category term="R" scheme="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/tags/R/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>大城市人口增长速度🦚</title>
-    <link href="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/posts/15523/"/>
-    <id>https://github.com/QGQ931001/QGQ931001.github.io/tree/master/posts/15523/</id>
-    <published>2020-05-27T00:00:00.000Z</published>
-    <updated>2026-04-06T05:27:38.000Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;效果展示&quot;&gt;效果展示&lt;/h2&gt;
-&lt;img data-src=&quot;/figure/bubblemap.png&quot; width=&quot;80%&quot; height=&quot;80%&quot; align=&quot;middle&quot;&gt;
-&lt;center&gt;
-上图即为最终效果
-&lt;/center&gt;
-&lt;h2 id=&quot;下载数据&quot;&gt;下载数据&lt;/h2&gt;
-&lt;p&gt;将代码中的&lt;strong&gt;&lt;code&gt;~/文档/&lt;/code&gt;&lt;/strong&gt;更换为要保存的目录.
-&lt;/p&gt;&lt;figure class=&quot;highlight r&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;download.file&lt;span class=&quot;punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&quot;https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv&quot;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;,&lt;/span&gt; destfile &lt;span class=&quot;operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;~/文档/data-bKvwd.csv&quot;&lt;/span&gt; &lt;span class=&quot;punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;download.file&lt;span class=&quot;punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&quot;https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json&quot;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;,&lt;/span&gt; destfile &lt;span class=&quot;operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;~/文档/world.geo.json&quot;&lt;/span&gt; &lt;span class=&quot;punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;/p&gt;
-&lt;h2 id=&quot;加载r包&quot;&gt;加载R包&lt;/h2&gt;
-&lt;p&gt;需要的R包如下所示.&lt;/p&gt;
-&lt;figure class=&quot;highlight r&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;library&lt;span class=&quot;punctuation&quot;&gt;(&lt;/span&gt;sf&lt;span class=&quot;punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;library&lt;span class=&quot;punctuation&quot;&gt;(&lt;/span&gt;readr&lt;span class=&quot;punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;library&lt;span class=&quot;punctuation&quot;&gt;(&lt;/span&gt;tidyverse&lt;span class=&quot;punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;library&lt;span class=&quot;punctuation&quot;&gt;(&lt;/span&gt;hrbrthemes&lt;span class=&quot;punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;library&lt;span class=&quot;punctuation&quot;&gt;(&lt;/span&gt;ggtext&lt;span class=&quot;punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="绘图" scheme="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/categories/%E7%BB%98%E5%9B%BE/"/>
-    
-    <category term="map&amp;sf" scheme="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/categories/%E7%BB%98%E5%9B%BE/map-sf/"/>
     
     
     <category term="R" scheme="https://github.com/QGQ931001/QGQ931001.github.io/tree/master/tags/R/"/>
