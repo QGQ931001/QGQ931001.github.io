@@ -67,152 +67,6 @@ ATT\)</span>一定会比较大,基准模型会存在低估偏误</li>
       </tags>
   </entry>
   <entry>
-    <title>走出非洲假说、人类遗传多样性与比较经济发展 _ Ashraf &amp; Galor (2013) 笔记</title>
-    <url>/posts/ashraf2013/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>本文是 Ashraf &amp; Galor 2013
-年的论文笔记,探讨了一个很有意思的问题:为什么全球各地的经济发展水平差异这么大?作者们从人类迁徙的历史出发,提出了一个相当有冲击力的观点_遗传多样性可能才是那个"深层根源".</p>
-<span id="more"></span>
-<h2 id="领域基础知识">领域基础知识</h2>
-<p>理解这篇论文需要先搞清楚几个核心概念:</p>
-<p><strong>比较经济发展 (Comparative Economic
-Development)</strong>:经济学的一个领域,研究为什么不同国家在经济繁荣程度上差距这么大.传统上经济学家会关注地理、制度、文化、人力资本这些因素.</p>
-<p><strong>"走出非洲"假说 (Out of Africa
-Hypothesis)</strong>:关于现代人类起源的主流理论.大约15万年前现代人类在东非演化形成,7-9万年前开始分批迁徙,逐步扩散到全球.每次迁徙都只有一部分人离开,带走的遗传多样性只是一小部分.</p>
-<p><strong>遗传多样性 (Genetic
-Diversity)</strong>:一个群体内部基因变异的程度.多样性高意味着人群基因类型更丰富;低则意味着相对单一.本文用"期望杂合度"来衡量,可以理解为随机选两个人,他们在基因上不同的概率.</p>
-<p><strong>序列建立者效应 (Serial-Founder
-Effect)</strong>:在人类迁徙过程中,每批离开的人只携带祖先群体遗传多样性的一部分.这个过程反复发生,导致离非洲越远,遗传多样性越低.就像从一副牌里每次只抽几张出去建立新的牌堆,离原牌堆越远,牌种越少.</p>
-<h2 id="研究背景">研究背景</h2>
-<p>解释全球经济发展差异,传统研究主要聚焦这几类因素:</p>
-<ol type="1">
-<li><p><strong>地理因素</strong>:戴蒙德在&lt;枪炮、病菌与钢铁&gt;里强调的_农作物的地理分布、大陆轴线方向(东西向有利于技术传播)等,对新石器革命时机和农业发展速度有深远影响.</p></li>
-<li><p><strong>制度因素</strong>:产权保护、法治、政府效率等,被认为是现代经济增长的关键驱动力.</p></li>
-<li><p><strong>文化因素</strong>:宗教信仰、社会信任水平等对经济活动的影响.</p></li>
-<li><p><strong>人力资本</strong>:教育和技能的积累.</p></li>
-<li><p><strong>民族-语言碎片化</strong>:社会内部民族/语言群体多样性通常被认为会增加冲突、阻碍发展.</p></li>
-</ol>
-<p>但这些大多是"近端"因素,论文想找的是更"深层"的源头_人类自身的遗传构成.</p>
-<h2 id="作者的问题意识">作者的问题意识</h2>
-<p>作者注意到,虽然地理、制度、文化等因素在不同地区差异显著,但这些本身也可能是更深层历史过程的产物.于是他们想回答:</p>
-<ul>
-<li>遗传多样性是否在农业社会出现之前,就对经济发展产生了持久影响?</li>
-<li>这种影响是单纯正面的,还是复杂的(既有好处也有坏处)?</li>
-<li>遗传多样性与经济发展的关系,能否通过"走出非洲"的迁徙路径来解释?</li>
-<li>这种影响是否独立于地理、制度和文化等传统因素?</li>
-</ul>
-<p>作者特别区分了<strong>遗传多样性</strong>(群体内部基因差异)和<strong>民族多样性</strong>(通常通过语言文化差异衡量).他们认为遗传多样性既有益处也有成本,关系可能是"驼峰状"的_适度的多样性最好,过高或过低都不利.</p>
-<h2 id="研究意义">研究意义</h2>
-<ol type="1">
-<li><p><strong>挑战传统理论</strong>:把影响因素追溯到数万年前的人类遗传多样性,为理解全球发展不平等提供了全新视角.</p></li>
-<li><p><strong>揭示双重效应</strong>:提出并实证了"驼峰状"影响_适度多样性有益,过高或过低都阻碍发展.这颠覆了以往对多样性多为负面影响的认知.</p></li>
-<li><p><strong>解决内生性</strong>:用"走出非洲"迁徙距离作为遗传多样性的外生工具变量,有效解决了内生性问题.</p></li>
-<li><p><strong>解释区域差异</strong>:亚洲和欧洲适中的遗传多样性有利于发展;非洲过高、美洲原住民过低的多样性则构成阻碍.</p></li>
-<li><p><strong>开启新方向</strong>:为经济学、人类学、遗传学的交叉研究开辟了新路径.</p></li>
-</ol>
-<h2 id="论文结构">论文结构</h2>
-<p>论文结构清晰,逻辑严谨:</p>
-<ol type="1">
-<li><p><strong>引言</strong>:提出核心论点_数万年前的遗传多样性差异对经济发展有长期"驼峰状"影响,且独立于地理、制度和文化因素.</p></li>
-<li><p><strong>相关文献</strong>:回顾传统发展因素,特别区分了本文与关注"群体间遗传距离"的文献的不同.</p></li>
-<li><p><strong>理论模型</strong>:建立模型形式化遗传多样性对生产力的双重影响_既扩张生产可能性边界(收益),又降低生产效率(成本).</p></li>
-<li><p><strong>历史分析</strong>:</p>
-<ul>
-<li>因变量:1500年人口密度(马尔萨斯时代技术进步主要转化为人口增长)</li>
-<li>自变量:观察到的遗传多样性(53民族)和预测的遗传多样性(145国家,用迁徙距离预测)</li>
-<li>控制变量:新石器革命时机、土地生产力、大陆固定效应等</li>
-<li>确认了显著的"驼峰状"关系</li>
-</ul></li>
-<li><p><strong>当代分析</strong>:</p>
-<ul>
-<li>因变量:2000年人均收入</li>
-<li>构建了"祖先调整后的当代国家人口多样性指数"</li>
-<li>控制了大量制度、文化、地理因素后,"驼峰状"效应依然显著</li>
-<li>机制验证:遗传多样性与信任负相关(成本),与科学知识创造正相关(收益)</li>
-</ul></li>
-<li><p><strong>结论</strong>:重申核心发现和遗传多样性的双重效应.</p></li>
-</ol>
-<h2 id="背景为什么关注遗传多样性">背景:为什么关注遗传多样性?</h2>
-<p>论文起点是全球经济发展巨大差异的反思.传统解释虽然有力,但作者想追溯更根本的源头_人类自身的生物学特性,具体就是遗传多样性.</p>
-<p>面临的主要挑战:</p>
-<ol type="1">
-<li><p><strong>数据稀缺</strong>:可靠遗传多样性数据只覆盖53个民族群体,跨国研究远远不够.</p></li>
-<li><p><strong>内生性问题</strong>:经济发展可能吸引移民从而增加多样性,因果关系难以厘清.</p></li>
-<li><p><strong>区分两个概念</strong>:遗传多样性(基因层面)和民族多样性(文化语言层面)是不同的.</p></li>
-<li><p><strong>识别机制</strong>:需要解释为什么遗传多样性会影响生产力.</p></li>
-</ol>
-<h2 id="研究方法">研究方法</h2>
-<p><strong>核心思想:用"走出非洲"的迁徙距离来预测遗传多样性.</strong></p>
-<h3 id="理论基石">理论基石</h3>
-<ul>
-<li>现代人类起源于东非,逐步向全球扩散</li>
-<li>序列建立者效应:离东非越远,遗传多样性越低</li>
-<li>Ramachandran等(2005)发现东非迁徙距离可解释53个民族近86%的遗传多样性变异</li>
-<li>迁徙距离是史前事件,与现代经济发展无直接因果关系,可作为外生工具变量</li>
-</ul>
-<h3 id="遗传多样性测量">遗传多样性测量</h3>
-<p><strong>期望杂合度</strong>:随机选两个个体在基因位点不同的概率.</p>
-<p><strong>历史样本</strong>:21个国家,直接用HGDP-CEPH数据.</p>
-<p><strong>扩展样本</strong>:计算从亚的斯亚贝巴到各国首都的陆路迁徙距离(考虑五个强制中继点),预测145个国家的遗传多样性.</p>
-<h3 id="当代指数构建">当代指数构建</h3>
-<p>考虑殖民后人口流动,构建了综合指数: - 各祖先群体内部的遗传多样性 -
-不同祖先群体之间的遗传距离</p>
-<h3 id="产出变量">产出变量</h3>
-<ul>
-<li><strong>历史时期</strong>:人口密度(马尔萨斯时代技术进步主要导致人口增长)</li>
-<li><strong>当代</strong>:人均GDP</li>
-<li><strong>机制验证</strong>:人际信任水平、科学知识创造强度</li>
-</ul>
-<h3 id="控制变量">控制变量</h3>
-<p>历史分析:新石器革命时机、土地生产力、大陆固定效应</p>
-<p>当代分析:加上制度(社会基础设施、民主程度、法律起源)、文化(宗教份额、欧洲裔人口比例)、地理(疟疾风险、热带区域)等因素.</p>
-<h2 id="核心发现">核心发现</h2>
-<p><strong>遗传多样性对经济发展有显著的"驼峰状"影响</strong>,无论在史前还是当代都成立.存在一个最优遗传多样性水平.</p>
-<h3 id="历史分析结果1500年人口密度">历史分析结果(1500年人口密度)</h3>
-<ul>
-<li>最优遗传多样性约为0.683(与日本接近)</li>
-<li>低于最优:每增加1%多样性,人口密度增加约36%</li>
-<li>高于最优:每减少1%多样性,人口密度增加约29%</li>
-<li>东非多样性最高,美洲原住民最低,亚洲和欧洲处于中间(接近最优)</li>
-</ul>
-<h3 id="当代分析结果2000年人均收入">当代分析结果(2000年人均收入)</h3>
-<ul>
-<li>最优遗传多样性约为0.721(与美国接近),略高于历史时期</li>
-<li>低于最优:每增加1%多样性,人均收入增加约39%</li>
-<li>高于最优:每减少1%多样性,人均收入增加约21%</li>
-</ul>
-<h3 id="机制验证">机制验证</h3>
-<ul>
-<li><strong>成本端</strong>:遗传多样性与人际信任显著负相关</li>
-<li><strong>收益端</strong>:遗传多样性与科学知识创造强度显著正相关</li>
-</ul>
-<p>这与理论模型预测完全一致.</p>
-<h3 id="关键概念图示">关键概念图示</h3>
-<p>想象一条先升后降的曲线: - 横轴是遗传多样性水平 - 纵轴是生产力</p>
-<p>低多样性时,增加多样性带来的创新和适应性好处大于不合作的成本,生产力上升;高多样性后,不合作成本占主导,生产力下降.</p>
-<h2 id="个人读后感">个人读后感</h2>
-<p>读这篇论文最深的感受是:原来四五万年前的人类迁徙,居然还在以"基因指纹"的方式影响着今天的世界经济发展格局.这个视角确实宏大.</p>
-<p>论文的方法论也很有意思.用迁徙距离作为工具变量解决内生性,这个思路很巧妙_毕竟没有人能"穿越"回去操控史前人类的迁徙路线.</p>
-<p>但我比较好奇的是:这个研究结论在政策层面能怎么用?作者在Q&amp;A里也提到了伦理风险问题.遗传多样性不像制度那样容易改变,总不能制定政策让人"调整基因"吧?所以这个研究更像是一个"理解世界的窗口",而非"行动指南".</p>
-<p>另外论文区分遗传多样性和民族多样性这点也很重要.以前总觉得"民族多样性"被研究得差不多了,没想到从基因层面看是完全不同的故事.</p>
-<p>总体来说,这是一篇很有野心、视角独特的论文,把生物学和经济学结合得相当紧密.虽然有些结论还需要更多研究来验证,但"深层根源"这个研究思路确实给人启发.</p>
-<hr>
-<p><strong>参考信息</strong></p>
-<ul>
-<li>论文:Ashraf, Q. H., &amp; Galor, O. (2013). The "Out of Africa"
-Hypothesis, Human Genetic Diversity, and Comparative Economic
-Development. <em>American Economic Review</em>, 103(1), 1-46.</li>
-</ul>
-]]></content>
-      <categories>
-        <category>经济史</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>经济史</tag>
-        <tag>发展经济学</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Macroeconomic Effects of Debt Relief 深度阅读笔记 — Auclert, Dobbie &amp; Goldsmith-Pinkham</title>
     <url>/posts/auclert2019/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -394,6 +248,152 @@ Economic Review.</li>
         <tag>债务减免</tag>
         <tag>大衰退</tag>
         <tag>破产制度</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>走出非洲假说、人类遗传多样性与比较经济发展 _ Ashraf &amp; Galor (2013) 笔记</title>
+    <url>/posts/ashraf2013/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>本文是 Ashraf &amp; Galor 2013
+年的论文笔记,探讨了一个很有意思的问题:为什么全球各地的经济发展水平差异这么大?作者们从人类迁徙的历史出发,提出了一个相当有冲击力的观点_遗传多样性可能才是那个"深层根源".</p>
+<span id="more"></span>
+<h2 id="领域基础知识">领域基础知识</h2>
+<p>理解这篇论文需要先搞清楚几个核心概念:</p>
+<p><strong>比较经济发展 (Comparative Economic
+Development)</strong>:经济学的一个领域,研究为什么不同国家在经济繁荣程度上差距这么大.传统上经济学家会关注地理、制度、文化、人力资本这些因素.</p>
+<p><strong>"走出非洲"假说 (Out of Africa
+Hypothesis)</strong>:关于现代人类起源的主流理论.大约15万年前现代人类在东非演化形成,7-9万年前开始分批迁徙,逐步扩散到全球.每次迁徙都只有一部分人离开,带走的遗传多样性只是一小部分.</p>
+<p><strong>遗传多样性 (Genetic
+Diversity)</strong>:一个群体内部基因变异的程度.多样性高意味着人群基因类型更丰富;低则意味着相对单一.本文用"期望杂合度"来衡量,可以理解为随机选两个人,他们在基因上不同的概率.</p>
+<p><strong>序列建立者效应 (Serial-Founder
+Effect)</strong>:在人类迁徙过程中,每批离开的人只携带祖先群体遗传多样性的一部分.这个过程反复发生,导致离非洲越远,遗传多样性越低.就像从一副牌里每次只抽几张出去建立新的牌堆,离原牌堆越远,牌种越少.</p>
+<h2 id="研究背景">研究背景</h2>
+<p>解释全球经济发展差异,传统研究主要聚焦这几类因素:</p>
+<ol type="1">
+<li><p><strong>地理因素</strong>:戴蒙德在&lt;枪炮、病菌与钢铁&gt;里强调的_农作物的地理分布、大陆轴线方向(东西向有利于技术传播)等,对新石器革命时机和农业发展速度有深远影响.</p></li>
+<li><p><strong>制度因素</strong>:产权保护、法治、政府效率等,被认为是现代经济增长的关键驱动力.</p></li>
+<li><p><strong>文化因素</strong>:宗教信仰、社会信任水平等对经济活动的影响.</p></li>
+<li><p><strong>人力资本</strong>:教育和技能的积累.</p></li>
+<li><p><strong>民族-语言碎片化</strong>:社会内部民族/语言群体多样性通常被认为会增加冲突、阻碍发展.</p></li>
+</ol>
+<p>但这些大多是"近端"因素,论文想找的是更"深层"的源头_人类自身的遗传构成.</p>
+<h2 id="作者的问题意识">作者的问题意识</h2>
+<p>作者注意到,虽然地理、制度、文化等因素在不同地区差异显著,但这些本身也可能是更深层历史过程的产物.于是他们想回答:</p>
+<ul>
+<li>遗传多样性是否在农业社会出现之前,就对经济发展产生了持久影响?</li>
+<li>这种影响是单纯正面的,还是复杂的(既有好处也有坏处)?</li>
+<li>遗传多样性与经济发展的关系,能否通过"走出非洲"的迁徙路径来解释?</li>
+<li>这种影响是否独立于地理、制度和文化等传统因素?</li>
+</ul>
+<p>作者特别区分了<strong>遗传多样性</strong>(群体内部基因差异)和<strong>民族多样性</strong>(通常通过语言文化差异衡量).他们认为遗传多样性既有益处也有成本,关系可能是"驼峰状"的_适度的多样性最好,过高或过低都不利.</p>
+<h2 id="研究意义">研究意义</h2>
+<ol type="1">
+<li><p><strong>挑战传统理论</strong>:把影响因素追溯到数万年前的人类遗传多样性,为理解全球发展不平等提供了全新视角.</p></li>
+<li><p><strong>揭示双重效应</strong>:提出并实证了"驼峰状"影响_适度多样性有益,过高或过低都阻碍发展.这颠覆了以往对多样性多为负面影响的认知.</p></li>
+<li><p><strong>解决内生性</strong>:用"走出非洲"迁徙距离作为遗传多样性的外生工具变量,有效解决了内生性问题.</p></li>
+<li><p><strong>解释区域差异</strong>:亚洲和欧洲适中的遗传多样性有利于发展;非洲过高、美洲原住民过低的多样性则构成阻碍.</p></li>
+<li><p><strong>开启新方向</strong>:为经济学、人类学、遗传学的交叉研究开辟了新路径.</p></li>
+</ol>
+<h2 id="论文结构">论文结构</h2>
+<p>论文结构清晰,逻辑严谨:</p>
+<ol type="1">
+<li><p><strong>引言</strong>:提出核心论点_数万年前的遗传多样性差异对经济发展有长期"驼峰状"影响,且独立于地理、制度和文化因素.</p></li>
+<li><p><strong>相关文献</strong>:回顾传统发展因素,特别区分了本文与关注"群体间遗传距离"的文献的不同.</p></li>
+<li><p><strong>理论模型</strong>:建立模型形式化遗传多样性对生产力的双重影响_既扩张生产可能性边界(收益),又降低生产效率(成本).</p></li>
+<li><p><strong>历史分析</strong>:</p>
+<ul>
+<li>因变量:1500年人口密度(马尔萨斯时代技术进步主要转化为人口增长)</li>
+<li>自变量:观察到的遗传多样性(53民族)和预测的遗传多样性(145国家,用迁徙距离预测)</li>
+<li>控制变量:新石器革命时机、土地生产力、大陆固定效应等</li>
+<li>确认了显著的"驼峰状"关系</li>
+</ul></li>
+<li><p><strong>当代分析</strong>:</p>
+<ul>
+<li>因变量:2000年人均收入</li>
+<li>构建了"祖先调整后的当代国家人口多样性指数"</li>
+<li>控制了大量制度、文化、地理因素后,"驼峰状"效应依然显著</li>
+<li>机制验证:遗传多样性与信任负相关(成本),与科学知识创造正相关(收益)</li>
+</ul></li>
+<li><p><strong>结论</strong>:重申核心发现和遗传多样性的双重效应.</p></li>
+</ol>
+<h2 id="背景为什么关注遗传多样性">背景:为什么关注遗传多样性?</h2>
+<p>论文起点是全球经济发展巨大差异的反思.传统解释虽然有力,但作者想追溯更根本的源头_人类自身的生物学特性,具体就是遗传多样性.</p>
+<p>面临的主要挑战:</p>
+<ol type="1">
+<li><p><strong>数据稀缺</strong>:可靠遗传多样性数据只覆盖53个民族群体,跨国研究远远不够.</p></li>
+<li><p><strong>内生性问题</strong>:经济发展可能吸引移民从而增加多样性,因果关系难以厘清.</p></li>
+<li><p><strong>区分两个概念</strong>:遗传多样性(基因层面)和民族多样性(文化语言层面)是不同的.</p></li>
+<li><p><strong>识别机制</strong>:需要解释为什么遗传多样性会影响生产力.</p></li>
+</ol>
+<h2 id="研究方法">研究方法</h2>
+<p><strong>核心思想:用"走出非洲"的迁徙距离来预测遗传多样性.</strong></p>
+<h3 id="理论基石">理论基石</h3>
+<ul>
+<li>现代人类起源于东非,逐步向全球扩散</li>
+<li>序列建立者效应:离东非越远,遗传多样性越低</li>
+<li>Ramachandran等(2005)发现东非迁徙距离可解释53个民族近86%的遗传多样性变异</li>
+<li>迁徙距离是史前事件,与现代经济发展无直接因果关系,可作为外生工具变量</li>
+</ul>
+<h3 id="遗传多样性测量">遗传多样性测量</h3>
+<p><strong>期望杂合度</strong>:随机选两个个体在基因位点不同的概率.</p>
+<p><strong>历史样本</strong>:21个国家,直接用HGDP-CEPH数据.</p>
+<p><strong>扩展样本</strong>:计算从亚的斯亚贝巴到各国首都的陆路迁徙距离(考虑五个强制中继点),预测145个国家的遗传多样性.</p>
+<h3 id="当代指数构建">当代指数构建</h3>
+<p>考虑殖民后人口流动,构建了综合指数: - 各祖先群体内部的遗传多样性 -
+不同祖先群体之间的遗传距离</p>
+<h3 id="产出变量">产出变量</h3>
+<ul>
+<li><strong>历史时期</strong>:人口密度(马尔萨斯时代技术进步主要导致人口增长)</li>
+<li><strong>当代</strong>:人均GDP</li>
+<li><strong>机制验证</strong>:人际信任水平、科学知识创造强度</li>
+</ul>
+<h3 id="控制变量">控制变量</h3>
+<p>历史分析:新石器革命时机、土地生产力、大陆固定效应</p>
+<p>当代分析:加上制度(社会基础设施、民主程度、法律起源)、文化(宗教份额、欧洲裔人口比例)、地理(疟疾风险、热带区域)等因素.</p>
+<h2 id="核心发现">核心发现</h2>
+<p><strong>遗传多样性对经济发展有显著的"驼峰状"影响</strong>,无论在史前还是当代都成立.存在一个最优遗传多样性水平.</p>
+<h3 id="历史分析结果1500年人口密度">历史分析结果(1500年人口密度)</h3>
+<ul>
+<li>最优遗传多样性约为0.683(与日本接近)</li>
+<li>低于最优:每增加1%多样性,人口密度增加约36%</li>
+<li>高于最优:每减少1%多样性,人口密度增加约29%</li>
+<li>东非多样性最高,美洲原住民最低,亚洲和欧洲处于中间(接近最优)</li>
+</ul>
+<h3 id="当代分析结果2000年人均收入">当代分析结果(2000年人均收入)</h3>
+<ul>
+<li>最优遗传多样性约为0.721(与美国接近),略高于历史时期</li>
+<li>低于最优:每增加1%多样性,人均收入增加约39%</li>
+<li>高于最优:每减少1%多样性,人均收入增加约21%</li>
+</ul>
+<h3 id="机制验证">机制验证</h3>
+<ul>
+<li><strong>成本端</strong>:遗传多样性与人际信任显著负相关</li>
+<li><strong>收益端</strong>:遗传多样性与科学知识创造强度显著正相关</li>
+</ul>
+<p>这与理论模型预测完全一致.</p>
+<h3 id="关键概念图示">关键概念图示</h3>
+<p>想象一条先升后降的曲线: - 横轴是遗传多样性水平 - 纵轴是生产力</p>
+<p>低多样性时,增加多样性带来的创新和适应性好处大于不合作的成本,生产力上升;高多样性后,不合作成本占主导,生产力下降.</p>
+<h2 id="个人读后感">个人读后感</h2>
+<p>读这篇论文最深的感受是:原来四五万年前的人类迁徙,居然还在以"基因指纹"的方式影响着今天的世界经济发展格局.这个视角确实宏大.</p>
+<p>论文的方法论也很有意思.用迁徙距离作为工具变量解决内生性,这个思路很巧妙_毕竟没有人能"穿越"回去操控史前人类的迁徙路线.</p>
+<p>但我比较好奇的是:这个研究结论在政策层面能怎么用?作者在Q&amp;A里也提到了伦理风险问题.遗传多样性不像制度那样容易改变,总不能制定政策让人"调整基因"吧?所以这个研究更像是一个"理解世界的窗口",而非"行动指南".</p>
+<p>另外论文区分遗传多样性和民族多样性这点也很重要.以前总觉得"民族多样性"被研究得差不多了,没想到从基因层面看是完全不同的故事.</p>
+<p>总体来说,这是一篇很有野心、视角独特的论文,把生物学和经济学结合得相当紧密.虽然有些结论还需要更多研究来验证,但"深层根源"这个研究思路确实给人启发.</p>
+<hr>
+<p><strong>参考信息</strong></p>
+<ul>
+<li>论文:Ashraf, Q. H., &amp; Galor, O. (2013). The "Out of Africa"
+Hypothesis, Human Genetic Diversity, and Comparative Economic
+Development. <em>American Economic Review</em>, 103(1), 1-46.</li>
+</ul>
+]]></content>
+      <categories>
+        <category>经济史</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>经济史</tag>
+        <tag>发展经济学</tag>
       </tags>
   </entry>
   <entry>
@@ -1007,56 +1007,6 @@ Instruments论文的深度笔记,由Claude AI辅助生成.</em></p>
       </tags>
   </entry>
   <entry>
-    <title>大城市人口增长速度🦚</title>
-    <url>/posts/15523/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
-<center>
-上图即为最终效果
-</center>
-<h2 id="下载数据">下载数据</h2>
-<p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录.
-</p><figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<h2 id="加载r包">加载R包</h2>
-<p>需要的R包如下所示.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
-<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<ol type="1">
-<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
-<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon,
-Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
-<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
-<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
-</ol>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
-<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.
-使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="绘图">绘图</h2>
-<p>代码如下,图见上文.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>绘图</category>
-        <category>map&amp;sf</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>&lt;玉米与人口&gt;深度阅读笔记 — Chen &amp; Kung</title>
     <url>/posts/chen2016/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -1374,6 +1324,351 @@ Issue 1, pp. 71-99</li>
       <tags>
         <tag>论文笔记</tag>
         <tag>经济史</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大城市人口增长速度🦚</title>
+    <url>/posts/15523/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
+<center>
+上图即为最终效果
+</center>
+<h2 id="下载数据">下载数据</h2>
+<p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录.
+</p><figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="加载r包">加载R包</h2>
+<p>需要的R包如下所示.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
+<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<ol type="1">
+<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
+<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon,
+Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
+<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
+<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
+</ol>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
+<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.
+使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="绘图">绘图</h2>
+<p>代码如下,图见上文.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>绘图</category>
+        <category>map&amp;sf</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Who Becomes a Politician? 深度阅读笔记 — Dal Bó, Finan, Folke, Persson &amp; Rickne</title>
+    <url>/posts/dalbo2017/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Who Becomes A Politician?</li>
+<li><strong>作者</strong>: Ernesto Dal Bó, Frederico Finan, Olle Folke,
+Torsten Persson, Johanna Rickne</li>
+<li><strong>类型</strong>: 论文笔记 / 政治经济学 / 民主理论</li>
+<li><strong>出版年份</strong>: 2017</li>
+<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics,
+Vol. 132, No. 4, pp. 1877-1914</li>
+<li><strong>DOI</strong>: 10.1093/qje/qjx016</li>
+<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、政治学基础
+<span id="more"></span> ---</li>
+</ul>
+<h2 id="引言背景和意义">引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>政治选拔(Political
+Selection)是政治经济学中的一个核心议题,涉及如何筛选和确定谁来担任公职.这一研究领域与政治科学中的代议制民主理论、公共选择理论以及劳动经济学中的人力资本理论密切相关.</p>
+<p>在传统政治经济学框架下,政治家被视为政策的"代理人",其行为会影响政策选择、执行效果以及利益分配.研究者关注的焦点在于:民主制度是否能够有效地将具有能力和品格的人才选拔到领导岗位,同时确保这些领导者能够代表广泛的社会利益.</p>
+<p>政治选拔研究的重要性体现在以下几个方面:</p>
+<p>第一,政策质量与执行效果直接取决于执政者的能力.正如本文所指出的,"政治家的身份会影响政策的选择、执行方式以及受益者".无论是在专制政体还是民主政体中,这一规律都成立.区别在于,专制政体下统治者的能力差异会导致完全不同的政策后果,而在民主政体下,由于选举机制的存在,选民可以通过定期选举来约束政治家的行为.</p>
+<p>第二,人力资本理论为理解政治选拔提供了重要的分析框架.根据这一理论,个人的教育水平、认知能力和非认知技能(如果领导力、人格特质)会影响其生产率和收入潜力.在劳动力市场中,这些特质决定了个人能获取多少收入和职业发展机会.政治领域作为劳动力市场的一个特殊部门,同样需要吸引和筛选具备特定能力的人才.</p>
+<p>第三,社会代表性问题涉及民主制度的合法性和公平性.民主理论强调"人民主权"原则,即政治决策应该反映人民的意志.然而,如果政治精英主要来自特定的社会阶层,可能会导致政策偏离其他社会群体的利益,形成所谓的"精英统治"问题.</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<p>本文的研究背景可以从理论和现实两个层面来理解:</p>
+<p><strong>理论背景方面</strong>,政治经济学领域存在两种对立的观点.一种观点认为民主制度难以吸引优秀人才.Caselli和Morelli(2004)的职业选择模型指出,能力强的人通常拥有更高的私人收入和更广阔的职业发展前景,因此进入政界的"机会成本"较高.与此相反,能力较弱的人在私人部门的收入前景较差,进入政界的机会成本也较低,在职业选择上反而具有比较优势.此外,Messner和Polborn(2004)基于Olson(1965)的集体行动理论提出,公民存在"搭便车"倾向_希望享受好政治结果但不愿付出个人努力_这种心理会削弱对政治家的监督,使能力较低者更容易当选.</p>
+<p>另一种观点则强调民主制度具有自我纠错能力.Besley和Coate(1997)建立的民主问责模型表明,选举机制可以激励有能力的人参选并做出正确决策.Pande(2003)的研究也表明,在特定条件下,民主选拔机制能够识别和重用有能力的人才.</p>
+<p><strong>现实背景方面</strong>,世界各地确实存在一些政治领导人能力不足或代表性失衡的现象.一些研究(如Jones和Olken,2005)发现,国家领导人的能力与经济增长之间存在显著关联_能力强的领导人执政期间经济增长更快.同时,关于政治代表性不足的问题也引发了广泛关注_女性、少数族裔、低收入群体在政治代表中的比例往往偏低.</p>
+<p>在这样的理论争论和现实观察基础上,本文提出一个核心问题:<strong>民主能否在吸引称职领导人的同时,实现广泛的社会代表性?</strong>
+这两个目标之间是否存在不可调和的矛盾?</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p>本文作者的问题意识体现在以下几个层面:</p>
+<p><strong>第一层:挑战传统理论预测.</strong>
+标准经济模型预测,由于机会成本和搭便车效应,民主制度会出现"逆向选择"_能力较弱的人反而更容易进入政治领域.但作者认为这一预测需要实证检验,因为模型假设可能与现实不符.</p>
+<p><strong>第二层:突破数据局限.</strong>
+以往研究面临三重数据限制:缺乏候选人和非候选人信息(只能研究当选者);依赖教育或收入等间接能力指标;缺乏可靠的社会背景代际数据.作者利用瑞典独特的行政数据克服了这些局限.</p>
+<p><strong>第三层:识别"包容性精英政治"模式.</strong>
+在一个能力与社会经济地位正相关的世界中,作者希望区分三种可能的政治选拔模式:精英主义(精英家族垄断政治权力)、排他性精英政治(政治选择有能力的人,但这些人恰好来自精英家庭,结果是"偶然的"精英化)、包容性精英政治(政治从各社会阶层选拔有能力的人).</p>
+<p><strong>第四层:解释包容性精英政治的实现机制.</strong>
+如果观察到包容性精英政治确实存在,还需要解释其背后的机制_为何能力出众者来自各社会阶层?政党和个人选择如何相互作用?</p>
+<h3 id="研究意义">研究意义</h3>
+<p>本文的研究意义可以从学术贡献、政策启示和方法论创新三个维度来理解:</p>
+<p><strong>学术贡献方面</strong>,本文是对政治选拔文献的重要推进.以往研究由于数据限制,只能使用教育或收入作为能力的代理变量,或者只能分析当选政治家的特征而无法考察候选人群体的选择过程.本文使用了四种能力度量(认知得分、领导力得分、教育年限、收入得分)和详细的社会背景数据,首次对政治选拔进行了全面描述.</p>
+<p>此外,本文的理论框架具有重要的概念创新.作者提出的"包容性精英政治"概念,巧妙地调和了"能力选拔"与"社会代表性"之间的表面矛盾,表明两者并非必然对立,在特定制度条件下可以实现兼容.</p>
+<p><strong>政策启示方面</strong>,本文的发现对民主制度的评价具有重要含义.如果瑞典等成熟民主国家确实能够实现包容性精英政治,那么关于"民主必然导致庸人治国"或"民主无法实现公平代表"的论断就需要重新审视.这一发现也为其他国家推动政治改革提供了可借鉴的制度经验.</p>
+<p><strong>方法论创新方面</strong>,本文展示了如何利用行政数据进行高质量的政治经济学研究.瑞典独特的"多代登记系统"和军事征兵测试数据,为研究提供了精确的能力度量和社会背景信息.这种数据驱动的实证方法为后续研究树立了标杆.</p>
+<hr>
+<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
+<p>本文采用标准的实证研究论文结构,共分为七个主要部分和一个在线附录:</p>
+<p><strong>第一节:引言(Introduction)</strong></p>
+<p>引言部分系统阐述了研究问题、背景和主要发现.作者首先指出政治身份对政策结果的重要影响,然后提出核心研究问题:民主能否同时实现能力选拔和广泛代表性?接着,作者回顾了三类数据局限(候选人信息、代理能力指标、社会代表数据),说明本文如何克服这些局限.最后,作者预告了四个主要发现,它们共同描绘了瑞典的"包容性精英政治"模式.</p>
+<p><strong>第二节:背景(Background)</strong></p>
+<p>这一部分介绍了瑞典政治制度的基本框架,为理解研究背景提供必要的制度语境.具体包括:</p>
+<ul>
+<li>瑞典的三级选举制度(市政、省级、全国)和比例代表制</li>
+<li>议会议员(MPs)的角色和选拔方式</li>
+<li>市政治理结构_市议会和市长</li>
+<li>地方政治参与的激励结构_兼职政治家传统</li>
+</ul>
+<p><strong>第三节:数据(Data)</strong></p>
+<p>数据部分是本文实证研究的基础.作者详细介绍了数据来源、变量构建和样本定义:</p>
+<ul>
+<li>数据来源:瑞典统计局、各种行政登记系统、瑞典国防招募局</li>
+<li>四种能力度量:认知得分(IQ)、领导力得分(1-9分)、教育年限、收入得分(Mincer残差)</li>
+<li>社会背景数据:父母收入、职业类别</li>
+<li>样本范围:1982-2010年间的候选人,当选者和公职人员</li>
+</ul>
+<p><strong>第四节:能力(Competence)</strong></p>
+<p>这一节呈现了关于政治选拔能力的核心实证结果.主要发现包括:</p>
+<ul>
+<li>政治家在各能力维度上均呈现正向选择</li>
+<li>从提名者→当选者→市长→议员,选择强度递增</li>
+<li>即使控制机会成本差异,正向选择仍然存在</li>
+</ul>
+<p><strong>第五节:社会背景与包容性(Social Background and
+Inclusiveness)</strong></p>
+<p>这一节探讨社会背景与能力选拔的关系,以识别三种可能的政治选拔模式:</p>
+<ul>
+<li>比较政治家与其同胞兄弟姐妹的能力</li>
+<li>考察政治家父母的社会背景分布</li>
+<li>区分"精英主义"、"排他性精英政治"和"包容性精英政治"</li>
+</ul>
+<p><strong>第六节:包容性精英政治的实现机制(Mechanisms)</strong></p>
+<p>这一节探讨为何包容性精英政治能够实现:</p>
+<ul>
+<li>能力虽与社会阶层正相关,但来自低阶层的能力突出者也被选拔</li>
+<li>政党筛选机制:政党倾向于提拔更有能力的人</li>
+<li>个人自选择机制:货币激励和内在动机共同作用</li>
+</ul>
+<p><strong>第七节:结论(Conclusion)</strong></p>
+<p>总结研究发现,讨论政策含义和未来研究方向.</p>
+<hr>
+<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
+<h3 id="一背景理论预期与现实困惑">一、背景:理论预期与现实困惑</h3>
+<p>政治选拔研究的起点是理解为什么某些人成为政治家而其他人则不然.传统经济理论提供了两种相互关联的机制来解释政治选拔模式.</p>
+<p><strong>职业选择模型的理论预测.</strong>
+Caselli和Morelli(2004)的标准职业选择模型提出了一个令人担忧的预测:在其他条件相同的情况下,能力较强的人往往拥有更高的私人收入和更广阔的职业发展前景.这意味着他们进入政治领域的"机会成本"较高_放弃的潜在收入和职业发展损失较大.相比之下,能力较弱的人机会成本较低,在职业选择上反而具有比较优势.因此,理论预测民主制度会出现"逆向选择"_政界充斥着能力不足的人,而最优秀的人才留在私人部门.</p>
+<p><strong>集体行动理论的补充解释.</strong>
+Messner和Polborn(2004)基于Olson(1965)的集体行动理论指出,公民存在"搭便车"倾向.在政治领域,许多公民希望享受良好治理带来的好处,但不愿意付出个人努力参与政治(如研究候选人信息、参加政治活动等).这种监督缺失使得能力较低的候选人更容易当选,因为他们不需要证明自己具备真正的能力.</p>
+<p><strong>能力分布与社会代表性的潜在冲突.</strong>
+即使民主制度能够选拔有能力的人,如果能力在社会群体中分布不均(如精英阶层平均拥有更多人的人力资本),那么基于能力的选拔可能导致代表性失衡.这意味着追求"选贤任能"可能与"广泛代表"之间存在权衡(trade-off).</p>
+<p>然而,现实中的政治选拔模式是否符合这些理论预测?作者认为,由于数据限制,这一问题尚未得到充分研究.现有研究主要依赖教育或收入作为能力的代理变量,这些指标同时反映了社会阶层的影响;而且以往研究只能分析当选政治家,无法考察候选人和非候选人群体.</p>
+<h3 id="二瑞典实验制度背景与数据优势">二、瑞典实验:制度背景与数据优势</h3>
+<p><strong>为什么选择瑞典?</strong>
+作者选择瑞典作为研究案例,基于以下考虑:</p>
+<p>首先,瑞典是典型的发达民主国家,政体稳定(Polity-IV评分连续百年满分),是许多国家制度发展的参照系.如果这样一个成熟民主国家出现代表性失衡或能力不足问题,民主制度的倡导者就需要寻找其他辩护理由.</p>
+<p>其次,瑞典实行比例代表制,这是世界上最普遍的选举制度.研究瑞典的经验可以为理解比例代表制下的政治选拔提供洞见.</p>
+<p>第三,瑞典的兼职政治家传统(leisure
+politicians)提供了一个独特的自然实验_大多数市议员只获得微薄的会议补贴,而非全职薪酬.这与许多国家的职业政治家形成对比,有助于理解不同激励结构对政治选拔的影响.</p>
+<p><strong>数据优势:四维能力度量与代际信息.</strong>
+本文使用的数据集包含四种能力度量:</p>
+<p><em>认知得分</em>来自瑞典国防招募局的军事征兵测试.这是一项针对18-19岁男性的标准化测试,评估解决问题、归纳推理、数值理解、言语理解、空间理解和技术理解能力.测试结果采用1-9分的标准九分制(stanine),可视为IQ得分.由于测试结果影响服役分配且应试者不知晓精确分数,数据质量较高.</p>
+<p><em>领导力得分</em>同样来自军事征兵程序.通过半结构化访谈评估潜在军事领袖的心理特质,包括社会成熟度、心理能量、强度和情绪稳定性.这些特质与"大五人格特质"(外向性、尽责性、开放性、宜人性和神经质)密切相关.只有认知得分达到5分以上的男性才进入领导力评估.</p>
+<p><em>教育年限</em>来自瑞典学校和大学的教育记录,涵盖正规教育年限.</p>
+<p><em>收入得分</em>采用Besley等(2016)开发的方法,从Mincer收入方程中提取残差.具体而言,估算包含年龄、教育、就业部门和
+municipality fixed
+effects的Mincer方程,残差代表控制这些因素后的"超额收入能力".为排除政治就业的反向因果,担任公职期间的观测值被剔除.</p>
+<p><strong>社会背景数据</strong>包括:父母收入(来自税务记录)和父母职业类别(来自人口普查和雇主登记).利用"多代登记系统"可以识别兄弟姐妹,从而进行家族内比较.</p>
+<h3 id="三核心发现一正向选择_政治家远比普通人更有能力">三、核心发现一:正向选择_政治家远比普通人更有能力</h3>
+<p>本文最引人注目的发现之一是,瑞典政治家在各能力维度上均呈现显著的正向选择_他们远比所代表的民众更有能力.</p>
+<p><strong>认知能力的正向选择.</strong>
+军事征兵测试数据显示,政治家群体的认知得分显著高于普通人群.市长认知得分比普通男性高1.3分(约0.68个标准差),议员认知得分更高约1.6分(约0.84个标准差).值得注意的是,这种正向选择呈现清晰的层级递进模式:提名但未当选者→普通当选者→市长→议员,认知能力逐步升高.</p>
+<p><strong>领导力评分的正向选择.</strong>
+领导力得分呈现类似的模式.普通男性平均领导力得分为5.3,而市长平均得分为6.5(约0.7个标准差),议员平均得分为6.8(约0.88个标准差).提名者得分略高于普通人但低于当选者,表明筛选过程逐步提升质量.</p>
+<p><strong>教育和收入的优势.</strong>
+政治家平均受教育年限为13.1年(普通人口为11.7年),收入得分也显著为正(当选者约0.55个标准差,市长约0.97个标准差,议员约1.33个标准差).</p>
+<p><strong>机会成本悖论的解释.</strong>
+传统理论预测,高能力意味着高机会成本,应导致逆向选择.但本文发现,即使政治家在任职前收入显著高于普通人(这意味着机会成本更高),正向选择仍然存在.作者通过区分"绝对机会成本"和"边际机会成本"来解释这一悖论:对于最优秀的人才,尽管绝对收入较高,但政治职位提供的非货币收益(如权力、声望、内在满足感)和相对收入优势可能足以补偿机会成本.</p>
+<h3 id="四核心发现二能力而非出身_家族内比较的证据">四、核心发现二:能力而非出身_家族内比较的证据</h3>
+<p>仅发现政治家平均能力较高是不够的_这可能反映精英阶层垄断政治权力,而非真正的能力选拔.为了区分"精英主义"和"精英政治",作者进行了家族内比较.</p>
+<p><strong>兄弟姐妹比较设计.</strong>
+作者识别出有政治家兄弟姐妹的个体,比较这些兄弟姐妹中成为政治家者与非成为政治家者的能力差异.这种比较方法可以控制家庭背景因素的影响_如果成为政治家主要由家庭背景决定,兄弟姐妹的能力应该相似.</p>
+<p><strong>关键发现:家族内同样存在正向选择.</strong>
+分析结果显示,即使在同一家庭内部,后来成为政治家的人认知得分仍显著高于未成为政治家的兄弟姐妹.具体而言,兄弟姐妹中成为议员者的认知得分比未成为议员者高出约0.3-0.5个标准差.这一发现表明,政治选拔主要基于个人能力,而非家庭出身.</p>
+<p><strong>排除纯精英主义.</strong>
+这一发现有力地排除了"纯精英主义"解释.如果政治仅由精英家族垄断,进入政治应该与个人能力无关,而主要取决于出身.但家族内比较显示,能力是决定性因素.因此,瑞典政治选拔属于某种形式的"精英政治"_但这是什么样的精英政治?</p>
+<h3 id="五核心发现三包容性_政治家父母的社会背景分布均衡">五、核心发现三:包容性_政治家父母的社会背景分布均衡</h3>
+<p>为了进一步区分"排他性精英政治"和"包容性精英政治",作者考察了政治家的社会背景.</p>
+<p><strong>测量社会背景的两个维度.</strong>
+作者使用两个指标衡量社会背景:父母收入(特别是父亲收入)和父母职业类别(区分体力劳动vs白领).这些是社会学中衡量社会阶层的传统指标.</p>
+<p><strong>惊人发现:政治家父母背景分布接近人口总体.</strong>
+无论是用父母收入十分位组还是职业类别衡量,政治家群体的父母社会背景分布几乎完美地复制了瑞典总人口的社会背景分布.这意味着,尽管政治家本人平均来自较高收入家庭(这反映正向选择),但他们的父母并非集中在精英阶层.</p>
+<p><strong>跨政党分析.</strong>
+作者进一步分析了不同政党提名的政治家社会背景差异.左翼政党(社会民主党)提名的政治家父母收入略低于右翼政党(温和党),但差异很小,各政党都在各收入阶层有代表.这种模式表明,代表性机制(各政党代表不同社会阶层)与能力选拔并行不悖.</p>
+<h3 id="六核心发现四弱权衡_为何能力与代表性可以兼容">六、核心发现四:弱权衡_为何能力与代表性可以兼容</h3>
+<p>传统理论担心,能力选拔与社会代表性之间存在权衡:如果高能力者集中于精英阶层,选择最有能力的人将损害代表性.但本文发现,这一权衡在瑞典非常微弱.</p>
+<p><strong>低阶层出身者的极端正向选择.</strong>
+关键在于,来自较低社会经济地位家庭的政治家,其个人能力选拔程度甚至更高.换言之,出身低阶层却能成为政治家的人,必须是能力极为突出者_否则他们无法克服结构性障碍进入政治.相比之下,高阶层出身者成为政治家所需的能力门槛可能较低,因为他们的家庭资源和社会网络提供了额外支持.</p>
+<p><strong>数量与质量的互补.</strong>
+来自低阶层的政治家人数较少,但质量极高;来自高阶层的政治家人数较多,但质量相对(相对于该阶层的能力分布)略低.两种效应相互抵消,使得总体权衡微弱.</p>
+<h3 id="七机制分析包容性精英政治如何运作">七、机制分析:包容性精英政治如何运作</h3>
+<p><strong>政党筛选机制.</strong>
+作者提供了政党如何促进包容性精英政治的证据.分析表明,政党在筛选候选人时存在正向选择_无论社会背景如何,能力更强的候选人更可能获得党内提名并晋升到更高职位.特别是,各政党倾向于将最有能力的候选人放在选举名单的优先位置,而非完全按照资历或派系平衡.</p>
+<p><strong>个人自选择机制.</strong>
+对于个人而言,货币激励和内在动机共同影响政治参与决策.实证分析表明:</p>
+<ul>
+<li>对于有能力的潜在候选人,高收入确实提高了进入政治的门槛(机会成本效应)</li>
+<li>但对于全职政治职位(如市长),其薪酬处于收入分布的前5%,足以吸引高能力者</li>
+<li>内在动机(对政策的兴趣、服务社会的愿望)对政治参与也有重要影响</li>
+</ul>
+<p><strong>制度环境的支持作用.</strong>
+瑞典的一些制度特征可能促进了包容性精英政治:比例代表制为不同社会背景的候选人提供机会;全职政治家的高薪酬解决了高能力者的激励问题;强大的政党纪律和筛选机制确保质量控制.</p>
+<hr>
+<h2 id="结论conclusion">结论(Conclusion)</h2>
+<h3 id="核心结论总结">核心结论总结</h3>
+<p>本文利用瑞典丰富的行政数据,系统研究了政治选拔的模式和机制.研究的核心发现可概括为四个字:<strong>包容性精英政治</strong>(Inclusive
+Meritocracy).</p>
+<p>具体而言,本文证明了四个关键事实:</p>
+<p><strong>第一,政治家是精选的.</strong>
+与理论预测的"逆向选择"相反,瑞典政治家平均而言远比所代表的民众更有能力_认知得分、领导力得分、教育年限和收入能力均显著高于人口平均水平.这种正向选择在从提名到市长再到议员的晋升阶梯上逐步增强.</p>
+<p><strong>第二,选择基于能力,而非出身.</strong>
+即使控制家庭背景因素,政治家仍然表现出正向选择.兄弟姐妹比较表明,在同一家庭内部,成为政治家者能力显著高于未成为政治家者.这排除了"纯精英主义"解释,确认个人能力是关键因素.</p>
+<p><strong>第三,社会代表性与能力选拔并行不悖.</strong>
+尽管瑞典政治家平均能力较高,但他们的社会背景分布几乎完美复制了人口的社会背景分布.来自各收入阶层和职业背景家庭的人都有机会成为政治家.</p>
+<p><strong>第四,能力与代表性之间的权衡微弱.</strong>
+这一发现的关键解释在于,来自较低社会阶层却能成为政治家的人,其能力选拔程度反而更高_他们必须极为出色才能克服结构性障碍.</p>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<p>本文对政治经济学领域做出了多方面贡献:</p>
+<p><strong>理论层面</strong>,本文挑战了政治选拔必然导致逆向选择的悲观论断,揭示了在特定制度条件下(瑞典的比例代表制、高薪酬全职职位、强势政党筛选),民主制度可以实现"包容性精英政治"_同时实现能力选拔和社会代表性.</p>
+<p><strong>实证层面</strong>,本文克服了政治选拔研究的三大数据限制,首次使用直接能力度量(认知测试、领导力评估)和代际社会背景数据,对政治选拔进行了全面描述.</p>
+<p><strong>政策层面</strong>,本文的发现对民主制度评价具有重要含义.如果成熟民主国家(如瑞典)确实能够实现包容性精英政治,那么关于"民主制度无法吸引优秀人才或必然导致代表性失衡"的论断就需要重新审视.</p>
+<h3 id="研究局限与未来方向">研究局限与未来方向</h3>
+<p>作者坦承了研究的若干局限:</p>
+<p>首先,研究仅基于瑞典一国数据,其结论的可推广性需要进一步验证.瑞典是高度发达的均质社会,有着独特的制度传统,其经验可能不完全适用于其他国家.</p>
+<p>其次,研究主要关注市级和国家级议员,未能充分分析基层政治参与和公民进入政治的早期决策过程.</p>
+<p>第三,研究描述了包容性精英政治的现象和实现机制,但未能完全揭示为何瑞典能够建立这样的制度安排.</p>
+<hr>
+<h2 id="未来研究方向">未来研究方向</h2>
+<h3 id="文献中提及的未来研究方向">文献中提及的未来研究方向</h3>
+<p>作者在论文结尾简要提及了几个值得进一步探索的方向:</p>
+<p><strong>跨国比较研究.</strong>
+瑞典的经验需要在其他国家和制度环境中进行验证.不同选举制度(多数制vs比例代表制)、不同政党体系(两党制vs多党制)、不同发展阶段(发展中国家vs发达国家)的政治选拔模式可能存在显著差异.</p>
+<p><strong>包容性精英政治的形成机制.</strong>
+本文主要描述了现象和相关性证据,但对因果机制的揭示尚不充分.未来的研究需要更深入地分析政党筛选规则、选举制度设计、薪酬激励等制度因素如何共同作用产生包容性精英政治.</p>
+<p><strong>长期动态分析.</strong>
+政治精英的更替模式如何影响政策结果?不同世代政治家的能力分布和社会背景分布是否存在历史演变?</p>
+<h3 id="基于本文思考的下一步研究工作">基于本文思考的下一步研究工作</h3>
+<p>除了作者提及的方向,本文还启发我们思考以下问题:</p>
+<p><strong>第一,文化与价值观的作用.</strong>
+瑞典的"福利国家共识"和"劳资合作"传统是否塑造了公民参与政治的动机?如果内在动机(服务公共利益)是吸引高能力者进入政治的重要因素,那么如何培养这种公民价值观?</p>
+<p><strong>第二,性别代表性的系统性分析.</strong>
+本文坦承,女性和移民在瑞典政治中代表性不足.本文主要分析了基于能力和阶级的选拔,但性别和族裔维度的代表性同样重要.未来的研究需要将多维度代表性与能力选拔纳入统一分析框架.</p>
+<p><strong>第三,技术变革对政治人才吸引力的影响.</strong>
+随着私人部门(特别是科技行业)的收入潜力持续上升,政治职位的相对吸引力是否发生变化?这对包容性精英政治的未来可持续性有何启示?</p>
+<p><strong>第四,媒体与信息环境的作用.</strong>
+在社交媒体时代,政治人物的曝光度和公众监督程度发生变化.这是否会影响高能力者进入政治的意愿?信息传播模式的变化如何影响选民识别和选拔优质政治家的能力?</p>
+<p><strong>第五,政党内部民主与选拔机制改革.</strong>
+各国政党正在尝试不同的候选人选拔规则改革(如初选、全民投票等).这些改革如何影响政治选拔的质量和包容性?制度设计如何平衡民主参与与专业筛选?</p>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<p>基于本文对"谁成为政治家"问题的深度剖析,以下问题值得进一步探讨:</p>
+<p><strong>关于民主与精英的矛盾统一:</strong></p>
+<p>民主理论长期面临一个根本张力:民主强调平等参与,但有效的治理需要专业能力.当我们说"民主应该选贤任能"时,是否已经背离了民主的平等主义精神?"包容性精英政治"究竟是民主的完善还是民主的异化?</p>
+<p><strong>关于能力度量的哲学问题:</strong></p>
+<p>本文使用认知测试、领导力评估和收入残差来度量"能力".但这些度量是否真正捕捉了政治成功所需的能力?智商高是否意味着更好的政策判断?领导力测试评估的心理特质与政治领导效能之间的关联强度如何?收入残差在多大程度上反映能力而非运气或歧视?</p>
+<p><strong>关于机会成本的重新审视:</strong></p>
+<p>作者解释了为何高能力政治家尽管机会成本高仍然进入政治_高薪酬和内在动机补偿了机会成本.但这是否意味着,只有在政治家薪酬足够高的国家才能实现包容性精英政治?这是否会导致"政治金钱化"_只有富人和高薪阶层愿意从政?</p>
+<p><strong>关于代表性统计均衡的深层含义:</strong></p>
+<p>如果政治家社会背景分布与人口分布"几乎相同",这究竟意味着什么?是机会均等的结果,还是统计上必然出现的现象(当样本足够大时,任何选拔方式都会复制总体分布)?形式上的均衡是否掩盖了实质上的权力不平等?</p>
+<p><strong>关于瑞典模式的普遍适用性:</strong></p>
+<p>瑞典的包容性精英政治是其特定历史条件(均质社会、福利国家传统、劳资合作主义)的产物还是可移植的制度设计?发展中国家或高度分化的社会是否也能建立类似的包容性选拔机制?</p>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<p>基于论文内容和上述分析,以下是用户接下来可能问的问题:</p>
+<ol type="1">
+<li><p><strong>瑞典的包容性精英政治是如何形成的?</strong>
+是否与特定的历史传统、政党制度或选举规则有关?</p></li>
+<li><p><strong>如何将瑞典的经验应用到其他国家?</strong>
+不同政治制度下实现包容性精英政治需要什么条件?</p></li>
+<li><p><strong>女性的代表性如何?</strong>
+本文指出女性在政治家中比例偏低,这是否与包容性精英政治的模式相矛盾?</p></li>
+<li><p><strong>为什么来自低社会阶层的能力突出者反而选拔程度更高?</strong>
+这是否意味着存在某种"双重标准"或补偿机制?</p></li>
+<li><p><strong>现代社交媒体时代如何影响政治选拔?</strong>
+信息传播方式的变化是否会影响高能力者进入政治的意愿?</p></li>
+<li><p><strong>政党的筛选机制具体如何运作?</strong>
+党内提名和晋升过程中,哪些因素最重要?</p></li>
+<li><p><strong>本文的研究方法对其他国家的政治经济学研究有何启示?</strong>
+数据限制如何克服?</p></li>
+<li><p><strong>如果机会成本和搭便车问题确实存在,为何瑞典仍能实现正向选择?</strong>
+哪些制度或文化因素是关键?</p></li>
+</ol>
+<hr>
+<h2 id="参考文献">参考文献</h2>
+<h3 id="主要引用">主要引用</h3>
+<ul>
+<li>Besley, T., &amp; Coate, S. (1997). A Model of Racial Trust and
+Mistrust. American Economic Review.</li>
+<li>Besley, T., &amp; Reynal-Querol, M. (2011). Do Voters Select
+Politicians Who Are More Competent? Evidence from Heroes and
+Martyrs.</li>
+<li>Caselli, F., &amp; Morelli, M. (2004). Bad Politicians. Journal of
+Public Economics.</li>
+<li>Dal Bó, E., Dal Bó, P., &amp; Snyder, J. (2009). The Political
+Economy of Legislation. Unpublished.</li>
+<li>Ferraz, C., &amp; Finan, F. (2009). Motivating Politicians: The
+Impact of Electoral Incentives on Performance. American Economic
+Journal.</li>
+<li>Messner, M., &amp; Polborn, M. (2004). The Option to Wait in
+Collective Elections. Journal of Economic Theory.</li>
+<li>Olson, M. (1965). The Logic of Collective Action. Harvard University
+Press.</li>
+<li>Osborne, M., &amp; Slivinski, A. (1996). A Model of Political
+Competition with Citizen-Candidates. Quarterly Journal of
+Economics.</li>
+<li>Persson, T., &amp; Tabellini, G. (2003). The Economic Effects of
+Constitutions. MIT Press.</li>
+<li>Powell, G. (2000). Elections as Instruments of Democracy. Yale
+University Press.</li>
+</ul>
+<h3 id="数据来源">数据来源</h3>
+<ul>
+<li>Besley et al. (2016). The Earnings and Leadership of Politicians.
+Unpublished.</li>
+<li>Statistics Sweden (Various Years). Swedish administrative
+registers.</li>
+<li>Swedish Defense Recruitment Agency (Various Years). Military
+enlistment tests.</li>
+</ul>
+<hr>
+<p><em>本笔记由 AI 生成,深度分析了&lt;Who Becomes A
+Politician?&gt;一文的核心内容、理论框架、实证发现和学术贡献.生成时间:2026年4月10日.</em></p>
+]]></content>
+      <categories>
+        <category>政治经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>政治经济学</tag>
+        <tag>政治选拔</tag>
+        <tag>民主理论</tag>
       </tags>
   </entry>
   <entry>
@@ -1832,301 +2127,6 @@ Doyle
         <tag>儿童福利</tag>
         <tag>犯罪经济学</tag>
         <tag>因果推断</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Who Becomes a Politician? 深度阅读笔记 — Dal Bó, Finan, Folke, Persson &amp; Rickne</title>
-    <url>/posts/dalbo2017/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Who Becomes A Politician?</li>
-<li><strong>作者</strong>: Ernesto Dal Bó, Frederico Finan, Olle Folke,
-Torsten Persson, Johanna Rickne</li>
-<li><strong>类型</strong>: 论文笔记 / 政治经济学 / 民主理论</li>
-<li><strong>出版年份</strong>: 2017</li>
-<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics,
-Vol. 132, No. 4, pp. 1877-1914</li>
-<li><strong>DOI</strong>: 10.1093/qje/qjx016</li>
-<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、政治学基础
-<span id="more"></span> ---</li>
-</ul>
-<h2 id="引言背景和意义">引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>政治选拔(Political
-Selection)是政治经济学中的一个核心议题,涉及如何筛选和确定谁来担任公职.这一研究领域与政治科学中的代议制民主理论、公共选择理论以及劳动经济学中的人力资本理论密切相关.</p>
-<p>在传统政治经济学框架下,政治家被视为政策的"代理人",其行为会影响政策选择、执行效果以及利益分配.研究者关注的焦点在于:民主制度是否能够有效地将具有能力和品格的人才选拔到领导岗位,同时确保这些领导者能够代表广泛的社会利益.</p>
-<p>政治选拔研究的重要性体现在以下几个方面:</p>
-<p>第一,政策质量与执行效果直接取决于执政者的能力.正如本文所指出的,"政治家的身份会影响政策的选择、执行方式以及受益者".无论是在专制政体还是民主政体中,这一规律都成立.区别在于,专制政体下统治者的能力差异会导致完全不同的政策后果,而在民主政体下,由于选举机制的存在,选民可以通过定期选举来约束政治家的行为.</p>
-<p>第二,人力资本理论为理解政治选拔提供了重要的分析框架.根据这一理论,个人的教育水平、认知能力和非认知技能(如果领导力、人格特质)会影响其生产率和收入潜力.在劳动力市场中,这些特质决定了个人能获取多少收入和职业发展机会.政治领域作为劳动力市场的一个特殊部门,同样需要吸引和筛选具备特定能力的人才.</p>
-<p>第三,社会代表性问题涉及民主制度的合法性和公平性.民主理论强调"人民主权"原则,即政治决策应该反映人民的意志.然而,如果政治精英主要来自特定的社会阶层,可能会导致政策偏离其他社会群体的利益,形成所谓的"精英统治"问题.</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p>本文的研究背景可以从理论和现实两个层面来理解:</p>
-<p><strong>理论背景方面</strong>,政治经济学领域存在两种对立的观点.一种观点认为民主制度难以吸引优秀人才.Caselli和Morelli(2004)的职业选择模型指出,能力强的人通常拥有更高的私人收入和更广阔的职业发展前景,因此进入政界的"机会成本"较高.与此相反,能力较弱的人在私人部门的收入前景较差,进入政界的机会成本也较低,在职业选择上反而具有比较优势.此外,Messner和Polborn(2004)基于Olson(1965)的集体行动理论提出,公民存在"搭便车"倾向_希望享受好政治结果但不愿付出个人努力_这种心理会削弱对政治家的监督,使能力较低者更容易当选.</p>
-<p>另一种观点则强调民主制度具有自我纠错能力.Besley和Coate(1997)建立的民主问责模型表明,选举机制可以激励有能力的人参选并做出正确决策.Pande(2003)的研究也表明,在特定条件下,民主选拔机制能够识别和重用有能力的人才.</p>
-<p><strong>现实背景方面</strong>,世界各地确实存在一些政治领导人能力不足或代表性失衡的现象.一些研究(如Jones和Olken,2005)发现,国家领导人的能力与经济增长之间存在显著关联_能力强的领导人执政期间经济增长更快.同时,关于政治代表性不足的问题也引发了广泛关注_女性、少数族裔、低收入群体在政治代表中的比例往往偏低.</p>
-<p>在这样的理论争论和现实观察基础上,本文提出一个核心问题:<strong>民主能否在吸引称职领导人的同时,实现广泛的社会代表性?</strong>
-这两个目标之间是否存在不可调和的矛盾?</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p>本文作者的问题意识体现在以下几个层面:</p>
-<p><strong>第一层:挑战传统理论预测.</strong>
-标准经济模型预测,由于机会成本和搭便车效应,民主制度会出现"逆向选择"_能力较弱的人反而更容易进入政治领域.但作者认为这一预测需要实证检验,因为模型假设可能与现实不符.</p>
-<p><strong>第二层:突破数据局限.</strong>
-以往研究面临三重数据限制:缺乏候选人和非候选人信息(只能研究当选者);依赖教育或收入等间接能力指标;缺乏可靠的社会背景代际数据.作者利用瑞典独特的行政数据克服了这些局限.</p>
-<p><strong>第三层:识别"包容性精英政治"模式.</strong>
-在一个能力与社会经济地位正相关的世界中,作者希望区分三种可能的政治选拔模式:精英主义(精英家族垄断政治权力)、排他性精英政治(政治选择有能力的人,但这些人恰好来自精英家庭,结果是"偶然的"精英化)、包容性精英政治(政治从各社会阶层选拔有能力的人).</p>
-<p><strong>第四层:解释包容性精英政治的实现机制.</strong>
-如果观察到包容性精英政治确实存在,还需要解释其背后的机制_为何能力出众者来自各社会阶层?政党和个人选择如何相互作用?</p>
-<h3 id="研究意义">研究意义</h3>
-<p>本文的研究意义可以从学术贡献、政策启示和方法论创新三个维度来理解:</p>
-<p><strong>学术贡献方面</strong>,本文是对政治选拔文献的重要推进.以往研究由于数据限制,只能使用教育或收入作为能力的代理变量,或者只能分析当选政治家的特征而无法考察候选人群体的选择过程.本文使用了四种能力度量(认知得分、领导力得分、教育年限、收入得分)和详细的社会背景数据,首次对政治选拔进行了全面描述.</p>
-<p>此外,本文的理论框架具有重要的概念创新.作者提出的"包容性精英政治"概念,巧妙地调和了"能力选拔"与"社会代表性"之间的表面矛盾,表明两者并非必然对立,在特定制度条件下可以实现兼容.</p>
-<p><strong>政策启示方面</strong>,本文的发现对民主制度的评价具有重要含义.如果瑞典等成熟民主国家确实能够实现包容性精英政治,那么关于"民主必然导致庸人治国"或"民主无法实现公平代表"的论断就需要重新审视.这一发现也为其他国家推动政治改革提供了可借鉴的制度经验.</p>
-<p><strong>方法论创新方面</strong>,本文展示了如何利用行政数据进行高质量的政治经济学研究.瑞典独特的"多代登记系统"和军事征兵测试数据,为研究提供了精确的能力度量和社会背景信息.这种数据驱动的实证方法为后续研究树立了标杆.</p>
-<hr>
-<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
-<p>本文采用标准的实证研究论文结构,共分为七个主要部分和一个在线附录:</p>
-<p><strong>第一节:引言(Introduction)</strong></p>
-<p>引言部分系统阐述了研究问题、背景和主要发现.作者首先指出政治身份对政策结果的重要影响,然后提出核心研究问题:民主能否同时实现能力选拔和广泛代表性?接着,作者回顾了三类数据局限(候选人信息、代理能力指标、社会代表数据),说明本文如何克服这些局限.最后,作者预告了四个主要发现,它们共同描绘了瑞典的"包容性精英政治"模式.</p>
-<p><strong>第二节:背景(Background)</strong></p>
-<p>这一部分介绍了瑞典政治制度的基本框架,为理解研究背景提供必要的制度语境.具体包括:</p>
-<ul>
-<li>瑞典的三级选举制度(市政、省级、全国)和比例代表制</li>
-<li>议会议员(MPs)的角色和选拔方式</li>
-<li>市政治理结构_市议会和市长</li>
-<li>地方政治参与的激励结构_兼职政治家传统</li>
-</ul>
-<p><strong>第三节:数据(Data)</strong></p>
-<p>数据部分是本文实证研究的基础.作者详细介绍了数据来源、变量构建和样本定义:</p>
-<ul>
-<li>数据来源:瑞典统计局、各种行政登记系统、瑞典国防招募局</li>
-<li>四种能力度量:认知得分(IQ)、领导力得分(1-9分)、教育年限、收入得分(Mincer残差)</li>
-<li>社会背景数据:父母收入、职业类别</li>
-<li>样本范围:1982-2010年间的候选人,当选者和公职人员</li>
-</ul>
-<p><strong>第四节:能力(Competence)</strong></p>
-<p>这一节呈现了关于政治选拔能力的核心实证结果.主要发现包括:</p>
-<ul>
-<li>政治家在各能力维度上均呈现正向选择</li>
-<li>从提名者→当选者→市长→议员,选择强度递增</li>
-<li>即使控制机会成本差异,正向选择仍然存在</li>
-</ul>
-<p><strong>第五节:社会背景与包容性(Social Background and
-Inclusiveness)</strong></p>
-<p>这一节探讨社会背景与能力选拔的关系,以识别三种可能的政治选拔模式:</p>
-<ul>
-<li>比较政治家与其同胞兄弟姐妹的能力</li>
-<li>考察政治家父母的社会背景分布</li>
-<li>区分"精英主义"、"排他性精英政治"和"包容性精英政治"</li>
-</ul>
-<p><strong>第六节:包容性精英政治的实现机制(Mechanisms)</strong></p>
-<p>这一节探讨为何包容性精英政治能够实现:</p>
-<ul>
-<li>能力虽与社会阶层正相关,但来自低阶层的能力突出者也被选拔</li>
-<li>政党筛选机制:政党倾向于提拔更有能力的人</li>
-<li>个人自选择机制:货币激励和内在动机共同作用</li>
-</ul>
-<p><strong>第七节:结论(Conclusion)</strong></p>
-<p>总结研究发现,讨论政策含义和未来研究方向.</p>
-<hr>
-<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
-<h3 id="一背景理论预期与现实困惑">一、背景:理论预期与现实困惑</h3>
-<p>政治选拔研究的起点是理解为什么某些人成为政治家而其他人则不然.传统经济理论提供了两种相互关联的机制来解释政治选拔模式.</p>
-<p><strong>职业选择模型的理论预测.</strong>
-Caselli和Morelli(2004)的标准职业选择模型提出了一个令人担忧的预测:在其他条件相同的情况下,能力较强的人往往拥有更高的私人收入和更广阔的职业发展前景.这意味着他们进入政治领域的"机会成本"较高_放弃的潜在收入和职业发展损失较大.相比之下,能力较弱的人机会成本较低,在职业选择上反而具有比较优势.因此,理论预测民主制度会出现"逆向选择"_政界充斥着能力不足的人,而最优秀的人才留在私人部门.</p>
-<p><strong>集体行动理论的补充解释.</strong>
-Messner和Polborn(2004)基于Olson(1965)的集体行动理论指出,公民存在"搭便车"倾向.在政治领域,许多公民希望享受良好治理带来的好处,但不愿意付出个人努力参与政治(如研究候选人信息、参加政治活动等).这种监督缺失使得能力较低的候选人更容易当选,因为他们不需要证明自己具备真正的能力.</p>
-<p><strong>能力分布与社会代表性的潜在冲突.</strong>
-即使民主制度能够选拔有能力的人,如果能力在社会群体中分布不均(如精英阶层平均拥有更多人的人力资本),那么基于能力的选拔可能导致代表性失衡.这意味着追求"选贤任能"可能与"广泛代表"之间存在权衡(trade-off).</p>
-<p>然而,现实中的政治选拔模式是否符合这些理论预测?作者认为,由于数据限制,这一问题尚未得到充分研究.现有研究主要依赖教育或收入作为能力的代理变量,这些指标同时反映了社会阶层的影响;而且以往研究只能分析当选政治家,无法考察候选人和非候选人群体.</p>
-<h3 id="二瑞典实验制度背景与数据优势">二、瑞典实验:制度背景与数据优势</h3>
-<p><strong>为什么选择瑞典?</strong>
-作者选择瑞典作为研究案例,基于以下考虑:</p>
-<p>首先,瑞典是典型的发达民主国家,政体稳定(Polity-IV评分连续百年满分),是许多国家制度发展的参照系.如果这样一个成熟民主国家出现代表性失衡或能力不足问题,民主制度的倡导者就需要寻找其他辩护理由.</p>
-<p>其次,瑞典实行比例代表制,这是世界上最普遍的选举制度.研究瑞典的经验可以为理解比例代表制下的政治选拔提供洞见.</p>
-<p>第三,瑞典的兼职政治家传统(leisure
-politicians)提供了一个独特的自然实验_大多数市议员只获得微薄的会议补贴,而非全职薪酬.这与许多国家的职业政治家形成对比,有助于理解不同激励结构对政治选拔的影响.</p>
-<p><strong>数据优势:四维能力度量与代际信息.</strong>
-本文使用的数据集包含四种能力度量:</p>
-<p><em>认知得分</em>来自瑞典国防招募局的军事征兵测试.这是一项针对18-19岁男性的标准化测试,评估解决问题、归纳推理、数值理解、言语理解、空间理解和技术理解能力.测试结果采用1-9分的标准九分制(stanine),可视为IQ得分.由于测试结果影响服役分配且应试者不知晓精确分数,数据质量较高.</p>
-<p><em>领导力得分</em>同样来自军事征兵程序.通过半结构化访谈评估潜在军事领袖的心理特质,包括社会成熟度、心理能量、强度和情绪稳定性.这些特质与"大五人格特质"(外向性、尽责性、开放性、宜人性和神经质)密切相关.只有认知得分达到5分以上的男性才进入领导力评估.</p>
-<p><em>教育年限</em>来自瑞典学校和大学的教育记录,涵盖正规教育年限.</p>
-<p><em>收入得分</em>采用Besley等(2016)开发的方法,从Mincer收入方程中提取残差.具体而言,估算包含年龄、教育、就业部门和
-municipality fixed
-effects的Mincer方程,残差代表控制这些因素后的"超额收入能力".为排除政治就业的反向因果,担任公职期间的观测值被剔除.</p>
-<p><strong>社会背景数据</strong>包括:父母收入(来自税务记录)和父母职业类别(来自人口普查和雇主登记).利用"多代登记系统"可以识别兄弟姐妹,从而进行家族内比较.</p>
-<h3 id="三核心发现一正向选择_政治家远比普通人更有能力">三、核心发现一:正向选择_政治家远比普通人更有能力</h3>
-<p>本文最引人注目的发现之一是,瑞典政治家在各能力维度上均呈现显著的正向选择_他们远比所代表的民众更有能力.</p>
-<p><strong>认知能力的正向选择.</strong>
-军事征兵测试数据显示,政治家群体的认知得分显著高于普通人群.市长认知得分比普通男性高1.3分(约0.68个标准差),议员认知得分更高约1.6分(约0.84个标准差).值得注意的是,这种正向选择呈现清晰的层级递进模式:提名但未当选者→普通当选者→市长→议员,认知能力逐步升高.</p>
-<p><strong>领导力评分的正向选择.</strong>
-领导力得分呈现类似的模式.普通男性平均领导力得分为5.3,而市长平均得分为6.5(约0.7个标准差),议员平均得分为6.8(约0.88个标准差).提名者得分略高于普通人但低于当选者,表明筛选过程逐步提升质量.</p>
-<p><strong>教育和收入的优势.</strong>
-政治家平均受教育年限为13.1年(普通人口为11.7年),收入得分也显著为正(当选者约0.55个标准差,市长约0.97个标准差,议员约1.33个标准差).</p>
-<p><strong>机会成本悖论的解释.</strong>
-传统理论预测,高能力意味着高机会成本,应导致逆向选择.但本文发现,即使政治家在任职前收入显著高于普通人(这意味着机会成本更高),正向选择仍然存在.作者通过区分"绝对机会成本"和"边际机会成本"来解释这一悖论:对于最优秀的人才,尽管绝对收入较高,但政治职位提供的非货币收益(如权力、声望、内在满足感)和相对收入优势可能足以补偿机会成本.</p>
-<h3 id="四核心发现二能力而非出身_家族内比较的证据">四、核心发现二:能力而非出身_家族内比较的证据</h3>
-<p>仅发现政治家平均能力较高是不够的_这可能反映精英阶层垄断政治权力,而非真正的能力选拔.为了区分"精英主义"和"精英政治",作者进行了家族内比较.</p>
-<p><strong>兄弟姐妹比较设计.</strong>
-作者识别出有政治家兄弟姐妹的个体,比较这些兄弟姐妹中成为政治家者与非成为政治家者的能力差异.这种比较方法可以控制家庭背景因素的影响_如果成为政治家主要由家庭背景决定,兄弟姐妹的能力应该相似.</p>
-<p><strong>关键发现:家族内同样存在正向选择.</strong>
-分析结果显示,即使在同一家庭内部,后来成为政治家的人认知得分仍显著高于未成为政治家的兄弟姐妹.具体而言,兄弟姐妹中成为议员者的认知得分比未成为议员者高出约0.3-0.5个标准差.这一发现表明,政治选拔主要基于个人能力,而非家庭出身.</p>
-<p><strong>排除纯精英主义.</strong>
-这一发现有力地排除了"纯精英主义"解释.如果政治仅由精英家族垄断,进入政治应该与个人能力无关,而主要取决于出身.但家族内比较显示,能力是决定性因素.因此,瑞典政治选拔属于某种形式的"精英政治"_但这是什么样的精英政治?</p>
-<h3 id="五核心发现三包容性_政治家父母的社会背景分布均衡">五、核心发现三:包容性_政治家父母的社会背景分布均衡</h3>
-<p>为了进一步区分"排他性精英政治"和"包容性精英政治",作者考察了政治家的社会背景.</p>
-<p><strong>测量社会背景的两个维度.</strong>
-作者使用两个指标衡量社会背景:父母收入(特别是父亲收入)和父母职业类别(区分体力劳动vs白领).这些是社会学中衡量社会阶层的传统指标.</p>
-<p><strong>惊人发现:政治家父母背景分布接近人口总体.</strong>
-无论是用父母收入十分位组还是职业类别衡量,政治家群体的父母社会背景分布几乎完美地复制了瑞典总人口的社会背景分布.这意味着,尽管政治家本人平均来自较高收入家庭(这反映正向选择),但他们的父母并非集中在精英阶层.</p>
-<p><strong>跨政党分析.</strong>
-作者进一步分析了不同政党提名的政治家社会背景差异.左翼政党(社会民主党)提名的政治家父母收入略低于右翼政党(温和党),但差异很小,各政党都在各收入阶层有代表.这种模式表明,代表性机制(各政党代表不同社会阶层)与能力选拔并行不悖.</p>
-<h3 id="六核心发现四弱权衡_为何能力与代表性可以兼容">六、核心发现四:弱权衡_为何能力与代表性可以兼容</h3>
-<p>传统理论担心,能力选拔与社会代表性之间存在权衡:如果高能力者集中于精英阶层,选择最有能力的人将损害代表性.但本文发现,这一权衡在瑞典非常微弱.</p>
-<p><strong>低阶层出身者的极端正向选择.</strong>
-关键在于,来自较低社会经济地位家庭的政治家,其个人能力选拔程度甚至更高.换言之,出身低阶层却能成为政治家的人,必须是能力极为突出者_否则他们无法克服结构性障碍进入政治.相比之下,高阶层出身者成为政治家所需的能力门槛可能较低,因为他们的家庭资源和社会网络提供了额外支持.</p>
-<p><strong>数量与质量的互补.</strong>
-来自低阶层的政治家人数较少,但质量极高;来自高阶层的政治家人数较多,但质量相对(相对于该阶层的能力分布)略低.两种效应相互抵消,使得总体权衡微弱.</p>
-<h3 id="七机制分析包容性精英政治如何运作">七、机制分析:包容性精英政治如何运作</h3>
-<p><strong>政党筛选机制.</strong>
-作者提供了政党如何促进包容性精英政治的证据.分析表明,政党在筛选候选人时存在正向选择_无论社会背景如何,能力更强的候选人更可能获得党内提名并晋升到更高职位.特别是,各政党倾向于将最有能力的候选人放在选举名单的优先位置,而非完全按照资历或派系平衡.</p>
-<p><strong>个人自选择机制.</strong>
-对于个人而言,货币激励和内在动机共同影响政治参与决策.实证分析表明:</p>
-<ul>
-<li>对于有能力的潜在候选人,高收入确实提高了进入政治的门槛(机会成本效应)</li>
-<li>但对于全职政治职位(如市长),其薪酬处于收入分布的前5%,足以吸引高能力者</li>
-<li>内在动机(对政策的兴趣、服务社会的愿望)对政治参与也有重要影响</li>
-</ul>
-<p><strong>制度环境的支持作用.</strong>
-瑞典的一些制度特征可能促进了包容性精英政治:比例代表制为不同社会背景的候选人提供机会;全职政治家的高薪酬解决了高能力者的激励问题;强大的政党纪律和筛选机制确保质量控制.</p>
-<hr>
-<h2 id="结论conclusion">结论(Conclusion)</h2>
-<h3 id="核心结论总结">核心结论总结</h3>
-<p>本文利用瑞典丰富的行政数据,系统研究了政治选拔的模式和机制.研究的核心发现可概括为四个字:<strong>包容性精英政治</strong>(Inclusive
-Meritocracy).</p>
-<p>具体而言,本文证明了四个关键事实:</p>
-<p><strong>第一,政治家是精选的.</strong>
-与理论预测的"逆向选择"相反,瑞典政治家平均而言远比所代表的民众更有能力_认知得分、领导力得分、教育年限和收入能力均显著高于人口平均水平.这种正向选择在从提名到市长再到议员的晋升阶梯上逐步增强.</p>
-<p><strong>第二,选择基于能力,而非出身.</strong>
-即使控制家庭背景因素,政治家仍然表现出正向选择.兄弟姐妹比较表明,在同一家庭内部,成为政治家者能力显著高于未成为政治家者.这排除了"纯精英主义"解释,确认个人能力是关键因素.</p>
-<p><strong>第三,社会代表性与能力选拔并行不悖.</strong>
-尽管瑞典政治家平均能力较高,但他们的社会背景分布几乎完美复制了人口的社会背景分布.来自各收入阶层和职业背景家庭的人都有机会成为政治家.</p>
-<p><strong>第四,能力与代表性之间的权衡微弱.</strong>
-这一发现的关键解释在于,来自较低社会阶层却能成为政治家的人,其能力选拔程度反而更高_他们必须极为出色才能克服结构性障碍.</p>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<p>本文对政治经济学领域做出了多方面贡献:</p>
-<p><strong>理论层面</strong>,本文挑战了政治选拔必然导致逆向选择的悲观论断,揭示了在特定制度条件下(瑞典的比例代表制、高薪酬全职职位、强势政党筛选),民主制度可以实现"包容性精英政治"_同时实现能力选拔和社会代表性.</p>
-<p><strong>实证层面</strong>,本文克服了政治选拔研究的三大数据限制,首次使用直接能力度量(认知测试、领导力评估)和代际社会背景数据,对政治选拔进行了全面描述.</p>
-<p><strong>政策层面</strong>,本文的发现对民主制度评价具有重要含义.如果成熟民主国家(如瑞典)确实能够实现包容性精英政治,那么关于"民主制度无法吸引优秀人才或必然导致代表性失衡"的论断就需要重新审视.</p>
-<h3 id="研究局限与未来方向">研究局限与未来方向</h3>
-<p>作者坦承了研究的若干局限:</p>
-<p>首先,研究仅基于瑞典一国数据,其结论的可推广性需要进一步验证.瑞典是高度发达的均质社会,有着独特的制度传统,其经验可能不完全适用于其他国家.</p>
-<p>其次,研究主要关注市级和国家级议员,未能充分分析基层政治参与和公民进入政治的早期决策过程.</p>
-<p>第三,研究描述了包容性精英政治的现象和实现机制,但未能完全揭示为何瑞典能够建立这样的制度安排.</p>
-<hr>
-<h2 id="未来研究方向">未来研究方向</h2>
-<h3 id="文献中提及的未来研究方向">文献中提及的未来研究方向</h3>
-<p>作者在论文结尾简要提及了几个值得进一步探索的方向:</p>
-<p><strong>跨国比较研究.</strong>
-瑞典的经验需要在其他国家和制度环境中进行验证.不同选举制度(多数制vs比例代表制)、不同政党体系(两党制vs多党制)、不同发展阶段(发展中国家vs发达国家)的政治选拔模式可能存在显著差异.</p>
-<p><strong>包容性精英政治的形成机制.</strong>
-本文主要描述了现象和相关性证据,但对因果机制的揭示尚不充分.未来的研究需要更深入地分析政党筛选规则、选举制度设计、薪酬激励等制度因素如何共同作用产生包容性精英政治.</p>
-<p><strong>长期动态分析.</strong>
-政治精英的更替模式如何影响政策结果?不同世代政治家的能力分布和社会背景分布是否存在历史演变?</p>
-<h3 id="基于本文思考的下一步研究工作">基于本文思考的下一步研究工作</h3>
-<p>除了作者提及的方向,本文还启发我们思考以下问题:</p>
-<p><strong>第一,文化与价值观的作用.</strong>
-瑞典的"福利国家共识"和"劳资合作"传统是否塑造了公民参与政治的动机?如果内在动机(服务公共利益)是吸引高能力者进入政治的重要因素,那么如何培养这种公民价值观?</p>
-<p><strong>第二,性别代表性的系统性分析.</strong>
-本文坦承,女性和移民在瑞典政治中代表性不足.本文主要分析了基于能力和阶级的选拔,但性别和族裔维度的代表性同样重要.未来的研究需要将多维度代表性与能力选拔纳入统一分析框架.</p>
-<p><strong>第三,技术变革对政治人才吸引力的影响.</strong>
-随着私人部门(特别是科技行业)的收入潜力持续上升,政治职位的相对吸引力是否发生变化?这对包容性精英政治的未来可持续性有何启示?</p>
-<p><strong>第四,媒体与信息环境的作用.</strong>
-在社交媒体时代,政治人物的曝光度和公众监督程度发生变化.这是否会影响高能力者进入政治的意愿?信息传播模式的变化如何影响选民识别和选拔优质政治家的能力?</p>
-<p><strong>第五,政党内部民主与选拔机制改革.</strong>
-各国政党正在尝试不同的候选人选拔规则改革(如初选、全民投票等).这些改革如何影响政治选拔的质量和包容性?制度设计如何平衡民主参与与专业筛选?</p>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<p>基于本文对"谁成为政治家"问题的深度剖析,以下问题值得进一步探讨:</p>
-<p><strong>关于民主与精英的矛盾统一:</strong></p>
-<p>民主理论长期面临一个根本张力:民主强调平等参与,但有效的治理需要专业能力.当我们说"民主应该选贤任能"时,是否已经背离了民主的平等主义精神?"包容性精英政治"究竟是民主的完善还是民主的异化?</p>
-<p><strong>关于能力度量的哲学问题:</strong></p>
-<p>本文使用认知测试、领导力评估和收入残差来度量"能力".但这些度量是否真正捕捉了政治成功所需的能力?智商高是否意味着更好的政策判断?领导力测试评估的心理特质与政治领导效能之间的关联强度如何?收入残差在多大程度上反映能力而非运气或歧视?</p>
-<p><strong>关于机会成本的重新审视:</strong></p>
-<p>作者解释了为何高能力政治家尽管机会成本高仍然进入政治_高薪酬和内在动机补偿了机会成本.但这是否意味着,只有在政治家薪酬足够高的国家才能实现包容性精英政治?这是否会导致"政治金钱化"_只有富人和高薪阶层愿意从政?</p>
-<p><strong>关于代表性统计均衡的深层含义:</strong></p>
-<p>如果政治家社会背景分布与人口分布"几乎相同",这究竟意味着什么?是机会均等的结果,还是统计上必然出现的现象(当样本足够大时,任何选拔方式都会复制总体分布)?形式上的均衡是否掩盖了实质上的权力不平等?</p>
-<p><strong>关于瑞典模式的普遍适用性:</strong></p>
-<p>瑞典的包容性精英政治是其特定历史条件(均质社会、福利国家传统、劳资合作主义)的产物还是可移植的制度设计?发展中国家或高度分化的社会是否也能建立类似的包容性选拔机制?</p>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<p>基于论文内容和上述分析,以下是用户接下来可能问的问题:</p>
-<ol type="1">
-<li><p><strong>瑞典的包容性精英政治是如何形成的?</strong>
-是否与特定的历史传统、政党制度或选举规则有关?</p></li>
-<li><p><strong>如何将瑞典的经验应用到其他国家?</strong>
-不同政治制度下实现包容性精英政治需要什么条件?</p></li>
-<li><p><strong>女性的代表性如何?</strong>
-本文指出女性在政治家中比例偏低,这是否与包容性精英政治的模式相矛盾?</p></li>
-<li><p><strong>为什么来自低社会阶层的能力突出者反而选拔程度更高?</strong>
-这是否意味着存在某种"双重标准"或补偿机制?</p></li>
-<li><p><strong>现代社交媒体时代如何影响政治选拔?</strong>
-信息传播方式的变化是否会影响高能力者进入政治的意愿?</p></li>
-<li><p><strong>政党的筛选机制具体如何运作?</strong>
-党内提名和晋升过程中,哪些因素最重要?</p></li>
-<li><p><strong>本文的研究方法对其他国家的政治经济学研究有何启示?</strong>
-数据限制如何克服?</p></li>
-<li><p><strong>如果机会成本和搭便车问题确实存在,为何瑞典仍能实现正向选择?</strong>
-哪些制度或文化因素是关键?</p></li>
-</ol>
-<hr>
-<h2 id="参考文献">参考文献</h2>
-<h3 id="主要引用">主要引用</h3>
-<ul>
-<li>Besley, T., &amp; Coate, S. (1997). A Model of Racial Trust and
-Mistrust. American Economic Review.</li>
-<li>Besley, T., &amp; Reynal-Querol, M. (2011). Do Voters Select
-Politicians Who Are More Competent? Evidence from Heroes and
-Martyrs.</li>
-<li>Caselli, F., &amp; Morelli, M. (2004). Bad Politicians. Journal of
-Public Economics.</li>
-<li>Dal Bó, E., Dal Bó, P., &amp; Snyder, J. (2009). The Political
-Economy of Legislation. Unpublished.</li>
-<li>Ferraz, C., &amp; Finan, F. (2009). Motivating Politicians: The
-Impact of Electoral Incentives on Performance. American Economic
-Journal.</li>
-<li>Messner, M., &amp; Polborn, M. (2004). The Option to Wait in
-Collective Elections. Journal of Economic Theory.</li>
-<li>Olson, M. (1965). The Logic of Collective Action. Harvard University
-Press.</li>
-<li>Osborne, M., &amp; Slivinski, A. (1996). A Model of Political
-Competition with Citizen-Candidates. Quarterly Journal of
-Economics.</li>
-<li>Persson, T., &amp; Tabellini, G. (2003). The Economic Effects of
-Constitutions. MIT Press.</li>
-<li>Powell, G. (2000). Elections as Instruments of Democracy. Yale
-University Press.</li>
-</ul>
-<h3 id="数据来源">数据来源</h3>
-<ul>
-<li>Besley et al. (2016). The Earnings and Leadership of Politicians.
-Unpublished.</li>
-<li>Statistics Sweden (Various Years). Swedish administrative
-registers.</li>
-<li>Swedish Defense Recruitment Agency (Various Years). Military
-enlistment tests.</li>
-</ul>
-<hr>
-<p><em>本笔记由 AI 生成,深度分析了&lt;Who Becomes A
-Politician?&gt;一文的核心内容、理论框架、实证发现和学术贡献.生成时间:2026年4月10日.</em></p>
-]]></content>
-      <categories>
-        <category>政治经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>政治经济学</tag>
-        <tag>政治选拔</tag>
-        <tag>民主理论</tag>
       </tags>
   </entry>
   <entry>
