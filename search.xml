@@ -67,6 +67,152 @@ ATT\)</span>一定会比较大,基准模型会存在低估偏误</li>
       </tags>
   </entry>
   <entry>
+    <title>走出非洲假说、人类遗传多样性与比较经济发展 _ Ashraf &amp; Galor (2013) 笔记</title>
+    <url>/posts/ashraf2013/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>本文是 Ashraf &amp; Galor 2013
+年的论文笔记,探讨了一个很有意思的问题:为什么全球各地的经济发展水平差异这么大?作者们从人类迁徙的历史出发,提出了一个相当有冲击力的观点_遗传多样性可能才是那个"深层根源".</p>
+<span id="more"></span>
+<h2 id="领域基础知识">领域基础知识</h2>
+<p>理解这篇论文需要先搞清楚几个核心概念:</p>
+<p><strong>比较经济发展 (Comparative Economic
+Development)</strong>:经济学的一个领域,研究为什么不同国家在经济繁荣程度上差距这么大.传统上经济学家会关注地理、制度、文化、人力资本这些因素.</p>
+<p><strong>"走出非洲"假说 (Out of Africa
+Hypothesis)</strong>:关于现代人类起源的主流理论.大约15万年前现代人类在东非演化形成,7-9万年前开始分批迁徙,逐步扩散到全球.每次迁徙都只有一部分人离开,带走的遗传多样性只是一小部分.</p>
+<p><strong>遗传多样性 (Genetic
+Diversity)</strong>:一个群体内部基因变异的程度.多样性高意味着人群基因类型更丰富;低则意味着相对单一.本文用"期望杂合度"来衡量,可以理解为随机选两个人,他们在基因上不同的概率.</p>
+<p><strong>序列建立者效应 (Serial-Founder
+Effect)</strong>:在人类迁徙过程中,每批离开的人只携带祖先群体遗传多样性的一部分.这个过程反复发生,导致离非洲越远,遗传多样性越低.就像从一副牌里每次只抽几张出去建立新的牌堆,离原牌堆越远,牌种越少.</p>
+<h2 id="研究背景">研究背景</h2>
+<p>解释全球经济发展差异,传统研究主要聚焦这几类因素:</p>
+<ol type="1">
+<li><p><strong>地理因素</strong>:戴蒙德在&lt;枪炮、病菌与钢铁&gt;里强调的_农作物的地理分布、大陆轴线方向(东西向有利于技术传播)等,对新石器革命时机和农业发展速度有深远影响.</p></li>
+<li><p><strong>制度因素</strong>:产权保护、法治、政府效率等,被认为是现代经济增长的关键驱动力.</p></li>
+<li><p><strong>文化因素</strong>:宗教信仰、社会信任水平等对经济活动的影响.</p></li>
+<li><p><strong>人力资本</strong>:教育和技能的积累.</p></li>
+<li><p><strong>民族-语言碎片化</strong>:社会内部民族/语言群体多样性通常被认为会增加冲突、阻碍发展.</p></li>
+</ol>
+<p>但这些大多是"近端"因素,论文想找的是更"深层"的源头_人类自身的遗传构成.</p>
+<h2 id="作者的问题意识">作者的问题意识</h2>
+<p>作者注意到,虽然地理、制度、文化等因素在不同地区差异显著,但这些本身也可能是更深层历史过程的产物.于是他们想回答:</p>
+<ul>
+<li>遗传多样性是否在农业社会出现之前,就对经济发展产生了持久影响?</li>
+<li>这种影响是单纯正面的,还是复杂的(既有好处也有坏处)?</li>
+<li>遗传多样性与经济发展的关系,能否通过"走出非洲"的迁徙路径来解释?</li>
+<li>这种影响是否独立于地理、制度和文化等传统因素?</li>
+</ul>
+<p>作者特别区分了<strong>遗传多样性</strong>(群体内部基因差异)和<strong>民族多样性</strong>(通常通过语言文化差异衡量).他们认为遗传多样性既有益处也有成本,关系可能是"驼峰状"的_适度的多样性最好,过高或过低都不利.</p>
+<h2 id="研究意义">研究意义</h2>
+<ol type="1">
+<li><p><strong>挑战传统理论</strong>:把影响因素追溯到数万年前的人类遗传多样性,为理解全球发展不平等提供了全新视角.</p></li>
+<li><p><strong>揭示双重效应</strong>:提出并实证了"驼峰状"影响_适度多样性有益,过高或过低都阻碍发展.这颠覆了以往对多样性多为负面影响的认知.</p></li>
+<li><p><strong>解决内生性</strong>:用"走出非洲"迁徙距离作为遗传多样性的外生工具变量,有效解决了内生性问题.</p></li>
+<li><p><strong>解释区域差异</strong>:亚洲和欧洲适中的遗传多样性有利于发展;非洲过高、美洲原住民过低的多样性则构成阻碍.</p></li>
+<li><p><strong>开启新方向</strong>:为经济学、人类学、遗传学的交叉研究开辟了新路径.</p></li>
+</ol>
+<h2 id="论文结构">论文结构</h2>
+<p>论文结构清晰,逻辑严谨:</p>
+<ol type="1">
+<li><p><strong>引言</strong>:提出核心论点_数万年前的遗传多样性差异对经济发展有长期"驼峰状"影响,且独立于地理、制度和文化因素.</p></li>
+<li><p><strong>相关文献</strong>:回顾传统发展因素,特别区分了本文与关注"群体间遗传距离"的文献的不同.</p></li>
+<li><p><strong>理论模型</strong>:建立模型形式化遗传多样性对生产力的双重影响_既扩张生产可能性边界(收益),又降低生产效率(成本).</p></li>
+<li><p><strong>历史分析</strong>:</p>
+<ul>
+<li>因变量:1500年人口密度(马尔萨斯时代技术进步主要转化为人口增长)</li>
+<li>自变量:观察到的遗传多样性(53民族)和预测的遗传多样性(145国家,用迁徙距离预测)</li>
+<li>控制变量:新石器革命时机、土地生产力、大陆固定效应等</li>
+<li>确认了显著的"驼峰状"关系</li>
+</ul></li>
+<li><p><strong>当代分析</strong>:</p>
+<ul>
+<li>因变量:2000年人均收入</li>
+<li>构建了"祖先调整后的当代国家人口多样性指数"</li>
+<li>控制了大量制度、文化、地理因素后,"驼峰状"效应依然显著</li>
+<li>机制验证:遗传多样性与信任负相关(成本),与科学知识创造正相关(收益)</li>
+</ul></li>
+<li><p><strong>结论</strong>:重申核心发现和遗传多样性的双重效应.</p></li>
+</ol>
+<h2 id="背景为什么关注遗传多样性">背景:为什么关注遗传多样性?</h2>
+<p>论文起点是全球经济发展巨大差异的反思.传统解释虽然有力,但作者想追溯更根本的源头_人类自身的生物学特性,具体就是遗传多样性.</p>
+<p>面临的主要挑战:</p>
+<ol type="1">
+<li><p><strong>数据稀缺</strong>:可靠遗传多样性数据只覆盖53个民族群体,跨国研究远远不够.</p></li>
+<li><p><strong>内生性问题</strong>:经济发展可能吸引移民从而增加多样性,因果关系难以厘清.</p></li>
+<li><p><strong>区分两个概念</strong>:遗传多样性(基因层面)和民族多样性(文化语言层面)是不同的.</p></li>
+<li><p><strong>识别机制</strong>:需要解释为什么遗传多样性会影响生产力.</p></li>
+</ol>
+<h2 id="研究方法">研究方法</h2>
+<p><strong>核心思想:用"走出非洲"的迁徙距离来预测遗传多样性.</strong></p>
+<h3 id="理论基石">理论基石</h3>
+<ul>
+<li>现代人类起源于东非,逐步向全球扩散</li>
+<li>序列建立者效应:离东非越远,遗传多样性越低</li>
+<li>Ramachandran等(2005)发现东非迁徙距离可解释53个民族近86%的遗传多样性变异</li>
+<li>迁徙距离是史前事件,与现代经济发展无直接因果关系,可作为外生工具变量</li>
+</ul>
+<h3 id="遗传多样性测量">遗传多样性测量</h3>
+<p><strong>期望杂合度</strong>:随机选两个个体在基因位点不同的概率.</p>
+<p><strong>历史样本</strong>:21个国家,直接用HGDP-CEPH数据.</p>
+<p><strong>扩展样本</strong>:计算从亚的斯亚贝巴到各国首都的陆路迁徙距离(考虑五个强制中继点),预测145个国家的遗传多样性.</p>
+<h3 id="当代指数构建">当代指数构建</h3>
+<p>考虑殖民后人口流动,构建了综合指数: - 各祖先群体内部的遗传多样性 -
+不同祖先群体之间的遗传距离</p>
+<h3 id="产出变量">产出变量</h3>
+<ul>
+<li><strong>历史时期</strong>:人口密度(马尔萨斯时代技术进步主要导致人口增长)</li>
+<li><strong>当代</strong>:人均GDP</li>
+<li><strong>机制验证</strong>:人际信任水平、科学知识创造强度</li>
+</ul>
+<h3 id="控制变量">控制变量</h3>
+<p>历史分析:新石器革命时机、土地生产力、大陆固定效应</p>
+<p>当代分析:加上制度(社会基础设施、民主程度、法律起源)、文化(宗教份额、欧洲裔人口比例)、地理(疟疾风险、热带区域)等因素.</p>
+<h2 id="核心发现">核心发现</h2>
+<p><strong>遗传多样性对经济发展有显著的"驼峰状"影响</strong>,无论在史前还是当代都成立.存在一个最优遗传多样性水平.</p>
+<h3 id="历史分析结果1500年人口密度">历史分析结果(1500年人口密度)</h3>
+<ul>
+<li>最优遗传多样性约为0.683(与日本接近)</li>
+<li>低于最优:每增加1%多样性,人口密度增加约36%</li>
+<li>高于最优:每减少1%多样性,人口密度增加约29%</li>
+<li>东非多样性最高,美洲原住民最低,亚洲和欧洲处于中间(接近最优)</li>
+</ul>
+<h3 id="当代分析结果2000年人均收入">当代分析结果(2000年人均收入)</h3>
+<ul>
+<li>最优遗传多样性约为0.721(与美国接近),略高于历史时期</li>
+<li>低于最优:每增加1%多样性,人均收入增加约39%</li>
+<li>高于最优:每减少1%多样性,人均收入增加约21%</li>
+</ul>
+<h3 id="机制验证">机制验证</h3>
+<ul>
+<li><strong>成本端</strong>:遗传多样性与人际信任显著负相关</li>
+<li><strong>收益端</strong>:遗传多样性与科学知识创造强度显著正相关</li>
+</ul>
+<p>这与理论模型预测完全一致.</p>
+<h3 id="关键概念图示">关键概念图示</h3>
+<p>想象一条先升后降的曲线: - 横轴是遗传多样性水平 - 纵轴是生产力</p>
+<p>低多样性时,增加多样性带来的创新和适应性好处大于不合作的成本,生产力上升;高多样性后,不合作成本占主导,生产力下降.</p>
+<h2 id="个人读后感">个人读后感</h2>
+<p>读这篇论文最深的感受是:原来四五万年前的人类迁徙,居然还在以"基因指纹"的方式影响着今天的世界经济发展格局.这个视角确实宏大.</p>
+<p>论文的方法论也很有意思.用迁徙距离作为工具变量解决内生性,这个思路很巧妙_毕竟没有人能"穿越"回去操控史前人类的迁徙路线.</p>
+<p>但我比较好奇的是:这个研究结论在政策层面能怎么用?作者在Q&amp;A里也提到了伦理风险问题.遗传多样性不像制度那样容易改变,总不能制定政策让人"调整基因"吧?所以这个研究更像是一个"理解世界的窗口",而非"行动指南".</p>
+<p>另外论文区分遗传多样性和民族多样性这点也很重要.以前总觉得"民族多样性"被研究得差不多了,没想到从基因层面看是完全不同的故事.</p>
+<p>总体来说,这是一篇很有野心、视角独特的论文,把生物学和经济学结合得相当紧密.虽然有些结论还需要更多研究来验证,但"深层根源"这个研究思路确实给人启发.</p>
+<hr>
+<p><strong>参考信息</strong></p>
+<ul>
+<li>论文:Ashraf, Q. H., &amp; Galor, O. (2013). The "Out of Africa"
+Hypothesis, Human Genetic Diversity, and Comparative Economic
+Development. <em>American Economic Review</em>, 103(1), 1-46.</li>
+</ul>
+]]></content>
+      <categories>
+        <category>经济史</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>经济史</tag>
+        <tag>发展经济学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Macroeconomic Effects of Debt Relief 深度阅读笔记 — Auclert, Dobbie &amp; Goldsmith-Pinkham</title>
     <url>/posts/auclert2019/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -251,149 +397,148 @@ Economic Review.</li>
       </tags>
   </entry>
   <entry>
-    <title>走出非洲假说、人类遗传多样性与比较经济发展 _ Ashraf &amp; Galor (2013) 笔记</title>
-    <url>/posts/ashraf2013/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>本文是 Ashraf &amp; Galor 2013
-年的论文笔记,探讨了一个很有意思的问题:为什么全球各地的经济发展水平差异这么大?作者们从人类迁徙的历史出发,提出了一个相当有冲击力的观点_遗传多样性可能才是那个"深层根源".</p>
-<span id="more"></span>
-<h2 id="领域基础知识">领域基础知识</h2>
-<p>理解这篇论文需要先搞清楚几个核心概念:</p>
-<p><strong>比较经济发展 (Comparative Economic
-Development)</strong>:经济学的一个领域,研究为什么不同国家在经济繁荣程度上差距这么大.传统上经济学家会关注地理、制度、文化、人力资本这些因素.</p>
-<p><strong>"走出非洲"假说 (Out of Africa
-Hypothesis)</strong>:关于现代人类起源的主流理论.大约15万年前现代人类在东非演化形成,7-9万年前开始分批迁徙,逐步扩散到全球.每次迁徙都只有一部分人离开,带走的遗传多样性只是一小部分.</p>
-<p><strong>遗传多样性 (Genetic
-Diversity)</strong>:一个群体内部基因变异的程度.多样性高意味着人群基因类型更丰富;低则意味着相对单一.本文用"期望杂合度"来衡量,可以理解为随机选两个人,他们在基因上不同的概率.</p>
-<p><strong>序列建立者效应 (Serial-Founder
-Effect)</strong>:在人类迁徙过程中,每批离开的人只携带祖先群体遗传多样性的一部分.这个过程反复发生,导致离非洲越远,遗传多样性越低.就像从一副牌里每次只抽几张出去建立新的牌堆,离原牌堆越远,牌种越少.</p>
-<h2 id="研究背景">研究背景</h2>
-<p>解释全球经济发展差异,传统研究主要聚焦这几类因素:</p>
-<ol type="1">
-<li><p><strong>地理因素</strong>:戴蒙德在&lt;枪炮、病菌与钢铁&gt;里强调的_农作物的地理分布、大陆轴线方向(东西向有利于技术传播)等,对新石器革命时机和农业发展速度有深远影响.</p></li>
-<li><p><strong>制度因素</strong>:产权保护、法治、政府效率等,被认为是现代经济增长的关键驱动力.</p></li>
-<li><p><strong>文化因素</strong>:宗教信仰、社会信任水平等对经济活动的影响.</p></li>
-<li><p><strong>人力资本</strong>:教育和技能的积累.</p></li>
-<li><p><strong>民族-语言碎片化</strong>:社会内部民族/语言群体多样性通常被认为会增加冲突、阻碍发展.</p></li>
-</ol>
-<p>但这些大多是"近端"因素,论文想找的是更"深层"的源头_人类自身的遗传构成.</p>
-<h2 id="作者的问题意识">作者的问题意识</h2>
-<p>作者注意到,虽然地理、制度、文化等因素在不同地区差异显著,但这些本身也可能是更深层历史过程的产物.于是他们想回答:</p>
+    <title>Do Governments Crowd Out Governments? — 深度阅读笔记 — Baumann &amp; Klymak</title>
+    <url>/posts/baumann2024/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
 <ul>
-<li>遗传多样性是否在农业社会出现之前,就对经济发展产生了持久影响?</li>
-<li>这种影响是单纯正面的,还是复杂的(既有好处也有坏处)?</li>
-<li>遗传多样性与经济发展的关系,能否通过"走出非洲"的迁徙路径来解释?</li>
-<li>这种影响是否独立于地理、制度和文化等传统因素?</li>
+<li><strong>标题</strong>: Do governments crowd out governments?
+Evidence from a natural experiment</li>
+<li><strong>作者</strong>: Stuart Baumann, Margaryta Klymak</li>
+<li><strong>类型</strong>: 论文笔记 / 财政学 / 政府经济学</li>
+<li><strong>出版年份</strong>: 2024</li>
+<li><strong>出版机构/期刊</strong>: European Economic Review, Vol. 168,
+104803</li>
+<li><strong>难度评估</strong>: 中 - 需要计量经济学基础 <span id="more"></span>
+---</li>
 </ul>
-<p>作者特别区分了<strong>遗传多样性</strong>(群体内部基因差异)和<strong>民族多样性</strong>(通常通过语言文化差异衡量).他们认为遗传多样性既有益处也有成本,关系可能是"驼峰状"的_适度的多样性最好,过高或过低都不利.</p>
-<h2 id="研究意义">研究意义</h2>
-<ol type="1">
-<li><p><strong>挑战传统理论</strong>:把影响因素追溯到数万年前的人类遗传多样性,为理解全球发展不平等提供了全新视角.</p></li>
-<li><p><strong>揭示双重效应</strong>:提出并实证了"驼峰状"影响_适度多样性有益,过高或过低都阻碍发展.这颠覆了以往对多样性多为负面影响的认知.</p></li>
-<li><p><strong>解决内生性</strong>:用"走出非洲"迁徙距离作为遗传多样性的外生工具变量,有效解决了内生性问题.</p></li>
-<li><p><strong>解释区域差异</strong>:亚洲和欧洲适中的遗传多样性有利于发展;非洲过高、美洲原住民过低的多样性则构成阻碍.</p></li>
-<li><p><strong>开启新方向</strong>:为经济学、人类学、遗传学的交叉研究开辟了新路径.</p></li>
-</ol>
-<h2 id="论文结构">论文结构</h2>
-<p>论文结构清晰,逻辑严谨:</p>
-<ol type="1">
-<li><p><strong>引言</strong>:提出核心论点_数万年前的遗传多样性差异对经济发展有长期"驼峰状"影响,且独立于地理、制度和文化因素.</p></li>
-<li><p><strong>相关文献</strong>:回顾传统发展因素,特别区分了本文与关注"群体间遗传距离"的文献的不同.</p></li>
-<li><p><strong>理论模型</strong>:建立模型形式化遗传多样性对生产力的双重影响_既扩张生产可能性边界(收益),又降低生产效率(成本).</p></li>
-<li><p><strong>历史分析</strong>:</p>
+<h2 id="引言背景和意义">引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>年终支出高峰(Year-End Spending
+Spike)是全球各国政府普遍存在的现象_政府部门在财政年度结束时集中大量支出.这种支出模式具有几个关键特征:</p>
+<p><strong>规模与普遍性.</strong>
+英国资本支出在财年最后一个月是月平均支出的约两倍;美国政府在财年最后一周的支出是平均周的4.9倍.这一现象在OECD
+27个国家均有观察到.</p>
+<p><strong>潜在浪费问题.</strong>
+年终仓促采购可能导致质量问题.Liebman和Mahoney(2017)发现,美国政府采购的IT项目在财年末执行的,其获得"低质量"评分的可能性是其他时间执行的2.2至5.6倍.</p>
+<p><strong>现有解释的局限.</strong>
+文献将年终支出归因于政府部门自身的预算周期(内部因素):如预防性储蓄基金、拖延行为、或规划不足.但这些解释均未考虑外部因素_其他政府部门和企业的支出行为.</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<p><strong>拥堵效应与竞争机制.</strong>
+当多个政府部门同时高强度支出时,可能在供应商方面产生拥堵效应.具体机制包括:</p>
 <ul>
-<li>因变量:1500年人口密度(马尔萨斯时代技术进步主要转化为人口增长)</li>
-<li>自变量:观察到的遗传多样性(53民族)和预测的遗传多样性(145国家,用迁徙距离预测)</li>
-<li>控制变量:新石器革命时机、土地生产力、大陆固定效应等</li>
-<li>确认了显著的"驼峰状"关系</li>
-</ul></li>
-<li><p><strong>当代分析</strong>:</p>
-<ul>
-<li>因变量:2000年人均收入</li>
-<li>构建了"祖先调整后的当代国家人口多样性指数"</li>
-<li>控制了大量制度、文化、地理因素后,"驼峰状"效应依然显著</li>
-<li>机制验证:遗传多样性与信任负相关(成本),与科学知识创造正相关(收益)</li>
-</ul></li>
-<li><p><strong>结论</strong>:重申核心发现和遗传多样性的双重效应.</p></li>
-</ol>
-<h2 id="背景为什么关注遗传多样性">背景:为什么关注遗传多样性?</h2>
-<p>论文起点是全球经济发展巨大差异的反思.传统解释虽然有力,但作者想追溯更根本的源头_人类自身的生物学特性,具体就是遗传多样性.</p>
-<p>面临的主要挑战:</p>
-<ol type="1">
-<li><p><strong>数据稀缺</strong>:可靠遗传多样性数据只覆盖53个民族群体,跨国研究远远不够.</p></li>
-<li><p><strong>内生性问题</strong>:经济发展可能吸引移民从而增加多样性,因果关系难以厘清.</p></li>
-<li><p><strong>区分两个概念</strong>:遗传多样性(基因层面)和民族多样性(文化语言层面)是不同的.</p></li>
-<li><p><strong>识别机制</strong>:需要解释为什么遗传多样性会影响生产力.</p></li>
-</ol>
-<h2 id="研究方法">研究方法</h2>
-<p><strong>核心思想:用"走出非洲"的迁徙距离来预测遗传多样性.</strong></p>
-<h3 id="理论基石">理论基石</h3>
-<ul>
-<li>现代人类起源于东非,逐步向全球扩散</li>
-<li>序列建立者效应:离东非越远,遗传多样性越低</li>
-<li>Ramachandran等(2005)发现东非迁徙距离可解释53个民族近86%的遗传多样性变异</li>
-<li>迁徙距离是史前事件,与现代经济发展无直接因果关系,可作为外生工具变量</li>
+<li><strong>价格上涨</strong>:供应商在高需求时期提高价格</li>
+<li><strong>采购替代</strong>:供应商不可用时被迫更换采购物品或供应商</li>
+<li><strong>销售策略</strong>:供应商增加销售人员、调整商品供应以利用高支出意愿</li>
+<li><strong>支出转移</strong>:部门可能将部分支出转移至其他时间以避免价格上涨</li>
 </ul>
-<h3 id="遗传多样性测量">遗传多样性测量</h3>
-<p><strong>期望杂合度</strong>:随机选两个个体在基因位点不同的概率.</p>
-<p><strong>历史样本</strong>:21个国家,直接用HGDP-CEPH数据.</p>
-<p><strong>扩展样本</strong>:计算从亚的斯亚贝巴到各国首都的陆路迁徙距离(考虑五个强制中继点),预测145个国家的遗传多样性.</p>
-<h3 id="当代指数构建">当代指数构建</h3>
-<p>考虑殖民后人口流动,构建了综合指数: - 各祖先群体内部的遗传多样性 -
-不同祖先群体之间的遗传距离</p>
-<h3 id="产出变量">产出变量</h3>
+<p><strong>识别挑战.</strong>
+同一国家的政府机构通常遵循相同的财年规则,使得分离"部门自身财年影响"和"其他政府机构财年影响"成为重大识别挑战.</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>:政府部门在财年末集中支出时,是否存在"政府挤出政府"的效应?</p>
+<p><strong>创新解决方案</strong>:利用英国驻海外办事处这一独特自然实验_这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
+<h3 id="研究意义">研究意义</h3>
 <ul>
-<li><strong>历史时期</strong>:人口密度(马尔萨斯时代技术进步主要导致人口增长)</li>
-<li><strong>当代</strong>:人均GDP</li>
-<li><strong>机制验证</strong>:人际信任水平、科学知识创造强度</li>
+<li><strong>学术贡献</strong>:首次分离年终支出的"内部"与"外部"驱动因素</li>
+<li><strong>政策含义</strong>:错开不同部门的财年可能减少年终支出</li>
 </ul>
-<h3 id="控制变量">控制变量</h3>
-<p>历史分析:新石器革命时机、土地生产力、大陆固定效应</p>
-<p>当代分析:加上制度(社会基础设施、民主程度、法律起源)、文化(宗教份额、欧洲裔人口比例)、地理(疟疾风险、热带区域)等因素.</p>
-<h2 id="核心发现">核心发现</h2>
-<p><strong>遗传多样性对经济发展有显著的"驼峰状"影响</strong>,无论在史前还是当代都成立.存在一个最优遗传多样性水平.</p>
-<h3 id="历史分析结果1500年人口密度">历史分析结果(1500年人口密度)</h3>
-<ul>
-<li>最优遗传多样性约为0.683(与日本接近)</li>
-<li>低于最优:每增加1%多样性,人口密度增加约36%</li>
-<li>高于最优:每减少1%多样性,人口密度增加约29%</li>
-<li>东非多样性最高,美洲原住民最低,亚洲和欧洲处于中间(接近最优)</li>
-</ul>
-<h3 id="当代分析结果2000年人均收入">当代分析结果(2000年人均收入)</h3>
-<ul>
-<li>最优遗传多样性约为0.721(与美国接近),略高于历史时期</li>
-<li>低于最优:每增加1%多样性,人均收入增加约39%</li>
-<li>高于最优:每减少1%多样性,人均收入增加约21%</li>
-</ul>
-<h3 id="机制验证">机制验证</h3>
-<ul>
-<li><strong>成本端</strong>:遗传多样性与人际信任显著负相关</li>
-<li><strong>收益端</strong>:遗传多样性与科学知识创造强度显著正相关</li>
-</ul>
-<p>这与理论模型预测完全一致.</p>
-<h3 id="关键概念图示">关键概念图示</h3>
-<p>想象一条先升后降的曲线: - 横轴是遗传多样性水平 - 纵轴是生产力</p>
-<p>低多样性时,增加多样性带来的创新和适应性好处大于不合作的成本,生产力上升;高多样性后,不合作成本占主导,生产力下降.</p>
-<h2 id="个人读后感">个人读后感</h2>
-<p>读这篇论文最深的感受是:原来四五万年前的人类迁徙,居然还在以"基因指纹"的方式影响着今天的世界经济发展格局.这个视角确实宏大.</p>
-<p>论文的方法论也很有意思.用迁徙距离作为工具变量解决内生性,这个思路很巧妙_毕竟没有人能"穿越"回去操控史前人类的迁徙路线.</p>
-<p>但我比较好奇的是:这个研究结论在政策层面能怎么用?作者在Q&amp;A里也提到了伦理风险问题.遗传多样性不像制度那样容易改变,总不能制定政策让人"调整基因"吧?所以这个研究更像是一个"理解世界的窗口",而非"行动指南".</p>
-<p>另外论文区分遗传多样性和民族多样性这点也很重要.以前总觉得"民族多样性"被研究得差不多了,没想到从基因层面看是完全不同的故事.</p>
-<p>总体来说,这是一篇很有野心、视角独特的论文,把生物学和经济学结合得相当紧密.虽然有些结论还需要更多研究来验证,但"深层根源"这个研究思路确实给人启发.</p>
 <hr>
-<p><strong>参考信息</strong></p>
+<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
+<p><strong>第一节:引言(Introduction)</strong></p>
+<p>阐述年终支出高峰现象、潜在拥堵机制,研究挑战与创新.</p>
+<p><strong>第二节:方法论(Methodology)</strong></p>
+<p>数据:英国外交和联邦事务部(FCO)海外办事处2008-2019财年月度支出数据.实证策略:利用海外办事处沿用本国财年但所在国财年各异的自然实验.</p>
+<p><strong>第三节:结果(Results)</strong></p>
+<p>三个主要发现:本国财年末效应、当地政府挤出效应、当地企业财年效应.</p>
+<hr>
+<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
+<h3 id="一自然实验的设计优势">一、自然实验的设计优势</h3>
+<p><strong>英国海外办事处的独特性.</strong>
+英国在180多个国家设有399个海外办事处,这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
+<p>这种设置的优势:办事处的预算框架、管理和监督制度相同,执行相似的外交任务,可比较不同东道国办事处的支出模式差异.</p>
+<h3 id="二核心实证发现">二、核心实证发现</h3>
+<p><strong>发现1:本国财年末效应显著.</strong></p>
+<p>海外办事处在英国财年最后一个月(3月)的支出显著更高:</p>
 <ul>
-<li>论文:Ashraf, Q. H., &amp; Galor, O. (2013). The "Out of Africa"
-Hypothesis, Human Genetic Diversity, and Comparative Economic
-Development. <em>American Economic Review</em>, 103(1), 1-46.</li>
+<li>资源预算:3月支出比月平均高1.359个标准差</li>
+<li>资本预算:3月支出比月平均高0.867个标准差</li>
 </ul>
+<p><strong>发现2:当地政府挤出效应显著.</strong></p>
+<p><span class="math inline">\(LFY End \times Home FY
+End\)</span>系数在资源支出模型中显著为正:在与英国财年重叠的国家,年终支出峰值更大.这表明东道国政府的年终支出确实产生了"挤出"效应.</p>
+<p><strong>发现3:当地企业财年效应显著.</strong></p>
+<p>在资本支出案例中,当地企业财年末越近,办事处支出越多.这与企业销售人员为最大化佣金的策略性行为一致.</p>
+<h3 id="三理论模型与预测">三、理论模型与预测</h3>
+<p>作者扩展了Liebman and
+Mahoney(2017)和Baumann(2019)的模型,加入"价格"和"拥堵效应"参数.</p>
+<p><strong>有趣发现</strong>:理论预测拥堵效应应减少年终支出峰值(理性部门会转移支出),但实证结果相反_拥堵效应加剧年终支出.这暗示政府部门的"行为惯性"可能比模型假设的更强.</p>
+<hr>
+<h2 id="结论conclusion">结论(Conclusion)</h2>
+<h3 id="核心结论总结">核心结论总结</h3>
+<p><strong>第一,本国财年是支出模式最重要的影响因素.</strong></p>
+<p><strong>第二,拥堵效应加剧年终支出.</strong>
+在与本国财年重叠的国家,年终支出规模更大.</p>
+<p><strong>第三,当地企业财年末后期,政府支出更高.</strong>
+企业销售人员的激励结构和行为也能影响政府部门的支出模式.</p>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ul>
+<li><strong>年终支出文献</strong>:首次分离内部与外部因素</li>
+<li><strong>财政溢出文献</strong>:发现"年终支出溢出"新概念</li>
+<li><strong>政策制定</strong>:错开财年可间接减少年终支出</li>
+</ul>
+<hr>
+<h2 id="未来研究方向">未来研究方向</h2>
+<h3 id="文献中提及的未来研究方向">文献中提及的未来研究方向</h3>
+<ul>
+<li>利用更细致的微观采购合同数据直接量化挤出效应的成本</li>
+<li>分析政府部门对拥堵效应的动态适应过程</li>
+</ul>
+<h3 id="基于本文思考的下一步研究工作">基于本文思考的下一步研究工作</h3>
+<p><strong>拥堵效应的成本量化.</strong>
+英国海外办事处在面临挤出效应时是否支付了更高价格?</p>
+<p><strong>政策错开财年的可行性分析.</strong>
+实施"错开财年"政策的实际可行性、潜在成本和过渡挑战.</p>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<p><strong>关于"个体理性"与"集体低效":</strong></p>
+<p>本文揭示了一个有趣的悖论:所有部门都在同一时间"理性"地加大支出以避免资金过期,这种个体理性可能导致整个经济体的集体低效_价格上涨、供应短缺、次优采购.</p>
+<p><strong>关于政府部门的价格敏感性:</strong></p>
+<p>理论模型预测理性部门会转移支出以避免拥堵,但实证结果相反.这暗示政府部门的"行为惯性"可能比新古典模型假设的更强.</p>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p><strong>拥堵效应具体如何测量?</strong>
+交互项系数的经济含义是什么?</p></li>
+<li><p><strong>资源预算和资本预算的响应为何不同?</strong></p></li>
+<li><p><strong>这对中国的政府采购改革有何启示?</strong></p></li>
+<li><p><strong>错开财年政策的实际可行性如何?</strong></p></li>
+</ol>
+<hr>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>Baumann, S. (2019). Procrastination and the Design of
+Government.</li>
+<li>Eichenauer, V. (2020). Budget Constraints and the Temporal Dynamics
+of Public Spending.</li>
+<li>Klymak, M., &amp; Baumann, S. (2022). Fiscal Year-End Procurement
+and Price Gouging.</li>
+<li>Liebman, J.B., &amp; Mahoney, N. (2017). Expiring Budgets and the
+Temporal Dynamics of Federal Spending.</li>
+<li>Oyer, P. (1998). Fiscal Year Ends and Intertemporal Labor
+Management.</li>
+</ul>
+<hr>
+<p><em>本笔记由 AI 生成,深度分析了&lt;Do governments crowd out
+governments?&gt;一文的核心内容、理论框架、实证发现和学术贡献.生成时间:2026年4月11日.</em></p>
 ]]></content>
       <categories>
-        <category>经济史</category>
+        <category>财政学</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-        <tag>经济史</tag>
-        <tag>发展经济学</tag>
+        <tag>财政学</tag>
+        <tag>政府支出</tag>
+        <tag>挤出效应</tag>
+        <tag>自然实验</tag>
       </tags>
   </entry>
   <entry>
@@ -777,151 +922,6 @@ Moi改革后)，这是否影响校准的可靠性？</p>
       </categories>
       <tags>
         <tag>妳</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Do Governments Crowd Out Governments? — 深度阅读笔记 — Baumann &amp; Klymak</title>
-    <url>/posts/baumann2024/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Do governments crowd out governments?
-Evidence from a natural experiment</li>
-<li><strong>作者</strong>: Stuart Baumann, Margaryta Klymak</li>
-<li><strong>类型</strong>: 论文笔记 / 财政学 / 政府经济学</li>
-<li><strong>出版年份</strong>: 2024</li>
-<li><strong>出版机构/期刊</strong>: European Economic Review, Vol. 168,
-104803</li>
-<li><strong>难度评估</strong>: 中 - 需要计量经济学基础 <span id="more"></span>
----</li>
-</ul>
-<h2 id="引言背景和意义">引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>年终支出高峰(Year-End Spending
-Spike)是全球各国政府普遍存在的现象_政府部门在财政年度结束时集中大量支出.这种支出模式具有几个关键特征:</p>
-<p><strong>规模与普遍性.</strong>
-英国资本支出在财年最后一个月是月平均支出的约两倍;美国政府在财年最后一周的支出是平均周的4.9倍.这一现象在OECD
-27个国家均有观察到.</p>
-<p><strong>潜在浪费问题.</strong>
-年终仓促采购可能导致质量问题.Liebman和Mahoney(2017)发现,美国政府采购的IT项目在财年末执行的,其获得"低质量"评分的可能性是其他时间执行的2.2至5.6倍.</p>
-<p><strong>现有解释的局限.</strong>
-文献将年终支出归因于政府部门自身的预算周期(内部因素):如预防性储蓄基金、拖延行为、或规划不足.但这些解释均未考虑外部因素_其他政府部门和企业的支出行为.</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p><strong>拥堵效应与竞争机制.</strong>
-当多个政府部门同时高强度支出时,可能在供应商方面产生拥堵效应.具体机制包括:</p>
-<ul>
-<li><strong>价格上涨</strong>:供应商在高需求时期提高价格</li>
-<li><strong>采购替代</strong>:供应商不可用时被迫更换采购物品或供应商</li>
-<li><strong>销售策略</strong>:供应商增加销售人员、调整商品供应以利用高支出意愿</li>
-<li><strong>支出转移</strong>:部门可能将部分支出转移至其他时间以避免价格上涨</li>
-</ul>
-<p><strong>识别挑战.</strong>
-同一国家的政府机构通常遵循相同的财年规则,使得分离"部门自身财年影响"和"其他政府机构财年影响"成为重大识别挑战.</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:政府部门在财年末集中支出时,是否存在"政府挤出政府"的效应?</p>
-<p><strong>创新解决方案</strong>:利用英国驻海外办事处这一独特自然实验_这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
-<h3 id="研究意义">研究意义</h3>
-<ul>
-<li><strong>学术贡献</strong>:首次分离年终支出的"内部"与"外部"驱动因素</li>
-<li><strong>政策含义</strong>:错开不同部门的财年可能减少年终支出</li>
-</ul>
-<hr>
-<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
-<p><strong>第一节:引言(Introduction)</strong></p>
-<p>阐述年终支出高峰现象、潜在拥堵机制,研究挑战与创新.</p>
-<p><strong>第二节:方法论(Methodology)</strong></p>
-<p>数据:英国外交和联邦事务部(FCO)海外办事处2008-2019财年月度支出数据.实证策略:利用海外办事处沿用本国财年但所在国财年各异的自然实验.</p>
-<p><strong>第三节:结果(Results)</strong></p>
-<p>三个主要发现:本国财年末效应、当地政府挤出效应、当地企业财年效应.</p>
-<hr>
-<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
-<h3 id="一自然实验的设计优势">一、自然实验的设计优势</h3>
-<p><strong>英国海外办事处的独特性.</strong>
-英国在180多个国家设有399个海外办事处,这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
-<p>这种设置的优势:办事处的预算框架、管理和监督制度相同,执行相似的外交任务,可比较不同东道国办事处的支出模式差异.</p>
-<h3 id="二核心实证发现">二、核心实证发现</h3>
-<p><strong>发现1:本国财年末效应显著.</strong></p>
-<p>海外办事处在英国财年最后一个月(3月)的支出显著更高:</p>
-<ul>
-<li>资源预算:3月支出比月平均高1.359个标准差</li>
-<li>资本预算:3月支出比月平均高0.867个标准差</li>
-</ul>
-<p><strong>发现2:当地政府挤出效应显著.</strong></p>
-<p><span class="math inline">\(LFY End \times Home FY
-End\)</span>系数在资源支出模型中显著为正:在与英国财年重叠的国家,年终支出峰值更大.这表明东道国政府的年终支出确实产生了"挤出"效应.</p>
-<p><strong>发现3:当地企业财年效应显著.</strong></p>
-<p>在资本支出案例中,当地企业财年末越近,办事处支出越多.这与企业销售人员为最大化佣金的策略性行为一致.</p>
-<h3 id="三理论模型与预测">三、理论模型与预测</h3>
-<p>作者扩展了Liebman and
-Mahoney(2017)和Baumann(2019)的模型,加入"价格"和"拥堵效应"参数.</p>
-<p><strong>有趣发现</strong>:理论预测拥堵效应应减少年终支出峰值(理性部门会转移支出),但实证结果相反_拥堵效应加剧年终支出.这暗示政府部门的"行为惯性"可能比模型假设的更强.</p>
-<hr>
-<h2 id="结论conclusion">结论(Conclusion)</h2>
-<h3 id="核心结论总结">核心结论总结</h3>
-<p><strong>第一,本国财年是支出模式最重要的影响因素.</strong></p>
-<p><strong>第二,拥堵效应加剧年终支出.</strong>
-在与本国财年重叠的国家,年终支出规模更大.</p>
-<p><strong>第三,当地企业财年末后期,政府支出更高.</strong>
-企业销售人员的激励结构和行为也能影响政府部门的支出模式.</p>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ul>
-<li><strong>年终支出文献</strong>:首次分离内部与外部因素</li>
-<li><strong>财政溢出文献</strong>:发现"年终支出溢出"新概念</li>
-<li><strong>政策制定</strong>:错开财年可间接减少年终支出</li>
-</ul>
-<hr>
-<h2 id="未来研究方向">未来研究方向</h2>
-<h3 id="文献中提及的未来研究方向">文献中提及的未来研究方向</h3>
-<ul>
-<li>利用更细致的微观采购合同数据直接量化挤出效应的成本</li>
-<li>分析政府部门对拥堵效应的动态适应过程</li>
-</ul>
-<h3 id="基于本文思考的下一步研究工作">基于本文思考的下一步研究工作</h3>
-<p><strong>拥堵效应的成本量化.</strong>
-英国海外办事处在面临挤出效应时是否支付了更高价格?</p>
-<p><strong>政策错开财年的可行性分析.</strong>
-实施"错开财年"政策的实际可行性、潜在成本和过渡挑战.</p>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<p><strong>关于"个体理性"与"集体低效":</strong></p>
-<p>本文揭示了一个有趣的悖论:所有部门都在同一时间"理性"地加大支出以避免资金过期,这种个体理性可能导致整个经济体的集体低效_价格上涨、供应短缺、次优采购.</p>
-<p><strong>关于政府部门的价格敏感性:</strong></p>
-<p>理论模型预测理性部门会转移支出以避免拥堵,但实证结果相反.这暗示政府部门的"行为惯性"可能比新古典模型假设的更强.</p>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p><strong>拥堵效应具体如何测量?</strong>
-交互项系数的经济含义是什么?</p></li>
-<li><p><strong>资源预算和资本预算的响应为何不同?</strong></p></li>
-<li><p><strong>这对中国的政府采购改革有何启示?</strong></p></li>
-<li><p><strong>错开财年政策的实际可行性如何?</strong></p></li>
-</ol>
-<hr>
-<h2 id="参考文献">参考文献</h2>
-<ul>
-<li>Baumann, S. (2019). Procrastination and the Design of
-Government.</li>
-<li>Eichenauer, V. (2020). Budget Constraints and the Temporal Dynamics
-of Public Spending.</li>
-<li>Klymak, M., &amp; Baumann, S. (2022). Fiscal Year-End Procurement
-and Price Gouging.</li>
-<li>Liebman, J.B., &amp; Mahoney, N. (2017). Expiring Budgets and the
-Temporal Dynamics of Federal Spending.</li>
-<li>Oyer, P. (1998). Fiscal Year Ends and Intertemporal Labor
-Management.</li>
-</ul>
-<hr>
-<p><em>本笔记由 AI 生成,深度分析了&lt;Do governments crowd out
-governments?&gt;一文的核心内容、理论框架、实证发现和学术贡献.生成时间:2026年4月11日.</em></p>
-]]></content>
-      <categories>
-        <category>财政学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>财政学</tag>
-        <tag>政府支出</tag>
-        <tag>挤出效应</tag>
-        <tag>自然实验</tag>
       </tags>
   </entry>
   <entry>
@@ -1419,326 +1419,6 @@ Instruments论文的深度笔记,由Claude AI辅助生成.</em></p>
       </tags>
   </entry>
   <entry>
-    <title>&lt;玉米与人口&gt;深度阅读笔记 — Chen &amp; Kung</title>
-    <url>/posts/chen2016/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Of maize and men: the effect of a New World
-crop on population and economic growth in China</li>
-<li><strong>作者</strong>: Shuo Chen, James Kai-sing Kung</li>
-<li><strong>类型</strong>: 论文笔记 / 经济史 / 人口史 / 计量史学</li>
-<li><strong>出版年份</strong>: 2016</li>
-<li><strong>出版机构/期刊</strong>: Journal of Economic Growth</li>
-<li><strong>DOI</strong>: 10.1007/s10887-016-9125-8</li>
-<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量史学基础
-<span id="more"></span> ---</li>
-</ul>
-<h2 id="引言马尔萨斯陷阱与中国">引言:马尔萨斯陷阱与中国</h2>
-<p>本研究聚焦于17世纪至20世纪初的中国,探讨在新大陆作物_特别是玉米_引入后,中国是否仍然深陷"马尔萨斯陷阱",以及这种新的农业技术对人口和经济增长产生了何种影响.</p>
-<h3 id="领域基础知识">领域基础知识</h3>
-<ol type="1">
-<li><p><strong>马尔萨斯陷阱 (Malthusian Trap):</strong>
-人口总是倾向于以几何级数增长,而食物生产却只能以算术级数增长.任何技术进步或土地扩张带来的食物增加,最终都会被更快增长的人口所消耗殆尽.</p>
-<ul>
-<li><strong>积极抑制 (Positive Checks):</strong>
-增加死亡率的因素,如饥荒、瘟疫和战争.</li>
-<li><strong>预防性抑制 (Preventive Checks):</strong>
-降低出生率的因素,如晚婚、禁欲或生育控制.</li>
-</ul></li>
-<li><p><strong>现代经济增长 (Modern Economic Growth):</strong>
-人均收入能够持续、快速增长的经济发展阶段.通常伴随着工业化、技术创新、教育水平提升、人口结构转变以及城市化进程.</p></li>
-<li><p><strong>哥伦布大交换 (Columbian Exchange):</strong>
-15世纪末哥伦布发现新大陆后,欧洲、非洲和美洲之间动植物、病菌、思想和人口的大规模交流.</p></li>
-<li><p><strong>大分流 (Great Divergence):</strong>
-18世纪以来,西方欧洲(特别是英国)与东亚(特别是中国)在经济发展道路上出现的分岔.</p></li>
-</ol>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><strong>中国的人口爆炸性增长与人均收入停滞:</strong>
-<ul>
-<li>从1500年的1.3亿人口到1900年的4亿人口,中国人口在400年间几乎增长了两倍.然而,根据Maddison
-(2001)
-的数据,中国的人均GDP却长期停滞在约600美元(经调整),处于温饱水平.</li>
-<li>当时中国处于一种"高压人口体制",生产力的任何增长都极有可能被人口增长以远高于欧洲的速度所转化和消耗.</li>
-</ul></li>
-<li><strong>新大陆作物在旧世界的影响_以马铃薯为例:</strong>
-<ul>
-<li>Nunn 和 Qian (2011)
-的研究发现,马铃薯的引入在1700-1900年间使旧世界人口增长了25-26%,城市化率提高了27-34%.</li>
-<li>中国也引入了三种主要的新大陆作物_玉米、甘薯和马铃薯.其中玉米因其对中国地理条件的适应性(抗旱、耐寒,适合山地和丘陵种植),以及数据可得性,成为本研究的重点.</li>
-</ul></li>
-<li><strong>中国未能工业化之谜:</strong>
-<ul>
-<li>传统观点认为是中国农业剩余不足以支撑工业化.</li>
-<li>本研究观点认为,人口增长是农业生产力提高(部分归因于玉米的引入)的内生结果,而非导致农业剩余不足的根本原因.</li>
-</ul></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<ul>
-<li><strong>新大陆作物(特别是玉米)的引入,是否帮助中国摆脱了马尔萨斯陷阱,实现了人口和经济增长?</strong></li>
-<li><strong>或者,玉米的引入是否仅仅导致了人口增长,而人均收入和城市化水平仍然停滞不前?</strong></li>
-<li><strong>与欧洲马铃薯的经验相比,中国玉米的引入为何产生了不同的经济增长轨迹?</strong></li>
-</ul>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li>为马尔萨斯理论提供了丰富的经验支持</li>
-<li>对"统一增长理论"的重要贡献</li>
-<li>深化了对中欧"大分流"原因的理解</li>
-<li>构建了独特的历史数据集</li>
-<li>方法论上的严谨性</li>
-</ol>
-<h2 id="内容及结构">内容及结构</h2>
-<ol type="1">
-<li>引言 (Introduction)</li>
-<li>玉米在中国的传播,1600-1910年 (The diffusion of Maize in China)</li>
-<li>数据和测量 (Data and measurement)</li>
-<li>估计策略和实证结果 (Estimation strategy and empirical results)</li>
-<li>有效性和稳健性检验 (Validity and robustness checks)</li>
-<li>人口增长而无经济发展 (Population growth without economics
-development)</li>
-<li>结论 (Conclusion)</li>
-</ol>
-<h2 id="数据集">数据集</h2>
-<ul>
-<li><strong>地理单位:</strong>
-267个"府"(相当于今天的地级市),涵盖中国18个省</li>
-<li><strong>时间跨度:</strong> 1600年至1910年</li>
-</ul>
-<p><strong>主要数据来源:</strong></p>
-<ol type="1">
-<li>玉米种植(核心自变量):查阅了1119卷府级地方志</li>
-<li>人口密度(核心因变量):来源于梁方仲 (1980) 和曹树基 (2000)
-的历史人口数据</li>
-<li>内战和瘟疫:来源于&lt;中国历代战争年表&gt;和宋正海 (1992) 的灾害记录</li>
-<li>粮食价格:来源于清代粮食价格数据库</li>
-<li>城市化率:来源于曹树基 (2000) 和Stauffer (1922) 的数据</li>
-<li>实际工资:来源于清代借贷纠纷案件的判例</li>
-</ol>
-<h2 id="核心方法差分中差分-difference-in-differences-did">核心方法:差分中差分
-(Difference-in-Differences, DID)</h2>
-<p><strong>基本思想:</strong></p>
-<ol type="1">
-<li><strong>"处理":</strong> 玉米在某个府开始种植</li>
-<li><strong>"处理组":</strong> 玉米开始种植的府</li>
-<li><strong>"对照组":</strong> 尚未开始种植玉米的府</li>
-<li><strong>"处理前"与"处理后":</strong>
-基于玉米采用年份划分的时间段</li>
-</ol>
-<p><strong>计量模型:</strong></p>
-<p><span class="math display">\[\text{popden}_{it} = \alpha
-\text{Maize}_{it} + \beta X_{it} + f_i + p_t +
-\epsilon_{it}\]</span></p>
-<ul>
-<li><span class="math inline">\(\text{popden}_{it}\)</span>:府 <span class="math inline">\(i\)</span> 在时期 <span class="math inline">\(t\)</span> 的人口密度(取自然对数)</li>
-<li><span class="math inline">\(\text{Maize}_{it}\)</span>:核心解释变量,如果府
-<span class="math inline">\(i\)</span> 在时期 <span class="math inline">\(t\)</span> 已经采用了玉米则为1,否则为0.其系数
-<span class="math inline">\(\alpha\)</span> 是本研究关注的核心参数</li>
-<li><span class="math inline">\(X_{it}\)</span>:一系列控制变量,包括战争和瘟疫的发生频率</li>
-<li><span class="math inline">\(f_i\)</span>:<strong>府固定效应</strong></li>
-<li><span class="math inline">\(p_t\)</span>:<strong>时期固定效应</strong></li>
-<li><span class="math inline">\(\epsilon_{it}\)</span>:误差项</li>
-</ul>
-<p><strong>DID方法的关键假设:平行趋势假设 (Parallel Trend
-Assumption).</strong>
-即在没有玉米种植的情况下,玉米采用区和非采用区的人口密度变化趋势应该是平行的.</p>
-<h2 id="玉米扩散机制">玉米扩散机制</h2>
-<ul>
-<li><strong>引入路线:</strong>
-16世纪中叶,玉米经由三条路线传入中国:丝绸之路(进入甘肃)、印度/缅甸(进入云南)、葡萄牙海路(进入福建)</li>
-<li><strong>地理适宜性:</strong>
-中国超过55%的土地适宜种植玉米(相比甘薯20%,马铃薯10%)</li>
-<li><strong>扩散模式:</strong>
-早期(前200年)扩散缓慢,1750年后扩散速度显著加快,到20世纪初几乎遍布全国</li>
-<li><strong>影响:</strong>
-玉米种植面积和产量大幅增加,被誉为继占城稻引入后的"第二次农业革命"</li>
-</ul>
-<h2 id="稳健性检验">稳健性检验</h2>
-<ol type="1">
-<li>府特异性时间趋势</li>
-<li>标准误聚类:使用Conley标准误</li>
-<li>空间计量方法:广义空间二阶段最小二乘法(GS2SLS)</li>
-<li>子样本分析:限制样本到华北地区(北纬33度以北)</li>
-<li>离群值和数据敏感性</li>
-<li>粮食价格验证</li>
-</ol>
-<h2 id="主要结果">主要结果</h2>
-<h3 id="玉米显著促进了中国人口增长">1. 玉米显著促进了中国人口增长</h3>
-<ul>
-<li><strong>基线回归 (表3):</strong> 玉米种植使府级人口密度增加了约
-<strong>9.9%</strong></li>
-<li><strong>量化贡献:</strong>
-在1776-1910年间,玉米种植导致中国人口增长了约
-<strong>18.77%</strong></li>
-<li><strong>机制:</strong>
-玉米引入确实增加了粮食供给,导致粮食价格下降(玉米种植后粮食价格下降3.7%)</li>
-</ul>
-<h3 id="玉米未能带来显著的经济发展">2. 玉米未能带来显著的经济发展</h3>
-<ul>
-<li><strong>城市化率:</strong>
-玉米种植对府级城市化率没有统计学上的显著影响</li>
-<li><strong>实际工资:</strong>
-玉米种植对府级农业长期雇工的实际工资也没有统计学上的显著影响</li>
-<li><strong>长期效应:</strong>
-即使考虑滞后一期的玉米种植效应,对城市化率和实际工资的影响仍然不显著</li>
-</ul>
-<h3 id="与欧洲马铃薯的对比">3. 与欧洲马铃薯的对比</h3>
-<p>Nunn和Qian (2011)
-发现马铃薯在旧世界不仅促进了人口增长,也推动了城市化和经济增长.本研究的发现为这一论断提供了"反例":在中国,玉米带来的大规模人口增长并非工业革命的充分条件.</p>
-<h2 id="核心发现图示">核心发现图示</h2>
-<ul>
-<li><strong>图5:</strong>
-玉米采用前后人口密度变化趋势,验证了平行趋势假设,并显示采用后人口密度显著上升</li>
-<li><strong>图6:</strong> 玉米采用前后战乱发生频率变化趋势</li>
-<li><strong>图8:</strong> 玉米采用前后粮食价格变化趋势</li>
-<li><strong>图9:</strong>
-玉米采用前后城市化率变化趋势,显示没有显著变化</li>
-<li><strong>图11:</strong>
-玉米采用前后实际工资变化趋势,显示没有显著变化</li>
-</ul>
-<h2 id="结论">结论</h2>
-<ol type="1">
-<li><p><strong>玉米显著促进了中国人口增长,但未能提升人均收入:</strong>
-玉米的广泛种植在1776-1910年间使中国人口增加了近19%.然而,这一农业生产力的提升并未转化为人均收入的显著增加,也未能推动城市化进程或提高实际工资水平.</p></li>
-<li><p><strong>中国在18-19世纪仍深陷马尔萨斯陷阱:</strong>
-尽管引入了具有革命性潜力的新农业技术,中国经济仍然未能摆脱马尔萨斯力量的束缚.</p></li>
-<li><p><strong>与欧洲经验形成对比,为"大分流"提供反例:</strong>
-这强调了大规模人口增长并非工业革命或经济现代化的充分条件.</p></li>
-</ol>
-<p><strong>对领域的贡献:</strong>
-强化了马尔萨斯理论的实证基础、深化了对统一增长理论的理解、为历史经济学研究提供了宝贵的数据和方法、拓宽了对"哥伦布大交换"影响的认知</p>
-<h2 id="未来研究方向">未来研究方向</h2>
-<h3 id="文献中提及的方向">文献中提及的方向</h3>
-<ol type="1">
-<li>其他新大陆作物的影响:由于数据限制,本文只研究了玉米</li>
-<li>更细致的区域异质性分析:不同区域的社会经济结构和制度环境差异巨大</li>
-</ol>
-<h3 id="进一步思考">进一步思考</h3>
-<ol type="1">
-<li>玉米引入对中国社会结构和制度变迁的深层影响</li>
-<li>中欧"大分流"中技术扩散与制度环境的比较研究</li>
-<li>长期环境变化对新大陆作物效应的调节</li>
-<li>玉米与地方经济专业化和市场整合</li>
-<li>马尔萨斯陷阱中的"质量-数量权衡"</li>
-</ol>
-<h2 id="学术思考">学术思考</h2>
-<ol type="1">
-<li>**"马尔萨斯陷阱"的衡量边界与逃逸机制的复杂性问题</li>
-<li>**新大陆作物的异质性与"次级农业革命"的可能性</li>
-<li>**微观层面的农民采纳行为与宏观效应的联系</li>
-<li>**"经济增长"代理变量的局限性与替代指标的探索</li>
-<li>**中国内部区域异质性的深层机制</li>
-</ol>
-<hr>
-<h2 id="深度评析玉米与人_新大陆作物对中国人口与经济增长的影响">深度评析:玉米与人_新大陆作物对中国人口与经济增长的影响</h2>
-<h3 id="领域基础知识什么是马尔萨斯陷阱">领域基础知识:什么是"马尔萨斯陷阱"?</h3>
-<p>在18世纪工业革命之前,人类社会普遍处于"马尔萨斯陷阱"(Malthusian
-Trap)中.简单来说,这个理论认为:<strong>技术进步带来的产出增加,最终会被人口增长所抵消.</strong></p>
-<ul>
-<li>如果农民发明了更好的耕作方法(比如引入了高产作物),短期内粮食多了,人均收入会提高</li>
-<li>但随后,人们会生更多的孩子,或者因为营养改善导致死亡率下降</li>
-<li>最终,新增的粮食养活了更多的人,但平均到每个人头上的粮食和收入又回到了"勉强维持生存"的水平(Subsistence
-Level)</li>
-</ul>
-<h3 id="研究背景新大陆作物的哥伦布大交换">研究背景:新大陆作物的"哥伦布大交换"</h3>
-<p>1492年哥伦布发现新大陆后,玉米、番薯、马铃薯等高产作物传向全世界.学术界(如
-Nunn 和
-Qian)曾发现,马铃薯在欧洲不仅促进了人口增长,还通过提高农业效率促进了城市化,从而助力欧洲开启了现代经济增长(工业革命).</p>
-<h3 id="作者的问题意识中国为什么是个例外">作者的问题意识:中国为什么是个例外?</h3>
-<p>中国在 1500 年到 1900 年间,人口从 1.3 亿激增到 4
-亿,约占全球增长的三分之一,但人均 GDP 却长期停滞在 600
-美元左右.作者想探究:<strong>玉米这种新技术的引入,在中国究竟是开启了"现代经济增长之门",还是仅仅让中国在马尔萨斯陷阱里越陷越深?</strong></p>
-<h2 id="内容及结构-1">内容及结构</h2>
-<p>论文共分为七个核心部分:</p>
-<ol type="1">
-<li>引言:提出核心议题</li>
-<li>玉米在中国的传播:梳理 1600-1910
-年玉米进入中国的路径及生态适应性</li>
-<li>数据与度量:利用历史地方志、粮价、人口密度等构建 267
-个府的面板数据</li>
-<li>实证策略与结果:使用"双重差分法"(DID)测算玉米对人口的影响</li>
-<li>稳健性检验:排除战乱、瘟疫及水稻改良等干扰因素</li>
-<li>经济增长分析:考察玉米对城市化率和实际工资的影响</li>
-<li>结论:总结发现</li>
-</ol>
-<h2 id="正文">正文</h2>
-<h3 id="背景与挑战如何证明是玉米导致了人口增长">1.
-背景与挑战:如何证明是"玉米"导致了人口增长?</h3>
-<p><strong>挑战:</strong> 18
-世纪中国人口在增长,农业技术也在进步,但我们怎么知道人口增长是因为种了玉米?</p>
-<p><strong>解决方法:</strong> 作者利用了玉米传播的"时空差异".</p>
-<ul>
-<li><strong>空间差异:</strong>
-有些府(地级市)适合种玉米,有些不适合(土地干旱程度、坡度不同)</li>
-<li><strong>时间差异:</strong> 玉米在不同府落户的时间有早有晚</li>
-</ul>
-<h3 id="方法地方志里的密码">2. 方法:地方志里的密码</h3>
-<ul>
-<li><strong>核心数据集:</strong> 作者查阅了 <strong>1119
-部地方志</strong>.地方志就像古代的"百科全书",如果某地的"物产"章节第一次出现了"玉蜀黍"或"包谷",作者就将其记录为该府开始采用玉米的时间</li>
-<li><strong>地理范围:</strong> 涵盖中国 18 个省的 267 个府,时间跨度 1600
-年到 1910 年</li>
-</ul>
-<h3 id="结果一人口19-的贡献率">3. 结果一(人口):19% 的贡献率</h3>
-<ul>
-<li><strong>发现:</strong>
-在控制了所有其他变量后,作者发现玉米的种植使得中国 1776 年至 1910
-年间的人口增长了近 <strong>19%</strong></li>
-<li><strong>逻辑:</strong>
-玉米耐旱、耐寒,且能在山坡地生长.它不与水稻抢夺肥沃的平原地,而是开辟了原本无法耕种的边际土地</li>
-<li><strong>粮价验证:</strong> 引入玉米后,粮价显著下降(约
-3.7%),这证明了玉米确实增加了食物供应</li>
-</ul>
-<h3 id="结果二经济人口多了钱没变多">4.
-结果二(经济):人口多了,钱没变多</h3>
-<p>这是本文最核心的发现.在欧洲,高产作物促进了城市化;但在中国:</p>
-<ul>
-<li><strong>城市化率:</strong>
-玉米种植对城市化率没有任何显著的正向推动.人们依然留在农村,只是人更多了</li>
-<li><strong>实际工资:</strong>
-玉米种植不仅没能提高实际工资,甚至因为人口过多导致劳动力边际报酬递减</li>
-<li><strong>边际报酬递减:</strong> 就像一亩地本来 2
-个人种,粮食够吃;现在种了玉米产出多了点,但也挤进来了 4
-个人种,虽然总粮食多了,但平分到每个人手里的粮食并没变多</li>
-</ul>
-<h2 id="结论-1">结论</h2>
-<ol type="1">
-<li><strong>实证结论</strong>:玉米在中国成功引发了"人口爆炸",贡献了约五分之一的人口增长</li>
-<li><strong>理论意义</strong>:玉米作为一项"新技术",在中国遭遇了典型的<strong>马尔萨斯结局</strong>_它只创造了"更多的中国人",而没有创造"更富裕的中国人"</li>
-<li><strong>大分流解释</strong>:中国的人口密度过高,将技术红利迅速吞噬,形成了"内卷化"(Involution)的自我循环</li>
-</ol>
-<h2 id="未来研究方向-1">未来研究方向</h2>
-<h3 id="文献中提及的方向-1">文献中提及的方向</h3>
-<ul>
-<li>其他新大陆作物:番薯(地瓜)为中国的推广作用</li>
-<li>质量-数量权衡:探究当时中国父母为何选择生更多孩子</li>
-</ul>
-<h3 id="学术思考-1">学术思考</h3>
-<ol type="1">
-<li>作物特性与工业化:作物的"生态属性"是否决定了一个国家的工业化命运?</li>
-<li>制度的调节作用:如果晚清政府拥有更强的产权保护或不同的土地税制,玉米产生的粮食盈余是否有可能转化为工业资本?</li>
-<li>内卷化的现代启示:如果高科技(如
-AI)的产出被某些社会因素抵消,我们会面临"数字化的马尔萨斯陷阱"吗?</li>
-</ol>
-<hr>
-<p><strong>文献信息:</strong></p>
-<ul>
-<li><strong>标题:</strong> Of maize and men: the effect of a New World
-crop on population and economic growth in China</li>
-<li><strong>作者:</strong> Shuo Chen, James Kai-sing Kung</li>
-<li><strong>期刊:</strong> Journal of Economic Growth, 2016, Vol. 21,
-Issue 1, pp. 71-99</li>
-<li><strong>DOI:</strong> 10.1007/s10887-016-9125-8</li>
-</ul>
-]]></content>
-      <categories>
-        <category>历史</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>经济史</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Poverty and Economic Decision-Making — 深度阅读笔记 — Carvalho, Meier &amp; Wang</title>
     <url>/posts/carvalho2016/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -2117,6 +1797,326 @@ Mani et al. (2013)
         <tag>贫困研究</tag>
         <tag>行为经济学</tag>
         <tag>认知科学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>&lt;玉米与人口&gt;深度阅读笔记 — Chen &amp; Kung</title>
+    <url>/posts/chen2016/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Of maize and men: the effect of a New World
+crop on population and economic growth in China</li>
+<li><strong>作者</strong>: Shuo Chen, James Kai-sing Kung</li>
+<li><strong>类型</strong>: 论文笔记 / 经济史 / 人口史 / 计量史学</li>
+<li><strong>出版年份</strong>: 2016</li>
+<li><strong>出版机构/期刊</strong>: Journal of Economic Growth</li>
+<li><strong>DOI</strong>: 10.1007/s10887-016-9125-8</li>
+<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量史学基础
+<span id="more"></span> ---</li>
+</ul>
+<h2 id="引言马尔萨斯陷阱与中国">引言:马尔萨斯陷阱与中国</h2>
+<p>本研究聚焦于17世纪至20世纪初的中国,探讨在新大陆作物_特别是玉米_引入后,中国是否仍然深陷"马尔萨斯陷阱",以及这种新的农业技术对人口和经济增长产生了何种影响.</p>
+<h3 id="领域基础知识">领域基础知识</h3>
+<ol type="1">
+<li><p><strong>马尔萨斯陷阱 (Malthusian Trap):</strong>
+人口总是倾向于以几何级数增长,而食物生产却只能以算术级数增长.任何技术进步或土地扩张带来的食物增加,最终都会被更快增长的人口所消耗殆尽.</p>
+<ul>
+<li><strong>积极抑制 (Positive Checks):</strong>
+增加死亡率的因素,如饥荒、瘟疫和战争.</li>
+<li><strong>预防性抑制 (Preventive Checks):</strong>
+降低出生率的因素,如晚婚、禁欲或生育控制.</li>
+</ul></li>
+<li><p><strong>现代经济增长 (Modern Economic Growth):</strong>
+人均收入能够持续、快速增长的经济发展阶段.通常伴随着工业化、技术创新、教育水平提升、人口结构转变以及城市化进程.</p></li>
+<li><p><strong>哥伦布大交换 (Columbian Exchange):</strong>
+15世纪末哥伦布发现新大陆后,欧洲、非洲和美洲之间动植物、病菌、思想和人口的大规模交流.</p></li>
+<li><p><strong>大分流 (Great Divergence):</strong>
+18世纪以来,西方欧洲(特别是英国)与东亚(特别是中国)在经济发展道路上出现的分岔.</p></li>
+</ol>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><strong>中国的人口爆炸性增长与人均收入停滞:</strong>
+<ul>
+<li>从1500年的1.3亿人口到1900年的4亿人口,中国人口在400年间几乎增长了两倍.然而,根据Maddison
+(2001)
+的数据,中国的人均GDP却长期停滞在约600美元(经调整),处于温饱水平.</li>
+<li>当时中国处于一种"高压人口体制",生产力的任何增长都极有可能被人口增长以远高于欧洲的速度所转化和消耗.</li>
+</ul></li>
+<li><strong>新大陆作物在旧世界的影响_以马铃薯为例:</strong>
+<ul>
+<li>Nunn 和 Qian (2011)
+的研究发现,马铃薯的引入在1700-1900年间使旧世界人口增长了25-26%,城市化率提高了27-34%.</li>
+<li>中国也引入了三种主要的新大陆作物_玉米、甘薯和马铃薯.其中玉米因其对中国地理条件的适应性(抗旱、耐寒,适合山地和丘陵种植),以及数据可得性,成为本研究的重点.</li>
+</ul></li>
+<li><strong>中国未能工业化之谜:</strong>
+<ul>
+<li>传统观点认为是中国农业剩余不足以支撑工业化.</li>
+<li>本研究观点认为,人口增长是农业生产力提高(部分归因于玉米的引入)的内生结果,而非导致农业剩余不足的根本原因.</li>
+</ul></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<ul>
+<li><strong>新大陆作物(特别是玉米)的引入,是否帮助中国摆脱了马尔萨斯陷阱,实现了人口和经济增长?</strong></li>
+<li><strong>或者,玉米的引入是否仅仅导致了人口增长,而人均收入和城市化水平仍然停滞不前?</strong></li>
+<li><strong>与欧洲马铃薯的经验相比,中国玉米的引入为何产生了不同的经济增长轨迹?</strong></li>
+</ul>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li>为马尔萨斯理论提供了丰富的经验支持</li>
+<li>对"统一增长理论"的重要贡献</li>
+<li>深化了对中欧"大分流"原因的理解</li>
+<li>构建了独特的历史数据集</li>
+<li>方法论上的严谨性</li>
+</ol>
+<h2 id="内容及结构">内容及结构</h2>
+<ol type="1">
+<li>引言 (Introduction)</li>
+<li>玉米在中国的传播,1600-1910年 (The diffusion of Maize in China)</li>
+<li>数据和测量 (Data and measurement)</li>
+<li>估计策略和实证结果 (Estimation strategy and empirical results)</li>
+<li>有效性和稳健性检验 (Validity and robustness checks)</li>
+<li>人口增长而无经济发展 (Population growth without economics
+development)</li>
+<li>结论 (Conclusion)</li>
+</ol>
+<h2 id="数据集">数据集</h2>
+<ul>
+<li><strong>地理单位:</strong>
+267个"府"(相当于今天的地级市),涵盖中国18个省</li>
+<li><strong>时间跨度:</strong> 1600年至1910年</li>
+</ul>
+<p><strong>主要数据来源:</strong></p>
+<ol type="1">
+<li>玉米种植(核心自变量):查阅了1119卷府级地方志</li>
+<li>人口密度(核心因变量):来源于梁方仲 (1980) 和曹树基 (2000)
+的历史人口数据</li>
+<li>内战和瘟疫:来源于&lt;中国历代战争年表&gt;和宋正海 (1992) 的灾害记录</li>
+<li>粮食价格:来源于清代粮食价格数据库</li>
+<li>城市化率:来源于曹树基 (2000) 和Stauffer (1922) 的数据</li>
+<li>实际工资:来源于清代借贷纠纷案件的判例</li>
+</ol>
+<h2 id="核心方法差分中差分-difference-in-differences-did">核心方法:差分中差分
+(Difference-in-Differences, DID)</h2>
+<p><strong>基本思想:</strong></p>
+<ol type="1">
+<li><strong>"处理":</strong> 玉米在某个府开始种植</li>
+<li><strong>"处理组":</strong> 玉米开始种植的府</li>
+<li><strong>"对照组":</strong> 尚未开始种植玉米的府</li>
+<li><strong>"处理前"与"处理后":</strong>
+基于玉米采用年份划分的时间段</li>
+</ol>
+<p><strong>计量模型:</strong></p>
+<p><span class="math display">\[\text{popden}_{it} = \alpha
+\text{Maize}_{it} + \beta X_{it} + f_i + p_t +
+\epsilon_{it}\]</span></p>
+<ul>
+<li><span class="math inline">\(\text{popden}_{it}\)</span>:府 <span class="math inline">\(i\)</span> 在时期 <span class="math inline">\(t\)</span> 的人口密度(取自然对数)</li>
+<li><span class="math inline">\(\text{Maize}_{it}\)</span>:核心解释变量,如果府
+<span class="math inline">\(i\)</span> 在时期 <span class="math inline">\(t\)</span> 已经采用了玉米则为1,否则为0.其系数
+<span class="math inline">\(\alpha\)</span> 是本研究关注的核心参数</li>
+<li><span class="math inline">\(X_{it}\)</span>:一系列控制变量,包括战争和瘟疫的发生频率</li>
+<li><span class="math inline">\(f_i\)</span>:<strong>府固定效应</strong></li>
+<li><span class="math inline">\(p_t\)</span>:<strong>时期固定效应</strong></li>
+<li><span class="math inline">\(\epsilon_{it}\)</span>:误差项</li>
+</ul>
+<p><strong>DID方法的关键假设:平行趋势假设 (Parallel Trend
+Assumption).</strong>
+即在没有玉米种植的情况下,玉米采用区和非采用区的人口密度变化趋势应该是平行的.</p>
+<h2 id="玉米扩散机制">玉米扩散机制</h2>
+<ul>
+<li><strong>引入路线:</strong>
+16世纪中叶,玉米经由三条路线传入中国:丝绸之路(进入甘肃)、印度/缅甸(进入云南)、葡萄牙海路(进入福建)</li>
+<li><strong>地理适宜性:</strong>
+中国超过55%的土地适宜种植玉米(相比甘薯20%,马铃薯10%)</li>
+<li><strong>扩散模式:</strong>
+早期(前200年)扩散缓慢,1750年后扩散速度显著加快,到20世纪初几乎遍布全国</li>
+<li><strong>影响:</strong>
+玉米种植面积和产量大幅增加,被誉为继占城稻引入后的"第二次农业革命"</li>
+</ul>
+<h2 id="稳健性检验">稳健性检验</h2>
+<ol type="1">
+<li>府特异性时间趋势</li>
+<li>标准误聚类:使用Conley标准误</li>
+<li>空间计量方法:广义空间二阶段最小二乘法(GS2SLS)</li>
+<li>子样本分析:限制样本到华北地区(北纬33度以北)</li>
+<li>离群值和数据敏感性</li>
+<li>粮食价格验证</li>
+</ol>
+<h2 id="主要结果">主要结果</h2>
+<h3 id="玉米显著促进了中国人口增长">1. 玉米显著促进了中国人口增长</h3>
+<ul>
+<li><strong>基线回归 (表3):</strong> 玉米种植使府级人口密度增加了约
+<strong>9.9%</strong></li>
+<li><strong>量化贡献:</strong>
+在1776-1910年间,玉米种植导致中国人口增长了约
+<strong>18.77%</strong></li>
+<li><strong>机制:</strong>
+玉米引入确实增加了粮食供给,导致粮食价格下降(玉米种植后粮食价格下降3.7%)</li>
+</ul>
+<h3 id="玉米未能带来显著的经济发展">2. 玉米未能带来显著的经济发展</h3>
+<ul>
+<li><strong>城市化率:</strong>
+玉米种植对府级城市化率没有统计学上的显著影响</li>
+<li><strong>实际工资:</strong>
+玉米种植对府级农业长期雇工的实际工资也没有统计学上的显著影响</li>
+<li><strong>长期效应:</strong>
+即使考虑滞后一期的玉米种植效应,对城市化率和实际工资的影响仍然不显著</li>
+</ul>
+<h3 id="与欧洲马铃薯的对比">3. 与欧洲马铃薯的对比</h3>
+<p>Nunn和Qian (2011)
+发现马铃薯在旧世界不仅促进了人口增长,也推动了城市化和经济增长.本研究的发现为这一论断提供了"反例":在中国,玉米带来的大规模人口增长并非工业革命的充分条件.</p>
+<h2 id="核心发现图示">核心发现图示</h2>
+<ul>
+<li><strong>图5:</strong>
+玉米采用前后人口密度变化趋势,验证了平行趋势假设,并显示采用后人口密度显著上升</li>
+<li><strong>图6:</strong> 玉米采用前后战乱发生频率变化趋势</li>
+<li><strong>图8:</strong> 玉米采用前后粮食价格变化趋势</li>
+<li><strong>图9:</strong>
+玉米采用前后城市化率变化趋势,显示没有显著变化</li>
+<li><strong>图11:</strong>
+玉米采用前后实际工资变化趋势,显示没有显著变化</li>
+</ul>
+<h2 id="结论">结论</h2>
+<ol type="1">
+<li><p><strong>玉米显著促进了中国人口增长,但未能提升人均收入:</strong>
+玉米的广泛种植在1776-1910年间使中国人口增加了近19%.然而,这一农业生产力的提升并未转化为人均收入的显著增加,也未能推动城市化进程或提高实际工资水平.</p></li>
+<li><p><strong>中国在18-19世纪仍深陷马尔萨斯陷阱:</strong>
+尽管引入了具有革命性潜力的新农业技术,中国经济仍然未能摆脱马尔萨斯力量的束缚.</p></li>
+<li><p><strong>与欧洲经验形成对比,为"大分流"提供反例:</strong>
+这强调了大规模人口增长并非工业革命或经济现代化的充分条件.</p></li>
+</ol>
+<p><strong>对领域的贡献:</strong>
+强化了马尔萨斯理论的实证基础、深化了对统一增长理论的理解、为历史经济学研究提供了宝贵的数据和方法、拓宽了对"哥伦布大交换"影响的认知</p>
+<h2 id="未来研究方向">未来研究方向</h2>
+<h3 id="文献中提及的方向">文献中提及的方向</h3>
+<ol type="1">
+<li>其他新大陆作物的影响:由于数据限制,本文只研究了玉米</li>
+<li>更细致的区域异质性分析:不同区域的社会经济结构和制度环境差异巨大</li>
+</ol>
+<h3 id="进一步思考">进一步思考</h3>
+<ol type="1">
+<li>玉米引入对中国社会结构和制度变迁的深层影响</li>
+<li>中欧"大分流"中技术扩散与制度环境的比较研究</li>
+<li>长期环境变化对新大陆作物效应的调节</li>
+<li>玉米与地方经济专业化和市场整合</li>
+<li>马尔萨斯陷阱中的"质量-数量权衡"</li>
+</ol>
+<h2 id="学术思考">学术思考</h2>
+<ol type="1">
+<li>**"马尔萨斯陷阱"的衡量边界与逃逸机制的复杂性问题</li>
+<li>**新大陆作物的异质性与"次级农业革命"的可能性</li>
+<li>**微观层面的农民采纳行为与宏观效应的联系</li>
+<li>**"经济增长"代理变量的局限性与替代指标的探索</li>
+<li>**中国内部区域异质性的深层机制</li>
+</ol>
+<hr>
+<h2 id="深度评析玉米与人_新大陆作物对中国人口与经济增长的影响">深度评析:玉米与人_新大陆作物对中国人口与经济增长的影响</h2>
+<h3 id="领域基础知识什么是马尔萨斯陷阱">领域基础知识:什么是"马尔萨斯陷阱"?</h3>
+<p>在18世纪工业革命之前,人类社会普遍处于"马尔萨斯陷阱"(Malthusian
+Trap)中.简单来说,这个理论认为:<strong>技术进步带来的产出增加,最终会被人口增长所抵消.</strong></p>
+<ul>
+<li>如果农民发明了更好的耕作方法(比如引入了高产作物),短期内粮食多了,人均收入会提高</li>
+<li>但随后,人们会生更多的孩子,或者因为营养改善导致死亡率下降</li>
+<li>最终,新增的粮食养活了更多的人,但平均到每个人头上的粮食和收入又回到了"勉强维持生存"的水平(Subsistence
+Level)</li>
+</ul>
+<h3 id="研究背景新大陆作物的哥伦布大交换">研究背景:新大陆作物的"哥伦布大交换"</h3>
+<p>1492年哥伦布发现新大陆后,玉米、番薯、马铃薯等高产作物传向全世界.学术界(如
+Nunn 和
+Qian)曾发现,马铃薯在欧洲不仅促进了人口增长,还通过提高农业效率促进了城市化,从而助力欧洲开启了现代经济增长(工业革命).</p>
+<h3 id="作者的问题意识中国为什么是个例外">作者的问题意识:中国为什么是个例外?</h3>
+<p>中国在 1500 年到 1900 年间,人口从 1.3 亿激增到 4
+亿,约占全球增长的三分之一,但人均 GDP 却长期停滞在 600
+美元左右.作者想探究:<strong>玉米这种新技术的引入,在中国究竟是开启了"现代经济增长之门",还是仅仅让中国在马尔萨斯陷阱里越陷越深?</strong></p>
+<h2 id="内容及结构-1">内容及结构</h2>
+<p>论文共分为七个核心部分:</p>
+<ol type="1">
+<li>引言:提出核心议题</li>
+<li>玉米在中国的传播:梳理 1600-1910
+年玉米进入中国的路径及生态适应性</li>
+<li>数据与度量:利用历史地方志、粮价、人口密度等构建 267
+个府的面板数据</li>
+<li>实证策略与结果:使用"双重差分法"(DID)测算玉米对人口的影响</li>
+<li>稳健性检验:排除战乱、瘟疫及水稻改良等干扰因素</li>
+<li>经济增长分析:考察玉米对城市化率和实际工资的影响</li>
+<li>结论:总结发现</li>
+</ol>
+<h2 id="正文">正文</h2>
+<h3 id="背景与挑战如何证明是玉米导致了人口增长">1.
+背景与挑战:如何证明是"玉米"导致了人口增长?</h3>
+<p><strong>挑战:</strong> 18
+世纪中国人口在增长,农业技术也在进步,但我们怎么知道人口增长是因为种了玉米?</p>
+<p><strong>解决方法:</strong> 作者利用了玉米传播的"时空差异".</p>
+<ul>
+<li><strong>空间差异:</strong>
+有些府(地级市)适合种玉米,有些不适合(土地干旱程度、坡度不同)</li>
+<li><strong>时间差异:</strong> 玉米在不同府落户的时间有早有晚</li>
+</ul>
+<h3 id="方法地方志里的密码">2. 方法:地方志里的密码</h3>
+<ul>
+<li><strong>核心数据集:</strong> 作者查阅了 <strong>1119
+部地方志</strong>.地方志就像古代的"百科全书",如果某地的"物产"章节第一次出现了"玉蜀黍"或"包谷",作者就将其记录为该府开始采用玉米的时间</li>
+<li><strong>地理范围:</strong> 涵盖中国 18 个省的 267 个府,时间跨度 1600
+年到 1910 年</li>
+</ul>
+<h3 id="结果一人口19-的贡献率">3. 结果一(人口):19% 的贡献率</h3>
+<ul>
+<li><strong>发现:</strong>
+在控制了所有其他变量后,作者发现玉米的种植使得中国 1776 年至 1910
+年间的人口增长了近 <strong>19%</strong></li>
+<li><strong>逻辑:</strong>
+玉米耐旱、耐寒,且能在山坡地生长.它不与水稻抢夺肥沃的平原地,而是开辟了原本无法耕种的边际土地</li>
+<li><strong>粮价验证:</strong> 引入玉米后,粮价显著下降(约
+3.7%),这证明了玉米确实增加了食物供应</li>
+</ul>
+<h3 id="结果二经济人口多了钱没变多">4.
+结果二(经济):人口多了,钱没变多</h3>
+<p>这是本文最核心的发现.在欧洲,高产作物促进了城市化;但在中国:</p>
+<ul>
+<li><strong>城市化率:</strong>
+玉米种植对城市化率没有任何显著的正向推动.人们依然留在农村,只是人更多了</li>
+<li><strong>实际工资:</strong>
+玉米种植不仅没能提高实际工资,甚至因为人口过多导致劳动力边际报酬递减</li>
+<li><strong>边际报酬递减:</strong> 就像一亩地本来 2
+个人种,粮食够吃;现在种了玉米产出多了点,但也挤进来了 4
+个人种,虽然总粮食多了,但平分到每个人手里的粮食并没变多</li>
+</ul>
+<h2 id="结论-1">结论</h2>
+<ol type="1">
+<li><strong>实证结论</strong>:玉米在中国成功引发了"人口爆炸",贡献了约五分之一的人口增长</li>
+<li><strong>理论意义</strong>:玉米作为一项"新技术",在中国遭遇了典型的<strong>马尔萨斯结局</strong>_它只创造了"更多的中国人",而没有创造"更富裕的中国人"</li>
+<li><strong>大分流解释</strong>:中国的人口密度过高,将技术红利迅速吞噬,形成了"内卷化"(Involution)的自我循环</li>
+</ol>
+<h2 id="未来研究方向-1">未来研究方向</h2>
+<h3 id="文献中提及的方向-1">文献中提及的方向</h3>
+<ul>
+<li>其他新大陆作物:番薯(地瓜)为中国的推广作用</li>
+<li>质量-数量权衡:探究当时中国父母为何选择生更多孩子</li>
+</ul>
+<h3 id="学术思考-1">学术思考</h3>
+<ol type="1">
+<li>作物特性与工业化:作物的"生态属性"是否决定了一个国家的工业化命运?</li>
+<li>制度的调节作用:如果晚清政府拥有更强的产权保护或不同的土地税制,玉米产生的粮食盈余是否有可能转化为工业资本?</li>
+<li>内卷化的现代启示:如果高科技(如
+AI)的产出被某些社会因素抵消,我们会面临"数字化的马尔萨斯陷阱"吗?</li>
+</ol>
+<hr>
+<p><strong>文献信息:</strong></p>
+<ul>
+<li><strong>标题:</strong> Of maize and men: the effect of a New World
+crop on population and economic growth in China</li>
+<li><strong>作者:</strong> Shuo Chen, James Kai-sing Kung</li>
+<li><strong>期刊:</strong> Journal of Economic Growth, 2016, Vol. 21,
+Issue 1, pp. 71-99</li>
+<li><strong>DOI:</strong> 10.1007/s10887-016-9125-8</li>
+</ul>
+]]></content>
+      <categories>
+        <category>历史</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>经济史</tag>
       </tags>
   </entry>
   <entry>
@@ -3474,6 +3474,491 @@ Fragments of Curious and Useful Knowledge from the Chinese Past</em>
       </tags>
   </entry>
   <entry>
+    <title>The Price of War — 深度阅读笔记 — Federle Et Al.</title>
+    <url>/posts/federle2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: The Price of War</li>
+<li><strong>作者</strong>: Jonathan Federle, André Meier, Gernot J.
+Müller, Willi Mutschler, Moritz Schularick</li>
+<li><strong>类型</strong>: 论文笔记 / 战争经济学 / 宏观经济学 /
+经济史学</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: American Economic Review, 116(3):
+791-827</li>
+<li><strong>DOI</strong>: 10.1257/aer.20241355</li>
+<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量史学基础
+<span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>本文属于<strong>经济学研究领域</strong>，具体涉及发展经济学、国际经济学、经济史学、冲突经济学（Conflict
+Economics）以及宏观经济学等多个子领域的交叉地带。论文所研究的<strong>战争经济学</strong>（Economics
+of
+War）是一个重要但相对被忽视的研究方向，主要探讨战争如何影响参与各方的经济表现。</p>
+<p>论文使用了多个经典宏观经济指标来测度战争的经济影响：</p>
+<ul>
+<li><strong>实际GDP（Real
+GDP）</strong>：衡量一个国家商品和服务产出的最核心指标</li>
+<li><strong>消费者价格指数（CPI）</strong>：衡量通货膨胀和物价水平变化</li>
+<li><strong>资本存量（Capital
+Stock）</strong>：衡量经济体中可用于生产的固定资产总量</li>
+<li><strong>全要素生产率（TFP, Total Factor
+Productivity）</strong>：衡量技术进步和效率提升的关键指标</li>
+<li><strong>股权回报率（Equity
+Returns）</strong>：反映股票市场的整体表现</li>
+<li><strong>长期利率（Long-term Interest
+Rates）</strong>：反映资金成本和政府借贷成本</li>
+</ul>
+<h3 id="研究的主要背景分点说明">研究的主要背景（分点说明）</h3>
+<p><strong>第一，战争与全球经济风险上升的背景。</strong>
+近年来，全球政治经济格局正在经历深刻变化。经济碎片化加剧（Fernández-Villaverde,
+Mineyama, and Song 2024; Gopinath et al.
+2025），地缘政治紧张局势和冲突风险显著上升。在这一背景下，理解战争对经济的影响变得尤为重要。</p>
+<p><strong>第二，现有文献的局限性。</strong>
+虽然有大量研究关注特定战争（如两次世界大战、冷战时期冲突）的财政和货币影响，以及战争对交战国经济增长的影响，但这些研究存在以下不足：</p>
+<ul>
+<li>多为单一战争案例研究，缺乏系统性比较</li>
+<li>很少考虑战争的<strong>跨境溢出效应</strong>（Spillover
+Effects）</li>
+<li>对战争如何通过贸易网络影响第三方国家的机制理解不足</li>
+</ul>
+<p><strong>第三，数据可得性的突破。</strong>
+本文作者整合了"战争相关因素项目"（Correlates of War,
+COW）的战争数据与"Jordà-Schularick-Taylor宏观史数据库"（MacroHistory
+Database），构建了一个跨越150年、涵盖60个国家的新数据集，这使得系统性地研究战争的经济影响成为可能。</p>
+<p><strong>第四，战争频率与地理分布的重要事实。</strong>
+本文揭示了一个重要却常被忽视的事实：尽管一个国家在特定年份成为战场的概率只有6%，但与其接壤并可能受到战争影响的国家比例高达20%——这一比例是全球金融危机频率的约5倍。这意味着虽然直接经历战争的国家相对较少，但通过贸易和地理渠道受到战争间接影响的国家却非常普遍。</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心研究问题：战争对经济的影响是什么？这种影响如何溢出到非参战国？</strong></p>
+<p>具体而言，作者试图回答以下问题：</p>
+<ol type="1">
+<li>战争在战地国家造成的直接经济损失有多大？</li>
+<li>参战国（非战地）的经济表现与战地国家有何不同？</li>
+<li>第三方国家如何受到战争的经济影响？贸易联系和地理邻近如何调节这一影响？</li>
+<li>战争的宏观经济影响在不同类型的战争中是否存在系统性差异？</li>
+</ol>
+<p>作者明确指出，他们的研究目的是建立<strong>新的Stylized
+Facts（典型化事实）</strong>，即战争后经济发展的典型模式，而不试图进行因果解释。这是因为战争爆发与经济发展之间可能存在双向因果关系——经济状况可能既是战争爆发的原因，也是战争的结果。</p>
+<h3 id="研究意义">研究意义</h3>
+<p><strong>理论意义：</strong>
+本文首次系统性地分析了三类国家（战地国家、参战国、第三方国家）在战争前后的经济动态演化，并区分了不同传导渠道（贸易渠道、地理渠道）的作用。这为战争经济学领域提供了重要的实证基础。</p>
+<p><strong>政策意义：</strong>
+在当前地缘政治紧张局势加剧、全球化退潮的背景下，理解战争的经济代价及其传播途径对于政策制定者具有重要的参考价值。尤其是认识到与战地的贸易联系会放大对他国经济的冲击，有助于各国更好地评估和应对地缘政治风险。</p>
+<p><strong>方法论贡献：</strong> 作者采用的局部投影法（Local Projections
+Method）和多维度的暴露度（Exposure）分析框架为后续研究提供了方法论借鉴。</p>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<h3 id="论文整体框架">论文整体框架</h3>
+<p>本文共分为五个主要部分，外加附录和补充材料：</p>
+<p><strong>第一部分：引言（Introduction）</strong> -
+阐述研究背景、问题意识和研究贡献 -
+回顾相关文献，定位本文在现有研究中的位置</p>
+<p><strong>第二部分：数据与基本事实（Data and Basic Facts）</strong> -
+详细说明战争地点（War Sites）的识别方法 - 介绍数据集的构建过程 -
+提供描述性统计</p>
+<p><strong>第三部分：战争爆发后的经济动态（Economic Dynamics after the
+Outbreak of War）</strong> - 介绍实证分析框架（局部投影法） -
+报告基准回归结果 - 分析第三方国家的异质性 -
+考察制度质量等更广泛的社会变化</p>
+<p><strong>第四部分：因果推断（Causality）</strong> -
+利用国别战争的差异性检验因果关系 - 通过叙事性识别（Narrative
+Identification）排除内生性干扰</p>
+<p><strong>第五部分：结论（Conclusion）</strong> - 总结主要发现 -
+讨论政策含义和研究局限</p>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p><strong>全球政治经济格局的深刻变化</strong></p>
+<p>近年来，国际政治经济环境发生了显著变化。地缘政治紧张局势加剧，冲突风险上升。战争不仅造成生命和财产的直接损失，还会扰乱贸易、破坏公共财政。正如Barro
+(2006)所指出的，上个世纪许多重大经济灾难都与本土战争有关。</p>
+<p><strong>被忽视的战争跨境影响</strong></p>
+<p>尽管战争的经济影响重大，但现有研究存在明显空白：战争的经济影响不仅限于交战国，其他国家和第三方国家也会受到冲击。这一"战争的代价"（Price
+of War）问题在学术和政策讨论中都未得到足够重视。</p>
+<p><strong>Trotsky的警示</strong></p>
+<p>作者引用了Trotsky的名言"你可能对战争不感兴趣，但战争对你感兴趣"（You
+may not be interested in war, but war is interested in
+you），用以强调在全球化时代，战争的经济影响具有广泛的传播性，即使是未直接参战的国家也难以独善其身。</p>
+<h3 id="挑战">挑战</h3>
+<p><strong>数据缺乏的系统性</strong></p>
+<p>系统研究战争经济影响面临的首要挑战是<strong>数据缺乏</strong>。需要整合多来源的历史数据：</p>
+<ul>
+<li>战争事件数据（COW项目）</li>
+<li>宏观经济时间序列数据（Jordà-Schularick-Taylor数据库）</li>
+<li>贸易数据（Fouquin and Hugot 2016）</li>
+<li>地理边界和人口数据</li>
+</ul>
+<p><strong>战地识别的复杂性</strong></p>
+<p>COW项目提供的是参战国信息，但并未明确指出战争在哪些国家的领土上进行。为此，作者需要：</p>
+<ul>
+<li>收集Battle-level的详细信息</li>
+<li>手动编码1,737场战役的地理位置</li>
+<li>将战役层面的伤亡汇总到国家层面</li>
+</ul>
+<p><strong>战争类型差异的处理</strong></p>
+<p>战争分为不同类型：</p>
+<ul>
+<li><strong>国家间战争（Interstate
+Wars）</strong>：两国或多国间武装冲突，如一战、二战</li>
+<li><strong>其他战争（Other
+Wars）</strong>：内战、殖民战争、独立战争等</li>
+</ul>
+<p>这两类战争在频率、强度、持续时间和经济动机方面都存在系统性差异，需要在分析中加以区分。</p>
+<p><strong>内生性问题的处理</strong></p>
+<p>战争爆发与经济状况之间可能存在双向因果关系——经济困难可能既是战争爆发的原因（内生性），也是战争的结果（需要识别因果方向）。如何剥离这种内生性是因果推断的核心挑战。</p>
+<h3 id="方法数据集要突出">方法（数据集要突出）</h3>
+<h4 id="数据集构建">数据集构建</h4>
+<p><strong>样本范围</strong></p>
+<ul>
+<li>时间跨度：1870-2023年（150年）</li>
+<li>国家数量：60个国家（占1960年全球GDP的95%）</li>
+<li>战争样本：694场战争（国家-年观察值），其中约1/3为国家间战争</li>
+</ul>
+<p><strong>战争数据的分类与编码</strong></p>
+<p>作者遵循COW项目的定义，将战争分为：</p>
+<ol type="1">
+<li><strong>Interstate
+Wars（国家间战争）</strong>：至少两个国家间、12个月内战斗死亡人数不少于1000人的武装冲突</li>
+<li><strong>Other
+Wars（其他战争）</strong>：内战、殖民战争、解放战争等</li>
+</ol>
+<p><strong>战争强度测量</strong></p>
+<p>使用<strong>Casualties/Local Population
+Ratio</strong>作为战争强度指标：</p>
+<p><span class="math display">\[{Site_{j,t} =
+\frac{Casualties_{j,t}}{Population_{j, pre-war}}}\]</span></p>
+<p>其中伤亡包括死亡、失踪、受伤和战俘。</p>
+<p><strong>关键统计事实</strong></p>
+<ul>
+<li>国家间战争平均强度：3.5%（以伤亡/战前人口衡量）</li>
+<li>其他战争平均强度：0.74%</li>
+<li>战争持续时间中位数：2年</li>
+<li>总样本包括225个国家间战争和469场其他战争</li>
+</ul>
+<p><strong>Battle-Level地理编码</strong></p>
+<p>为识别战地，作者收集了1,737场战役的详细信息：</p>
+<ul>
+<li>来源：Clodfelter (2017)战争百科全书及多种历史资料</li>
+<li>每场战役记录：地理位置、伤亡人数、参战方</li>
+<li>最大战役：Brusilov Offensive（一战），超过100万伤亡</li>
+</ul>
+<p><strong>宏观经济指标</strong></p>
+<p>使用Jordà-Schularick-Taylor宏观史数据库，核心变量包括：</p>
+<ul>
+<li>实际GDP（Real GDP）</li>
+<li>消费者价格指数（CPI）</li>
+<li>资本存量（Capital Stock）</li>
+<li>全要素生产率（TFP）</li>
+<li>10年期政府债券收益率</li>
+<li>股权回报指数</li>
+<li>军事支出（占GDP比重）</li>
+<li>军事人员（占人口比重）</li>
+</ul>
+<p><strong>贸易数据</strong></p>
+<p>使用Fouquin and Hugot
+(2016)的双边贸易数据，并使用引力模型填补缺失值（伪<span class="math inline">\({R^2=0.95}\)</span>）。</p>
+<p><strong>GPT-4验证</strong></p>
+<p>作者还使用GPT-4
+API辅助验证战地编码的准确性，发现GPT-4识别结果与手工编码的Pearson相关系数为0.73（<span class="math inline">\({p&lt;0.001}\)</span>）。</p>
+<h4 id="实证方法局部投影法">实证方法：局部投影法</h4>
+<p><strong>Local Projections Method（局部投影法）</strong></p>
+<p>遵循Jordà (2005)的方法，估计以下规范：</p>
+<p><span class="math display">\[{y_{i,t+h} - y_{i,t-1} = \zeta_h'
+X_{i,t} + \sum_{c \in \{S,B,T\}} \phi_{c,h}(\gamma_{i,c,t}' \cdot
+Sites_t) + \sum_{c \in \{B,T\}} \psi_{c,h}(\epsilon_{i,c,t-1}' \cdot
+Sites_t) + u_{i,t+h}}\]</span></p>
+<p>其中：</p>
+<ul>
+<li><span class="math inline">\({y_{i,t}}\)</span>：结果变量（如实际GDP）</li>
+<li><span class="math inline">\({h}\)</span>：战争开始后的年数（<span class="math inline">\({h=0,1,...,8}\)</span>）</li>
+<li><span class="math inline">\({X_{i,t}}\)</span>：控制变量（包含4阶滞后项、国家固定效应、是否接壤战地国家）</li>
+<li><span class="math inline">\({\phi_{c,h}}\)</span>：捕捉c类国家（战地S、参战B、第三方T）在战争后的动态</li>
+<li><span class="math inline">\({\psi_{c,h}}\)</span>：允许暴露度（贸易联系、地理邻近）对溢出效应进行调节</li>
+</ul>
+<p><strong>暴露度向量（Exposure Vector）</strong></p>
+<p><span class="math display">\[{\epsilon_{i,c,t-1} = \frac{Import_{i
+\leftarrow j, t-1}}{GDP_{i, t-1}}}\]</span></p>
+<p>衡量第三方国家i与战地国家j之间的贸易暴露度。</p>
+<p><strong>固定效应设定</strong></p>
+<p>不包含时间固定效应，以捕捉特定国家组的完整经济动态，而非仅捕捉相对于平均值的动态变化。</p>
+<h3 id="结果results">结果（Results）</h3>
+<h4 id="基准结果三类国家的经济动态">基准结果：三类国家的经济动态</h4>
+<p><strong>产出（Output）</strong></p>
+<ul>
+<li><strong>战地国家</strong>：GDP下降约10%（相对于战前趋势），在战争开始后约4年达到谷底，此后恢复缓慢，8年后仍低约5%，完全恢复需要约12年</li>
+<li><strong>参战国</strong>：平均GDP未显示明显偏离趋势</li>
+<li><strong>第三方国家</strong>：平均GDP仅适度下降</li>
+</ul>
+<p><strong>消费者价格指数（CPI）</strong></p>
+<ul>
+<li><strong>战地国家</strong>：物价水平持续上涨，战争开始6年后达到峰值，比趋势高约20%</li>
+<li><strong>参战国和第三方国家</strong>：物价水平也有一定上涨，但幅度较小</li>
+</ul>
+<p><strong>资本存量（Capital Stock）</strong></p>
+<ul>
+<li><strong>战地国家</strong>：8年内下降超过4%</li>
+<li><strong>参战国和第三方国家</strong>：也有显著下降，但幅度小得多</li>
+<li>注意：资本存量下降可能反映物理破坏，也可能反映投资减少</li>
+</ul>
+<p><strong>全要素生产率（TFP）</strong></p>
+<ul>
+<li><strong>战地国家</strong>：TFP立即大幅下降，与战争严重破坏经济运作一致</li>
+<li><strong>参战国</strong>：TFP轻微（但不显著）上升</li>
+<li><strong>第三方国家</strong>：TFP基本不变</li>
+</ul>
+<p><strong>长期利率</strong></p>
+<ul>
+<li><strong>战地国家</strong>：10年期政府债券收益率上升约0.3个百分点，并持续
+elevated 约12年</li>
+<li><strong>参战国和第三方国家</strong>：也有适度上升，但不显著</li>
+</ul>
+<p><strong>股权回报率</strong></p>
+<ul>
+<li><strong>战地国家</strong>：股市指数持续下跌，相对趋势的累计跑输幅度在6年后达到20%</li>
+<li>初始反应微弱，表明市场未完全预期战争的不利发展</li>
+<li><strong>第三方国家</strong>：股市跌幅约为战地国家的一半</li>
+<li><strong>参战国</strong>：表现出最强的韧性</li>
+</ul>
+<p><strong>军事支出和人员</strong></p>
+<ul>
+<li><strong>战地和参战国</strong>：军事支出显著增加，初期约增加1个百分点GDP，4年后达到峰值2.5个百分点GDP</li>
+<li><strong>第三方国家</strong>：军事支出和人员基本不变</li>
+</ul>
+<h4 id="关键发现第三国异质性">关键发现：第三国异质性</h4>
+<p><strong>贸易暴露度的关键作用</strong></p>
+<p>当按贸易暴露度区分第三方国家时，发现显著差异：</p>
+<ul>
+<li><strong>高贸易暴露国家</strong>（从战地进口占GDP的3%）：产出下降2%，价格大幅上涨，资本存量下降，利率上升，股权回报下降</li>
+<li><strong>零贸易暴露国家</strong>：基本不受影响</li>
+</ul>
+<p>这一发现具有重要的政策含义：与战地的贸易联系是战争经济影响传导的关键渠道。</p>
+<p><strong>地理邻近的额外风险</strong></p>
+<p>接壤战地的国家面临额外的负面效应：</p>
+<ul>
+<li>长期利率略有下降（可能反映资本外逃）</li>
+<li>股权回报为负（符合灾难风险溢价上升）</li>
+<li>军事支出和人员略有增加（反映军事溢出风险）</li>
+</ul>
+<p><strong>贸易渠道的机制</strong></p>
+<p>贸易收缩是战争溢出效应的关键传导机制：</p>
+<ul>
+<li>战地出口下降：战地生产能力被破坏</li>
+<li>战地进口下降：供应链中断</li>
+<li>高暴露第三方国家：进出口均收缩</li>
+</ul>
+<h4 id="因果推断结果">因果推断结果</h4>
+<p><strong>国家间战争 vs. 其他战争</strong></p>
+<ul>
+<li><strong>国家间战争</strong>：爆发前，产出和通胀没有系统性变化</li>
+<li><strong>其他战争</strong>：爆发前通胀上升、产出增长放缓——这些战争可能是经济波动的原因和结果</li>
+</ul>
+<p><strong>叙事性识别（Narrative Identification）</strong></p>
+<p>作者识别了每场国家间战争的主要战争动机（casus belli）：</p>
+<ul>
+<li>大多数战争与民族主义、意识形态或历史原因相关（可能外生于商业周期）</li>
+<li>经济动机仅在少数6场战争中显得重要</li>
+<li>排除这6场战争后，样本中国际战争的经济影响估计与全样本非常相似</li>
+</ul>
+<p><strong>Granger因果检验</strong></p>
+<ul>
+<li>国家间战争：不被产出增长和通胀的滞后项Granger引起</li>
+<li>其他战争：存在反向因果关系</li>
+</ul>
+<p>这支持了因果解释：战争导致了所记录的经济动态。</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<h3 id="核心发现总结">核心发现总结</h3>
+<p><strong>发现一：战地国家的巨大经济代价</strong></p>
+<p>一场中等强度（2%伤亡/人口）的战争与战地国家产出下降约10%相关。消费者价格上涨约20%。资本存量、全要素生产率和股权回报均急剧下降。经济恢复是缓慢的——完全恢复需要约12年，尽管战争本身平均只持续2-3年。</p>
+<p><strong>发现二：参战国的相对韧性</strong></p>
+<p>尽管面临战争，参战国（非战地）的平均经济表现明显好于战地国家。这可能与军事支出增加带来的财政刺激效应有关——如Braun和McGrattan
+(1993)以及Ilzetzki
+(2024)研究所示，两次世界大战期间美国和英国的经济扩张与军费急剧增加有关。</p>
+<p><strong>发现三：第三方国家的显著溢出效应</strong></p>
+<p>战争的经济影响并不局限于战地。通过贸易渠道，第三方国家也受到显著影响：</p>
+<ul>
+<li>与战地有密切贸易联系的国家（进口占GDP 3%）：产出下降约2%</li>
+<li>接壤战地的国家：面临额外的负面金融效应</li>
+</ul>
+<p><strong>发现四：传播渠道</strong></p>
+<p>贸易联系和地理邻近是战争经济影响跨境传播的两个关键渠道。这与全球供应链的相互依存性以及地理邻近带来的直接风险暴露有关。</p>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><strong>首次系统性分析</strong>：首次全面分析150年间60个国家战争的经济影响，提供了战争经济学的典型化事实</li>
+<li><strong>跨境溢出效应</strong>：揭示了战争通过贸易和地理渠道对第三方国家的显著溢出效应</li>
+<li><strong>异质性分析</strong>：详细区分了不同类型国家（战地、参战、第三方）和不同暴露度下的经济动态差异</li>
+<li><strong>因果识别</strong>：通过叙事性方法识别战争的经济影响，为因果推断提供了合理依据</li>
+<li><strong>方法论贡献</strong>：提供了局部投影法在战争经济学应用的范例</li>
+</ol>
+<h3 id="更广泛的社会影响">更广泛的社会影响</h3>
+<p>除经济指标外，作者还记录了战争对更广泛社会制度的影响：</p>
+<ul>
+<li>媒体自由度下降</li>
+<li>司法独立性下降</li>
+<li>选举公平性下降</li>
+<li>制度质量下降</li>
+</ul>
+<p>这些变化主要局限于战地，但媒体自由度的下降也波及参战国。</p>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="论文中提及的未来研究方向">论文中提及的未来研究方向</h3>
+<ol type="1">
+<li><strong>福利损失的全面测度</strong>
+<ul>
+<li>现有指标无法完全捕捉战争的经济代价及其对人类福利的影响</li>
+<li>产出与福利可能在战时分歧：例如劳动力动员可能导致产出增加，即使整体福利下降</li>
+<li>需要更好的方法来衡量私人消费等人福利指标</li>
+</ul></li>
+<li><strong>战争性质的演变</strong>
+<ul>
+<li>战争性质随时间不断变化</li>
+<li>伤亡与其他候选统计指标之间的关系也可能变化</li>
+<li>需要动态更新的战争强度测量方法</li>
+</ul></li>
+<li><strong>局部战争的经济影响</strong>
+<ul>
+<li>未来可以专门研究有限地理范围的局部战争的经济影响</li>
+<li>分析核威慑下的有限战争与全面战争的差异</li>
+</ul></li>
+</ol>
+<h3 id="根据论文内容思考的下一步研究工作">根据论文内容思考的下一步研究工作</h3>
+<ol type="1">
+<li><strong>供应链渠道的深入研究</strong>
+<ul>
+<li>本文发现贸易是主要传导渠道，但未深入分析供应链网络的结构性特征</li>
+<li>可研究全球价值链（GVC）参与度如何调节战争溢出效应</li>
+<li>可使用投入产出表分析产业关联的具体路径</li>
+</ul></li>
+<li><strong>金融渠道的作用</strong>
+<ul>
+<li>本文发现股权回报在战地和第三方国家都大幅下降</li>
+<li>可深入研究战争如何通过金融市场（资本流动、汇率、信贷市场）传导</li>
+</ul></li>
+<li><strong>人力资本渠道</strong>
+<ul>
+<li>战争造成的人员伤亡和劳动力动员直接影响人力资本</li>
+<li>可研究战争对教育、健康和创新的人力资本长期影响</li>
+</ul></li>
+<li><strong>政策应对效果评估</strong>
+<ul>
+<li>什么样的政策可以缓冲战争的经济影响？</li>
+<li>贸易多元化、战略储备、区域经济一体化等政策工具的效果</li>
+</ul></li>
+<li><strong>不同战争类型的细分研究</strong>
+<ul>
+<li>国家间战争vs内战的经济影响机制可能不同</li>
+<li>代理战争（Proxy Wars）与直接战争的经济影响差异</li>
+</ul></li>
+<li><strong>数字化战争的新特征</strong>
+<ul>
+<li>网络战、信息战、制裁战等新型冲突形式的经济影响</li>
+<li>传统分析框架的适用性和局限性</li>
+</ul></li>
+</ol>
+<hr>
+<h2 id="学术思考">6. 学术思考</h2>
+<p>基于对本文的深入分析，以下学术问题值得关注和进一步探讨：</p>
+<h3 id="关于因果推断的思考">关于因果推断的思考</h3>
+<p><strong>问题一：内生性的残余挑战</strong></p>
+<p>尽管作者通过排除经济动机明确的战争来缓解内生性，但战争选择本身可能仍存在与经济因素相关的其他混淆。例如，一个国家在经济增长放缓时可能更倾向于卷入战争（通过军事转移国内矛盾）。这是否意味着即使在"外生"战争中，战前经济状况的某些特征也在发挥作用？如何在计量经济学框架下更彻底地解决这一问题？</p>
+<h3 id="关于传导机制的思考">关于传导机制的思考</h3>
+<p><strong>问题二：贸易渠道vs. 金融渠道的相对重要性</strong></p>
+<p>本文发现贸易是战争溢出效应的关键渠道，但金融渠道（如资本流动、汇率波动、信贷紧缩）的作用可能被低估。在当今全球金融一体化的背景下，金融渠道是否比贸易渠道更重要？尤其是在短期危机（如2022年乌克兰战争）中，金融市场的反应速度可能远快于贸易调整。</p>
+<p><strong>问题三：全球价值链的结构性作用</strong></p>
+<p>本文使用的贸易暴露度指标较为粗略，未能捕捉全球价值链（GVC）的复杂结构。一个深度嵌入GVC的国家可能同时面临供给中断（作为供应商）和需求萎缩（作为消费者）的双重冲击。如何构建更精细的GVC暴露度指标？</p>
+<h3 id="关于政策含义的思考">关于政策含义的思考</h3>
+<p><strong>问题四：经济一体化与战争脆弱性的权衡</strong></p>
+<p>本文发现贸易联系会放大战争的溢出效应。这意味着经济一体化在带来增长红利的同时，也使各国更容易受到地缘政治冲击。这是否意味着各国应该在追求经济效率和保持战略自主之间进行权衡？区域经济集团化（如EU）是否提供了在开放与安全之间的平衡？</p>
+<p><strong>问题五：战略储备和供应链多样化的价值</strong></p>
+<p>既然与战地的贸易联系会放大对他国的经济影响，那么战略储备和供应链多元化是否应该成为国家安全的必要组成部分？这对于小国和高度依赖进口的国家尤为重要。</p>
+<h3 id="关于研究方法的思考">关于研究方法的思考</h3>
+<p><strong>问题六：局部投影法的适用性</strong></p>
+<p>局部投影法在本文中被用来估计战争的经济动态，但这一方法假设了线性关系和固定效应结构。战争的非线性效应（如阈值效应、叠加效应）是否被遗漏？特别是当多个战争同时发生时，单独估计每场战争效应的高维问题如何处理？</p>
+<h3 id="关于历史演变的思考">关于历史演变的思考</h3>
+<p><strong>问题七：战争性质的范式转变</strong></p>
+<p>从1870年代到2020年代，战争的技术性质、参与主体、地理范围都发生了巨大变化。从大规模的国家间战争到小规模的代理人战争，再到可能包含网络战和贸易战的新型混合冲突。不同类型的冲突是否遵循相同的宏观经济动态规律？本文的150年样本是否掩盖了这些结构性变化？</p>
+<hr>
+<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
+<p>根据论文内容和上述分析，以下是用户接下来可能问的问题：</p>
+<h3 id="关于研究内容的深层问题">关于研究内容的深层问题</h3>
+<ol type="1">
+<li><strong>战争的长期经济后果是什么？</strong>
+<ul>
+<li>本文关注战后8年的动态，但恢复需要约12年</li>
+<li>长期（20-50年）经济轨迹如何？</li>
+<li>战争是否会造成"疤痕效应"（Scarring
+Effects），永久降低增长路径？</li>
+</ul></li>
+<li><strong>不同类型战争的经济影响有何差异？</strong>
+<ul>
+<li>国家间战争vs. 内战的传导机制是否不同？</li>
+<li>高强度vs. 低强度战争是否存在非线性阈值效应？</li>
+<li>代理战争与直接战争的经济影响差异？</li>
+</ul></li>
+<li><strong>疫情和战争叠加的影响是否不同？</strong>
+<ul>
+<li>COVID-19疫情可视为非战争的"经济灾难"</li>
+<li>两种灾难的经济影响机制和恢复模式是否可比？</li>
+</ul></li>
+</ol>
+<h3 id="关于方法论的问题">关于方法论的问题</h3>
+<ol start="4" type="1">
+<li><strong>如何进一步改进因果识别的可信度？</strong>
+<ul>
+<li>自然实验方法（如板块运动会）是否可用？</li>
+<li>工具变量方法是否可行？</li>
+<li>Difference-in-Differences设计是否适合此研究？</li>
+</ul></li>
+<li><strong>模型基础的解释是什么？</strong>
+<ul>
+<li>本文使用局部投影法进行简约式（Reduced-form）估计</li>
+<li>是否存在结构模型（如DSGE）能更好地解释这些动态？</li>
+<li>论文的工作论文版本（Federle et al. 2024）的模型结果如何？</li>
+</ul></li>
+</ol>
+<h3 id="关于政策应用的问题">关于政策应用的问题</h3>
+<ol start="6" type="1">
+<li><strong>如何将研究发现应用于当前的地缘政治风险评估？</strong>
+<ul>
+<li>对于台湾问题、中美博弈等当前热点，本文框架有何启示？</li>
+<li>如何量化"与中国发生贸易战"的潜在经济代价？</li>
+</ul></li>
+<li><strong>何种政策可以缓冲战争的经济冲击？</strong>
+<ul>
+<li>战略储备的效果如何？</li>
+<li>区域经济一体化的保护效应？</li>
+<li>金融稳定工具（如外汇储备、货币互换）的作用？</li>
+</ul></li>
+</ol>
+<h3 id="关于后续研究的问题">关于后续研究的问题</h3>
+<ol start="8" type="1">
+<li><strong>本文的主要贡献者（5位作者）后续还有哪些相关研究？</strong>
+<ul>
+<li>是否有关于特定战争案例的深度研究？</li>
+<li>是否有使用更细粒度数据（如月度、行业层面）的研究？</li>
+</ul></li>
+<li><strong>是否存在与本文发现相矛盾的文献？</strong>
+<ul>
+<li>质疑或修正本文结论的研究有哪些？</li>
+<li>这些矛盾是否可以通过样本选择、方法论差异或数据版本来解释？</li>
+</ul></li>
+</ol>
+<hr>
+<p><em>本分析报告为深度阅读笔记，梳理了论文的核心逻辑、主要发现和学术价值。</em></p>
+]]></content>
+      <categories>
+        <category>经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>宏观经济学</tag>
+        <tag>战争经济学</tag>
+        <tag>经济史学</tag>
+        <tag>地缘政治</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>&lt;中国人口研究 1368-1953&gt;深度阅读笔记 — 何炳棣 Ping-Ti Ho</title>
     <url>/posts/ho1959/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="书籍信息">书籍信息</h2>
@@ -4260,491 +4745,6 @@ _谢肇淛&lt;五杂俎&gt;(约1610年)</p>
       </tags>
   </entry>
   <entry>
-    <title>The Price of War — 深度阅读笔记 — Federle Et Al.</title>
-    <url>/posts/federle2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: The Price of War</li>
-<li><strong>作者</strong>: Jonathan Federle, André Meier, Gernot J.
-Müller, Willi Mutschler, Moritz Schularick</li>
-<li><strong>类型</strong>: 论文笔记 / 战争经济学 / 宏观经济学 /
-经济史学</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: American Economic Review, 116(3):
-791-827</li>
-<li><strong>DOI</strong>: 10.1257/aer.20241355</li>
-<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量史学基础
-<span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>本文属于<strong>经济学研究领域</strong>，具体涉及发展经济学、国际经济学、经济史学、冲突经济学（Conflict
-Economics）以及宏观经济学等多个子领域的交叉地带。论文所研究的<strong>战争经济学</strong>（Economics
-of
-War）是一个重要但相对被忽视的研究方向，主要探讨战争如何影响参与各方的经济表现。</p>
-<p>论文使用了多个经典宏观经济指标来测度战争的经济影响：</p>
-<ul>
-<li><strong>实际GDP（Real
-GDP）</strong>：衡量一个国家商品和服务产出的最核心指标</li>
-<li><strong>消费者价格指数（CPI）</strong>：衡量通货膨胀和物价水平变化</li>
-<li><strong>资本存量（Capital
-Stock）</strong>：衡量经济体中可用于生产的固定资产总量</li>
-<li><strong>全要素生产率（TFP, Total Factor
-Productivity）</strong>：衡量技术进步和效率提升的关键指标</li>
-<li><strong>股权回报率（Equity
-Returns）</strong>：反映股票市场的整体表现</li>
-<li><strong>长期利率（Long-term Interest
-Rates）</strong>：反映资金成本和政府借贷成本</li>
-</ul>
-<h3 id="研究的主要背景分点说明">研究的主要背景（分点说明）</h3>
-<p><strong>第一，战争与全球经济风险上升的背景。</strong>
-近年来，全球政治经济格局正在经历深刻变化。经济碎片化加剧（Fernández-Villaverde,
-Mineyama, and Song 2024; Gopinath et al.
-2025），地缘政治紧张局势和冲突风险显著上升。在这一背景下，理解战争对经济的影响变得尤为重要。</p>
-<p><strong>第二，现有文献的局限性。</strong>
-虽然有大量研究关注特定战争（如两次世界大战、冷战时期冲突）的财政和货币影响，以及战争对交战国经济增长的影响，但这些研究存在以下不足：</p>
-<ul>
-<li>多为单一战争案例研究，缺乏系统性比较</li>
-<li>很少考虑战争的<strong>跨境溢出效应</strong>（Spillover
-Effects）</li>
-<li>对战争如何通过贸易网络影响第三方国家的机制理解不足</li>
-</ul>
-<p><strong>第三，数据可得性的突破。</strong>
-本文作者整合了"战争相关因素项目"（Correlates of War,
-COW）的战争数据与"Jordà-Schularick-Taylor宏观史数据库"（MacroHistory
-Database），构建了一个跨越150年、涵盖60个国家的新数据集，这使得系统性地研究战争的经济影响成为可能。</p>
-<p><strong>第四，战争频率与地理分布的重要事实。</strong>
-本文揭示了一个重要却常被忽视的事实：尽管一个国家在特定年份成为战场的概率只有6%，但与其接壤并可能受到战争影响的国家比例高达20%——这一比例是全球金融危机频率的约5倍。这意味着虽然直接经历战争的国家相对较少，但通过贸易和地理渠道受到战争间接影响的国家却非常普遍。</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心研究问题：战争对经济的影响是什么？这种影响如何溢出到非参战国？</strong></p>
-<p>具体而言，作者试图回答以下问题：</p>
-<ol type="1">
-<li>战争在战地国家造成的直接经济损失有多大？</li>
-<li>参战国（非战地）的经济表现与战地国家有何不同？</li>
-<li>第三方国家如何受到战争的经济影响？贸易联系和地理邻近如何调节这一影响？</li>
-<li>战争的宏观经济影响在不同类型的战争中是否存在系统性差异？</li>
-</ol>
-<p>作者明确指出，他们的研究目的是建立<strong>新的Stylized
-Facts（典型化事实）</strong>，即战争后经济发展的典型模式，而不试图进行因果解释。这是因为战争爆发与经济发展之间可能存在双向因果关系——经济状况可能既是战争爆发的原因，也是战争的结果。</p>
-<h3 id="研究意义">研究意义</h3>
-<p><strong>理论意义：</strong>
-本文首次系统性地分析了三类国家（战地国家、参战国、第三方国家）在战争前后的经济动态演化，并区分了不同传导渠道（贸易渠道、地理渠道）的作用。这为战争经济学领域提供了重要的实证基础。</p>
-<p><strong>政策意义：</strong>
-在当前地缘政治紧张局势加剧、全球化退潮的背景下，理解战争的经济代价及其传播途径对于政策制定者具有重要的参考价值。尤其是认识到与战地的贸易联系会放大对他国经济的冲击，有助于各国更好地评估和应对地缘政治风险。</p>
-<p><strong>方法论贡献：</strong> 作者采用的局部投影法（Local Projections
-Method）和多维度的暴露度（Exposure）分析框架为后续研究提供了方法论借鉴。</p>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<h3 id="论文整体框架">论文整体框架</h3>
-<p>本文共分为五个主要部分，外加附录和补充材料：</p>
-<p><strong>第一部分：引言（Introduction）</strong> -
-阐述研究背景、问题意识和研究贡献 -
-回顾相关文献，定位本文在现有研究中的位置</p>
-<p><strong>第二部分：数据与基本事实（Data and Basic Facts）</strong> -
-详细说明战争地点（War Sites）的识别方法 - 介绍数据集的构建过程 -
-提供描述性统计</p>
-<p><strong>第三部分：战争爆发后的经济动态（Economic Dynamics after the
-Outbreak of War）</strong> - 介绍实证分析框架（局部投影法） -
-报告基准回归结果 - 分析第三方国家的异质性 -
-考察制度质量等更广泛的社会变化</p>
-<p><strong>第四部分：因果推断（Causality）</strong> -
-利用国别战争的差异性检验因果关系 - 通过叙事性识别（Narrative
-Identification）排除内生性干扰</p>
-<p><strong>第五部分：结论（Conclusion）</strong> - 总结主要发现 -
-讨论政策含义和研究局限</p>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p><strong>全球政治经济格局的深刻变化</strong></p>
-<p>近年来，国际政治经济环境发生了显著变化。地缘政治紧张局势加剧，冲突风险上升。战争不仅造成生命和财产的直接损失，还会扰乱贸易、破坏公共财政。正如Barro
-(2006)所指出的，上个世纪许多重大经济灾难都与本土战争有关。</p>
-<p><strong>被忽视的战争跨境影响</strong></p>
-<p>尽管战争的经济影响重大，但现有研究存在明显空白：战争的经济影响不仅限于交战国，其他国家和第三方国家也会受到冲击。这一"战争的代价"（Price
-of War）问题在学术和政策讨论中都未得到足够重视。</p>
-<p><strong>Trotsky的警示</strong></p>
-<p>作者引用了Trotsky的名言"你可能对战争不感兴趣，但战争对你感兴趣"（You
-may not be interested in war, but war is interested in
-you），用以强调在全球化时代，战争的经济影响具有广泛的传播性，即使是未直接参战的国家也难以独善其身。</p>
-<h3 id="挑战">挑战</h3>
-<p><strong>数据缺乏的系统性</strong></p>
-<p>系统研究战争经济影响面临的首要挑战是<strong>数据缺乏</strong>。需要整合多来源的历史数据：</p>
-<ul>
-<li>战争事件数据（COW项目）</li>
-<li>宏观经济时间序列数据（Jordà-Schularick-Taylor数据库）</li>
-<li>贸易数据（Fouquin and Hugot 2016）</li>
-<li>地理边界和人口数据</li>
-</ul>
-<p><strong>战地识别的复杂性</strong></p>
-<p>COW项目提供的是参战国信息，但并未明确指出战争在哪些国家的领土上进行。为此，作者需要：</p>
-<ul>
-<li>收集Battle-level的详细信息</li>
-<li>手动编码1,737场战役的地理位置</li>
-<li>将战役层面的伤亡汇总到国家层面</li>
-</ul>
-<p><strong>战争类型差异的处理</strong></p>
-<p>战争分为不同类型：</p>
-<ul>
-<li><strong>国家间战争（Interstate
-Wars）</strong>：两国或多国间武装冲突，如一战、二战</li>
-<li><strong>其他战争（Other
-Wars）</strong>：内战、殖民战争、独立战争等</li>
-</ul>
-<p>这两类战争在频率、强度、持续时间和经济动机方面都存在系统性差异，需要在分析中加以区分。</p>
-<p><strong>内生性问题的处理</strong></p>
-<p>战争爆发与经济状况之间可能存在双向因果关系——经济困难可能既是战争爆发的原因（内生性），也是战争的结果（需要识别因果方向）。如何剥离这种内生性是因果推断的核心挑战。</p>
-<h3 id="方法数据集要突出">方法（数据集要突出）</h3>
-<h4 id="数据集构建">数据集构建</h4>
-<p><strong>样本范围</strong></p>
-<ul>
-<li>时间跨度：1870-2023年（150年）</li>
-<li>国家数量：60个国家（占1960年全球GDP的95%）</li>
-<li>战争样本：694场战争（国家-年观察值），其中约1/3为国家间战争</li>
-</ul>
-<p><strong>战争数据的分类与编码</strong></p>
-<p>作者遵循COW项目的定义，将战争分为：</p>
-<ol type="1">
-<li><strong>Interstate
-Wars（国家间战争）</strong>：至少两个国家间、12个月内战斗死亡人数不少于1000人的武装冲突</li>
-<li><strong>Other
-Wars（其他战争）</strong>：内战、殖民战争、解放战争等</li>
-</ol>
-<p><strong>战争强度测量</strong></p>
-<p>使用<strong>Casualties/Local Population
-Ratio</strong>作为战争强度指标：</p>
-<p><span class="math display">\[{Site_{j,t} =
-\frac{Casualties_{j,t}}{Population_{j, pre-war}}}\]</span></p>
-<p>其中伤亡包括死亡、失踪、受伤和战俘。</p>
-<p><strong>关键统计事实</strong></p>
-<ul>
-<li>国家间战争平均强度：3.5%（以伤亡/战前人口衡量）</li>
-<li>其他战争平均强度：0.74%</li>
-<li>战争持续时间中位数：2年</li>
-<li>总样本包括225个国家间战争和469场其他战争</li>
-</ul>
-<p><strong>Battle-Level地理编码</strong></p>
-<p>为识别战地，作者收集了1,737场战役的详细信息：</p>
-<ul>
-<li>来源：Clodfelter (2017)战争百科全书及多种历史资料</li>
-<li>每场战役记录：地理位置、伤亡人数、参战方</li>
-<li>最大战役：Brusilov Offensive（一战），超过100万伤亡</li>
-</ul>
-<p><strong>宏观经济指标</strong></p>
-<p>使用Jordà-Schularick-Taylor宏观史数据库，核心变量包括：</p>
-<ul>
-<li>实际GDP（Real GDP）</li>
-<li>消费者价格指数（CPI）</li>
-<li>资本存量（Capital Stock）</li>
-<li>全要素生产率（TFP）</li>
-<li>10年期政府债券收益率</li>
-<li>股权回报指数</li>
-<li>军事支出（占GDP比重）</li>
-<li>军事人员（占人口比重）</li>
-</ul>
-<p><strong>贸易数据</strong></p>
-<p>使用Fouquin and Hugot
-(2016)的双边贸易数据，并使用引力模型填补缺失值（伪<span class="math inline">\({R^2=0.95}\)</span>）。</p>
-<p><strong>GPT-4验证</strong></p>
-<p>作者还使用GPT-4
-API辅助验证战地编码的准确性，发现GPT-4识别结果与手工编码的Pearson相关系数为0.73（<span class="math inline">\({p&lt;0.001}\)</span>）。</p>
-<h4 id="实证方法局部投影法">实证方法：局部投影法</h4>
-<p><strong>Local Projections Method（局部投影法）</strong></p>
-<p>遵循Jordà (2005)的方法，估计以下规范：</p>
-<p><span class="math display">\[{y_{i,t+h} - y_{i,t-1} = \zeta_h'
-X_{i,t} + \sum_{c \in \{S,B,T\}} \phi_{c,h}(\gamma_{i,c,t}' \cdot
-Sites_t) + \sum_{c \in \{B,T\}} \psi_{c,h}(\epsilon_{i,c,t-1}' \cdot
-Sites_t) + u_{i,t+h}}\]</span></p>
-<p>其中：</p>
-<ul>
-<li><span class="math inline">\({y_{i,t}}\)</span>：结果变量（如实际GDP）</li>
-<li><span class="math inline">\({h}\)</span>：战争开始后的年数（<span class="math inline">\({h=0,1,...,8}\)</span>）</li>
-<li><span class="math inline">\({X_{i,t}}\)</span>：控制变量（包含4阶滞后项、国家固定效应、是否接壤战地国家）</li>
-<li><span class="math inline">\({\phi_{c,h}}\)</span>：捕捉c类国家（战地S、参战B、第三方T）在战争后的动态</li>
-<li><span class="math inline">\({\psi_{c,h}}\)</span>：允许暴露度（贸易联系、地理邻近）对溢出效应进行调节</li>
-</ul>
-<p><strong>暴露度向量（Exposure Vector）</strong></p>
-<p><span class="math display">\[{\epsilon_{i,c,t-1} = \frac{Import_{i
-\leftarrow j, t-1}}{GDP_{i, t-1}}}\]</span></p>
-<p>衡量第三方国家i与战地国家j之间的贸易暴露度。</p>
-<p><strong>固定效应设定</strong></p>
-<p>不包含时间固定效应，以捕捉特定国家组的完整经济动态，而非仅捕捉相对于平均值的动态变化。</p>
-<h3 id="结果results">结果（Results）</h3>
-<h4 id="基准结果三类国家的经济动态">基准结果：三类国家的经济动态</h4>
-<p><strong>产出（Output）</strong></p>
-<ul>
-<li><strong>战地国家</strong>：GDP下降约10%（相对于战前趋势），在战争开始后约4年达到谷底，此后恢复缓慢，8年后仍低约5%，完全恢复需要约12年</li>
-<li><strong>参战国</strong>：平均GDP未显示明显偏离趋势</li>
-<li><strong>第三方国家</strong>：平均GDP仅适度下降</li>
-</ul>
-<p><strong>消费者价格指数（CPI）</strong></p>
-<ul>
-<li><strong>战地国家</strong>：物价水平持续上涨，战争开始6年后达到峰值，比趋势高约20%</li>
-<li><strong>参战国和第三方国家</strong>：物价水平也有一定上涨，但幅度较小</li>
-</ul>
-<p><strong>资本存量（Capital Stock）</strong></p>
-<ul>
-<li><strong>战地国家</strong>：8年内下降超过4%</li>
-<li><strong>参战国和第三方国家</strong>：也有显著下降，但幅度小得多</li>
-<li>注意：资本存量下降可能反映物理破坏，也可能反映投资减少</li>
-</ul>
-<p><strong>全要素生产率（TFP）</strong></p>
-<ul>
-<li><strong>战地国家</strong>：TFP立即大幅下降，与战争严重破坏经济运作一致</li>
-<li><strong>参战国</strong>：TFP轻微（但不显著）上升</li>
-<li><strong>第三方国家</strong>：TFP基本不变</li>
-</ul>
-<p><strong>长期利率</strong></p>
-<ul>
-<li><strong>战地国家</strong>：10年期政府债券收益率上升约0.3个百分点，并持续
-elevated 约12年</li>
-<li><strong>参战国和第三方国家</strong>：也有适度上升，但不显著</li>
-</ul>
-<p><strong>股权回报率</strong></p>
-<ul>
-<li><strong>战地国家</strong>：股市指数持续下跌，相对趋势的累计跑输幅度在6年后达到20%</li>
-<li>初始反应微弱，表明市场未完全预期战争的不利发展</li>
-<li><strong>第三方国家</strong>：股市跌幅约为战地国家的一半</li>
-<li><strong>参战国</strong>：表现出最强的韧性</li>
-</ul>
-<p><strong>军事支出和人员</strong></p>
-<ul>
-<li><strong>战地和参战国</strong>：军事支出显著增加，初期约增加1个百分点GDP，4年后达到峰值2.5个百分点GDP</li>
-<li><strong>第三方国家</strong>：军事支出和人员基本不变</li>
-</ul>
-<h4 id="关键发现第三国异质性">关键发现：第三国异质性</h4>
-<p><strong>贸易暴露度的关键作用</strong></p>
-<p>当按贸易暴露度区分第三方国家时，发现显著差异：</p>
-<ul>
-<li><strong>高贸易暴露国家</strong>（从战地进口占GDP的3%）：产出下降2%，价格大幅上涨，资本存量下降，利率上升，股权回报下降</li>
-<li><strong>零贸易暴露国家</strong>：基本不受影响</li>
-</ul>
-<p>这一发现具有重要的政策含义：与战地的贸易联系是战争经济影响传导的关键渠道。</p>
-<p><strong>地理邻近的额外风险</strong></p>
-<p>接壤战地的国家面临额外的负面效应：</p>
-<ul>
-<li>长期利率略有下降（可能反映资本外逃）</li>
-<li>股权回报为负（符合灾难风险溢价上升）</li>
-<li>军事支出和人员略有增加（反映军事溢出风险）</li>
-</ul>
-<p><strong>贸易渠道的机制</strong></p>
-<p>贸易收缩是战争溢出效应的关键传导机制：</p>
-<ul>
-<li>战地出口下降：战地生产能力被破坏</li>
-<li>战地进口下降：供应链中断</li>
-<li>高暴露第三方国家：进出口均收缩</li>
-</ul>
-<h4 id="因果推断结果">因果推断结果</h4>
-<p><strong>国家间战争 vs. 其他战争</strong></p>
-<ul>
-<li><strong>国家间战争</strong>：爆发前，产出和通胀没有系统性变化</li>
-<li><strong>其他战争</strong>：爆发前通胀上升、产出增长放缓——这些战争可能是经济波动的原因和结果</li>
-</ul>
-<p><strong>叙事性识别（Narrative Identification）</strong></p>
-<p>作者识别了每场国家间战争的主要战争动机（casus belli）：</p>
-<ul>
-<li>大多数战争与民族主义、意识形态或历史原因相关（可能外生于商业周期）</li>
-<li>经济动机仅在少数6场战争中显得重要</li>
-<li>排除这6场战争后，样本中国际战争的经济影响估计与全样本非常相似</li>
-</ul>
-<p><strong>Granger因果检验</strong></p>
-<ul>
-<li>国家间战争：不被产出增长和通胀的滞后项Granger引起</li>
-<li>其他战争：存在反向因果关系</li>
-</ul>
-<p>这支持了因果解释：战争导致了所记录的经济动态。</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<h3 id="核心发现总结">核心发现总结</h3>
-<p><strong>发现一：战地国家的巨大经济代价</strong></p>
-<p>一场中等强度（2%伤亡/人口）的战争与战地国家产出下降约10%相关。消费者价格上涨约20%。资本存量、全要素生产率和股权回报均急剧下降。经济恢复是缓慢的——完全恢复需要约12年，尽管战争本身平均只持续2-3年。</p>
-<p><strong>发现二：参战国的相对韧性</strong></p>
-<p>尽管面临战争，参战国（非战地）的平均经济表现明显好于战地国家。这可能与军事支出增加带来的财政刺激效应有关——如Braun和McGrattan
-(1993)以及Ilzetzki
-(2024)研究所示，两次世界大战期间美国和英国的经济扩张与军费急剧增加有关。</p>
-<p><strong>发现三：第三方国家的显著溢出效应</strong></p>
-<p>战争的经济影响并不局限于战地。通过贸易渠道，第三方国家也受到显著影响：</p>
-<ul>
-<li>与战地有密切贸易联系的国家（进口占GDP 3%）：产出下降约2%</li>
-<li>接壤战地的国家：面临额外的负面金融效应</li>
-</ul>
-<p><strong>发现四：传播渠道</strong></p>
-<p>贸易联系和地理邻近是战争经济影响跨境传播的两个关键渠道。这与全球供应链的相互依存性以及地理邻近带来的直接风险暴露有关。</p>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><strong>首次系统性分析</strong>：首次全面分析150年间60个国家战争的经济影响，提供了战争经济学的典型化事实</li>
-<li><strong>跨境溢出效应</strong>：揭示了战争通过贸易和地理渠道对第三方国家的显著溢出效应</li>
-<li><strong>异质性分析</strong>：详细区分了不同类型国家（战地、参战、第三方）和不同暴露度下的经济动态差异</li>
-<li><strong>因果识别</strong>：通过叙事性方法识别战争的经济影响，为因果推断提供了合理依据</li>
-<li><strong>方法论贡献</strong>：提供了局部投影法在战争经济学应用的范例</li>
-</ol>
-<h3 id="更广泛的社会影响">更广泛的社会影响</h3>
-<p>除经济指标外，作者还记录了战争对更广泛社会制度的影响：</p>
-<ul>
-<li>媒体自由度下降</li>
-<li>司法独立性下降</li>
-<li>选举公平性下降</li>
-<li>制度质量下降</li>
-</ul>
-<p>这些变化主要局限于战地，但媒体自由度的下降也波及参战国。</p>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="论文中提及的未来研究方向">论文中提及的未来研究方向</h3>
-<ol type="1">
-<li><strong>福利损失的全面测度</strong>
-<ul>
-<li>现有指标无法完全捕捉战争的经济代价及其对人类福利的影响</li>
-<li>产出与福利可能在战时分歧：例如劳动力动员可能导致产出增加，即使整体福利下降</li>
-<li>需要更好的方法来衡量私人消费等人福利指标</li>
-</ul></li>
-<li><strong>战争性质的演变</strong>
-<ul>
-<li>战争性质随时间不断变化</li>
-<li>伤亡与其他候选统计指标之间的关系也可能变化</li>
-<li>需要动态更新的战争强度测量方法</li>
-</ul></li>
-<li><strong>局部战争的经济影响</strong>
-<ul>
-<li>未来可以专门研究有限地理范围的局部战争的经济影响</li>
-<li>分析核威慑下的有限战争与全面战争的差异</li>
-</ul></li>
-</ol>
-<h3 id="根据论文内容思考的下一步研究工作">根据论文内容思考的下一步研究工作</h3>
-<ol type="1">
-<li><strong>供应链渠道的深入研究</strong>
-<ul>
-<li>本文发现贸易是主要传导渠道，但未深入分析供应链网络的结构性特征</li>
-<li>可研究全球价值链（GVC）参与度如何调节战争溢出效应</li>
-<li>可使用投入产出表分析产业关联的具体路径</li>
-</ul></li>
-<li><strong>金融渠道的作用</strong>
-<ul>
-<li>本文发现股权回报在战地和第三方国家都大幅下降</li>
-<li>可深入研究战争如何通过金融市场（资本流动、汇率、信贷市场）传导</li>
-</ul></li>
-<li><strong>人力资本渠道</strong>
-<ul>
-<li>战争造成的人员伤亡和劳动力动员直接影响人力资本</li>
-<li>可研究战争对教育、健康和创新的人力资本长期影响</li>
-</ul></li>
-<li><strong>政策应对效果评估</strong>
-<ul>
-<li>什么样的政策可以缓冲战争的经济影响？</li>
-<li>贸易多元化、战略储备、区域经济一体化等政策工具的效果</li>
-</ul></li>
-<li><strong>不同战争类型的细分研究</strong>
-<ul>
-<li>国家间战争vs内战的经济影响机制可能不同</li>
-<li>代理战争（Proxy Wars）与直接战争的经济影响差异</li>
-</ul></li>
-<li><strong>数字化战争的新特征</strong>
-<ul>
-<li>网络战、信息战、制裁战等新型冲突形式的经济影响</li>
-<li>传统分析框架的适用性和局限性</li>
-</ul></li>
-</ol>
-<hr>
-<h2 id="学术思考">6. 学术思考</h2>
-<p>基于对本文的深入分析，以下学术问题值得关注和进一步探讨：</p>
-<h3 id="关于因果推断的思考">关于因果推断的思考</h3>
-<p><strong>问题一：内生性的残余挑战</strong></p>
-<p>尽管作者通过排除经济动机明确的战争来缓解内生性，但战争选择本身可能仍存在与经济因素相关的其他混淆。例如，一个国家在经济增长放缓时可能更倾向于卷入战争（通过军事转移国内矛盾）。这是否意味着即使在"外生"战争中，战前经济状况的某些特征也在发挥作用？如何在计量经济学框架下更彻底地解决这一问题？</p>
-<h3 id="关于传导机制的思考">关于传导机制的思考</h3>
-<p><strong>问题二：贸易渠道vs. 金融渠道的相对重要性</strong></p>
-<p>本文发现贸易是战争溢出效应的关键渠道，但金融渠道（如资本流动、汇率波动、信贷紧缩）的作用可能被低估。在当今全球金融一体化的背景下，金融渠道是否比贸易渠道更重要？尤其是在短期危机（如2022年乌克兰战争）中，金融市场的反应速度可能远快于贸易调整。</p>
-<p><strong>问题三：全球价值链的结构性作用</strong></p>
-<p>本文使用的贸易暴露度指标较为粗略，未能捕捉全球价值链（GVC）的复杂结构。一个深度嵌入GVC的国家可能同时面临供给中断（作为供应商）和需求萎缩（作为消费者）的双重冲击。如何构建更精细的GVC暴露度指标？</p>
-<h3 id="关于政策含义的思考">关于政策含义的思考</h3>
-<p><strong>问题四：经济一体化与战争脆弱性的权衡</strong></p>
-<p>本文发现贸易联系会放大战争的溢出效应。这意味着经济一体化在带来增长红利的同时，也使各国更容易受到地缘政治冲击。这是否意味着各国应该在追求经济效率和保持战略自主之间进行权衡？区域经济集团化（如EU）是否提供了在开放与安全之间的平衡？</p>
-<p><strong>问题五：战略储备和供应链多样化的价值</strong></p>
-<p>既然与战地的贸易联系会放大对他国的经济影响，那么战略储备和供应链多元化是否应该成为国家安全的必要组成部分？这对于小国和高度依赖进口的国家尤为重要。</p>
-<h3 id="关于研究方法的思考">关于研究方法的思考</h3>
-<p><strong>问题六：局部投影法的适用性</strong></p>
-<p>局部投影法在本文中被用来估计战争的经济动态，但这一方法假设了线性关系和固定效应结构。战争的非线性效应（如阈值效应、叠加效应）是否被遗漏？特别是当多个战争同时发生时，单独估计每场战争效应的高维问题如何处理？</p>
-<h3 id="关于历史演变的思考">关于历史演变的思考</h3>
-<p><strong>问题七：战争性质的范式转变</strong></p>
-<p>从1870年代到2020年代，战争的技术性质、参与主体、地理范围都发生了巨大变化。从大规模的国家间战争到小规模的代理人战争，再到可能包含网络战和贸易战的新型混合冲突。不同类型的冲突是否遵循相同的宏观经济动态规律？本文的150年样本是否掩盖了这些结构性变化？</p>
-<hr>
-<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
-<p>根据论文内容和上述分析，以下是用户接下来可能问的问题：</p>
-<h3 id="关于研究内容的深层问题">关于研究内容的深层问题</h3>
-<ol type="1">
-<li><strong>战争的长期经济后果是什么？</strong>
-<ul>
-<li>本文关注战后8年的动态，但恢复需要约12年</li>
-<li>长期（20-50年）经济轨迹如何？</li>
-<li>战争是否会造成"疤痕效应"（Scarring
-Effects），永久降低增长路径？</li>
-</ul></li>
-<li><strong>不同类型战争的经济影响有何差异？</strong>
-<ul>
-<li>国家间战争vs. 内战的传导机制是否不同？</li>
-<li>高强度vs. 低强度战争是否存在非线性阈值效应？</li>
-<li>代理战争与直接战争的经济影响差异？</li>
-</ul></li>
-<li><strong>疫情和战争叠加的影响是否不同？</strong>
-<ul>
-<li>COVID-19疫情可视为非战争的"经济灾难"</li>
-<li>两种灾难的经济影响机制和恢复模式是否可比？</li>
-</ul></li>
-</ol>
-<h3 id="关于方法论的问题">关于方法论的问题</h3>
-<ol start="4" type="1">
-<li><strong>如何进一步改进因果识别的可信度？</strong>
-<ul>
-<li>自然实验方法（如板块运动会）是否可用？</li>
-<li>工具变量方法是否可行？</li>
-<li>Difference-in-Differences设计是否适合此研究？</li>
-</ul></li>
-<li><strong>模型基础的解释是什么？</strong>
-<ul>
-<li>本文使用局部投影法进行简约式（Reduced-form）估计</li>
-<li>是否存在结构模型（如DSGE）能更好地解释这些动态？</li>
-<li>论文的工作论文版本（Federle et al. 2024）的模型结果如何？</li>
-</ul></li>
-</ol>
-<h3 id="关于政策应用的问题">关于政策应用的问题</h3>
-<ol start="6" type="1">
-<li><strong>如何将研究发现应用于当前的地缘政治风险评估？</strong>
-<ul>
-<li>对于台湾问题、中美博弈等当前热点，本文框架有何启示？</li>
-<li>如何量化"与中国发生贸易战"的潜在经济代价？</li>
-</ul></li>
-<li><strong>何种政策可以缓冲战争的经济冲击？</strong>
-<ul>
-<li>战略储备的效果如何？</li>
-<li>区域经济一体化的保护效应？</li>
-<li>金融稳定工具（如外汇储备、货币互换）的作用？</li>
-</ul></li>
-</ol>
-<h3 id="关于后续研究的问题">关于后续研究的问题</h3>
-<ol start="8" type="1">
-<li><strong>本文的主要贡献者（5位作者）后续还有哪些相关研究？</strong>
-<ul>
-<li>是否有关于特定战争案例的深度研究？</li>
-<li>是否有使用更细粒度数据（如月度、行业层面）的研究？</li>
-</ul></li>
-<li><strong>是否存在与本文发现相矛盾的文献？</strong>
-<ul>
-<li>质疑或修正本文结论的研究有哪些？</li>
-<li>这些矛盾是否可以通过样本选择、方法论差异或数据版本来解释？</li>
-</ul></li>
-</ol>
-<hr>
-<p><em>本分析报告为深度阅读笔记，梳理了论文的核心逻辑、主要发现和学术价值。</em></p>
-]]></content>
-      <categories>
-        <category>经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>宏观经济学</tag>
-        <tag>战争经济学</tag>
-        <tag>经济史学</tag>
-        <tag>地缘政治</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>&lt;住房与不平等&gt;深度阅读笔记 — Ioannides &amp; Ngai</title>
     <url>/posts/ioannides2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -5282,6 +5282,187 @@ Studies</li>
       </tags>
   </entry>
   <entry>
+    <title>预算到期会导致年底浪费性支出吗?_ Liebman &amp; Mahoney (2017) 笔记</title>
+    <url>/posts/liebman2017/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Do Expiring Budgets Lead to Wasteful Year-End
+Spending? Evidence from Federal Procurement</li>
+<li><strong>作者</strong>: Jeffrey B. Liebman(哈佛大学), Neale
+Mahoney(芝加哥大学)</li>
+<li><strong>类型</strong>: 论文笔记 / 公共经济学 / 预算制度</li>
+<li><strong>出版年份</strong>: 2017</li>
+<li><strong>出版机构/期刊</strong>: American Economic Review</li>
+<li><strong>DOI</strong>: 10.1257/aer.20131296</li>
+<li><strong>难度评估</strong>: 高 -
+需要经济学、计量经济学、公共财政学基础</li>
+</ul>
+<span id="more"></span>
+<h2 id="引言">引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>本文属于公共经济学、行为经济学和管理学的交叉领域,探讨政府支出效率问题.核心概念包括:</p>
+<ul>
+<li><strong>预算约束</strong>: 政府机构在财政年度内可支配的资金总额</li>
+<li><strong>自由裁量支出</strong>:
+政府可以自行决定如何分配的预算部分,与法定支出(如社会保障)相对</li>
+<li><strong>公共采购</strong>: 政府购买商品和服务的行为</li>
+<li><strong>信息技术(IT)项目</strong>:
+政府对计算机硬件、软件和相关服务的投资</li>
+<li><strong>社会成本</strong>:
+指一项经济活动对整个社会造成的成本,包括直接成本和外部成本</li>
+<li><strong>滚动预算(Rollover Budget)</strong>:
+允许机构将未使用的预算资金转移到下一个财政年度</li>
+</ul>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<p>政府机构通常面临"不使用就失去"的预算规则,即在一个财政年度结束时,任何未使用的预算资金都将返回国库,而不是留给该机构使用.这种规则可能会导致机构在财政年度末
+rush 支出,即使这意味着投资于低价值的项目.</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p>作者认为,"不使用就失去"的预算规则可能会导致政府浪费性支出.他们试图通过实证分析来检验这一观点,并探讨解决这一问题的潜在政策,例如允许机构将未使用的资金转入下一个财政年度.</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><strong>揭示了政府支出中潜在的浪费现象</strong>:
+通过量化财政年度末的支出高峰和质量下降,为政府支出效率问题提供了有力证据</li>
+<li><strong>评估了滚动预算的有效性</strong>:
+通过研究美国司法部的滚动预算政策,为解决浪费性支出提供了一个可行的解决方案</li>
+<li><strong>为政府预算管理提供了政策建议</strong>:
+研究结果表明,允许机构将未使用的资金转入下一个财政年度可以提高政府支出效率</li>
+</ol>
+<h2 id="论文结构">论文结构</h2>
+<ol type="1">
+<li><strong>引言</strong>: 概述研究背景、问题意识和研究意义</li>
+<li><strong>理论模型</strong>:
+建立一个简单的模型来解释"不使用就失去"的预算规则如何导致浪费性支出</li>
+<li><strong>数据描述</strong>:
+介绍用于实证分析的数据集,包括联邦采购数据系统(FPDS)和IT仪表板</li>
+<li><strong>实证分析1</strong>:
+使用FPDS数据检验财政年度末是否存在支出高峰</li>
+<li><strong>实证分析2</strong>:
+使用IT仪表板数据检验财政年度末的支出质量是否下降</li>
+<li><strong>政策分析</strong>: 研究滚动预算政策对支出行为的影响</li>
+<li><strong>福利分析</strong>:
+使用校准后的模型评估滚动预算政策的福利效应</li>
+<li><strong>结论</strong>:
+总结研究结果,讨论政策含义,并提出未来研究方向</li>
+</ol>
+<h2 id="背景">背景</h2>
+<p>许多组织都有在财政年度末到期的预算,这可能导致在年底匆忙将资源用于低质量的项目.美国联邦政府的自由裁量支出预算也面临类似情况,机构必须在财政年度结束前完成拨款.</p>
+<h3 id="挑战">挑战</h3>
+<ol type="1">
+<li><strong>"不使用就失去"的预算规则</strong>:
+如果机构不花完预算,剩余的资金将返回国库,降低了年底花钱的机会成本</li>
+<li><strong>预防性储蓄的动机</strong>:
+机构倾向于在预算周期开始时保留资金,以应对未来不确定的支出需求</li>
+<li><strong>缺乏关于年底浪费性支出的硬性证据</strong>:
+尽管有传闻证据,但缺乏关于美国联邦政府年底支出激增以及年底支出价值低于其他时间段的证据</li>
+</ol>
+<h2 id="方法">方法</h2>
+<h3 id="理论模型">理论模型</h3>
+<ul>
+<li><strong>模型设定</strong>:
+作者建立了一个年度预算模型,包括国会和一个政府机构.国会为该机构选择预算,该机构在一年中的每个时期都会获得一个参数,该参数决定了支出的边际价值,并选择一个支出水平以最大化收益递减的目标</li>
+<li><strong>模型特征</strong>:
+具有三个关键特征_预算到期、未来支出价值的不确定性以及每个时期内支出的收益递减</li>
+<li><strong>模型预测</strong>:
+由于不确定性和收益递减,该机构将在年初进行预防性储蓄;在年底,资金到期的前景导致该机构花掉所有剩余资源,即使边际价值低于资金的社会成本,导致年底支出量激增和质量下降</li>
+</ul>
+<h3 id="数据集">数据集</h3>
+<p><strong>1. 联邦采购数据系统(FPDS)</strong> - 时间范围:
+2004年至2009年财政年度 - 数据量: 1460万份合同 - 总支出: 2.6万亿美元 -
+主要内容:
+合同层面信息,包括金额、产品/服务代码、机构、供应商、合同类型、招标机制等
+- 用途: 用于分析联邦采购支出的总体模式,特别是年底支出高峰</p>
+<p><strong>2. IT仪表板(IT Dashboard)</strong> - 数据时间: 截至2010年3月
+- 项目数量: 686个主要IT项目 - 总计划支出: 1300亿美元 - 主要内容:
+项目绩效数据,包括总体评级、成本评级、进度评级、CIO评估等 - 用途:
+用于评估IT项目的质量,特别是年底开始的项目的质量</p>
+<h3 id="实证策略">实证策略</h3>
+<ol type="1">
+<li><strong>支出高峰检验</strong>:
+使用FPDS数据,分析财政年度内每周的采购支出模式,确定是否存在年底支出高峰</li>
+<li><strong>质量下降检验</strong>:
+使用IT仪表板数据,比较在财政年度最后一周开始的项目与在其他时间开始的项目的质量评级</li>
+<li><strong>政策分析</strong>:
+研究美国司法部(DOJ)的滚动预算政策对支出行为的影响.DOJ有权将未使用的IT项目预算转入下一财政年度,作者比较了DOJ的IT和非IT支出,以及DOJ和其他机构之间的支出模式</li>
+<li><strong>福利分析</strong>:
+通过校准模型以适应支出高峰和质量下降,分析允许滚动预算的潜在福利收益</li>
+</ol>
+<h3 id="关键术语">关键术语</h3>
+<ul>
+<li><strong>FPDS (Federal Procurement Data System)</strong>:
+联邦采购数据系统,跟踪所有联邦合同的数据系统</li>
+<li><strong>IT仪表板 (IT Dashboard)</strong>:
+跟踪联邦政府主要IT项目绩效的网站</li>
+<li><strong>CIO (Chief Information Officer)</strong>:
+首席信息官,负责机构的信息技术战略和管理</li>
+<li><strong>Ordered Logit Regression</strong>:
+有序Logit回归,用于分析有序分类因变量的统计模型</li>
+<li><strong>Difference-in-Differences</strong>:
+双重差分法,用于评估政策或干预效果的统计方法</li>
+<li><strong>CRRA (Constant Relative Risk Aversion)</strong>:
+恒定相对风险厌恶效用函数</li>
+<li><strong>CARA (Constant Absolute Risk Aversion)</strong>:
+恒定绝对风险厌恶效用函数</li>
+</ul>
+<h2 id="结果">结果</h2>
+<ol type="1">
+<li><strong>支出高峰</strong>:
+数据显示年底支出大幅增加.在财政年度的最后一周,支出是平时每周平均水平的4.9倍</li>
+<li><strong>质量下降</strong>:
+年底开始的IT项目的质量评级明显较低.在财政年度最后一周开始的项目,获得较低质量分数的可能性要高出2.3到5.6倍</li>
+<li><strong>滚动预算的影响</strong>:
+DOJ的IT支出没有出现支出高峰,最后一周的IT支出仅占3.3%,而非IT支出为9.3%.差异分析表明滚动预算减少了年底支出量</li>
+<li><strong>福利分析</strong>:
+允许滚动预算可以带来福利收益.即使是允许机构在短时间内转入资金的中间政策,也可以产生接近全部滚动价值四分之三的福利收益</li>
+</ol>
+<h2 id="结论">结论</h2>
+<p>本文的核心结论是:由于"不使用就失去"的预算规则,美国联邦政府存在年底浪费性支出现象.具体表现为:</p>
+<ul>
+<li><strong>年底支出量激增</strong>:
+财政年度末的支出明显高于其他时间段</li>
+<li><strong>年底支出质量下降</strong>:
+财政年度末开始的IT项目质量较低</li>
+</ul>
+<p>允许滚动预算可以有效地解决这个问题.DOJ的经验表明滚动预算可以减少年底支出量,并可能提高项目质量.福利分析表明,即使是有限制的滚动预算政策也可以带来显著的福利收益.</p>
+<p>作者建议可以通过允许机构将未使用的资金延期到下个财政年度,用于四个月的宽限期,从而消除因年底浪费性支出造成的大部分效率低下问题.</p>
+<h2 id="未来研究方向">未来研究方向</h2>
+<ol type="1">
+<li><strong>研究国会预算决策对机构支出行为的影响</strong>:
+深入研究国会如何应对滚动预算,以及如何设计预算规则以实现最佳效果</li>
+<li><strong>考虑机构内部的异质性</strong>:
+研究机构内部不同部门的支出行为差异,以及如何设计更有针对性的预算政策</li>
+<li><strong>探索其他解决浪费性支出问题的政策</strong>:
+例如改进预算预测,加强项目管理,或引入竞争性招标</li>
+<li><strong>研究不同类型的资金结转政策</strong>:
+比较无限期结转、有条件结转等不同方案对支出效率的影响</li>
+<li><strong>行为因素的影响</strong>:
+考虑认知偏差、损失厌恶等行为因素对政府部门年底支出行为的影响</li>
+<li><strong>政治因素</strong>:
+研究资金结转政策的政治可行性,以及立法机构对预算控制的考量</li>
+</ol>
+<h2 id="学术思考">学术思考</h2>
+<ol type="1">
+<li><strong>预算制度与创新</strong>:
+"使用或失效"的预算规则是否会抑制政府部门的创新活动?如果政府部门知道它们必须在当年用完所有资金,它们是否会更倾向于投资于风险较低、回报较快的项目?</li>
+<li><strong>政治周期与支出行为</strong>:
+政府部门的支出行为是否会受到政治周期的影响?</li>
+<li><strong>绩效评估指标的设计</strong>:
+如何设计更有效的绩效评估指标,以准确衡量政府部门的支出质量?</li>
+<li><strong>资金结转政策的适用性</strong>:
+资金结转政策是否适用于所有类型的政府部门和项目?</li>
+<li><strong>公共部门与私营部门的对比</strong>:
+比较公共部门和私营部门在预算管理和支出效率方面的差异</li>
+</ol>
+]]></content>
+      <categories>
+        <category>公共经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>公共经济学</tag>
+        <tag>预算制度</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>年末消费高峰 — 论文笔记 — McCue, Prier &amp; Lofaro</title>
     <url>/posts/mccue2021/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -5550,187 +5731,6 @@ study of procurement contracts》深度分析撰写。</em></p>
         <tag>论文笔记</tag>
         <tag>公共财政</tag>
         <tag>政府采购</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>预算到期会导致年底浪费性支出吗?_ Liebman &amp; Mahoney (2017) 笔记</title>
-    <url>/posts/liebman2017/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Do Expiring Budgets Lead to Wasteful Year-End
-Spending? Evidence from Federal Procurement</li>
-<li><strong>作者</strong>: Jeffrey B. Liebman(哈佛大学), Neale
-Mahoney(芝加哥大学)</li>
-<li><strong>类型</strong>: 论文笔记 / 公共经济学 / 预算制度</li>
-<li><strong>出版年份</strong>: 2017</li>
-<li><strong>出版机构/期刊</strong>: American Economic Review</li>
-<li><strong>DOI</strong>: 10.1257/aer.20131296</li>
-<li><strong>难度评估</strong>: 高 -
-需要经济学、计量经济学、公共财政学基础</li>
-</ul>
-<span id="more"></span>
-<h2 id="引言">引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>本文属于公共经济学、行为经济学和管理学的交叉领域,探讨政府支出效率问题.核心概念包括:</p>
-<ul>
-<li><strong>预算约束</strong>: 政府机构在财政年度内可支配的资金总额</li>
-<li><strong>自由裁量支出</strong>:
-政府可以自行决定如何分配的预算部分,与法定支出(如社会保障)相对</li>
-<li><strong>公共采购</strong>: 政府购买商品和服务的行为</li>
-<li><strong>信息技术(IT)项目</strong>:
-政府对计算机硬件、软件和相关服务的投资</li>
-<li><strong>社会成本</strong>:
-指一项经济活动对整个社会造成的成本,包括直接成本和外部成本</li>
-<li><strong>滚动预算(Rollover Budget)</strong>:
-允许机构将未使用的预算资金转移到下一个财政年度</li>
-</ul>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p>政府机构通常面临"不使用就失去"的预算规则,即在一个财政年度结束时,任何未使用的预算资金都将返回国库,而不是留给该机构使用.这种规则可能会导致机构在财政年度末
-rush 支出,即使这意味着投资于低价值的项目.</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p>作者认为,"不使用就失去"的预算规则可能会导致政府浪费性支出.他们试图通过实证分析来检验这一观点,并探讨解决这一问题的潜在政策,例如允许机构将未使用的资金转入下一个财政年度.</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><strong>揭示了政府支出中潜在的浪费现象</strong>:
-通过量化财政年度末的支出高峰和质量下降,为政府支出效率问题提供了有力证据</li>
-<li><strong>评估了滚动预算的有效性</strong>:
-通过研究美国司法部的滚动预算政策,为解决浪费性支出提供了一个可行的解决方案</li>
-<li><strong>为政府预算管理提供了政策建议</strong>:
-研究结果表明,允许机构将未使用的资金转入下一个财政年度可以提高政府支出效率</li>
-</ol>
-<h2 id="论文结构">论文结构</h2>
-<ol type="1">
-<li><strong>引言</strong>: 概述研究背景、问题意识和研究意义</li>
-<li><strong>理论模型</strong>:
-建立一个简单的模型来解释"不使用就失去"的预算规则如何导致浪费性支出</li>
-<li><strong>数据描述</strong>:
-介绍用于实证分析的数据集,包括联邦采购数据系统(FPDS)和IT仪表板</li>
-<li><strong>实证分析1</strong>:
-使用FPDS数据检验财政年度末是否存在支出高峰</li>
-<li><strong>实证分析2</strong>:
-使用IT仪表板数据检验财政年度末的支出质量是否下降</li>
-<li><strong>政策分析</strong>: 研究滚动预算政策对支出行为的影响</li>
-<li><strong>福利分析</strong>:
-使用校准后的模型评估滚动预算政策的福利效应</li>
-<li><strong>结论</strong>:
-总结研究结果,讨论政策含义,并提出未来研究方向</li>
-</ol>
-<h2 id="背景">背景</h2>
-<p>许多组织都有在财政年度末到期的预算,这可能导致在年底匆忙将资源用于低质量的项目.美国联邦政府的自由裁量支出预算也面临类似情况,机构必须在财政年度结束前完成拨款.</p>
-<h3 id="挑战">挑战</h3>
-<ol type="1">
-<li><strong>"不使用就失去"的预算规则</strong>:
-如果机构不花完预算,剩余的资金将返回国库,降低了年底花钱的机会成本</li>
-<li><strong>预防性储蓄的动机</strong>:
-机构倾向于在预算周期开始时保留资金,以应对未来不确定的支出需求</li>
-<li><strong>缺乏关于年底浪费性支出的硬性证据</strong>:
-尽管有传闻证据,但缺乏关于美国联邦政府年底支出激增以及年底支出价值低于其他时间段的证据</li>
-</ol>
-<h2 id="方法">方法</h2>
-<h3 id="理论模型">理论模型</h3>
-<ul>
-<li><strong>模型设定</strong>:
-作者建立了一个年度预算模型,包括国会和一个政府机构.国会为该机构选择预算,该机构在一年中的每个时期都会获得一个参数,该参数决定了支出的边际价值,并选择一个支出水平以最大化收益递减的目标</li>
-<li><strong>模型特征</strong>:
-具有三个关键特征_预算到期、未来支出价值的不确定性以及每个时期内支出的收益递减</li>
-<li><strong>模型预测</strong>:
-由于不确定性和收益递减,该机构将在年初进行预防性储蓄;在年底,资金到期的前景导致该机构花掉所有剩余资源,即使边际价值低于资金的社会成本,导致年底支出量激增和质量下降</li>
-</ul>
-<h3 id="数据集">数据集</h3>
-<p><strong>1. 联邦采购数据系统(FPDS)</strong> - 时间范围:
-2004年至2009年财政年度 - 数据量: 1460万份合同 - 总支出: 2.6万亿美元 -
-主要内容:
-合同层面信息,包括金额、产品/服务代码、机构、供应商、合同类型、招标机制等
-- 用途: 用于分析联邦采购支出的总体模式,特别是年底支出高峰</p>
-<p><strong>2. IT仪表板(IT Dashboard)</strong> - 数据时间: 截至2010年3月
-- 项目数量: 686个主要IT项目 - 总计划支出: 1300亿美元 - 主要内容:
-项目绩效数据,包括总体评级、成本评级、进度评级、CIO评估等 - 用途:
-用于评估IT项目的质量,特别是年底开始的项目的质量</p>
-<h3 id="实证策略">实证策略</h3>
-<ol type="1">
-<li><strong>支出高峰检验</strong>:
-使用FPDS数据,分析财政年度内每周的采购支出模式,确定是否存在年底支出高峰</li>
-<li><strong>质量下降检验</strong>:
-使用IT仪表板数据,比较在财政年度最后一周开始的项目与在其他时间开始的项目的质量评级</li>
-<li><strong>政策分析</strong>:
-研究美国司法部(DOJ)的滚动预算政策对支出行为的影响.DOJ有权将未使用的IT项目预算转入下一财政年度,作者比较了DOJ的IT和非IT支出,以及DOJ和其他机构之间的支出模式</li>
-<li><strong>福利分析</strong>:
-通过校准模型以适应支出高峰和质量下降,分析允许滚动预算的潜在福利收益</li>
-</ol>
-<h3 id="关键术语">关键术语</h3>
-<ul>
-<li><strong>FPDS (Federal Procurement Data System)</strong>:
-联邦采购数据系统,跟踪所有联邦合同的数据系统</li>
-<li><strong>IT仪表板 (IT Dashboard)</strong>:
-跟踪联邦政府主要IT项目绩效的网站</li>
-<li><strong>CIO (Chief Information Officer)</strong>:
-首席信息官,负责机构的信息技术战略和管理</li>
-<li><strong>Ordered Logit Regression</strong>:
-有序Logit回归,用于分析有序分类因变量的统计模型</li>
-<li><strong>Difference-in-Differences</strong>:
-双重差分法,用于评估政策或干预效果的统计方法</li>
-<li><strong>CRRA (Constant Relative Risk Aversion)</strong>:
-恒定相对风险厌恶效用函数</li>
-<li><strong>CARA (Constant Absolute Risk Aversion)</strong>:
-恒定绝对风险厌恶效用函数</li>
-</ul>
-<h2 id="结果">结果</h2>
-<ol type="1">
-<li><strong>支出高峰</strong>:
-数据显示年底支出大幅增加.在财政年度的最后一周,支出是平时每周平均水平的4.9倍</li>
-<li><strong>质量下降</strong>:
-年底开始的IT项目的质量评级明显较低.在财政年度最后一周开始的项目,获得较低质量分数的可能性要高出2.3到5.6倍</li>
-<li><strong>滚动预算的影响</strong>:
-DOJ的IT支出没有出现支出高峰,最后一周的IT支出仅占3.3%,而非IT支出为9.3%.差异分析表明滚动预算减少了年底支出量</li>
-<li><strong>福利分析</strong>:
-允许滚动预算可以带来福利收益.即使是允许机构在短时间内转入资金的中间政策,也可以产生接近全部滚动价值四分之三的福利收益</li>
-</ol>
-<h2 id="结论">结论</h2>
-<p>本文的核心结论是:由于"不使用就失去"的预算规则,美国联邦政府存在年底浪费性支出现象.具体表现为:</p>
-<ul>
-<li><strong>年底支出量激增</strong>:
-财政年度末的支出明显高于其他时间段</li>
-<li><strong>年底支出质量下降</strong>:
-财政年度末开始的IT项目质量较低</li>
-</ul>
-<p>允许滚动预算可以有效地解决这个问题.DOJ的经验表明滚动预算可以减少年底支出量,并可能提高项目质量.福利分析表明,即使是有限制的滚动预算政策也可以带来显著的福利收益.</p>
-<p>作者建议可以通过允许机构将未使用的资金延期到下个财政年度,用于四个月的宽限期,从而消除因年底浪费性支出造成的大部分效率低下问题.</p>
-<h2 id="未来研究方向">未来研究方向</h2>
-<ol type="1">
-<li><strong>研究国会预算决策对机构支出行为的影响</strong>:
-深入研究国会如何应对滚动预算,以及如何设计预算规则以实现最佳效果</li>
-<li><strong>考虑机构内部的异质性</strong>:
-研究机构内部不同部门的支出行为差异,以及如何设计更有针对性的预算政策</li>
-<li><strong>探索其他解决浪费性支出问题的政策</strong>:
-例如改进预算预测,加强项目管理,或引入竞争性招标</li>
-<li><strong>研究不同类型的资金结转政策</strong>:
-比较无限期结转、有条件结转等不同方案对支出效率的影响</li>
-<li><strong>行为因素的影响</strong>:
-考虑认知偏差、损失厌恶等行为因素对政府部门年底支出行为的影响</li>
-<li><strong>政治因素</strong>:
-研究资金结转政策的政治可行性,以及立法机构对预算控制的考量</li>
-</ol>
-<h2 id="学术思考">学术思考</h2>
-<ol type="1">
-<li><strong>预算制度与创新</strong>:
-"使用或失效"的预算规则是否会抑制政府部门的创新活动?如果政府部门知道它们必须在当年用完所有资金,它们是否会更倾向于投资于风险较低、回报较快的项目?</li>
-<li><strong>政治周期与支出行为</strong>:
-政府部门的支出行为是否会受到政治周期的影响?</li>
-<li><strong>绩效评估指标的设计</strong>:
-如何设计更有效的绩效评估指标,以准确衡量政府部门的支出质量?</li>
-<li><strong>资金结转政策的适用性</strong>:
-资金结转政策是否适用于所有类型的政府部门和项目?</li>
-<li><strong>公共部门与私营部门的对比</strong>:
-比较公共部门和私营部门在预算管理和支出效率方面的差异</li>
-</ol>
-]]></content>
-      <categories>
-        <category>公共经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>公共经济学</tag>
-        <tag>预算制度</tag>
       </tags>
   </entry>
   <entry>
@@ -6928,6 +6928,42 @@ World!"开始的,对于<strong>shell</strong>而言:</p>
       </tags>
   </entry>
   <entry>
+    <title>画一幅我农所在地的道路图</title>
+    <url>/posts/42027/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;">
+<center>
+上图即为最终效果
+</center>
+<h2 id="一些必备的工具">一些必备的工具</h2>
+<p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="绘制路网地图">绘制路网地图</h2>
+<p>导入以下R 包:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>读入杨陵区的数据:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>获取杨陵区的经纬度范围:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
+<p>提取杨陵区的街道路线:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>把数据保存为<strong>rds</strong>:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>然后绘图:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>绘图</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>字体和公式的Display</title>
     <url>/posts/15167/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
@@ -6964,42 +7000,6 @@ t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)
       </categories>
       <tags>
         <tag>blog_test</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>画一幅我农所在地的道路图</title>
-    <url>/posts/42027/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;">
-<center>
-上图即为最终效果
-</center>
-<h2 id="一些必备的工具">一些必备的工具</h2>
-<p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="绘制路网地图">绘制路网地图</h2>
-<p>导入以下R 包:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>读入杨陵区的数据:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>获取杨陵区的经纬度范围:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
-<p>提取杨陵区的街道路线:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>把数据保存为<strong>rds</strong>:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>然后绘图:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>绘图</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
       </tags>
   </entry>
 </search>
