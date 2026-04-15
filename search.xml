@@ -397,151 +397,6 @@ Economic Review.</li>
       </tags>
   </entry>
   <entry>
-    <title>Do Governments Crowd Out Governments? — 深度阅读笔记 — Baumann &amp; Klymak</title>
-    <url>/posts/baumann2024/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Do governments crowd out governments?
-Evidence from a natural experiment</li>
-<li><strong>作者</strong>: Stuart Baumann, Margaryta Klymak</li>
-<li><strong>类型</strong>: 论文笔记 / 财政学 / 政府经济学</li>
-<li><strong>出版年份</strong>: 2024</li>
-<li><strong>出版机构/期刊</strong>: European Economic Review, Vol. 168,
-104803</li>
-<li><strong>难度评估</strong>: 中 - 需要计量经济学基础 <span id="more"></span>
----</li>
-</ul>
-<h2 id="引言背景和意义">引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>年终支出高峰(Year-End Spending
-Spike)是全球各国政府普遍存在的现象_政府部门在财政年度结束时集中大量支出.这种支出模式具有几个关键特征:</p>
-<p><strong>规模与普遍性.</strong>
-英国资本支出在财年最后一个月是月平均支出的约两倍;美国政府在财年最后一周的支出是平均周的4.9倍.这一现象在OECD
-27个国家均有观察到.</p>
-<p><strong>潜在浪费问题.</strong>
-年终仓促采购可能导致质量问题.Liebman和Mahoney(2017)发现,美国政府采购的IT项目在财年末执行的,其获得"低质量"评分的可能性是其他时间执行的2.2至5.6倍.</p>
-<p><strong>现有解释的局限.</strong>
-文献将年终支出归因于政府部门自身的预算周期(内部因素):如预防性储蓄基金、拖延行为、或规划不足.但这些解释均未考虑外部因素_其他政府部门和企业的支出行为.</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p><strong>拥堵效应与竞争机制.</strong>
-当多个政府部门同时高强度支出时,可能在供应商方面产生拥堵效应.具体机制包括:</p>
-<ul>
-<li><strong>价格上涨</strong>:供应商在高需求时期提高价格</li>
-<li><strong>采购替代</strong>:供应商不可用时被迫更换采购物品或供应商</li>
-<li><strong>销售策略</strong>:供应商增加销售人员、调整商品供应以利用高支出意愿</li>
-<li><strong>支出转移</strong>:部门可能将部分支出转移至其他时间以避免价格上涨</li>
-</ul>
-<p><strong>识别挑战.</strong>
-同一国家的政府机构通常遵循相同的财年规则,使得分离"部门自身财年影响"和"其他政府机构财年影响"成为重大识别挑战.</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:政府部门在财年末集中支出时,是否存在"政府挤出政府"的效应?</p>
-<p><strong>创新解决方案</strong>:利用英国驻海外办事处这一独特自然实验_这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
-<h3 id="研究意义">研究意义</h3>
-<ul>
-<li><strong>学术贡献</strong>:首次分离年终支出的"内部"与"外部"驱动因素</li>
-<li><strong>政策含义</strong>:错开不同部门的财年可能减少年终支出</li>
-</ul>
-<hr>
-<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
-<p><strong>第一节:引言(Introduction)</strong></p>
-<p>阐述年终支出高峰现象、潜在拥堵机制,研究挑战与创新.</p>
-<p><strong>第二节:方法论(Methodology)</strong></p>
-<p>数据:英国外交和联邦事务部(FCO)海外办事处2008-2019财年月度支出数据.实证策略:利用海外办事处沿用本国财年但所在国财年各异的自然实验.</p>
-<p><strong>第三节:结果(Results)</strong></p>
-<p>三个主要发现:本国财年末效应、当地政府挤出效应、当地企业财年效应.</p>
-<hr>
-<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
-<h3 id="一自然实验的设计优势">一、自然实验的设计优势</h3>
-<p><strong>英国海外办事处的独特性.</strong>
-英国在180多个国家设有399个海外办事处,这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
-<p>这种设置的优势:办事处的预算框架、管理和监督制度相同,执行相似的外交任务,可比较不同东道国办事处的支出模式差异.</p>
-<h3 id="二核心实证发现">二、核心实证发现</h3>
-<p><strong>发现1:本国财年末效应显著.</strong></p>
-<p>海外办事处在英国财年最后一个月(3月)的支出显著更高:</p>
-<ul>
-<li>资源预算:3月支出比月平均高1.359个标准差</li>
-<li>资本预算:3月支出比月平均高0.867个标准差</li>
-</ul>
-<p><strong>发现2:当地政府挤出效应显著.</strong></p>
-<p><span class="math inline">\(LFY End \times Home FY
-End\)</span>系数在资源支出模型中显著为正:在与英国财年重叠的国家,年终支出峰值更大.这表明东道国政府的年终支出确实产生了"挤出"效应.</p>
-<p><strong>发现3:当地企业财年效应显著.</strong></p>
-<p>在资本支出案例中,当地企业财年末越近,办事处支出越多.这与企业销售人员为最大化佣金的策略性行为一致.</p>
-<h3 id="三理论模型与预测">三、理论模型与预测</h3>
-<p>作者扩展了Liebman and
-Mahoney(2017)和Baumann(2019)的模型,加入"价格"和"拥堵效应"参数.</p>
-<p><strong>有趣发现</strong>:理论预测拥堵效应应减少年终支出峰值(理性部门会转移支出),但实证结果相反_拥堵效应加剧年终支出.这暗示政府部门的"行为惯性"可能比模型假设的更强.</p>
-<hr>
-<h2 id="结论conclusion">结论(Conclusion)</h2>
-<h3 id="核心结论总结">核心结论总结</h3>
-<p><strong>第一,本国财年是支出模式最重要的影响因素.</strong></p>
-<p><strong>第二,拥堵效应加剧年终支出.</strong>
-在与本国财年重叠的国家,年终支出规模更大.</p>
-<p><strong>第三,当地企业财年末后期,政府支出更高.</strong>
-企业销售人员的激励结构和行为也能影响政府部门的支出模式.</p>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ul>
-<li><strong>年终支出文献</strong>:首次分离内部与外部因素</li>
-<li><strong>财政溢出文献</strong>:发现"年终支出溢出"新概念</li>
-<li><strong>政策制定</strong>:错开财年可间接减少年终支出</li>
-</ul>
-<hr>
-<h2 id="未来研究方向">未来研究方向</h2>
-<h3 id="文献中提及的未来研究方向">文献中提及的未来研究方向</h3>
-<ul>
-<li>利用更细致的微观采购合同数据直接量化挤出效应的成本</li>
-<li>分析政府部门对拥堵效应的动态适应过程</li>
-</ul>
-<h3 id="基于本文思考的下一步研究工作">基于本文思考的下一步研究工作</h3>
-<p><strong>拥堵效应的成本量化.</strong>
-英国海外办事处在面临挤出效应时是否支付了更高价格?</p>
-<p><strong>政策错开财年的可行性分析.</strong>
-实施"错开财年"政策的实际可行性、潜在成本和过渡挑战.</p>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<p><strong>关于"个体理性"与"集体低效":</strong></p>
-<p>本文揭示了一个有趣的悖论:所有部门都在同一时间"理性"地加大支出以避免资金过期,这种个体理性可能导致整个经济体的集体低效_价格上涨、供应短缺、次优采购.</p>
-<p><strong>关于政府部门的价格敏感性:</strong></p>
-<p>理论模型预测理性部门会转移支出以避免拥堵,但实证结果相反.这暗示政府部门的"行为惯性"可能比新古典模型假设的更强.</p>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p><strong>拥堵效应具体如何测量?</strong>
-交互项系数的经济含义是什么?</p></li>
-<li><p><strong>资源预算和资本预算的响应为何不同?</strong></p></li>
-<li><p><strong>这对中国的政府采购改革有何启示?</strong></p></li>
-<li><p><strong>错开财年政策的实际可行性如何?</strong></p></li>
-</ol>
-<hr>
-<h2 id="参考文献">参考文献</h2>
-<ul>
-<li>Baumann, S. (2019). Procrastination and the Design of
-Government.</li>
-<li>Eichenauer, V. (2020). Budget Constraints and the Temporal Dynamics
-of Public Spending.</li>
-<li>Klymak, M., &amp; Baumann, S. (2022). Fiscal Year-End Procurement
-and Price Gouging.</li>
-<li>Liebman, J.B., &amp; Mahoney, N. (2017). Expiring Budgets and the
-Temporal Dynamics of Federal Spending.</li>
-<li>Oyer, P. (1998). Fiscal Year Ends and Intertemporal Labor
-Management.</li>
-</ul>
-<hr>
-<p><em>本笔记由 AI 生成,深度分析了&lt;Do governments crowd out
-governments?&gt;一文的核心内容、理论框架、实证发现和学术贡献.生成时间:2026年4月11日.</em></p>
-]]></content>
-      <categories>
-        <category>财政学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>财政学</tag>
-        <tag>政府支出</tag>
-        <tag>挤出效应</tag>
-        <tag>自然实验</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>In Harm&#39;s Way? Infrastructure Investments and the Persistence of Coastal Cities — 深度阅读笔记 — Balboni</title>
     <url>/posts/balboni2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -904,6 +759,151 @@ Moi改革后)，这是否影响校准的可靠性？</p>
       </tags>
   </entry>
   <entry>
+    <title>Do Governments Crowd Out Governments? — 深度阅读笔记 — Baumann &amp; Klymak</title>
+    <url>/posts/baumann2024/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Do governments crowd out governments?
+Evidence from a natural experiment</li>
+<li><strong>作者</strong>: Stuart Baumann, Margaryta Klymak</li>
+<li><strong>类型</strong>: 论文笔记 / 财政学 / 政府经济学</li>
+<li><strong>出版年份</strong>: 2024</li>
+<li><strong>出版机构/期刊</strong>: European Economic Review, Vol. 168,
+104803</li>
+<li><strong>难度评估</strong>: 中 - 需要计量经济学基础 <span id="more"></span>
+---</li>
+</ul>
+<h2 id="引言背景和意义">引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>年终支出高峰(Year-End Spending
+Spike)是全球各国政府普遍存在的现象_政府部门在财政年度结束时集中大量支出.这种支出模式具有几个关键特征:</p>
+<p><strong>规模与普遍性.</strong>
+英国资本支出在财年最后一个月是月平均支出的约两倍;美国政府在财年最后一周的支出是平均周的4.9倍.这一现象在OECD
+27个国家均有观察到.</p>
+<p><strong>潜在浪费问题.</strong>
+年终仓促采购可能导致质量问题.Liebman和Mahoney(2017)发现,美国政府采购的IT项目在财年末执行的,其获得"低质量"评分的可能性是其他时间执行的2.2至5.6倍.</p>
+<p><strong>现有解释的局限.</strong>
+文献将年终支出归因于政府部门自身的预算周期(内部因素):如预防性储蓄基金、拖延行为、或规划不足.但这些解释均未考虑外部因素_其他政府部门和企业的支出行为.</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<p><strong>拥堵效应与竞争机制.</strong>
+当多个政府部门同时高强度支出时,可能在供应商方面产生拥堵效应.具体机制包括:</p>
+<ul>
+<li><strong>价格上涨</strong>:供应商在高需求时期提高价格</li>
+<li><strong>采购替代</strong>:供应商不可用时被迫更换采购物品或供应商</li>
+<li><strong>销售策略</strong>:供应商增加销售人员、调整商品供应以利用高支出意愿</li>
+<li><strong>支出转移</strong>:部门可能将部分支出转移至其他时间以避免价格上涨</li>
+</ul>
+<p><strong>识别挑战.</strong>
+同一国家的政府机构通常遵循相同的财年规则,使得分离"部门自身财年影响"和"其他政府机构财年影响"成为重大识别挑战.</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>:政府部门在财年末集中支出时,是否存在"政府挤出政府"的效应?</p>
+<p><strong>创新解决方案</strong>:利用英国驻海外办事处这一独特自然实验_这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
+<h3 id="研究意义">研究意义</h3>
+<ul>
+<li><strong>学术贡献</strong>:首次分离年终支出的"内部"与"外部"驱动因素</li>
+<li><strong>政策含义</strong>:错开不同部门的财年可能减少年终支出</li>
+</ul>
+<hr>
+<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
+<p><strong>第一节:引言(Introduction)</strong></p>
+<p>阐述年终支出高峰现象、潜在拥堵机制,研究挑战与创新.</p>
+<p><strong>第二节:方法论(Methodology)</strong></p>
+<p>数据:英国外交和联邦事务部(FCO)海外办事处2008-2019财年月度支出数据.实证策略:利用海外办事处沿用本国财年但所在国财年各异的自然实验.</p>
+<p><strong>第三节:结果(Results)</strong></p>
+<p>三个主要发现:本国财年末效应、当地政府挤出效应、当地企业财年效应.</p>
+<hr>
+<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
+<h3 id="一自然实验的设计优势">一、自然实验的设计优势</h3>
+<p><strong>英国海外办事处的独特性.</strong>
+英国在180多个国家设有399个海外办事处,这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
+<p>这种设置的优势:办事处的预算框架、管理和监督制度相同,执行相似的外交任务,可比较不同东道国办事处的支出模式差异.</p>
+<h3 id="二核心实证发现">二、核心实证发现</h3>
+<p><strong>发现1:本国财年末效应显著.</strong></p>
+<p>海外办事处在英国财年最后一个月(3月)的支出显著更高:</p>
+<ul>
+<li>资源预算:3月支出比月平均高1.359个标准差</li>
+<li>资本预算:3月支出比月平均高0.867个标准差</li>
+</ul>
+<p><strong>发现2:当地政府挤出效应显著.</strong></p>
+<p><span class="math inline">\(LFY End \times Home FY
+End\)</span>系数在资源支出模型中显著为正:在与英国财年重叠的国家,年终支出峰值更大.这表明东道国政府的年终支出确实产生了"挤出"效应.</p>
+<p><strong>发现3:当地企业财年效应显著.</strong></p>
+<p>在资本支出案例中,当地企业财年末越近,办事处支出越多.这与企业销售人员为最大化佣金的策略性行为一致.</p>
+<h3 id="三理论模型与预测">三、理论模型与预测</h3>
+<p>作者扩展了Liebman and
+Mahoney(2017)和Baumann(2019)的模型,加入"价格"和"拥堵效应"参数.</p>
+<p><strong>有趣发现</strong>:理论预测拥堵效应应减少年终支出峰值(理性部门会转移支出),但实证结果相反_拥堵效应加剧年终支出.这暗示政府部门的"行为惯性"可能比模型假设的更强.</p>
+<hr>
+<h2 id="结论conclusion">结论(Conclusion)</h2>
+<h3 id="核心结论总结">核心结论总结</h3>
+<p><strong>第一,本国财年是支出模式最重要的影响因素.</strong></p>
+<p><strong>第二,拥堵效应加剧年终支出.</strong>
+在与本国财年重叠的国家,年终支出规模更大.</p>
+<p><strong>第三,当地企业财年末后期,政府支出更高.</strong>
+企业销售人员的激励结构和行为也能影响政府部门的支出模式.</p>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ul>
+<li><strong>年终支出文献</strong>:首次分离内部与外部因素</li>
+<li><strong>财政溢出文献</strong>:发现"年终支出溢出"新概念</li>
+<li><strong>政策制定</strong>:错开财年可间接减少年终支出</li>
+</ul>
+<hr>
+<h2 id="未来研究方向">未来研究方向</h2>
+<h3 id="文献中提及的未来研究方向">文献中提及的未来研究方向</h3>
+<ul>
+<li>利用更细致的微观采购合同数据直接量化挤出效应的成本</li>
+<li>分析政府部门对拥堵效应的动态适应过程</li>
+</ul>
+<h3 id="基于本文思考的下一步研究工作">基于本文思考的下一步研究工作</h3>
+<p><strong>拥堵效应的成本量化.</strong>
+英国海外办事处在面临挤出效应时是否支付了更高价格?</p>
+<p><strong>政策错开财年的可行性分析.</strong>
+实施"错开财年"政策的实际可行性、潜在成本和过渡挑战.</p>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<p><strong>关于"个体理性"与"集体低效":</strong></p>
+<p>本文揭示了一个有趣的悖论:所有部门都在同一时间"理性"地加大支出以避免资金过期,这种个体理性可能导致整个经济体的集体低效_价格上涨、供应短缺、次优采购.</p>
+<p><strong>关于政府部门的价格敏感性:</strong></p>
+<p>理论模型预测理性部门会转移支出以避免拥堵,但实证结果相反.这暗示政府部门的"行为惯性"可能比新古典模型假设的更强.</p>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p><strong>拥堵效应具体如何测量?</strong>
+交互项系数的经济含义是什么?</p></li>
+<li><p><strong>资源预算和资本预算的响应为何不同?</strong></p></li>
+<li><p><strong>这对中国的政府采购改革有何启示?</strong></p></li>
+<li><p><strong>错开财年政策的实际可行性如何?</strong></p></li>
+</ol>
+<hr>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>Baumann, S. (2019). Procrastination and the Design of
+Government.</li>
+<li>Eichenauer, V. (2020). Budget Constraints and the Temporal Dynamics
+of Public Spending.</li>
+<li>Klymak, M., &amp; Baumann, S. (2022). Fiscal Year-End Procurement
+and Price Gouging.</li>
+<li>Liebman, J.B., &amp; Mahoney, N. (2017). Expiring Budgets and the
+Temporal Dynamics of Federal Spending.</li>
+<li>Oyer, P. (1998). Fiscal Year Ends and Intertemporal Labor
+Management.</li>
+</ul>
+<hr>
+<p><em>本笔记由 AI 生成,深度分析了&lt;Do governments crowd out
+governments?&gt;一文的核心内容、理论框架、实证发现和学术贡献.生成时间:2026年4月11日.</em></p>
+]]></content>
+      <categories>
+        <category>财政学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>财政学</tag>
+        <tag>政府支出</tag>
+        <tag>挤出效应</tag>
+        <tag>自然实验</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>致Berry</title>
     <url>/posts/51392/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
@@ -940,6 +940,56 @@ Moi改革后)，这是否影响校准的可靠性？</p>
       </categories>
       <tags>
         <tag>stata</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大城市人口增长速度🦚</title>
+    <url>/posts/15523/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
+<center>
+上图即为最终效果
+</center>
+<h2 id="下载数据">下载数据</h2>
+<p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录.
+</p><figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="加载r包">加载R包</h2>
+<p>需要的R包如下所示.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
+<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<ol type="1">
+<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
+<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon,
+Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
+<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
+<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
+</ol>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
+<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.
+使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="绘图">绘图</h2>
+<p>代码如下,图见上文.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>绘图</category>
+        <category>map&amp;sf</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
       </tags>
   </entry>
   <entry>
@@ -1366,56 +1416,6 @@ Instruments论文的深度笔记,由Claude AI辅助生成.</em></p>
         <tag>论文笔记</tag>
         <tag>计量经济学</tag>
         <tag>工具变量</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大城市人口增长速度🦚</title>
-    <url>/posts/15523/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
-<center>
-上图即为最终效果
-</center>
-<h2 id="下载数据">下载数据</h2>
-<p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录.
-</p><figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<h2 id="加载r包">加载R包</h2>
-<p>需要的R包如下所示.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
-<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<ol type="1">
-<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
-<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon,
-Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
-<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
-<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
-</ol>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
-<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.
-使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="绘图">绘图</h2>
-<p>代码如下,图见上文.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>绘图</category>
-        <category>map&amp;sf</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
       </tags>
   </entry>
   <entry>
@@ -2873,6 +2873,491 @@ Doyle
       </tags>
   </entry>
   <entry>
+    <title>The Price of War — 深度阅读笔记 — Federle Et Al.</title>
+    <url>/posts/federle2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: The Price of War</li>
+<li><strong>作者</strong>: Jonathan Federle, André Meier, Gernot J.
+Müller, Willi Mutschler, Moritz Schularick</li>
+<li><strong>类型</strong>: 论文笔记 / 战争经济学 / 宏观经济学 /
+经济史学</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: American Economic Review, 116(3):
+791-827</li>
+<li><strong>DOI</strong>: 10.1257/aer.20241355</li>
+<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量史学基础
+<span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>本文属于<strong>经济学研究领域</strong>，具体涉及发展经济学、国际经济学、经济史学、冲突经济学（Conflict
+Economics）以及宏观经济学等多个子领域的交叉地带。论文所研究的<strong>战争经济学</strong>（Economics
+of
+War）是一个重要但相对被忽视的研究方向，主要探讨战争如何影响参与各方的经济表现。</p>
+<p>论文使用了多个经典宏观经济指标来测度战争的经济影响：</p>
+<ul>
+<li><strong>实际GDP（Real
+GDP）</strong>：衡量一个国家商品和服务产出的最核心指标</li>
+<li><strong>消费者价格指数（CPI）</strong>：衡量通货膨胀和物价水平变化</li>
+<li><strong>资本存量（Capital
+Stock）</strong>：衡量经济体中可用于生产的固定资产总量</li>
+<li><strong>全要素生产率（TFP, Total Factor
+Productivity）</strong>：衡量技术进步和效率提升的关键指标</li>
+<li><strong>股权回报率（Equity
+Returns）</strong>：反映股票市场的整体表现</li>
+<li><strong>长期利率（Long-term Interest
+Rates）</strong>：反映资金成本和政府借贷成本</li>
+</ul>
+<h3 id="研究的主要背景分点说明">研究的主要背景（分点说明）</h3>
+<p><strong>第一，战争与全球经济风险上升的背景。</strong>
+近年来，全球政治经济格局正在经历深刻变化。经济碎片化加剧（Fernández-Villaverde,
+Mineyama, and Song 2024; Gopinath et al.
+2025），地缘政治紧张局势和冲突风险显著上升。在这一背景下，理解战争对经济的影响变得尤为重要。</p>
+<p><strong>第二，现有文献的局限性。</strong>
+虽然有大量研究关注特定战争（如两次世界大战、冷战时期冲突）的财政和货币影响，以及战争对交战国经济增长的影响，但这些研究存在以下不足：</p>
+<ul>
+<li>多为单一战争案例研究，缺乏系统性比较</li>
+<li>很少考虑战争的<strong>跨境溢出效应</strong>（Spillover
+Effects）</li>
+<li>对战争如何通过贸易网络影响第三方国家的机制理解不足</li>
+</ul>
+<p><strong>第三，数据可得性的突破。</strong>
+本文作者整合了"战争相关因素项目"（Correlates of War,
+COW）的战争数据与"Jordà-Schularick-Taylor宏观史数据库"（MacroHistory
+Database），构建了一个跨越150年、涵盖60个国家的新数据集，这使得系统性地研究战争的经济影响成为可能。</p>
+<p><strong>第四，战争频率与地理分布的重要事实。</strong>
+本文揭示了一个重要却常被忽视的事实：尽管一个国家在特定年份成为战场的概率只有6%，但与其接壤并可能受到战争影响的国家比例高达20%——这一比例是全球金融危机频率的约5倍。这意味着虽然直接经历战争的国家相对较少，但通过贸易和地理渠道受到战争间接影响的国家却非常普遍。</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心研究问题：战争对经济的影响是什么？这种影响如何溢出到非参战国？</strong></p>
+<p>具体而言，作者试图回答以下问题：</p>
+<ol type="1">
+<li>战争在战地国家造成的直接经济损失有多大？</li>
+<li>参战国（非战地）的经济表现与战地国家有何不同？</li>
+<li>第三方国家如何受到战争的经济影响？贸易联系和地理邻近如何调节这一影响？</li>
+<li>战争的宏观经济影响在不同类型的战争中是否存在系统性差异？</li>
+</ol>
+<p>作者明确指出，他们的研究目的是建立<strong>新的Stylized
+Facts（典型化事实）</strong>，即战争后经济发展的典型模式，而不试图进行因果解释。这是因为战争爆发与经济发展之间可能存在双向因果关系——经济状况可能既是战争爆发的原因，也是战争的结果。</p>
+<h3 id="研究意义">研究意义</h3>
+<p><strong>理论意义：</strong>
+本文首次系统性地分析了三类国家（战地国家、参战国、第三方国家）在战争前后的经济动态演化，并区分了不同传导渠道（贸易渠道、地理渠道）的作用。这为战争经济学领域提供了重要的实证基础。</p>
+<p><strong>政策意义：</strong>
+在当前地缘政治紧张局势加剧、全球化退潮的背景下，理解战争的经济代价及其传播途径对于政策制定者具有重要的参考价值。尤其是认识到与战地的贸易联系会放大对他国经济的冲击，有助于各国更好地评估和应对地缘政治风险。</p>
+<p><strong>方法论贡献：</strong> 作者采用的局部投影法（Local Projections
+Method）和多维度的暴露度（Exposure）分析框架为后续研究提供了方法论借鉴。</p>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<h3 id="论文整体框架">论文整体框架</h3>
+<p>本文共分为五个主要部分，外加附录和补充材料：</p>
+<p><strong>第一部分：引言（Introduction）</strong> -
+阐述研究背景、问题意识和研究贡献 -
+回顾相关文献，定位本文在现有研究中的位置</p>
+<p><strong>第二部分：数据与基本事实（Data and Basic Facts）</strong> -
+详细说明战争地点（War Sites）的识别方法 - 介绍数据集的构建过程 -
+提供描述性统计</p>
+<p><strong>第三部分：战争爆发后的经济动态（Economic Dynamics after the
+Outbreak of War）</strong> - 介绍实证分析框架（局部投影法） -
+报告基准回归结果 - 分析第三方国家的异质性 -
+考察制度质量等更广泛的社会变化</p>
+<p><strong>第四部分：因果推断（Causality）</strong> -
+利用国别战争的差异性检验因果关系 - 通过叙事性识别（Narrative
+Identification）排除内生性干扰</p>
+<p><strong>第五部分：结论（Conclusion）</strong> - 总结主要发现 -
+讨论政策含义和研究局限</p>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p><strong>全球政治经济格局的深刻变化</strong></p>
+<p>近年来，国际政治经济环境发生了显著变化。地缘政治紧张局势加剧，冲突风险上升。战争不仅造成生命和财产的直接损失，还会扰乱贸易、破坏公共财政。正如Barro
+(2006)所指出的，上个世纪许多重大经济灾难都与本土战争有关。</p>
+<p><strong>被忽视的战争跨境影响</strong></p>
+<p>尽管战争的经济影响重大，但现有研究存在明显空白：战争的经济影响不仅限于交战国，其他国家和第三方国家也会受到冲击。这一"战争的代价"（Price
+of War）问题在学术和政策讨论中都未得到足够重视。</p>
+<p><strong>Trotsky的警示</strong></p>
+<p>作者引用了Trotsky的名言"你可能对战争不感兴趣，但战争对你感兴趣"（You
+may not be interested in war, but war is interested in
+you），用以强调在全球化时代，战争的经济影响具有广泛的传播性，即使是未直接参战的国家也难以独善其身。</p>
+<h3 id="挑战">挑战</h3>
+<p><strong>数据缺乏的系统性</strong></p>
+<p>系统研究战争经济影响面临的首要挑战是<strong>数据缺乏</strong>。需要整合多来源的历史数据：</p>
+<ul>
+<li>战争事件数据（COW项目）</li>
+<li>宏观经济时间序列数据（Jordà-Schularick-Taylor数据库）</li>
+<li>贸易数据（Fouquin and Hugot 2016）</li>
+<li>地理边界和人口数据</li>
+</ul>
+<p><strong>战地识别的复杂性</strong></p>
+<p>COW项目提供的是参战国信息，但并未明确指出战争在哪些国家的领土上进行。为此，作者需要：</p>
+<ul>
+<li>收集Battle-level的详细信息</li>
+<li>手动编码1,737场战役的地理位置</li>
+<li>将战役层面的伤亡汇总到国家层面</li>
+</ul>
+<p><strong>战争类型差异的处理</strong></p>
+<p>战争分为不同类型：</p>
+<ul>
+<li><strong>国家间战争（Interstate
+Wars）</strong>：两国或多国间武装冲突，如一战、二战</li>
+<li><strong>其他战争（Other
+Wars）</strong>：内战、殖民战争、独立战争等</li>
+</ul>
+<p>这两类战争在频率、强度、持续时间和经济动机方面都存在系统性差异，需要在分析中加以区分。</p>
+<p><strong>内生性问题的处理</strong></p>
+<p>战争爆发与经济状况之间可能存在双向因果关系——经济困难可能既是战争爆发的原因（内生性），也是战争的结果（需要识别因果方向）。如何剥离这种内生性是因果推断的核心挑战。</p>
+<h3 id="方法数据集要突出">方法（数据集要突出）</h3>
+<h4 id="数据集构建">数据集构建</h4>
+<p><strong>样本范围</strong></p>
+<ul>
+<li>时间跨度：1870-2023年（150年）</li>
+<li>国家数量：60个国家（占1960年全球GDP的95%）</li>
+<li>战争样本：694场战争（国家-年观察值），其中约1/3为国家间战争</li>
+</ul>
+<p><strong>战争数据的分类与编码</strong></p>
+<p>作者遵循COW项目的定义，将战争分为：</p>
+<ol type="1">
+<li><strong>Interstate
+Wars（国家间战争）</strong>：至少两个国家间、12个月内战斗死亡人数不少于1000人的武装冲突</li>
+<li><strong>Other
+Wars（其他战争）</strong>：内战、殖民战争、解放战争等</li>
+</ol>
+<p><strong>战争强度测量</strong></p>
+<p>使用<strong>Casualties/Local Population
+Ratio</strong>作为战争强度指标：</p>
+<p><span class="math display">\[{Site_{j,t} =
+\frac{Casualties_{j,t}}{Population_{j, pre-war}}}\]</span></p>
+<p>其中伤亡包括死亡、失踪、受伤和战俘。</p>
+<p><strong>关键统计事实</strong></p>
+<ul>
+<li>国家间战争平均强度：3.5%（以伤亡/战前人口衡量）</li>
+<li>其他战争平均强度：0.74%</li>
+<li>战争持续时间中位数：2年</li>
+<li>总样本包括225个国家间战争和469场其他战争</li>
+</ul>
+<p><strong>Battle-Level地理编码</strong></p>
+<p>为识别战地，作者收集了1,737场战役的详细信息：</p>
+<ul>
+<li>来源：Clodfelter (2017)战争百科全书及多种历史资料</li>
+<li>每场战役记录：地理位置、伤亡人数、参战方</li>
+<li>最大战役：Brusilov Offensive（一战），超过100万伤亡</li>
+</ul>
+<p><strong>宏观经济指标</strong></p>
+<p>使用Jordà-Schularick-Taylor宏观史数据库，核心变量包括：</p>
+<ul>
+<li>实际GDP（Real GDP）</li>
+<li>消费者价格指数（CPI）</li>
+<li>资本存量（Capital Stock）</li>
+<li>全要素生产率（TFP）</li>
+<li>10年期政府债券收益率</li>
+<li>股权回报指数</li>
+<li>军事支出（占GDP比重）</li>
+<li>军事人员（占人口比重）</li>
+</ul>
+<p><strong>贸易数据</strong></p>
+<p>使用Fouquin and Hugot
+(2016)的双边贸易数据，并使用引力模型填补缺失值（伪<span class="math inline">\({R^2=0.95}\)</span>）。</p>
+<p><strong>GPT-4验证</strong></p>
+<p>作者还使用GPT-4
+API辅助验证战地编码的准确性，发现GPT-4识别结果与手工编码的Pearson相关系数为0.73（<span class="math inline">\({p&lt;0.001}\)</span>）。</p>
+<h4 id="实证方法局部投影法">实证方法：局部投影法</h4>
+<p><strong>Local Projections Method（局部投影法）</strong></p>
+<p>遵循Jordà (2005)的方法，估计以下规范：</p>
+<p><span class="math display">\[{y_{i,t+h} - y_{i,t-1} = \zeta_h'
+X_{i,t} + \sum_{c \in \{S,B,T\}} \phi_{c,h}(\gamma_{i,c,t}' \cdot
+Sites_t) + \sum_{c \in \{B,T\}} \psi_{c,h}(\epsilon_{i,c,t-1}' \cdot
+Sites_t) + u_{i,t+h}}\]</span></p>
+<p>其中：</p>
+<ul>
+<li><span class="math inline">\({y_{i,t}}\)</span>：结果变量（如实际GDP）</li>
+<li><span class="math inline">\({h}\)</span>：战争开始后的年数（<span class="math inline">\({h=0,1,...,8}\)</span>）</li>
+<li><span class="math inline">\({X_{i,t}}\)</span>：控制变量（包含4阶滞后项、国家固定效应、是否接壤战地国家）</li>
+<li><span class="math inline">\({\phi_{c,h}}\)</span>：捕捉c类国家（战地S、参战B、第三方T）在战争后的动态</li>
+<li><span class="math inline">\({\psi_{c,h}}\)</span>：允许暴露度（贸易联系、地理邻近）对溢出效应进行调节</li>
+</ul>
+<p><strong>暴露度向量（Exposure Vector）</strong></p>
+<p><span class="math display">\[{\epsilon_{i,c,t-1} = \frac{Import_{i
+\leftarrow j, t-1}}{GDP_{i, t-1}}}\]</span></p>
+<p>衡量第三方国家i与战地国家j之间的贸易暴露度。</p>
+<p><strong>固定效应设定</strong></p>
+<p>不包含时间固定效应，以捕捉特定国家组的完整经济动态，而非仅捕捉相对于平均值的动态变化。</p>
+<h3 id="结果results">结果（Results）</h3>
+<h4 id="基准结果三类国家的经济动态">基准结果：三类国家的经济动态</h4>
+<p><strong>产出（Output）</strong></p>
+<ul>
+<li><strong>战地国家</strong>：GDP下降约10%（相对于战前趋势），在战争开始后约4年达到谷底，此后恢复缓慢，8年后仍低约5%，完全恢复需要约12年</li>
+<li><strong>参战国</strong>：平均GDP未显示明显偏离趋势</li>
+<li><strong>第三方国家</strong>：平均GDP仅适度下降</li>
+</ul>
+<p><strong>消费者价格指数（CPI）</strong></p>
+<ul>
+<li><strong>战地国家</strong>：物价水平持续上涨，战争开始6年后达到峰值，比趋势高约20%</li>
+<li><strong>参战国和第三方国家</strong>：物价水平也有一定上涨，但幅度较小</li>
+</ul>
+<p><strong>资本存量（Capital Stock）</strong></p>
+<ul>
+<li><strong>战地国家</strong>：8年内下降超过4%</li>
+<li><strong>参战国和第三方国家</strong>：也有显著下降，但幅度小得多</li>
+<li>注意：资本存量下降可能反映物理破坏，也可能反映投资减少</li>
+</ul>
+<p><strong>全要素生产率（TFP）</strong></p>
+<ul>
+<li><strong>战地国家</strong>：TFP立即大幅下降，与战争严重破坏经济运作一致</li>
+<li><strong>参战国</strong>：TFP轻微（但不显著）上升</li>
+<li><strong>第三方国家</strong>：TFP基本不变</li>
+</ul>
+<p><strong>长期利率</strong></p>
+<ul>
+<li><strong>战地国家</strong>：10年期政府债券收益率上升约0.3个百分点，并持续
+elevated 约12年</li>
+<li><strong>参战国和第三方国家</strong>：也有适度上升，但不显著</li>
+</ul>
+<p><strong>股权回报率</strong></p>
+<ul>
+<li><strong>战地国家</strong>：股市指数持续下跌，相对趋势的累计跑输幅度在6年后达到20%</li>
+<li>初始反应微弱，表明市场未完全预期战争的不利发展</li>
+<li><strong>第三方国家</strong>：股市跌幅约为战地国家的一半</li>
+<li><strong>参战国</strong>：表现出最强的韧性</li>
+</ul>
+<p><strong>军事支出和人员</strong></p>
+<ul>
+<li><strong>战地和参战国</strong>：军事支出显著增加，初期约增加1个百分点GDP，4年后达到峰值2.5个百分点GDP</li>
+<li><strong>第三方国家</strong>：军事支出和人员基本不变</li>
+</ul>
+<h4 id="关键发现第三国异质性">关键发现：第三国异质性</h4>
+<p><strong>贸易暴露度的关键作用</strong></p>
+<p>当按贸易暴露度区分第三方国家时，发现显著差异：</p>
+<ul>
+<li><strong>高贸易暴露国家</strong>（从战地进口占GDP的3%）：产出下降2%，价格大幅上涨，资本存量下降，利率上升，股权回报下降</li>
+<li><strong>零贸易暴露国家</strong>：基本不受影响</li>
+</ul>
+<p>这一发现具有重要的政策含义：与战地的贸易联系是战争经济影响传导的关键渠道。</p>
+<p><strong>地理邻近的额外风险</strong></p>
+<p>接壤战地的国家面临额外的负面效应：</p>
+<ul>
+<li>长期利率略有下降（可能反映资本外逃）</li>
+<li>股权回报为负（符合灾难风险溢价上升）</li>
+<li>军事支出和人员略有增加（反映军事溢出风险）</li>
+</ul>
+<p><strong>贸易渠道的机制</strong></p>
+<p>贸易收缩是战争溢出效应的关键传导机制：</p>
+<ul>
+<li>战地出口下降：战地生产能力被破坏</li>
+<li>战地进口下降：供应链中断</li>
+<li>高暴露第三方国家：进出口均收缩</li>
+</ul>
+<h4 id="因果推断结果">因果推断结果</h4>
+<p><strong>国家间战争 vs. 其他战争</strong></p>
+<ul>
+<li><strong>国家间战争</strong>：爆发前，产出和通胀没有系统性变化</li>
+<li><strong>其他战争</strong>：爆发前通胀上升、产出增长放缓——这些战争可能是经济波动的原因和结果</li>
+</ul>
+<p><strong>叙事性识别（Narrative Identification）</strong></p>
+<p>作者识别了每场国家间战争的主要战争动机（casus belli）：</p>
+<ul>
+<li>大多数战争与民族主义、意识形态或历史原因相关（可能外生于商业周期）</li>
+<li>经济动机仅在少数6场战争中显得重要</li>
+<li>排除这6场战争后，样本中国际战争的经济影响估计与全样本非常相似</li>
+</ul>
+<p><strong>Granger因果检验</strong></p>
+<ul>
+<li>国家间战争：不被产出增长和通胀的滞后项Granger引起</li>
+<li>其他战争：存在反向因果关系</li>
+</ul>
+<p>这支持了因果解释：战争导致了所记录的经济动态。</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<h3 id="核心发现总结">核心发现总结</h3>
+<p><strong>发现一：战地国家的巨大经济代价</strong></p>
+<p>一场中等强度（2%伤亡/人口）的战争与战地国家产出下降约10%相关。消费者价格上涨约20%。资本存量、全要素生产率和股权回报均急剧下降。经济恢复是缓慢的——完全恢复需要约12年，尽管战争本身平均只持续2-3年。</p>
+<p><strong>发现二：参战国的相对韧性</strong></p>
+<p>尽管面临战争，参战国（非战地）的平均经济表现明显好于战地国家。这可能与军事支出增加带来的财政刺激效应有关——如Braun和McGrattan
+(1993)以及Ilzetzki
+(2024)研究所示，两次世界大战期间美国和英国的经济扩张与军费急剧增加有关。</p>
+<p><strong>发现三：第三方国家的显著溢出效应</strong></p>
+<p>战争的经济影响并不局限于战地。通过贸易渠道，第三方国家也受到显著影响：</p>
+<ul>
+<li>与战地有密切贸易联系的国家（进口占GDP 3%）：产出下降约2%</li>
+<li>接壤战地的国家：面临额外的负面金融效应</li>
+</ul>
+<p><strong>发现四：传播渠道</strong></p>
+<p>贸易联系和地理邻近是战争经济影响跨境传播的两个关键渠道。这与全球供应链的相互依存性以及地理邻近带来的直接风险暴露有关。</p>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><strong>首次系统性分析</strong>：首次全面分析150年间60个国家战争的经济影响，提供了战争经济学的典型化事实</li>
+<li><strong>跨境溢出效应</strong>：揭示了战争通过贸易和地理渠道对第三方国家的显著溢出效应</li>
+<li><strong>异质性分析</strong>：详细区分了不同类型国家（战地、参战、第三方）和不同暴露度下的经济动态差异</li>
+<li><strong>因果识别</strong>：通过叙事性方法识别战争的经济影响，为因果推断提供了合理依据</li>
+<li><strong>方法论贡献</strong>：提供了局部投影法在战争经济学应用的范例</li>
+</ol>
+<h3 id="更广泛的社会影响">更广泛的社会影响</h3>
+<p>除经济指标外，作者还记录了战争对更广泛社会制度的影响：</p>
+<ul>
+<li>媒体自由度下降</li>
+<li>司法独立性下降</li>
+<li>选举公平性下降</li>
+<li>制度质量下降</li>
+</ul>
+<p>这些变化主要局限于战地，但媒体自由度的下降也波及参战国。</p>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="论文中提及的未来研究方向">论文中提及的未来研究方向</h3>
+<ol type="1">
+<li><strong>福利损失的全面测度</strong>
+<ul>
+<li>现有指标无法完全捕捉战争的经济代价及其对人类福利的影响</li>
+<li>产出与福利可能在战时分歧：例如劳动力动员可能导致产出增加，即使整体福利下降</li>
+<li>需要更好的方法来衡量私人消费等人福利指标</li>
+</ul></li>
+<li><strong>战争性质的演变</strong>
+<ul>
+<li>战争性质随时间不断变化</li>
+<li>伤亡与其他候选统计指标之间的关系也可能变化</li>
+<li>需要动态更新的战争强度测量方法</li>
+</ul></li>
+<li><strong>局部战争的经济影响</strong>
+<ul>
+<li>未来可以专门研究有限地理范围的局部战争的经济影响</li>
+<li>分析核威慑下的有限战争与全面战争的差异</li>
+</ul></li>
+</ol>
+<h3 id="根据论文内容思考的下一步研究工作">根据论文内容思考的下一步研究工作</h3>
+<ol type="1">
+<li><strong>供应链渠道的深入研究</strong>
+<ul>
+<li>本文发现贸易是主要传导渠道，但未深入分析供应链网络的结构性特征</li>
+<li>可研究全球价值链（GVC）参与度如何调节战争溢出效应</li>
+<li>可使用投入产出表分析产业关联的具体路径</li>
+</ul></li>
+<li><strong>金融渠道的作用</strong>
+<ul>
+<li>本文发现股权回报在战地和第三方国家都大幅下降</li>
+<li>可深入研究战争如何通过金融市场（资本流动、汇率、信贷市场）传导</li>
+</ul></li>
+<li><strong>人力资本渠道</strong>
+<ul>
+<li>战争造成的人员伤亡和劳动力动员直接影响人力资本</li>
+<li>可研究战争对教育、健康和创新的人力资本长期影响</li>
+</ul></li>
+<li><strong>政策应对效果评估</strong>
+<ul>
+<li>什么样的政策可以缓冲战争的经济影响？</li>
+<li>贸易多元化、战略储备、区域经济一体化等政策工具的效果</li>
+</ul></li>
+<li><strong>不同战争类型的细分研究</strong>
+<ul>
+<li>国家间战争vs内战的经济影响机制可能不同</li>
+<li>代理战争（Proxy Wars）与直接战争的经济影响差异</li>
+</ul></li>
+<li><strong>数字化战争的新特征</strong>
+<ul>
+<li>网络战、信息战、制裁战等新型冲突形式的经济影响</li>
+<li>传统分析框架的适用性和局限性</li>
+</ul></li>
+</ol>
+<hr>
+<h2 id="学术思考">6. 学术思考</h2>
+<p>基于对本文的深入分析，以下学术问题值得关注和进一步探讨：</p>
+<h3 id="关于因果推断的思考">关于因果推断的思考</h3>
+<p><strong>问题一：内生性的残余挑战</strong></p>
+<p>尽管作者通过排除经济动机明确的战争来缓解内生性，但战争选择本身可能仍存在与经济因素相关的其他混淆。例如，一个国家在经济增长放缓时可能更倾向于卷入战争（通过军事转移国内矛盾）。这是否意味着即使在"外生"战争中，战前经济状况的某些特征也在发挥作用？如何在计量经济学框架下更彻底地解决这一问题？</p>
+<h3 id="关于传导机制的思考">关于传导机制的思考</h3>
+<p><strong>问题二：贸易渠道vs. 金融渠道的相对重要性</strong></p>
+<p>本文发现贸易是战争溢出效应的关键渠道，但金融渠道（如资本流动、汇率波动、信贷紧缩）的作用可能被低估。在当今全球金融一体化的背景下，金融渠道是否比贸易渠道更重要？尤其是在短期危机（如2022年乌克兰战争）中，金融市场的反应速度可能远快于贸易调整。</p>
+<p><strong>问题三：全球价值链的结构性作用</strong></p>
+<p>本文使用的贸易暴露度指标较为粗略，未能捕捉全球价值链（GVC）的复杂结构。一个深度嵌入GVC的国家可能同时面临供给中断（作为供应商）和需求萎缩（作为消费者）的双重冲击。如何构建更精细的GVC暴露度指标？</p>
+<h3 id="关于政策含义的思考">关于政策含义的思考</h3>
+<p><strong>问题四：经济一体化与战争脆弱性的权衡</strong></p>
+<p>本文发现贸易联系会放大战争的溢出效应。这意味着经济一体化在带来增长红利的同时，也使各国更容易受到地缘政治冲击。这是否意味着各国应该在追求经济效率和保持战略自主之间进行权衡？区域经济集团化（如EU）是否提供了在开放与安全之间的平衡？</p>
+<p><strong>问题五：战略储备和供应链多样化的价值</strong></p>
+<p>既然与战地的贸易联系会放大对他国的经济影响，那么战略储备和供应链多元化是否应该成为国家安全的必要组成部分？这对于小国和高度依赖进口的国家尤为重要。</p>
+<h3 id="关于研究方法的思考">关于研究方法的思考</h3>
+<p><strong>问题六：局部投影法的适用性</strong></p>
+<p>局部投影法在本文中被用来估计战争的经济动态，但这一方法假设了线性关系和固定效应结构。战争的非线性效应（如阈值效应、叠加效应）是否被遗漏？特别是当多个战争同时发生时，单独估计每场战争效应的高维问题如何处理？</p>
+<h3 id="关于历史演变的思考">关于历史演变的思考</h3>
+<p><strong>问题七：战争性质的范式转变</strong></p>
+<p>从1870年代到2020年代，战争的技术性质、参与主体、地理范围都发生了巨大变化。从大规模的国家间战争到小规模的代理人战争，再到可能包含网络战和贸易战的新型混合冲突。不同类型的冲突是否遵循相同的宏观经济动态规律？本文的150年样本是否掩盖了这些结构性变化？</p>
+<hr>
+<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
+<p>根据论文内容和上述分析，以下是用户接下来可能问的问题：</p>
+<h3 id="关于研究内容的深层问题">关于研究内容的深层问题</h3>
+<ol type="1">
+<li><strong>战争的长期经济后果是什么？</strong>
+<ul>
+<li>本文关注战后8年的动态，但恢复需要约12年</li>
+<li>长期（20-50年）经济轨迹如何？</li>
+<li>战争是否会造成"疤痕效应"（Scarring
+Effects），永久降低增长路径？</li>
+</ul></li>
+<li><strong>不同类型战争的经济影响有何差异？</strong>
+<ul>
+<li>国家间战争vs. 内战的传导机制是否不同？</li>
+<li>高强度vs. 低强度战争是否存在非线性阈值效应？</li>
+<li>代理战争与直接战争的经济影响差异？</li>
+</ul></li>
+<li><strong>疫情和战争叠加的影响是否不同？</strong>
+<ul>
+<li>COVID-19疫情可视为非战争的"经济灾难"</li>
+<li>两种灾难的经济影响机制和恢复模式是否可比？</li>
+</ul></li>
+</ol>
+<h3 id="关于方法论的问题">关于方法论的问题</h3>
+<ol start="4" type="1">
+<li><strong>如何进一步改进因果识别的可信度？</strong>
+<ul>
+<li>自然实验方法（如板块运动会）是否可用？</li>
+<li>工具变量方法是否可行？</li>
+<li>Difference-in-Differences设计是否适合此研究？</li>
+</ul></li>
+<li><strong>模型基础的解释是什么？</strong>
+<ul>
+<li>本文使用局部投影法进行简约式（Reduced-form）估计</li>
+<li>是否存在结构模型（如DSGE）能更好地解释这些动态？</li>
+<li>论文的工作论文版本（Federle et al. 2024）的模型结果如何？</li>
+</ul></li>
+</ol>
+<h3 id="关于政策应用的问题">关于政策应用的问题</h3>
+<ol start="6" type="1">
+<li><strong>如何将研究发现应用于当前的地缘政治风险评估？</strong>
+<ul>
+<li>对于台湾问题、中美博弈等当前热点，本文框架有何启示？</li>
+<li>如何量化"与中国发生贸易战"的潜在经济代价？</li>
+</ul></li>
+<li><strong>何种政策可以缓冲战争的经济冲击？</strong>
+<ul>
+<li>战略储备的效果如何？</li>
+<li>区域经济一体化的保护效应？</li>
+<li>金融稳定工具（如外汇储备、货币互换）的作用？</li>
+</ul></li>
+</ol>
+<h3 id="关于后续研究的问题">关于后续研究的问题</h3>
+<ol start="8" type="1">
+<li><strong>本文的主要贡献者（5位作者）后续还有哪些相关研究？</strong>
+<ul>
+<li>是否有关于特定战争案例的深度研究？</li>
+<li>是否有使用更细粒度数据（如月度、行业层面）的研究？</li>
+</ul></li>
+<li><strong>是否存在与本文发现相矛盾的文献？</strong>
+<ul>
+<li>质疑或修正本文结论的研究有哪些？</li>
+<li>这些矛盾是否可以通过样本选择、方法论差异或数据版本来解释？</li>
+</ul></li>
+</ol>
+<hr>
+<p><em>本分析报告为深度阅读笔记，梳理了论文的核心逻辑、主要发现和学术价值。</em></p>
+]]></content>
+      <categories>
+        <category>经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>宏观经济学</tag>
+        <tag>战争经济学</tag>
+        <tag>经济史学</tag>
+        <tag>地缘政治</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>&lt;中国的历史之路&gt;深度阅读笔记 — 伊懋可 Mark Elvin</title>
     <url>/posts/elvin1973/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="书籍信息">书籍信息</h2>
@@ -4260,61 +4745,6 @@ _谢肇淛&lt;五杂俎&gt;(约1610年)</p>
       </tags>
   </entry>
   <entry>
-    <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
-    <url>/posts/48526/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
-<ul>
-<li>因果识别+统计推断</li>
-<li>因果识别(<strong><em>causal
-identification</em></strong>):如果拥有总体,能否确定总体因果关系</li>
-<li>统计推断(<strong><em>statistical
-inference</em></strong>):如何从样本数据获取总体因果关系信息,实际是一种相关性事实</li>
-<li>识别假设,实际就是对 <span class="math inline">\(D\)</span> 和 <span class="math inline">\(\varepsilon\)</span>
-的关系作出表述,但这种过程是无法从理论上验证的</li>
-</ul>
-<span id="more"></span>
-<h2 id="section"><strong>1</strong></h2>
-<ul>
-<li><strong>1.1</strong>
-因果效应的定义:干预与否、处理与否时,潜在结果之间的差值.潜在结果一定是同一个时间点上的结果</li>
-<li><strong>1.2</strong> 潜在结果永远无法完全观测,除非存在平行宇宙</li>
-<li><strong>1.3</strong>
-通过识别假设可以进行"插值",可以化"相关关系"识别场景为"因果关系"识别场景</li>
-<li><strong>1.4</strong>
-鲁宾因果模型(潜在因果框架),一套描述因果关系的新语言</li>
-</ul>
-<h2 id="section-1"><strong>2</strong></h2>
-<ul>
-<li><strong>2.1</strong> 第一类识别假设:潜在结果均值独立于处理状态</li>
-<li><strong>2.2</strong>
-从干扰项中剥离出控制变量;或者寻找一个与干扰项不相关的工具变量</li>
-<li><strong>2.3</strong>
-第二类识别假设:潜在结果条件均值独立于处理状态</li>
-<li><strong>2.4</strong> 好的控制变量:既影响<span class="math inline">\(Y\)</span>,又影响<span class="math inline">\(D\)</span>.其本身和干扰项是否相关是不重要的,不是研究者关注的中心</li>
-<li><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</li>
-<li><strong>2.6</strong> 无需过渡阐释控制变量的系数</li>
-</ul>
-<h2 id="section-2"><strong>3</strong></h2>
-<ul>
-<li><strong>3.1</strong> 鲁宾因果模型并未规定具体的函数形式</li>
-<li><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</li>
-</ul>
-<h2 id="section-3"><strong>4</strong></h2>
-<ul>
-<li><strong>4.1</strong>
-选择性又称之为分配机制,每个个体如何接受处理,可以用倾向得分来表示</li>
-<li><strong>4.2</strong>
-建议现实使用IV、DID、RDD等识别方法时,称之为准实验</li>
-</ul>
-]]></content>
-      <categories>
-        <category>计量</category>
-      </categories>
-      <tags>
-        <tag>学术讲座</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>&lt;住房与不平等&gt;深度阅读笔记 — Ioannides &amp; Ngai</title>
     <url>/posts/ioannides2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -4435,488 +4865,58 @@ Inequality - <strong>作者</strong>:Yannis M. Ioannides, L. Rachel Ngai -
       </tags>
   </entry>
   <entry>
-    <title>The Price of War — 深度阅读笔记 — Federle Et Al.</title>
-    <url>/posts/federle2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+    <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
+    <url>/posts/48526/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
 <ul>
-<li><strong>标题</strong>: The Price of War</li>
-<li><strong>作者</strong>: Jonathan Federle, André Meier, Gernot J.
-Müller, Willi Mutschler, Moritz Schularick</li>
-<li><strong>类型</strong>: 论文笔记 / 战争经济学 / 宏观经济学 /
-经济史学</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: American Economic Review, 116(3):
-791-827</li>
-<li><strong>DOI</strong>: 10.1257/aer.20241355</li>
-<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量史学基础
-<span id="more"></span></li>
+<li>因果识别+统计推断</li>
+<li>因果识别(<strong><em>causal
+identification</em></strong>):如果拥有总体,能否确定总体因果关系</li>
+<li>统计推断(<strong><em>statistical
+inference</em></strong>):如何从样本数据获取总体因果关系信息,实际是一种相关性事实</li>
+<li>识别假设,实际就是对 <span class="math inline">\(D\)</span> 和 <span class="math inline">\(\varepsilon\)</span>
+的关系作出表述,但这种过程是无法从理论上验证的</li>
 </ul>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>本文属于<strong>经济学研究领域</strong>，具体涉及发展经济学、国际经济学、经济史学、冲突经济学（Conflict
-Economics）以及宏观经济学等多个子领域的交叉地带。论文所研究的<strong>战争经济学</strong>（Economics
-of
-War）是一个重要但相对被忽视的研究方向，主要探讨战争如何影响参与各方的经济表现。</p>
-<p>论文使用了多个经典宏观经济指标来测度战争的经济影响：</p>
+<span id="more"></span>
+<h2 id="section"><strong>1</strong></h2>
 <ul>
-<li><strong>实际GDP（Real
-GDP）</strong>：衡量一个国家商品和服务产出的最核心指标</li>
-<li><strong>消费者价格指数（CPI）</strong>：衡量通货膨胀和物价水平变化</li>
-<li><strong>资本存量（Capital
-Stock）</strong>：衡量经济体中可用于生产的固定资产总量</li>
-<li><strong>全要素生产率（TFP, Total Factor
-Productivity）</strong>：衡量技术进步和效率提升的关键指标</li>
-<li><strong>股权回报率（Equity
-Returns）</strong>：反映股票市场的整体表现</li>
-<li><strong>长期利率（Long-term Interest
-Rates）</strong>：反映资金成本和政府借贷成本</li>
+<li><strong>1.1</strong>
+因果效应的定义:干预与否、处理与否时,潜在结果之间的差值.潜在结果一定是同一个时间点上的结果</li>
+<li><strong>1.2</strong> 潜在结果永远无法完全观测,除非存在平行宇宙</li>
+<li><strong>1.3</strong>
+通过识别假设可以进行"插值",可以化"相关关系"识别场景为"因果关系"识别场景</li>
+<li><strong>1.4</strong>
+鲁宾因果模型(潜在因果框架),一套描述因果关系的新语言</li>
 </ul>
-<h3 id="研究的主要背景分点说明">研究的主要背景（分点说明）</h3>
-<p><strong>第一，战争与全球经济风险上升的背景。</strong>
-近年来，全球政治经济格局正在经历深刻变化。经济碎片化加剧（Fernández-Villaverde,
-Mineyama, and Song 2024; Gopinath et al.
-2025），地缘政治紧张局势和冲突风险显著上升。在这一背景下，理解战争对经济的影响变得尤为重要。</p>
-<p><strong>第二，现有文献的局限性。</strong>
-虽然有大量研究关注特定战争（如两次世界大战、冷战时期冲突）的财政和货币影响，以及战争对交战国经济增长的影响，但这些研究存在以下不足：</p>
+<h2 id="section-1"><strong>2</strong></h2>
 <ul>
-<li>多为单一战争案例研究，缺乏系统性比较</li>
-<li>很少考虑战争的<strong>跨境溢出效应</strong>（Spillover
-Effects）</li>
-<li>对战争如何通过贸易网络影响第三方国家的机制理解不足</li>
+<li><strong>2.1</strong> 第一类识别假设:潜在结果均值独立于处理状态</li>
+<li><strong>2.2</strong>
+从干扰项中剥离出控制变量;或者寻找一个与干扰项不相关的工具变量</li>
+<li><strong>2.3</strong>
+第二类识别假设:潜在结果条件均值独立于处理状态</li>
+<li><strong>2.4</strong> 好的控制变量:既影响<span class="math inline">\(Y\)</span>,又影响<span class="math inline">\(D\)</span>.其本身和干扰项是否相关是不重要的,不是研究者关注的中心</li>
+<li><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</li>
+<li><strong>2.6</strong> 无需过渡阐释控制变量的系数</li>
 </ul>
-<p><strong>第三，数据可得性的突破。</strong>
-本文作者整合了"战争相关因素项目"（Correlates of War,
-COW）的战争数据与"Jordà-Schularick-Taylor宏观史数据库"（MacroHistory
-Database），构建了一个跨越150年、涵盖60个国家的新数据集，这使得系统性地研究战争的经济影响成为可能。</p>
-<p><strong>第四，战争频率与地理分布的重要事实。</strong>
-本文揭示了一个重要却常被忽视的事实：尽管一个国家在特定年份成为战场的概率只有6%，但与其接壤并可能受到战争影响的国家比例高达20%——这一比例是全球金融危机频率的约5倍。这意味着虽然直接经历战争的国家相对较少，但通过贸易和地理渠道受到战争间接影响的国家却非常普遍。</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心研究问题：战争对经济的影响是什么？这种影响如何溢出到非参战国？</strong></p>
-<p>具体而言，作者试图回答以下问题：</p>
-<ol type="1">
-<li>战争在战地国家造成的直接经济损失有多大？</li>
-<li>参战国（非战地）的经济表现与战地国家有何不同？</li>
-<li>第三方国家如何受到战争的经济影响？贸易联系和地理邻近如何调节这一影响？</li>
-<li>战争的宏观经济影响在不同类型的战争中是否存在系统性差异？</li>
-</ol>
-<p>作者明确指出，他们的研究目的是建立<strong>新的Stylized
-Facts（典型化事实）</strong>，即战争后经济发展的典型模式，而不试图进行因果解释。这是因为战争爆发与经济发展之间可能存在双向因果关系——经济状况可能既是战争爆发的原因，也是战争的结果。</p>
-<h3 id="研究意义">研究意义</h3>
-<p><strong>理论意义：</strong>
-本文首次系统性地分析了三类国家（战地国家、参战国、第三方国家）在战争前后的经济动态演化，并区分了不同传导渠道（贸易渠道、地理渠道）的作用。这为战争经济学领域提供了重要的实证基础。</p>
-<p><strong>政策意义：</strong>
-在当前地缘政治紧张局势加剧、全球化退潮的背景下，理解战争的经济代价及其传播途径对于政策制定者具有重要的参考价值。尤其是认识到与战地的贸易联系会放大对他国经济的冲击，有助于各国更好地评估和应对地缘政治风险。</p>
-<p><strong>方法论贡献：</strong> 作者采用的局部投影法（Local Projections
-Method）和多维度的暴露度（Exposure）分析框架为后续研究提供了方法论借鉴。</p>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<h3 id="论文整体框架">论文整体框架</h3>
-<p>本文共分为五个主要部分，外加附录和补充材料：</p>
-<p><strong>第一部分：引言（Introduction）</strong> -
-阐述研究背景、问题意识和研究贡献 -
-回顾相关文献，定位本文在现有研究中的位置</p>
-<p><strong>第二部分：数据与基本事实（Data and Basic Facts）</strong> -
-详细说明战争地点（War Sites）的识别方法 - 介绍数据集的构建过程 -
-提供描述性统计</p>
-<p><strong>第三部分：战争爆发后的经济动态（Economic Dynamics after the
-Outbreak of War）</strong> - 介绍实证分析框架（局部投影法） -
-报告基准回归结果 - 分析第三方国家的异质性 -
-考察制度质量等更广泛的社会变化</p>
-<p><strong>第四部分：因果推断（Causality）</strong> -
-利用国别战争的差异性检验因果关系 - 通过叙事性识别（Narrative
-Identification）排除内生性干扰</p>
-<p><strong>第五部分：结论（Conclusion）</strong> - 总结主要发现 -
-讨论政策含义和研究局限</p>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p><strong>全球政治经济格局的深刻变化</strong></p>
-<p>近年来，国际政治经济环境发生了显著变化。地缘政治紧张局势加剧，冲突风险上升。战争不仅造成生命和财产的直接损失，还会扰乱贸易、破坏公共财政。正如Barro
-(2006)所指出的，上个世纪许多重大经济灾难都与本土战争有关。</p>
-<p><strong>被忽视的战争跨境影响</strong></p>
-<p>尽管战争的经济影响重大，但现有研究存在明显空白：战争的经济影响不仅限于交战国，其他国家和第三方国家也会受到冲击。这一"战争的代价"（Price
-of War）问题在学术和政策讨论中都未得到足够重视。</p>
-<p><strong>Trotsky的警示</strong></p>
-<p>作者引用了Trotsky的名言"你可能对战争不感兴趣，但战争对你感兴趣"（You
-may not be interested in war, but war is interested in
-you），用以强调在全球化时代，战争的经济影响具有广泛的传播性，即使是未直接参战的国家也难以独善其身。</p>
-<h3 id="挑战">挑战</h3>
-<p><strong>数据缺乏的系统性</strong></p>
-<p>系统研究战争经济影响面临的首要挑战是<strong>数据缺乏</strong>。需要整合多来源的历史数据：</p>
+<h2 id="section-2"><strong>3</strong></h2>
 <ul>
-<li>战争事件数据（COW项目）</li>
-<li>宏观经济时间序列数据（Jordà-Schularick-Taylor数据库）</li>
-<li>贸易数据（Fouquin and Hugot 2016）</li>
-<li>地理边界和人口数据</li>
+<li><strong>3.1</strong> 鲁宾因果模型并未规定具体的函数形式</li>
+<li><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</li>
 </ul>
-<p><strong>战地识别的复杂性</strong></p>
-<p>COW项目提供的是参战国信息，但并未明确指出战争在哪些国家的领土上进行。为此，作者需要：</p>
+<h2 id="section-3"><strong>4</strong></h2>
 <ul>
-<li>收集Battle-level的详细信息</li>
-<li>手动编码1,737场战役的地理位置</li>
-<li>将战役层面的伤亡汇总到国家层面</li>
+<li><strong>4.1</strong>
+选择性又称之为分配机制,每个个体如何接受处理,可以用倾向得分来表示</li>
+<li><strong>4.2</strong>
+建议现实使用IV、DID、RDD等识别方法时,称之为准实验</li>
 </ul>
-<p><strong>战争类型差异的处理</strong></p>
-<p>战争分为不同类型：</p>
-<ul>
-<li><strong>国家间战争（Interstate
-Wars）</strong>：两国或多国间武装冲突，如一战、二战</li>
-<li><strong>其他战争（Other
-Wars）</strong>：内战、殖民战争、独立战争等</li>
-</ul>
-<p>这两类战争在频率、强度、持续时间和经济动机方面都存在系统性差异，需要在分析中加以区分。</p>
-<p><strong>内生性问题的处理</strong></p>
-<p>战争爆发与经济状况之间可能存在双向因果关系——经济困难可能既是战争爆发的原因（内生性），也是战争的结果（需要识别因果方向）。如何剥离这种内生性是因果推断的核心挑战。</p>
-<h3 id="方法数据集要突出">方法（数据集要突出）</h3>
-<h4 id="数据集构建">数据集构建</h4>
-<p><strong>样本范围</strong></p>
-<ul>
-<li>时间跨度：1870-2023年（150年）</li>
-<li>国家数量：60个国家（占1960年全球GDP的95%）</li>
-<li>战争样本：694场战争（国家-年观察值），其中约1/3为国家间战争</li>
-</ul>
-<p><strong>战争数据的分类与编码</strong></p>
-<p>作者遵循COW项目的定义，将战争分为：</p>
-<ol type="1">
-<li><strong>Interstate
-Wars（国家间战争）</strong>：至少两个国家间、12个月内战斗死亡人数不少于1000人的武装冲突</li>
-<li><strong>Other
-Wars（其他战争）</strong>：内战、殖民战争、解放战争等</li>
-</ol>
-<p><strong>战争强度测量</strong></p>
-<p>使用<strong>Casualties/Local Population
-Ratio</strong>作为战争强度指标：</p>
-<p><span class="math display">\[{Site_{j,t} =
-\frac{Casualties_{j,t}}{Population_{j, pre-war}}}\]</span></p>
-<p>其中伤亡包括死亡、失踪、受伤和战俘。</p>
-<p><strong>关键统计事实</strong></p>
-<ul>
-<li>国家间战争平均强度：3.5%（以伤亡/战前人口衡量）</li>
-<li>其他战争平均强度：0.74%</li>
-<li>战争持续时间中位数：2年</li>
-<li>总样本包括225个国家间战争和469场其他战争</li>
-</ul>
-<p><strong>Battle-Level地理编码</strong></p>
-<p>为识别战地，作者收集了1,737场战役的详细信息：</p>
-<ul>
-<li>来源：Clodfelter (2017)战争百科全书及多种历史资料</li>
-<li>每场战役记录：地理位置、伤亡人数、参战方</li>
-<li>最大战役：Brusilov Offensive（一战），超过100万伤亡</li>
-</ul>
-<p><strong>宏观经济指标</strong></p>
-<p>使用Jordà-Schularick-Taylor宏观史数据库，核心变量包括：</p>
-<ul>
-<li>实际GDP（Real GDP）</li>
-<li>消费者价格指数（CPI）</li>
-<li>资本存量（Capital Stock）</li>
-<li>全要素生产率（TFP）</li>
-<li>10年期政府债券收益率</li>
-<li>股权回报指数</li>
-<li>军事支出（占GDP比重）</li>
-<li>军事人员（占人口比重）</li>
-</ul>
-<p><strong>贸易数据</strong></p>
-<p>使用Fouquin and Hugot
-(2016)的双边贸易数据，并使用引力模型填补缺失值（伪<span class="math inline">\({R^2=0.95}\)</span>）。</p>
-<p><strong>GPT-4验证</strong></p>
-<p>作者还使用GPT-4
-API辅助验证战地编码的准确性，发现GPT-4识别结果与手工编码的Pearson相关系数为0.73（<span class="math inline">\({p&lt;0.001}\)</span>）。</p>
-<h4 id="实证方法局部投影法">实证方法：局部投影法</h4>
-<p><strong>Local Projections Method（局部投影法）</strong></p>
-<p>遵循Jordà (2005)的方法，估计以下规范：</p>
-<p><span class="math display">\[{y_{i,t+h} - y_{i,t-1} = \zeta_h'
-X_{i,t} + \sum_{c \in \{S,B,T\}} \phi_{c,h}(\gamma_{i,c,t}' \cdot
-Sites_t) + \sum_{c \in \{B,T\}} \psi_{c,h}(\epsilon_{i,c,t-1}' \cdot
-Sites_t) + u_{i,t+h}}\]</span></p>
-<p>其中：</p>
-<ul>
-<li><span class="math inline">\({y_{i,t}}\)</span>：结果变量（如实际GDP）</li>
-<li><span class="math inline">\({h}\)</span>：战争开始后的年数（<span class="math inline">\({h=0,1,...,8}\)</span>）</li>
-<li><span class="math inline">\({X_{i,t}}\)</span>：控制变量（包含4阶滞后项、国家固定效应、是否接壤战地国家）</li>
-<li><span class="math inline">\({\phi_{c,h}}\)</span>：捕捉c类国家（战地S、参战B、第三方T）在战争后的动态</li>
-<li><span class="math inline">\({\psi_{c,h}}\)</span>：允许暴露度（贸易联系、地理邻近）对溢出效应进行调节</li>
-</ul>
-<p><strong>暴露度向量（Exposure Vector）</strong></p>
-<p><span class="math display">\[{\epsilon_{i,c,t-1} = \frac{Import_{i
-\leftarrow j, t-1}}{GDP_{i, t-1}}}\]</span></p>
-<p>衡量第三方国家i与战地国家j之间的贸易暴露度。</p>
-<p><strong>固定效应设定</strong></p>
-<p>不包含时间固定效应，以捕捉特定国家组的完整经济动态，而非仅捕捉相对于平均值的动态变化。</p>
-<h3 id="结果results">结果（Results）</h3>
-<h4 id="基准结果三类国家的经济动态">基准结果：三类国家的经济动态</h4>
-<p><strong>产出（Output）</strong></p>
-<ul>
-<li><strong>战地国家</strong>：GDP下降约10%（相对于战前趋势），在战争开始后约4年达到谷底，此后恢复缓慢，8年后仍低约5%，完全恢复需要约12年</li>
-<li><strong>参战国</strong>：平均GDP未显示明显偏离趋势</li>
-<li><strong>第三方国家</strong>：平均GDP仅适度下降</li>
-</ul>
-<p><strong>消费者价格指数（CPI）</strong></p>
-<ul>
-<li><strong>战地国家</strong>：物价水平持续上涨，战争开始6年后达到峰值，比趋势高约20%</li>
-<li><strong>参战国和第三方国家</strong>：物价水平也有一定上涨，但幅度较小</li>
-</ul>
-<p><strong>资本存量（Capital Stock）</strong></p>
-<ul>
-<li><strong>战地国家</strong>：8年内下降超过4%</li>
-<li><strong>参战国和第三方国家</strong>：也有显著下降，但幅度小得多</li>
-<li>注意：资本存量下降可能反映物理破坏，也可能反映投资减少</li>
-</ul>
-<p><strong>全要素生产率（TFP）</strong></p>
-<ul>
-<li><strong>战地国家</strong>：TFP立即大幅下降，与战争严重破坏经济运作一致</li>
-<li><strong>参战国</strong>：TFP轻微（但不显著）上升</li>
-<li><strong>第三方国家</strong>：TFP基本不变</li>
-</ul>
-<p><strong>长期利率</strong></p>
-<ul>
-<li><strong>战地国家</strong>：10年期政府债券收益率上升约0.3个百分点，并持续
-elevated 约12年</li>
-<li><strong>参战国和第三方国家</strong>：也有适度上升，但不显著</li>
-</ul>
-<p><strong>股权回报率</strong></p>
-<ul>
-<li><strong>战地国家</strong>：股市指数持续下跌，相对趋势的累计跑输幅度在6年后达到20%</li>
-<li>初始反应微弱，表明市场未完全预期战争的不利发展</li>
-<li><strong>第三方国家</strong>：股市跌幅约为战地国家的一半</li>
-<li><strong>参战国</strong>：表现出最强的韧性</li>
-</ul>
-<p><strong>军事支出和人员</strong></p>
-<ul>
-<li><strong>战地和参战国</strong>：军事支出显著增加，初期约增加1个百分点GDP，4年后达到峰值2.5个百分点GDP</li>
-<li><strong>第三方国家</strong>：军事支出和人员基本不变</li>
-</ul>
-<h4 id="关键发现第三国异质性">关键发现：第三国异质性</h4>
-<p><strong>贸易暴露度的关键作用</strong></p>
-<p>当按贸易暴露度区分第三方国家时，发现显著差异：</p>
-<ul>
-<li><strong>高贸易暴露国家</strong>（从战地进口占GDP的3%）：产出下降2%，价格大幅上涨，资本存量下降，利率上升，股权回报下降</li>
-<li><strong>零贸易暴露国家</strong>：基本不受影响</li>
-</ul>
-<p>这一发现具有重要的政策含义：与战地的贸易联系是战争经济影响传导的关键渠道。</p>
-<p><strong>地理邻近的额外风险</strong></p>
-<p>接壤战地的国家面临额外的负面效应：</p>
-<ul>
-<li>长期利率略有下降（可能反映资本外逃）</li>
-<li>股权回报为负（符合灾难风险溢价上升）</li>
-<li>军事支出和人员略有增加（反映军事溢出风险）</li>
-</ul>
-<p><strong>贸易渠道的机制</strong></p>
-<p>贸易收缩是战争溢出效应的关键传导机制：</p>
-<ul>
-<li>战地出口下降：战地生产能力被破坏</li>
-<li>战地进口下降：供应链中断</li>
-<li>高暴露第三方国家：进出口均收缩</li>
-</ul>
-<h4 id="因果推断结果">因果推断结果</h4>
-<p><strong>国家间战争 vs. 其他战争</strong></p>
-<ul>
-<li><strong>国家间战争</strong>：爆发前，产出和通胀没有系统性变化</li>
-<li><strong>其他战争</strong>：爆发前通胀上升、产出增长放缓——这些战争可能是经济波动的原因和结果</li>
-</ul>
-<p><strong>叙事性识别（Narrative Identification）</strong></p>
-<p>作者识别了每场国家间战争的主要战争动机（casus belli）：</p>
-<ul>
-<li>大多数战争与民族主义、意识形态或历史原因相关（可能外生于商业周期）</li>
-<li>经济动机仅在少数6场战争中显得重要</li>
-<li>排除这6场战争后，样本中国际战争的经济影响估计与全样本非常相似</li>
-</ul>
-<p><strong>Granger因果检验</strong></p>
-<ul>
-<li>国家间战争：不被产出增长和通胀的滞后项Granger引起</li>
-<li>其他战争：存在反向因果关系</li>
-</ul>
-<p>这支持了因果解释：战争导致了所记录的经济动态。</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<h3 id="核心发现总结">核心发现总结</h3>
-<p><strong>发现一：战地国家的巨大经济代价</strong></p>
-<p>一场中等强度（2%伤亡/人口）的战争与战地国家产出下降约10%相关。消费者价格上涨约20%。资本存量、全要素生产率和股权回报均急剧下降。经济恢复是缓慢的——完全恢复需要约12年，尽管战争本身平均只持续2-3年。</p>
-<p><strong>发现二：参战国的相对韧性</strong></p>
-<p>尽管面临战争，参战国（非战地）的平均经济表现明显好于战地国家。这可能与军事支出增加带来的财政刺激效应有关——如Braun和McGrattan
-(1993)以及Ilzetzki
-(2024)研究所示，两次世界大战期间美国和英国的经济扩张与军费急剧增加有关。</p>
-<p><strong>发现三：第三方国家的显著溢出效应</strong></p>
-<p>战争的经济影响并不局限于战地。通过贸易渠道，第三方国家也受到显著影响：</p>
-<ul>
-<li>与战地有密切贸易联系的国家（进口占GDP 3%）：产出下降约2%</li>
-<li>接壤战地的国家：面临额外的负面金融效应</li>
-</ul>
-<p><strong>发现四：传播渠道</strong></p>
-<p>贸易联系和地理邻近是战争经济影响跨境传播的两个关键渠道。这与全球供应链的相互依存性以及地理邻近带来的直接风险暴露有关。</p>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><strong>首次系统性分析</strong>：首次全面分析150年间60个国家战争的经济影响，提供了战争经济学的典型化事实</li>
-<li><strong>跨境溢出效应</strong>：揭示了战争通过贸易和地理渠道对第三方国家的显著溢出效应</li>
-<li><strong>异质性分析</strong>：详细区分了不同类型国家（战地、参战、第三方）和不同暴露度下的经济动态差异</li>
-<li><strong>因果识别</strong>：通过叙事性方法识别战争的经济影响，为因果推断提供了合理依据</li>
-<li><strong>方法论贡献</strong>：提供了局部投影法在战争经济学应用的范例</li>
-</ol>
-<h3 id="更广泛的社会影响">更广泛的社会影响</h3>
-<p>除经济指标外，作者还记录了战争对更广泛社会制度的影响：</p>
-<ul>
-<li>媒体自由度下降</li>
-<li>司法独立性下降</li>
-<li>选举公平性下降</li>
-<li>制度质量下降</li>
-</ul>
-<p>这些变化主要局限于战地，但媒体自由度的下降也波及参战国。</p>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="论文中提及的未来研究方向">论文中提及的未来研究方向</h3>
-<ol type="1">
-<li><strong>福利损失的全面测度</strong>
-<ul>
-<li>现有指标无法完全捕捉战争的经济代价及其对人类福利的影响</li>
-<li>产出与福利可能在战时分歧：例如劳动力动员可能导致产出增加，即使整体福利下降</li>
-<li>需要更好的方法来衡量私人消费等人福利指标</li>
-</ul></li>
-<li><strong>战争性质的演变</strong>
-<ul>
-<li>战争性质随时间不断变化</li>
-<li>伤亡与其他候选统计指标之间的关系也可能变化</li>
-<li>需要动态更新的战争强度测量方法</li>
-</ul></li>
-<li><strong>局部战争的经济影响</strong>
-<ul>
-<li>未来可以专门研究有限地理范围的局部战争的经济影响</li>
-<li>分析核威慑下的有限战争与全面战争的差异</li>
-</ul></li>
-</ol>
-<h3 id="根据论文内容思考的下一步研究工作">根据论文内容思考的下一步研究工作</h3>
-<ol type="1">
-<li><strong>供应链渠道的深入研究</strong>
-<ul>
-<li>本文发现贸易是主要传导渠道，但未深入分析供应链网络的结构性特征</li>
-<li>可研究全球价值链（GVC）参与度如何调节战争溢出效应</li>
-<li>可使用投入产出表分析产业关联的具体路径</li>
-</ul></li>
-<li><strong>金融渠道的作用</strong>
-<ul>
-<li>本文发现股权回报在战地和第三方国家都大幅下降</li>
-<li>可深入研究战争如何通过金融市场（资本流动、汇率、信贷市场）传导</li>
-</ul></li>
-<li><strong>人力资本渠道</strong>
-<ul>
-<li>战争造成的人员伤亡和劳动力动员直接影响人力资本</li>
-<li>可研究战争对教育、健康和创新的人力资本长期影响</li>
-</ul></li>
-<li><strong>政策应对效果评估</strong>
-<ul>
-<li>什么样的政策可以缓冲战争的经济影响？</li>
-<li>贸易多元化、战略储备、区域经济一体化等政策工具的效果</li>
-</ul></li>
-<li><strong>不同战争类型的细分研究</strong>
-<ul>
-<li>国家间战争vs内战的经济影响机制可能不同</li>
-<li>代理战争（Proxy Wars）与直接战争的经济影响差异</li>
-</ul></li>
-<li><strong>数字化战争的新特征</strong>
-<ul>
-<li>网络战、信息战、制裁战等新型冲突形式的经济影响</li>
-<li>传统分析框架的适用性和局限性</li>
-</ul></li>
-</ol>
-<hr>
-<h2 id="学术思考">6. 学术思考</h2>
-<p>基于对本文的深入分析，以下学术问题值得关注和进一步探讨：</p>
-<h3 id="关于因果推断的思考">关于因果推断的思考</h3>
-<p><strong>问题一：内生性的残余挑战</strong></p>
-<p>尽管作者通过排除经济动机明确的战争来缓解内生性，但战争选择本身可能仍存在与经济因素相关的其他混淆。例如，一个国家在经济增长放缓时可能更倾向于卷入战争（通过军事转移国内矛盾）。这是否意味着即使在"外生"战争中，战前经济状况的某些特征也在发挥作用？如何在计量经济学框架下更彻底地解决这一问题？</p>
-<h3 id="关于传导机制的思考">关于传导机制的思考</h3>
-<p><strong>问题二：贸易渠道vs. 金融渠道的相对重要性</strong></p>
-<p>本文发现贸易是战争溢出效应的关键渠道，但金融渠道（如资本流动、汇率波动、信贷紧缩）的作用可能被低估。在当今全球金融一体化的背景下，金融渠道是否比贸易渠道更重要？尤其是在短期危机（如2022年乌克兰战争）中，金融市场的反应速度可能远快于贸易调整。</p>
-<p><strong>问题三：全球价值链的结构性作用</strong></p>
-<p>本文使用的贸易暴露度指标较为粗略，未能捕捉全球价值链（GVC）的复杂结构。一个深度嵌入GVC的国家可能同时面临供给中断（作为供应商）和需求萎缩（作为消费者）的双重冲击。如何构建更精细的GVC暴露度指标？</p>
-<h3 id="关于政策含义的思考">关于政策含义的思考</h3>
-<p><strong>问题四：经济一体化与战争脆弱性的权衡</strong></p>
-<p>本文发现贸易联系会放大战争的溢出效应。这意味着经济一体化在带来增长红利的同时，也使各国更容易受到地缘政治冲击。这是否意味着各国应该在追求经济效率和保持战略自主之间进行权衡？区域经济集团化（如EU）是否提供了在开放与安全之间的平衡？</p>
-<p><strong>问题五：战略储备和供应链多样化的价值</strong></p>
-<p>既然与战地的贸易联系会放大对他国的经济影响，那么战略储备和供应链多元化是否应该成为国家安全的必要组成部分？这对于小国和高度依赖进口的国家尤为重要。</p>
-<h3 id="关于研究方法的思考">关于研究方法的思考</h3>
-<p><strong>问题六：局部投影法的适用性</strong></p>
-<p>局部投影法在本文中被用来估计战争的经济动态，但这一方法假设了线性关系和固定效应结构。战争的非线性效应（如阈值效应、叠加效应）是否被遗漏？特别是当多个战争同时发生时，单独估计每场战争效应的高维问题如何处理？</p>
-<h3 id="关于历史演变的思考">关于历史演变的思考</h3>
-<p><strong>问题七：战争性质的范式转变</strong></p>
-<p>从1870年代到2020年代，战争的技术性质、参与主体、地理范围都发生了巨大变化。从大规模的国家间战争到小规模的代理人战争，再到可能包含网络战和贸易战的新型混合冲突。不同类型的冲突是否遵循相同的宏观经济动态规律？本文的150年样本是否掩盖了这些结构性变化？</p>
-<hr>
-<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
-<p>根据论文内容和上述分析，以下是用户接下来可能问的问题：</p>
-<h3 id="关于研究内容的深层问题">关于研究内容的深层问题</h3>
-<ol type="1">
-<li><strong>战争的长期经济后果是什么？</strong>
-<ul>
-<li>本文关注战后8年的动态，但恢复需要约12年</li>
-<li>长期（20-50年）经济轨迹如何？</li>
-<li>战争是否会造成"疤痕效应"（Scarring
-Effects），永久降低增长路径？</li>
-</ul></li>
-<li><strong>不同类型战争的经济影响有何差异？</strong>
-<ul>
-<li>国家间战争vs. 内战的传导机制是否不同？</li>
-<li>高强度vs. 低强度战争是否存在非线性阈值效应？</li>
-<li>代理战争与直接战争的经济影响差异？</li>
-</ul></li>
-<li><strong>疫情和战争叠加的影响是否不同？</strong>
-<ul>
-<li>COVID-19疫情可视为非战争的"经济灾难"</li>
-<li>两种灾难的经济影响机制和恢复模式是否可比？</li>
-</ul></li>
-</ol>
-<h3 id="关于方法论的问题">关于方法论的问题</h3>
-<ol start="4" type="1">
-<li><strong>如何进一步改进因果识别的可信度？</strong>
-<ul>
-<li>自然实验方法（如板块运动会）是否可用？</li>
-<li>工具变量方法是否可行？</li>
-<li>Difference-in-Differences设计是否适合此研究？</li>
-</ul></li>
-<li><strong>模型基础的解释是什么？</strong>
-<ul>
-<li>本文使用局部投影法进行简约式（Reduced-form）估计</li>
-<li>是否存在结构模型（如DSGE）能更好地解释这些动态？</li>
-<li>论文的工作论文版本（Federle et al. 2024）的模型结果如何？</li>
-</ul></li>
-</ol>
-<h3 id="关于政策应用的问题">关于政策应用的问题</h3>
-<ol start="6" type="1">
-<li><strong>如何将研究发现应用于当前的地缘政治风险评估？</strong>
-<ul>
-<li>对于台湾问题、中美博弈等当前热点，本文框架有何启示？</li>
-<li>如何量化"与中国发生贸易战"的潜在经济代价？</li>
-</ul></li>
-<li><strong>何种政策可以缓冲战争的经济冲击？</strong>
-<ul>
-<li>战略储备的效果如何？</li>
-<li>区域经济一体化的保护效应？</li>
-<li>金融稳定工具（如外汇储备、货币互换）的作用？</li>
-</ul></li>
-</ol>
-<h3 id="关于后续研究的问题">关于后续研究的问题</h3>
-<ol start="8" type="1">
-<li><strong>本文的主要贡献者（5位作者）后续还有哪些相关研究？</strong>
-<ul>
-<li>是否有关于特定战争案例的深度研究？</li>
-<li>是否有使用更细粒度数据（如月度、行业层面）的研究？</li>
-</ul></li>
-<li><strong>是否存在与本文发现相矛盾的文献？</strong>
-<ul>
-<li>质疑或修正本文结论的研究有哪些？</li>
-<li>这些矛盾是否可以通过样本选择、方法论差异或数据版本来解释？</li>
-</ul></li>
-</ol>
-<hr>
-<p><em>本分析报告为深度阅读笔记，梳理了论文的核心逻辑、主要发现和学术价值。</em></p>
 ]]></content>
       <categories>
-        <category>经济学</category>
+        <category>计量</category>
       </categories>
       <tags>
-        <tag>论文笔记</tag>
-        <tag>宏观经济学</tag>
-        <tag>战争经济学</tag>
-        <tag>经济史学</tag>
-        <tag>地缘政治</tag>
+        <tag>学术讲座</tag>
       </tags>
   </entry>
   <entry>
@@ -5995,6 +5995,46 @@ Vol. 126, pp. 593-650</li>
       </tags>
   </entry>
   <entry>
+    <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
+    <url>/posts/32262/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
+<h2 id="研究问题"><strong>1. 研究问题</strong></h2>
+<p>本文以江苏省12个地级市"河长制"政策转移案例(2006 —
+2016)为研究对象,在识别政策转移案例中"复制"和"再生产"两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对"河长制"转移程度的影响.研究发现"河长制"政策转移中的"政策再生产"的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局.通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产.</p>
+<p>&nbsp;</p>
+<span id="more"></span>
+<h2 id="问题的提出"><strong>2. 问题的提出</strong></h2>
+<p><strong>2.1 政策转移的必要性</strong></p>
+<p>现实状况:政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有"后发优势"的意味、地区间的合作与竞争</p>
+<p>转移情形:政策转移并不意味着全盘复制,可分为"复制"和"再生产"两种形式</p>
+<p>核心问题:什么因素能够促成政策"再生产",政策"再生产"又体现出那些维度特征</p>
+<p><strong>2.2 河长制的背景介绍</strong></p>
+<p>河湖治理是跨界特性最典型的领域之一,涉及上下游、左右岸、不同行政区域和行业,呈现出高度的复杂性.河长制最早发轫于太湖蓝藻危机,2016年之前是一项地方政策,经政策扩散至多地.</p>
+<p>现实调查显示河长制在江苏省内的扩散过程中呈现出"复制"和"再生产"的典型差异.</p>
+<p>&nbsp;</p>
+<h2 id="研究思路和方法"><strong>3. 研究思路和方法</strong></h2>
+<p><strong>3.1 QCA</strong></p>
+<p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles
+Ragin)于<code>1987</code>年提出,适用于案例数量大于10小于60的研究.</p>
+<p>其使用布尔代数和集合论的思想来进行中小数量的跨案例比较,从而处理多个原因和一个结果之间的因果关系.</p>
+<p><strong>3.2 转移程度的刻画</strong></p>
+<p>道洛维茨和马什最早借鉴rose(1993)的连续统来划分政策转移程度:复制、模仿、混合、启发.</p>
+<p>本文简单划分为:"复制"和"再生产"</p>
+<p><strong>3.3 解释变量的选择</strong></p>
+<p>行政压力、资源禀赋、政策需求、外部力量</p>
+<p>&nbsp;</p>
+<h2 id="结论"><strong>4. 结论</strong></h2>
+<p>政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素.</p>
+]]></content>
+      <categories>
+        <category>公共管理</category>
+        <category>政策转移</category>
+      </categories>
+      <tags>
+        <tag>文献阅读</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>文献阅读# the Effect of Microinsurance on Economic Activities: Evidence From a Randomized Field Experiment</title>
     <url>/posts/51245/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
@@ -6053,46 +6093,6 @@ Vol. 126, pp. 593-650</li>
       <categories>
         <category>实验经济学</category>
         <category>保险</category>
-      </categories>
-      <tags>
-        <tag>文献阅读</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
-    <url>/posts/32262/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
-<h2 id="研究问题"><strong>1. 研究问题</strong></h2>
-<p>本文以江苏省12个地级市"河长制"政策转移案例(2006 —
-2016)为研究对象,在识别政策转移案例中"复制"和"再生产"两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对"河长制"转移程度的影响.研究发现"河长制"政策转移中的"政策再生产"的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局.通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产.</p>
-<p>&nbsp;</p>
-<span id="more"></span>
-<h2 id="问题的提出"><strong>2. 问题的提出</strong></h2>
-<p><strong>2.1 政策转移的必要性</strong></p>
-<p>现实状况:政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有"后发优势"的意味、地区间的合作与竞争</p>
-<p>转移情形:政策转移并不意味着全盘复制,可分为"复制"和"再生产"两种形式</p>
-<p>核心问题:什么因素能够促成政策"再生产",政策"再生产"又体现出那些维度特征</p>
-<p><strong>2.2 河长制的背景介绍</strong></p>
-<p>河湖治理是跨界特性最典型的领域之一,涉及上下游、左右岸、不同行政区域和行业,呈现出高度的复杂性.河长制最早发轫于太湖蓝藻危机,2016年之前是一项地方政策,经政策扩散至多地.</p>
-<p>现实调查显示河长制在江苏省内的扩散过程中呈现出"复制"和"再生产"的典型差异.</p>
-<p>&nbsp;</p>
-<h2 id="研究思路和方法"><strong>3. 研究思路和方法</strong></h2>
-<p><strong>3.1 QCA</strong></p>
-<p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles
-Ragin)于<code>1987</code>年提出,适用于案例数量大于10小于60的研究.</p>
-<p>其使用布尔代数和集合论的思想来进行中小数量的跨案例比较,从而处理多个原因和一个结果之间的因果关系.</p>
-<p><strong>3.2 转移程度的刻画</strong></p>
-<p>道洛维茨和马什最早借鉴rose(1993)的连续统来划分政策转移程度:复制、模仿、混合、启发.</p>
-<p>本文简单划分为:"复制"和"再生产"</p>
-<p><strong>3.3 解释变量的选择</strong></p>
-<p>行政压力、资源禀赋、政策需求、外部力量</p>
-<p>&nbsp;</p>
-<h2 id="结论"><strong>4. 结论</strong></h2>
-<p>政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素.</p>
-]]></content>
-      <categories>
-        <category>公共管理</category>
-        <category>政策转移</category>
       </categories>
       <tags>
         <tag>文献阅读</tag>
