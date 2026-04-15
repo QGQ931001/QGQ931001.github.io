@@ -397,27 +397,6 @@ Economic Review.</li>
       </tags>
   </entry>
   <entry>
-    <title>致Berry</title>
-    <url>/posts/51392/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<center>
-<strong>Love You.</strong>
-</center>
-<center>
-<strong>Berry!</strong>
-</center>
-<center>
-<img data-src="/image/berry.jpg" width="66%" height="66%" title="妳" alt="妳">
-</center>
-]]></content>
-      <categories>
-        <category>领导</category>
-      </categories>
-      <tags>
-        <tag>妳</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>In Harm&#39;s Way? Infrastructure Investments and the Persistence of Coastal Cities — 深度阅读笔记 — Balboni</title>
     <url>/posts/balboni2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -922,6 +901,27 @@ governments?&gt;一文的核心内容、理论框架、实证发现和学术贡�
         <tag>政府支出</tag>
         <tag>挤出效应</tag>
         <tag>自然实验</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>致Berry</title>
+    <url>/posts/51392/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<center>
+<strong>Love You.</strong>
+</center>
+<center>
+<strong>Berry!</strong>
+</center>
+<center>
+<img data-src="/image/berry.jpg" width="66%" height="66%" title="妳" alt="妳">
+</center>
+]]></content>
+      <categories>
+        <category>领导</category>
+      </categories>
+      <tags>
+        <tag>妳</tag>
       </tags>
   </entry>
   <entry>
@@ -4745,61 +4745,6 @@ _谢肇淛&lt;五杂俎&gt;(约1610年)</p>
       </tags>
   </entry>
   <entry>
-    <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
-    <url>/posts/48526/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
-<ul>
-<li>因果识别+统计推断</li>
-<li>因果识别(<strong><em>causal
-identification</em></strong>):如果拥有总体,能否确定总体因果关系</li>
-<li>统计推断(<strong><em>statistical
-inference</em></strong>):如何从样本数据获取总体因果关系信息,实际是一种相关性事实</li>
-<li>识别假设,实际就是对 <span class="math inline">\(D\)</span> 和 <span class="math inline">\(\varepsilon\)</span>
-的关系作出表述,但这种过程是无法从理论上验证的</li>
-</ul>
-<span id="more"></span>
-<h2 id="section"><strong>1</strong></h2>
-<ul>
-<li><strong>1.1</strong>
-因果效应的定义:干预与否、处理与否时,潜在结果之间的差值.潜在结果一定是同一个时间点上的结果</li>
-<li><strong>1.2</strong> 潜在结果永远无法完全观测,除非存在平行宇宙</li>
-<li><strong>1.3</strong>
-通过识别假设可以进行"插值",可以化"相关关系"识别场景为"因果关系"识别场景</li>
-<li><strong>1.4</strong>
-鲁宾因果模型(潜在因果框架),一套描述因果关系的新语言</li>
-</ul>
-<h2 id="section-1"><strong>2</strong></h2>
-<ul>
-<li><strong>2.1</strong> 第一类识别假设:潜在结果均值独立于处理状态</li>
-<li><strong>2.2</strong>
-从干扰项中剥离出控制变量;或者寻找一个与干扰项不相关的工具变量</li>
-<li><strong>2.3</strong>
-第二类识别假设:潜在结果条件均值独立于处理状态</li>
-<li><strong>2.4</strong> 好的控制变量:既影响<span class="math inline">\(Y\)</span>,又影响<span class="math inline">\(D\)</span>.其本身和干扰项是否相关是不重要的,不是研究者关注的中心</li>
-<li><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</li>
-<li><strong>2.6</strong> 无需过渡阐释控制变量的系数</li>
-</ul>
-<h2 id="section-2"><strong>3</strong></h2>
-<ul>
-<li><strong>3.1</strong> 鲁宾因果模型并未规定具体的函数形式</li>
-<li><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</li>
-</ul>
-<h2 id="section-3"><strong>4</strong></h2>
-<ul>
-<li><strong>4.1</strong>
-选择性又称之为分配机制,每个个体如何接受处理,可以用倾向得分来表示</li>
-<li><strong>4.2</strong>
-建议现实使用IV、DID、RDD等识别方法时,称之为准实验</li>
-</ul>
-]]></content>
-      <categories>
-        <category>计量</category>
-      </categories>
-      <tags>
-        <tag>学术讲座</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>&lt;住房与不平等&gt;深度阅读笔记 — Ioannides &amp; Ngai</title>
     <url>/posts/ioannides2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -4917,6 +4862,61 @@ Inequality - <strong>作者</strong>:Yannis M. Ioannides, L. Rachel Ngai -
       <tags>
         <tag>论文笔记</tag>
         <tag>城市经济学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
+    <url>/posts/48526/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
+<ul>
+<li>因果识别+统计推断</li>
+<li>因果识别(<strong><em>causal
+identification</em></strong>):如果拥有总体,能否确定总体因果关系</li>
+<li>统计推断(<strong><em>statistical
+inference</em></strong>):如何从样本数据获取总体因果关系信息,实际是一种相关性事实</li>
+<li>识别假设,实际就是对 <span class="math inline">\(D\)</span> 和 <span class="math inline">\(\varepsilon\)</span>
+的关系作出表述,但这种过程是无法从理论上验证的</li>
+</ul>
+<span id="more"></span>
+<h2 id="section"><strong>1</strong></h2>
+<ul>
+<li><strong>1.1</strong>
+因果效应的定义:干预与否、处理与否时,潜在结果之间的差值.潜在结果一定是同一个时间点上的结果</li>
+<li><strong>1.2</strong> 潜在结果永远无法完全观测,除非存在平行宇宙</li>
+<li><strong>1.3</strong>
+通过识别假设可以进行"插值",可以化"相关关系"识别场景为"因果关系"识别场景</li>
+<li><strong>1.4</strong>
+鲁宾因果模型(潜在因果框架),一套描述因果关系的新语言</li>
+</ul>
+<h2 id="section-1"><strong>2</strong></h2>
+<ul>
+<li><strong>2.1</strong> 第一类识别假设:潜在结果均值独立于处理状态</li>
+<li><strong>2.2</strong>
+从干扰项中剥离出控制变量;或者寻找一个与干扰项不相关的工具变量</li>
+<li><strong>2.3</strong>
+第二类识别假设:潜在结果条件均值独立于处理状态</li>
+<li><strong>2.4</strong> 好的控制变量:既影响<span class="math inline">\(Y\)</span>,又影响<span class="math inline">\(D\)</span>.其本身和干扰项是否相关是不重要的,不是研究者关注的中心</li>
+<li><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</li>
+<li><strong>2.6</strong> 无需过渡阐释控制变量的系数</li>
+</ul>
+<h2 id="section-2"><strong>3</strong></h2>
+<ul>
+<li><strong>3.1</strong> 鲁宾因果模型并未规定具体的函数形式</li>
+<li><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</li>
+</ul>
+<h2 id="section-3"><strong>4</strong></h2>
+<ul>
+<li><strong>4.1</strong>
+选择性又称之为分配机制,每个个体如何接受处理,可以用倾向得分来表示</li>
+<li><strong>4.2</strong>
+建议现实使用IV、DID、RDD等识别方法时,称之为准实验</li>
+</ul>
+]]></content>
+      <categories>
+        <category>计量</category>
+      </categories>
+      <tags>
+        <tag>学术讲座</tag>
       </tags>
   </entry>
   <entry>
@@ -6099,6 +6099,240 @@ Ragin)于<code>1987</code>年提出,适用于案例数量大于10小于60的研�
       </tags>
   </entry>
   <entry>
+    <title>R数据科学_ggplot2笔记(1)</title>
+    <url>/posts/29862/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="一个说明">一个说明</h2>
+<p><code>ggplot2::ggplot()</code>指使用<a href="https://ggplot2.tidyverse.org/"><strong>ggplot2</strong></a>包中的<code>ggplot</code>函数,<code>::</code>表示快速调用某个包里的函数.</p>
+<h2 id="示例">示例</h2>
+<p>使用<code>ggplot2</code>包中的<code>mpg</code>数据框,这份数据是一份汽车资料:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">knitr<span class="operator">::</span>kable<span class="punctuation">(</span>head<span class="punctuation">(</span>ggplot2<span class="operator">::</span>mpg<span class="punctuation">,</span> <span class="number">10</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 15%">
+<col style="width: 8%">
+<col style="width: 6%">
+<col style="width: 5%">
+<col style="width: 15%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 4%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">manufacturer</th>
+<th style="text-align: left;">model</th>
+<th style="text-align: left;">displ</th>
+<th style="text-align: right;">year</th>
+<th style="text-align: right;">cyl</th>
+<th style="text-align: left;">trans</th>
+<th style="text-align: left;">drv</th>
+<th style="text-align: right;">cty</th>
+<th style="text-align: right;">hwy</th>
+<th style="text-align: left;">fl</th>
+<th style="text-align: left;">class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">audi</td>
+<td style="text-align: left;">a4</td>
+<td style="text-align: left;">1.8</td>
+<td style="text-align: right;">1999</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">auto(l5)</td>
+<td style="text-align: left;">f</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: left;">p</td>
+<td style="text-align: left;">compact</td>
+</tr>
+<tr>
+<td style="text-align: left;">audi</td>
+<td style="text-align: left;">a4</td>
+<td style="text-align: left;">1.8</td>
+<td style="text-align: right;">1999</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">manual(m5)</td>
+<td style="text-align: left;">f</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: left;">p</td>
+<td style="text-align: left;">compact</td>
+</tr>
+<tr>
+<td style="text-align: left;">audi</td>
+<td style="text-align: left;">a4</td>
+<td style="text-align: left;">2.0</td>
+<td style="text-align: right;">2008</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">manual(m6)</td>
+<td style="text-align: left;">f</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: left;">p</td>
+<td style="text-align: left;">compact</td>
+</tr>
+<tr>
+<td style="text-align: left;">audi</td>
+<td style="text-align: left;">a4</td>
+<td style="text-align: left;">2.0</td>
+<td style="text-align: right;">2008</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">auto(av)</td>
+<td style="text-align: left;">f</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: left;">p</td>
+<td style="text-align: left;">compact</td>
+</tr>
+<tr>
+<td style="text-align: left;">audi</td>
+<td style="text-align: left;">a4</td>
+<td style="text-align: left;">2.8</td>
+<td style="text-align: right;">1999</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">auto(l5)</td>
+<td style="text-align: left;">f</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: left;">p</td>
+<td style="text-align: left;">compact</td>
+</tr>
+<tr>
+<td style="text-align: left;">audi</td>
+<td style="text-align: left;">a4</td>
+<td style="text-align: left;">2.8</td>
+<td style="text-align: right;">1999</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">manual(m5)</td>
+<td style="text-align: left;">f</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: left;">p</td>
+<td style="text-align: left;">compact</td>
+</tr>
+<tr>
+<td style="text-align: left;">audi</td>
+<td style="text-align: left;">a4</td>
+<td style="text-align: left;">3.1</td>
+<td style="text-align: right;">2008</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">auto(av)</td>
+<td style="text-align: left;">f</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: left;">p</td>
+<td style="text-align: left;">compact</td>
+</tr>
+<tr>
+<td style="text-align: left;">audi</td>
+<td style="text-align: left;">a4 quattro</td>
+<td style="text-align: left;">1.8</td>
+<td style="text-align: right;">1999</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">manual(m5)</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: left;">p</td>
+<td style="text-align: left;">compact</td>
+</tr>
+<tr>
+<td style="text-align: left;">audi</td>
+<td style="text-align: left;">a4 quattro</td>
+<td style="text-align: left;">1.8</td>
+<td style="text-align: right;">1999</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">auto(l5)</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: left;">p</td>
+<td style="text-align: left;">compact</td>
+</tr>
+<tr>
+<td style="text-align: left;">audi</td>
+<td style="text-align: left;">a4 quattro</td>
+<td style="text-align: left;">2.0</td>
+<td style="text-align: right;">2008</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">manual(m6)</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: left;">p</td>
+<td style="text-align: left;">compact</td>
+</tr>
+</tbody>
+</table>
+<span id="more"></span>
+<p>创建<code>ggplot2</code>图形,散点图:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> mpg<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_point<span class="punctuation">(</span>mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> displ<span class="punctuation">,</span> y <span class="operator">=</span> hwy<span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> p</span><br><span class="line">p</span><br></pre></td></tr></tbody></table></figure>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;"></p>
+<p>其中<code>mapping</code>是映射的意思,在<code>ggplot()</code>的<code>()</code>中出现的内容将传递之后的绘图函数,<code>p</code>保存了绘制好的图形,可以进一步进行美化和调整:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">p <span class="operator">+</span> theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> enfont<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">      theme<span class="punctuation">(</span>axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">            axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">            axis.title <span class="operator">=</span> element_text<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">12</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;">
+可以将一些图片调整的代码存放在<code>modify</code>命名的一个对象中:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> enfont<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">        axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">        axis.title <span class="operator">=</span> element_text<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">12</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> modify</span><br></pre></td></tr></tbody></table></figure>
+<p>实际上,<code>ggplot2</code>的魅力之一在于通过颜色(<strong>color</strong>)、形状(<strong>shape</strong>)、透明度(<strong>alpha</strong>)等等属性展示超越<strong>2</strong>维的信息,比如:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> mpg<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_point<span class="punctuation">(</span>mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> displ<span class="punctuation">,</span> y <span class="operator">=</span> hwy<span class="punctuation">,</span> color <span class="operator">=</span> <span class="built_in">class</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  modify</span><br></pre></td></tr></tbody></table></figure>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-5-1.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" style="display: block; margin: auto;"></p>
+<p>另外一种展示超越2维属性的方法就是<strong>分面</strong>:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> mpg<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_point<span class="punctuation">(</span>mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> displ<span class="punctuation">,</span> y <span class="operator">=</span> hwy<span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  facet_wrap<span class="punctuation">(</span><span class="operator">~</span> <span class="built_in">class</span><span class="punctuation">,</span> nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  modify</span><br></pre></td></tr></tbody></table></figure>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-6-1.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" style="display: block; margin: auto;"></p>
+<p><code>facet_wrap()</code>中的第一个参数是<strong>R</strong>中的一种数据结构,叫作"公式",并非数学意义上的意思.也可以使用2个变量进行分面:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> mpg<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_point<span class="punctuation">(</span>mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> displ<span class="punctuation">,</span> y <span class="operator">=</span> hwy<span class="punctuation">,</span> color <span class="operator">=</span> <span class="built_in">class</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  facet_wrap<span class="punctuation">(</span>drv <span class="operator">~</span> cyl<span class="punctuation">,</span> nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  modify</span><br></pre></td></tr></tbody></table></figure>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-7-1.png" title="plot of chunk unnamed-chunk-7" alt="plot of chunk unnamed-chunk-7" style="display: block; margin: auto;"></p>
+<p>可以使用占位符<code>.</code>来代替<code>facet_wrap()</code>第一个参数中的<code>drv</code>,效果如下:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> mpg<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_point<span class="punctuation">(</span>mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> displ<span class="punctuation">,</span> y <span class="operator">=</span> hwy<span class="punctuation">,</span> color <span class="operator">=</span> <span class="built_in">class</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  facet_wrap<span class="punctuation">(</span>. <span class="operator">~</span> cyl<span class="punctuation">,</span> nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  modify</span><br></pre></td></tr></tbody></table></figure>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-8-1.png" title="plot of chunk unnamed-chunk-8" alt="plot of chunk unnamed-chunk-8" style="display: block; margin: auto;"></p>
+<h2 id="几何对象">几何对象</h2>
+<p>R并非只有<code>ggplot2</code>一种绘图方案,比如:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">set.seed<span class="punctuation">(</span><span class="number">123</span><span class="punctuation">)</span></span><br><span class="line">n <span class="operator">&lt;-</span> 1000</span><br><span class="line">x1  <span class="operator">&lt;-</span> matrix<span class="punctuation">(</span>rnorm<span class="punctuation">(</span>n<span class="punctuation">)</span><span class="punctuation">,</span> ncol <span class="operator">=</span> <span class="number">2</span><span class="punctuation">)</span></span><br><span class="line">x2  <span class="operator">&lt;-</span> matrix<span class="punctuation">(</span>rnorm<span class="punctuation">(</span>n<span class="punctuation">,</span> mean <span class="operator">=</span> <span class="number">3</span><span class="punctuation">,</span> sd <span class="operator">=</span> <span class="number">1.5</span><span class="punctuation">)</span><span class="punctuation">,</span> ncol <span class="operator">=</span> <span class="number">2</span><span class="punctuation">)</span></span><br><span class="line">x   <span class="operator">&lt;-</span> rbind<span class="punctuation">(</span>x1<span class="punctuation">,</span> x2<span class="punctuation">)</span></span><br><span class="line">head<span class="punctuation">(</span>x<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;             [,1]        [,2]</span><br><span class="line">#&gt; [1,] -0.56047565 -0.60189285</span><br><span class="line">#&gt; [2,] -0.23017749 -0.99369859</span><br><span class="line">#&gt; [3,]  1.55870831  1.02678506</span><br><span class="line">#&gt; [4,]  0.07050839  0.75106130</span><br><span class="line">#&gt; [5,]  0.12928774 -1.50916654</span><br><span class="line">#&gt; [6,]  1.71506499 -0.09514745</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">smoothScatter<span class="punctuation">(</span>x<span class="punctuation">,</span> xlab <span class="operator">=</span> <span class="string">"x1"</span><span class="punctuation">,</span> ylab <span class="operator">=</span> <span class="string">"x2"</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-9-1.png" title="plot of chunk unnamed-chunk-9" alt="plot of chunk unnamed-chunk-9" style="display: block; margin: auto;"></p>
+<p>而ggplot2肯定并非只有一类几何对象,比如<code>geom_smooth</code>、<code>geom_line</code>、<code>geom_bar</code>等等,而这些对象生成的图层可以堆叠,比如:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> mpg<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_point<span class="punctuation">(</span>mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> displ<span class="punctuation">,</span> y <span class="operator">=</span> hwy<span class="punctuation">,</span> color <span class="operator">=</span> drv<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">             show.legend <span class="operator">=</span> <span class="literal">FALSE</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_smooth<span class="punctuation">(</span>mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> displ<span class="punctuation">,</span> y <span class="operator">=</span> hwy<span class="punctuation">,</span> linetype <span class="operator">=</span> drv<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">              show.legend <span class="operator">=</span> <span class="literal">FALSE</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-10-1.png" title="plot of chunk unnamed-chunk-10" alt="plot of chunk unnamed-chunk-10" style="display: block; margin: auto;"></p>
+<p><code>geom_smooth()</code>使用单个几何对象表示多行数据(一条曲线),而<code>geom_bar()</code>和<code>geom_point</code>则是多个几何对象(多个矩形或点),将<code>geom_smooth()</code>的<code>group</code>属性映射为一个离散变量时,这样<code>ggplot2</code>就会为这个分类变量的每个唯一值绘制一个独立的几何对象.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> mpg<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_smooth<span class="punctuation">(</span>mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> displ<span class="punctuation">,</span> y <span class="operator">=</span> hwy<span class="punctuation">,</span> group <span class="operator">=</span> drv<span class="punctuation">)</span></span><br><span class="line"> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-11-1.png" title="plot of chunk unnamed-chunk-11" alt="plot of chunk unnamed-chunk-11" style="display: block; margin: auto;"></p>
+<p>也可以为不同的图层指定不同的数据:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> mpg<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_point<span class="punctuation">(</span>mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> displ<span class="punctuation">,</span> y <span class="operator">=</span> hwy<span class="punctuation">,</span> color <span class="operator">=</span> drv<span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_smooth<span class="punctuation">(</span>data <span class="operator">=</span> dplyr<span class="operator">::</span>filter<span class="punctuation">(</span>mpg<span class="punctuation">,</span> <span class="built_in">class</span> <span class="operator">==</span> <span class="string">"subcompact"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">              mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> displ<span class="punctuation">,</span> y <span class="operator">=</span> hwy<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">              se <span class="operator">=</span> <span class="literal">FALSE</span><span class="punctuation">,</span></span><br><span class="line">              show.legend <span class="operator">=</span> <span class="literal">FALSE</span></span><br><span class="line"> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-12-1.png" title="plot of chunk unnamed-chunk-12" alt="plot of chunk unnamed-chunk-12" style="display: block; margin: auto;"></p>
+<h2 id="统计变换">统计变换</h2>
+<p><code>geom_bar()</code>函数可以绘制的基本条形图.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> diamonds<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_bar<span class="punctuation">(</span>mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> cut<span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-13-1.png" title="plot of chunk unnamed-chunk-13" alt="plot of chunk unnamed-chunk-13" style="display: block; margin: auto;"></p>
+<p>条形图 <code>x</code> 轴显示的是 <code>cut</code> ,这是
+<code>diamonds</code> 数据集中的一个变量. <code>y</code> 轴显示的是
+<code>count</code> ,但 <code>count</code> 不是 <code>diamonds</code>
+中的变量! <code>count</code>
+来自哪里呢?很多图形绘制的是数据集的原始数据,比如散点图.另外一些图形则可以绘制那些计算出的新数据,比如条形图.</p>
+<p>绘图时用来计算新数据的算法称为stat(statistical
+transformation),即统计变换.你可能想要覆盖默认的统计变换.在以下代码中,我们将<code>geom_bar()</code>函数的统计变换从计数(默认值)修改为标识.这样我们就可以将条形的高度映射为<code>y</code>轴变量的初始值.遗憾的是,当随意说起条形图时,人们指的可能就是这种条形图,其中条形高度已经存在于数据中,而不是像前一个图一样,条形高度由对行进行计数来生成:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">demo <span class="operator">&lt;-</span> tribble<span class="punctuation">(</span></span><br><span class="line">  <span class="operator">~</span>a<span class="punctuation">,</span>      <span class="operator">~</span>b<span class="punctuation">,</span></span><br><span class="line">  <span class="string">"bar_1"</span><span class="punctuation">,</span> <span class="number">20</span><span class="punctuation">,</span></span><br><span class="line">  <span class="string">"bar_2"</span><span class="punctuation">,</span> <span class="number">30</span><span class="punctuation">,</span></span><br><span class="line">  <span class="string">"bar_3"</span><span class="punctuation">,</span> <span class="number">40</span></span><br><span class="line"><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> demo<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_bar<span class="punctuation">(</span></span><br><span class="line">    mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> a<span class="punctuation">,</span> y <span class="operator">=</span> b<span class="punctuation">)</span><span class="punctuation">,</span> stat <span class="operator">=</span> <span class="string">"identity"</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-14-1.png" title="plot of chunk unnamed-chunk-14" alt="plot of chunk unnamed-chunk-14" style="display: block; margin: auto;"></p>
+<p>也可以改变统计变换的默认映射:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> diamonds<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_bar<span class="punctuation">(</span></span><br><span class="line">    mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> cut<span class="punctuation">,</span> y <span class="operator">=</span> ..prop..<span class="punctuation">,</span> group <span class="operator">=</span> <span class="number">1</span><span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-15-1.png" title="plot of chunk unnamed-chunk-15" alt="plot of chunk unnamed-chunk-15" style="display: block; margin: auto;"></p>
+<p>你可能想要在代码中强调统计变换.例如,你可以使用<code>stat_summary()</code>函数将人们的注意力吸引到你计算出的那些摘要统计量上.<code>stat_summary()</code>函数为<code>x</code>的每个唯一值计算<code>y</code>值的摘要统计:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> diamonds<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  stat_summary<span class="punctuation">(</span></span><br><span class="line">    mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> cut<span class="punctuation">,</span> y <span class="operator">=</span> depth<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">        fun.ymin <span class="operator">=</span> <span class="built_in">min</span><span class="punctuation">,</span></span><br><span class="line">    fun.ymax <span class="operator">=</span> <span class="built_in">max</span><span class="punctuation">,</span></span><br><span class="line">    fun.y <span class="operator">=</span> median</span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p><img data-src="/figure_rdata_science/unnamed-chunk-16-1.png" title="plot of chunk unnamed-chunk-16" alt="plot of chunk unnamed-chunk-16" style="display: block; margin: auto;"></p>
+<p><code>ggplot2</code>提供了20多个统计变换以供你使用.每个统计变换都是一个函数,因此你可以按照通用方式获得帮助,例如<code>?stat_bin</code></p>
+]]></content>
+      <categories>
+        <category>绘图</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>中国农业发展之路 — 深度阅读笔记 — Perkins</title>
     <url>/posts/perkins1969/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="书籍信息">书籍信息</h2>
@@ -6643,240 +6877,6 @@ University Press.</li>
         <tag>书籍</tag>
         <tag>农业史</tag>
         <tag>中国历史</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>R数据科学_ggplot2笔记(1)</title>
-    <url>/posts/29862/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="一个说明">一个说明</h2>
-<p><code>ggplot2::ggplot()</code>指使用<a href="https://ggplot2.tidyverse.org/"><strong>ggplot2</strong></a>包中的<code>ggplot</code>函数,<code>::</code>表示快速调用某个包里的函数.</p>
-<h2 id="示例">示例</h2>
-<p>使用<code>ggplot2</code>包中的<code>mpg</code>数据框,这份数据是一份汽车资料:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">knitr<span class="operator">::</span>kable<span class="punctuation">(</span>head<span class="punctuation">(</span>ggplot2<span class="operator">::</span>mpg<span class="punctuation">,</span> <span class="number">10</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<table style="width:100%;">
-<colgroup>
-<col style="width: 17%">
-<col style="width: 15%">
-<col style="width: 8%">
-<col style="width: 6%">
-<col style="width: 5%">
-<col style="width: 15%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 4%">
-<col style="width: 10%">
-</colgroup>
-<thead>
-<tr>
-<th style="text-align: left;">manufacturer</th>
-<th style="text-align: left;">model</th>
-<th style="text-align: left;">displ</th>
-<th style="text-align: right;">year</th>
-<th style="text-align: right;">cyl</th>
-<th style="text-align: left;">trans</th>
-<th style="text-align: left;">drv</th>
-<th style="text-align: right;">cty</th>
-<th style="text-align: right;">hwy</th>
-<th style="text-align: left;">fl</th>
-<th style="text-align: left;">class</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">audi</td>
-<td style="text-align: left;">a4</td>
-<td style="text-align: left;">1.8</td>
-<td style="text-align: right;">1999</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: left;">auto(l5)</td>
-<td style="text-align: left;">f</td>
-<td style="text-align: right;">18</td>
-<td style="text-align: right;">29</td>
-<td style="text-align: left;">p</td>
-<td style="text-align: left;">compact</td>
-</tr>
-<tr>
-<td style="text-align: left;">audi</td>
-<td style="text-align: left;">a4</td>
-<td style="text-align: left;">1.8</td>
-<td style="text-align: right;">1999</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: left;">manual(m5)</td>
-<td style="text-align: left;">f</td>
-<td style="text-align: right;">21</td>
-<td style="text-align: right;">29</td>
-<td style="text-align: left;">p</td>
-<td style="text-align: left;">compact</td>
-</tr>
-<tr>
-<td style="text-align: left;">audi</td>
-<td style="text-align: left;">a4</td>
-<td style="text-align: left;">2.0</td>
-<td style="text-align: right;">2008</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: left;">manual(m6)</td>
-<td style="text-align: left;">f</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: right;">31</td>
-<td style="text-align: left;">p</td>
-<td style="text-align: left;">compact</td>
-</tr>
-<tr>
-<td style="text-align: left;">audi</td>
-<td style="text-align: left;">a4</td>
-<td style="text-align: left;">2.0</td>
-<td style="text-align: right;">2008</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: left;">auto(av)</td>
-<td style="text-align: left;">f</td>
-<td style="text-align: right;">21</td>
-<td style="text-align: right;">30</td>
-<td style="text-align: left;">p</td>
-<td style="text-align: left;">compact</td>
-</tr>
-<tr>
-<td style="text-align: left;">audi</td>
-<td style="text-align: left;">a4</td>
-<td style="text-align: left;">2.8</td>
-<td style="text-align: right;">1999</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: left;">auto(l5)</td>
-<td style="text-align: left;">f</td>
-<td style="text-align: right;">16</td>
-<td style="text-align: right;">26</td>
-<td style="text-align: left;">p</td>
-<td style="text-align: left;">compact</td>
-</tr>
-<tr>
-<td style="text-align: left;">audi</td>
-<td style="text-align: left;">a4</td>
-<td style="text-align: left;">2.8</td>
-<td style="text-align: right;">1999</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: left;">manual(m5)</td>
-<td style="text-align: left;">f</td>
-<td style="text-align: right;">18</td>
-<td style="text-align: right;">26</td>
-<td style="text-align: left;">p</td>
-<td style="text-align: left;">compact</td>
-</tr>
-<tr>
-<td style="text-align: left;">audi</td>
-<td style="text-align: left;">a4</td>
-<td style="text-align: left;">3.1</td>
-<td style="text-align: right;">2008</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: left;">auto(av)</td>
-<td style="text-align: left;">f</td>
-<td style="text-align: right;">18</td>
-<td style="text-align: right;">27</td>
-<td style="text-align: left;">p</td>
-<td style="text-align: left;">compact</td>
-</tr>
-<tr>
-<td style="text-align: left;">audi</td>
-<td style="text-align: left;">a4 quattro</td>
-<td style="text-align: left;">1.8</td>
-<td style="text-align: right;">1999</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: left;">manual(m5)</td>
-<td style="text-align: left;">4</td>
-<td style="text-align: right;">18</td>
-<td style="text-align: right;">26</td>
-<td style="text-align: left;">p</td>
-<td style="text-align: left;">compact</td>
-</tr>
-<tr>
-<td style="text-align: left;">audi</td>
-<td style="text-align: left;">a4 quattro</td>
-<td style="text-align: left;">1.8</td>
-<td style="text-align: right;">1999</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: left;">auto(l5)</td>
-<td style="text-align: left;">4</td>
-<td style="text-align: right;">16</td>
-<td style="text-align: right;">25</td>
-<td style="text-align: left;">p</td>
-<td style="text-align: left;">compact</td>
-</tr>
-<tr>
-<td style="text-align: left;">audi</td>
-<td style="text-align: left;">a4 quattro</td>
-<td style="text-align: left;">2.0</td>
-<td style="text-align: right;">2008</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: left;">manual(m6)</td>
-<td style="text-align: left;">4</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: right;">28</td>
-<td style="text-align: left;">p</td>
-<td style="text-align: left;">compact</td>
-</tr>
-</tbody>
-</table>
-<span id="more"></span>
-<p>创建<code>ggplot2</code>图形,散点图:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> mpg<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_point<span class="punctuation">(</span>mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> displ<span class="punctuation">,</span> y <span class="operator">=</span> hwy<span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> p</span><br><span class="line">p</span><br></pre></td></tr></tbody></table></figure>
-<p><img data-src="/figure_rdata_science/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;"></p>
-<p>其中<code>mapping</code>是映射的意思,在<code>ggplot()</code>的<code>()</code>中出现的内容将传递之后的绘图函数,<code>p</code>保存了绘制好的图形,可以进一步进行美化和调整:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">p <span class="operator">+</span> theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> enfont<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">      theme<span class="punctuation">(</span>axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">            axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">            axis.title <span class="operator">=</span> element_text<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">12</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p><img data-src="/figure_rdata_science/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;">
-可以将一些图片调整的代码存放在<code>modify</code>命名的一个对象中:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> enfont<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">        axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">        axis.title <span class="operator">=</span> element_text<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">12</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> modify</span><br></pre></td></tr></tbody></table></figure>
-<p>实际上,<code>ggplot2</code>的魅力之一在于通过颜色(<strong>color</strong>)、形状(<strong>shape</strong>)、透明度(<strong>alpha</strong>)等等属性展示超越<strong>2</strong>维的信息,比如:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> mpg<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_point<span class="punctuation">(</span>mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> displ<span class="punctuation">,</span> y <span class="operator">=</span> hwy<span class="punctuation">,</span> color <span class="operator">=</span> <span class="built_in">class</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  modify</span><br></pre></td></tr></tbody></table></figure>
-<p><img data-src="/figure_rdata_science/unnamed-chunk-5-1.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" style="display: block; margin: auto;"></p>
-<p>另外一种展示超越2维属性的方法就是<strong>分面</strong>:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> mpg<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_point<span class="punctuation">(</span>mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> displ<span class="punctuation">,</span> y <span class="operator">=</span> hwy<span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  facet_wrap<span class="punctuation">(</span><span class="operator">~</span> <span class="built_in">class</span><span class="punctuation">,</span> nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  modify</span><br></pre></td></tr></tbody></table></figure>
-<p><img data-src="/figure_rdata_science/unnamed-chunk-6-1.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" style="display: block; margin: auto;"></p>
-<p><code>facet_wrap()</code>中的第一个参数是<strong>R</strong>中的一种数据结构,叫作"公式",并非数学意义上的意思.也可以使用2个变量进行分面:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> mpg<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_point<span class="punctuation">(</span>mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> displ<span class="punctuation">,</span> y <span class="operator">=</span> hwy<span class="punctuation">,</span> color <span class="operator">=</span> <span class="built_in">class</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  facet_wrap<span class="punctuation">(</span>drv <span class="operator">~</span> cyl<span class="punctuation">,</span> nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  modify</span><br></pre></td></tr></tbody></table></figure>
-<p><img data-src="/figure_rdata_science/unnamed-chunk-7-1.png" title="plot of chunk unnamed-chunk-7" alt="plot of chunk unnamed-chunk-7" style="display: block; margin: auto;"></p>
-<p>可以使用占位符<code>.</code>来代替<code>facet_wrap()</code>第一个参数中的<code>drv</code>,效果如下:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> mpg<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_point<span class="punctuation">(</span>mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> displ<span class="punctuation">,</span> y <span class="operator">=</span> hwy<span class="punctuation">,</span> color <span class="operator">=</span> <span class="built_in">class</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  facet_wrap<span class="punctuation">(</span>. <span class="operator">~</span> cyl<span class="punctuation">,</span> nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  modify</span><br></pre></td></tr></tbody></table></figure>
-<p><img data-src="/figure_rdata_science/unnamed-chunk-8-1.png" title="plot of chunk unnamed-chunk-8" alt="plot of chunk unnamed-chunk-8" style="display: block; margin: auto;"></p>
-<h2 id="几何对象">几何对象</h2>
-<p>R并非只有<code>ggplot2</code>一种绘图方案,比如:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">set.seed<span class="punctuation">(</span><span class="number">123</span><span class="punctuation">)</span></span><br><span class="line">n <span class="operator">&lt;-</span> 1000</span><br><span class="line">x1  <span class="operator">&lt;-</span> matrix<span class="punctuation">(</span>rnorm<span class="punctuation">(</span>n<span class="punctuation">)</span><span class="punctuation">,</span> ncol <span class="operator">=</span> <span class="number">2</span><span class="punctuation">)</span></span><br><span class="line">x2  <span class="operator">&lt;-</span> matrix<span class="punctuation">(</span>rnorm<span class="punctuation">(</span>n<span class="punctuation">,</span> mean <span class="operator">=</span> <span class="number">3</span><span class="punctuation">,</span> sd <span class="operator">=</span> <span class="number">1.5</span><span class="punctuation">)</span><span class="punctuation">,</span> ncol <span class="operator">=</span> <span class="number">2</span><span class="punctuation">)</span></span><br><span class="line">x   <span class="operator">&lt;-</span> rbind<span class="punctuation">(</span>x1<span class="punctuation">,</span> x2<span class="punctuation">)</span></span><br><span class="line">head<span class="punctuation">(</span>x<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;             [,1]        [,2]</span><br><span class="line">#&gt; [1,] -0.56047565 -0.60189285</span><br><span class="line">#&gt; [2,] -0.23017749 -0.99369859</span><br><span class="line">#&gt; [3,]  1.55870831  1.02678506</span><br><span class="line">#&gt; [4,]  0.07050839  0.75106130</span><br><span class="line">#&gt; [5,]  0.12928774 -1.50916654</span><br><span class="line">#&gt; [6,]  1.71506499 -0.09514745</span><br></pre></td></tr></tbody></table></figure>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">smoothScatter<span class="punctuation">(</span>x<span class="punctuation">,</span> xlab <span class="operator">=</span> <span class="string">"x1"</span><span class="punctuation">,</span> ylab <span class="operator">=</span> <span class="string">"x2"</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p><img data-src="/figure_rdata_science/unnamed-chunk-9-1.png" title="plot of chunk unnamed-chunk-9" alt="plot of chunk unnamed-chunk-9" style="display: block; margin: auto;"></p>
-<p>而ggplot2肯定并非只有一类几何对象,比如<code>geom_smooth</code>、<code>geom_line</code>、<code>geom_bar</code>等等,而这些对象生成的图层可以堆叠,比如:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> mpg<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_point<span class="punctuation">(</span>mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> displ<span class="punctuation">,</span> y <span class="operator">=</span> hwy<span class="punctuation">,</span> color <span class="operator">=</span> drv<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">             show.legend <span class="operator">=</span> <span class="literal">FALSE</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_smooth<span class="punctuation">(</span>mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> displ<span class="punctuation">,</span> y <span class="operator">=</span> hwy<span class="punctuation">,</span> linetype <span class="operator">=</span> drv<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">              show.legend <span class="operator">=</span> <span class="literal">FALSE</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p><img data-src="/figure_rdata_science/unnamed-chunk-10-1.png" title="plot of chunk unnamed-chunk-10" alt="plot of chunk unnamed-chunk-10" style="display: block; margin: auto;"></p>
-<p><code>geom_smooth()</code>使用单个几何对象表示多行数据(一条曲线),而<code>geom_bar()</code>和<code>geom_point</code>则是多个几何对象(多个矩形或点),将<code>geom_smooth()</code>的<code>group</code>属性映射为一个离散变量时,这样<code>ggplot2</code>就会为这个分类变量的每个唯一值绘制一个独立的几何对象.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> mpg<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_smooth<span class="punctuation">(</span>mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> displ<span class="punctuation">,</span> y <span class="operator">=</span> hwy<span class="punctuation">,</span> group <span class="operator">=</span> drv<span class="punctuation">)</span></span><br><span class="line"> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p><img data-src="/figure_rdata_science/unnamed-chunk-11-1.png" title="plot of chunk unnamed-chunk-11" alt="plot of chunk unnamed-chunk-11" style="display: block; margin: auto;"></p>
-<p>也可以为不同的图层指定不同的数据:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> mpg<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_point<span class="punctuation">(</span>mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> displ<span class="punctuation">,</span> y <span class="operator">=</span> hwy<span class="punctuation">,</span> color <span class="operator">=</span> drv<span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_smooth<span class="punctuation">(</span>data <span class="operator">=</span> dplyr<span class="operator">::</span>filter<span class="punctuation">(</span>mpg<span class="punctuation">,</span> <span class="built_in">class</span> <span class="operator">==</span> <span class="string">"subcompact"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">              mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> displ<span class="punctuation">,</span> y <span class="operator">=</span> hwy<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">              se <span class="operator">=</span> <span class="literal">FALSE</span><span class="punctuation">,</span></span><br><span class="line">              show.legend <span class="operator">=</span> <span class="literal">FALSE</span></span><br><span class="line"> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p><img data-src="/figure_rdata_science/unnamed-chunk-12-1.png" title="plot of chunk unnamed-chunk-12" alt="plot of chunk unnamed-chunk-12" style="display: block; margin: auto;"></p>
-<h2 id="统计变换">统计变换</h2>
-<p><code>geom_bar()</code>函数可以绘制的基本条形图.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> diamonds<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_bar<span class="punctuation">(</span>mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> cut<span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p><img data-src="/figure_rdata_science/unnamed-chunk-13-1.png" title="plot of chunk unnamed-chunk-13" alt="plot of chunk unnamed-chunk-13" style="display: block; margin: auto;"></p>
-<p>条形图 <code>x</code> 轴显示的是 <code>cut</code> ,这是
-<code>diamonds</code> 数据集中的一个变量. <code>y</code> 轴显示的是
-<code>count</code> ,但 <code>count</code> 不是 <code>diamonds</code>
-中的变量! <code>count</code>
-来自哪里呢?很多图形绘制的是数据集的原始数据,比如散点图.另外一些图形则可以绘制那些计算出的新数据,比如条形图.</p>
-<p>绘图时用来计算新数据的算法称为stat(statistical
-transformation),即统计变换.你可能想要覆盖默认的统计变换.在以下代码中,我们将<code>geom_bar()</code>函数的统计变换从计数(默认值)修改为标识.这样我们就可以将条形的高度映射为<code>y</code>轴变量的初始值.遗憾的是,当随意说起条形图时,人们指的可能就是这种条形图,其中条形高度已经存在于数据中,而不是像前一个图一样,条形高度由对行进行计数来生成:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">demo <span class="operator">&lt;-</span> tribble<span class="punctuation">(</span></span><br><span class="line">  <span class="operator">~</span>a<span class="punctuation">,</span>      <span class="operator">~</span>b<span class="punctuation">,</span></span><br><span class="line">  <span class="string">"bar_1"</span><span class="punctuation">,</span> <span class="number">20</span><span class="punctuation">,</span></span><br><span class="line">  <span class="string">"bar_2"</span><span class="punctuation">,</span> <span class="number">30</span><span class="punctuation">,</span></span><br><span class="line">  <span class="string">"bar_3"</span><span class="punctuation">,</span> <span class="number">40</span></span><br><span class="line"><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> demo<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_bar<span class="punctuation">(</span></span><br><span class="line">    mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> a<span class="punctuation">,</span> y <span class="operator">=</span> b<span class="punctuation">)</span><span class="punctuation">,</span> stat <span class="operator">=</span> <span class="string">"identity"</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p><img data-src="/figure_rdata_science/unnamed-chunk-14-1.png" title="plot of chunk unnamed-chunk-14" alt="plot of chunk unnamed-chunk-14" style="display: block; margin: auto;"></p>
-<p>也可以改变统计变换的默认映射:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> diamonds<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_bar<span class="punctuation">(</span></span><br><span class="line">    mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> cut<span class="punctuation">,</span> y <span class="operator">=</span> ..prop..<span class="punctuation">,</span> group <span class="operator">=</span> <span class="number">1</span><span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p><img data-src="/figure_rdata_science/unnamed-chunk-15-1.png" title="plot of chunk unnamed-chunk-15" alt="plot of chunk unnamed-chunk-15" style="display: block; margin: auto;"></p>
-<p>你可能想要在代码中强调统计变换.例如,你可以使用<code>stat_summary()</code>函数将人们的注意力吸引到你计算出的那些摘要统计量上.<code>stat_summary()</code>函数为<code>x</code>的每个唯一值计算<code>y</code>值的摘要统计:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> diamonds<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  stat_summary<span class="punctuation">(</span></span><br><span class="line">    mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> cut<span class="punctuation">,</span> y <span class="operator">=</span> depth<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">        fun.ymin <span class="operator">=</span> <span class="built_in">min</span><span class="punctuation">,</span></span><br><span class="line">    fun.ymax <span class="operator">=</span> <span class="built_in">max</span><span class="punctuation">,</span></span><br><span class="line">    fun.y <span class="operator">=</span> median</span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p><img data-src="/figure_rdata_science/unnamed-chunk-16-1.png" title="plot of chunk unnamed-chunk-16" alt="plot of chunk unnamed-chunk-16" style="display: block; margin: auto;"></p>
-<p><code>ggplot2</code>提供了20多个统计变换以供你使用.每个统计变换都是一个函数,因此你可以按照通用方式获得帮助,例如<code>?stat_bin</code></p>
-]]></content>
-      <categories>
-        <category>绘图</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
       </tags>
   </entry>
   <entry>
