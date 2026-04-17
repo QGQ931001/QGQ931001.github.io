@@ -349,6 +349,152 @@ Bootstrap是否是更好的选择?它与本文的TSCB有何关系?</p></li>
       </tags>
   </entry>
   <entry>
+    <title>走出非洲假说、人类遗传多样性与比较经济发展 _ Ashraf &amp; Galor (2013) 笔记</title>
+    <url>/posts/ashraf2013/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>本文是 Ashraf &amp; Galor 2013
+年的论文笔记,探讨了一个很有意思的问题:为什么全球各地的经济发展水平差异这么大?作者们从人类迁徙的历史出发,提出了一个相当有冲击力的观点_遗传多样性可能才是那个"深层根源".</p>
+<span id="more"></span>
+<h2 id="领域基础知识">领域基础知识</h2>
+<p>理解这篇论文需要先搞清楚几个核心概念:</p>
+<p><strong>比较经济发展 (Comparative Economic
+Development)</strong>:经济学的一个领域,研究为什么不同国家在经济繁荣程度上差距这么大.传统上经济学家会关注地理、制度、文化、人力资本这些因素.</p>
+<p><strong>"走出非洲"假说 (Out of Africa
+Hypothesis)</strong>:关于现代人类起源的主流理论.大约15万年前现代人类在东非演化形成,7-9万年前开始分批迁徙,逐步扩散到全球.每次迁徙都只有一部分人离开,带走的遗传多样性只是一小部分.</p>
+<p><strong>遗传多样性 (Genetic
+Diversity)</strong>:一个群体内部基因变异的程度.多样性高意味着人群基因类型更丰富;低则意味着相对单一.本文用"期望杂合度"来衡量,可以理解为随机选两个人,他们在基因上不同的概率.</p>
+<p><strong>序列建立者效应 (Serial-Founder
+Effect)</strong>:在人类迁徙过程中,每批离开的人只携带祖先群体遗传多样性的一部分.这个过程反复发生,导致离非洲越远,遗传多样性越低.就像从一副牌里每次只抽几张出去建立新的牌堆,离原牌堆越远,牌种越少.</p>
+<h2 id="研究背景">研究背景</h2>
+<p>解释全球经济发展差异,传统研究主要聚焦这几类因素:</p>
+<ol type="1">
+<li><p><strong>地理因素</strong>:戴蒙德在&lt;枪炮、病菌与钢铁&gt;里强调的_农作物的地理分布、大陆轴线方向(东西向有利于技术传播)等,对新石器革命时机和农业发展速度有深远影响.</p></li>
+<li><p><strong>制度因素</strong>:产权保护、法治、政府效率等,被认为是现代经济增长的关键驱动力.</p></li>
+<li><p><strong>文化因素</strong>:宗教信仰、社会信任水平等对经济活动的影响.</p></li>
+<li><p><strong>人力资本</strong>:教育和技能的积累.</p></li>
+<li><p><strong>民族-语言碎片化</strong>:社会内部民族/语言群体多样性通常被认为会增加冲突、阻碍发展.</p></li>
+</ol>
+<p>但这些大多是"近端"因素,论文想找的是更"深层"的源头_人类自身的遗传构成.</p>
+<h2 id="作者的问题意识">作者的问题意识</h2>
+<p>作者注意到,虽然地理、制度、文化等因素在不同地区差异显著,但这些本身也可能是更深层历史过程的产物.于是他们想回答:</p>
+<ul>
+<li>遗传多样性是否在农业社会出现之前,就对经济发展产生了持久影响?</li>
+<li>这种影响是单纯正面的,还是复杂的(既有好处也有坏处)?</li>
+<li>遗传多样性与经济发展的关系,能否通过"走出非洲"的迁徙路径来解释?</li>
+<li>这种影响是否独立于地理、制度和文化等传统因素?</li>
+</ul>
+<p>作者特别区分了<strong>遗传多样性</strong>(群体内部基因差异)和<strong>民族多样性</strong>(通常通过语言文化差异衡量).他们认为遗传多样性既有益处也有成本,关系可能是"驼峰状"的_适度的多样性最好,过高或过低都不利.</p>
+<h2 id="研究意义">研究意义</h2>
+<ol type="1">
+<li><p><strong>挑战传统理论</strong>:把影响因素追溯到数万年前的人类遗传多样性,为理解全球发展不平等提供了全新视角.</p></li>
+<li><p><strong>揭示双重效应</strong>:提出并实证了"驼峰状"影响_适度多样性有益,过高或过低都阻碍发展.这颠覆了以往对多样性多为负面影响的认知.</p></li>
+<li><p><strong>解决内生性</strong>:用"走出非洲"迁徙距离作为遗传多样性的外生工具变量,有效解决了内生性问题.</p></li>
+<li><p><strong>解释区域差异</strong>:亚洲和欧洲适中的遗传多样性有利于发展;非洲过高、美洲原住民过低的多样性则构成阻碍.</p></li>
+<li><p><strong>开启新方向</strong>:为经济学、人类学、遗传学的交叉研究开辟了新路径.</p></li>
+</ol>
+<h2 id="论文结构">论文结构</h2>
+<p>论文结构清晰,逻辑严谨:</p>
+<ol type="1">
+<li><p><strong>引言</strong>:提出核心论点_数万年前的遗传多样性差异对经济发展有长期"驼峰状"影响,且独立于地理、制度和文化因素.</p></li>
+<li><p><strong>相关文献</strong>:回顾传统发展因素,特别区分了本文与关注"群体间遗传距离"的文献的不同.</p></li>
+<li><p><strong>理论模型</strong>:建立模型形式化遗传多样性对生产力的双重影响_既扩张生产可能性边界(收益),又降低生产效率(成本).</p></li>
+<li><p><strong>历史分析</strong>:</p>
+<ul>
+<li>因变量:1500年人口密度(马尔萨斯时代技术进步主要转化为人口增长)</li>
+<li>自变量:观察到的遗传多样性(53民族)和预测的遗传多样性(145国家,用迁徙距离预测)</li>
+<li>控制变量:新石器革命时机、土地生产力、大陆固定效应等</li>
+<li>确认了显著的"驼峰状"关系</li>
+</ul></li>
+<li><p><strong>当代分析</strong>:</p>
+<ul>
+<li>因变量:2000年人均收入</li>
+<li>构建了"祖先调整后的当代国家人口多样性指数"</li>
+<li>控制了大量制度、文化、地理因素后,"驼峰状"效应依然显著</li>
+<li>机制验证:遗传多样性与信任负相关(成本),与科学知识创造正相关(收益)</li>
+</ul></li>
+<li><p><strong>结论</strong>:重申核心发现和遗传多样性的双重效应.</p></li>
+</ol>
+<h2 id="背景为什么关注遗传多样性">背景:为什么关注遗传多样性?</h2>
+<p>论文起点是全球经济发展巨大差异的反思.传统解释虽然有力,但作者想追溯更根本的源头_人类自身的生物学特性,具体就是遗传多样性.</p>
+<p>面临的主要挑战:</p>
+<ol type="1">
+<li><p><strong>数据稀缺</strong>:可靠遗传多样性数据只覆盖53个民族群体,跨国研究远远不够.</p></li>
+<li><p><strong>内生性问题</strong>:经济发展可能吸引移民从而增加多样性,因果关系难以厘清.</p></li>
+<li><p><strong>区分两个概念</strong>:遗传多样性(基因层面)和民族多样性(文化语言层面)是不同的.</p></li>
+<li><p><strong>识别机制</strong>:需要解释为什么遗传多样性会影响生产力.</p></li>
+</ol>
+<h2 id="研究方法">研究方法</h2>
+<p><strong>核心思想:用"走出非洲"的迁徙距离来预测遗传多样性.</strong></p>
+<h3 id="理论基石">理论基石</h3>
+<ul>
+<li>现代人类起源于东非,逐步向全球扩散</li>
+<li>序列建立者效应:离东非越远,遗传多样性越低</li>
+<li>Ramachandran等(2005)发现东非迁徙距离可解释53个民族近86%的遗传多样性变异</li>
+<li>迁徙距离是史前事件,与现代经济发展无直接因果关系,可作为外生工具变量</li>
+</ul>
+<h3 id="遗传多样性测量">遗传多样性测量</h3>
+<p><strong>期望杂合度</strong>:随机选两个个体在基因位点不同的概率.</p>
+<p><strong>历史样本</strong>:21个国家,直接用HGDP-CEPH数据.</p>
+<p><strong>扩展样本</strong>:计算从亚的斯亚贝巴到各国首都的陆路迁徙距离(考虑五个强制中继点),预测145个国家的遗传多样性.</p>
+<h3 id="当代指数构建">当代指数构建</h3>
+<p>考虑殖民后人口流动,构建了综合指数: - 各祖先群体内部的遗传多样性 -
+不同祖先群体之间的遗传距离</p>
+<h3 id="产出变量">产出变量</h3>
+<ul>
+<li><strong>历史时期</strong>:人口密度(马尔萨斯时代技术进步主要导致人口增长)</li>
+<li><strong>当代</strong>:人均GDP</li>
+<li><strong>机制验证</strong>:人际信任水平、科学知识创造强度</li>
+</ul>
+<h3 id="控制变量">控制变量</h3>
+<p>历史分析:新石器革命时机、土地生产力、大陆固定效应</p>
+<p>当代分析:加上制度(社会基础设施、民主程度、法律起源)、文化(宗教份额、欧洲裔人口比例)、地理(疟疾风险、热带区域)等因素.</p>
+<h2 id="核心发现">核心发现</h2>
+<p><strong>遗传多样性对经济发展有显著的"驼峰状"影响</strong>,无论在史前还是当代都成立.存在一个最优遗传多样性水平.</p>
+<h3 id="历史分析结果1500年人口密度">历史分析结果(1500年人口密度)</h3>
+<ul>
+<li>最优遗传多样性约为0.683(与日本接近)</li>
+<li>低于最优:每增加1%多样性,人口密度增加约36%</li>
+<li>高于最优:每减少1%多样性,人口密度增加约29%</li>
+<li>东非多样性最高,美洲原住民最低,亚洲和欧洲处于中间(接近最优)</li>
+</ul>
+<h3 id="当代分析结果2000年人均收入">当代分析结果(2000年人均收入)</h3>
+<ul>
+<li>最优遗传多样性约为0.721(与美国接近),略高于历史时期</li>
+<li>低于最优:每增加1%多样性,人均收入增加约39%</li>
+<li>高于最优:每减少1%多样性,人均收入增加约21%</li>
+</ul>
+<h3 id="机制验证">机制验证</h3>
+<ul>
+<li><strong>成本端</strong>:遗传多样性与人际信任显著负相关</li>
+<li><strong>收益端</strong>:遗传多样性与科学知识创造强度显著正相关</li>
+</ul>
+<p>这与理论模型预测完全一致.</p>
+<h3 id="关键概念图示">关键概念图示</h3>
+<p>想象一条先升后降的曲线: - 横轴是遗传多样性水平 - 纵轴是生产力</p>
+<p>低多样性时,增加多样性带来的创新和适应性好处大于不合作的成本,生产力上升;高多样性后,不合作成本占主导,生产力下降.</p>
+<h2 id="个人读后感">个人读后感</h2>
+<p>读这篇论文最深的感受是:原来四五万年前的人类迁徙,居然还在以"基因指纹"的方式影响着今天的世界经济发展格局.这个视角确实宏大.</p>
+<p>论文的方法论也很有意思.用迁徙距离作为工具变量解决内生性,这个思路很巧妙_毕竟没有人能"穿越"回去操控史前人类的迁徙路线.</p>
+<p>但我比较好奇的是:这个研究结论在政策层面能怎么用?作者在Q&amp;A里也提到了伦理风险问题.遗传多样性不像制度那样容易改变,总不能制定政策让人"调整基因"吧?所以这个研究更像是一个"理解世界的窗口",而非"行动指南".</p>
+<p>另外论文区分遗传多样性和民族多样性这点也很重要.以前总觉得"民族多样性"被研究得差不多了,没想到从基因层面看是完全不同的故事.</p>
+<p>总体来说,这是一篇很有野心、视角独特的论文,把生物学和经济学结合得相当紧密.虽然有些结论还需要更多研究来验证,但"深层根源"这个研究思路确实给人启发.</p>
+<hr>
+<p><strong>参考信息</strong></p>
+<ul>
+<li>论文:Ashraf, Q. H., &amp; Galor, O. (2013). The "Out of Africa"
+Hypothesis, Human Genetic Diversity, and Comparative Economic
+Development. <em>American Economic Review</em>, 103(1), 1-46.</li>
+</ul>
+]]></content>
+      <categories>
+        <category>经济史</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>经济史</tag>
+        <tag>发展经济学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Rural Roads and Local Economic Development — 深度阅读笔记 — Asher &amp; Novosad</title>
     <url>/posts/asher2020/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -514,152 +660,6 @@ RDD),这为识别道路建设的因果效应提供了方法论上的创新.</p><
         <tag>发展经济学</tag>
         <tag>基础设施</tag>
         <tag>AER</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>走出非洲假说、人类遗传多样性与比较经济发展 _ Ashraf &amp; Galor (2013) 笔记</title>
-    <url>/posts/ashraf2013/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>本文是 Ashraf &amp; Galor 2013
-年的论文笔记,探讨了一个很有意思的问题:为什么全球各地的经济发展水平差异这么大?作者们从人类迁徙的历史出发,提出了一个相当有冲击力的观点_遗传多样性可能才是那个"深层根源".</p>
-<span id="more"></span>
-<h2 id="领域基础知识">领域基础知识</h2>
-<p>理解这篇论文需要先搞清楚几个核心概念:</p>
-<p><strong>比较经济发展 (Comparative Economic
-Development)</strong>:经济学的一个领域,研究为什么不同国家在经济繁荣程度上差距这么大.传统上经济学家会关注地理、制度、文化、人力资本这些因素.</p>
-<p><strong>"走出非洲"假说 (Out of Africa
-Hypothesis)</strong>:关于现代人类起源的主流理论.大约15万年前现代人类在东非演化形成,7-9万年前开始分批迁徙,逐步扩散到全球.每次迁徙都只有一部分人离开,带走的遗传多样性只是一小部分.</p>
-<p><strong>遗传多样性 (Genetic
-Diversity)</strong>:一个群体内部基因变异的程度.多样性高意味着人群基因类型更丰富;低则意味着相对单一.本文用"期望杂合度"来衡量,可以理解为随机选两个人,他们在基因上不同的概率.</p>
-<p><strong>序列建立者效应 (Serial-Founder
-Effect)</strong>:在人类迁徙过程中,每批离开的人只携带祖先群体遗传多样性的一部分.这个过程反复发生,导致离非洲越远,遗传多样性越低.就像从一副牌里每次只抽几张出去建立新的牌堆,离原牌堆越远,牌种越少.</p>
-<h2 id="研究背景">研究背景</h2>
-<p>解释全球经济发展差异,传统研究主要聚焦这几类因素:</p>
-<ol type="1">
-<li><p><strong>地理因素</strong>:戴蒙德在&lt;枪炮、病菌与钢铁&gt;里强调的_农作物的地理分布、大陆轴线方向(东西向有利于技术传播)等,对新石器革命时机和农业发展速度有深远影响.</p></li>
-<li><p><strong>制度因素</strong>:产权保护、法治、政府效率等,被认为是现代经济增长的关键驱动力.</p></li>
-<li><p><strong>文化因素</strong>:宗教信仰、社会信任水平等对经济活动的影响.</p></li>
-<li><p><strong>人力资本</strong>:教育和技能的积累.</p></li>
-<li><p><strong>民族-语言碎片化</strong>:社会内部民族/语言群体多样性通常被认为会增加冲突、阻碍发展.</p></li>
-</ol>
-<p>但这些大多是"近端"因素,论文想找的是更"深层"的源头_人类自身的遗传构成.</p>
-<h2 id="作者的问题意识">作者的问题意识</h2>
-<p>作者注意到,虽然地理、制度、文化等因素在不同地区差异显著,但这些本身也可能是更深层历史过程的产物.于是他们想回答:</p>
-<ul>
-<li>遗传多样性是否在农业社会出现之前,就对经济发展产生了持久影响?</li>
-<li>这种影响是单纯正面的,还是复杂的(既有好处也有坏处)?</li>
-<li>遗传多样性与经济发展的关系,能否通过"走出非洲"的迁徙路径来解释?</li>
-<li>这种影响是否独立于地理、制度和文化等传统因素?</li>
-</ul>
-<p>作者特别区分了<strong>遗传多样性</strong>(群体内部基因差异)和<strong>民族多样性</strong>(通常通过语言文化差异衡量).他们认为遗传多样性既有益处也有成本,关系可能是"驼峰状"的_适度的多样性最好,过高或过低都不利.</p>
-<h2 id="研究意义">研究意义</h2>
-<ol type="1">
-<li><p><strong>挑战传统理论</strong>:把影响因素追溯到数万年前的人类遗传多样性,为理解全球发展不平等提供了全新视角.</p></li>
-<li><p><strong>揭示双重效应</strong>:提出并实证了"驼峰状"影响_适度多样性有益,过高或过低都阻碍发展.这颠覆了以往对多样性多为负面影响的认知.</p></li>
-<li><p><strong>解决内生性</strong>:用"走出非洲"迁徙距离作为遗传多样性的外生工具变量,有效解决了内生性问题.</p></li>
-<li><p><strong>解释区域差异</strong>:亚洲和欧洲适中的遗传多样性有利于发展;非洲过高、美洲原住民过低的多样性则构成阻碍.</p></li>
-<li><p><strong>开启新方向</strong>:为经济学、人类学、遗传学的交叉研究开辟了新路径.</p></li>
-</ol>
-<h2 id="论文结构">论文结构</h2>
-<p>论文结构清晰,逻辑严谨:</p>
-<ol type="1">
-<li><p><strong>引言</strong>:提出核心论点_数万年前的遗传多样性差异对经济发展有长期"驼峰状"影响,且独立于地理、制度和文化因素.</p></li>
-<li><p><strong>相关文献</strong>:回顾传统发展因素,特别区分了本文与关注"群体间遗传距离"的文献的不同.</p></li>
-<li><p><strong>理论模型</strong>:建立模型形式化遗传多样性对生产力的双重影响_既扩张生产可能性边界(收益),又降低生产效率(成本).</p></li>
-<li><p><strong>历史分析</strong>:</p>
-<ul>
-<li>因变量:1500年人口密度(马尔萨斯时代技术进步主要转化为人口增长)</li>
-<li>自变量:观察到的遗传多样性(53民族)和预测的遗传多样性(145国家,用迁徙距离预测)</li>
-<li>控制变量:新石器革命时机、土地生产力、大陆固定效应等</li>
-<li>确认了显著的"驼峰状"关系</li>
-</ul></li>
-<li><p><strong>当代分析</strong>:</p>
-<ul>
-<li>因变量:2000年人均收入</li>
-<li>构建了"祖先调整后的当代国家人口多样性指数"</li>
-<li>控制了大量制度、文化、地理因素后,"驼峰状"效应依然显著</li>
-<li>机制验证:遗传多样性与信任负相关(成本),与科学知识创造正相关(收益)</li>
-</ul></li>
-<li><p><strong>结论</strong>:重申核心发现和遗传多样性的双重效应.</p></li>
-</ol>
-<h2 id="背景为什么关注遗传多样性">背景:为什么关注遗传多样性?</h2>
-<p>论文起点是全球经济发展巨大差异的反思.传统解释虽然有力,但作者想追溯更根本的源头_人类自身的生物学特性,具体就是遗传多样性.</p>
-<p>面临的主要挑战:</p>
-<ol type="1">
-<li><p><strong>数据稀缺</strong>:可靠遗传多样性数据只覆盖53个民族群体,跨国研究远远不够.</p></li>
-<li><p><strong>内生性问题</strong>:经济发展可能吸引移民从而增加多样性,因果关系难以厘清.</p></li>
-<li><p><strong>区分两个概念</strong>:遗传多样性(基因层面)和民族多样性(文化语言层面)是不同的.</p></li>
-<li><p><strong>识别机制</strong>:需要解释为什么遗传多样性会影响生产力.</p></li>
-</ol>
-<h2 id="研究方法">研究方法</h2>
-<p><strong>核心思想:用"走出非洲"的迁徙距离来预测遗传多样性.</strong></p>
-<h3 id="理论基石">理论基石</h3>
-<ul>
-<li>现代人类起源于东非,逐步向全球扩散</li>
-<li>序列建立者效应:离东非越远,遗传多样性越低</li>
-<li>Ramachandran等(2005)发现东非迁徙距离可解释53个民族近86%的遗传多样性变异</li>
-<li>迁徙距离是史前事件,与现代经济发展无直接因果关系,可作为外生工具变量</li>
-</ul>
-<h3 id="遗传多样性测量">遗传多样性测量</h3>
-<p><strong>期望杂合度</strong>:随机选两个个体在基因位点不同的概率.</p>
-<p><strong>历史样本</strong>:21个国家,直接用HGDP-CEPH数据.</p>
-<p><strong>扩展样本</strong>:计算从亚的斯亚贝巴到各国首都的陆路迁徙距离(考虑五个强制中继点),预测145个国家的遗传多样性.</p>
-<h3 id="当代指数构建">当代指数构建</h3>
-<p>考虑殖民后人口流动,构建了综合指数: - 各祖先群体内部的遗传多样性 -
-不同祖先群体之间的遗传距离</p>
-<h3 id="产出变量">产出变量</h3>
-<ul>
-<li><strong>历史时期</strong>:人口密度(马尔萨斯时代技术进步主要导致人口增长)</li>
-<li><strong>当代</strong>:人均GDP</li>
-<li><strong>机制验证</strong>:人际信任水平、科学知识创造强度</li>
-</ul>
-<h3 id="控制变量">控制变量</h3>
-<p>历史分析:新石器革命时机、土地生产力、大陆固定效应</p>
-<p>当代分析:加上制度(社会基础设施、民主程度、法律起源)、文化(宗教份额、欧洲裔人口比例)、地理(疟疾风险、热带区域)等因素.</p>
-<h2 id="核心发现">核心发现</h2>
-<p><strong>遗传多样性对经济发展有显著的"驼峰状"影响</strong>,无论在史前还是当代都成立.存在一个最优遗传多样性水平.</p>
-<h3 id="历史分析结果1500年人口密度">历史分析结果(1500年人口密度)</h3>
-<ul>
-<li>最优遗传多样性约为0.683(与日本接近)</li>
-<li>低于最优:每增加1%多样性,人口密度增加约36%</li>
-<li>高于最优:每减少1%多样性,人口密度增加约29%</li>
-<li>东非多样性最高,美洲原住民最低,亚洲和欧洲处于中间(接近最优)</li>
-</ul>
-<h3 id="当代分析结果2000年人均收入">当代分析结果(2000年人均收入)</h3>
-<ul>
-<li>最优遗传多样性约为0.721(与美国接近),略高于历史时期</li>
-<li>低于最优:每增加1%多样性,人均收入增加约39%</li>
-<li>高于最优:每减少1%多样性,人均收入增加约21%</li>
-</ul>
-<h3 id="机制验证">机制验证</h3>
-<ul>
-<li><strong>成本端</strong>:遗传多样性与人际信任显著负相关</li>
-<li><strong>收益端</strong>:遗传多样性与科学知识创造强度显著正相关</li>
-</ul>
-<p>这与理论模型预测完全一致.</p>
-<h3 id="关键概念图示">关键概念图示</h3>
-<p>想象一条先升后降的曲线: - 横轴是遗传多样性水平 - 纵轴是生产力</p>
-<p>低多样性时,增加多样性带来的创新和适应性好处大于不合作的成本,生产力上升;高多样性后,不合作成本占主导,生产力下降.</p>
-<h2 id="个人读后感">个人读后感</h2>
-<p>读这篇论文最深的感受是:原来四五万年前的人类迁徙,居然还在以"基因指纹"的方式影响着今天的世界经济发展格局.这个视角确实宏大.</p>
-<p>论文的方法论也很有意思.用迁徙距离作为工具变量解决内生性,这个思路很巧妙_毕竟没有人能"穿越"回去操控史前人类的迁徙路线.</p>
-<p>但我比较好奇的是:这个研究结论在政策层面能怎么用?作者在Q&amp;A里也提到了伦理风险问题.遗传多样性不像制度那样容易改变,总不能制定政策让人"调整基因"吧?所以这个研究更像是一个"理解世界的窗口",而非"行动指南".</p>
-<p>另外论文区分遗传多样性和民族多样性这点也很重要.以前总觉得"民族多样性"被研究得差不多了,没想到从基因层面看是完全不同的故事.</p>
-<p>总体来说,这是一篇很有野心、视角独特的论文,把生物学和经济学结合得相当紧密.虽然有些结论还需要更多研究来验证,但"深层根源"这个研究思路确实给人启发.</p>
-<hr>
-<p><strong>参考信息</strong></p>
-<ul>
-<li>论文:Ashraf, Q. H., &amp; Galor, O. (2013). The "Out of Africa"
-Hypothesis, Human Genetic Diversity, and Comparative Economic
-Development. <em>American Economic Review</em>, 103(1), 1-46.</li>
-</ul>
-]]></content>
-      <categories>
-        <category>经济史</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>发展经济学</tag>
-        <tag>经济史</tag>
       </tags>
   </entry>
   <entry>
@@ -2143,6 +2143,279 @@ Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</
       </tags>
   </entry>
   <entry>
+    <title>The Effect of Minimum Wages on Low-Wage Jobs — 深度分析 — Cengiz Et Al.</title>
+    <url>/posts/cengiz2019/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: The Effect of Minimum Wages on Low-Wage
+Jobs</li>
+<li><strong>作者</strong>: Doruk Cengiz(University of Massachusetts
+Amherst), Arindrajit Dube(UMass Amherst, NBER), Attila Lindner(UCL, CEP,
+IFS), Ben Zipperer(Economic Policy Institute)</li>
+<li><strong>类型</strong>: 论文笔记 / 劳动经济学</li>
+<li><strong>出版年份</strong>: 2019</li>
+<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics,
+Volume 134, Issue 3, Pages 1405-1454</li>
+<li><strong>难度评估</strong>: 中 - 需要劳动经济学和计量经济学基础
+<span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言背景和意义">1. 引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>最低工资政策(Minimum Wage
+Policy)</strong>:政府规定的劳动力小时工资下限,是劳动经济学中最具争议的政策之一.支持者认为它能提高低收入工人的生活水平,反对者担心它会导致就业下降("unemployment").</p>
+<p><strong>"新最低工资研究"的起源</strong>:Card and Krueger
+(1995)&lt;神话与计量经济学:对最低工资的新研究&gt;对传统观点提出挑战,使用准实验方法发现最低工资提高并未导致就业下降.</p>
+<p><strong>bunching
+estimator(堆集估计量)</strong>:一种利用政策变化导致的结果分布聚集现象来识别因果效应的方法.</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>政策热潮</strong>:加州、伊利诺伊州、麻省、新泽西州、纽约州已通过将最低工资提高至$15/小时的立法;数十个城市也实施了城市级最低工资政策.</p></li>
+<li><p><strong>研究缺漏</strong>:尽管新最低工资研究已逾30年,但关于政策对总体就业影响的研究仍然很少.2014年国会预算办公室(CBO)报告承认相关研究匮乏,被迫使用青少年的弹性来推断对低工资工人的总体影响.</p></li>
+<li><p><strong>方法论挑战</strong>:传统方法使用双向固定效应回归,但存在一些问题,如对工资分布上尾部的影响可能干扰对底部效应的估计.</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>:最低工资对低工资工作的总体效应是什么?</p>
+<p><strong>具体子问题</strong>: - 最低工资对就业的影响是正还是负? -
+影响有多大? - 最低工资带来的工资上涨是否被就业损失所抵消? -
+效应的异质性如何?</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><strong>方法创新</strong>:提出"事件堆集"(EB-bunching)方法,将总体就业效应分解到各工资区间</li>
+<li><strong>对既有文献的贡献</strong>:澄清了最低工资文献中关于1980年代和1990年代早期样本选择的争议</li>
+<li><strong>政策意义</strong>:为当前$15最低工资运动提供实证依据</li>
+</ol>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构(论文结构)</h2>
+<table>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr>
+<th>章节</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I. Introduction</td>
+<td>研究背景、问题意识、文献贡献</td>
+</tr>
+<tr>
+<td>II. Methodology and Data</td>
+<td>概念框架、实证策略、数据</td>
+</tr>
+<tr>
+<td>III. Main Empirical Findings</td>
+<td>总体就业效应、工资溢出、异质性分析</td>
+</tr>
+<tr>
+<td>IV. Robustness and Threats to Identification</td>
+<td>对双向固定效应方法问题的解释</td>
+</tr>
+<tr>
+<td>V. Conclusion</td>
+<td>结论</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文(逻辑梳理)</h2>
+<h3 id="背景最低工资的理论预测">背景:最低工资的理论预测</h3>
+<p><strong>竞争性劳动力市场模型预测</strong>: -
+最低工资提高会导致低工资就业下降 - 下降幅度取决于劳动力需求弹性</p>
+<p><strong>monopsony模型预测</strong>: - 最低工资提高可能增加就业 -
+因为雇主的市場力量被削弱</p>
+<p><strong>实际预测的复杂性</strong>: -
+工资溢出效应(spillovers):最低工资可能推动高于最低工资的工人工资上涨 -
+劳动力替代:低技能工人可能被高技能工人替代 -
+就业损失可能分布在不同工资区间</p>
+<h3 id="挑战">挑战</h3>
+<ol type="1">
+<li><p><strong>识别问题</strong>:如何分离最低工资的因果效应?</p></li>
+<li><p><strong>聚类分配问题</strong>:传统双向固定效应方法可能因早期时期的混杂因素而产生偏误</p></li>
+<li><p><strong>效应的空间异质性</strong>:不同行业的最低工资效应可能不同</p></li>
+<li><p><strong>数据局限性</strong>:CPS调查数据可能存在测量误差</p></li>
+</ol>
+<h3 id="方法数据集要突出">方法(数据集要突出)</h3>
+<p><strong>数据来源</strong>: -
+1979-2016年CPS(当前人口调查)NBER合并出口轮次小组数据 - 137,000+观测值 -
+138个州级最低工资事件(1979-2016年间) -
+<strong>事件定义</strong>:州最低工资增加至少$0.25,且至少2%工人直接影响</p>
+<p><strong>核心概念</strong>: - <strong>缺失工作(Missing
+Jobs)</strong>:最低工资提高后,低于新最低工资的工作数量减少 -
+<strong>超额工作(Excess
+Jobs)</strong>:因最低工资提高而出现在最低工资水平或略高处的工作增加</p>
+<p><strong>实证策略_事件研究设计</strong>: <span class="math display">\[{E_{sjt} \over N_{st}} = \sum_{\tau=-3}^{4}
+\sum_{k=-4}^{17} \alpha_{\tau k} I_{\tau k}^{sjt} + \mu_{sj} + \rho_{jt}
++ \Omega_{sjt} + u_{sjt}}\]</span></p>
+<p>其中: - <span class="math inline">\(E_{sjt}\)</span>:j工资区间在s州的就业 - <span class="math inline">\(N_{st}\)</span>:s州当时的劳动力 - <span class="math inline">\(I_{\tau k}^{sjt}\)</span>:处理指示变量 - <span class="math inline">\(\mu_{sj}\)</span>:州×工资区间固定效应 - <span class="math inline">\(\rho_{jt}\)</span>:时间×工资区间固定效应 -
+标准误按州级聚类</p>
+<p><strong>关键创新</strong>: - 将就业变化按$0.25工资区间分解 -
+使用事件窗口前后对比 - 提供对上尾效应的检验</p>
+<h3 id="结果results">结果(Results)</h3>
+<p><strong>核心发现1:总体就业效应接近零</strong></p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>估计值</th>
+<th>标准误</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>受影响工人就业变化</td>
+<td>+2.8%</td>
+<td>(2.9%)</td>
+</tr>
+<tr>
+<td>就业弹性(相对于自身工资)</td>
+<td>0.41</td>
+<td>(0.43)</td>
+</tr>
+</tbody>
+</table>
+<p>→ 在95%置信水平下,排除低于-0.45的弹性</p>
+<p><strong>核心发现2:工资溢出效应显著</strong></p>
+<ul>
+<li>溢出效应向上延伸至最低工资以上约$3</li>
+<li>总体工资增长中约40%来自溢出效应</li>
+<li><strong>不对称性</strong>:留任工人获得显著工资溢出,但新进入者没有</li>
+</ul>
+<p><strong>核心发现3:行业异质性</strong></p>
+<table>
+<thead>
+<tr>
+<th>行业</th>
+<th>就业弹性</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>可贸易部门(制造业)</td>
+<td>-1.4</td>
+<td>显著负效应</td>
+</tr>
+<tr>
+<td>不可贸易部门(餐饮、零售)</td>
+<td>≈0</td>
+<td>几乎无效应</td>
+</tr>
+</tbody>
+</table>
+<p>→ 行业组成是决定最低工资就业效应的关键因素</p>
+<p><strong>核心发现4:人口群体异质性</strong></p>
+<ul>
+<li>按教育和年龄分组,未发现低技能工人被高技能工人替代的证据</li>
+<li>不同人口群体的就业效应大多接近零且不显著</li>
+<li>表明最低工资政策的好处理广泛共享</li>
+</ul>
+<p><strong>核心发现5:对Meer and West (2016)发现的解释</strong></p>
+<ul>
+<li>该研究使用双向固定效应发现大的负就业估计</li>
+<li>分解分析显示这一负效应由工资分布上尾的不大幅度下降驱动</li>
+<li>问题来源:1980年代和1990年代早期样本中包含的时期混杂因素</li>
+<li>1992年后,各种标准规范几乎没有就业减少的证据</li>
+</ul>
+<hr>
+<h2 id="结论conclusion">4. 结论(Conclusion)</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>最低工资对低工资工作数量的总体影响基本为零</strong>:五年观察期内,低工资工作数量基本保持不变</p></li>
+<li><p><strong>最低工资的直接工资效应被适度工资溢出放大</strong>:溢出效应约占总体工资增长的40%</p></li>
+<li><p><strong>就业效应不能用劳动力替代解释</strong>:不同教育和年龄群体的替代效应证据不成立</p></li>
+<li><p><strong>在更高最低工资水平下也未发现就业减少证据</strong>:但确实发现可贸易部门(制造业)减少的迹象</p></li>
+<li><p><strong>方法论贡献</strong>:EB-bunching方法提供了透明且稳健的估计最低工资就业效应的方法</p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><strong>澄清方法论争议</strong>:解释了为什么双向固定效应和事件研究方法产生不同结果</li>
+<li><strong>提供新的实证证据</strong>:使用更全面的数据和更细粒度的分解</li>
+<li><strong>扩展工资溢出分析</strong>:提供了关于溢出机制(相对工资关系 vs
+外部选择价值)的证据</li>
+<li><strong>政策意义</strong>:为$15最低工资运动提供实证支持</li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向(Future work)</h2>
+<h3 id="论文提及的拓展方向">论文提及的拓展方向</h3>
+<ol type="1">
+<li><p><strong>更高最低工资水平的研究</strong>:当Kaitz指数超过59%时会发生什么?需要更高最低工资的州的
+variation</p></li>
+<li><p><strong>长期效应</strong>:本研究关注5年窗口,更长期效应仍需研究</p></li>
+<li><p><strong>其他国家的证据</strong>:美国结果的国际可比性</p></li>
+</ol>
+<h3 id="思考的下一步研究">思考的下一步研究</h3>
+<ol type="1">
+<li><p><strong>动态一般均衡效应</strong>:行业层面的一般均衡调整如何影响就业?</p></li>
+<li><p><strong>非正规就业</strong>:最低工资对非正规经济(零工经济)的影响</p></li>
+<li><p><strong>非工资效应</strong>:最低工资对工作条件、培训机会等非工资方面的影响</p></li>
+<li><p><strong>家庭效应</strong>:最低工资对家庭收入分配和儿童贫困的影响</p></li>
+<li><p><strong>政治经济学</strong>:最低工资设定的决定因素及其政治经济学含义</p></li>
+</ol>
+<hr>
+<h2 id="学术思考">6. 学术思考</h2>
+<h3 id="核心学术问题">核心学术问题</h3>
+<ol type="1">
+<li><strong>竞争性 vs monopsony劳动力市场的边界</strong>
+<ul>
+<li>本研究发现总体就业效应接近零</li>
+<li>这是否意味着低工资劳动力市场更接近monopsony?</li>
+<li>还是正负效应相互抵消?</li>
+</ul></li>
+<li><strong>工资溢出的机制</strong>
+<ul>
+<li>研究发现溢出效应在最低工资以上约$3处消失</li>
+<li>且对留任工人和新进入者影响不对称</li>
+<li>这更支持"相对工资关系假设"而非"外部选择价值假设"</li>
+<li>但这是否意味着企业内部存在显著的工资刚性?</li>
+</ul></li>
+<li><strong>可贸易 vs 不可贸易部门的差异</strong>
+<ul>
+<li>制造业显著负效应 vs 零售餐饮零效应</li>
+<li>这是否意味着全球化压力降低了美国低技能工人的谈价能力?</li>
+<li>还是反映了不同的劳动力市场结构?</li>
+</ul></li>
+<li><strong>EB-bunching方法的普适性</strong>
+<ul>
+<li>将总体效应分解到各工资区间</li>
+<li>提供了"透明"的估计方式</li>
+<li>是否可以推广到其他政策评估?</li>
+</ul></li>
+<li><strong>对CBO政策分析的启示</strong>
+<ul>
+<li>CBO使用青少年弹性来推断总体影响</li>
+<li>本研究表明青少年可能是受最低工资影响最深的群体</li>
+<li>这是否意味着CBO的方法实际上低估了不确定性?</li>
+</ul></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p><strong>识别策略的有效性</strong>:如何检验平行趋势假设?事件前趋势检验的结果如何?</p></li>
+<li><p><strong>测量误差的影响</strong>:CPS数据中的测量误差如何影响估计?特别是对工资分布尾部的测量?</p></li>
+<li><p><strong>Kaitz指数的具体含义</strong>:Kaitz指数达到59%时会发生什么理论预测?</p></li>
+<li><p><strong>对理论模型的启示</strong>:这些发现如何区分竞争性模型和monopsony模型?</p></li>
+<li><p><strong>政策外部有效性</strong>:基于1979-2016年数据的发现在2020年代是否仍然适用?劳动力市场结构是否发生了根本性变化?</p></li>
+<li><p><strong>对工人流动的动态效应</strong>:最低工资是否影响了低工资工人的职业发展轨迹?</p></li>
+<li><p><strong>雇主反应的非工资渠道</strong>:雇主除了调整就业和工资外,是否在工时、工作条件、培训等方面做出了调整?</p></li>
+<li><p><strong>与Dube et al. (2010)
+NJ快餐业研究的关系</strong>:为什么NJ快餐业研究发现了正效应,而本研究对所有行业的汇总发现零效应?</p></li>
+<li><p><strong>对州际差异的控制</strong>:如何排除州级经济基本面对结果的混杂影响?各州经济多样性的作用是什么?</p></li>
+<li><p><strong>最低工资的收入分配效应</strong>:最低工资如何与税法、其他转移支付计划相互作用以影响收入不平等?</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>劳动经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Poverty and Economic Decision-Making — 深度阅读笔记 — Carvalho, Meier &amp; Wang</title>
     <url>/posts/carvalho2016/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -2521,279 +2794,6 @@ Mani et al. (2013)
         <tag>贫困研究</tag>
         <tag>行为经济学</tag>
         <tag>认知科学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>The Effect of Minimum Wages on Low-Wage Jobs — 深度分析 — Cengiz Et Al.</title>
-    <url>/posts/cengiz2019/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: The Effect of Minimum Wages on Low-Wage
-Jobs</li>
-<li><strong>作者</strong>: Doruk Cengiz(University of Massachusetts
-Amherst), Arindrajit Dube(UMass Amherst, NBER), Attila Lindner(UCL, CEP,
-IFS), Ben Zipperer(Economic Policy Institute)</li>
-<li><strong>类型</strong>: 论文笔记 / 劳动经济学</li>
-<li><strong>出版年份</strong>: 2019</li>
-<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics,
-Volume 134, Issue 3, Pages 1405-1454</li>
-<li><strong>难度评估</strong>: 中 - 需要劳动经济学和计量经济学基础
-<span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言背景和意义">1. 引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>最低工资政策(Minimum Wage
-Policy)</strong>:政府规定的劳动力小时工资下限,是劳动经济学中最具争议的政策之一.支持者认为它能提高低收入工人的生活水平,反对者担心它会导致就业下降("unemployment").</p>
-<p><strong>"新最低工资研究"的起源</strong>:Card and Krueger
-(1995)&lt;神话与计量经济学:对最低工资的新研究&gt;对传统观点提出挑战,使用准实验方法发现最低工资提高并未导致就业下降.</p>
-<p><strong>bunching
-estimator(堆集估计量)</strong>:一种利用政策变化导致的结果分布聚集现象来识别因果效应的方法.</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>政策热潮</strong>:加州、伊利诺伊州、麻省、新泽西州、纽约州已通过将最低工资提高至$15/小时的立法;数十个城市也实施了城市级最低工资政策.</p></li>
-<li><p><strong>研究缺漏</strong>:尽管新最低工资研究已逾30年,但关于政策对总体就业影响的研究仍然很少.2014年国会预算办公室(CBO)报告承认相关研究匮乏,被迫使用青少年的弹性来推断对低工资工人的总体影响.</p></li>
-<li><p><strong>方法论挑战</strong>:传统方法使用双向固定效应回归,但存在一些问题,如对工资分布上尾部的影响可能干扰对底部效应的估计.</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:最低工资对低工资工作的总体效应是什么?</p>
-<p><strong>具体子问题</strong>: - 最低工资对就业的影响是正还是负? -
-影响有多大? - 最低工资带来的工资上涨是否被就业损失所抵消? -
-效应的异质性如何?</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><strong>方法创新</strong>:提出"事件堆集"(EB-bunching)方法,将总体就业效应分解到各工资区间</li>
-<li><strong>对既有文献的贡献</strong>:澄清了最低工资文献中关于1980年代和1990年代早期样本选择的争议</li>
-<li><strong>政策意义</strong>:为当前$15最低工资运动提供实证依据</li>
-</ol>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构(论文结构)</h2>
-<table>
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr>
-<th>章节</th>
-<th>内容</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I. Introduction</td>
-<td>研究背景、问题意识、文献贡献</td>
-</tr>
-<tr>
-<td>II. Methodology and Data</td>
-<td>概念框架、实证策略、数据</td>
-</tr>
-<tr>
-<td>III. Main Empirical Findings</td>
-<td>总体就业效应、工资溢出、异质性分析</td>
-</tr>
-<tr>
-<td>IV. Robustness and Threats to Identification</td>
-<td>对双向固定效应方法问题的解释</td>
-</tr>
-<tr>
-<td>V. Conclusion</td>
-<td>结论</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文(逻辑梳理)</h2>
-<h3 id="背景最低工资的理论预测">背景:最低工资的理论预测</h3>
-<p><strong>竞争性劳动力市场模型预测</strong>: -
-最低工资提高会导致低工资就业下降 - 下降幅度取决于劳动力需求弹性</p>
-<p><strong>monopsony模型预测</strong>: - 最低工资提高可能增加就业 -
-因为雇主的市場力量被削弱</p>
-<p><strong>实际预测的复杂性</strong>: -
-工资溢出效应(spillovers):最低工资可能推动高于最低工资的工人工资上涨 -
-劳动力替代:低技能工人可能被高技能工人替代 -
-就业损失可能分布在不同工资区间</p>
-<h3 id="挑战">挑战</h3>
-<ol type="1">
-<li><p><strong>识别问题</strong>:如何分离最低工资的因果效应?</p></li>
-<li><p><strong>聚类分配问题</strong>:传统双向固定效应方法可能因早期时期的混杂因素而产生偏误</p></li>
-<li><p><strong>效应的空间异质性</strong>:不同行业的最低工资效应可能不同</p></li>
-<li><p><strong>数据局限性</strong>:CPS调查数据可能存在测量误差</p></li>
-</ol>
-<h3 id="方法数据集要突出">方法(数据集要突出)</h3>
-<p><strong>数据来源</strong>: -
-1979-2016年CPS(当前人口调查)NBER合并出口轮次小组数据 - 137,000+观测值 -
-138个州级最低工资事件(1979-2016年间) -
-<strong>事件定义</strong>:州最低工资增加至少$0.25,且至少2%工人直接影响</p>
-<p><strong>核心概念</strong>: - <strong>缺失工作(Missing
-Jobs)</strong>:最低工资提高后,低于新最低工资的工作数量减少 -
-<strong>超额工作(Excess
-Jobs)</strong>:因最低工资提高而出现在最低工资水平或略高处的工作增加</p>
-<p><strong>实证策略_事件研究设计</strong>: <span class="math display">\[{E_{sjt} \over N_{st}} = \sum_{\tau=-3}^{4}
-\sum_{k=-4}^{17} \alpha_{\tau k} I_{\tau k}^{sjt} + \mu_{sj} + \rho_{jt}
-+ \Omega_{sjt} + u_{sjt}}\]</span></p>
-<p>其中: - <span class="math inline">\(E_{sjt}\)</span>:j工资区间在s州的就业 - <span class="math inline">\(N_{st}\)</span>:s州当时的劳动力 - <span class="math inline">\(I_{\tau k}^{sjt}\)</span>:处理指示变量 - <span class="math inline">\(\mu_{sj}\)</span>:州×工资区间固定效应 - <span class="math inline">\(\rho_{jt}\)</span>:时间×工资区间固定效应 -
-标准误按州级聚类</p>
-<p><strong>关键创新</strong>: - 将就业变化按$0.25工资区间分解 -
-使用事件窗口前后对比 - 提供对上尾效应的检验</p>
-<h3 id="结果results">结果(Results)</h3>
-<p><strong>核心发现1:总体就业效应接近零</strong></p>
-<table>
-<thead>
-<tr>
-<th>指标</th>
-<th>估计值</th>
-<th>标准误</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>受影响工人就业变化</td>
-<td>+2.8%</td>
-<td>(2.9%)</td>
-</tr>
-<tr>
-<td>就业弹性(相对于自身工资)</td>
-<td>0.41</td>
-<td>(0.43)</td>
-</tr>
-</tbody>
-</table>
-<p>→ 在95%置信水平下,排除低于-0.45的弹性</p>
-<p><strong>核心发现2:工资溢出效应显著</strong></p>
-<ul>
-<li>溢出效应向上延伸至最低工资以上约$3</li>
-<li>总体工资增长中约40%来自溢出效应</li>
-<li><strong>不对称性</strong>:留任工人获得显著工资溢出,但新进入者没有</li>
-</ul>
-<p><strong>核心发现3:行业异质性</strong></p>
-<table>
-<thead>
-<tr>
-<th>行业</th>
-<th>就业弹性</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>可贸易部门(制造业)</td>
-<td>-1.4</td>
-<td>显著负效应</td>
-</tr>
-<tr>
-<td>不可贸易部门(餐饮、零售)</td>
-<td>≈0</td>
-<td>几乎无效应</td>
-</tr>
-</tbody>
-</table>
-<p>→ 行业组成是决定最低工资就业效应的关键因素</p>
-<p><strong>核心发现4:人口群体异质性</strong></p>
-<ul>
-<li>按教育和年龄分组,未发现低技能工人被高技能工人替代的证据</li>
-<li>不同人口群体的就业效应大多接近零且不显著</li>
-<li>表明最低工资政策的好处理广泛共享</li>
-</ul>
-<p><strong>核心发现5:对Meer and West (2016)发现的解释</strong></p>
-<ul>
-<li>该研究使用双向固定效应发现大的负就业估计</li>
-<li>分解分析显示这一负效应由工资分布上尾的不大幅度下降驱动</li>
-<li>问题来源:1980年代和1990年代早期样本中包含的时期混杂因素</li>
-<li>1992年后,各种标准规范几乎没有就业减少的证据</li>
-</ul>
-<hr>
-<h2 id="结论conclusion">4. 结论(Conclusion)</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>最低工资对低工资工作数量的总体影响基本为零</strong>:五年观察期内,低工资工作数量基本保持不变</p></li>
-<li><p><strong>最低工资的直接工资效应被适度工资溢出放大</strong>:溢出效应约占总体工资增长的40%</p></li>
-<li><p><strong>就业效应不能用劳动力替代解释</strong>:不同教育和年龄群体的替代效应证据不成立</p></li>
-<li><p><strong>在更高最低工资水平下也未发现就业减少证据</strong>:但确实发现可贸易部门(制造业)减少的迹象</p></li>
-<li><p><strong>方法论贡献</strong>:EB-bunching方法提供了透明且稳健的估计最低工资就业效应的方法</p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><strong>澄清方法论争议</strong>:解释了为什么双向固定效应和事件研究方法产生不同结果</li>
-<li><strong>提供新的实证证据</strong>:使用更全面的数据和更细粒度的分解</li>
-<li><strong>扩展工资溢出分析</strong>:提供了关于溢出机制(相对工资关系 vs
-外部选择价值)的证据</li>
-<li><strong>政策意义</strong>:为$15最低工资运动提供实证支持</li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向(Future work)</h2>
-<h3 id="论文提及的拓展方向">论文提及的拓展方向</h3>
-<ol type="1">
-<li><p><strong>更高最低工资水平的研究</strong>:当Kaitz指数超过59%时会发生什么?需要更高最低工资的州的
-variation</p></li>
-<li><p><strong>长期效应</strong>:本研究关注5年窗口,更长期效应仍需研究</p></li>
-<li><p><strong>其他国家的证据</strong>:美国结果的国际可比性</p></li>
-</ol>
-<h3 id="思考的下一步研究">思考的下一步研究</h3>
-<ol type="1">
-<li><p><strong>动态一般均衡效应</strong>:行业层面的一般均衡调整如何影响就业?</p></li>
-<li><p><strong>非正规就业</strong>:最低工资对非正规经济(零工经济)的影响</p></li>
-<li><p><strong>非工资效应</strong>:最低工资对工作条件、培训机会等非工资方面的影响</p></li>
-<li><p><strong>家庭效应</strong>:最低工资对家庭收入分配和儿童贫困的影响</p></li>
-<li><p><strong>政治经济学</strong>:最低工资设定的决定因素及其政治经济学含义</p></li>
-</ol>
-<hr>
-<h2 id="学术思考">6. 学术思考</h2>
-<h3 id="核心学术问题">核心学术问题</h3>
-<ol type="1">
-<li><strong>竞争性 vs monopsony劳动力市场的边界</strong>
-<ul>
-<li>本研究发现总体就业效应接近零</li>
-<li>这是否意味着低工资劳动力市场更接近monopsony?</li>
-<li>还是正负效应相互抵消?</li>
-</ul></li>
-<li><strong>工资溢出的机制</strong>
-<ul>
-<li>研究发现溢出效应在最低工资以上约$3处消失</li>
-<li>且对留任工人和新进入者影响不对称</li>
-<li>这更支持"相对工资关系假设"而非"外部选择价值假设"</li>
-<li>但这是否意味着企业内部存在显著的工资刚性?</li>
-</ul></li>
-<li><strong>可贸易 vs 不可贸易部门的差异</strong>
-<ul>
-<li>制造业显著负效应 vs 零售餐饮零效应</li>
-<li>这是否意味着全球化压力降低了美国低技能工人的谈价能力?</li>
-<li>还是反映了不同的劳动力市场结构?</li>
-</ul></li>
-<li><strong>EB-bunching方法的普适性</strong>
-<ul>
-<li>将总体效应分解到各工资区间</li>
-<li>提供了"透明"的估计方式</li>
-<li>是否可以推广到其他政策评估?</li>
-</ul></li>
-<li><strong>对CBO政策分析的启示</strong>
-<ul>
-<li>CBO使用青少年弹性来推断总体影响</li>
-<li>本研究表明青少年可能是受最低工资影响最深的群体</li>
-<li>这是否意味着CBO的方法实际上低估了不确定性?</li>
-</ul></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p><strong>识别策略的有效性</strong>:如何检验平行趋势假设?事件前趋势检验的结果如何?</p></li>
-<li><p><strong>测量误差的影响</strong>:CPS数据中的测量误差如何影响估计?特别是对工资分布尾部的测量?</p></li>
-<li><p><strong>Kaitz指数的具体含义</strong>:Kaitz指数达到59%时会发生什么理论预测?</p></li>
-<li><p><strong>对理论模型的启示</strong>:这些发现如何区分竞争性模型和monopsony模型?</p></li>
-<li><p><strong>政策外部有效性</strong>:基于1979-2016年数据的发现在2020年代是否仍然适用?劳动力市场结构是否发生了根本性变化?</p></li>
-<li><p><strong>对工人流动的动态效应</strong>:最低工资是否影响了低工资工人的职业发展轨迹?</p></li>
-<li><p><strong>雇主反应的非工资渠道</strong>:雇主除了调整就业和工资外,是否在工时、工作条件、培训等方面做出了调整?</p></li>
-<li><p><strong>与Dube et al. (2010)
-NJ快餐业研究的关系</strong>:为什么NJ快餐业研究发现了正效应,而本研究对所有行业的汇总发现零效应?</p></li>
-<li><p><strong>对州际差异的控制</strong>:如何排除州级经济基本面对结果的混杂影响?各州经济多样性的作用是什么?</p></li>
-<li><p><strong>最低工资的收入分配效应</strong>:最低工资如何与税法、其他转移支付计划相互作用以影响收入不平等?</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>劳动经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -8051,6 +8051,46 @@ study of procurement contracts》深度分析撰写。</em></p>
       </tags>
   </entry>
   <entry>
+    <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
+    <url>/posts/32262/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
+<h2 id="研究问题"><strong>1. 研究问题</strong></h2>
+<p>本文以江苏省12个地级市"河长制"政策转移案例(2006 —
+2016)为研究对象,在识别政策转移案例中"复制"和"再生产"两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对"河长制"转移程度的影响.研究发现"河长制"政策转移中的"政策再生产"的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局.通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产.</p>
+<p>&nbsp;</p>
+<span id="more"></span>
+<h2 id="问题的提出"><strong>2. 问题的提出</strong></h2>
+<p><strong>2.1 政策转移的必要性</strong></p>
+<p>现实状况:政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有"后发优势"的意味、地区间的合作与竞争</p>
+<p>转移情形:政策转移并不意味着全盘复制,可分为"复制"和"再生产"两种形式</p>
+<p>核心问题:什么因素能够促成政策"再生产",政策"再生产"又体现出那些维度特征</p>
+<p><strong>2.2 河长制的背景介绍</strong></p>
+<p>河湖治理是跨界特性最典型的领域之一,涉及上下游、左右岸、不同行政区域和行业,呈现出高度的复杂性.河长制最早发轫于太湖蓝藻危机,2016年之前是一项地方政策,经政策扩散至多地.</p>
+<p>现实调查显示河长制在江苏省内的扩散过程中呈现出"复制"和"再生产"的典型差异.</p>
+<p>&nbsp;</p>
+<h2 id="研究思路和方法"><strong>3. 研究思路和方法</strong></h2>
+<p><strong>3.1 QCA</strong></p>
+<p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles
+Ragin)于<code>1987</code>年提出,适用于案例数量大于10小于60的研究.</p>
+<p>其使用布尔代数和集合论的思想来进行中小数量的跨案例比较,从而处理多个原因和一个结果之间的因果关系.</p>
+<p><strong>3.2 转移程度的刻画</strong></p>
+<p>道洛维茨和马什最早借鉴rose(1993)的连续统来划分政策转移程度:复制、模仿、混合、启发.</p>
+<p>本文简单划分为:"复制"和"再生产"</p>
+<p><strong>3.3 解释变量的选择</strong></p>
+<p>行政压力、资源禀赋、政策需求、外部力量</p>
+<p>&nbsp;</p>
+<h2 id="结论"><strong>4. 结论</strong></h2>
+<p>政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素.</p>
+]]></content>
+      <categories>
+        <category>公共管理</category>
+        <category>政策转移</category>
+      </categories>
+      <tags>
+        <tag>文献阅读</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>&lt;马铃薯与人口&gt;深度阅读笔记 — Nunn &amp; Qian</title>
     <url>/posts/nunn2011/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -8309,46 +8349,6 @@ Vol. 126, pp. 593-650</li>
       <tags>
         <tag>论文笔记</tag>
         <tag>经济史</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
-    <url>/posts/32262/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
-<h2 id="研究问题"><strong>1. 研究问题</strong></h2>
-<p>本文以江苏省12个地级市"河长制"政策转移案例(2006 —
-2016)为研究对象,在识别政策转移案例中"复制"和"再生产"两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对"河长制"转移程度的影响.研究发现"河长制"政策转移中的"政策再生产"的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局.通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产.</p>
-<p>&nbsp;</p>
-<span id="more"></span>
-<h2 id="问题的提出"><strong>2. 问题的提出</strong></h2>
-<p><strong>2.1 政策转移的必要性</strong></p>
-<p>现实状况:政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有"后发优势"的意味、地区间的合作与竞争</p>
-<p>转移情形:政策转移并不意味着全盘复制,可分为"复制"和"再生产"两种形式</p>
-<p>核心问题:什么因素能够促成政策"再生产",政策"再生产"又体现出那些维度特征</p>
-<p><strong>2.2 河长制的背景介绍</strong></p>
-<p>河湖治理是跨界特性最典型的领域之一,涉及上下游、左右岸、不同行政区域和行业,呈现出高度的复杂性.河长制最早发轫于太湖蓝藻危机,2016年之前是一项地方政策,经政策扩散至多地.</p>
-<p>现实调查显示河长制在江苏省内的扩散过程中呈现出"复制"和"再生产"的典型差异.</p>
-<p>&nbsp;</p>
-<h2 id="研究思路和方法"><strong>3. 研究思路和方法</strong></h2>
-<p><strong>3.1 QCA</strong></p>
-<p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles
-Ragin)于<code>1987</code>年提出,适用于案例数量大于10小于60的研究.</p>
-<p>其使用布尔代数和集合论的思想来进行中小数量的跨案例比较,从而处理多个原因和一个结果之间的因果关系.</p>
-<p><strong>3.2 转移程度的刻画</strong></p>
-<p>道洛维茨和马什最早借鉴rose(1993)的连续统来划分政策转移程度:复制、模仿、混合、启发.</p>
-<p>本文简单划分为:"复制"和"再生产"</p>
-<p><strong>3.3 解释变量的选择</strong></p>
-<p>行政压力、资源禀赋、政策需求、外部力量</p>
-<p>&nbsp;</p>
-<h2 id="结论"><strong>4. 结论</strong></h2>
-<p>政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素.</p>
-]]></content>
-      <categories>
-        <category>公共管理</category>
-        <category>政策转移</category>
-      </categories>
-      <tags>
-        <tag>文献阅读</tag>
       </tags>
   </entry>
   <entry>
@@ -9221,6 +9221,30 @@ World!"开始的,对于<strong>shell</strong>而言:</p>
       </tags>
   </entry>
   <entry>
+    <title>2014到2021年:淘宝村分布散点图😲</title>
+    <url>/posts/18898/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示"><strong>效果展示</strong></h2>
+<img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235354537.svg" width="80%" height="80%" align="middle">
+<center>
+2014年的淘宝村分布
+</center>
+<span id="more"></span>
+<p><img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235404847.svg" width="80%" height="80%" align="middle"></p>
+<center>
+2021年的淘宝村分布
+</center>
+<h2 id="从最初3个增长至7023个"><strong>从最初3个增长至7023个</strong></h2>
+<p>从2009年到2021年,中国淘宝村呈现裂变式的扩散增长,从最初3个增长至7023个,无论是数量规模,还是分布广度都经历了飞跃式的发展.从萌芽至发展阶段,"小农户连接大市场"的电商逻辑长期被认为是淘宝村的主要内涵.围绕这一内涵,市场、政策、技术、人才一度不断汇聚,为淘宝村发展创造了十余年的黄金机遇,形成了一场边缘人群连接现代网络、边缘地区接壤现代市场、边缘产品汇聚现代需求的"边缘革命".然而,在经历十余年的飞速发展后,淘宝村开始面临红利期消失、消费升级、同质化竞争、规范治理等适应性挑战,转型变革已是必然选择.在这一过程中,过往遵循传统电商逻辑的淘宝村正经历蜕变.一方面,垂直电商、内容电商等多元化的销售互联网生态正加速形成;另一方面,由差异化、个性化、碎片化需求所驱动的产业数字化升级不断涌现.可以认为,以"消费互联网+产业互联网"为特征的产销全域数字化逻辑正在为淘宝村注入新的内涵,其核心不再是"连接大市场",而是"洞悉大市场、细分小市场、塑造新市场".这种内涵演进对淘宝村发展提出了更高的要求,即能否充分利用数字技术提高经营主体的市场洞察力,能否通过数据信息整合优化生产流程,能否基于数字供应链实现快速的市场反馈.在此意义上,新时代的淘宝村将不再是"逆边缘化"的地理名词,而是一类凭借数字技术突破分散决策、分散生产、分散经营劣势的组织指称.</p>
+]]></content>
+      <categories>
+        <category>绘图</category>
+        <category>map&amp;sf</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>字体和公式的Display</title>
     <url>/posts/15167/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
@@ -9257,30 +9281,6 @@ t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)
       </categories>
       <tags>
         <tag>blog_test</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2014到2021年:淘宝村分布散点图😲</title>
-    <url>/posts/18898/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示"><strong>效果展示</strong></h2>
-<img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235354537.svg" width="80%" height="80%" align="middle">
-<center>
-2014年的淘宝村分布
-</center>
-<span id="more"></span>
-<p><img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235404847.svg" width="80%" height="80%" align="middle"></p>
-<center>
-2021年的淘宝村分布
-</center>
-<h2 id="从最初3个增长至7023个"><strong>从最初3个增长至7023个</strong></h2>
-<p>从2009年到2021年,中国淘宝村呈现裂变式的扩散增长,从最初3个增长至7023个,无论是数量规模,还是分布广度都经历了飞跃式的发展.从萌芽至发展阶段,"小农户连接大市场"的电商逻辑长期被认为是淘宝村的主要内涵.围绕这一内涵,市场、政策、技术、人才一度不断汇聚,为淘宝村发展创造了十余年的黄金机遇,形成了一场边缘人群连接现代网络、边缘地区接壤现代市场、边缘产品汇聚现代需求的"边缘革命".然而,在经历十余年的飞速发展后,淘宝村开始面临红利期消失、消费升级、同质化竞争、规范治理等适应性挑战,转型变革已是必然选择.在这一过程中,过往遵循传统电商逻辑的淘宝村正经历蜕变.一方面,垂直电商、内容电商等多元化的销售互联网生态正加速形成;另一方面,由差异化、个性化、碎片化需求所驱动的产业数字化升级不断涌现.可以认为,以"消费互联网+产业互联网"为特征的产销全域数字化逻辑正在为淘宝村注入新的内涵,其核心不再是"连接大市场",而是"洞悉大市场、细分小市场、塑造新市场".这种内涵演进对淘宝村发展提出了更高的要求,即能否充分利用数字技术提高经营主体的市场洞察力,能否通过数据信息整合优化生产流程,能否基于数字供应链实现快速的市场反馈.在此意义上,新时代的淘宝村将不再是"逆边缘化"的地理名词,而是一类凭借数字技术突破分散决策、分散生产、分散经营劣势的组织指称.</p>
-]]></content>
-      <categories>
-        <category>绘图</category>
-        <category>map&amp;sf</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
       </tags>
   </entry>
   <entry>
