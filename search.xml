@@ -67,174 +67,6 @@ ATT\)</span>一定会比较大,基准模型会存在低估偏误</li>
       </tags>
   </entry>
   <entry>
-    <title>Rural Roads and Local Economic Development — 深度阅读笔记 — Asher &amp; Novosad</title>
-    <url>/posts/asher2020/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Rural Roads and Local Economic
-Development</li>
-<li><strong>作者</strong>: Sam Asher, Paul Novosad</li>
-<li><strong>年份</strong>: 2020</li>
-<li><strong>来源</strong>: American Economic Review, Vol. 110, No. 3,
-pp. 797-823 <span id="more"></span></li>
-</ul>
-<h2 id="引言背景和意义">引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>发展经济学中,基础设施投资一直是促进经济增长和减贫的核心政策工具.道路基础设施作为连接生产与市场的关键纽带,被认为是促进农村经济发展、缩小城乡差距的重要手段.理论上,良好的道路网络可以降低运输成本、增加市场准入、促进农业商品化、创造非农就业机会,并吸引外部投资.</p>
-<p>印度作为全球最大的发展中国家之一,其农村地区的发展问题一直备受关注.在本世纪初,印度政府启动了大规模农村道路建设计划_Pradhan
-Mantri Gram Sadak Yojana
-(PMGSY),旨在为农村地区提供国家铺设的公路网络.这一计划的规模巨大,涉及数十亿美元的投资,惠及近十亿人口.</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p>Asher和Novosad的研究建立在以下背景之上:</p>
-<ol type="1">
-<li><p><strong>政策规模巨大</strong>:印度的PMGSY计划总投资约400亿美元,是迄今为止规模最大的农村道路投资计划之一.如此大规模的政策实验为评估道路基础设施的因果效应提供了难得的研究机会.</p></li>
-<li><p><strong>研究空白</strong>:尽管基础设施对发展的重要性被广泛认可,但关于大规模道路建设对农村经济影响的因果证据仍然有限.现有研究大多面临内生性问题_道路建设往往选择经济条件较好的地区,难以分离纯粹的"道路效应".</p></li>
-<li><p><strong>理论预期与现实差距</strong>:传统观点认为,修路将通过以下渠道促进农村发展:降低运输成本→提高农产品市场准入→增加农业收入→促进非农就业→整体经济增长.然而,实际效果是否如此?偏远地区能否真正从道路建设中受益?这些问题需要在严谨的实证框架下进行检验.</p></li>
-<li><p><strong>识别策略的创新</strong>:作者利用PMGSY计划的项目准入规则(基于人口阈值)实施模糊回归不连续性设计(Fuzzy
-RDD),这为识别道路建设的因果效应提供了方法论上的创新.</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p>本研究试图回答一个核心问题:<strong>大规模农村道路建设是否真的能够促进地方经济发展?</strong></p>
-<p>具体而言,作者关注: -
-道路建设如何影响农村地区的产业结构(农业vs非农业)? -
-道路建设对农民收入、资产和就业的实质影响是什么? -
-道路建设的效果在不同类型村庄和家庭之间是否存在异质性? -
-在缺乏其他经济机会的偏远地区,道路建设是否仍然有效?</p>
-<h3 id="研究意义">研究意义</h3>
-<p>本研究具有重要的政策含义: 1.
-为发展中国家的大规模基础设施投资提供了因果效应评估 2.
-揭示了道路建设可能不如预期那般有效的原因 3.
-为未来基础设施投资政策提供了实证依据</p>
-<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
-<p>本文结构清晰,共分为以下几个部分:</p>
-<p><strong>I. 引言</strong>:介绍研究背景、问题意识和研究贡献</p>
-<p><strong>II. 制度背景(Institutional Background)</strong>
-介绍印度PMGSY农村道路建设计划的详细规则,包括项目准入的人口阈值标准.</p>
-<p><strong>III. 数据(Data)</strong>
-描述研究所使用的三大数据集:人口普查、农业普查和IHDS家庭调查数据.</p>
-<p><strong>IV. 经验框架(Empirical Framework)</strong>
-详细阐述模糊回归不连续性设计的实施方法论.</p>
-<p><strong>V. 主要结果(Main Results)</strong>
-报告道路建设对农业产出、劳动力转移、收入和资产的影响.</p>
-<p><strong>VI. 机制分析(Mechanisms)</strong>
-探讨为什么道路建设未能带来预期的发展效果.</p>
-<p><strong>VII. 结论(Conclusion)</strong></p>
-<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
-<h3 id="一制度背景与识别策略">一、制度背景与识别策略</h3>
-<p>PMGSY计划的项目准入规则基于明确的人口阈值: -
-人口≥500人的村庄将有硬路面道路连接 -
-人口&lt;500人的村庄在计划期内不建设硬路面道路</p>
-<p><strong>这一规则为实施回归不连续性设计(RDD)提供了外生的政策冲击.</strong></p>
-<p>作者使用<strong>模糊RD设计</strong>(Fuzzy RDD),原因在于: -
-并非所有人口≥500人的村庄都确实获得了道路建设 -
-存在一定的"渗透"(crossover),即部分人口&lt;500人的村庄也获得了道路 -
-工具变量方法可以处理这种非随机分配</p>
-<h3 id="二数据与样本特征">二、数据与样本特征</h3>
-<p>作者使用三大数据集:</p>
-<ol type="1">
-<li><strong>印度人口普查数据</strong>:覆盖印度所有村庄,提供基线期的道路状况和人口数据</li>
-<li><strong>农业普查数据</strong>:提供村庄层面的农业投入产出数据</li>
-<li><strong>IHDS家庭调查数据(2011-12)</strong>:提供家庭层面的收入、消费和就业信息</li>
-</ol>
-<p>样本选择: - 主要分析样本聚焦于PMGSY计划覆盖的州 -
-使用2001年人口普查数据确定基线期道路状况 -
-关注2008-2014年间完成的道路建设项目</p>
-<h3 id="三主要结果">三、主要结果</h3>
-<p><strong>核心发现:道路建设的主要效果是促进劳动力从农业向非农业转移,但农业产出、收入和资产均无显著变化.</strong></p>
-<h4 id="劳动力转移">3.1 劳动力转移</h4>
-<p>Table 2(主文表)显示: - 新建道路使农业劳动份额下降约8.5个百分点 -
-这一效果在统计上显著,且主要由无地或少地农民驱动 -
-非农就业增长主要集中在建筑业</p>
-<p><strong>然而,值得注意的是:</strong> -
-农业劳动份额的下降并不意味着农业的衰退 - 也没有带来农业机械化的提升 -
-农业产出和土地使用模式未发生显著变化</p>
-<h4 id="收入和消费">3.2 收入和消费</h4>
-<p>作者发现: - 家庭总收入和消费均无显著变化 -
-农业收入和非农收入均未显著增加 - 道路建设未能带来实质性的经济提升</p>
-<h4 id="资产和土地">3.3 资产和土地</h4>
-<p>道路建设对土地持有模式没有显著影响: - 无地家庭比例未增加 -
-各规模农户的土地持有保持稳定</p>
-<h3 id="四机制解释">四、机制解释</h3>
-<p><strong>为何道路建设未能带来预期的发展效果?</strong></p>
-<p>作者提出了几个可能的解释:</p>
-<h4 id="偏远地区缺乏经济机会">4.1 偏远地区缺乏经济机会</h4>
-<p>最核心的解释是:<strong>即使交通条件改善,偏远农村地区可能仍然缺乏有竞争力的经济机会.</strong></p>
-<p>证据支持: - 靠近市场的村庄(距离城镇较近)在基线期已有较好的道路条件 -
-偏远村庄即使通了路,其与主要经济中心的距离仍然较远 -
-运输成本虽然下降,但可能仍不足以使偏远地区的产品具有竞争力</p>
-<h4 id="劳动力转移渠道">4.2 劳动力转移渠道</h4>
-<p>道路建设确实促进了劳动力转移,但转移的模式值得关注: -
-主要是非农就业增加,而非农业现代化 -
-新增非农就业主要是低技能劳动(建筑工人) -
-这反映的是农业剩余劳动力的"挤出",而非真正的经济转型</p>
-<h4 id="农业持续停滞">4.3 农业持续停滞</h4>
-<p>尽管交通改善: - 农产品市场准入增加 - 但缺乏需求端的足够拉动 -
-偏远地区的农业可能面临土壤、气候等自然条件限制 - 农业技术进步缓慢</p>
-<h3 id="五异质性分析">五、异质性分析</h3>
-<p>作者发现显著的区域异质性:</p>
-<table>
-<thead>
-<tr>
-<th>维度</th>
-<th>发现</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>初始道路条件</td>
-<td>初始无道路的村庄效果更明显</td>
-</tr>
-<tr>
-<td>地理区位</td>
-<td>偏远地区效果较弱</td>
-</tr>
-<tr>
-<td>土地禀赋</td>
-<td>无地农民更容易转移</td>
-</tr>
-</tbody>
-</table>
-<h2 id="结论conclusion">结论(Conclusion)</h2>
-<h3 id="研究核心结论">研究核心结论</h3>
-<ol type="1">
-<li><p><strong>道路建设的首要效果是促进劳动力从农业转移</strong>,但这一转移并非带来农业现代化或收入增长</p></li>
-<li><p><strong>道路建设未能显著提升农业产出、收入或资产</strong>,这一发现在传统发展理论背景下是出乎意料的</p></li>
-<li><p><strong>偏远地区即使获得道路连接,也可能继续缺乏经济机会</strong>,这挑战了"要想富,先修路"的传统智慧</p></li>
-<li><p><strong>政策启示</strong>:单纯的基础设施投资不足以促进农村发展,需要配套的经济机会创造政策</p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><p><strong>方法论贡献</strong>:展示了如何利用政策规则的连续性进行因果推断,提供了大型基础设施项目评估的范例</p></li>
-<li><p><strong>理论贡献</strong>:挑战了简单的"基础设施→市场准入→经济增长"的线性逻辑,揭示了发展过程中可能存在的多重障碍</p></li>
-<li><p><strong>政策贡献</strong>:为发展中国家的基础设施投资政策提供了审慎的实证依据</p></li>
-</ol>
-<h3 id="未来研究方向">未来研究方向</h3>
-<ol type="1">
-<li>结合更长期的跟踪数据,评估道路建设的动态效应</li>
-<li>探索道路建设与其他干预措施(如技能培训、小额信贷)的组合效果</li>
-<li>比较不同类型道路(国道vs地方路)的影响差异</li>
-<li>研究道路建设对女性劳动参与的特殊影响</li>
-</ol>
-<h2 id="学术思考">学术思考</h2>
-<ol type="1">
-<li><p><strong>发展政策的有效性问题</strong>:本文揭示了单纯基础设施投资的局限性.那么,什么样的政策组合才能真正促进偏远农村的发展?人力资本投资、农业技术推广、信贷可得性改善,哪一项更为关键?</p></li>
-<li><p><strong>空间经济学视角</strong>:本文的分析主要在村庄层面,忽视了一般均衡效应_道路建设可能导致周边城市的经济活动扩张,从而吸走农村的人力资源.如何在全经济层面评估道路建设的效应?</p></li>
-<li><p><strong>时间维度的重要性</strong>:4年的观察期可能不足以捕捉道路建设的全部效应.农业的结构调整、企业的进入与退出、家庭的人力资本投资决策都可能需要更长时间才能显现.</p></li>
-<li><p><strong>一般化性问题</strong>:印度PMGSY计划的经验在多大程度上可以推广到其他发展中国家或地区?各国的地理条件、市场发育程度和制度环境存在巨大差异,需要谨慎解读.</p></li>
-<li><p><strong>女性视角的分析缺失</strong>:本文未能充分关注道路建设对女性劳动参与和家庭决策的独特影响,而这在发展研究中是一个重要的维度.</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>发展经济学</tag>
-        <tag>基础设施</tag>
-        <tag>AER</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>When Should You Adjust Standard Errors for Clustering — 深度分析 — Abadie Et Al.</title>
     <url>/posts/abadie2023/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -514,6 +346,174 @@ Bootstrap是否是更好的选择?它与本文的TSCB有何关系?</p></li>
       </categories>
       <tags>
         <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Rural Roads and Local Economic Development — 深度阅读笔记 — Asher &amp; Novosad</title>
+    <url>/posts/asher2020/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Rural Roads and Local Economic
+Development</li>
+<li><strong>作者</strong>: Sam Asher, Paul Novosad</li>
+<li><strong>年份</strong>: 2020</li>
+<li><strong>来源</strong>: American Economic Review, Vol. 110, No. 3,
+pp. 797-823 <span id="more"></span></li>
+</ul>
+<h2 id="引言背景和意义">引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>发展经济学中,基础设施投资一直是促进经济增长和减贫的核心政策工具.道路基础设施作为连接生产与市场的关键纽带,被认为是促进农村经济发展、缩小城乡差距的重要手段.理论上,良好的道路网络可以降低运输成本、增加市场准入、促进农业商品化、创造非农就业机会,并吸引外部投资.</p>
+<p>印度作为全球最大的发展中国家之一,其农村地区的发展问题一直备受关注.在本世纪初,印度政府启动了大规模农村道路建设计划_Pradhan
+Mantri Gram Sadak Yojana
+(PMGSY),旨在为农村地区提供国家铺设的公路网络.这一计划的规模巨大,涉及数十亿美元的投资,惠及近十亿人口.</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<p>Asher和Novosad的研究建立在以下背景之上:</p>
+<ol type="1">
+<li><p><strong>政策规模巨大</strong>:印度的PMGSY计划总投资约400亿美元,是迄今为止规模最大的农村道路投资计划之一.如此大规模的政策实验为评估道路基础设施的因果效应提供了难得的研究机会.</p></li>
+<li><p><strong>研究空白</strong>:尽管基础设施对发展的重要性被广泛认可,但关于大规模道路建设对农村经济影响的因果证据仍然有限.现有研究大多面临内生性问题_道路建设往往选择经济条件较好的地区,难以分离纯粹的"道路效应".</p></li>
+<li><p><strong>理论预期与现实差距</strong>:传统观点认为,修路将通过以下渠道促进农村发展:降低运输成本→提高农产品市场准入→增加农业收入→促进非农就业→整体经济增长.然而,实际效果是否如此?偏远地区能否真正从道路建设中受益?这些问题需要在严谨的实证框架下进行检验.</p></li>
+<li><p><strong>识别策略的创新</strong>:作者利用PMGSY计划的项目准入规则(基于人口阈值)实施模糊回归不连续性设计(Fuzzy
+RDD),这为识别道路建设的因果效应提供了方法论上的创新.</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p>本研究试图回答一个核心问题:<strong>大规模农村道路建设是否真的能够促进地方经济发展?</strong></p>
+<p>具体而言,作者关注: -
+道路建设如何影响农村地区的产业结构(农业vs非农业)? -
+道路建设对农民收入、资产和就业的实质影响是什么? -
+道路建设的效果在不同类型村庄和家庭之间是否存在异质性? -
+在缺乏其他经济机会的偏远地区,道路建设是否仍然有效?</p>
+<h3 id="研究意义">研究意义</h3>
+<p>本研究具有重要的政策含义: 1.
+为发展中国家的大规模基础设施投资提供了因果效应评估 2.
+揭示了道路建设可能不如预期那般有效的原因 3.
+为未来基础设施投资政策提供了实证依据</p>
+<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
+<p>本文结构清晰,共分为以下几个部分:</p>
+<p><strong>I. 引言</strong>:介绍研究背景、问题意识和研究贡献</p>
+<p><strong>II. 制度背景(Institutional Background)</strong>
+介绍印度PMGSY农村道路建设计划的详细规则,包括项目准入的人口阈值标准.</p>
+<p><strong>III. 数据(Data)</strong>
+描述研究所使用的三大数据集:人口普查、农业普查和IHDS家庭调查数据.</p>
+<p><strong>IV. 经验框架(Empirical Framework)</strong>
+详细阐述模糊回归不连续性设计的实施方法论.</p>
+<p><strong>V. 主要结果(Main Results)</strong>
+报告道路建设对农业产出、劳动力转移、收入和资产的影响.</p>
+<p><strong>VI. 机制分析(Mechanisms)</strong>
+探讨为什么道路建设未能带来预期的发展效果.</p>
+<p><strong>VII. 结论(Conclusion)</strong></p>
+<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
+<h3 id="一制度背景与识别策略">一、制度背景与识别策略</h3>
+<p>PMGSY计划的项目准入规则基于明确的人口阈值: -
+人口≥500人的村庄将有硬路面道路连接 -
+人口&lt;500人的村庄在计划期内不建设硬路面道路</p>
+<p><strong>这一规则为实施回归不连续性设计(RDD)提供了外生的政策冲击.</strong></p>
+<p>作者使用<strong>模糊RD设计</strong>(Fuzzy RDD),原因在于: -
+并非所有人口≥500人的村庄都确实获得了道路建设 -
+存在一定的"渗透"(crossover),即部分人口&lt;500人的村庄也获得了道路 -
+工具变量方法可以处理这种非随机分配</p>
+<h3 id="二数据与样本特征">二、数据与样本特征</h3>
+<p>作者使用三大数据集:</p>
+<ol type="1">
+<li><strong>印度人口普查数据</strong>:覆盖印度所有村庄,提供基线期的道路状况和人口数据</li>
+<li><strong>农业普查数据</strong>:提供村庄层面的农业投入产出数据</li>
+<li><strong>IHDS家庭调查数据(2011-12)</strong>:提供家庭层面的收入、消费和就业信息</li>
+</ol>
+<p>样本选择: - 主要分析样本聚焦于PMGSY计划覆盖的州 -
+使用2001年人口普查数据确定基线期道路状况 -
+关注2008-2014年间完成的道路建设项目</p>
+<h3 id="三主要结果">三、主要结果</h3>
+<p><strong>核心发现:道路建设的主要效果是促进劳动力从农业向非农业转移,但农业产出、收入和资产均无显著变化.</strong></p>
+<h4 id="劳动力转移">3.1 劳动力转移</h4>
+<p>Table 2(主文表)显示: - 新建道路使农业劳动份额下降约8.5个百分点 -
+这一效果在统计上显著,且主要由无地或少地农民驱动 -
+非农就业增长主要集中在建筑业</p>
+<p><strong>然而,值得注意的是:</strong> -
+农业劳动份额的下降并不意味着农业的衰退 - 也没有带来农业机械化的提升 -
+农业产出和土地使用模式未发生显著变化</p>
+<h4 id="收入和消费">3.2 收入和消费</h4>
+<p>作者发现: - 家庭总收入和消费均无显著变化 -
+农业收入和非农收入均未显著增加 - 道路建设未能带来实质性的经济提升</p>
+<h4 id="资产和土地">3.3 资产和土地</h4>
+<p>道路建设对土地持有模式没有显著影响: - 无地家庭比例未增加 -
+各规模农户的土地持有保持稳定</p>
+<h3 id="四机制解释">四、机制解释</h3>
+<p><strong>为何道路建设未能带来预期的发展效果?</strong></p>
+<p>作者提出了几个可能的解释:</p>
+<h4 id="偏远地区缺乏经济机会">4.1 偏远地区缺乏经济机会</h4>
+<p>最核心的解释是:<strong>即使交通条件改善,偏远农村地区可能仍然缺乏有竞争力的经济机会.</strong></p>
+<p>证据支持: - 靠近市场的村庄(距离城镇较近)在基线期已有较好的道路条件 -
+偏远村庄即使通了路,其与主要经济中心的距离仍然较远 -
+运输成本虽然下降,但可能仍不足以使偏远地区的产品具有竞争力</p>
+<h4 id="劳动力转移渠道">4.2 劳动力转移渠道</h4>
+<p>道路建设确实促进了劳动力转移,但转移的模式值得关注: -
+主要是非农就业增加,而非农业现代化 -
+新增非农就业主要是低技能劳动(建筑工人) -
+这反映的是农业剩余劳动力的"挤出",而非真正的经济转型</p>
+<h4 id="农业持续停滞">4.3 农业持续停滞</h4>
+<p>尽管交通改善: - 农产品市场准入增加 - 但缺乏需求端的足够拉动 -
+偏远地区的农业可能面临土壤、气候等自然条件限制 - 农业技术进步缓慢</p>
+<h3 id="五异质性分析">五、异质性分析</h3>
+<p>作者发现显著的区域异质性:</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>发现</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>初始道路条件</td>
+<td>初始无道路的村庄效果更明显</td>
+</tr>
+<tr>
+<td>地理区位</td>
+<td>偏远地区效果较弱</td>
+</tr>
+<tr>
+<td>土地禀赋</td>
+<td>无地农民更容易转移</td>
+</tr>
+</tbody>
+</table>
+<h2 id="结论conclusion">结论(Conclusion)</h2>
+<h3 id="研究核心结论">研究核心结论</h3>
+<ol type="1">
+<li><p><strong>道路建设的首要效果是促进劳动力从农业转移</strong>,但这一转移并非带来农业现代化或收入增长</p></li>
+<li><p><strong>道路建设未能显著提升农业产出、收入或资产</strong>,这一发现在传统发展理论背景下是出乎意料的</p></li>
+<li><p><strong>偏远地区即使获得道路连接,也可能继续缺乏经济机会</strong>,这挑战了"要想富,先修路"的传统智慧</p></li>
+<li><p><strong>政策启示</strong>:单纯的基础设施投资不足以促进农村发展,需要配套的经济机会创造政策</p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><p><strong>方法论贡献</strong>:展示了如何利用政策规则的连续性进行因果推断,提供了大型基础设施项目评估的范例</p></li>
+<li><p><strong>理论贡献</strong>:挑战了简单的"基础设施→市场准入→经济增长"的线性逻辑,揭示了发展过程中可能存在的多重障碍</p></li>
+<li><p><strong>政策贡献</strong>:为发展中国家的基础设施投资政策提供了审慎的实证依据</p></li>
+</ol>
+<h3 id="未来研究方向">未来研究方向</h3>
+<ol type="1">
+<li>结合更长期的跟踪数据,评估道路建设的动态效应</li>
+<li>探索道路建设与其他干预措施(如技能培训、小额信贷)的组合效果</li>
+<li>比较不同类型道路(国道vs地方路)的影响差异</li>
+<li>研究道路建设对女性劳动参与的特殊影响</li>
+</ol>
+<h2 id="学术思考">学术思考</h2>
+<ol type="1">
+<li><p><strong>发展政策的有效性问题</strong>:本文揭示了单纯基础设施投资的局限性.那么,什么样的政策组合才能真正促进偏远农村的发展?人力资本投资、农业技术推广、信贷可得性改善,哪一项更为关键?</p></li>
+<li><p><strong>空间经济学视角</strong>:本文的分析主要在村庄层面,忽视了一般均衡效应_道路建设可能导致周边城市的经济活动扩张,从而吸走农村的人力资源.如何在全经济层面评估道路建设的效应?</p></li>
+<li><p><strong>时间维度的重要性</strong>:4年的观察期可能不足以捕捉道路建设的全部效应.农业的结构调整、企业的进入与退出、家庭的人力资本投资决策都可能需要更长时间才能显现.</p></li>
+<li><p><strong>一般化性问题</strong>:印度PMGSY计划的经验在多大程度上可以推广到其他发展中国家或地区?各国的地理条件、市场发育程度和制度环境存在巨大差异,需要谨慎解读.</p></li>
+<li><p><strong>女性视角的分析缺失</strong>:本文未能充分关注道路建设对女性劳动参与和家庭决策的独特影响,而这在发展研究中是一个重要的维度.</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>发展经济学</tag>
+        <tag>基础设施</tag>
+        <tag>AER</tag>
       </tags>
   </entry>
   <entry>
@@ -844,151 +844,6 @@ Economic Review.</li>
         <tag>债务减免</tag>
         <tag>大衰退</tag>
         <tag>破产制度</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Do Governments Crowd Out Governments? — 深度阅读笔记 — Baumann &amp; Klymak</title>
-    <url>/posts/baumann2024/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Do governments crowd out governments?
-Evidence from a natural experiment</li>
-<li><strong>作者</strong>: Stuart Baumann, Margaryta Klymak</li>
-<li><strong>类型</strong>: 论文笔记 / 财政学 / 政府经济学</li>
-<li><strong>出版年份</strong>: 2024</li>
-<li><strong>出版机构/期刊</strong>: European Economic Review, Vol. 168,
-104803</li>
-<li><strong>难度评估</strong>: 中 - 需要计量经济学基础 <span id="more"></span>
----</li>
-</ul>
-<h2 id="引言背景和意义">引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>年终支出高峰(Year-End Spending
-Spike)是全球各国政府普遍存在的现象_政府部门在财政年度结束时集中大量支出.这种支出模式具有几个关键特征:</p>
-<p><strong>规模与普遍性.</strong>
-英国资本支出在财年最后一个月是月平均支出的约两倍;美国政府在财年最后一周的支出是平均周的4.9倍.这一现象在OECD
-27个国家均有观察到.</p>
-<p><strong>潜在浪费问题.</strong>
-年终仓促采购可能导致质量问题.Liebman和Mahoney(2017)发现,美国政府采购的IT项目在财年末执行的,其获得"低质量"评分的可能性是其他时间执行的2.2至5.6倍.</p>
-<p><strong>现有解释的局限.</strong>
-文献将年终支出归因于政府部门自身的预算周期(内部因素):如预防性储蓄基金、拖延行为、或规划不足.但这些解释均未考虑外部因素_其他政府部门和企业的支出行为.</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p><strong>拥堵效应与竞争机制.</strong>
-当多个政府部门同时高强度支出时,可能在供应商方面产生拥堵效应.具体机制包括:</p>
-<ul>
-<li><strong>价格上涨</strong>:供应商在高需求时期提高价格</li>
-<li><strong>采购替代</strong>:供应商不可用时被迫更换采购物品或供应商</li>
-<li><strong>销售策略</strong>:供应商增加销售人员、调整商品供应以利用高支出意愿</li>
-<li><strong>支出转移</strong>:部门可能将部分支出转移至其他时间以避免价格上涨</li>
-</ul>
-<p><strong>识别挑战.</strong>
-同一国家的政府机构通常遵循相同的财年规则,使得分离"部门自身财年影响"和"其他政府机构财年影响"成为重大识别挑战.</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:政府部门在财年末集中支出时,是否存在"政府挤出政府"的效应?</p>
-<p><strong>创新解决方案</strong>:利用英国驻海外办事处这一独特自然实验_这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
-<h3 id="研究意义">研究意义</h3>
-<ul>
-<li><strong>学术贡献</strong>:首次分离年终支出的"内部"与"外部"驱动因素</li>
-<li><strong>政策含义</strong>:错开不同部门的财年可能减少年终支出</li>
-</ul>
-<hr>
-<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
-<p><strong>第一节:引言(Introduction)</strong></p>
-<p>阐述年终支出高峰现象、潜在拥堵机制,研究挑战与创新.</p>
-<p><strong>第二节:方法论(Methodology)</strong></p>
-<p>数据:英国外交和联邦事务部(FCO)海外办事处2008-2019财年月度支出数据.实证策略:利用海外办事处沿用本国财年但所在国财年各异的自然实验.</p>
-<p><strong>第三节:结果(Results)</strong></p>
-<p>三个主要发现:本国财年末效应、当地政府挤出效应、当地企业财年效应.</p>
-<hr>
-<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
-<h3 id="一自然实验的设计优势">一、自然实验的设计优势</h3>
-<p><strong>英国海外办事处的独特性.</strong>
-英国在180多个国家设有399个海外办事处,这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
-<p>这种设置的优势:办事处的预算框架、管理和监督制度相同,执行相似的外交任务,可比较不同东道国办事处的支出模式差异.</p>
-<h3 id="二核心实证发现">二、核心实证发现</h3>
-<p><strong>发现1:本国财年末效应显著.</strong></p>
-<p>海外办事处在英国财年最后一个月(3月)的支出显著更高:</p>
-<ul>
-<li>资源预算:3月支出比月平均高1.359个标准差</li>
-<li>资本预算:3月支出比月平均高0.867个标准差</li>
-</ul>
-<p><strong>发现2:当地政府挤出效应显著.</strong></p>
-<p><span class="math inline">\(LFY End \times Home FY
-End\)</span>系数在资源支出模型中显著为正:在与英国财年重叠的国家,年终支出峰值更大.这表明东道国政府的年终支出确实产生了"挤出"效应.</p>
-<p><strong>发现3:当地企业财年效应显著.</strong></p>
-<p>在资本支出案例中,当地企业财年末越近,办事处支出越多.这与企业销售人员为最大化佣金的策略性行为一致.</p>
-<h3 id="三理论模型与预测">三、理论模型与预测</h3>
-<p>作者扩展了Liebman and
-Mahoney(2017)和Baumann(2019)的模型,加入"价格"和"拥堵效应"参数.</p>
-<p><strong>有趣发现</strong>:理论预测拥堵效应应减少年终支出峰值(理性部门会转移支出),但实证结果相反_拥堵效应加剧年终支出.这暗示政府部门的"行为惯性"可能比模型假设的更强.</p>
-<hr>
-<h2 id="结论conclusion">结论(Conclusion)</h2>
-<h3 id="核心结论总结">核心结论总结</h3>
-<p><strong>第一,本国财年是支出模式最重要的影响因素.</strong></p>
-<p><strong>第二,拥堵效应加剧年终支出.</strong>
-在与本国财年重叠的国家,年终支出规模更大.</p>
-<p><strong>第三,当地企业财年末后期,政府支出更高.</strong>
-企业销售人员的激励结构和行为也能影响政府部门的支出模式.</p>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ul>
-<li><strong>年终支出文献</strong>:首次分离内部与外部因素</li>
-<li><strong>财政溢出文献</strong>:发现"年终支出溢出"新概念</li>
-<li><strong>政策制定</strong>:错开财年可间接减少年终支出</li>
-</ul>
-<hr>
-<h2 id="未来研究方向">未来研究方向</h2>
-<h3 id="文献中提及的未来研究方向">文献中提及的未来研究方向</h3>
-<ul>
-<li>利用更细致的微观采购合同数据直接量化挤出效应的成本</li>
-<li>分析政府部门对拥堵效应的动态适应过程</li>
-</ul>
-<h3 id="基于本文思考的下一步研究工作">基于本文思考的下一步研究工作</h3>
-<p><strong>拥堵效应的成本量化.</strong>
-英国海外办事处在面临挤出效应时是否支付了更高价格?</p>
-<p><strong>政策错开财年的可行性分析.</strong>
-实施"错开财年"政策的实际可行性、潜在成本和过渡挑战.</p>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<p><strong>关于"个体理性"与"集体低效":</strong></p>
-<p>本文揭示了一个有趣的悖论:所有部门都在同一时间"理性"地加大支出以避免资金过期,这种个体理性可能导致整个经济体的集体低效_价格上涨、供应短缺、次优采购.</p>
-<p><strong>关于政府部门的价格敏感性:</strong></p>
-<p>理论模型预测理性部门会转移支出以避免拥堵,但实证结果相反.这暗示政府部门的"行为惯性"可能比新古典模型假设的更强.</p>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p><strong>拥堵效应具体如何测量?</strong>
-交互项系数的经济含义是什么?</p></li>
-<li><p><strong>资源预算和资本预算的响应为何不同?</strong></p></li>
-<li><p><strong>这对中国的政府采购改革有何启示?</strong></p></li>
-<li><p><strong>错开财年政策的实际可行性如何?</strong></p></li>
-</ol>
-<hr>
-<h2 id="参考文献">参考文献</h2>
-<ul>
-<li>Baumann, S. (2019). Procrastination and the Design of
-Government.</li>
-<li>Eichenauer, V. (2020). Budget Constraints and the Temporal Dynamics
-of Public Spending.</li>
-<li>Klymak, M., &amp; Baumann, S. (2022). Fiscal Year-End Procurement
-and Price Gouging.</li>
-<li>Liebman, J.B., &amp; Mahoney, N. (2017). Expiring Budgets and the
-Temporal Dynamics of Federal Spending.</li>
-<li>Oyer, P. (1998). Fiscal Year Ends and Intertemporal Labor
-Management.</li>
-</ul>
-<hr>
-<p><em>本笔记由 AI 生成,深度分析了&lt;Do governments crowd out
-governments?&gt;一文的核心内容、理论框架、实证发现和学术贡献.生成时间:2026年4月11日.</em></p>
-]]></content>
-      <categories>
-        <category>财政学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>财政学</tag>
-        <tag>政府支出</tag>
-        <tag>挤出效应</tag>
-        <tag>自然实验</tag>
       </tags>
   </entry>
   <entry>
@@ -1351,6 +1206,151 @@ Moi改革后)，这是否影响校准的可靠性？</p>
         <tag>基础设施经济学</tag>
         <tag>空间经济学</tag>
         <tag>气候经济学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Do Governments Crowd Out Governments? — 深度阅读笔记 — Baumann &amp; Klymak</title>
+    <url>/posts/baumann2024/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Do governments crowd out governments?
+Evidence from a natural experiment</li>
+<li><strong>作者</strong>: Stuart Baumann, Margaryta Klymak</li>
+<li><strong>类型</strong>: 论文笔记 / 财政学 / 政府经济学</li>
+<li><strong>出版年份</strong>: 2024</li>
+<li><strong>出版机构/期刊</strong>: European Economic Review, Vol. 168,
+104803</li>
+<li><strong>难度评估</strong>: 中 - 需要计量经济学基础 <span id="more"></span>
+---</li>
+</ul>
+<h2 id="引言背景和意义">引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>年终支出高峰(Year-End Spending
+Spike)是全球各国政府普遍存在的现象_政府部门在财政年度结束时集中大量支出.这种支出模式具有几个关键特征:</p>
+<p><strong>规模与普遍性.</strong>
+英国资本支出在财年最后一个月是月平均支出的约两倍;美国政府在财年最后一周的支出是平均周的4.9倍.这一现象在OECD
+27个国家均有观察到.</p>
+<p><strong>潜在浪费问题.</strong>
+年终仓促采购可能导致质量问题.Liebman和Mahoney(2017)发现,美国政府采购的IT项目在财年末执行的,其获得"低质量"评分的可能性是其他时间执行的2.2至5.6倍.</p>
+<p><strong>现有解释的局限.</strong>
+文献将年终支出归因于政府部门自身的预算周期(内部因素):如预防性储蓄基金、拖延行为、或规划不足.但这些解释均未考虑外部因素_其他政府部门和企业的支出行为.</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<p><strong>拥堵效应与竞争机制.</strong>
+当多个政府部门同时高强度支出时,可能在供应商方面产生拥堵效应.具体机制包括:</p>
+<ul>
+<li><strong>价格上涨</strong>:供应商在高需求时期提高价格</li>
+<li><strong>采购替代</strong>:供应商不可用时被迫更换采购物品或供应商</li>
+<li><strong>销售策略</strong>:供应商增加销售人员、调整商品供应以利用高支出意愿</li>
+<li><strong>支出转移</strong>:部门可能将部分支出转移至其他时间以避免价格上涨</li>
+</ul>
+<p><strong>识别挑战.</strong>
+同一国家的政府机构通常遵循相同的财年规则,使得分离"部门自身财年影响"和"其他政府机构财年影响"成为重大识别挑战.</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>:政府部门在财年末集中支出时,是否存在"政府挤出政府"的效应?</p>
+<p><strong>创新解决方案</strong>:利用英国驻海外办事处这一独特自然实验_这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
+<h3 id="研究意义">研究意义</h3>
+<ul>
+<li><strong>学术贡献</strong>:首次分离年终支出的"内部"与"外部"驱动因素</li>
+<li><strong>政策含义</strong>:错开不同部门的财年可能减少年终支出</li>
+</ul>
+<hr>
+<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
+<p><strong>第一节:引言(Introduction)</strong></p>
+<p>阐述年终支出高峰现象、潜在拥堵机制,研究挑战与创新.</p>
+<p><strong>第二节:方法论(Methodology)</strong></p>
+<p>数据:英国外交和联邦事务部(FCO)海外办事处2008-2019财年月度支出数据.实证策略:利用海外办事处沿用本国财年但所在国财年各异的自然实验.</p>
+<p><strong>第三节:结果(Results)</strong></p>
+<p>三个主要发现:本国财年末效应、当地政府挤出效应、当地企业财年效应.</p>
+<hr>
+<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
+<h3 id="一自然实验的设计优势">一、自然实验的设计优势</h3>
+<p><strong>英国海外办事处的独特性.</strong>
+英国在180多个国家设有399个海外办事处,这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
+<p>这种设置的优势:办事处的预算框架、管理和监督制度相同,执行相似的外交任务,可比较不同东道国办事处的支出模式差异.</p>
+<h3 id="二核心实证发现">二、核心实证发现</h3>
+<p><strong>发现1:本国财年末效应显著.</strong></p>
+<p>海外办事处在英国财年最后一个月(3月)的支出显著更高:</p>
+<ul>
+<li>资源预算:3月支出比月平均高1.359个标准差</li>
+<li>资本预算:3月支出比月平均高0.867个标准差</li>
+</ul>
+<p><strong>发现2:当地政府挤出效应显著.</strong></p>
+<p><span class="math inline">\(LFY End \times Home FY
+End\)</span>系数在资源支出模型中显著为正:在与英国财年重叠的国家,年终支出峰值更大.这表明东道国政府的年终支出确实产生了"挤出"效应.</p>
+<p><strong>发现3:当地企业财年效应显著.</strong></p>
+<p>在资本支出案例中,当地企业财年末越近,办事处支出越多.这与企业销售人员为最大化佣金的策略性行为一致.</p>
+<h3 id="三理论模型与预测">三、理论模型与预测</h3>
+<p>作者扩展了Liebman and
+Mahoney(2017)和Baumann(2019)的模型,加入"价格"和"拥堵效应"参数.</p>
+<p><strong>有趣发现</strong>:理论预测拥堵效应应减少年终支出峰值(理性部门会转移支出),但实证结果相反_拥堵效应加剧年终支出.这暗示政府部门的"行为惯性"可能比模型假设的更强.</p>
+<hr>
+<h2 id="结论conclusion">结论(Conclusion)</h2>
+<h3 id="核心结论总结">核心结论总结</h3>
+<p><strong>第一,本国财年是支出模式最重要的影响因素.</strong></p>
+<p><strong>第二,拥堵效应加剧年终支出.</strong>
+在与本国财年重叠的国家,年终支出规模更大.</p>
+<p><strong>第三,当地企业财年末后期,政府支出更高.</strong>
+企业销售人员的激励结构和行为也能影响政府部门的支出模式.</p>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ul>
+<li><strong>年终支出文献</strong>:首次分离内部与外部因素</li>
+<li><strong>财政溢出文献</strong>:发现"年终支出溢出"新概念</li>
+<li><strong>政策制定</strong>:错开财年可间接减少年终支出</li>
+</ul>
+<hr>
+<h2 id="未来研究方向">未来研究方向</h2>
+<h3 id="文献中提及的未来研究方向">文献中提及的未来研究方向</h3>
+<ul>
+<li>利用更细致的微观采购合同数据直接量化挤出效应的成本</li>
+<li>分析政府部门对拥堵效应的动态适应过程</li>
+</ul>
+<h3 id="基于本文思考的下一步研究工作">基于本文思考的下一步研究工作</h3>
+<p><strong>拥堵效应的成本量化.</strong>
+英国海外办事处在面临挤出效应时是否支付了更高价格?</p>
+<p><strong>政策错开财年的可行性分析.</strong>
+实施"错开财年"政策的实际可行性、潜在成本和过渡挑战.</p>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<p><strong>关于"个体理性"与"集体低效":</strong></p>
+<p>本文揭示了一个有趣的悖论:所有部门都在同一时间"理性"地加大支出以避免资金过期,这种个体理性可能导致整个经济体的集体低效_价格上涨、供应短缺、次优采购.</p>
+<p><strong>关于政府部门的价格敏感性:</strong></p>
+<p>理论模型预测理性部门会转移支出以避免拥堵,但实证结果相反.这暗示政府部门的"行为惯性"可能比新古典模型假设的更强.</p>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p><strong>拥堵效应具体如何测量?</strong>
+交互项系数的经济含义是什么?</p></li>
+<li><p><strong>资源预算和资本预算的响应为何不同?</strong></p></li>
+<li><p><strong>这对中国的政府采购改革有何启示?</strong></p></li>
+<li><p><strong>错开财年政策的实际可行性如何?</strong></p></li>
+</ol>
+<hr>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>Baumann, S. (2019). Procrastination and the Design of
+Government.</li>
+<li>Eichenauer, V. (2020). Budget Constraints and the Temporal Dynamics
+of Public Spending.</li>
+<li>Klymak, M., &amp; Baumann, S. (2022). Fiscal Year-End Procurement
+and Price Gouging.</li>
+<li>Liebman, J.B., &amp; Mahoney, N. (2017). Expiring Budgets and the
+Temporal Dynamics of Federal Spending.</li>
+<li>Oyer, P. (1998). Fiscal Year Ends and Intertemporal Labor
+Management.</li>
+</ul>
+<hr>
+<p><em>本笔记由 AI 生成,深度分析了&lt;Do governments crowd out
+governments?&gt;一文的核心内容、理论框架、实证发现和学术贡献.生成时间:2026年4月11日.</em></p>
+]]></content>
+      <categories>
+        <category>财政学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>财政学</tag>
+        <tag>政府支出</tag>
+        <tag>挤出效应</tag>
+        <tag>自然实验</tag>
       </tags>
   </entry>
   <entry>
@@ -6276,6 +6276,126 @@ Bartik 估计量解释?</strong></p></li>
       </tags>
   </entry>
   <entry>
+    <title>&lt;住房与不平等&gt;深度阅读笔记 — Ioannides &amp; Ngai</title>
+    <url>/posts/ioannides2025/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Housing and Inequality(住房与不平等)</li>
+<li><strong>作者</strong>: Yannis M. Ioannides(塔夫茨大学)、L. Rachel
+Ngai(伦敦政治经济学院)</li>
+<li><strong>类型</strong>: 论文笔记 / 城市经济学 / 不平等研究 /
+住房经济学</li>
+<li><strong>出版年份</strong>: 2025</li>
+<li><strong>出版机构/期刊</strong>: Journal of Economic Literature, Vol.
+63, No. 3, pp. 916-963</li>
+<li><strong>JEL分类号</strong>: D63, J15, J24, R21, R23, R31</li>
+<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、城市经济学基础
+<span id="more"></span> ---</li>
+</ul>
+<h2 id="引言住房为何天然与不平等纠缠">引言:住房为何天然与不平等纠缠?</h2>
+<h3 id="领域基础知识住房的三重角色">领域基础知识:住房的三重角色</h3>
+<p>在经济学中,"住房"绝非普通消费品.它至少同时扮演<strong>三种角色</strong>:</p>
+<p><strong>第一,住房是消费品(Consumption)</strong>:住房为人们提供居住服务.无论租房还是买房,家庭都在"消费"住房这一服务.</p>
+<p><strong>第二,住房是资本品/资产(Capital)</strong>:对自住业主而言,住房往往是家庭最重要的财富形式,也是最重要的抵押品.</p>
+<p><strong>第三,住房是"地点/区位"(Location)</strong>:住房的地理位置将家庭绑定于特定的社区、学区与就业网络.</p>
+<p>这三重属性在现实中捆绑在同一个"主住房"上:住房经济学区别于其他商品经济学的核心在于其<strong>空间不可分割性</strong>.</p>
+<h3 id="研究背景住房成本上升与社会分化">研究背景:住房成本上升与社会分化</h3>
+<p><strong>核心现象:</strong>近几十年出现了全球性住房价格和租金长期持续上涨,且住房支出在家庭预算中的比重不断上升_对低收入群体上升更快.</p>
+<p><strong>三类政策与学术关切:</strong> 1.
+<strong>可负担性危机(Affordability
+Crisis)</strong>:低收入家庭住房支出占比更高,系统性挤压其非住房消费、储蓄与人力资本投资
+2. <strong>财富分化(Wealth
+Divergence)</strong>:房产是中产家庭最重要的资产形式,房价上涨使"房主"与"租客"之间的财富差距扩大
+3.
+<strong>空间分化和机会不平等</strong>:优质社区更贵,形成代际传递的自我循环</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>问题一</strong>:不平等如何通过住房表现出来?
+<strong>问题二</strong>:住房又如何反过来扩大和固化不平等?</p>
+<p><strong>两种不平等视角:</strong> - <strong>禀赋不平等(Endowments
+Inequality)</strong>:收入、财富、信用条件等先天差异导致住房结果不同 -
+<strong>成员资格不平等(Membership
+Inequality)</strong>:住在哪里决定了社会网络和机会结构</p>
+<hr>
+<h2 id="内容及结构">内容及结构</h2>
+<table>
+<colgroup>
+<col style="width: 27%">
+<col style="width: 27%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr>
+<th>章节</th>
+<th>主题</th>
+<th>核心内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第1节 引言</td>
+<td>问题框架</td>
+<td>住房三特征与不平等双通道</td>
+</tr>
+<tr>
+<td>第2节 概念框架</td>
+<td>理论建模</td>
+<td>租买选择、抵押借贷、人力资本投资联动</td>
+</tr>
+<tr>
+<td>第3节 住房作为消费</td>
+<td>消费不平等</td>
+<td>住房支出比重上升的回归性、需求弹性、驱逐效应</td>
+</tr>
+<tr>
+<td>第4节 住房作为资本</td>
+<td>财富不平等</td>
+<td>住房财富结构、房价上涨与财富分化</td>
+</tr>
+<tr>
+<td>第5节 住房作为区位</td>
+<td>空间不平等</td>
+<td>邻里效应、教育渠道、城市排序</td>
+</tr>
+<tr>
+<td>第6节 种族与隔离</td>
+<td>市场失灵</td>
+<td>歧视实验、经纪人引导、算法歧视</td>
+</tr>
+<tr>
+<td>第7节 结论</td>
+<td>综合总结</td>
+<td>核心发现与政策含义</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="核心发现">核心发现</h2>
+<h3 id="住房支出比重对穷人更回归">住房支出比重对穷人更"回归"</h3>
+<p><strong>数据证据(OECD 2020):</strong> -
+2015年住房支出占比:底部五分位约37%,中间五分位约31%,顶部五分位约25% -
+2005-2015年:底部五分位上升9个百分点,是顶部的3倍</p>
+<h3 id="住房三重通道与不平等">住房三重通道与不平等</h3>
+<p><strong>消费通道</strong>:住房支出占比上升压迫低收入家庭
+<strong>资本通道</strong>:房价上涨使房主财富增加、租房者被排斥
+<strong>区位通道</strong>:好社区更贵,形成代际传递</p>
+<hr>
+<h2 id="结论">结论</h2>
+<p>住房同时扮演<strong>消费品、资产、区位</strong>三重角色,是不平等的"温度计"和"发电机".政策必须在一般均衡框架下评估,而非局部均衡.</p>
+<hr>
+<p><strong>文献信息:</strong> - <strong>标题</strong>:Housing and
+Inequality - <strong>作者</strong>:Yannis M. Ioannides, L. Rachel Ngai -
+<strong>期刊</strong>:Journal of Economic Literature, 2025 -
+<strong>JEL分类号</strong>:D63, J15, J24, R21, R23, R31</p>
+]]></content>
+      <categories>
+        <category>经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>城市经济学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>&lt;中国人口研究 1368-1953&gt;深度阅读笔记 — 何炳棣 Ping-Ti Ho</title>
     <url>/posts/ho1959/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="书籍信息">书籍信息</h2>
@@ -7059,126 +7179,6 @@ _谢肇淛&lt;五杂俎&gt;(约1610年)</p>
         <tag>读书笔记</tag>
         <tag>中国研究</tag>
         <tag>人口史</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>&lt;住房与不平等&gt;深度阅读笔记 — Ioannides &amp; Ngai</title>
-    <url>/posts/ioannides2025/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Housing and Inequality(住房与不平等)</li>
-<li><strong>作者</strong>: Yannis M. Ioannides(塔夫茨大学)、L. Rachel
-Ngai(伦敦政治经济学院)</li>
-<li><strong>类型</strong>: 论文笔记 / 城市经济学 / 不平等研究 /
-住房经济学</li>
-<li><strong>出版年份</strong>: 2025</li>
-<li><strong>出版机构/期刊</strong>: Journal of Economic Literature, Vol.
-63, No. 3, pp. 916-963</li>
-<li><strong>JEL分类号</strong>: D63, J15, J24, R21, R23, R31</li>
-<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、城市经济学基础
-<span id="more"></span> ---</li>
-</ul>
-<h2 id="引言住房为何天然与不平等纠缠">引言:住房为何天然与不平等纠缠?</h2>
-<h3 id="领域基础知识住房的三重角色">领域基础知识:住房的三重角色</h3>
-<p>在经济学中,"住房"绝非普通消费品.它至少同时扮演<strong>三种角色</strong>:</p>
-<p><strong>第一,住房是消费品(Consumption)</strong>:住房为人们提供居住服务.无论租房还是买房,家庭都在"消费"住房这一服务.</p>
-<p><strong>第二,住房是资本品/资产(Capital)</strong>:对自住业主而言,住房往往是家庭最重要的财富形式,也是最重要的抵押品.</p>
-<p><strong>第三,住房是"地点/区位"(Location)</strong>:住房的地理位置将家庭绑定于特定的社区、学区与就业网络.</p>
-<p>这三重属性在现实中捆绑在同一个"主住房"上:住房经济学区别于其他商品经济学的核心在于其<strong>空间不可分割性</strong>.</p>
-<h3 id="研究背景住房成本上升与社会分化">研究背景:住房成本上升与社会分化</h3>
-<p><strong>核心现象:</strong>近几十年出现了全球性住房价格和租金长期持续上涨,且住房支出在家庭预算中的比重不断上升_对低收入群体上升更快.</p>
-<p><strong>三类政策与学术关切:</strong> 1.
-<strong>可负担性危机(Affordability
-Crisis)</strong>:低收入家庭住房支出占比更高,系统性挤压其非住房消费、储蓄与人力资本投资
-2. <strong>财富分化(Wealth
-Divergence)</strong>:房产是中产家庭最重要的资产形式,房价上涨使"房主"与"租客"之间的财富差距扩大
-3.
-<strong>空间分化和机会不平等</strong>:优质社区更贵,形成代际传递的自我循环</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>问题一</strong>:不平等如何通过住房表现出来?
-<strong>问题二</strong>:住房又如何反过来扩大和固化不平等?</p>
-<p><strong>两种不平等视角:</strong> - <strong>禀赋不平等(Endowments
-Inequality)</strong>:收入、财富、信用条件等先天差异导致住房结果不同 -
-<strong>成员资格不平等(Membership
-Inequality)</strong>:住在哪里决定了社会网络和机会结构</p>
-<hr>
-<h2 id="内容及结构">内容及结构</h2>
-<table>
-<colgroup>
-<col style="width: 27%">
-<col style="width: 27%">
-<col style="width: 45%">
-</colgroup>
-<thead>
-<tr>
-<th>章节</th>
-<th>主题</th>
-<th>核心内容</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>第1节 引言</td>
-<td>问题框架</td>
-<td>住房三特征与不平等双通道</td>
-</tr>
-<tr>
-<td>第2节 概念框架</td>
-<td>理论建模</td>
-<td>租买选择、抵押借贷、人力资本投资联动</td>
-</tr>
-<tr>
-<td>第3节 住房作为消费</td>
-<td>消费不平等</td>
-<td>住房支出比重上升的回归性、需求弹性、驱逐效应</td>
-</tr>
-<tr>
-<td>第4节 住房作为资本</td>
-<td>财富不平等</td>
-<td>住房财富结构、房价上涨与财富分化</td>
-</tr>
-<tr>
-<td>第5节 住房作为区位</td>
-<td>空间不平等</td>
-<td>邻里效应、教育渠道、城市排序</td>
-</tr>
-<tr>
-<td>第6节 种族与隔离</td>
-<td>市场失灵</td>
-<td>歧视实验、经纪人引导、算法歧视</td>
-</tr>
-<tr>
-<td>第7节 结论</td>
-<td>综合总结</td>
-<td>核心发现与政策含义</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="核心发现">核心发现</h2>
-<h3 id="住房支出比重对穷人更回归">住房支出比重对穷人更"回归"</h3>
-<p><strong>数据证据(OECD 2020):</strong> -
-2015年住房支出占比:底部五分位约37%,中间五分位约31%,顶部五分位约25% -
-2005-2015年:底部五分位上升9个百分点,是顶部的3倍</p>
-<h3 id="住房三重通道与不平等">住房三重通道与不平等</h3>
-<p><strong>消费通道</strong>:住房支出占比上升压迫低收入家庭
-<strong>资本通道</strong>:房价上涨使房主财富增加、租房者被排斥
-<strong>区位通道</strong>:好社区更贵,形成代际传递</p>
-<hr>
-<h2 id="结论">结论</h2>
-<p>住房同时扮演<strong>消费品、资产、区位</strong>三重角色,是不平等的"温度计"和"发电机".政策必须在一般均衡框架下评估,而非局部均衡.</p>
-<hr>
-<p><strong>文献信息:</strong> - <strong>标题</strong>:Housing and
-Inequality - <strong>作者</strong>:Yannis M. Ioannides, L. Rachel Ngai -
-<strong>期刊</strong>:Journal of Economic Literature, 2025 -
-<strong>JEL分类号</strong>:D63, J15, J24, R21, R23, R31</p>
-]]></content>
-      <categories>
-        <category>经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>城市经济学</tag>
       </tags>
   </entry>
   <entry>
@@ -9221,30 +9221,6 @@ World!"开始的,对于<strong>shell</strong>而言:</p>
       </tags>
   </entry>
   <entry>
-    <title>2014到2021年:淘宝村分布散点图😲</title>
-    <url>/posts/18898/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示"><strong>效果展示</strong></h2>
-<img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235354537.svg" width="80%" height="80%" align="middle">
-<center>
-2014年的淘宝村分布
-</center>
-<span id="more"></span>
-<p><img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235404847.svg" width="80%" height="80%" align="middle"></p>
-<center>
-2021年的淘宝村分布
-</center>
-<h2 id="从最初3个增长至7023个"><strong>从最初3个增长至7023个</strong></h2>
-<p>从2009年到2021年,中国淘宝村呈现裂变式的扩散增长,从最初3个增长至7023个,无论是数量规模,还是分布广度都经历了飞跃式的发展.从萌芽至发展阶段,"小农户连接大市场"的电商逻辑长期被认为是淘宝村的主要内涵.围绕这一内涵,市场、政策、技术、人才一度不断汇聚,为淘宝村发展创造了十余年的黄金机遇,形成了一场边缘人群连接现代网络、边缘地区接壤现代市场、边缘产品汇聚现代需求的"边缘革命".然而,在经历十余年的飞速发展后,淘宝村开始面临红利期消失、消费升级、同质化竞争、规范治理等适应性挑战,转型变革已是必然选择.在这一过程中,过往遵循传统电商逻辑的淘宝村正经历蜕变.一方面,垂直电商、内容电商等多元化的销售互联网生态正加速形成;另一方面,由差异化、个性化、碎片化需求所驱动的产业数字化升级不断涌现.可以认为,以"消费互联网+产业互联网"为特征的产销全域数字化逻辑正在为淘宝村注入新的内涵,其核心不再是"连接大市场",而是"洞悉大市场、细分小市场、塑造新市场".这种内涵演进对淘宝村发展提出了更高的要求,即能否充分利用数字技术提高经营主体的市场洞察力,能否通过数据信息整合优化生产流程,能否基于数字供应链实现快速的市场反馈.在此意义上,新时代的淘宝村将不再是"逆边缘化"的地理名词,而是一类凭借数字技术突破分散决策、分散生产、分散经营劣势的组织指称.</p>
-]]></content>
-      <categories>
-        <category>绘图</category>
-        <category>map&amp;sf</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>字体和公式的Display</title>
     <url>/posts/15167/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
@@ -9281,6 +9257,30 @@ t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)
       </categories>
       <tags>
         <tag>blog_test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2014到2021年:淘宝村分布散点图😲</title>
+    <url>/posts/18898/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示"><strong>效果展示</strong></h2>
+<img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235354537.svg" width="80%" height="80%" align="middle">
+<center>
+2014年的淘宝村分布
+</center>
+<span id="more"></span>
+<p><img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235404847.svg" width="80%" height="80%" align="middle"></p>
+<center>
+2021年的淘宝村分布
+</center>
+<h2 id="从最初3个增长至7023个"><strong>从最初3个增长至7023个</strong></h2>
+<p>从2009年到2021年,中国淘宝村呈现裂变式的扩散增长,从最初3个增长至7023个,无论是数量规模,还是分布广度都经历了飞跃式的发展.从萌芽至发展阶段,"小农户连接大市场"的电商逻辑长期被认为是淘宝村的主要内涵.围绕这一内涵,市场、政策、技术、人才一度不断汇聚,为淘宝村发展创造了十余年的黄金机遇,形成了一场边缘人群连接现代网络、边缘地区接壤现代市场、边缘产品汇聚现代需求的"边缘革命".然而,在经历十余年的飞速发展后,淘宝村开始面临红利期消失、消费升级、同质化竞争、规范治理等适应性挑战,转型变革已是必然选择.在这一过程中,过往遵循传统电商逻辑的淘宝村正经历蜕变.一方面,垂直电商、内容电商等多元化的销售互联网生态正加速形成;另一方面,由差异化、个性化、碎片化需求所驱动的产业数字化升级不断涌现.可以认为,以"消费互联网+产业互联网"为特征的产销全域数字化逻辑正在为淘宝村注入新的内涵,其核心不再是"连接大市场",而是"洞悉大市场、细分小市场、塑造新市场".这种内涵演进对淘宝村发展提出了更高的要求,即能否充分利用数字技术提高经营主体的市场洞察力,能否通过数据信息整合优化生产流程,能否基于数字供应链实现快速的市场反馈.在此意义上,新时代的淘宝村将不再是"逆边缘化"的地理名词,而是一类凭借数字技术突破分散决策、分散生产、分散经营劣势的组织指称.</p>
+]]></content>
+      <categories>
+        <category>绘图</category>
+        <category>map&amp;sf</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
       </tags>
   </entry>
   <entry>
