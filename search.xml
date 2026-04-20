@@ -5431,6 +5431,245 @@ NCI测试检验"正确指定的约简形式"假设</p>
       </tags>
   </entry>
   <entry>
+    <title>The Economic Consequences of Hospital Admissions — 深度阅读笔记 — Dobkin Et Al.</title>
+    <url>/posts/dobkin2018/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: The Economic Consequences of Hospital
+Admissions</li>
+<li><strong>作者</strong>: Carlos Dobkin, Amy Finkelstein, Raymond
+Kluender, Matthew J. Notowidigdo</li>
+<li><strong>年份</strong>: 2018</li>
+<li><strong>来源</strong>: American Economic Review, Vol. 108, No. 2,
+pp. 308-352 <span id="more"></span></li>
+</ul>
+<h2 id="引言背景和意义">引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>健康风险是美国家庭面临的重要经济风险.美国的医疗保障体系以私人保险为主、政府保险(如Medicare、Medicaid)为辅.ACA(Affordable
+Care
+Act)改革大幅扩展了保险覆盖面,但家庭仍然面临自付医疗费用、劳动收入损失和医疗债务等经济风险.</p>
+<p>健康冲击(health shock)对家庭经济的影响渠道包括: 1.
+<strong>直接渠道</strong>:自付医疗费用增加 2.
+<strong>间接渠道</strong>:劳动能力下降→收入减少 3.
+<strong>财务渠道</strong>:医疗债务→信用受损→借贷能力下降</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>政策关切</strong>:美国医疗保险政策的目标是保护家庭免受健康风险的经济后果.从林登·约翰逊签署Medicare时的宣言,到ACA的推出,政策制定者一直将健康保险作为经济安全网的核心组成部分.</p></li>
+<li><p><strong>知识缺口</strong>:尽管政策高度重视,但关于美国家庭面临的经济风险程度的系统证据仍然不足.已有研究存在样本局限或方法论问题,难以提供可靠的因果估计.</p></li>
+<li><p><strong>数据机会</strong>:本研究利用两个独特的数据集:</p>
+<ul>
+<li>健康与退休研究(HRS)的20年面板调查数据</li>
+<li>加州医院出院数据与信用报告的关联数据</li>
+</ul></li>
+<li><p><strong>方法论创新</strong>:使用事件研究方法,在入院这一相对外生的健康事件发生时点前后观察经济结果的动态变化.</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p>本研究试图回答: - 住院对有保险的非老年人会产生哪些经济后果? -
+这些后果在多大程度上被健康保险覆盖? -
+无保险人群面临的风险与有保险人群有何不同? -
+住院引发的破产在所有破产中占比几何?</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><strong>政策评估</strong>:为评估美国健康保险政策的保护效果提供实证依据</li>
+<li><strong>机制理解</strong>:揭示健康冲击通过哪些渠道影响家庭经济状况</li>
+<li><strong>社会成本核算</strong>:量化住院的经济后果,为医疗改革提供成本效益分析基础</li>
+</ol>
+<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
+<p><strong>I.
+经济框架</strong>:建立两期跨期模型,分析健康冲击如何产生医疗费用和工资损失</p>
+<p><strong>II.
+数据与经验框架</strong>:描述HRS和信用报告数据,阐述事件研究方法论</p>
+<p><strong>III.
+医疗费用与收入结果</strong>:报告HRS中住院对自付费用和劳动收入的影响</p>
+<p><strong>IV.
+信用报告结果</strong>:报告住院对未付账单、破产和信贷可及性的影响</p>
+<p><strong>V. 政策含义</strong>:讨论研究发现的福利含义</p>
+<p><strong>VI. 结论</strong></p>
+<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
+<h3 id="一理论框架">一、理论框架</h3>
+<p>作者建立了一个简洁的两期跨期选择模型:</p>
+<p><strong>模型设定</strong>: - 个人存活两期,期初面临健康冲击(概率p) -
+健康冲击产生外生医疗费用m,并降低工资率 -
+健康保险覆盖λ_m比例的医疗费用和λ_α比例的工资损失 -
+个人在预算约束下最大化状态特定效用</p>
+<p><strong>核心命题(Proposition 1)</strong>: 未完全覆盖的健康冲击会导致:
+- 消费下降(Δc₁&lt;0, Δc₂&lt;0) - 效用下降(ΔU&lt;0) -
+未付账单增加(Δu&gt;0) - 但对借款和收入的影响方向不确定</p>
+<p><strong>政策含义</strong>: -
+通过观察健康冲击后经济结果的变化,可以reject完全保险假设 -
+任何经济结果的变化(收入、信贷限制、借款等)都是保险不足的证据</p>
+<h3 id="二数据与样本">二、数据与样本</h3>
+<h4 id="hrs数据">2.1 HRS数据</h4>
+<ul>
+<li>1992-2012年20年的健康与退休研究面板数据</li>
+<li>追踪50岁以上人群的健康和经济状况</li>
+<li>重点样本:约2,700名50-59岁有保险的住院成年人</li>
+</ul>
+<h4 id="加州信用报告数据">2.2 加州信用报告数据</h4>
+<ul>
+<li>2002-2011年的信用报告面板</li>
+<li>与2003-2007年加州医院出院数据关联</li>
+<li>重点样本:约38万名25-64岁有保险的住院成年人</li>
+</ul>
+<p><strong>样本构建原则</strong>: - 排除妊娠相关入院 -
+要求入院前至少3年无住院记录(确保"冲击"性质) -
+有保险定义为私人保险或Medicaid</p>
+<p><strong>表1关键特征</strong>: | 指标 | HRS (50-59岁) | 信用报告
+(25-64岁) | |------|---------------|-------------------| | 入院年龄 |
+55.6岁 | 48.5岁 | | 男性比例 | 47.6% | 45.1% | | 私人保险 | 94.1% |
+86.3% | | 平均住院天数 | n/a | 4.1天 | | 医院列表费用 | n/a | ${45,580
+|</p>
+<h3 id="三主要结果">三、主要结果</h3>
+<h4 id="hrs结果自付费用与收入">3.1 HRS结果:自付费用与收入</h4>
+<p><strong>表2核心数据(50-59岁有保险成年人)</strong>:</p>
+<p><strong>自付医疗费用</strong>: - 入院后12个月:增加}<span class="math inline">\(3,275
+- 入院后36个月:增加\)</span>{1,011 - 3年平均年增加:}$1,429</p>
+<p><strong>就业与劳动收入</strong>: -
+就业概率下降:12个月后下降8.9个百分点,36个月后下降11.1个百分点 -
+年劳动收入下降:12个月后下降${6,445,36个月后下降}<span class="math inline">\(11,071
+- **3年平均年收入下降\)</span>{8,753,相当于入院前收入的20%**</p>
+<p><strong>关键发现</strong>: 1.
+<strong>收入下降远超自付费用增加</strong>:自付费用3年平均每年增加}<span class="math inline">\(1,429,但收入下降\)</span>{8,753 2.
+<strong>收入损失几乎无保险</strong>:仅约10%的收入损失通过社会保险项目得到补偿
+3. ** spousal劳动供给无响应<strong>:配偶没有增加劳动供给来弥补收入损失
+4.
+</strong>效果持久**:收入下降似乎持久甚至加剧,反映健康冲击的持续影响</p>
+<h4 id="信用报告结果">3.2 信用报告结果</h4>
+<p><strong>表5-7核心数据(25-64岁有保险成年人)</strong>:</p>
+<p><strong>未付医疗账单</strong>: - 入院4年后,未付账单增加约}<span class="math inline">\(300(较小)
+- 但信用卡余额下降约\)</span>{1,700</p>
+<p><strong>破产</strong>: - 有保险的非老年人:入院增加破产概率0.4个百分点
+- 无保险的非老年人:入院增加破产概率1.4个百分点 -
+<strong>住院引发的破产:有保险者中占4%,无保险者中占6%</strong></p>
+<p><strong>借贷与信用</strong>: - 信用卡余额下降约10%(4年内) -
+信用额度下降约5%</p>
+<h4 id="关键对比50-59岁-vs-60-64岁">3.3 关键对比:50-59岁 vs 60-64岁</h4>
+<p><strong>60-64岁年龄组发现</strong>: - 收入下降幅度相似 -
+但超过60%的收入下降通过社会保障退休收入得到保险 -
+与50-59岁组仅10%的保险率形成鲜明对比</p>
+<p><strong>政策含义</strong>: -
+在美国,法定社会保障退休年龄(62岁)是重要的收入保险分水岭 -
+62岁之前的成年人几乎没有正式的 earnings insurance</p>
+<h3 id="四机制分析">四、机制分析</h3>
+<h4 id="为什么收入下降幅度这么大">4.1 为什么收入下降幅度这么大?</h4>
+<p>** Extensive margin(就业边际)**: - 入院后3年,就业概率下降11个百分点 -
+约60-85%的收入下降可由就业下降解释 -
+主要表现为从全职工作退出,部分进入退休状态</p>
+<p>** Intensive margin(工时边际)**: - 年工时下降约228小时(14%) -
+工资率本身(conditional on working)无显著变化</p>
+<p><strong>健康限制</strong>: -
+自报"健康原因限制工作能力"的比例上升9.5个百分点</p>
+<h4 id="为什么社会保险覆盖这么少">4.2 为什么社会保险覆盖这么少?</h4>
+<p><strong>失业保险(UI)不适用</strong>: - 住院不等于失业 -
+UI不覆盖因健康原因减少工时的情况</p>
+<p><strong>残疾保险(SSDI)</strong>: - 申请过程漫长且结果不确定 -
+50-59岁人群难以获得SSDI</p>
+<p><strong>社会保障退休收入(SSRI)</strong>: - 需要年满62岁才能领取 -
+60-64岁人群才开始有资格</p>
+<h3 id="五福利含义">五、福利含义</h3>
+<h4 id="总体经济后果的保险覆盖">5.1 总体经济后果的保险覆盖</h4>
+<p>作者估算(50-59岁有保险者): -
+<strong>第1年</strong>:超过90%的医疗费用被覆盖,但仅约80%的"总经济后果"(医疗费用+收入损失)被覆盖
+- <strong>第3年</strong>:仅约50%的总经济后果被覆盖</p>
+<p>随时间推移,收入损失在总经济后果中的比重越来越大,而社会保险对收入损失的保险几乎不存在.</p>
+<h4 id="医疗支出-vs-收入损失的福利权重">5.2 医疗支出 vs
+收入损失的福利权重</h4>
+<p><strong>重要区分</strong>: - 外生医疗支出(给定健康状态)→
+与同等金额的消费减少 welfare impact 相同 -
+收入变化可能反映劳动供给对健康状态的调整→ welfare impact 不同</p>
+<p><strong>福利计算</strong>: -
+一个简单模型显示:对于有健康保险的成年人,收入损失的 welfare consequences
+至少是自付医疗费用增加的3倍</p>
+<h4 id="无保险者的处境">5.3 无保险者的处境</h4>
+<p><strong>无保险者面临的更大风险</strong>: - 未付医疗账单增加}<span class="math inline">\(6,000(有保险者仅\)</span>{300) -
+破产率增幅是无保险者的3.5倍 - 但借贷反应的幅度相似</p>
+<p><strong>"隐性保险"现象</strong>: -
+所谓"无保险者"实际上通过其他渠道获得部分隐性保险 -
+例如,医院不能拒绝急诊患者,这形成了某种隐性公共保险 -
+外部各方(医院、纳税人)承担了部分医疗债务的 incidence</p>
+<h3 id="六医疗破产文献的贡献">六、"医疗破产"文献的贡献</h3>
+<p>本文对"医疗破产"文献提供了重要的校准证据:</p>
+<p><strong>先前研究的过高估计</strong>: -
+某些研究声称医疗事件可解释20-60%的所有破产 -
+这些研究通常基于自我报告的破产原因</p>
+<p><strong>本文的修正估计</strong>: -
+住院引发的破产:有保险者中约4%,无保险者中约6% -
+远低于先前研究声称的比例</p>
+<p><strong>原因分析</strong>: - 破产是多重因素共同作用的结果 -
+医疗事件可能是"最后一根稻草",而非根本原因 -
+破产申请人可能将医疗事件列为破产原因之一</p>
+<h2 id="结论conclusion">结论(Conclusion)</h2>
+<h3 id="研究核心结论">研究核心结论</h3>
+<ol type="1">
+<li><strong>住院对有保险的非老年人产生重大经济后果</strong>
+<ul>
+<li>就业概率下降11个百分点</li>
+<li>年收入下降约}$9,000(20%的入院前年收入)</li>
+<li>自付医疗费用增加,破产风险上升</li>
+</ul></li>
+<li><strong>收入损失几乎完全无保险</strong>
+<ul>
+<li>仅约10%的收入损失通过社会保险得到补偿</li>
+<li>这一发现挑战了美国医疗保险体系的"完整性"叙事</li>
+</ul></li>
+<li><strong>62岁是重要分水岭</strong>
+<ul>
+<li>60-64岁人群的收入损失保险率超过60%</li>
+<li>主要通过社会保障退休收入实现</li>
+</ul></li>
+<li><strong>无保险者的风险更大但幅度有限</strong>
+<ul>
+<li>未付账单和破产率增幅更大</li>
+<li>但借贷反应的幅度相似</li>
+</ul></li>
+<li><strong>住院引发的破产只是破产的一小部分</strong>
+<ul>
+<li>有保险者中约4%,无保险者中约6%</li>
+<li>远低于先前文献声称的比例</li>
+</ul></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><p><strong>数据贡献</strong>:首次将医院出院数据与信用报告数据关联,创建大规模住院经济后果数据集</p></li>
+<li><p><strong>方法论贡献</strong>:清晰的事件研究框架,结合非参数和参数估计,提供了可复制的模板</p></li>
+<li><p><strong>政策贡献</strong>:为评估ACA等健康保险改革的保护效果提供了实证依据</p></li>
+<li><p><strong>理论贡献</strong>:对"医疗破产"文献的校准提出了重要修正</p></li>
+</ol>
+<h3 id="未来研究方向">未来研究方向</h3>
+<ol type="1">
+<li>更长期的跟踪研究,评估收入下降的持久性</li>
+<li>探索不同类型入院(如心脏病 vs 骨折)的差异化影响</li>
+<li>跨国家比较:美国 vs 北欧国家的 earnings insurance 差异</li>
+<li>评估ACA改革后的效应变化</li>
+</ol>
+<h2 id="学术思考">学术思考</h2>
+<ol type="1">
+<li><p><strong>"完全保险"的定义问题</strong>:本文中"完全保险"的定义是消费在健康和健康状态间不变.但这是否等同于
+welfare 最优?考虑到健康状态本身影响效用函数(Viscusi &amp; Evans
+1990),消费平滑可能并非唯一目标.</p></li>
+<li><p><strong>内生性健康问题</strong>:住院可能反映潜在的健康恶化,而不仅仅是"外生冲击".如果健康和生产力之间存在反向因果,那么部分"收入效应"实际上可能是"生产力下降"而非"保险不足".</p></li>
+<li><p><strong>一般均衡效应</strong>:本文关注受影响个体的直接效应,但忽视了劳动力市场的
+general equilibrium_大量工人因健康原因退出劳动市场可能影响 wages
+和其他人就业机会.</p></li>
+<li><p><strong>动态视角的缺失</strong>:两期模型是否足以捕捉健康冲击的动态复杂性?实际中,健康冲击可能引发健康-收入恶化的"螺旋",需要更复杂的动态模型来刻画.</p></li>
+<li><p><strong>社会安全网的比较制度分析</strong>:美国和丹麦的对比(本文提及)揭示了制度设计的巨大差异.美国的
+disability insurance 和 paid sick leave
+系统是否应该向北欧模式转型?</p></li>
+<li><p><strong>医疗费用膨胀的外部性</strong>:本文揭示的经济后果部分源于医疗费用的高涨.如果医院收费改革(降低list
+charges)能否同时改善家庭经济状况和医疗系统效率?</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>AER</tag>
+        <tag>健康经济学</tag>
+        <tag>医疗保障</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Child Protection and Adult Crime: Using Investigator Assignment to Estimate Causal Effects of Foster Care -- 深度阅读笔记 -- Doyle</title>
     <url>/posts/doyle2008/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -6487,245 +6726,6 @@ Fragments of Curious and Useful Knowledge from the Chinese Past</em>
         <tag>经济史</tag>
         <tag>读书笔记</tag>
         <tag>中国研究</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>The Economic Consequences of Hospital Admissions — 深度阅读笔记 — Dobkin Et Al.</title>
-    <url>/posts/dobkin2018/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: The Economic Consequences of Hospital
-Admissions</li>
-<li><strong>作者</strong>: Carlos Dobkin, Amy Finkelstein, Raymond
-Kluender, Matthew J. Notowidigdo</li>
-<li><strong>年份</strong>: 2018</li>
-<li><strong>来源</strong>: American Economic Review, Vol. 108, No. 2,
-pp. 308-352 <span id="more"></span></li>
-</ul>
-<h2 id="引言背景和意义">引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>健康风险是美国家庭面临的重要经济风险.美国的医疗保障体系以私人保险为主、政府保险(如Medicare、Medicaid)为辅.ACA(Affordable
-Care
-Act)改革大幅扩展了保险覆盖面,但家庭仍然面临自付医疗费用、劳动收入损失和医疗债务等经济风险.</p>
-<p>健康冲击(health shock)对家庭经济的影响渠道包括: 1.
-<strong>直接渠道</strong>:自付医疗费用增加 2.
-<strong>间接渠道</strong>:劳动能力下降→收入减少 3.
-<strong>财务渠道</strong>:医疗债务→信用受损→借贷能力下降</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>政策关切</strong>:美国医疗保险政策的目标是保护家庭免受健康风险的经济后果.从林登·约翰逊签署Medicare时的宣言,到ACA的推出,政策制定者一直将健康保险作为经济安全网的核心组成部分.</p></li>
-<li><p><strong>知识缺口</strong>:尽管政策高度重视,但关于美国家庭面临的经济风险程度的系统证据仍然不足.已有研究存在样本局限或方法论问题,难以提供可靠的因果估计.</p></li>
-<li><p><strong>数据机会</strong>:本研究利用两个独特的数据集:</p>
-<ul>
-<li>健康与退休研究(HRS)的20年面板调查数据</li>
-<li>加州医院出院数据与信用报告的关联数据</li>
-</ul></li>
-<li><p><strong>方法论创新</strong>:使用事件研究方法,在入院这一相对外生的健康事件发生时点前后观察经济结果的动态变化.</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p>本研究试图回答: - 住院对有保险的非老年人会产生哪些经济后果? -
-这些后果在多大程度上被健康保险覆盖? -
-无保险人群面临的风险与有保险人群有何不同? -
-住院引发的破产在所有破产中占比几何?</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><strong>政策评估</strong>:为评估美国健康保险政策的保护效果提供实证依据</li>
-<li><strong>机制理解</strong>:揭示健康冲击通过哪些渠道影响家庭经济状况</li>
-<li><strong>社会成本核算</strong>:量化住院的经济后果,为医疗改革提供成本效益分析基础</li>
-</ol>
-<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
-<p><strong>I.
-经济框架</strong>:建立两期跨期模型,分析健康冲击如何产生医疗费用和工资损失</p>
-<p><strong>II.
-数据与经验框架</strong>:描述HRS和信用报告数据,阐述事件研究方法论</p>
-<p><strong>III.
-医疗费用与收入结果</strong>:报告HRS中住院对自付费用和劳动收入的影响</p>
-<p><strong>IV.
-信用报告结果</strong>:报告住院对未付账单、破产和信贷可及性的影响</p>
-<p><strong>V. 政策含义</strong>:讨论研究发现的福利含义</p>
-<p><strong>VI. 结论</strong></p>
-<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
-<h3 id="一理论框架">一、理论框架</h3>
-<p>作者建立了一个简洁的两期跨期选择模型:</p>
-<p><strong>模型设定</strong>: - 个人存活两期,期初面临健康冲击(概率p) -
-健康冲击产生外生医疗费用m,并降低工资率 -
-健康保险覆盖λ_m比例的医疗费用和λ_α比例的工资损失 -
-个人在预算约束下最大化状态特定效用</p>
-<p><strong>核心命题(Proposition 1)</strong>: 未完全覆盖的健康冲击会导致:
-- 消费下降(Δc₁&lt;0, Δc₂&lt;0) - 效用下降(ΔU&lt;0) -
-未付账单增加(Δu&gt;0) - 但对借款和收入的影响方向不确定</p>
-<p><strong>政策含义</strong>: -
-通过观察健康冲击后经济结果的变化,可以reject完全保险假设 -
-任何经济结果的变化(收入、信贷限制、借款等)都是保险不足的证据</p>
-<h3 id="二数据与样本">二、数据与样本</h3>
-<h4 id="hrs数据">2.1 HRS数据</h4>
-<ul>
-<li>1992-2012年20年的健康与退休研究面板数据</li>
-<li>追踪50岁以上人群的健康和经济状况</li>
-<li>重点样本:约2,700名50-59岁有保险的住院成年人</li>
-</ul>
-<h4 id="加州信用报告数据">2.2 加州信用报告数据</h4>
-<ul>
-<li>2002-2011年的信用报告面板</li>
-<li>与2003-2007年加州医院出院数据关联</li>
-<li>重点样本:约38万名25-64岁有保险的住院成年人</li>
-</ul>
-<p><strong>样本构建原则</strong>: - 排除妊娠相关入院 -
-要求入院前至少3年无住院记录(确保"冲击"性质) -
-有保险定义为私人保险或Medicaid</p>
-<p><strong>表1关键特征</strong>: | 指标 | HRS (50-59岁) | 信用报告
-(25-64岁) | |------|---------------|-------------------| | 入院年龄 |
-55.6岁 | 48.5岁 | | 男性比例 | 47.6% | 45.1% | | 私人保险 | 94.1% |
-86.3% | | 平均住院天数 | n/a | 4.1天 | | 医院列表费用 | n/a | ${45,580
-|</p>
-<h3 id="三主要结果">三、主要结果</h3>
-<h4 id="hrs结果自付费用与收入">3.1 HRS结果:自付费用与收入</h4>
-<p><strong>表2核心数据(50-59岁有保险成年人)</strong>:</p>
-<p><strong>自付医疗费用</strong>: - 入院后12个月:增加}<span class="math inline">\(3,275
-- 入院后36个月:增加\)</span>{1,011 - 3年平均年增加:}$1,429</p>
-<p><strong>就业与劳动收入</strong>: -
-就业概率下降:12个月后下降8.9个百分点,36个月后下降11.1个百分点 -
-年劳动收入下降:12个月后下降${6,445,36个月后下降}<span class="math inline">\(11,071
-- **3年平均年收入下降\)</span>{8,753,相当于入院前收入的20%**</p>
-<p><strong>关键发现</strong>: 1.
-<strong>收入下降远超自付费用增加</strong>:自付费用3年平均每年增加}<span class="math inline">\(1,429,但收入下降\)</span>{8,753 2.
-<strong>收入损失几乎无保险</strong>:仅约10%的收入损失通过社会保险项目得到补偿
-3. ** spousal劳动供给无响应<strong>:配偶没有增加劳动供给来弥补收入损失
-4.
-</strong>效果持久**:收入下降似乎持久甚至加剧,反映健康冲击的持续影响</p>
-<h4 id="信用报告结果">3.2 信用报告结果</h4>
-<p><strong>表5-7核心数据(25-64岁有保险成年人)</strong>:</p>
-<p><strong>未付医疗账单</strong>: - 入院4年后,未付账单增加约}<span class="math inline">\(300(较小)
-- 但信用卡余额下降约\)</span>{1,700</p>
-<p><strong>破产</strong>: - 有保险的非老年人:入院增加破产概率0.4个百分点
-- 无保险的非老年人:入院增加破产概率1.4个百分点 -
-<strong>住院引发的破产:有保险者中占4%,无保险者中占6%</strong></p>
-<p><strong>借贷与信用</strong>: - 信用卡余额下降约10%(4年内) -
-信用额度下降约5%</p>
-<h4 id="关键对比50-59岁-vs-60-64岁">3.3 关键对比:50-59岁 vs 60-64岁</h4>
-<p><strong>60-64岁年龄组发现</strong>: - 收入下降幅度相似 -
-但超过60%的收入下降通过社会保障退休收入得到保险 -
-与50-59岁组仅10%的保险率形成鲜明对比</p>
-<p><strong>政策含义</strong>: -
-在美国,法定社会保障退休年龄(62岁)是重要的收入保险分水岭 -
-62岁之前的成年人几乎没有正式的 earnings insurance</p>
-<h3 id="四机制分析">四、机制分析</h3>
-<h4 id="为什么收入下降幅度这么大">4.1 为什么收入下降幅度这么大?</h4>
-<p>** Extensive margin(就业边际)**: - 入院后3年,就业概率下降11个百分点 -
-约60-85%的收入下降可由就业下降解释 -
-主要表现为从全职工作退出,部分进入退休状态</p>
-<p>** Intensive margin(工时边际)**: - 年工时下降约228小时(14%) -
-工资率本身(conditional on working)无显著变化</p>
-<p><strong>健康限制</strong>: -
-自报"健康原因限制工作能力"的比例上升9.5个百分点</p>
-<h4 id="为什么社会保险覆盖这么少">4.2 为什么社会保险覆盖这么少?</h4>
-<p><strong>失业保险(UI)不适用</strong>: - 住院不等于失业 -
-UI不覆盖因健康原因减少工时的情况</p>
-<p><strong>残疾保险(SSDI)</strong>: - 申请过程漫长且结果不确定 -
-50-59岁人群难以获得SSDI</p>
-<p><strong>社会保障退休收入(SSRI)</strong>: - 需要年满62岁才能领取 -
-60-64岁人群才开始有资格</p>
-<h3 id="五福利含义">五、福利含义</h3>
-<h4 id="总体经济后果的保险覆盖">5.1 总体经济后果的保险覆盖</h4>
-<p>作者估算(50-59岁有保险者): -
-<strong>第1年</strong>:超过90%的医疗费用被覆盖,但仅约80%的"总经济后果"(医疗费用+收入损失)被覆盖
-- <strong>第3年</strong>:仅约50%的总经济后果被覆盖</p>
-<p>随时间推移,收入损失在总经济后果中的比重越来越大,而社会保险对收入损失的保险几乎不存在.</p>
-<h4 id="医疗支出-vs-收入损失的福利权重">5.2 医疗支出 vs
-收入损失的福利权重</h4>
-<p><strong>重要区分</strong>: - 外生医疗支出(给定健康状态)→
-与同等金额的消费减少 welfare impact 相同 -
-收入变化可能反映劳动供给对健康状态的调整→ welfare impact 不同</p>
-<p><strong>福利计算</strong>: -
-一个简单模型显示:对于有健康保险的成年人,收入损失的 welfare consequences
-至少是自付医疗费用增加的3倍</p>
-<h4 id="无保险者的处境">5.3 无保险者的处境</h4>
-<p><strong>无保险者面临的更大风险</strong>: - 未付医疗账单增加}<span class="math inline">\(6,000(有保险者仅\)</span>{300) -
-破产率增幅是无保险者的3.5倍 - 但借贷反应的幅度相似</p>
-<p><strong>"隐性保险"现象</strong>: -
-所谓"无保险者"实际上通过其他渠道获得部分隐性保险 -
-例如,医院不能拒绝急诊患者,这形成了某种隐性公共保险 -
-外部各方(医院、纳税人)承担了部分医疗债务的 incidence</p>
-<h3 id="六医疗破产文献的贡献">六、"医疗破产"文献的贡献</h3>
-<p>本文对"医疗破产"文献提供了重要的校准证据:</p>
-<p><strong>先前研究的过高估计</strong>: -
-某些研究声称医疗事件可解释20-60%的所有破产 -
-这些研究通常基于自我报告的破产原因</p>
-<p><strong>本文的修正估计</strong>: -
-住院引发的破产:有保险者中约4%,无保险者中约6% -
-远低于先前研究声称的比例</p>
-<p><strong>原因分析</strong>: - 破产是多重因素共同作用的结果 -
-医疗事件可能是"最后一根稻草",而非根本原因 -
-破产申请人可能将医疗事件列为破产原因之一</p>
-<h2 id="结论conclusion">结论(Conclusion)</h2>
-<h3 id="研究核心结论">研究核心结论</h3>
-<ol type="1">
-<li><strong>住院对有保险的非老年人产生重大经济后果</strong>
-<ul>
-<li>就业概率下降11个百分点</li>
-<li>年收入下降约}$9,000(20%的入院前年收入)</li>
-<li>自付医疗费用增加,破产风险上升</li>
-</ul></li>
-<li><strong>收入损失几乎完全无保险</strong>
-<ul>
-<li>仅约10%的收入损失通过社会保险得到补偿</li>
-<li>这一发现挑战了美国医疗保险体系的"完整性"叙事</li>
-</ul></li>
-<li><strong>62岁是重要分水岭</strong>
-<ul>
-<li>60-64岁人群的收入损失保险率超过60%</li>
-<li>主要通过社会保障退休收入实现</li>
-</ul></li>
-<li><strong>无保险者的风险更大但幅度有限</strong>
-<ul>
-<li>未付账单和破产率增幅更大</li>
-<li>但借贷反应的幅度相似</li>
-</ul></li>
-<li><strong>住院引发的破产只是破产的一小部分</strong>
-<ul>
-<li>有保险者中约4%,无保险者中约6%</li>
-<li>远低于先前文献声称的比例</li>
-</ul></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><p><strong>数据贡献</strong>:首次将医院出院数据与信用报告数据关联,创建大规模住院经济后果数据集</p></li>
-<li><p><strong>方法论贡献</strong>:清晰的事件研究框架,结合非参数和参数估计,提供了可复制的模板</p></li>
-<li><p><strong>政策贡献</strong>:为评估ACA等健康保险改革的保护效果提供了实证依据</p></li>
-<li><p><strong>理论贡献</strong>:对"医疗破产"文献的校准提出了重要修正</p></li>
-</ol>
-<h3 id="未来研究方向">未来研究方向</h3>
-<ol type="1">
-<li>更长期的跟踪研究,评估收入下降的持久性</li>
-<li>探索不同类型入院(如心脏病 vs 骨折)的差异化影响</li>
-<li>跨国家比较:美国 vs 北欧国家的 earnings insurance 差异</li>
-<li>评估ACA改革后的效应变化</li>
-</ol>
-<h2 id="学术思考">学术思考</h2>
-<ol type="1">
-<li><p><strong>"完全保险"的定义问题</strong>:本文中"完全保险"的定义是消费在健康和健康状态间不变.但这是否等同于
-welfare 最优?考虑到健康状态本身影响效用函数(Viscusi &amp; Evans
-1990),消费平滑可能并非唯一目标.</p></li>
-<li><p><strong>内生性健康问题</strong>:住院可能反映潜在的健康恶化,而不仅仅是"外生冲击".如果健康和生产力之间存在反向因果,那么部分"收入效应"实际上可能是"生产力下降"而非"保险不足".</p></li>
-<li><p><strong>一般均衡效应</strong>:本文关注受影响个体的直接效应,但忽视了劳动力市场的
-general equilibrium_大量工人因健康原因退出劳动市场可能影响 wages
-和其他人就业机会.</p></li>
-<li><p><strong>动态视角的缺失</strong>:两期模型是否足以捕捉健康冲击的动态复杂性?实际中,健康冲击可能引发健康-收入恶化的"螺旋",需要更复杂的动态模型来刻画.</p></li>
-<li><p><strong>社会安全网的比较制度分析</strong>:美国和丹麦的对比(本文提及)揭示了制度设计的巨大差异.美国的
-disability insurance 和 paid sick leave
-系统是否应该向北欧模式转型?</p></li>
-<li><p><strong>医疗费用膨胀的外部性</strong>:本文揭示的经济后果部分源于医疗费用的高涨.如果医院收费改革(降低list
-charges)能否同时改善家庭经济状况和医疗系统效率?</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>AER</tag>
-        <tag>健康经济学</tag>
-        <tag>医疗保障</tag>
       </tags>
   </entry>
   <entry>
@@ -10753,187 +10753,6 @@ Studies</li>
       </tags>
   </entry>
   <entry>
-    <title>预算到期会导致年底浪费性支出吗?_ Liebman &amp; Mahoney (2017) 笔记</title>
-    <url>/posts/liebman2017/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Do Expiring Budgets Lead to Wasteful Year-End
-Spending? Evidence from Federal Procurement</li>
-<li><strong>作者</strong>: Jeffrey B. Liebman(哈佛大学), Neale
-Mahoney(芝加哥大学)</li>
-<li><strong>类型</strong>: 论文笔记 / 公共经济学 / 预算制度</li>
-<li><strong>出版年份</strong>: 2017</li>
-<li><strong>出版机构/期刊</strong>: American Economic Review</li>
-<li><strong>DOI</strong>: 10.1257/aer.20131296</li>
-<li><strong>难度评估</strong>: 高 -
-需要经济学、计量经济学、公共财政学基础</li>
-</ul>
-<span id="more"></span>
-<h2 id="引言">引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>本文属于公共经济学、行为经济学和管理学的交叉领域,探讨政府支出效率问题.核心概念包括:</p>
-<ul>
-<li><strong>预算约束</strong>: 政府机构在财政年度内可支配的资金总额</li>
-<li><strong>自由裁量支出</strong>:
-政府可以自行决定如何分配的预算部分,与法定支出(如社会保障)相对</li>
-<li><strong>公共采购</strong>: 政府购买商品和服务的行为</li>
-<li><strong>信息技术(IT)项目</strong>:
-政府对计算机硬件、软件和相关服务的投资</li>
-<li><strong>社会成本</strong>:
-指一项经济活动对整个社会造成的成本,包括直接成本和外部成本</li>
-<li><strong>滚动预算(Rollover Budget)</strong>:
-允许机构将未使用的预算资金转移到下一个财政年度</li>
-</ul>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p>政府机构通常面临"不使用就失去"的预算规则,即在一个财政年度结束时,任何未使用的预算资金都将返回国库,而不是留给该机构使用.这种规则可能会导致机构在财政年度末
-rush 支出,即使这意味着投资于低价值的项目.</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p>作者认为,"不使用就失去"的预算规则可能会导致政府浪费性支出.他们试图通过实证分析来检验这一观点,并探讨解决这一问题的潜在政策,例如允许机构将未使用的资金转入下一个财政年度.</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><strong>揭示了政府支出中潜在的浪费现象</strong>:
-通过量化财政年度末的支出高峰和质量下降,为政府支出效率问题提供了有力证据</li>
-<li><strong>评估了滚动预算的有效性</strong>:
-通过研究美国司法部的滚动预算政策,为解决浪费性支出提供了一个可行的解决方案</li>
-<li><strong>为政府预算管理提供了政策建议</strong>:
-研究结果表明,允许机构将未使用的资金转入下一个财政年度可以提高政府支出效率</li>
-</ol>
-<h2 id="论文结构">论文结构</h2>
-<ol type="1">
-<li><strong>引言</strong>: 概述研究背景、问题意识和研究意义</li>
-<li><strong>理论模型</strong>:
-建立一个简单的模型来解释"不使用就失去"的预算规则如何导致浪费性支出</li>
-<li><strong>数据描述</strong>:
-介绍用于实证分析的数据集,包括联邦采购数据系统(FPDS)和IT仪表板</li>
-<li><strong>实证分析1</strong>:
-使用FPDS数据检验财政年度末是否存在支出高峰</li>
-<li><strong>实证分析2</strong>:
-使用IT仪表板数据检验财政年度末的支出质量是否下降</li>
-<li><strong>政策分析</strong>: 研究滚动预算政策对支出行为的影响</li>
-<li><strong>福利分析</strong>:
-使用校准后的模型评估滚动预算政策的福利效应</li>
-<li><strong>结论</strong>:
-总结研究结果,讨论政策含义,并提出未来研究方向</li>
-</ol>
-<h2 id="背景">背景</h2>
-<p>许多组织都有在财政年度末到期的预算,这可能导致在年底匆忙将资源用于低质量的项目.美国联邦政府的自由裁量支出预算也面临类似情况,机构必须在财政年度结束前完成拨款.</p>
-<h3 id="挑战">挑战</h3>
-<ol type="1">
-<li><strong>"不使用就失去"的预算规则</strong>:
-如果机构不花完预算,剩余的资金将返回国库,降低了年底花钱的机会成本</li>
-<li><strong>预防性储蓄的动机</strong>:
-机构倾向于在预算周期开始时保留资金,以应对未来不确定的支出需求</li>
-<li><strong>缺乏关于年底浪费性支出的硬性证据</strong>:
-尽管有传闻证据,但缺乏关于美国联邦政府年底支出激增以及年底支出价值低于其他时间段的证据</li>
-</ol>
-<h2 id="方法">方法</h2>
-<h3 id="理论模型">理论模型</h3>
-<ul>
-<li><strong>模型设定</strong>:
-作者建立了一个年度预算模型,包括国会和一个政府机构.国会为该机构选择预算,该机构在一年中的每个时期都会获得一个参数,该参数决定了支出的边际价值,并选择一个支出水平以最大化收益递减的目标</li>
-<li><strong>模型特征</strong>:
-具有三个关键特征_预算到期、未来支出价值的不确定性以及每个时期内支出的收益递减</li>
-<li><strong>模型预测</strong>:
-由于不确定性和收益递减,该机构将在年初进行预防性储蓄;在年底,资金到期的前景导致该机构花掉所有剩余资源,即使边际价值低于资金的社会成本,导致年底支出量激增和质量下降</li>
-</ul>
-<h3 id="数据集">数据集</h3>
-<p><strong>1. 联邦采购数据系统(FPDS)</strong> - 时间范围:
-2004年至2009年财政年度 - 数据量: 1460万份合同 - 总支出: 2.6万亿美元 -
-主要内容:
-合同层面信息,包括金额、产品/服务代码、机构、供应商、合同类型、招标机制等
-- 用途: 用于分析联邦采购支出的总体模式,特别是年底支出高峰</p>
-<p><strong>2. IT仪表板(IT Dashboard)</strong> - 数据时间: 截至2010年3月
-- 项目数量: 686个主要IT项目 - 总计划支出: 1300亿美元 - 主要内容:
-项目绩效数据,包括总体评级、成本评级、进度评级、CIO评估等 - 用途:
-用于评估IT项目的质量,特别是年底开始的项目的质量</p>
-<h3 id="实证策略">实证策略</h3>
-<ol type="1">
-<li><strong>支出高峰检验</strong>:
-使用FPDS数据,分析财政年度内每周的采购支出模式,确定是否存在年底支出高峰</li>
-<li><strong>质量下降检验</strong>:
-使用IT仪表板数据,比较在财政年度最后一周开始的项目与在其他时间开始的项目的质量评级</li>
-<li><strong>政策分析</strong>:
-研究美国司法部(DOJ)的滚动预算政策对支出行为的影响.DOJ有权将未使用的IT项目预算转入下一财政年度,作者比较了DOJ的IT和非IT支出,以及DOJ和其他机构之间的支出模式</li>
-<li><strong>福利分析</strong>:
-通过校准模型以适应支出高峰和质量下降,分析允许滚动预算的潜在福利收益</li>
-</ol>
-<h3 id="关键术语">关键术语</h3>
-<ul>
-<li><strong>FPDS (Federal Procurement Data System)</strong>:
-联邦采购数据系统,跟踪所有联邦合同的数据系统</li>
-<li><strong>IT仪表板 (IT Dashboard)</strong>:
-跟踪联邦政府主要IT项目绩效的网站</li>
-<li><strong>CIO (Chief Information Officer)</strong>:
-首席信息官,负责机构的信息技术战略和管理</li>
-<li><strong>Ordered Logit Regression</strong>:
-有序Logit回归,用于分析有序分类因变量的统计模型</li>
-<li><strong>Difference-in-Differences</strong>:
-双重差分法,用于评估政策或干预效果的统计方法</li>
-<li><strong>CRRA (Constant Relative Risk Aversion)</strong>:
-恒定相对风险厌恶效用函数</li>
-<li><strong>CARA (Constant Absolute Risk Aversion)</strong>:
-恒定绝对风险厌恶效用函数</li>
-</ul>
-<h2 id="结果">结果</h2>
-<ol type="1">
-<li><strong>支出高峰</strong>:
-数据显示年底支出大幅增加.在财政年度的最后一周,支出是平时每周平均水平的4.9倍</li>
-<li><strong>质量下降</strong>:
-年底开始的IT项目的质量评级明显较低.在财政年度最后一周开始的项目,获得较低质量分数的可能性要高出2.3到5.6倍</li>
-<li><strong>滚动预算的影响</strong>:
-DOJ的IT支出没有出现支出高峰,最后一周的IT支出仅占3.3%,而非IT支出为9.3%.差异分析表明滚动预算减少了年底支出量</li>
-<li><strong>福利分析</strong>:
-允许滚动预算可以带来福利收益.即使是允许机构在短时间内转入资金的中间政策,也可以产生接近全部滚动价值四分之三的福利收益</li>
-</ol>
-<h2 id="结论">结论</h2>
-<p>本文的核心结论是:由于"不使用就失去"的预算规则,美国联邦政府存在年底浪费性支出现象.具体表现为:</p>
-<ul>
-<li><strong>年底支出量激增</strong>:
-财政年度末的支出明显高于其他时间段</li>
-<li><strong>年底支出质量下降</strong>:
-财政年度末开始的IT项目质量较低</li>
-</ul>
-<p>允许滚动预算可以有效地解决这个问题.DOJ的经验表明滚动预算可以减少年底支出量,并可能提高项目质量.福利分析表明,即使是有限制的滚动预算政策也可以带来显著的福利收益.</p>
-<p>作者建议可以通过允许机构将未使用的资金延期到下个财政年度,用于四个月的宽限期,从而消除因年底浪费性支出造成的大部分效率低下问题.</p>
-<h2 id="未来研究方向">未来研究方向</h2>
-<ol type="1">
-<li><strong>研究国会预算决策对机构支出行为的影响</strong>:
-深入研究国会如何应对滚动预算,以及如何设计预算规则以实现最佳效果</li>
-<li><strong>考虑机构内部的异质性</strong>:
-研究机构内部不同部门的支出行为差异,以及如何设计更有针对性的预算政策</li>
-<li><strong>探索其他解决浪费性支出问题的政策</strong>:
-例如改进预算预测,加强项目管理,或引入竞争性招标</li>
-<li><strong>研究不同类型的资金结转政策</strong>:
-比较无限期结转、有条件结转等不同方案对支出效率的影响</li>
-<li><strong>行为因素的影响</strong>:
-考虑认知偏差、损失厌恶等行为因素对政府部门年底支出行为的影响</li>
-<li><strong>政治因素</strong>:
-研究资金结转政策的政治可行性,以及立法机构对预算控制的考量</li>
-</ol>
-<h2 id="学术思考">学术思考</h2>
-<ol type="1">
-<li><strong>预算制度与创新</strong>:
-"使用或失效"的预算规则是否会抑制政府部门的创新活动?如果政府部门知道它们必须在当年用完所有资金,它们是否会更倾向于投资于风险较低、回报较快的项目?</li>
-<li><strong>政治周期与支出行为</strong>:
-政府部门的支出行为是否会受到政治周期的影响?</li>
-<li><strong>绩效评估指标的设计</strong>:
-如何设计更有效的绩效评估指标,以准确衡量政府部门的支出质量?</li>
-<li><strong>资金结转政策的适用性</strong>:
-资金结转政策是否适用于所有类型的政府部门和项目?</li>
-<li><strong>公共部门与私营部门的对比</strong>:
-比较公共部门和私营部门在预算管理和支出效率方面的差异</li>
-</ol>
-]]></content>
-      <categories>
-        <category>公共经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>公共经济学</tag>
-        <tag>预算制度</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>年末消费高峰 — 论文笔记 — McCue, Prier &amp; Lofaro</title>
     <url>/posts/mccue2021/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -11202,6 +11021,187 @@ study of procurement contracts》深度分析撰写。</em></p>
         <tag>论文笔记</tag>
         <tag>公共财政</tag>
         <tag>政府采购</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>预算到期会导致年底浪费性支出吗?_ Liebman &amp; Mahoney (2017) 笔记</title>
+    <url>/posts/liebman2017/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Do Expiring Budgets Lead to Wasteful Year-End
+Spending? Evidence from Federal Procurement</li>
+<li><strong>作者</strong>: Jeffrey B. Liebman(哈佛大学), Neale
+Mahoney(芝加哥大学)</li>
+<li><strong>类型</strong>: 论文笔记 / 公共经济学 / 预算制度</li>
+<li><strong>出版年份</strong>: 2017</li>
+<li><strong>出版机构/期刊</strong>: American Economic Review</li>
+<li><strong>DOI</strong>: 10.1257/aer.20131296</li>
+<li><strong>难度评估</strong>: 高 -
+需要经济学、计量经济学、公共财政学基础</li>
+</ul>
+<span id="more"></span>
+<h2 id="引言">引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>本文属于公共经济学、行为经济学和管理学的交叉领域,探讨政府支出效率问题.核心概念包括:</p>
+<ul>
+<li><strong>预算约束</strong>: 政府机构在财政年度内可支配的资金总额</li>
+<li><strong>自由裁量支出</strong>:
+政府可以自行决定如何分配的预算部分,与法定支出(如社会保障)相对</li>
+<li><strong>公共采购</strong>: 政府购买商品和服务的行为</li>
+<li><strong>信息技术(IT)项目</strong>:
+政府对计算机硬件、软件和相关服务的投资</li>
+<li><strong>社会成本</strong>:
+指一项经济活动对整个社会造成的成本,包括直接成本和外部成本</li>
+<li><strong>滚动预算(Rollover Budget)</strong>:
+允许机构将未使用的预算资金转移到下一个财政年度</li>
+</ul>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<p>政府机构通常面临"不使用就失去"的预算规则,即在一个财政年度结束时,任何未使用的预算资金都将返回国库,而不是留给该机构使用.这种规则可能会导致机构在财政年度末
+rush 支出,即使这意味着投资于低价值的项目.</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p>作者认为,"不使用就失去"的预算规则可能会导致政府浪费性支出.他们试图通过实证分析来检验这一观点,并探讨解决这一问题的潜在政策,例如允许机构将未使用的资金转入下一个财政年度.</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><strong>揭示了政府支出中潜在的浪费现象</strong>:
+通过量化财政年度末的支出高峰和质量下降,为政府支出效率问题提供了有力证据</li>
+<li><strong>评估了滚动预算的有效性</strong>:
+通过研究美国司法部的滚动预算政策,为解决浪费性支出提供了一个可行的解决方案</li>
+<li><strong>为政府预算管理提供了政策建议</strong>:
+研究结果表明,允许机构将未使用的资金转入下一个财政年度可以提高政府支出效率</li>
+</ol>
+<h2 id="论文结构">论文结构</h2>
+<ol type="1">
+<li><strong>引言</strong>: 概述研究背景、问题意识和研究意义</li>
+<li><strong>理论模型</strong>:
+建立一个简单的模型来解释"不使用就失去"的预算规则如何导致浪费性支出</li>
+<li><strong>数据描述</strong>:
+介绍用于实证分析的数据集,包括联邦采购数据系统(FPDS)和IT仪表板</li>
+<li><strong>实证分析1</strong>:
+使用FPDS数据检验财政年度末是否存在支出高峰</li>
+<li><strong>实证分析2</strong>:
+使用IT仪表板数据检验财政年度末的支出质量是否下降</li>
+<li><strong>政策分析</strong>: 研究滚动预算政策对支出行为的影响</li>
+<li><strong>福利分析</strong>:
+使用校准后的模型评估滚动预算政策的福利效应</li>
+<li><strong>结论</strong>:
+总结研究结果,讨论政策含义,并提出未来研究方向</li>
+</ol>
+<h2 id="背景">背景</h2>
+<p>许多组织都有在财政年度末到期的预算,这可能导致在年底匆忙将资源用于低质量的项目.美国联邦政府的自由裁量支出预算也面临类似情况,机构必须在财政年度结束前完成拨款.</p>
+<h3 id="挑战">挑战</h3>
+<ol type="1">
+<li><strong>"不使用就失去"的预算规则</strong>:
+如果机构不花完预算,剩余的资金将返回国库,降低了年底花钱的机会成本</li>
+<li><strong>预防性储蓄的动机</strong>:
+机构倾向于在预算周期开始时保留资金,以应对未来不确定的支出需求</li>
+<li><strong>缺乏关于年底浪费性支出的硬性证据</strong>:
+尽管有传闻证据,但缺乏关于美国联邦政府年底支出激增以及年底支出价值低于其他时间段的证据</li>
+</ol>
+<h2 id="方法">方法</h2>
+<h3 id="理论模型">理论模型</h3>
+<ul>
+<li><strong>模型设定</strong>:
+作者建立了一个年度预算模型,包括国会和一个政府机构.国会为该机构选择预算,该机构在一年中的每个时期都会获得一个参数,该参数决定了支出的边际价值,并选择一个支出水平以最大化收益递减的目标</li>
+<li><strong>模型特征</strong>:
+具有三个关键特征_预算到期、未来支出价值的不确定性以及每个时期内支出的收益递减</li>
+<li><strong>模型预测</strong>:
+由于不确定性和收益递减,该机构将在年初进行预防性储蓄;在年底,资金到期的前景导致该机构花掉所有剩余资源,即使边际价值低于资金的社会成本,导致年底支出量激增和质量下降</li>
+</ul>
+<h3 id="数据集">数据集</h3>
+<p><strong>1. 联邦采购数据系统(FPDS)</strong> - 时间范围:
+2004年至2009年财政年度 - 数据量: 1460万份合同 - 总支出: 2.6万亿美元 -
+主要内容:
+合同层面信息,包括金额、产品/服务代码、机构、供应商、合同类型、招标机制等
+- 用途: 用于分析联邦采购支出的总体模式,特别是年底支出高峰</p>
+<p><strong>2. IT仪表板(IT Dashboard)</strong> - 数据时间: 截至2010年3月
+- 项目数量: 686个主要IT项目 - 总计划支出: 1300亿美元 - 主要内容:
+项目绩效数据,包括总体评级、成本评级、进度评级、CIO评估等 - 用途:
+用于评估IT项目的质量,特别是年底开始的项目的质量</p>
+<h3 id="实证策略">实证策略</h3>
+<ol type="1">
+<li><strong>支出高峰检验</strong>:
+使用FPDS数据,分析财政年度内每周的采购支出模式,确定是否存在年底支出高峰</li>
+<li><strong>质量下降检验</strong>:
+使用IT仪表板数据,比较在财政年度最后一周开始的项目与在其他时间开始的项目的质量评级</li>
+<li><strong>政策分析</strong>:
+研究美国司法部(DOJ)的滚动预算政策对支出行为的影响.DOJ有权将未使用的IT项目预算转入下一财政年度,作者比较了DOJ的IT和非IT支出,以及DOJ和其他机构之间的支出模式</li>
+<li><strong>福利分析</strong>:
+通过校准模型以适应支出高峰和质量下降,分析允许滚动预算的潜在福利收益</li>
+</ol>
+<h3 id="关键术语">关键术语</h3>
+<ul>
+<li><strong>FPDS (Federal Procurement Data System)</strong>:
+联邦采购数据系统,跟踪所有联邦合同的数据系统</li>
+<li><strong>IT仪表板 (IT Dashboard)</strong>:
+跟踪联邦政府主要IT项目绩效的网站</li>
+<li><strong>CIO (Chief Information Officer)</strong>:
+首席信息官,负责机构的信息技术战略和管理</li>
+<li><strong>Ordered Logit Regression</strong>:
+有序Logit回归,用于分析有序分类因变量的统计模型</li>
+<li><strong>Difference-in-Differences</strong>:
+双重差分法,用于评估政策或干预效果的统计方法</li>
+<li><strong>CRRA (Constant Relative Risk Aversion)</strong>:
+恒定相对风险厌恶效用函数</li>
+<li><strong>CARA (Constant Absolute Risk Aversion)</strong>:
+恒定绝对风险厌恶效用函数</li>
+</ul>
+<h2 id="结果">结果</h2>
+<ol type="1">
+<li><strong>支出高峰</strong>:
+数据显示年底支出大幅增加.在财政年度的最后一周,支出是平时每周平均水平的4.9倍</li>
+<li><strong>质量下降</strong>:
+年底开始的IT项目的质量评级明显较低.在财政年度最后一周开始的项目,获得较低质量分数的可能性要高出2.3到5.6倍</li>
+<li><strong>滚动预算的影响</strong>:
+DOJ的IT支出没有出现支出高峰,最后一周的IT支出仅占3.3%,而非IT支出为9.3%.差异分析表明滚动预算减少了年底支出量</li>
+<li><strong>福利分析</strong>:
+允许滚动预算可以带来福利收益.即使是允许机构在短时间内转入资金的中间政策,也可以产生接近全部滚动价值四分之三的福利收益</li>
+</ol>
+<h2 id="结论">结论</h2>
+<p>本文的核心结论是:由于"不使用就失去"的预算规则,美国联邦政府存在年底浪费性支出现象.具体表现为:</p>
+<ul>
+<li><strong>年底支出量激增</strong>:
+财政年度末的支出明显高于其他时间段</li>
+<li><strong>年底支出质量下降</strong>:
+财政年度末开始的IT项目质量较低</li>
+</ul>
+<p>允许滚动预算可以有效地解决这个问题.DOJ的经验表明滚动预算可以减少年底支出量,并可能提高项目质量.福利分析表明,即使是有限制的滚动预算政策也可以带来显著的福利收益.</p>
+<p>作者建议可以通过允许机构将未使用的资金延期到下个财政年度,用于四个月的宽限期,从而消除因年底浪费性支出造成的大部分效率低下问题.</p>
+<h2 id="未来研究方向">未来研究方向</h2>
+<ol type="1">
+<li><strong>研究国会预算决策对机构支出行为的影响</strong>:
+深入研究国会如何应对滚动预算,以及如何设计预算规则以实现最佳效果</li>
+<li><strong>考虑机构内部的异质性</strong>:
+研究机构内部不同部门的支出行为差异,以及如何设计更有针对性的预算政策</li>
+<li><strong>探索其他解决浪费性支出问题的政策</strong>:
+例如改进预算预测,加强项目管理,或引入竞争性招标</li>
+<li><strong>研究不同类型的资金结转政策</strong>:
+比较无限期结转、有条件结转等不同方案对支出效率的影响</li>
+<li><strong>行为因素的影响</strong>:
+考虑认知偏差、损失厌恶等行为因素对政府部门年底支出行为的影响</li>
+<li><strong>政治因素</strong>:
+研究资金结转政策的政治可行性,以及立法机构对预算控制的考量</li>
+</ol>
+<h2 id="学术思考">学术思考</h2>
+<ol type="1">
+<li><strong>预算制度与创新</strong>:
+"使用或失效"的预算规则是否会抑制政府部门的创新活动?如果政府部门知道它们必须在当年用完所有资金,它们是否会更倾向于投资于风险较低、回报较快的项目?</li>
+<li><strong>政治周期与支出行为</strong>:
+政府部门的支出行为是否会受到政治周期的影响?</li>
+<li><strong>绩效评估指标的设计</strong>:
+如何设计更有效的绩效评估指标,以准确衡量政府部门的支出质量?</li>
+<li><strong>资金结转政策的适用性</strong>:
+资金结转政策是否适用于所有类型的政府部门和项目?</li>
+<li><strong>公共部门与私营部门的对比</strong>:
+比较公共部门和私营部门在预算管理和支出效率方面的差异</li>
+</ol>
+]]></content>
+      <categories>
+        <category>公共经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>公共经济学</tag>
+        <tag>预算制度</tag>
       </tags>
   </entry>
   <entry>
@@ -12889,45 +12889,6 @@ capita提高约5%</p></li>
       </tags>
   </entry>
   <entry>
-    <title>字体和公式的Display</title>
-    <url>/posts/15167/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<font face="Times New Roman">
-</font><p style="text-align:justify"><font face="Times New Roman">
-<b>"Evaluating the employment impact of a mandatory job search
-program"</b></font> <br> <br> <font face="Times New Roman">
-</font></p><p style="text-align:justify"><font face="Times New Roman">
-</font></p><p><font face="Times New Roman"><b>What treatment do the authors evaluate?</b></font> <br></p>
-<span id="more"></span>
-<font face="Tex Gyre Pagella">
-<p style="text-align:justify">
-</p><p><b>Answer: </b> In the parametric methods, the common trend
-assumption is:</p>
-<p><span class="math display">\[\begin{array}{l}
-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
-t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
-t=0\right)\right] \\
-=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
-t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
-t=0\right)\right]
-\end{array}\]</span> In the non-parametric methods, the common trend
-assumption is:</p>
-<p><span class="math display">\[\begin{array}{l}
-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i
-t}^{0} | P_{E X}, P_{t X}, N D=1, t=0\right) \\
-=E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=1\right)-E\left(Y_{i
-t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)
-\end{array}\]</span></p>
-</font><p><font face="Tex Gyre Pagella"></font></p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>blog_test</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Policy Experimentation in China: The Political Economy of Policy Learning — 深度阅读笔记 — Wang &amp; Yang</title>
     <url>/posts/wang2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -13155,6 +13116,45 @@ Economy</em>, 133(7), 2180-2228. https://doi.org/10.1086/734873</p>
         <tag>政治经济学</tag>
         <tag>政策实验</tag>
         <tag>中国经济</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>字体和公式的Display</title>
+    <url>/posts/15167/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<font face="Times New Roman">
+</font><p style="text-align:justify"><font face="Times New Roman">
+<b>"Evaluating the employment impact of a mandatory job search
+program"</b></font> <br> <br> <font face="Times New Roman">
+</font></p><p style="text-align:justify"><font face="Times New Roman">
+</font></p><p><font face="Times New Roman"><b>What treatment do the authors evaluate?</b></font> <br></p>
+<span id="more"></span>
+<font face="Tex Gyre Pagella">
+<p style="text-align:justify">
+</p><p><b>Answer: </b> In the parametric methods, the common trend
+assumption is:</p>
+<p><span class="math display">\[\begin{array}{l}
+f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
+t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
+t=0\right)\right] \\
+=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
+t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
+t=0\right)\right]
+\end{array}\]</span> In the non-parametric methods, the common trend
+assumption is:</p>
+<p><span class="math display">\[\begin{array}{l}
+E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i
+t}^{0} | P_{E X}, P_{t X}, N D=1, t=0\right) \\
+=E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=1\right)-E\left(Y_{i
+t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)
+\end{array}\]</span></p>
+</font><p><font face="Tex Gyre Pagella"></font></p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>blog_test</tag>
       </tags>
   </entry>
   <entry>
