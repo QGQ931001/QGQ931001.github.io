@@ -1162,184 +1162,6 @@ Economic Review.</li>
       </tags>
   </entry>
   <entry>
-    <title>长期住房收益率动态 — 深度阅读笔记 — Bäcker-Peral, Hazell &amp; Mian</title>
-    <url>/posts/backer-peral2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Dynamics of the Long-Term Housing Yield:
-Evidence from Natural Experiments</li>
-<li><strong>作者</strong>: Verónica Bäcker-Peral (普林斯顿), Jonathon
-Hazell (LSE), Atif Mian (普林斯顿 &amp; NBER)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3):
-1014-1051</li>
-<li><strong>DOI</strong>: 10.1257/aer.20240513</li>
-<li><strong>难度评估</strong>: 高 -
-需要房地产金融、计量经济学、自然实验方法基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>长期住房收益率（Long-Term Housing
-Yield）</strong>：预期长期均衡时的租金价格比率，反映市场对长期住房回报率的预期。</p>
-<p><strong>租约延长（Lease
-Extension）</strong>：英国房产的租约可以被延长90年或更长时间，形成自然实验。</p>
-<p><strong>自然实验方法（Natural Experiment
-Approach）</strong>：利用租约延长前后同一房产的价格变化来识别长期收益率。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>长期收益率的重要性</strong>：揭示市场对长期均衡的预期，帮助理解中期冲击消散后的经济状态</p></li>
-<li><p><strong>测量困难</strong>：长期收益率难以测量，需要能区分长期和中期价格行为的数据</p></li>
-<li><p><strong>英国独特制度</strong>：大多数公寓以长期租约（leasehold）形式买卖，可定期延长</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：如何利用英国租约延长的自然实验来估计预期的长期住房收益率y*？</p>
-<p><strong>主要发现</strong>： -
-y<em>从2000-2006年的约5.2%下降到2024年的2.7% - 非弹性市场下降更陡峭 -
-气候风险暴露较高的地区y</em>仍然较高</p>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
-<ul>
-<li>问题陈述和研究动机</li>
-<li>数据和方法概述</li>
-<li>主要发现预览</li>
-</ul>
-<h3 id="第二节预期长期住房收益率的定义">第二节：预期长期住房收益率的定义</h3>
-<ul>
-<li>收益率的定义</li>
-<li>y*的分解</li>
-</ul>
-<h3 id="第三节数据和租约延长详情">第三节：数据和租约延长详情</h3>
-<ul>
-<li><strong>3.1 数据构建</strong></li>
-<li><strong>3.2 租约延长制度详情</strong></li>
-<li><strong>3.3 交易滞后</strong></li>
-</ul>
-<h3 id="第四节实证方法">第四节：实证方法</h3>
-<ul>
-<li>双重差分估计</li>
-<li>非线性最小二乘估计y*</li>
-</ul>
-<h3 id="第五节主要结果">第五节：主要结果</h3>
-<ul>
-<li>y*的时间序列动态</li>
-<li>横截面异质性</li>
-</ul>
-<h3 id="第六节宏观经济含义">第六节：宏观经济含义</h3>
-<ul>
-<li>与其他市场的比较</li>
-<li>当前价格的持久性指标</li>
-<li>供给弹性和气候风险的影响</li>
-</ul>
-<h3 id="第七节结论">第七节：结论</h3>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="英国房产制度">英国房产制度</h4>
-<p><strong>两种产权形式</strong>： -
-Freehold（永久产权）：对房产的永久所有权 -
-Leasehold（租约）：长期租约，可买卖，通常在起源时长达100年以上</p>
-<p><strong>租约延长机制</strong>： -
-1993年《租约改革法》授予公寓租约持有人权利： -
-获得比原始租约长90年的新租约 - 需向永久产权持有人支付一次性协商费用</p>
-<p><strong>关键事实</strong>： - 英国有5百万租约房产 -
-70%的租约是剩余期限≤250年的"短租约" - 30%是剩余期限≥700年的"长租约" -
-几乎不存在250-700年之间的租约</p>
-<h3 id="实证方法">实证方法</h3>
-<h4 id="自然实验">自然实验</h4>
-<p><strong>核心洞察</strong>： -
-同一房产在延长前后的价格差异反映了长期收益率 - 延长前价格反映短期价值 -
-延长后价格反映短期和长期价值 - 价格差异几乎完全取决于长期收益率</p>
-<p><strong>识别策略</strong>： - 处理组：在t-u时刻延长租约的房产 -
-对照组：类似的未延长租约的房产 - 比较两组在延长前后的价格增长</p>
-<h4 id="估计方程">估计方程</h4>
-<p><strong>双重差分</strong>： <span class="math display">\[\Delta \log
-P_{it} = \alpha + \beta \cdot Extension_{i} + \gamma_t + \delta X_i +
-\varepsilon_{it}\]</span></p>
-<p><strong>非线最小二乘</strong>： 使用贴现现金流定价方程： <span class="math display">\[P_{extended} = P_{short} \cdot e^{y^* \cdot
-\Delta T}\]</span></p>
-<p>其中ΔT是延长的年数</p>
-<h3 id="主要结果">主要结果</h3>
-<h4 id="时间序列动态">时间序列动态</h4>
-<p><strong>核心发现</strong>： - 2000-2006年：y<em>稳定在约5.2% -
-2008年大衰退开始：y</em>开始下降 - 2024年：达到2.7%的低点 -
-大衰退导致的下降幅度大，相当于长期价格-租金比近翻倍</p>
-<p><strong>关键特征</strong>： - y*在疫情期间及之后保持相对稳定 -
-2024年的月度估计显示更精确</p>
-<h4 id="横截面异质性">横截面异质性</h4>
-<p><strong>供给弹性效应</strong>： -
-非弹性市场（供给受限地区）y*下降更陡峭 - 因为需求增加导致估值上升</p>
-<p><strong>气候风险效应</strong>： -
-长期气候风险较高的地区（洪水、沉降暴露） - y<em>水平较高 -
-说明y</em>包含住房风险溢价</p>
-<h3 id="宏观经济含义">宏观经济含义</h3>
-<h4 id="与其他市场的比较">与其他市场的比较</h4>
-<p><strong>长期债券收益率</strong>： - 长期债券收益率与y*密切追踪 -
-表明下降是广泛而非住房特有的</p>
-<p><strong>全球住房和其他资产</strong>： -
-全球住房和其他资产的长期收益率趋势类似 -
-表明下降可能与预期长期安全资产收益率r*的下降有关</p>
-<h4 id="当前vs长期收益率">当前vs长期收益率</h4>
-<p><strong>实时指标</strong>： - 当前租金价格比与y*的比较 -
-表明市场对未来住房估值的预期持久性</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p>**长期住房收益率y*显著下降**：从约5%下降到2.7%，与大衰退相关</p></li>
-<li><p><strong>方法论创新</strong>：利用租约延长的自然实验，"差掉"收益率曲线的短端</p></li>
-<li><p><strong>横截面异质性</strong>：供给弹性和气候风险影响y*的水平和动态</p></li>
-<li><p><strong>实时估计可用</strong>：数据和代码公开，实时更新</p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><p><strong>方法论</strong>：首个利用租约延长自然实验估计长期住房收益率</p></li>
-<li><p><strong>数据</strong>：构建并公开租约延长行政数据集</p></li>
-<li><p><strong>宏观经济</strong>：提供关于r*等重要宏观经济参数的见解</p></li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
-<ol type="1">
-<li><p>利用新方法研究其他资产类别的长期收益率</p></li>
-<li><p>扩展到其他国家的住房市场</p></li>
-</ol>
-<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
-<ol type="1">
-<li><p><strong>与结构模型的比较</strong>：自然实验方法与结构模型方法的优劣比较</p></li>
-<li><p><strong>政策应用</strong>：y*的实时估计如何用于货币政策和宏观审慎政策</p></li>
-</ol>
-<hr>
-<h2 id="学术思考">7. 学术思考</h2>
-<h3 id="核心学术洞察">核心学术洞察</h3>
-<ol type="1">
-<li><p><strong>"差掉短端"的识别策略</strong>：自然实验方法的核心洞察是，租约延长前的价格测量短期价值，延长后的价格测量短期和长期价值。因此，价格差异"差掉"了收益率曲线的短端，只反映长期收益率。</p></li>
-<li><p><strong>长期vs中期信息的权衡</strong>：金融资产的典型远期收益率最多提供10-30年的信息，而租约延长提供接近一个世纪的信息。</p></li>
-<li><p><strong>实时估计的优势</strong>：大多数宏观金融方法依赖于结构性假设，自然实验方法不依赖这些假设，因此可以提供更稳健的实时估计。</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p>**为什么长期住房收益率y*下降这么多？**
-与预期长期安全资产收益率r*的下降有何关系？</p></li>
-<li><p><strong>自然实验方法的识别假设是什么？</strong>
-平行趋势假设是否可靠？</p></li>
-<li><p><strong>租约延长数据如何构建？</strong>
-匹配关闭租约和开放租约的技术细节是什么？</p></li>
-<li><p>**y*与长期债券收益率的追踪关系有何含义？**
-这表明什么共同驱动因素？</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>In Harm&#39;s Way? Infrastructure Investments and the Persistence of Coastal Cities — 深度阅读笔记 — Balboni</title>
     <url>/posts/balboni2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -1702,166 +1524,181 @@ Moi改革后)，这是否影响校准的可靠性？</p>
       </tags>
   </entry>
   <entry>
-    <title>Do Governments Crowd Out Governments? — 深度阅读笔记 — Baumann &amp; Klymak</title>
-    <url>/posts/baumann2024/</url>
+    <title>长期住房收益率动态 — 深度阅读笔记 — Bäcker-Peral, Hazell &amp; Mian</title>
+    <url>/posts/backer-peral2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
 <ul>
-<li><strong>标题</strong>: Do governments crowd out governments?
-Evidence from a natural experiment</li>
-<li><strong>作者</strong>: Stuart Baumann, Margaryta Klymak</li>
-<li><strong>类型</strong>: 论文笔记 / 财政学 / 政府经济学</li>
-<li><strong>出版年份</strong>: 2024</li>
-<li><strong>出版机构/期刊</strong>: European Economic Review, Vol. 168,
-104803</li>
-<li><strong>难度评估</strong>: 中 - 需要计量经济学基础 <span id="more"></span>
----</li>
+<li><strong>标题</strong>: Dynamics of the Long-Term Housing Yield:
+Evidence from Natural Experiments</li>
+<li><strong>作者</strong>: Verónica Bäcker-Peral (普林斯顿), Jonathon
+Hazell (LSE), Atif Mian (普林斯顿 &amp; NBER)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(3):
+1014-1051</li>
+<li><strong>DOI</strong>: 10.1257/aer.20240513</li>
+<li><strong>难度评估</strong>: 高 -
+需要房地产金融、计量经济学、自然实验方法基础</li>
 </ul>
-<h2 id="引言背景和意义">引言(背景和意义)</h2>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
 <h3 id="领域基础知识">领域基础知识</h3>
-<p>年终支出高峰(Year-End Spending
-Spike)是全球各国政府普遍存在的现象_政府部门在财政年度结束时集中大量支出.这种支出模式具有几个关键特征:</p>
-<p><strong>规模与普遍性.</strong>
-英国资本支出在财年最后一个月是月平均支出的约两倍;美国政府在财年最后一周的支出是平均周的4.9倍.这一现象在OECD
-27个国家均有观察到.</p>
-<p><strong>潜在浪费问题.</strong>
-年终仓促采购可能导致质量问题.Liebman和Mahoney(2017)发现,美国政府采购的IT项目在财年末执行的,其获得"低质量"评分的可能性是其他时间执行的2.2至5.6倍.</p>
-<p><strong>现有解释的局限.</strong>
-文献将年终支出归因于政府部门自身的预算周期(内部因素):如预防性储蓄基金、拖延行为、或规划不足.但这些解释均未考虑外部因素_其他政府部门和企业的支出行为.</p>
+<p><strong>长期住房收益率（Long-Term Housing
+Yield）</strong>：预期长期均衡时的租金价格比率，反映市场对长期住房回报率的预期。</p>
+<p><strong>租约延长（Lease
+Extension）</strong>：英国房产的租约可以被延长90年或更长时间，形成自然实验。</p>
+<p><strong>自然实验方法（Natural Experiment
+Approach）</strong>：利用租约延长前后同一房产的价格变化来识别长期收益率。</p>
 <h3 id="研究的主要背景">研究的主要背景</h3>
-<p><strong>拥堵效应与竞争机制.</strong>
-当多个政府部门同时高强度支出时,可能在供应商方面产生拥堵效应.具体机制包括:</p>
-<ul>
-<li><strong>价格上涨</strong>:供应商在高需求时期提高价格</li>
-<li><strong>采购替代</strong>:供应商不可用时被迫更换采购物品或供应商</li>
-<li><strong>销售策略</strong>:供应商增加销售人员、调整商品供应以利用高支出意愿</li>
-<li><strong>支出转移</strong>:部门可能将部分支出转移至其他时间以避免价格上涨</li>
-</ul>
-<p><strong>识别挑战.</strong>
-同一国家的政府机构通常遵循相同的财年规则,使得分离"部门自身财年影响"和"其他政府机构财年影响"成为重大识别挑战.</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:政府部门在财年末集中支出时,是否存在"政府挤出政府"的效应?</p>
-<p><strong>创新解决方案</strong>:利用英国驻海外办事处这一独特自然实验_这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
-<h3 id="研究意义">研究意义</h3>
-<ul>
-<li><strong>学术贡献</strong>:首次分离年终支出的"内部"与"外部"驱动因素</li>
-<li><strong>政策含义</strong>:错开不同部门的财年可能减少年终支出</li>
-</ul>
-<hr>
-<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
-<p><strong>第一节:引言(Introduction)</strong></p>
-<p>阐述年终支出高峰现象、潜在拥堵机制,研究挑战与创新.</p>
-<p><strong>第二节:方法论(Methodology)</strong></p>
-<p>数据:英国外交和联邦事务部(FCO)海外办事处2008-2019财年月度支出数据.实证策略:利用海外办事处沿用本国财年但所在国财年各异的自然实验.</p>
-<p><strong>第三节:结果(Results)</strong></p>
-<p>三个主要发现:本国财年末效应、当地政府挤出效应、当地企业财年效应.</p>
-<hr>
-<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
-<h3 id="一自然实验的设计优势">一、自然实验的设计优势</h3>
-<p><strong>英国海外办事处的独特性.</strong>
-英国在180多个国家设有399个海外办事处,这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
-<p>这种设置的优势:办事处的预算框架、管理和监督制度相同,执行相似的外交任务,可比较不同东道国办事处的支出模式差异.</p>
-<h3 id="二核心实证发现">二、核心实证发现</h3>
-<p><strong>发现1:本国财年末效应显著.</strong></p>
-<p>海外办事处在英国财年最后一个月(3月)的支出显著更高:</p>
-<ul>
-<li>资源预算:3月支出比月平均高1.359个标准差</li>
-<li>资本预算:3月支出比月平均高0.867个标准差</li>
-</ul>
-<p><strong>发现2:当地政府挤出效应显著.</strong></p>
-<p><span class="math inline">\(LFY End \times Home FY
-End\)</span>系数在资源支出模型中显著为正:在与英国财年重叠的国家,年终支出峰值更大.这表明东道国政府的年终支出确实产生了"挤出"效应.</p>
-<p><strong>发现3:当地企业财年效应显著.</strong></p>
-<p>在资本支出案例中,当地企业财年末越近,办事处支出越多.这与企业销售人员为最大化佣金的策略性行为一致.</p>
-<h3 id="三理论模型与预测">三、理论模型与预测</h3>
-<p>作者扩展了Liebman and
-Mahoney(2017)和Baumann(2019)的模型,加入"价格"和"拥堵效应"参数.</p>
-<p><strong>有趣发现</strong>:理论预测拥堵效应应减少年终支出峰值(理性部门会转移支出),但实证结果相反_拥堵效应加剧年终支出.这暗示政府部门的"行为惯性"可能比模型假设的更强.</p>
-<hr>
-<h2 id="结论conclusion">结论(Conclusion)</h2>
-<h3 id="核心结论总结">核心结论总结</h3>
-<p><strong>第一,本国财年是支出模式最重要的影响因素.</strong></p>
-<p><strong>第二,拥堵效应加剧年终支出.</strong>
-在与本国财年重叠的国家,年终支出规模更大.</p>
-<p><strong>第三,当地企业财年末后期,政府支出更高.</strong>
-企业销售人员的激励结构和行为也能影响政府部门的支出模式.</p>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ul>
-<li><strong>年终支出文献</strong>:首次分离内部与外部因素</li>
-<li><strong>财政溢出文献</strong>:发现"年终支出溢出"新概念</li>
-<li><strong>政策制定</strong>:错开财年可间接减少年终支出</li>
-</ul>
-<hr>
-<h2 id="未来研究方向">未来研究方向</h2>
-<h3 id="文献中提及的未来研究方向">文献中提及的未来研究方向</h3>
-<ul>
-<li>利用更细致的微观采购合同数据直接量化挤出效应的成本</li>
-<li>分析政府部门对拥堵效应的动态适应过程</li>
-</ul>
-<h3 id="基于本文思考的下一步研究工作">基于本文思考的下一步研究工作</h3>
-<p><strong>拥堵效应的成本量化.</strong>
-英国海外办事处在面临挤出效应时是否支付了更高价格?</p>
-<p><strong>政策错开财年的可行性分析.</strong>
-实施"错开财年"政策的实际可行性、潜在成本和过渡挑战.</p>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<p><strong>关于"个体理性"与"集体低效":</strong></p>
-<p>本文揭示了一个有趣的悖论:所有部门都在同一时间"理性"地加大支出以避免资金过期,这种个体理性可能导致整个经济体的集体低效_价格上涨、供应短缺、次优采购.</p>
-<p><strong>关于政府部门的价格敏感性:</strong></p>
-<p>理论模型预测理性部门会转移支出以避免拥堵,但实证结果相反.这暗示政府部门的"行为惯性"可能比新古典模型假设的更强.</p>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
 <ol type="1">
-<li><p><strong>拥堵效应具体如何测量?</strong>
-交互项系数的经济含义是什么?</p></li>
-<li><p><strong>资源预算和资本预算的响应为何不同?</strong></p></li>
-<li><p><strong>这对中国的政府采购改革有何启示?</strong></p></li>
-<li><p><strong>错开财年政策的实际可行性如何?</strong></p></li>
+<li><p><strong>长期收益率的重要性</strong>：揭示市场对长期均衡的预期，帮助理解中期冲击消散后的经济状态</p></li>
+<li><p><strong>测量困难</strong>：长期收益率难以测量，需要能区分长期和中期价格行为的数据</p></li>
+<li><p><strong>英国独特制度</strong>：大多数公寓以长期租约（leasehold）形式买卖，可定期延长</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：如何利用英国租约延长的自然实验来估计预期的长期住房收益率y*？</p>
+<p><strong>主要发现</strong>： -
+y<em>从2000-2006年的约5.2%下降到2024年的2.7% - 非弹性市场下降更陡峭 -
+气候风险暴露较高的地区y</em>仍然较高</p>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
+<ul>
+<li>问题陈述和研究动机</li>
+<li>数据和方法概述</li>
+<li>主要发现预览</li>
+</ul>
+<h3 id="第二节预期长期住房收益率的定义">第二节：预期长期住房收益率的定义</h3>
+<ul>
+<li>收益率的定义</li>
+<li>y*的分解</li>
+</ul>
+<h3 id="第三节数据和租约延长详情">第三节：数据和租约延长详情</h3>
+<ul>
+<li><strong>3.1 数据构建</strong></li>
+<li><strong>3.2 租约延长制度详情</strong></li>
+<li><strong>3.3 交易滞后</strong></li>
+</ul>
+<h3 id="第四节实证方法">第四节：实证方法</h3>
+<ul>
+<li>双重差分估计</li>
+<li>非线性最小二乘估计y*</li>
+</ul>
+<h3 id="第五节主要结果">第五节：主要结果</h3>
+<ul>
+<li>y*的时间序列动态</li>
+<li>横截面异质性</li>
+</ul>
+<h3 id="第六节宏观经济含义">第六节：宏观经济含义</h3>
+<ul>
+<li>与其他市场的比较</li>
+<li>当前价格的持久性指标</li>
+<li>供给弹性和气候风险的影响</li>
+</ul>
+<h3 id="第七节结论">第七节：结论</h3>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="英国房产制度">英国房产制度</h4>
+<p><strong>两种产权形式</strong>： -
+Freehold（永久产权）：对房产的永久所有权 -
+Leasehold（租约）：长期租约，可买卖，通常在起源时长达100年以上</p>
+<p><strong>租约延长机制</strong>： -
+1993年《租约改革法》授予公寓租约持有人权利： -
+获得比原始租约长90年的新租约 - 需向永久产权持有人支付一次性协商费用</p>
+<p><strong>关键事实</strong>： - 英国有5百万租约房产 -
+70%的租约是剩余期限≤250年的"短租约" - 30%是剩余期限≥700年的"长租约" -
+几乎不存在250-700年之间的租约</p>
+<h3 id="实证方法">实证方法</h3>
+<h4 id="自然实验">自然实验</h4>
+<p><strong>核心洞察</strong>： -
+同一房产在延长前后的价格差异反映了长期收益率 - 延长前价格反映短期价值 -
+延长后价格反映短期和长期价值 - 价格差异几乎完全取决于长期收益率</p>
+<p><strong>识别策略</strong>： - 处理组：在t-u时刻延长租约的房产 -
+对照组：类似的未延长租约的房产 - 比较两组在延长前后的价格增长</p>
+<h4 id="估计方程">估计方程</h4>
+<p><strong>双重差分</strong>： <span class="math display">\[\Delta \log
+P_{it} = \alpha + \beta \cdot Extension_{i} + \gamma_t + \delta X_i +
+\varepsilon_{it}\]</span></p>
+<p><strong>非线最小二乘</strong>： 使用贴现现金流定价方程： <span class="math display">\[P_{extended} = P_{short} \cdot e^{y^* \cdot
+\Delta T}\]</span></p>
+<p>其中ΔT是延长的年数</p>
+<h3 id="主要结果">主要结果</h3>
+<h4 id="时间序列动态">时间序列动态</h4>
+<p><strong>核心发现</strong>： - 2000-2006年：y<em>稳定在约5.2% -
+2008年大衰退开始：y</em>开始下降 - 2024年：达到2.7%的低点 -
+大衰退导致的下降幅度大，相当于长期价格-租金比近翻倍</p>
+<p><strong>关键特征</strong>： - y*在疫情期间及之后保持相对稳定 -
+2024年的月度估计显示更精确</p>
+<h4 id="横截面异质性">横截面异质性</h4>
+<p><strong>供给弹性效应</strong>： -
+非弹性市场（供给受限地区）y*下降更陡峭 - 因为需求增加导致估值上升</p>
+<p><strong>气候风险效应</strong>： -
+长期气候风险较高的地区（洪水、沉降暴露） - y<em>水平较高 -
+说明y</em>包含住房风险溢价</p>
+<h3 id="宏观经济含义">宏观经济含义</h3>
+<h4 id="与其他市场的比较">与其他市场的比较</h4>
+<p><strong>长期债券收益率</strong>： - 长期债券收益率与y*密切追踪 -
+表明下降是广泛而非住房特有的</p>
+<p><strong>全球住房和其他资产</strong>： -
+全球住房和其他资产的长期收益率趋势类似 -
+表明下降可能与预期长期安全资产收益率r*的下降有关</p>
+<h4 id="当前vs长期收益率">当前vs长期收益率</h4>
+<p><strong>实时指标</strong>： - 当前租金价格比与y*的比较 -
+表明市场对未来住房估值的预期持久性</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p>**长期住房收益率y*显著下降**：从约5%下降到2.7%，与大衰退相关</p></li>
+<li><p><strong>方法论创新</strong>：利用租约延长的自然实验，"差掉"收益率曲线的短端</p></li>
+<li><p><strong>横截面异质性</strong>：供给弹性和气候风险影响y*的水平和动态</p></li>
+<li><p><strong>实时估计可用</strong>：数据和代码公开，实时更新</p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><p><strong>方法论</strong>：首个利用租约延长自然实验估计长期住房收益率</p></li>
+<li><p><strong>数据</strong>：构建并公开租约延长行政数据集</p></li>
+<li><p><strong>宏观经济</strong>：提供关于r*等重要宏观经济参数的见解</p></li>
 </ol>
 <hr>
-<h2 id="参考文献">参考文献</h2>
-<ul>
-<li>Baumann, S. (2019). Procrastination and the Design of
-Government.</li>
-<li>Eichenauer, V. (2020). Budget Constraints and the Temporal Dynamics
-of Public Spending.</li>
-<li>Klymak, M., &amp; Baumann, S. (2022). Fiscal Year-End Procurement
-and Price Gouging.</li>
-<li>Liebman, J.B., &amp; Mahoney, N. (2017). Expiring Budgets and the
-Temporal Dynamics of Federal Spending.</li>
-<li>Oyer, P. (1998). Fiscal Year Ends and Intertemporal Labor
-Management.</li>
-</ul>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
+<ol type="1">
+<li><p>利用新方法研究其他资产类别的长期收益率</p></li>
+<li><p>扩展到其他国家的住房市场</p></li>
+</ol>
+<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
+<ol type="1">
+<li><p><strong>与结构模型的比较</strong>：自然实验方法与结构模型方法的优劣比较</p></li>
+<li><p><strong>政策应用</strong>：y*的实时估计如何用于货币政策和宏观审慎政策</p></li>
+</ol>
 <hr>
-<p><em>本笔记由 AI 生成,深度分析了&lt;Do governments crowd out
-governments?&gt;一文的核心内容、理论框架、实证发现和学术贡献.生成时间:2026年4月11日.</em></p>
+<h2 id="学术思考">7. 学术思考</h2>
+<h3 id="核心学术洞察">核心学术洞察</h3>
+<ol type="1">
+<li><p><strong>"差掉短端"的识别策略</strong>：自然实验方法的核心洞察是，租约延长前的价格测量短期价值，延长后的价格测量短期和长期价值。因此，价格差异"差掉"了收益率曲线的短端，只反映长期收益率。</p></li>
+<li><p><strong>长期vs中期信息的权衡</strong>：金融资产的典型远期收益率最多提供10-30年的信息，而租约延长提供接近一个世纪的信息。</p></li>
+<li><p><strong>实时估计的优势</strong>：大多数宏观金融方法依赖于结构性假设，自然实验方法不依赖这些假设，因此可以提供更稳健的实时估计。</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p>**为什么长期住房收益率y*下降这么多？**
+与预期长期安全资产收益率r*的下降有何关系？</p></li>
+<li><p><strong>自然实验方法的识别假设是什么？</strong>
+平行趋势假设是否可靠？</p></li>
+<li><p><strong>租约延长数据如何构建？</strong>
+匹配关闭租约和开放租约的技术细节是什么？</p></li>
+<li><p>**y*与长期债券收益率的追踪关系有何含义？**
+这表明什么共同驱动因素？</p></li>
+</ol>
 ]]></content>
       <categories>
-        <category>财政学</category>
+        <category>AER</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-        <tag>财政学</tag>
-        <tag>政府支出</tag>
-        <tag>挤出效应</tag>
-        <tag>自然实验</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何在双变量Probit中使用工具变量法IV估计</title>
-    <url>/posts/60676/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<h1 id="ml两步法">ML两步法</h1>
-<p>可以采用二步法进行ML估计,以下将会以一段样例代码展示:</p>
-<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">webuse</span> school, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">set</span> seed 1</span><br><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobit</span><br><span class="line"><span class="keyword">program</span> mybiprobit</span><br><span class="line"><span class="keyword">args</span> lnf m1   m2  athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"><span class="comment">**Here I am creating an artificial IV</span></span><br><span class="line"><span class="keyword">gen</span> z=logptax-rnormal()</span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobit (private:private=logptax loginc years)   (vote:vote=logptax loginc years)   /athrho (zb1:logptax=loginc  years z) /lns1</span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> maximize,</span><br><span class="line"><span class="keyword">matrix</span> b=<span class="built_in">e</span>(b)</span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobitiv</span><br><span class="line"><span class="keyword">program</span> mybiprobitiv</span><br><span class="line"><span class="keyword">args</span> lnf mm1 g1  mm2  g2 athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">tempvar</span> m1 m2</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m1'</span>=<span class="symbol">`mm1'</span>+<span class="symbol">`g1'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m2'</span>=<span class="symbol">`mm2'</span>+<span class="symbol">`g2'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobitiv (private:private=logptax loginc years) (g1:)  (vote:vote=logptax loginc years)  (g2:) /athrho (zb1:logptax=loginc  years z  ) /lns1, init(b)</span><br><span class="line"><span class="keyword">ml</span> maximize</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>计量</category>
-        <category>内生性问题</category>
-      </categories>
-      <tags>
-        <tag>stata</tag>
       </tags>
   </entry>
   <entry>
@@ -2076,6 +1913,151 @@ design）文献的联系值得深入。</p></li>
       </tags>
   </entry>
   <entry>
+    <title>Do Governments Crowd Out Governments? — 深度阅读笔记 — Baumann &amp; Klymak</title>
+    <url>/posts/baumann2024/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Do governments crowd out governments?
+Evidence from a natural experiment</li>
+<li><strong>作者</strong>: Stuart Baumann, Margaryta Klymak</li>
+<li><strong>类型</strong>: 论文笔记 / 财政学 / 政府经济学</li>
+<li><strong>出版年份</strong>: 2024</li>
+<li><strong>出版机构/期刊</strong>: European Economic Review, Vol. 168,
+104803</li>
+<li><strong>难度评估</strong>: 中 - 需要计量经济学基础 <span id="more"></span>
+---</li>
+</ul>
+<h2 id="引言背景和意义">引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>年终支出高峰(Year-End Spending
+Spike)是全球各国政府普遍存在的现象_政府部门在财政年度结束时集中大量支出.这种支出模式具有几个关键特征:</p>
+<p><strong>规模与普遍性.</strong>
+英国资本支出在财年最后一个月是月平均支出的约两倍;美国政府在财年最后一周的支出是平均周的4.9倍.这一现象在OECD
+27个国家均有观察到.</p>
+<p><strong>潜在浪费问题.</strong>
+年终仓促采购可能导致质量问题.Liebman和Mahoney(2017)发现,美国政府采购的IT项目在财年末执行的,其获得"低质量"评分的可能性是其他时间执行的2.2至5.6倍.</p>
+<p><strong>现有解释的局限.</strong>
+文献将年终支出归因于政府部门自身的预算周期(内部因素):如预防性储蓄基金、拖延行为、或规划不足.但这些解释均未考虑外部因素_其他政府部门和企业的支出行为.</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<p><strong>拥堵效应与竞争机制.</strong>
+当多个政府部门同时高强度支出时,可能在供应商方面产生拥堵效应.具体机制包括:</p>
+<ul>
+<li><strong>价格上涨</strong>:供应商在高需求时期提高价格</li>
+<li><strong>采购替代</strong>:供应商不可用时被迫更换采购物品或供应商</li>
+<li><strong>销售策略</strong>:供应商增加销售人员、调整商品供应以利用高支出意愿</li>
+<li><strong>支出转移</strong>:部门可能将部分支出转移至其他时间以避免价格上涨</li>
+</ul>
+<p><strong>识别挑战.</strong>
+同一国家的政府机构通常遵循相同的财年规则,使得分离"部门自身财年影响"和"其他政府机构财年影响"成为重大识别挑战.</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>:政府部门在财年末集中支出时,是否存在"政府挤出政府"的效应?</p>
+<p><strong>创新解决方案</strong>:利用英国驻海外办事处这一独特自然实验_这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
+<h3 id="研究意义">研究意义</h3>
+<ul>
+<li><strong>学术贡献</strong>:首次分离年终支出的"内部"与"外部"驱动因素</li>
+<li><strong>政策含义</strong>:错开不同部门的财年可能减少年终支出</li>
+</ul>
+<hr>
+<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
+<p><strong>第一节:引言(Introduction)</strong></p>
+<p>阐述年终支出高峰现象、潜在拥堵机制,研究挑战与创新.</p>
+<p><strong>第二节:方法论(Methodology)</strong></p>
+<p>数据:英国外交和联邦事务部(FCO)海外办事处2008-2019财年月度支出数据.实证策略:利用海外办事处沿用本国财年但所在国财年各异的自然实验.</p>
+<p><strong>第三节:结果(Results)</strong></p>
+<p>三个主要发现:本国财年末效应、当地政府挤出效应、当地企业财年效应.</p>
+<hr>
+<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
+<h3 id="一自然实验的设计优势">一、自然实验的设计优势</h3>
+<p><strong>英国海外办事处的独特性.</strong>
+英国在180多个国家设有399个海外办事处,这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
+<p>这种设置的优势:办事处的预算框架、管理和监督制度相同,执行相似的外交任务,可比较不同东道国办事处的支出模式差异.</p>
+<h3 id="二核心实证发现">二、核心实证发现</h3>
+<p><strong>发现1:本国财年末效应显著.</strong></p>
+<p>海外办事处在英国财年最后一个月(3月)的支出显著更高:</p>
+<ul>
+<li>资源预算:3月支出比月平均高1.359个标准差</li>
+<li>资本预算:3月支出比月平均高0.867个标准差</li>
+</ul>
+<p><strong>发现2:当地政府挤出效应显著.</strong></p>
+<p><span class="math inline">\(LFY End \times Home FY
+End\)</span>系数在资源支出模型中显著为正:在与英国财年重叠的国家,年终支出峰值更大.这表明东道国政府的年终支出确实产生了"挤出"效应.</p>
+<p><strong>发现3:当地企业财年效应显著.</strong></p>
+<p>在资本支出案例中,当地企业财年末越近,办事处支出越多.这与企业销售人员为最大化佣金的策略性行为一致.</p>
+<h3 id="三理论模型与预测">三、理论模型与预测</h3>
+<p>作者扩展了Liebman and
+Mahoney(2017)和Baumann(2019)的模型,加入"价格"和"拥堵效应"参数.</p>
+<p><strong>有趣发现</strong>:理论预测拥堵效应应减少年终支出峰值(理性部门会转移支出),但实证结果相反_拥堵效应加剧年终支出.这暗示政府部门的"行为惯性"可能比模型假设的更强.</p>
+<hr>
+<h2 id="结论conclusion">结论(Conclusion)</h2>
+<h3 id="核心结论总结">核心结论总结</h3>
+<p><strong>第一,本国财年是支出模式最重要的影响因素.</strong></p>
+<p><strong>第二,拥堵效应加剧年终支出.</strong>
+在与本国财年重叠的国家,年终支出规模更大.</p>
+<p><strong>第三,当地企业财年末后期,政府支出更高.</strong>
+企业销售人员的激励结构和行为也能影响政府部门的支出模式.</p>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ul>
+<li><strong>年终支出文献</strong>:首次分离内部与外部因素</li>
+<li><strong>财政溢出文献</strong>:发现"年终支出溢出"新概念</li>
+<li><strong>政策制定</strong>:错开财年可间接减少年终支出</li>
+</ul>
+<hr>
+<h2 id="未来研究方向">未来研究方向</h2>
+<h3 id="文献中提及的未来研究方向">文献中提及的未来研究方向</h3>
+<ul>
+<li>利用更细致的微观采购合同数据直接量化挤出效应的成本</li>
+<li>分析政府部门对拥堵效应的动态适应过程</li>
+</ul>
+<h3 id="基于本文思考的下一步研究工作">基于本文思考的下一步研究工作</h3>
+<p><strong>拥堵效应的成本量化.</strong>
+英国海外办事处在面临挤出效应时是否支付了更高价格?</p>
+<p><strong>政策错开财年的可行性分析.</strong>
+实施"错开财年"政策的实际可行性、潜在成本和过渡挑战.</p>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<p><strong>关于"个体理性"与"集体低效":</strong></p>
+<p>本文揭示了一个有趣的悖论:所有部门都在同一时间"理性"地加大支出以避免资金过期,这种个体理性可能导致整个经济体的集体低效_价格上涨、供应短缺、次优采购.</p>
+<p><strong>关于政府部门的价格敏感性:</strong></p>
+<p>理论模型预测理性部门会转移支出以避免拥堵,但实证结果相反.这暗示政府部门的"行为惯性"可能比新古典模型假设的更强.</p>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p><strong>拥堵效应具体如何测量?</strong>
+交互项系数的经济含义是什么?</p></li>
+<li><p><strong>资源预算和资本预算的响应为何不同?</strong></p></li>
+<li><p><strong>这对中国的政府采购改革有何启示?</strong></p></li>
+<li><p><strong>错开财年政策的实际可行性如何?</strong></p></li>
+</ol>
+<hr>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>Baumann, S. (2019). Procrastination and the Design of
+Government.</li>
+<li>Eichenauer, V. (2020). Budget Constraints and the Temporal Dynamics
+of Public Spending.</li>
+<li>Klymak, M., &amp; Baumann, S. (2022). Fiscal Year-End Procurement
+and Price Gouging.</li>
+<li>Liebman, J.B., &amp; Mahoney, N. (2017). Expiring Budgets and the
+Temporal Dynamics of Federal Spending.</li>
+<li>Oyer, P. (1998). Fiscal Year Ends and Intertemporal Labor
+Management.</li>
+</ul>
+<hr>
+<p><em>本笔记由 AI 生成,深度分析了&lt;Do governments crowd out
+governments?&gt;一文的核心内容、理论框架、实证发现和学术贡献.生成时间:2026年4月11日.</em></p>
+]]></content>
+      <categories>
+        <category>财政学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>财政学</tag>
+        <tag>政府支出</tag>
+        <tag>挤出效应</tag>
+        <tag>自然实验</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>致Berry</title>
     <url>/posts/51392/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
@@ -2097,195 +2079,21 @@ design）文献的联系值得深入。</p></li>
       </tags>
   </entry>
   <entry>
-    <title>Real Credit Cycles — 深度阅读笔记 — Bordalo, Gennaioli, Shleifer &amp; Terry</title>
-    <url>/posts/bordalo2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Real Credit Cycles</li>
-<li><strong>作者</strong>: Pedro Bordalo(Oxford), Nicola
-Gennaioli(Bocconi), Andrei Shleifer(Harvard), Stephen J.
-Terry(Michigan)</li>
-<li><strong>类型</strong>: 论文笔记 / 信贷周期 / 诊断预期 /
-行为宏观经济学</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: American Economic Review, Vol. 116,
-No. 4, pp. 1274-1308</li>
-<li><strong>DOI</strong>: 10.1257/aer.20211820</li>
-<li><strong>难度评估</strong>: 高 -
-需要宏观经济学、信贷市场、行为经济学基础 <span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>诊断预期（Diagnostic Expectations,
-DE）</strong>是Bordalo、Gennaioli和Shleifer
-(2018)提出的一种信念形成机制，源自心理学中的"选择性记忆"理论。该机制认为代理人对未来事件的信念会过度加权近期新闻所激活的记忆，导致过度反应。</p>
-<p><strong>信贷周期（Credit
-Cycles）</strong>是宏观经济波动的重要组成部分。发达经济体经历着信贷、产出、投资和杠杆率的繁荣-萧条循环。好时期（信用利差低、投资高、杠杆高）会预测随后的萧条期（利差上升、投资和产出下降），即使没有负面的基本冲击。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><strong>经验规律</strong>：Schularick &amp; Taylor
-(2012)、López-Salido, Stein &amp; Zakrajšek
-(2017)等文献记录了信贷周期的可预测性——好时期预示着坏时期</li>
-<li><strong>现有解释的不足</strong>：现有理论将信贷逆转归因于外生"金融冲击"（投资者要求回报率飙升、不确定性增加、银行挤兑），放大了火甩卖或需求外部性。但这些理论没有回答：这些金融冲击从何而来？为什么在繁荣之后发生？</li>
-<li><strong>非理性预期的角色</strong>：Minsky (1977)和Kindleberger
-(1978)曾提出非理性预期可能导致繁荣-萧条循环，但缺乏严格的微观基础</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：如何从非理性预期的角度解释信贷周期的繁荣-萧条动态？为什么即使没有大的负面基本冲击，信用利差也会大幅波动？</p>
-<p><strong>关键洞察</strong>：作者将诊断预期（DE）嵌入包含异质企业和风险债务的新古典模型。DE引入了单一的过反应参数θ，通过管理层的盈利预测数据估计其值。在合理的θ值（约0.9）下，模型产生了现实的信贷周期。好时期产生经济和金融脆弱性，预测未来预期的失望、低债券回报和投资下降。</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><strong>微观基础</strong>：为Minsky型的直觉提供了严格的心理学基础——诊断预期来自选择性记忆</li>
-<li><strong>可估计性</strong>：DE的过反应程度θ可以通过管理层盈利预测数据进行估计，使模型具有可检验的预测</li>
-<li><strong>简洁性</strong>：只需要适度的负面冲击就能产生2007-2009年观察到的大幅利差增长</li>
-<li><strong>与数据一致</strong>：模型同时匹配了信念数据（过度反应）和市场结果（信用利差的周期性和波动性），这是习惯或灾难风险模型无法做到的</li>
-</ol>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<p>论文结构如下：</p>
-<ol type="1">
-<li><strong>引言</strong>：问题陈述、DE概述、主要结论预览</li>
-<li><strong>数据</strong>（Section
-I）：管理层盈利预测数据，证明预期过度反应与公司层面投资和债券回报逆转相关</li>
-<li><strong>诊断预期理论</strong>（Section
-II）：DE的心理学基础、与适应性预期和理性预期的比较、玩具模型</li>
-<li><strong>模型</strong>（Section
-III）：包含异质企业、风险债务和诊断预期的Neoclassical模型</li>
-<li><strong>模型估计与机制检查</strong>（Section
-IV）：SMM估计、模型拟合、投资对TFP冲击的非线性反应</li>
-<li><strong>信贷周期的定量表现</strong>（Section
-V）：宏观共变、分散性、无Targeted预测、企业层面周期、2007-2009危机的解释</li>
-<li><strong>稳健性</strong>（Section VI）：内生工资、敏感性分析</li>
-<li><strong>结论</strong>（Section VIII）</li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>作者首先证明管理层预测确实过度反应： - 在Table
-1中，投资更多、发行更多债务的公司，未来盈利预测错误更负面（过度乐观的标志）
-- 在Table 2中，这种过度乐观预测了未来债券回报下降和投资下降</p>
-<p>诊断预期的核心公式：</p>
-<p><span class="math display">\[\hat{\pi}_t^\theta(A_{t+1}) =
-\hat{\pi}_t(A_{t+1}) + \theta[\hat{\pi}_t(A_{t+1}) -
-\hat{\pi}_{t-1}(A_{t+1})]\]</span></p>
-<p>当θ &gt;
-0时，代理人过度反应于当前新闻相对于过去的信息。好消息不仅增加了好结果的真实现可能性，也使其成为焦点并在信念中被过度加权。</p>
-<h3 id="挑战">挑战</h3>
-<ol type="1">
-<li><strong>过度反应与合理性</strong>：如何让过度反应与理性预期（RE）兼容，同时保持可解性和可估计性？</li>
-<li><strong>匹配多个目标</strong>：模型需要同时匹配信念数据（预测误差的可预测性）和市场结果（信用利差的周期性和波动性）</li>
-<li><strong>非线性放大</strong>：如何在标准的新古典模型中产生足够的非线性，使得即使适度的负面TFP冲击也能产生大幅的信贷利差变化？</li>
-</ol>
-<h3 id="方法">方法</h3>
-<h4 id="玩具模型信用利差">玩具模型——信用利差</h4>
-<p>作者首先构建了一个简化的玩具模型来展示DE如何影响信贷定价：</p>
-<p>假设企业只有在生产率低于阈值A*时才会违约。贷款人要求的预期回报为R =
-1。</p>
-<p>信用利差为：</p>
-<p><span class="math display">\[S_t =
-\frac{\delta_t^\theta}{1-\delta_t^\theta}\]</span></p>
-<p>其中<span class="math inline">\(\delta_t^\theta = \Phi[\ln A^* -
-\hat{\pi}_t^\theta(\ln A_{t+1}) /
-\sigma]\)</span>是诊断感知的违约概率。</p>
-<p>线性化后：</p>
-<p><span class="math display">\[S_t \approx S_\infty -
-S\hat{\pi}_t^\theta(\ln A_{t+1})\]</span></p>
-<p>代入DE公式，得到：</p>
-<p><span class="math display">\[S_t \approx S_\infty(1-\rho) + \rho
-S_{t-1} - S\rho(1+\theta)\varepsilon_t +
-S\theta\rho^2\varepsilon_{t-1}\]</span></p>
-<p><strong>关键机制</strong>： 1. 当前TFP冲击的放大：<span class="math inline">\(-S\rho(1+\theta)\varepsilon_t\)</span> ——
-DE过度反应 2. 过去TFP冲击的逆转：<span class="math inline">\(+S\theta\rho^2\varepsilon_{t-1}\)</span> ——
-乐观消退导致利差上升</p>
-<p>这意味着即使没有大的负面TFP冲击，当前的过度乐观也会在未来消退时导致利差上升。</p>
-<h4 id="完整neoclassical模型">完整Neoclassical模型</h4>
-<p>模型包含： -
-<strong>异质企业</strong>：微观的TFP过程z（AR(1)），持续的idiosyncratic
-productivity - <strong>宏观TFP</strong>：A（AR(1)） -
-<strong>风险债务</strong>：企业发行债务，贷款人要求预期回报R -
-<strong>诊断预期</strong>：企业和贷款人对微观和宏观TFP都形成诊断预期</p>
-<p>企业的问题：选择投资k'、债务b'、劳动n来最大化诊断预期的折现现金流。</p>
-<p>债务定价：贷款人的零利润条件要求诊断预期的债券回报等于无风险利率R：</p>
-<p><span class="math display">\[q_\theta(s, k', b') =
-\frac{1}{R}\hat{\pi}_\theta[1 + df_\theta(s', k',
-b')(\rho(k', b') - 1) | s]\]</span></p>
-<h4 id="smm估计">SMM估计</h4>
-<p>使用16个矩（13个微观矩+3个宏观矩）估计10个参数。</p>
-<p>关键识别：预测误差的变化与当前投资/债务变化的协方差与θ正相关。RE模型无法产生这种协方差。</p>
-<p><strong>估计结果</strong>：θ ≈ 0.913，与之前文献的估计一致（Bordalo
-et al. 2019, 2020; Pflueger et al. 2020）。</p>
-<h3 id="结果results">结果（Results）</h3>
-<h4 id="模型拟合">模型拟合</h4>
-<p>Table 5显示DE模型很好地拟合了微观和宏观矩： -
-DE（而非RE）模型能够生成可预测的预测误差（微观矩1和2） -
-DE模型匹配了投资波动性和信用利差与利润/投资/债务的负相关</p>
-<h4 id="关键机制好时期的脆弱性">关键机制：好时期的脆弱性</h4>
-<p>Figure 2展示了核心机制：<strong>好时期的脆弱性</strong></p>
-<p>投资对负面TFP冲击的反应高度依赖于初始条件。在好时期（之前有正TFP冲击），同样的负面TFP冲击导致投资大幅下降；而在正常时期，反应则温和得多。</p>
-<p><strong>直觉</strong>：在好时期，企业家和贷款人都过度乐观。这导致杠杆和投资过度扩张。当负面冲击发生时，诊断预期迅速逆转——乐观情绪迅速冷却，导致投资和信贷大幅收缩。</p>
-<h4 id="信贷危机的解释">2007-2009信贷危机的解释</h4>
-<p>作者发现，只需要适度的TFP下降就能产生2007-2009年观察到的利差增幅。RE模型完全无法匹配这一表现。</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<p>本文将诊断预期嵌入包含异质企业和高风险债务的新古典模型中。主要结论：</p>
-<ol type="1">
-<li><strong>过反应产生信贷周期</strong>：诊断预期（θ ≈
-0.9）自然产生现实信贷周期——好时期过度扩张，随后的信念逆转导致收缩</li>
-<li><strong>好时期的脆弱性</strong>：投资对TFP冲击的反应是非线性的，好时期更脆弱</li>
-<li><strong>无需大冲击</strong>：产生2007-2009年那样的大幅利差增长只需要适度的负面TFP冲击</li>
-<li><strong>与信念数据一致</strong>：模型同时匹配了过反应的信念和信贷周期的市场表现</li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="文献提及的方向">文献提及的方向</h3>
-<ol type="1">
-<li><strong>与时间变化的风险偏好结合</strong>：DE可以与习惯形成、长周期风险或灾难风险结合</li>
-<li><strong>扩展到New Keynesian模型</strong>：Bianchi, Ilut &amp; Saijo
-(2023)和L'Huillier, Singh &amp; Yoo (2024)已将DE嵌入新凯恩斯模型</li>
-<li><strong>更丰富的商业周期机制</strong>：如总需求转移、产能利用率变化、企业层面就业削减等</li>
-</ol>
-<h3 id="未来研究思考">未来研究思考</h3>
-<ol type="1">
-<li><strong>政策含义</strong>：如果信贷周期是由过度反应而非理性预期的风险溢价变化驱动的，货币政策和宏观审慎政策应如何应对？</li>
-<li><strong>信息干预</strong>：是否可以设计信息干预来减少诊断过度反应，从而稳定信贷周期？</li>
-<li><strong>跨市场传播</strong>：DE驱动的信贷周期如何传播到其他市场（如股票市场、外汇）？</li>
-<li><strong>异质性效应</strong>：不同类型的公司（如高杠杆vs低杠杆、家族企业vs职业经理人管理）是否对DE有不同的敏感性？</li>
-<li><strong>国际比较</strong>：DE驱动的信贷周期是否在发达经济体和发展中经济体中表现不同？</li>
-</ol>
-<hr>
-<h2 id="学术思考">6. 学术思考</h2>
-<ol type="1">
-<li><p><strong>DE与理性学习的兼容性</strong>：DE假设代理人形成"诊断分布"来更新信念，但这一过程如何与理性贝叶斯学习协调？当多个可能的记忆线索存在时，代理人如何选择？</p></li>
-<li><p><strong>过度反应的外部有效性</strong>：θ ≈
-0.9是从管理层盈利预测中估计的。这种过度反应是否在所有类型的决策中都是稳定的？还是说过度反应在某些决策领域比在其他领域更强？</p></li>
-<li><p><strong>为什么θ在不同的数据集和代理类型中如此一致？</strong>：这种跨情境的一致性支持了DE作为一种基本心理机制的解释，但也提出了为什么代理人不学习减少这种过度反应的问题。</p></li>
-<li><p><strong>政策含义</strong>：如果信贷周期是由DE驱动的，那么央行是否应该尝试"管理预期"？这与传统的货币政策规则有何不同？</p></li>
-<li><p><strong>模型的可证伪性</strong>：DE模型的关键预测（如好时期的脆弱性、预测误差的可预测性）是否在未经样本测试的情况下可证伪？</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li>DE与适应性预期（adaptive expectations）和过度持久（exaggerated
-persistence）有何具体区别？</li>
-<li>如何在数据中识别θ参数？有哪些核心识别Moment？</li>
-<li>模型如何解释"信心的突然冷却"——为什么乐观情绪会迅速消退而不需要负面消息？</li>
-<li>在一般均衡（而非部分均衡）中，DE对信贷周期的影响是否会被放大或缩小？</li>
-<li>模型的默认率动态与实际数据中的默认率动态有何具体比较？</li>
-<li>DE是否会导致持续的偏差（如系统性高估或低估），还是只是在均值回归？</li>
-<li>如何将DE与金融摩擦（如银行中介、流动性约束）结合？</li>
-<li>在开放经济环境中，DE如何与汇率预期互动？</li>
-</ol>
+    <title>如何在双变量Probit中使用工具变量法IV估计</title>
+    <url>/posts/60676/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<h1 id="ml两步法">ML两步法</h1>
+<p>可以采用二步法进行ML估计,以下将会以一段样例代码展示:</p>
+<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">webuse</span> school, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">set</span> seed 1</span><br><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobit</span><br><span class="line"><span class="keyword">program</span> mybiprobit</span><br><span class="line"><span class="keyword">args</span> lnf m1   m2  athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"><span class="comment">**Here I am creating an artificial IV</span></span><br><span class="line"><span class="keyword">gen</span> z=logptax-rnormal()</span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobit (private:private=logptax loginc years)   (vote:vote=logptax loginc years)   /athrho (zb1:logptax=loginc  years z) /lns1</span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> maximize,</span><br><span class="line"><span class="keyword">matrix</span> b=<span class="built_in">e</span>(b)</span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobitiv</span><br><span class="line"><span class="keyword">program</span> mybiprobitiv</span><br><span class="line"><span class="keyword">args</span> lnf mm1 g1  mm2  g2 athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">tempvar</span> m1 m2</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m1'</span>=<span class="symbol">`mm1'</span>+<span class="symbol">`g1'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m2'</span>=<span class="symbol">`mm2'</span>+<span class="symbol">`g2'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobitiv (private:private=logptax loginc years) (g1:)  (vote:vote=logptax loginc years)  (g2:) /athrho (zb1:logptax=loginc  years z  ) /lns1, init(b)</span><br><span class="line"><span class="keyword">ml</span> maximize</span><br></pre></td></tr></tbody></table></figure>
 ]]></content>
       <categories>
-        <category>宏观经济学</category>
+        <category>计量</category>
+        <category>内生性问题</category>
       </categories>
       <tags>
-        <tag>论文笔记</tag>
-        <tag>AER</tag>
-        <tag>信贷周期</tag>
-        <tag>诊断预期</tag>
-        <tag>行为宏观经济学</tag>
+        <tag>stata</tag>
       </tags>
   </entry>
   <entry>
@@ -2712,6 +2520,198 @@ Instruments论文的深度笔记,由Claude AI辅助生成.</em></p>
         <tag>论文笔记</tag>
         <tag>计量经济学</tag>
         <tag>工具变量</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Real Credit Cycles — 深度阅读笔记 — Bordalo, Gennaioli, Shleifer &amp; Terry</title>
+    <url>/posts/bordalo2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Real Credit Cycles</li>
+<li><strong>作者</strong>: Pedro Bordalo(Oxford), Nicola
+Gennaioli(Bocconi), Andrei Shleifer(Harvard), Stephen J.
+Terry(Michigan)</li>
+<li><strong>类型</strong>: 论文笔记 / 信贷周期 / 诊断预期 /
+行为宏观经济学</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: American Economic Review, Vol. 116,
+No. 4, pp. 1274-1308</li>
+<li><strong>DOI</strong>: 10.1257/aer.20211820</li>
+<li><strong>难度评估</strong>: 高 -
+需要宏观经济学、信贷市场、行为经济学基础 <span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>诊断预期（Diagnostic Expectations,
+DE）</strong>是Bordalo、Gennaioli和Shleifer
+(2018)提出的一种信念形成机制，源自心理学中的"选择性记忆"理论。该机制认为代理人对未来事件的信念会过度加权近期新闻所激活的记忆，导致过度反应。</p>
+<p><strong>信贷周期（Credit
+Cycles）</strong>是宏观经济波动的重要组成部分。发达经济体经历着信贷、产出、投资和杠杆率的繁荣-萧条循环。好时期（信用利差低、投资高、杠杆高）会预测随后的萧条期（利差上升、投资和产出下降），即使没有负面的基本冲击。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><strong>经验规律</strong>：Schularick &amp; Taylor
+(2012)、López-Salido, Stein &amp; Zakrajšek
+(2017)等文献记录了信贷周期的可预测性——好时期预示着坏时期</li>
+<li><strong>现有解释的不足</strong>：现有理论将信贷逆转归因于外生"金融冲击"（投资者要求回报率飙升、不确定性增加、银行挤兑），放大了火甩卖或需求外部性。但这些理论没有回答：这些金融冲击从何而来？为什么在繁荣之后发生？</li>
+<li><strong>非理性预期的角色</strong>：Minsky (1977)和Kindleberger
+(1978)曾提出非理性预期可能导致繁荣-萧条循环，但缺乏严格的微观基础</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：如何从非理性预期的角度解释信贷周期的繁荣-萧条动态？为什么即使没有大的负面基本冲击，信用利差也会大幅波动？</p>
+<p><strong>关键洞察</strong>：作者将诊断预期（DE）嵌入包含异质企业和风险债务的新古典模型。DE引入了单一的过反应参数θ，通过管理层的盈利预测数据估计其值。在合理的θ值（约0.9）下，模型产生了现实的信贷周期。好时期产生经济和金融脆弱性，预测未来预期的失望、低债券回报和投资下降。</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><strong>微观基础</strong>：为Minsky型的直觉提供了严格的心理学基础——诊断预期来自选择性记忆</li>
+<li><strong>可估计性</strong>：DE的过反应程度θ可以通过管理层盈利预测数据进行估计，使模型具有可检验的预测</li>
+<li><strong>简洁性</strong>：只需要适度的负面冲击就能产生2007-2009年观察到的大幅利差增长</li>
+<li><strong>与数据一致</strong>：模型同时匹配了信念数据（过度反应）和市场结果（信用利差的周期性和波动性），这是习惯或灾难风险模型无法做到的</li>
+</ol>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<p>论文结构如下：</p>
+<ol type="1">
+<li><strong>引言</strong>：问题陈述、DE概述、主要结论预览</li>
+<li><strong>数据</strong>（Section
+I）：管理层盈利预测数据，证明预期过度反应与公司层面投资和债券回报逆转相关</li>
+<li><strong>诊断预期理论</strong>（Section
+II）：DE的心理学基础、与适应性预期和理性预期的比较、玩具模型</li>
+<li><strong>模型</strong>（Section
+III）：包含异质企业、风险债务和诊断预期的Neoclassical模型</li>
+<li><strong>模型估计与机制检查</strong>（Section
+IV）：SMM估计、模型拟合、投资对TFP冲击的非线性反应</li>
+<li><strong>信贷周期的定量表现</strong>（Section
+V）：宏观共变、分散性、无Targeted预测、企业层面周期、2007-2009危机的解释</li>
+<li><strong>稳健性</strong>（Section VI）：内生工资、敏感性分析</li>
+<li><strong>结论</strong>（Section VIII）</li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>作者首先证明管理层预测确实过度反应： - 在Table
+1中，投资更多、发行更多债务的公司，未来盈利预测错误更负面（过度乐观的标志）
+- 在Table 2中，这种过度乐观预测了未来债券回报下降和投资下降</p>
+<p>诊断预期的核心公式：</p>
+<p><span class="math display">\[\hat{\pi}_t^\theta(A_{t+1}) =
+\hat{\pi}_t(A_{t+1}) + \theta[\hat{\pi}_t(A_{t+1}) -
+\hat{\pi}_{t-1}(A_{t+1})]\]</span></p>
+<p>当θ &gt;
+0时，代理人过度反应于当前新闻相对于过去的信息。好消息不仅增加了好结果的真实现可能性，也使其成为焦点并在信念中被过度加权。</p>
+<h3 id="挑战">挑战</h3>
+<ol type="1">
+<li><strong>过度反应与合理性</strong>：如何让过度反应与理性预期（RE）兼容，同时保持可解性和可估计性？</li>
+<li><strong>匹配多个目标</strong>：模型需要同时匹配信念数据（预测误差的可预测性）和市场结果（信用利差的周期性和波动性）</li>
+<li><strong>非线性放大</strong>：如何在标准的新古典模型中产生足够的非线性，使得即使适度的负面TFP冲击也能产生大幅的信贷利差变化？</li>
+</ol>
+<h3 id="方法">方法</h3>
+<h4 id="玩具模型信用利差">玩具模型——信用利差</h4>
+<p>作者首先构建了一个简化的玩具模型来展示DE如何影响信贷定价：</p>
+<p>假设企业只有在生产率低于阈值A*时才会违约。贷款人要求的预期回报为R =
+1。</p>
+<p>信用利差为：</p>
+<p><span class="math display">\[S_t =
+\frac{\delta_t^\theta}{1-\delta_t^\theta}\]</span></p>
+<p>其中<span class="math inline">\(\delta_t^\theta = \Phi[\ln A^* -
+\hat{\pi}_t^\theta(\ln A_{t+1}) /
+\sigma]\)</span>是诊断感知的违约概率。</p>
+<p>线性化后：</p>
+<p><span class="math display">\[S_t \approx S_\infty -
+S\hat{\pi}_t^\theta(\ln A_{t+1})\]</span></p>
+<p>代入DE公式，得到：</p>
+<p><span class="math display">\[S_t \approx S_\infty(1-\rho) + \rho
+S_{t-1} - S\rho(1+\theta)\varepsilon_t +
+S\theta\rho^2\varepsilon_{t-1}\]</span></p>
+<p><strong>关键机制</strong>： 1. 当前TFP冲击的放大：<span class="math inline">\(-S\rho(1+\theta)\varepsilon_t\)</span> ——
+DE过度反应 2. 过去TFP冲击的逆转：<span class="math inline">\(+S\theta\rho^2\varepsilon_{t-1}\)</span> ——
+乐观消退导致利差上升</p>
+<p>这意味着即使没有大的负面TFP冲击，当前的过度乐观也会在未来消退时导致利差上升。</p>
+<h4 id="完整neoclassical模型">完整Neoclassical模型</h4>
+<p>模型包含： -
+<strong>异质企业</strong>：微观的TFP过程z（AR(1)），持续的idiosyncratic
+productivity - <strong>宏观TFP</strong>：A（AR(1)） -
+<strong>风险债务</strong>：企业发行债务，贷款人要求预期回报R -
+<strong>诊断预期</strong>：企业和贷款人对微观和宏观TFP都形成诊断预期</p>
+<p>企业的问题：选择投资k'、债务b'、劳动n来最大化诊断预期的折现现金流。</p>
+<p>债务定价：贷款人的零利润条件要求诊断预期的债券回报等于无风险利率R：</p>
+<p><span class="math display">\[q_\theta(s, k', b') =
+\frac{1}{R}\hat{\pi}_\theta[1 + df_\theta(s', k',
+b')(\rho(k', b') - 1) | s]\]</span></p>
+<h4 id="smm估计">SMM估计</h4>
+<p>使用16个矩（13个微观矩+3个宏观矩）估计10个参数。</p>
+<p>关键识别：预测误差的变化与当前投资/债务变化的协方差与θ正相关。RE模型无法产生这种协方差。</p>
+<p><strong>估计结果</strong>：θ ≈ 0.913，与之前文献的估计一致（Bordalo
+et al. 2019, 2020; Pflueger et al. 2020）。</p>
+<h3 id="结果results">结果（Results）</h3>
+<h4 id="模型拟合">模型拟合</h4>
+<p>Table 5显示DE模型很好地拟合了微观和宏观矩： -
+DE（而非RE）模型能够生成可预测的预测误差（微观矩1和2） -
+DE模型匹配了投资波动性和信用利差与利润/投资/债务的负相关</p>
+<h4 id="关键机制好时期的脆弱性">关键机制：好时期的脆弱性</h4>
+<p>Figure 2展示了核心机制：<strong>好时期的脆弱性</strong></p>
+<p>投资对负面TFP冲击的反应高度依赖于初始条件。在好时期（之前有正TFP冲击），同样的负面TFP冲击导致投资大幅下降；而在正常时期，反应则温和得多。</p>
+<p><strong>直觉</strong>：在好时期，企业家和贷款人都过度乐观。这导致杠杆和投资过度扩张。当负面冲击发生时，诊断预期迅速逆转——乐观情绪迅速冷却，导致投资和信贷大幅收缩。</p>
+<h4 id="信贷危机的解释">2007-2009信贷危机的解释</h4>
+<p>作者发现，只需要适度的TFP下降就能产生2007-2009年观察到的利差增幅。RE模型完全无法匹配这一表现。</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<p>本文将诊断预期嵌入包含异质企业和高风险债务的新古典模型中。主要结论：</p>
+<ol type="1">
+<li><strong>过反应产生信贷周期</strong>：诊断预期（θ ≈
+0.9）自然产生现实信贷周期——好时期过度扩张，随后的信念逆转导致收缩</li>
+<li><strong>好时期的脆弱性</strong>：投资对TFP冲击的反应是非线性的，好时期更脆弱</li>
+<li><strong>无需大冲击</strong>：产生2007-2009年那样的大幅利差增长只需要适度的负面TFP冲击</li>
+<li><strong>与信念数据一致</strong>：模型同时匹配了过反应的信念和信贷周期的市场表现</li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="文献提及的方向">文献提及的方向</h3>
+<ol type="1">
+<li><strong>与时间变化的风险偏好结合</strong>：DE可以与习惯形成、长周期风险或灾难风险结合</li>
+<li><strong>扩展到New Keynesian模型</strong>：Bianchi, Ilut &amp; Saijo
+(2023)和L'Huillier, Singh &amp; Yoo (2024)已将DE嵌入新凯恩斯模型</li>
+<li><strong>更丰富的商业周期机制</strong>：如总需求转移、产能利用率变化、企业层面就业削减等</li>
+</ol>
+<h3 id="未来研究思考">未来研究思考</h3>
+<ol type="1">
+<li><strong>政策含义</strong>：如果信贷周期是由过度反应而非理性预期的风险溢价变化驱动的，货币政策和宏观审慎政策应如何应对？</li>
+<li><strong>信息干预</strong>：是否可以设计信息干预来减少诊断过度反应，从而稳定信贷周期？</li>
+<li><strong>跨市场传播</strong>：DE驱动的信贷周期如何传播到其他市场（如股票市场、外汇）？</li>
+<li><strong>异质性效应</strong>：不同类型的公司（如高杠杆vs低杠杆、家族企业vs职业经理人管理）是否对DE有不同的敏感性？</li>
+<li><strong>国际比较</strong>：DE驱动的信贷周期是否在发达经济体和发展中经济体中表现不同？</li>
+</ol>
+<hr>
+<h2 id="学术思考">6. 学术思考</h2>
+<ol type="1">
+<li><p><strong>DE与理性学习的兼容性</strong>：DE假设代理人形成"诊断分布"来更新信念，但这一过程如何与理性贝叶斯学习协调？当多个可能的记忆线索存在时，代理人如何选择？</p></li>
+<li><p><strong>过度反应的外部有效性</strong>：θ ≈
+0.9是从管理层盈利预测中估计的。这种过度反应是否在所有类型的决策中都是稳定的？还是说过度反应在某些决策领域比在其他领域更强？</p></li>
+<li><p><strong>为什么θ在不同的数据集和代理类型中如此一致？</strong>：这种跨情境的一致性支持了DE作为一种基本心理机制的解释，但也提出了为什么代理人不学习减少这种过度反应的问题。</p></li>
+<li><p><strong>政策含义</strong>：如果信贷周期是由DE驱动的，那么央行是否应该尝试"管理预期"？这与传统的货币政策规则有何不同？</p></li>
+<li><p><strong>模型的可证伪性</strong>：DE模型的关键预测（如好时期的脆弱性、预测误差的可预测性）是否在未经样本测试的情况下可证伪？</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li>DE与适应性预期（adaptive expectations）和过度持久（exaggerated
+persistence）有何具体区别？</li>
+<li>如何在数据中识别θ参数？有哪些核心识别Moment？</li>
+<li>模型如何解释"信心的突然冷却"——为什么乐观情绪会迅速消退而不需要负面消息？</li>
+<li>在一般均衡（而非部分均衡）中，DE对信贷周期的影响是否会被放大或缩小？</li>
+<li>模型的默认率动态与实际数据中的默认率动态有何具体比较？</li>
+<li>DE是否会导致持续的偏差（如系统性高估或低估），还是只是在均值回归？</li>
+<li>如何将DE与金融摩擦（如银行中介、流动性约束）结合？</li>
+<li>在开放经济环境中，DE如何与汇率预期互动？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>宏观经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>AER</tag>
+        <tag>信贷周期</tag>
+        <tag>诊断预期</tag>
+        <tag>行为宏观经济学</tag>
       </tags>
   </entry>
   <entry>
@@ -4340,218 +4340,6 @@ Issue 1, pp. 71-99</li>
       </tags>
   </entry>
   <entry>
-    <title>零和思维与美国政治分歧的根源 — 深度阅读笔记 — Chinoy, Nunn, Sequeira &amp; Stantcheva</title>
-    <url>/posts/chinoy2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Zero-Sum Thinking and the Roots of U.S.
-Political Differences</li>
-<li><strong>作者</strong>: Sahil Chinoy (Harvard), Nathan Nunn (UBC
-&amp; CIFAR), Sandra Sequeira (LSE), Stefanie Stantcheva (Harvard)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review</li>
-<li><strong>DOI</strong>: 10.1257/aer.20240692</li>
-<li><strong>难度评估</strong>: 高 -
-需要文化经济学、政治经济学、计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>零和思维（Zero-Sum
-Thinking）</strong>：一种世界观，认为一个人的收益必然导致另一个人的损失，社会产出是有限的而非可以创造新价值的。该概念最早由人类学家George
-Foster（1965, 1967）提出，称为"有限美好形象"（Image of Limited
-Good）。</p>
-<p><strong>文化演化模型（Cultural Evolution
-Models）</strong>：经济学中研究文化特质如何在代际间垂直传播的模型，通常假设文化特质从父母传递给子女（Bisin
-&amp; Verdier, 2000, 2011, 2017）。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>历史视角下的零和思维</strong>：零和思维在历史上普遍存在，从欧洲重商主义到现代贸易和移民政策。在资源稀缺、技术进步缓慢的前工业社会尤为常见。</p></li>
-<li><p><strong>美国独特的历史因素</strong>：美国历史上有三个关键因素影响零和思维的形成：代际经济流动性、移民和奴役。</p></li>
-<li><p><strong>现有研究的局限</strong>：先前研究使用种族或地理位置作为祖先经历的代理变量，但无法干净地隔离垂直传播渠道。</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>： - 零和思维如何影响政治和政策偏好？ -
-零和思维的祖先根源是什么？ -
-流动性、移民、奴役经历如何代际传递并影响当代人的零和思维？</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><p><strong>理论贡献</strong>：首次利用四代人的调查数据，直接测量祖先经历对零和思维的影响，推进了文化演化理论的检验。</p></li>
-<li><p><strong>实证贡献</strong>：收集了约20,400名美国居民的调查数据，将零和思维测量、政治偏好与丰富的祖先信息相结合。</p></li>
-<li><p><strong>政策意义</strong>：揭示了零和思维与再分配政策、种族/性别平等政策、移民政策的系统性关联。</p></li>
-</ol>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
-<ul>
-<li>Foster的零和思维假说介绍</li>
-<li>研究动机和数据概述</li>
-<li>三大贡献预告</li>
-</ul>
-<h3 id="第二节调查设计数据收集和零和思维测量">第二节：调查设计、数据收集和零和思维测量</h3>
-<ul>
-<li>调查方法和样本描述</li>
-<li>零和思维的四题项测量（民族、公民身份、贸易、收入）</li>
-<li>主成分分析构建综合指数</li>
-<li>数据质量检验</li>
-</ul>
-<h3 id="第三节零和思维的政治关联">第三节：零和思维的政治关联</h3>
-<ul>
-<li>零和思维与政党偏好的关系</li>
-<li>零和思维与四项政策态度（再分配、种族、性别、移民）</li>
-<li>零和思维与自身利益的交互分析</li>
-<li>零和思维与其他核心信念的比较</li>
-<li>跨国家的一般性检验（WVS数据）</li>
-</ul>
-<h3 id="第四节零和思维的历史预测因子">第四节：零和思维的历史预测因子</h3>
-<ul>
-<li>代际经济流动性的影响</li>
-<li>移民经历的直接和间接效应</li>
-<li>奴役经历的直接和间接效应</li>
-<li>奴隶制的溢出效应</li>
-</ul>
-<h3 id="第五节结论conclusion">第五节：结论（Conclusion）</h3>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="零和思维的理论基础">零和思维的理论基础</h4>
-<p>George
-Foster（1965）在研究墨西哥农村时提出"有限美好"假说：许多社会存在零和世界观，认为资源是有限的，一方的收益必然是另一方的损失。这种观点在资源稀缺、市场不发达、技术进步有限的前工业社会中尤为普遍。</p>
-<h4 id="美国历史背景的特殊性">美国历史背景的特殊性</h4>
-<p>美国历史上有三个关键因素塑造零和思维： 1.
-<strong>代际流动性</strong>：美国曾是"机会之地"，向上流动性高于其他工业化国家
-2.
-<strong>移民潮</strong>：大规模移民塑造了美国社会，移民通常在美国获得经济成功而不损害他人
-3. <strong>奴役制度</strong>：奴隶制是一种彻底的零和（或负和）制度</p>
-<h3 id="方法">方法</h3>
-<h4 id="数据集">数据集</h4>
-<p><strong>调查设计</strong>： -
-约20,400名美国居民，七轮调查（2020年10月至2023年7月） -
-通过在线调查公司Respondi/Bilendi招募 - 调查时长约20-30分钟</p>
-<p><strong>调查内容模块</strong>： 1.
-<strong>受访者背景</strong>：年龄、性别、政治倾向 2.
-<strong>祖先信息</strong>：父母、祖父母的信息（出生地、居住历史、教育、职业、经济地位）
-3. <strong>政策观点</strong>：再分配、种族、性别、移民等政策态度 4.
-<strong>零和思维测量</strong>：四个领域的零和思维问题</p>
-<p><strong>四题项零和思维测量</strong>： 1.
-<strong>民族维度</strong>："如果一个种族群体变富裕，这通常是以其他群体为代价的"
-2.
-<strong>公民身份维度</strong>："如果没有美国公民身份的人经济上做得更好，这通常是以美国公民为代价的"
-3.
-<strong>贸易维度</strong>："在国际贸易中，如果一个国家赚更多钱，另一个国家通常会赚得更少"
-4.
-<strong>收入维度</strong>："如果一个收入群体变得更富有，这通常是以其他群体为代价的"</p>
-<p><strong>指数构建</strong>：使用主成分分析（PCA）提取第一主成分，标准化为0-1区间的综合指数。</p>
-<h4 id="估计方程">估计方程</h4>
-<p><strong>政治关联分析</strong>： <span class="math display">\[Y_i =
-\alpha_{s(i)} + \beta \cdot ZeroSum_i + X_i\Gamma +
-\varepsilon_i\]</span></p>
-<p><strong>历史预测因子分析</strong>： <span class="math display">\[ZeroSum_i = \beta_{resp} \cdot
-RespondentExperience_i + \beta_p \cdot ParentsExperience_i + \beta_{gp}
-\cdot GrandparentsExperience_i + X_i\Gamma + \alpha_{s(i)} +
-\varepsilon_i\]</span></p>
-<h3 id="结果">结果</h3>
-<h4 id="发现一零和思维测量">发现一：零和思维测量</h4>
-<p><strong>因子结构</strong>：第一主成分的特征值为2.30，所有题项的因子载荷相似（0.40-0.55），表明存在一个潜在的零和思维因子。</p>
-<p><strong>人口学差异</strong>： - 年龄：较年长者零和思维较低 -
-种族：黑人和西班牙裔美国人零和思维最高，亚裔最低 -
-收入：最低收入群体（&lt;${<span class="math inline">\(25,000}\)</span>）零和思维最高 -
-党派：共和党人零和思维较低 - 教育：受教育程度较高者零和思维较低</p>
-<h4 id="发现二零和思维与政策偏好">发现二：零和思维与政策偏好</h4>
-<p><strong>核心结果</strong>：零和思维与四项政策态度显著正相关： -
-<strong>再分配指数</strong>：支持更多政府再分配 -
-<strong>种族态度指数</strong>：支持减少种族歧视的政策 -
-<strong>性别态度指数</strong>：支持促进性别平等的政策 -
-<strong>反移民指数</strong>：支持更严格的移民限制</p>
-<p><strong>效应大小</strong>：一标准差增加的零和思维，对再分配的支持相当于20%的标准差变化，与民主党倾向性相当。</p>
-<p><strong>与自身利益的交互</strong>： -
-零和思维与再分配的支持在所有收入群体中都显著为正，且在高收入群体中更强 -
-男性零和思维对性别平等的支持更强 -
-白人受访者零和思维对种族平等政策的支持更强</p>
-<p><strong>党内差异</strong>：零和思维可解释党内政策分歧： -
-民主党中零和思维更强的人更支持限制移民 -
-共和党中零和思维更强的人更支持再分配</p>
-<h4 id="发现三跨国家一般性wvs数据">发现三：跨国家一般性（WVS数据）</h4>
-<p>使用世界价值观调查（WVS）72个国家192,000名受访者数据验证： -
-零和思维与右翼政治立场显著负相关 -
-零和思维与支持再分配和反移民态度正相关</p>
-<p><strong>早期生活经济增长</strong>：使用WVS数据，控制出生年份和国家固定效应，发现早期生活暴露于更高的GDP增长与更低的零和思维相关。</p>
-<h4 id="发现四历史预测因子">发现四：历史预测因子</h4>
-<p><strong>代际流动性</strong>： -
-更大的代际向上流动性与更低的零和思维相关 -
-这种关系在所有代际（1代、2代、3代）中都显著 -
-主要由向上流动驱动，向下流动影响较小</p>
-<p><strong>移民</strong>： -
-直接效应：第一代移民零和思维最低，移民主裔子孙次之 -
-间接效应：祖父母在移民比例较高县市长大的受访者零和思维较低 -
-时间效应：近期移民效应更强</p>
-<p><strong>奴役</strong>： - 直接效应：有奴隶祖先的受访者零和思维更高 -
-所有形式的奴役（奴隶贸易、Holocaust、契约仆役、日裔美国人拘留、印第安人保留地）都与更高零和思维相关
-- 间接效应：在1860年奴隶比例较高的县市长大的受访者零和思维更高 -
-奴隶制溢出：南方白人移民到非南方县带来了更高的零和思维</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>零和思维是重要且独立的政策预测因子</strong>：零和思维与再分配、种族/性别平等、移民政策的态度有显著关联，且独立于其他核心信念。</p></li>
-<li><p><strong>零和思维不是简单的党派问题</strong>：它可以解释党内政策分歧——为什么部分民主党人支持限制移民，部分共和党人支持再分配。</p></li>
-<li><p><strong>零和思维有深厚的历史根源</strong>：三个关键历史因素——代际流动性、移民、奴役——通过直接和间接渠道影响当代人的零和思维。</p></li>
-<li><p><strong>零和思维的跨国一般性</strong>：WVS数据证实，零和思维与政治态度的关系在72个国家都成立。</p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><p><strong>测量贡献</strong>：开发了综合的跨情境零和思维测量方法，优于单一情境测量。</p></li>
-<li><p><strong>数据贡献</strong>：首次收集了四代人信息的调查数据，直接测量祖先经历。</p></li>
-<li><p><strong>理论贡献</strong>：推进了对文化演化模型的理解，证明垂直传播的重要性。</p></li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
-<ol type="1">
-<li><p><strong>党内分歧研究</strong>：探索零和思维对新党形成、联盟和竞选平台的影响</p></li>
-<li><p><strong>政治现象研究</strong>：零和思维是否能解释民粹主义、阴谋论、排外主义的起源？</p></li>
-<li><p><strong>气候与不平等</strong>：零和思维如何与气候变化和全球不平等的态度相关联？</p></li>
-</ol>
-<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
-<ol type="1">
-<li><p><strong>识别策略改进</strong>：使用工具变量或自然实验进一步验证因果关系</p></li>
-<li><p><strong>机制检验</strong>：代际传递的具体渠道——是通过语言、家庭互动还是行为？</p></li>
-<li><p><strong>干预研究</strong>：是否可以设计干预措施减少零和思维？</p></li>
-</ol>
-<hr>
-<h2 id="学术思考">7. 学术思考</h2>
-<h3 id="核心学术洞察">核心学术洞察</h3>
-<ol type="1">
-<li><p><strong>"有限美好"的现代延续</strong>：Foster的零和思维假说虽提出于1960年代研究墨西哥农村，但本文证明其在现代美国社会仍具有重要解释力。</p></li>
-<li><p><strong>政策态度的认知根源</strong>：传统研究将政策态度归因于自身利益或价值观，但本文揭示了零和思维作为一种独立的中介机制。</p></li>
-<li><p><strong>历史创伤的代际传递</strong>：奴役制度不仅影响直接受害者，还通过环境暴露和文化传递影响后代。</p></li>
-</ol>
-<h3 id="深层学术问题">深层学术问题</h3>
-<ol type="1">
-<li><p><strong>为什么向上流动而非向下流动影响零和思维？</strong>
-这种不对称性暗示什么心理或文化机制？</p></li>
-<li><p><strong>移民的"正能量"效应</strong>：移民如何降低零和思维？是通过榜样效应、接触效应还是家庭叙述传递？</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p><strong>零和思维的测量是否可信？</strong>
-四题项测量能否捕捉零和思维的全部维度？</p></li>
-<li><p><strong>祖先经历的因果识别</strong>：如何解决内生性问题？</p></li>
-<li><p><strong>黑人受访者零和思维最高但奴役边际效应最小</strong>：如何解释这个悖论？</p></li>
-<li><p><strong>零和思维与特朗普现象</strong>：数据显示零和思维预测了民主党人投票给特朗普？</p></li>
-<li><p><strong>政策含义</strong>：如果零和思维是可塑的，什么干预可以减少零和思维？</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Regulating Conglomerates: Evidence From an Energy Conservation Program in China — 深度阅读笔记 — AER</title>
     <url>/posts/chen2021/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -4848,6 +4636,218 @@ horizon 是多久?</strong></p></li>
 <li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD
 数据的质量和覆盖范围如何保证?</strong></p></li>
 <li><p><strong>在中国"双碳"目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>零和思维与美国政治分歧的根源 — 深度阅读笔记 — Chinoy, Nunn, Sequeira &amp; Stantcheva</title>
+    <url>/posts/chinoy2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Zero-Sum Thinking and the Roots of U.S.
+Political Differences</li>
+<li><strong>作者</strong>: Sahil Chinoy (Harvard), Nathan Nunn (UBC
+&amp; CIFAR), Sandra Sequeira (LSE), Stefanie Stantcheva (Harvard)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review</li>
+<li><strong>DOI</strong>: 10.1257/aer.20240692</li>
+<li><strong>难度评估</strong>: 高 -
+需要文化经济学、政治经济学、计量经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>零和思维（Zero-Sum
+Thinking）</strong>：一种世界观，认为一个人的收益必然导致另一个人的损失，社会产出是有限的而非可以创造新价值的。该概念最早由人类学家George
+Foster（1965, 1967）提出，称为"有限美好形象"（Image of Limited
+Good）。</p>
+<p><strong>文化演化模型（Cultural Evolution
+Models）</strong>：经济学中研究文化特质如何在代际间垂直传播的模型，通常假设文化特质从父母传递给子女（Bisin
+&amp; Verdier, 2000, 2011, 2017）。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>历史视角下的零和思维</strong>：零和思维在历史上普遍存在，从欧洲重商主义到现代贸易和移民政策。在资源稀缺、技术进步缓慢的前工业社会尤为常见。</p></li>
+<li><p><strong>美国独特的历史因素</strong>：美国历史上有三个关键因素影响零和思维的形成：代际经济流动性、移民和奴役。</p></li>
+<li><p><strong>现有研究的局限</strong>：先前研究使用种族或地理位置作为祖先经历的代理变量，但无法干净地隔离垂直传播渠道。</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>： - 零和思维如何影响政治和政策偏好？ -
+零和思维的祖先根源是什么？ -
+流动性、移民、奴役经历如何代际传递并影响当代人的零和思维？</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><p><strong>理论贡献</strong>：首次利用四代人的调查数据，直接测量祖先经历对零和思维的影响，推进了文化演化理论的检验。</p></li>
+<li><p><strong>实证贡献</strong>：收集了约20,400名美国居民的调查数据，将零和思维测量、政治偏好与丰富的祖先信息相结合。</p></li>
+<li><p><strong>政策意义</strong>：揭示了零和思维与再分配政策、种族/性别平等政策、移民政策的系统性关联。</p></li>
+</ol>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
+<ul>
+<li>Foster的零和思维假说介绍</li>
+<li>研究动机和数据概述</li>
+<li>三大贡献预告</li>
+</ul>
+<h3 id="第二节调查设计数据收集和零和思维测量">第二节：调查设计、数据收集和零和思维测量</h3>
+<ul>
+<li>调查方法和样本描述</li>
+<li>零和思维的四题项测量（民族、公民身份、贸易、收入）</li>
+<li>主成分分析构建综合指数</li>
+<li>数据质量检验</li>
+</ul>
+<h3 id="第三节零和思维的政治关联">第三节：零和思维的政治关联</h3>
+<ul>
+<li>零和思维与政党偏好的关系</li>
+<li>零和思维与四项政策态度（再分配、种族、性别、移民）</li>
+<li>零和思维与自身利益的交互分析</li>
+<li>零和思维与其他核心信念的比较</li>
+<li>跨国家的一般性检验（WVS数据）</li>
+</ul>
+<h3 id="第四节零和思维的历史预测因子">第四节：零和思维的历史预测因子</h3>
+<ul>
+<li>代际经济流动性的影响</li>
+<li>移民经历的直接和间接效应</li>
+<li>奴役经历的直接和间接效应</li>
+<li>奴隶制的溢出效应</li>
+</ul>
+<h3 id="第五节结论conclusion">第五节：结论（Conclusion）</h3>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="零和思维的理论基础">零和思维的理论基础</h4>
+<p>George
+Foster（1965）在研究墨西哥农村时提出"有限美好"假说：许多社会存在零和世界观，认为资源是有限的，一方的收益必然是另一方的损失。这种观点在资源稀缺、市场不发达、技术进步有限的前工业社会中尤为普遍。</p>
+<h4 id="美国历史背景的特殊性">美国历史背景的特殊性</h4>
+<p>美国历史上有三个关键因素塑造零和思维： 1.
+<strong>代际流动性</strong>：美国曾是"机会之地"，向上流动性高于其他工业化国家
+2.
+<strong>移民潮</strong>：大规模移民塑造了美国社会，移民通常在美国获得经济成功而不损害他人
+3. <strong>奴役制度</strong>：奴隶制是一种彻底的零和（或负和）制度</p>
+<h3 id="方法">方法</h3>
+<h4 id="数据集">数据集</h4>
+<p><strong>调查设计</strong>： -
+约20,400名美国居民，七轮调查（2020年10月至2023年7月） -
+通过在线调查公司Respondi/Bilendi招募 - 调查时长约20-30分钟</p>
+<p><strong>调查内容模块</strong>： 1.
+<strong>受访者背景</strong>：年龄、性别、政治倾向 2.
+<strong>祖先信息</strong>：父母、祖父母的信息（出生地、居住历史、教育、职业、经济地位）
+3. <strong>政策观点</strong>：再分配、种族、性别、移民等政策态度 4.
+<strong>零和思维测量</strong>：四个领域的零和思维问题</p>
+<p><strong>四题项零和思维测量</strong>： 1.
+<strong>民族维度</strong>："如果一个种族群体变富裕，这通常是以其他群体为代价的"
+2.
+<strong>公民身份维度</strong>："如果没有美国公民身份的人经济上做得更好，这通常是以美国公民为代价的"
+3.
+<strong>贸易维度</strong>："在国际贸易中，如果一个国家赚更多钱，另一个国家通常会赚得更少"
+4.
+<strong>收入维度</strong>："如果一个收入群体变得更富有，这通常是以其他群体为代价的"</p>
+<p><strong>指数构建</strong>：使用主成分分析（PCA）提取第一主成分，标准化为0-1区间的综合指数。</p>
+<h4 id="估计方程">估计方程</h4>
+<p><strong>政治关联分析</strong>： <span class="math display">\[Y_i =
+\alpha_{s(i)} + \beta \cdot ZeroSum_i + X_i\Gamma +
+\varepsilon_i\]</span></p>
+<p><strong>历史预测因子分析</strong>： <span class="math display">\[ZeroSum_i = \beta_{resp} \cdot
+RespondentExperience_i + \beta_p \cdot ParentsExperience_i + \beta_{gp}
+\cdot GrandparentsExperience_i + X_i\Gamma + \alpha_{s(i)} +
+\varepsilon_i\]</span></p>
+<h3 id="结果">结果</h3>
+<h4 id="发现一零和思维测量">发现一：零和思维测量</h4>
+<p><strong>因子结构</strong>：第一主成分的特征值为2.30，所有题项的因子载荷相似（0.40-0.55），表明存在一个潜在的零和思维因子。</p>
+<p><strong>人口学差异</strong>： - 年龄：较年长者零和思维较低 -
+种族：黑人和西班牙裔美国人零和思维最高，亚裔最低 -
+收入：最低收入群体（&lt;${<span class="math inline">\(25,000}\)</span>）零和思维最高 -
+党派：共和党人零和思维较低 - 教育：受教育程度较高者零和思维较低</p>
+<h4 id="发现二零和思维与政策偏好">发现二：零和思维与政策偏好</h4>
+<p><strong>核心结果</strong>：零和思维与四项政策态度显著正相关： -
+<strong>再分配指数</strong>：支持更多政府再分配 -
+<strong>种族态度指数</strong>：支持减少种族歧视的政策 -
+<strong>性别态度指数</strong>：支持促进性别平等的政策 -
+<strong>反移民指数</strong>：支持更严格的移民限制</p>
+<p><strong>效应大小</strong>：一标准差增加的零和思维，对再分配的支持相当于20%的标准差变化，与民主党倾向性相当。</p>
+<p><strong>与自身利益的交互</strong>： -
+零和思维与再分配的支持在所有收入群体中都显著为正，且在高收入群体中更强 -
+男性零和思维对性别平等的支持更强 -
+白人受访者零和思维对种族平等政策的支持更强</p>
+<p><strong>党内差异</strong>：零和思维可解释党内政策分歧： -
+民主党中零和思维更强的人更支持限制移民 -
+共和党中零和思维更强的人更支持再分配</p>
+<h4 id="发现三跨国家一般性wvs数据">发现三：跨国家一般性（WVS数据）</h4>
+<p>使用世界价值观调查（WVS）72个国家192,000名受访者数据验证： -
+零和思维与右翼政治立场显著负相关 -
+零和思维与支持再分配和反移民态度正相关</p>
+<p><strong>早期生活经济增长</strong>：使用WVS数据，控制出生年份和国家固定效应，发现早期生活暴露于更高的GDP增长与更低的零和思维相关。</p>
+<h4 id="发现四历史预测因子">发现四：历史预测因子</h4>
+<p><strong>代际流动性</strong>： -
+更大的代际向上流动性与更低的零和思维相关 -
+这种关系在所有代际（1代、2代、3代）中都显著 -
+主要由向上流动驱动，向下流动影响较小</p>
+<p><strong>移民</strong>： -
+直接效应：第一代移民零和思维最低，移民主裔子孙次之 -
+间接效应：祖父母在移民比例较高县市长大的受访者零和思维较低 -
+时间效应：近期移民效应更强</p>
+<p><strong>奴役</strong>： - 直接效应：有奴隶祖先的受访者零和思维更高 -
+所有形式的奴役（奴隶贸易、Holocaust、契约仆役、日裔美国人拘留、印第安人保留地）都与更高零和思维相关
+- 间接效应：在1860年奴隶比例较高的县市长大的受访者零和思维更高 -
+奴隶制溢出：南方白人移民到非南方县带来了更高的零和思维</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>零和思维是重要且独立的政策预测因子</strong>：零和思维与再分配、种族/性别平等、移民政策的态度有显著关联，且独立于其他核心信念。</p></li>
+<li><p><strong>零和思维不是简单的党派问题</strong>：它可以解释党内政策分歧——为什么部分民主党人支持限制移民，部分共和党人支持再分配。</p></li>
+<li><p><strong>零和思维有深厚的历史根源</strong>：三个关键历史因素——代际流动性、移民、奴役——通过直接和间接渠道影响当代人的零和思维。</p></li>
+<li><p><strong>零和思维的跨国一般性</strong>：WVS数据证实，零和思维与政治态度的关系在72个国家都成立。</p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><p><strong>测量贡献</strong>：开发了综合的跨情境零和思维测量方法，优于单一情境测量。</p></li>
+<li><p><strong>数据贡献</strong>：首次收集了四代人信息的调查数据，直接测量祖先经历。</p></li>
+<li><p><strong>理论贡献</strong>：推进了对文化演化模型的理解，证明垂直传播的重要性。</p></li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
+<ol type="1">
+<li><p><strong>党内分歧研究</strong>：探索零和思维对新党形成、联盟和竞选平台的影响</p></li>
+<li><p><strong>政治现象研究</strong>：零和思维是否能解释民粹主义、阴谋论、排外主义的起源？</p></li>
+<li><p><strong>气候与不平等</strong>：零和思维如何与气候变化和全球不平等的态度相关联？</p></li>
+</ol>
+<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
+<ol type="1">
+<li><p><strong>识别策略改进</strong>：使用工具变量或自然实验进一步验证因果关系</p></li>
+<li><p><strong>机制检验</strong>：代际传递的具体渠道——是通过语言、家庭互动还是行为？</p></li>
+<li><p><strong>干预研究</strong>：是否可以设计干预措施减少零和思维？</p></li>
+</ol>
+<hr>
+<h2 id="学术思考">7. 学术思考</h2>
+<h3 id="核心学术洞察">核心学术洞察</h3>
+<ol type="1">
+<li><p><strong>"有限美好"的现代延续</strong>：Foster的零和思维假说虽提出于1960年代研究墨西哥农村，但本文证明其在现代美国社会仍具有重要解释力。</p></li>
+<li><p><strong>政策态度的认知根源</strong>：传统研究将政策态度归因于自身利益或价值观，但本文揭示了零和思维作为一种独立的中介机制。</p></li>
+<li><p><strong>历史创伤的代际传递</strong>：奴役制度不仅影响直接受害者，还通过环境暴露和文化传递影响后代。</p></li>
+</ol>
+<h3 id="深层学术问题">深层学术问题</h3>
+<ol type="1">
+<li><p><strong>为什么向上流动而非向下流动影响零和思维？</strong>
+这种不对称性暗示什么心理或文化机制？</p></li>
+<li><p><strong>移民的"正能量"效应</strong>：移民如何降低零和思维？是通过榜样效应、接触效应还是家庭叙述传递？</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p><strong>零和思维的测量是否可信？</strong>
+四题项测量能否捕捉零和思维的全部维度？</p></li>
+<li><p><strong>祖先经历的因果识别</strong>：如何解决内生性问题？</p></li>
+<li><p><strong>黑人受访者零和思维最高但奴役边际效应最小</strong>：如何解释这个悖论？</p></li>
+<li><p><strong>零和思维与特朗普现象</strong>：数据显示零和思维预测了民主党人投票给特朗普？</p></li>
+<li><p><strong>政策含义</strong>：如果零和思维是可塑的，什么干预可以减少零和思维？</p></li>
 </ol>
 ]]></content>
       <categories>
@@ -7214,80 +7214,6 @@ Effects），永久降低增长路径？</li>
       </tags>
   </entry>
   <entry>
-    <title>相似工作的同酬 — 深度阅读笔记 — Gentile Passaro, Kojima &amp; Pakzad-Hurson</title>
-    <url>/posts/gentile-passaro2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Equal Pay for Similar Work</li>
-<li><strong>作者</strong>: Diego Gentile Passaro (Amazon Science),
-Fuhito Kojima (东京大学), Bobak Pakzad-Hurson (布朗大学)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3):
-977-1013</li>
-<li><strong>DOI</strong>: 10.1257/aer.20230832</li>
-<li><strong>难度评估</strong>: 高 -
-需要劳动经济学、搜索理论、计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>同工同酬法（EPSW）</strong>：要求对"相似"工作支付同等报酬，比"相同工作"更宽泛。</p>
-<p><strong>性别工资差距（Gender Wage
-Gap）</strong>：男性和女性工人之间的平均工资差异。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><strong>EPSW政策日益普遍</strong>：美国45.9%的劳动力受EPSW管辖</li>
-<li><strong>执行困难</strong>："相同工作"难以定义</li>
-<li><strong>意外的均衡效应</strong>：EPSW可能产生违背政策初衷的均衡效应</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：EPSW对劳动力市场结果的均衡效应是什么？是否会反而加剧性别工资差距？</p>
-<p><strong>关键发现</strong>：EPSW导致企业按性别隔离劳动力，在男性占多数的劳动力市场中会增加性别工资差距</p>
-<hr>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ol type="1">
-<li><strong>引言</strong>: EPSW政策背景、研究问题、主要发现</li>
-<li><strong>静态模型</strong>:
-设定、无EPSW均衡、EPSW均衡、工资差距效应</li>
-<li><strong>动态搜索模型</strong>: 搜索摩擦和再配置摩擦、动态均衡</li>
-<li><strong>实证分析</strong>: 智利2009年EPSW政策、因果识别</li>
-<li><strong>结论</strong></li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="epsw-vs-epew">EPSW vs EPEW</h4>
-<p><strong>EPEW</strong>：要求"相同工作"获得相同报酬
-<strong>EPSW</strong>：更宽泛，要求对"相似工作"支付同等报酬</p>
-<h3 id="理论模型">理论模型</h3>
-<h4 id="静态模型">静态模型</h4>
-<p><strong>核心机制</strong>： -
-EPSW要求雇主对相似工作的所有工人支付相同工资 -
-企业会调整劳动力组合来降低成本 - 导致按性别隔离劳动力</p>
-<p><strong>均衡效应</strong>： -
-男性占多数的市场：女性被分配到低工资任务 - 女性占多数的市场：结果相反 -
-总体可能加剧工资差距</p>
-<h4 id="动态搜索模型">动态搜索模型</h4>
-<p><strong>搜索摩擦</strong>：工人寻找工作需要时间和成本
-<strong>再配置摩擦</strong>：企业调整劳动力组合需要成本</p>
-<hr>
-<h2 id="结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><strong>EPSW可能反效果</strong>：导致劳动力性别隔离</li>
-<li><strong>男性占多数市场中加剧差距</strong>：实证证实</li>
-<li><strong>政策启示</strong>：同酬法设计需考虑均衡效应</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Fiscal Volatility Shocks and Economic Activity — 深度阅读笔记 — AER</title>
     <url>/posts/fernandez2015/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -7832,6 +7758,80 @@ calls）如何与模型中的反馈机制互动？</li>
         <tag>AER</tag>
         <tag>资产定价</tag>
         <tag>卖空市场</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>相似工作的同酬 — 深度阅读笔记 — Gentile Passaro, Kojima &amp; Pakzad-Hurson</title>
+    <url>/posts/gentile-passaro2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Equal Pay for Similar Work</li>
+<li><strong>作者</strong>: Diego Gentile Passaro (Amazon Science),
+Fuhito Kojima (东京大学), Bobak Pakzad-Hurson (布朗大学)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(3):
+977-1013</li>
+<li><strong>DOI</strong>: 10.1257/aer.20230832</li>
+<li><strong>难度评估</strong>: 高 -
+需要劳动经济学、搜索理论、计量经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>同工同酬法（EPSW）</strong>：要求对"相似"工作支付同等报酬，比"相同工作"更宽泛。</p>
+<p><strong>性别工资差距（Gender Wage
+Gap）</strong>：男性和女性工人之间的平均工资差异。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><strong>EPSW政策日益普遍</strong>：美国45.9%的劳动力受EPSW管辖</li>
+<li><strong>执行困难</strong>："相同工作"难以定义</li>
+<li><strong>意外的均衡效应</strong>：EPSW可能产生违背政策初衷的均衡效应</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：EPSW对劳动力市场结果的均衡效应是什么？是否会反而加剧性别工资差距？</p>
+<p><strong>关键发现</strong>：EPSW导致企业按性别隔离劳动力，在男性占多数的劳动力市场中会增加性别工资差距</p>
+<hr>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ol type="1">
+<li><strong>引言</strong>: EPSW政策背景、研究问题、主要发现</li>
+<li><strong>静态模型</strong>:
+设定、无EPSW均衡、EPSW均衡、工资差距效应</li>
+<li><strong>动态搜索模型</strong>: 搜索摩擦和再配置摩擦、动态均衡</li>
+<li><strong>实证分析</strong>: 智利2009年EPSW政策、因果识别</li>
+<li><strong>结论</strong></li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="epsw-vs-epew">EPSW vs EPEW</h4>
+<p><strong>EPEW</strong>：要求"相同工作"获得相同报酬
+<strong>EPSW</strong>：更宽泛，要求对"相似工作"支付同等报酬</p>
+<h3 id="理论模型">理论模型</h3>
+<h4 id="静态模型">静态模型</h4>
+<p><strong>核心机制</strong>： -
+EPSW要求雇主对相似工作的所有工人支付相同工资 -
+企业会调整劳动力组合来降低成本 - 导致按性别隔离劳动力</p>
+<p><strong>均衡效应</strong>： -
+男性占多数的市场：女性被分配到低工资任务 - 女性占多数的市场：结果相反 -
+总体可能加剧工资差距</p>
+<h4 id="动态搜索模型">动态搜索模型</h4>
+<p><strong>搜索摩擦</strong>：工人寻找工作需要时间和成本
+<strong>再配置摩擦</strong>：企业调整劳动力组合需要成本</p>
+<hr>
+<h2 id="结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><strong>EPSW可能反效果</strong>：导致劳动力性别隔离</li>
+<li><strong>男性占多数市场中加剧差距</strong>：实证证实</li>
+<li><strong>政策启示</strong>：同酬法设计需考虑均衡效应</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -11466,6 +11466,46 @@ Vol. 126, pp. 593-650</li>
       </tags>
   </entry>
   <entry>
+    <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
+    <url>/posts/32262/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
+<h2 id="研究问题"><strong>1. 研究问题</strong></h2>
+<p>本文以江苏省12个地级市"河长制"政策转移案例(2006 —
+2016)为研究对象,在识别政策转移案例中"复制"和"再生产"两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对"河长制"转移程度的影响.研究发现"河长制"政策转移中的"政策再生产"的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局.通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产.</p>
+<p>&nbsp;</p>
+<span id="more"></span>
+<h2 id="问题的提出"><strong>2. 问题的提出</strong></h2>
+<p><strong>2.1 政策转移的必要性</strong></p>
+<p>现实状况:政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有"后发优势"的意味、地区间的合作与竞争</p>
+<p>转移情形:政策转移并不意味着全盘复制,可分为"复制"和"再生产"两种形式</p>
+<p>核心问题:什么因素能够促成政策"再生产",政策"再生产"又体现出那些维度特征</p>
+<p><strong>2.2 河长制的背景介绍</strong></p>
+<p>河湖治理是跨界特性最典型的领域之一,涉及上下游、左右岸、不同行政区域和行业,呈现出高度的复杂性.河长制最早发轫于太湖蓝藻危机,2016年之前是一项地方政策,经政策扩散至多地.</p>
+<p>现实调查显示河长制在江苏省内的扩散过程中呈现出"复制"和"再生产"的典型差异.</p>
+<p>&nbsp;</p>
+<h2 id="研究思路和方法"><strong>3. 研究思路和方法</strong></h2>
+<p><strong>3.1 QCA</strong></p>
+<p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles
+Ragin)于<code>1987</code>年提出,适用于案例数量大于10小于60的研究.</p>
+<p>其使用布尔代数和集合论的思想来进行中小数量的跨案例比较,从而处理多个原因和一个结果之间的因果关系.</p>
+<p><strong>3.2 转移程度的刻画</strong></p>
+<p>道洛维茨和马什最早借鉴rose(1993)的连续统来划分政策转移程度:复制、模仿、混合、启发.</p>
+<p>本文简单划分为:"复制"和"再生产"</p>
+<p><strong>3.3 解释变量的选择</strong></p>
+<p>行政压力、资源禀赋、政策需求、外部力量</p>
+<p>&nbsp;</p>
+<h2 id="结论"><strong>4. 结论</strong></h2>
+<p>政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素.</p>
+]]></content>
+      <categories>
+        <category>公共管理</category>
+        <category>政策转移</category>
+      </categories>
+      <tags>
+        <tag>文献阅读</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>用稻草做砖 — 深度阅读笔记 — Okeke</title>
     <url>/posts/okeke2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -11557,46 +11597,6 @@ rollout数据、设施调查、服务提供调查、患者调查、家庭调查<
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
-    <url>/posts/32262/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
-<h2 id="研究问题"><strong>1. 研究问题</strong></h2>
-<p>本文以江苏省12个地级市"河长制"政策转移案例(2006 —
-2016)为研究对象,在识别政策转移案例中"复制"和"再生产"两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对"河长制"转移程度的影响.研究发现"河长制"政策转移中的"政策再生产"的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局.通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产.</p>
-<p>&nbsp;</p>
-<span id="more"></span>
-<h2 id="问题的提出"><strong>2. 问题的提出</strong></h2>
-<p><strong>2.1 政策转移的必要性</strong></p>
-<p>现实状况:政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有"后发优势"的意味、地区间的合作与竞争</p>
-<p>转移情形:政策转移并不意味着全盘复制,可分为"复制"和"再生产"两种形式</p>
-<p>核心问题:什么因素能够促成政策"再生产",政策"再生产"又体现出那些维度特征</p>
-<p><strong>2.2 河长制的背景介绍</strong></p>
-<p>河湖治理是跨界特性最典型的领域之一,涉及上下游、左右岸、不同行政区域和行业,呈现出高度的复杂性.河长制最早发轫于太湖蓝藻危机,2016年之前是一项地方政策,经政策扩散至多地.</p>
-<p>现实调查显示河长制在江苏省内的扩散过程中呈现出"复制"和"再生产"的典型差异.</p>
-<p>&nbsp;</p>
-<h2 id="研究思路和方法"><strong>3. 研究思路和方法</strong></h2>
-<p><strong>3.1 QCA</strong></p>
-<p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles
-Ragin)于<code>1987</code>年提出,适用于案例数量大于10小于60的研究.</p>
-<p>其使用布尔代数和集合论的思想来进行中小数量的跨案例比较,从而处理多个原因和一个结果之间的因果关系.</p>
-<p><strong>3.2 转移程度的刻画</strong></p>
-<p>道洛维茨和马什最早借鉴rose(1993)的连续统来划分政策转移程度:复制、模仿、混合、启发.</p>
-<p>本文简单划分为:"复制"和"再生产"</p>
-<p><strong>3.3 解释变量的选择</strong></p>
-<p>行政压力、资源禀赋、政策需求、外部力量</p>
-<p>&nbsp;</p>
-<h2 id="结论"><strong>4. 结论</strong></h2>
-<p>政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素.</p>
-]]></content>
-      <categories>
-        <category>公共管理</category>
-        <category>政策转移</category>
-      </categories>
-      <tags>
-        <tag>文献阅读</tag>
       </tags>
   </entry>
   <entry>
@@ -11717,6 +11717,63 @@ Records</li>
 <p>合作与玩家预期寿命非单调相关；记录操纵形式和行动互补性决定合作可能性。</p>
 <h2 id="未来研究方向">5. 未来研究方向</h2>
 <p>有限社区推广、异质性寿命分析、实验验证、机制设计。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Racial Discrimination and the Social Contract — 深度阅读笔记 — Qian &amp; Tabellini</title>
+    <url>/posts/qian2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Racial Discrimination and the Social
+Contract: Evidence from U.S. Army Enlistment during WWII</li>
+<li><strong>作者</strong>: Nancy Qian (Northwestern &amp; NBER), Marco
+Tabellini (Harvard &amp; CEPR &amp; NBER)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies
+(RES)</li>
+<li><strong>难度评估</strong>: 高 -
+需要政治经济学、计量经济学、历史背景知识 <span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言">1. 引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>社会契约理论、歧视与政治排斥、战争与政治加入。</p>
+<h3 id="研究背景">研究背景</h3>
+<p>社会契约理论认为战争和革命是政治加入的重要触发因素；排除效应在战时如何影响公民对政府的支持尚无直接证据。</p>
+<h3 id="核心问题">核心问题</h3>
+<p>歧视和政治排斥如何影响公民在战时对政府的支持？排除效应是正向（信号价值）还是负向（挫败感）？</p>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：历史背景（Jim Crow时代的歧视、 WWII与珍珠港事件）</li>
+<li>第三节：概念框架</li>
+<li>第四节：数据</li>
+<li>第五节：主要结果</li>
+<li>第六节：额外分析</li>
+<li>第七节：结论</li>
+</ul>
+<h2 id="正文">3. 正文</h2>
+<h3 id="核心机制">核心机制</h3>
+<p>珍珠港袭击作为外生冲击；识别歧视对入伍影响的供给侧效应。</p>
+<h3 id="关键发现">关键发现</h3>
+<ol type="1">
+<li>珍珠港后志愿入伍率急剧上升，但黑人增幅小于白人</li>
+<li>歧视越高的郡，黑人入伍率增幅越小（相对于白人）</li>
+<li>歧视减少黑人的数量和质量（教育水平）</li>
+<li>距离珍珠港越远、州加入联邦越晚，歧视效应越强</li>
+<li>日裔美国人在未被拘禁地区入伍率更高</li>
+</ol>
+<h2 id="结论">4. 结论</h2>
+<p>歧视和政治排斥降低被排斥群体在战时对政府的支持，为社会契约理论提供实证支持。</p>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<p>一战遗产的代际传递、宣传运动的效果、跨语境验证。</p>
 ]]></content>
       <categories>
         <category>RES</category>
@@ -12273,63 +12330,6 @@ University Press.</li>
       </tags>
   </entry>
   <entry>
-    <title>Racial Discrimination and the Social Contract — 深度阅读笔记 — Qian &amp; Tabellini</title>
-    <url>/posts/qian2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Racial Discrimination and the Social
-Contract: Evidence from U.S. Army Enlistment during WWII</li>
-<li><strong>作者</strong>: Nancy Qian (Northwestern &amp; NBER), Marco
-Tabellini (Harvard &amp; CEPR &amp; NBER)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies
-(RES)</li>
-<li><strong>难度评估</strong>: 高 -
-需要政治经济学、计量经济学、历史背景知识 <span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言">1. 引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>社会契约理论、歧视与政治排斥、战争与政治加入。</p>
-<h3 id="研究背景">研究背景</h3>
-<p>社会契约理论认为战争和革命是政治加入的重要触发因素；排除效应在战时如何影响公民对政府的支持尚无直接证据。</p>
-<h3 id="核心问题">核心问题</h3>
-<p>歧视和政治排斥如何影响公民在战时对政府的支持？排除效应是正向（信号价值）还是负向（挫败感）？</p>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：历史背景（Jim Crow时代的歧视、 WWII与珍珠港事件）</li>
-<li>第三节：概念框架</li>
-<li>第四节：数据</li>
-<li>第五节：主要结果</li>
-<li>第六节：额外分析</li>
-<li>第七节：结论</li>
-</ul>
-<h2 id="正文">3. 正文</h2>
-<h3 id="核心机制">核心机制</h3>
-<p>珍珠港袭击作为外生冲击；识别歧视对入伍影响的供给侧效应。</p>
-<h3 id="关键发现">关键发现</h3>
-<ol type="1">
-<li>珍珠港后志愿入伍率急剧上升，但黑人增幅小于白人</li>
-<li>歧视越高的郡，黑人入伍率增幅越小（相对于白人）</li>
-<li>歧视减少黑人的数量和质量（教育水平）</li>
-<li>距离珍珠港越远、州加入联邦越晚，歧视效应越强</li>
-<li>日裔美国人在未被拘禁地区入伍率更高</li>
-</ol>
-<h2 id="结论">4. 结论</h2>
-<p>歧视和政治排斥降低被排斥群体在战时对政府的支持，为社会契约理论提供实证支持。</p>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<p>一战遗产的代际传递、宣传运动的效果、跨语境验证。</p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>R数据科学_ggplot2笔记(1)</title>
     <url>/posts/29862/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="一个说明">一个说明</h2>
@@ -12790,6 +12790,45 @@ an Endogenous Production Network</li>
       </tags>
   </entry>
   <entry>
+    <title>字体和公式的Display</title>
+    <url>/posts/15167/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<font face="Times New Roman">
+</font><p style="text-align:justify"><font face="Times New Roman">
+<b>"Evaluating the employment impact of a mandatory job search
+program"</b></font> <br> <br> <font face="Times New Roman">
+</font></p><p style="text-align:justify"><font face="Times New Roman">
+</font></p><p><font face="Times New Roman"><b>What treatment do the authors evaluate?</b></font> <br></p>
+<span id="more"></span>
+<font face="Tex Gyre Pagella">
+<p style="text-align:justify">
+</p><p><b>Answer: </b> In the parametric methods, the common trend
+assumption is:</p>
+<p><span class="math display">\[\begin{array}{l}
+f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
+t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
+t=0\right)\right] \\
+=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
+t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
+t=0\right)\right]
+\end{array}\]</span> In the non-parametric methods, the common trend
+assumption is:</p>
+<p><span class="math display">\[\begin{array}{l}
+E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i
+t}^{0} | P_{E X}, P_{t X}, N D=1, t=0\right) \\
+=E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=1\right)-E\left(Y_{i
+t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)
+\end{array}\]</span></p>
+</font><p><font face="Tex Gyre Pagella"></font></p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>blog_test</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>移民、创新与增长 — 深度阅读笔记 — Terry Et Al.</title>
     <url>/posts/terry2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -12886,45 +12925,6 @@ capita提高约5%</p></li>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>字体和公式的Display</title>
-    <url>/posts/15167/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<font face="Times New Roman">
-</font><p style="text-align:justify"><font face="Times New Roman">
-<b>"Evaluating the employment impact of a mandatory job search
-program"</b></font> <br> <br> <font face="Times New Roman">
-</font></p><p style="text-align:justify"><font face="Times New Roman">
-</font></p><p><font face="Times New Roman"><b>What treatment do the authors evaluate?</b></font> <br></p>
-<span id="more"></span>
-<font face="Tex Gyre Pagella">
-<p style="text-align:justify">
-</p><p><b>Answer: </b> In the parametric methods, the common trend
-assumption is:</p>
-<p><span class="math display">\[\begin{array}{l}
-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
-t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
-t=0\right)\right] \\
-=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
-t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
-t=0\right)\right]
-\end{array}\]</span> In the non-parametric methods, the common trend
-assumption is:</p>
-<p><span class="math display">\[\begin{array}{l}
-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i
-t}^{0} | P_{E X}, P_{t X}, N D=1, t=0\right) \\
-=E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=1\right)-E\left(Y_{i
-t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)
-\end{array}\]</span></p>
-</font><p><font face="Tex Gyre Pagella"></font></p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>blog_test</tag>
       </tags>
   </entry>
   <entry>
@@ -13251,42 +13251,6 @@ III资本要求对银行中介交易产生负面影响</p></li>
       </tags>
   </entry>
   <entry>
-    <title>画一幅我农所在地的道路图</title>
-    <url>/posts/42027/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;">
-<center>
-上图即为最终效果
-</center>
-<h2 id="一些必备的工具">一些必备的工具</h2>
-<p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="绘制路网地图">绘制路网地图</h2>
-<p>导入以下R 包:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>读入杨陵区的数据:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>获取杨陵区的经纬度范围:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
-<p>提取杨陵区的街道路线:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>把数据保存为<strong>rds</strong>:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>然后绘图:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>绘图</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>多层网络上的博弈 — 深度阅读笔记 — Zenou &amp; Zhou</title>
     <url>/posts/zenou2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -13381,6 +13345,42 @@ T\]</span></p>
       </categories>
       <tags>
         <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>画一幅我农所在地的道路图</title>
+    <url>/posts/42027/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;">
+<center>
+上图即为最终效果
+</center>
+<h2 id="一些必备的工具">一些必备的工具</h2>
+<p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="绘制路网地图">绘制路网地图</h2>
+<p>导入以下R 包:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>读入杨陵区的数据:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>获取杨陵区的经纬度范围:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
+<p>提取杨陵区的街道路线:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>把数据保存为<strong>rds</strong>:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>然后绘图:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>绘图</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
       </tags>
   </entry>
 </search>
