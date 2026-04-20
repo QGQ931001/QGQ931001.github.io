@@ -67,97 +67,6 @@ ATT\)</span>一定会比较大,基准模型会存在低估偏误</li>
       </tags>
   </entry>
   <entry>
-    <title>国家能力建设中的溢出效应 — 深度阅读笔记 — Aman-Rana &amp; Minaudier</title>
-    <url>/posts/aman-rana2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Spillovers in State Capacity Building:
-Evidence from the Digitization of Land Records in Pakistan</li>
-<li><strong>作者</strong>: Shan Aman-Rana (University of Virginia),
-Clement Minaudier (City University of London)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(4):
-1459-1498</li>
-<li><strong>DOI</strong>: 10.1257/aer.20240880</li>
-<li><strong>难度评估</strong>: 高 -
-需要发展经济学、组织经济学、计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>国家能力（State
-Capacity）</strong>：指国家有效执行政策和提供公共服务的能力，主要包括税收能力、产权保护和行政能力。</p>
-<p><strong>数字化改革（Digitization
-Reform）</strong>：在发展中国家被视为加强国家能力的有效手段，可减少官僚腐败，提高透明度和效率。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>数字化的双重性</strong>：数字化会"重塑"官僚机构的组织结构，改变不同机构间的关系</p></li>
-<li><p><strong>研究缺口</strong>：现有文献主要关注数字化的直接正面效应，对间接影响的系统性研究不足</p></li>
-<li><p><strong>巴基斯坦案例</strong>：旁遮普省的分阶段土地记录数字化改革（2011-2014年）提供理想准实验场景</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：技术引入官僚机构所带来的组织变化是否会削弱国家能力？</p>
-<p><strong>主要发现</strong>：土地记录数字化导致税收征收下降84%</p>
-<hr>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<h3 id="第1节引言">第1节：引言</h3>
-<h3 id="第2节背景与数据">第2节：背景与数据</h3>
-<ul>
-<li>巴基斯坦旁遮普省的农业收入税（AIT）制度</li>
-<li>土地记录数字化改革三阶段推出（2011-2014年）</li>
-<li>数据来源：税收行政数据、卫星数据、家庭调查数据</li>
-</ul>
-<h3 id="第3节识别策略与结果">第3节：识别策略与结果</h3>
-<ul>
-<li>交错推出的DID设计</li>
-<li>数字化导致税收征收下降84%</li>
-</ul>
-<h3 id="第4节机制分析">第4节：机制分析</h3>
-<ul>
-<li>税基变化</li>
-<li>官僚绩效变化（失去杠杆效应、腐败转移效应）</li>
-</ul>
-<h3 id="第5节讨论">第5节：讨论</h3>
-<h3 id="第6节结论">第6节：结论</h3>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="巴基斯坦农业收入税制度">巴基斯坦农业收入税制度</h4>
-<p>税收由地方官僚（Qanungo）征收，基于耕地面积或利润。征收流程包括年初作物检查（Girdawari）、发出税收需求通知、征收税款。</p>
-<h3 id="实证方法">实证方法</h3>
-<p><strong>识别策略</strong>： - 交错推出的DID设计 -
-使用计划推出时间而非实际时间定义处理变量 - 事件研究验证平行趋势</p>
-<p><strong>主要结果</strong>： - 数字化导致税收征收下降84%</p>
-<h3 id="机制分析">机制分析</h3>
-<p><strong>税基变化</strong>：使用卫星数据、农户调查数据验证</p>
-<p><strong>官僚绩效变化</strong>： -
-理论模型：失去杠杆效应、腐败转移效应 -
-税收评估变化：申报耕地面积下降10%、税收需求下降45% -
-征收绩效下降：征收率下降29.5个百分点</p>
-<hr>
-<h2 id="结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>技术引入可能损害国家能力</strong>：数字化在改善产权保护的同时，可能损害税收能力</p></li>
-<li><p><strong>组织变化是关键机制</strong>：官僚失去对农民土地信息的控制，导致征收能力下降</p></li>
-<li><p><strong>政策启示</strong>：技术投资必须配合组织变革</p></li>
-</ol>
-<hr>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<ol type="1">
-<li>其他国家类似数字化改革的验证</li>
-<li>配套政策干预的效果</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>When Should You Adjust Standard Errors for Clustering — 深度分析 — Abadie Et Al.</title>
     <url>/posts/abadie2023/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -434,6 +343,97 @@ Bootstrap是否是更好的选择?它与本文的TSCB有何关系?</p></li>
 ]]></content>
       <categories>
         <category>计量经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>国家能力建设中的溢出效应 — 深度阅读笔记 — Aman-Rana &amp; Minaudier</title>
+    <url>/posts/aman-rana2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Spillovers in State Capacity Building:
+Evidence from the Digitization of Land Records in Pakistan</li>
+<li><strong>作者</strong>: Shan Aman-Rana (University of Virginia),
+Clement Minaudier (City University of London)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(4):
+1459-1498</li>
+<li><strong>DOI</strong>: 10.1257/aer.20240880</li>
+<li><strong>难度评估</strong>: 高 -
+需要发展经济学、组织经济学、计量经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>国家能力（State
+Capacity）</strong>：指国家有效执行政策和提供公共服务的能力，主要包括税收能力、产权保护和行政能力。</p>
+<p><strong>数字化改革（Digitization
+Reform）</strong>：在发展中国家被视为加强国家能力的有效手段，可减少官僚腐败，提高透明度和效率。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>数字化的双重性</strong>：数字化会"重塑"官僚机构的组织结构，改变不同机构间的关系</p></li>
+<li><p><strong>研究缺口</strong>：现有文献主要关注数字化的直接正面效应，对间接影响的系统性研究不足</p></li>
+<li><p><strong>巴基斯坦案例</strong>：旁遮普省的分阶段土地记录数字化改革（2011-2014年）提供理想准实验场景</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：技术引入官僚机构所带来的组织变化是否会削弱国家能力？</p>
+<p><strong>主要发现</strong>：土地记录数字化导致税收征收下降84%</p>
+<hr>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<h3 id="第1节引言">第1节：引言</h3>
+<h3 id="第2节背景与数据">第2节：背景与数据</h3>
+<ul>
+<li>巴基斯坦旁遮普省的农业收入税（AIT）制度</li>
+<li>土地记录数字化改革三阶段推出（2011-2014年）</li>
+<li>数据来源：税收行政数据、卫星数据、家庭调查数据</li>
+</ul>
+<h3 id="第3节识别策略与结果">第3节：识别策略与结果</h3>
+<ul>
+<li>交错推出的DID设计</li>
+<li>数字化导致税收征收下降84%</li>
+</ul>
+<h3 id="第4节机制分析">第4节：机制分析</h3>
+<ul>
+<li>税基变化</li>
+<li>官僚绩效变化（失去杠杆效应、腐败转移效应）</li>
+</ul>
+<h3 id="第5节讨论">第5节：讨论</h3>
+<h3 id="第6节结论">第6节：结论</h3>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="巴基斯坦农业收入税制度">巴基斯坦农业收入税制度</h4>
+<p>税收由地方官僚（Qanungo）征收，基于耕地面积或利润。征收流程包括年初作物检查（Girdawari）、发出税收需求通知、征收税款。</p>
+<h3 id="实证方法">实证方法</h3>
+<p><strong>识别策略</strong>： - 交错推出的DID设计 -
+使用计划推出时间而非实际时间定义处理变量 - 事件研究验证平行趋势</p>
+<p><strong>主要结果</strong>： - 数字化导致税收征收下降84%</p>
+<h3 id="机制分析">机制分析</h3>
+<p><strong>税基变化</strong>：使用卫星数据、农户调查数据验证</p>
+<p><strong>官僚绩效变化</strong>： -
+理论模型：失去杠杆效应、腐败转移效应 -
+税收评估变化：申报耕地面积下降10%、税收需求下降45% -
+征收绩效下降：征收率下降29.5个百分点</p>
+<hr>
+<h2 id="结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>技术引入可能损害国家能力</strong>：数字化在改善产权保护的同时，可能损害税收能力</p></li>
+<li><p><strong>组织变化是关键机制</strong>：官僚失去对农民土地信息的控制，导致征收能力下降</p></li>
+<li><p><strong>政策启示</strong>：技术投资必须配合组织变革</p></li>
+</ol>
+<hr>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<ol type="1">
+<li>其他国家类似数字化改革的验证</li>
+<li>配套政策干预的效果</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -4020,312 +4020,6 @@ NJ快餐业研究的关系</strong>:为什么NJ快餐业研究发现了正效应
       </tags>
   </entry>
   <entry>
-    <title>Regulating Conglomerates: Evidence From an Energy Conservation Program in China — 深度阅读笔记 — AER</title>
-    <url>/posts/chen2021/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Regulating Conglomerates: Evidence from an
-Energy Conservation Program in China</li>
-<li><strong>作者</strong>: Qiaoyi Chen (复旦大学), Zhao Chen (复旦大学),
-Zhikuo Liu (复旦大学), Juan Carlos Suárez Serrato (Duke大学 &amp; NBER),
-Daniel Yi Xu (Duke大学 &amp; NBER)</li>
-<li><strong>年份</strong>: 2021</li>
-<li><strong>来源</strong>: American Economic Review (AER)</li>
-<li><strong>DOI</strong>: 未提供 <span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言背景和意义">引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>能源
-regulation和经济活动的关系是环境经济学研究的核心议题之一.在发展中国家,特别是中国这样的新兴经济体,政府面临着平衡经济增长与工业化负面效应(如碳排放和污染)的艰巨挑战.中国的工业能源消耗在全球占据主导地位,其工业能源使用不仅在国内经济中举足轻重,更对全球气候变化产生深远影响.</p>
-<p>能源效率 regulation
-的设计面临多重复杂性:首先,大型工业企业往往嵌入更广泛的商业网络(企业集团/
-conglomerate),这使得监管政策的评估必须考虑集团内部的资源配置和 spillover
-效应;其次,监管政策的有效性取决于企业响应的边际成本_是通过提高能源效率、降低产出,还是将生产转移到未受监管的关联企业来实现减排;第三,市场竞争和产业组织结构会放大或缩小政策的实际效果,产生所谓的"泄漏"(leakage)效应.</p>
-<p>本文研究的"千家企业"(Top-1,000)项目是中国"十一五"规划(2006-2011)期间最重要的能源节约政策之一.该项目针对能源密集型行业中的最大能耗企业,目标是到2011年实现工业能源强度(单位GDP能耗)降低20%的宏伟目标.</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p><strong>中国能源消耗的严峻形势</strong>:进入21世纪初期,中国的工业能源消耗已经远远超过其他主要经济体.以图1为参考,能源
-regulation
-对国家和全球都具有重要意义.这一背景下,理解大型能源监管政策的效果对于制定更有效的环境政策至关重要.</p>
-<p><strong>千家企业项目的设计逻辑</strong>:该项目设计参照了发达国家自愿协议项目的经验,相信企业能够通过提高能源效率显著减少能源使用.项目名称"千家企业"指的是9个能源密集型行业中能源消耗超过18万吨标准煤的1008家工业企业.这些企业的总能源消耗在2004年达到6.7亿吨标准煤,占中国工业能源消费的47%和全国能源消费的33%.</p>
-<p><strong>政策执行的制度背景</strong>:项目采用自上而下的目标分解机制:中央政府向每个省级政府分配能源使用减排目标,省级官员再向每个千家企业分配个人能源使用配额.千家企业须接受第三方年度能源审计,并可能面临工业和信息化部以及国家能源管理局的额外审计.</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p>现有政策评估存在关键缺陷:官方评估主要依赖千家企业自身的能源使用变化,得出项目高度有效的结论.然而,这一评估方法存在两个重要问题:</p>
-<p>第一,它忽视了企业集团内部的生产再分配效应.受监管企业可能不是通过提高能源效率,而是通过将生产转移到同一企业集团内不受监管的关联企业来满足监管要求.这种行为会导致监管政策出现"集团泄漏"(conglomerate
-leakage).</p>
-<p>第二,它忽视了市场竞争效应.受监管企业因减产而让出的市场份额可能被同行业不受监管的竞争对手获取,导致总体能源节约效果低于预期,即"市场泄漏"(market
-leakage).</p>
-<p>本文核心研究问题:千家企业项目对能源消耗的实际影响如何?企业集团内部的
-production shifting 在多大程度上削弱了政策效果?考虑到这些 spillover
-效应,政策的福利含义是什么?</p>
-<h3 id="研究意义">研究意义</h3>
-<p><strong>理论贡献</strong>:本文将 reduced-form 计量经济学方法与产业
-equilibrium 模型相结合,提供了一个分析能源 regulation
-的一般框架.这一框架能够同时刻画企业集团内部和市场竞争层面的 spillover
-效应,为准确评估能源政策的真实效果提供了方法论支撑.</p>
-<p><strong>政策含义</strong>:研究发现对设计更有效的能源 regulation
-具有直接启示.如果能够利用公开可得的企业集团所有权信息,针对整个企业集团而不仅是单个企业制定监管规则,可以显著提高政策的能源节约效果.</p>
-<p><strong>发展经济学价值</strong>:在印度、中国和拉丁美洲,企业集团的重要性日益上升(Ramachandran,
-Manikandan and Pant,
-2013).本文的发现对于理解企业集团如何响应政府监管具有普遍的参考价值.</p>
-<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
-<p>本文采用层层递进的研究设计,共分为7个主要部分:</p>
-<p><strong>第一部分:政策背景与数据</strong>(Policy Background and
-Data).详细描述千家企业能源节约项目,介绍用于测量经济活动和能源使用的数据集,以及构建中国企业集团所有权网络的研究策略.</p>
-<p><strong>第二部分:政策对受监管企业的影响</strong>(Effects of the
-Policy on Regulated
-Firms).使用双重差分法(difference-in-differences)识别政策效果,证明受监管企业通过降低产出而非提高能源效率来满足监管要求.</p>
-<p><strong>第三部分:企业集团内部的溢出效应</strong>(Within-Conglomerate
-Spillovers).利用详细的商业注册数据,发现受监管企业集团将生产转移到未受监管的关联企业,揭示了40%的产出下降被集团内部吸收.</p>
-<p><strong>第四部分:产业 equilibrium 模型</strong>(Industry Equilibrium
-Model).构建包含企业集团生产和市场 spillover 的产业 equilibrium
-模型,为第五部分的模型估计和第六部分的福利分析奠定基础.</p>
-<p><strong>第五部分:模型估计</strong>(Model
-Estimation).通过匹配企业规模分布和集团内部生产分配的 pre-regulation
-特征来估计模型参数.</p>
-<p><strong>第六部分:福利分析</strong>(Welfare Analysis).量化政策的
-aggregate 和 welfare
-效果,比较不同政策工具(扩展监管范围、依赖性能源税、基于公开信息的集团层面
-regulation)的效果.</p>
-<p><strong>第七部分:稳健性检验</strong>(Robustness).检验模型结果对替代模型设定和参数值的敏感性,包括考虑能源效率改善可能性和
-pre-existing 能源效率差异的模型扩展.</p>
-<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
-<h3 id="背景与挑战">背景与挑战</h3>
-<h4 id="中国的能源困境与政策应对">中国的能源困境与政策应对</h4>
-<p>中国作为世界最大的能源消费国,其工业能源消耗占全国总能耗的70%.在快速工业化和城市化的背景下,如何在保持经济增长的同时控制能源消耗和碳排放,是中国政府面临的核心政策挑战.2006年启动的"十一五"规划将能源强度降低20%作为约束性目标,这一目标通过多个政策和行业计划来实现,其中千家企业项目是最重要的举措之一.</p>
-<p>千家企业项目的设计体现了发展中国家的政策创新.与发达国家主要依赖自愿协议和市场激励不同,中国的项目采用了强有力的行政执行机制.项目针对9个能源密集型行业的1008家超大型企业,这些企业的能源消耗占工业总能耗的47%.由于政策于2006年宣布,但根据企业2004年的
-retrospectively 能源消耗数据选择参与者,企业无法操纵项目参与名单,这为准
-quasi-experimental 识别策略提供了外生性来源.</p>
-<h4 id="企业集团的重要性">企业集团的重要性</h4>
-<p>理解千家企业项目效果的关键在于认识到这些受监管企业并非孤立运营,而是嵌入在复杂的企业集团网络中.通过中国工商行政管理总局的行政注册数据库(CARD),作者能够追踪这些企业的所有权关系.</p>
-<p>研究发现,千家企业企业平均拥有2.45个同行业内的关联企业.由于千家企业通常是各行业的最大企业,其关联企业的规模明显较小,平均产出仅为受监管企业的19.3%.这一事实意味着企业集团可能有显著的
-scope 通过关联企业之间的生产替代来响应监管.</p>
-<p>然而,完全替代的可能性受到两个因素制约:首先,关联企业规模较小,无法完全吸收受监管企业的产出下降;其次,同一4-digit行业内同集团企业之间的
-production shifting 受到技术和物流约束.</p>
-<h4 id="识别策略的核心挑战">识别策略的核心挑战</h4>
-<p>准确评估千家企业项目效果面临三个层面的识别挑战:</p>
-<p><strong>第一层:受监管企业 vs.
-对照企业</strong>.理想的反事实是:如果没有千家企业项目,受监管企业的能源使用和产出会有怎样的变化?作者使用"万家"(Top-10,000)企业作为对照组_这些企业在2011年后才被纳入监管,因此2011年之前的时期提供了
-quasi-experimental variation.</p>
-<p><strong>第二层:集团内部的 production
-shifting</strong>.即使能够识别受监管企业相对于对照企业的效果,这仍然无法捕捉企业集团内部的再分配效应.受监管企业可能将生产转移到同一集团内的关联企业,从而降低政策的整体能源节约效果.</p>
-<p><strong>第三层:市场竞争效应</strong>.受监管企业的减产可能导致竞争对手获得更多市场份额,这种市场层面的泄漏也会影响政策的
-aggregate 效果.</p>
-<h3 id="方法论reduced-form-分析">方法论:Reduced-Form 分析</h3>
-<h4 id="双重差分设计">双重差分设计</h4>
-<p>作者采用多层双重差分策略来识别政策的直接效应和溢出效应.</p>
-<p><strong>第一个双重差分</strong>:比较受监管的千家企业与同行业但不受监管的万家企业的差异.这是标准的
-treatment vs. control
-比较,假设在政策实施前,两组企业的能源使用和产出趋势相似.</p>
-<p><strong>事件研究规范</strong>(Event-Study
-Specification)用于检验平行趋势假设:</p>
-<p><span class="math display">\[Y_{ijklt} = \sum_{\tau \neq 2006}
-\beta_\tau \times Treat_i \times Year_\tau + \alpha_i + \eta_{jt} +
-\delta_{kt} + \varepsilon_{ijklt}\]</span></p>
-<p>其中 <span class="math inline">\(Y_{ijklt}\)</span> 是企业 <span class="math inline">\(i\)</span> 在行业 <span class="math inline">\(j\)</span>、省份 <span class="math inline">\(k\)</span>、年份 <span class="math inline">\(t\)</span> 的 outcome 变量,<span class="math inline">\(Treat_i\)</span> 是处理组指示变量,<span class="math inline">\(\alpha_i\)</span> 是企业固定效应,<span class="math inline">\(\eta_{jt}\)</span> 是行业×年份固定效应,<span class="math inline">\(\delta_{kt}\)</span> 是省份×年份固定效应.</p>
-<p>图4展示了 event-study
-结果:处理组和对照组企业在政策实施前的趋势高度一致,支持平行趋势假设.政策实施后,千家企业的能源使用相对下降约16%.</p>
-<p><strong>第二个双重差分</strong>:比较同一企业集团内的关联企业与其他不受监管企业的差异.这一设计利用了企业集团所有权网络信息,识别集团内部的溢出效应.</p>
-<h4 id="主要-reduced-form-发现">主要 Reduced-Form 发现</h4>
-<p><strong>发现一:能源使用下降源于产出降低,而非效率提升</strong></p>
-<p>表3报告了政策对能源使用和产出的影响.结果显示:</p>
-<ul>
-<li>能源使用下降12%-16%,在不同的固定效应规范下保持稳健</li>
-<li>产出(以收入衡量)下降10%-23%</li>
-<li><strong>能源效率(产出/能源使用)没有显著变化</strong></li>
-</ul>
-<p>这一发现具有重要的政策含义:企业选择通过降低产出来满足监管要求,而非投资于能源效率提升.作者认为这可能是因为能源效率投资需要
-long-lived capital
-的更新,面临技术不确定性和中国政府政策承诺不确定性的制约.</p>
-<p><strong>发现二:集团内部生产转移</strong></p>
-<p>利用 CARD
-数据,作者识别了46,178家与千家企业有关联关系的企业.将这些关联企业与万家数据库匹配后,得到2,466家在同行业的关联企业.</p>
-<p>双重差分分析显示:</p>
-<ul>
-<li>关联企业的产出增加约12%</li>
-<li>关联企业的能源使用增加,但没有能源效率变化</li>
-<li>只有当关联企业的4-digit行业与受监管企业相同时,才出现显著的生产增加</li>
-<li>在其他行业的关联企业作为 placebo test,未发现产出增加</li>
-</ul>
-<p>基于规模差异(关联企业平均规模仅为受监管企业的19.3%),作者计算出企业集团能够将受监管企业40%的产出下降转移到关联企业.</p>
-<p><strong>发现三:市场层面的竞争效应</strong></p>
-<p>作者提供了市场泄漏的证据:同行业但不受监管的企业在政策实施后产出增加.这与千家企业减产让出市场份额的预期一致.</p>
-<h3 id="结构模型产业-equilibrium-模型">结构模型:产业 Equilibrium
-模型</h3>
-<h4 id="模型设定">模型设定</h4>
-<p>为了量化政策的 aggregate 和 welfare
-效果,作者构建了一个包含以下特征的产业 equilibrium 模型:</p>
-<p><strong>需求侧</strong>:使用常替代弹性(CES)聚合器描述消费者对不同企业产品的偏好:</p>
-<p><span class="math display">\[U = \left( \int_\Omega
-Q(\omega)^{\frac{\sigma-1}{\sigma}} d\omega
-\right)^{\frac{\sigma}{\sigma-1}}\]</span></p>
-<p>其中 <span class="math inline">\(\sigma &gt; 1\)</span>
-是替代弹性,<span class="math inline">\(\omega\)</span> 表示企业产品.</p>
-<p><strong>供给侧</strong>:每个企业生产单一产品面临常数边际成本 <span class="math inline">\(c\)</span> 和冰山成本 <span class="math inline">\(\tau\)</span>.企业可以选择在受监管状态(承担能源监管成本)或非监管状态下运营.</p>
-<p><strong>企业集团结构</strong>:模型明确允许企业在同一企业集团内共享投入和转移生产.设
-<span class="math inline">\(\lambda_s\)</span> 表示企业集团 <span class="math inline">\(s\)</span> 内的企业数量,<span class="math inline">\(\omega_{s,k}\)</span> 表示企业 <span class="math inline">\(k\)</span> 在集团 <span class="math inline">\(s\)</span> 中的相对规模.</p>
-<p><strong>关键参数</strong>:模型需要估计替代弹性 <span class="math inline">\(\sigma\)</span>、集团内部替代弹性 <span class="math inline">\(\gamma\)</span>、能源监管成本 <span class="math inline">\(\kappa\)</span> 等参数.</p>
-<h4 id="模型估计">模型估计</h4>
-<p>作者通过匹配以下矩条件来估计模型:</p>
-<ol type="1">
-<li><strong>企业规模分布</strong>:模型能够再现企业规模的集中度</li>
-<li><strong>集团内部生产分配</strong>:模型匹配观测到的集团内部相对规模分布</li>
-<li><strong>Reduced-form 估计</strong>:模型 out-of-sample
-验证双重差分估计结果</li>
-</ol>
-<p>模型与双重差分估计的一致性验证了模型正确捕捉了企业集团内部和市场层面的
-spillover 效应的定量重要性.</p>
-<h3 id="福利分析">福利分析</h3>
-<h4 id="政策效果的量化">政策效果的量化</h4>
-<p>基于估计的模型,作者量化了千家家企业项目的 aggregate 效果:</p>
-<ul>
-<li><strong>能源节约</strong>:政策使总能源使用降低4%,相当于每年减少约4800万吨标准煤</li>
-<li><strong>社会成本</strong>:影子成本约160美元/吨碳(当量)</li>
-</ul>
-<p>关键机制:企业集团通过内部 production shifting
-降低了千家企业的影子监管成本约30%.这是因为集团能够将部分产出转移到关联企业,从而部分抵消了对受监管企业的直接影响.</p>
-<h4 id="替代政策的模拟">替代政策的模拟</h4>
-<p>作者使用模型比较了三种替代政策:</p>
-<p><strong>政策A:扩展千家家企业项目</strong>.将更多企业纳入监管范围,但保持针对单个企业的监管结构.结果显示这只能带来边际的能源节约增加.</p>
-<p><strong>政策B:规模依赖性能源税</strong>.对所有属于有千家企业存在的企业集团的企业征收能源税.结果接近
-universal energy tax 的效果.</p>
-<p><strong>政策C:基于公开信息的集团层面
-regulation</strong>.利用公开可获得的企业所有权信息,针对整个企业集团制定监管规则.结果显示可以在相同
-welfare 成本下将能源节约提高10%.</p>
-<p><strong>核心洞察</strong>:由于企业集团内部的 production shifting
-是一种重要的泄漏渠道,针对 conglomerate
-层面的监管能够更有效地实现能源节约目标.</p>
-<h3 id="稳健性检验">稳健性检验</h3>
-<p>作者进行了广泛的稳健性检验:</p>
-<ol type="1">
-<li><p><strong>能源效率改善的长期可能性</strong>:扩展模型允许企业响应监管投资于能源效率,发现即使在长期视角下,能源效率改善仍然成本高昂</p></li>
-<li><p><strong>Pre-existing
-能源效率差异</strong>:假设千家企业比所有其他企业能源效率低20%,重新计算社会成本约133美元/吨碳</p></li>
-<li><p><strong>参数敏感性</strong>:不同的 <span class="math inline">\(\sigma\)</span>、<span class="math inline">\(\gamma\)</span> 和 <span class="math inline">\(\kappa\)</span> 参数值下的稳健性</p></li>
-<li><p><strong>数据构建的敏感性</strong>:使用行政税务数据填补缺失值、限制样本至样本期内持续存在的企业等</p></li>
-</ol>
-<h2 id="结论conclusion">结论(Conclusion)</h2>
-<h3 id="核心研究结论">核心研究结论</h3>
-<p>本文通过对千家企业能源节约项目的深入研究,得出以下核心结论:</p>
-<p><strong>第一,监管企业通过减产而非提高能源效率来响应政策</strong>.这一发现揭示了能源监管的边际成本结构,表明能源效率投资的成本远高于简单地接受产出损失.</p>
-<p><strong>第二,企业集团内部的 production shifting
-是政策效果的重要泄漏渠道</strong>.受监管企业集团将40%的产出下降转移到未受监管的关联企业,这一发现对仅关注受监管企业效果的政策评估提出了挑战.</p>
-<p><strong>第三,市场竞争效应进一步削弱了政策的能源节约效果</strong>.受监管企业减产让出的市场份额被竞争对手获取,降低了政策的
-aggregate 效果.</p>
-<p><strong>第四,政策的 welfare
-合理性取决于社会碳成本</strong>.当社会碳成本超过160美元/吨碳时,千家企业项目才能改善
-welfare,这一结果对当前碳定价政策具有直接启示.</p>
-<p><strong>第五,集团层面的监管设计能够显著提高政策效果</strong>.利用公开可获得的企业所有权信息,针对整个企业集团制定监管规则,可以在相同
-welfare 成本下将能源节约提高10%.</p>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<p><strong>对能源经济学 literature
-的贡献</strong>:本文提供了迄今为止最全面的中国能源监管政策评估,揭示了企业集团作为重要但此前被忽视的响应渠道的作用.</p>
-<p><strong>对环境 regulation literature 的贡献</strong>:本文将
-reduced-form 和 structural 方法相结合,为分析环境 regulation 的 spillover
-效应提供了可推广的框架.</p>
-<p><strong>对产业组织 literature
-的贡献</strong>:本文揭示了企业集团作为一种特殊的产业组织形式如何影响政府监管的有效性.</p>
-<h3 id="政策建议">政策建议</h3>
-<p><strong>短期建议</strong>:完善千家家企业项目的监管设计,考虑集团层面的信息披露要求和监管规则.</p>
-<p><strong>中期建议</strong>:扩展能源监管范围时,应优先考虑基于集团层面的
-targeting,而非简单地增加受监管企业数量.</p>
-<p><strong>长期建议</strong>:建立企业所有权信息的公开数据库,为更有效的监管设计提供信息基础.</p>
-<h2 id="未来研究方向提及">未来研究方向提及</h2>
-<p>作者在论文中提出了若干值得进一步研究的方向:</p>
-<p><strong>Long-run
-能源效率改善</strong>:模型扩展表明长期来看企业可能投资于能源效率,但时间和成本不确定性仍然很高.未来的研究可以深入分析能源效率投资决策的动态过程.</p>
-<p><strong>空间
-spillover</strong>:本文主要关注集团内部和国家层面的效应,省份间的
-production substitution 和污染转移也是重要议题.</p>
-<p><strong>行政执行约束</strong>:政府对监管范围和监管强度的行政约束是政策设计的重要摩擦来源,值得进一步研究.</p>
-<h2 id="未来研究方向思考">未来研究方向思考</h2>
-<p>基于对本文的深入理解,以下是值得进一步探索的研究方向:</p>
-<p><strong>第一,集团所有权网络的动态演化</strong>.本文使用2018年的 CARD
-数据构建所有权网络,无法捕捉政策实施后的网络调整.未来的研究可以分析监管如何驱动企业集团的重组和整合.</p>
-<p><strong>第二,跨国比较研究</strong>.不同国家的企业集团结构和监管执行机制存在显著差异.将中国的发现与印度、巴西等其他大型新兴经济体进行比较,可以揭示企业集团响应政府监管的一般性模式.</p>
-<p><strong>第三,供应链溢出效应</strong>.本文主要关注同一企业集团内部的横向溢出,但受监管企业的上游供应商和下游客户也可能受到影响.考虑供应链关系的溢出效应可以提供更完整的政策效果图景.</p>
-<p><strong>第四,碳定价与能源监管的相互作用</strong>.当存在碳定价机制时,能源监管政策的
-marginal cost
-会相应改变.未来的研究可以分析这两种政策工具的交互作用和最优组合.</p>
-<p><strong>第五,企业异质性的深入分析</strong>.本文假设企业是同质的,但不同类型的企业(国有企业
-vs. 民营企业、外资企业 vs.
-内资企业)可能有不同的响应模式.分析这些异质性可以提供更精细的政策建议.</p>
-<h2 id="学术思考">学术思考</h2>
-<p>本文引发了几个值得深入思考的学术问题:</p>
-<p><strong>关于识别策略的思考</strong>:双重差分方法的核心假设是处理组和对照组在政策实施前具有相同的趋势.然而,在中国特有的政治经济环境下,处理组企业可能因为"树大招风"而受到更多关注,或者反过来因为政策透明度而获得更好的监管信息.这些微观机制是否会影响平行趋势假设?</p>
-<p><strong>关于企业行为假设的思考</strong>:本文假设企业是理性的,能够最优地配置集团内部的资源.然而,在现实中,企业集团内部的资源配置还受到代理问题、政治联系和内部权力斗争等因素的影响.如何在模型中更好地刻画这些制度因素?</p>
-<p><strong>关于福利评估的思考</strong>:本文采用社会碳成本(SCC)作为
-welfare 评估的核心参数,但 SCC 本身存在很大的不确定性.不同的 SCC
-假设会导致不同的政策评价,这是否意味着 welfare 分析过于依赖参数设定?</p>
-<p><strong>关于政策可复制性的思考</strong>:千家企业项目的成功在很大程度上依赖于中国的特殊制度环境_强大的行政执行能力、将环境绩效与官员晋升挂钩的考核机制.将其经验复制到其他发展中国家时,需要考虑制度能力差异.</p>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<p>基于论文内容和上述分析,以下是用户接下来可能问的问题:</p>
-<ol type="1">
-<li><p><strong>千家企业项目中,哪些行业的企业能源效率响应最为显著?是否存在行业异质性?</strong></p></li>
-<li><p><strong>企业集团将生产转移到关联企业时,是否考虑了关联企业所在地区的环境成本(污染转移)?</strong></p></li>
-<li><p><strong>作者提到的160美元/吨碳的社会碳成本,如何与当前国际碳市场价格(如欧洲碳市场的50-100欧元/吨)进行比较?</strong></p></li>
-<li><p><strong>在模型中假设的 CES 需求替代弹性 σ 如何估计?不同假设对
-welfare 结果的敏感性如何?</strong></p></li>
-<li><p><strong>万家(Top-10,000)企业在2011年后被纳入监管,这是否意味着万家可以作为"第二阶段"的处理组?研究设计是否支持这种连续处理效应的分析?</strong></p></li>
-<li><p><strong>作者提到国有企业更可能被纳入千家企业项目,这是否与国企的政治联系有关?政治联系如何影响企业的能源效率投资决策?</strong></p></li>
-<li><p><strong>对于民营企业占主导的行业(如纺织业),能源监管的效果是否有所不同?所有制结构如何调节政策效果?</strong></p></li>
-<li><p><strong>模型中考虑能源效率改善的扩展模型,是否区分了短期和长期效应?长期效应的时间
-horizon 是多久?</strong></p></li>
-<li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD
-数据的质量和覆盖范围如何保证?</strong></p></li>
-<li><p><strong>在中国"双碳"目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p></li>
-</ol>
-<h2 id="学术思考-1">学术思考</h2>
-<p>本文引发了几个值得深入思考的学术问题:</p>
-<p><strong>关于识别策略的思考</strong>:双重差分方法的核心假设是处理组和对照组在政策实施前具有相同的趋势.然而,在中国特有的政治经济环境下,处理组企业可能因为"树大招风"而受到更多关注,或者反过来因为政策透明度而获得更好的监管信息.这些微观机制是否会影响平行趋势假设?</p>
-<p><strong>关于企业行为假设的思考</strong>:本文假设企业是理性的,能够最优地配置集团内部的资源.然而,在现实中,企业集团内部的资源配置还受到代理问题、政治联系和内部权力斗争等因素的影响.如何在模型中更好地刻画这些制度因素?</p>
-<p><strong>关于福利评估的思考</strong>:本文采用社会碳成本(SCC)作为
-welfare 评估的核心参数,但 SCC 本身存在很大的不确定性.不同的 SCC
-假设会导致不同的政策评价,这是否意味着 welfare 分析过于依赖参数设定?</p>
-<p><strong>关于政策可复制性的思考</strong>:千家企业项目的成功在很大程度上依赖于中国的特殊制度环境_强大的行政执行能力、将环境绩效与官员晋升挂钩的考核机制.将其经验复制到其他发展中国家时,需要考虑制度能力差异.</p>
-<h2 id="下一步用户可能提的问题-1">下一步用户可能提的问题</h2>
-<p>基于论文内容和上述分析,以下是用户接下来可能问的问题:</p>
-<ol type="1">
-<li><p><strong>千家企业项目中,哪些行业的企业能源效率响应最为显著?是否存在行业异质性?</strong></p></li>
-<li><p><strong>企业集团将生产转移到关联企业时,是否考虑了关联企业所在地区的环境成本(污染转移)?</strong></p></li>
-<li><p><strong>作者提到的160美元/吨碳的社会碳成本,如何与当前国际碳市场价格(如欧洲碳市场的50-100欧元/吨)进行比较?</strong></p></li>
-<li><p><strong>在模型中假设的 CES 需求替代弹性 σ 如何估计?不同假设对
-welfare 结果的敏感性如何?</strong></p></li>
-<li><p><strong>万家(Top-10,000)企业在2011年后被纳入监管,这是否意味着万家可以作为"第二阶段"的处理组?研究设计是否支持这种连续处理效应的分析?</strong></p></li>
-<li><p><strong>作者提到国有企业更可能被纳入千家企业项目,这是否与国企的政治联系有关?政治联系如何影响企业的能源效率投资决策?</strong></p></li>
-<li><p><strong>对于民营企业占主导的行业(如纺织业),能源监管的效果是否有所不同?所有制结构如何调节政策效果?</strong></p></li>
-<li><p><strong>模型中考虑能源效率改善的扩展模型,是否区分了短期和长期效应?长期效应的时间
-horizon 是多久?</strong></p></li>
-<li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD
-数据的质量和覆盖范围如何保证?</strong></p></li>
-<li><p><strong>在中国"双碳"目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p></li>
-</ol>
-<h2 id="下一步用户可能提的问题-2">下一步用户可能提的问题</h2>
-<p>基于论文内容和上述分析,以下是用户接下来可能问的问题:</p>
-<ol type="1">
-<li><p><strong>千家企业项目中,哪些行业的企业能源效率响应最为显著?是否存在行业异质性?</strong></p></li>
-<li><p><strong>企业集团将生产转移到关联企业时,是否考虑了关联企业所在地区的环境成本(污染转移)?</strong></p></li>
-<li><p><strong>作者提到的160美元/吨碳的社会碳成本,如何与当前国际碳市场价格(如欧洲碳市场的50-100欧元/吨)进行比较?</strong></p></li>
-<li><p><strong>在模型中假设的 CES 需求替代弹性 σ 如何估计?不同假设对
-welfare 结果的敏感性如何?</strong></p></li>
-<li><p><strong>万家(Top-10,000)企业在2011年后被纳入监管,这是否意味着万家可以作为"第二阶段"的处理组?研究设计是否支持这种连续处理效应的分析?</strong></p></li>
-<li><p><strong>作者提到国有企业更可能被纳入千家企业项目,这是否与国企的政治联系有关?政治联系如何影响企业的能源效率投资决策?</strong></p></li>
-<li><p><strong>对于民营企业占主导的行业(如纺织业),能源监管的效果是否有所不同?所有制结构如何调节政策效果?</strong></p></li>
-<li><p><strong>模型中考虑能源效率改善的扩展模型,是否区分了短期和长期效应?长期效应的时间
-horizon 是多久?</strong></p></li>
-<li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD
-数据的质量和覆盖范围如何保证?</strong></p></li>
-<li><p><strong>在中国"双碳"目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>&lt;玉米与人口&gt;深度阅读笔记 — Chen &amp; Kung</title>
     <url>/posts/chen2016/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -4643,6 +4337,312 @@ Issue 1, pp. 71-99</li>
       <tags>
         <tag>论文笔记</tag>
         <tag>经济史</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Regulating Conglomerates: Evidence From an Energy Conservation Program in China — 深度阅读笔记 — AER</title>
+    <url>/posts/chen2021/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Regulating Conglomerates: Evidence from an
+Energy Conservation Program in China</li>
+<li><strong>作者</strong>: Qiaoyi Chen (复旦大学), Zhao Chen (复旦大学),
+Zhikuo Liu (复旦大学), Juan Carlos Suárez Serrato (Duke大学 &amp; NBER),
+Daniel Yi Xu (Duke大学 &amp; NBER)</li>
+<li><strong>年份</strong>: 2021</li>
+<li><strong>来源</strong>: American Economic Review (AER)</li>
+<li><strong>DOI</strong>: 未提供 <span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言背景和意义">引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>能源
+regulation和经济活动的关系是环境经济学研究的核心议题之一.在发展中国家,特别是中国这样的新兴经济体,政府面临着平衡经济增长与工业化负面效应(如碳排放和污染)的艰巨挑战.中国的工业能源消耗在全球占据主导地位,其工业能源使用不仅在国内经济中举足轻重,更对全球气候变化产生深远影响.</p>
+<p>能源效率 regulation
+的设计面临多重复杂性:首先,大型工业企业往往嵌入更广泛的商业网络(企业集团/
+conglomerate),这使得监管政策的评估必须考虑集团内部的资源配置和 spillover
+效应;其次,监管政策的有效性取决于企业响应的边际成本_是通过提高能源效率、降低产出,还是将生产转移到未受监管的关联企业来实现减排;第三,市场竞争和产业组织结构会放大或缩小政策的实际效果,产生所谓的"泄漏"(leakage)效应.</p>
+<p>本文研究的"千家企业"(Top-1,000)项目是中国"十一五"规划(2006-2011)期间最重要的能源节约政策之一.该项目针对能源密集型行业中的最大能耗企业,目标是到2011年实现工业能源强度(单位GDP能耗)降低20%的宏伟目标.</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<p><strong>中国能源消耗的严峻形势</strong>:进入21世纪初期,中国的工业能源消耗已经远远超过其他主要经济体.以图1为参考,能源
+regulation
+对国家和全球都具有重要意义.这一背景下,理解大型能源监管政策的效果对于制定更有效的环境政策至关重要.</p>
+<p><strong>千家企业项目的设计逻辑</strong>:该项目设计参照了发达国家自愿协议项目的经验,相信企业能够通过提高能源效率显著减少能源使用.项目名称"千家企业"指的是9个能源密集型行业中能源消耗超过18万吨标准煤的1008家工业企业.这些企业的总能源消耗在2004年达到6.7亿吨标准煤,占中国工业能源消费的47%和全国能源消费的33%.</p>
+<p><strong>政策执行的制度背景</strong>:项目采用自上而下的目标分解机制:中央政府向每个省级政府分配能源使用减排目标,省级官员再向每个千家企业分配个人能源使用配额.千家企业须接受第三方年度能源审计,并可能面临工业和信息化部以及国家能源管理局的额外审计.</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p>现有政策评估存在关键缺陷:官方评估主要依赖千家企业自身的能源使用变化,得出项目高度有效的结论.然而,这一评估方法存在两个重要问题:</p>
+<p>第一,它忽视了企业集团内部的生产再分配效应.受监管企业可能不是通过提高能源效率,而是通过将生产转移到同一企业集团内不受监管的关联企业来满足监管要求.这种行为会导致监管政策出现"集团泄漏"(conglomerate
+leakage).</p>
+<p>第二,它忽视了市场竞争效应.受监管企业因减产而让出的市场份额可能被同行业不受监管的竞争对手获取,导致总体能源节约效果低于预期,即"市场泄漏"(market
+leakage).</p>
+<p>本文核心研究问题:千家企业项目对能源消耗的实际影响如何?企业集团内部的
+production shifting 在多大程度上削弱了政策效果?考虑到这些 spillover
+效应,政策的福利含义是什么?</p>
+<h3 id="研究意义">研究意义</h3>
+<p><strong>理论贡献</strong>:本文将 reduced-form 计量经济学方法与产业
+equilibrium 模型相结合,提供了一个分析能源 regulation
+的一般框架.这一框架能够同时刻画企业集团内部和市场竞争层面的 spillover
+效应,为准确评估能源政策的真实效果提供了方法论支撑.</p>
+<p><strong>政策含义</strong>:研究发现对设计更有效的能源 regulation
+具有直接启示.如果能够利用公开可得的企业集团所有权信息,针对整个企业集团而不仅是单个企业制定监管规则,可以显著提高政策的能源节约效果.</p>
+<p><strong>发展经济学价值</strong>:在印度、中国和拉丁美洲,企业集团的重要性日益上升(Ramachandran,
+Manikandan and Pant,
+2013).本文的发现对于理解企业集团如何响应政府监管具有普遍的参考价值.</p>
+<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
+<p>本文采用层层递进的研究设计,共分为7个主要部分:</p>
+<p><strong>第一部分:政策背景与数据</strong>(Policy Background and
+Data).详细描述千家企业能源节约项目,介绍用于测量经济活动和能源使用的数据集,以及构建中国企业集团所有权网络的研究策略.</p>
+<p><strong>第二部分:政策对受监管企业的影响</strong>(Effects of the
+Policy on Regulated
+Firms).使用双重差分法(difference-in-differences)识别政策效果,证明受监管企业通过降低产出而非提高能源效率来满足监管要求.</p>
+<p><strong>第三部分:企业集团内部的溢出效应</strong>(Within-Conglomerate
+Spillovers).利用详细的商业注册数据,发现受监管企业集团将生产转移到未受监管的关联企业,揭示了40%的产出下降被集团内部吸收.</p>
+<p><strong>第四部分:产业 equilibrium 模型</strong>(Industry Equilibrium
+Model).构建包含企业集团生产和市场 spillover 的产业 equilibrium
+模型,为第五部分的模型估计和第六部分的福利分析奠定基础.</p>
+<p><strong>第五部分:模型估计</strong>(Model
+Estimation).通过匹配企业规模分布和集团内部生产分配的 pre-regulation
+特征来估计模型参数.</p>
+<p><strong>第六部分:福利分析</strong>(Welfare Analysis).量化政策的
+aggregate 和 welfare
+效果,比较不同政策工具(扩展监管范围、依赖性能源税、基于公开信息的集团层面
+regulation)的效果.</p>
+<p><strong>第七部分:稳健性检验</strong>(Robustness).检验模型结果对替代模型设定和参数值的敏感性,包括考虑能源效率改善可能性和
+pre-existing 能源效率差异的模型扩展.</p>
+<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
+<h3 id="背景与挑战">背景与挑战</h3>
+<h4 id="中国的能源困境与政策应对">中国的能源困境与政策应对</h4>
+<p>中国作为世界最大的能源消费国,其工业能源消耗占全国总能耗的70%.在快速工业化和城市化的背景下,如何在保持经济增长的同时控制能源消耗和碳排放,是中国政府面临的核心政策挑战.2006年启动的"十一五"规划将能源强度降低20%作为约束性目标,这一目标通过多个政策和行业计划来实现,其中千家企业项目是最重要的举措之一.</p>
+<p>千家企业项目的设计体现了发展中国家的政策创新.与发达国家主要依赖自愿协议和市场激励不同,中国的项目采用了强有力的行政执行机制.项目针对9个能源密集型行业的1008家超大型企业,这些企业的能源消耗占工业总能耗的47%.由于政策于2006年宣布,但根据企业2004年的
+retrospectively 能源消耗数据选择参与者,企业无法操纵项目参与名单,这为准
+quasi-experimental 识别策略提供了外生性来源.</p>
+<h4 id="企业集团的重要性">企业集团的重要性</h4>
+<p>理解千家企业项目效果的关键在于认识到这些受监管企业并非孤立运营,而是嵌入在复杂的企业集团网络中.通过中国工商行政管理总局的行政注册数据库(CARD),作者能够追踪这些企业的所有权关系.</p>
+<p>研究发现,千家企业企业平均拥有2.45个同行业内的关联企业.由于千家企业通常是各行业的最大企业,其关联企业的规模明显较小,平均产出仅为受监管企业的19.3%.这一事实意味着企业集团可能有显著的
+scope 通过关联企业之间的生产替代来响应监管.</p>
+<p>然而,完全替代的可能性受到两个因素制约:首先,关联企业规模较小,无法完全吸收受监管企业的产出下降;其次,同一4-digit行业内同集团企业之间的
+production shifting 受到技术和物流约束.</p>
+<h4 id="识别策略的核心挑战">识别策略的核心挑战</h4>
+<p>准确评估千家企业项目效果面临三个层面的识别挑战:</p>
+<p><strong>第一层:受监管企业 vs.
+对照企业</strong>.理想的反事实是:如果没有千家企业项目,受监管企业的能源使用和产出会有怎样的变化?作者使用"万家"(Top-10,000)企业作为对照组_这些企业在2011年后才被纳入监管,因此2011年之前的时期提供了
+quasi-experimental variation.</p>
+<p><strong>第二层:集团内部的 production
+shifting</strong>.即使能够识别受监管企业相对于对照企业的效果,这仍然无法捕捉企业集团内部的再分配效应.受监管企业可能将生产转移到同一集团内的关联企业,从而降低政策的整体能源节约效果.</p>
+<p><strong>第三层:市场竞争效应</strong>.受监管企业的减产可能导致竞争对手获得更多市场份额,这种市场层面的泄漏也会影响政策的
+aggregate 效果.</p>
+<h3 id="方法论reduced-form-分析">方法论:Reduced-Form 分析</h3>
+<h4 id="双重差分设计">双重差分设计</h4>
+<p>作者采用多层双重差分策略来识别政策的直接效应和溢出效应.</p>
+<p><strong>第一个双重差分</strong>:比较受监管的千家企业与同行业但不受监管的万家企业的差异.这是标准的
+treatment vs. control
+比较,假设在政策实施前,两组企业的能源使用和产出趋势相似.</p>
+<p><strong>事件研究规范</strong>(Event-Study
+Specification)用于检验平行趋势假设:</p>
+<p><span class="math display">\[Y_{ijklt} = \sum_{\tau \neq 2006}
+\beta_\tau \times Treat_i \times Year_\tau + \alpha_i + \eta_{jt} +
+\delta_{kt} + \varepsilon_{ijklt}\]</span></p>
+<p>其中 <span class="math inline">\(Y_{ijklt}\)</span> 是企业 <span class="math inline">\(i\)</span> 在行业 <span class="math inline">\(j\)</span>、省份 <span class="math inline">\(k\)</span>、年份 <span class="math inline">\(t\)</span> 的 outcome 变量,<span class="math inline">\(Treat_i\)</span> 是处理组指示变量,<span class="math inline">\(\alpha_i\)</span> 是企业固定效应,<span class="math inline">\(\eta_{jt}\)</span> 是行业×年份固定效应,<span class="math inline">\(\delta_{kt}\)</span> 是省份×年份固定效应.</p>
+<p>图4展示了 event-study
+结果:处理组和对照组企业在政策实施前的趋势高度一致,支持平行趋势假设.政策实施后,千家企业的能源使用相对下降约16%.</p>
+<p><strong>第二个双重差分</strong>:比较同一企业集团内的关联企业与其他不受监管企业的差异.这一设计利用了企业集团所有权网络信息,识别集团内部的溢出效应.</p>
+<h4 id="主要-reduced-form-发现">主要 Reduced-Form 发现</h4>
+<p><strong>发现一:能源使用下降源于产出降低,而非效率提升</strong></p>
+<p>表3报告了政策对能源使用和产出的影响.结果显示:</p>
+<ul>
+<li>能源使用下降12%-16%,在不同的固定效应规范下保持稳健</li>
+<li>产出(以收入衡量)下降10%-23%</li>
+<li><strong>能源效率(产出/能源使用)没有显著变化</strong></li>
+</ul>
+<p>这一发现具有重要的政策含义:企业选择通过降低产出来满足监管要求,而非投资于能源效率提升.作者认为这可能是因为能源效率投资需要
+long-lived capital
+的更新,面临技术不确定性和中国政府政策承诺不确定性的制约.</p>
+<p><strong>发现二:集团内部生产转移</strong></p>
+<p>利用 CARD
+数据,作者识别了46,178家与千家企业有关联关系的企业.将这些关联企业与万家数据库匹配后,得到2,466家在同行业的关联企业.</p>
+<p>双重差分分析显示:</p>
+<ul>
+<li>关联企业的产出增加约12%</li>
+<li>关联企业的能源使用增加,但没有能源效率变化</li>
+<li>只有当关联企业的4-digit行业与受监管企业相同时,才出现显著的生产增加</li>
+<li>在其他行业的关联企业作为 placebo test,未发现产出增加</li>
+</ul>
+<p>基于规模差异(关联企业平均规模仅为受监管企业的19.3%),作者计算出企业集团能够将受监管企业40%的产出下降转移到关联企业.</p>
+<p><strong>发现三:市场层面的竞争效应</strong></p>
+<p>作者提供了市场泄漏的证据:同行业但不受监管的企业在政策实施后产出增加.这与千家企业减产让出市场份额的预期一致.</p>
+<h3 id="结构模型产业-equilibrium-模型">结构模型:产业 Equilibrium
+模型</h3>
+<h4 id="模型设定">模型设定</h4>
+<p>为了量化政策的 aggregate 和 welfare
+效果,作者构建了一个包含以下特征的产业 equilibrium 模型:</p>
+<p><strong>需求侧</strong>:使用常替代弹性(CES)聚合器描述消费者对不同企业产品的偏好:</p>
+<p><span class="math display">\[U = \left( \int_\Omega
+Q(\omega)^{\frac{\sigma-1}{\sigma}} d\omega
+\right)^{\frac{\sigma}{\sigma-1}}\]</span></p>
+<p>其中 <span class="math inline">\(\sigma &gt; 1\)</span>
+是替代弹性,<span class="math inline">\(\omega\)</span> 表示企业产品.</p>
+<p><strong>供给侧</strong>:每个企业生产单一产品面临常数边际成本 <span class="math inline">\(c\)</span> 和冰山成本 <span class="math inline">\(\tau\)</span>.企业可以选择在受监管状态(承担能源监管成本)或非监管状态下运营.</p>
+<p><strong>企业集团结构</strong>:模型明确允许企业在同一企业集团内共享投入和转移生产.设
+<span class="math inline">\(\lambda_s\)</span> 表示企业集团 <span class="math inline">\(s\)</span> 内的企业数量,<span class="math inline">\(\omega_{s,k}\)</span> 表示企业 <span class="math inline">\(k\)</span> 在集团 <span class="math inline">\(s\)</span> 中的相对规模.</p>
+<p><strong>关键参数</strong>:模型需要估计替代弹性 <span class="math inline">\(\sigma\)</span>、集团内部替代弹性 <span class="math inline">\(\gamma\)</span>、能源监管成本 <span class="math inline">\(\kappa\)</span> 等参数.</p>
+<h4 id="模型估计">模型估计</h4>
+<p>作者通过匹配以下矩条件来估计模型:</p>
+<ol type="1">
+<li><strong>企业规模分布</strong>:模型能够再现企业规模的集中度</li>
+<li><strong>集团内部生产分配</strong>:模型匹配观测到的集团内部相对规模分布</li>
+<li><strong>Reduced-form 估计</strong>:模型 out-of-sample
+验证双重差分估计结果</li>
+</ol>
+<p>模型与双重差分估计的一致性验证了模型正确捕捉了企业集团内部和市场层面的
+spillover 效应的定量重要性.</p>
+<h3 id="福利分析">福利分析</h3>
+<h4 id="政策效果的量化">政策效果的量化</h4>
+<p>基于估计的模型,作者量化了千家家企业项目的 aggregate 效果:</p>
+<ul>
+<li><strong>能源节约</strong>:政策使总能源使用降低4%,相当于每年减少约4800万吨标准煤</li>
+<li><strong>社会成本</strong>:影子成本约160美元/吨碳(当量)</li>
+</ul>
+<p>关键机制:企业集团通过内部 production shifting
+降低了千家企业的影子监管成本约30%.这是因为集团能够将部分产出转移到关联企业,从而部分抵消了对受监管企业的直接影响.</p>
+<h4 id="替代政策的模拟">替代政策的模拟</h4>
+<p>作者使用模型比较了三种替代政策:</p>
+<p><strong>政策A:扩展千家家企业项目</strong>.将更多企业纳入监管范围,但保持针对单个企业的监管结构.结果显示这只能带来边际的能源节约增加.</p>
+<p><strong>政策B:规模依赖性能源税</strong>.对所有属于有千家企业存在的企业集团的企业征收能源税.结果接近
+universal energy tax 的效果.</p>
+<p><strong>政策C:基于公开信息的集团层面
+regulation</strong>.利用公开可获得的企业所有权信息,针对整个企业集团制定监管规则.结果显示可以在相同
+welfare 成本下将能源节约提高10%.</p>
+<p><strong>核心洞察</strong>:由于企业集团内部的 production shifting
+是一种重要的泄漏渠道,针对 conglomerate
+层面的监管能够更有效地实现能源节约目标.</p>
+<h3 id="稳健性检验">稳健性检验</h3>
+<p>作者进行了广泛的稳健性检验:</p>
+<ol type="1">
+<li><p><strong>能源效率改善的长期可能性</strong>:扩展模型允许企业响应监管投资于能源效率,发现即使在长期视角下,能源效率改善仍然成本高昂</p></li>
+<li><p><strong>Pre-existing
+能源效率差异</strong>:假设千家企业比所有其他企业能源效率低20%,重新计算社会成本约133美元/吨碳</p></li>
+<li><p><strong>参数敏感性</strong>:不同的 <span class="math inline">\(\sigma\)</span>、<span class="math inline">\(\gamma\)</span> 和 <span class="math inline">\(\kappa\)</span> 参数值下的稳健性</p></li>
+<li><p><strong>数据构建的敏感性</strong>:使用行政税务数据填补缺失值、限制样本至样本期内持续存在的企业等</p></li>
+</ol>
+<h2 id="结论conclusion">结论(Conclusion)</h2>
+<h3 id="核心研究结论">核心研究结论</h3>
+<p>本文通过对千家企业能源节约项目的深入研究,得出以下核心结论:</p>
+<p><strong>第一,监管企业通过减产而非提高能源效率来响应政策</strong>.这一发现揭示了能源监管的边际成本结构,表明能源效率投资的成本远高于简单地接受产出损失.</p>
+<p><strong>第二,企业集团内部的 production shifting
+是政策效果的重要泄漏渠道</strong>.受监管企业集团将40%的产出下降转移到未受监管的关联企业,这一发现对仅关注受监管企业效果的政策评估提出了挑战.</p>
+<p><strong>第三,市场竞争效应进一步削弱了政策的能源节约效果</strong>.受监管企业减产让出的市场份额被竞争对手获取,降低了政策的
+aggregate 效果.</p>
+<p><strong>第四,政策的 welfare
+合理性取决于社会碳成本</strong>.当社会碳成本超过160美元/吨碳时,千家企业项目才能改善
+welfare,这一结果对当前碳定价政策具有直接启示.</p>
+<p><strong>第五,集团层面的监管设计能够显著提高政策效果</strong>.利用公开可获得的企业所有权信息,针对整个企业集团制定监管规则,可以在相同
+welfare 成本下将能源节约提高10%.</p>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<p><strong>对能源经济学 literature
+的贡献</strong>:本文提供了迄今为止最全面的中国能源监管政策评估,揭示了企业集团作为重要但此前被忽视的响应渠道的作用.</p>
+<p><strong>对环境 regulation literature 的贡献</strong>:本文将
+reduced-form 和 structural 方法相结合,为分析环境 regulation 的 spillover
+效应提供了可推广的框架.</p>
+<p><strong>对产业组织 literature
+的贡献</strong>:本文揭示了企业集团作为一种特殊的产业组织形式如何影响政府监管的有效性.</p>
+<h3 id="政策建议">政策建议</h3>
+<p><strong>短期建议</strong>:完善千家家企业项目的监管设计,考虑集团层面的信息披露要求和监管规则.</p>
+<p><strong>中期建议</strong>:扩展能源监管范围时,应优先考虑基于集团层面的
+targeting,而非简单地增加受监管企业数量.</p>
+<p><strong>长期建议</strong>:建立企业所有权信息的公开数据库,为更有效的监管设计提供信息基础.</p>
+<h2 id="未来研究方向提及">未来研究方向提及</h2>
+<p>作者在论文中提出了若干值得进一步研究的方向:</p>
+<p><strong>Long-run
+能源效率改善</strong>:模型扩展表明长期来看企业可能投资于能源效率,但时间和成本不确定性仍然很高.未来的研究可以深入分析能源效率投资决策的动态过程.</p>
+<p><strong>空间
+spillover</strong>:本文主要关注集团内部和国家层面的效应,省份间的
+production substitution 和污染转移也是重要议题.</p>
+<p><strong>行政执行约束</strong>:政府对监管范围和监管强度的行政约束是政策设计的重要摩擦来源,值得进一步研究.</p>
+<h2 id="未来研究方向思考">未来研究方向思考</h2>
+<p>基于对本文的深入理解,以下是值得进一步探索的研究方向:</p>
+<p><strong>第一,集团所有权网络的动态演化</strong>.本文使用2018年的 CARD
+数据构建所有权网络,无法捕捉政策实施后的网络调整.未来的研究可以分析监管如何驱动企业集团的重组和整合.</p>
+<p><strong>第二,跨国比较研究</strong>.不同国家的企业集团结构和监管执行机制存在显著差异.将中国的发现与印度、巴西等其他大型新兴经济体进行比较,可以揭示企业集团响应政府监管的一般性模式.</p>
+<p><strong>第三,供应链溢出效应</strong>.本文主要关注同一企业集团内部的横向溢出,但受监管企业的上游供应商和下游客户也可能受到影响.考虑供应链关系的溢出效应可以提供更完整的政策效果图景.</p>
+<p><strong>第四,碳定价与能源监管的相互作用</strong>.当存在碳定价机制时,能源监管政策的
+marginal cost
+会相应改变.未来的研究可以分析这两种政策工具的交互作用和最优组合.</p>
+<p><strong>第五,企业异质性的深入分析</strong>.本文假设企业是同质的,但不同类型的企业(国有企业
+vs. 民营企业、外资企业 vs.
+内资企业)可能有不同的响应模式.分析这些异质性可以提供更精细的政策建议.</p>
+<h2 id="学术思考">学术思考</h2>
+<p>本文引发了几个值得深入思考的学术问题:</p>
+<p><strong>关于识别策略的思考</strong>:双重差分方法的核心假设是处理组和对照组在政策实施前具有相同的趋势.然而,在中国特有的政治经济环境下,处理组企业可能因为"树大招风"而受到更多关注,或者反过来因为政策透明度而获得更好的监管信息.这些微观机制是否会影响平行趋势假设?</p>
+<p><strong>关于企业行为假设的思考</strong>:本文假设企业是理性的,能够最优地配置集团内部的资源.然而,在现实中,企业集团内部的资源配置还受到代理问题、政治联系和内部权力斗争等因素的影响.如何在模型中更好地刻画这些制度因素?</p>
+<p><strong>关于福利评估的思考</strong>:本文采用社会碳成本(SCC)作为
+welfare 评估的核心参数,但 SCC 本身存在很大的不确定性.不同的 SCC
+假设会导致不同的政策评价,这是否意味着 welfare 分析过于依赖参数设定?</p>
+<p><strong>关于政策可复制性的思考</strong>:千家企业项目的成功在很大程度上依赖于中国的特殊制度环境_强大的行政执行能力、将环境绩效与官员晋升挂钩的考核机制.将其经验复制到其他发展中国家时,需要考虑制度能力差异.</p>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<p>基于论文内容和上述分析,以下是用户接下来可能问的问题:</p>
+<ol type="1">
+<li><p><strong>千家企业项目中,哪些行业的企业能源效率响应最为显著?是否存在行业异质性?</strong></p></li>
+<li><p><strong>企业集团将生产转移到关联企业时,是否考虑了关联企业所在地区的环境成本(污染转移)?</strong></p></li>
+<li><p><strong>作者提到的160美元/吨碳的社会碳成本,如何与当前国际碳市场价格(如欧洲碳市场的50-100欧元/吨)进行比较?</strong></p></li>
+<li><p><strong>在模型中假设的 CES 需求替代弹性 σ 如何估计?不同假设对
+welfare 结果的敏感性如何?</strong></p></li>
+<li><p><strong>万家(Top-10,000)企业在2011年后被纳入监管,这是否意味着万家可以作为"第二阶段"的处理组?研究设计是否支持这种连续处理效应的分析?</strong></p></li>
+<li><p><strong>作者提到国有企业更可能被纳入千家企业项目,这是否与国企的政治联系有关?政治联系如何影响企业的能源效率投资决策?</strong></p></li>
+<li><p><strong>对于民营企业占主导的行业(如纺织业),能源监管的效果是否有所不同?所有制结构如何调节政策效果?</strong></p></li>
+<li><p><strong>模型中考虑能源效率改善的扩展模型,是否区分了短期和长期效应?长期效应的时间
+horizon 是多久?</strong></p></li>
+<li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD
+数据的质量和覆盖范围如何保证?</strong></p></li>
+<li><p><strong>在中国"双碳"目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p></li>
+</ol>
+<h2 id="学术思考-1">学术思考</h2>
+<p>本文引发了几个值得深入思考的学术问题:</p>
+<p><strong>关于识别策略的思考</strong>:双重差分方法的核心假设是处理组和对照组在政策实施前具有相同的趋势.然而,在中国特有的政治经济环境下,处理组企业可能因为"树大招风"而受到更多关注,或者反过来因为政策透明度而获得更好的监管信息.这些微观机制是否会影响平行趋势假设?</p>
+<p><strong>关于企业行为假设的思考</strong>:本文假设企业是理性的,能够最优地配置集团内部的资源.然而,在现实中,企业集团内部的资源配置还受到代理问题、政治联系和内部权力斗争等因素的影响.如何在模型中更好地刻画这些制度因素?</p>
+<p><strong>关于福利评估的思考</strong>:本文采用社会碳成本(SCC)作为
+welfare 评估的核心参数,但 SCC 本身存在很大的不确定性.不同的 SCC
+假设会导致不同的政策评价,这是否意味着 welfare 分析过于依赖参数设定?</p>
+<p><strong>关于政策可复制性的思考</strong>:千家企业项目的成功在很大程度上依赖于中国的特殊制度环境_强大的行政执行能力、将环境绩效与官员晋升挂钩的考核机制.将其经验复制到其他发展中国家时,需要考虑制度能力差异.</p>
+<h2 id="下一步用户可能提的问题-1">下一步用户可能提的问题</h2>
+<p>基于论文内容和上述分析,以下是用户接下来可能问的问题:</p>
+<ol type="1">
+<li><p><strong>千家企业项目中,哪些行业的企业能源效率响应最为显著?是否存在行业异质性?</strong></p></li>
+<li><p><strong>企业集团将生产转移到关联企业时,是否考虑了关联企业所在地区的环境成本(污染转移)?</strong></p></li>
+<li><p><strong>作者提到的160美元/吨碳的社会碳成本,如何与当前国际碳市场价格(如欧洲碳市场的50-100欧元/吨)进行比较?</strong></p></li>
+<li><p><strong>在模型中假设的 CES 需求替代弹性 σ 如何估计?不同假设对
+welfare 结果的敏感性如何?</strong></p></li>
+<li><p><strong>万家(Top-10,000)企业在2011年后被纳入监管,这是否意味着万家可以作为"第二阶段"的处理组?研究设计是否支持这种连续处理效应的分析?</strong></p></li>
+<li><p><strong>作者提到国有企业更可能被纳入千家企业项目,这是否与国企的政治联系有关?政治联系如何影响企业的能源效率投资决策?</strong></p></li>
+<li><p><strong>对于民营企业占主导的行业(如纺织业),能源监管的效果是否有所不同?所有制结构如何调节政策效果?</strong></p></li>
+<li><p><strong>模型中考虑能源效率改善的扩展模型,是否区分了短期和长期效应?长期效应的时间
+horizon 是多久?</strong></p></li>
+<li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD
+数据的质量和覆盖范围如何保证?</strong></p></li>
+<li><p><strong>在中国"双碳"目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p></li>
+</ol>
+<h2 id="下一步用户可能提的问题-2">下一步用户可能提的问题</h2>
+<p>基于论文内容和上述分析,以下是用户接下来可能问的问题:</p>
+<ol type="1">
+<li><p><strong>千家企业项目中,哪些行业的企业能源效率响应最为显著?是否存在行业异质性?</strong></p></li>
+<li><p><strong>企业集团将生产转移到关联企业时,是否考虑了关联企业所在地区的环境成本(污染转移)?</strong></p></li>
+<li><p><strong>作者提到的160美元/吨碳的社会碳成本,如何与当前国际碳市场价格(如欧洲碳市场的50-100欧元/吨)进行比较?</strong></p></li>
+<li><p><strong>在模型中假设的 CES 需求替代弹性 σ 如何估计?不同假设对
+welfare 结果的敏感性如何?</strong></p></li>
+<li><p><strong>万家(Top-10,000)企业在2011年后被纳入监管,这是否意味着万家可以作为"第二阶段"的处理组?研究设计是否支持这种连续处理效应的分析?</strong></p></li>
+<li><p><strong>作者提到国有企业更可能被纳入千家企业项目,这是否与国企的政治联系有关?政治联系如何影响企业的能源效率投资决策?</strong></p></li>
+<li><p><strong>对于民营企业占主导的行业(如纺织业),能源监管的效果是否有所不同?所有制结构如何调节政策效果?</strong></p></li>
+<li><p><strong>模型中考虑能源效率改善的扩展模型,是否区分了短期和长期效应?长期效应的时间
+horizon 是多久?</strong></p></li>
+<li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD
+数据的质量和覆盖范围如何保证?</strong></p></li>
+<li><p><strong>在中国"双碳"目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -5428,245 +5428,6 @@ NCI测试检验"正确指定的约简形式"假设</p>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>The Economic Consequences of Hospital Admissions — 深度阅读笔记 — Dobkin Et Al.</title>
-    <url>/posts/dobkin2018/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: The Economic Consequences of Hospital
-Admissions</li>
-<li><strong>作者</strong>: Carlos Dobkin, Amy Finkelstein, Raymond
-Kluender, Matthew J. Notowidigdo</li>
-<li><strong>年份</strong>: 2018</li>
-<li><strong>来源</strong>: American Economic Review, Vol. 108, No. 2,
-pp. 308-352 <span id="more"></span></li>
-</ul>
-<h2 id="引言背景和意义">引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>健康风险是美国家庭面临的重要经济风险.美国的医疗保障体系以私人保险为主、政府保险(如Medicare、Medicaid)为辅.ACA(Affordable
-Care
-Act)改革大幅扩展了保险覆盖面,但家庭仍然面临自付医疗费用、劳动收入损失和医疗债务等经济风险.</p>
-<p>健康冲击(health shock)对家庭经济的影响渠道包括: 1.
-<strong>直接渠道</strong>:自付医疗费用增加 2.
-<strong>间接渠道</strong>:劳动能力下降→收入减少 3.
-<strong>财务渠道</strong>:医疗债务→信用受损→借贷能力下降</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>政策关切</strong>:美国医疗保险政策的目标是保护家庭免受健康风险的经济后果.从林登·约翰逊签署Medicare时的宣言,到ACA的推出,政策制定者一直将健康保险作为经济安全网的核心组成部分.</p></li>
-<li><p><strong>知识缺口</strong>:尽管政策高度重视,但关于美国家庭面临的经济风险程度的系统证据仍然不足.已有研究存在样本局限或方法论问题,难以提供可靠的因果估计.</p></li>
-<li><p><strong>数据机会</strong>:本研究利用两个独特的数据集:</p>
-<ul>
-<li>健康与退休研究(HRS)的20年面板调查数据</li>
-<li>加州医院出院数据与信用报告的关联数据</li>
-</ul></li>
-<li><p><strong>方法论创新</strong>:使用事件研究方法,在入院这一相对外生的健康事件发生时点前后观察经济结果的动态变化.</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p>本研究试图回答: - 住院对有保险的非老年人会产生哪些经济后果? -
-这些后果在多大程度上被健康保险覆盖? -
-无保险人群面临的风险与有保险人群有何不同? -
-住院引发的破产在所有破产中占比几何?</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><strong>政策评估</strong>:为评估美国健康保险政策的保护效果提供实证依据</li>
-<li><strong>机制理解</strong>:揭示健康冲击通过哪些渠道影响家庭经济状况</li>
-<li><strong>社会成本核算</strong>:量化住院的经济后果,为医疗改革提供成本效益分析基础</li>
-</ol>
-<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
-<p><strong>I.
-经济框架</strong>:建立两期跨期模型,分析健康冲击如何产生医疗费用和工资损失</p>
-<p><strong>II.
-数据与经验框架</strong>:描述HRS和信用报告数据,阐述事件研究方法论</p>
-<p><strong>III.
-医疗费用与收入结果</strong>:报告HRS中住院对自付费用和劳动收入的影响</p>
-<p><strong>IV.
-信用报告结果</strong>:报告住院对未付账单、破产和信贷可及性的影响</p>
-<p><strong>V. 政策含义</strong>:讨论研究发现的福利含义</p>
-<p><strong>VI. 结论</strong></p>
-<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
-<h3 id="一理论框架">一、理论框架</h3>
-<p>作者建立了一个简洁的两期跨期选择模型:</p>
-<p><strong>模型设定</strong>: - 个人存活两期,期初面临健康冲击(概率p) -
-健康冲击产生外生医疗费用m,并降低工资率 -
-健康保险覆盖λ_m比例的医疗费用和λ_α比例的工资损失 -
-个人在预算约束下最大化状态特定效用</p>
-<p><strong>核心命题(Proposition 1)</strong>: 未完全覆盖的健康冲击会导致:
-- 消费下降(Δc₁&lt;0, Δc₂&lt;0) - 效用下降(ΔU&lt;0) -
-未付账单增加(Δu&gt;0) - 但对借款和收入的影响方向不确定</p>
-<p><strong>政策含义</strong>: -
-通过观察健康冲击后经济结果的变化,可以reject完全保险假设 -
-任何经济结果的变化(收入、信贷限制、借款等)都是保险不足的证据</p>
-<h3 id="二数据与样本">二、数据与样本</h3>
-<h4 id="hrs数据">2.1 HRS数据</h4>
-<ul>
-<li>1992-2012年20年的健康与退休研究面板数据</li>
-<li>追踪50岁以上人群的健康和经济状况</li>
-<li>重点样本:约2,700名50-59岁有保险的住院成年人</li>
-</ul>
-<h4 id="加州信用报告数据">2.2 加州信用报告数据</h4>
-<ul>
-<li>2002-2011年的信用报告面板</li>
-<li>与2003-2007年加州医院出院数据关联</li>
-<li>重点样本:约38万名25-64岁有保险的住院成年人</li>
-</ul>
-<p><strong>样本构建原则</strong>: - 排除妊娠相关入院 -
-要求入院前至少3年无住院记录(确保"冲击"性质) -
-有保险定义为私人保险或Medicaid</p>
-<p><strong>表1关键特征</strong>: | 指标 | HRS (50-59岁) | 信用报告
-(25-64岁) | |------|---------------|-------------------| | 入院年龄 |
-55.6岁 | 48.5岁 | | 男性比例 | 47.6% | 45.1% | | 私人保险 | 94.1% |
-86.3% | | 平均住院天数 | n/a | 4.1天 | | 医院列表费用 | n/a | ${45,580
-|</p>
-<h3 id="三主要结果">三、主要结果</h3>
-<h4 id="hrs结果自付费用与收入">3.1 HRS结果:自付费用与收入</h4>
-<p><strong>表2核心数据(50-59岁有保险成年人)</strong>:</p>
-<p><strong>自付医疗费用</strong>: - 入院后12个月:增加}<span class="math inline">\(3,275
-- 入院后36个月:增加\)</span>{1,011 - 3年平均年增加:}$1,429</p>
-<p><strong>就业与劳动收入</strong>: -
-就业概率下降:12个月后下降8.9个百分点,36个月后下降11.1个百分点 -
-年劳动收入下降:12个月后下降${6,445,36个月后下降}<span class="math inline">\(11,071
-- **3年平均年收入下降\)</span>{8,753,相当于入院前收入的20%**</p>
-<p><strong>关键发现</strong>: 1.
-<strong>收入下降远超自付费用增加</strong>:自付费用3年平均每年增加}<span class="math inline">\(1,429,但收入下降\)</span>{8,753 2.
-<strong>收入损失几乎无保险</strong>:仅约10%的收入损失通过社会保险项目得到补偿
-3. ** spousal劳动供给无响应<strong>:配偶没有增加劳动供给来弥补收入损失
-4.
-</strong>效果持久**:收入下降似乎持久甚至加剧,反映健康冲击的持续影响</p>
-<h4 id="信用报告结果">3.2 信用报告结果</h4>
-<p><strong>表5-7核心数据(25-64岁有保险成年人)</strong>:</p>
-<p><strong>未付医疗账单</strong>: - 入院4年后,未付账单增加约}<span class="math inline">\(300(较小)
-- 但信用卡余额下降约\)</span>{1,700</p>
-<p><strong>破产</strong>: - 有保险的非老年人:入院增加破产概率0.4个百分点
-- 无保险的非老年人:入院增加破产概率1.4个百分点 -
-<strong>住院引发的破产:有保险者中占4%,无保险者中占6%</strong></p>
-<p><strong>借贷与信用</strong>: - 信用卡余额下降约10%(4年内) -
-信用额度下降约5%</p>
-<h4 id="关键对比50-59岁-vs-60-64岁">3.3 关键对比:50-59岁 vs 60-64岁</h4>
-<p><strong>60-64岁年龄组发现</strong>: - 收入下降幅度相似 -
-但超过60%的收入下降通过社会保障退休收入得到保险 -
-与50-59岁组仅10%的保险率形成鲜明对比</p>
-<p><strong>政策含义</strong>: -
-在美国,法定社会保障退休年龄(62岁)是重要的收入保险分水岭 -
-62岁之前的成年人几乎没有正式的 earnings insurance</p>
-<h3 id="四机制分析">四、机制分析</h3>
-<h4 id="为什么收入下降幅度这么大">4.1 为什么收入下降幅度这么大?</h4>
-<p>** Extensive margin(就业边际)**: - 入院后3年,就业概率下降11个百分点 -
-约60-85%的收入下降可由就业下降解释 -
-主要表现为从全职工作退出,部分进入退休状态</p>
-<p>** Intensive margin(工时边际)**: - 年工时下降约228小时(14%) -
-工资率本身(conditional on working)无显著变化</p>
-<p><strong>健康限制</strong>: -
-自报"健康原因限制工作能力"的比例上升9.5个百分点</p>
-<h4 id="为什么社会保险覆盖这么少">4.2 为什么社会保险覆盖这么少?</h4>
-<p><strong>失业保险(UI)不适用</strong>: - 住院不等于失业 -
-UI不覆盖因健康原因减少工时的情况</p>
-<p><strong>残疾保险(SSDI)</strong>: - 申请过程漫长且结果不确定 -
-50-59岁人群难以获得SSDI</p>
-<p><strong>社会保障退休收入(SSRI)</strong>: - 需要年满62岁才能领取 -
-60-64岁人群才开始有资格</p>
-<h3 id="五福利含义">五、福利含义</h3>
-<h4 id="总体经济后果的保险覆盖">5.1 总体经济后果的保险覆盖</h4>
-<p>作者估算(50-59岁有保险者): -
-<strong>第1年</strong>:超过90%的医疗费用被覆盖,但仅约80%的"总经济后果"(医疗费用+收入损失)被覆盖
-- <strong>第3年</strong>:仅约50%的总经济后果被覆盖</p>
-<p>随时间推移,收入损失在总经济后果中的比重越来越大,而社会保险对收入损失的保险几乎不存在.</p>
-<h4 id="医疗支出-vs-收入损失的福利权重">5.2 医疗支出 vs
-收入损失的福利权重</h4>
-<p><strong>重要区分</strong>: - 外生医疗支出(给定健康状态)→
-与同等金额的消费减少 welfare impact 相同 -
-收入变化可能反映劳动供给对健康状态的调整→ welfare impact 不同</p>
-<p><strong>福利计算</strong>: -
-一个简单模型显示:对于有健康保险的成年人,收入损失的 welfare consequences
-至少是自付医疗费用增加的3倍</p>
-<h4 id="无保险者的处境">5.3 无保险者的处境</h4>
-<p><strong>无保险者面临的更大风险</strong>: - 未付医疗账单增加}<span class="math inline">\(6,000(有保险者仅\)</span>{300) -
-破产率增幅是无保险者的3.5倍 - 但借贷反应的幅度相似</p>
-<p><strong>"隐性保险"现象</strong>: -
-所谓"无保险者"实际上通过其他渠道获得部分隐性保险 -
-例如,医院不能拒绝急诊患者,这形成了某种隐性公共保险 -
-外部各方(医院、纳税人)承担了部分医疗债务的 incidence</p>
-<h3 id="六医疗破产文献的贡献">六、"医疗破产"文献的贡献</h3>
-<p>本文对"医疗破产"文献提供了重要的校准证据:</p>
-<p><strong>先前研究的过高估计</strong>: -
-某些研究声称医疗事件可解释20-60%的所有破产 -
-这些研究通常基于自我报告的破产原因</p>
-<p><strong>本文的修正估计</strong>: -
-住院引发的破产:有保险者中约4%,无保险者中约6% -
-远低于先前研究声称的比例</p>
-<p><strong>原因分析</strong>: - 破产是多重因素共同作用的结果 -
-医疗事件可能是"最后一根稻草",而非根本原因 -
-破产申请人可能将医疗事件列为破产原因之一</p>
-<h2 id="结论conclusion">结论(Conclusion)</h2>
-<h3 id="研究核心结论">研究核心结论</h3>
-<ol type="1">
-<li><strong>住院对有保险的非老年人产生重大经济后果</strong>
-<ul>
-<li>就业概率下降11个百分点</li>
-<li>年收入下降约}$9,000(20%的入院前年收入)</li>
-<li>自付医疗费用增加,破产风险上升</li>
-</ul></li>
-<li><strong>收入损失几乎完全无保险</strong>
-<ul>
-<li>仅约10%的收入损失通过社会保险得到补偿</li>
-<li>这一发现挑战了美国医疗保险体系的"完整性"叙事</li>
-</ul></li>
-<li><strong>62岁是重要分水岭</strong>
-<ul>
-<li>60-64岁人群的收入损失保险率超过60%</li>
-<li>主要通过社会保障退休收入实现</li>
-</ul></li>
-<li><strong>无保险者的风险更大但幅度有限</strong>
-<ul>
-<li>未付账单和破产率增幅更大</li>
-<li>但借贷反应的幅度相似</li>
-</ul></li>
-<li><strong>住院引发的破产只是破产的一小部分</strong>
-<ul>
-<li>有保险者中约4%,无保险者中约6%</li>
-<li>远低于先前文献声称的比例</li>
-</ul></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><p><strong>数据贡献</strong>:首次将医院出院数据与信用报告数据关联,创建大规模住院经济后果数据集</p></li>
-<li><p><strong>方法论贡献</strong>:清晰的事件研究框架,结合非参数和参数估计,提供了可复制的模板</p></li>
-<li><p><strong>政策贡献</strong>:为评估ACA等健康保险改革的保护效果提供了实证依据</p></li>
-<li><p><strong>理论贡献</strong>:对"医疗破产"文献的校准提出了重要修正</p></li>
-</ol>
-<h3 id="未来研究方向">未来研究方向</h3>
-<ol type="1">
-<li>更长期的跟踪研究,评估收入下降的持久性</li>
-<li>探索不同类型入院(如心脏病 vs 骨折)的差异化影响</li>
-<li>跨国家比较:美国 vs 北欧国家的 earnings insurance 差异</li>
-<li>评估ACA改革后的效应变化</li>
-</ol>
-<h2 id="学术思考">学术思考</h2>
-<ol type="1">
-<li><p><strong>"完全保险"的定义问题</strong>:本文中"完全保险"的定义是消费在健康和健康状态间不变.但这是否等同于
-welfare 最优?考虑到健康状态本身影响效用函数(Viscusi &amp; Evans
-1990),消费平滑可能并非唯一目标.</p></li>
-<li><p><strong>内生性健康问题</strong>:住院可能反映潜在的健康恶化,而不仅仅是"外生冲击".如果健康和生产力之间存在反向因果,那么部分"收入效应"实际上可能是"生产力下降"而非"保险不足".</p></li>
-<li><p><strong>一般均衡效应</strong>:本文关注受影响个体的直接效应,但忽视了劳动力市场的
-general equilibrium_大量工人因健康原因退出劳动市场可能影响 wages
-和其他人就业机会.</p></li>
-<li><p><strong>动态视角的缺失</strong>:两期模型是否足以捕捉健康冲击的动态复杂性?实际中,健康冲击可能引发健康-收入恶化的"螺旋",需要更复杂的动态模型来刻画.</p></li>
-<li><p><strong>社会安全网的比较制度分析</strong>:美国和丹麦的对比(本文提及)揭示了制度设计的巨大差异.美国的
-disability insurance 和 paid sick leave
-系统是否应该向北欧模式转型?</p></li>
-<li><p><strong>医疗费用膨胀的外部性</strong>:本文揭示的经济后果部分源于医疗费用的高涨.如果医院收费改革(降低list
-charges)能否同时改善家庭经济状况和医疗系统效率?</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>AER</tag>
-        <tag>健康经济学</tag>
-        <tag>医疗保障</tag>
       </tags>
   </entry>
   <entry>
@@ -6726,6 +6487,245 @@ Fragments of Curious and Useful Knowledge from the Chinese Past</em>
         <tag>经济史</tag>
         <tag>读书笔记</tag>
         <tag>中国研究</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>The Economic Consequences of Hospital Admissions — 深度阅读笔记 — Dobkin Et Al.</title>
+    <url>/posts/dobkin2018/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: The Economic Consequences of Hospital
+Admissions</li>
+<li><strong>作者</strong>: Carlos Dobkin, Amy Finkelstein, Raymond
+Kluender, Matthew J. Notowidigdo</li>
+<li><strong>年份</strong>: 2018</li>
+<li><strong>来源</strong>: American Economic Review, Vol. 108, No. 2,
+pp. 308-352 <span id="more"></span></li>
+</ul>
+<h2 id="引言背景和意义">引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>健康风险是美国家庭面临的重要经济风险.美国的医疗保障体系以私人保险为主、政府保险(如Medicare、Medicaid)为辅.ACA(Affordable
+Care
+Act)改革大幅扩展了保险覆盖面,但家庭仍然面临自付医疗费用、劳动收入损失和医疗债务等经济风险.</p>
+<p>健康冲击(health shock)对家庭经济的影响渠道包括: 1.
+<strong>直接渠道</strong>:自付医疗费用增加 2.
+<strong>间接渠道</strong>:劳动能力下降→收入减少 3.
+<strong>财务渠道</strong>:医疗债务→信用受损→借贷能力下降</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>政策关切</strong>:美国医疗保险政策的目标是保护家庭免受健康风险的经济后果.从林登·约翰逊签署Medicare时的宣言,到ACA的推出,政策制定者一直将健康保险作为经济安全网的核心组成部分.</p></li>
+<li><p><strong>知识缺口</strong>:尽管政策高度重视,但关于美国家庭面临的经济风险程度的系统证据仍然不足.已有研究存在样本局限或方法论问题,难以提供可靠的因果估计.</p></li>
+<li><p><strong>数据机会</strong>:本研究利用两个独特的数据集:</p>
+<ul>
+<li>健康与退休研究(HRS)的20年面板调查数据</li>
+<li>加州医院出院数据与信用报告的关联数据</li>
+</ul></li>
+<li><p><strong>方法论创新</strong>:使用事件研究方法,在入院这一相对外生的健康事件发生时点前后观察经济结果的动态变化.</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p>本研究试图回答: - 住院对有保险的非老年人会产生哪些经济后果? -
+这些后果在多大程度上被健康保险覆盖? -
+无保险人群面临的风险与有保险人群有何不同? -
+住院引发的破产在所有破产中占比几何?</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><strong>政策评估</strong>:为评估美国健康保险政策的保护效果提供实证依据</li>
+<li><strong>机制理解</strong>:揭示健康冲击通过哪些渠道影响家庭经济状况</li>
+<li><strong>社会成本核算</strong>:量化住院的经济后果,为医疗改革提供成本效益分析基础</li>
+</ol>
+<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
+<p><strong>I.
+经济框架</strong>:建立两期跨期模型,分析健康冲击如何产生医疗费用和工资损失</p>
+<p><strong>II.
+数据与经验框架</strong>:描述HRS和信用报告数据,阐述事件研究方法论</p>
+<p><strong>III.
+医疗费用与收入结果</strong>:报告HRS中住院对自付费用和劳动收入的影响</p>
+<p><strong>IV.
+信用报告结果</strong>:报告住院对未付账单、破产和信贷可及性的影响</p>
+<p><strong>V. 政策含义</strong>:讨论研究发现的福利含义</p>
+<p><strong>VI. 结论</strong></p>
+<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
+<h3 id="一理论框架">一、理论框架</h3>
+<p>作者建立了一个简洁的两期跨期选择模型:</p>
+<p><strong>模型设定</strong>: - 个人存活两期,期初面临健康冲击(概率p) -
+健康冲击产生外生医疗费用m,并降低工资率 -
+健康保险覆盖λ_m比例的医疗费用和λ_α比例的工资损失 -
+个人在预算约束下最大化状态特定效用</p>
+<p><strong>核心命题(Proposition 1)</strong>: 未完全覆盖的健康冲击会导致:
+- 消费下降(Δc₁&lt;0, Δc₂&lt;0) - 效用下降(ΔU&lt;0) -
+未付账单增加(Δu&gt;0) - 但对借款和收入的影响方向不确定</p>
+<p><strong>政策含义</strong>: -
+通过观察健康冲击后经济结果的变化,可以reject完全保险假设 -
+任何经济结果的变化(收入、信贷限制、借款等)都是保险不足的证据</p>
+<h3 id="二数据与样本">二、数据与样本</h3>
+<h4 id="hrs数据">2.1 HRS数据</h4>
+<ul>
+<li>1992-2012年20年的健康与退休研究面板数据</li>
+<li>追踪50岁以上人群的健康和经济状况</li>
+<li>重点样本:约2,700名50-59岁有保险的住院成年人</li>
+</ul>
+<h4 id="加州信用报告数据">2.2 加州信用报告数据</h4>
+<ul>
+<li>2002-2011年的信用报告面板</li>
+<li>与2003-2007年加州医院出院数据关联</li>
+<li>重点样本:约38万名25-64岁有保险的住院成年人</li>
+</ul>
+<p><strong>样本构建原则</strong>: - 排除妊娠相关入院 -
+要求入院前至少3年无住院记录(确保"冲击"性质) -
+有保险定义为私人保险或Medicaid</p>
+<p><strong>表1关键特征</strong>: | 指标 | HRS (50-59岁) | 信用报告
+(25-64岁) | |------|---------------|-------------------| | 入院年龄 |
+55.6岁 | 48.5岁 | | 男性比例 | 47.6% | 45.1% | | 私人保险 | 94.1% |
+86.3% | | 平均住院天数 | n/a | 4.1天 | | 医院列表费用 | n/a | ${45,580
+|</p>
+<h3 id="三主要结果">三、主要结果</h3>
+<h4 id="hrs结果自付费用与收入">3.1 HRS结果:自付费用与收入</h4>
+<p><strong>表2核心数据(50-59岁有保险成年人)</strong>:</p>
+<p><strong>自付医疗费用</strong>: - 入院后12个月:增加}<span class="math inline">\(3,275
+- 入院后36个月:增加\)</span>{1,011 - 3年平均年增加:}$1,429</p>
+<p><strong>就业与劳动收入</strong>: -
+就业概率下降:12个月后下降8.9个百分点,36个月后下降11.1个百分点 -
+年劳动收入下降:12个月后下降${6,445,36个月后下降}<span class="math inline">\(11,071
+- **3年平均年收入下降\)</span>{8,753,相当于入院前收入的20%**</p>
+<p><strong>关键发现</strong>: 1.
+<strong>收入下降远超自付费用增加</strong>:自付费用3年平均每年增加}<span class="math inline">\(1,429,但收入下降\)</span>{8,753 2.
+<strong>收入损失几乎无保险</strong>:仅约10%的收入损失通过社会保险项目得到补偿
+3. ** spousal劳动供给无响应<strong>:配偶没有增加劳动供给来弥补收入损失
+4.
+</strong>效果持久**:收入下降似乎持久甚至加剧,反映健康冲击的持续影响</p>
+<h4 id="信用报告结果">3.2 信用报告结果</h4>
+<p><strong>表5-7核心数据(25-64岁有保险成年人)</strong>:</p>
+<p><strong>未付医疗账单</strong>: - 入院4年后,未付账单增加约}<span class="math inline">\(300(较小)
+- 但信用卡余额下降约\)</span>{1,700</p>
+<p><strong>破产</strong>: - 有保险的非老年人:入院增加破产概率0.4个百分点
+- 无保险的非老年人:入院增加破产概率1.4个百分点 -
+<strong>住院引发的破产:有保险者中占4%,无保险者中占6%</strong></p>
+<p><strong>借贷与信用</strong>: - 信用卡余额下降约10%(4年内) -
+信用额度下降约5%</p>
+<h4 id="关键对比50-59岁-vs-60-64岁">3.3 关键对比:50-59岁 vs 60-64岁</h4>
+<p><strong>60-64岁年龄组发现</strong>: - 收入下降幅度相似 -
+但超过60%的收入下降通过社会保障退休收入得到保险 -
+与50-59岁组仅10%的保险率形成鲜明对比</p>
+<p><strong>政策含义</strong>: -
+在美国,法定社会保障退休年龄(62岁)是重要的收入保险分水岭 -
+62岁之前的成年人几乎没有正式的 earnings insurance</p>
+<h3 id="四机制分析">四、机制分析</h3>
+<h4 id="为什么收入下降幅度这么大">4.1 为什么收入下降幅度这么大?</h4>
+<p>** Extensive margin(就业边际)**: - 入院后3年,就业概率下降11个百分点 -
+约60-85%的收入下降可由就业下降解释 -
+主要表现为从全职工作退出,部分进入退休状态</p>
+<p>** Intensive margin(工时边际)**: - 年工时下降约228小时(14%) -
+工资率本身(conditional on working)无显著变化</p>
+<p><strong>健康限制</strong>: -
+自报"健康原因限制工作能力"的比例上升9.5个百分点</p>
+<h4 id="为什么社会保险覆盖这么少">4.2 为什么社会保险覆盖这么少?</h4>
+<p><strong>失业保险(UI)不适用</strong>: - 住院不等于失业 -
+UI不覆盖因健康原因减少工时的情况</p>
+<p><strong>残疾保险(SSDI)</strong>: - 申请过程漫长且结果不确定 -
+50-59岁人群难以获得SSDI</p>
+<p><strong>社会保障退休收入(SSRI)</strong>: - 需要年满62岁才能领取 -
+60-64岁人群才开始有资格</p>
+<h3 id="五福利含义">五、福利含义</h3>
+<h4 id="总体经济后果的保险覆盖">5.1 总体经济后果的保险覆盖</h4>
+<p>作者估算(50-59岁有保险者): -
+<strong>第1年</strong>:超过90%的医疗费用被覆盖,但仅约80%的"总经济后果"(医疗费用+收入损失)被覆盖
+- <strong>第3年</strong>:仅约50%的总经济后果被覆盖</p>
+<p>随时间推移,收入损失在总经济后果中的比重越来越大,而社会保险对收入损失的保险几乎不存在.</p>
+<h4 id="医疗支出-vs-收入损失的福利权重">5.2 医疗支出 vs
+收入损失的福利权重</h4>
+<p><strong>重要区分</strong>: - 外生医疗支出(给定健康状态)→
+与同等金额的消费减少 welfare impact 相同 -
+收入变化可能反映劳动供给对健康状态的调整→ welfare impact 不同</p>
+<p><strong>福利计算</strong>: -
+一个简单模型显示:对于有健康保险的成年人,收入损失的 welfare consequences
+至少是自付医疗费用增加的3倍</p>
+<h4 id="无保险者的处境">5.3 无保险者的处境</h4>
+<p><strong>无保险者面临的更大风险</strong>: - 未付医疗账单增加}<span class="math inline">\(6,000(有保险者仅\)</span>{300) -
+破产率增幅是无保险者的3.5倍 - 但借贷反应的幅度相似</p>
+<p><strong>"隐性保险"现象</strong>: -
+所谓"无保险者"实际上通过其他渠道获得部分隐性保险 -
+例如,医院不能拒绝急诊患者,这形成了某种隐性公共保险 -
+外部各方(医院、纳税人)承担了部分医疗债务的 incidence</p>
+<h3 id="六医疗破产文献的贡献">六、"医疗破产"文献的贡献</h3>
+<p>本文对"医疗破产"文献提供了重要的校准证据:</p>
+<p><strong>先前研究的过高估计</strong>: -
+某些研究声称医疗事件可解释20-60%的所有破产 -
+这些研究通常基于自我报告的破产原因</p>
+<p><strong>本文的修正估计</strong>: -
+住院引发的破产:有保险者中约4%,无保险者中约6% -
+远低于先前研究声称的比例</p>
+<p><strong>原因分析</strong>: - 破产是多重因素共同作用的结果 -
+医疗事件可能是"最后一根稻草",而非根本原因 -
+破产申请人可能将医疗事件列为破产原因之一</p>
+<h2 id="结论conclusion">结论(Conclusion)</h2>
+<h3 id="研究核心结论">研究核心结论</h3>
+<ol type="1">
+<li><strong>住院对有保险的非老年人产生重大经济后果</strong>
+<ul>
+<li>就业概率下降11个百分点</li>
+<li>年收入下降约}$9,000(20%的入院前年收入)</li>
+<li>自付医疗费用增加,破产风险上升</li>
+</ul></li>
+<li><strong>收入损失几乎完全无保险</strong>
+<ul>
+<li>仅约10%的收入损失通过社会保险得到补偿</li>
+<li>这一发现挑战了美国医疗保险体系的"完整性"叙事</li>
+</ul></li>
+<li><strong>62岁是重要分水岭</strong>
+<ul>
+<li>60-64岁人群的收入损失保险率超过60%</li>
+<li>主要通过社会保障退休收入实现</li>
+</ul></li>
+<li><strong>无保险者的风险更大但幅度有限</strong>
+<ul>
+<li>未付账单和破产率增幅更大</li>
+<li>但借贷反应的幅度相似</li>
+</ul></li>
+<li><strong>住院引发的破产只是破产的一小部分</strong>
+<ul>
+<li>有保险者中约4%,无保险者中约6%</li>
+<li>远低于先前文献声称的比例</li>
+</ul></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><p><strong>数据贡献</strong>:首次将医院出院数据与信用报告数据关联,创建大规模住院经济后果数据集</p></li>
+<li><p><strong>方法论贡献</strong>:清晰的事件研究框架,结合非参数和参数估计,提供了可复制的模板</p></li>
+<li><p><strong>政策贡献</strong>:为评估ACA等健康保险改革的保护效果提供了实证依据</p></li>
+<li><p><strong>理论贡献</strong>:对"医疗破产"文献的校准提出了重要修正</p></li>
+</ol>
+<h3 id="未来研究方向">未来研究方向</h3>
+<ol type="1">
+<li>更长期的跟踪研究,评估收入下降的持久性</li>
+<li>探索不同类型入院(如心脏病 vs 骨折)的差异化影响</li>
+<li>跨国家比较:美国 vs 北欧国家的 earnings insurance 差异</li>
+<li>评估ACA改革后的效应变化</li>
+</ol>
+<h2 id="学术思考">学术思考</h2>
+<ol type="1">
+<li><p><strong>"完全保险"的定义问题</strong>:本文中"完全保险"的定义是消费在健康和健康状态间不变.但这是否等同于
+welfare 最优?考虑到健康状态本身影响效用函数(Viscusi &amp; Evans
+1990),消费平滑可能并非唯一目标.</p></li>
+<li><p><strong>内生性健康问题</strong>:住院可能反映潜在的健康恶化,而不仅仅是"外生冲击".如果健康和生产力之间存在反向因果,那么部分"收入效应"实际上可能是"生产力下降"而非"保险不足".</p></li>
+<li><p><strong>一般均衡效应</strong>:本文关注受影响个体的直接效应,但忽视了劳动力市场的
+general equilibrium_大量工人因健康原因退出劳动市场可能影响 wages
+和其他人就业机会.</p></li>
+<li><p><strong>动态视角的缺失</strong>:两期模型是否足以捕捉健康冲击的动态复杂性?实际中,健康冲击可能引发健康-收入恶化的"螺旋",需要更复杂的动态模型来刻画.</p></li>
+<li><p><strong>社会安全网的比较制度分析</strong>:美国和丹麦的对比(本文提及)揭示了制度设计的巨大差异.美国的
+disability insurance 和 paid sick leave
+系统是否应该向北欧模式转型?</p></li>
+<li><p><strong>医疗费用膨胀的外部性</strong>:本文揭示的经济后果部分源于医疗费用的高涨.如果医院收费改革(降低list
+charges)能否同时改善家庭经济状况和医疗系统效率?</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>AER</tag>
+        <tag>健康经济学</tag>
+        <tag>医疗保障</tag>
       </tags>
   </entry>
   <entry>
@@ -9921,6 +9921,74 @@ vs 10分位：8.3倍的价值产出差异</p>
       </tags>
   </entry>
   <entry>
+    <title>海外的丰裕 — 深度阅读笔记 — Khanna Et Al.</title>
+    <url>/posts/khanna2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Abundance from Abroad: Migrant Income and
+Long-Run Economic Development</li>
+<li><strong>作者</strong>: Gaurav Khanna (UC San Diego), Emir
+Murathanoglu, Caroline B. Theoharides, Dean Yang</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(4):
+1540-1577</li>
+<li><strong>DOI</strong>: 10.1257/aer.20241465</li>
+<li><strong>难度评估</strong>: 高 -
+需要发展经济学、国际经济学、计量经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>国际移民与发展</strong>：国际移民是发展中国家重要的经济现象，2019年全球有2.1亿来自发展中国家的国际移民。</p>
+<p><strong>转移份额设计（Shift-Share）</strong>：一种准实验识别策略，将总冲击分解为"份额"和"转移"两部分。</p>
+<p><strong>1997年亚洲金融危机</strong>：从泰国开始迅速蔓延，菲律宾比索贬值约40%。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>移民的收入效应</strong>：移民到发达国家工作的收入收益远超任何已知的发展干预项目</p></li>
+<li><p><strong>移民对原籍地区的溢出效应</strong>：缺乏对更广泛原籍地区发展影响的研究</p></li>
+<li><p><strong>识别挑战</strong>：移民收入与原籍地区发展之间存在反向因果问题</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：国际移民收入前景如何影响原籍地区的长期经济发展？</p>
+<p><strong>主要发现</strong>：移民收入冲击的长期放大效应约为六倍</p>
+<hr>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ol type="1">
+<li><strong>引言</strong>: 问题陈述和研究背景</li>
+<li><strong>背景</strong>:
+国际劳动移民概况、菲律宾的移民体系、亚洲金融危机</li>
+<li><strong>数据</strong>: 移民合同数据、汇率数据、结果数据</li>
+<li><strong>实证方法</strong>: 转移份额变量的构建、因果识别</li>
+<li><strong>主要结果</strong>: 长期放大效应、国内收入vs移民收入</li>
+<li><strong>稳健性检验</strong></li>
+<li><strong>结论</strong></li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="实证方法">实证方法</h3>
+<p><strong>转移份额设计</strong>： - 使用1997年亚洲金融危机作为外生冲击
+- 构建"暴露于移民收入"的工具变量 -
+外生性假设：危机前各地区移民份额与危机后发展独立</p>
+<p><strong>主要结果</strong>： - 移民收入冲击的长期放大效应约为六倍 -
+74.9%来自国内收入效应 - 19.7%来自教育投资</p>
+<hr>
+<h2 id="结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>移民促进原籍发展</strong>：长期因果证据支持"良性循环"假说</p></li>
+<li><p><strong>放大机制</strong>：国内收入和教育投资是主要渠道</p></li>
+<li><p><strong>政策启示</strong>：移民政策可以成为全球减贫的重要工具</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Extreme Categories and Overreaction to News — 深度阅读笔记 — Kwon &amp; Tang</title>
     <url>/posts/kwon2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -10095,74 +10163,6 @@ in extreme news categories</h3>
 ]]></content>
       <categories>
         <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>海外的丰裕 — 深度阅读笔记 — Khanna Et Al.</title>
-    <url>/posts/khanna2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Abundance from Abroad: Migrant Income and
-Long-Run Economic Development</li>
-<li><strong>作者</strong>: Gaurav Khanna (UC San Diego), Emir
-Murathanoglu, Caroline B. Theoharides, Dean Yang</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(4):
-1540-1577</li>
-<li><strong>DOI</strong>: 10.1257/aer.20241465</li>
-<li><strong>难度评估</strong>: 高 -
-需要发展经济学、国际经济学、计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>国际移民与发展</strong>：国际移民是发展中国家重要的经济现象，2019年全球有2.1亿来自发展中国家的国际移民。</p>
-<p><strong>转移份额设计（Shift-Share）</strong>：一种准实验识别策略，将总冲击分解为"份额"和"转移"两部分。</p>
-<p><strong>1997年亚洲金融危机</strong>：从泰国开始迅速蔓延，菲律宾比索贬值约40%。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>移民的收入效应</strong>：移民到发达国家工作的收入收益远超任何已知的发展干预项目</p></li>
-<li><p><strong>移民对原籍地区的溢出效应</strong>：缺乏对更广泛原籍地区发展影响的研究</p></li>
-<li><p><strong>识别挑战</strong>：移民收入与原籍地区发展之间存在反向因果问题</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：国际移民收入前景如何影响原籍地区的长期经济发展？</p>
-<p><strong>主要发现</strong>：移民收入冲击的长期放大效应约为六倍</p>
-<hr>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ol type="1">
-<li><strong>引言</strong>: 问题陈述和研究背景</li>
-<li><strong>背景</strong>:
-国际劳动移民概况、菲律宾的移民体系、亚洲金融危机</li>
-<li><strong>数据</strong>: 移民合同数据、汇率数据、结果数据</li>
-<li><strong>实证方法</strong>: 转移份额变量的构建、因果识别</li>
-<li><strong>主要结果</strong>: 长期放大效应、国内收入vs移民收入</li>
-<li><strong>稳健性检验</strong></li>
-<li><strong>结论</strong></li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="实证方法">实证方法</h3>
-<p><strong>转移份额设计</strong>： - 使用1997年亚洲金融危机作为外生冲击
-- 构建"暴露于移民收入"的工具变量 -
-外生性假设：危机前各地区移民份额与危机后发展独立</p>
-<p><strong>主要结果</strong>： - 移民收入冲击的长期放大效应约为六倍 -
-74.9%来自国内收入效应 - 19.7%来自教育投资</p>
-<hr>
-<h2 id="结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>移民促进原籍发展</strong>：长期因果证据支持"良性循环"假说</p></li>
-<li><p><strong>放大机制</strong>：国内收入和教育投资是主要渠道</p></li>
-<li><p><strong>政策启示</strong>：移民政策可以成为全球减贫的重要工具</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -10694,6 +10694,65 @@ Studies</li>
       </tags>
   </entry>
   <entry>
+    <title>Hiring as Exploration — 深度阅读笔记 — Li, Raymond &amp; Bergman</title>
+    <url>/posts/li2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Hiring as Exploration</li>
+<li><strong>作者</strong>: Danielle Li (MIT &amp; NBER), Lindsey Raymond
+(MIT), Peter Bergman (UT Austin &amp; NBER)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies
+(RES)</li>
+<li><strong>DOI</strong>: 10.1093/restud/rdaf040</li>
+<li><strong>难度评估</strong>: 高 -
+需要机器学习、计量经济学、招聘经济学基础 <span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言">1. 引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>情境强盗问题、探索与利用的权衡、监督学习算法、UCB（上置信界）算法。</p>
+<h3 id="研究背景">研究背景</h3>
+<p>算法招聘日益普及；传统监督学习算法可能复制历史偏见；人类面试官预测能力有限。</p>
+<h3 id="核心问题">核心问题</h3>
+<p>将招聘视为情境强盗问题——如何平衡"利用"（选择已知最佳）与"探索"（学习新候选人质量）。探索式算法能否在提高招聘质量的同时增加人口多样性？</p>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：招聘偏见</li>
+<li>第三节：数据环境</li>
+<li>第四节：实证策略</li>
+<li>第五节：算法设计（SL vs UCB）</li>
+<li>第六节：主要结果</li>
+<li>第七节：扩展</li>
+<li>第八节：结论</li>
+</ul>
+<h2 id="正文">3. 正文</h2>
+<h3 id="核心机制">核心机制</h3>
+<ul>
+<li><strong>SL模型</strong>：仅利用——选择预期质量最高的候选人</li>
+<li><strong>UCB模型</strong>：利用+探索——对特征偏离训练数据均值的候选人给予探索溢价</li>
+</ul>
+<h3 id="关键发现">关键发现</h3>
+<ol type="1">
+<li><strong>多样性</strong>：UCB使黑人/西班牙裔代表从9.4%增至24.3%；SL降至5%以下</li>
+<li><strong>质量</strong>：SL录用率32%，UCB 27%，人类仅10%</li>
+<li><strong>帕累托改进</strong>：可能同时提升质量与多样性</li>
+</ol>
+<h2 id="结论">4. 结论</h2>
+<p>探索式算法可实现帕累托改进，挑战了效率-公平权衡的传统观点。</p>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<p>跨行业推广、长期动态效应、法律伦理风险、因果机制检验。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>预算到期会导致年底浪费性支出吗?_ Liebman &amp; Mahoney (2017) 笔记</title>
     <url>/posts/liebman2017/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -10872,65 +10931,6 @@ DOJ的IT支出没有出现支出高峰,最后一周的IT支出仅占3.3%,而非I
         <tag>论文笔记</tag>
         <tag>公共经济学</tag>
         <tag>预算制度</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hiring as Exploration — 深度阅读笔记 — Li, Raymond &amp; Bergman</title>
-    <url>/posts/li2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Hiring as Exploration</li>
-<li><strong>作者</strong>: Danielle Li (MIT &amp; NBER), Lindsey Raymond
-(MIT), Peter Bergman (UT Austin &amp; NBER)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies
-(RES)</li>
-<li><strong>DOI</strong>: 10.1093/restud/rdaf040</li>
-<li><strong>难度评估</strong>: 高 -
-需要机器学习、计量经济学、招聘经济学基础 <span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言">1. 引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>情境强盗问题、探索与利用的权衡、监督学习算法、UCB（上置信界）算法。</p>
-<h3 id="研究背景">研究背景</h3>
-<p>算法招聘日益普及；传统监督学习算法可能复制历史偏见；人类面试官预测能力有限。</p>
-<h3 id="核心问题">核心问题</h3>
-<p>将招聘视为情境强盗问题——如何平衡"利用"（选择已知最佳）与"探索"（学习新候选人质量）。探索式算法能否在提高招聘质量的同时增加人口多样性？</p>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：招聘偏见</li>
-<li>第三节：数据环境</li>
-<li>第四节：实证策略</li>
-<li>第五节：算法设计（SL vs UCB）</li>
-<li>第六节：主要结果</li>
-<li>第七节：扩展</li>
-<li>第八节：结论</li>
-</ul>
-<h2 id="正文">3. 正文</h2>
-<h3 id="核心机制">核心机制</h3>
-<ul>
-<li><strong>SL模型</strong>：仅利用——选择预期质量最高的候选人</li>
-<li><strong>UCB模型</strong>：利用+探索——对特征偏离训练数据均值的候选人给予探索溢价</li>
-</ul>
-<h3 id="关键发现">关键发现</h3>
-<ol type="1">
-<li><strong>多样性</strong>：UCB使黑人/西班牙裔代表从9.4%增至24.3%；SL降至5%以下</li>
-<li><strong>质量</strong>：SL录用率32%，UCB 27%，人类仅10%</li>
-<li><strong>帕累托改进</strong>：可能同时提升质量与多样性</li>
-</ol>
-<h2 id="结论">4. 结论</h2>
-<p>探索式算法可实现帕累托改进，挑战了效率-公平权衡的传统观点。</p>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<p>跨行业推广、长期动态效应、法律伦理风险、因果机制检验。</p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -11726,63 +11726,6 @@ Records</li>
       </tags>
   </entry>
   <entry>
-    <title>Racial Discrimination and the Social Contract — 深度阅读笔记 — Qian &amp; Tabellini</title>
-    <url>/posts/qian2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Racial Discrimination and the Social
-Contract: Evidence from U.S. Army Enlistment during WWII</li>
-<li><strong>作者</strong>: Nancy Qian (Northwestern &amp; NBER), Marco
-Tabellini (Harvard &amp; CEPR &amp; NBER)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies
-(RES)</li>
-<li><strong>难度评估</strong>: 高 -
-需要政治经济学、计量经济学、历史背景知识 <span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言">1. 引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>社会契约理论、歧视与政治排斥、战争与政治加入。</p>
-<h3 id="研究背景">研究背景</h3>
-<p>社会契约理论认为战争和革命是政治加入的重要触发因素；排除效应在战时如何影响公民对政府的支持尚无直接证据。</p>
-<h3 id="核心问题">核心问题</h3>
-<p>歧视和政治排斥如何影响公民在战时对政府的支持？排除效应是正向（信号价值）还是负向（挫败感）？</p>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：历史背景（Jim Crow时代的歧视、 WWII与珍珠港事件）</li>
-<li>第三节：概念框架</li>
-<li>第四节：数据</li>
-<li>第五节：主要结果</li>
-<li>第六节：额外分析</li>
-<li>第七节：结论</li>
-</ul>
-<h2 id="正文">3. 正文</h2>
-<h3 id="核心机制">核心机制</h3>
-<p>珍珠港袭击作为外生冲击；识别歧视对入伍影响的供给侧效应。</p>
-<h3 id="关键发现">关键发现</h3>
-<ol type="1">
-<li>珍珠港后志愿入伍率急剧上升，但黑人增幅小于白人</li>
-<li>歧视越高的郡，黑人入伍率增幅越小（相对于白人）</li>
-<li>歧视减少黑人的数量和质量（教育水平）</li>
-<li>距离珍珠港越远、州加入联邦越晚，歧视效应越强</li>
-<li>日裔美国人在未被拘禁地区入伍率更高</li>
-</ol>
-<h2 id="结论">4. 结论</h2>
-<p>歧视和政治排斥降低被排斥群体在战时对政府的支持，为社会契约理论提供实证支持。</p>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<p>一战遗产的代际传递、宣传运动的效果、跨语境验证。</p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>中国农业发展之路 — 深度阅读笔记 — Perkins</title>
     <url>/posts/perkins1969/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="书籍信息">书籍信息</h2>
@@ -12327,6 +12270,63 @@ University Press.</li>
         <tag>书籍</tag>
         <tag>农业史</tag>
         <tag>中国历史</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Racial Discrimination and the Social Contract — 深度阅读笔记 — Qian &amp; Tabellini</title>
+    <url>/posts/qian2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Racial Discrimination and the Social
+Contract: Evidence from U.S. Army Enlistment during WWII</li>
+<li><strong>作者</strong>: Nancy Qian (Northwestern &amp; NBER), Marco
+Tabellini (Harvard &amp; CEPR &amp; NBER)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies
+(RES)</li>
+<li><strong>难度评估</strong>: 高 -
+需要政治经济学、计量经济学、历史背景知识 <span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言">1. 引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>社会契约理论、歧视与政治排斥、战争与政治加入。</p>
+<h3 id="研究背景">研究背景</h3>
+<p>社会契约理论认为战争和革命是政治加入的重要触发因素；排除效应在战时如何影响公民对政府的支持尚无直接证据。</p>
+<h3 id="核心问题">核心问题</h3>
+<p>歧视和政治排斥如何影响公民在战时对政府的支持？排除效应是正向（信号价值）还是负向（挫败感）？</p>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：历史背景（Jim Crow时代的歧视、 WWII与珍珠港事件）</li>
+<li>第三节：概念框架</li>
+<li>第四节：数据</li>
+<li>第五节：主要结果</li>
+<li>第六节：额外分析</li>
+<li>第七节：结论</li>
+</ul>
+<h2 id="正文">3. 正文</h2>
+<h3 id="核心机制">核心机制</h3>
+<p>珍珠港袭击作为外生冲击；识别歧视对入伍影响的供给侧效应。</p>
+<h3 id="关键发现">关键发现</h3>
+<ol type="1">
+<li>珍珠港后志愿入伍率急剧上升，但黑人增幅小于白人</li>
+<li>歧视越高的郡，黑人入伍率增幅越小（相对于白人）</li>
+<li>歧视减少黑人的数量和质量（教育水平）</li>
+<li>距离珍珠港越远、州加入联邦越晚，歧视效应越强</li>
+<li>日裔美国人在未被拘禁地区入伍率更高</li>
+</ol>
+<h2 id="结论">4. 结论</h2>
+<p>歧视和政治排斥降低被排斥群体在战时对政府的支持，为社会契约理论提供实证支持。</p>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<p>一战遗产的代际传递、宣传运动的效果、跨语境验证。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
