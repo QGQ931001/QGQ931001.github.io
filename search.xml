@@ -67,6 +67,97 @@ ATT\)</span>一定会比较大,基准模型会存在低估偏误</li>
       </tags>
   </entry>
   <entry>
+    <title>国家能力建设中的溢出效应 — 深度阅读笔记 — Aman-Rana &amp; Minaudier</title>
+    <url>/posts/aman-rana2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Spillovers in State Capacity Building:
+Evidence from the Digitization of Land Records in Pakistan</li>
+<li><strong>作者</strong>: Shan Aman-Rana (University of Virginia),
+Clement Minaudier (City University of London)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(4):
+1459-1498</li>
+<li><strong>DOI</strong>: 10.1257/aer.20240880</li>
+<li><strong>难度评估</strong>: 高 -
+需要发展经济学、组织经济学、计量经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>国家能力（State
+Capacity）</strong>：指国家有效执行政策和提供公共服务的能力，主要包括税收能力、产权保护和行政能力。</p>
+<p><strong>数字化改革（Digitization
+Reform）</strong>：在发展中国家被视为加强国家能力的有效手段，可减少官僚腐败，提高透明度和效率。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>数字化的双重性</strong>：数字化会"重塑"官僚机构的组织结构，改变不同机构间的关系</p></li>
+<li><p><strong>研究缺口</strong>：现有文献主要关注数字化的直接正面效应，对间接影响的系统性研究不足</p></li>
+<li><p><strong>巴基斯坦案例</strong>：旁遮普省的分阶段土地记录数字化改革（2011-2014年）提供理想准实验场景</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：技术引入官僚机构所带来的组织变化是否会削弱国家能力？</p>
+<p><strong>主要发现</strong>：土地记录数字化导致税收征收下降84%</p>
+<hr>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<h3 id="第1节引言">第1节：引言</h3>
+<h3 id="第2节背景与数据">第2节：背景与数据</h3>
+<ul>
+<li>巴基斯坦旁遮普省的农业收入税（AIT）制度</li>
+<li>土地记录数字化改革三阶段推出（2011-2014年）</li>
+<li>数据来源：税收行政数据、卫星数据、家庭调查数据</li>
+</ul>
+<h3 id="第3节识别策略与结果">第3节：识别策略与结果</h3>
+<ul>
+<li>交错推出的DID设计</li>
+<li>数字化导致税收征收下降84%</li>
+</ul>
+<h3 id="第4节机制分析">第4节：机制分析</h3>
+<ul>
+<li>税基变化</li>
+<li>官僚绩效变化（失去杠杆效应、腐败转移效应）</li>
+</ul>
+<h3 id="第5节讨论">第5节：讨论</h3>
+<h3 id="第6节结论">第6节：结论</h3>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="巴基斯坦农业收入税制度">巴基斯坦农业收入税制度</h4>
+<p>税收由地方官僚（Qanungo）征收，基于耕地面积或利润。征收流程包括年初作物检查（Girdawari）、发出税收需求通知、征收税款。</p>
+<h3 id="实证方法">实证方法</h3>
+<p><strong>识别策略</strong>： - 交错推出的DID设计 -
+使用计划推出时间而非实际时间定义处理变量 - 事件研究验证平行趋势</p>
+<p><strong>主要结果</strong>： - 数字化导致税收征收下降84%</p>
+<h3 id="机制分析">机制分析</h3>
+<p><strong>税基变化</strong>：使用卫星数据、农户调查数据验证</p>
+<p><strong>官僚绩效变化</strong>： -
+理论模型：失去杠杆效应、腐败转移效应 -
+税收评估变化：申报耕地面积下降10%、税收需求下降45% -
+征收绩效下降：征收率下降29.5个百分点</p>
+<hr>
+<h2 id="结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>技术引入可能损害国家能力</strong>：数字化在改善产权保护的同时，可能损害税收能力</p></li>
+<li><p><strong>组织变化是关键机制</strong>：官僚失去对农民土地信息的控制，导致征收能力下降</p></li>
+<li><p><strong>政策启示</strong>：技术投资必须配合组织变革</p></li>
+</ol>
+<hr>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<ol type="1">
+<li>其他国家类似数字化改革的验证</li>
+<li>配套政策干预的效果</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>When Should You Adjust Standard Errors for Clustering — 深度分析 — Abadie Et Al.</title>
     <url>/posts/abadie2023/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -349,94 +440,171 @@ Bootstrap是否是更好的选择?它与本文的TSCB有何关系?</p></li>
       </tags>
   </entry>
   <entry>
-    <title>国家能力建设中的溢出效应 — 深度阅读笔记 — Aman-Rana &amp; Minaudier</title>
-    <url>/posts/aman-rana2026/</url>
+    <title>Rural Roads and Local Economic Development — 深度阅读笔记 — Asher &amp; Novosad</title>
+    <url>/posts/asher2020/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
 <ul>
-<li><strong>标题</strong>: Spillovers in State Capacity Building:
-Evidence from the Digitization of Land Records in Pakistan</li>
-<li><strong>作者</strong>: Shan Aman-Rana (University of Virginia),
-Clement Minaudier (City University of London)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(4):
-1459-1498</li>
-<li><strong>DOI</strong>: 10.1257/aer.20240880</li>
-<li><strong>难度评估</strong>: 高 -
-需要发展经济学、组织经济学、计量经济学基础</li>
+<li><strong>标题</strong>: Rural Roads and Local Economic
+Development</li>
+<li><strong>作者</strong>: Sam Asher, Paul Novosad</li>
+<li><strong>年份</strong>: 2020</li>
+<li><strong>来源</strong>: American Economic Review, Vol. 110, No. 3,
+pp. 797-823 <span id="more"></span></li>
 </ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h2 id="引言背景和意义">引言(背景和意义)</h2>
 <h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>国家能力（State
-Capacity）</strong>：指国家有效执行政策和提供公共服务的能力，主要包括税收能力、产权保护和行政能力。</p>
-<p><strong>数字化改革（Digitization
-Reform）</strong>：在发展中国家被视为加强国家能力的有效手段，可减少官僚腐败，提高透明度和效率。</p>
+<p>发展经济学中,基础设施投资一直是促进经济增长和减贫的核心政策工具.道路基础设施作为连接生产与市场的关键纽带,被认为是促进农村经济发展、缩小城乡差距的重要手段.理论上,良好的道路网络可以降低运输成本、增加市场准入、促进农业商品化、创造非农就业机会,并吸引外部投资.</p>
+<p>印度作为全球最大的发展中国家之一,其农村地区的发展问题一直备受关注.在本世纪初,印度政府启动了大规模农村道路建设计划_Pradhan
+Mantri Gram Sadak Yojana
+(PMGSY),旨在为农村地区提供国家铺设的公路网络.这一计划的规模巨大,涉及数十亿美元的投资,惠及近十亿人口.</p>
 <h3 id="研究的主要背景">研究的主要背景</h3>
+<p>Asher和Novosad的研究建立在以下背景之上:</p>
 <ol type="1">
-<li><p><strong>数字化的双重性</strong>：数字化会"重塑"官僚机构的组织结构，改变不同机构间的关系</p></li>
-<li><p><strong>研究缺口</strong>：现有文献主要关注数字化的直接正面效应，对间接影响的系统性研究不足</p></li>
-<li><p><strong>巴基斯坦案例</strong>：旁遮普省的分阶段土地记录数字化改革（2011-2014年）提供理想准实验场景</p></li>
+<li><p><strong>政策规模巨大</strong>:印度的PMGSY计划总投资约400亿美元,是迄今为止规模最大的农村道路投资计划之一.如此大规模的政策实验为评估道路基础设施的因果效应提供了难得的研究机会.</p></li>
+<li><p><strong>研究空白</strong>:尽管基础设施对发展的重要性被广泛认可,但关于大规模道路建设对农村经济影响的因果证据仍然有限.现有研究大多面临内生性问题_道路建设往往选择经济条件较好的地区,难以分离纯粹的"道路效应".</p></li>
+<li><p><strong>理论预期与现实差距</strong>:传统观点认为,修路将通过以下渠道促进农村发展:降低运输成本→提高农产品市场准入→增加农业收入→促进非农就业→整体经济增长.然而,实际效果是否如此?偏远地区能否真正从道路建设中受益?这些问题需要在严谨的实证框架下进行检验.</p></li>
+<li><p><strong>识别策略的创新</strong>:作者利用PMGSY计划的项目准入规则(基于人口阈值)实施模糊回归不连续性设计(Fuzzy
+RDD),这为识别道路建设的因果效应提供了方法论上的创新.</p></li>
 </ol>
 <h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：技术引入官僚机构所带来的组织变化是否会削弱国家能力？</p>
-<p><strong>主要发现</strong>：土地记录数字化导致税收征收下降84%</p>
-<hr>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<h3 id="第1节引言">第1节：引言</h3>
-<h3 id="第2节背景与数据">第2节：背景与数据</h3>
-<ul>
-<li>巴基斯坦旁遮普省的农业收入税（AIT）制度</li>
-<li>土地记录数字化改革三阶段推出（2011-2014年）</li>
-<li>数据来源：税收行政数据、卫星数据、家庭调查数据</li>
-</ul>
-<h3 id="第3节识别策略与结果">第3节：识别策略与结果</h3>
-<ul>
-<li>交错推出的DID设计</li>
-<li>数字化导致税收征收下降84%</li>
-</ul>
-<h3 id="第4节机制分析">第4节：机制分析</h3>
-<ul>
-<li>税基变化</li>
-<li>官僚绩效变化（失去杠杆效应、腐败转移效应）</li>
-</ul>
-<h3 id="第5节讨论">第5节：讨论</h3>
-<h3 id="第6节结论">第6节：结论</h3>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="巴基斯坦农业收入税制度">巴基斯坦农业收入税制度</h4>
-<p>税收由地方官僚（Qanungo）征收，基于耕地面积或利润。征收流程包括年初作物检查（Girdawari）、发出税收需求通知、征收税款。</p>
-<h3 id="实证方法">实证方法</h3>
-<p><strong>识别策略</strong>： - 交错推出的DID设计 -
-使用计划推出时间而非实际时间定义处理变量 - 事件研究验证平行趋势</p>
-<p><strong>主要结果</strong>： - 数字化导致税收征收下降84%</p>
-<h3 id="机制分析">机制分析</h3>
-<p><strong>税基变化</strong>：使用卫星数据、农户调查数据验证</p>
-<p><strong>官僚绩效变化</strong>： -
-理论模型：失去杠杆效应、腐败转移效应 -
-税收评估变化：申报耕地面积下降10%、税收需求下降45% -
-征收绩效下降：征收率下降29.5个百分点</p>
-<hr>
-<h2 id="结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
+<p>本研究试图回答一个核心问题:<strong>大规模农村道路建设是否真的能够促进地方经济发展?</strong></p>
+<p>具体而言,作者关注: -
+道路建设如何影响农村地区的产业结构(农业vs非农业)? -
+道路建设对农民收入、资产和就业的实质影响是什么? -
+道路建设的效果在不同类型村庄和家庭之间是否存在异质性? -
+在缺乏其他经济机会的偏远地区,道路建设是否仍然有效?</p>
+<h3 id="研究意义">研究意义</h3>
+<p>本研究具有重要的政策含义: 1.
+为发展中国家的大规模基础设施投资提供了因果效应评估 2.
+揭示了道路建设可能不如预期那般有效的原因 3.
+为未来基础设施投资政策提供了实证依据</p>
+<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
+<p>本文结构清晰,共分为以下几个部分:</p>
+<p><strong>I. 引言</strong>:介绍研究背景、问题意识和研究贡献</p>
+<p><strong>II. 制度背景(Institutional Background)</strong>
+介绍印度PMGSY农村道路建设计划的详细规则,包括项目准入的人口阈值标准.</p>
+<p><strong>III. 数据(Data)</strong>
+描述研究所使用的三大数据集:人口普查、农业普查和IHDS家庭调查数据.</p>
+<p><strong>IV. 经验框架(Empirical Framework)</strong>
+详细阐述模糊回归不连续性设计的实施方法论.</p>
+<p><strong>V. 主要结果(Main Results)</strong>
+报告道路建设对农业产出、劳动力转移、收入和资产的影响.</p>
+<p><strong>VI. 机制分析(Mechanisms)</strong>
+探讨为什么道路建设未能带来预期的发展效果.</p>
+<p><strong>VII. 结论(Conclusion)</strong></p>
+<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
+<h3 id="一制度背景与识别策略">一、制度背景与识别策略</h3>
+<p>PMGSY计划的项目准入规则基于明确的人口阈值: -
+人口≥500人的村庄将有硬路面道路连接 -
+人口&lt;500人的村庄在计划期内不建设硬路面道路</p>
+<p><strong>这一规则为实施回归不连续性设计(RDD)提供了外生的政策冲击.</strong></p>
+<p>作者使用<strong>模糊RD设计</strong>(Fuzzy RDD),原因在于: -
+并非所有人口≥500人的村庄都确实获得了道路建设 -
+存在一定的"渗透"(crossover),即部分人口&lt;500人的村庄也获得了道路 -
+工具变量方法可以处理这种非随机分配</p>
+<h3 id="二数据与样本特征">二、数据与样本特征</h3>
+<p>作者使用三大数据集:</p>
 <ol type="1">
-<li><p><strong>技术引入可能损害国家能力</strong>：数字化在改善产权保护的同时，可能损害税收能力</p></li>
-<li><p><strong>组织变化是关键机制</strong>：官僚失去对农民土地信息的控制，导致征收能力下降</p></li>
-<li><p><strong>政策启示</strong>：技术投资必须配合组织变革</p></li>
+<li><strong>印度人口普查数据</strong>:覆盖印度所有村庄,提供基线期的道路状况和人口数据</li>
+<li><strong>农业普查数据</strong>:提供村庄层面的农业投入产出数据</li>
+<li><strong>IHDS家庭调查数据(2011-12)</strong>:提供家庭层面的收入、消费和就业信息</li>
 </ol>
-<hr>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
+<p>样本选择: - 主要分析样本聚焦于PMGSY计划覆盖的州 -
+使用2001年人口普查数据确定基线期道路状况 -
+关注2008-2014年间完成的道路建设项目</p>
+<h3 id="三主要结果">三、主要结果</h3>
+<p><strong>核心发现:道路建设的主要效果是促进劳动力从农业向非农业转移,但农业产出、收入和资产均无显著变化.</strong></p>
+<h4 id="劳动力转移">3.1 劳动力转移</h4>
+<p>Table 2(主文表)显示: - 新建道路使农业劳动份额下降约8.5个百分点 -
+这一效果在统计上显著,且主要由无地或少地农民驱动 -
+非农就业增长主要集中在建筑业</p>
+<p><strong>然而,值得注意的是:</strong> -
+农业劳动份额的下降并不意味着农业的衰退 - 也没有带来农业机械化的提升 -
+农业产出和土地使用模式未发生显著变化</p>
+<h4 id="收入和消费">3.2 收入和消费</h4>
+<p>作者发现: - 家庭总收入和消费均无显著变化 -
+农业收入和非农收入均未显著增加 - 道路建设未能带来实质性的经济提升</p>
+<h4 id="资产和土地">3.3 资产和土地</h4>
+<p>道路建设对土地持有模式没有显著影响: - 无地家庭比例未增加 -
+各规模农户的土地持有保持稳定</p>
+<h3 id="四机制解释">四、机制解释</h3>
+<p><strong>为何道路建设未能带来预期的发展效果?</strong></p>
+<p>作者提出了几个可能的解释:</p>
+<h4 id="偏远地区缺乏经济机会">4.1 偏远地区缺乏经济机会</h4>
+<p>最核心的解释是:<strong>即使交通条件改善,偏远农村地区可能仍然缺乏有竞争力的经济机会.</strong></p>
+<p>证据支持: - 靠近市场的村庄(距离城镇较近)在基线期已有较好的道路条件 -
+偏远村庄即使通了路,其与主要经济中心的距离仍然较远 -
+运输成本虽然下降,但可能仍不足以使偏远地区的产品具有竞争力</p>
+<h4 id="劳动力转移渠道">4.2 劳动力转移渠道</h4>
+<p>道路建设确实促进了劳动力转移,但转移的模式值得关注: -
+主要是非农就业增加,而非农业现代化 -
+新增非农就业主要是低技能劳动(建筑工人) -
+这反映的是农业剩余劳动力的"挤出",而非真正的经济转型</p>
+<h4 id="农业持续停滞">4.3 农业持续停滞</h4>
+<p>尽管交通改善: - 农产品市场准入增加 - 但缺乏需求端的足够拉动 -
+偏远地区的农业可能面临土壤、气候等自然条件限制 - 农业技术进步缓慢</p>
+<h3 id="五异质性分析">五、异质性分析</h3>
+<p>作者发现显著的区域异质性:</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>发现</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>初始道路条件</td>
+<td>初始无道路的村庄效果更明显</td>
+</tr>
+<tr>
+<td>地理区位</td>
+<td>偏远地区效果较弱</td>
+</tr>
+<tr>
+<td>土地禀赋</td>
+<td>无地农民更容易转移</td>
+</tr>
+</tbody>
+</table>
+<h2 id="结论conclusion">结论(Conclusion)</h2>
+<h3 id="研究核心结论">研究核心结论</h3>
 <ol type="1">
-<li>其他国家类似数字化改革的验证</li>
-<li>配套政策干预的效果</li>
+<li><p><strong>道路建设的首要效果是促进劳动力从农业转移</strong>,但这一转移并非带来农业现代化或收入增长</p></li>
+<li><p><strong>道路建设未能显著提升农业产出、收入或资产</strong>,这一发现在传统发展理论背景下是出乎意料的</p></li>
+<li><p><strong>偏远地区即使获得道路连接,也可能继续缺乏经济机会</strong>,这挑战了"要想富,先修路"的传统智慧</p></li>
+<li><p><strong>政策启示</strong>:单纯的基础设施投资不足以促进农村发展,需要配套的经济机会创造政策</p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><p><strong>方法论贡献</strong>:展示了如何利用政策规则的连续性进行因果推断,提供了大型基础设施项目评估的范例</p></li>
+<li><p><strong>理论贡献</strong>:挑战了简单的"基础设施→市场准入→经济增长"的线性逻辑,揭示了发展过程中可能存在的多重障碍</p></li>
+<li><p><strong>政策贡献</strong>:为发展中国家的基础设施投资政策提供了审慎的实证依据</p></li>
+</ol>
+<h3 id="未来研究方向">未来研究方向</h3>
+<ol type="1">
+<li>结合更长期的跟踪数据,评估道路建设的动态效应</li>
+<li>探索道路建设与其他干预措施(如技能培训、小额信贷)的组合效果</li>
+<li>比较不同类型道路(国道vs地方路)的影响差异</li>
+<li>研究道路建设对女性劳动参与的特殊影响</li>
+</ol>
+<h2 id="学术思考">学术思考</h2>
+<ol type="1">
+<li><p><strong>发展政策的有效性问题</strong>:本文揭示了单纯基础设施投资的局限性.那么,什么样的政策组合才能真正促进偏远农村的发展?人力资本投资、农业技术推广、信贷可得性改善,哪一项更为关键?</p></li>
+<li><p><strong>空间经济学视角</strong>:本文的分析主要在村庄层面,忽视了一般均衡效应_道路建设可能导致周边城市的经济活动扩张,从而吸走农村的人力资源.如何在全经济层面评估道路建设的效应?</p></li>
+<li><p><strong>时间维度的重要性</strong>:4年的观察期可能不足以捕捉道路建设的全部效应.农业的结构调整、企业的进入与退出、家庭的人力资本投资决策都可能需要更长时间才能显现.</p></li>
+<li><p><strong>一般化性问题</strong>:印度PMGSY计划的经验在多大程度上可以推广到其他发展中国家或地区?各国的地理条件、市场发育程度和制度环境存在巨大差异,需要谨慎解读.</p></li>
+<li><p><strong>女性视角的分析缺失</strong>:本文未能充分关注道路建设对女性劳动参与和家庭决策的独特影响,而这在发展研究中是一个重要的维度.</p></li>
 </ol>
 ]]></content>
       <categories>
-        <category>AER</category>
+        <category>经济学</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
+        <tag>发展经济学</tag>
+        <tag>基础设施</tag>
+        <tag>AER</tag>
       </tags>
   </entry>
   <entry>
@@ -643,176 +811,8 @@ Development. <em>American Economic Review</em>, 103(1), 1-46.</li>
       </categories>
       <tags>
         <tag>论文笔记</tag>
+        <tag>发展经济学</tag>
         <tag>经济史</tag>
-        <tag>发展经济学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Rural Roads and Local Economic Development — 深度阅读笔记 — Asher &amp; Novosad</title>
-    <url>/posts/asher2020/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Rural Roads and Local Economic
-Development</li>
-<li><strong>作者</strong>: Sam Asher, Paul Novosad</li>
-<li><strong>年份</strong>: 2020</li>
-<li><strong>来源</strong>: American Economic Review, Vol. 110, No. 3,
-pp. 797-823 <span id="more"></span></li>
-</ul>
-<h2 id="引言背景和意义">引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>发展经济学中,基础设施投资一直是促进经济增长和减贫的核心政策工具.道路基础设施作为连接生产与市场的关键纽带,被认为是促进农村经济发展、缩小城乡差距的重要手段.理论上,良好的道路网络可以降低运输成本、增加市场准入、促进农业商品化、创造非农就业机会,并吸引外部投资.</p>
-<p>印度作为全球最大的发展中国家之一,其农村地区的发展问题一直备受关注.在本世纪初,印度政府启动了大规模农村道路建设计划_Pradhan
-Mantri Gram Sadak Yojana
-(PMGSY),旨在为农村地区提供国家铺设的公路网络.这一计划的规模巨大,涉及数十亿美元的投资,惠及近十亿人口.</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p>Asher和Novosad的研究建立在以下背景之上:</p>
-<ol type="1">
-<li><p><strong>政策规模巨大</strong>:印度的PMGSY计划总投资约400亿美元,是迄今为止规模最大的农村道路投资计划之一.如此大规模的政策实验为评估道路基础设施的因果效应提供了难得的研究机会.</p></li>
-<li><p><strong>研究空白</strong>:尽管基础设施对发展的重要性被广泛认可,但关于大规模道路建设对农村经济影响的因果证据仍然有限.现有研究大多面临内生性问题_道路建设往往选择经济条件较好的地区,难以分离纯粹的"道路效应".</p></li>
-<li><p><strong>理论预期与现实差距</strong>:传统观点认为,修路将通过以下渠道促进农村发展:降低运输成本→提高农产品市场准入→增加农业收入→促进非农就业→整体经济增长.然而,实际效果是否如此?偏远地区能否真正从道路建设中受益?这些问题需要在严谨的实证框架下进行检验.</p></li>
-<li><p><strong>识别策略的创新</strong>:作者利用PMGSY计划的项目准入规则(基于人口阈值)实施模糊回归不连续性设计(Fuzzy
-RDD),这为识别道路建设的因果效应提供了方法论上的创新.</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p>本研究试图回答一个核心问题:<strong>大规模农村道路建设是否真的能够促进地方经济发展?</strong></p>
-<p>具体而言,作者关注: -
-道路建设如何影响农村地区的产业结构(农业vs非农业)? -
-道路建设对农民收入、资产和就业的实质影响是什么? -
-道路建设的效果在不同类型村庄和家庭之间是否存在异质性? -
-在缺乏其他经济机会的偏远地区,道路建设是否仍然有效?</p>
-<h3 id="研究意义">研究意义</h3>
-<p>本研究具有重要的政策含义: 1.
-为发展中国家的大规模基础设施投资提供了因果效应评估 2.
-揭示了道路建设可能不如预期那般有效的原因 3.
-为未来基础设施投资政策提供了实证依据</p>
-<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
-<p>本文结构清晰,共分为以下几个部分:</p>
-<p><strong>I. 引言</strong>:介绍研究背景、问题意识和研究贡献</p>
-<p><strong>II. 制度背景(Institutional Background)</strong>
-介绍印度PMGSY农村道路建设计划的详细规则,包括项目准入的人口阈值标准.</p>
-<p><strong>III. 数据(Data)</strong>
-描述研究所使用的三大数据集:人口普查、农业普查和IHDS家庭调查数据.</p>
-<p><strong>IV. 经验框架(Empirical Framework)</strong>
-详细阐述模糊回归不连续性设计的实施方法论.</p>
-<p><strong>V. 主要结果(Main Results)</strong>
-报告道路建设对农业产出、劳动力转移、收入和资产的影响.</p>
-<p><strong>VI. 机制分析(Mechanisms)</strong>
-探讨为什么道路建设未能带来预期的发展效果.</p>
-<p><strong>VII. 结论(Conclusion)</strong></p>
-<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
-<h3 id="一制度背景与识别策略">一、制度背景与识别策略</h3>
-<p>PMGSY计划的项目准入规则基于明确的人口阈值: -
-人口≥500人的村庄将有硬路面道路连接 -
-人口&lt;500人的村庄在计划期内不建设硬路面道路</p>
-<p><strong>这一规则为实施回归不连续性设计(RDD)提供了外生的政策冲击.</strong></p>
-<p>作者使用<strong>模糊RD设计</strong>(Fuzzy RDD),原因在于: -
-并非所有人口≥500人的村庄都确实获得了道路建设 -
-存在一定的"渗透"(crossover),即部分人口&lt;500人的村庄也获得了道路 -
-工具变量方法可以处理这种非随机分配</p>
-<h3 id="二数据与样本特征">二、数据与样本特征</h3>
-<p>作者使用三大数据集:</p>
-<ol type="1">
-<li><strong>印度人口普查数据</strong>:覆盖印度所有村庄,提供基线期的道路状况和人口数据</li>
-<li><strong>农业普查数据</strong>:提供村庄层面的农业投入产出数据</li>
-<li><strong>IHDS家庭调查数据(2011-12)</strong>:提供家庭层面的收入、消费和就业信息</li>
-</ol>
-<p>样本选择: - 主要分析样本聚焦于PMGSY计划覆盖的州 -
-使用2001年人口普查数据确定基线期道路状况 -
-关注2008-2014年间完成的道路建设项目</p>
-<h3 id="三主要结果">三、主要结果</h3>
-<p><strong>核心发现:道路建设的主要效果是促进劳动力从农业向非农业转移,但农业产出、收入和资产均无显著变化.</strong></p>
-<h4 id="劳动力转移">3.1 劳动力转移</h4>
-<p>Table 2(主文表)显示: - 新建道路使农业劳动份额下降约8.5个百分点 -
-这一效果在统计上显著,且主要由无地或少地农民驱动 -
-非农就业增长主要集中在建筑业</p>
-<p><strong>然而,值得注意的是:</strong> -
-农业劳动份额的下降并不意味着农业的衰退 - 也没有带来农业机械化的提升 -
-农业产出和土地使用模式未发生显著变化</p>
-<h4 id="收入和消费">3.2 收入和消费</h4>
-<p>作者发现: - 家庭总收入和消费均无显著变化 -
-农业收入和非农收入均未显著增加 - 道路建设未能带来实质性的经济提升</p>
-<h4 id="资产和土地">3.3 资产和土地</h4>
-<p>道路建设对土地持有模式没有显著影响: - 无地家庭比例未增加 -
-各规模农户的土地持有保持稳定</p>
-<h3 id="四机制解释">四、机制解释</h3>
-<p><strong>为何道路建设未能带来预期的发展效果?</strong></p>
-<p>作者提出了几个可能的解释:</p>
-<h4 id="偏远地区缺乏经济机会">4.1 偏远地区缺乏经济机会</h4>
-<p>最核心的解释是:<strong>即使交通条件改善,偏远农村地区可能仍然缺乏有竞争力的经济机会.</strong></p>
-<p>证据支持: - 靠近市场的村庄(距离城镇较近)在基线期已有较好的道路条件 -
-偏远村庄即使通了路,其与主要经济中心的距离仍然较远 -
-运输成本虽然下降,但可能仍不足以使偏远地区的产品具有竞争力</p>
-<h4 id="劳动力转移渠道">4.2 劳动力转移渠道</h4>
-<p>道路建设确实促进了劳动力转移,但转移的模式值得关注: -
-主要是非农就业增加,而非农业现代化 -
-新增非农就业主要是低技能劳动(建筑工人) -
-这反映的是农业剩余劳动力的"挤出",而非真正的经济转型</p>
-<h4 id="农业持续停滞">4.3 农业持续停滞</h4>
-<p>尽管交通改善: - 农产品市场准入增加 - 但缺乏需求端的足够拉动 -
-偏远地区的农业可能面临土壤、气候等自然条件限制 - 农业技术进步缓慢</p>
-<h3 id="五异质性分析">五、异质性分析</h3>
-<p>作者发现显著的区域异质性:</p>
-<table>
-<thead>
-<tr>
-<th>维度</th>
-<th>发现</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>初始道路条件</td>
-<td>初始无道路的村庄效果更明显</td>
-</tr>
-<tr>
-<td>地理区位</td>
-<td>偏远地区效果较弱</td>
-</tr>
-<tr>
-<td>土地禀赋</td>
-<td>无地农民更容易转移</td>
-</tr>
-</tbody>
-</table>
-<h2 id="结论conclusion">结论(Conclusion)</h2>
-<h3 id="研究核心结论">研究核心结论</h3>
-<ol type="1">
-<li><p><strong>道路建设的首要效果是促进劳动力从农业转移</strong>,但这一转移并非带来农业现代化或收入增长</p></li>
-<li><p><strong>道路建设未能显著提升农业产出、收入或资产</strong>,这一发现在传统发展理论背景下是出乎意料的</p></li>
-<li><p><strong>偏远地区即使获得道路连接,也可能继续缺乏经济机会</strong>,这挑战了"要想富,先修路"的传统智慧</p></li>
-<li><p><strong>政策启示</strong>:单纯的基础设施投资不足以促进农村发展,需要配套的经济机会创造政策</p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><p><strong>方法论贡献</strong>:展示了如何利用政策规则的连续性进行因果推断,提供了大型基础设施项目评估的范例</p></li>
-<li><p><strong>理论贡献</strong>:挑战了简单的"基础设施→市场准入→经济增长"的线性逻辑,揭示了发展过程中可能存在的多重障碍</p></li>
-<li><p><strong>政策贡献</strong>:为发展中国家的基础设施投资政策提供了审慎的实证依据</p></li>
-</ol>
-<h3 id="未来研究方向">未来研究方向</h3>
-<ol type="1">
-<li>结合更长期的跟踪数据,评估道路建设的动态效应</li>
-<li>探索道路建设与其他干预措施(如技能培训、小额信贷)的组合效果</li>
-<li>比较不同类型道路(国道vs地方路)的影响差异</li>
-<li>研究道路建设对女性劳动参与的特殊影响</li>
-</ol>
-<h2 id="学术思考">学术思考</h2>
-<ol type="1">
-<li><p><strong>发展政策的有效性问题</strong>:本文揭示了单纯基础设施投资的局限性.那么,什么样的政策组合才能真正促进偏远农村的发展?人力资本投资、农业技术推广、信贷可得性改善,哪一项更为关键?</p></li>
-<li><p><strong>空间经济学视角</strong>:本文的分析主要在村庄层面,忽视了一般均衡效应_道路建设可能导致周边城市的经济活动扩张,从而吸走农村的人力资源.如何在全经济层面评估道路建设的效应?</p></li>
-<li><p><strong>时间维度的重要性</strong>:4年的观察期可能不足以捕捉道路建设的全部效应.农业的结构调整、企业的进入与退出、家庭的人力资本投资决策都可能需要更长时间才能显现.</p></li>
-<li><p><strong>一般化性问题</strong>:印度PMGSY计划的经验在多大程度上可以推广到其他发展中国家或地区?各国的地理条件、市场发育程度和制度环境存在巨大差异,需要谨慎解读.</p></li>
-<li><p><strong>女性视角的分析缺失</strong>:本文未能充分关注道路建设对女性劳动参与和家庭决策的独特影响,而这在发展研究中是一个重要的维度.</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>发展经济学</tag>
-        <tag>基础设施</tag>
-        <tag>AER</tag>
       </tags>
   </entry>
   <entry>
@@ -1702,6 +1702,151 @@ Moi改革后)，这是否影响校准的可靠性？</p>
       </tags>
   </entry>
   <entry>
+    <title>Do Governments Crowd Out Governments? — 深度阅读笔记 — Baumann &amp; Klymak</title>
+    <url>/posts/baumann2024/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Do governments crowd out governments?
+Evidence from a natural experiment</li>
+<li><strong>作者</strong>: Stuart Baumann, Margaryta Klymak</li>
+<li><strong>类型</strong>: 论文笔记 / 财政学 / 政府经济学</li>
+<li><strong>出版年份</strong>: 2024</li>
+<li><strong>出版机构/期刊</strong>: European Economic Review, Vol. 168,
+104803</li>
+<li><strong>难度评估</strong>: 中 - 需要计量经济学基础 <span id="more"></span>
+---</li>
+</ul>
+<h2 id="引言背景和意义">引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>年终支出高峰(Year-End Spending
+Spike)是全球各国政府普遍存在的现象_政府部门在财政年度结束时集中大量支出.这种支出模式具有几个关键特征:</p>
+<p><strong>规模与普遍性.</strong>
+英国资本支出在财年最后一个月是月平均支出的约两倍;美国政府在财年最后一周的支出是平均周的4.9倍.这一现象在OECD
+27个国家均有观察到.</p>
+<p><strong>潜在浪费问题.</strong>
+年终仓促采购可能导致质量问题.Liebman和Mahoney(2017)发现,美国政府采购的IT项目在财年末执行的,其获得"低质量"评分的可能性是其他时间执行的2.2至5.6倍.</p>
+<p><strong>现有解释的局限.</strong>
+文献将年终支出归因于政府部门自身的预算周期(内部因素):如预防性储蓄基金、拖延行为、或规划不足.但这些解释均未考虑外部因素_其他政府部门和企业的支出行为.</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<p><strong>拥堵效应与竞争机制.</strong>
+当多个政府部门同时高强度支出时,可能在供应商方面产生拥堵效应.具体机制包括:</p>
+<ul>
+<li><strong>价格上涨</strong>:供应商在高需求时期提高价格</li>
+<li><strong>采购替代</strong>:供应商不可用时被迫更换采购物品或供应商</li>
+<li><strong>销售策略</strong>:供应商增加销售人员、调整商品供应以利用高支出意愿</li>
+<li><strong>支出转移</strong>:部门可能将部分支出转移至其他时间以避免价格上涨</li>
+</ul>
+<p><strong>识别挑战.</strong>
+同一国家的政府机构通常遵循相同的财年规则,使得分离"部门自身财年影响"和"其他政府机构财年影响"成为重大识别挑战.</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>:政府部门在财年末集中支出时,是否存在"政府挤出政府"的效应?</p>
+<p><strong>创新解决方案</strong>:利用英国驻海外办事处这一独特自然实验_这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
+<h3 id="研究意义">研究意义</h3>
+<ul>
+<li><strong>学术贡献</strong>:首次分离年终支出的"内部"与"外部"驱动因素</li>
+<li><strong>政策含义</strong>:错开不同部门的财年可能减少年终支出</li>
+</ul>
+<hr>
+<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
+<p><strong>第一节:引言(Introduction)</strong></p>
+<p>阐述年终支出高峰现象、潜在拥堵机制,研究挑战与创新.</p>
+<p><strong>第二节:方法论(Methodology)</strong></p>
+<p>数据:英国外交和联邦事务部(FCO)海外办事处2008-2019财年月度支出数据.实证策略:利用海外办事处沿用本国财年但所在国财年各异的自然实验.</p>
+<p><strong>第三节:结果(Results)</strong></p>
+<p>三个主要发现:本国财年末效应、当地政府挤出效应、当地企业财年效应.</p>
+<hr>
+<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
+<h3 id="一自然实验的设计优势">一、自然实验的设计优势</h3>
+<p><strong>英国海外办事处的独特性.</strong>
+英国在180多个国家设有399个海外办事处,这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
+<p>这种设置的优势:办事处的预算框架、管理和监督制度相同,执行相似的外交任务,可比较不同东道国办事处的支出模式差异.</p>
+<h3 id="二核心实证发现">二、核心实证发现</h3>
+<p><strong>发现1:本国财年末效应显著.</strong></p>
+<p>海外办事处在英国财年最后一个月(3月)的支出显著更高:</p>
+<ul>
+<li>资源预算:3月支出比月平均高1.359个标准差</li>
+<li>资本预算:3月支出比月平均高0.867个标准差</li>
+</ul>
+<p><strong>发现2:当地政府挤出效应显著.</strong></p>
+<p><span class="math inline">\(LFY End \times Home FY
+End\)</span>系数在资源支出模型中显著为正:在与英国财年重叠的国家,年终支出峰值更大.这表明东道国政府的年终支出确实产生了"挤出"效应.</p>
+<p><strong>发现3:当地企业财年效应显著.</strong></p>
+<p>在资本支出案例中,当地企业财年末越近,办事处支出越多.这与企业销售人员为最大化佣金的策略性行为一致.</p>
+<h3 id="三理论模型与预测">三、理论模型与预测</h3>
+<p>作者扩展了Liebman and
+Mahoney(2017)和Baumann(2019)的模型,加入"价格"和"拥堵效应"参数.</p>
+<p><strong>有趣发现</strong>:理论预测拥堵效应应减少年终支出峰值(理性部门会转移支出),但实证结果相反_拥堵效应加剧年终支出.这暗示政府部门的"行为惯性"可能比模型假设的更强.</p>
+<hr>
+<h2 id="结论conclusion">结论(Conclusion)</h2>
+<h3 id="核心结论总结">核心结论总结</h3>
+<p><strong>第一,本国财年是支出模式最重要的影响因素.</strong></p>
+<p><strong>第二,拥堵效应加剧年终支出.</strong>
+在与本国财年重叠的国家,年终支出规模更大.</p>
+<p><strong>第三,当地企业财年末后期,政府支出更高.</strong>
+企业销售人员的激励结构和行为也能影响政府部门的支出模式.</p>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ul>
+<li><strong>年终支出文献</strong>:首次分离内部与外部因素</li>
+<li><strong>财政溢出文献</strong>:发现"年终支出溢出"新概念</li>
+<li><strong>政策制定</strong>:错开财年可间接减少年终支出</li>
+</ul>
+<hr>
+<h2 id="未来研究方向">未来研究方向</h2>
+<h3 id="文献中提及的未来研究方向">文献中提及的未来研究方向</h3>
+<ul>
+<li>利用更细致的微观采购合同数据直接量化挤出效应的成本</li>
+<li>分析政府部门对拥堵效应的动态适应过程</li>
+</ul>
+<h3 id="基于本文思考的下一步研究工作">基于本文思考的下一步研究工作</h3>
+<p><strong>拥堵效应的成本量化.</strong>
+英国海外办事处在面临挤出效应时是否支付了更高价格?</p>
+<p><strong>政策错开财年的可行性分析.</strong>
+实施"错开财年"政策的实际可行性、潜在成本和过渡挑战.</p>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<p><strong>关于"个体理性"与"集体低效":</strong></p>
+<p>本文揭示了一个有趣的悖论:所有部门都在同一时间"理性"地加大支出以避免资金过期,这种个体理性可能导致整个经济体的集体低效_价格上涨、供应短缺、次优采购.</p>
+<p><strong>关于政府部门的价格敏感性:</strong></p>
+<p>理论模型预测理性部门会转移支出以避免拥堵,但实证结果相反.这暗示政府部门的"行为惯性"可能比新古典模型假设的更强.</p>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p><strong>拥堵效应具体如何测量?</strong>
+交互项系数的经济含义是什么?</p></li>
+<li><p><strong>资源预算和资本预算的响应为何不同?</strong></p></li>
+<li><p><strong>这对中国的政府采购改革有何启示?</strong></p></li>
+<li><p><strong>错开财年政策的实际可行性如何?</strong></p></li>
+</ol>
+<hr>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>Baumann, S. (2019). Procrastination and the Design of
+Government.</li>
+<li>Eichenauer, V. (2020). Budget Constraints and the Temporal Dynamics
+of Public Spending.</li>
+<li>Klymak, M., &amp; Baumann, S. (2022). Fiscal Year-End Procurement
+and Price Gouging.</li>
+<li>Liebman, J.B., &amp; Mahoney, N. (2017). Expiring Budgets and the
+Temporal Dynamics of Federal Spending.</li>
+<li>Oyer, P. (1998). Fiscal Year Ends and Intertemporal Labor
+Management.</li>
+</ul>
+<hr>
+<p><em>本笔记由 AI 生成,深度分析了&lt;Do governments crowd out
+governments?&gt;一文的核心内容、理论框架、实证发现和学术贡献.生成时间:2026年4月11日.</em></p>
+]]></content>
+      <categories>
+        <category>财政学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>财政学</tag>
+        <tag>政府支出</tag>
+        <tag>挤出效应</tag>
+        <tag>自然实验</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Similarity of Information and Collective Action — 深度阅读笔记 — Basak, Deb &amp; Kuvalekar</title>
     <url>/posts/basak2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -1910,151 +2055,6 @@ design）文献的联系值得深入。</p></li>
         <tag>AER</tag>
         <tag>博弈论</tag>
         <tag>信息经济学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Do Governments Crowd Out Governments? — 深度阅读笔记 — Baumann &amp; Klymak</title>
-    <url>/posts/baumann2024/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Do governments crowd out governments?
-Evidence from a natural experiment</li>
-<li><strong>作者</strong>: Stuart Baumann, Margaryta Klymak</li>
-<li><strong>类型</strong>: 论文笔记 / 财政学 / 政府经济学</li>
-<li><strong>出版年份</strong>: 2024</li>
-<li><strong>出版机构/期刊</strong>: European Economic Review, Vol. 168,
-104803</li>
-<li><strong>难度评估</strong>: 中 - 需要计量经济学基础 <span id="more"></span>
----</li>
-</ul>
-<h2 id="引言背景和意义">引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>年终支出高峰(Year-End Spending
-Spike)是全球各国政府普遍存在的现象_政府部门在财政年度结束时集中大量支出.这种支出模式具有几个关键特征:</p>
-<p><strong>规模与普遍性.</strong>
-英国资本支出在财年最后一个月是月平均支出的约两倍;美国政府在财年最后一周的支出是平均周的4.9倍.这一现象在OECD
-27个国家均有观察到.</p>
-<p><strong>潜在浪费问题.</strong>
-年终仓促采购可能导致质量问题.Liebman和Mahoney(2017)发现,美国政府采购的IT项目在财年末执行的,其获得"低质量"评分的可能性是其他时间执行的2.2至5.6倍.</p>
-<p><strong>现有解释的局限.</strong>
-文献将年终支出归因于政府部门自身的预算周期(内部因素):如预防性储蓄基金、拖延行为、或规划不足.但这些解释均未考虑外部因素_其他政府部门和企业的支出行为.</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p><strong>拥堵效应与竞争机制.</strong>
-当多个政府部门同时高强度支出时,可能在供应商方面产生拥堵效应.具体机制包括:</p>
-<ul>
-<li><strong>价格上涨</strong>:供应商在高需求时期提高价格</li>
-<li><strong>采购替代</strong>:供应商不可用时被迫更换采购物品或供应商</li>
-<li><strong>销售策略</strong>:供应商增加销售人员、调整商品供应以利用高支出意愿</li>
-<li><strong>支出转移</strong>:部门可能将部分支出转移至其他时间以避免价格上涨</li>
-</ul>
-<p><strong>识别挑战.</strong>
-同一国家的政府机构通常遵循相同的财年规则,使得分离"部门自身财年影响"和"其他政府机构财年影响"成为重大识别挑战.</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:政府部门在财年末集中支出时,是否存在"政府挤出政府"的效应?</p>
-<p><strong>创新解决方案</strong>:利用英国驻海外办事处这一独特自然实验_这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
-<h3 id="研究意义">研究意义</h3>
-<ul>
-<li><strong>学术贡献</strong>:首次分离年终支出的"内部"与"外部"驱动因素</li>
-<li><strong>政策含义</strong>:错开不同部门的财年可能减少年终支出</li>
-</ul>
-<hr>
-<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
-<p><strong>第一节:引言(Introduction)</strong></p>
-<p>阐述年终支出高峰现象、潜在拥堵机制,研究挑战与创新.</p>
-<p><strong>第二节:方法论(Methodology)</strong></p>
-<p>数据:英国外交和联邦事务部(FCO)海外办事处2008-2019财年月度支出数据.实证策略:利用海外办事处沿用本国财年但所在国财年各异的自然实验.</p>
-<p><strong>第三节:结果(Results)</strong></p>
-<p>三个主要发现:本国财年末效应、当地政府挤出效应、当地企业财年效应.</p>
-<hr>
-<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
-<h3 id="一自然实验的设计优势">一、自然实验的设计优势</h3>
-<p><strong>英国海外办事处的独特性.</strong>
-英国在180多个国家设有399个海外办事处,这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
-<p>这种设置的优势:办事处的预算框架、管理和监督制度相同,执行相似的外交任务,可比较不同东道国办事处的支出模式差异.</p>
-<h3 id="二核心实证发现">二、核心实证发现</h3>
-<p><strong>发现1:本国财年末效应显著.</strong></p>
-<p>海外办事处在英国财年最后一个月(3月)的支出显著更高:</p>
-<ul>
-<li>资源预算:3月支出比月平均高1.359个标准差</li>
-<li>资本预算:3月支出比月平均高0.867个标准差</li>
-</ul>
-<p><strong>发现2:当地政府挤出效应显著.</strong></p>
-<p><span class="math inline">\(LFY End \times Home FY
-End\)</span>系数在资源支出模型中显著为正:在与英国财年重叠的国家,年终支出峰值更大.这表明东道国政府的年终支出确实产生了"挤出"效应.</p>
-<p><strong>发现3:当地企业财年效应显著.</strong></p>
-<p>在资本支出案例中,当地企业财年末越近,办事处支出越多.这与企业销售人员为最大化佣金的策略性行为一致.</p>
-<h3 id="三理论模型与预测">三、理论模型与预测</h3>
-<p>作者扩展了Liebman and
-Mahoney(2017)和Baumann(2019)的模型,加入"价格"和"拥堵效应"参数.</p>
-<p><strong>有趣发现</strong>:理论预测拥堵效应应减少年终支出峰值(理性部门会转移支出),但实证结果相反_拥堵效应加剧年终支出.这暗示政府部门的"行为惯性"可能比模型假设的更强.</p>
-<hr>
-<h2 id="结论conclusion">结论(Conclusion)</h2>
-<h3 id="核心结论总结">核心结论总结</h3>
-<p><strong>第一,本国财年是支出模式最重要的影响因素.</strong></p>
-<p><strong>第二,拥堵效应加剧年终支出.</strong>
-在与本国财年重叠的国家,年终支出规模更大.</p>
-<p><strong>第三,当地企业财年末后期,政府支出更高.</strong>
-企业销售人员的激励结构和行为也能影响政府部门的支出模式.</p>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ul>
-<li><strong>年终支出文献</strong>:首次分离内部与外部因素</li>
-<li><strong>财政溢出文献</strong>:发现"年终支出溢出"新概念</li>
-<li><strong>政策制定</strong>:错开财年可间接减少年终支出</li>
-</ul>
-<hr>
-<h2 id="未来研究方向">未来研究方向</h2>
-<h3 id="文献中提及的未来研究方向">文献中提及的未来研究方向</h3>
-<ul>
-<li>利用更细致的微观采购合同数据直接量化挤出效应的成本</li>
-<li>分析政府部门对拥堵效应的动态适应过程</li>
-</ul>
-<h3 id="基于本文思考的下一步研究工作">基于本文思考的下一步研究工作</h3>
-<p><strong>拥堵效应的成本量化.</strong>
-英国海外办事处在面临挤出效应时是否支付了更高价格?</p>
-<p><strong>政策错开财年的可行性分析.</strong>
-实施"错开财年"政策的实际可行性、潜在成本和过渡挑战.</p>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<p><strong>关于"个体理性"与"集体低效":</strong></p>
-<p>本文揭示了一个有趣的悖论:所有部门都在同一时间"理性"地加大支出以避免资金过期,这种个体理性可能导致整个经济体的集体低效_价格上涨、供应短缺、次优采购.</p>
-<p><strong>关于政府部门的价格敏感性:</strong></p>
-<p>理论模型预测理性部门会转移支出以避免拥堵,但实证结果相反.这暗示政府部门的"行为惯性"可能比新古典模型假设的更强.</p>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p><strong>拥堵效应具体如何测量?</strong>
-交互项系数的经济含义是什么?</p></li>
-<li><p><strong>资源预算和资本预算的响应为何不同?</strong></p></li>
-<li><p><strong>这对中国的政府采购改革有何启示?</strong></p></li>
-<li><p><strong>错开财年政策的实际可行性如何?</strong></p></li>
-</ol>
-<hr>
-<h2 id="参考文献">参考文献</h2>
-<ul>
-<li>Baumann, S. (2019). Procrastination and the Design of
-Government.</li>
-<li>Eichenauer, V. (2020). Budget Constraints and the Temporal Dynamics
-of Public Spending.</li>
-<li>Klymak, M., &amp; Baumann, S. (2022). Fiscal Year-End Procurement
-and Price Gouging.</li>
-<li>Liebman, J.B., &amp; Mahoney, N. (2017). Expiring Budgets and the
-Temporal Dynamics of Federal Spending.</li>
-<li>Oyer, P. (1998). Fiscal Year Ends and Intertemporal Labor
-Management.</li>
-</ul>
-<hr>
-<p><em>本笔记由 AI 生成,深度分析了&lt;Do governments crowd out
-governments?&gt;一文的核心内容、理论框架、实证发现和学术贡献.生成时间:2026年4月11日.</em></p>
-]]></content>
-      <categories>
-        <category>财政学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>财政学</tag>
-        <tag>政府支出</tag>
-        <tag>挤出效应</tag>
-        <tag>自然实验</tag>
       </tags>
   </entry>
   <entry>
@@ -2715,56 +2715,6 @@ Instruments论文的深度笔记,由Claude AI辅助生成.</em></p>
       </tags>
   </entry>
   <entry>
-    <title>大城市人口增长速度🦚</title>
-    <url>/posts/15523/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
-<center>
-上图即为最终效果
-</center>
-<h2 id="下载数据">下载数据</h2>
-<p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录.
-</p><figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<h2 id="加载r包">加载R包</h2>
-<p>需要的R包如下所示.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
-<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<ol type="1">
-<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
-<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon,
-Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
-<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
-<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
-</ol>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
-<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.
-使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="绘图">绘图</h2>
-<p>代码如下,图见上文.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>绘图</category>
-        <category>map&amp;sf</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Generative AI at Work — 深度分析 — Brynjolfsson Et Al.</title>
     <url>/posts/bryn2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -3036,6 +2986,56 @@ rot)的风险?</p></li>
       </categories>
       <tags>
         <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大城市人口增长速度🦚</title>
+    <url>/posts/15523/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
+<center>
+上图即为最终效果
+</center>
+<h2 id="下载数据">下载数据</h2>
+<p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录.
+</p><figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="加载r包">加载R包</h2>
+<p>需要的R包如下所示.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
+<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<ol type="1">
+<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
+<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon,
+Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
+<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
+<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
+</ol>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
+<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.
+使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="绘图">绘图</h2>
+<p>代码如下,图见上文.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>绘图</category>
+        <category>map&amp;sf</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
       </tags>
   </entry>
   <entry>
@@ -8361,6 +8361,122 @@ Bartik 估计量解释?</strong></p></li>
       </tags>
   </entry>
   <entry>
+    <title>Surviving Childhood — 深度阅读笔记 — Helénsdotter</title>
+    <url>/posts/helensdotter2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Surviving Childhood: Effects of Removing a
+Child From Home</li>
+<li><strong>作者</strong>: Ronja Helénsdotter (MIT and University of
+Gothenburg)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies
+(RES)</li>
+<li><strong>DOI</strong>: 10.1093/restud/rdae053</li>
+<li><strong>难度评估</strong>: 高 -
+需要计量经济学（IV）、儿童保护制度背景知识 <span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>工具变量设计（Instrumental Variable, IV
+Design）</strong>：利用外生的准随机变量（法官分配）来识别因果效应。在本文中，法官对是否移除儿童的决定存在个体差异，这种差异与儿童本身特征无关，可以作为"移除决定"的工具变量。</p>
+<p><strong>法庭命令的安置（Court-Ordered
+Removal）</strong>：指父母或儿童不同意移除时，法院强制命令将儿童从家中带走的程序。在瑞典，约30%的寄养儿童属于此类非自愿安置，这是本文的研究对象。</p>
+<p><strong>外化问题（Externalizing
+Problems）</strong>：指儿童向外部环境表现出的问题行为，如犯罪、物质滥用、自残等，与内化问题（如焦虑、抑郁）相对。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>脆弱群体的严峻现实</strong>：在许多西方国家，自杀和药物使用障碍是青少年死亡的三大原因之一。数据显示，2-6%的儿童在18岁前会被安置在外home
+care，而这些儿童的青少年期和早期成年期死亡率是同龄人的3-5倍。</p></li>
+<li><p><strong>数据稀缺的困境</strong>：由于需要大规模、纵向、个体层面的丰富数据集，关于儿童移除对健康影响的因果证据极为匮乏。</p></li>
+<li><p><strong>政策相关性强</strong>：儿童保护系统涉及政府权力与个人家庭权利之间的冲突。</p></li>
+<li><p><strong>现有研究的空白</strong>：多数研究仅关注教育、犯罪和劳动力市场结果，仅5篇论文研究健康相关结果，且几乎所有可信研究都来自北美。</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：法庭命令的儿童从家中移除，对健康、犯罪和教育会产生什么影响？</p>
+<p><strong>研究方法</strong>：利用法官分配的准随机变化和法官间移除倾向的差异，构建工具变量（IV）设计来隔离因果效应。</p>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：制度背景（瑞典儿童保护系统流程、安置条件）</li>
+<li>第三节：数据（法院文件、登记数据、法官移除倾向）</li>
+<li>第四节：识别策略（法官IV设计）</li>
+<li>第五节：基准结果（死亡率、医疗利用、犯罪）</li>
+<li>第六节：机制探索（照料条件、同伴效应、父母渠道）</li>
+<li>第七节：稳健性检验</li>
+<li>第八节：结论</li>
+</ul>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="识别策略">识别策略</h3>
+<p><strong>法官工具变量的构建</strong>： <span class="math display">\[Z_j(c) = \frac{\sum_{i \neq c} R_j(i) - \sum_{i
+\in c} R_j(i)}{n_j - n_j(c)}\]</span></p>
+<p><strong>瑞典制度背景的关键特征</strong>： -
+法官仅在听证期间与家庭接触（通常1小时） -
+法官只做一个二元决定：是否移除儿童 -
+所有其他决定由社会福利委员会（SWC）做出</p>
+<h3 id="主要结果">主要结果</h3>
+<p><strong>死亡率的基准IV估计</strong>： -
+移除使19岁前死亡风险增加6.8个百分点（相对控制组均值1.8%） -
+效应主要由自杀驱动，主要发生在安置期间 -
+对10岁以上儿童，9个月后自杀风险显著增加</p>
+<p><strong>机制探索</strong>： - 照料条件缺陷导致超过一半的死亡 -
+有害同伴暴露显著增加自残和物质滥用风险 -
+移除显著增加非麻醉药犯罪风险</p>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>法庭命令的儿童移除对死亡率有重大的负面影响</strong>——移除使边际儿童的19岁前死亡风险增加6.8个百分点（相对增幅约378%）</p></li>
+<li><p><strong>同伴效应和照料条件是重要渠道</strong></p></li>
+<li><p><strong>对出生父母影响有限</strong></p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li>首次利用法官IV研究儿童保护</li>
+<li>填补健康结果研究的空白</li>
+<li>打破北美研究垄断，为欧洲研究提供框架</li>
+</ol>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="文献提及的方向">文献提及的方向</h3>
+<ol type="1">
+<li>短期vs长期效应</li>
+<li>其他欧洲国家复制</li>
+<li>干预设计</li>
+</ol>
+<h3 id="未来研究思考">未来研究思考</h3>
+<ol type="1">
+<li>效应异质性（不同年龄、安置类型、基础原因）</li>
+<li>动态效应（安置结束后的长期效应）</li>
+<li>照料质量的因果效应</li>
+</ol>
+<h2 id="学术思考">6. 学术思考</h2>
+<h3 id="核心理论洞察">核心理论洞察</h3>
+<ol type="1">
+<li><p><strong>"工具变量作为准实验的黄金标准"</strong>：法官的准随机分配和个体间移除倾向的差异提供了一个"自然实验"。瑞典法官只做一个二元决定、且几乎不与家庭接触，这使得排除限制更容易满足。</p></li>
+<li><p><strong>"机制识别的艰难性"</strong>：虽然本文努力探索影响机制，但照料条件、同伴暴露、中断效应可能相互关联，难以区分独立贡献。</p></li>
+</ol>
+<h3 id="深层学术问题">深层学术问题</h3>
+<ol type="1">
+<li>效应边界：本文识别的是"边际儿童"的效应，对其他儿童是否相同？</li>
+<li>外部有效性：瑞典的制度环境与北美不同，结论能否推广？</li>
+</ol>
+<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li>法官IV vs CPS工作者IV的区别是什么？</li>
+<li>如何理解"边际儿童"的概念？</li>
+<li>照料条件缺陷导致超过一半的死亡——这是系统性问题吗？</li>
+<li>从政策角度，应该如何权衡移除的风险和收益？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>&lt;中国人口研究 1368-1953&gt;深度阅读笔记 — 何炳棣 Ping-Ti Ho</title>
     <url>/posts/ho1959/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="书籍信息">书籍信息</h2>
@@ -9147,122 +9263,6 @@ _谢肇淛&lt;五杂俎&gt;(约1610年)</p>
       </tags>
   </entry>
   <entry>
-    <title>Surviving Childhood — 深度阅读笔记 — Helénsdotter</title>
-    <url>/posts/helensdotter2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Surviving Childhood: Effects of Removing a
-Child From Home</li>
-<li><strong>作者</strong>: Ronja Helénsdotter (MIT and University of
-Gothenburg)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies
-(RES)</li>
-<li><strong>DOI</strong>: 10.1093/restud/rdae053</li>
-<li><strong>难度评估</strong>: 高 -
-需要计量经济学（IV）、儿童保护制度背景知识 <span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>工具变量设计（Instrumental Variable, IV
-Design）</strong>：利用外生的准随机变量（法官分配）来识别因果效应。在本文中，法官对是否移除儿童的决定存在个体差异，这种差异与儿童本身特征无关，可以作为"移除决定"的工具变量。</p>
-<p><strong>法庭命令的安置（Court-Ordered
-Removal）</strong>：指父母或儿童不同意移除时，法院强制命令将儿童从家中带走的程序。在瑞典，约30%的寄养儿童属于此类非自愿安置，这是本文的研究对象。</p>
-<p><strong>外化问题（Externalizing
-Problems）</strong>：指儿童向外部环境表现出的问题行为，如犯罪、物质滥用、自残等，与内化问题（如焦虑、抑郁）相对。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>脆弱群体的严峻现实</strong>：在许多西方国家，自杀和药物使用障碍是青少年死亡的三大原因之一。数据显示，2-6%的儿童在18岁前会被安置在外home
-care，而这些儿童的青少年期和早期成年期死亡率是同龄人的3-5倍。</p></li>
-<li><p><strong>数据稀缺的困境</strong>：由于需要大规模、纵向、个体层面的丰富数据集，关于儿童移除对健康影响的因果证据极为匮乏。</p></li>
-<li><p><strong>政策相关性强</strong>：儿童保护系统涉及政府权力与个人家庭权利之间的冲突。</p></li>
-<li><p><strong>现有研究的空白</strong>：多数研究仅关注教育、犯罪和劳动力市场结果，仅5篇论文研究健康相关结果，且几乎所有可信研究都来自北美。</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：法庭命令的儿童从家中移除，对健康、犯罪和教育会产生什么影响？</p>
-<p><strong>研究方法</strong>：利用法官分配的准随机变化和法官间移除倾向的差异，构建工具变量（IV）设计来隔离因果效应。</p>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：制度背景（瑞典儿童保护系统流程、安置条件）</li>
-<li>第三节：数据（法院文件、登记数据、法官移除倾向）</li>
-<li>第四节：识别策略（法官IV设计）</li>
-<li>第五节：基准结果（死亡率、医疗利用、犯罪）</li>
-<li>第六节：机制探索（照料条件、同伴效应、父母渠道）</li>
-<li>第七节：稳健性检验</li>
-<li>第八节：结论</li>
-</ul>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="识别策略">识别策略</h3>
-<p><strong>法官工具变量的构建</strong>： <span class="math display">\[Z_j(c) = \frac{\sum_{i \neq c} R_j(i) - \sum_{i
-\in c} R_j(i)}{n_j - n_j(c)}\]</span></p>
-<p><strong>瑞典制度背景的关键特征</strong>： -
-法官仅在听证期间与家庭接触（通常1小时） -
-法官只做一个二元决定：是否移除儿童 -
-所有其他决定由社会福利委员会（SWC）做出</p>
-<h3 id="主要结果">主要结果</h3>
-<p><strong>死亡率的基准IV估计</strong>： -
-移除使19岁前死亡风险增加6.8个百分点（相对控制组均值1.8%） -
-效应主要由自杀驱动，主要发生在安置期间 -
-对10岁以上儿童，9个月后自杀风险显著增加</p>
-<p><strong>机制探索</strong>： - 照料条件缺陷导致超过一半的死亡 -
-有害同伴暴露显著增加自残和物质滥用风险 -
-移除显著增加非麻醉药犯罪风险</p>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>法庭命令的儿童移除对死亡率有重大的负面影响</strong>——移除使边际儿童的19岁前死亡风险增加6.8个百分点（相对增幅约378%）</p></li>
-<li><p><strong>同伴效应和照料条件是重要渠道</strong></p></li>
-<li><p><strong>对出生父母影响有限</strong></p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li>首次利用法官IV研究儿童保护</li>
-<li>填补健康结果研究的空白</li>
-<li>打破北美研究垄断，为欧洲研究提供框架</li>
-</ol>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="文献提及的方向">文献提及的方向</h3>
-<ol type="1">
-<li>短期vs长期效应</li>
-<li>其他欧洲国家复制</li>
-<li>干预设计</li>
-</ol>
-<h3 id="未来研究思考">未来研究思考</h3>
-<ol type="1">
-<li>效应异质性（不同年龄、安置类型、基础原因）</li>
-<li>动态效应（安置结束后的长期效应）</li>
-<li>照料质量的因果效应</li>
-</ol>
-<h2 id="学术思考">6. 学术思考</h2>
-<h3 id="核心理论洞察">核心理论洞察</h3>
-<ol type="1">
-<li><p><strong>"工具变量作为准实验的黄金标准"</strong>：法官的准随机分配和个体间移除倾向的差异提供了一个"自然实验"。瑞典法官只做一个二元决定、且几乎不与家庭接触，这使得排除限制更容易满足。</p></li>
-<li><p><strong>"机制识别的艰难性"</strong>：虽然本文努力探索影响机制，但照料条件、同伴暴露、中断效应可能相互关联，难以区分独立贡献。</p></li>
-</ol>
-<h3 id="深层学术问题">深层学术问题</h3>
-<ol type="1">
-<li>效应边界：本文识别的是"边际儿童"的效应，对其他儿童是否相同？</li>
-<li>外部有效性：瑞典的制度环境与北美不同，结论能否推广？</li>
-</ol>
-<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li>法官IV vs CPS工作者IV的区别是什么？</li>
-<li>如何理解"边际儿童"的概念？</li>
-<li>照料条件缺陷导致超过一半的死亡——这是系统性问题吗？</li>
-<li>从政策角度，应该如何权衡移除的风险和收益？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>你所不知道的可能对你有益 — 深度阅读笔记 — Höner &amp; Samuelson</title>
     <url>/posts/honner2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -9513,58 +9513,6 @@ Christian Proebsting (EPFL), Linda L. Tesar (Michigan &amp; NBER)</li>
       </tags>
   </entry>
   <entry>
-    <title>Endogenous Clustering and Analogy-Based Expectation Equilibrium — 深度阅读笔记 — Jehiel &amp; Weber</title>
-    <url>/posts/jehiel2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Endogenous Clustering and Analogy-Based
-Expectation Equilibrium</li>
-<li><strong>作者</strong>: Philippe Jehiel (PSE &amp; UCL), Giacomo
-Weber (PSE &amp; Bologna)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies
-(RES)</li>
-<li><strong>难度评估</strong>: 高 - 需要博弈论、行为经济学、机器学习基础
-<span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言">1. 引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>ABEE类比预期均衡、K-means聚类、原型理论。</p>
-<h3 id="研究背景">研究背景</h3>
-<p>理性预期假设要求过高；外生类比分割的局限性。</p>
-<h3 id="核心问题">核心问题</h3>
-<p>类比分割如何内生决定？玩家如何在记忆约束下最优分类情况？</p>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：理论框架</li>
-<li>第三节：应用</li>
-<li>第四节：结论</li>
-</ul>
-<h2 id="正文">3. 正文</h2>
-<h3 id="核心机制">核心机制</h3>
-<p>将类比分割内生化为聚类问题的解</p>
-<h3 id="关键发现">关键发现</h3>
-<ol type="1">
-<li>区分自排斥（需混合分区）vs自吸引（多重均衡）环境</li>
-<li>有限环境总存在聚类分布ABEE</li>
-<li>应用：美人竞赛（自吸引）、监控游戏（自排斥）</li>
-</ol>
-<h2 id="结论">4. 结论</h2>
-<p>内生类比分割框架提供了均衡多重性的新渠道。</p>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<p>实证检验、福利含义、规范分析。</p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>&lt;住房与不平等&gt;深度阅读笔记 — Ioannides &amp; Ngai</title>
     <url>/posts/ioannides2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -9682,6 +9630,58 @@ Inequality - <strong>作者</strong>:Yannis M. Ioannides, L. Rachel Ngai -
       <tags>
         <tag>论文笔记</tag>
         <tag>城市经济学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Endogenous Clustering and Analogy-Based Expectation Equilibrium — 深度阅读笔记 — Jehiel &amp; Weber</title>
+    <url>/posts/jehiel2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Endogenous Clustering and Analogy-Based
+Expectation Equilibrium</li>
+<li><strong>作者</strong>: Philippe Jehiel (PSE &amp; UCL), Giacomo
+Weber (PSE &amp; Bologna)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies
+(RES)</li>
+<li><strong>难度评估</strong>: 高 - 需要博弈论、行为经济学、机器学习基础
+<span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言">1. 引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>ABEE类比预期均衡、K-means聚类、原型理论。</p>
+<h3 id="研究背景">研究背景</h3>
+<p>理性预期假设要求过高；外生类比分割的局限性。</p>
+<h3 id="核心问题">核心问题</h3>
+<p>类比分割如何内生决定？玩家如何在记忆约束下最优分类情况？</p>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：理论框架</li>
+<li>第三节：应用</li>
+<li>第四节：结论</li>
+</ul>
+<h2 id="正文">3. 正文</h2>
+<h3 id="核心机制">核心机制</h3>
+<p>将类比分割内生化为聚类问题的解</p>
+<h3 id="关键发现">关键发现</h3>
+<ol type="1">
+<li>区分自排斥（需混合分区）vs自吸引（多重均衡）环境</li>
+<li>有限环境总存在聚类分布ABEE</li>
+<li>应用：美人竞赛（自吸引）、监控游戏（自排斥）</li>
+</ol>
+<h2 id="结论">4. 结论</h2>
+<p>内生类比分割框架提供了均衡多重性的新渠道。</p>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<p>实证检验、福利含义、规范分析。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
