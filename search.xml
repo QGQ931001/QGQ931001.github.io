@@ -1,163 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>学术讲座# 中国人民大学经济学院江艇:渐进DID的最新进展</title>
-    <url>/posts/836/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="关于did因果识别"><strong>关于DID因果识别</strong></h2>
-<ul>
-<li>Imbens:
-任何的因果识别归根结底都是做<strong>插值</strong>与<strong>差值</strong></li>
-<li>传统<span class="math inline">\(DID\)</span>最大的两类威胁是:①平行趋势不成立;②存在混淆政策</li>
-<li><span class="math inline">\(DID\)</span>的重要前提是平行趋势,但这种前提实际并不能完全验证:事前平行并不意味着事后平行趋势,但事前不平行一定能验证平行趋势不成立</li>
-<li>最经典的例子就是经济特区,深圳在改革开放前可能和中原地区的一个小村庄没有什么不同,但是即使深圳没有被划为经济特区,改革开放后其经济增长趋势也有可能因为地缘优势而呈现较快的增长趋势</li>
-<li>两期的数据做<span class="math inline">\(DID\)</span>会退化为<span class="math inline">\(FD\)</span>,此时的截距项代表时间变化趋势</li>
-<li>Good control: 既影响<span class="math inline">\(y\)</span>,又影响<span class="math inline">\(D\cdot T\)</span></li>
-<li>Bad control: 既影响y,又被<span class="math inline">\(D\cdot
-T\)</span>影响</li>
-<li>无法判断影响样本进入处理组的因素是否还影响其变化趋势</li>
-<li>潜在结果:使用上标表示,想象中的结果</li>
-<li><span class="math inline">\(ATT\)</span>:处理组接受处理后的平均处理效应</li>
-<li><span class="math inline">\(D\)</span>实际可以理解为处理组的固定效应</li>
-</ul>
-<span id="more"></span>
-<h2 id="交错型didstaggered-did"><strong>1. 交错型DID(staggered
-DID)</strong></h2>
-<ul>
-<li>没有办法构造<span class="math inline">\(D\cdot
-T\)</span>,可以直接定义<span class="math inline">\(D\cdot
-T\)</span>,表示接受处理的虚拟变量</li>
-<li>干预事件的发生时间不一致,极可能意味着,事后趋势不一致.为此,应尽量控制影响<span class="math inline">\(X_i\)</span>,避免控制既影响<span class="math inline">\(y\)</span>,又被<span class="math inline">\(D⋅T\)</span>影响的<span class="math inline">\(X_{it}\)</span></li>
-<li>Goodman-Bacon定理:任何一个交错<span class="math inline">\(DID\)</span>的双向固定效应模型都可以分解为<span class="math inline">\(K^2\)</span>个传统双重差分估计结果的加权平均</li>
-<li>导致偏误的原因在于:以晚处理组为处理组,以早处理组为对照组,此时双重差分估计中包含了一项<span class="math inline">\(\Delta
-ATT\)</span>,即早处理组的政策效应存在明显的动态变化</li>
-<li>交错<span class="math inline">\(DID\)</span>估计出的<span class="math inline">\(\beta\)</span>究竟意味着什么?由三部分构成:①方差加权的<span class="math inline">\(ATT\)</span>;②方差加权的趋势差异;③<span class="math inline">\(\Delta ATT\)</span></li>
-</ul>
-<h2 id="改进策略_基于事件研究法"><strong>2.
-改进策略_基于事件研究法</strong></h2>
-<ul>
-<li><strong>2.1</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解,观察以早处理组为控制组的系数和权重,判断其是否影响了最终系数的估计</li>
-<li><strong>2.2</strong> 进行协变量的平衡性检验.在交错<span class="math inline">\(DID\)</span>的情形下,平行趋势检验没办法做.干预时间的不一致,平衡性检验可作为一种替代手段.此做法的目的在于判断事前变量与干预处理进度之间的关系.进行匹配时,都可以以政策执行前某一期为准</li>
-<li><strong>2.3</strong>
-进一步,可以按照各组作为控制组的贡献作为权重,对事前变量与干预处理进度进行加权<span class="math inline">\(OLS\)</span></li>
-<li><strong>2.4</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解,必须是平衡面板数据,所以要删除一些样本</li>
-<li><strong>2.5</strong>
-事件研究法:变日历时间为相对时间.按照相对时间进行校准,如果存在非常明显的趋势,则<span class="math inline">\(\Delta
-ATT\)</span>一定会比较大,基准模型会存在低估偏误</li>
-<li><strong>2.6</strong>
-可以根据事件研究法的结果,将核心解释变量乘以一个<span class="math inline">\((t-T^*)\)</span></li>
-</ul>
-<h2 id="改进策略_堆叠didstacked-did"><strong>3.改进策略_堆叠<span class="math inline">\(DID\)</span>(Stacked <span class="math inline">\(DID\)</span>)</strong></h2>
-<ul>
-<li><strong>3.1</strong>
-假定存在K个处理时点,构造K个数据集.每个数据集中只保留可以为处理组服务的控制组,比如晚处理组和一直未处理的组.标准误需要聚类到数据集上面</li>
-<li><strong>3.2</strong> 从构造上保证了早处理组不能作为控制组</li>
-</ul>
-<h2 id="改进策略_对事件研究法的反思寻找干净的控制组"><strong>4.改进策略_对事件研究法的反思,寻找干净的控制组</strong></h2>
-<ul>
-<li><strong>4.1</strong>
-仅不同时间队列样本的动态处理效应变化方式是一样的,事件研究法的估计才是有效的</li>
-</ul>
-]]></content>
-      <categories>
-        <category>计量</category>
-        <category>DID</category>
-      </categories>
-      <tags>
-        <tag>学术讲座</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>国家能力建设中的溢出效应 — 深度阅读笔记 — Aman-Rana &amp; Minaudier</title>
-    <url>/posts/aman-rana2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Spillovers in State Capacity Building:
-Evidence from the Digitization of Land Records in Pakistan</li>
-<li><strong>作者</strong>: Shan Aman-Rana (University of Virginia),
-Clement Minaudier (City University of London)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(4):
-1459-1498</li>
-<li><strong>DOI</strong>: 10.1257/aer.20240880</li>
-<li><strong>难度评估</strong>: 高 -
-需要发展经济学、组织经济学、计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>国家能力（State
-Capacity）</strong>：指国家有效执行政策和提供公共服务的能力，主要包括税收能力、产权保护和行政能力。</p>
-<p><strong>数字化改革（Digitization
-Reform）</strong>：在发展中国家被视为加强国家能力的有效手段，可减少官僚腐败，提高透明度和效率。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>数字化的双重性</strong>：数字化会"重塑"官僚机构的组织结构，改变不同机构间的关系</p></li>
-<li><p><strong>研究缺口</strong>：现有文献主要关注数字化的直接正面效应，对间接影响的系统性研究不足</p></li>
-<li><p><strong>巴基斯坦案例</strong>：旁遮普省的分阶段土地记录数字化改革（2011-2014年）提供理想准实验场景</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：技术引入官僚机构所带来的组织变化是否会削弱国家能力？</p>
-<p><strong>主要发现</strong>：土地记录数字化导致税收征收下降84%</p>
-<hr>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<h3 id="第1节引言">第1节：引言</h3>
-<h3 id="第2节背景与数据">第2节：背景与数据</h3>
-<ul>
-<li>巴基斯坦旁遮普省的农业收入税（AIT）制度</li>
-<li>土地记录数字化改革三阶段推出（2011-2014年）</li>
-<li>数据来源：税收行政数据、卫星数据、家庭调查数据</li>
-</ul>
-<h3 id="第3节识别策略与结果">第3节：识别策略与结果</h3>
-<ul>
-<li>交错推出的DID设计</li>
-<li>数字化导致税收征收下降84%</li>
-</ul>
-<h3 id="第4节机制分析">第4节：机制分析</h3>
-<ul>
-<li>税基变化</li>
-<li>官僚绩效变化（失去杠杆效应、腐败转移效应）</li>
-</ul>
-<h3 id="第5节讨论">第5节：讨论</h3>
-<h3 id="第6节结论">第6节：结论</h3>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="巴基斯坦农业收入税制度">巴基斯坦农业收入税制度</h4>
-<p>税收由地方官僚（Qanungo）征收，基于耕地面积或利润。征收流程包括年初作物检查（Girdawari）、发出税收需求通知、征收税款。</p>
-<h3 id="实证方法">实证方法</h3>
-<p><strong>识别策略</strong>： - 交错推出的DID设计 -
-使用计划推出时间而非实际时间定义处理变量 - 事件研究验证平行趋势</p>
-<p><strong>主要结果</strong>： - 数字化导致税收征收下降84%</p>
-<h3 id="机制分析">机制分析</h3>
-<p><strong>税基变化</strong>：使用卫星数据、农户调查数据验证</p>
-<p><strong>官僚绩效变化</strong>： -
-理论模型：失去杠杆效应、腐败转移效应 -
-税收评估变化：申报耕地面积下降10%、税收需求下降45% -
-征收绩效下降：征收率下降29.5个百分点</p>
-<hr>
-<h2 id="结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>技术引入可能损害国家能力</strong>：数字化在改善产权保护的同时，可能损害税收能力</p></li>
-<li><p><strong>组织变化是关键机制</strong>：官僚失去对农民土地信息的控制，导致征收能力下降</p></li>
-<li><p><strong>政策启示</strong>：技术投资必须配合组织变革</p></li>
-</ol>
-<hr>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<ol type="1">
-<li>其他国家类似数字化改革的验证</li>
-<li>配套政策干预的效果</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>When Should You Adjust Standard Errors for Clustering — 深度分析 — Abadie Et Al.</title>
     <url>/posts/abadie2023/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -434,6 +277,163 @@ Bootstrap是否是更好的选择?它与本文的TSCB有何关系?</p></li>
 ]]></content>
       <categories>
         <category>计量经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学术讲座# 中国人民大学经济学院江艇:渐进DID的最新进展</title>
+    <url>/posts/836/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="关于did因果识别"><strong>关于DID因果识别</strong></h2>
+<ul>
+<li>Imbens:
+任何的因果识别归根结底都是做<strong>插值</strong>与<strong>差值</strong></li>
+<li>传统<span class="math inline">\(DID\)</span>最大的两类威胁是:①平行趋势不成立;②存在混淆政策</li>
+<li><span class="math inline">\(DID\)</span>的重要前提是平行趋势,但这种前提实际并不能完全验证:事前平行并不意味着事后平行趋势,但事前不平行一定能验证平行趋势不成立</li>
+<li>最经典的例子就是经济特区,深圳在改革开放前可能和中原地区的一个小村庄没有什么不同,但是即使深圳没有被划为经济特区,改革开放后其经济增长趋势也有可能因为地缘优势而呈现较快的增长趋势</li>
+<li>两期的数据做<span class="math inline">\(DID\)</span>会退化为<span class="math inline">\(FD\)</span>,此时的截距项代表时间变化趋势</li>
+<li>Good control: 既影响<span class="math inline">\(y\)</span>,又影响<span class="math inline">\(D\cdot T\)</span></li>
+<li>Bad control: 既影响y,又被<span class="math inline">\(D\cdot
+T\)</span>影响</li>
+<li>无法判断影响样本进入处理组的因素是否还影响其变化趋势</li>
+<li>潜在结果:使用上标表示,想象中的结果</li>
+<li><span class="math inline">\(ATT\)</span>:处理组接受处理后的平均处理效应</li>
+<li><span class="math inline">\(D\)</span>实际可以理解为处理组的固定效应</li>
+</ul>
+<span id="more"></span>
+<h2 id="交错型didstaggered-did"><strong>1. 交错型DID(staggered
+DID)</strong></h2>
+<ul>
+<li>没有办法构造<span class="math inline">\(D\cdot
+T\)</span>,可以直接定义<span class="math inline">\(D\cdot
+T\)</span>,表示接受处理的虚拟变量</li>
+<li>干预事件的发生时间不一致,极可能意味着,事后趋势不一致.为此,应尽量控制影响<span class="math inline">\(X_i\)</span>,避免控制既影响<span class="math inline">\(y\)</span>,又被<span class="math inline">\(D⋅T\)</span>影响的<span class="math inline">\(X_{it}\)</span></li>
+<li>Goodman-Bacon定理:任何一个交错<span class="math inline">\(DID\)</span>的双向固定效应模型都可以分解为<span class="math inline">\(K^2\)</span>个传统双重差分估计结果的加权平均</li>
+<li>导致偏误的原因在于:以晚处理组为处理组,以早处理组为对照组,此时双重差分估计中包含了一项<span class="math inline">\(\Delta
+ATT\)</span>,即早处理组的政策效应存在明显的动态变化</li>
+<li>交错<span class="math inline">\(DID\)</span>估计出的<span class="math inline">\(\beta\)</span>究竟意味着什么?由三部分构成:①方差加权的<span class="math inline">\(ATT\)</span>;②方差加权的趋势差异;③<span class="math inline">\(\Delta ATT\)</span></li>
+</ul>
+<h2 id="改进策略_基于事件研究法"><strong>2.
+改进策略_基于事件研究法</strong></h2>
+<ul>
+<li><strong>2.1</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解,观察以早处理组为控制组的系数和权重,判断其是否影响了最终系数的估计</li>
+<li><strong>2.2</strong> 进行协变量的平衡性检验.在交错<span class="math inline">\(DID\)</span>的情形下,平行趋势检验没办法做.干预时间的不一致,平衡性检验可作为一种替代手段.此做法的目的在于判断事前变量与干预处理进度之间的关系.进行匹配时,都可以以政策执行前某一期为准</li>
+<li><strong>2.3</strong>
+进一步,可以按照各组作为控制组的贡献作为权重,对事前变量与干预处理进度进行加权<span class="math inline">\(OLS\)</span></li>
+<li><strong>2.4</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解,必须是平衡面板数据,所以要删除一些样本</li>
+<li><strong>2.5</strong>
+事件研究法:变日历时间为相对时间.按照相对时间进行校准,如果存在非常明显的趋势,则<span class="math inline">\(\Delta
+ATT\)</span>一定会比较大,基准模型会存在低估偏误</li>
+<li><strong>2.6</strong>
+可以根据事件研究法的结果,将核心解释变量乘以一个<span class="math inline">\((t-T^*)\)</span></li>
+</ul>
+<h2 id="改进策略_堆叠didstacked-did"><strong>3.改进策略_堆叠<span class="math inline">\(DID\)</span>(Stacked <span class="math inline">\(DID\)</span>)</strong></h2>
+<ul>
+<li><strong>3.1</strong>
+假定存在K个处理时点,构造K个数据集.每个数据集中只保留可以为处理组服务的控制组,比如晚处理组和一直未处理的组.标准误需要聚类到数据集上面</li>
+<li><strong>3.2</strong> 从构造上保证了早处理组不能作为控制组</li>
+</ul>
+<h2 id="改进策略_对事件研究法的反思寻找干净的控制组"><strong>4.改进策略_对事件研究法的反思,寻找干净的控制组</strong></h2>
+<ul>
+<li><strong>4.1</strong>
+仅不同时间队列样本的动态处理效应变化方式是一样的,事件研究法的估计才是有效的</li>
+</ul>
+]]></content>
+      <categories>
+        <category>计量</category>
+        <category>DID</category>
+      </categories>
+      <tags>
+        <tag>学术讲座</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>国家能力建设中的溢出效应 — 深度阅读笔记 — Aman-Rana &amp; Minaudier</title>
+    <url>/posts/aman-rana2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Spillovers in State Capacity Building:
+Evidence from the Digitization of Land Records in Pakistan</li>
+<li><strong>作者</strong>: Shan Aman-Rana (University of Virginia),
+Clement Minaudier (City University of London)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(4):
+1459-1498</li>
+<li><strong>DOI</strong>: 10.1257/aer.20240880</li>
+<li><strong>难度评估</strong>: 高 -
+需要发展经济学、组织经济学、计量经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>国家能力（State
+Capacity）</strong>：指国家有效执行政策和提供公共服务的能力，主要包括税收能力、产权保护和行政能力。</p>
+<p><strong>数字化改革（Digitization
+Reform）</strong>：在发展中国家被视为加强国家能力的有效手段，可减少官僚腐败，提高透明度和效率。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>数字化的双重性</strong>：数字化会"重塑"官僚机构的组织结构，改变不同机构间的关系</p></li>
+<li><p><strong>研究缺口</strong>：现有文献主要关注数字化的直接正面效应，对间接影响的系统性研究不足</p></li>
+<li><p><strong>巴基斯坦案例</strong>：旁遮普省的分阶段土地记录数字化改革（2011-2014年）提供理想准实验场景</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：技术引入官僚机构所带来的组织变化是否会削弱国家能力？</p>
+<p><strong>主要发现</strong>：土地记录数字化导致税收征收下降84%</p>
+<hr>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<h3 id="第1节引言">第1节：引言</h3>
+<h3 id="第2节背景与数据">第2节：背景与数据</h3>
+<ul>
+<li>巴基斯坦旁遮普省的农业收入税（AIT）制度</li>
+<li>土地记录数字化改革三阶段推出（2011-2014年）</li>
+<li>数据来源：税收行政数据、卫星数据、家庭调查数据</li>
+</ul>
+<h3 id="第3节识别策略与结果">第3节：识别策略与结果</h3>
+<ul>
+<li>交错推出的DID设计</li>
+<li>数字化导致税收征收下降84%</li>
+</ul>
+<h3 id="第4节机制分析">第4节：机制分析</h3>
+<ul>
+<li>税基变化</li>
+<li>官僚绩效变化（失去杠杆效应、腐败转移效应）</li>
+</ul>
+<h3 id="第5节讨论">第5节：讨论</h3>
+<h3 id="第6节结论">第6节：结论</h3>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="巴基斯坦农业收入税制度">巴基斯坦农业收入税制度</h4>
+<p>税收由地方官僚（Qanungo）征收，基于耕地面积或利润。征收流程包括年初作物检查（Girdawari）、发出税收需求通知、征收税款。</p>
+<h3 id="实证方法">实证方法</h3>
+<p><strong>识别策略</strong>： - 交错推出的DID设计 -
+使用计划推出时间而非实际时间定义处理变量 - 事件研究验证平行趋势</p>
+<p><strong>主要结果</strong>： - 数字化导致税收征收下降84%</p>
+<h3 id="机制分析">机制分析</h3>
+<p><strong>税基变化</strong>：使用卫星数据、农户调查数据验证</p>
+<p><strong>官僚绩效变化</strong>： -
+理论模型：失去杠杆效应、腐败转移效应 -
+税收评估变化：申报耕地面积下降10%、税收需求下降45% -
+征收绩效下降：征收率下降29.5个百分点</p>
+<hr>
+<h2 id="结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>技术引入可能损害国家能力</strong>：数字化在改善产权保护的同时，可能损害税收能力</p></li>
+<li><p><strong>组织变化是关键机制</strong>：官僚失去对农民土地信息的控制，导致征收能力下降</p></li>
+<li><p><strong>政策启示</strong>：技术投资必须配合组织变革</p></li>
+</ol>
+<hr>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<ol type="1">
+<li>其他国家类似数字化改革的验证</li>
+<li>配套政策干预的效果</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -816,168 +816,6 @@ Development. <em>American Economic Review</em>, 103(1), 1-46.</li>
       </tags>
   </entry>
   <entry>
-    <title>稳健的错误设定模型 — 深度阅读笔记 — Ba</title>
-    <url>/posts/ba2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Robust Misspecified Models</li>
-<li><strong>作者</strong>: Cuimin Ba (University of Pittsburgh)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, Vol. 116, No. 4,
-pp. 1340-1379</li>
-<li><strong>DOI</strong>: 10.1257/aer.20240246</li>
-<li><strong>难度评估</strong>: 高 -
-需要博弈论、学习理论、贝叶斯推断基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>模型错误设定（Model
-Misspecification）</strong>：指决策者将零概率分配给真实数据生成过程(DGP)的情况。这可能源于简化复杂现实的需要，或认知偏差如过度自信或相关性忽视。</p>
-<p><strong>自我确认均衡（Self-Confirming Equilibrium,
-SCE）</strong>：指代理人在给定一致信念下选择最优行动，但模型预测可能与真实DGP不匹配（仅在均衡路径上匹配）。</p>
-<p><strong>贝叶斯因子（Bayes
-Factor）</strong>：是两种模型相对于观察数据的似然比，用于决定是否切换模型。当贝叶斯因子超过阈值α时，代理人切换模型。</p>
-<p><strong>p-吸收性（P-absorbingness）</strong>：本文提出的新概念，要求使用某模型的教条主义者在正概率下最终只玩均衡行动。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><strong>模型与决策</strong>:
-人们使用模型指导决策，但常用模型往往是错误设定的</li>
-<li><strong>现有研究局限</strong>:
-大多数文献假设决策者是"教条的"——使用特定错误模型且不考虑改变</li>
-<li><strong>现实中的模型切换</strong>:
-科学家转换范式、经济学家采用新模型、个体在认知行为治疗中改变思维模式</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:
-当决策者愿意切换模型时，哪些错误设定的模型会持续存在？</p>
-<p><strong>关键洞察</strong>:
-作者提出两个核心特征来表征稳健的错误设定模型：(1)模型在预测均衡分布方面的渐近准确性；(2)围绕均衡的先验"紧密度"。错误设定的模型可以是稳健的，即使决策者观察到无限数据，也能持续对抗任何竞争模型。</p>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<p>论文结构如下:</p>
-<ol type="1">
-<li><strong>引言</strong>: 问题陈述、动机、贡献预览</li>
-<li><strong>激励示例</strong>: 艺术家过度/不足自信的例子</li>
-<li><strong>框架</strong>:
-基本设定、模型设定、切换规则、持久性和稳健性定义</li>
-<li><strong>主要结果</strong>: 定理1-3</li>
-<li><strong>应用</strong>: 媒体偏见与极化、过度与不足自信</li>
-<li><strong>扩展</strong>: 替代切换规则、多个竞争模型，前瞻性代理人</li>
-<li><strong>结论</strong></li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="艺术家示例">艺术家示例</h4>
-<p>艺术家选择努力程度，真实能力b*=1，但艺术家可能过度自信(b̂=2)或不足自信(b̂=0)。</p>
-<p><strong>关键发现</strong>: 过度自信更稳健!</p>
-<ul>
-<li><strong>不足自信</strong>:
-导致负反馈循环，努力在1和2之间永远循环，无自我确认均衡</li>
-<li><strong>过度自信</strong>:
-导致正反馈循环，最终稳定在努力=0的均衡</li>
-</ul>
-<h3 id="框架设定">框架设定</h3>
-<p><strong>数据生成过程</strong>: 每个时期代理人生成内生数据 - 行动at →
-结果yt ~ Q*(·|at) - 结果取决于行动（内生数据）</p>
-<p><strong>主观模型</strong>: 每个模型θ是预测DGP的有限集合{ Qθ(·|a,ω)
-}</p>
-<p><strong>切换规则</strong>: - 计算贝叶斯因子λt - 如果λt &gt;
-α，切换到竞争模型 - 如果λt &lt; 1/α，切换回来 - α≥1控制切换粘性</p>
-<h3 id="主要结果">主要结果</h3>
-<h4 id="定理1哪些模型可以稳健">定理1：哪些模型可以稳健</h4>
-<p><strong>条件</strong>: α &gt; 1</p>
-<p><strong>等价命题</strong>: (i) 模型θ在某些先验下全局稳健 (ii)
-模型θ在某些先验下局部稳健 (iii) 模型θ存在p-吸收SCE</p>
-<p><strong>关键洞察</strong>:
-全局和局部稳健性是等价的——如果模型对重大范式转换脆弱，对局部变化也脆弱。</p>
-<h4 id="定理2何时模型是稳健的">定理2：何时模型是稳健的</h4>
-<p><strong>条件</strong>:
-模型θ无陷阱（可识别+所有p-吸收SCE是准严格）</p>
-<p><strong>核心概念</strong>: - <strong>一致参数</strong> Cθ:
-存在p-吸收SCE支持的参数 - <strong>先验紧密度</strong>: πθ0(Cθ) ≥ 1/α</p>
-<p><strong>结论</strong>: - 全局稳健 ⟺ 先验紧密度条件满足 - 局部稳健 ⟺
-Cθ ≠ ∅（对所有全支撑先验）</p>
-<h4 id="定理3非粘性切换-α-1">定理3：非粘性切换 (α = 1)</h4>
-<p><strong>结论</strong>: Cθ = Ωθ（全参数一致）才是稳健的</p>
-<p><strong>洞察</strong>: 粘性帮助更多错误模型持续存在</p>
-<h3 id="应用">应用</h3>
-<h4 id="a.-媒体偏见与极化">A. 媒体偏见与极化</h4>
-<p><strong>设定</strong>: - 代理人选择左翼、中间、右翼媒体 -
-真实状态是ωM（中间） - 媒体可能误导代理人</p>
-<p><strong>命题1</strong>: - θ̂在所有先验和切换阈值下全局稳健 -
-θ只在先验充分集中或切换阈值足够高时全局稳健 - θ̂最终以正概率永久替换θ</p>
-<p><strong>政治极化机制</strong>:
-错误模型θ̂因为简单，在数据拟合上表现更好，最终导致持久的政治极化。</p>
-<h4 id="b.-过度与不足自信">B. 过度与不足自信</h4>
-<p><strong>设定</strong>:
-代理人对能力有偏见(b̂)，学习另一个基本因素(ω)</p>
-<p><strong>命题2</strong>: - 过度自信(b̂ &gt; b<em>): 总是局部稳健 -
-不足自信(b̂ &lt; b</em>): 只在某些不连续区间局部稳健</p>
-<p><strong>机制差异</strong>: - 过度自信 → 正反馈 → 收敛到SCE - 不足自信
-→ 负反馈 → 在非SCE行动间振荡</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<p>本文研究了当决策者比较错误设定模型与竞争模型时，哪些模型会持续存在。主要结论:</p>
-<ol type="1">
-<li><strong>稳健性条件</strong>:
-错误设定模型的稳健性取决于两个特征——渐近准确性和先验紧密度</li>
-<li><strong>全局vs局部稳健</strong>:
-在粘性切换下(α&gt;1)两者等价;在非粘性切换下(α=1)只有全集中先验有效</li>
-<li><strong>反直觉发现</strong>:
-配备根深蒂固先验的简单错误模型可以比正确模型更稳健</li>
-<li><strong>应用广泛</strong>:
-从媒体极化到认知偏差,框架提供了预测哪些偏见更持久的工具</li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="文献提及的方向">文献提及的方向</h3>
-<ol type="1">
-<li><strong>最优切换阈值</strong>: 如何平衡I类和II类错误</li>
-<li><strong>持久性概率</strong>: 量化模型被永久采用的可能性</li>
-<li><strong>前瞻性代理人</strong>: 跨模型的前瞻性而非仅模型内</li>
-<li><strong>连续行动空间</strong>: 扩展框架到连续行动</li>
-</ol>
-<h3 id="未来研究思考">未来研究思考</h3>
-<ol type="1">
-<li><strong>政策设计</strong>:
-如果知道某些错误模型更稳健,如何设计干预来对抗它们?</li>
-<li><strong>模型复杂性</strong>:
-复杂模型vs简单模型的权衡是否与本文发现一致?</li>
-<li><strong>异质性学习</strong>:
-不同决策者是否以不同方式应用切换规则?</li>
-</ol>
-<hr>
-<h2 id="学术思考">7. 学术思考</h2>
-<h3 id="核心学术洞察">核心学术洞察</h3>
-<ol type="1">
-<li><p><strong>为什么简单错误模型更稳健?</strong>:
-本文的核心反直觉发现。直觉上,正确模型应该更受欢迎。但错误模型因为简单,先验更集中,而正确模型在每个参数上都可能不一致。</p></li>
-<li><p><strong>粘性切换的双刃剑效应</strong>:
-粘性(α&gt;1)帮助错误模型持续,但也防止因早期噪声过早放弃正确模型。</p></li>
-<li><p><strong>p-吸收性的概念创新</strong>:
-传统SCE只要求均衡存在,不要求可达到性。p-吸收性要求从正概率初始信念可达。</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li>定理1中"局部和全局稳健等价"的证明思路是什么?</li>
-<li>媒体极化应用中的"策略性误报"是如何设计的?</li>
-<li>p-吸收SCE和普通SCE有什么区别?</li>
-<li>错误模型持久性的概率有多高?</li>
-<li>在离散vs连续行动空间中,结论如何变化?</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Macroeconomic Effects of Debt Relief 深度阅读笔记 — Auclert, Dobbie &amp; Goldsmith-Pinkham</title>
     <url>/posts/auclert2019/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -1159,6 +997,346 @@ Economic Review.</li>
         <tag>债务减免</tag>
         <tag>大衰退</tag>
         <tag>破产制度</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>稳健的错误设定模型 — 深度阅读笔记 — Ba</title>
+    <url>/posts/ba2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Robust Misspecified Models</li>
+<li><strong>作者</strong>: Cuimin Ba (University of Pittsburgh)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, Vol. 116, No. 4,
+pp. 1340-1379</li>
+<li><strong>DOI</strong>: 10.1257/aer.20240246</li>
+<li><strong>难度评估</strong>: 高 -
+需要博弈论、学习理论、贝叶斯推断基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>模型错误设定（Model
+Misspecification）</strong>：指决策者将零概率分配给真实数据生成过程(DGP)的情况。这可能源于简化复杂现实的需要，或认知偏差如过度自信或相关性忽视。</p>
+<p><strong>自我确认均衡（Self-Confirming Equilibrium,
+SCE）</strong>：指代理人在给定一致信念下选择最优行动，但模型预测可能与真实DGP不匹配（仅在均衡路径上匹配）。</p>
+<p><strong>贝叶斯因子（Bayes
+Factor）</strong>：是两种模型相对于观察数据的似然比，用于决定是否切换模型。当贝叶斯因子超过阈值α时，代理人切换模型。</p>
+<p><strong>p-吸收性（P-absorbingness）</strong>：本文提出的新概念，要求使用某模型的教条主义者在正概率下最终只玩均衡行动。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><strong>模型与决策</strong>:
+人们使用模型指导决策，但常用模型往往是错误设定的</li>
+<li><strong>现有研究局限</strong>:
+大多数文献假设决策者是"教条的"——使用特定错误模型且不考虑改变</li>
+<li><strong>现实中的模型切换</strong>:
+科学家转换范式、经济学家采用新模型、个体在认知行为治疗中改变思维模式</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>:
+当决策者愿意切换模型时，哪些错误设定的模型会持续存在？</p>
+<p><strong>关键洞察</strong>:
+作者提出两个核心特征来表征稳健的错误设定模型：(1)模型在预测均衡分布方面的渐近准确性；(2)围绕均衡的先验"紧密度"。错误设定的模型可以是稳健的，即使决策者观察到无限数据，也能持续对抗任何竞争模型。</p>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<p>论文结构如下:</p>
+<ol type="1">
+<li><strong>引言</strong>: 问题陈述、动机、贡献预览</li>
+<li><strong>激励示例</strong>: 艺术家过度/不足自信的例子</li>
+<li><strong>框架</strong>:
+基本设定、模型设定、切换规则、持久性和稳健性定义</li>
+<li><strong>主要结果</strong>: 定理1-3</li>
+<li><strong>应用</strong>: 媒体偏见与极化、过度与不足自信</li>
+<li><strong>扩展</strong>: 替代切换规则、多个竞争模型，前瞻性代理人</li>
+<li><strong>结论</strong></li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="艺术家示例">艺术家示例</h4>
+<p>艺术家选择努力程度，真实能力b*=1，但艺术家可能过度自信(b̂=2)或不足自信(b̂=0)。</p>
+<p><strong>关键发现</strong>: 过度自信更稳健!</p>
+<ul>
+<li><strong>不足自信</strong>:
+导致负反馈循环，努力在1和2之间永远循环，无自我确认均衡</li>
+<li><strong>过度自信</strong>:
+导致正反馈循环，最终稳定在努力=0的均衡</li>
+</ul>
+<h3 id="框架设定">框架设定</h3>
+<p><strong>数据生成过程</strong>: 每个时期代理人生成内生数据 - 行动at →
+结果yt ~ Q*(·|at) - 结果取决于行动（内生数据）</p>
+<p><strong>主观模型</strong>: 每个模型θ是预测DGP的有限集合{ Qθ(·|a,ω)
+}</p>
+<p><strong>切换规则</strong>: - 计算贝叶斯因子λt - 如果λt &gt;
+α，切换到竞争模型 - 如果λt &lt; 1/α，切换回来 - α≥1控制切换粘性</p>
+<h3 id="主要结果">主要结果</h3>
+<h4 id="定理1哪些模型可以稳健">定理1：哪些模型可以稳健</h4>
+<p><strong>条件</strong>: α &gt; 1</p>
+<p><strong>等价命题</strong>: (i) 模型θ在某些先验下全局稳健 (ii)
+模型θ在某些先验下局部稳健 (iii) 模型θ存在p-吸收SCE</p>
+<p><strong>关键洞察</strong>:
+全局和局部稳健性是等价的——如果模型对重大范式转换脆弱，对局部变化也脆弱。</p>
+<h4 id="定理2何时模型是稳健的">定理2：何时模型是稳健的</h4>
+<p><strong>条件</strong>:
+模型θ无陷阱（可识别+所有p-吸收SCE是准严格）</p>
+<p><strong>核心概念</strong>: - <strong>一致参数</strong> Cθ:
+存在p-吸收SCE支持的参数 - <strong>先验紧密度</strong>: πθ0(Cθ) ≥ 1/α</p>
+<p><strong>结论</strong>: - 全局稳健 ⟺ 先验紧密度条件满足 - 局部稳健 ⟺
+Cθ ≠ ∅（对所有全支撑先验）</p>
+<h4 id="定理3非粘性切换-α-1">定理3：非粘性切换 (α = 1)</h4>
+<p><strong>结论</strong>: Cθ = Ωθ（全参数一致）才是稳健的</p>
+<p><strong>洞察</strong>: 粘性帮助更多错误模型持续存在</p>
+<h3 id="应用">应用</h3>
+<h4 id="a.-媒体偏见与极化">A. 媒体偏见与极化</h4>
+<p><strong>设定</strong>: - 代理人选择左翼、中间、右翼媒体 -
+真实状态是ωM（中间） - 媒体可能误导代理人</p>
+<p><strong>命题1</strong>: - θ̂在所有先验和切换阈值下全局稳健 -
+θ只在先验充分集中或切换阈值足够高时全局稳健 - θ̂最终以正概率永久替换θ</p>
+<p><strong>政治极化机制</strong>:
+错误模型θ̂因为简单，在数据拟合上表现更好，最终导致持久的政治极化。</p>
+<h4 id="b.-过度与不足自信">B. 过度与不足自信</h4>
+<p><strong>设定</strong>:
+代理人对能力有偏见(b̂)，学习另一个基本因素(ω)</p>
+<p><strong>命题2</strong>: - 过度自信(b̂ &gt; b<em>): 总是局部稳健 -
+不足自信(b̂ &lt; b</em>): 只在某些不连续区间局部稳健</p>
+<p><strong>机制差异</strong>: - 过度自信 → 正反馈 → 收敛到SCE - 不足自信
+→ 负反馈 → 在非SCE行动间振荡</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<p>本文研究了当决策者比较错误设定模型与竞争模型时，哪些模型会持续存在。主要结论:</p>
+<ol type="1">
+<li><strong>稳健性条件</strong>:
+错误设定模型的稳健性取决于两个特征——渐近准确性和先验紧密度</li>
+<li><strong>全局vs局部稳健</strong>:
+在粘性切换下(α&gt;1)两者等价;在非粘性切换下(α=1)只有全集中先验有效</li>
+<li><strong>反直觉发现</strong>:
+配备根深蒂固先验的简单错误模型可以比正确模型更稳健</li>
+<li><strong>应用广泛</strong>:
+从媒体极化到认知偏差,框架提供了预测哪些偏见更持久的工具</li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="文献提及的方向">文献提及的方向</h3>
+<ol type="1">
+<li><strong>最优切换阈值</strong>: 如何平衡I类和II类错误</li>
+<li><strong>持久性概率</strong>: 量化模型被永久采用的可能性</li>
+<li><strong>前瞻性代理人</strong>: 跨模型的前瞻性而非仅模型内</li>
+<li><strong>连续行动空间</strong>: 扩展框架到连续行动</li>
+</ol>
+<h3 id="未来研究思考">未来研究思考</h3>
+<ol type="1">
+<li><strong>政策设计</strong>:
+如果知道某些错误模型更稳健,如何设计干预来对抗它们?</li>
+<li><strong>模型复杂性</strong>:
+复杂模型vs简单模型的权衡是否与本文发现一致?</li>
+<li><strong>异质性学习</strong>:
+不同决策者是否以不同方式应用切换规则?</li>
+</ol>
+<hr>
+<h2 id="学术思考">7. 学术思考</h2>
+<h3 id="核心学术洞察">核心学术洞察</h3>
+<ol type="1">
+<li><p><strong>为什么简单错误模型更稳健?</strong>:
+本文的核心反直觉发现。直觉上,正确模型应该更受欢迎。但错误模型因为简单,先验更集中,而正确模型在每个参数上都可能不一致。</p></li>
+<li><p><strong>粘性切换的双刃剑效应</strong>:
+粘性(α&gt;1)帮助错误模型持续,但也防止因早期噪声过早放弃正确模型。</p></li>
+<li><p><strong>p-吸收性的概念创新</strong>:
+传统SCE只要求均衡存在,不要求可达到性。p-吸收性要求从正概率初始信念可达。</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li>定理1中"局部和全局稳健等价"的证明思路是什么?</li>
+<li>媒体极化应用中的"策略性误报"是如何设计的?</li>
+<li>p-吸收SCE和普通SCE有什么区别?</li>
+<li>错误模型持久性的概率有多高?</li>
+<li>在离散vs连续行动空间中,结论如何变化?</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>长期住房收益率动态 — 深度阅读笔记 — Bäcker-Peral, Hazell &amp; Mian</title>
+    <url>/posts/backer-peral2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Dynamics of the Long-Term Housing Yield:
+Evidence from Natural Experiments</li>
+<li><strong>作者</strong>: Verónica Bäcker-Peral (普林斯顿), Jonathon
+Hazell (LSE), Atif Mian (普林斯顿 &amp; NBER)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(3):
+1014-1051</li>
+<li><strong>DOI</strong>: 10.1257/aer.20240513</li>
+<li><strong>难度评估</strong>: 高 -
+需要房地产金融、计量经济学、自然实验方法基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>长期住房收益率（Long-Term Housing
+Yield）</strong>：预期长期均衡时的租金价格比率，反映市场对长期住房回报率的预期。</p>
+<p><strong>租约延长（Lease
+Extension）</strong>：英国房产的租约可以被延长90年或更长时间，形成自然实验。</p>
+<p><strong>自然实验方法（Natural Experiment
+Approach）</strong>：利用租约延长前后同一房产的价格变化来识别长期收益率。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>长期收益率的重要性</strong>：揭示市场对长期均衡的预期，帮助理解中期冲击消散后的经济状态</p></li>
+<li><p><strong>测量困难</strong>：长期收益率难以测量，需要能区分长期和中期价格行为的数据</p></li>
+<li><p><strong>英国独特制度</strong>：大多数公寓以长期租约（leasehold）形式买卖，可定期延长</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：如何利用英国租约延长的自然实验来估计预期的长期住房收益率y*？</p>
+<p><strong>主要发现</strong>： -
+y<em>从2000-2006年的约5.2%下降到2024年的2.7% - 非弹性市场下降更陡峭 -
+气候风险暴露较高的地区y</em>仍然较高</p>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
+<ul>
+<li>问题陈述和研究动机</li>
+<li>数据和方法概述</li>
+<li>主要发现预览</li>
+</ul>
+<h3 id="第二节预期长期住房收益率的定义">第二节：预期长期住房收益率的定义</h3>
+<ul>
+<li>收益率的定义</li>
+<li>y*的分解</li>
+</ul>
+<h3 id="第三节数据和租约延长详情">第三节：数据和租约延长详情</h3>
+<ul>
+<li><strong>3.1 数据构建</strong></li>
+<li><strong>3.2 租约延长制度详情</strong></li>
+<li><strong>3.3 交易滞后</strong></li>
+</ul>
+<h3 id="第四节实证方法">第四节：实证方法</h3>
+<ul>
+<li>双重差分估计</li>
+<li>非线性最小二乘估计y*</li>
+</ul>
+<h3 id="第五节主要结果">第五节：主要结果</h3>
+<ul>
+<li>y*的时间序列动态</li>
+<li>横截面异质性</li>
+</ul>
+<h3 id="第六节宏观经济含义">第六节：宏观经济含义</h3>
+<ul>
+<li>与其他市场的比较</li>
+<li>当前价格的持久性指标</li>
+<li>供给弹性和气候风险的影响</li>
+</ul>
+<h3 id="第七节结论">第七节：结论</h3>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="英国房产制度">英国房产制度</h4>
+<p><strong>两种产权形式</strong>： -
+Freehold（永久产权）：对房产的永久所有权 -
+Leasehold（租约）：长期租约，可买卖，通常在起源时长达100年以上</p>
+<p><strong>租约延长机制</strong>： -
+1993年《租约改革法》授予公寓租约持有人权利： -
+获得比原始租约长90年的新租约 - 需向永久产权持有人支付一次性协商费用</p>
+<p><strong>关键事实</strong>： - 英国有5百万租约房产 -
+70%的租约是剩余期限≤250年的"短租约" - 30%是剩余期限≥700年的"长租约" -
+几乎不存在250-700年之间的租约</p>
+<h3 id="实证方法">实证方法</h3>
+<h4 id="自然实验">自然实验</h4>
+<p><strong>核心洞察</strong>： -
+同一房产在延长前后的价格差异反映了长期收益率 - 延长前价格反映短期价值 -
+延长后价格反映短期和长期价值 - 价格差异几乎完全取决于长期收益率</p>
+<p><strong>识别策略</strong>： - 处理组：在t-u时刻延长租约的房产 -
+对照组：类似的未延长租约的房产 - 比较两组在延长前后的价格增长</p>
+<h4 id="估计方程">估计方程</h4>
+<p><strong>双重差分</strong>： <span class="math display">\[\Delta \log
+P_{it} = \alpha + \beta \cdot Extension_{i} + \gamma_t + \delta X_i +
+\varepsilon_{it}\]</span></p>
+<p><strong>非线最小二乘</strong>： 使用贴现现金流定价方程： <span class="math display">\[P_{extended} = P_{short} \cdot e^{y^* \cdot
+\Delta T}\]</span></p>
+<p>其中ΔT是延长的年数</p>
+<h3 id="主要结果">主要结果</h3>
+<h4 id="时间序列动态">时间序列动态</h4>
+<p><strong>核心发现</strong>： - 2000-2006年：y<em>稳定在约5.2% -
+2008年大衰退开始：y</em>开始下降 - 2024年：达到2.7%的低点 -
+大衰退导致的下降幅度大，相当于长期价格-租金比近翻倍</p>
+<p><strong>关键特征</strong>： - y*在疫情期间及之后保持相对稳定 -
+2024年的月度估计显示更精确</p>
+<h4 id="横截面异质性">横截面异质性</h4>
+<p><strong>供给弹性效应</strong>： -
+非弹性市场（供给受限地区）y*下降更陡峭 - 因为需求增加导致估值上升</p>
+<p><strong>气候风险效应</strong>： -
+长期气候风险较高的地区（洪水、沉降暴露） - y<em>水平较高 -
+说明y</em>包含住房风险溢价</p>
+<h3 id="宏观经济含义">宏观经济含义</h3>
+<h4 id="与其他市场的比较">与其他市场的比较</h4>
+<p><strong>长期债券收益率</strong>： - 长期债券收益率与y*密切追踪 -
+表明下降是广泛而非住房特有的</p>
+<p><strong>全球住房和其他资产</strong>： -
+全球住房和其他资产的长期收益率趋势类似 -
+表明下降可能与预期长期安全资产收益率r*的下降有关</p>
+<h4 id="当前vs长期收益率">当前vs长期收益率</h4>
+<p><strong>实时指标</strong>： - 当前租金价格比与y*的比较 -
+表明市场对未来住房估值的预期持久性</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p>**长期住房收益率y*显著下降**：从约5%下降到2.7%，与大衰退相关</p></li>
+<li><p><strong>方法论创新</strong>：利用租约延长的自然实验，"差掉"收益率曲线的短端</p></li>
+<li><p><strong>横截面异质性</strong>：供给弹性和气候风险影响y*的水平和动态</p></li>
+<li><p><strong>实时估计可用</strong>：数据和代码公开，实时更新</p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><p><strong>方法论</strong>：首个利用租约延长自然实验估计长期住房收益率</p></li>
+<li><p><strong>数据</strong>：构建并公开租约延长行政数据集</p></li>
+<li><p><strong>宏观经济</strong>：提供关于r*等重要宏观经济参数的见解</p></li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
+<ol type="1">
+<li><p>利用新方法研究其他资产类别的长期收益率</p></li>
+<li><p>扩展到其他国家的住房市场</p></li>
+</ol>
+<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
+<ol type="1">
+<li><p><strong>与结构模型的比较</strong>：自然实验方法与结构模型方法的优劣比较</p></li>
+<li><p><strong>政策应用</strong>：y*的实时估计如何用于货币政策和宏观审慎政策</p></li>
+</ol>
+<hr>
+<h2 id="学术思考">7. 学术思考</h2>
+<h3 id="核心学术洞察">核心学术洞察</h3>
+<ol type="1">
+<li><p><strong>"差掉短端"的识别策略</strong>：自然实验方法的核心洞察是，租约延长前的价格测量短期价值，延长后的价格测量短期和长期价值。因此，价格差异"差掉"了收益率曲线的短端，只反映长期收益率。</p></li>
+<li><p><strong>长期vs中期信息的权衡</strong>：金融资产的典型远期收益率最多提供10-30年的信息，而租约延长提供接近一个世纪的信息。</p></li>
+<li><p><strong>实时估计的优势</strong>：大多数宏观金融方法依赖于结构性假设，自然实验方法不依赖这些假设，因此可以提供更稳健的实时估计。</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p>**为什么长期住房收益率y*下降这么多？**
+与预期长期安全资产收益率r*的下降有何关系？</p></li>
+<li><p><strong>自然实验方法的识别假设是什么？</strong>
+平行趋势假设是否可靠？</p></li>
+<li><p><strong>租约延长数据如何构建？</strong>
+匹配关闭租约和开放租约的技术细节是什么？</p></li>
+<li><p>**y*与长期债券收益率的追踪关系有何含义？**
+这表明什么共同驱动因素？</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -1524,181 +1702,148 @@ Moi改革后)，这是否影响校准的可靠性？</p>
       </tags>
   </entry>
   <entry>
-    <title>长期住房收益率动态 — 深度阅读笔记 — Bäcker-Peral, Hazell &amp; Mian</title>
-    <url>/posts/backer-peral2026/</url>
+    <title>Do Governments Crowd Out Governments? — 深度阅读笔记 — Baumann &amp; Klymak</title>
+    <url>/posts/baumann2024/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
 <ul>
-<li><strong>标题</strong>: Dynamics of the Long-Term Housing Yield:
-Evidence from Natural Experiments</li>
-<li><strong>作者</strong>: Verónica Bäcker-Peral (普林斯顿), Jonathon
-Hazell (LSE), Atif Mian (普林斯顿 &amp; NBER)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3):
-1014-1051</li>
-<li><strong>DOI</strong>: 10.1257/aer.20240513</li>
-<li><strong>难度评估</strong>: 高 -
-需要房地产金融、计量经济学、自然实验方法基础</li>
+<li><strong>标题</strong>: Do governments crowd out governments?
+Evidence from a natural experiment</li>
+<li><strong>作者</strong>: Stuart Baumann, Margaryta Klymak</li>
+<li><strong>类型</strong>: 论文笔记 / 财政学 / 政府经济学</li>
+<li><strong>出版年份</strong>: 2024</li>
+<li><strong>出版机构/期刊</strong>: European Economic Review, Vol. 168,
+104803</li>
+<li><strong>难度评估</strong>: 中 - 需要计量经济学基础 <span id="more"></span>
+---</li>
 </ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h2 id="引言背景和意义">引言(背景和意义)</h2>
 <h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>长期住房收益率（Long-Term Housing
-Yield）</strong>：预期长期均衡时的租金价格比率，反映市场对长期住房回报率的预期。</p>
-<p><strong>租约延长（Lease
-Extension）</strong>：英国房产的租约可以被延长90年或更长时间，形成自然实验。</p>
-<p><strong>自然实验方法（Natural Experiment
-Approach）</strong>：利用租约延长前后同一房产的价格变化来识别长期收益率。</p>
+<p>年终支出高峰(Year-End Spending
+Spike)是全球各国政府普遍存在的现象_政府部门在财政年度结束时集中大量支出.这种支出模式具有几个关键特征:</p>
+<p><strong>规模与普遍性.</strong>
+英国资本支出在财年最后一个月是月平均支出的约两倍;美国政府在财年最后一周的支出是平均周的4.9倍.这一现象在OECD
+27个国家均有观察到.</p>
+<p><strong>潜在浪费问题.</strong>
+年终仓促采购可能导致质量问题.Liebman和Mahoney(2017)发现,美国政府采购的IT项目在财年末执行的,其获得"低质量"评分的可能性是其他时间执行的2.2至5.6倍.</p>
+<p><strong>现有解释的局限.</strong>
+文献将年终支出归因于政府部门自身的预算周期(内部因素):如预防性储蓄基金、拖延行为、或规划不足.但这些解释均未考虑外部因素_其他政府部门和企业的支出行为.</p>
 <h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>长期收益率的重要性</strong>：揭示市场对长期均衡的预期，帮助理解中期冲击消散后的经济状态</p></li>
-<li><p><strong>测量困难</strong>：长期收益率难以测量，需要能区分长期和中期价格行为的数据</p></li>
-<li><p><strong>英国独特制度</strong>：大多数公寓以长期租约（leasehold）形式买卖，可定期延长</p></li>
-</ol>
+<p><strong>拥堵效应与竞争机制.</strong>
+当多个政府部门同时高强度支出时,可能在供应商方面产生拥堵效应.具体机制包括:</p>
+<ul>
+<li><strong>价格上涨</strong>:供应商在高需求时期提高价格</li>
+<li><strong>采购替代</strong>:供应商不可用时被迫更换采购物品或供应商</li>
+<li><strong>销售策略</strong>:供应商增加销售人员、调整商品供应以利用高支出意愿</li>
+<li><strong>支出转移</strong>:部门可能将部分支出转移至其他时间以避免价格上涨</li>
+</ul>
+<p><strong>识别挑战.</strong>
+同一国家的政府机构通常遵循相同的财年规则,使得分离"部门自身财年影响"和"其他政府机构财年影响"成为重大识别挑战.</p>
 <h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：如何利用英国租约延长的自然实验来估计预期的长期住房收益率y*？</p>
-<p><strong>主要发现</strong>： -
-y<em>从2000-2006年的约5.2%下降到2024年的2.7% - 非弹性市场下降更陡峭 -
-气候风险暴露较高的地区y</em>仍然较高</p>
+<p><strong>核心问题</strong>:政府部门在财年末集中支出时,是否存在"政府挤出政府"的效应?</p>
+<p><strong>创新解决方案</strong>:利用英国驻海外办事处这一独特自然实验_这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
+<h3 id="研究意义">研究意义</h3>
+<ul>
+<li><strong>学术贡献</strong>:首次分离年终支出的"内部"与"外部"驱动因素</li>
+<li><strong>政策含义</strong>:错开不同部门的财年可能减少年终支出</li>
+</ul>
 <hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
-<ul>
-<li>问题陈述和研究动机</li>
-<li>数据和方法概述</li>
-<li>主要发现预览</li>
-</ul>
-<h3 id="第二节预期长期住房收益率的定义">第二节：预期长期住房收益率的定义</h3>
-<ul>
-<li>收益率的定义</li>
-<li>y*的分解</li>
-</ul>
-<h3 id="第三节数据和租约延长详情">第三节：数据和租约延长详情</h3>
-<ul>
-<li><strong>3.1 数据构建</strong></li>
-<li><strong>3.2 租约延长制度详情</strong></li>
-<li><strong>3.3 交易滞后</strong></li>
-</ul>
-<h3 id="第四节实证方法">第四节：实证方法</h3>
-<ul>
-<li>双重差分估计</li>
-<li>非线性最小二乘估计y*</li>
-</ul>
-<h3 id="第五节主要结果">第五节：主要结果</h3>
-<ul>
-<li>y*的时间序列动态</li>
-<li>横截面异质性</li>
-</ul>
-<h3 id="第六节宏观经济含义">第六节：宏观经济含义</h3>
-<ul>
-<li>与其他市场的比较</li>
-<li>当前价格的持久性指标</li>
-<li>供给弹性和气候风险的影响</li>
-</ul>
-<h3 id="第七节结论">第七节：结论</h3>
+<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
+<p><strong>第一节:引言(Introduction)</strong></p>
+<p>阐述年终支出高峰现象、潜在拥堵机制,研究挑战与创新.</p>
+<p><strong>第二节:方法论(Methodology)</strong></p>
+<p>数据:英国外交和联邦事务部(FCO)海外办事处2008-2019财年月度支出数据.实证策略:利用海外办事处沿用本国财年但所在国财年各异的自然实验.</p>
+<p><strong>第三节:结果(Results)</strong></p>
+<p>三个主要发现:本国财年末效应、当地政府挤出效应、当地企业财年效应.</p>
 <hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="英国房产制度">英国房产制度</h4>
-<p><strong>两种产权形式</strong>： -
-Freehold（永久产权）：对房产的永久所有权 -
-Leasehold（租约）：长期租约，可买卖，通常在起源时长达100年以上</p>
-<p><strong>租约延长机制</strong>： -
-1993年《租约改革法》授予公寓租约持有人权利： -
-获得比原始租约长90年的新租约 - 需向永久产权持有人支付一次性协商费用</p>
-<p><strong>关键事实</strong>： - 英国有5百万租约房产 -
-70%的租约是剩余期限≤250年的"短租约" - 30%是剩余期限≥700年的"长租约" -
-几乎不存在250-700年之间的租约</p>
-<h3 id="实证方法">实证方法</h3>
-<h4 id="自然实验">自然实验</h4>
-<p><strong>核心洞察</strong>： -
-同一房产在延长前后的价格差异反映了长期收益率 - 延长前价格反映短期价值 -
-延长后价格反映短期和长期价值 - 价格差异几乎完全取决于长期收益率</p>
-<p><strong>识别策略</strong>： - 处理组：在t-u时刻延长租约的房产 -
-对照组：类似的未延长租约的房产 - 比较两组在延长前后的价格增长</p>
-<h4 id="估计方程">估计方程</h4>
-<p><strong>双重差分</strong>： <span class="math display">\[\Delta \log
-P_{it} = \alpha + \beta \cdot Extension_{i} + \gamma_t + \delta X_i +
-\varepsilon_{it}\]</span></p>
-<p><strong>非线最小二乘</strong>： 使用贴现现金流定价方程： <span class="math display">\[P_{extended} = P_{short} \cdot e^{y^* \cdot
-\Delta T}\]</span></p>
-<p>其中ΔT是延长的年数</p>
-<h3 id="主要结果">主要结果</h3>
-<h4 id="时间序列动态">时间序列动态</h4>
-<p><strong>核心发现</strong>： - 2000-2006年：y<em>稳定在约5.2% -
-2008年大衰退开始：y</em>开始下降 - 2024年：达到2.7%的低点 -
-大衰退导致的下降幅度大，相当于长期价格-租金比近翻倍</p>
-<p><strong>关键特征</strong>： - y*在疫情期间及之后保持相对稳定 -
-2024年的月度估计显示更精确</p>
-<h4 id="横截面异质性">横截面异质性</h4>
-<p><strong>供给弹性效应</strong>： -
-非弹性市场（供给受限地区）y*下降更陡峭 - 因为需求增加导致估值上升</p>
-<p><strong>气候风险效应</strong>： -
-长期气候风险较高的地区（洪水、沉降暴露） - y<em>水平较高 -
-说明y</em>包含住房风险溢价</p>
-<h3 id="宏观经济含义">宏观经济含义</h3>
-<h4 id="与其他市场的比较">与其他市场的比较</h4>
-<p><strong>长期债券收益率</strong>： - 长期债券收益率与y*密切追踪 -
-表明下降是广泛而非住房特有的</p>
-<p><strong>全球住房和其他资产</strong>： -
-全球住房和其他资产的长期收益率趋势类似 -
-表明下降可能与预期长期安全资产收益率r*的下降有关</p>
-<h4 id="当前vs长期收益率">当前vs长期收益率</h4>
-<p><strong>实时指标</strong>： - 当前租金价格比与y*的比较 -
-表明市场对未来住房估值的预期持久性</p>
+<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
+<h3 id="一自然实验的设计优势">一、自然实验的设计优势</h3>
+<p><strong>英国海外办事处的独特性.</strong>
+英国在180多个国家设有399个海外办事处,这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
+<p>这种设置的优势:办事处的预算框架、管理和监督制度相同,执行相似的外交任务,可比较不同东道国办事处的支出模式差异.</p>
+<h3 id="二核心实证发现">二、核心实证发现</h3>
+<p><strong>发现1:本国财年末效应显著.</strong></p>
+<p>海外办事处在英国财年最后一个月(3月)的支出显著更高:</p>
+<ul>
+<li>资源预算:3月支出比月平均高1.359个标准差</li>
+<li>资本预算:3月支出比月平均高0.867个标准差</li>
+</ul>
+<p><strong>发现2:当地政府挤出效应显著.</strong></p>
+<p><span class="math inline">\(LFY End \times Home FY
+End\)</span>系数在资源支出模型中显著为正:在与英国财年重叠的国家,年终支出峰值更大.这表明东道国政府的年终支出确实产生了"挤出"效应.</p>
+<p><strong>发现3:当地企业财年效应显著.</strong></p>
+<p>在资本支出案例中,当地企业财年末越近,办事处支出越多.这与企业销售人员为最大化佣金的策略性行为一致.</p>
+<h3 id="三理论模型与预测">三、理论模型与预测</h3>
+<p>作者扩展了Liebman and
+Mahoney(2017)和Baumann(2019)的模型,加入"价格"和"拥堵效应"参数.</p>
+<p><strong>有趣发现</strong>:理论预测拥堵效应应减少年终支出峰值(理性部门会转移支出),但实证结果相反_拥堵效应加剧年终支出.这暗示政府部门的"行为惯性"可能比模型假设的更强.</p>
 <hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p>**长期住房收益率y*显著下降**：从约5%下降到2.7%，与大衰退相关</p></li>
-<li><p><strong>方法论创新</strong>：利用租约延长的自然实验，"差掉"收益率曲线的短端</p></li>
-<li><p><strong>横截面异质性</strong>：供给弹性和气候风险影响y*的水平和动态</p></li>
-<li><p><strong>实时估计可用</strong>：数据和代码公开，实时更新</p></li>
-</ol>
+<h2 id="结论conclusion">结论(Conclusion)</h2>
+<h3 id="核心结论总结">核心结论总结</h3>
+<p><strong>第一,本国财年是支出模式最重要的影响因素.</strong></p>
+<p><strong>第二,拥堵效应加剧年终支出.</strong>
+在与本国财年重叠的国家,年终支出规模更大.</p>
+<p><strong>第三,当地企业财年末后期,政府支出更高.</strong>
+企业销售人员的激励结构和行为也能影响政府部门的支出模式.</p>
 <h3 id="对领域的贡献">对领域的贡献</h3>
+<ul>
+<li><strong>年终支出文献</strong>:首次分离内部与外部因素</li>
+<li><strong>财政溢出文献</strong>:发现"年终支出溢出"新概念</li>
+<li><strong>政策制定</strong>:错开财年可间接减少年终支出</li>
+</ul>
+<hr>
+<h2 id="未来研究方向">未来研究方向</h2>
+<h3 id="文献中提及的未来研究方向">文献中提及的未来研究方向</h3>
+<ul>
+<li>利用更细致的微观采购合同数据直接量化挤出效应的成本</li>
+<li>分析政府部门对拥堵效应的动态适应过程</li>
+</ul>
+<h3 id="基于本文思考的下一步研究工作">基于本文思考的下一步研究工作</h3>
+<p><strong>拥堵效应的成本量化.</strong>
+英国海外办事处在面临挤出效应时是否支付了更高价格?</p>
+<p><strong>政策错开财年的可行性分析.</strong>
+实施"错开财年"政策的实际可行性、潜在成本和过渡挑战.</p>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<p><strong>关于"个体理性"与"集体低效":</strong></p>
+<p>本文揭示了一个有趣的悖论:所有部门都在同一时间"理性"地加大支出以避免资金过期,这种个体理性可能导致整个经济体的集体低效_价格上涨、供应短缺、次优采购.</p>
+<p><strong>关于政府部门的价格敏感性:</strong></p>
+<p>理论模型预测理性部门会转移支出以避免拥堵,但实证结果相反.这暗示政府部门的"行为惯性"可能比新古典模型假设的更强.</p>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
 <ol type="1">
-<li><p><strong>方法论</strong>：首个利用租约延长自然实验估计长期住房收益率</p></li>
-<li><p><strong>数据</strong>：构建并公开租约延长行政数据集</p></li>
-<li><p><strong>宏观经济</strong>：提供关于r*等重要宏观经济参数的见解</p></li>
+<li><p><strong>拥堵效应具体如何测量?</strong>
+交互项系数的经济含义是什么?</p></li>
+<li><p><strong>资源预算和资本预算的响应为何不同?</strong></p></li>
+<li><p><strong>这对中国的政府采购改革有何启示?</strong></p></li>
+<li><p><strong>错开财年政策的实际可行性如何?</strong></p></li>
 </ol>
 <hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
-<ol type="1">
-<li><p>利用新方法研究其他资产类别的长期收益率</p></li>
-<li><p>扩展到其他国家的住房市场</p></li>
-</ol>
-<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
-<ol type="1">
-<li><p><strong>与结构模型的比较</strong>：自然实验方法与结构模型方法的优劣比较</p></li>
-<li><p><strong>政策应用</strong>：y*的实时估计如何用于货币政策和宏观审慎政策</p></li>
-</ol>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>Baumann, S. (2019). Procrastination and the Design of
+Government.</li>
+<li>Eichenauer, V. (2020). Budget Constraints and the Temporal Dynamics
+of Public Spending.</li>
+<li>Klymak, M., &amp; Baumann, S. (2022). Fiscal Year-End Procurement
+and Price Gouging.</li>
+<li>Liebman, J.B., &amp; Mahoney, N. (2017). Expiring Budgets and the
+Temporal Dynamics of Federal Spending.</li>
+<li>Oyer, P. (1998). Fiscal Year Ends and Intertemporal Labor
+Management.</li>
+</ul>
 <hr>
-<h2 id="学术思考">7. 学术思考</h2>
-<h3 id="核心学术洞察">核心学术洞察</h3>
-<ol type="1">
-<li><p><strong>"差掉短端"的识别策略</strong>：自然实验方法的核心洞察是，租约延长前的价格测量短期价值，延长后的价格测量短期和长期价值。因此，价格差异"差掉"了收益率曲线的短端，只反映长期收益率。</p></li>
-<li><p><strong>长期vs中期信息的权衡</strong>：金融资产的典型远期收益率最多提供10-30年的信息，而租约延长提供接近一个世纪的信息。</p></li>
-<li><p><strong>实时估计的优势</strong>：大多数宏观金融方法依赖于结构性假设，自然实验方法不依赖这些假设，因此可以提供更稳健的实时估计。</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p>**为什么长期住房收益率y*下降这么多？**
-与预期长期安全资产收益率r*的下降有何关系？</p></li>
-<li><p><strong>自然实验方法的识别假设是什么？</strong>
-平行趋势假设是否可靠？</p></li>
-<li><p><strong>租约延长数据如何构建？</strong>
-匹配关闭租约和开放租约的技术细节是什么？</p></li>
-<li><p>**y*与长期债券收益率的追踪关系有何含义？**
-这表明什么共同驱动因素？</p></li>
-</ol>
+<p><em>本笔记由 AI 生成,深度分析了&lt;Do governments crowd out
+governments?&gt;一文的核心内容、理论框架、实证发现和学术贡献.生成时间:2026年4月11日.</em></p>
 ]]></content>
       <categories>
-        <category>AER</category>
+        <category>财政学</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
+        <tag>财政学</tag>
+        <tag>政府支出</tag>
+        <tag>挤出效应</tag>
+        <tag>自然实验</tag>
       </tags>
   </entry>
   <entry>
@@ -1910,151 +2055,6 @@ design）文献的联系值得深入。</p></li>
         <tag>AER</tag>
         <tag>博弈论</tag>
         <tag>信息经济学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Do Governments Crowd Out Governments? — 深度阅读笔记 — Baumann &amp; Klymak</title>
-    <url>/posts/baumann2024/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Do governments crowd out governments?
-Evidence from a natural experiment</li>
-<li><strong>作者</strong>: Stuart Baumann, Margaryta Klymak</li>
-<li><strong>类型</strong>: 论文笔记 / 财政学 / 政府经济学</li>
-<li><strong>出版年份</strong>: 2024</li>
-<li><strong>出版机构/期刊</strong>: European Economic Review, Vol. 168,
-104803</li>
-<li><strong>难度评估</strong>: 中 - 需要计量经济学基础 <span id="more"></span>
----</li>
-</ul>
-<h2 id="引言背景和意义">引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>年终支出高峰(Year-End Spending
-Spike)是全球各国政府普遍存在的现象_政府部门在财政年度结束时集中大量支出.这种支出模式具有几个关键特征:</p>
-<p><strong>规模与普遍性.</strong>
-英国资本支出在财年最后一个月是月平均支出的约两倍;美国政府在财年最后一周的支出是平均周的4.9倍.这一现象在OECD
-27个国家均有观察到.</p>
-<p><strong>潜在浪费问题.</strong>
-年终仓促采购可能导致质量问题.Liebman和Mahoney(2017)发现,美国政府采购的IT项目在财年末执行的,其获得"低质量"评分的可能性是其他时间执行的2.2至5.6倍.</p>
-<p><strong>现有解释的局限.</strong>
-文献将年终支出归因于政府部门自身的预算周期(内部因素):如预防性储蓄基金、拖延行为、或规划不足.但这些解释均未考虑外部因素_其他政府部门和企业的支出行为.</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p><strong>拥堵效应与竞争机制.</strong>
-当多个政府部门同时高强度支出时,可能在供应商方面产生拥堵效应.具体机制包括:</p>
-<ul>
-<li><strong>价格上涨</strong>:供应商在高需求时期提高价格</li>
-<li><strong>采购替代</strong>:供应商不可用时被迫更换采购物品或供应商</li>
-<li><strong>销售策略</strong>:供应商增加销售人员、调整商品供应以利用高支出意愿</li>
-<li><strong>支出转移</strong>:部门可能将部分支出转移至其他时间以避免价格上涨</li>
-</ul>
-<p><strong>识别挑战.</strong>
-同一国家的政府机构通常遵循相同的财年规则,使得分离"部门自身财年影响"和"其他政府机构财年影响"成为重大识别挑战.</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:政府部门在财年末集中支出时,是否存在"政府挤出政府"的效应?</p>
-<p><strong>创新解决方案</strong>:利用英国驻海外办事处这一独特自然实验_这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
-<h3 id="研究意义">研究意义</h3>
-<ul>
-<li><strong>学术贡献</strong>:首次分离年终支出的"内部"与"外部"驱动因素</li>
-<li><strong>政策含义</strong>:错开不同部门的财年可能减少年终支出</li>
-</ul>
-<hr>
-<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
-<p><strong>第一节:引言(Introduction)</strong></p>
-<p>阐述年终支出高峰现象、潜在拥堵机制,研究挑战与创新.</p>
-<p><strong>第二节:方法论(Methodology)</strong></p>
-<p>数据:英国外交和联邦事务部(FCO)海外办事处2008-2019财年月度支出数据.实证策略:利用海外办事处沿用本国财年但所在国财年各异的自然实验.</p>
-<p><strong>第三节:结果(Results)</strong></p>
-<p>三个主要发现:本国财年末效应、当地政府挤出效应、当地企业财年效应.</p>
-<hr>
-<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
-<h3 id="一自然实验的设计优势">一、自然实验的设计优势</h3>
-<p><strong>英国海外办事处的独特性.</strong>
-英国在180多个国家设有399个海外办事处,这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
-<p>这种设置的优势:办事处的预算框架、管理和监督制度相同,执行相似的外交任务,可比较不同东道国办事处的支出模式差异.</p>
-<h3 id="二核心实证发现">二、核心实证发现</h3>
-<p><strong>发现1:本国财年末效应显著.</strong></p>
-<p>海外办事处在英国财年最后一个月(3月)的支出显著更高:</p>
-<ul>
-<li>资源预算:3月支出比月平均高1.359个标准差</li>
-<li>资本预算:3月支出比月平均高0.867个标准差</li>
-</ul>
-<p><strong>发现2:当地政府挤出效应显著.</strong></p>
-<p><span class="math inline">\(LFY End \times Home FY
-End\)</span>系数在资源支出模型中显著为正:在与英国财年重叠的国家,年终支出峰值更大.这表明东道国政府的年终支出确实产生了"挤出"效应.</p>
-<p><strong>发现3:当地企业财年效应显著.</strong></p>
-<p>在资本支出案例中,当地企业财年末越近,办事处支出越多.这与企业销售人员为最大化佣金的策略性行为一致.</p>
-<h3 id="三理论模型与预测">三、理论模型与预测</h3>
-<p>作者扩展了Liebman and
-Mahoney(2017)和Baumann(2019)的模型,加入"价格"和"拥堵效应"参数.</p>
-<p><strong>有趣发现</strong>:理论预测拥堵效应应减少年终支出峰值(理性部门会转移支出),但实证结果相反_拥堵效应加剧年终支出.这暗示政府部门的"行为惯性"可能比模型假设的更强.</p>
-<hr>
-<h2 id="结论conclusion">结论(Conclusion)</h2>
-<h3 id="核心结论总结">核心结论总结</h3>
-<p><strong>第一,本国财年是支出模式最重要的影响因素.</strong></p>
-<p><strong>第二,拥堵效应加剧年终支出.</strong>
-在与本国财年重叠的国家,年终支出规模更大.</p>
-<p><strong>第三,当地企业财年末后期,政府支出更高.</strong>
-企业销售人员的激励结构和行为也能影响政府部门的支出模式.</p>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ul>
-<li><strong>年终支出文献</strong>:首次分离内部与外部因素</li>
-<li><strong>财政溢出文献</strong>:发现"年终支出溢出"新概念</li>
-<li><strong>政策制定</strong>:错开财年可间接减少年终支出</li>
-</ul>
-<hr>
-<h2 id="未来研究方向">未来研究方向</h2>
-<h3 id="文献中提及的未来研究方向">文献中提及的未来研究方向</h3>
-<ul>
-<li>利用更细致的微观采购合同数据直接量化挤出效应的成本</li>
-<li>分析政府部门对拥堵效应的动态适应过程</li>
-</ul>
-<h3 id="基于本文思考的下一步研究工作">基于本文思考的下一步研究工作</h3>
-<p><strong>拥堵效应的成本量化.</strong>
-英国海外办事处在面临挤出效应时是否支付了更高价格?</p>
-<p><strong>政策错开财年的可行性分析.</strong>
-实施"错开财年"政策的实际可行性、潜在成本和过渡挑战.</p>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<p><strong>关于"个体理性"与"集体低效":</strong></p>
-<p>本文揭示了一个有趣的悖论:所有部门都在同一时间"理性"地加大支出以避免资金过期,这种个体理性可能导致整个经济体的集体低效_价格上涨、供应短缺、次优采购.</p>
-<p><strong>关于政府部门的价格敏感性:</strong></p>
-<p>理论模型预测理性部门会转移支出以避免拥堵,但实证结果相反.这暗示政府部门的"行为惯性"可能比新古典模型假设的更强.</p>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p><strong>拥堵效应具体如何测量?</strong>
-交互项系数的经济含义是什么?</p></li>
-<li><p><strong>资源预算和资本预算的响应为何不同?</strong></p></li>
-<li><p><strong>这对中国的政府采购改革有何启示?</strong></p></li>
-<li><p><strong>错开财年政策的实际可行性如何?</strong></p></li>
-</ol>
-<hr>
-<h2 id="参考文献">参考文献</h2>
-<ul>
-<li>Baumann, S. (2019). Procrastination and the Design of
-Government.</li>
-<li>Eichenauer, V. (2020). Budget Constraints and the Temporal Dynamics
-of Public Spending.</li>
-<li>Klymak, M., &amp; Baumann, S. (2022). Fiscal Year-End Procurement
-and Price Gouging.</li>
-<li>Liebman, J.B., &amp; Mahoney, N. (2017). Expiring Budgets and the
-Temporal Dynamics of Federal Spending.</li>
-<li>Oyer, P. (1998). Fiscal Year Ends and Intertemporal Labor
-Management.</li>
-</ul>
-<hr>
-<p><em>本笔记由 AI 生成,深度分析了&lt;Do governments crowd out
-governments?&gt;一文的核心内容、理论框架、实证发现和学术贡献.生成时间:2026年4月11日.</em></p>
-]]></content>
-      <categories>
-        <category>财政学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>财政学</tag>
-        <tag>政府支出</tag>
-        <tag>挤出效应</tag>
-        <tag>自然实验</tag>
       </tags>
   </entry>
   <entry>
@@ -3747,279 +3747,6 @@ Mani et al. (2013)
       </tags>
   </entry>
   <entry>
-    <title>The Effect of Minimum Wages on Low-Wage Jobs — 深度分析 — Cengiz Et Al.</title>
-    <url>/posts/cengiz2019/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: The Effect of Minimum Wages on Low-Wage
-Jobs</li>
-<li><strong>作者</strong>: Doruk Cengiz(University of Massachusetts
-Amherst), Arindrajit Dube(UMass Amherst, NBER), Attila Lindner(UCL, CEP,
-IFS), Ben Zipperer(Economic Policy Institute)</li>
-<li><strong>类型</strong>: 论文笔记 / 劳动经济学</li>
-<li><strong>出版年份</strong>: 2019</li>
-<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics,
-Volume 134, Issue 3, Pages 1405-1454</li>
-<li><strong>难度评估</strong>: 中 - 需要劳动经济学和计量经济学基础
-<span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言背景和意义">1. 引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>最低工资政策(Minimum Wage
-Policy)</strong>:政府规定的劳动力小时工资下限,是劳动经济学中最具争议的政策之一.支持者认为它能提高低收入工人的生活水平,反对者担心它会导致就业下降("unemployment").</p>
-<p><strong>"新最低工资研究"的起源</strong>:Card and Krueger
-(1995)&lt;神话与计量经济学:对最低工资的新研究&gt;对传统观点提出挑战,使用准实验方法发现最低工资提高并未导致就业下降.</p>
-<p><strong>bunching
-estimator(堆集估计量)</strong>:一种利用政策变化导致的结果分布聚集现象来识别因果效应的方法.</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>政策热潮</strong>:加州、伊利诺伊州、麻省、新泽西州、纽约州已通过将最低工资提高至$15/小时的立法;数十个城市也实施了城市级最低工资政策.</p></li>
-<li><p><strong>研究缺漏</strong>:尽管新最低工资研究已逾30年,但关于政策对总体就业影响的研究仍然很少.2014年国会预算办公室(CBO)报告承认相关研究匮乏,被迫使用青少年的弹性来推断对低工资工人的总体影响.</p></li>
-<li><p><strong>方法论挑战</strong>:传统方法使用双向固定效应回归,但存在一些问题,如对工资分布上尾部的影响可能干扰对底部效应的估计.</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:最低工资对低工资工作的总体效应是什么?</p>
-<p><strong>具体子问题</strong>: - 最低工资对就业的影响是正还是负? -
-影响有多大? - 最低工资带来的工资上涨是否被就业损失所抵消? -
-效应的异质性如何?</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><strong>方法创新</strong>:提出"事件堆集"(EB-bunching)方法,将总体就业效应分解到各工资区间</li>
-<li><strong>对既有文献的贡献</strong>:澄清了最低工资文献中关于1980年代和1990年代早期样本选择的争议</li>
-<li><strong>政策意义</strong>:为当前$15最低工资运动提供实证依据</li>
-</ol>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构(论文结构)</h2>
-<table>
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr>
-<th>章节</th>
-<th>内容</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I. Introduction</td>
-<td>研究背景、问题意识、文献贡献</td>
-</tr>
-<tr>
-<td>II. Methodology and Data</td>
-<td>概念框架、实证策略、数据</td>
-</tr>
-<tr>
-<td>III. Main Empirical Findings</td>
-<td>总体就业效应、工资溢出、异质性分析</td>
-</tr>
-<tr>
-<td>IV. Robustness and Threats to Identification</td>
-<td>对双向固定效应方法问题的解释</td>
-</tr>
-<tr>
-<td>V. Conclusion</td>
-<td>结论</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文(逻辑梳理)</h2>
-<h3 id="背景最低工资的理论预测">背景:最低工资的理论预测</h3>
-<p><strong>竞争性劳动力市场模型预测</strong>: -
-最低工资提高会导致低工资就业下降 - 下降幅度取决于劳动力需求弹性</p>
-<p><strong>monopsony模型预测</strong>: - 最低工资提高可能增加就业 -
-因为雇主的市場力量被削弱</p>
-<p><strong>实际预测的复杂性</strong>: -
-工资溢出效应(spillovers):最低工资可能推动高于最低工资的工人工资上涨 -
-劳动力替代:低技能工人可能被高技能工人替代 -
-就业损失可能分布在不同工资区间</p>
-<h3 id="挑战">挑战</h3>
-<ol type="1">
-<li><p><strong>识别问题</strong>:如何分离最低工资的因果效应?</p></li>
-<li><p><strong>聚类分配问题</strong>:传统双向固定效应方法可能因早期时期的混杂因素而产生偏误</p></li>
-<li><p><strong>效应的空间异质性</strong>:不同行业的最低工资效应可能不同</p></li>
-<li><p><strong>数据局限性</strong>:CPS调查数据可能存在测量误差</p></li>
-</ol>
-<h3 id="方法数据集要突出">方法(数据集要突出)</h3>
-<p><strong>数据来源</strong>: -
-1979-2016年CPS(当前人口调查)NBER合并出口轮次小组数据 - 137,000+观测值 -
-138个州级最低工资事件(1979-2016年间) -
-<strong>事件定义</strong>:州最低工资增加至少$0.25,且至少2%工人直接影响</p>
-<p><strong>核心概念</strong>: - <strong>缺失工作(Missing
-Jobs)</strong>:最低工资提高后,低于新最低工资的工作数量减少 -
-<strong>超额工作(Excess
-Jobs)</strong>:因最低工资提高而出现在最低工资水平或略高处的工作增加</p>
-<p><strong>实证策略_事件研究设计</strong>: <span class="math display">\[{E_{sjt} \over N_{st}} = \sum_{\tau=-3}^{4}
-\sum_{k=-4}^{17} \alpha_{\tau k} I_{\tau k}^{sjt} + \mu_{sj} + \rho_{jt}
-+ \Omega_{sjt} + u_{sjt}}\]</span></p>
-<p>其中: - <span class="math inline">\(E_{sjt}\)</span>:j工资区间在s州的就业 - <span class="math inline">\(N_{st}\)</span>:s州当时的劳动力 - <span class="math inline">\(I_{\tau k}^{sjt}\)</span>:处理指示变量 - <span class="math inline">\(\mu_{sj}\)</span>:州×工资区间固定效应 - <span class="math inline">\(\rho_{jt}\)</span>:时间×工资区间固定效应 -
-标准误按州级聚类</p>
-<p><strong>关键创新</strong>: - 将就业变化按$0.25工资区间分解 -
-使用事件窗口前后对比 - 提供对上尾效应的检验</p>
-<h3 id="结果results">结果(Results)</h3>
-<p><strong>核心发现1:总体就业效应接近零</strong></p>
-<table>
-<thead>
-<tr>
-<th>指标</th>
-<th>估计值</th>
-<th>标准误</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>受影响工人就业变化</td>
-<td>+2.8%</td>
-<td>(2.9%)</td>
-</tr>
-<tr>
-<td>就业弹性(相对于自身工资)</td>
-<td>0.41</td>
-<td>(0.43)</td>
-</tr>
-</tbody>
-</table>
-<p>→ 在95%置信水平下,排除低于-0.45的弹性</p>
-<p><strong>核心发现2:工资溢出效应显著</strong></p>
-<ul>
-<li>溢出效应向上延伸至最低工资以上约$3</li>
-<li>总体工资增长中约40%来自溢出效应</li>
-<li><strong>不对称性</strong>:留任工人获得显著工资溢出,但新进入者没有</li>
-</ul>
-<p><strong>核心发现3:行业异质性</strong></p>
-<table>
-<thead>
-<tr>
-<th>行业</th>
-<th>就业弹性</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>可贸易部门(制造业)</td>
-<td>-1.4</td>
-<td>显著负效应</td>
-</tr>
-<tr>
-<td>不可贸易部门(餐饮、零售)</td>
-<td>≈0</td>
-<td>几乎无效应</td>
-</tr>
-</tbody>
-</table>
-<p>→ 行业组成是决定最低工资就业效应的关键因素</p>
-<p><strong>核心发现4:人口群体异质性</strong></p>
-<ul>
-<li>按教育和年龄分组,未发现低技能工人被高技能工人替代的证据</li>
-<li>不同人口群体的就业效应大多接近零且不显著</li>
-<li>表明最低工资政策的好处理广泛共享</li>
-</ul>
-<p><strong>核心发现5:对Meer and West (2016)发现的解释</strong></p>
-<ul>
-<li>该研究使用双向固定效应发现大的负就业估计</li>
-<li>分解分析显示这一负效应由工资分布上尾的不大幅度下降驱动</li>
-<li>问题来源:1980年代和1990年代早期样本中包含的时期混杂因素</li>
-<li>1992年后,各种标准规范几乎没有就业减少的证据</li>
-</ul>
-<hr>
-<h2 id="结论conclusion">4. 结论(Conclusion)</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>最低工资对低工资工作数量的总体影响基本为零</strong>:五年观察期内,低工资工作数量基本保持不变</p></li>
-<li><p><strong>最低工资的直接工资效应被适度工资溢出放大</strong>:溢出效应约占总体工资增长的40%</p></li>
-<li><p><strong>就业效应不能用劳动力替代解释</strong>:不同教育和年龄群体的替代效应证据不成立</p></li>
-<li><p><strong>在更高最低工资水平下也未发现就业减少证据</strong>:但确实发现可贸易部门(制造业)减少的迹象</p></li>
-<li><p><strong>方法论贡献</strong>:EB-bunching方法提供了透明且稳健的估计最低工资就业效应的方法</p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><strong>澄清方法论争议</strong>:解释了为什么双向固定效应和事件研究方法产生不同结果</li>
-<li><strong>提供新的实证证据</strong>:使用更全面的数据和更细粒度的分解</li>
-<li><strong>扩展工资溢出分析</strong>:提供了关于溢出机制(相对工资关系 vs
-外部选择价值)的证据</li>
-<li><strong>政策意义</strong>:为$15最低工资运动提供实证支持</li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向(Future work)</h2>
-<h3 id="论文提及的拓展方向">论文提及的拓展方向</h3>
-<ol type="1">
-<li><p><strong>更高最低工资水平的研究</strong>:当Kaitz指数超过59%时会发生什么?需要更高最低工资的州的
-variation</p></li>
-<li><p><strong>长期效应</strong>:本研究关注5年窗口,更长期效应仍需研究</p></li>
-<li><p><strong>其他国家的证据</strong>:美国结果的国际可比性</p></li>
-</ol>
-<h3 id="思考的下一步研究">思考的下一步研究</h3>
-<ol type="1">
-<li><p><strong>动态一般均衡效应</strong>:行业层面的一般均衡调整如何影响就业?</p></li>
-<li><p><strong>非正规就业</strong>:最低工资对非正规经济(零工经济)的影响</p></li>
-<li><p><strong>非工资效应</strong>:最低工资对工作条件、培训机会等非工资方面的影响</p></li>
-<li><p><strong>家庭效应</strong>:最低工资对家庭收入分配和儿童贫困的影响</p></li>
-<li><p><strong>政治经济学</strong>:最低工资设定的决定因素及其政治经济学含义</p></li>
-</ol>
-<hr>
-<h2 id="学术思考">6. 学术思考</h2>
-<h3 id="核心学术问题">核心学术问题</h3>
-<ol type="1">
-<li><strong>竞争性 vs monopsony劳动力市场的边界</strong>
-<ul>
-<li>本研究发现总体就业效应接近零</li>
-<li>这是否意味着低工资劳动力市场更接近monopsony?</li>
-<li>还是正负效应相互抵消?</li>
-</ul></li>
-<li><strong>工资溢出的机制</strong>
-<ul>
-<li>研究发现溢出效应在最低工资以上约$3处消失</li>
-<li>且对留任工人和新进入者影响不对称</li>
-<li>这更支持"相对工资关系假设"而非"外部选择价值假设"</li>
-<li>但这是否意味着企业内部存在显著的工资刚性?</li>
-</ul></li>
-<li><strong>可贸易 vs 不可贸易部门的差异</strong>
-<ul>
-<li>制造业显著负效应 vs 零售餐饮零效应</li>
-<li>这是否意味着全球化压力降低了美国低技能工人的谈价能力?</li>
-<li>还是反映了不同的劳动力市场结构?</li>
-</ul></li>
-<li><strong>EB-bunching方法的普适性</strong>
-<ul>
-<li>将总体效应分解到各工资区间</li>
-<li>提供了"透明"的估计方式</li>
-<li>是否可以推广到其他政策评估?</li>
-</ul></li>
-<li><strong>对CBO政策分析的启示</strong>
-<ul>
-<li>CBO使用青少年弹性来推断总体影响</li>
-<li>本研究表明青少年可能是受最低工资影响最深的群体</li>
-<li>这是否意味着CBO的方法实际上低估了不确定性?</li>
-</ul></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p><strong>识别策略的有效性</strong>:如何检验平行趋势假设?事件前趋势检验的结果如何?</p></li>
-<li><p><strong>测量误差的影响</strong>:CPS数据中的测量误差如何影响估计?特别是对工资分布尾部的测量?</p></li>
-<li><p><strong>Kaitz指数的具体含义</strong>:Kaitz指数达到59%时会发生什么理论预测?</p></li>
-<li><p><strong>对理论模型的启示</strong>:这些发现如何区分竞争性模型和monopsony模型?</p></li>
-<li><p><strong>政策外部有效性</strong>:基于1979-2016年数据的发现在2020年代是否仍然适用?劳动力市场结构是否发生了根本性变化?</p></li>
-<li><p><strong>对工人流动的动态效应</strong>:最低工资是否影响了低工资工人的职业发展轨迹?</p></li>
-<li><p><strong>雇主反应的非工资渠道</strong>:雇主除了调整就业和工资外,是否在工时、工作条件、培训等方面做出了调整?</p></li>
-<li><p><strong>与Dube et al. (2010)
-NJ快餐业研究的关系</strong>:为什么NJ快餐业研究发现了正效应,而本研究对所有行业的汇总发现零效应?</p></li>
-<li><p><strong>对州际差异的控制</strong>:如何排除州级经济基本面对结果的混杂影响?各州经济多样性的作用是什么?</p></li>
-<li><p><strong>最低工资的收入分配效应</strong>:最低工资如何与税法、其他转移支付计划相互作用以影响收入不平等?</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>劳动经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>&lt;玉米与人口&gt;深度阅读笔记 — Chen &amp; Kung</title>
     <url>/posts/chen2016/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -4340,6 +4067,279 @@ Issue 1, pp. 71-99</li>
       </tags>
   </entry>
   <entry>
+    <title>The Effect of Minimum Wages on Low-Wage Jobs — 深度分析 — Cengiz Et Al.</title>
+    <url>/posts/cengiz2019/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: The Effect of Minimum Wages on Low-Wage
+Jobs</li>
+<li><strong>作者</strong>: Doruk Cengiz(University of Massachusetts
+Amherst), Arindrajit Dube(UMass Amherst, NBER), Attila Lindner(UCL, CEP,
+IFS), Ben Zipperer(Economic Policy Institute)</li>
+<li><strong>类型</strong>: 论文笔记 / 劳动经济学</li>
+<li><strong>出版年份</strong>: 2019</li>
+<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics,
+Volume 134, Issue 3, Pages 1405-1454</li>
+<li><strong>难度评估</strong>: 中 - 需要劳动经济学和计量经济学基础
+<span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言背景和意义">1. 引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>最低工资政策(Minimum Wage
+Policy)</strong>:政府规定的劳动力小时工资下限,是劳动经济学中最具争议的政策之一.支持者认为它能提高低收入工人的生活水平,反对者担心它会导致就业下降("unemployment").</p>
+<p><strong>"新最低工资研究"的起源</strong>:Card and Krueger
+(1995)&lt;神话与计量经济学:对最低工资的新研究&gt;对传统观点提出挑战,使用准实验方法发现最低工资提高并未导致就业下降.</p>
+<p><strong>bunching
+estimator(堆集估计量)</strong>:一种利用政策变化导致的结果分布聚集现象来识别因果效应的方法.</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>政策热潮</strong>:加州、伊利诺伊州、麻省、新泽西州、纽约州已通过将最低工资提高至$15/小时的立法;数十个城市也实施了城市级最低工资政策.</p></li>
+<li><p><strong>研究缺漏</strong>:尽管新最低工资研究已逾30年,但关于政策对总体就业影响的研究仍然很少.2014年国会预算办公室(CBO)报告承认相关研究匮乏,被迫使用青少年的弹性来推断对低工资工人的总体影响.</p></li>
+<li><p><strong>方法论挑战</strong>:传统方法使用双向固定效应回归,但存在一些问题,如对工资分布上尾部的影响可能干扰对底部效应的估计.</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>:最低工资对低工资工作的总体效应是什么?</p>
+<p><strong>具体子问题</strong>: - 最低工资对就业的影响是正还是负? -
+影响有多大? - 最低工资带来的工资上涨是否被就业损失所抵消? -
+效应的异质性如何?</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><strong>方法创新</strong>:提出"事件堆集"(EB-bunching)方法,将总体就业效应分解到各工资区间</li>
+<li><strong>对既有文献的贡献</strong>:澄清了最低工资文献中关于1980年代和1990年代早期样本选择的争议</li>
+<li><strong>政策意义</strong>:为当前$15最低工资运动提供实证依据</li>
+</ol>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构(论文结构)</h2>
+<table>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr>
+<th>章节</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I. Introduction</td>
+<td>研究背景、问题意识、文献贡献</td>
+</tr>
+<tr>
+<td>II. Methodology and Data</td>
+<td>概念框架、实证策略、数据</td>
+</tr>
+<tr>
+<td>III. Main Empirical Findings</td>
+<td>总体就业效应、工资溢出、异质性分析</td>
+</tr>
+<tr>
+<td>IV. Robustness and Threats to Identification</td>
+<td>对双向固定效应方法问题的解释</td>
+</tr>
+<tr>
+<td>V. Conclusion</td>
+<td>结论</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文(逻辑梳理)</h2>
+<h3 id="背景最低工资的理论预测">背景:最低工资的理论预测</h3>
+<p><strong>竞争性劳动力市场模型预测</strong>: -
+最低工资提高会导致低工资就业下降 - 下降幅度取决于劳动力需求弹性</p>
+<p><strong>monopsony模型预测</strong>: - 最低工资提高可能增加就业 -
+因为雇主的市場力量被削弱</p>
+<p><strong>实际预测的复杂性</strong>: -
+工资溢出效应(spillovers):最低工资可能推动高于最低工资的工人工资上涨 -
+劳动力替代:低技能工人可能被高技能工人替代 -
+就业损失可能分布在不同工资区间</p>
+<h3 id="挑战">挑战</h3>
+<ol type="1">
+<li><p><strong>识别问题</strong>:如何分离最低工资的因果效应?</p></li>
+<li><p><strong>聚类分配问题</strong>:传统双向固定效应方法可能因早期时期的混杂因素而产生偏误</p></li>
+<li><p><strong>效应的空间异质性</strong>:不同行业的最低工资效应可能不同</p></li>
+<li><p><strong>数据局限性</strong>:CPS调查数据可能存在测量误差</p></li>
+</ol>
+<h3 id="方法数据集要突出">方法(数据集要突出)</h3>
+<p><strong>数据来源</strong>: -
+1979-2016年CPS(当前人口调查)NBER合并出口轮次小组数据 - 137,000+观测值 -
+138个州级最低工资事件(1979-2016年间) -
+<strong>事件定义</strong>:州最低工资增加至少$0.25,且至少2%工人直接影响</p>
+<p><strong>核心概念</strong>: - <strong>缺失工作(Missing
+Jobs)</strong>:最低工资提高后,低于新最低工资的工作数量减少 -
+<strong>超额工作(Excess
+Jobs)</strong>:因最低工资提高而出现在最低工资水平或略高处的工作增加</p>
+<p><strong>实证策略_事件研究设计</strong>: <span class="math display">\[{E_{sjt} \over N_{st}} = \sum_{\tau=-3}^{4}
+\sum_{k=-4}^{17} \alpha_{\tau k} I_{\tau k}^{sjt} + \mu_{sj} + \rho_{jt}
++ \Omega_{sjt} + u_{sjt}}\]</span></p>
+<p>其中: - <span class="math inline">\(E_{sjt}\)</span>:j工资区间在s州的就业 - <span class="math inline">\(N_{st}\)</span>:s州当时的劳动力 - <span class="math inline">\(I_{\tau k}^{sjt}\)</span>:处理指示变量 - <span class="math inline">\(\mu_{sj}\)</span>:州×工资区间固定效应 - <span class="math inline">\(\rho_{jt}\)</span>:时间×工资区间固定效应 -
+标准误按州级聚类</p>
+<p><strong>关键创新</strong>: - 将就业变化按$0.25工资区间分解 -
+使用事件窗口前后对比 - 提供对上尾效应的检验</p>
+<h3 id="结果results">结果(Results)</h3>
+<p><strong>核心发现1:总体就业效应接近零</strong></p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>估计值</th>
+<th>标准误</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>受影响工人就业变化</td>
+<td>+2.8%</td>
+<td>(2.9%)</td>
+</tr>
+<tr>
+<td>就业弹性(相对于自身工资)</td>
+<td>0.41</td>
+<td>(0.43)</td>
+</tr>
+</tbody>
+</table>
+<p>→ 在95%置信水平下,排除低于-0.45的弹性</p>
+<p><strong>核心发现2:工资溢出效应显著</strong></p>
+<ul>
+<li>溢出效应向上延伸至最低工资以上约$3</li>
+<li>总体工资增长中约40%来自溢出效应</li>
+<li><strong>不对称性</strong>:留任工人获得显著工资溢出,但新进入者没有</li>
+</ul>
+<p><strong>核心发现3:行业异质性</strong></p>
+<table>
+<thead>
+<tr>
+<th>行业</th>
+<th>就业弹性</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>可贸易部门(制造业)</td>
+<td>-1.4</td>
+<td>显著负效应</td>
+</tr>
+<tr>
+<td>不可贸易部门(餐饮、零售)</td>
+<td>≈0</td>
+<td>几乎无效应</td>
+</tr>
+</tbody>
+</table>
+<p>→ 行业组成是决定最低工资就业效应的关键因素</p>
+<p><strong>核心发现4:人口群体异质性</strong></p>
+<ul>
+<li>按教育和年龄分组,未发现低技能工人被高技能工人替代的证据</li>
+<li>不同人口群体的就业效应大多接近零且不显著</li>
+<li>表明最低工资政策的好处理广泛共享</li>
+</ul>
+<p><strong>核心发现5:对Meer and West (2016)发现的解释</strong></p>
+<ul>
+<li>该研究使用双向固定效应发现大的负就业估计</li>
+<li>分解分析显示这一负效应由工资分布上尾的不大幅度下降驱动</li>
+<li>问题来源:1980年代和1990年代早期样本中包含的时期混杂因素</li>
+<li>1992年后,各种标准规范几乎没有就业减少的证据</li>
+</ul>
+<hr>
+<h2 id="结论conclusion">4. 结论(Conclusion)</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>最低工资对低工资工作数量的总体影响基本为零</strong>:五年观察期内,低工资工作数量基本保持不变</p></li>
+<li><p><strong>最低工资的直接工资效应被适度工资溢出放大</strong>:溢出效应约占总体工资增长的40%</p></li>
+<li><p><strong>就业效应不能用劳动力替代解释</strong>:不同教育和年龄群体的替代效应证据不成立</p></li>
+<li><p><strong>在更高最低工资水平下也未发现就业减少证据</strong>:但确实发现可贸易部门(制造业)减少的迹象</p></li>
+<li><p><strong>方法论贡献</strong>:EB-bunching方法提供了透明且稳健的估计最低工资就业效应的方法</p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><strong>澄清方法论争议</strong>:解释了为什么双向固定效应和事件研究方法产生不同结果</li>
+<li><strong>提供新的实证证据</strong>:使用更全面的数据和更细粒度的分解</li>
+<li><strong>扩展工资溢出分析</strong>:提供了关于溢出机制(相对工资关系 vs
+外部选择价值)的证据</li>
+<li><strong>政策意义</strong>:为$15最低工资运动提供实证支持</li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向(Future work)</h2>
+<h3 id="论文提及的拓展方向">论文提及的拓展方向</h3>
+<ol type="1">
+<li><p><strong>更高最低工资水平的研究</strong>:当Kaitz指数超过59%时会发生什么?需要更高最低工资的州的
+variation</p></li>
+<li><p><strong>长期效应</strong>:本研究关注5年窗口,更长期效应仍需研究</p></li>
+<li><p><strong>其他国家的证据</strong>:美国结果的国际可比性</p></li>
+</ol>
+<h3 id="思考的下一步研究">思考的下一步研究</h3>
+<ol type="1">
+<li><p><strong>动态一般均衡效应</strong>:行业层面的一般均衡调整如何影响就业?</p></li>
+<li><p><strong>非正规就业</strong>:最低工资对非正规经济(零工经济)的影响</p></li>
+<li><p><strong>非工资效应</strong>:最低工资对工作条件、培训机会等非工资方面的影响</p></li>
+<li><p><strong>家庭效应</strong>:最低工资对家庭收入分配和儿童贫困的影响</p></li>
+<li><p><strong>政治经济学</strong>:最低工资设定的决定因素及其政治经济学含义</p></li>
+</ol>
+<hr>
+<h2 id="学术思考">6. 学术思考</h2>
+<h3 id="核心学术问题">核心学术问题</h3>
+<ol type="1">
+<li><strong>竞争性 vs monopsony劳动力市场的边界</strong>
+<ul>
+<li>本研究发现总体就业效应接近零</li>
+<li>这是否意味着低工资劳动力市场更接近monopsony?</li>
+<li>还是正负效应相互抵消?</li>
+</ul></li>
+<li><strong>工资溢出的机制</strong>
+<ul>
+<li>研究发现溢出效应在最低工资以上约$3处消失</li>
+<li>且对留任工人和新进入者影响不对称</li>
+<li>这更支持"相对工资关系假设"而非"外部选择价值假设"</li>
+<li>但这是否意味着企业内部存在显著的工资刚性?</li>
+</ul></li>
+<li><strong>可贸易 vs 不可贸易部门的差异</strong>
+<ul>
+<li>制造业显著负效应 vs 零售餐饮零效应</li>
+<li>这是否意味着全球化压力降低了美国低技能工人的谈价能力?</li>
+<li>还是反映了不同的劳动力市场结构?</li>
+</ul></li>
+<li><strong>EB-bunching方法的普适性</strong>
+<ul>
+<li>将总体效应分解到各工资区间</li>
+<li>提供了"透明"的估计方式</li>
+<li>是否可以推广到其他政策评估?</li>
+</ul></li>
+<li><strong>对CBO政策分析的启示</strong>
+<ul>
+<li>CBO使用青少年弹性来推断总体影响</li>
+<li>本研究表明青少年可能是受最低工资影响最深的群体</li>
+<li>这是否意味着CBO的方法实际上低估了不确定性?</li>
+</ul></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p><strong>识别策略的有效性</strong>:如何检验平行趋势假设?事件前趋势检验的结果如何?</p></li>
+<li><p><strong>测量误差的影响</strong>:CPS数据中的测量误差如何影响估计?特别是对工资分布尾部的测量?</p></li>
+<li><p><strong>Kaitz指数的具体含义</strong>:Kaitz指数达到59%时会发生什么理论预测?</p></li>
+<li><p><strong>对理论模型的启示</strong>:这些发现如何区分竞争性模型和monopsony模型?</p></li>
+<li><p><strong>政策外部有效性</strong>:基于1979-2016年数据的发现在2020年代是否仍然适用?劳动力市场结构是否发生了根本性变化?</p></li>
+<li><p><strong>对工人流动的动态效应</strong>:最低工资是否影响了低工资工人的职业发展轨迹?</p></li>
+<li><p><strong>雇主反应的非工资渠道</strong>:雇主除了调整就业和工资外,是否在工时、工作条件、培训等方面做出了调整?</p></li>
+<li><p><strong>与Dube et al. (2010)
+NJ快餐业研究的关系</strong>:为什么NJ快餐业研究发现了正效应,而本研究对所有行业的汇总发现零效应?</p></li>
+<li><p><strong>对州际差异的控制</strong>:如何排除州级经济基本面对结果的混杂影响?各州经济多样性的作用是什么?</p></li>
+<li><p><strong>最低工资的收入分配效应</strong>:最低工资如何与税法、其他转移支付计划相互作用以影响收入不平等?</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>劳动经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Regulating Conglomerates: Evidence From an Energy Conservation Program in China — 深度阅读笔记 — AER</title>
     <url>/posts/chen2021/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -4646,86 +4646,6 @@ horizon 是多久?</strong></p></li>
       </tags>
   </entry>
   <entry>
-    <title>序列诅咒均衡 — 深度阅读笔记 — Cohen &amp; Li</title>
-    <url>/posts/cohen2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Sequential Cursed Equilibrium</li>
-<li><strong>作者</strong>: Shani Cohen (Harvard), Shengwu Li
-(Harvard)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3):
-934-976</li>
-<li><strong>DOI</strong>: 10.1257/aer.20230309</li>
-<li><strong>难度评估</strong>: 高 - 需要博弈论、行为经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>诅咒均衡（Cursed Equilibrium,
-CE）</strong>：Eyster和Rabin（2005）提出的解概念，玩家忽略其他玩家行为与其类型之间的相关性。</p>
-<p><strong>扩展式博弈（Extensive-Form
-Games）</strong>：具有时序结构的博弈，玩家依次行动。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>标准博弈论假设"三思而后行"</strong>：玩家在决策时会考虑假设性事件的信息</p></li>
-<li><p><strong>实际行为偏离</strong>：人们经常忽略假设性事件的含义，但从观察事件中进行推断</p></li>
-<li><p><strong>诅咒均衡的局限性</strong>：不适用于序列博弈；对内生信息也存在curse</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：如何修改诅咒均衡以适应扩展式博弈，使玩家能够从观察事件中学习但忽略假设事件的信息？</p>
-<hr>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<h3 id="第一节引言">第一节：引言</h3>
-<h3 id="第二节定义和一般结果">第二节：定义和一般结果</h3>
-<ul>
-<li>SCE的定义和存在性</li>
-<li>同时博弈中的SCE</li>
-<li>部分诅咒</li>
-</ul>
-<h3 id="第三节实验应用">第三节：实验应用</h3>
-<ul>
-<li>交易博弈实验</li>
-<li>成本信号博弈</li>
-<li>信息获取博弈</li>
-</ul>
-<h3 id="第四节动态拍卖">第四节：动态拍卖</h3>
-<h3 id="第五节讨论和结论">第五节：讨论和结论</h3>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="标准博弈论的问题">标准博弈论的问题</h4>
-<p><strong>"三思而后行"原则（Savage 1972）</strong>： -
-标准理论要求玩家在决策时考虑假设性事件的信息 -
-但实际上人们经常忽略这种信息</p>
-<p><strong>诅咒均衡（CE）的核心思想</strong>： -
-玩家理解对手行为的边缘分布 - 但忽略这些分布之间的相关性</p>
-<h4 id="诅咒均衡的两个局限性">诅咒均衡的两个局限性</h4>
-<p><strong>局限性1：不适应序列博弈</strong> -
-序列博弈与同时博弈有相同的贝叶斯正态形式 -
-因此CE预测相同，但这不符合直觉</p>
-<p><strong>局限性2：对内生信息的诅咒</strong></p>
-<h3 id="序列诅咒均衡sce">序列诅咒均衡（SCE）</h3>
-<p><strong>核心创新</strong>：允许玩家对内生信息受到诅咒</p>
-<p><strong>关键洞察</strong>：玩家从观察事件中学习，但忽略假设事件的信息</p>
-<hr>
-<h2 id="结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>SCE扩展了CE到扩展式博弈</strong></p></li>
-<li><p><strong>解释实验证据</strong>：为关于假设性思维的实验提供理论解释</p></li>
-<li><p><strong>应用广泛</strong>：交易博弈、成本信号博弈、信息获取博弈、动态拍卖</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>零和思维与美国政治分歧的根源 — 深度阅读笔记 — Chinoy, Nunn, Sequeira &amp; Stantcheva</title>
     <url>/posts/chinoy2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -4928,6 +4848,86 @@ RespondentExperience_i + \beta_p \cdot ParentsExperience_i + \beta_{gp}
 <li><p><strong>黑人受访者零和思维最高但奴役边际效应最小</strong>：如何解释这个悖论？</p></li>
 <li><p><strong>零和思维与特朗普现象</strong>：数据显示零和思维预测了民主党人投票给特朗普？</p></li>
 <li><p><strong>政策含义</strong>：如果零和思维是可塑的，什么干预可以减少零和思维？</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>序列诅咒均衡 — 深度阅读笔记 — Cohen &amp; Li</title>
+    <url>/posts/cohen2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Sequential Cursed Equilibrium</li>
+<li><strong>作者</strong>: Shani Cohen (Harvard), Shengwu Li
+(Harvard)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(3):
+934-976</li>
+<li><strong>DOI</strong>: 10.1257/aer.20230309</li>
+<li><strong>难度评估</strong>: 高 - 需要博弈论、行为经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>诅咒均衡（Cursed Equilibrium,
+CE）</strong>：Eyster和Rabin（2005）提出的解概念，玩家忽略其他玩家行为与其类型之间的相关性。</p>
+<p><strong>扩展式博弈（Extensive-Form
+Games）</strong>：具有时序结构的博弈，玩家依次行动。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>标准博弈论假设"三思而后行"</strong>：玩家在决策时会考虑假设性事件的信息</p></li>
+<li><p><strong>实际行为偏离</strong>：人们经常忽略假设性事件的含义，但从观察事件中进行推断</p></li>
+<li><p><strong>诅咒均衡的局限性</strong>：不适用于序列博弈；对内生信息也存在curse</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：如何修改诅咒均衡以适应扩展式博弈，使玩家能够从观察事件中学习但忽略假设事件的信息？</p>
+<hr>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<h3 id="第一节引言">第一节：引言</h3>
+<h3 id="第二节定义和一般结果">第二节：定义和一般结果</h3>
+<ul>
+<li>SCE的定义和存在性</li>
+<li>同时博弈中的SCE</li>
+<li>部分诅咒</li>
+</ul>
+<h3 id="第三节实验应用">第三节：实验应用</h3>
+<ul>
+<li>交易博弈实验</li>
+<li>成本信号博弈</li>
+<li>信息获取博弈</li>
+</ul>
+<h3 id="第四节动态拍卖">第四节：动态拍卖</h3>
+<h3 id="第五节讨论和结论">第五节：讨论和结论</h3>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="标准博弈论的问题">标准博弈论的问题</h4>
+<p><strong>"三思而后行"原则（Savage 1972）</strong>： -
+标准理论要求玩家在决策时考虑假设性事件的信息 -
+但实际上人们经常忽略这种信息</p>
+<p><strong>诅咒均衡（CE）的核心思想</strong>： -
+玩家理解对手行为的边缘分布 - 但忽略这些分布之间的相关性</p>
+<h4 id="诅咒均衡的两个局限性">诅咒均衡的两个局限性</h4>
+<p><strong>局限性1：不适应序列博弈</strong> -
+序列博弈与同时博弈有相同的贝叶斯正态形式 -
+因此CE预测相同，但这不符合直觉</p>
+<p><strong>局限性2：对内生信息的诅咒</strong></p>
+<h3 id="序列诅咒均衡sce">序列诅咒均衡（SCE）</h3>
+<p><strong>核心创新</strong>：允许玩家对内生信息受到诅咒</p>
+<p><strong>关键洞察</strong>：玩家从观察事件中学习，但忽略假设事件的信息</p>
+<hr>
+<h2 id="结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>SCE扩展了CE到扩展式博弈</strong></p></li>
+<li><p><strong>解释实验证据</strong>：为关于假设性思维的实验提供理论解释</p></li>
+<li><p><strong>应用广泛</strong>：交易博弈、成本信号博弈、信息获取博弈、动态拍卖</p></li>
 </ol>
 ]]></content>
       <categories>
@@ -7214,6 +7214,217 @@ Effects），永久降低增长路径？</li>
       </tags>
   </entry>
   <entry>
+    <title>A Long and a Short Leg Make for a Wobbly Equilibrium — 深度阅读笔记 — Gârleanu, Panageas &amp; Zheng</title>
+    <url>/posts/garleanu2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: A Long and a Short Leg Make for a Wobbly
+Equilibrium</li>
+<li><strong>作者</strong>: Nicolae Gârleanu(Washington University),
+Stavros Panageas(UCLA Anderson), Geoffery Zheng(NYU)</li>
+<li><strong>类型</strong>: 论文笔记 / 资产定价 / 卖空市场 /
+金融市场微观结构</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: American Economic Review, Vol. 116,
+No. 4, pp. 1234-1273</li>
+<li><strong>DOI</strong>: 10.1257/aer.20211548</li>
+<li><strong>难度评估</strong>: 高 -
+需要资产定价、金融市场微观结构、一般均衡理论基础 <span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>股票卖空（Short
+Selling）是指投资者借入股票卖出，期望在股价下跌后买回获利。卖空需要支付借券费（lending
+fee），该费用由借贷市场的供给曲线内生决定。卖空活动的不稳定性是资产定价领域的核心问题之一——个股的卖空兴趣（short
+interest）常表现出突然且大幅的变化。</p>
+<p>异质信念（Heterogeneous
+Beliefs）是金融学中解释交易发生的重要框架：一部分投资者过度乐观（I型投资者），另一部分投资者理性（R型投资者），信念差异驱动交易。理性投资者有动机卖空他们认为被高估的股票。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><strong>卖空活动的不稳定现象</strong>：个股卖空兴趣表现出"跳跃"特征——突然的大幅变化，而非平稳的连续变化</li>
+<li><strong>理论与现实的不匹配</strong>：传统模型预测卖空活动应平滑变化，但实证显示存在跳跃；现有文献多将其归因于投资组合约束、融资限制、代理问题等外生因素</li>
+<li><strong>反馈机制缺失</strong>：现有模型缺少现货市场与借贷市场之间的反馈回路，导致无法内生解释均衡的多重性和跳跃</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：股票现货市场与借贷市场的相互作用如何导致卖空活动的突然变化？为什么理性卖空者甚至会在错误定价扩大时放弃市场？</p>
+<p><strong>关键洞察</strong>：作者发现了借贷费用（lending
+fee）引发的反馈机制：利用率（utilization
+ratio）上升→做多收益增加→夏普比率下降→卖空需求增加→利用率进一步上升。这形成了一个自我强化的循环，可产生"向后弯曲的需求曲线"和均衡的突然转移。</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><strong>内生机制</strong>：不依赖外生约束（投资组合限制、融资限制），而是通过借贷费用的微结构建模内生产生多重均衡和跳跃</li>
+<li><strong>可检验预测</strong>：提供了关于何时应该观察到卖空活动跳跃的具体条件（Proposition
+4）</li>
+<li><strong>现实应用</strong>：解释了2020年11月至2021年1月期间广泛发生的卖空者撤退现象</li>
+</ol>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<p>论文结构如下：</p>
+<ol type="1">
+<li><strong>引言</strong>：问题陈述、主要结论预览</li>
+<li><strong>模型设定</strong>（Section
+I）：异质信念、借贷费用、预算约束</li>
+<li><strong>主要分析结果</strong>（Section
+II）：均衡多重性、反馈机制、放大效应</li>
+<li><strong>财富份额动态</strong>（Section
+III）：多均衡下理性投资者财富份额的漂移</li>
+<li><strong>任意供给曲线</strong>（Section
+IV）：推广到一般形式的f(y)，给出多重均衡的充分必要条件（Proposition
+4）</li>
+<li><strong>实证证据</strong>（Section
+V）：利用Markit数据验证理论预测</li>
+<li><strong>扩展</strong>（Section
+VI）：非单位跨期替代弹性（IES）和多股票模型</li>
+<li><strong>GameStop案例研究</strong>（Section
+VII）：2020年11月-2021年1月的卖空撤退</li>
+<li><strong>结论</strong>（Section VIII）</li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>考虑一个连续时间、无限期界的经济体。投资者分为两类： -
+<strong>理性投资者（R型）</strong>：占有份额ν，相信正确的DDG过程（均值μD，波动率σD）
+- <strong>过度乐观投资者（I型）</strong>：相信错误的DDG过程（均值μI &gt;
+μD，持有"教条式信念"不学习）</p>
+<p>经济体中有正供给的风险资产（股票），其股息增长服从几何布朗运动。</p>
+<p><strong>与传统文献的核心区别</strong>：卖空需要支付借贷费用ft。投资者要么做多（w&gt;0）获得借贷收入τf_tyt，要么做空（w&lt;0）支付费用ft。</p>
+<p>借贷市场的关键机制： -
+<strong>利用率yt</strong>：被借出的股票占所有可借出股票的比例 -
+<strong>借贷费用ft</strong>：由借贷市场的供给曲线f(yt)内生决定 -
+<strong>市场清理事先</strong>：yt × 做多总量 = 做空总量</p>
+<h3 id="挑战">挑战</h3>
+<ol type="1">
+<li><strong>多重均衡</strong>：反馈回路可能导致多个均衡共存，包括零卖空均衡和高卖空均衡</li>
+<li><strong>向后弯曲的需求曲线</strong>：供需均衡可能非单调，导致均衡的突然跳跃</li>
+<li><strong>动态不稳定性</strong>：财富份额的演化可能放大外生冲击</li>
+<li><strong>跳跃的内生性</strong>：跳跃不是外生假设，而是从均衡动态中自然产生</li>
+</ol>
+<h3 id="方法">方法</h3>
+<h4 id="最优投资组合">最优投资组合</h4>
+<p>对数效用下的最优组合选择给出：</p>
+<p><span class="math display">\[w_{ti} = \begin{cases}
+\frac{\hat{\mu}_{ti} - r_t + f_t}{\sigma_D^2} &amp; \text{if }
+\hat{\mu}_{ti} - r_t + f_t &lt; 0 \\ \frac{\hat{\mu}_{ti} - r_t + \tau
+f_t y_t}{\sigma_D^2} &amp; \text{if } \hat{\mu}_{ti} - r_t + \tau f_t
+y_t &gt; 0 \\ 0 &amp; \text{otherwise} \end{cases}\]</span></p>
+<p>存在一个"不行动区间"：当感知到的超额收益在<span class="math inline">\(-\frac{f_t}{\sigma_D^2}\)</span>和<span class="math inline">\(-\frac{\tau f_t
+y_t}{\sigma_D^2}\)</span>之间时，投资者选择零仓位。</p>
+<h4 id="均衡条件与反馈机制">均衡条件与反馈机制</h4>
+<p>市场清理事先要求： <span class="math display">\[y_t =
+\frac{W_t^-}{W_t^+} = -\frac{w_t^R}{w_t^I} \cdot
+\frac{\omega_t}{1-\omega_t}\]</span></p>
+<p>夏普比率的表达式为： <span class="math display">\[\kappa_t = \sigma_D
+- (1-\omega_t)\eta - \sigma\phi_D(\omega_t + \tau
+y_t(1-\omega_t))\]</span></p>
+<p>其中<span class="math inline">\(\eta \equiv \frac{\mu_I -
+\mu_D}{\sigma_D}\)</span>。</p>
+<p><strong>关键反馈回路</strong>： 1. y上升 →
+做多投资者收益增加（借贷收入） → 股票需求增加 2. 需求增加 →
+夏普比率κ下降 3. κ下降 → 卖空者动机增强 → 做空需求增加 4. 做空需求增加 →
+y进一步上升 → 循环...</p>
+<h4 id="多重均衡条件">多重均衡条件</h4>
+<p><strong>Proposition 4（核心结果）</strong>：设<span class="math inline">\(h(y) \equiv f(y)(1-\tau y)\)</span>。若存在<span class="math inline">\(y \in [0, 1)\)</span>使得： - (a) <span class="math inline">\(h'(y) &lt; 0\)</span> - (b) <span class="math inline">\(\sigma_D^2 &lt; \frac{1}{4}(1-y)^2
+|h'(y)|\)</span></p>
+<p>则存在信念的财富分布使得多重均衡存在。</p>
+<p><strong>直觉理解</strong>：<span class="math inline">\(h(y)\)</span>衡量的是空头支付的费率<span class="math inline">\(f(y)\)</span>与多头获得的实际收入<span class="math inline">\(\tau f(y) y\)</span>之间的差额。当<span class="math inline">\(h'(y) &lt;
+0\)</span>时，说明随着利用率上升，这一差额在缩小，意味着做空变得相对更"昂贵"而做多相对更"有利"。这种非线性导致均衡的多重性。</p>
+<h4 id="均衡结构">均衡结构</h4>
+<p><strong>Proposition 2</strong>描述了均衡的完整结构： - 当<span class="math inline">\(\omega_t \in (\omega_2^*,
+1]\)</span>：唯一均衡，无卖空 - 当<span class="math inline">\(\omega_t
+\in [\omega_1^*,
+\omega_2^*]\)</span>：三个均衡（无卖空、中等卖空、高卖空） - 当<span class="math inline">\(\omega_t \in [0,
+\omega_1^*)\)</span>：唯一均衡，有卖空</p>
+<p>其中<span class="math inline">\(\omega_1^*\)</span>和<span class="math inline">\(\omega_2^*\)</span>是临界财富份额，<span class="math inline">\(\omega_2^* &gt; \omega_1^*\)</span>。</p>
+<h3 id="结果results">结果（Results）</h3>
+<h4 id="理论结果">理论结果</h4>
+<ol type="1">
+<li><strong>多重均衡的存在性</strong>：在特定参数条件下，系统可以支持多达三个均衡</li>
+<li><strong>向后弯曲的需求曲线</strong>：aggregate需求<span class="math inline">\(D(\kappa)\)</span>是κ的非单调函数，导致均衡的突然跳跃</li>
+<li><strong>跳跃的内生性</strong>：当<span class="math inline">\(\omega_t\)</span>连续变化穿过临界区间<span class="math inline">\([\omega_1^*,
+\omega_2^*]\)</span>时，κ和y发生不连续的跳跃</li>
+<li><strong>放大效应</strong>：即使在唯一均衡区域，反馈回路仍然存在，产生放大效应（multiplier
+effect）</li>
+</ol>
+<h4 id="实证结果">实证结果</h4>
+<ol type="1">
+<li><strong>肥尾分布</strong>：利用率的周变化呈现明显的肥尾（超额峰度26），远非正态</li>
+<li><strong>借贷费用的非线性</strong>：借贷费用与利用率呈非线性关系，在高利用率区域急剧上升</li>
+<li><strong>h'(y)的符号</strong>：估计的h'(y)在低利用率区域显著为负，符合Proposition
+4的条件</li>
+<li><strong>跳跃预测</strong>：满足Proposition
+4条件（h'(y)在某处为负）的股票，跳跃发生率显著更高</li>
+<li><strong>2020-2021案例</strong>：广泛卖空撤退开始于GameStop事件前8周，影响了并未被在线讨论的股票</li>
+</ol>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<p>本文提供了卖空活动突然变化的理论解释，主要结论：</p>
+<ol type="1">
+<li><strong>反馈机制是核心</strong>：现货与借贷市场的相互作用产生反馈回路，导致均衡多重性和跳跃</li>
+<li><strong>必要充分条件</strong>：Proposition
+4给出了多重均衡存在性的简洁可检验条件（h'(y)在某处为负）</li>
+<li><strong>理性撤退</strong>：即使错误定价扩大，理性卖空者也可能撤退——因为他们预期其他卖空者会撤退，从而降低了关键性概率</li>
+<li><strong>实证支持</strong>：满足模型预测条件的股票确实表现出更高的利用率跳跃率</li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="文献提及的方向">文献提及的方向</h3>
+<ol type="1">
+<li><strong>更丰富的资产类别</strong>：当前模型针对单一资产，可扩展到多资产组合选择</li>
+<li><strong>学习动态</strong>：当前I型投资者持有"教条式信念"，引入贝叶斯学习可能改变动态</li>
+<li><strong>内生信息获取</strong>：投资者选择支付成本获取信息，这可能影响均衡结构</li>
+<li><strong>更一般的信念分布</strong>：当前假设两类投资者，可扩展到连续分布</li>
+</ol>
+<h3 id="未来研究思考">未来研究思考</h3>
+<ol type="1">
+<li><strong>实证应用</strong>：利用更细粒度的借贷数据检验模型在个股层面的预测</li>
+<li><strong>期权市场互动</strong>：卖空活动的跳跃可能影响期权定价，检验这一跨市场联系是有趣的方向</li>
+<li><strong>机构投资者行为</strong>：对冲基金作为主要卖空者，其融资约束和风险管理如何与模型预测互动？</li>
+<li><strong>市场
+microstructure</strong>：借贷市场的微观结构设计（如竞争vs垄断）如何影响均衡多重性？</li>
+<li><strong>高频数据</strong>：利用日内数据检验模型预测的动态调整过程</li>
+</ol>
+<hr>
+<h2 id="学术思考">6. 学术思考</h2>
+<ol type="1">
+<li><p><strong>h'(y) &lt; 0条件的稳健性</strong>：Proposition
+4的条件依赖于特定的函数形式假设。放松供给曲线函数形式的假设后，多重均衡是否仍然存在？是否存在更一般的充分条件？</p></li>
+<li><p><strong>从理论到可操作的投资策略</strong>：如果模型正确，那么满足h'(y)
+&lt;
+0条件的股票应该提供更多的错误定价机会。这是否意味着存在可盈利的Alpha机会？还是说跳跃风险会消除这种机会？</p></li>
+<li><p><strong>理性撤退的均衡稳定性</strong>：在模型中，卖空者撤退是因为预期他人会撤退。这是一种协调均衡（coordination
+equilibrium）。但在现实中，这种协调如何实现？是否存在某种信号机制触发协调崩溃？</p></li>
+<li><p><strong>与市场微观结构文献的联系</strong>：模型假设借贷市场是搜索市场（search
+market），但现货市场是瓦尔拉斯市场（Walrasian
+market）。这一分离是否符合现实？将两部分都建模为搜索市场会改变结论吗？</p></li>
+<li><p><strong>异质信念的来源</strong>：模型假设I型投资者过度乐观，但没有解释这种乐观的来源。如果乐观来自信息获取成本的差异，引入内生信息获取会如何改变分析？</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li>如何在实证中估计h'(y)并检验Proposition 4的条件？</li>
+<li>模型如何解释2020-2021年GameStop期间以及之前8周的广泛卖空撤退？</li>
+<li>卖空费用的具体微观结构模型（如搜索与议价）如何推导？</li>
+<li>在多资产模型中，借贷市场的反馈机制如何与组合选择相互作用？</li>
+<li>理性投资者（R型）如何在内生学习下形成信念？</li>
+<li>模型的均衡多重性与市场效率有何关系？是否存在"错误定价的教科书案例"？</li>
+<li>如何将模型扩展到期权市场，分析卖空跳跃对期权波动率曲面（volatility
+surface）的影响？</li>
+<li>机构投资者的融资约束（如margin
+calls）如何与模型中的反馈机制互动？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>资产定价</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>AER</tag>
+        <tag>资产定价</tag>
+        <tag>卖空市场</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Fiscal Volatility Shocks and Economic Activity — 深度阅读笔记 — AER</title>
     <url>/posts/fernandez2015/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -7547,217 +7758,6 @@ space)讨论有什么启示?发展中国家在 ZLB
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>A Long and a Short Leg Make for a Wobbly Equilibrium — 深度阅读笔记 — Gârleanu, Panageas &amp; Zheng</title>
-    <url>/posts/garleanu2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: A Long and a Short Leg Make for a Wobbly
-Equilibrium</li>
-<li><strong>作者</strong>: Nicolae Gârleanu(Washington University),
-Stavros Panageas(UCLA Anderson), Geoffery Zheng(NYU)</li>
-<li><strong>类型</strong>: 论文笔记 / 资产定价 / 卖空市场 /
-金融市场微观结构</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: American Economic Review, Vol. 116,
-No. 4, pp. 1234-1273</li>
-<li><strong>DOI</strong>: 10.1257/aer.20211548</li>
-<li><strong>难度评估</strong>: 高 -
-需要资产定价、金融市场微观结构、一般均衡理论基础 <span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>股票卖空（Short
-Selling）是指投资者借入股票卖出，期望在股价下跌后买回获利。卖空需要支付借券费（lending
-fee），该费用由借贷市场的供给曲线内生决定。卖空活动的不稳定性是资产定价领域的核心问题之一——个股的卖空兴趣（short
-interest）常表现出突然且大幅的变化。</p>
-<p>异质信念（Heterogeneous
-Beliefs）是金融学中解释交易发生的重要框架：一部分投资者过度乐观（I型投资者），另一部分投资者理性（R型投资者），信念差异驱动交易。理性投资者有动机卖空他们认为被高估的股票。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><strong>卖空活动的不稳定现象</strong>：个股卖空兴趣表现出"跳跃"特征——突然的大幅变化，而非平稳的连续变化</li>
-<li><strong>理论与现实的不匹配</strong>：传统模型预测卖空活动应平滑变化，但实证显示存在跳跃；现有文献多将其归因于投资组合约束、融资限制、代理问题等外生因素</li>
-<li><strong>反馈机制缺失</strong>：现有模型缺少现货市场与借贷市场之间的反馈回路，导致无法内生解释均衡的多重性和跳跃</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：股票现货市场与借贷市场的相互作用如何导致卖空活动的突然变化？为什么理性卖空者甚至会在错误定价扩大时放弃市场？</p>
-<p><strong>关键洞察</strong>：作者发现了借贷费用（lending
-fee）引发的反馈机制：利用率（utilization
-ratio）上升→做多收益增加→夏普比率下降→卖空需求增加→利用率进一步上升。这形成了一个自我强化的循环，可产生"向后弯曲的需求曲线"和均衡的突然转移。</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><strong>内生机制</strong>：不依赖外生约束（投资组合限制、融资限制），而是通过借贷费用的微结构建模内生产生多重均衡和跳跃</li>
-<li><strong>可检验预测</strong>：提供了关于何时应该观察到卖空活动跳跃的具体条件（Proposition
-4）</li>
-<li><strong>现实应用</strong>：解释了2020年11月至2021年1月期间广泛发生的卖空者撤退现象</li>
-</ol>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<p>论文结构如下：</p>
-<ol type="1">
-<li><strong>引言</strong>：问题陈述、主要结论预览</li>
-<li><strong>模型设定</strong>（Section
-I）：异质信念、借贷费用、预算约束</li>
-<li><strong>主要分析结果</strong>（Section
-II）：均衡多重性、反馈机制、放大效应</li>
-<li><strong>财富份额动态</strong>（Section
-III）：多均衡下理性投资者财富份额的漂移</li>
-<li><strong>任意供给曲线</strong>（Section
-IV）：推广到一般形式的f(y)，给出多重均衡的充分必要条件（Proposition
-4）</li>
-<li><strong>实证证据</strong>（Section
-V）：利用Markit数据验证理论预测</li>
-<li><strong>扩展</strong>（Section
-VI）：非单位跨期替代弹性（IES）和多股票模型</li>
-<li><strong>GameStop案例研究</strong>（Section
-VII）：2020年11月-2021年1月的卖空撤退</li>
-<li><strong>结论</strong>（Section VIII）</li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>考虑一个连续时间、无限期界的经济体。投资者分为两类： -
-<strong>理性投资者（R型）</strong>：占有份额ν，相信正确的DDG过程（均值μD，波动率σD）
-- <strong>过度乐观投资者（I型）</strong>：相信错误的DDG过程（均值μI &gt;
-μD，持有"教条式信念"不学习）</p>
-<p>经济体中有正供给的风险资产（股票），其股息增长服从几何布朗运动。</p>
-<p><strong>与传统文献的核心区别</strong>：卖空需要支付借贷费用ft。投资者要么做多（w&gt;0）获得借贷收入τf_tyt，要么做空（w&lt;0）支付费用ft。</p>
-<p>借贷市场的关键机制： -
-<strong>利用率yt</strong>：被借出的股票占所有可借出股票的比例 -
-<strong>借贷费用ft</strong>：由借贷市场的供给曲线f(yt)内生决定 -
-<strong>市场清理事先</strong>：yt × 做多总量 = 做空总量</p>
-<h3 id="挑战">挑战</h3>
-<ol type="1">
-<li><strong>多重均衡</strong>：反馈回路可能导致多个均衡共存，包括零卖空均衡和高卖空均衡</li>
-<li><strong>向后弯曲的需求曲线</strong>：供需均衡可能非单调，导致均衡的突然跳跃</li>
-<li><strong>动态不稳定性</strong>：财富份额的演化可能放大外生冲击</li>
-<li><strong>跳跃的内生性</strong>：跳跃不是外生假设，而是从均衡动态中自然产生</li>
-</ol>
-<h3 id="方法">方法</h3>
-<h4 id="最优投资组合">最优投资组合</h4>
-<p>对数效用下的最优组合选择给出：</p>
-<p><span class="math display">\[w_{ti} = \begin{cases}
-\frac{\hat{\mu}_{ti} - r_t + f_t}{\sigma_D^2} &amp; \text{if }
-\hat{\mu}_{ti} - r_t + f_t &lt; 0 \\ \frac{\hat{\mu}_{ti} - r_t + \tau
-f_t y_t}{\sigma_D^2} &amp; \text{if } \hat{\mu}_{ti} - r_t + \tau f_t
-y_t &gt; 0 \\ 0 &amp; \text{otherwise} \end{cases}\]</span></p>
-<p>存在一个"不行动区间"：当感知到的超额收益在<span class="math inline">\(-\frac{f_t}{\sigma_D^2}\)</span>和<span class="math inline">\(-\frac{\tau f_t
-y_t}{\sigma_D^2}\)</span>之间时，投资者选择零仓位。</p>
-<h4 id="均衡条件与反馈机制">均衡条件与反馈机制</h4>
-<p>市场清理事先要求： <span class="math display">\[y_t =
-\frac{W_t^-}{W_t^+} = -\frac{w_t^R}{w_t^I} \cdot
-\frac{\omega_t}{1-\omega_t}\]</span></p>
-<p>夏普比率的表达式为： <span class="math display">\[\kappa_t = \sigma_D
-- (1-\omega_t)\eta - \sigma\phi_D(\omega_t + \tau
-y_t(1-\omega_t))\]</span></p>
-<p>其中<span class="math inline">\(\eta \equiv \frac{\mu_I -
-\mu_D}{\sigma_D}\)</span>。</p>
-<p><strong>关键反馈回路</strong>： 1. y上升 →
-做多投资者收益增加（借贷收入） → 股票需求增加 2. 需求增加 →
-夏普比率κ下降 3. κ下降 → 卖空者动机增强 → 做空需求增加 4. 做空需求增加 →
-y进一步上升 → 循环...</p>
-<h4 id="多重均衡条件">多重均衡条件</h4>
-<p><strong>Proposition 4（核心结果）</strong>：设<span class="math inline">\(h(y) \equiv f(y)(1-\tau y)\)</span>。若存在<span class="math inline">\(y \in [0, 1)\)</span>使得： - (a) <span class="math inline">\(h'(y) &lt; 0\)</span> - (b) <span class="math inline">\(\sigma_D^2 &lt; \frac{1}{4}(1-y)^2
-|h'(y)|\)</span></p>
-<p>则存在信念的财富分布使得多重均衡存在。</p>
-<p><strong>直觉理解</strong>：<span class="math inline">\(h(y)\)</span>衡量的是空头支付的费率<span class="math inline">\(f(y)\)</span>与多头获得的实际收入<span class="math inline">\(\tau f(y) y\)</span>之间的差额。当<span class="math inline">\(h'(y) &lt;
-0\)</span>时，说明随着利用率上升，这一差额在缩小，意味着做空变得相对更"昂贵"而做多相对更"有利"。这种非线性导致均衡的多重性。</p>
-<h4 id="均衡结构">均衡结构</h4>
-<p><strong>Proposition 2</strong>描述了均衡的完整结构： - 当<span class="math inline">\(\omega_t \in (\omega_2^*,
-1]\)</span>：唯一均衡，无卖空 - 当<span class="math inline">\(\omega_t
-\in [\omega_1^*,
-\omega_2^*]\)</span>：三个均衡（无卖空、中等卖空、高卖空） - 当<span class="math inline">\(\omega_t \in [0,
-\omega_1^*)\)</span>：唯一均衡，有卖空</p>
-<p>其中<span class="math inline">\(\omega_1^*\)</span>和<span class="math inline">\(\omega_2^*\)</span>是临界财富份额，<span class="math inline">\(\omega_2^* &gt; \omega_1^*\)</span>。</p>
-<h3 id="结果results">结果（Results）</h3>
-<h4 id="理论结果">理论结果</h4>
-<ol type="1">
-<li><strong>多重均衡的存在性</strong>：在特定参数条件下，系统可以支持多达三个均衡</li>
-<li><strong>向后弯曲的需求曲线</strong>：aggregate需求<span class="math inline">\(D(\kappa)\)</span>是κ的非单调函数，导致均衡的突然跳跃</li>
-<li><strong>跳跃的内生性</strong>：当<span class="math inline">\(\omega_t\)</span>连续变化穿过临界区间<span class="math inline">\([\omega_1^*,
-\omega_2^*]\)</span>时，κ和y发生不连续的跳跃</li>
-<li><strong>放大效应</strong>：即使在唯一均衡区域，反馈回路仍然存在，产生放大效应（multiplier
-effect）</li>
-</ol>
-<h4 id="实证结果">实证结果</h4>
-<ol type="1">
-<li><strong>肥尾分布</strong>：利用率的周变化呈现明显的肥尾（超额峰度26），远非正态</li>
-<li><strong>借贷费用的非线性</strong>：借贷费用与利用率呈非线性关系，在高利用率区域急剧上升</li>
-<li><strong>h'(y)的符号</strong>：估计的h'(y)在低利用率区域显著为负，符合Proposition
-4的条件</li>
-<li><strong>跳跃预测</strong>：满足Proposition
-4条件（h'(y)在某处为负）的股票，跳跃发生率显著更高</li>
-<li><strong>2020-2021案例</strong>：广泛卖空撤退开始于GameStop事件前8周，影响了并未被在线讨论的股票</li>
-</ol>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<p>本文提供了卖空活动突然变化的理论解释，主要结论：</p>
-<ol type="1">
-<li><strong>反馈机制是核心</strong>：现货与借贷市场的相互作用产生反馈回路，导致均衡多重性和跳跃</li>
-<li><strong>必要充分条件</strong>：Proposition
-4给出了多重均衡存在性的简洁可检验条件（h'(y)在某处为负）</li>
-<li><strong>理性撤退</strong>：即使错误定价扩大，理性卖空者也可能撤退——因为他们预期其他卖空者会撤退，从而降低了关键性概率</li>
-<li><strong>实证支持</strong>：满足模型预测条件的股票确实表现出更高的利用率跳跃率</li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="文献提及的方向">文献提及的方向</h3>
-<ol type="1">
-<li><strong>更丰富的资产类别</strong>：当前模型针对单一资产，可扩展到多资产组合选择</li>
-<li><strong>学习动态</strong>：当前I型投资者持有"教条式信念"，引入贝叶斯学习可能改变动态</li>
-<li><strong>内生信息获取</strong>：投资者选择支付成本获取信息，这可能影响均衡结构</li>
-<li><strong>更一般的信念分布</strong>：当前假设两类投资者，可扩展到连续分布</li>
-</ol>
-<h3 id="未来研究思考">未来研究思考</h3>
-<ol type="1">
-<li><strong>实证应用</strong>：利用更细粒度的借贷数据检验模型在个股层面的预测</li>
-<li><strong>期权市场互动</strong>：卖空活动的跳跃可能影响期权定价，检验这一跨市场联系是有趣的方向</li>
-<li><strong>机构投资者行为</strong>：对冲基金作为主要卖空者，其融资约束和风险管理如何与模型预测互动？</li>
-<li><strong>市场
-microstructure</strong>：借贷市场的微观结构设计（如竞争vs垄断）如何影响均衡多重性？</li>
-<li><strong>高频数据</strong>：利用日内数据检验模型预测的动态调整过程</li>
-</ol>
-<hr>
-<h2 id="学术思考">6. 学术思考</h2>
-<ol type="1">
-<li><p><strong>h'(y) &lt; 0条件的稳健性</strong>：Proposition
-4的条件依赖于特定的函数形式假设。放松供给曲线函数形式的假设后，多重均衡是否仍然存在？是否存在更一般的充分条件？</p></li>
-<li><p><strong>从理论到可操作的投资策略</strong>：如果模型正确，那么满足h'(y)
-&lt;
-0条件的股票应该提供更多的错误定价机会。这是否意味着存在可盈利的Alpha机会？还是说跳跃风险会消除这种机会？</p></li>
-<li><p><strong>理性撤退的均衡稳定性</strong>：在模型中，卖空者撤退是因为预期他人会撤退。这是一种协调均衡（coordination
-equilibrium）。但在现实中，这种协调如何实现？是否存在某种信号机制触发协调崩溃？</p></li>
-<li><p><strong>与市场微观结构文献的联系</strong>：模型假设借贷市场是搜索市场（search
-market），但现货市场是瓦尔拉斯市场（Walrasian
-market）。这一分离是否符合现实？将两部分都建模为搜索市场会改变结论吗？</p></li>
-<li><p><strong>异质信念的来源</strong>：模型假设I型投资者过度乐观，但没有解释这种乐观的来源。如果乐观来自信息获取成本的差异，引入内生信息获取会如何改变分析？</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li>如何在实证中估计h'(y)并检验Proposition 4的条件？</li>
-<li>模型如何解释2020-2021年GameStop期间以及之前8周的广泛卖空撤退？</li>
-<li>卖空费用的具体微观结构模型（如搜索与议价）如何推导？</li>
-<li>在多资产模型中，借贷市场的反馈机制如何与组合选择相互作用？</li>
-<li>理性投资者（R型）如何在内生学习下形成信念？</li>
-<li>模型的均衡多重性与市场效率有何关系？是否存在"错误定价的教科书案例"？</li>
-<li>如何将模型扩展到期权市场，分析卖空跳跃对期权波动率曲面（volatility
-surface）的影响？</li>
-<li>机构投资者的融资约束（如margin
-calls）如何与模型中的反馈机制互动？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>资产定价</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>AER</tag>
-        <tag>资产定价</tag>
-        <tag>卖空市场</tag>
       </tags>
   </entry>
   <entry>
@@ -11726,6 +11726,63 @@ Records</li>
       </tags>
   </entry>
   <entry>
+    <title>Racial Discrimination and the Social Contract — 深度阅读笔记 — Qian &amp; Tabellini</title>
+    <url>/posts/qian2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Racial Discrimination and the Social
+Contract: Evidence from U.S. Army Enlistment during WWII</li>
+<li><strong>作者</strong>: Nancy Qian (Northwestern &amp; NBER), Marco
+Tabellini (Harvard &amp; CEPR &amp; NBER)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies
+(RES)</li>
+<li><strong>难度评估</strong>: 高 -
+需要政治经济学、计量经济学、历史背景知识 <span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言">1. 引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>社会契约理论、歧视与政治排斥、战争与政治加入。</p>
+<h3 id="研究背景">研究背景</h3>
+<p>社会契约理论认为战争和革命是政治加入的重要触发因素；排除效应在战时如何影响公民对政府的支持尚无直接证据。</p>
+<h3 id="核心问题">核心问题</h3>
+<p>歧视和政治排斥如何影响公民在战时对政府的支持？排除效应是正向（信号价值）还是负向（挫败感）？</p>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：历史背景（Jim Crow时代的歧视、 WWII与珍珠港事件）</li>
+<li>第三节：概念框架</li>
+<li>第四节：数据</li>
+<li>第五节：主要结果</li>
+<li>第六节：额外分析</li>
+<li>第七节：结论</li>
+</ul>
+<h2 id="正文">3. 正文</h2>
+<h3 id="核心机制">核心机制</h3>
+<p>珍珠港袭击作为外生冲击；识别歧视对入伍影响的供给侧效应。</p>
+<h3 id="关键发现">关键发现</h3>
+<ol type="1">
+<li>珍珠港后志愿入伍率急剧上升，但黑人增幅小于白人</li>
+<li>歧视越高的郡，黑人入伍率增幅越小（相对于白人）</li>
+<li>歧视减少黑人的数量和质量（教育水平）</li>
+<li>距离珍珠港越远、州加入联邦越晚，歧视效应越强</li>
+<li>日裔美国人在未被拘禁地区入伍率更高</li>
+</ol>
+<h2 id="结论">4. 结论</h2>
+<p>歧视和政治排斥降低被排斥群体在战时对政府的支持，为社会契约理论提供实证支持。</p>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<p>一战遗产的代际传递、宣传运动的效果、跨语境验证。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>中国农业发展之路 — 深度阅读笔记 — Perkins</title>
     <url>/posts/perkins1969/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="书籍信息">书籍信息</h2>
@@ -12270,63 +12327,6 @@ University Press.</li>
         <tag>书籍</tag>
         <tag>农业史</tag>
         <tag>中国历史</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Racial Discrimination and the Social Contract — 深度阅读笔记 — Qian &amp; Tabellini</title>
-    <url>/posts/qian2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Racial Discrimination and the Social
-Contract: Evidence from U.S. Army Enlistment during WWII</li>
-<li><strong>作者</strong>: Nancy Qian (Northwestern &amp; NBER), Marco
-Tabellini (Harvard &amp; CEPR &amp; NBER)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies
-(RES)</li>
-<li><strong>难度评估</strong>: 高 -
-需要政治经济学、计量经济学、历史背景知识 <span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言">1. 引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>社会契约理论、歧视与政治排斥、战争与政治加入。</p>
-<h3 id="研究背景">研究背景</h3>
-<p>社会契约理论认为战争和革命是政治加入的重要触发因素；排除效应在战时如何影响公民对政府的支持尚无直接证据。</p>
-<h3 id="核心问题">核心问题</h3>
-<p>歧视和政治排斥如何影响公民在战时对政府的支持？排除效应是正向（信号价值）还是负向（挫败感）？</p>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：历史背景（Jim Crow时代的歧视、 WWII与珍珠港事件）</li>
-<li>第三节：概念框架</li>
-<li>第四节：数据</li>
-<li>第五节：主要结果</li>
-<li>第六节：额外分析</li>
-<li>第七节：结论</li>
-</ul>
-<h2 id="正文">3. 正文</h2>
-<h3 id="核心机制">核心机制</h3>
-<p>珍珠港袭击作为外生冲击；识别歧视对入伍影响的供给侧效应。</p>
-<h3 id="关键发现">关键发现</h3>
-<ol type="1">
-<li>珍珠港后志愿入伍率急剧上升，但黑人增幅小于白人</li>
-<li>歧视越高的郡，黑人入伍率增幅越小（相对于白人）</li>
-<li>歧视减少黑人的数量和质量（教育水平）</li>
-<li>距离珍珠港越远、州加入联邦越晚，歧视效应越强</li>
-<li>日裔美国人在未被拘禁地区入伍率更高</li>
-</ol>
-<h2 id="结论">4. 结论</h2>
-<p>歧视和政治排斥降低被排斥群体在战时对政府的支持，为社会契约理论提供实证支持。</p>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<p>一战遗产的代际传递、宣传运动的效果、跨语境验证。</p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
