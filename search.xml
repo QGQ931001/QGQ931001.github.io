@@ -1000,6 +1000,168 @@ Economic Review.</li>
       </tags>
   </entry>
   <entry>
+    <title>稳健的错误设定模型 — 深度阅读笔记 — Ba</title>
+    <url>/posts/ba2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Robust Misspecified Models</li>
+<li><strong>作者</strong>: Cuimin Ba (University of Pittsburgh)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, Vol. 116, No. 4,
+pp. 1340-1379</li>
+<li><strong>DOI</strong>: 10.1257/aer.20240246</li>
+<li><strong>难度评估</strong>: 高 -
+需要博弈论、学习理论、贝叶斯推断基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>模型错误设定（Model
+Misspecification）</strong>：指决策者将零概率分配给真实数据生成过程(DGP)的情况。这可能源于简化复杂现实的需要，或认知偏差如过度自信或相关性忽视。</p>
+<p><strong>自我确认均衡（Self-Confirming Equilibrium,
+SCE）</strong>：指代理人在给定一致信念下选择最优行动，但模型预测可能与真实DGP不匹配（仅在均衡路径上匹配）。</p>
+<p><strong>贝叶斯因子（Bayes
+Factor）</strong>：是两种模型相对于观察数据的似然比，用于决定是否切换模型。当贝叶斯因子超过阈值α时，代理人切换模型。</p>
+<p><strong>p-吸收性（P-absorbingness）</strong>：本文提出的新概念，要求使用某模型的教条主义者在正概率下最终只玩均衡行动。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><strong>模型与决策</strong>:
+人们使用模型指导决策，但常用模型往往是错误设定的</li>
+<li><strong>现有研究局限</strong>:
+大多数文献假设决策者是"教条的"——使用特定错误模型且不考虑改变</li>
+<li><strong>现实中的模型切换</strong>:
+科学家转换范式、经济学家采用新模型、个体在认知行为治疗中改变思维模式</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>:
+当决策者愿意切换模型时，哪些错误设定的模型会持续存在？</p>
+<p><strong>关键洞察</strong>:
+作者提出两个核心特征来表征稳健的错误设定模型：(1)模型在预测均衡分布方面的渐近准确性；(2)围绕均衡的先验"紧密度"。错误设定的模型可以是稳健的，即使决策者观察到无限数据，也能持续对抗任何竞争模型。</p>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<p>论文结构如下:</p>
+<ol type="1">
+<li><strong>引言</strong>: 问题陈述、动机、贡献预览</li>
+<li><strong>激励示例</strong>: 艺术家过度/不足自信的例子</li>
+<li><strong>框架</strong>:
+基本设定、模型设定、切换规则、持久性和稳健性定义</li>
+<li><strong>主要结果</strong>: 定理1-3</li>
+<li><strong>应用</strong>: 媒体偏见与极化、过度与不足自信</li>
+<li><strong>扩展</strong>: 替代切换规则、多个竞争模型，前瞻性代理人</li>
+<li><strong>结论</strong></li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="艺术家示例">艺术家示例</h4>
+<p>艺术家选择努力程度，真实能力b*=1，但艺术家可能过度自信(b̂=2)或不足自信(b̂=0)。</p>
+<p><strong>关键发现</strong>: 过度自信更稳健!</p>
+<ul>
+<li><strong>不足自信</strong>:
+导致负反馈循环，努力在1和2之间永远循环，无自我确认均衡</li>
+<li><strong>过度自信</strong>:
+导致正反馈循环，最终稳定在努力=0的均衡</li>
+</ul>
+<h3 id="框架设定">框架设定</h3>
+<p><strong>数据生成过程</strong>: 每个时期代理人生成内生数据 - 行动at →
+结果yt ~ Q*(·|at) - 结果取决于行动（内生数据）</p>
+<p><strong>主观模型</strong>: 每个模型θ是预测DGP的有限集合{ Qθ(·|a,ω)
+}</p>
+<p><strong>切换规则</strong>: - 计算贝叶斯因子λt - 如果λt &gt;
+α，切换到竞争模型 - 如果λt &lt; 1/α，切换回来 - α≥1控制切换粘性</p>
+<h3 id="主要结果">主要结果</h3>
+<h4 id="定理1哪些模型可以稳健">定理1：哪些模型可以稳健</h4>
+<p><strong>条件</strong>: α &gt; 1</p>
+<p><strong>等价命题</strong>: (i) 模型θ在某些先验下全局稳健 (ii)
+模型θ在某些先验下局部稳健 (iii) 模型θ存在p-吸收SCE</p>
+<p><strong>关键洞察</strong>:
+全局和局部稳健性是等价的——如果模型对重大范式转换脆弱，对局部变化也脆弱。</p>
+<h4 id="定理2何时模型是稳健的">定理2：何时模型是稳健的</h4>
+<p><strong>条件</strong>:
+模型θ无陷阱（可识别+所有p-吸收SCE是准严格）</p>
+<p><strong>核心概念</strong>: - <strong>一致参数</strong> Cθ:
+存在p-吸收SCE支持的参数 - <strong>先验紧密度</strong>: πθ0(Cθ) ≥ 1/α</p>
+<p><strong>结论</strong>: - 全局稳健 ⟺ 先验紧密度条件满足 - 局部稳健 ⟺
+Cθ ≠ ∅（对所有全支撑先验）</p>
+<h4 id="定理3非粘性切换-α-1">定理3：非粘性切换 (α = 1)</h4>
+<p><strong>结论</strong>: Cθ = Ωθ（全参数一致）才是稳健的</p>
+<p><strong>洞察</strong>: 粘性帮助更多错误模型持续存在</p>
+<h3 id="应用">应用</h3>
+<h4 id="a.-媒体偏见与极化">A. 媒体偏见与极化</h4>
+<p><strong>设定</strong>: - 代理人选择左翼、中间、右翼媒体 -
+真实状态是ωM（中间） - 媒体可能误导代理人</p>
+<p><strong>命题1</strong>: - θ̂在所有先验和切换阈值下全局稳健 -
+θ只在先验充分集中或切换阈值足够高时全局稳健 - θ̂最终以正概率永久替换θ</p>
+<p><strong>政治极化机制</strong>:
+错误模型θ̂因为简单，在数据拟合上表现更好，最终导致持久的政治极化。</p>
+<h4 id="b.-过度与不足自信">B. 过度与不足自信</h4>
+<p><strong>设定</strong>:
+代理人对能力有偏见(b̂)，学习另一个基本因素(ω)</p>
+<p><strong>命题2</strong>: - 过度自信(b̂ &gt; b<em>): 总是局部稳健 -
+不足自信(b̂ &lt; b</em>): 只在某些不连续区间局部稳健</p>
+<p><strong>机制差异</strong>: - 过度自信 → 正反馈 → 收敛到SCE - 不足自信
+→ 负反馈 → 在非SCE行动间振荡</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<p>本文研究了当决策者比较错误设定模型与竞争模型时，哪些模型会持续存在。主要结论:</p>
+<ol type="1">
+<li><strong>稳健性条件</strong>:
+错误设定模型的稳健性取决于两个特征——渐近准确性和先验紧密度</li>
+<li><strong>全局vs局部稳健</strong>:
+在粘性切换下(α&gt;1)两者等价;在非粘性切换下(α=1)只有全集中先验有效</li>
+<li><strong>反直觉发现</strong>:
+配备根深蒂固先验的简单错误模型可以比正确模型更稳健</li>
+<li><strong>应用广泛</strong>:
+从媒体极化到认知偏差,框架提供了预测哪些偏见更持久的工具</li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="文献提及的方向">文献提及的方向</h3>
+<ol type="1">
+<li><strong>最优切换阈值</strong>: 如何平衡I类和II类错误</li>
+<li><strong>持久性概率</strong>: 量化模型被永久采用的可能性</li>
+<li><strong>前瞻性代理人</strong>: 跨模型的前瞻性而非仅模型内</li>
+<li><strong>连续行动空间</strong>: 扩展框架到连续行动</li>
+</ol>
+<h3 id="未来研究思考">未来研究思考</h3>
+<ol type="1">
+<li><strong>政策设计</strong>:
+如果知道某些错误模型更稳健,如何设计干预来对抗它们?</li>
+<li><strong>模型复杂性</strong>:
+复杂模型vs简单模型的权衡是否与本文发现一致?</li>
+<li><strong>异质性学习</strong>:
+不同决策者是否以不同方式应用切换规则?</li>
+</ol>
+<hr>
+<h2 id="学术思考">7. 学术思考</h2>
+<h3 id="核心学术洞察">核心学术洞察</h3>
+<ol type="1">
+<li><p><strong>为什么简单错误模型更稳健?</strong>:
+本文的核心反直觉发现。直觉上,正确模型应该更受欢迎。但错误模型因为简单,先验更集中,而正确模型在每个参数上都可能不一致。</p></li>
+<li><p><strong>粘性切换的双刃剑效应</strong>:
+粘性(α&gt;1)帮助错误模型持续,但也防止因早期噪声过早放弃正确模型。</p></li>
+<li><p><strong>p-吸收性的概念创新</strong>:
+传统SCE只要求均衡存在,不要求可达到性。p-吸收性要求从正概率初始信念可达。</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li>定理1中"局部和全局稳健等价"的证明思路是什么?</li>
+<li>媒体极化应用中的"策略性误报"是如何设计的?</li>
+<li>p-吸收SCE和普通SCE有什么区别?</li>
+<li>错误模型持久性的概率有多高?</li>
+<li>在离散vs连续行动空间中,结论如何变化?</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>长期住房收益率动态 — 深度阅读笔记 — Bäcker-Peral, Hazell &amp; Mian</title>
     <url>/posts/backer-peral2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -1168,168 +1330,6 @@ P_{it} = \alpha + \beta \cdot Extension_{i} + \gamma_t + \delta X_i +
 匹配关闭租约和开放租约的技术细节是什么？</p></li>
 <li><p>**y*与长期债券收益率的追踪关系有何含义？**
 这表明什么共同驱动因素？</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>稳健的错误设定模型 — 深度阅读笔记 — Ba</title>
-    <url>/posts/ba2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Robust Misspecified Models</li>
-<li><strong>作者</strong>: Cuimin Ba (University of Pittsburgh)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, Vol. 116, No. 4,
-pp. 1340-1379</li>
-<li><strong>DOI</strong>: 10.1257/aer.20240246</li>
-<li><strong>难度评估</strong>: 高 -
-需要博弈论、学习理论、贝叶斯推断基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>模型错误设定（Model
-Misspecification）</strong>：指决策者将零概率分配给真实数据生成过程(DGP)的情况。这可能源于简化复杂现实的需要，或认知偏差如过度自信或相关性忽视。</p>
-<p><strong>自我确认均衡（Self-Confirming Equilibrium,
-SCE）</strong>：指代理人在给定一致信念下选择最优行动，但模型预测可能与真实DGP不匹配（仅在均衡路径上匹配）。</p>
-<p><strong>贝叶斯因子（Bayes
-Factor）</strong>：是两种模型相对于观察数据的似然比，用于决定是否切换模型。当贝叶斯因子超过阈值α时，代理人切换模型。</p>
-<p><strong>p-吸收性（P-absorbingness）</strong>：本文提出的新概念，要求使用某模型的教条主义者在正概率下最终只玩均衡行动。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><strong>模型与决策</strong>:
-人们使用模型指导决策，但常用模型往往是错误设定的</li>
-<li><strong>现有研究局限</strong>:
-大多数文献假设决策者是"教条的"——使用特定错误模型且不考虑改变</li>
-<li><strong>现实中的模型切换</strong>:
-科学家转换范式、经济学家采用新模型、个体在认知行为治疗中改变思维模式</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:
-当决策者愿意切换模型时，哪些错误设定的模型会持续存在？</p>
-<p><strong>关键洞察</strong>:
-作者提出两个核心特征来表征稳健的错误设定模型：(1)模型在预测均衡分布方面的渐近准确性；(2)围绕均衡的先验"紧密度"。错误设定的模型可以是稳健的，即使决策者观察到无限数据，也能持续对抗任何竞争模型。</p>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<p>论文结构如下:</p>
-<ol type="1">
-<li><strong>引言</strong>: 问题陈述、动机、贡献预览</li>
-<li><strong>激励示例</strong>: 艺术家过度/不足自信的例子</li>
-<li><strong>框架</strong>:
-基本设定、模型设定、切换规则、持久性和稳健性定义</li>
-<li><strong>主要结果</strong>: 定理1-3</li>
-<li><strong>应用</strong>: 媒体偏见与极化、过度与不足自信</li>
-<li><strong>扩展</strong>: 替代切换规则、多个竞争模型，前瞻性代理人</li>
-<li><strong>结论</strong></li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="艺术家示例">艺术家示例</h4>
-<p>艺术家选择努力程度，真实能力b*=1，但艺术家可能过度自信(b̂=2)或不足自信(b̂=0)。</p>
-<p><strong>关键发现</strong>: 过度自信更稳健!</p>
-<ul>
-<li><strong>不足自信</strong>:
-导致负反馈循环，努力在1和2之间永远循环，无自我确认均衡</li>
-<li><strong>过度自信</strong>:
-导致正反馈循环，最终稳定在努力=0的均衡</li>
-</ul>
-<h3 id="框架设定">框架设定</h3>
-<p><strong>数据生成过程</strong>: 每个时期代理人生成内生数据 - 行动at →
-结果yt ~ Q*(·|at) - 结果取决于行动（内生数据）</p>
-<p><strong>主观模型</strong>: 每个模型θ是预测DGP的有限集合{ Qθ(·|a,ω)
-}</p>
-<p><strong>切换规则</strong>: - 计算贝叶斯因子λt - 如果λt &gt;
-α，切换到竞争模型 - 如果λt &lt; 1/α，切换回来 - α≥1控制切换粘性</p>
-<h3 id="主要结果">主要结果</h3>
-<h4 id="定理1哪些模型可以稳健">定理1：哪些模型可以稳健</h4>
-<p><strong>条件</strong>: α &gt; 1</p>
-<p><strong>等价命题</strong>: (i) 模型θ在某些先验下全局稳健 (ii)
-模型θ在某些先验下局部稳健 (iii) 模型θ存在p-吸收SCE</p>
-<p><strong>关键洞察</strong>:
-全局和局部稳健性是等价的——如果模型对重大范式转换脆弱，对局部变化也脆弱。</p>
-<h4 id="定理2何时模型是稳健的">定理2：何时模型是稳健的</h4>
-<p><strong>条件</strong>:
-模型θ无陷阱（可识别+所有p-吸收SCE是准严格）</p>
-<p><strong>核心概念</strong>: - <strong>一致参数</strong> Cθ:
-存在p-吸收SCE支持的参数 - <strong>先验紧密度</strong>: πθ0(Cθ) ≥ 1/α</p>
-<p><strong>结论</strong>: - 全局稳健 ⟺ 先验紧密度条件满足 - 局部稳健 ⟺
-Cθ ≠ ∅（对所有全支撑先验）</p>
-<h4 id="定理3非粘性切换-α-1">定理3：非粘性切换 (α = 1)</h4>
-<p><strong>结论</strong>: Cθ = Ωθ（全参数一致）才是稳健的</p>
-<p><strong>洞察</strong>: 粘性帮助更多错误模型持续存在</p>
-<h3 id="应用">应用</h3>
-<h4 id="a.-媒体偏见与极化">A. 媒体偏见与极化</h4>
-<p><strong>设定</strong>: - 代理人选择左翼、中间、右翼媒体 -
-真实状态是ωM（中间） - 媒体可能误导代理人</p>
-<p><strong>命题1</strong>: - θ̂在所有先验和切换阈值下全局稳健 -
-θ只在先验充分集中或切换阈值足够高时全局稳健 - θ̂最终以正概率永久替换θ</p>
-<p><strong>政治极化机制</strong>:
-错误模型θ̂因为简单，在数据拟合上表现更好，最终导致持久的政治极化。</p>
-<h4 id="b.-过度与不足自信">B. 过度与不足自信</h4>
-<p><strong>设定</strong>:
-代理人对能力有偏见(b̂)，学习另一个基本因素(ω)</p>
-<p><strong>命题2</strong>: - 过度自信(b̂ &gt; b<em>): 总是局部稳健 -
-不足自信(b̂ &lt; b</em>): 只在某些不连续区间局部稳健</p>
-<p><strong>机制差异</strong>: - 过度自信 → 正反馈 → 收敛到SCE - 不足自信
-→ 负反馈 → 在非SCE行动间振荡</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<p>本文研究了当决策者比较错误设定模型与竞争模型时，哪些模型会持续存在。主要结论:</p>
-<ol type="1">
-<li><strong>稳健性条件</strong>:
-错误设定模型的稳健性取决于两个特征——渐近准确性和先验紧密度</li>
-<li><strong>全局vs局部稳健</strong>:
-在粘性切换下(α&gt;1)两者等价;在非粘性切换下(α=1)只有全集中先验有效</li>
-<li><strong>反直觉发现</strong>:
-配备根深蒂固先验的简单错误模型可以比正确模型更稳健</li>
-<li><strong>应用广泛</strong>:
-从媒体极化到认知偏差,框架提供了预测哪些偏见更持久的工具</li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="文献提及的方向">文献提及的方向</h3>
-<ol type="1">
-<li><strong>最优切换阈值</strong>: 如何平衡I类和II类错误</li>
-<li><strong>持久性概率</strong>: 量化模型被永久采用的可能性</li>
-<li><strong>前瞻性代理人</strong>: 跨模型的前瞻性而非仅模型内</li>
-<li><strong>连续行动空间</strong>: 扩展框架到连续行动</li>
-</ol>
-<h3 id="未来研究思考">未来研究思考</h3>
-<ol type="1">
-<li><strong>政策设计</strong>:
-如果知道某些错误模型更稳健,如何设计干预来对抗它们?</li>
-<li><strong>模型复杂性</strong>:
-复杂模型vs简单模型的权衡是否与本文发现一致?</li>
-<li><strong>异质性学习</strong>:
-不同决策者是否以不同方式应用切换规则?</li>
-</ol>
-<hr>
-<h2 id="学术思考">7. 学术思考</h2>
-<h3 id="核心学术洞察">核心学术洞察</h3>
-<ol type="1">
-<li><p><strong>为什么简单错误模型更稳健?</strong>:
-本文的核心反直觉发现。直觉上,正确模型应该更受欢迎。但错误模型因为简单,先验更集中,而正确模型在每个参数上都可能不一致。</p></li>
-<li><p><strong>粘性切换的双刃剑效应</strong>:
-粘性(α&gt;1)帮助错误模型持续,但也防止因早期噪声过早放弃正确模型。</p></li>
-<li><p><strong>p-吸收性的概念创新</strong>:
-传统SCE只要求均衡存在,不要求可达到性。p-吸收性要求从正概率初始信念可达。</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li>定理1中"局部和全局稳健等价"的证明思路是什么?</li>
-<li>媒体极化应用中的"策略性误报"是如何设计的?</li>
-<li>p-吸收SCE和普通SCE有什么区别?</li>
-<li>错误模型持久性的概率有多高?</li>
-<li>在离散vs连续行动空间中,结论如何变化?</li>
 </ol>
 ]]></content>
       <categories>
@@ -2715,56 +2715,6 @@ Instruments论文的深度笔记,由Claude AI辅助生成.</em></p>
       </tags>
   </entry>
   <entry>
-    <title>大城市人口增长速度🦚</title>
-    <url>/posts/15523/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
-<center>
-上图即为最终效果
-</center>
-<h2 id="下载数据">下载数据</h2>
-<p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录.
-</p><figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<h2 id="加载r包">加载R包</h2>
-<p>需要的R包如下所示.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
-<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<ol type="1">
-<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
-<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon,
-Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
-<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
-<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
-</ol>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
-<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.
-使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="绘图">绘图</h2>
-<p>代码如下,图见上文.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>绘图</category>
-        <category>map&amp;sf</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Generative AI at Work — 深度分析 — Brynjolfsson Et Al.</title>
     <url>/posts/bryn2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -3036,6 +2986,56 @@ rot)的风险?</p></li>
       </categories>
       <tags>
         <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大城市人口增长速度🦚</title>
+    <url>/posts/15523/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
+<center>
+上图即为最终效果
+</center>
+<h2 id="下载数据">下载数据</h2>
+<p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录.
+</p><figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="加载r包">加载R包</h2>
+<p>需要的R包如下所示.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
+<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<ol type="1">
+<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
+<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon,
+Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
+<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
+<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
+</ol>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
+<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.
+使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="绘图">绘图</h2>
+<p>代码如下,图见上文.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>绘图</category>
+        <category>map&amp;sf</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
       </tags>
   </entry>
   <entry>
@@ -4340,6 +4340,218 @@ Issue 1, pp. 71-99</li>
       </tags>
   </entry>
   <entry>
+    <title>零和思维与美国政治分歧的根源 — 深度阅读笔记 — Chinoy, Nunn, Sequeira &amp; Stantcheva</title>
+    <url>/posts/chinoy2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Zero-Sum Thinking and the Roots of U.S.
+Political Differences</li>
+<li><strong>作者</strong>: Sahil Chinoy (Harvard), Nathan Nunn (UBC
+&amp; CIFAR), Sandra Sequeira (LSE), Stefanie Stantcheva (Harvard)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review</li>
+<li><strong>DOI</strong>: 10.1257/aer.20240692</li>
+<li><strong>难度评估</strong>: 高 -
+需要文化经济学、政治经济学、计量经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>零和思维（Zero-Sum
+Thinking）</strong>：一种世界观，认为一个人的收益必然导致另一个人的损失，社会产出是有限的而非可以创造新价值的。该概念最早由人类学家George
+Foster（1965, 1967）提出，称为"有限美好形象"（Image of Limited
+Good）。</p>
+<p><strong>文化演化模型（Cultural Evolution
+Models）</strong>：经济学中研究文化特质如何在代际间垂直传播的模型，通常假设文化特质从父母传递给子女（Bisin
+&amp; Verdier, 2000, 2011, 2017）。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>历史视角下的零和思维</strong>：零和思维在历史上普遍存在，从欧洲重商主义到现代贸易和移民政策。在资源稀缺、技术进步缓慢的前工业社会尤为常见。</p></li>
+<li><p><strong>美国独特的历史因素</strong>：美国历史上有三个关键因素影响零和思维的形成：代际经济流动性、移民和奴役。</p></li>
+<li><p><strong>现有研究的局限</strong>：先前研究使用种族或地理位置作为祖先经历的代理变量，但无法干净地隔离垂直传播渠道。</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>： - 零和思维如何影响政治和政策偏好？ -
+零和思维的祖先根源是什么？ -
+流动性、移民、奴役经历如何代际传递并影响当代人的零和思维？</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><p><strong>理论贡献</strong>：首次利用四代人的调查数据，直接测量祖先经历对零和思维的影响，推进了文化演化理论的检验。</p></li>
+<li><p><strong>实证贡献</strong>：收集了约20,400名美国居民的调查数据，将零和思维测量、政治偏好与丰富的祖先信息相结合。</p></li>
+<li><p><strong>政策意义</strong>：揭示了零和思维与再分配政策、种族/性别平等政策、移民政策的系统性关联。</p></li>
+</ol>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
+<ul>
+<li>Foster的零和思维假说介绍</li>
+<li>研究动机和数据概述</li>
+<li>三大贡献预告</li>
+</ul>
+<h3 id="第二节调查设计数据收集和零和思维测量">第二节：调查设计、数据收集和零和思维测量</h3>
+<ul>
+<li>调查方法和样本描述</li>
+<li>零和思维的四题项测量（民族、公民身份、贸易、收入）</li>
+<li>主成分分析构建综合指数</li>
+<li>数据质量检验</li>
+</ul>
+<h3 id="第三节零和思维的政治关联">第三节：零和思维的政治关联</h3>
+<ul>
+<li>零和思维与政党偏好的关系</li>
+<li>零和思维与四项政策态度（再分配、种族、性别、移民）</li>
+<li>零和思维与自身利益的交互分析</li>
+<li>零和思维与其他核心信念的比较</li>
+<li>跨国家的一般性检验（WVS数据）</li>
+</ul>
+<h3 id="第四节零和思维的历史预测因子">第四节：零和思维的历史预测因子</h3>
+<ul>
+<li>代际经济流动性的影响</li>
+<li>移民经历的直接和间接效应</li>
+<li>奴役经历的直接和间接效应</li>
+<li>奴隶制的溢出效应</li>
+</ul>
+<h3 id="第五节结论conclusion">第五节：结论（Conclusion）</h3>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="零和思维的理论基础">零和思维的理论基础</h4>
+<p>George
+Foster（1965）在研究墨西哥农村时提出"有限美好"假说：许多社会存在零和世界观，认为资源是有限的，一方的收益必然是另一方的损失。这种观点在资源稀缺、市场不发达、技术进步有限的前工业社会中尤为普遍。</p>
+<h4 id="美国历史背景的特殊性">美国历史背景的特殊性</h4>
+<p>美国历史上有三个关键因素塑造零和思维： 1.
+<strong>代际流动性</strong>：美国曾是"机会之地"，向上流动性高于其他工业化国家
+2.
+<strong>移民潮</strong>：大规模移民塑造了美国社会，移民通常在美国获得经济成功而不损害他人
+3. <strong>奴役制度</strong>：奴隶制是一种彻底的零和（或负和）制度</p>
+<h3 id="方法">方法</h3>
+<h4 id="数据集">数据集</h4>
+<p><strong>调查设计</strong>： -
+约20,400名美国居民，七轮调查（2020年10月至2023年7月） -
+通过在线调查公司Respondi/Bilendi招募 - 调查时长约20-30分钟</p>
+<p><strong>调查内容模块</strong>： 1.
+<strong>受访者背景</strong>：年龄、性别、政治倾向 2.
+<strong>祖先信息</strong>：父母、祖父母的信息（出生地、居住历史、教育、职业、经济地位）
+3. <strong>政策观点</strong>：再分配、种族、性别、移民等政策态度 4.
+<strong>零和思维测量</strong>：四个领域的零和思维问题</p>
+<p><strong>四题项零和思维测量</strong>： 1.
+<strong>民族维度</strong>："如果一个种族群体变富裕，这通常是以其他群体为代价的"
+2.
+<strong>公民身份维度</strong>："如果没有美国公民身份的人经济上做得更好，这通常是以美国公民为代价的"
+3.
+<strong>贸易维度</strong>："在国际贸易中，如果一个国家赚更多钱，另一个国家通常会赚得更少"
+4.
+<strong>收入维度</strong>："如果一个收入群体变得更富有，这通常是以其他群体为代价的"</p>
+<p><strong>指数构建</strong>：使用主成分分析（PCA）提取第一主成分，标准化为0-1区间的综合指数。</p>
+<h4 id="估计方程">估计方程</h4>
+<p><strong>政治关联分析</strong>： <span class="math display">\[Y_i =
+\alpha_{s(i)} + \beta \cdot ZeroSum_i + X_i\Gamma +
+\varepsilon_i\]</span></p>
+<p><strong>历史预测因子分析</strong>： <span class="math display">\[ZeroSum_i = \beta_{resp} \cdot
+RespondentExperience_i + \beta_p \cdot ParentsExperience_i + \beta_{gp}
+\cdot GrandparentsExperience_i + X_i\Gamma + \alpha_{s(i)} +
+\varepsilon_i\]</span></p>
+<h3 id="结果">结果</h3>
+<h4 id="发现一零和思维测量">发现一：零和思维测量</h4>
+<p><strong>因子结构</strong>：第一主成分的特征值为2.30，所有题项的因子载荷相似（0.40-0.55），表明存在一个潜在的零和思维因子。</p>
+<p><strong>人口学差异</strong>： - 年龄：较年长者零和思维较低 -
+种族：黑人和西班牙裔美国人零和思维最高，亚裔最低 -
+收入：最低收入群体（&lt;${<span class="math inline">\(25,000}\)</span>）零和思维最高 -
+党派：共和党人零和思维较低 - 教育：受教育程度较高者零和思维较低</p>
+<h4 id="发现二零和思维与政策偏好">发现二：零和思维与政策偏好</h4>
+<p><strong>核心结果</strong>：零和思维与四项政策态度显著正相关： -
+<strong>再分配指数</strong>：支持更多政府再分配 -
+<strong>种族态度指数</strong>：支持减少种族歧视的政策 -
+<strong>性别态度指数</strong>：支持促进性别平等的政策 -
+<strong>反移民指数</strong>：支持更严格的移民限制</p>
+<p><strong>效应大小</strong>：一标准差增加的零和思维，对再分配的支持相当于20%的标准差变化，与民主党倾向性相当。</p>
+<p><strong>与自身利益的交互</strong>： -
+零和思维与再分配的支持在所有收入群体中都显著为正，且在高收入群体中更强 -
+男性零和思维对性别平等的支持更强 -
+白人受访者零和思维对种族平等政策的支持更强</p>
+<p><strong>党内差异</strong>：零和思维可解释党内政策分歧： -
+民主党中零和思维更强的人更支持限制移民 -
+共和党中零和思维更强的人更支持再分配</p>
+<h4 id="发现三跨国家一般性wvs数据">发现三：跨国家一般性（WVS数据）</h4>
+<p>使用世界价值观调查（WVS）72个国家192,000名受访者数据验证： -
+零和思维与右翼政治立场显著负相关 -
+零和思维与支持再分配和反移民态度正相关</p>
+<p><strong>早期生活经济增长</strong>：使用WVS数据，控制出生年份和国家固定效应，发现早期生活暴露于更高的GDP增长与更低的零和思维相关。</p>
+<h4 id="发现四历史预测因子">发现四：历史预测因子</h4>
+<p><strong>代际流动性</strong>： -
+更大的代际向上流动性与更低的零和思维相关 -
+这种关系在所有代际（1代、2代、3代）中都显著 -
+主要由向上流动驱动，向下流动影响较小</p>
+<p><strong>移民</strong>： -
+直接效应：第一代移民零和思维最低，移民主裔子孙次之 -
+间接效应：祖父母在移民比例较高县市长大的受访者零和思维较低 -
+时间效应：近期移民效应更强</p>
+<p><strong>奴役</strong>： - 直接效应：有奴隶祖先的受访者零和思维更高 -
+所有形式的奴役（奴隶贸易、Holocaust、契约仆役、日裔美国人拘留、印第安人保留地）都与更高零和思维相关
+- 间接效应：在1860年奴隶比例较高的县市长大的受访者零和思维更高 -
+奴隶制溢出：南方白人移民到非南方县带来了更高的零和思维</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>零和思维是重要且独立的政策预测因子</strong>：零和思维与再分配、种族/性别平等、移民政策的态度有显著关联，且独立于其他核心信念。</p></li>
+<li><p><strong>零和思维不是简单的党派问题</strong>：它可以解释党内政策分歧——为什么部分民主党人支持限制移民，部分共和党人支持再分配。</p></li>
+<li><p><strong>零和思维有深厚的历史根源</strong>：三个关键历史因素——代际流动性、移民、奴役——通过直接和间接渠道影响当代人的零和思维。</p></li>
+<li><p><strong>零和思维的跨国一般性</strong>：WVS数据证实，零和思维与政治态度的关系在72个国家都成立。</p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><p><strong>测量贡献</strong>：开发了综合的跨情境零和思维测量方法，优于单一情境测量。</p></li>
+<li><p><strong>数据贡献</strong>：首次收集了四代人信息的调查数据，直接测量祖先经历。</p></li>
+<li><p><strong>理论贡献</strong>：推进了对文化演化模型的理解，证明垂直传播的重要性。</p></li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
+<ol type="1">
+<li><p><strong>党内分歧研究</strong>：探索零和思维对新党形成、联盟和竞选平台的影响</p></li>
+<li><p><strong>政治现象研究</strong>：零和思维是否能解释民粹主义、阴谋论、排外主义的起源？</p></li>
+<li><p><strong>气候与不平等</strong>：零和思维如何与气候变化和全球不平等的态度相关联？</p></li>
+</ol>
+<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
+<ol type="1">
+<li><p><strong>识别策略改进</strong>：使用工具变量或自然实验进一步验证因果关系</p></li>
+<li><p><strong>机制检验</strong>：代际传递的具体渠道——是通过语言、家庭互动还是行为？</p></li>
+<li><p><strong>干预研究</strong>：是否可以设计干预措施减少零和思维？</p></li>
+</ol>
+<hr>
+<h2 id="学术思考">7. 学术思考</h2>
+<h3 id="核心学术洞察">核心学术洞察</h3>
+<ol type="1">
+<li><p><strong>"有限美好"的现代延续</strong>：Foster的零和思维假说虽提出于1960年代研究墨西哥农村，但本文证明其在现代美国社会仍具有重要解释力。</p></li>
+<li><p><strong>政策态度的认知根源</strong>：传统研究将政策态度归因于自身利益或价值观，但本文揭示了零和思维作为一种独立的中介机制。</p></li>
+<li><p><strong>历史创伤的代际传递</strong>：奴役制度不仅影响直接受害者，还通过环境暴露和文化传递影响后代。</p></li>
+</ol>
+<h3 id="深层学术问题">深层学术问题</h3>
+<ol type="1">
+<li><p><strong>为什么向上流动而非向下流动影响零和思维？</strong>
+这种不对称性暗示什么心理或文化机制？</p></li>
+<li><p><strong>移民的"正能量"效应</strong>：移民如何降低零和思维？是通过榜样效应、接触效应还是家庭叙述传递？</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p><strong>零和思维的测量是否可信？</strong>
+四题项测量能否捕捉零和思维的全部维度？</p></li>
+<li><p><strong>祖先经历的因果识别</strong>：如何解决内生性问题？</p></li>
+<li><p><strong>黑人受访者零和思维最高但奴役边际效应最小</strong>：如何解释这个悖论？</p></li>
+<li><p><strong>零和思维与特朗普现象</strong>：数据显示零和思维预测了民主党人投票给特朗普？</p></li>
+<li><p><strong>政策含义</strong>：如果零和思维是可塑的，什么干预可以减少零和思维？</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Regulating Conglomerates: Evidence From an Energy Conservation Program in China — 深度阅读笔记 — AER</title>
     <url>/posts/chen2021/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -4636,218 +4848,6 @@ horizon 是多久?</strong></p></li>
 <li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD
 数据的质量和覆盖范围如何保证?</strong></p></li>
 <li><p><strong>在中国"双碳"目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>零和思维与美国政治分歧的根源 — 深度阅读笔记 — Chinoy, Nunn, Sequeira &amp; Stantcheva</title>
-    <url>/posts/chinoy2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Zero-Sum Thinking and the Roots of U.S.
-Political Differences</li>
-<li><strong>作者</strong>: Sahil Chinoy (Harvard), Nathan Nunn (UBC
-&amp; CIFAR), Sandra Sequeira (LSE), Stefanie Stantcheva (Harvard)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review</li>
-<li><strong>DOI</strong>: 10.1257/aer.20240692</li>
-<li><strong>难度评估</strong>: 高 -
-需要文化经济学、政治经济学、计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>零和思维（Zero-Sum
-Thinking）</strong>：一种世界观，认为一个人的收益必然导致另一个人的损失，社会产出是有限的而非可以创造新价值的。该概念最早由人类学家George
-Foster（1965, 1967）提出，称为"有限美好形象"（Image of Limited
-Good）。</p>
-<p><strong>文化演化模型（Cultural Evolution
-Models）</strong>：经济学中研究文化特质如何在代际间垂直传播的模型，通常假设文化特质从父母传递给子女（Bisin
-&amp; Verdier, 2000, 2011, 2017）。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>历史视角下的零和思维</strong>：零和思维在历史上普遍存在，从欧洲重商主义到现代贸易和移民政策。在资源稀缺、技术进步缓慢的前工业社会尤为常见。</p></li>
-<li><p><strong>美国独特的历史因素</strong>：美国历史上有三个关键因素影响零和思维的形成：代际经济流动性、移民和奴役。</p></li>
-<li><p><strong>现有研究的局限</strong>：先前研究使用种族或地理位置作为祖先经历的代理变量，但无法干净地隔离垂直传播渠道。</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>： - 零和思维如何影响政治和政策偏好？ -
-零和思维的祖先根源是什么？ -
-流动性、移民、奴役经历如何代际传递并影响当代人的零和思维？</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><p><strong>理论贡献</strong>：首次利用四代人的调查数据，直接测量祖先经历对零和思维的影响，推进了文化演化理论的检验。</p></li>
-<li><p><strong>实证贡献</strong>：收集了约20,400名美国居民的调查数据，将零和思维测量、政治偏好与丰富的祖先信息相结合。</p></li>
-<li><p><strong>政策意义</strong>：揭示了零和思维与再分配政策、种族/性别平等政策、移民政策的系统性关联。</p></li>
-</ol>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
-<ul>
-<li>Foster的零和思维假说介绍</li>
-<li>研究动机和数据概述</li>
-<li>三大贡献预告</li>
-</ul>
-<h3 id="第二节调查设计数据收集和零和思维测量">第二节：调查设计、数据收集和零和思维测量</h3>
-<ul>
-<li>调查方法和样本描述</li>
-<li>零和思维的四题项测量（民族、公民身份、贸易、收入）</li>
-<li>主成分分析构建综合指数</li>
-<li>数据质量检验</li>
-</ul>
-<h3 id="第三节零和思维的政治关联">第三节：零和思维的政治关联</h3>
-<ul>
-<li>零和思维与政党偏好的关系</li>
-<li>零和思维与四项政策态度（再分配、种族、性别、移民）</li>
-<li>零和思维与自身利益的交互分析</li>
-<li>零和思维与其他核心信念的比较</li>
-<li>跨国家的一般性检验（WVS数据）</li>
-</ul>
-<h3 id="第四节零和思维的历史预测因子">第四节：零和思维的历史预测因子</h3>
-<ul>
-<li>代际经济流动性的影响</li>
-<li>移民经历的直接和间接效应</li>
-<li>奴役经历的直接和间接效应</li>
-<li>奴隶制的溢出效应</li>
-</ul>
-<h3 id="第五节结论conclusion">第五节：结论（Conclusion）</h3>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="零和思维的理论基础">零和思维的理论基础</h4>
-<p>George
-Foster（1965）在研究墨西哥农村时提出"有限美好"假说：许多社会存在零和世界观，认为资源是有限的，一方的收益必然是另一方的损失。这种观点在资源稀缺、市场不发达、技术进步有限的前工业社会中尤为普遍。</p>
-<h4 id="美国历史背景的特殊性">美国历史背景的特殊性</h4>
-<p>美国历史上有三个关键因素塑造零和思维： 1.
-<strong>代际流动性</strong>：美国曾是"机会之地"，向上流动性高于其他工业化国家
-2.
-<strong>移民潮</strong>：大规模移民塑造了美国社会，移民通常在美国获得经济成功而不损害他人
-3. <strong>奴役制度</strong>：奴隶制是一种彻底的零和（或负和）制度</p>
-<h3 id="方法">方法</h3>
-<h4 id="数据集">数据集</h4>
-<p><strong>调查设计</strong>： -
-约20,400名美国居民，七轮调查（2020年10月至2023年7月） -
-通过在线调查公司Respondi/Bilendi招募 - 调查时长约20-30分钟</p>
-<p><strong>调查内容模块</strong>： 1.
-<strong>受访者背景</strong>：年龄、性别、政治倾向 2.
-<strong>祖先信息</strong>：父母、祖父母的信息（出生地、居住历史、教育、职业、经济地位）
-3. <strong>政策观点</strong>：再分配、种族、性别、移民等政策态度 4.
-<strong>零和思维测量</strong>：四个领域的零和思维问题</p>
-<p><strong>四题项零和思维测量</strong>： 1.
-<strong>民族维度</strong>："如果一个种族群体变富裕，这通常是以其他群体为代价的"
-2.
-<strong>公民身份维度</strong>："如果没有美国公民身份的人经济上做得更好，这通常是以美国公民为代价的"
-3.
-<strong>贸易维度</strong>："在国际贸易中，如果一个国家赚更多钱，另一个国家通常会赚得更少"
-4.
-<strong>收入维度</strong>："如果一个收入群体变得更富有，这通常是以其他群体为代价的"</p>
-<p><strong>指数构建</strong>：使用主成分分析（PCA）提取第一主成分，标准化为0-1区间的综合指数。</p>
-<h4 id="估计方程">估计方程</h4>
-<p><strong>政治关联分析</strong>： <span class="math display">\[Y_i =
-\alpha_{s(i)} + \beta \cdot ZeroSum_i + X_i\Gamma +
-\varepsilon_i\]</span></p>
-<p><strong>历史预测因子分析</strong>： <span class="math display">\[ZeroSum_i = \beta_{resp} \cdot
-RespondentExperience_i + \beta_p \cdot ParentsExperience_i + \beta_{gp}
-\cdot GrandparentsExperience_i + X_i\Gamma + \alpha_{s(i)} +
-\varepsilon_i\]</span></p>
-<h3 id="结果">结果</h3>
-<h4 id="发现一零和思维测量">发现一：零和思维测量</h4>
-<p><strong>因子结构</strong>：第一主成分的特征值为2.30，所有题项的因子载荷相似（0.40-0.55），表明存在一个潜在的零和思维因子。</p>
-<p><strong>人口学差异</strong>： - 年龄：较年长者零和思维较低 -
-种族：黑人和西班牙裔美国人零和思维最高，亚裔最低 -
-收入：最低收入群体（&lt;${<span class="math inline">\(25,000}\)</span>）零和思维最高 -
-党派：共和党人零和思维较低 - 教育：受教育程度较高者零和思维较低</p>
-<h4 id="发现二零和思维与政策偏好">发现二：零和思维与政策偏好</h4>
-<p><strong>核心结果</strong>：零和思维与四项政策态度显著正相关： -
-<strong>再分配指数</strong>：支持更多政府再分配 -
-<strong>种族态度指数</strong>：支持减少种族歧视的政策 -
-<strong>性别态度指数</strong>：支持促进性别平等的政策 -
-<strong>反移民指数</strong>：支持更严格的移民限制</p>
-<p><strong>效应大小</strong>：一标准差增加的零和思维，对再分配的支持相当于20%的标准差变化，与民主党倾向性相当。</p>
-<p><strong>与自身利益的交互</strong>： -
-零和思维与再分配的支持在所有收入群体中都显著为正，且在高收入群体中更强 -
-男性零和思维对性别平等的支持更强 -
-白人受访者零和思维对种族平等政策的支持更强</p>
-<p><strong>党内差异</strong>：零和思维可解释党内政策分歧： -
-民主党中零和思维更强的人更支持限制移民 -
-共和党中零和思维更强的人更支持再分配</p>
-<h4 id="发现三跨国家一般性wvs数据">发现三：跨国家一般性（WVS数据）</h4>
-<p>使用世界价值观调查（WVS）72个国家192,000名受访者数据验证： -
-零和思维与右翼政治立场显著负相关 -
-零和思维与支持再分配和反移民态度正相关</p>
-<p><strong>早期生活经济增长</strong>：使用WVS数据，控制出生年份和国家固定效应，发现早期生活暴露于更高的GDP增长与更低的零和思维相关。</p>
-<h4 id="发现四历史预测因子">发现四：历史预测因子</h4>
-<p><strong>代际流动性</strong>： -
-更大的代际向上流动性与更低的零和思维相关 -
-这种关系在所有代际（1代、2代、3代）中都显著 -
-主要由向上流动驱动，向下流动影响较小</p>
-<p><strong>移民</strong>： -
-直接效应：第一代移民零和思维最低，移民主裔子孙次之 -
-间接效应：祖父母在移民比例较高县市长大的受访者零和思维较低 -
-时间效应：近期移民效应更强</p>
-<p><strong>奴役</strong>： - 直接效应：有奴隶祖先的受访者零和思维更高 -
-所有形式的奴役（奴隶贸易、Holocaust、契约仆役、日裔美国人拘留、印第安人保留地）都与更高零和思维相关
-- 间接效应：在1860年奴隶比例较高的县市长大的受访者零和思维更高 -
-奴隶制溢出：南方白人移民到非南方县带来了更高的零和思维</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>零和思维是重要且独立的政策预测因子</strong>：零和思维与再分配、种族/性别平等、移民政策的态度有显著关联，且独立于其他核心信念。</p></li>
-<li><p><strong>零和思维不是简单的党派问题</strong>：它可以解释党内政策分歧——为什么部分民主党人支持限制移民，部分共和党人支持再分配。</p></li>
-<li><p><strong>零和思维有深厚的历史根源</strong>：三个关键历史因素——代际流动性、移民、奴役——通过直接和间接渠道影响当代人的零和思维。</p></li>
-<li><p><strong>零和思维的跨国一般性</strong>：WVS数据证实，零和思维与政治态度的关系在72个国家都成立。</p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><p><strong>测量贡献</strong>：开发了综合的跨情境零和思维测量方法，优于单一情境测量。</p></li>
-<li><p><strong>数据贡献</strong>：首次收集了四代人信息的调查数据，直接测量祖先经历。</p></li>
-<li><p><strong>理论贡献</strong>：推进了对文化演化模型的理解，证明垂直传播的重要性。</p></li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
-<ol type="1">
-<li><p><strong>党内分歧研究</strong>：探索零和思维对新党形成、联盟和竞选平台的影响</p></li>
-<li><p><strong>政治现象研究</strong>：零和思维是否能解释民粹主义、阴谋论、排外主义的起源？</p></li>
-<li><p><strong>气候与不平等</strong>：零和思维如何与气候变化和全球不平等的态度相关联？</p></li>
-</ol>
-<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
-<ol type="1">
-<li><p><strong>识别策略改进</strong>：使用工具变量或自然实验进一步验证因果关系</p></li>
-<li><p><strong>机制检验</strong>：代际传递的具体渠道——是通过语言、家庭互动还是行为？</p></li>
-<li><p><strong>干预研究</strong>：是否可以设计干预措施减少零和思维？</p></li>
-</ol>
-<hr>
-<h2 id="学术思考">7. 学术思考</h2>
-<h3 id="核心学术洞察">核心学术洞察</h3>
-<ol type="1">
-<li><p><strong>"有限美好"的现代延续</strong>：Foster的零和思维假说虽提出于1960年代研究墨西哥农村，但本文证明其在现代美国社会仍具有重要解释力。</p></li>
-<li><p><strong>政策态度的认知根源</strong>：传统研究将政策态度归因于自身利益或价值观，但本文揭示了零和思维作为一种独立的中介机制。</p></li>
-<li><p><strong>历史创伤的代际传递</strong>：奴役制度不仅影响直接受害者，还通过环境暴露和文化传递影响后代。</p></li>
-</ol>
-<h3 id="深层学术问题">深层学术问题</h3>
-<ol type="1">
-<li><p><strong>为什么向上流动而非向下流动影响零和思维？</strong>
-这种不对称性暗示什么心理或文化机制？</p></li>
-<li><p><strong>移民的"正能量"效应</strong>：移民如何降低零和思维？是通过榜样效应、接触效应还是家庭叙述传递？</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p><strong>零和思维的测量是否可信？</strong>
-四题项测量能否捕捉零和思维的全部维度？</p></li>
-<li><p><strong>祖先经历的因果识别</strong>：如何解决内生性问题？</p></li>
-<li><p><strong>黑人受访者零和思维最高但奴役边际效应最小</strong>：如何解释这个悖论？</p></li>
-<li><p><strong>零和思维与特朗普现象</strong>：数据显示零和思维预测了民主党人投票给特朗普？</p></li>
-<li><p><strong>政策含义</strong>：如果零和思维是可塑的，什么干预可以减少零和思维？</p></li>
 </ol>
 ]]></content>
       <categories>
@@ -10332,65 +10332,6 @@ Equivalence失效</strong>：当参与不可观察时，FPA和SPA不再等价</p
       </tags>
   </entry>
   <entry>
-    <title>Hiring as Exploration — 深度阅读笔记 — Li, Raymond &amp; Bergman</title>
-    <url>/posts/li2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Hiring as Exploration</li>
-<li><strong>作者</strong>: Danielle Li (MIT &amp; NBER), Lindsey Raymond
-(MIT), Peter Bergman (UT Austin &amp; NBER)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies
-(RES)</li>
-<li><strong>DOI</strong>: 10.1093/restud/rdaf040</li>
-<li><strong>难度评估</strong>: 高 -
-需要机器学习、计量经济学、招聘经济学基础 <span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言">1. 引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>情境强盗问题、探索与利用的权衡、监督学习算法、UCB（上置信界）算法。</p>
-<h3 id="研究背景">研究背景</h3>
-<p>算法招聘日益普及；传统监督学习算法可能复制历史偏见；人类面试官预测能力有限。</p>
-<h3 id="核心问题">核心问题</h3>
-<p>将招聘视为情境强盗问题——如何平衡"利用"（选择已知最佳）与"探索"（学习新候选人质量）。探索式算法能否在提高招聘质量的同时增加人口多样性？</p>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：招聘偏见</li>
-<li>第三节：数据环境</li>
-<li>第四节：实证策略</li>
-<li>第五节：算法设计（SL vs UCB）</li>
-<li>第六节：主要结果</li>
-<li>第七节：扩展</li>
-<li>第八节：结论</li>
-</ul>
-<h2 id="正文">3. 正文</h2>
-<h3 id="核心机制">核心机制</h3>
-<ul>
-<li><strong>SL模型</strong>：仅利用——选择预期质量最高的候选人</li>
-<li><strong>UCB模型</strong>：利用+探索——对特征偏离训练数据均值的候选人给予探索溢价</li>
-</ul>
-<h3 id="关键发现">关键发现</h3>
-<ol type="1">
-<li><strong>多样性</strong>：UCB使黑人/西班牙裔代表从9.4%增至24.3%；SL降至5%以下</li>
-<li><strong>质量</strong>：SL录用率32%，UCB 27%，人类仅10%</li>
-<li><strong>帕累托改进</strong>：可能同时提升质量与多样性</li>
-</ol>
-<h2 id="结论">4. 结论</h2>
-<p>探索式算法可实现帕累托改进，挑战了效率-公平权衡的传统观点。</p>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<p>跨行业推广、长期动态效应、法律伦理风险、因果机制检验。</p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>One Quarter of Humanity 深度阅读笔记 — James Z. Lee &amp; Wang Feng</title>
     <url>/posts/lee2001/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="书籍信息">书籍信息</h2>
@@ -10934,6 +10875,65 @@ DOJ的IT支出没有出现支出高峰,最后一周的IT支出仅占3.3%,而非I
       </tags>
   </entry>
   <entry>
+    <title>Hiring as Exploration — 深度阅读笔记 — Li, Raymond &amp; Bergman</title>
+    <url>/posts/li2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Hiring as Exploration</li>
+<li><strong>作者</strong>: Danielle Li (MIT &amp; NBER), Lindsey Raymond
+(MIT), Peter Bergman (UT Austin &amp; NBER)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies
+(RES)</li>
+<li><strong>DOI</strong>: 10.1093/restud/rdaf040</li>
+<li><strong>难度评估</strong>: 高 -
+需要机器学习、计量经济学、招聘经济学基础 <span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言">1. 引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>情境强盗问题、探索与利用的权衡、监督学习算法、UCB（上置信界）算法。</p>
+<h3 id="研究背景">研究背景</h3>
+<p>算法招聘日益普及；传统监督学习算法可能复制历史偏见；人类面试官预测能力有限。</p>
+<h3 id="核心问题">核心问题</h3>
+<p>将招聘视为情境强盗问题——如何平衡"利用"（选择已知最佳）与"探索"（学习新候选人质量）。探索式算法能否在提高招聘质量的同时增加人口多样性？</p>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：招聘偏见</li>
+<li>第三节：数据环境</li>
+<li>第四节：实证策略</li>
+<li>第五节：算法设计（SL vs UCB）</li>
+<li>第六节：主要结果</li>
+<li>第七节：扩展</li>
+<li>第八节：结论</li>
+</ul>
+<h2 id="正文">3. 正文</h2>
+<h3 id="核心机制">核心机制</h3>
+<ul>
+<li><strong>SL模型</strong>：仅利用——选择预期质量最高的候选人</li>
+<li><strong>UCB模型</strong>：利用+探索——对特征偏离训练数据均值的候选人给予探索溢价</li>
+</ul>
+<h3 id="关键发现">关键发现</h3>
+<ol type="1">
+<li><strong>多样性</strong>：UCB使黑人/西班牙裔代表从9.4%增至24.3%；SL降至5%以下</li>
+<li><strong>质量</strong>：SL录用率32%，UCB 27%，人类仅10%</li>
+<li><strong>帕累托改进</strong>：可能同时提升质量与多样性</li>
+</ol>
+<h2 id="结论">4. 结论</h2>
+<p>探索式算法可实现帕累托改进，挑战了效率-公平权衡的传统观点。</p>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<p>跨行业推广、长期动态效应、法律伦理风险、因果机制检验。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>年末消费高峰 — 论文笔记 — McCue, Prier &amp; Lofaro</title>
     <url>/posts/mccue2021/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -11205,6 +11205,100 @@ study of procurement contracts》深度分析撰写。</em></p>
       </tags>
   </entry>
   <entry>
+    <title>用稻草做砖 — 深度阅读笔记 — Okeke</title>
+    <url>/posts/okeke2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Making Bricks from Straw: Resources and
+Productivity in Health Care</li>
+<li><strong>作者</strong>: Edward N. Okeke (RAND Corporation)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(4):
+1499-1539</li>
+<li><strong>DOI</strong>: 10.1257/aer.20241459</li>
+<li><strong>难度评估</strong>: 高 -
+需要卫生经济学、发展经济学、实验经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>公共卫生设施生产率（Health Care Productivity）</strong>
+指卫生设施将投入（资金、人员、设备）转化为卫生服务产出的效率。在发展中国家，公共卫生设施普遍表现不佳，存在典型的"低质量-低数量"均衡陷阱。</p>
+<p><strong>财政约束（Financial Constraints）</strong>
+指行为主体无法获得足够资金来执行生产性投资的限制。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>发展中国家的卫生设施表现糟糕</strong>：访客常发现设施在中午后只有少数患者和工作人员</p></li>
+<li><p><strong>财政约束的争论</strong>：卫生工作者认为资金不足，但证据参差不齐</p></li>
+<li><p><strong>研究缺口</strong>：缺乏对"卫生设施内部到底发生了什么"的系统研究</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：为什么发展中国家的卫生设施表现如此糟糕？财政约束的作用是什么？</p>
+<p><strong>主要发现</strong>：额外财政资源带来了巨大的生产率提高，效果持续约两年</p>
+<hr>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ol type="1">
+<li><strong>引言</strong>: 问题陈述和研究背景</li>
+<li><strong>机构背景</strong>: 尼日利亚医疗体系、实验设计</li>
+<li><strong>数据</strong>:
+rollout数据、设施调查、服务提供调查、患者调查、家庭调查</li>
+<li><strong>分析与结果</strong>:
+支出效应、资金使用、产出效应、质量效应、健康效应</li>
+<li><strong>机制讨论</strong>: 行动计划、"无形"效应、打破均衡陷阱</li>
+<li><strong>长期效应</strong>: 四年后效果持续</li>
+<li><strong>结论</strong>: 政策含义</li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p><strong>尼日利亚公共卫生设施的困境</strong>： - 28%没有电力供应 -
+26%没有自来水 - 11%没有正常工作的厕所 - 14%重复使用注射器</p>
+<p><strong>"Catch-22"困境</strong>：要吸引患者必须改善质量和价格，但没有资源无法实现。</p>
+<h3 id="方法">方法</h3>
+<p><strong>实验设计</strong>：288个公共卫生中心，来自四个州</p>
+<p><strong>随机分配</strong>（三组）： 1.
+<strong>Grant组</strong>（96个）：获得60万奈拉（约1,600美元）赠款 2.
+<strong>Encouragement组</strong>（96个）：仅获得会议干预 3.
+<strong>Control组</strong>（96个）：维持现状</p>
+<p><strong>关键设计特点</strong>： - "意外"宣布：在会议结束时才宣布赠款
+- 资金管理完全由卫生工作者自行决定 - 条件宽松（只需提供银行账户）</p>
+<h3 id="结果">结果</h3>
+<p><strong>资金使用</strong>： - 47%用于改善质量（设备、翻新、员工激励）
+- 35%用于降低患者价格 - 约82%可追踪</p>
+<p><strong>产出效应</strong>： - 产前访问：+17-41% - 分娩：+17-41% -
+住院：+66%</p>
+<p><strong>质量效应</strong>：总体质量指数提高0.4标准差</p>
+<p><strong>健康效应</strong>：儿童死亡率降低24%</p>
+<p><strong>"无形"效应</strong>： - Grant诊所更早制定书面行动计划 -
+计划更详细，更可能寻求社区投入</p>
+<p><strong>长期效应</strong>（四年后）： - 产前访问：+15 log points -
+儿童免疫：+17 log points</p>
+<hr>
+<h2 id="结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>财政约束是真正的约束</strong>：向卫生设施提供额外资金带来了巨大的生产率提高</p></li>
+<li><p><strong>资金被有效使用</strong>：约47%用于改善质量，35%用于降低价格，没有明显的资金挪用</p></li>
+<li><p><strong>打破了"低质量-低数量"均衡</strong>：帮助卫生设施同时解决质量和价格两个约束</p></li>
+<li><p><strong>自主权产生了更好的效果</strong>：无条件赠款优于绩效挂钩拨款</p></li>
+<li><p><strong>效果持久</strong>：即使资金停止，改进仍持续约两年</p></li>
+</ol>
+<h3 id="政策含义">政策含义</h3>
+<ol type="1">
+<li><p><strong>资本注入可以打破均衡</strong>：财务"大推动"可能帮助突破困境</p></li>
+<li><p><strong>自主权和灵活性很重要</strong>：让卫生工作者自行决定如何花钱比严格规定用途更有效</p></li>
+<li><p><strong>"培训"不一定是前提</strong>：卫生工作者能够管理赠款资金，即使没有额外培训</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>&lt;马铃薯与人口&gt;深度阅读笔记 — Nunn &amp; Qian</title>
     <url>/posts/nunn2011/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -11463,100 +11557,6 @@ Vol. 126, pp. 593-650</li>
       <tags>
         <tag>论文笔记</tag>
         <tag>经济史</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>用稻草做砖 — 深度阅读笔记 — Okeke</title>
-    <url>/posts/okeke2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Making Bricks from Straw: Resources and
-Productivity in Health Care</li>
-<li><strong>作者</strong>: Edward N. Okeke (RAND Corporation)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(4):
-1499-1539</li>
-<li><strong>DOI</strong>: 10.1257/aer.20241459</li>
-<li><strong>难度评估</strong>: 高 -
-需要卫生经济学、发展经济学、实验经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>公共卫生设施生产率（Health Care Productivity）</strong>
-指卫生设施将投入（资金、人员、设备）转化为卫生服务产出的效率。在发展中国家，公共卫生设施普遍表现不佳，存在典型的"低质量-低数量"均衡陷阱。</p>
-<p><strong>财政约束（Financial Constraints）</strong>
-指行为主体无法获得足够资金来执行生产性投资的限制。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>发展中国家的卫生设施表现糟糕</strong>：访客常发现设施在中午后只有少数患者和工作人员</p></li>
-<li><p><strong>财政约束的争论</strong>：卫生工作者认为资金不足，但证据参差不齐</p></li>
-<li><p><strong>研究缺口</strong>：缺乏对"卫生设施内部到底发生了什么"的系统研究</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：为什么发展中国家的卫生设施表现如此糟糕？财政约束的作用是什么？</p>
-<p><strong>主要发现</strong>：额外财政资源带来了巨大的生产率提高，效果持续约两年</p>
-<hr>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ol type="1">
-<li><strong>引言</strong>: 问题陈述和研究背景</li>
-<li><strong>机构背景</strong>: 尼日利亚医疗体系、实验设计</li>
-<li><strong>数据</strong>:
-rollout数据、设施调查、服务提供调查、患者调查、家庭调查</li>
-<li><strong>分析与结果</strong>:
-支出效应、资金使用、产出效应、质量效应、健康效应</li>
-<li><strong>机制讨论</strong>: 行动计划、"无形"效应、打破均衡陷阱</li>
-<li><strong>长期效应</strong>: 四年后效果持续</li>
-<li><strong>结论</strong>: 政策含义</li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p><strong>尼日利亚公共卫生设施的困境</strong>： - 28%没有电力供应 -
-26%没有自来水 - 11%没有正常工作的厕所 - 14%重复使用注射器</p>
-<p><strong>"Catch-22"困境</strong>：要吸引患者必须改善质量和价格，但没有资源无法实现。</p>
-<h3 id="方法">方法</h3>
-<p><strong>实验设计</strong>：288个公共卫生中心，来自四个州</p>
-<p><strong>随机分配</strong>（三组）： 1.
-<strong>Grant组</strong>（96个）：获得60万奈拉（约1,600美元）赠款 2.
-<strong>Encouragement组</strong>（96个）：仅获得会议干预 3.
-<strong>Control组</strong>（96个）：维持现状</p>
-<p><strong>关键设计特点</strong>： - "意外"宣布：在会议结束时才宣布赠款
-- 资金管理完全由卫生工作者自行决定 - 条件宽松（只需提供银行账户）</p>
-<h3 id="结果">结果</h3>
-<p><strong>资金使用</strong>： - 47%用于改善质量（设备、翻新、员工激励）
-- 35%用于降低患者价格 - 约82%可追踪</p>
-<p><strong>产出效应</strong>： - 产前访问：+17-41% - 分娩：+17-41% -
-住院：+66%</p>
-<p><strong>质量效应</strong>：总体质量指数提高0.4标准差</p>
-<p><strong>健康效应</strong>：儿童死亡率降低24%</p>
-<p><strong>"无形"效应</strong>： - Grant诊所更早制定书面行动计划 -
-计划更详细，更可能寻求社区投入</p>
-<p><strong>长期效应</strong>（四年后）： - 产前访问：+15 log points -
-儿童免疫：+17 log points</p>
-<hr>
-<h2 id="结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>财政约束是真正的约束</strong>：向卫生设施提供额外资金带来了巨大的生产率提高</p></li>
-<li><p><strong>资金被有效使用</strong>：约47%用于改善质量，35%用于降低价格，没有明显的资金挪用</p></li>
-<li><p><strong>打破了"低质量-低数量"均衡</strong>：帮助卫生设施同时解决质量和价格两个约束</p></li>
-<li><p><strong>自主权产生了更好的效果</strong>：无条件赠款优于绩效挂钩拨款</p></li>
-<li><p><strong>效果持久</strong>：即使资金停止，改进仍持续约两年</p></li>
-</ol>
-<h3 id="政策含义">政策含义</h3>
-<ol type="1">
-<li><p><strong>资本注入可以打破均衡</strong>：财务"大推动"可能帮助突破困境</p></li>
-<li><p><strong>自主权和灵活性很重要</strong>：让卫生工作者自行决定如何花钱比严格规定用途更有效</p></li>
-<li><p><strong>"培训"不一定是前提</strong>：卫生工作者能够管理赠款资金，即使没有额外培训</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
