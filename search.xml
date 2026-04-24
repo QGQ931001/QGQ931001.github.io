@@ -1162,6 +1162,184 @@ Cθ ≠ ∅（对所有全支撑先验）</p>
       </tags>
   </entry>
   <entry>
+    <title>长期住房收益率动态 — 深度阅读笔记 — Bäcker-Peral, Hazell &amp; Mian</title>
+    <url>/posts/backer-peral2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Dynamics of the Long-Term Housing Yield:
+Evidence from Natural Experiments</li>
+<li><strong>作者</strong>: Verónica Bäcker-Peral (普林斯顿), Jonathon
+Hazell (LSE), Atif Mian (普林斯顿 &amp; NBER)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(3):
+1014-1051</li>
+<li><strong>DOI</strong>: 10.1257/aer.20240513</li>
+<li><strong>难度评估</strong>: 高 -
+需要房地产金融、计量经济学、自然实验方法基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>长期住房收益率（Long-Term Housing
+Yield）</strong>：预期长期均衡时的租金价格比率，反映市场对长期住房回报率的预期。</p>
+<p><strong>租约延长（Lease
+Extension）</strong>：英国房产的租约可以被延长90年或更长时间，形成自然实验。</p>
+<p><strong>自然实验方法（Natural Experiment
+Approach）</strong>：利用租约延长前后同一房产的价格变化来识别长期收益率。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>长期收益率的重要性</strong>：揭示市场对长期均衡的预期，帮助理解中期冲击消散后的经济状态</p></li>
+<li><p><strong>测量困难</strong>：长期收益率难以测量，需要能区分长期和中期价格行为的数据</p></li>
+<li><p><strong>英国独特制度</strong>：大多数公寓以长期租约（leasehold）形式买卖，可定期延长</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：如何利用英国租约延长的自然实验来估计预期的长期住房收益率y*？</p>
+<p><strong>主要发现</strong>： -
+y<em>从2000-2006年的约5.2%下降到2024年的2.7% - 非弹性市场下降更陡峭 -
+气候风险暴露较高的地区y</em>仍然较高</p>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
+<ul>
+<li>问题陈述和研究动机</li>
+<li>数据和方法概述</li>
+<li>主要发现预览</li>
+</ul>
+<h3 id="第二节预期长期住房收益率的定义">第二节：预期长期住房收益率的定义</h3>
+<ul>
+<li>收益率的定义</li>
+<li>y*的分解</li>
+</ul>
+<h3 id="第三节数据和租约延长详情">第三节：数据和租约延长详情</h3>
+<ul>
+<li><strong>3.1 数据构建</strong></li>
+<li><strong>3.2 租约延长制度详情</strong></li>
+<li><strong>3.3 交易滞后</strong></li>
+</ul>
+<h3 id="第四节实证方法">第四节：实证方法</h3>
+<ul>
+<li>双重差分估计</li>
+<li>非线性最小二乘估计y*</li>
+</ul>
+<h3 id="第五节主要结果">第五节：主要结果</h3>
+<ul>
+<li>y*的时间序列动态</li>
+<li>横截面异质性</li>
+</ul>
+<h3 id="第六节宏观经济含义">第六节：宏观经济含义</h3>
+<ul>
+<li>与其他市场的比较</li>
+<li>当前价格的持久性指标</li>
+<li>供给弹性和气候风险的影响</li>
+</ul>
+<h3 id="第七节结论">第七节：结论</h3>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="英国房产制度">英国房产制度</h4>
+<p><strong>两种产权形式</strong>： -
+Freehold（永久产权）：对房产的永久所有权 -
+Leasehold（租约）：长期租约，可买卖，通常在起源时长达100年以上</p>
+<p><strong>租约延长机制</strong>： -
+1993年《租约改革法》授予公寓租约持有人权利： -
+获得比原始租约长90年的新租约 - 需向永久产权持有人支付一次性协商费用</p>
+<p><strong>关键事实</strong>： - 英国有5百万租约房产 -
+70%的租约是剩余期限≤250年的"短租约" - 30%是剩余期限≥700年的"长租约" -
+几乎不存在250-700年之间的租约</p>
+<h3 id="实证方法">实证方法</h3>
+<h4 id="自然实验">自然实验</h4>
+<p><strong>核心洞察</strong>： -
+同一房产在延长前后的价格差异反映了长期收益率 - 延长前价格反映短期价值 -
+延长后价格反映短期和长期价值 - 价格差异几乎完全取决于长期收益率</p>
+<p><strong>识别策略</strong>： - 处理组：在t-u时刻延长租约的房产 -
+对照组：类似的未延长租约的房产 - 比较两组在延长前后的价格增长</p>
+<h4 id="估计方程">估计方程</h4>
+<p><strong>双重差分</strong>： <span class="math display">\[\Delta \log
+P_{it} = \alpha + \beta \cdot Extension_{i} + \gamma_t + \delta X_i +
+\varepsilon_{it}\]</span></p>
+<p><strong>非线最小二乘</strong>： 使用贴现现金流定价方程： <span class="math display">\[P_{extended} = P_{short} \cdot e^{y^* \cdot
+\Delta T}\]</span></p>
+<p>其中ΔT是延长的年数</p>
+<h3 id="主要结果">主要结果</h3>
+<h4 id="时间序列动态">时间序列动态</h4>
+<p><strong>核心发现</strong>： - 2000-2006年：y<em>稳定在约5.2% -
+2008年大衰退开始：y</em>开始下降 - 2024年：达到2.7%的低点 -
+大衰退导致的下降幅度大，相当于长期价格-租金比近翻倍</p>
+<p><strong>关键特征</strong>： - y*在疫情期间及之后保持相对稳定 -
+2024年的月度估计显示更精确</p>
+<h4 id="横截面异质性">横截面异质性</h4>
+<p><strong>供给弹性效应</strong>： -
+非弹性市场（供给受限地区）y*下降更陡峭 - 因为需求增加导致估值上升</p>
+<p><strong>气候风险效应</strong>： -
+长期气候风险较高的地区（洪水、沉降暴露） - y<em>水平较高 -
+说明y</em>包含住房风险溢价</p>
+<h3 id="宏观经济含义">宏观经济含义</h3>
+<h4 id="与其他市场的比较">与其他市场的比较</h4>
+<p><strong>长期债券收益率</strong>： - 长期债券收益率与y*密切追踪 -
+表明下降是广泛而非住房特有的</p>
+<p><strong>全球住房和其他资产</strong>： -
+全球住房和其他资产的长期收益率趋势类似 -
+表明下降可能与预期长期安全资产收益率r*的下降有关</p>
+<h4 id="当前vs长期收益率">当前vs长期收益率</h4>
+<p><strong>实时指标</strong>： - 当前租金价格比与y*的比较 -
+表明市场对未来住房估值的预期持久性</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p>**长期住房收益率y*显著下降**：从约5%下降到2.7%，与大衰退相关</p></li>
+<li><p><strong>方法论创新</strong>：利用租约延长的自然实验，"差掉"收益率曲线的短端</p></li>
+<li><p><strong>横截面异质性</strong>：供给弹性和气候风险影响y*的水平和动态</p></li>
+<li><p><strong>实时估计可用</strong>：数据和代码公开，实时更新</p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><p><strong>方法论</strong>：首个利用租约延长自然实验估计长期住房收益率</p></li>
+<li><p><strong>数据</strong>：构建并公开租约延长行政数据集</p></li>
+<li><p><strong>宏观经济</strong>：提供关于r*等重要宏观经济参数的见解</p></li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
+<ol type="1">
+<li><p>利用新方法研究其他资产类别的长期收益率</p></li>
+<li><p>扩展到其他国家的住房市场</p></li>
+</ol>
+<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
+<ol type="1">
+<li><p><strong>与结构模型的比较</strong>：自然实验方法与结构模型方法的优劣比较</p></li>
+<li><p><strong>政策应用</strong>：y*的实时估计如何用于货币政策和宏观审慎政策</p></li>
+</ol>
+<hr>
+<h2 id="学术思考">7. 学术思考</h2>
+<h3 id="核心学术洞察">核心学术洞察</h3>
+<ol type="1">
+<li><p><strong>"差掉短端"的识别策略</strong>：自然实验方法的核心洞察是，租约延长前的价格测量短期价值，延长后的价格测量短期和长期价值。因此，价格差异"差掉"了收益率曲线的短端，只反映长期收益率。</p></li>
+<li><p><strong>长期vs中期信息的权衡</strong>：金融资产的典型远期收益率最多提供10-30年的信息，而租约延长提供接近一个世纪的信息。</p></li>
+<li><p><strong>实时估计的优势</strong>：大多数宏观金融方法依赖于结构性假设，自然实验方法不依赖这些假设，因此可以提供更稳健的实时估计。</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p>**为什么长期住房收益率y*下降这么多？**
+与预期长期安全资产收益率r*的下降有何关系？</p></li>
+<li><p><strong>自然实验方法的识别假设是什么？</strong>
+平行趋势假设是否可靠？</p></li>
+<li><p><strong>租约延长数据如何构建？</strong>
+匹配关闭租约和开放租约的技术细节是什么？</p></li>
+<li><p>**y*与长期债券收益率的追踪关系有何含义？**
+这表明什么共同驱动因素？</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>In Harm&#39;s Way? Infrastructure Investments and the Persistence of Coastal Cities — 深度阅读笔记 — Balboni</title>
     <url>/posts/balboni2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -1521,184 +1699,6 @@ Moi改革后)，这是否影响校准的可靠性？</p>
         <tag>基础设施经济学</tag>
         <tag>空间经济学</tag>
         <tag>气候经济学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>长期住房收益率动态 — 深度阅读笔记 — Bäcker-Peral, Hazell &amp; Mian</title>
-    <url>/posts/backer-peral2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Dynamics of the Long-Term Housing Yield:
-Evidence from Natural Experiments</li>
-<li><strong>作者</strong>: Verónica Bäcker-Peral (普林斯顿), Jonathon
-Hazell (LSE), Atif Mian (普林斯顿 &amp; NBER)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3):
-1014-1051</li>
-<li><strong>DOI</strong>: 10.1257/aer.20240513</li>
-<li><strong>难度评估</strong>: 高 -
-需要房地产金融、计量经济学、自然实验方法基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>长期住房收益率（Long-Term Housing
-Yield）</strong>：预期长期均衡时的租金价格比率，反映市场对长期住房回报率的预期。</p>
-<p><strong>租约延长（Lease
-Extension）</strong>：英国房产的租约可以被延长90年或更长时间，形成自然实验。</p>
-<p><strong>自然实验方法（Natural Experiment
-Approach）</strong>：利用租约延长前后同一房产的价格变化来识别长期收益率。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>长期收益率的重要性</strong>：揭示市场对长期均衡的预期，帮助理解中期冲击消散后的经济状态</p></li>
-<li><p><strong>测量困难</strong>：长期收益率难以测量，需要能区分长期和中期价格行为的数据</p></li>
-<li><p><strong>英国独特制度</strong>：大多数公寓以长期租约（leasehold）形式买卖，可定期延长</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：如何利用英国租约延长的自然实验来估计预期的长期住房收益率y*？</p>
-<p><strong>主要发现</strong>： -
-y<em>从2000-2006年的约5.2%下降到2024年的2.7% - 非弹性市场下降更陡峭 -
-气候风险暴露较高的地区y</em>仍然较高</p>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
-<ul>
-<li>问题陈述和研究动机</li>
-<li>数据和方法概述</li>
-<li>主要发现预览</li>
-</ul>
-<h3 id="第二节预期长期住房收益率的定义">第二节：预期长期住房收益率的定义</h3>
-<ul>
-<li>收益率的定义</li>
-<li>y*的分解</li>
-</ul>
-<h3 id="第三节数据和租约延长详情">第三节：数据和租约延长详情</h3>
-<ul>
-<li><strong>3.1 数据构建</strong></li>
-<li><strong>3.2 租约延长制度详情</strong></li>
-<li><strong>3.3 交易滞后</strong></li>
-</ul>
-<h3 id="第四节实证方法">第四节：实证方法</h3>
-<ul>
-<li>双重差分估计</li>
-<li>非线性最小二乘估计y*</li>
-</ul>
-<h3 id="第五节主要结果">第五节：主要结果</h3>
-<ul>
-<li>y*的时间序列动态</li>
-<li>横截面异质性</li>
-</ul>
-<h3 id="第六节宏观经济含义">第六节：宏观经济含义</h3>
-<ul>
-<li>与其他市场的比较</li>
-<li>当前价格的持久性指标</li>
-<li>供给弹性和气候风险的影响</li>
-</ul>
-<h3 id="第七节结论">第七节：结论</h3>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="英国房产制度">英国房产制度</h4>
-<p><strong>两种产权形式</strong>： -
-Freehold（永久产权）：对房产的永久所有权 -
-Leasehold（租约）：长期租约，可买卖，通常在起源时长达100年以上</p>
-<p><strong>租约延长机制</strong>： -
-1993年《租约改革法》授予公寓租约持有人权利： -
-获得比原始租约长90年的新租约 - 需向永久产权持有人支付一次性协商费用</p>
-<p><strong>关键事实</strong>： - 英国有5百万租约房产 -
-70%的租约是剩余期限≤250年的"短租约" - 30%是剩余期限≥700年的"长租约" -
-几乎不存在250-700年之间的租约</p>
-<h3 id="实证方法">实证方法</h3>
-<h4 id="自然实验">自然实验</h4>
-<p><strong>核心洞察</strong>： -
-同一房产在延长前后的价格差异反映了长期收益率 - 延长前价格反映短期价值 -
-延长后价格反映短期和长期价值 - 价格差异几乎完全取决于长期收益率</p>
-<p><strong>识别策略</strong>： - 处理组：在t-u时刻延长租约的房产 -
-对照组：类似的未延长租约的房产 - 比较两组在延长前后的价格增长</p>
-<h4 id="估计方程">估计方程</h4>
-<p><strong>双重差分</strong>： <span class="math display">\[\Delta \log
-P_{it} = \alpha + \beta \cdot Extension_{i} + \gamma_t + \delta X_i +
-\varepsilon_{it}\]</span></p>
-<p><strong>非线最小二乘</strong>： 使用贴现现金流定价方程： <span class="math display">\[P_{extended} = P_{short} \cdot e^{y^* \cdot
-\Delta T}\]</span></p>
-<p>其中ΔT是延长的年数</p>
-<h3 id="主要结果">主要结果</h3>
-<h4 id="时间序列动态">时间序列动态</h4>
-<p><strong>核心发现</strong>： - 2000-2006年：y<em>稳定在约5.2% -
-2008年大衰退开始：y</em>开始下降 - 2024年：达到2.7%的低点 -
-大衰退导致的下降幅度大，相当于长期价格-租金比近翻倍</p>
-<p><strong>关键特征</strong>： - y*在疫情期间及之后保持相对稳定 -
-2024年的月度估计显示更精确</p>
-<h4 id="横截面异质性">横截面异质性</h4>
-<p><strong>供给弹性效应</strong>： -
-非弹性市场（供给受限地区）y*下降更陡峭 - 因为需求增加导致估值上升</p>
-<p><strong>气候风险效应</strong>： -
-长期气候风险较高的地区（洪水、沉降暴露） - y<em>水平较高 -
-说明y</em>包含住房风险溢价</p>
-<h3 id="宏观经济含义">宏观经济含义</h3>
-<h4 id="与其他市场的比较">与其他市场的比较</h4>
-<p><strong>长期债券收益率</strong>： - 长期债券收益率与y*密切追踪 -
-表明下降是广泛而非住房特有的</p>
-<p><strong>全球住房和其他资产</strong>： -
-全球住房和其他资产的长期收益率趋势类似 -
-表明下降可能与预期长期安全资产收益率r*的下降有关</p>
-<h4 id="当前vs长期收益率">当前vs长期收益率</h4>
-<p><strong>实时指标</strong>： - 当前租金价格比与y*的比较 -
-表明市场对未来住房估值的预期持久性</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p>**长期住房收益率y*显著下降**：从约5%下降到2.7%，与大衰退相关</p></li>
-<li><p><strong>方法论创新</strong>：利用租约延长的自然实验，"差掉"收益率曲线的短端</p></li>
-<li><p><strong>横截面异质性</strong>：供给弹性和气候风险影响y*的水平和动态</p></li>
-<li><p><strong>实时估计可用</strong>：数据和代码公开，实时更新</p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><p><strong>方法论</strong>：首个利用租约延长自然实验估计长期住房收益率</p></li>
-<li><p><strong>数据</strong>：构建并公开租约延长行政数据集</p></li>
-<li><p><strong>宏观经济</strong>：提供关于r*等重要宏观经济参数的见解</p></li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
-<ol type="1">
-<li><p>利用新方法研究其他资产类别的长期收益率</p></li>
-<li><p>扩展到其他国家的住房市场</p></li>
-</ol>
-<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
-<ol type="1">
-<li><p><strong>与结构模型的比较</strong>：自然实验方法与结构模型方法的优劣比较</p></li>
-<li><p><strong>政策应用</strong>：y*的实时估计如何用于货币政策和宏观审慎政策</p></li>
-</ol>
-<hr>
-<h2 id="学术思考">7. 学术思考</h2>
-<h3 id="核心学术洞察">核心学术洞察</h3>
-<ol type="1">
-<li><p><strong>"差掉短端"的识别策略</strong>：自然实验方法的核心洞察是，租约延长前的价格测量短期价值，延长后的价格测量短期和长期价值。因此，价格差异"差掉"了收益率曲线的短端，只反映长期收益率。</p></li>
-<li><p><strong>长期vs中期信息的权衡</strong>：金融资产的典型远期收益率最多提供10-30年的信息，而租约延长提供接近一个世纪的信息。</p></li>
-<li><p><strong>实时估计的优势</strong>：大多数宏观金融方法依赖于结构性假设，自然实验方法不依赖这些假设，因此可以提供更稳健的实时估计。</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p>**为什么长期住房收益率y*下降这么多？**
-与预期长期安全资产收益率r*的下降有何关系？</p></li>
-<li><p><strong>自然实验方法的识别假设是什么？</strong>
-平行趋势假设是否可靠？</p></li>
-<li><p><strong>租约延长数据如何构建？</strong>
-匹配关闭租约和开放租约的技术细节是什么？</p></li>
-<li><p>**y*与长期债券收益率的追踪关系有何含义？**
-这表明什么共同驱动因素？</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -3039,6 +3039,333 @@ Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</
       </tags>
   </entry>
   <entry>
+    <title>清洁水的价值 — 深度阅读笔记 — Burlig, Jina &amp; Sudarshan</title>
+    <url>/posts/burlig2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: The Value of Clean Water: Experimental
+Evidence from Rural India</li>
+<li><strong>作者</strong>: Fiona Burlig (University of Chicago Harris
+School, EPIC), Amir Jina (University of Chicago Harris School, EPIC,
+NBER), Anant Sudarshan (University of Warwick)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(3):
+1148-1187</li>
+<li><strong>DOI</strong>: 10.1257/aer.20250278</li>
+<li><strong>难度评估</strong>: 高 -
+需要实验经济学、发展经济学、公共卫生经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>饮用水安全问题（Safe Drinking Water
+Access）</strong>：全球约20亿人缺乏安全饮用水，这是一个重大的公共卫生危机。传统解决方案包括自来水管道和点源氯处理，但各有问题：管道建设成本高昂（高成本），氯处理方案需求不足（低需求）。</p>
+<p><strong>分散式水处理与家庭配送（Decentralized Treatment and Home
+Delivery）</strong>：一种替代方案是将水处理分散化并配送到家庭。这种模式在巴西、中国、印度、印度尼西亚、墨西哥等国家日益普及，使用量在多年间增长了300%。</p>
+<p><strong>揭示偏好法（Revealed Preference
+Methods）</strong>：通过观察人们在现实市场中的实际选择来推断其支付意愿（WTP），而非依赖假设性的条件评估法。这种方法更接近真实价值。</p>
+<p><strong>DALY（Disability-Adjusted Life
+Year）</strong>：一种综合衡量疾病负担的指标，等于因早死而损失的生命年数加上因残疾而损失的健康年数。DALY越低表示健康状况越好。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><strong>全球水危机规模</strong>：
+<ul>
+<li>超过20亿人缺乏安全饮用水</li>
+<li>受污染饮用水每年导致约14亿例腹泻、50万儿童死亡</li>
+<li>清洁饮用水的缺乏是全球儿童死亡的主要原因之一</li>
+<li>联合国估计，实现普遍清洁饮用水获取需要将当前改善速度提高六倍</li>
+</ul></li>
+<li><strong>现有解决方案的局限性</strong>：
+<ul>
+<li><strong>管道供水</strong>：英国等发达国家花费近150年才实现普遍管道供水；低收入国家仅约30%农村人口能获得自来水，且经常受到污染</li>
+<li><strong>点源氯处理</strong>：成本低，有效，但使用率仅约5%，被描述为"不够好，无法完全解决"清洁水获取问题</li>
+<li><strong>其他方法</strong>：净水器、太阳消毒等替代方案虽有效果，但均存在局限性</li>
+</ul></li>
+<li><strong>新兴的第三种方案</strong>：
+<ul>
+<li>分散式水处理结合家庭配送模式正在兴起</li>
+<li>在中低收入国家城市贫民窟和农村地区服务越来越多的人口</li>
+<li>在巴西、中国、印度、印度尼西亚、墨西哥等国家增长显著</li>
+</ul></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>： 1.
+分散式家庭配送清洁水是否能够有效改善农村贫困人口的清洁水获取问题？ 2.
+家庭对清洁水的真实估值是多少？支付意愿（WTP）和接受意愿（WTA）各是多少？
+3. 政府应该使用价格机制还是免费分配来提供清洁水？ 4.
+这种干预的成本效益如何？</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><p><strong>理论贡献</strong>：首次通过随机对照实验直接测量农村贫困人口对清洁饮用水本身的支付意愿，填补了以往研究只测量净水技术需求的空白。</p></li>
+<li><p><strong>方法论贡献</strong>：同时测量了WTP（支付意愿）和WTA（接受意愿）两种揭示偏好指标，为理解发展中国家家庭对环境品的估值提供了更完整的图景。</p></li>
+<li><p><strong>政策贡献</strong>：为发展中国家政府如何最优分配有限的公共卫生资金提供了实证依据，对全球清洁水获取政策具有直接指导意义。</p></li>
+<li><p><strong>规模可扩展性证明</strong>：研究合作方Spring
+Health已运营10年、覆盖Odisha地区100个村庄，证明了这种模式在技术上的可行性和可持续性。</p></li>
+</ol>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
+<ul>
+<li>全球水危机概述</li>
+<li>现有解决方案的局限（管道高成本、氯处理低需求）</li>
+<li>研究问题介绍</li>
+<li>论文结构预览</li>
+</ul>
+<h3 id="第二节背景与研究地点background-and-setting">第二节：背景与研究地点（Background
+and Setting）</h3>
+<ul>
+<li><strong>II.1
+研究地点</strong>：印度Odisha邦——印度最贫穷的邦之一，农村家庭月支出约2600卢比</li>
+<li><strong>II.2
+水资源状况</strong>：地下水丰富但砷、铁等污染物普遍存在；约20%人口缺乏安全饮用水</li>
+<li><strong>II.3 Spring
+Health公司</strong>：研究合作方，提供分散式水处理和家庭配送服务</li>
+</ul>
+<h3 id="第三节实验设计experimental-design">第三节：实验设计（Experimental
+Design）</h3>
+<ul>
+<li><strong>III.1
+实验目标</strong>：测量清洁水需求和估值；测量对健康的影响</li>
+<li><strong>III.2
+实验结构</strong>：集群随机试验，600个村庄，60,000户家庭</li>
+<li><strong>III.3 处理组设置</strong>：
+<ul>
+<li>定价组：不同折扣（25%、50%、75%）的价格优惠</li>
+<li>定量配给组：每月免费定量供给</li>
+<li>可交换配额组：现金返还机制</li>
+</ul></li>
+<li><strong>III.4
+控制组</strong>：纯控制组（保持原有状态）和商家对照组</li>
+</ul>
+<h3 id="第四节数据收集data-collection">第四节：数据收集（Data
+Collection）</h3>
+<ul>
+<li><strong>IV.1 管理数据</strong>：Spring Health订单系统记录</li>
+<li><strong>IV.2 调查数据</strong>：高频检查和终线调查</li>
+<li><strong>IV.3 健康结果</strong>：自报疾病、健康支出、缺课情况等</li>
+<li><strong>IV.4 水质测试</strong>：样本水质检测结果</li>
+</ul>
+<h3 id="第五节需求分析结果results-demand-for-clean-water">第五节：需求分析结果（Results:
+Demand for Clean Water）</h3>
+<ul>
+<li><strong>V.1 需求价格弹性</strong>：从价格折扣组估计</li>
+<li><strong>V.2 需求曲线</strong>：绘制价格-需求量曲线</li>
+<li><strong>V.3 广延边际vs集约边际</strong>：是否订购 vs
+订购数量的区分</li>
+<li><strong>V.4 需求稳定性</strong>：整个实验期间需求保持高位</li>
+</ul>
+<h3 id="第六节估值分析results-valuation">第六节：估值分析（Results:
+Valuation）</h3>
+<ul>
+<li><strong>VI.1 支付意愿（WTP）</strong>：从价格数据估算</li>
+<li><strong>VI.2 接受意愿（WTA）</strong>：从现金返还机制估算</li>
+<li><strong>VI.3
+与以往研究的比较</strong>：本研究估值比以往间接估计高数倍</li>
+</ul>
+<h3 id="第七节健康影响results-health-effects">第七节：健康影响（Results:
+Health Effects）</h3>
+<ul>
+<li><strong>VII.1
+自报疾病减少</strong>：饮用水清洁水后自报生病概率下降</li>
+<li><strong>VII.2 健康支出减少</strong>：医疗支出显著降低</li>
+<li><strong>VII.3 缺课减少</strong>：家庭成员缺课情况改善</li>
+<li><strong>VII.4 异质性分析</strong>：不同亚组的健康影响差异</li>
+</ul>
+<h3 id="第八节成本效益分析cost-effectiveness-analysis">第八节：成本效益分析（Cost-Effectiveness
+Analysis）</h3>
+<ul>
+<li><strong>VIII.1 单位成本计算</strong>：每升水成本、每户每月成本</li>
+<li><strong>VIII.2 DALY计算</strong>：每DALY节省成本</li>
+<li><strong>VIII.3
+与其他干预比较</strong>：与氯片分配、优惠券等比较</li>
+<li><strong>VIII.4
+不同场景分析</strong>：全补贴vs部分补贴vs市场定价</li>
+</ul>
+<h3 id="第九节讨论与结论discussion-and-conclusion">第九节：讨论与结论（Discussion
+and Conclusion）</h3>
+<ul>
+<li><strong>IX.1 政策含义</strong>：免费配送vs现金转移支付的权衡</li>
+<li><strong>IX.2 机制优势</strong>：相比点源氯处理的优势</li>
+<li><strong>IX.3 局限性</strong>：研究样本特殊性、外部效度问题</li>
+<li><strong>IX.4
+结论</strong>：分散式水处理和家庭配送是值得认真考虑的政策选项</li>
+</ul>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="全球水危机">全球水危机</h4>
+<p>全球约20亿人缺乏安全饮用水，这一问题的规模令人震惊： -
+每年约14亿例腹泻病例与不安全饮用水相关 - 50万儿童因腹泻死亡 -
+清洁水获取是全球儿童死亡的主要原因之一 -
+联合国估计实现普遍清洁水获取需要将改善速度提高六倍</p>
+<h4 id="传统解决方案的失败">传统解决方案的失败</h4>
+<p><strong>管道供水的局限</strong>： -
+发达国家（如英国）花费了近一个世纪才实现普遍管道供水 -
+低收入国家仅有不到30%的农村人口能获得自来水 -
+更为关键的是，即使有管道的地区，水质也常常不达标 -
+印度国家首都区仅26%的管道水样本被认为是可饮用的</p>
+<p><strong>点源氯处理的局限</strong>： -
+成本低，有效：可显著改善健康结果 -
+<strong>核心问题</strong>：使用率极低——即使完全免费，使用率也仅约5% -
+低需求原因包括： - 味道问题（氯的异味） -
+便利性问题（需要记住处理、存储水） - 认知负担（需要改变日常行为） -
+污染风险（取水和运水过程中的二次污染）</p>
+<h4 id="新兴的第三种方案">新兴的第三种方案</h4>
+<p>分散式水处理结合家庭配送正在成为第三种解决方案： -
+在巴西、中国、印度、印度尼西亚、墨西哥等国家迅速普及 -
+使用量在多年间增长了300% -
+结合了管道供水（方便）和氯处理（便宜）的优点</p>
+<h3 id="挑战">挑战</h3>
+<h4 id="研究问题">研究问题</h4>
+<ol type="1">
+<li><p><strong>需求弹性问题</strong>：家庭对清洁水的需求价格弹性有多大？在什么价格水平上需求会大幅下降？</p></li>
+<li><p><strong>真实估值问题</strong>：家庭对清洁水的真实价值是多少？以往的研究只研究了净水技术需求，而非清洁水本身。</p></li>
+<li><p><strong>WTP vs
+WTA问题</strong>：支付意愿和接受意愿是否不同？经典理论预测WTA应该大于WTP，但在发展中国家环境中是否如此？</p></li>
+<li><p><strong>政策设计问题</strong>：政府应该提供免费水、补贴价格还是现金转移支付？哪种方式更有效率？</p></li>
+<li><p><strong>成本效益问题</strong>：与其他公共卫生干预相比，这种干预的成本效益如何？</p></li>
+</ol>
+<h3 id="方法数据集要突出">方法（数据集要突出）</h3>
+<h4 id="实验设置">实验设置</h4>
+<p><strong>地点</strong>：印度Odisha邦——印度最贫穷的邦之一，排名第29/35</p>
+<p><strong>样本规模</strong>： - 600个村庄 - 约60,000户家庭 -
+实施周期：2021年4月至2023年8月（约27个月）</p>
+<p><strong>合作方</strong>：Spring Health India -
+在Odisha农村地区运营分散式水处理和家庭配送 - 使用电动氯化处理工艺 -
+太阳能供电 - 当地企业家运营</p>
+<p><strong>随机化设计</strong>：</p>
+<p>600个村庄随机分为3组： - 定价组（200村）：以不同折扣购买清洁水 -
+25%折扣 - 50%折扣 - 75%折扣 - 定量配给组（200村）：每月免费定量供给 -
+可交换配额组（200村）：现金返还机制 - 控制组：纯控制组</p>
+<p><strong>价格设置</strong>： - 全价：10卢比/升 - 25%折扣：7.5卢比/升 -
+50%折扣：5卢比/升 - 75%折扣：2.5卢比/升</p>
+<p><strong>现金返还设置</strong>： -
+季度返还：返还购买金额的25%、50%、75% - 返还方式：移动支付或银行账户</p>
+<h4 id="数据收集">数据收集</h4>
+<p><strong>管理数据</strong>： - Spring Health订单系统完整记录所有订单 -
+每日订单数量、价格、用户信息 - 完整面板数据</p>
+<p><strong>调查数据</strong>： - 高频检查（约每季度一次） -
+终线调查（实验结束时） - 涵盖饮水习惯、健康结果等</p>
+<p><strong>水质测试</strong>： - 从不同水源采集样本 -
+检测大肠杆菌等生物污染物 - 金属污染物检测</p>
+<h3 id="结果results">结果（Results）</h3>
+<h4 id="主要发现一需求价格弹性">主要发现一：需求价格弹性</h4>
+<p><strong>关键结果</strong>：在低价位（免费或低价）时，需求超过90%，且在整个实验期间保持稳定。</p>
+<p>具体而言： - <strong>免费或低价时</strong>：超过90%的家庭订购清洁水 -
+<strong>高价时（10卢比/升）</strong>：需求下降约40% -
+<strong>价格弹性</strong>：估计约为<span class="math inline">\({-0.3}\)</span>至<span class="math inline">\({-0.5}\)</span>左右</p>
+<p><strong>需求曲线形态</strong>： - 呈现明显的非线性特征 -
+在低价位时需求高度无弹性 - 在价格上涨时需求弹性增加 -
+但即使高价也有相当需求（说明潜在市场存在）</p>
+<p><strong>广延边际vs集约边际</strong>： -
+<strong>广延边际</strong>（是否订购）：对价格高度敏感 -
+<strong>集约边际</strong>（订购多少）：对价格相对不敏感 -
+一旦决定订购，家庭倾向于订购满足大部分饮水需求的量</p>
+<h4 id="主要发现二支付意愿和接受意愿">主要发现二：支付意愿和接受意愿</h4>
+<p><strong>支付意愿（WTP）</strong>： - 远高于以往间接估计 -
+约为既往氯处理研究的3-5倍 - 月度WTP约为家庭月支出的5-10% -
+相当于年度清洁水价值约为月支出的60-120%</p>
+<p><strong>接受意愿（WTA）</strong>： - WTA &gt; WTP，符合理论预测 -
+WTA显著超过边际成本 - 表明存在相当大的消费者剩余</p>
+<p><strong>为什么WTP远高于既往研究？</strong> -
+既往研究测量的是净水技术需求，而非清洁水本身 -
+家庭需要承担额外的非货币成本（时间、麻烦、认知负担） -
+本研究直接测量了最终产品——清洁水本身 - 包含了时间节省等额外收益</p>
+<h4 id="主要发现三健康影响">主要发现三：健康影响</h4>
+<p><strong>自报疾病减少</strong>： -
+饮用水清洁水的家庭自报生病概率降低约5-8个百分点 -
+相当于相比对照组降低约25-30%</p>
+<p><strong>健康支出减少</strong>： - 每周健康支出显著减少 -
+减少幅度约15-20%</p>
+<p><strong>缺课减少</strong>： - 因病缺课情况改善 -
+对女性影响尤为显著（她们通常负责取水）</p>
+<p><strong>时间节省</strong>： - 每周取水平均时间减少约15-20分钟 -
+对于女性有特别的性别平等意义</p>
+<h4 id="主要发现四成本效益分析">主要发现四：成本效益分析</h4>
+<p><strong>成本估算</strong>： - 每升水边际成本：约2-3卢比 -
+每户每月运营成本：约150-200卢比</p>
+<p><strong>DALY计算结果</strong>： - 免费配送模式的每DALY成本：约${<span class="math inline">\(30-80}
+- 远低于世界卫生组织的成本效益阈值（\)</span>{$100}/DALY） -
+与其他高性价比公共卫生干预（如蚊帐、疫苗）相当</p>
+<p><strong>与其他干预比较</strong>： -
+比氯片分配稍贵，但覆盖面更广、效果更持续 -
+比管道供水便宜得多，且实施更快 -
+综合考虑健康收益和时间节省，性价比突出</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>分散式家庭配送模式有效</strong>：农村家庭对清洁水的需求强烈且稳定，低价时超过90%的家庭持续使用。</p></li>
+<li><p><strong>估值远高于既往估计</strong>：家庭对清洁水本身的支付意愿是既往净水技术研究的3-5倍，表明以往研究严重低估了清洁水的真实价值。</p></li>
+<li><p><strong>WTA &gt;
+WTP</strong>：接受意愿超过支付意愿，符合理论预测且差异显著，这对政策设计有重要含义。</p></li>
+<li><p><strong>健康收益显著</strong>：清洁水获取与自报疾病减少、健康支出下降、缺课减少相关。</p></li>
+<li><p><strong>成本效益高</strong>：以每DALY成本衡量，分散式水处理具有高成本效益，值得政策关注。</p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><p><strong>填补研究空白</strong>：首次通过随机实验直接测量农村贫困人口对清洁水本身的揭示偏好估值。</p></li>
+<li><p><strong>方法论示范</strong>：同时使用价格实验和现金返还机制分别识别WTP和WTA，为环境品估值提供了更完整的框架。</p></li>
+<li><p><strong>政策启示</strong>：证明分散式水处理和家庭配送是值得认真考虑的政策选项，可以作为管道供水和点源氯处理的补充或替代。</p></li>
+<li><p><strong>市场可行性证明</strong>：证明在适当价格下，这种商业模式可以盈利，为可持续扩展提供了可能。</p></li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
+<ol type="1">
+<li><p><strong>多地区复制</strong>：在其他地区复制这一实验，检验结果的外部效度</p></li>
+<li><p><strong>长期持续性</strong>：研究家庭使用清洁水的长期持续性，以及干预效果是否随时间衰减</p></li>
+<li><p><strong>补充干预</strong>：研究其他补充干预（如环境卫生教育）是否能进一步改善健康结果</p></li>
+<li><p><strong>比较研究</strong>：与其他清洁水干预（如不同类型的净水器、不同的配送模式）的直接比较</p></li>
+</ol>
+<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
+<ol type="1">
+<li><p><strong>外部效度问题</strong>：Odisha地区的结果能否推广到其他地区？需要更多跨地区研究。</p></li>
+<li><p><strong>竞争效应</strong>：如果政府大规模推广这一模式，对现有水供应商（如瓶装水、桶装水）会有什么影响？</p></li>
+<li><p><strong>动态效率</strong>：当前实验没有考虑动态激励——长期来看，这种模式是否会抑制私人投资？</p></li>
+<li><p><strong>制度设计</strong>：不同机构（政府、非营利组织、私人公司）在实施这一模式时效果是否相同？</p></li>
+<li><p><strong>行为偏差</strong>：家庭是否存在行为偏差（如Present
+Bias）导致低估值或无法坚持使用？</p></li>
+</ol>
+<hr>
+<h2 id="学术思考">7. 学术思考</h2>
+<h3 id="核心学术洞察">核心学术洞察</h3>
+<ol type="1">
+<li><p><strong>"产品"vs"技术"的估值差异</strong>：本文最重要的洞见之一是区分了"净水技术"和"清洁水本身"的价值。既往研究测量的是前者（氯片、水龙头等），而本文直接测量后者。这解释了为什么本研究WTP远高于以往——因为它测量的是最终产品的完整价值，包括了所有非货币成本（时间、麻烦、风险）的节省。</p></li>
+<li><p><strong>发展中国家环境品的WTP/WTA差距</strong>：本文发现WTA显著大于WTP，这与标准理论一致，但在发展中国家的实证检验仍然有限。本文提供了难得的发展中国家环境品WTA数据点。</p></li>
+<li><p><strong>免费分配的"地板效应"</strong>：有趣的是，即使在免费分配的情况下，需求也没有超过100%——说明确实存在某些家庭不使用清洁水。这可能与偏好、信息或其他障碍有关，值得进一步研究。</p></li>
+</ol>
+<h3 id="深层学术问题">深层学术问题</h3>
+<ol type="1">
+<li><p><strong>为什么Odisha的估值这么高？</strong>
+这是否与当地特殊的水资源状况有关（地下水砷污染严重）？还是反映了更普遍的心理和文化因素？</p></li>
+<li><p><strong>商业模式可持续性</strong>：Spring
+Health是一个成功的案例，但能否复制？在没有外部补贴的情况下，这种模式能否盈利？</p></li>
+<li><p><strong>价格机制的效率vs公平权衡</strong>：免费分配（或高额补贴）虽然能最大化覆盖率，但可能造成资源浪费。现金转移支付虽然更有效率，但可能不会全部用于购买清洁水。如何在这之间取得平衡？</p></li>
+<li><p><strong>自报健康结果的可靠性</strong>：本研究主要依赖自报健康数据，可能存在测量误差和报告偏差。是否有更客观的健康指标可以补充？</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p><strong>与其他发展中国家清洁水干预相比</strong>：本文的方法和结论与Kremer、Dupas等人在东非、南亚的研究有何异同？是否有系统性的跨国差异？</p></li>
+<li><p><strong>商业模式的规模扩展性</strong>：Spring
+Health能否在更大规模（县级、邦级、全国）复制？主要障碍是什么？</p></li>
+<li><p><strong>政府vs市场提供</strong>：在清洁水领域，政府免费提供、补贴价格、现金转移支付三种方式哪种最优？是否存在普遍适用的最优政策？</p></li>
+<li><p><strong>实证策略的可靠性</strong>：使用价格折扣和现金返还机制识别WTP和WTA是否会产生不同的偏差？如何验证估计的稳健性？</p></li>
+<li><p><strong>与中国农村饮水问题的关联</strong>：本文的研究结论对中国农村饮水安全政策有什么启示？中国是否有类似分散式水配送的实践？</p></li>
+<li><p><strong>女性赋权效应</strong>：研究提到女性通常负责取水，清洁水配送对女性时间和经济参与有什么长期影响？</p></li>
+<li><p><strong>与其他健康干预的组合</strong>：清洁水干预与其他公共卫生干预（如疫苗、营养补充）组合是否能产生更大的健康收益？</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Poverty and Economic Decision-Making — 深度阅读笔记 — Carvalho, Meier &amp; Wang</title>
     <url>/posts/carvalho2016/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -3420,6 +3747,279 @@ Mani et al. (2013)
       </tags>
   </entry>
   <entry>
+    <title>The Effect of Minimum Wages on Low-Wage Jobs — 深度分析 — Cengiz Et Al.</title>
+    <url>/posts/cengiz2019/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: The Effect of Minimum Wages on Low-Wage
+Jobs</li>
+<li><strong>作者</strong>: Doruk Cengiz(University of Massachusetts
+Amherst), Arindrajit Dube(UMass Amherst, NBER), Attila Lindner(UCL, CEP,
+IFS), Ben Zipperer(Economic Policy Institute)</li>
+<li><strong>类型</strong>: 论文笔记 / 劳动经济学</li>
+<li><strong>出版年份</strong>: 2019</li>
+<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics,
+Volume 134, Issue 3, Pages 1405-1454</li>
+<li><strong>难度评估</strong>: 中 - 需要劳动经济学和计量经济学基础
+<span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言背景和意义">1. 引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>最低工资政策(Minimum Wage
+Policy)</strong>:政府规定的劳动力小时工资下限,是劳动经济学中最具争议的政策之一.支持者认为它能提高低收入工人的生活水平,反对者担心它会导致就业下降("unemployment").</p>
+<p><strong>"新最低工资研究"的起源</strong>:Card and Krueger
+(1995)&lt;神话与计量经济学:对最低工资的新研究&gt;对传统观点提出挑战,使用准实验方法发现最低工资提高并未导致就业下降.</p>
+<p><strong>bunching
+estimator(堆集估计量)</strong>:一种利用政策变化导致的结果分布聚集现象来识别因果效应的方法.</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>政策热潮</strong>:加州、伊利诺伊州、麻省、新泽西州、纽约州已通过将最低工资提高至$15/小时的立法;数十个城市也实施了城市级最低工资政策.</p></li>
+<li><p><strong>研究缺漏</strong>:尽管新最低工资研究已逾30年,但关于政策对总体就业影响的研究仍然很少.2014年国会预算办公室(CBO)报告承认相关研究匮乏,被迫使用青少年的弹性来推断对低工资工人的总体影响.</p></li>
+<li><p><strong>方法论挑战</strong>:传统方法使用双向固定效应回归,但存在一些问题,如对工资分布上尾部的影响可能干扰对底部效应的估计.</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>:最低工资对低工资工作的总体效应是什么?</p>
+<p><strong>具体子问题</strong>: - 最低工资对就业的影响是正还是负? -
+影响有多大? - 最低工资带来的工资上涨是否被就业损失所抵消? -
+效应的异质性如何?</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><strong>方法创新</strong>:提出"事件堆集"(EB-bunching)方法,将总体就业效应分解到各工资区间</li>
+<li><strong>对既有文献的贡献</strong>:澄清了最低工资文献中关于1980年代和1990年代早期样本选择的争议</li>
+<li><strong>政策意义</strong>:为当前$15最低工资运动提供实证依据</li>
+</ol>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构(论文结构)</h2>
+<table>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr>
+<th>章节</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I. Introduction</td>
+<td>研究背景、问题意识、文献贡献</td>
+</tr>
+<tr>
+<td>II. Methodology and Data</td>
+<td>概念框架、实证策略、数据</td>
+</tr>
+<tr>
+<td>III. Main Empirical Findings</td>
+<td>总体就业效应、工资溢出、异质性分析</td>
+</tr>
+<tr>
+<td>IV. Robustness and Threats to Identification</td>
+<td>对双向固定效应方法问题的解释</td>
+</tr>
+<tr>
+<td>V. Conclusion</td>
+<td>结论</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文(逻辑梳理)</h2>
+<h3 id="背景最低工资的理论预测">背景:最低工资的理论预测</h3>
+<p><strong>竞争性劳动力市场模型预测</strong>: -
+最低工资提高会导致低工资就业下降 - 下降幅度取决于劳动力需求弹性</p>
+<p><strong>monopsony模型预测</strong>: - 最低工资提高可能增加就业 -
+因为雇主的市場力量被削弱</p>
+<p><strong>实际预测的复杂性</strong>: -
+工资溢出效应(spillovers):最低工资可能推动高于最低工资的工人工资上涨 -
+劳动力替代:低技能工人可能被高技能工人替代 -
+就业损失可能分布在不同工资区间</p>
+<h3 id="挑战">挑战</h3>
+<ol type="1">
+<li><p><strong>识别问题</strong>:如何分离最低工资的因果效应?</p></li>
+<li><p><strong>聚类分配问题</strong>:传统双向固定效应方法可能因早期时期的混杂因素而产生偏误</p></li>
+<li><p><strong>效应的空间异质性</strong>:不同行业的最低工资效应可能不同</p></li>
+<li><p><strong>数据局限性</strong>:CPS调查数据可能存在测量误差</p></li>
+</ol>
+<h3 id="方法数据集要突出">方法(数据集要突出)</h3>
+<p><strong>数据来源</strong>: -
+1979-2016年CPS(当前人口调查)NBER合并出口轮次小组数据 - 137,000+观测值 -
+138个州级最低工资事件(1979-2016年间) -
+<strong>事件定义</strong>:州最低工资增加至少$0.25,且至少2%工人直接影响</p>
+<p><strong>核心概念</strong>: - <strong>缺失工作(Missing
+Jobs)</strong>:最低工资提高后,低于新最低工资的工作数量减少 -
+<strong>超额工作(Excess
+Jobs)</strong>:因最低工资提高而出现在最低工资水平或略高处的工作增加</p>
+<p><strong>实证策略_事件研究设计</strong>: <span class="math display">\[{E_{sjt} \over N_{st}} = \sum_{\tau=-3}^{4}
+\sum_{k=-4}^{17} \alpha_{\tau k} I_{\tau k}^{sjt} + \mu_{sj} + \rho_{jt}
++ \Omega_{sjt} + u_{sjt}}\]</span></p>
+<p>其中: - <span class="math inline">\(E_{sjt}\)</span>:j工资区间在s州的就业 - <span class="math inline">\(N_{st}\)</span>:s州当时的劳动力 - <span class="math inline">\(I_{\tau k}^{sjt}\)</span>:处理指示变量 - <span class="math inline">\(\mu_{sj}\)</span>:州×工资区间固定效应 - <span class="math inline">\(\rho_{jt}\)</span>:时间×工资区间固定效应 -
+标准误按州级聚类</p>
+<p><strong>关键创新</strong>: - 将就业变化按$0.25工资区间分解 -
+使用事件窗口前后对比 - 提供对上尾效应的检验</p>
+<h3 id="结果results">结果(Results)</h3>
+<p><strong>核心发现1:总体就业效应接近零</strong></p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>估计值</th>
+<th>标准误</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>受影响工人就业变化</td>
+<td>+2.8%</td>
+<td>(2.9%)</td>
+</tr>
+<tr>
+<td>就业弹性(相对于自身工资)</td>
+<td>0.41</td>
+<td>(0.43)</td>
+</tr>
+</tbody>
+</table>
+<p>→ 在95%置信水平下,排除低于-0.45的弹性</p>
+<p><strong>核心发现2:工资溢出效应显著</strong></p>
+<ul>
+<li>溢出效应向上延伸至最低工资以上约$3</li>
+<li>总体工资增长中约40%来自溢出效应</li>
+<li><strong>不对称性</strong>:留任工人获得显著工资溢出,但新进入者没有</li>
+</ul>
+<p><strong>核心发现3:行业异质性</strong></p>
+<table>
+<thead>
+<tr>
+<th>行业</th>
+<th>就业弹性</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>可贸易部门(制造业)</td>
+<td>-1.4</td>
+<td>显著负效应</td>
+</tr>
+<tr>
+<td>不可贸易部门(餐饮、零售)</td>
+<td>≈0</td>
+<td>几乎无效应</td>
+</tr>
+</tbody>
+</table>
+<p>→ 行业组成是决定最低工资就业效应的关键因素</p>
+<p><strong>核心发现4:人口群体异质性</strong></p>
+<ul>
+<li>按教育和年龄分组,未发现低技能工人被高技能工人替代的证据</li>
+<li>不同人口群体的就业效应大多接近零且不显著</li>
+<li>表明最低工资政策的好处理广泛共享</li>
+</ul>
+<p><strong>核心发现5:对Meer and West (2016)发现的解释</strong></p>
+<ul>
+<li>该研究使用双向固定效应发现大的负就业估计</li>
+<li>分解分析显示这一负效应由工资分布上尾的不大幅度下降驱动</li>
+<li>问题来源:1980年代和1990年代早期样本中包含的时期混杂因素</li>
+<li>1992年后,各种标准规范几乎没有就业减少的证据</li>
+</ul>
+<hr>
+<h2 id="结论conclusion">4. 结论(Conclusion)</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>最低工资对低工资工作数量的总体影响基本为零</strong>:五年观察期内,低工资工作数量基本保持不变</p></li>
+<li><p><strong>最低工资的直接工资效应被适度工资溢出放大</strong>:溢出效应约占总体工资增长的40%</p></li>
+<li><p><strong>就业效应不能用劳动力替代解释</strong>:不同教育和年龄群体的替代效应证据不成立</p></li>
+<li><p><strong>在更高最低工资水平下也未发现就业减少证据</strong>:但确实发现可贸易部门(制造业)减少的迹象</p></li>
+<li><p><strong>方法论贡献</strong>:EB-bunching方法提供了透明且稳健的估计最低工资就业效应的方法</p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><strong>澄清方法论争议</strong>:解释了为什么双向固定效应和事件研究方法产生不同结果</li>
+<li><strong>提供新的实证证据</strong>:使用更全面的数据和更细粒度的分解</li>
+<li><strong>扩展工资溢出分析</strong>:提供了关于溢出机制(相对工资关系 vs
+外部选择价值)的证据</li>
+<li><strong>政策意义</strong>:为$15最低工资运动提供实证支持</li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向(Future work)</h2>
+<h3 id="论文提及的拓展方向">论文提及的拓展方向</h3>
+<ol type="1">
+<li><p><strong>更高最低工资水平的研究</strong>:当Kaitz指数超过59%时会发生什么?需要更高最低工资的州的
+variation</p></li>
+<li><p><strong>长期效应</strong>:本研究关注5年窗口,更长期效应仍需研究</p></li>
+<li><p><strong>其他国家的证据</strong>:美国结果的国际可比性</p></li>
+</ol>
+<h3 id="思考的下一步研究">思考的下一步研究</h3>
+<ol type="1">
+<li><p><strong>动态一般均衡效应</strong>:行业层面的一般均衡调整如何影响就业?</p></li>
+<li><p><strong>非正规就业</strong>:最低工资对非正规经济(零工经济)的影响</p></li>
+<li><p><strong>非工资效应</strong>:最低工资对工作条件、培训机会等非工资方面的影响</p></li>
+<li><p><strong>家庭效应</strong>:最低工资对家庭收入分配和儿童贫困的影响</p></li>
+<li><p><strong>政治经济学</strong>:最低工资设定的决定因素及其政治经济学含义</p></li>
+</ol>
+<hr>
+<h2 id="学术思考">6. 学术思考</h2>
+<h3 id="核心学术问题">核心学术问题</h3>
+<ol type="1">
+<li><strong>竞争性 vs monopsony劳动力市场的边界</strong>
+<ul>
+<li>本研究发现总体就业效应接近零</li>
+<li>这是否意味着低工资劳动力市场更接近monopsony?</li>
+<li>还是正负效应相互抵消?</li>
+</ul></li>
+<li><strong>工资溢出的机制</strong>
+<ul>
+<li>研究发现溢出效应在最低工资以上约$3处消失</li>
+<li>且对留任工人和新进入者影响不对称</li>
+<li>这更支持"相对工资关系假设"而非"外部选择价值假设"</li>
+<li>但这是否意味着企业内部存在显著的工资刚性?</li>
+</ul></li>
+<li><strong>可贸易 vs 不可贸易部门的差异</strong>
+<ul>
+<li>制造业显著负效应 vs 零售餐饮零效应</li>
+<li>这是否意味着全球化压力降低了美国低技能工人的谈价能力?</li>
+<li>还是反映了不同的劳动力市场结构?</li>
+</ul></li>
+<li><strong>EB-bunching方法的普适性</strong>
+<ul>
+<li>将总体效应分解到各工资区间</li>
+<li>提供了"透明"的估计方式</li>
+<li>是否可以推广到其他政策评估?</li>
+</ul></li>
+<li><strong>对CBO政策分析的启示</strong>
+<ul>
+<li>CBO使用青少年弹性来推断总体影响</li>
+<li>本研究表明青少年可能是受最低工资影响最深的群体</li>
+<li>这是否意味着CBO的方法实际上低估了不确定性?</li>
+</ul></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p><strong>识别策略的有效性</strong>:如何检验平行趋势假设?事件前趋势检验的结果如何?</p></li>
+<li><p><strong>测量误差的影响</strong>:CPS数据中的测量误差如何影响估计?特别是对工资分布尾部的测量?</p></li>
+<li><p><strong>Kaitz指数的具体含义</strong>:Kaitz指数达到59%时会发生什么理论预测?</p></li>
+<li><p><strong>对理论模型的启示</strong>:这些发现如何区分竞争性模型和monopsony模型?</p></li>
+<li><p><strong>政策外部有效性</strong>:基于1979-2016年数据的发现在2020年代是否仍然适用?劳动力市场结构是否发生了根本性变化?</p></li>
+<li><p><strong>对工人流动的动态效应</strong>:最低工资是否影响了低工资工人的职业发展轨迹?</p></li>
+<li><p><strong>雇主反应的非工资渠道</strong>:雇主除了调整就业和工资外,是否在工时、工作条件、培训等方面做出了调整?</p></li>
+<li><p><strong>与Dube et al. (2010)
+NJ快餐业研究的关系</strong>:为什么NJ快餐业研究发现了正效应,而本研究对所有行业的汇总发现零效应?</p></li>
+<li><p><strong>对州际差异的控制</strong>:如何排除州级经济基本面对结果的混杂影响?各州经济多样性的作用是什么?</p></li>
+<li><p><strong>最低工资的收入分配效应</strong>:最低工资如何与税法、其他转移支付计划相互作用以影响收入不平等?</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>劳动经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>&lt;玉米与人口&gt;深度阅读笔记 — Chen &amp; Kung</title>
     <url>/posts/chen2016/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -3740,606 +4340,6 @@ Issue 1, pp. 71-99</li>
       </tags>
   </entry>
   <entry>
-    <title>The Effect of Minimum Wages on Low-Wage Jobs — 深度分析 — Cengiz Et Al.</title>
-    <url>/posts/cengiz2019/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: The Effect of Minimum Wages on Low-Wage
-Jobs</li>
-<li><strong>作者</strong>: Doruk Cengiz(University of Massachusetts
-Amherst), Arindrajit Dube(UMass Amherst, NBER), Attila Lindner(UCL, CEP,
-IFS), Ben Zipperer(Economic Policy Institute)</li>
-<li><strong>类型</strong>: 论文笔记 / 劳动经济学</li>
-<li><strong>出版年份</strong>: 2019</li>
-<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics,
-Volume 134, Issue 3, Pages 1405-1454</li>
-<li><strong>难度评估</strong>: 中 - 需要劳动经济学和计量经济学基础
-<span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言背景和意义">1. 引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>最低工资政策(Minimum Wage
-Policy)</strong>:政府规定的劳动力小时工资下限,是劳动经济学中最具争议的政策之一.支持者认为它能提高低收入工人的生活水平,反对者担心它会导致就业下降("unemployment").</p>
-<p><strong>"新最低工资研究"的起源</strong>:Card and Krueger
-(1995)&lt;神话与计量经济学:对最低工资的新研究&gt;对传统观点提出挑战,使用准实验方法发现最低工资提高并未导致就业下降.</p>
-<p><strong>bunching
-estimator(堆集估计量)</strong>:一种利用政策变化导致的结果分布聚集现象来识别因果效应的方法.</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>政策热潮</strong>:加州、伊利诺伊州、麻省、新泽西州、纽约州已通过将最低工资提高至$15/小时的立法;数十个城市也实施了城市级最低工资政策.</p></li>
-<li><p><strong>研究缺漏</strong>:尽管新最低工资研究已逾30年,但关于政策对总体就业影响的研究仍然很少.2014年国会预算办公室(CBO)报告承认相关研究匮乏,被迫使用青少年的弹性来推断对低工资工人的总体影响.</p></li>
-<li><p><strong>方法论挑战</strong>:传统方法使用双向固定效应回归,但存在一些问题,如对工资分布上尾部的影响可能干扰对底部效应的估计.</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:最低工资对低工资工作的总体效应是什么?</p>
-<p><strong>具体子问题</strong>: - 最低工资对就业的影响是正还是负? -
-影响有多大? - 最低工资带来的工资上涨是否被就业损失所抵消? -
-效应的异质性如何?</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><strong>方法创新</strong>:提出"事件堆集"(EB-bunching)方法,将总体就业效应分解到各工资区间</li>
-<li><strong>对既有文献的贡献</strong>:澄清了最低工资文献中关于1980年代和1990年代早期样本选择的争议</li>
-<li><strong>政策意义</strong>:为当前$15最低工资运动提供实证依据</li>
-</ol>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构(论文结构)</h2>
-<table>
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr>
-<th>章节</th>
-<th>内容</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I. Introduction</td>
-<td>研究背景、问题意识、文献贡献</td>
-</tr>
-<tr>
-<td>II. Methodology and Data</td>
-<td>概念框架、实证策略、数据</td>
-</tr>
-<tr>
-<td>III. Main Empirical Findings</td>
-<td>总体就业效应、工资溢出、异质性分析</td>
-</tr>
-<tr>
-<td>IV. Robustness and Threats to Identification</td>
-<td>对双向固定效应方法问题的解释</td>
-</tr>
-<tr>
-<td>V. Conclusion</td>
-<td>结论</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文(逻辑梳理)</h2>
-<h3 id="背景最低工资的理论预测">背景:最低工资的理论预测</h3>
-<p><strong>竞争性劳动力市场模型预测</strong>: -
-最低工资提高会导致低工资就业下降 - 下降幅度取决于劳动力需求弹性</p>
-<p><strong>monopsony模型预测</strong>: - 最低工资提高可能增加就业 -
-因为雇主的市場力量被削弱</p>
-<p><strong>实际预测的复杂性</strong>: -
-工资溢出效应(spillovers):最低工资可能推动高于最低工资的工人工资上涨 -
-劳动力替代:低技能工人可能被高技能工人替代 -
-就业损失可能分布在不同工资区间</p>
-<h3 id="挑战">挑战</h3>
-<ol type="1">
-<li><p><strong>识别问题</strong>:如何分离最低工资的因果效应?</p></li>
-<li><p><strong>聚类分配问题</strong>:传统双向固定效应方法可能因早期时期的混杂因素而产生偏误</p></li>
-<li><p><strong>效应的空间异质性</strong>:不同行业的最低工资效应可能不同</p></li>
-<li><p><strong>数据局限性</strong>:CPS调查数据可能存在测量误差</p></li>
-</ol>
-<h3 id="方法数据集要突出">方法(数据集要突出)</h3>
-<p><strong>数据来源</strong>: -
-1979-2016年CPS(当前人口调查)NBER合并出口轮次小组数据 - 137,000+观测值 -
-138个州级最低工资事件(1979-2016年间) -
-<strong>事件定义</strong>:州最低工资增加至少$0.25,且至少2%工人直接影响</p>
-<p><strong>核心概念</strong>: - <strong>缺失工作(Missing
-Jobs)</strong>:最低工资提高后,低于新最低工资的工作数量减少 -
-<strong>超额工作(Excess
-Jobs)</strong>:因最低工资提高而出现在最低工资水平或略高处的工作增加</p>
-<p><strong>实证策略_事件研究设计</strong>: <span class="math display">\[{E_{sjt} \over N_{st}} = \sum_{\tau=-3}^{4}
-\sum_{k=-4}^{17} \alpha_{\tau k} I_{\tau k}^{sjt} + \mu_{sj} + \rho_{jt}
-+ \Omega_{sjt} + u_{sjt}}\]</span></p>
-<p>其中: - <span class="math inline">\(E_{sjt}\)</span>:j工资区间在s州的就业 - <span class="math inline">\(N_{st}\)</span>:s州当时的劳动力 - <span class="math inline">\(I_{\tau k}^{sjt}\)</span>:处理指示变量 - <span class="math inline">\(\mu_{sj}\)</span>:州×工资区间固定效应 - <span class="math inline">\(\rho_{jt}\)</span>:时间×工资区间固定效应 -
-标准误按州级聚类</p>
-<p><strong>关键创新</strong>: - 将就业变化按$0.25工资区间分解 -
-使用事件窗口前后对比 - 提供对上尾效应的检验</p>
-<h3 id="结果results">结果(Results)</h3>
-<p><strong>核心发现1:总体就业效应接近零</strong></p>
-<table>
-<thead>
-<tr>
-<th>指标</th>
-<th>估计值</th>
-<th>标准误</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>受影响工人就业变化</td>
-<td>+2.8%</td>
-<td>(2.9%)</td>
-</tr>
-<tr>
-<td>就业弹性(相对于自身工资)</td>
-<td>0.41</td>
-<td>(0.43)</td>
-</tr>
-</tbody>
-</table>
-<p>→ 在95%置信水平下,排除低于-0.45的弹性</p>
-<p><strong>核心发现2:工资溢出效应显著</strong></p>
-<ul>
-<li>溢出效应向上延伸至最低工资以上约$3</li>
-<li>总体工资增长中约40%来自溢出效应</li>
-<li><strong>不对称性</strong>:留任工人获得显著工资溢出,但新进入者没有</li>
-</ul>
-<p><strong>核心发现3:行业异质性</strong></p>
-<table>
-<thead>
-<tr>
-<th>行业</th>
-<th>就业弹性</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>可贸易部门(制造业)</td>
-<td>-1.4</td>
-<td>显著负效应</td>
-</tr>
-<tr>
-<td>不可贸易部门(餐饮、零售)</td>
-<td>≈0</td>
-<td>几乎无效应</td>
-</tr>
-</tbody>
-</table>
-<p>→ 行业组成是决定最低工资就业效应的关键因素</p>
-<p><strong>核心发现4:人口群体异质性</strong></p>
-<ul>
-<li>按教育和年龄分组,未发现低技能工人被高技能工人替代的证据</li>
-<li>不同人口群体的就业效应大多接近零且不显著</li>
-<li>表明最低工资政策的好处理广泛共享</li>
-</ul>
-<p><strong>核心发现5:对Meer and West (2016)发现的解释</strong></p>
-<ul>
-<li>该研究使用双向固定效应发现大的负就业估计</li>
-<li>分解分析显示这一负效应由工资分布上尾的不大幅度下降驱动</li>
-<li>问题来源:1980年代和1990年代早期样本中包含的时期混杂因素</li>
-<li>1992年后,各种标准规范几乎没有就业减少的证据</li>
-</ul>
-<hr>
-<h2 id="结论conclusion">4. 结论(Conclusion)</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>最低工资对低工资工作数量的总体影响基本为零</strong>:五年观察期内,低工资工作数量基本保持不变</p></li>
-<li><p><strong>最低工资的直接工资效应被适度工资溢出放大</strong>:溢出效应约占总体工资增长的40%</p></li>
-<li><p><strong>就业效应不能用劳动力替代解释</strong>:不同教育和年龄群体的替代效应证据不成立</p></li>
-<li><p><strong>在更高最低工资水平下也未发现就业减少证据</strong>:但确实发现可贸易部门(制造业)减少的迹象</p></li>
-<li><p><strong>方法论贡献</strong>:EB-bunching方法提供了透明且稳健的估计最低工资就业效应的方法</p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><strong>澄清方法论争议</strong>:解释了为什么双向固定效应和事件研究方法产生不同结果</li>
-<li><strong>提供新的实证证据</strong>:使用更全面的数据和更细粒度的分解</li>
-<li><strong>扩展工资溢出分析</strong>:提供了关于溢出机制(相对工资关系 vs
-外部选择价值)的证据</li>
-<li><strong>政策意义</strong>:为$15最低工资运动提供实证支持</li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向(Future work)</h2>
-<h3 id="论文提及的拓展方向">论文提及的拓展方向</h3>
-<ol type="1">
-<li><p><strong>更高最低工资水平的研究</strong>:当Kaitz指数超过59%时会发生什么?需要更高最低工资的州的
-variation</p></li>
-<li><p><strong>长期效应</strong>:本研究关注5年窗口,更长期效应仍需研究</p></li>
-<li><p><strong>其他国家的证据</strong>:美国结果的国际可比性</p></li>
-</ol>
-<h3 id="思考的下一步研究">思考的下一步研究</h3>
-<ol type="1">
-<li><p><strong>动态一般均衡效应</strong>:行业层面的一般均衡调整如何影响就业?</p></li>
-<li><p><strong>非正规就业</strong>:最低工资对非正规经济(零工经济)的影响</p></li>
-<li><p><strong>非工资效应</strong>:最低工资对工作条件、培训机会等非工资方面的影响</p></li>
-<li><p><strong>家庭效应</strong>:最低工资对家庭收入分配和儿童贫困的影响</p></li>
-<li><p><strong>政治经济学</strong>:最低工资设定的决定因素及其政治经济学含义</p></li>
-</ol>
-<hr>
-<h2 id="学术思考">6. 学术思考</h2>
-<h3 id="核心学术问题">核心学术问题</h3>
-<ol type="1">
-<li><strong>竞争性 vs monopsony劳动力市场的边界</strong>
-<ul>
-<li>本研究发现总体就业效应接近零</li>
-<li>这是否意味着低工资劳动力市场更接近monopsony?</li>
-<li>还是正负效应相互抵消?</li>
-</ul></li>
-<li><strong>工资溢出的机制</strong>
-<ul>
-<li>研究发现溢出效应在最低工资以上约$3处消失</li>
-<li>且对留任工人和新进入者影响不对称</li>
-<li>这更支持"相对工资关系假设"而非"外部选择价值假设"</li>
-<li>但这是否意味着企业内部存在显著的工资刚性?</li>
-</ul></li>
-<li><strong>可贸易 vs 不可贸易部门的差异</strong>
-<ul>
-<li>制造业显著负效应 vs 零售餐饮零效应</li>
-<li>这是否意味着全球化压力降低了美国低技能工人的谈价能力?</li>
-<li>还是反映了不同的劳动力市场结构?</li>
-</ul></li>
-<li><strong>EB-bunching方法的普适性</strong>
-<ul>
-<li>将总体效应分解到各工资区间</li>
-<li>提供了"透明"的估计方式</li>
-<li>是否可以推广到其他政策评估?</li>
-</ul></li>
-<li><strong>对CBO政策分析的启示</strong>
-<ul>
-<li>CBO使用青少年弹性来推断总体影响</li>
-<li>本研究表明青少年可能是受最低工资影响最深的群体</li>
-<li>这是否意味着CBO的方法实际上低估了不确定性?</li>
-</ul></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p><strong>识别策略的有效性</strong>:如何检验平行趋势假设?事件前趋势检验的结果如何?</p></li>
-<li><p><strong>测量误差的影响</strong>:CPS数据中的测量误差如何影响估计?特别是对工资分布尾部的测量?</p></li>
-<li><p><strong>Kaitz指数的具体含义</strong>:Kaitz指数达到59%时会发生什么理论预测?</p></li>
-<li><p><strong>对理论模型的启示</strong>:这些发现如何区分竞争性模型和monopsony模型?</p></li>
-<li><p><strong>政策外部有效性</strong>:基于1979-2016年数据的发现在2020年代是否仍然适用?劳动力市场结构是否发生了根本性变化?</p></li>
-<li><p><strong>对工人流动的动态效应</strong>:最低工资是否影响了低工资工人的职业发展轨迹?</p></li>
-<li><p><strong>雇主反应的非工资渠道</strong>:雇主除了调整就业和工资外,是否在工时、工作条件、培训等方面做出了调整?</p></li>
-<li><p><strong>与Dube et al. (2010)
-NJ快餐业研究的关系</strong>:为什么NJ快餐业研究发现了正效应,而本研究对所有行业的汇总发现零效应?</p></li>
-<li><p><strong>对州际差异的控制</strong>:如何排除州级经济基本面对结果的混杂影响?各州经济多样性的作用是什么?</p></li>
-<li><p><strong>最低工资的收入分配效应</strong>:最低工资如何与税法、其他转移支付计划相互作用以影响收入不平等?</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>劳动经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>清洁水的价值 — 深度阅读笔记 — Burlig, Jina &amp; Sudarshan</title>
-    <url>/posts/burlig2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: The Value of Clean Water: Experimental
-Evidence from Rural India</li>
-<li><strong>作者</strong>: Fiona Burlig (University of Chicago Harris
-School, EPIC), Amir Jina (University of Chicago Harris School, EPIC,
-NBER), Anant Sudarshan (University of Warwick)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3):
-1148-1187</li>
-<li><strong>DOI</strong>: 10.1257/aer.20250278</li>
-<li><strong>难度评估</strong>: 高 -
-需要实验经济学、发展经济学、公共卫生经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>饮用水安全问题（Safe Drinking Water
-Access）</strong>：全球约20亿人缺乏安全饮用水，这是一个重大的公共卫生危机。传统解决方案包括自来水管道和点源氯处理，但各有问题：管道建设成本高昂（高成本），氯处理方案需求不足（低需求）。</p>
-<p><strong>分散式水处理与家庭配送（Decentralized Treatment and Home
-Delivery）</strong>：一种替代方案是将水处理分散化并配送到家庭。这种模式在巴西、中国、印度、印度尼西亚、墨西哥等国家日益普及，使用量在多年间增长了300%。</p>
-<p><strong>揭示偏好法（Revealed Preference
-Methods）</strong>：通过观察人们在现实市场中的实际选择来推断其支付意愿（WTP），而非依赖假设性的条件评估法。这种方法更接近真实价值。</p>
-<p><strong>DALY（Disability-Adjusted Life
-Year）</strong>：一种综合衡量疾病负担的指标，等于因早死而损失的生命年数加上因残疾而损失的健康年数。DALY越低表示健康状况越好。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><strong>全球水危机规模</strong>：
-<ul>
-<li>超过20亿人缺乏安全饮用水</li>
-<li>受污染饮用水每年导致约14亿例腹泻、50万儿童死亡</li>
-<li>清洁饮用水的缺乏是全球儿童死亡的主要原因之一</li>
-<li>联合国估计，实现普遍清洁饮用水获取需要将当前改善速度提高六倍</li>
-</ul></li>
-<li><strong>现有解决方案的局限性</strong>：
-<ul>
-<li><strong>管道供水</strong>：英国等发达国家花费近150年才实现普遍管道供水；低收入国家仅约30%农村人口能获得自来水，且经常受到污染</li>
-<li><strong>点源氯处理</strong>：成本低，有效，但使用率仅约5%，被描述为"不够好，无法完全解决"清洁水获取问题</li>
-<li><strong>其他方法</strong>：净水器、太阳消毒等替代方案虽有效果，但均存在局限性</li>
-</ul></li>
-<li><strong>新兴的第三种方案</strong>：
-<ul>
-<li>分散式水处理结合家庭配送模式正在兴起</li>
-<li>在中低收入国家城市贫民窟和农村地区服务越来越多的人口</li>
-<li>在巴西、中国、印度、印度尼西亚、墨西哥等国家增长显著</li>
-</ul></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>： 1.
-分散式家庭配送清洁水是否能够有效改善农村贫困人口的清洁水获取问题？ 2.
-家庭对清洁水的真实估值是多少？支付意愿（WTP）和接受意愿（WTA）各是多少？
-3. 政府应该使用价格机制还是免费分配来提供清洁水？ 4.
-这种干预的成本效益如何？</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><p><strong>理论贡献</strong>：首次通过随机对照实验直接测量农村贫困人口对清洁饮用水本身的支付意愿，填补了以往研究只测量净水技术需求的空白。</p></li>
-<li><p><strong>方法论贡献</strong>：同时测量了WTP（支付意愿）和WTA（接受意愿）两种揭示偏好指标，为理解发展中国家家庭对环境品的估值提供了更完整的图景。</p></li>
-<li><p><strong>政策贡献</strong>：为发展中国家政府如何最优分配有限的公共卫生资金提供了实证依据，对全球清洁水获取政策具有直接指导意义。</p></li>
-<li><p><strong>规模可扩展性证明</strong>：研究合作方Spring
-Health已运营10年、覆盖Odisha地区100个村庄，证明了这种模式在技术上的可行性和可持续性。</p></li>
-</ol>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
-<ul>
-<li>全球水危机概述</li>
-<li>现有解决方案的局限（管道高成本、氯处理低需求）</li>
-<li>研究问题介绍</li>
-<li>论文结构预览</li>
-</ul>
-<h3 id="第二节背景与研究地点background-and-setting">第二节：背景与研究地点（Background
-and Setting）</h3>
-<ul>
-<li><strong>II.1
-研究地点</strong>：印度Odisha邦——印度最贫穷的邦之一，农村家庭月支出约2600卢比</li>
-<li><strong>II.2
-水资源状况</strong>：地下水丰富但砷、铁等污染物普遍存在；约20%人口缺乏安全饮用水</li>
-<li><strong>II.3 Spring
-Health公司</strong>：研究合作方，提供分散式水处理和家庭配送服务</li>
-</ul>
-<h3 id="第三节实验设计experimental-design">第三节：实验设计（Experimental
-Design）</h3>
-<ul>
-<li><strong>III.1
-实验目标</strong>：测量清洁水需求和估值；测量对健康的影响</li>
-<li><strong>III.2
-实验结构</strong>：集群随机试验，600个村庄，60,000户家庭</li>
-<li><strong>III.3 处理组设置</strong>：
-<ul>
-<li>定价组：不同折扣（25%、50%、75%）的价格优惠</li>
-<li>定量配给组：每月免费定量供给</li>
-<li>可交换配额组：现金返还机制</li>
-</ul></li>
-<li><strong>III.4
-控制组</strong>：纯控制组（保持原有状态）和商家对照组</li>
-</ul>
-<h3 id="第四节数据收集data-collection">第四节：数据收集（Data
-Collection）</h3>
-<ul>
-<li><strong>IV.1 管理数据</strong>：Spring Health订单系统记录</li>
-<li><strong>IV.2 调查数据</strong>：高频检查和终线调查</li>
-<li><strong>IV.3 健康结果</strong>：自报疾病、健康支出、缺课情况等</li>
-<li><strong>IV.4 水质测试</strong>：样本水质检测结果</li>
-</ul>
-<h3 id="第五节需求分析结果results-demand-for-clean-water">第五节：需求分析结果（Results:
-Demand for Clean Water）</h3>
-<ul>
-<li><strong>V.1 需求价格弹性</strong>：从价格折扣组估计</li>
-<li><strong>V.2 需求曲线</strong>：绘制价格-需求量曲线</li>
-<li><strong>V.3 广延边际vs集约边际</strong>：是否订购 vs
-订购数量的区分</li>
-<li><strong>V.4 需求稳定性</strong>：整个实验期间需求保持高位</li>
-</ul>
-<h3 id="第六节估值分析results-valuation">第六节：估值分析（Results:
-Valuation）</h3>
-<ul>
-<li><strong>VI.1 支付意愿（WTP）</strong>：从价格数据估算</li>
-<li><strong>VI.2 接受意愿（WTA）</strong>：从现金返还机制估算</li>
-<li><strong>VI.3
-与以往研究的比较</strong>：本研究估值比以往间接估计高数倍</li>
-</ul>
-<h3 id="第七节健康影响results-health-effects">第七节：健康影响（Results:
-Health Effects）</h3>
-<ul>
-<li><strong>VII.1
-自报疾病减少</strong>：饮用水清洁水后自报生病概率下降</li>
-<li><strong>VII.2 健康支出减少</strong>：医疗支出显著降低</li>
-<li><strong>VII.3 缺课减少</strong>：家庭成员缺课情况改善</li>
-<li><strong>VII.4 异质性分析</strong>：不同亚组的健康影响差异</li>
-</ul>
-<h3 id="第八节成本效益分析cost-effectiveness-analysis">第八节：成本效益分析（Cost-Effectiveness
-Analysis）</h3>
-<ul>
-<li><strong>VIII.1 单位成本计算</strong>：每升水成本、每户每月成本</li>
-<li><strong>VIII.2 DALY计算</strong>：每DALY节省成本</li>
-<li><strong>VIII.3
-与其他干预比较</strong>：与氯片分配、优惠券等比较</li>
-<li><strong>VIII.4
-不同场景分析</strong>：全补贴vs部分补贴vs市场定价</li>
-</ul>
-<h3 id="第九节讨论与结论discussion-and-conclusion">第九节：讨论与结论（Discussion
-and Conclusion）</h3>
-<ul>
-<li><strong>IX.1 政策含义</strong>：免费配送vs现金转移支付的权衡</li>
-<li><strong>IX.2 机制优势</strong>：相比点源氯处理的优势</li>
-<li><strong>IX.3 局限性</strong>：研究样本特殊性、外部效度问题</li>
-<li><strong>IX.4
-结论</strong>：分散式水处理和家庭配送是值得认真考虑的政策选项</li>
-</ul>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="全球水危机">全球水危机</h4>
-<p>全球约20亿人缺乏安全饮用水，这一问题的规模令人震惊： -
-每年约14亿例腹泻病例与不安全饮用水相关 - 50万儿童因腹泻死亡 -
-清洁水获取是全球儿童死亡的主要原因之一 -
-联合国估计实现普遍清洁水获取需要将改善速度提高六倍</p>
-<h4 id="传统解决方案的失败">传统解决方案的失败</h4>
-<p><strong>管道供水的局限</strong>： -
-发达国家（如英国）花费了近一个世纪才实现普遍管道供水 -
-低收入国家仅有不到30%的农村人口能获得自来水 -
-更为关键的是，即使有管道的地区，水质也常常不达标 -
-印度国家首都区仅26%的管道水样本被认为是可饮用的</p>
-<p><strong>点源氯处理的局限</strong>： -
-成本低，有效：可显著改善健康结果 -
-<strong>核心问题</strong>：使用率极低——即使完全免费，使用率也仅约5% -
-低需求原因包括： - 味道问题（氯的异味） -
-便利性问题（需要记住处理、存储水） - 认知负担（需要改变日常行为） -
-污染风险（取水和运水过程中的二次污染）</p>
-<h4 id="新兴的第三种方案">新兴的第三种方案</h4>
-<p>分散式水处理结合家庭配送正在成为第三种解决方案： -
-在巴西、中国、印度、印度尼西亚、墨西哥等国家迅速普及 -
-使用量在多年间增长了300% -
-结合了管道供水（方便）和氯处理（便宜）的优点</p>
-<h3 id="挑战">挑战</h3>
-<h4 id="研究问题">研究问题</h4>
-<ol type="1">
-<li><p><strong>需求弹性问题</strong>：家庭对清洁水的需求价格弹性有多大？在什么价格水平上需求会大幅下降？</p></li>
-<li><p><strong>真实估值问题</strong>：家庭对清洁水的真实价值是多少？以往的研究只研究了净水技术需求，而非清洁水本身。</p></li>
-<li><p><strong>WTP vs
-WTA问题</strong>：支付意愿和接受意愿是否不同？经典理论预测WTA应该大于WTP，但在发展中国家环境中是否如此？</p></li>
-<li><p><strong>政策设计问题</strong>：政府应该提供免费水、补贴价格还是现金转移支付？哪种方式更有效率？</p></li>
-<li><p><strong>成本效益问题</strong>：与其他公共卫生干预相比，这种干预的成本效益如何？</p></li>
-</ol>
-<h3 id="方法数据集要突出">方法（数据集要突出）</h3>
-<h4 id="实验设置">实验设置</h4>
-<p><strong>地点</strong>：印度Odisha邦——印度最贫穷的邦之一，排名第29/35</p>
-<p><strong>样本规模</strong>： - 600个村庄 - 约60,000户家庭 -
-实施周期：2021年4月至2023年8月（约27个月）</p>
-<p><strong>合作方</strong>：Spring Health India -
-在Odisha农村地区运营分散式水处理和家庭配送 - 使用电动氯化处理工艺 -
-太阳能供电 - 当地企业家运营</p>
-<p><strong>随机化设计</strong>：</p>
-<p>600个村庄随机分为3组： - 定价组（200村）：以不同折扣购买清洁水 -
-25%折扣 - 50%折扣 - 75%折扣 - 定量配给组（200村）：每月免费定量供给 -
-可交换配额组（200村）：现金返还机制 - 控制组：纯控制组</p>
-<p><strong>价格设置</strong>： - 全价：10卢比/升 - 25%折扣：7.5卢比/升 -
-50%折扣：5卢比/升 - 75%折扣：2.5卢比/升</p>
-<p><strong>现金返还设置</strong>： -
-季度返还：返还购买金额的25%、50%、75% - 返还方式：移动支付或银行账户</p>
-<h4 id="数据收集">数据收集</h4>
-<p><strong>管理数据</strong>： - Spring Health订单系统完整记录所有订单 -
-每日订单数量、价格、用户信息 - 完整面板数据</p>
-<p><strong>调查数据</strong>： - 高频检查（约每季度一次） -
-终线调查（实验结束时） - 涵盖饮水习惯、健康结果等</p>
-<p><strong>水质测试</strong>： - 从不同水源采集样本 -
-检测大肠杆菌等生物污染物 - 金属污染物检测</p>
-<h3 id="结果results">结果（Results）</h3>
-<h4 id="主要发现一需求价格弹性">主要发现一：需求价格弹性</h4>
-<p><strong>关键结果</strong>：在低价位（免费或低价）时，需求超过90%，且在整个实验期间保持稳定。</p>
-<p>具体而言： - <strong>免费或低价时</strong>：超过90%的家庭订购清洁水 -
-<strong>高价时（10卢比/升）</strong>：需求下降约40% -
-<strong>价格弹性</strong>：估计约为<span class="math inline">\({-0.3}\)</span>至<span class="math inline">\({-0.5}\)</span>左右</p>
-<p><strong>需求曲线形态</strong>： - 呈现明显的非线性特征 -
-在低价位时需求高度无弹性 - 在价格上涨时需求弹性增加 -
-但即使高价也有相当需求（说明潜在市场存在）</p>
-<p><strong>广延边际vs集约边际</strong>： -
-<strong>广延边际</strong>（是否订购）：对价格高度敏感 -
-<strong>集约边际</strong>（订购多少）：对价格相对不敏感 -
-一旦决定订购，家庭倾向于订购满足大部分饮水需求的量</p>
-<h4 id="主要发现二支付意愿和接受意愿">主要发现二：支付意愿和接受意愿</h4>
-<p><strong>支付意愿（WTP）</strong>： - 远高于以往间接估计 -
-约为既往氯处理研究的3-5倍 - 月度WTP约为家庭月支出的5-10% -
-相当于年度清洁水价值约为月支出的60-120%</p>
-<p><strong>接受意愿（WTA）</strong>： - WTA &gt; WTP，符合理论预测 -
-WTA显著超过边际成本 - 表明存在相当大的消费者剩余</p>
-<p><strong>为什么WTP远高于既往研究？</strong> -
-既往研究测量的是净水技术需求，而非清洁水本身 -
-家庭需要承担额外的非货币成本（时间、麻烦、认知负担） -
-本研究直接测量了最终产品——清洁水本身 - 包含了时间节省等额外收益</p>
-<h4 id="主要发现三健康影响">主要发现三：健康影响</h4>
-<p><strong>自报疾病减少</strong>： -
-饮用水清洁水的家庭自报生病概率降低约5-8个百分点 -
-相当于相比对照组降低约25-30%</p>
-<p><strong>健康支出减少</strong>： - 每周健康支出显著减少 -
-减少幅度约15-20%</p>
-<p><strong>缺课减少</strong>： - 因病缺课情况改善 -
-对女性影响尤为显著（她们通常负责取水）</p>
-<p><strong>时间节省</strong>： - 每周取水平均时间减少约15-20分钟 -
-对于女性有特别的性别平等意义</p>
-<h4 id="主要发现四成本效益分析">主要发现四：成本效益分析</h4>
-<p><strong>成本估算</strong>： - 每升水边际成本：约2-3卢比 -
-每户每月运营成本：约150-200卢比</p>
-<p><strong>DALY计算结果</strong>： - 免费配送模式的每DALY成本：约${<span class="math inline">\(30-80}
-- 远低于世界卫生组织的成本效益阈值（\)</span>{$100}/DALY） -
-与其他高性价比公共卫生干预（如蚊帐、疫苗）相当</p>
-<p><strong>与其他干预比较</strong>： -
-比氯片分配稍贵，但覆盖面更广、效果更持续 -
-比管道供水便宜得多，且实施更快 -
-综合考虑健康收益和时间节省，性价比突出</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>分散式家庭配送模式有效</strong>：农村家庭对清洁水的需求强烈且稳定，低价时超过90%的家庭持续使用。</p></li>
-<li><p><strong>估值远高于既往估计</strong>：家庭对清洁水本身的支付意愿是既往净水技术研究的3-5倍，表明以往研究严重低估了清洁水的真实价值。</p></li>
-<li><p><strong>WTA &gt;
-WTP</strong>：接受意愿超过支付意愿，符合理论预测且差异显著，这对政策设计有重要含义。</p></li>
-<li><p><strong>健康收益显著</strong>：清洁水获取与自报疾病减少、健康支出下降、缺课减少相关。</p></li>
-<li><p><strong>成本效益高</strong>：以每DALY成本衡量，分散式水处理具有高成本效益，值得政策关注。</p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><p><strong>填补研究空白</strong>：首次通过随机实验直接测量农村贫困人口对清洁水本身的揭示偏好估值。</p></li>
-<li><p><strong>方法论示范</strong>：同时使用价格实验和现金返还机制分别识别WTP和WTA，为环境品估值提供了更完整的框架。</p></li>
-<li><p><strong>政策启示</strong>：证明分散式水处理和家庭配送是值得认真考虑的政策选项，可以作为管道供水和点源氯处理的补充或替代。</p></li>
-<li><p><strong>市场可行性证明</strong>：证明在适当价格下，这种商业模式可以盈利，为可持续扩展提供了可能。</p></li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
-<ol type="1">
-<li><p><strong>多地区复制</strong>：在其他地区复制这一实验，检验结果的外部效度</p></li>
-<li><p><strong>长期持续性</strong>：研究家庭使用清洁水的长期持续性，以及干预效果是否随时间衰减</p></li>
-<li><p><strong>补充干预</strong>：研究其他补充干预（如环境卫生教育）是否能进一步改善健康结果</p></li>
-<li><p><strong>比较研究</strong>：与其他清洁水干预（如不同类型的净水器、不同的配送模式）的直接比较</p></li>
-</ol>
-<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
-<ol type="1">
-<li><p><strong>外部效度问题</strong>：Odisha地区的结果能否推广到其他地区？需要更多跨地区研究。</p></li>
-<li><p><strong>竞争效应</strong>：如果政府大规模推广这一模式，对现有水供应商（如瓶装水、桶装水）会有什么影响？</p></li>
-<li><p><strong>动态效率</strong>：当前实验没有考虑动态激励——长期来看，这种模式是否会抑制私人投资？</p></li>
-<li><p><strong>制度设计</strong>：不同机构（政府、非营利组织、私人公司）在实施这一模式时效果是否相同？</p></li>
-<li><p><strong>行为偏差</strong>：家庭是否存在行为偏差（如Present
-Bias）导致低估值或无法坚持使用？</p></li>
-</ol>
-<hr>
-<h2 id="学术思考">7. 学术思考</h2>
-<h3 id="核心学术洞察">核心学术洞察</h3>
-<ol type="1">
-<li><p><strong>"产品"vs"技术"的估值差异</strong>：本文最重要的洞见之一是区分了"净水技术"和"清洁水本身"的价值。既往研究测量的是前者（氯片、水龙头等），而本文直接测量后者。这解释了为什么本研究WTP远高于以往——因为它测量的是最终产品的完整价值，包括了所有非货币成本（时间、麻烦、风险）的节省。</p></li>
-<li><p><strong>发展中国家环境品的WTP/WTA差距</strong>：本文发现WTA显著大于WTP，这与标准理论一致，但在发展中国家的实证检验仍然有限。本文提供了难得的发展中国家环境品WTA数据点。</p></li>
-<li><p><strong>免费分配的"地板效应"</strong>：有趣的是，即使在免费分配的情况下，需求也没有超过100%——说明确实存在某些家庭不使用清洁水。这可能与偏好、信息或其他障碍有关，值得进一步研究。</p></li>
-</ol>
-<h3 id="深层学术问题">深层学术问题</h3>
-<ol type="1">
-<li><p><strong>为什么Odisha的估值这么高？</strong>
-这是否与当地特殊的水资源状况有关（地下水砷污染严重）？还是反映了更普遍的心理和文化因素？</p></li>
-<li><p><strong>商业模式可持续性</strong>：Spring
-Health是一个成功的案例，但能否复制？在没有外部补贴的情况下，这种模式能否盈利？</p></li>
-<li><p><strong>价格机制的效率vs公平权衡</strong>：免费分配（或高额补贴）虽然能最大化覆盖率，但可能造成资源浪费。现金转移支付虽然更有效率，但可能不会全部用于购买清洁水。如何在这之间取得平衡？</p></li>
-<li><p><strong>自报健康结果的可靠性</strong>：本研究主要依赖自报健康数据，可能存在测量误差和报告偏差。是否有更客观的健康指标可以补充？</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p><strong>与其他发展中国家清洁水干预相比</strong>：本文的方法和结论与Kremer、Dupas等人在东非、南亚的研究有何异同？是否有系统性的跨国差异？</p></li>
-<li><p><strong>商业模式的规模扩展性</strong>：Spring
-Health能否在更大规模（县级、邦级、全国）复制？主要障碍是什么？</p></li>
-<li><p><strong>政府vs市场提供</strong>：在清洁水领域，政府免费提供、补贴价格、现金转移支付三种方式哪种最优？是否存在普遍适用的最优政策？</p></li>
-<li><p><strong>实证策略的可靠性</strong>：使用价格折扣和现金返还机制识别WTP和WTA是否会产生不同的偏差？如何验证估计的稳健性？</p></li>
-<li><p><strong>与中国农村饮水问题的关联</strong>：本文的研究结论对中国农村饮水安全政策有什么启示？中国是否有类似分散式水配送的实践？</p></li>
-<li><p><strong>女性赋权效应</strong>：研究提到女性通常负责取水，清洁水配送对女性时间和经济参与有什么长期影响？</p></li>
-<li><p><strong>与其他健康干预的组合</strong>：清洁水干预与其他公共卫生干预（如疫苗、营养补充）组合是否能产生更大的健康收益？</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Regulating Conglomerates: Evidence From an Energy Conservation Program in China — 深度阅读笔记 — AER</title>
     <url>/posts/chen2021/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -4646,86 +4646,6 @@ horizon 是多久?</strong></p></li>
       </tags>
   </entry>
   <entry>
-    <title>序列诅咒均衡 — 深度阅读笔记 — Cohen &amp; Li</title>
-    <url>/posts/cohen2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Sequential Cursed Equilibrium</li>
-<li><strong>作者</strong>: Shani Cohen (Harvard), Shengwu Li
-(Harvard)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3):
-934-976</li>
-<li><strong>DOI</strong>: 10.1257/aer.20230309</li>
-<li><strong>难度评估</strong>: 高 - 需要博弈论、行为经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>诅咒均衡（Cursed Equilibrium,
-CE）</strong>：Eyster和Rabin（2005）提出的解概念，玩家忽略其他玩家行为与其类型之间的相关性。</p>
-<p><strong>扩展式博弈（Extensive-Form
-Games）</strong>：具有时序结构的博弈，玩家依次行动。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>标准博弈论假设"三思而后行"</strong>：玩家在决策时会考虑假设性事件的信息</p></li>
-<li><p><strong>实际行为偏离</strong>：人们经常忽略假设性事件的含义，但从观察事件中进行推断</p></li>
-<li><p><strong>诅咒均衡的局限性</strong>：不适用于序列博弈；对内生信息也存在curse</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：如何修改诅咒均衡以适应扩展式博弈，使玩家能够从观察事件中学习但忽略假设事件的信息？</p>
-<hr>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<h3 id="第一节引言">第一节：引言</h3>
-<h3 id="第二节定义和一般结果">第二节：定义和一般结果</h3>
-<ul>
-<li>SCE的定义和存在性</li>
-<li>同时博弈中的SCE</li>
-<li>部分诅咒</li>
-</ul>
-<h3 id="第三节实验应用">第三节：实验应用</h3>
-<ul>
-<li>交易博弈实验</li>
-<li>成本信号博弈</li>
-<li>信息获取博弈</li>
-</ul>
-<h3 id="第四节动态拍卖">第四节：动态拍卖</h3>
-<h3 id="第五节讨论和结论">第五节：讨论和结论</h3>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="标准博弈论的问题">标准博弈论的问题</h4>
-<p><strong>"三思而后行"原则（Savage 1972）</strong>： -
-标准理论要求玩家在决策时考虑假设性事件的信息 -
-但实际上人们经常忽略这种信息</p>
-<p><strong>诅咒均衡（CE）的核心思想</strong>： -
-玩家理解对手行为的边缘分布 - 但忽略这些分布之间的相关性</p>
-<h4 id="诅咒均衡的两个局限性">诅咒均衡的两个局限性</h4>
-<p><strong>局限性1：不适应序列博弈</strong> -
-序列博弈与同时博弈有相同的贝叶斯正态形式 -
-因此CE预测相同，但这不符合直觉</p>
-<p><strong>局限性2：对内生信息的诅咒</strong></p>
-<h3 id="序列诅咒均衡sce">序列诅咒均衡（SCE）</h3>
-<p><strong>核心创新</strong>：允许玩家对内生信息受到诅咒</p>
-<p><strong>关键洞察</strong>：玩家从观察事件中学习，但忽略假设事件的信息</p>
-<hr>
-<h2 id="结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>SCE扩展了CE到扩展式博弈</strong></p></li>
-<li><p><strong>解释实验证据</strong>：为关于假设性思维的实验提供理论解释</p></li>
-<li><p><strong>应用广泛</strong>：交易博弈、成本信号博弈、信息获取博弈、动态拍卖</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>零和思维与美国政治分歧的根源 — 深度阅读笔记 — Chinoy, Nunn, Sequeira &amp; Stantcheva</title>
     <url>/posts/chinoy2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -4928,6 +4848,186 @@ RespondentExperience_i + \beta_p \cdot ParentsExperience_i + \beta_{gp}
 <li><p><strong>黑人受访者零和思维最高但奴役边际效应最小</strong>：如何解释这个悖论？</p></li>
 <li><p><strong>零和思维与特朗普现象</strong>：数据显示零和思维预测了民主党人投票给特朗普？</p></li>
 <li><p><strong>政策含义</strong>：如果零和思维是可塑的，什么干预可以减少零和思维？</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>序列诅咒均衡 — 深度阅读笔记 — Cohen &amp; Li</title>
+    <url>/posts/cohen2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Sequential Cursed Equilibrium</li>
+<li><strong>作者</strong>: Shani Cohen (Harvard), Shengwu Li
+(Harvard)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(3):
+934-976</li>
+<li><strong>DOI</strong>: 10.1257/aer.20230309</li>
+<li><strong>难度评估</strong>: 高 - 需要博弈论、行为经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>诅咒均衡（Cursed Equilibrium,
+CE）</strong>：Eyster和Rabin（2005）提出的解概念，玩家忽略其他玩家行为与其类型之间的相关性。</p>
+<p><strong>扩展式博弈（Extensive-Form
+Games）</strong>：具有时序结构的博弈，玩家依次行动。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>标准博弈论假设"三思而后行"</strong>：玩家在决策时会考虑假设性事件的信息</p></li>
+<li><p><strong>实际行为偏离</strong>：人们经常忽略假设性事件的含义，但从观察事件中进行推断</p></li>
+<li><p><strong>诅咒均衡的局限性</strong>：不适用于序列博弈；对内生信息也存在curse</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：如何修改诅咒均衡以适应扩展式博弈，使玩家能够从观察事件中学习但忽略假设事件的信息？</p>
+<hr>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<h3 id="第一节引言">第一节：引言</h3>
+<h3 id="第二节定义和一般结果">第二节：定义和一般结果</h3>
+<ul>
+<li>SCE的定义和存在性</li>
+<li>同时博弈中的SCE</li>
+<li>部分诅咒</li>
+</ul>
+<h3 id="第三节实验应用">第三节：实验应用</h3>
+<ul>
+<li>交易博弈实验</li>
+<li>成本信号博弈</li>
+<li>信息获取博弈</li>
+</ul>
+<h3 id="第四节动态拍卖">第四节：动态拍卖</h3>
+<h3 id="第五节讨论和结论">第五节：讨论和结论</h3>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="标准博弈论的问题">标准博弈论的问题</h4>
+<p><strong>"三思而后行"原则（Savage 1972）</strong>： -
+标准理论要求玩家在决策时考虑假设性事件的信息 -
+但实际上人们经常忽略这种信息</p>
+<p><strong>诅咒均衡（CE）的核心思想</strong>： -
+玩家理解对手行为的边缘分布 - 但忽略这些分布之间的相关性</p>
+<h4 id="诅咒均衡的两个局限性">诅咒均衡的两个局限性</h4>
+<p><strong>局限性1：不适应序列博弈</strong> -
+序列博弈与同时博弈有相同的贝叶斯正态形式 -
+因此CE预测相同，但这不符合直觉</p>
+<p><strong>局限性2：对内生信息的诅咒</strong></p>
+<h3 id="序列诅咒均衡sce">序列诅咒均衡（SCE）</h3>
+<p><strong>核心创新</strong>：允许玩家对内生信息受到诅咒</p>
+<p><strong>关键洞察</strong>：玩家从观察事件中学习，但忽略假设事件的信息</p>
+<hr>
+<h2 id="结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>SCE扩展了CE到扩展式博弈</strong></p></li>
+<li><p><strong>解释实验证据</strong>：为关于假设性思维的实验提供理论解释</p></li>
+<li><p><strong>应用广泛</strong>：交易博弈、成本信号博弈、信息获取博弈、动态拍卖</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>工作场所性骚扰为何被低估 — 深度阅读笔记 — Dahl &amp; Knepper</title>
+    <url>/posts/dahl2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Why Is Workplace Sexual Harassment
+Underreported? The Value of Outside Options amid the Threat of
+Retaliation</li>
+<li><strong>作者</strong>: Gordon B. Dahl (UC San Diego, NBER), Matthew
+Knepper (University of Georgia)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(3):
+897-933</li>
+<li><strong>DOI</strong>: 10.1257/aer.20221703</li>
+<li><strong>难度评估</strong>: 高 -
+需要劳动经济学、法律经济学、应用微观计量基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>性骚扰举报率（Underreporting）</strong>：据调查，1/28的美国工人每年报告遭受工作场所性骚扰，但只有1/11,000向EEOC提出指控。</p>
+<p><strong>报复性解雇（Retaliatory
+Firing）</strong>：雇主对提出指控的员工进行惩罚的行为，在性骚扰案件中越来越常见，从2000年的52%上升到2015年的72%。</p>
+<p><strong>EEOC（平等就业机会委员会）</strong>：负责执行联邦反歧视法律的机构，负责处理性骚扰投诉并判定案件是否有价值。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>性骚扰漏报严重</strong>：每年约500万工人受影响，但举报率极低</p></li>
+<li><p><strong>雇主报复威胁假设</strong>：雇主可能通过解雇威胁迫使受害者保持沉默</p></li>
+<li><p><strong>传统识别困难</strong>：难以测量未被报告的事件</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：为什么工作场所性骚扰长期被低估？外部选择如何影响举报决策？</p>
+<p><strong>关键洞察</strong>：外部冲击（失业率上升、UI福利削减）减少工人的外部选择价值，增加举报的机会成本，从而增加漏报</p>
+<hr>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<h3 id="第一节引言">第一节：引言</h3>
+<ul>
+<li>问题陈述和文献综述</li>
+<li>理论假设</li>
+<li>研究贡献概述</li>
+</ul>
+<h3 id="第二节制度和政策背景">第二节：制度和政策背景</h3>
+<ul>
+<li>EEOC的性骚扰执法</li>
+<li>北卡罗来纳州UI项目削减</li>
+</ul>
+<h3 id="第三节数据和样本构建">第三节：数据和样本构建</h3>
+<ul>
+<li>EEOC指控数据</li>
+<li>州和行业失业数据</li>
+<li>EEO-1就业文件</li>
+<li>失业保险数据</li>
+</ul>
+<h3 id="第四节模型">第四节：模型</h3>
+<ul>
+<li>阈值报告模型</li>
+</ul>
+<h3 id="第五节识别策略">第五节：识别策略</h3>
+<ul>
+<li>失业率冲击</li>
+<li>UI福利削减</li>
+</ul>
+<h3 id="第六节经济条件和性别权力差异的结果">第六节：经济条件和性别权力差异的结果</h3>
+<h3 id="第七节ui改革的效应">第七节：UI改革的效应</h3>
+<h3 id="第八节结论">第八节：结论</h3>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="性骚扰漏报问题">性骚扰漏报问题</h4>
+<ul>
+<li>1/28的美国工人每年报告遭受工作场所性骚扰</li>
+<li>只有1/11,000向EEOC提出指控</li>
+<li>报复性解雇从2000年的52%上升到2015年的72%</li>
+</ul>
+<h3 id="理论框架">理论框架</h3>
+<p><strong>阈值报告模型</strong>： - 工人在举报的预期收益和成本之间权衡
+- 外部选择价值（失业保险、工作机会）影响机会成本 - 失业率上升 →
+外部选择价值下降 → 举报机会成本上升 → 举报率下降</p>
+<h3 id="识别策略">识别策略</h3>
+<p><strong>失业率冲击</strong>： - 使用失业率作为外部选择价值的代理变量
+- 交错识别策略</p>
+<p><strong>UI福利削减</strong>： -
+北卡罗来纳州2013年UI福利削减作为准实验 - 提供外生冲击验证</p>
+<hr>
+<h2 id="结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>外部选择影响举报决策</strong>：失业率上升和UI福利削减降低举报率</p></li>
+<li><p><strong>报复威胁真实存在</strong>：证实了报复威胁假设</p></li>
+<li><p><strong>政策启示</strong>：保护工人的外部选择对增加举报率至关重要</p></li>
 </ol>
 ]]></content>
       <categories>
@@ -5321,106 +5421,6 @@ NCI测试检验"正确指定的约简形式"假设</p>
 <li>扩展到其他设计（如RD）</li>
 <li>更多实证应用</li>
 <li>函数形式测试的分离</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>工作场所性骚扰为何被低估 — 深度阅读笔记 — Dahl &amp; Knepper</title>
-    <url>/posts/dahl2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Why Is Workplace Sexual Harassment
-Underreported? The Value of Outside Options amid the Threat of
-Retaliation</li>
-<li><strong>作者</strong>: Gordon B. Dahl (UC San Diego, NBER), Matthew
-Knepper (University of Georgia)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3):
-897-933</li>
-<li><strong>DOI</strong>: 10.1257/aer.20221703</li>
-<li><strong>难度评估</strong>: 高 -
-需要劳动经济学、法律经济学、应用微观计量基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>性骚扰举报率（Underreporting）</strong>：据调查，1/28的美国工人每年报告遭受工作场所性骚扰，但只有1/11,000向EEOC提出指控。</p>
-<p><strong>报复性解雇（Retaliatory
-Firing）</strong>：雇主对提出指控的员工进行惩罚的行为，在性骚扰案件中越来越常见，从2000年的52%上升到2015年的72%。</p>
-<p><strong>EEOC（平等就业机会委员会）</strong>：负责执行联邦反歧视法律的机构，负责处理性骚扰投诉并判定案件是否有价值。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>性骚扰漏报严重</strong>：每年约500万工人受影响，但举报率极低</p></li>
-<li><p><strong>雇主报复威胁假设</strong>：雇主可能通过解雇威胁迫使受害者保持沉默</p></li>
-<li><p><strong>传统识别困难</strong>：难以测量未被报告的事件</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：为什么工作场所性骚扰长期被低估？外部选择如何影响举报决策？</p>
-<p><strong>关键洞察</strong>：外部冲击（失业率上升、UI福利削减）减少工人的外部选择价值，增加举报的机会成本，从而增加漏报</p>
-<hr>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<h3 id="第一节引言">第一节：引言</h3>
-<ul>
-<li>问题陈述和文献综述</li>
-<li>理论假设</li>
-<li>研究贡献概述</li>
-</ul>
-<h3 id="第二节制度和政策背景">第二节：制度和政策背景</h3>
-<ul>
-<li>EEOC的性骚扰执法</li>
-<li>北卡罗来纳州UI项目削减</li>
-</ul>
-<h3 id="第三节数据和样本构建">第三节：数据和样本构建</h3>
-<ul>
-<li>EEOC指控数据</li>
-<li>州和行业失业数据</li>
-<li>EEO-1就业文件</li>
-<li>失业保险数据</li>
-</ul>
-<h3 id="第四节模型">第四节：模型</h3>
-<ul>
-<li>阈值报告模型</li>
-</ul>
-<h3 id="第五节识别策略">第五节：识别策略</h3>
-<ul>
-<li>失业率冲击</li>
-<li>UI福利削减</li>
-</ul>
-<h3 id="第六节经济条件和性别权力差异的结果">第六节：经济条件和性别权力差异的结果</h3>
-<h3 id="第七节ui改革的效应">第七节：UI改革的效应</h3>
-<h3 id="第八节结论">第八节：结论</h3>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="性骚扰漏报问题">性骚扰漏报问题</h4>
-<ul>
-<li>1/28的美国工人每年报告遭受工作场所性骚扰</li>
-<li>只有1/11,000向EEOC提出指控</li>
-<li>报复性解雇从2000年的52%上升到2015年的72%</li>
-</ul>
-<h3 id="理论框架">理论框架</h3>
-<p><strong>阈值报告模型</strong>： - 工人在举报的预期收益和成本之间权衡
-- 外部选择价值（失业保险、工作机会）影响机会成本 - 失业率上升 →
-外部选择价值下降 → 举报机会成本上升 → 举报率下降</p>
-<h3 id="识别策略">识别策略</h3>
-<p><strong>失业率冲击</strong>： - 使用失业率作为外部选择价值的代理变量
-- 交错识别策略</p>
-<p><strong>UI福利削减</strong>： -
-北卡罗来纳州2013年UI福利削减作为准实验 - 提供外生冲击验证</p>
-<hr>
-<h2 id="结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>外部选择影响举报决策</strong>：失业率上升和UI福利削减降低举报率</p></li>
-<li><p><strong>报复威胁真实存在</strong>：证实了报复威胁假设</p></li>
-<li><p><strong>政策启示</strong>：保护工人的外部选择对增加举报率至关重要</p></li>
 </ol>
 ]]></content>
       <categories>
@@ -6125,342 +6125,6 @@ Doyle
         <tag>儿童福利</tag>
         <tag>犯罪经济学</tag>
         <tag>因果推断</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Fiscal Volatility Shocks and Economic Activity — 深度阅读笔记 — AER</title>
-    <url>/posts/fernandez2015/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Fiscal Volatility Shocks and Economic
-Activity</li>
-<li><strong>作者</strong>: Jesús Fernández-Villaverde (University of
-Pennsylvania), Pablo Guerrón-Quintana (Federal Reserve Bank of
-Philadelphia), Keith Kuester (University of Bonn), Juan Rubio-Ramírez
-(Emory University, Federal Reserve Bank of Atlanta, BBVA Research)</li>
-<li><strong>年份</strong>: 2015</li>
-<li><strong>来源</strong>: American Economic Review, 105(11):
-3352-3384</li>
-<li><strong>DOI</strong>: http://dx.doi.org/10.1257/aer.20121236
-<span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言背景和意义">引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>财政政策不确定性</strong>(Fiscal
-Uncertainty)指公众对未来财政政策路径(如税收、政府支出、债务)的不确定性.这种不确定性不同于财政政策本身的变化_即使平均财政政策立场保持不变,政策不确定性的增加也可能对经济活动产生独立影响.</p>
-<p><strong>时间变异性波动率</strong>(Time-Varying
-Volatility)是描述经济时间序列波动率随时间变化特征的计量经济学概念.传统的时间序列模型假设误差项的方差是常数,但实际数据中波动率往往呈现聚集现象(volatility
-clustering)_高波动期后往往跟随高波动期,低波动期后跟随低波动期.</p>
-<p><strong>新凯恩斯主义模型</strong>(New Keynesian
-Model)是当代宏观经济学的基准框架之一,特点是在总供给侧引入名义刚性(nominal
-rigidities,如菜单成本或交错定价),使货币政策能够影响实际经济变量.标准的新凯恩斯主义模型包括家庭部门、厂商部门和一个遵循泰勒规则的中央银行.</p>
-<p><strong>向量自回归</strong>(Vector Autoregression, VAR)是由 Sims
-(1980)
-开创的计量经济学方法,用多个经济变量的滞后项来预测各变量的未来值.VAR
-不需要事先声明变量间的因果关系结构,而是让数据说话.</p>
-<p><strong>脉冲响应函数</strong>(Impulse Response Functions,
-IRFs)描述系统对单位冲击的动态响应,是分析经济冲击传导机制的核心工具.</p>
-<p><strong>零利率下限</strong>(Zero Lower Bound,
-ZLB)指名义利率不能为负的现实约束.在经济衰退期,货币政策可能受到 ZLB
-限制,此时财政政策对经济的刺激作用可能更大.</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p><strong>后金融危机时期的财政不确定性</strong>:2008-2014年间,美国经济面临多种财政政策不确定性来源:2013年10月的联邦政府关门、2010年&lt;税收减免、失业保险再授权和就业创造法案&gt;的短暂通过、2011年围绕联邦债务上限的争议导致美国主权信用评级被下调.费城联储的调查数据显示,52%报告需求下降的企业将"对未来税收或政府监管不确定增加"列为原因之一.</p>
-<p><strong>政策与学术背景</strong>:Baker, Bloom and Davis (2013)
-构建的财政不确定性指数显示,2008年后财政政策不确定性显著上升.学术界和政策制定者都在关注:这种不确定性本身是否会对经济活动产生实质性的负面影响?</p>
-<p><strong>现有研究的空白</strong>:虽然关于税收不确定性和政府支出不确定性的研究较多,但明确区分"财政波动性冲击"(fiscal
-volatility shocks,即波动率本身的变化)与"财政水平冲击"(fiscal level
-shocks,如税率的永久性变化)的研究相对较少.Bi, Leeper and Leith (2013)
-等研究表明永久性政策变化的不确定性有重要效应,但临时性财政不确定性对经济的影响尚未被充分研究.</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:意外增加的财政政策不确定性(财政波动性冲击)是否会对经济活动产生不利影响?如果是,其传导机制是什么?影响有多大?</p>
-<p><strong>为什么区分波动性冲击与水平冲击很重要</strong>:财政政策的不确定性可以来自两个来源:</p>
-<ol type="1">
-<li><strong>水平冲击</strong>:未来财政政策的预期路径本身发生变化,但这个路径是确定的</li>
-<li><strong>波动性冲击</strong>:即使财政政策的预期路径保持不变,政策的不确定性(围绕该路径的分散程度)增加</li>
-</ol>
-<p>这两种不确定性来源可能产生完全不同的经济效应.作者试图隔离第二种效应_即财政波动性冲击的独立影响.</p>
-<p><strong>为什么关注暂时性波动</strong>:永久性财政不确定性(如关于长期债务可持续性的担忧)与暂时性财政不确定性(如围绕年度预算的党派争议)对经济的传导机制不同.前者主要通过影响长期预期和资本成本影响当前投资决策;后者可能通过增加企业面临的宏观风险,影响其雇用和投资决策.</p>
-<h3 id="研究意义">研究意义</h3>
-<p><strong>理论贡献</strong>:本文首次系统研究暂时性财政波动性冲击对经济活动的动态影响,并通过
-VAR 和 DSGE 模型的联合估计提供了可信的量化证据.</p>
-<p><strong>方法论贡献</strong>:论文提供了(i)估计允许时间变波动率的财政规则的方法,(ii)将估计的财政波动性冲击引入
-VAR 的策略,以及(iii)在 New Keynesian 模型中进行三阶扰动方法(third-order
-perturbation)计算的非线性解法.</p>
-<p><strong>政策含义</strong>:论文结果对于理解2008年后复苏缓慢的原因以及如何设计更好的财政政策不确定性管理策略具有直接启示.特别是
-ZLB
-情境下财政波动性冲击的放大效应,揭示了在经济衰退期保持财政政策可预测性的重要性.</p>
-<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
-<p>本文共分为8个部分:</p>
-<p><strong>Section I:具有时间变波动率的财政规则</strong>(Fiscal Rules
-with Time-Varying
-Volatility).估计税收和政府支出规则,允许其创新项的波动率随时间变化.</p>
-<p><strong>Section II:VAR 证据</strong>(VAR
-Evidence).将估计的财政波动性冲击引入 VAR,报告脉冲响应函数.</p>
-<p><strong>Section III:理论模型</strong>(The
-Model).构建一个包含财政波动性冲击的标准新凯恩斯主义模型.</p>
-<p><strong>Section IV:数值实现</strong>(Numerical
-Implementation).描述如何求解和估计模型.</p>
-<p><strong>Section V-VII:主要结果</strong>.报告基准模型和 ZLB
-情境下的脉冲响应,解释机制,进行福利分析.</p>
-<p><strong>Section
-VIII:结论</strong>(Conclusion).总结发现并讨论政策含义.</p>
-<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
-<h3 id="估计财政规则与波动性冲击">估计财政规则与波动性冲击</h3>
-<h4 id="数据">数据</h4>
-<p>作者使用美国政府1970年第一季度至2014年第二季度的合并政府(联邦、州和地方)季度数据:</p>
-<ul>
-<li><strong>税收数据</strong>:来自国民收入和产品账户(NIPA),构造平均税率而非边际税率.包括:劳动收入税率
-<span class="math inline">\(\tau_l\)</span>、资本收入税率 <span class="math inline">\(\tau_k\)</span>、消费税率 <span class="math inline">\(\tau_c\)</span></li>
-<li><strong>政府支出</strong>:政府消费和总固定投资(来自 NIPA)</li>
-<li><strong>债务序列</strong>:公众持有的联邦债务(来自圣路易斯联储 FRED
-数据库)</li>
-<li><strong>产出</strong>:来自 NIPA</li>
-</ul>
-<p>作者使用去趋势实际产出(Christiano-Fitzgerald
-带通滤波器)进行去趋势处理.</p>
-<h4 id="财政规则设定">财政规则设定</h4>
-<p>对四个政策工具设定运动方程:</p>
-<p><span class="math display">\[\tilde{x}_t - \bar{x} = \rho_x
-(\tilde{x}_{t-1} - \bar{x}) + \phi_{x,y} \tilde{y}_{t-1} +
-\phi_{x,b}\left(\frac{b_{t-1}}{y_{t-1}} - \frac{\bar{b}}{\bar{y}}\right)
-+ \exp(\sigma_{x,t}) \varepsilon_{x,t}\]</span></p>
-<p>其中 <span class="math inline">\(\varepsilon_{x,t} \sim
-N(0,1)\)</span>.</p>
-<p><strong>关键特征</strong>:波动率 <span class="math inline">\(\sigma_{x,t}\)</span> 是随机的而非常数:</p>
-<p><span class="math display">\[\sigma_{x,t} = (1-\rho_{\sigma x})
-\bar{\sigma}_x + \rho_{\sigma x} \sigma_{x,t-1} + \sqrt{1-\rho_{\sigma
-x}^2} \eta_x u_{x,t}\]</span></p>
-<p>其中 <span class="math inline">\(u_{x,t} \sim N(0,1)\)</span>.</p>
-<p><strong>两个独立创新</strong>: - <span class="math inline">\(\varepsilon_{x,t}\)</span>:财政冲击对工具 <span class="math inline">\(x\)</span> 的创新 - <span class="math inline">\(u_{x,t}\)</span>:工具 <span class="math inline">\(x\)</span> 的财政波动性冲击的创新</p>
-<p>这样设定将财政冲击与财政波动性冲击明确区分开来_前者改变政策水平,后者改变政策的不确定性.</p>
-<h4 id="估计方法">估计方法</h4>
-<p>作者采用<strong>贝叶斯方法</strong>结合似然函数和平flat priors,通过
-Markov Chain Monte Carlo (MCMC) 采样从后验分布中抽取样本.</p>
-<p>由于方程中波动率与创新的非线性交互作用,使用<strong>粒子滤波器</strong>(particle
-filter)来处理.详细过程见 Appendix C.</p>
-<h4 id="主要估计结果">主要估计结果</h4>
-<p><strong>表1报告了后验中位数和95%概率区间</strong>:</p>
-<p><strong>Persistence 参数 <span class="math inline">\(\rho_x\)</span></strong>:所有工具都高度持久(0.98-0.99),表明税收和政府支出政策具有很强的惯性.</p>
-<p><strong>波动率参数 <span class="math inline">\(\sigma_x\)</span></strong>:资本收入税率的平均标准差约为0.75个百分点(<span class="math inline">\(100 \times \exp(-4.89) \approx 0.75\)</span>).</p>
-<p><strong><span class="math inline">\(\eta_x\)</span> 的证据</strong>:
-<span class="math inline">\(\eta_x\)</span>
-为正表明时间变波动率是重要的_如果不考虑时间变波动率,会丢失重要的信息.</p>
-<p><strong><span class="math inline">\(\rho_{\sigma x}\)</span>
-的持久性</strong>:除劳动收入税外,波动性冲击偏离其均值的持久性相当高(0.65-0.92).</p>
-<h4 id="财政波动性冲击的历史轨迹">财政波动性冲击的历史轨迹</h4>
-<p><strong>图1显示了资本收入税率波动性冲击的平滑化95%概率区间</strong>.</p>
-<p><strong>历史事件映射</strong>:</p>
-<ol type="1">
-<li><p><strong>1974-1975年高峰</strong>:水门事件导致 Nixon
-辞职,财政政策"漂移无定".Ford
-政府的税收-支出政策反复摇摆.国会中自由派力量增强,与共和党政府的冲突增加.围绕投资税收抵免和资本收入税的争议是讨论的核心.</p></li>
-<li><p><strong>1985-1987年第二个高峰</strong>:1985年经济报告显示财政赤字严重,一系列提案被提出.国会倾向于增加税收,而总统倾向于削减支出.1986年&lt;税收改革法案&gt;最终达成妥协.</p></li>
-<li><p><strong>2001-2002年第三个高峰</strong>:9/11恐怖袭击及其潜在的巨大财政影响,2001-2002年经济衰退,布什减税.</p></li>
-<li><p><strong>2008-2009年、2011年、2014年的高峰</strong>:金融危机及其后果,空前的选举不稳定(2004-2014年间6次选举产生5种政党控制模式).</p></li>
-</ol>
-<p><strong>图2的Panel
-A</strong>显示了每季度观察到正的两标准差财政波动性冲击的概率.Panel B
-显示在样本中至少观察到2次、3次、4次等此类冲击的后验概率.</p>
-<p><strong>关键发现</strong>:一个正的两标准差冲击是大概率事件_在样本中至少观察到3-4次此类事件.这意味着财政波动性冲击并非极端罕见事件,而是大约每十年就会发生一次的重要冲击.</p>
-<h3 id="var-分析">VAR 分析</h3>
-<h4 id="var-设定">VAR 设定</h4>
-<p>作者估计了一个 VAR,包含以下变量:</p>
-<ol type="1">
-<li><strong>财政波动性冲击</strong>:来自第一阶段估计的资本收入税率波动性冲击
-<span class="math inline">\(u_{\tau k, t}\)</span></li>
-<li><strong>产出缺口</strong>:实际产出与其趋势的偏离</li>
-<li><strong>通货膨胀率</strong>:GDP 平减指数的变化率</li>
-<li><strong>联邦基金利率</strong>:美联储政策利率</li>
-<li><strong>实际工资增长率</strong></li>
-<li><strong>工作时间</strong>:总工时</li>
-<li><strong>投资增长率</strong></li>
-<li><strong>markup</strong>:价格加成</li>
-</ol>
-<p>VAR 滞后阶数由 SIC 准则选择为2阶.</p>
-<h4 id="脉冲响应函数">脉冲响应函数</h4>
-<p><strong>图3显示了资本收入税率财政波动性冲击的脉冲响应</strong>(正的两标准差冲击):</p>
-<p><strong>产出</strong>:产出在冲击后显著下降,在第3-4季度达到最低点(约-0.4%),之后缓慢恢复.</p>
-<p><strong>消费</strong>:消费的下降幅度与产出类似,但恢复速度更慢.</p>
-<p><strong>投资</strong>:投资的下降幅度更大(约-0.8%),且恢复期更长.</p>
-<p><strong>工作时间</strong>:工时显著下降,在第4季度达到最低点(约-0.3%).</p>
-<p><strong>价格水平</strong>:价格水平下降(通货紧缩),这与新凯恩斯主义模型的预测一致.</p>
-<p><strong>关键发现</strong>:正的财政波动性冲击(政策不确定性增加)对经济活动产生显著的负面效应,这一效应在冲击后持续多个季度.</p>
-<h3 id="理论模型">理论模型</h3>
-<h4 id="模型设定">模型设定</h4>
-<p>作者构建了一个<strong>新凯恩斯主义模型</strong>(New Keynesian
-Model),variant 包括:</p>
-<p><strong>家庭部门</strong>: - 代表性家庭提供劳动并消费最终品 -
-面临标准的新凯恩斯主义菲利普斯曲线</p>
-<p><strong>厂商部门</strong>: - 垄断竞争厂商面临交错价格调整(Calvo 定价)
-- 每期有部分厂商调整价格,其余厂商保持价格不变</p>
-<p><strong>政府</strong>: - 遵循估计的财政规则设定税收和政府支出 -
-财政波动性冲击通过 <span class="math inline">\(\sigma_{\tau k,
-t}\)</span> 进入模型</p>
-<p><strong>货币当局</strong>: - 遵循泰勒规则设定名义利率</p>
-<p><strong>关键机制</strong>:财政波动性冲击通过两种渠道影响经济:</p>
-<ol type="1">
-<li><strong>直接渠道</strong>:不确定性增加 →
-企业延迟投资和雇用决策(option value 效应)</li>
-<li><strong>间接渠道</strong>:不确定性影响 markups → 价格加成变化 →
-实际利率变化 → 消费和投资变化</li>
-</ol>
-<h4 id="扩展zlb-情境">扩展:ZLB 情境</h4>
-<p>作者还考虑了经济已经处于零利率下限(ZLB)时受到财政波动性冲击的情境.这对于理解2008-2014年美国经济的动态特别相关.</p>
-<p><strong>ZLB 的关键效应</strong>:当经济处于 ZLB
-时,货币政策无法通过降低名义利率来缓冲负面冲击.这意味着财政波动性冲击的负面效应会被放大,因为没有货币政策应对工具.</p>
-<h3 id="数值结果">数值结果</h3>
-<h4 id="基准模型非-zlb">基准模型(非 ZLB)</h4>
-<p><strong>图5比较了 VAR
-和模型的脉冲响应</strong>.两者高度一致,验证了模型正确捕捉了数据中的关键动态.</p>
-<p><strong>量化效应</strong>:一个正的两标准差财政波动性冲击导致: -
-产出下降约0.5-0.6% - 投资下降约1.0-1.2% - 消费下降约0.3-0.4% -
-持续时间约8-12个季度</p>
-<p><strong>机制分析</strong>:作者进行了机制检验,确认 markup
-的内生变化是关键传导渠道.</p>
-<p><strong>通胀</strong>:模型预测通胀上升,但 VAR
-显示通胀下降.解决这一小差异的方法是在泰勒规则中加入财政波动性冲击(见
-Section VI).</p>
-<h4 id="zlb-情境">ZLB 情境</h4>
-<p><strong>关键发现</strong>:当经济处于 ZLB 时,效应被显著放大:</p>
-<ul>
-<li>产出下降约1.5%(是非 ZLB 情况的15倍!)</li>
-<li>持续时间显著延长</li>
-</ul>
-<p><strong>原因</strong>:在 ZLB
-情境下,名义利率无法下降来缓冲冲击.实际利率上升更多,对消费和投资的抑制作用更强.</p>
-<p>这一发现对于理解2008年后金融危机时期的经济动态具有重要意义.</p>
-<h3 id="福利分析">福利分析</h3>
-<h4 id="福利计算">福利计算</h4>
-<p>作者进行了福利分析,比较存在财政波动性冲击和不存在财政波动性冲击两种情境下的社会福利.</p>
-<p><strong>福利损失度量</strong>:定义为消费和闲暇的等价变化(equivalent
-variation).</p>
-<p><strong>结果</strong>:</p>
-<ul>
-<li>在基准模型中,财政波动性冲击导致的福利损失相当于永久性降低消费约0.2%</li>
-<li>在 ZLB 情境中,福利损失显著更大</li>
-</ul>
-<h4 id="政策含义">政策含义</h4>
-<p><strong>财政可预测性的价值</strong>:结果强调了保持财政政策可预测性的重要性.即使无法改变财政政策的平均水平或方向,政府也应努力减少政策不确定性.</p>
-<p><strong>ZLB 情境的特殊脆弱性</strong>:当经济处于 ZLB
-时,财政不确定性增加的伤害特别大,这意味着在深度衰退期更需要稳定的财政信号.</p>
-<h2 id="结论conclusion">结论(Conclusion)</h2>
-<h3 id="核心发现总结">核心发现总结</h3>
-<p><strong>发现一</strong>:美国税收和政府支出过程存在显著的时间变波动率.平滑化的财政波动性冲击与历史叙事事件高度一致(水门事件、1980年代赤字争论、2008年金融危机).</p>
-<p><strong>发现二</strong>:VAR
-分析显示,一个正的两标准差资本收入税率财政波动性冲击会导致产出、消费、投资、工作时间和价格水平显著且持久地下降.</p>
-<p><strong>发现三</strong>:新凯恩斯主义模型定性地再现了 VAR
-的脉冲响应,option value 效应和 markup 的内生变化是核心传导机制.</p>
-<p><strong>发现四</strong>:当经济处于 ZLB
-时,财政波动性冲击的效应被显著放大_产出下降是正常时期的15倍.</p>
-<p><strong>发现五</strong>:财政政策可预测性具有显著的社会福利价值,尤其是在
-ZLB 情境中.</p>
-<h3 id="对宏观经济学的贡献">对宏观经济学的贡献</h3>
-<p><strong>对不确定性 literature 的贡献</strong>:本文扩展了 Bloom (2009)
-等关于不确定性冲击的研究,将财政不确定性与其他类型的不确定性(如技术不确定性)区分开来,并揭示了其独特的传导机制.</p>
-<p><strong>对财政政策 literature
-的贡献</strong>:本文明确区分了财政水平冲击和财政波动性冲击,填补了该
-literature 的重要空白.</p>
-<p><strong>对 ZLB 文献的贡献</strong>:本文揭示了 ZLB
-情境下财政波动性冲击的放大效应,这对于理解大衰退(Great Recession)和其他
-ZLB 情境下的经济动态具有重要意义.</p>
-<h3 id="政策建议">政策建议</h3>
-<p><strong>第一,保持财政政策可预测性</strong>.即使在政治分歧严重的情况下,政府也应努力提供清晰、一致的财政政策信号.</p>
-<p><strong>第二,在 ZLB
-情境中特别谨慎</strong>.当经济处于零利率下限时,财政不确定性增加的伤害被显著放大,政策制定者应更加注意沟通策略.</p>
-<p><strong>第三,考虑财政规则的作用</strong>.财政规则(如债务上限、赤字限制)可以降低政策的不确定性,但其自身的可变性也需要管理.</p>
-<h2 id="未来研究方向提及">未来研究方向提及</h2>
-<p><strong>第一,永久性 vs.
-暂时性财政不确定性</strong>.本文聚焦暂时性财政不确定性,但永久性财政不确定性(如关于长期财政可持续性的担忧)可能具有不同的效应.</p>
-<p><strong>第二,状态依赖的财政政策</strong>.Mace (1991)
-等研究了状态依赖的财政政策,这些政策在不同的经济状态下采取不同的形式.</p>
-<p><strong>第三,国际传播</strong>.财政波动性冲击如何通过国际贸易和金融渠道传播到其他国家?</p>
-<p><strong>第四,异质性代理</strong>.本文使用代表性家庭模型,但异质性代理模型可能揭示不同的传导机制.</p>
-<h2 id="未来研究方向思考">未来研究方向思考</h2>
-<p><strong>第一,发展中国家的财政波动性问题</strong>.发达经济体的财政波动性对发展中经济体可能有完全不同的影响,因为后者的制度能力较弱,财政不稳定可能带来更严重的后果.</p>
-<p><strong>第二,企业层面的财政不确定性暴露</strong>.本文使用宏观经济 VAR
-和代表性代理模型,但微观企业数据可能揭示财政不确定性对不同类型企业的差异化影响.</p>
-<p><strong>第三,货币-财政政策交互作用</strong>.在 ZLB
-情境下,货币和财政政策的交互作用变得特别重要.两种政策如何协调以最小化不确定性对经济的伤害?</p>
-<p><strong>第四,预期管理策略</strong>.本文揭示了财政不确定性的危害,但如何系统性地管理预期本身是一个值得深入研究的问题.政府的沟通策略、透明度措施和承诺机制如何影响不确定性冲击的强度?</p>
-<p><strong>第五,网络和金融加速器效应</strong>.财政不确定性可能通过企业间的网络关系和金融加速器机制放大.一个企业的投资削减可能通过供应链影响其他企业,这些
-second-round 效应值得进一步研究.</p>
-<h2 id="学术思考">学术思考</h2>
-<p><strong>关于识别策略的思考</strong>:本文使用两步估计策略_首先估计财政规则的波动性,然后将估计的波动性序列作为外生变量引入
-VAR.这一策略的有效性取决于第一步估计的波动性能否被视为"意外变化"的合理代理.如果经济主体能够预期波动性的变化(而不仅仅是对冲击本身的预期),那么识别假设可能受到挑战.</p>
-<p><strong>关于模型设定的选择</strong>:作者使用代表性代理而非异质性代理.这限制了模型捕捉财政不确定性对不同群体差异化影响的能力.例如,财政不确定性对失业者和中小企业的伤害可能比对就业者和大型企业更大.</p>
-<p><strong>关于 ZLB 分析的启示</strong>:ZLB
-情境下的15倍放大效应是一个惊人的结果.但这一结果是否具有普遍性,还是对美国特定情境的高度依赖?不同的初始债务水平、不同的开放程度、不同的汇率制度下,ZLB
-放大效应是否相同?</p>
-<p><strong>关于政策含义的谨慎性</strong>:虽然本文强调了财政可预测性的重要性,但"说起来容易做起来难".在民主政治环境下,财政政策的内在不确定性可能是政治过程的自然结果,而非政策失误.如何在保持政策灵活性的同时减少不必要的波动?</p>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p><strong>为什么内生 markup
-变化是财政波动性冲击传导的关键机制?这个机制的具体经济学解释是什么?</strong></p></li>
-<li><p><strong>作者提到在 VAR
-中加入财政波动性冲击到泰勒规则可以解决通胀预测的小差异,这在理论上意味着什么?</strong></p></li>
-<li><p><strong>15倍的 ZLB
-放大效应是否稳健?如果使用不同的货币规则设定,结果会如何变化?</strong></p></li>
-<li><p><strong>本文使用平均税率而非边际税率进行估计.边际税率的不确定性是否会对经济产生不同的影响?</strong></p></li>
-<li><p><strong>在美国的制度背景下,财政规则(如债务上限)的存在实际上增加了而非减少了财政不确定性.如何调和这一矛盾?</strong></p></li>
-<li><p><strong>本文的发现对于当前的"财政空间"(fiscal
-space)讨论有什么启示?发展中国家在 ZLB
-情境下是否也有类似的放大效应?</strong></p></li>
-<li><p><strong>关于模型中的预期形成</strong>:假设家庭和企业具有理性预期,但实际中他们可能对财政政策的变化有适应性预期或粘性预期.这种预期设定如何影响结果?**</p></li>
-<li><p><strong>本文使用季度数据.更高频率(日度或周度)的财政不确定性数据是否会揭示更多动态细节?</strong></p></li>
-<li><p><strong>作者提到这是"第一个"研究财政波动性冲击的尝试.这个"第一"的贡献有多大?后续研究如何在此基础上扩展?</strong></p></li>
-<li><p><strong>在当前的高通胀环境下(如2022-2024年),财政不确定性对经济的影响是否与低通胀/低利率环境有不同的表现?</strong></p></li>
-</ol>
-<h2 id="学术思考-1">学术思考</h2>
-<p><strong>关于识别策略的思考</strong>:本文使用两步估计策略_首先估计财政规则的波动性,然后将估计的波动性序列作为外生变量引入
-VAR.这一策略的有效性取决于第一步估计的波动性能否被视为"意外变化"的合理代理.如果经济主体能够预期波动性的变化(而不仅仅是对冲击本身的预期),那么识别假设可能受到挑战.</p>
-<p><strong>关于模型设定的选择</strong>:作者使用代表性代理而非异质性代理.这限制了模型捕捉财政不确定性对不同群体差异化影响的能力.例如,财政不确定性对失业者和中小企业的伤害可能比对就业者和大型企业更大.</p>
-<p><strong>关于 ZLB 分析的启示</strong>:ZLB
-情境下的15倍放大效应是一个惊人的结果.但这一结果是否具有普遍性,还是对美国特定情境的高度依赖?不同的初始债务水平、不同的开放程度、不同的汇率制度下,ZLB
-放大效应是否相同?</p>
-<p><strong>关于政策含义的谨慎性</strong>:虽然本文强调了财政可预测性的重要性,但"说起来容易做起来难".在民主政治环境下,财政政策的内在不确定性可能是政治过程的自然结果,而非政策失误.如何在保持政策灵活性的同时减少不必要的波动?</p>
-<h2 id="下一步用户可能提的问题-1">下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p><strong>为什么内生 markup
-变化是财政波动性冲击传导的关键机制?这个机制的具体经济学解释是什么?</strong></p></li>
-<li><p><strong>作者提到在 VAR
-中加入财政波动性冲击到泰勒规则可以解决通胀预测的小差异,这在理论上意味着什么?</strong></p></li>
-<li><p><strong>15倍的 ZLB
-放大效应是否稳健?如果使用不同的货币规则设定,结果会如何变化?</strong></p></li>
-<li><p><strong>本文使用平均税率而非边际税率进行估计.边际税率的不确定性是否会对经济产生不同的影响?</strong></p></li>
-<li><p><strong>在美国的制度背景下,财政规则(如债务上限)的存在实际上增加了而非减少了财政不确定性.如何调和这一矛盾?</strong></p></li>
-<li><p><strong>本文的发现对于当前的"财政空间"(fiscal
-space)讨论有什么启示?发展中国家在 ZLB
-情境下是否也有类似的放大效应?</strong></p></li>
-<li><p><strong>关于模型中的预期形成</strong>:假设家庭和企业具有理性预期,但实际中他们可能对财政政策的变化有适应性预期或粘性预期.这种预期设定如何影响结果?**</p></li>
-<li><p><strong>本文使用季度数据.更高频率(日度或周度)的财政不确定性数据是否会揭示更多动态细节?</strong></p></li>
-<li><p><strong>作者提到这是"第一个"研究财政波动性冲击的尝试.这个"第一"的贡献有多大?后续研究如何在此基础上扩展?</strong></p></li>
-<li><p><strong>在当前的高通胀环境下(如2022-2024年),财政不确定性对经济的影响是否与低通胀/低利率环境有不同的表现?</strong></p></li>
-</ol>
-<h2 id="下一步用户可能提的问题-2">下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p><strong>为什么内生 markup
-变化是财政波动性冲击传导的关键机制?这个机制的具体经济学解释是什么?</strong></p></li>
-<li><p><strong>作者提到在 VAR
-中加入财政波动性冲击到泰勒规则可以解决通胀预测的小差异,这在理论上意味着什么?</strong></p></li>
-<li><p><strong>15倍的 ZLB
-放大效应是否稳健?如果使用不同的货币规则设定,结果会如何变化?</strong></p></li>
-<li><p><strong>本文使用平均税率而非边际税率进行估计.边际税率的不确定性是否会对经济产生不同的影响?</strong></p></li>
-<li><p><strong>在美国的制度背景下,财政规则(如债务上限)的存在实际上增加了而非减少了财政不确定性.如何调和这一矛盾?</strong></p></li>
-<li><p><strong>本文的发现对于当前的"财政空间"(fiscal
-space)讨论有什么启示?发展中国家在 ZLB
-情境下是否也有类似的放大效应?</strong></p></li>
-<li><p><strong>关于模型中的预期形成</strong>:假设家庭和企业具有理性预期,但实际中他们可能对财政政策的变化有适应性预期或粘性预期.这种预期设定如何影响结果?**</p></li>
-<li><p><strong>本文使用季度数据.更高频率(日度或周度)的财政不确定性数据是否会揭示更多动态细节?</strong></p></li>
-<li><p><strong>作者提到这是"第一个"研究财政波动性冲击的尝试.这个"第一"的贡献有多大?后续研究如何在此基础上扩展?</strong></p></li>
-<li><p><strong>在当前的高通胀环境下(如2022-2024年),财政不确定性对经济的影响是否与低通胀/低利率环境有不同的表现?</strong></p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -7547,6 +7211,342 @@ Effects），永久降低增长路径？</li>
         <tag>战争经济学</tag>
         <tag>经济史学</tag>
         <tag>地缘政治</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Fiscal Volatility Shocks and Economic Activity — 深度阅读笔记 — AER</title>
+    <url>/posts/fernandez2015/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Fiscal Volatility Shocks and Economic
+Activity</li>
+<li><strong>作者</strong>: Jesús Fernández-Villaverde (University of
+Pennsylvania), Pablo Guerrón-Quintana (Federal Reserve Bank of
+Philadelphia), Keith Kuester (University of Bonn), Juan Rubio-Ramírez
+(Emory University, Federal Reserve Bank of Atlanta, BBVA Research)</li>
+<li><strong>年份</strong>: 2015</li>
+<li><strong>来源</strong>: American Economic Review, 105(11):
+3352-3384</li>
+<li><strong>DOI</strong>: http://dx.doi.org/10.1257/aer.20121236
+<span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言背景和意义">引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>财政政策不确定性</strong>(Fiscal
+Uncertainty)指公众对未来财政政策路径(如税收、政府支出、债务)的不确定性.这种不确定性不同于财政政策本身的变化_即使平均财政政策立场保持不变,政策不确定性的增加也可能对经济活动产生独立影响.</p>
+<p><strong>时间变异性波动率</strong>(Time-Varying
+Volatility)是描述经济时间序列波动率随时间变化特征的计量经济学概念.传统的时间序列模型假设误差项的方差是常数,但实际数据中波动率往往呈现聚集现象(volatility
+clustering)_高波动期后往往跟随高波动期,低波动期后跟随低波动期.</p>
+<p><strong>新凯恩斯主义模型</strong>(New Keynesian
+Model)是当代宏观经济学的基准框架之一,特点是在总供给侧引入名义刚性(nominal
+rigidities,如菜单成本或交错定价),使货币政策能够影响实际经济变量.标准的新凯恩斯主义模型包括家庭部门、厂商部门和一个遵循泰勒规则的中央银行.</p>
+<p><strong>向量自回归</strong>(Vector Autoregression, VAR)是由 Sims
+(1980)
+开创的计量经济学方法,用多个经济变量的滞后项来预测各变量的未来值.VAR
+不需要事先声明变量间的因果关系结构,而是让数据说话.</p>
+<p><strong>脉冲响应函数</strong>(Impulse Response Functions,
+IRFs)描述系统对单位冲击的动态响应,是分析经济冲击传导机制的核心工具.</p>
+<p><strong>零利率下限</strong>(Zero Lower Bound,
+ZLB)指名义利率不能为负的现实约束.在经济衰退期,货币政策可能受到 ZLB
+限制,此时财政政策对经济的刺激作用可能更大.</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<p><strong>后金融危机时期的财政不确定性</strong>:2008-2014年间,美国经济面临多种财政政策不确定性来源:2013年10月的联邦政府关门、2010年&lt;税收减免、失业保险再授权和就业创造法案&gt;的短暂通过、2011年围绕联邦债务上限的争议导致美国主权信用评级被下调.费城联储的调查数据显示,52%报告需求下降的企业将"对未来税收或政府监管不确定增加"列为原因之一.</p>
+<p><strong>政策与学术背景</strong>:Baker, Bloom and Davis (2013)
+构建的财政不确定性指数显示,2008年后财政政策不确定性显著上升.学术界和政策制定者都在关注:这种不确定性本身是否会对经济活动产生实质性的负面影响?</p>
+<p><strong>现有研究的空白</strong>:虽然关于税收不确定性和政府支出不确定性的研究较多,但明确区分"财政波动性冲击"(fiscal
+volatility shocks,即波动率本身的变化)与"财政水平冲击"(fiscal level
+shocks,如税率的永久性变化)的研究相对较少.Bi, Leeper and Leith (2013)
+等研究表明永久性政策变化的不确定性有重要效应,但临时性财政不确定性对经济的影响尚未被充分研究.</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>:意外增加的财政政策不确定性(财政波动性冲击)是否会对经济活动产生不利影响?如果是,其传导机制是什么?影响有多大?</p>
+<p><strong>为什么区分波动性冲击与水平冲击很重要</strong>:财政政策的不确定性可以来自两个来源:</p>
+<ol type="1">
+<li><strong>水平冲击</strong>:未来财政政策的预期路径本身发生变化,但这个路径是确定的</li>
+<li><strong>波动性冲击</strong>:即使财政政策的预期路径保持不变,政策的不确定性(围绕该路径的分散程度)增加</li>
+</ol>
+<p>这两种不确定性来源可能产生完全不同的经济效应.作者试图隔离第二种效应_即财政波动性冲击的独立影响.</p>
+<p><strong>为什么关注暂时性波动</strong>:永久性财政不确定性(如关于长期债务可持续性的担忧)与暂时性财政不确定性(如围绕年度预算的党派争议)对经济的传导机制不同.前者主要通过影响长期预期和资本成本影响当前投资决策;后者可能通过增加企业面临的宏观风险,影响其雇用和投资决策.</p>
+<h3 id="研究意义">研究意义</h3>
+<p><strong>理论贡献</strong>:本文首次系统研究暂时性财政波动性冲击对经济活动的动态影响,并通过
+VAR 和 DSGE 模型的联合估计提供了可信的量化证据.</p>
+<p><strong>方法论贡献</strong>:论文提供了(i)估计允许时间变波动率的财政规则的方法,(ii)将估计的财政波动性冲击引入
+VAR 的策略,以及(iii)在 New Keynesian 模型中进行三阶扰动方法(third-order
+perturbation)计算的非线性解法.</p>
+<p><strong>政策含义</strong>:论文结果对于理解2008年后复苏缓慢的原因以及如何设计更好的财政政策不确定性管理策略具有直接启示.特别是
+ZLB
+情境下财政波动性冲击的放大效应,揭示了在经济衰退期保持财政政策可预测性的重要性.</p>
+<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
+<p>本文共分为8个部分:</p>
+<p><strong>Section I:具有时间变波动率的财政规则</strong>(Fiscal Rules
+with Time-Varying
+Volatility).估计税收和政府支出规则,允许其创新项的波动率随时间变化.</p>
+<p><strong>Section II:VAR 证据</strong>(VAR
+Evidence).将估计的财政波动性冲击引入 VAR,报告脉冲响应函数.</p>
+<p><strong>Section III:理论模型</strong>(The
+Model).构建一个包含财政波动性冲击的标准新凯恩斯主义模型.</p>
+<p><strong>Section IV:数值实现</strong>(Numerical
+Implementation).描述如何求解和估计模型.</p>
+<p><strong>Section V-VII:主要结果</strong>.报告基准模型和 ZLB
+情境下的脉冲响应,解释机制,进行福利分析.</p>
+<p><strong>Section
+VIII:结论</strong>(Conclusion).总结发现并讨论政策含义.</p>
+<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
+<h3 id="估计财政规则与波动性冲击">估计财政规则与波动性冲击</h3>
+<h4 id="数据">数据</h4>
+<p>作者使用美国政府1970年第一季度至2014年第二季度的合并政府(联邦、州和地方)季度数据:</p>
+<ul>
+<li><strong>税收数据</strong>:来自国民收入和产品账户(NIPA),构造平均税率而非边际税率.包括:劳动收入税率
+<span class="math inline">\(\tau_l\)</span>、资本收入税率 <span class="math inline">\(\tau_k\)</span>、消费税率 <span class="math inline">\(\tau_c\)</span></li>
+<li><strong>政府支出</strong>:政府消费和总固定投资(来自 NIPA)</li>
+<li><strong>债务序列</strong>:公众持有的联邦债务(来自圣路易斯联储 FRED
+数据库)</li>
+<li><strong>产出</strong>:来自 NIPA</li>
+</ul>
+<p>作者使用去趋势实际产出(Christiano-Fitzgerald
+带通滤波器)进行去趋势处理.</p>
+<h4 id="财政规则设定">财政规则设定</h4>
+<p>对四个政策工具设定运动方程:</p>
+<p><span class="math display">\[\tilde{x}_t - \bar{x} = \rho_x
+(\tilde{x}_{t-1} - \bar{x}) + \phi_{x,y} \tilde{y}_{t-1} +
+\phi_{x,b}\left(\frac{b_{t-1}}{y_{t-1}} - \frac{\bar{b}}{\bar{y}}\right)
++ \exp(\sigma_{x,t}) \varepsilon_{x,t}\]</span></p>
+<p>其中 <span class="math inline">\(\varepsilon_{x,t} \sim
+N(0,1)\)</span>.</p>
+<p><strong>关键特征</strong>:波动率 <span class="math inline">\(\sigma_{x,t}\)</span> 是随机的而非常数:</p>
+<p><span class="math display">\[\sigma_{x,t} = (1-\rho_{\sigma x})
+\bar{\sigma}_x + \rho_{\sigma x} \sigma_{x,t-1} + \sqrt{1-\rho_{\sigma
+x}^2} \eta_x u_{x,t}\]</span></p>
+<p>其中 <span class="math inline">\(u_{x,t} \sim N(0,1)\)</span>.</p>
+<p><strong>两个独立创新</strong>: - <span class="math inline">\(\varepsilon_{x,t}\)</span>:财政冲击对工具 <span class="math inline">\(x\)</span> 的创新 - <span class="math inline">\(u_{x,t}\)</span>:工具 <span class="math inline">\(x\)</span> 的财政波动性冲击的创新</p>
+<p>这样设定将财政冲击与财政波动性冲击明确区分开来_前者改变政策水平,后者改变政策的不确定性.</p>
+<h4 id="估计方法">估计方法</h4>
+<p>作者采用<strong>贝叶斯方法</strong>结合似然函数和平flat priors,通过
+Markov Chain Monte Carlo (MCMC) 采样从后验分布中抽取样本.</p>
+<p>由于方程中波动率与创新的非线性交互作用,使用<strong>粒子滤波器</strong>(particle
+filter)来处理.详细过程见 Appendix C.</p>
+<h4 id="主要估计结果">主要估计结果</h4>
+<p><strong>表1报告了后验中位数和95%概率区间</strong>:</p>
+<p><strong>Persistence 参数 <span class="math inline">\(\rho_x\)</span></strong>:所有工具都高度持久(0.98-0.99),表明税收和政府支出政策具有很强的惯性.</p>
+<p><strong>波动率参数 <span class="math inline">\(\sigma_x\)</span></strong>:资本收入税率的平均标准差约为0.75个百分点(<span class="math inline">\(100 \times \exp(-4.89) \approx 0.75\)</span>).</p>
+<p><strong><span class="math inline">\(\eta_x\)</span> 的证据</strong>:
+<span class="math inline">\(\eta_x\)</span>
+为正表明时间变波动率是重要的_如果不考虑时间变波动率,会丢失重要的信息.</p>
+<p><strong><span class="math inline">\(\rho_{\sigma x}\)</span>
+的持久性</strong>:除劳动收入税外,波动性冲击偏离其均值的持久性相当高(0.65-0.92).</p>
+<h4 id="财政波动性冲击的历史轨迹">财政波动性冲击的历史轨迹</h4>
+<p><strong>图1显示了资本收入税率波动性冲击的平滑化95%概率区间</strong>.</p>
+<p><strong>历史事件映射</strong>:</p>
+<ol type="1">
+<li><p><strong>1974-1975年高峰</strong>:水门事件导致 Nixon
+辞职,财政政策"漂移无定".Ford
+政府的税收-支出政策反复摇摆.国会中自由派力量增强,与共和党政府的冲突增加.围绕投资税收抵免和资本收入税的争议是讨论的核心.</p></li>
+<li><p><strong>1985-1987年第二个高峰</strong>:1985年经济报告显示财政赤字严重,一系列提案被提出.国会倾向于增加税收,而总统倾向于削减支出.1986年&lt;税收改革法案&gt;最终达成妥协.</p></li>
+<li><p><strong>2001-2002年第三个高峰</strong>:9/11恐怖袭击及其潜在的巨大财政影响,2001-2002年经济衰退,布什减税.</p></li>
+<li><p><strong>2008-2009年、2011年、2014年的高峰</strong>:金融危机及其后果,空前的选举不稳定(2004-2014年间6次选举产生5种政党控制模式).</p></li>
+</ol>
+<p><strong>图2的Panel
+A</strong>显示了每季度观察到正的两标准差财政波动性冲击的概率.Panel B
+显示在样本中至少观察到2次、3次、4次等此类冲击的后验概率.</p>
+<p><strong>关键发现</strong>:一个正的两标准差冲击是大概率事件_在样本中至少观察到3-4次此类事件.这意味着财政波动性冲击并非极端罕见事件,而是大约每十年就会发生一次的重要冲击.</p>
+<h3 id="var-分析">VAR 分析</h3>
+<h4 id="var-设定">VAR 设定</h4>
+<p>作者估计了一个 VAR,包含以下变量:</p>
+<ol type="1">
+<li><strong>财政波动性冲击</strong>:来自第一阶段估计的资本收入税率波动性冲击
+<span class="math inline">\(u_{\tau k, t}\)</span></li>
+<li><strong>产出缺口</strong>:实际产出与其趋势的偏离</li>
+<li><strong>通货膨胀率</strong>:GDP 平减指数的变化率</li>
+<li><strong>联邦基金利率</strong>:美联储政策利率</li>
+<li><strong>实际工资增长率</strong></li>
+<li><strong>工作时间</strong>:总工时</li>
+<li><strong>投资增长率</strong></li>
+<li><strong>markup</strong>:价格加成</li>
+</ol>
+<p>VAR 滞后阶数由 SIC 准则选择为2阶.</p>
+<h4 id="脉冲响应函数">脉冲响应函数</h4>
+<p><strong>图3显示了资本收入税率财政波动性冲击的脉冲响应</strong>(正的两标准差冲击):</p>
+<p><strong>产出</strong>:产出在冲击后显著下降,在第3-4季度达到最低点(约-0.4%),之后缓慢恢复.</p>
+<p><strong>消费</strong>:消费的下降幅度与产出类似,但恢复速度更慢.</p>
+<p><strong>投资</strong>:投资的下降幅度更大(约-0.8%),且恢复期更长.</p>
+<p><strong>工作时间</strong>:工时显著下降,在第4季度达到最低点(约-0.3%).</p>
+<p><strong>价格水平</strong>:价格水平下降(通货紧缩),这与新凯恩斯主义模型的预测一致.</p>
+<p><strong>关键发现</strong>:正的财政波动性冲击(政策不确定性增加)对经济活动产生显著的负面效应,这一效应在冲击后持续多个季度.</p>
+<h3 id="理论模型">理论模型</h3>
+<h4 id="模型设定">模型设定</h4>
+<p>作者构建了一个<strong>新凯恩斯主义模型</strong>(New Keynesian
+Model),variant 包括:</p>
+<p><strong>家庭部门</strong>: - 代表性家庭提供劳动并消费最终品 -
+面临标准的新凯恩斯主义菲利普斯曲线</p>
+<p><strong>厂商部门</strong>: - 垄断竞争厂商面临交错价格调整(Calvo 定价)
+- 每期有部分厂商调整价格,其余厂商保持价格不变</p>
+<p><strong>政府</strong>: - 遵循估计的财政规则设定税收和政府支出 -
+财政波动性冲击通过 <span class="math inline">\(\sigma_{\tau k,
+t}\)</span> 进入模型</p>
+<p><strong>货币当局</strong>: - 遵循泰勒规则设定名义利率</p>
+<p><strong>关键机制</strong>:财政波动性冲击通过两种渠道影响经济:</p>
+<ol type="1">
+<li><strong>直接渠道</strong>:不确定性增加 →
+企业延迟投资和雇用决策(option value 效应)</li>
+<li><strong>间接渠道</strong>:不确定性影响 markups → 价格加成变化 →
+实际利率变化 → 消费和投资变化</li>
+</ol>
+<h4 id="扩展zlb-情境">扩展:ZLB 情境</h4>
+<p>作者还考虑了经济已经处于零利率下限(ZLB)时受到财政波动性冲击的情境.这对于理解2008-2014年美国经济的动态特别相关.</p>
+<p><strong>ZLB 的关键效应</strong>:当经济处于 ZLB
+时,货币政策无法通过降低名义利率来缓冲负面冲击.这意味着财政波动性冲击的负面效应会被放大,因为没有货币政策应对工具.</p>
+<h3 id="数值结果">数值结果</h3>
+<h4 id="基准模型非-zlb">基准模型(非 ZLB)</h4>
+<p><strong>图5比较了 VAR
+和模型的脉冲响应</strong>.两者高度一致,验证了模型正确捕捉了数据中的关键动态.</p>
+<p><strong>量化效应</strong>:一个正的两标准差财政波动性冲击导致: -
+产出下降约0.5-0.6% - 投资下降约1.0-1.2% - 消费下降约0.3-0.4% -
+持续时间约8-12个季度</p>
+<p><strong>机制分析</strong>:作者进行了机制检验,确认 markup
+的内生变化是关键传导渠道.</p>
+<p><strong>通胀</strong>:模型预测通胀上升,但 VAR
+显示通胀下降.解决这一小差异的方法是在泰勒规则中加入财政波动性冲击(见
+Section VI).</p>
+<h4 id="zlb-情境">ZLB 情境</h4>
+<p><strong>关键发现</strong>:当经济处于 ZLB 时,效应被显著放大:</p>
+<ul>
+<li>产出下降约1.5%(是非 ZLB 情况的15倍!)</li>
+<li>持续时间显著延长</li>
+</ul>
+<p><strong>原因</strong>:在 ZLB
+情境下,名义利率无法下降来缓冲冲击.实际利率上升更多,对消费和投资的抑制作用更强.</p>
+<p>这一发现对于理解2008年后金融危机时期的经济动态具有重要意义.</p>
+<h3 id="福利分析">福利分析</h3>
+<h4 id="福利计算">福利计算</h4>
+<p>作者进行了福利分析,比较存在财政波动性冲击和不存在财政波动性冲击两种情境下的社会福利.</p>
+<p><strong>福利损失度量</strong>:定义为消费和闲暇的等价变化(equivalent
+variation).</p>
+<p><strong>结果</strong>:</p>
+<ul>
+<li>在基准模型中,财政波动性冲击导致的福利损失相当于永久性降低消费约0.2%</li>
+<li>在 ZLB 情境中,福利损失显著更大</li>
+</ul>
+<h4 id="政策含义">政策含义</h4>
+<p><strong>财政可预测性的价值</strong>:结果强调了保持财政政策可预测性的重要性.即使无法改变财政政策的平均水平或方向,政府也应努力减少政策不确定性.</p>
+<p><strong>ZLB 情境的特殊脆弱性</strong>:当经济处于 ZLB
+时,财政不确定性增加的伤害特别大,这意味着在深度衰退期更需要稳定的财政信号.</p>
+<h2 id="结论conclusion">结论(Conclusion)</h2>
+<h3 id="核心发现总结">核心发现总结</h3>
+<p><strong>发现一</strong>:美国税收和政府支出过程存在显著的时间变波动率.平滑化的财政波动性冲击与历史叙事事件高度一致(水门事件、1980年代赤字争论、2008年金融危机).</p>
+<p><strong>发现二</strong>:VAR
+分析显示,一个正的两标准差资本收入税率财政波动性冲击会导致产出、消费、投资、工作时间和价格水平显著且持久地下降.</p>
+<p><strong>发现三</strong>:新凯恩斯主义模型定性地再现了 VAR
+的脉冲响应,option value 效应和 markup 的内生变化是核心传导机制.</p>
+<p><strong>发现四</strong>:当经济处于 ZLB
+时,财政波动性冲击的效应被显著放大_产出下降是正常时期的15倍.</p>
+<p><strong>发现五</strong>:财政政策可预测性具有显著的社会福利价值,尤其是在
+ZLB 情境中.</p>
+<h3 id="对宏观经济学的贡献">对宏观经济学的贡献</h3>
+<p><strong>对不确定性 literature 的贡献</strong>:本文扩展了 Bloom (2009)
+等关于不确定性冲击的研究,将财政不确定性与其他类型的不确定性(如技术不确定性)区分开来,并揭示了其独特的传导机制.</p>
+<p><strong>对财政政策 literature
+的贡献</strong>:本文明确区分了财政水平冲击和财政波动性冲击,填补了该
+literature 的重要空白.</p>
+<p><strong>对 ZLB 文献的贡献</strong>:本文揭示了 ZLB
+情境下财政波动性冲击的放大效应,这对于理解大衰退(Great Recession)和其他
+ZLB 情境下的经济动态具有重要意义.</p>
+<h3 id="政策建议">政策建议</h3>
+<p><strong>第一,保持财政政策可预测性</strong>.即使在政治分歧严重的情况下,政府也应努力提供清晰、一致的财政政策信号.</p>
+<p><strong>第二,在 ZLB
+情境中特别谨慎</strong>.当经济处于零利率下限时,财政不确定性增加的伤害被显著放大,政策制定者应更加注意沟通策略.</p>
+<p><strong>第三,考虑财政规则的作用</strong>.财政规则(如债务上限、赤字限制)可以降低政策的不确定性,但其自身的可变性也需要管理.</p>
+<h2 id="未来研究方向提及">未来研究方向提及</h2>
+<p><strong>第一,永久性 vs.
+暂时性财政不确定性</strong>.本文聚焦暂时性财政不确定性,但永久性财政不确定性(如关于长期财政可持续性的担忧)可能具有不同的效应.</p>
+<p><strong>第二,状态依赖的财政政策</strong>.Mace (1991)
+等研究了状态依赖的财政政策,这些政策在不同的经济状态下采取不同的形式.</p>
+<p><strong>第三,国际传播</strong>.财政波动性冲击如何通过国际贸易和金融渠道传播到其他国家?</p>
+<p><strong>第四,异质性代理</strong>.本文使用代表性家庭模型,但异质性代理模型可能揭示不同的传导机制.</p>
+<h2 id="未来研究方向思考">未来研究方向思考</h2>
+<p><strong>第一,发展中国家的财政波动性问题</strong>.发达经济体的财政波动性对发展中经济体可能有完全不同的影响,因为后者的制度能力较弱,财政不稳定可能带来更严重的后果.</p>
+<p><strong>第二,企业层面的财政不确定性暴露</strong>.本文使用宏观经济 VAR
+和代表性代理模型,但微观企业数据可能揭示财政不确定性对不同类型企业的差异化影响.</p>
+<p><strong>第三,货币-财政政策交互作用</strong>.在 ZLB
+情境下,货币和财政政策的交互作用变得特别重要.两种政策如何协调以最小化不确定性对经济的伤害?</p>
+<p><strong>第四,预期管理策略</strong>.本文揭示了财政不确定性的危害,但如何系统性地管理预期本身是一个值得深入研究的问题.政府的沟通策略、透明度措施和承诺机制如何影响不确定性冲击的强度?</p>
+<p><strong>第五,网络和金融加速器效应</strong>.财政不确定性可能通过企业间的网络关系和金融加速器机制放大.一个企业的投资削减可能通过供应链影响其他企业,这些
+second-round 效应值得进一步研究.</p>
+<h2 id="学术思考">学术思考</h2>
+<p><strong>关于识别策略的思考</strong>:本文使用两步估计策略_首先估计财政规则的波动性,然后将估计的波动性序列作为外生变量引入
+VAR.这一策略的有效性取决于第一步估计的波动性能否被视为"意外变化"的合理代理.如果经济主体能够预期波动性的变化(而不仅仅是对冲击本身的预期),那么识别假设可能受到挑战.</p>
+<p><strong>关于模型设定的选择</strong>:作者使用代表性代理而非异质性代理.这限制了模型捕捉财政不确定性对不同群体差异化影响的能力.例如,财政不确定性对失业者和中小企业的伤害可能比对就业者和大型企业更大.</p>
+<p><strong>关于 ZLB 分析的启示</strong>:ZLB
+情境下的15倍放大效应是一个惊人的结果.但这一结果是否具有普遍性,还是对美国特定情境的高度依赖?不同的初始债务水平、不同的开放程度、不同的汇率制度下,ZLB
+放大效应是否相同?</p>
+<p><strong>关于政策含义的谨慎性</strong>:虽然本文强调了财政可预测性的重要性,但"说起来容易做起来难".在民主政治环境下,财政政策的内在不确定性可能是政治过程的自然结果,而非政策失误.如何在保持政策灵活性的同时减少不必要的波动?</p>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p><strong>为什么内生 markup
+变化是财政波动性冲击传导的关键机制?这个机制的具体经济学解释是什么?</strong></p></li>
+<li><p><strong>作者提到在 VAR
+中加入财政波动性冲击到泰勒规则可以解决通胀预测的小差异,这在理论上意味着什么?</strong></p></li>
+<li><p><strong>15倍的 ZLB
+放大效应是否稳健?如果使用不同的货币规则设定,结果会如何变化?</strong></p></li>
+<li><p><strong>本文使用平均税率而非边际税率进行估计.边际税率的不确定性是否会对经济产生不同的影响?</strong></p></li>
+<li><p><strong>在美国的制度背景下,财政规则(如债务上限)的存在实际上增加了而非减少了财政不确定性.如何调和这一矛盾?</strong></p></li>
+<li><p><strong>本文的发现对于当前的"财政空间"(fiscal
+space)讨论有什么启示?发展中国家在 ZLB
+情境下是否也有类似的放大效应?</strong></p></li>
+<li><p><strong>关于模型中的预期形成</strong>:假设家庭和企业具有理性预期,但实际中他们可能对财政政策的变化有适应性预期或粘性预期.这种预期设定如何影响结果?**</p></li>
+<li><p><strong>本文使用季度数据.更高频率(日度或周度)的财政不确定性数据是否会揭示更多动态细节?</strong></p></li>
+<li><p><strong>作者提到这是"第一个"研究财政波动性冲击的尝试.这个"第一"的贡献有多大?后续研究如何在此基础上扩展?</strong></p></li>
+<li><p><strong>在当前的高通胀环境下(如2022-2024年),财政不确定性对经济的影响是否与低通胀/低利率环境有不同的表现?</strong></p></li>
+</ol>
+<h2 id="学术思考-1">学术思考</h2>
+<p><strong>关于识别策略的思考</strong>:本文使用两步估计策略_首先估计财政规则的波动性,然后将估计的波动性序列作为外生变量引入
+VAR.这一策略的有效性取决于第一步估计的波动性能否被视为"意外变化"的合理代理.如果经济主体能够预期波动性的变化(而不仅仅是对冲击本身的预期),那么识别假设可能受到挑战.</p>
+<p><strong>关于模型设定的选择</strong>:作者使用代表性代理而非异质性代理.这限制了模型捕捉财政不确定性对不同群体差异化影响的能力.例如,财政不确定性对失业者和中小企业的伤害可能比对就业者和大型企业更大.</p>
+<p><strong>关于 ZLB 分析的启示</strong>:ZLB
+情境下的15倍放大效应是一个惊人的结果.但这一结果是否具有普遍性,还是对美国特定情境的高度依赖?不同的初始债务水平、不同的开放程度、不同的汇率制度下,ZLB
+放大效应是否相同?</p>
+<p><strong>关于政策含义的谨慎性</strong>:虽然本文强调了财政可预测性的重要性,但"说起来容易做起来难".在民主政治环境下,财政政策的内在不确定性可能是政治过程的自然结果,而非政策失误.如何在保持政策灵活性的同时减少不必要的波动?</p>
+<h2 id="下一步用户可能提的问题-1">下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p><strong>为什么内生 markup
+变化是财政波动性冲击传导的关键机制?这个机制的具体经济学解释是什么?</strong></p></li>
+<li><p><strong>作者提到在 VAR
+中加入财政波动性冲击到泰勒规则可以解决通胀预测的小差异,这在理论上意味着什么?</strong></p></li>
+<li><p><strong>15倍的 ZLB
+放大效应是否稳健?如果使用不同的货币规则设定,结果会如何变化?</strong></p></li>
+<li><p><strong>本文使用平均税率而非边际税率进行估计.边际税率的不确定性是否会对经济产生不同的影响?</strong></p></li>
+<li><p><strong>在美国的制度背景下,财政规则(如债务上限)的存在实际上增加了而非减少了财政不确定性.如何调和这一矛盾?</strong></p></li>
+<li><p><strong>本文的发现对于当前的"财政空间"(fiscal
+space)讨论有什么启示?发展中国家在 ZLB
+情境下是否也有类似的放大效应?</strong></p></li>
+<li><p><strong>关于模型中的预期形成</strong>:假设家庭和企业具有理性预期,但实际中他们可能对财政政策的变化有适应性预期或粘性预期.这种预期设定如何影响结果?**</p></li>
+<li><p><strong>本文使用季度数据.更高频率(日度或周度)的财政不确定性数据是否会揭示更多动态细节?</strong></p></li>
+<li><p><strong>作者提到这是"第一个"研究财政波动性冲击的尝试.这个"第一"的贡献有多大?后续研究如何在此基础上扩展?</strong></p></li>
+<li><p><strong>在当前的高通胀环境下(如2022-2024年),财政不确定性对经济的影响是否与低通胀/低利率环境有不同的表现?</strong></p></li>
+</ol>
+<h2 id="下一步用户可能提的问题-2">下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p><strong>为什么内生 markup
+变化是财政波动性冲击传导的关键机制?这个机制的具体经济学解释是什么?</strong></p></li>
+<li><p><strong>作者提到在 VAR
+中加入财政波动性冲击到泰勒规则可以解决通胀预测的小差异,这在理论上意味着什么?</strong></p></li>
+<li><p><strong>15倍的 ZLB
+放大效应是否稳健?如果使用不同的货币规则设定,结果会如何变化?</strong></p></li>
+<li><p><strong>本文使用平均税率而非边际税率进行估计.边际税率的不确定性是否会对经济产生不同的影响?</strong></p></li>
+<li><p><strong>在美国的制度背景下,财政规则(如债务上限)的存在实际上增加了而非减少了财政不确定性.如何调和这一矛盾?</strong></p></li>
+<li><p><strong>本文的发现对于当前的"财政空间"(fiscal
+space)讨论有什么启示?发展中国家在 ZLB
+情境下是否也有类似的放大效应?</strong></p></li>
+<li><p><strong>关于模型中的预期形成</strong>:假设家庭和企业具有理性预期,但实际中他们可能对财政政策的变化有适应性预期或粘性预期.这种预期设定如何影响结果?**</p></li>
+<li><p><strong>本文使用季度数据.更高频率(日度或周度)的财政不确定性数据是否会揭示更多动态细节?</strong></p></li>
+<li><p><strong>作者提到这是"第一个"研究财政波动性冲击的尝试.这个"第一"的贡献有多大?后续研究如何在此基础上扩展?</strong></p></li>
+<li><p><strong>在当前的高通胀环境下(如2022-2024年),财政不确定性对经济的影响是否与低通胀/低利率环境有不同的表现?</strong></p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -9263,60 +9263,6 @@ _谢肇淛&lt;五杂俎&gt;(约1610年)</p>
       </tags>
   </entry>
   <entry>
-    <title>Labor Mobility in Currency Union — 深度阅读笔记 — House, Proebsting &amp; Tesar</title>
-    <url>/posts/house2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Quantifying the Benefits of Labor Mobility in
-a Currency Union</li>
-<li><strong>作者</strong>: Christopher L. House (Michigan &amp; NBER),
-Christian Proebsting (EPFL), Linda L. Tesar (Michigan &amp; NBER)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies
-(RES)</li>
-<li><strong>难度评估</strong>: 高 -
-需要宏观经济学、国际经济学、DSGE模型基础 <span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言">1. 引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>最优货币区理论、搜索与匹配框架、货币联盟。</p>
-<h3 id="研究背景">研究背景</h3>
-<p>欧元区失业差异远大于美国；美国迁移响应大于欧洲；Mundell猜想流动性可替代货币政策。</p>
-<h3 id="核心问题">核心问题</h3>
-<p>劳动力流动性对货币联盟有多重要？流动性vs弹性汇率的效应比较？</p>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：相关文献</li>
-<li>第三节：实证分析</li>
-<li>第四节：模型</li>
-<li>第五节：量化分析</li>
-<li>第六节：结论</li>
-</ul>
-<h2 id="正文">3. 正文</h2>
-<h3 id="核心机制">核心机制</h3>
-<p>多国DSGE模型 + 搜索与匹配 + 跨境迁移</p>
-<h3 id="关键发现">关键发现</h3>
-<ol type="1">
-<li>欧洲若达美国流动性水平，失业差异降25%</li>
-<li>流动性和弹性汇率在降低失业上是替代品</li>
-<li>但在产出和通胀维度机制不同</li>
-</ol>
-<h2 id="结论">4. 结论</h2>
-<p>验证Mundell猜想——劳动力流动性确实可部分替代货币政策，但效果有限。</p>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<p>制度设计提高流动性、福利分析、过渡动态。</p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>你所不知道的可能对你有益 — 深度阅读笔记 — Höner &amp; Samuelson</title>
     <url>/posts/honner2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -9513,6 +9459,60 @@ T\)</span>按无原子分布选择</li>
       </tags>
   </entry>
   <entry>
+    <title>Labor Mobility in Currency Union — 深度阅读笔记 — House, Proebsting &amp; Tesar</title>
+    <url>/posts/house2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Quantifying the Benefits of Labor Mobility in
+a Currency Union</li>
+<li><strong>作者</strong>: Christopher L. House (Michigan &amp; NBER),
+Christian Proebsting (EPFL), Linda L. Tesar (Michigan &amp; NBER)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies
+(RES)</li>
+<li><strong>难度评估</strong>: 高 -
+需要宏观经济学、国际经济学、DSGE模型基础 <span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言">1. 引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>最优货币区理论、搜索与匹配框架、货币联盟。</p>
+<h3 id="研究背景">研究背景</h3>
+<p>欧元区失业差异远大于美国；美国迁移响应大于欧洲；Mundell猜想流动性可替代货币政策。</p>
+<h3 id="核心问题">核心问题</h3>
+<p>劳动力流动性对货币联盟有多重要？流动性vs弹性汇率的效应比较？</p>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：相关文献</li>
+<li>第三节：实证分析</li>
+<li>第四节：模型</li>
+<li>第五节：量化分析</li>
+<li>第六节：结论</li>
+</ul>
+<h2 id="正文">3. 正文</h2>
+<h3 id="核心机制">核心机制</h3>
+<p>多国DSGE模型 + 搜索与匹配 + 跨境迁移</p>
+<h3 id="关键发现">关键发现</h3>
+<ol type="1">
+<li>欧洲若达美国流动性水平，失业差异降25%</li>
+<li>流动性和弹性汇率在降低失业上是替代品</li>
+<li>但在产出和通胀维度机制不同</li>
+</ol>
+<h2 id="结论">4. 结论</h2>
+<p>验证Mundell猜想——劳动力流动性确实可部分替代货币政策，但效果有限。</p>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<p>制度设计提高流动性、福利分析、过渡动态。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>&lt;住房与不平等&gt;深度阅读笔记 — Ioannides &amp; Ngai</title>
     <url>/posts/ioannides2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -9630,6 +9630,61 @@ Inequality - <strong>作者</strong>:Yannis M. Ioannides, L. Rachel Ngai -
       <tags>
         <tag>论文笔记</tag>
         <tag>城市经济学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
+    <url>/posts/48526/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
+<ul>
+<li>因果识别+统计推断</li>
+<li>因果识别(<strong><em>causal
+identification</em></strong>):如果拥有总体,能否确定总体因果关系</li>
+<li>统计推断(<strong><em>statistical
+inference</em></strong>):如何从样本数据获取总体因果关系信息,实际是一种相关性事实</li>
+<li>识别假设,实际就是对 <span class="math inline">\(D\)</span> 和 <span class="math inline">\(\varepsilon\)</span>
+的关系作出表述,但这种过程是无法从理论上验证的</li>
+</ul>
+<span id="more"></span>
+<h2 id="section"><strong>1</strong></h2>
+<ul>
+<li><strong>1.1</strong>
+因果效应的定义:干预与否、处理与否时,潜在结果之间的差值.潜在结果一定是同一个时间点上的结果</li>
+<li><strong>1.2</strong> 潜在结果永远无法完全观测,除非存在平行宇宙</li>
+<li><strong>1.3</strong>
+通过识别假设可以进行"插值",可以化"相关关系"识别场景为"因果关系"识别场景</li>
+<li><strong>1.4</strong>
+鲁宾因果模型(潜在因果框架),一套描述因果关系的新语言</li>
+</ul>
+<h2 id="section-1"><strong>2</strong></h2>
+<ul>
+<li><strong>2.1</strong> 第一类识别假设:潜在结果均值独立于处理状态</li>
+<li><strong>2.2</strong>
+从干扰项中剥离出控制变量;或者寻找一个与干扰项不相关的工具变量</li>
+<li><strong>2.3</strong>
+第二类识别假设:潜在结果条件均值独立于处理状态</li>
+<li><strong>2.4</strong> 好的控制变量:既影响<span class="math inline">\(Y\)</span>,又影响<span class="math inline">\(D\)</span>.其本身和干扰项是否相关是不重要的,不是研究者关注的中心</li>
+<li><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</li>
+<li><strong>2.6</strong> 无需过渡阐释控制变量的系数</li>
+</ul>
+<h2 id="section-2"><strong>3</strong></h2>
+<ul>
+<li><strong>3.1</strong> 鲁宾因果模型并未规定具体的函数形式</li>
+<li><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</li>
+</ul>
+<h2 id="section-3"><strong>4</strong></h2>
+<ul>
+<li><strong>4.1</strong>
+选择性又称之为分配机制,每个个体如何接受处理,可以用倾向得分来表示</li>
+<li><strong>4.2</strong>
+建议现实使用IV、DID、RDD等识别方法时,称之为准实验</li>
+</ul>
+]]></content>
+      <categories>
+        <category>计量</category>
+      </categories>
+      <tags>
+        <tag>学术讲座</tag>
       </tags>
   </entry>
   <entry>
@@ -9863,61 +9918,6 @@ vs 10分位：8.3倍的价值产出差异</p>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
-    <url>/posts/48526/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
-<ul>
-<li>因果识别+统计推断</li>
-<li>因果识别(<strong><em>causal
-identification</em></strong>):如果拥有总体,能否确定总体因果关系</li>
-<li>统计推断(<strong><em>statistical
-inference</em></strong>):如何从样本数据获取总体因果关系信息,实际是一种相关性事实</li>
-<li>识别假设,实际就是对 <span class="math inline">\(D\)</span> 和 <span class="math inline">\(\varepsilon\)</span>
-的关系作出表述,但这种过程是无法从理论上验证的</li>
-</ul>
-<span id="more"></span>
-<h2 id="section"><strong>1</strong></h2>
-<ul>
-<li><strong>1.1</strong>
-因果效应的定义:干预与否、处理与否时,潜在结果之间的差值.潜在结果一定是同一个时间点上的结果</li>
-<li><strong>1.2</strong> 潜在结果永远无法完全观测,除非存在平行宇宙</li>
-<li><strong>1.3</strong>
-通过识别假设可以进行"插值",可以化"相关关系"识别场景为"因果关系"识别场景</li>
-<li><strong>1.4</strong>
-鲁宾因果模型(潜在因果框架),一套描述因果关系的新语言</li>
-</ul>
-<h2 id="section-1"><strong>2</strong></h2>
-<ul>
-<li><strong>2.1</strong> 第一类识别假设:潜在结果均值独立于处理状态</li>
-<li><strong>2.2</strong>
-从干扰项中剥离出控制变量;或者寻找一个与干扰项不相关的工具变量</li>
-<li><strong>2.3</strong>
-第二类识别假设:潜在结果条件均值独立于处理状态</li>
-<li><strong>2.4</strong> 好的控制变量:既影响<span class="math inline">\(Y\)</span>,又影响<span class="math inline">\(D\)</span>.其本身和干扰项是否相关是不重要的,不是研究者关注的中心</li>
-<li><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</li>
-<li><strong>2.6</strong> 无需过渡阐释控制变量的系数</li>
-</ul>
-<h2 id="section-2"><strong>3</strong></h2>
-<ul>
-<li><strong>3.1</strong> 鲁宾因果模型并未规定具体的函数形式</li>
-<li><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</li>
-</ul>
-<h2 id="section-3"><strong>4</strong></h2>
-<ul>
-<li><strong>4.1</strong>
-选择性又称之为分配机制,每个个体如何接受处理,可以用倾向得分来表示</li>
-<li><strong>4.2</strong>
-建议现实使用IV、DID、RDD等识别方法时,称之为准实验</li>
-</ul>
-]]></content>
-      <categories>
-        <category>计量</category>
-      </categories>
-      <tags>
-        <tag>学术讲座</tag>
       </tags>
   </entry>
   <entry>
