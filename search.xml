@@ -7214,217 +7214,6 @@ Effects），永久降低增长路径？</li>
       </tags>
   </entry>
   <entry>
-    <title>A Long and a Short Leg Make for a Wobbly Equilibrium — 深度阅读笔记 — Gârleanu, Panageas &amp; Zheng</title>
-    <url>/posts/garleanu2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: A Long and a Short Leg Make for a Wobbly
-Equilibrium</li>
-<li><strong>作者</strong>: Nicolae Gârleanu(Washington University),
-Stavros Panageas(UCLA Anderson), Geoffery Zheng(NYU)</li>
-<li><strong>类型</strong>: 论文笔记 / 资产定价 / 卖空市场 /
-金融市场微观结构</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: American Economic Review, Vol. 116,
-No. 4, pp. 1234-1273</li>
-<li><strong>DOI</strong>: 10.1257/aer.20211548</li>
-<li><strong>难度评估</strong>: 高 -
-需要资产定价、金融市场微观结构、一般均衡理论基础 <span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>股票卖空（Short
-Selling）是指投资者借入股票卖出，期望在股价下跌后买回获利。卖空需要支付借券费（lending
-fee），该费用由借贷市场的供给曲线内生决定。卖空活动的不稳定性是资产定价领域的核心问题之一——个股的卖空兴趣（short
-interest）常表现出突然且大幅的变化。</p>
-<p>异质信念（Heterogeneous
-Beliefs）是金融学中解释交易发生的重要框架：一部分投资者过度乐观（I型投资者），另一部分投资者理性（R型投资者），信念差异驱动交易。理性投资者有动机卖空他们认为被高估的股票。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><strong>卖空活动的不稳定现象</strong>：个股卖空兴趣表现出"跳跃"特征——突然的大幅变化，而非平稳的连续变化</li>
-<li><strong>理论与现实的不匹配</strong>：传统模型预测卖空活动应平滑变化，但实证显示存在跳跃；现有文献多将其归因于投资组合约束、融资限制、代理问题等外生因素</li>
-<li><strong>反馈机制缺失</strong>：现有模型缺少现货市场与借贷市场之间的反馈回路，导致无法内生解释均衡的多重性和跳跃</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：股票现货市场与借贷市场的相互作用如何导致卖空活动的突然变化？为什么理性卖空者甚至会在错误定价扩大时放弃市场？</p>
-<p><strong>关键洞察</strong>：作者发现了借贷费用（lending
-fee）引发的反馈机制：利用率（utilization
-ratio）上升→做多收益增加→夏普比率下降→卖空需求增加→利用率进一步上升。这形成了一个自我强化的循环，可产生"向后弯曲的需求曲线"和均衡的突然转移。</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><strong>内生机制</strong>：不依赖外生约束（投资组合限制、融资限制），而是通过借贷费用的微结构建模内生产生多重均衡和跳跃</li>
-<li><strong>可检验预测</strong>：提供了关于何时应该观察到卖空活动跳跃的具体条件（Proposition
-4）</li>
-<li><strong>现实应用</strong>：解释了2020年11月至2021年1月期间广泛发生的卖空者撤退现象</li>
-</ol>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<p>论文结构如下：</p>
-<ol type="1">
-<li><strong>引言</strong>：问题陈述、主要结论预览</li>
-<li><strong>模型设定</strong>（Section
-I）：异质信念、借贷费用、预算约束</li>
-<li><strong>主要分析结果</strong>（Section
-II）：均衡多重性、反馈机制、放大效应</li>
-<li><strong>财富份额动态</strong>（Section
-III）：多均衡下理性投资者财富份额的漂移</li>
-<li><strong>任意供给曲线</strong>（Section
-IV）：推广到一般形式的f(y)，给出多重均衡的充分必要条件（Proposition
-4）</li>
-<li><strong>实证证据</strong>（Section
-V）：利用Markit数据验证理论预测</li>
-<li><strong>扩展</strong>（Section
-VI）：非单位跨期替代弹性（IES）和多股票模型</li>
-<li><strong>GameStop案例研究</strong>（Section
-VII）：2020年11月-2021年1月的卖空撤退</li>
-<li><strong>结论</strong>（Section VIII）</li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>考虑一个连续时间、无限期界的经济体。投资者分为两类： -
-<strong>理性投资者（R型）</strong>：占有份额ν，相信正确的DDG过程（均值μD，波动率σD）
-- <strong>过度乐观投资者（I型）</strong>：相信错误的DDG过程（均值μI &gt;
-μD，持有"教条式信念"不学习）</p>
-<p>经济体中有正供给的风险资产（股票），其股息增长服从几何布朗运动。</p>
-<p><strong>与传统文献的核心区别</strong>：卖空需要支付借贷费用ft。投资者要么做多（w&gt;0）获得借贷收入τf_tyt，要么做空（w&lt;0）支付费用ft。</p>
-<p>借贷市场的关键机制： -
-<strong>利用率yt</strong>：被借出的股票占所有可借出股票的比例 -
-<strong>借贷费用ft</strong>：由借贷市场的供给曲线f(yt)内生决定 -
-<strong>市场清理事先</strong>：yt × 做多总量 = 做空总量</p>
-<h3 id="挑战">挑战</h3>
-<ol type="1">
-<li><strong>多重均衡</strong>：反馈回路可能导致多个均衡共存，包括零卖空均衡和高卖空均衡</li>
-<li><strong>向后弯曲的需求曲线</strong>：供需均衡可能非单调，导致均衡的突然跳跃</li>
-<li><strong>动态不稳定性</strong>：财富份额的演化可能放大外生冲击</li>
-<li><strong>跳跃的内生性</strong>：跳跃不是外生假设，而是从均衡动态中自然产生</li>
-</ol>
-<h3 id="方法">方法</h3>
-<h4 id="最优投资组合">最优投资组合</h4>
-<p>对数效用下的最优组合选择给出：</p>
-<p><span class="math display">\[w_{ti} = \begin{cases}
-\frac{\hat{\mu}_{ti} - r_t + f_t}{\sigma_D^2} &amp; \text{if }
-\hat{\mu}_{ti} - r_t + f_t &lt; 0 \\ \frac{\hat{\mu}_{ti} - r_t + \tau
-f_t y_t}{\sigma_D^2} &amp; \text{if } \hat{\mu}_{ti} - r_t + \tau f_t
-y_t &gt; 0 \\ 0 &amp; \text{otherwise} \end{cases}\]</span></p>
-<p>存在一个"不行动区间"：当感知到的超额收益在<span class="math inline">\(-\frac{f_t}{\sigma_D^2}\)</span>和<span class="math inline">\(-\frac{\tau f_t
-y_t}{\sigma_D^2}\)</span>之间时，投资者选择零仓位。</p>
-<h4 id="均衡条件与反馈机制">均衡条件与反馈机制</h4>
-<p>市场清理事先要求： <span class="math display">\[y_t =
-\frac{W_t^-}{W_t^+} = -\frac{w_t^R}{w_t^I} \cdot
-\frac{\omega_t}{1-\omega_t}\]</span></p>
-<p>夏普比率的表达式为： <span class="math display">\[\kappa_t = \sigma_D
-- (1-\omega_t)\eta - \sigma\phi_D(\omega_t + \tau
-y_t(1-\omega_t))\]</span></p>
-<p>其中<span class="math inline">\(\eta \equiv \frac{\mu_I -
-\mu_D}{\sigma_D}\)</span>。</p>
-<p><strong>关键反馈回路</strong>： 1. y上升 →
-做多投资者收益增加（借贷收入） → 股票需求增加 2. 需求增加 →
-夏普比率κ下降 3. κ下降 → 卖空者动机增强 → 做空需求增加 4. 做空需求增加 →
-y进一步上升 → 循环...</p>
-<h4 id="多重均衡条件">多重均衡条件</h4>
-<p><strong>Proposition 4（核心结果）</strong>：设<span class="math inline">\(h(y) \equiv f(y)(1-\tau y)\)</span>。若存在<span class="math inline">\(y \in [0, 1)\)</span>使得： - (a) <span class="math inline">\(h'(y) &lt; 0\)</span> - (b) <span class="math inline">\(\sigma_D^2 &lt; \frac{1}{4}(1-y)^2
-|h'(y)|\)</span></p>
-<p>则存在信念的财富分布使得多重均衡存在。</p>
-<p><strong>直觉理解</strong>：<span class="math inline">\(h(y)\)</span>衡量的是空头支付的费率<span class="math inline">\(f(y)\)</span>与多头获得的实际收入<span class="math inline">\(\tau f(y) y\)</span>之间的差额。当<span class="math inline">\(h'(y) &lt;
-0\)</span>时，说明随着利用率上升，这一差额在缩小，意味着做空变得相对更"昂贵"而做多相对更"有利"。这种非线性导致均衡的多重性。</p>
-<h4 id="均衡结构">均衡结构</h4>
-<p><strong>Proposition 2</strong>描述了均衡的完整结构： - 当<span class="math inline">\(\omega_t \in (\omega_2^*,
-1]\)</span>：唯一均衡，无卖空 - 当<span class="math inline">\(\omega_t
-\in [\omega_1^*,
-\omega_2^*]\)</span>：三个均衡（无卖空、中等卖空、高卖空） - 当<span class="math inline">\(\omega_t \in [0,
-\omega_1^*)\)</span>：唯一均衡，有卖空</p>
-<p>其中<span class="math inline">\(\omega_1^*\)</span>和<span class="math inline">\(\omega_2^*\)</span>是临界财富份额，<span class="math inline">\(\omega_2^* &gt; \omega_1^*\)</span>。</p>
-<h3 id="结果results">结果（Results）</h3>
-<h4 id="理论结果">理论结果</h4>
-<ol type="1">
-<li><strong>多重均衡的存在性</strong>：在特定参数条件下，系统可以支持多达三个均衡</li>
-<li><strong>向后弯曲的需求曲线</strong>：aggregate需求<span class="math inline">\(D(\kappa)\)</span>是κ的非单调函数，导致均衡的突然跳跃</li>
-<li><strong>跳跃的内生性</strong>：当<span class="math inline">\(\omega_t\)</span>连续变化穿过临界区间<span class="math inline">\([\omega_1^*,
-\omega_2^*]\)</span>时，κ和y发生不连续的跳跃</li>
-<li><strong>放大效应</strong>：即使在唯一均衡区域，反馈回路仍然存在，产生放大效应（multiplier
-effect）</li>
-</ol>
-<h4 id="实证结果">实证结果</h4>
-<ol type="1">
-<li><strong>肥尾分布</strong>：利用率的周变化呈现明显的肥尾（超额峰度26），远非正态</li>
-<li><strong>借贷费用的非线性</strong>：借贷费用与利用率呈非线性关系，在高利用率区域急剧上升</li>
-<li><strong>h'(y)的符号</strong>：估计的h'(y)在低利用率区域显著为负，符合Proposition
-4的条件</li>
-<li><strong>跳跃预测</strong>：满足Proposition
-4条件（h'(y)在某处为负）的股票，跳跃发生率显著更高</li>
-<li><strong>2020-2021案例</strong>：广泛卖空撤退开始于GameStop事件前8周，影响了并未被在线讨论的股票</li>
-</ol>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<p>本文提供了卖空活动突然变化的理论解释，主要结论：</p>
-<ol type="1">
-<li><strong>反馈机制是核心</strong>：现货与借贷市场的相互作用产生反馈回路，导致均衡多重性和跳跃</li>
-<li><strong>必要充分条件</strong>：Proposition
-4给出了多重均衡存在性的简洁可检验条件（h'(y)在某处为负）</li>
-<li><strong>理性撤退</strong>：即使错误定价扩大，理性卖空者也可能撤退——因为他们预期其他卖空者会撤退，从而降低了关键性概率</li>
-<li><strong>实证支持</strong>：满足模型预测条件的股票确实表现出更高的利用率跳跃率</li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="文献提及的方向">文献提及的方向</h3>
-<ol type="1">
-<li><strong>更丰富的资产类别</strong>：当前模型针对单一资产，可扩展到多资产组合选择</li>
-<li><strong>学习动态</strong>：当前I型投资者持有"教条式信念"，引入贝叶斯学习可能改变动态</li>
-<li><strong>内生信息获取</strong>：投资者选择支付成本获取信息，这可能影响均衡结构</li>
-<li><strong>更一般的信念分布</strong>：当前假设两类投资者，可扩展到连续分布</li>
-</ol>
-<h3 id="未来研究思考">未来研究思考</h3>
-<ol type="1">
-<li><strong>实证应用</strong>：利用更细粒度的借贷数据检验模型在个股层面的预测</li>
-<li><strong>期权市场互动</strong>：卖空活动的跳跃可能影响期权定价，检验这一跨市场联系是有趣的方向</li>
-<li><strong>机构投资者行为</strong>：对冲基金作为主要卖空者，其融资约束和风险管理如何与模型预测互动？</li>
-<li><strong>市场
-microstructure</strong>：借贷市场的微观结构设计（如竞争vs垄断）如何影响均衡多重性？</li>
-<li><strong>高频数据</strong>：利用日内数据检验模型预测的动态调整过程</li>
-</ol>
-<hr>
-<h2 id="学术思考">6. 学术思考</h2>
-<ol type="1">
-<li><p><strong>h'(y) &lt; 0条件的稳健性</strong>：Proposition
-4的条件依赖于特定的函数形式假设。放松供给曲线函数形式的假设后，多重均衡是否仍然存在？是否存在更一般的充分条件？</p></li>
-<li><p><strong>从理论到可操作的投资策略</strong>：如果模型正确，那么满足h'(y)
-&lt;
-0条件的股票应该提供更多的错误定价机会。这是否意味着存在可盈利的Alpha机会？还是说跳跃风险会消除这种机会？</p></li>
-<li><p><strong>理性撤退的均衡稳定性</strong>：在模型中，卖空者撤退是因为预期他人会撤退。这是一种协调均衡（coordination
-equilibrium）。但在现实中，这种协调如何实现？是否存在某种信号机制触发协调崩溃？</p></li>
-<li><p><strong>与市场微观结构文献的联系</strong>：模型假设借贷市场是搜索市场（search
-market），但现货市场是瓦尔拉斯市场（Walrasian
-market）。这一分离是否符合现实？将两部分都建模为搜索市场会改变结论吗？</p></li>
-<li><p><strong>异质信念的来源</strong>：模型假设I型投资者过度乐观，但没有解释这种乐观的来源。如果乐观来自信息获取成本的差异，引入内生信息获取会如何改变分析？</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li>如何在实证中估计h'(y)并检验Proposition 4的条件？</li>
-<li>模型如何解释2020-2021年GameStop期间以及之前8周的广泛卖空撤退？</li>
-<li>卖空费用的具体微观结构模型（如搜索与议价）如何推导？</li>
-<li>在多资产模型中，借贷市场的反馈机制如何与组合选择相互作用？</li>
-<li>理性投资者（R型）如何在内生学习下形成信念？</li>
-<li>模型的均衡多重性与市场效率有何关系？是否存在"错误定价的教科书案例"？</li>
-<li>如何将模型扩展到期权市场，分析卖空跳跃对期权波动率曲面（volatility
-surface）的影响？</li>
-<li>机构投资者的融资约束（如margin
-calls）如何与模型中的反馈机制互动？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>资产定价</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>AER</tag>
-        <tag>资产定价</tag>
-        <tag>卖空市场</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Fiscal Volatility Shocks and Economic Activity — 深度阅读笔记 — AER</title>
     <url>/posts/fernandez2015/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -7758,6 +7547,217 @@ space)讨论有什么启示?发展中国家在 ZLB
       </categories>
       <tags>
         <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>A Long and a Short Leg Make for a Wobbly Equilibrium — 深度阅读笔记 — Gârleanu, Panageas &amp; Zheng</title>
+    <url>/posts/garleanu2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: A Long and a Short Leg Make for a Wobbly
+Equilibrium</li>
+<li><strong>作者</strong>: Nicolae Gârleanu(Washington University),
+Stavros Panageas(UCLA Anderson), Geoffery Zheng(NYU)</li>
+<li><strong>类型</strong>: 论文笔记 / 资产定价 / 卖空市场 /
+金融市场微观结构</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: American Economic Review, Vol. 116,
+No. 4, pp. 1234-1273</li>
+<li><strong>DOI</strong>: 10.1257/aer.20211548</li>
+<li><strong>难度评估</strong>: 高 -
+需要资产定价、金融市场微观结构、一般均衡理论基础 <span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>股票卖空（Short
+Selling）是指投资者借入股票卖出，期望在股价下跌后买回获利。卖空需要支付借券费（lending
+fee），该费用由借贷市场的供给曲线内生决定。卖空活动的不稳定性是资产定价领域的核心问题之一——个股的卖空兴趣（short
+interest）常表现出突然且大幅的变化。</p>
+<p>异质信念（Heterogeneous
+Beliefs）是金融学中解释交易发生的重要框架：一部分投资者过度乐观（I型投资者），另一部分投资者理性（R型投资者），信念差异驱动交易。理性投资者有动机卖空他们认为被高估的股票。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><strong>卖空活动的不稳定现象</strong>：个股卖空兴趣表现出"跳跃"特征——突然的大幅变化，而非平稳的连续变化</li>
+<li><strong>理论与现实的不匹配</strong>：传统模型预测卖空活动应平滑变化，但实证显示存在跳跃；现有文献多将其归因于投资组合约束、融资限制、代理问题等外生因素</li>
+<li><strong>反馈机制缺失</strong>：现有模型缺少现货市场与借贷市场之间的反馈回路，导致无法内生解释均衡的多重性和跳跃</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：股票现货市场与借贷市场的相互作用如何导致卖空活动的突然变化？为什么理性卖空者甚至会在错误定价扩大时放弃市场？</p>
+<p><strong>关键洞察</strong>：作者发现了借贷费用（lending
+fee）引发的反馈机制：利用率（utilization
+ratio）上升→做多收益增加→夏普比率下降→卖空需求增加→利用率进一步上升。这形成了一个自我强化的循环，可产生"向后弯曲的需求曲线"和均衡的突然转移。</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><strong>内生机制</strong>：不依赖外生约束（投资组合限制、融资限制），而是通过借贷费用的微结构建模内生产生多重均衡和跳跃</li>
+<li><strong>可检验预测</strong>：提供了关于何时应该观察到卖空活动跳跃的具体条件（Proposition
+4）</li>
+<li><strong>现实应用</strong>：解释了2020年11月至2021年1月期间广泛发生的卖空者撤退现象</li>
+</ol>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<p>论文结构如下：</p>
+<ol type="1">
+<li><strong>引言</strong>：问题陈述、主要结论预览</li>
+<li><strong>模型设定</strong>（Section
+I）：异质信念、借贷费用、预算约束</li>
+<li><strong>主要分析结果</strong>（Section
+II）：均衡多重性、反馈机制、放大效应</li>
+<li><strong>财富份额动态</strong>（Section
+III）：多均衡下理性投资者财富份额的漂移</li>
+<li><strong>任意供给曲线</strong>（Section
+IV）：推广到一般形式的f(y)，给出多重均衡的充分必要条件（Proposition
+4）</li>
+<li><strong>实证证据</strong>（Section
+V）：利用Markit数据验证理论预测</li>
+<li><strong>扩展</strong>（Section
+VI）：非单位跨期替代弹性（IES）和多股票模型</li>
+<li><strong>GameStop案例研究</strong>（Section
+VII）：2020年11月-2021年1月的卖空撤退</li>
+<li><strong>结论</strong>（Section VIII）</li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>考虑一个连续时间、无限期界的经济体。投资者分为两类： -
+<strong>理性投资者（R型）</strong>：占有份额ν，相信正确的DDG过程（均值μD，波动率σD）
+- <strong>过度乐观投资者（I型）</strong>：相信错误的DDG过程（均值μI &gt;
+μD，持有"教条式信念"不学习）</p>
+<p>经济体中有正供给的风险资产（股票），其股息增长服从几何布朗运动。</p>
+<p><strong>与传统文献的核心区别</strong>：卖空需要支付借贷费用ft。投资者要么做多（w&gt;0）获得借贷收入τf_tyt，要么做空（w&lt;0）支付费用ft。</p>
+<p>借贷市场的关键机制： -
+<strong>利用率yt</strong>：被借出的股票占所有可借出股票的比例 -
+<strong>借贷费用ft</strong>：由借贷市场的供给曲线f(yt)内生决定 -
+<strong>市场清理事先</strong>：yt × 做多总量 = 做空总量</p>
+<h3 id="挑战">挑战</h3>
+<ol type="1">
+<li><strong>多重均衡</strong>：反馈回路可能导致多个均衡共存，包括零卖空均衡和高卖空均衡</li>
+<li><strong>向后弯曲的需求曲线</strong>：供需均衡可能非单调，导致均衡的突然跳跃</li>
+<li><strong>动态不稳定性</strong>：财富份额的演化可能放大外生冲击</li>
+<li><strong>跳跃的内生性</strong>：跳跃不是外生假设，而是从均衡动态中自然产生</li>
+</ol>
+<h3 id="方法">方法</h3>
+<h4 id="最优投资组合">最优投资组合</h4>
+<p>对数效用下的最优组合选择给出：</p>
+<p><span class="math display">\[w_{ti} = \begin{cases}
+\frac{\hat{\mu}_{ti} - r_t + f_t}{\sigma_D^2} &amp; \text{if }
+\hat{\mu}_{ti} - r_t + f_t &lt; 0 \\ \frac{\hat{\mu}_{ti} - r_t + \tau
+f_t y_t}{\sigma_D^2} &amp; \text{if } \hat{\mu}_{ti} - r_t + \tau f_t
+y_t &gt; 0 \\ 0 &amp; \text{otherwise} \end{cases}\]</span></p>
+<p>存在一个"不行动区间"：当感知到的超额收益在<span class="math inline">\(-\frac{f_t}{\sigma_D^2}\)</span>和<span class="math inline">\(-\frac{\tau f_t
+y_t}{\sigma_D^2}\)</span>之间时，投资者选择零仓位。</p>
+<h4 id="均衡条件与反馈机制">均衡条件与反馈机制</h4>
+<p>市场清理事先要求： <span class="math display">\[y_t =
+\frac{W_t^-}{W_t^+} = -\frac{w_t^R}{w_t^I} \cdot
+\frac{\omega_t}{1-\omega_t}\]</span></p>
+<p>夏普比率的表达式为： <span class="math display">\[\kappa_t = \sigma_D
+- (1-\omega_t)\eta - \sigma\phi_D(\omega_t + \tau
+y_t(1-\omega_t))\]</span></p>
+<p>其中<span class="math inline">\(\eta \equiv \frac{\mu_I -
+\mu_D}{\sigma_D}\)</span>。</p>
+<p><strong>关键反馈回路</strong>： 1. y上升 →
+做多投资者收益增加（借贷收入） → 股票需求增加 2. 需求增加 →
+夏普比率κ下降 3. κ下降 → 卖空者动机增强 → 做空需求增加 4. 做空需求增加 →
+y进一步上升 → 循环...</p>
+<h4 id="多重均衡条件">多重均衡条件</h4>
+<p><strong>Proposition 4（核心结果）</strong>：设<span class="math inline">\(h(y) \equiv f(y)(1-\tau y)\)</span>。若存在<span class="math inline">\(y \in [0, 1)\)</span>使得： - (a) <span class="math inline">\(h'(y) &lt; 0\)</span> - (b) <span class="math inline">\(\sigma_D^2 &lt; \frac{1}{4}(1-y)^2
+|h'(y)|\)</span></p>
+<p>则存在信念的财富分布使得多重均衡存在。</p>
+<p><strong>直觉理解</strong>：<span class="math inline">\(h(y)\)</span>衡量的是空头支付的费率<span class="math inline">\(f(y)\)</span>与多头获得的实际收入<span class="math inline">\(\tau f(y) y\)</span>之间的差额。当<span class="math inline">\(h'(y) &lt;
+0\)</span>时，说明随着利用率上升，这一差额在缩小，意味着做空变得相对更"昂贵"而做多相对更"有利"。这种非线性导致均衡的多重性。</p>
+<h4 id="均衡结构">均衡结构</h4>
+<p><strong>Proposition 2</strong>描述了均衡的完整结构： - 当<span class="math inline">\(\omega_t \in (\omega_2^*,
+1]\)</span>：唯一均衡，无卖空 - 当<span class="math inline">\(\omega_t
+\in [\omega_1^*,
+\omega_2^*]\)</span>：三个均衡（无卖空、中等卖空、高卖空） - 当<span class="math inline">\(\omega_t \in [0,
+\omega_1^*)\)</span>：唯一均衡，有卖空</p>
+<p>其中<span class="math inline">\(\omega_1^*\)</span>和<span class="math inline">\(\omega_2^*\)</span>是临界财富份额，<span class="math inline">\(\omega_2^* &gt; \omega_1^*\)</span>。</p>
+<h3 id="结果results">结果（Results）</h3>
+<h4 id="理论结果">理论结果</h4>
+<ol type="1">
+<li><strong>多重均衡的存在性</strong>：在特定参数条件下，系统可以支持多达三个均衡</li>
+<li><strong>向后弯曲的需求曲线</strong>：aggregate需求<span class="math inline">\(D(\kappa)\)</span>是κ的非单调函数，导致均衡的突然跳跃</li>
+<li><strong>跳跃的内生性</strong>：当<span class="math inline">\(\omega_t\)</span>连续变化穿过临界区间<span class="math inline">\([\omega_1^*,
+\omega_2^*]\)</span>时，κ和y发生不连续的跳跃</li>
+<li><strong>放大效应</strong>：即使在唯一均衡区域，反馈回路仍然存在，产生放大效应（multiplier
+effect）</li>
+</ol>
+<h4 id="实证结果">实证结果</h4>
+<ol type="1">
+<li><strong>肥尾分布</strong>：利用率的周变化呈现明显的肥尾（超额峰度26），远非正态</li>
+<li><strong>借贷费用的非线性</strong>：借贷费用与利用率呈非线性关系，在高利用率区域急剧上升</li>
+<li><strong>h'(y)的符号</strong>：估计的h'(y)在低利用率区域显著为负，符合Proposition
+4的条件</li>
+<li><strong>跳跃预测</strong>：满足Proposition
+4条件（h'(y)在某处为负）的股票，跳跃发生率显著更高</li>
+<li><strong>2020-2021案例</strong>：广泛卖空撤退开始于GameStop事件前8周，影响了并未被在线讨论的股票</li>
+</ol>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<p>本文提供了卖空活动突然变化的理论解释，主要结论：</p>
+<ol type="1">
+<li><strong>反馈机制是核心</strong>：现货与借贷市场的相互作用产生反馈回路，导致均衡多重性和跳跃</li>
+<li><strong>必要充分条件</strong>：Proposition
+4给出了多重均衡存在性的简洁可检验条件（h'(y)在某处为负）</li>
+<li><strong>理性撤退</strong>：即使错误定价扩大，理性卖空者也可能撤退——因为他们预期其他卖空者会撤退，从而降低了关键性概率</li>
+<li><strong>实证支持</strong>：满足模型预测条件的股票确实表现出更高的利用率跳跃率</li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="文献提及的方向">文献提及的方向</h3>
+<ol type="1">
+<li><strong>更丰富的资产类别</strong>：当前模型针对单一资产，可扩展到多资产组合选择</li>
+<li><strong>学习动态</strong>：当前I型投资者持有"教条式信念"，引入贝叶斯学习可能改变动态</li>
+<li><strong>内生信息获取</strong>：投资者选择支付成本获取信息，这可能影响均衡结构</li>
+<li><strong>更一般的信念分布</strong>：当前假设两类投资者，可扩展到连续分布</li>
+</ol>
+<h3 id="未来研究思考">未来研究思考</h3>
+<ol type="1">
+<li><strong>实证应用</strong>：利用更细粒度的借贷数据检验模型在个股层面的预测</li>
+<li><strong>期权市场互动</strong>：卖空活动的跳跃可能影响期权定价，检验这一跨市场联系是有趣的方向</li>
+<li><strong>机构投资者行为</strong>：对冲基金作为主要卖空者，其融资约束和风险管理如何与模型预测互动？</li>
+<li><strong>市场
+microstructure</strong>：借贷市场的微观结构设计（如竞争vs垄断）如何影响均衡多重性？</li>
+<li><strong>高频数据</strong>：利用日内数据检验模型预测的动态调整过程</li>
+</ol>
+<hr>
+<h2 id="学术思考">6. 学术思考</h2>
+<ol type="1">
+<li><p><strong>h'(y) &lt; 0条件的稳健性</strong>：Proposition
+4的条件依赖于特定的函数形式假设。放松供给曲线函数形式的假设后，多重均衡是否仍然存在？是否存在更一般的充分条件？</p></li>
+<li><p><strong>从理论到可操作的投资策略</strong>：如果模型正确，那么满足h'(y)
+&lt;
+0条件的股票应该提供更多的错误定价机会。这是否意味着存在可盈利的Alpha机会？还是说跳跃风险会消除这种机会？</p></li>
+<li><p><strong>理性撤退的均衡稳定性</strong>：在模型中，卖空者撤退是因为预期他人会撤退。这是一种协调均衡（coordination
+equilibrium）。但在现实中，这种协调如何实现？是否存在某种信号机制触发协调崩溃？</p></li>
+<li><p><strong>与市场微观结构文献的联系</strong>：模型假设借贷市场是搜索市场（search
+market），但现货市场是瓦尔拉斯市场（Walrasian
+market）。这一分离是否符合现实？将两部分都建模为搜索市场会改变结论吗？</p></li>
+<li><p><strong>异质信念的来源</strong>：模型假设I型投资者过度乐观，但没有解释这种乐观的来源。如果乐观来自信息获取成本的差异，引入内生信息获取会如何改变分析？</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li>如何在实证中估计h'(y)并检验Proposition 4的条件？</li>
+<li>模型如何解释2020-2021年GameStop期间以及之前8周的广泛卖空撤退？</li>
+<li>卖空费用的具体微观结构模型（如搜索与议价）如何推导？</li>
+<li>在多资产模型中，借贷市场的反馈机制如何与组合选择相互作用？</li>
+<li>理性投资者（R型）如何在内生学习下形成信念？</li>
+<li>模型的均衡多重性与市场效率有何关系？是否存在"错误定价的教科书案例"？</li>
+<li>如何将模型扩展到期权市场，分析卖空跳跃对期权波动率曲面（volatility
+surface）的影响？</li>
+<li>机构投资者的融资约束（如margin
+calls）如何与模型中的反馈机制互动？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>资产定价</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>AER</tag>
+        <tag>资产定价</tag>
+        <tag>卖空市场</tag>
       </tags>
   </entry>
   <entry>
@@ -12790,6 +12790,45 @@ an Endogenous Production Network</li>
       </tags>
   </entry>
   <entry>
+    <title>字体和公式的Display</title>
+    <url>/posts/15167/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<font face="Times New Roman">
+</font><p style="text-align:justify"><font face="Times New Roman">
+<b>"Evaluating the employment impact of a mandatory job search
+program"</b></font> <br> <br> <font face="Times New Roman">
+</font></p><p style="text-align:justify"><font face="Times New Roman">
+</font></p><p><font face="Times New Roman"><b>What treatment do the authors evaluate?</b></font> <br></p>
+<span id="more"></span>
+<font face="Tex Gyre Pagella">
+<p style="text-align:justify">
+</p><p><b>Answer: </b> In the parametric methods, the common trend
+assumption is:</p>
+<p><span class="math display">\[\begin{array}{l}
+f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
+t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
+t=0\right)\right] \\
+=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
+t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
+t=0\right)\right]
+\end{array}\]</span> In the non-parametric methods, the common trend
+assumption is:</p>
+<p><span class="math display">\[\begin{array}{l}
+E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i
+t}^{0} | P_{E X}, P_{t X}, N D=1, t=0\right) \\
+=E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=1\right)-E\left(Y_{i
+t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)
+\end{array}\]</span></p>
+</font><p><font face="Tex Gyre Pagella"></font></p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>blog_test</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>移民、创新与增长 — 深度阅读笔记 — Terry Et Al.</title>
     <url>/posts/terry2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -12886,45 +12925,6 @@ capita提高约5%</p></li>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>字体和公式的Display</title>
-    <url>/posts/15167/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<font face="Times New Roman">
-</font><p style="text-align:justify"><font face="Times New Roman">
-<b>"Evaluating the employment impact of a mandatory job search
-program"</b></font> <br> <br> <font face="Times New Roman">
-</font></p><p style="text-align:justify"><font face="Times New Roman">
-</font></p><p><font face="Times New Roman"><b>What treatment do the authors evaluate?</b></font> <br></p>
-<span id="more"></span>
-<font face="Tex Gyre Pagella">
-<p style="text-align:justify">
-</p><p><b>Answer: </b> In the parametric methods, the common trend
-assumption is:</p>
-<p><span class="math display">\[\begin{array}{l}
-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
-t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
-t=0\right)\right] \\
-=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
-t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
-t=0\right)\right]
-\end{array}\]</span> In the non-parametric methods, the common trend
-assumption is:</p>
-<p><span class="math display">\[\begin{array}{l}
-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i
-t}^{0} | P_{E X}, P_{t X}, N D=1, t=0\right) \\
-=E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=1\right)-E\left(Y_{i
-t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)
-\end{array}\]</span></p>
-</font><p><font face="Tex Gyre Pagella"></font></p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>blog_test</tag>
       </tags>
   </entry>
   <entry>
@@ -13158,6 +13158,42 @@ Economy</em>, 133(7), 2180-2228. https://doi.org/10.1086/734873</p>
       </tags>
   </entry>
   <entry>
+    <title>画一幅我农所在地的道路图</title>
+    <url>/posts/42027/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;">
+<center>
+上图即为最终效果
+</center>
+<h2 id="一些必备的工具">一些必备的工具</h2>
+<p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="绘制路网地图">绘制路网地图</h2>
+<p>导入以下R 包:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>读入杨陵区的数据:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>获取杨陵区的经纬度范围:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
+<p>提取杨陵区的街道路线:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>把数据保存为<strong>rds</strong>:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>然后绘图:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>绘图</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>市场力量与资本约束 — 深度阅读笔记 — Wittwer &amp; Allen</title>
     <url>/posts/wittwer2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -13248,42 +13284,6 @@ III资本要求对银行中介交易产生负面影响</p></li>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>画一幅我农所在地的道路图</title>
-    <url>/posts/42027/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;">
-<center>
-上图即为最终效果
-</center>
-<h2 id="一些必备的工具">一些必备的工具</h2>
-<p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="绘制路网地图">绘制路网地图</h2>
-<p>导入以下R 包:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>读入杨陵区的数据:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>获取杨陵区的经纬度范围:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
-<p>提取杨陵区的街道路线:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>把数据保存为<strong>rds</strong>:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>然后绘图:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>绘图</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
       </tags>
   </entry>
   <entry>
