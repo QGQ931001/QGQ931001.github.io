@@ -816,168 +816,6 @@ Development. <em>American Economic Review</em>, 103(1), 1-46.</li>
       </tags>
   </entry>
   <entry>
-    <title>稳健的错误设定模型 — 深度阅读笔记 — Ba</title>
-    <url>/posts/ba2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Robust Misspecified Models</li>
-<li><strong>作者</strong>: Cuimin Ba (University of Pittsburgh)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, Vol. 116, No. 4,
-pp. 1340-1379</li>
-<li><strong>DOI</strong>: 10.1257/aer.20240246</li>
-<li><strong>难度评估</strong>: 高 -
-需要博弈论、学习理论、贝叶斯推断基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>模型错误设定（Model
-Misspecification）</strong>：指决策者将零概率分配给真实数据生成过程(DGP)的情况。这可能源于简化复杂现实的需要，或认知偏差如过度自信或相关性忽视。</p>
-<p><strong>自我确认均衡（Self-Confirming Equilibrium,
-SCE）</strong>：指代理人在给定一致信念下选择最优行动，但模型预测可能与真实DGP不匹配（仅在均衡路径上匹配）。</p>
-<p><strong>贝叶斯因子（Bayes
-Factor）</strong>：是两种模型相对于观察数据的似然比，用于决定是否切换模型。当贝叶斯因子超过阈值α时，代理人切换模型。</p>
-<p><strong>p-吸收性（P-absorbingness）</strong>：本文提出的新概念，要求使用某模型的教条主义者在正概率下最终只玩均衡行动。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><strong>模型与决策</strong>:
-人们使用模型指导决策，但常用模型往往是错误设定的</li>
-<li><strong>现有研究局限</strong>:
-大多数文献假设决策者是"教条的"——使用特定错误模型且不考虑改变</li>
-<li><strong>现实中的模型切换</strong>:
-科学家转换范式、经济学家采用新模型、个体在认知行为治疗中改变思维模式</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:
-当决策者愿意切换模型时，哪些错误设定的模型会持续存在？</p>
-<p><strong>关键洞察</strong>:
-作者提出两个核心特征来表征稳健的错误设定模型：(1)模型在预测均衡分布方面的渐近准确性；(2)围绕均衡的先验"紧密度"。错误设定的模型可以是稳健的，即使决策者观察到无限数据，也能持续对抗任何竞争模型。</p>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<p>论文结构如下:</p>
-<ol type="1">
-<li><strong>引言</strong>: 问题陈述、动机、贡献预览</li>
-<li><strong>激励示例</strong>: 艺术家过度/不足自信的例子</li>
-<li><strong>框架</strong>:
-基本设定、模型设定、切换规则、持久性和稳健性定义</li>
-<li><strong>主要结果</strong>: 定理1-3</li>
-<li><strong>应用</strong>: 媒体偏见与极化、过度与不足自信</li>
-<li><strong>扩展</strong>: 替代切换规则、多个竞争模型，前瞻性代理人</li>
-<li><strong>结论</strong></li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="艺术家示例">艺术家示例</h4>
-<p>艺术家选择努力程度，真实能力b*=1，但艺术家可能过度自信(b̂=2)或不足自信(b̂=0)。</p>
-<p><strong>关键发现</strong>: 过度自信更稳健!</p>
-<ul>
-<li><strong>不足自信</strong>:
-导致负反馈循环，努力在1和2之间永远循环，无自我确认均衡</li>
-<li><strong>过度自信</strong>:
-导致正反馈循环，最终稳定在努力=0的均衡</li>
-</ul>
-<h3 id="框架设定">框架设定</h3>
-<p><strong>数据生成过程</strong>: 每个时期代理人生成内生数据 - 行动at →
-结果yt ~ Q*(·|at) - 结果取决于行动（内生数据）</p>
-<p><strong>主观模型</strong>: 每个模型θ是预测DGP的有限集合{ Qθ(·|a,ω)
-}</p>
-<p><strong>切换规则</strong>: - 计算贝叶斯因子λt - 如果λt &gt;
-α，切换到竞争模型 - 如果λt &lt; 1/α，切换回来 - α≥1控制切换粘性</p>
-<h3 id="主要结果">主要结果</h3>
-<h4 id="定理1哪些模型可以稳健">定理1：哪些模型可以稳健</h4>
-<p><strong>条件</strong>: α &gt; 1</p>
-<p><strong>等价命题</strong>: (i) 模型θ在某些先验下全局稳健 (ii)
-模型θ在某些先验下局部稳健 (iii) 模型θ存在p-吸收SCE</p>
-<p><strong>关键洞察</strong>:
-全局和局部稳健性是等价的——如果模型对重大范式转换脆弱，对局部变化也脆弱。</p>
-<h4 id="定理2何时模型是稳健的">定理2：何时模型是稳健的</h4>
-<p><strong>条件</strong>:
-模型θ无陷阱（可识别+所有p-吸收SCE是准严格）</p>
-<p><strong>核心概念</strong>: - <strong>一致参数</strong> Cθ:
-存在p-吸收SCE支持的参数 - <strong>先验紧密度</strong>: πθ0(Cθ) ≥ 1/α</p>
-<p><strong>结论</strong>: - 全局稳健 ⟺ 先验紧密度条件满足 - 局部稳健 ⟺
-Cθ ≠ ∅（对所有全支撑先验）</p>
-<h4 id="定理3非粘性切换-α-1">定理3：非粘性切换 (α = 1)</h4>
-<p><strong>结论</strong>: Cθ = Ωθ（全参数一致）才是稳健的</p>
-<p><strong>洞察</strong>: 粘性帮助更多错误模型持续存在</p>
-<h3 id="应用">应用</h3>
-<h4 id="a.-媒体偏见与极化">A. 媒体偏见与极化</h4>
-<p><strong>设定</strong>: - 代理人选择左翼、中间、右翼媒体 -
-真实状态是ωM（中间） - 媒体可能误导代理人</p>
-<p><strong>命题1</strong>: - θ̂在所有先验和切换阈值下全局稳健 -
-θ只在先验充分集中或切换阈值足够高时全局稳健 - θ̂最终以正概率永久替换θ</p>
-<p><strong>政治极化机制</strong>:
-错误模型θ̂因为简单，在数据拟合上表现更好，最终导致持久的政治极化。</p>
-<h4 id="b.-过度与不足自信">B. 过度与不足自信</h4>
-<p><strong>设定</strong>:
-代理人对能力有偏见(b̂)，学习另一个基本因素(ω)</p>
-<p><strong>命题2</strong>: - 过度自信(b̂ &gt; b<em>): 总是局部稳健 -
-不足自信(b̂ &lt; b</em>): 只在某些不连续区间局部稳健</p>
-<p><strong>机制差异</strong>: - 过度自信 → 正反馈 → 收敛到SCE - 不足自信
-→ 负反馈 → 在非SCE行动间振荡</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<p>本文研究了当决策者比较错误设定模型与竞争模型时，哪些模型会持续存在。主要结论:</p>
-<ol type="1">
-<li><strong>稳健性条件</strong>:
-错误设定模型的稳健性取决于两个特征——渐近准确性和先验紧密度</li>
-<li><strong>全局vs局部稳健</strong>:
-在粘性切换下(α&gt;1)两者等价;在非粘性切换下(α=1)只有全集中先验有效</li>
-<li><strong>反直觉发现</strong>:
-配备根深蒂固先验的简单错误模型可以比正确模型更稳健</li>
-<li><strong>应用广泛</strong>:
-从媒体极化到认知偏差,框架提供了预测哪些偏见更持久的工具</li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="文献提及的方向">文献提及的方向</h3>
-<ol type="1">
-<li><strong>最优切换阈值</strong>: 如何平衡I类和II类错误</li>
-<li><strong>持久性概率</strong>: 量化模型被永久采用的可能性</li>
-<li><strong>前瞻性代理人</strong>: 跨模型的前瞻性而非仅模型内</li>
-<li><strong>连续行动空间</strong>: 扩展框架到连续行动</li>
-</ol>
-<h3 id="未来研究思考">未来研究思考</h3>
-<ol type="1">
-<li><strong>政策设计</strong>:
-如果知道某些错误模型更稳健,如何设计干预来对抗它们?</li>
-<li><strong>模型复杂性</strong>:
-复杂模型vs简单模型的权衡是否与本文发现一致?</li>
-<li><strong>异质性学习</strong>:
-不同决策者是否以不同方式应用切换规则?</li>
-</ol>
-<hr>
-<h2 id="学术思考">7. 学术思考</h2>
-<h3 id="核心学术洞察">核心学术洞察</h3>
-<ol type="1">
-<li><p><strong>为什么简单错误模型更稳健?</strong>:
-本文的核心反直觉发现。直觉上,正确模型应该更受欢迎。但错误模型因为简单,先验更集中,而正确模型在每个参数上都可能不一致。</p></li>
-<li><p><strong>粘性切换的双刃剑效应</strong>:
-粘性(α&gt;1)帮助错误模型持续,但也防止因早期噪声过早放弃正确模型。</p></li>
-<li><p><strong>p-吸收性的概念创新</strong>:
-传统SCE只要求均衡存在,不要求可达到性。p-吸收性要求从正概率初始信念可达。</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li>定理1中"局部和全局稳健等价"的证明思路是什么?</li>
-<li>媒体极化应用中的"策略性误报"是如何设计的?</li>
-<li>p-吸收SCE和普通SCE有什么区别?</li>
-<li>错误模型持久性的概率有多高?</li>
-<li>在离散vs连续行动空间中,结论如何变化?</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Macroeconomic Effects of Debt Relief 深度阅读笔记 — Auclert, Dobbie &amp; Goldsmith-Pinkham</title>
     <url>/posts/auclert2019/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -1159,6 +997,346 @@ Economic Review.</li>
         <tag>债务减免</tag>
         <tag>大衰退</tag>
         <tag>破产制度</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>稳健的错误设定模型 — 深度阅读笔记 — Ba</title>
+    <url>/posts/ba2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Robust Misspecified Models</li>
+<li><strong>作者</strong>: Cuimin Ba (University of Pittsburgh)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, Vol. 116, No. 4,
+pp. 1340-1379</li>
+<li><strong>DOI</strong>: 10.1257/aer.20240246</li>
+<li><strong>难度评估</strong>: 高 -
+需要博弈论、学习理论、贝叶斯推断基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>模型错误设定（Model
+Misspecification）</strong>：指决策者将零概率分配给真实数据生成过程(DGP)的情况。这可能源于简化复杂现实的需要，或认知偏差如过度自信或相关性忽视。</p>
+<p><strong>自我确认均衡（Self-Confirming Equilibrium,
+SCE）</strong>：指代理人在给定一致信念下选择最优行动，但模型预测可能与真实DGP不匹配（仅在均衡路径上匹配）。</p>
+<p><strong>贝叶斯因子（Bayes
+Factor）</strong>：是两种模型相对于观察数据的似然比，用于决定是否切换模型。当贝叶斯因子超过阈值α时，代理人切换模型。</p>
+<p><strong>p-吸收性（P-absorbingness）</strong>：本文提出的新概念，要求使用某模型的教条主义者在正概率下最终只玩均衡行动。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><strong>模型与决策</strong>:
+人们使用模型指导决策，但常用模型往往是错误设定的</li>
+<li><strong>现有研究局限</strong>:
+大多数文献假设决策者是"教条的"——使用特定错误模型且不考虑改变</li>
+<li><strong>现实中的模型切换</strong>:
+科学家转换范式、经济学家采用新模型、个体在认知行为治疗中改变思维模式</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>:
+当决策者愿意切换模型时，哪些错误设定的模型会持续存在？</p>
+<p><strong>关键洞察</strong>:
+作者提出两个核心特征来表征稳健的错误设定模型：(1)模型在预测均衡分布方面的渐近准确性；(2)围绕均衡的先验"紧密度"。错误设定的模型可以是稳健的，即使决策者观察到无限数据，也能持续对抗任何竞争模型。</p>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<p>论文结构如下:</p>
+<ol type="1">
+<li><strong>引言</strong>: 问题陈述、动机、贡献预览</li>
+<li><strong>激励示例</strong>: 艺术家过度/不足自信的例子</li>
+<li><strong>框架</strong>:
+基本设定、模型设定、切换规则、持久性和稳健性定义</li>
+<li><strong>主要结果</strong>: 定理1-3</li>
+<li><strong>应用</strong>: 媒体偏见与极化、过度与不足自信</li>
+<li><strong>扩展</strong>: 替代切换规则、多个竞争模型，前瞻性代理人</li>
+<li><strong>结论</strong></li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="艺术家示例">艺术家示例</h4>
+<p>艺术家选择努力程度，真实能力b*=1，但艺术家可能过度自信(b̂=2)或不足自信(b̂=0)。</p>
+<p><strong>关键发现</strong>: 过度自信更稳健!</p>
+<ul>
+<li><strong>不足自信</strong>:
+导致负反馈循环，努力在1和2之间永远循环，无自我确认均衡</li>
+<li><strong>过度自信</strong>:
+导致正反馈循环，最终稳定在努力=0的均衡</li>
+</ul>
+<h3 id="框架设定">框架设定</h3>
+<p><strong>数据生成过程</strong>: 每个时期代理人生成内生数据 - 行动at →
+结果yt ~ Q*(·|at) - 结果取决于行动（内生数据）</p>
+<p><strong>主观模型</strong>: 每个模型θ是预测DGP的有限集合{ Qθ(·|a,ω)
+}</p>
+<p><strong>切换规则</strong>: - 计算贝叶斯因子λt - 如果λt &gt;
+α，切换到竞争模型 - 如果λt &lt; 1/α，切换回来 - α≥1控制切换粘性</p>
+<h3 id="主要结果">主要结果</h3>
+<h4 id="定理1哪些模型可以稳健">定理1：哪些模型可以稳健</h4>
+<p><strong>条件</strong>: α &gt; 1</p>
+<p><strong>等价命题</strong>: (i) 模型θ在某些先验下全局稳健 (ii)
+模型θ在某些先验下局部稳健 (iii) 模型θ存在p-吸收SCE</p>
+<p><strong>关键洞察</strong>:
+全局和局部稳健性是等价的——如果模型对重大范式转换脆弱，对局部变化也脆弱。</p>
+<h4 id="定理2何时模型是稳健的">定理2：何时模型是稳健的</h4>
+<p><strong>条件</strong>:
+模型θ无陷阱（可识别+所有p-吸收SCE是准严格）</p>
+<p><strong>核心概念</strong>: - <strong>一致参数</strong> Cθ:
+存在p-吸收SCE支持的参数 - <strong>先验紧密度</strong>: πθ0(Cθ) ≥ 1/α</p>
+<p><strong>结论</strong>: - 全局稳健 ⟺ 先验紧密度条件满足 - 局部稳健 ⟺
+Cθ ≠ ∅（对所有全支撑先验）</p>
+<h4 id="定理3非粘性切换-α-1">定理3：非粘性切换 (α = 1)</h4>
+<p><strong>结论</strong>: Cθ = Ωθ（全参数一致）才是稳健的</p>
+<p><strong>洞察</strong>: 粘性帮助更多错误模型持续存在</p>
+<h3 id="应用">应用</h3>
+<h4 id="a.-媒体偏见与极化">A. 媒体偏见与极化</h4>
+<p><strong>设定</strong>: - 代理人选择左翼、中间、右翼媒体 -
+真实状态是ωM（中间） - 媒体可能误导代理人</p>
+<p><strong>命题1</strong>: - θ̂在所有先验和切换阈值下全局稳健 -
+θ只在先验充分集中或切换阈值足够高时全局稳健 - θ̂最终以正概率永久替换θ</p>
+<p><strong>政治极化机制</strong>:
+错误模型θ̂因为简单，在数据拟合上表现更好，最终导致持久的政治极化。</p>
+<h4 id="b.-过度与不足自信">B. 过度与不足自信</h4>
+<p><strong>设定</strong>:
+代理人对能力有偏见(b̂)，学习另一个基本因素(ω)</p>
+<p><strong>命题2</strong>: - 过度自信(b̂ &gt; b<em>): 总是局部稳健 -
+不足自信(b̂ &lt; b</em>): 只在某些不连续区间局部稳健</p>
+<p><strong>机制差异</strong>: - 过度自信 → 正反馈 → 收敛到SCE - 不足自信
+→ 负反馈 → 在非SCE行动间振荡</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<p>本文研究了当决策者比较错误设定模型与竞争模型时，哪些模型会持续存在。主要结论:</p>
+<ol type="1">
+<li><strong>稳健性条件</strong>:
+错误设定模型的稳健性取决于两个特征——渐近准确性和先验紧密度</li>
+<li><strong>全局vs局部稳健</strong>:
+在粘性切换下(α&gt;1)两者等价;在非粘性切换下(α=1)只有全集中先验有效</li>
+<li><strong>反直觉发现</strong>:
+配备根深蒂固先验的简单错误模型可以比正确模型更稳健</li>
+<li><strong>应用广泛</strong>:
+从媒体极化到认知偏差,框架提供了预测哪些偏见更持久的工具</li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="文献提及的方向">文献提及的方向</h3>
+<ol type="1">
+<li><strong>最优切换阈值</strong>: 如何平衡I类和II类错误</li>
+<li><strong>持久性概率</strong>: 量化模型被永久采用的可能性</li>
+<li><strong>前瞻性代理人</strong>: 跨模型的前瞻性而非仅模型内</li>
+<li><strong>连续行动空间</strong>: 扩展框架到连续行动</li>
+</ol>
+<h3 id="未来研究思考">未来研究思考</h3>
+<ol type="1">
+<li><strong>政策设计</strong>:
+如果知道某些错误模型更稳健,如何设计干预来对抗它们?</li>
+<li><strong>模型复杂性</strong>:
+复杂模型vs简单模型的权衡是否与本文发现一致?</li>
+<li><strong>异质性学习</strong>:
+不同决策者是否以不同方式应用切换规则?</li>
+</ol>
+<hr>
+<h2 id="学术思考">7. 学术思考</h2>
+<h3 id="核心学术洞察">核心学术洞察</h3>
+<ol type="1">
+<li><p><strong>为什么简单错误模型更稳健?</strong>:
+本文的核心反直觉发现。直觉上,正确模型应该更受欢迎。但错误模型因为简单,先验更集中,而正确模型在每个参数上都可能不一致。</p></li>
+<li><p><strong>粘性切换的双刃剑效应</strong>:
+粘性(α&gt;1)帮助错误模型持续,但也防止因早期噪声过早放弃正确模型。</p></li>
+<li><p><strong>p-吸收性的概念创新</strong>:
+传统SCE只要求均衡存在,不要求可达到性。p-吸收性要求从正概率初始信念可达。</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li>定理1中"局部和全局稳健等价"的证明思路是什么?</li>
+<li>媒体极化应用中的"策略性误报"是如何设计的?</li>
+<li>p-吸收SCE和普通SCE有什么区别?</li>
+<li>错误模型持久性的概率有多高?</li>
+<li>在离散vs连续行动空间中,结论如何变化?</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>长期住房收益率动态 — 深度阅读笔记 — Bäcker-Peral, Hazell &amp; Mian</title>
+    <url>/posts/backer-peral2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Dynamics of the Long-Term Housing Yield:
+Evidence from Natural Experiments</li>
+<li><strong>作者</strong>: Verónica Bäcker-Peral (普林斯顿), Jonathon
+Hazell (LSE), Atif Mian (普林斯顿 &amp; NBER)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(3):
+1014-1051</li>
+<li><strong>DOI</strong>: 10.1257/aer.20240513</li>
+<li><strong>难度评估</strong>: 高 -
+需要房地产金融、计量经济学、自然实验方法基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>长期住房收益率（Long-Term Housing
+Yield）</strong>：预期长期均衡时的租金价格比率，反映市场对长期住房回报率的预期。</p>
+<p><strong>租约延长（Lease
+Extension）</strong>：英国房产的租约可以被延长90年或更长时间，形成自然实验。</p>
+<p><strong>自然实验方法（Natural Experiment
+Approach）</strong>：利用租约延长前后同一房产的价格变化来识别长期收益率。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>长期收益率的重要性</strong>：揭示市场对长期均衡的预期，帮助理解中期冲击消散后的经济状态</p></li>
+<li><p><strong>测量困难</strong>：长期收益率难以测量，需要能区分长期和中期价格行为的数据</p></li>
+<li><p><strong>英国独特制度</strong>：大多数公寓以长期租约（leasehold）形式买卖，可定期延长</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：如何利用英国租约延长的自然实验来估计预期的长期住房收益率y*？</p>
+<p><strong>主要发现</strong>： -
+y<em>从2000-2006年的约5.2%下降到2024年的2.7% - 非弹性市场下降更陡峭 -
+气候风险暴露较高的地区y</em>仍然较高</p>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
+<ul>
+<li>问题陈述和研究动机</li>
+<li>数据和方法概述</li>
+<li>主要发现预览</li>
+</ul>
+<h3 id="第二节预期长期住房收益率的定义">第二节：预期长期住房收益率的定义</h3>
+<ul>
+<li>收益率的定义</li>
+<li>y*的分解</li>
+</ul>
+<h3 id="第三节数据和租约延长详情">第三节：数据和租约延长详情</h3>
+<ul>
+<li><strong>3.1 数据构建</strong></li>
+<li><strong>3.2 租约延长制度详情</strong></li>
+<li><strong>3.3 交易滞后</strong></li>
+</ul>
+<h3 id="第四节实证方法">第四节：实证方法</h3>
+<ul>
+<li>双重差分估计</li>
+<li>非线性最小二乘估计y*</li>
+</ul>
+<h3 id="第五节主要结果">第五节：主要结果</h3>
+<ul>
+<li>y*的时间序列动态</li>
+<li>横截面异质性</li>
+</ul>
+<h3 id="第六节宏观经济含义">第六节：宏观经济含义</h3>
+<ul>
+<li>与其他市场的比较</li>
+<li>当前价格的持久性指标</li>
+<li>供给弹性和气候风险的影响</li>
+</ul>
+<h3 id="第七节结论">第七节：结论</h3>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="英国房产制度">英国房产制度</h4>
+<p><strong>两种产权形式</strong>： -
+Freehold（永久产权）：对房产的永久所有权 -
+Leasehold（租约）：长期租约，可买卖，通常在起源时长达100年以上</p>
+<p><strong>租约延长机制</strong>： -
+1993年《租约改革法》授予公寓租约持有人权利： -
+获得比原始租约长90年的新租约 - 需向永久产权持有人支付一次性协商费用</p>
+<p><strong>关键事实</strong>： - 英国有5百万租约房产 -
+70%的租约是剩余期限≤250年的"短租约" - 30%是剩余期限≥700年的"长租约" -
+几乎不存在250-700年之间的租约</p>
+<h3 id="实证方法">实证方法</h3>
+<h4 id="自然实验">自然实验</h4>
+<p><strong>核心洞察</strong>： -
+同一房产在延长前后的价格差异反映了长期收益率 - 延长前价格反映短期价值 -
+延长后价格反映短期和长期价值 - 价格差异几乎完全取决于长期收益率</p>
+<p><strong>识别策略</strong>： - 处理组：在t-u时刻延长租约的房产 -
+对照组：类似的未延长租约的房产 - 比较两组在延长前后的价格增长</p>
+<h4 id="估计方程">估计方程</h4>
+<p><strong>双重差分</strong>： <span class="math display">\[\Delta \log
+P_{it} = \alpha + \beta \cdot Extension_{i} + \gamma_t + \delta X_i +
+\varepsilon_{it}\]</span></p>
+<p><strong>非线最小二乘</strong>： 使用贴现现金流定价方程： <span class="math display">\[P_{extended} = P_{short} \cdot e^{y^* \cdot
+\Delta T}\]</span></p>
+<p>其中ΔT是延长的年数</p>
+<h3 id="主要结果">主要结果</h3>
+<h4 id="时间序列动态">时间序列动态</h4>
+<p><strong>核心发现</strong>： - 2000-2006年：y<em>稳定在约5.2% -
+2008年大衰退开始：y</em>开始下降 - 2024年：达到2.7%的低点 -
+大衰退导致的下降幅度大，相当于长期价格-租金比近翻倍</p>
+<p><strong>关键特征</strong>： - y*在疫情期间及之后保持相对稳定 -
+2024年的月度估计显示更精确</p>
+<h4 id="横截面异质性">横截面异质性</h4>
+<p><strong>供给弹性效应</strong>： -
+非弹性市场（供给受限地区）y*下降更陡峭 - 因为需求增加导致估值上升</p>
+<p><strong>气候风险效应</strong>： -
+长期气候风险较高的地区（洪水、沉降暴露） - y<em>水平较高 -
+说明y</em>包含住房风险溢价</p>
+<h3 id="宏观经济含义">宏观经济含义</h3>
+<h4 id="与其他市场的比较">与其他市场的比较</h4>
+<p><strong>长期债券收益率</strong>： - 长期债券收益率与y*密切追踪 -
+表明下降是广泛而非住房特有的</p>
+<p><strong>全球住房和其他资产</strong>： -
+全球住房和其他资产的长期收益率趋势类似 -
+表明下降可能与预期长期安全资产收益率r*的下降有关</p>
+<h4 id="当前vs长期收益率">当前vs长期收益率</h4>
+<p><strong>实时指标</strong>： - 当前租金价格比与y*的比较 -
+表明市场对未来住房估值的预期持久性</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p>**长期住房收益率y*显著下降**：从约5%下降到2.7%，与大衰退相关</p></li>
+<li><p><strong>方法论创新</strong>：利用租约延长的自然实验，"差掉"收益率曲线的短端</p></li>
+<li><p><strong>横截面异质性</strong>：供给弹性和气候风险影响y*的水平和动态</p></li>
+<li><p><strong>实时估计可用</strong>：数据和代码公开，实时更新</p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><p><strong>方法论</strong>：首个利用租约延长自然实验估计长期住房收益率</p></li>
+<li><p><strong>数据</strong>：构建并公开租约延长行政数据集</p></li>
+<li><p><strong>宏观经济</strong>：提供关于r*等重要宏观经济参数的见解</p></li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
+<ol type="1">
+<li><p>利用新方法研究其他资产类别的长期收益率</p></li>
+<li><p>扩展到其他国家的住房市场</p></li>
+</ol>
+<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
+<ol type="1">
+<li><p><strong>与结构模型的比较</strong>：自然实验方法与结构模型方法的优劣比较</p></li>
+<li><p><strong>政策应用</strong>：y*的实时估计如何用于货币政策和宏观审慎政策</p></li>
+</ol>
+<hr>
+<h2 id="学术思考">7. 学术思考</h2>
+<h3 id="核心学术洞察">核心学术洞察</h3>
+<ol type="1">
+<li><p><strong>"差掉短端"的识别策略</strong>：自然实验方法的核心洞察是，租约延长前的价格测量短期价值，延长后的价格测量短期和长期价值。因此，价格差异"差掉"了收益率曲线的短端，只反映长期收益率。</p></li>
+<li><p><strong>长期vs中期信息的权衡</strong>：金融资产的典型远期收益率最多提供10-30年的信息，而租约延长提供接近一个世纪的信息。</p></li>
+<li><p><strong>实时估计的优势</strong>：大多数宏观金融方法依赖于结构性假设，自然实验方法不依赖这些假设，因此可以提供更稳健的实时估计。</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p>**为什么长期住房收益率y*下降这么多？**
+与预期长期安全资产收益率r*的下降有何关系？</p></li>
+<li><p><strong>自然实验方法的识别假设是什么？</strong>
+平行趋势假设是否可靠？</p></li>
+<li><p><strong>租约延长数据如何构建？</strong>
+匹配关闭租约和开放租约的技术细节是什么？</p></li>
+<li><p>**y*与长期债券收益率的追踪关系有何含义？**
+这表明什么共同驱动因素？</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -1521,184 +1699,6 @@ Moi改革后)，这是否影响校准的可靠性？</p>
         <tag>基础设施经济学</tag>
         <tag>空间经济学</tag>
         <tag>气候经济学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>长期住房收益率动态 — 深度阅读笔记 — Bäcker-Peral, Hazell &amp; Mian</title>
-    <url>/posts/backer-peral2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Dynamics of the Long-Term Housing Yield:
-Evidence from Natural Experiments</li>
-<li><strong>作者</strong>: Verónica Bäcker-Peral (普林斯顿), Jonathon
-Hazell (LSE), Atif Mian (普林斯顿 &amp; NBER)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3):
-1014-1051</li>
-<li><strong>DOI</strong>: 10.1257/aer.20240513</li>
-<li><strong>难度评估</strong>: 高 -
-需要房地产金融、计量经济学、自然实验方法基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>长期住房收益率（Long-Term Housing
-Yield）</strong>：预期长期均衡时的租金价格比率，反映市场对长期住房回报率的预期。</p>
-<p><strong>租约延长（Lease
-Extension）</strong>：英国房产的租约可以被延长90年或更长时间，形成自然实验。</p>
-<p><strong>自然实验方法（Natural Experiment
-Approach）</strong>：利用租约延长前后同一房产的价格变化来识别长期收益率。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>长期收益率的重要性</strong>：揭示市场对长期均衡的预期，帮助理解中期冲击消散后的经济状态</p></li>
-<li><p><strong>测量困难</strong>：长期收益率难以测量，需要能区分长期和中期价格行为的数据</p></li>
-<li><p><strong>英国独特制度</strong>：大多数公寓以长期租约（leasehold）形式买卖，可定期延长</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：如何利用英国租约延长的自然实验来估计预期的长期住房收益率y*？</p>
-<p><strong>主要发现</strong>： -
-y<em>从2000-2006年的约5.2%下降到2024年的2.7% - 非弹性市场下降更陡峭 -
-气候风险暴露较高的地区y</em>仍然较高</p>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
-<ul>
-<li>问题陈述和研究动机</li>
-<li>数据和方法概述</li>
-<li>主要发现预览</li>
-</ul>
-<h3 id="第二节预期长期住房收益率的定义">第二节：预期长期住房收益率的定义</h3>
-<ul>
-<li>收益率的定义</li>
-<li>y*的分解</li>
-</ul>
-<h3 id="第三节数据和租约延长详情">第三节：数据和租约延长详情</h3>
-<ul>
-<li><strong>3.1 数据构建</strong></li>
-<li><strong>3.2 租约延长制度详情</strong></li>
-<li><strong>3.3 交易滞后</strong></li>
-</ul>
-<h3 id="第四节实证方法">第四节：实证方法</h3>
-<ul>
-<li>双重差分估计</li>
-<li>非线性最小二乘估计y*</li>
-</ul>
-<h3 id="第五节主要结果">第五节：主要结果</h3>
-<ul>
-<li>y*的时间序列动态</li>
-<li>横截面异质性</li>
-</ul>
-<h3 id="第六节宏观经济含义">第六节：宏观经济含义</h3>
-<ul>
-<li>与其他市场的比较</li>
-<li>当前价格的持久性指标</li>
-<li>供给弹性和气候风险的影响</li>
-</ul>
-<h3 id="第七节结论">第七节：结论</h3>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="英国房产制度">英国房产制度</h4>
-<p><strong>两种产权形式</strong>： -
-Freehold（永久产权）：对房产的永久所有权 -
-Leasehold（租约）：长期租约，可买卖，通常在起源时长达100年以上</p>
-<p><strong>租约延长机制</strong>： -
-1993年《租约改革法》授予公寓租约持有人权利： -
-获得比原始租约长90年的新租约 - 需向永久产权持有人支付一次性协商费用</p>
-<p><strong>关键事实</strong>： - 英国有5百万租约房产 -
-70%的租约是剩余期限≤250年的"短租约" - 30%是剩余期限≥700年的"长租约" -
-几乎不存在250-700年之间的租约</p>
-<h3 id="实证方法">实证方法</h3>
-<h4 id="自然实验">自然实验</h4>
-<p><strong>核心洞察</strong>： -
-同一房产在延长前后的价格差异反映了长期收益率 - 延长前价格反映短期价值 -
-延长后价格反映短期和长期价值 - 价格差异几乎完全取决于长期收益率</p>
-<p><strong>识别策略</strong>： - 处理组：在t-u时刻延长租约的房产 -
-对照组：类似的未延长租约的房产 - 比较两组在延长前后的价格增长</p>
-<h4 id="估计方程">估计方程</h4>
-<p><strong>双重差分</strong>： <span class="math display">\[\Delta \log
-P_{it} = \alpha + \beta \cdot Extension_{i} + \gamma_t + \delta X_i +
-\varepsilon_{it}\]</span></p>
-<p><strong>非线最小二乘</strong>： 使用贴现现金流定价方程： <span class="math display">\[P_{extended} = P_{short} \cdot e^{y^* \cdot
-\Delta T}\]</span></p>
-<p>其中ΔT是延长的年数</p>
-<h3 id="主要结果">主要结果</h3>
-<h4 id="时间序列动态">时间序列动态</h4>
-<p><strong>核心发现</strong>： - 2000-2006年：y<em>稳定在约5.2% -
-2008年大衰退开始：y</em>开始下降 - 2024年：达到2.7%的低点 -
-大衰退导致的下降幅度大，相当于长期价格-租金比近翻倍</p>
-<p><strong>关键特征</strong>： - y*在疫情期间及之后保持相对稳定 -
-2024年的月度估计显示更精确</p>
-<h4 id="横截面异质性">横截面异质性</h4>
-<p><strong>供给弹性效应</strong>： -
-非弹性市场（供给受限地区）y*下降更陡峭 - 因为需求增加导致估值上升</p>
-<p><strong>气候风险效应</strong>： -
-长期气候风险较高的地区（洪水、沉降暴露） - y<em>水平较高 -
-说明y</em>包含住房风险溢价</p>
-<h3 id="宏观经济含义">宏观经济含义</h3>
-<h4 id="与其他市场的比较">与其他市场的比较</h4>
-<p><strong>长期债券收益率</strong>： - 长期债券收益率与y*密切追踪 -
-表明下降是广泛而非住房特有的</p>
-<p><strong>全球住房和其他资产</strong>： -
-全球住房和其他资产的长期收益率趋势类似 -
-表明下降可能与预期长期安全资产收益率r*的下降有关</p>
-<h4 id="当前vs长期收益率">当前vs长期收益率</h4>
-<p><strong>实时指标</strong>： - 当前租金价格比与y*的比较 -
-表明市场对未来住房估值的预期持久性</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p>**长期住房收益率y*显著下降**：从约5%下降到2.7%，与大衰退相关</p></li>
-<li><p><strong>方法论创新</strong>：利用租约延长的自然实验，"差掉"收益率曲线的短端</p></li>
-<li><p><strong>横截面异质性</strong>：供给弹性和气候风险影响y*的水平和动态</p></li>
-<li><p><strong>实时估计可用</strong>：数据和代码公开，实时更新</p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><p><strong>方法论</strong>：首个利用租约延长自然实验估计长期住房收益率</p></li>
-<li><p><strong>数据</strong>：构建并公开租约延长行政数据集</p></li>
-<li><p><strong>宏观经济</strong>：提供关于r*等重要宏观经济参数的见解</p></li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
-<ol type="1">
-<li><p>利用新方法研究其他资产类别的长期收益率</p></li>
-<li><p>扩展到其他国家的住房市场</p></li>
-</ol>
-<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
-<ol type="1">
-<li><p><strong>与结构模型的比较</strong>：自然实验方法与结构模型方法的优劣比较</p></li>
-<li><p><strong>政策应用</strong>：y*的实时估计如何用于货币政策和宏观审慎政策</p></li>
-</ol>
-<hr>
-<h2 id="学术思考">7. 学术思考</h2>
-<h3 id="核心学术洞察">核心学术洞察</h3>
-<ol type="1">
-<li><p><strong>"差掉短端"的识别策略</strong>：自然实验方法的核心洞察是，租约延长前的价格测量短期价值，延长后的价格测量短期和长期价值。因此，价格差异"差掉"了收益率曲线的短端，只反映长期收益率。</p></li>
-<li><p><strong>长期vs中期信息的权衡</strong>：金融资产的典型远期收益率最多提供10-30年的信息，而租约延长提供接近一个世纪的信息。</p></li>
-<li><p><strong>实时估计的优势</strong>：大多数宏观金融方法依赖于结构性假设，自然实验方法不依赖这些假设，因此可以提供更稳健的实时估计。</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p>**为什么长期住房收益率y*下降这么多？**
-与预期长期安全资产收益率r*的下降有何关系？</p></li>
-<li><p><strong>自然实验方法的识别假设是什么？</strong>
-平行趋势假设是否可靠？</p></li>
-<li><p><strong>租约延长数据如何构建？</strong>
-匹配关闭租约和开放租约的技术细节是什么？</p></li>
-<li><p>**y*与长期债券收益率的追踪关系有何含义？**
-这表明什么共同驱动因素？</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -2289,6 +2289,280 @@ persistence）有何具体区别？</li>
       </tags>
   </entry>
   <entry>
+    <title>Generative AI at Work — 深度分析 — Brynjolfsson Et Al.</title>
+    <url>/posts/bryn2025/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Generative AI at Work</li>
+<li><strong>作者</strong>: Erik Brynjolfsson(Stanford University, MIT),
+Danielle Li(MIT), Lindsey Raymond(MIT)</li>
+<li><strong>类型</strong>: 论文笔记 / 劳动经济学</li>
+<li><strong>出版年份</strong>: 2025</li>
+<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics,
+Volume 140, Issue 2, Pages 889-942</li>
+<li><strong>难度评估</strong>: 中 - 需要劳动经济学和实证方法基础
+<span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言背景和意义">1. 引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>生成式人工智能(Generative AI)</strong>
+是一类能够基于已有数据模型生成新内容(如文本、图像、音乐、视频)的机器学习技术.本文聚焦于大型语言模型(LLM),这是一种专门处理序列数据的神经网络模型,通过学习预测序列中的下一个词来生成文本.GPT-3是本研究的核心技术基础.</p>
+<p><strong>客服行业特征</strong>:客服行业是AI采用率最高的行业之一(Chui
+et al.
+2021).该行业面临高员工流动率(每年60%)、高培训成本(每个客服人员10,000-20,000美元),以及客服人员之间生产力高度差异化的挑战.</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>技术革命性变化</strong>:传统计算机程序需要明确的指令来执行任务,而机器学习算法通过从示例中推断指令来工作.这种差异使AI能够执行难以编程的routine任务.</p></li>
+<li><p><strong>实验室vs现实世界</strong>:尽管各种生成式AI工具在实验室环境中表现良好,但其在现实世界中的效果仍存在疑问_AI可能遇到不熟悉的问题、面临组织阻力,或提供误导性信息.</p></li>
+<li><p><strong>AI对不同技能工人的差异化影响</strong>:先前信息技术研究(如计算机和机器人技术)发现技术倾向于补充高技能工人.但生成式AI可能具有不同的效果,因为它能够捕捉和传播高绩效工人的行为模式.</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>:生成式AI在工作场所的实际效果如何?AI是否能够捕捉和传播高绩效工人的最佳实践?AI对不同技能水平的工人影响是否相同?</p>
+<h3 id="研究意义">研究意义</h3>
+<p>本文提供了生成式AI在工作场所大规模采用的早期证据,对于理解AI对生产力、劳动市场不平等和工资的影响具有重要政策含义.</p>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构(论文结构)</h2>
+<p>本文共分为九个主要部分:</p>
+<table>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr>
+<th>章节</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I. Introduction</td>
+<td>研究背景、问题意识、主要发现和文献贡献</td>
+</tr>
+<tr>
+<td>II. Generative AI and Large Language Models</td>
+<td>技术背景:LLM的技术原理和经济影响</td>
+</tr>
+<tr>
+<td>III. Our Setting: LLMs for Customer Support</td>
+<td>研究环境:客服行业和AI系统设计</td>
+</tr>
+<tr>
+<td>IV. Deployment, Data, and Empirical Strategy</td>
+<td>部署过程、数据和实证策略</td>
+</tr>
+<tr>
+<td>V. Main Results</td>
+<td>主要结果:总体生产率效应和异质性分析</td>
+</tr>
+<tr>
+<td>VI. Adherence, Learning, Topic Handling, and Conversational
+Change</td>
+<td>机制分析:依从性、学习、话题处理和对话变化</td>
+</tr>
+<tr>
+<td>VII. Effects on Customers and Agents</td>
+<td>AI对客户和客服人员体验的影响</td>
+</tr>
+<tr>
+<td>VIII. Discussion</td>
+<td>讨论和局限性</td>
+</tr>
+<tr>
+<td>IX. Conclusion</td>
+<td>结论</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文(逻辑梳理)</h2>
+<h3 id="背景">背景</h3>
+<p><strong>传统IT技术与生成式AI的核心区别</strong>: -
+<strong>传统IT</strong>:需要明确的、详细的指令来将输入转化为输出 -
+<strong>机器学习</strong>:通过示例推断指令,能够执行即使没有明确指令的任务
+-
+<strong>生成式AI</strong>:不需要明确指令来执行任务,能从大量数据中学习模型并生成新内容</p>
+<p><strong>客服行业的特殊性</strong>: -
+客户对话可以被视为一系列模式匹配问题 -
+需要结合产品知识、问题解决能力和处理沮丧客户的能力 -
+对话被广泛记录和数字化,适合LLM微调</p>
+<h3 id="挑战">挑战</h3>
+<ol type="1">
+<li><p><strong>真实世界环境的复杂性</strong>:实验室环境与现实世界的差异,AI可能遇到不可预测的问题</p></li>
+<li><p><strong>人机协作的困难</strong>:先前研究表明,集成AI的决策支持系统往往表现不如单独依赖人类或AI的系统</p></li>
+<li><p><strong>有效组合人类和AI专业知识的难度</strong>:AI建议何时有效、何时无效的判断困难</p></li>
+<li><p><strong>组织因素</strong>:有前景的技术可能因需要互补的组织投资、技能发展或业务流程重新设计而在实践中效果有限</p></li>
+</ol>
+<h3 id="方法数据集要突出">方法(数据集要突出)</h3>
+<p><strong>数据来源</strong>: - 财富500强企业,销售中小企业业务流程软件 -
+3,006,395次客户对话 - 5,172名客服人员 - 1,200万次聊天(后AI时期) -
+89%的客服人员位于菲律宾,其余主要在美国和其他国家</p>
+<p><strong>AI系统</strong>: - 基于GPT-3的对话助手 -
+实时生成响应建议和内部文档链接 - 设计为增强(而非取代)人类客服</p>
+<p><strong>关键绩效指标(KPIs)</strong>: | 指标 | 缩写 | 定义 | 基准均值
+| |------|------|------|----------| | 每小时解决数 | RPH |
+每小时成功解决的客户问题数 | 2.1 | | 平均处理时间 | AHT |
+完成一次聊天的平均时间 | 41分钟 | | 聊天/小时 | CPH |
+每小时处理的聊天数(考虑多任务) | - | | 解决率 | RR | 成功解决的对话比例
+| 82% | | 净推荐值 | NPS | 客户满意度指标 | 79 |</p>
+<p><strong>实证策略</strong>: -
+<strong>标准双重差分</strong>(Difference-in-Differences) <span class="math display">\[{y_{it} = \delta_t + \alpha_i + \beta AI_{it} +
+\gamma X_{it} + \epsilon_{it}}\]</span></p>
+<ul>
+<li>控制年月固定效应、客服人员固定效应和客服任期固定效应</li>
+<li>使用Sun and Abraham
+(2021)的交互加权(IW)估计量处理异质性处理效应</li>
+</ul>
+<h3 id="结果results">结果(Results)</h3>
+<p><strong>主要发现1:总体生产力效应</strong></p>
+<p>AI assistance使客服人员生产力<strong>平均提高15%</strong>: -
+每小时解决数(RPH):增加0.30(15.2%) - 平均处理时间(AHT):减少3.7分钟(8.5%)
+- 每小时聊天数(CPH):增加0.37(15%) -
+解决率(RR):小幅度增加1.3个百分点(不显著) -
+客户满意度(NPS):无显著变化</p>
+<p><strong>主要发现2:异质性效应</strong></p>
+<table>
+<thead>
+<tr>
+<th>工人类型</th>
+<th>RPH变化</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>最低技能五分位数</td>
+<td>+36%</td>
+<td>大幅提升</td>
+</tr>
+<tr>
+<td>最高技能五分位数</td>
+<td>无显著变化</td>
+<td>效果甚微</td>
+</tr>
+<tr>
+<td>不满1个月任期</td>
+<td>+34%</td>
+<td>新人获益最大</td>
+</tr>
+<tr>
+<td>超过1年任期</td>
+<td>无显著变化</td>
+<td>老人几乎无收益</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键发现</strong>:有2个月任期的AI辅助客服人员表现与超过6个月任期的非AI辅助客服人员相当_AI
+assistance显著加速了学习曲线.</p>
+<p><strong>主要发现3:最佳实践的捕捉与传播</strong></p>
+<ul>
+<li>遵循AI建议更多的客服人员获得更大的生产力提升</li>
+<li>AI对"中等罕见问题"(moderately rare
+problems)效果最大_这些问题人类经验较少但AI有足够训练数据</li>
+<li>AI改善了客服人员的英语流利程度,特别是对国际代理</li>
+</ul>
+<p><strong>主要发现4:客户体验改善</strong></p>
+<ul>
+<li>客户更有礼貌,更少要求与经理交流</li>
+<li>人工流失率下降,由新员工留住推动</li>
+</ul>
+<hr>
+<h2 id="结论conclusion">4. 结论(Conclusion)</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>生成式AI显著提高工人生产力</strong>:平均提高15%,由速度提升(减少处理时间)和多任务能力增强驱动</p></li>
+<li><p><strong>AI对低技能和低经验工人帮助最大</strong>:与先前IT技术研究结论相反,AI帮助缩小了技能差距而非扩大</p></li>
+<li><p><strong>AI捕捉并传播了高绩效工人的最佳实践</strong>:使低技能工人能够学习原本需要多年经验才能获得的技能</p></li>
+<li><p><strong>持久性学习效应</strong>:即使在AI不可用期间(如系统故障),接受过AI辅助的工人仍保持生产力提升</p></li>
+<li><p><strong>改善了工作体验</strong>:减少人员流失,特别是新员工流失</p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li>提供了生成式AI在真实工作场所大规模部署的首批因果证据</li>
+<li>揭示了AI如何改变不同技能水平工人的生产力分布</li>
+<li>提供了关于人机协作机制(依从性、学习、沟通模式)的深入证据</li>
+<li>强调了劳动市场影响方面需要考虑的长期动态</li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向(Future work)</h2>
+<h3 id="文献提及的未来研究">文献提及的未来研究</h3>
+<ol type="1">
+<li><p><strong>更长期效应</strong>:本研究捕捉的是中期效应,长期来看公司可能会调整招聘策略或开发更强大的AI系统</p></li>
+<li><p><strong>总体就业和工资效应</strong>:本研究未涉及总体就业或工资变化,需要更多研究</p></li>
+<li><p><strong>跨职业劳动力需求变化</strong>:虽然AI可能增加职业内低技能劳动力需求,但均衡响应可能导致跨职业转移,最终有利于高技能工人</p></li>
+</ol>
+<h3 id="作者思考的下一步研究">作者思考的下一步研究</h3>
+<ol type="1">
+<li><p><strong>AI对最高技能工人的长期影响</strong>:当前最高技能工人增加AI依赖性可能减少未来AI模型对新问题的效果,需要长期追踪</p></li>
+<li><p><strong>跨行业推广性</strong>:客服行业的结论是否适用于其他行业(如法律咨询、医疗诊断、金融分析)?</p></li>
+<li><p><strong>配套培训和组织变革</strong>:什么样的配套培训和组织结构能最大化AI效果?</p></li>
+<li><p><strong>对工资不平等的整体影响</strong>:尽管本研究显示AI缩小了职业内差距,但跨职业效应和对总体工资结构的影响仍需研究</p></li>
+<li><p><strong>AI质量维护</strong>:随着高技能工人增加依赖性,AI训练数据的多样性可能下降,如何维护AI质量?</p></li>
+</ol>
+<hr>
+<h2 id="学术思考">6. 学术思考</h2>
+<h3 id="核心学术问题">核心学术问题</h3>
+<ol type="1">
+<li><strong>技能偏向性技术变革(SBTC)的逆转?</strong>
+<ul>
+<li>先前研究证明IT技术补充高技能工人、替代低技能工人</li>
+<li>本研究显示生成式AI具有相反效果_补充低技能工人</li>
+<li>这是否意味着生成式AI代表了技术变革的新范式?</li>
+</ul></li>
+<li><strong>最佳实践的边际价值递减</strong>
+<ul>
+<li>AI对中等罕见问题效果最大</li>
+<li>对于最常见问题,人类已经足够熟练</li>
+<li>对于极罕见问题,AI训练数据不足</li>
+<li>这是否意味着存在一个"最佳实践库"被AI完全捕捉的临界点?</li>
+</ul></li>
+<li><strong>人类技能的路径依赖</strong>
+<ul>
+<li>即使AI可及性提高,高技能工人仍保持高产出</li>
+<li>但高技能工人的AI依赖性也在增加</li>
+<li>这是否意味着高技能工人正在将技能"外包"给AI,长期可能导致人类专业知识的退化?</li>
+</ul></li>
+<li><strong>学习vs依赖的边界</strong>
+<ul>
+<li>研究发现持久性学习效应(即使AI不可用也能保持生产力)</li>
+<li>但也有研究表明GPS导航会导致空间导航能力退化</li>
+<li>什么条件下AI辅助会产生真正的学习而非依赖?</li>
+</ul></li>
+<li><strong>生产力量化悖论</strong>
+<ul>
+<li>速度和数量通常存在权衡</li>
+<li>但本文发现AI同时提高了速度和某些质量指标</li>
+<li>这是否意味着传统经济学的边际分析框架需要修正?</li>
+</ul></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p><strong>这篇论文的识别策略是否存在内生性问题?</strong>
+管理者选择哪些客服人员优先获得AI访问权限,这是否会导致估计偏误?作者如何处理这个问题?</p></li>
+<li><p><strong>实验设计细节</strong>:作者在文中提到进行了RCT实验,但控制组信息缺失.这对因果推断的有效性有何影响?</p></li>
+<li><p><strong>异质性效应的机制</strong>:为什么最高技能工人在某些质量指标上反而下降?是因为他们过度依赖AI建议,还是因为遵循AI建议减少了他们的创造性贡献?</p></li>
+<li><p><strong>对劳动市场的宏观意义</strong>:尽管本研究显示AI提高了低技能工人的个体生产力,Autor,
+Levy, and Murnane (2003)和Acemoglu and Restrepo
+(2018)讨论的跨职业替代效应如何整合?</p></li>
+<li><p><strong>AI对工资的直接影响</strong>:研究显示人员流失减少(特别是新员工),但没有工资数据.生产力提升如何在公司和工人之间分配?</p></li>
+<li><p><strong>跨文化适用性</strong>:研究主要在菲律宾(呼叫中心外包中心)进行,其结论是否适用于其他文化和工作环境?</p></li>
+<li><p><strong>AI系统本身的学习vs静态分析</strong>:研究分析不同时间采用者的效果,发现类似结果.但AI系统本身在更新迭代,这些版本变化对结果的影响如何?</p></li>
+<li><p><strong>对其他行业的推广性</strong>:客服行业对对话式AI高度结构化,其他行业(如医疗诊断、法律咨询、创意产业)是否会有类似效果?</p></li>
+<li><p><strong>长期人力资本积累</strong>:虽然短期内生产力提升,但长期来看工人的专业技能是否会可能退化?是否有类似"技能锈蚀"(skill
+rot)的风险?</p></li>
+<li><p><strong>组织的适应性反应</strong>:公司是否会因为新员工上手更快而改变招聘策略?是否会导致整体劳动力构成的改变?</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>劳动经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>A Practical Guide to Shift-Share Instruments 论文笔记 — Borusyak, Hull &amp; Jaravel</title>
     <url>/posts/boru2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -2712,280 +2986,6 @@ Instruments论文的深度笔记,由Claude AI辅助生成.</em></p>
         <tag>论文笔记</tag>
         <tag>计量经济学</tag>
         <tag>工具变量</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Generative AI at Work — 深度分析 — Brynjolfsson Et Al.</title>
-    <url>/posts/bryn2025/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Generative AI at Work</li>
-<li><strong>作者</strong>: Erik Brynjolfsson(Stanford University, MIT),
-Danielle Li(MIT), Lindsey Raymond(MIT)</li>
-<li><strong>类型</strong>: 论文笔记 / 劳动经济学</li>
-<li><strong>出版年份</strong>: 2025</li>
-<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics,
-Volume 140, Issue 2, Pages 889-942</li>
-<li><strong>难度评估</strong>: 中 - 需要劳动经济学和实证方法基础
-<span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言背景和意义">1. 引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>生成式人工智能(Generative AI)</strong>
-是一类能够基于已有数据模型生成新内容(如文本、图像、音乐、视频)的机器学习技术.本文聚焦于大型语言模型(LLM),这是一种专门处理序列数据的神经网络模型,通过学习预测序列中的下一个词来生成文本.GPT-3是本研究的核心技术基础.</p>
-<p><strong>客服行业特征</strong>:客服行业是AI采用率最高的行业之一(Chui
-et al.
-2021).该行业面临高员工流动率(每年60%)、高培训成本(每个客服人员10,000-20,000美元),以及客服人员之间生产力高度差异化的挑战.</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>技术革命性变化</strong>:传统计算机程序需要明确的指令来执行任务,而机器学习算法通过从示例中推断指令来工作.这种差异使AI能够执行难以编程的routine任务.</p></li>
-<li><p><strong>实验室vs现实世界</strong>:尽管各种生成式AI工具在实验室环境中表现良好,但其在现实世界中的效果仍存在疑问_AI可能遇到不熟悉的问题、面临组织阻力,或提供误导性信息.</p></li>
-<li><p><strong>AI对不同技能工人的差异化影响</strong>:先前信息技术研究(如计算机和机器人技术)发现技术倾向于补充高技能工人.但生成式AI可能具有不同的效果,因为它能够捕捉和传播高绩效工人的行为模式.</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:生成式AI在工作场所的实际效果如何?AI是否能够捕捉和传播高绩效工人的最佳实践?AI对不同技能水平的工人影响是否相同?</p>
-<h3 id="研究意义">研究意义</h3>
-<p>本文提供了生成式AI在工作场所大规模采用的早期证据,对于理解AI对生产力、劳动市场不平等和工资的影响具有重要政策含义.</p>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构(论文结构)</h2>
-<p>本文共分为九个主要部分:</p>
-<table>
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr>
-<th>章节</th>
-<th>内容</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I. Introduction</td>
-<td>研究背景、问题意识、主要发现和文献贡献</td>
-</tr>
-<tr>
-<td>II. Generative AI and Large Language Models</td>
-<td>技术背景:LLM的技术原理和经济影响</td>
-</tr>
-<tr>
-<td>III. Our Setting: LLMs for Customer Support</td>
-<td>研究环境:客服行业和AI系统设计</td>
-</tr>
-<tr>
-<td>IV. Deployment, Data, and Empirical Strategy</td>
-<td>部署过程、数据和实证策略</td>
-</tr>
-<tr>
-<td>V. Main Results</td>
-<td>主要结果:总体生产率效应和异质性分析</td>
-</tr>
-<tr>
-<td>VI. Adherence, Learning, Topic Handling, and Conversational
-Change</td>
-<td>机制分析:依从性、学习、话题处理和对话变化</td>
-</tr>
-<tr>
-<td>VII. Effects on Customers and Agents</td>
-<td>AI对客户和客服人员体验的影响</td>
-</tr>
-<tr>
-<td>VIII. Discussion</td>
-<td>讨论和局限性</td>
-</tr>
-<tr>
-<td>IX. Conclusion</td>
-<td>结论</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文(逻辑梳理)</h2>
-<h3 id="背景">背景</h3>
-<p><strong>传统IT技术与生成式AI的核心区别</strong>: -
-<strong>传统IT</strong>:需要明确的、详细的指令来将输入转化为输出 -
-<strong>机器学习</strong>:通过示例推断指令,能够执行即使没有明确指令的任务
--
-<strong>生成式AI</strong>:不需要明确指令来执行任务,能从大量数据中学习模型并生成新内容</p>
-<p><strong>客服行业的特殊性</strong>: -
-客户对话可以被视为一系列模式匹配问题 -
-需要结合产品知识、问题解决能力和处理沮丧客户的能力 -
-对话被广泛记录和数字化,适合LLM微调</p>
-<h3 id="挑战">挑战</h3>
-<ol type="1">
-<li><p><strong>真实世界环境的复杂性</strong>:实验室环境与现实世界的差异,AI可能遇到不可预测的问题</p></li>
-<li><p><strong>人机协作的困难</strong>:先前研究表明,集成AI的决策支持系统往往表现不如单独依赖人类或AI的系统</p></li>
-<li><p><strong>有效组合人类和AI专业知识的难度</strong>:AI建议何时有效、何时无效的判断困难</p></li>
-<li><p><strong>组织因素</strong>:有前景的技术可能因需要互补的组织投资、技能发展或业务流程重新设计而在实践中效果有限</p></li>
-</ol>
-<h3 id="方法数据集要突出">方法(数据集要突出)</h3>
-<p><strong>数据来源</strong>: - 财富500强企业,销售中小企业业务流程软件 -
-3,006,395次客户对话 - 5,172名客服人员 - 1,200万次聊天(后AI时期) -
-89%的客服人员位于菲律宾,其余主要在美国和其他国家</p>
-<p><strong>AI系统</strong>: - 基于GPT-3的对话助手 -
-实时生成响应建议和内部文档链接 - 设计为增强(而非取代)人类客服</p>
-<p><strong>关键绩效指标(KPIs)</strong>: | 指标 | 缩写 | 定义 | 基准均值
-| |------|------|------|----------| | 每小时解决数 | RPH |
-每小时成功解决的客户问题数 | 2.1 | | 平均处理时间 | AHT |
-完成一次聊天的平均时间 | 41分钟 | | 聊天/小时 | CPH |
-每小时处理的聊天数(考虑多任务) | - | | 解决率 | RR | 成功解决的对话比例
-| 82% | | 净推荐值 | NPS | 客户满意度指标 | 79 |</p>
-<p><strong>实证策略</strong>: -
-<strong>标准双重差分</strong>(Difference-in-Differences) <span class="math display">\[{y_{it} = \delta_t + \alpha_i + \beta AI_{it} +
-\gamma X_{it} + \epsilon_{it}}\]</span></p>
-<ul>
-<li>控制年月固定效应、客服人员固定效应和客服任期固定效应</li>
-<li>使用Sun and Abraham
-(2021)的交互加权(IW)估计量处理异质性处理效应</li>
-</ul>
-<h3 id="结果results">结果(Results)</h3>
-<p><strong>主要发现1:总体生产力效应</strong></p>
-<p>AI assistance使客服人员生产力<strong>平均提高15%</strong>: -
-每小时解决数(RPH):增加0.30(15.2%) - 平均处理时间(AHT):减少3.7分钟(8.5%)
-- 每小时聊天数(CPH):增加0.37(15%) -
-解决率(RR):小幅度增加1.3个百分点(不显著) -
-客户满意度(NPS):无显著变化</p>
-<p><strong>主要发现2:异质性效应</strong></p>
-<table>
-<thead>
-<tr>
-<th>工人类型</th>
-<th>RPH变化</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>最低技能五分位数</td>
-<td>+36%</td>
-<td>大幅提升</td>
-</tr>
-<tr>
-<td>最高技能五分位数</td>
-<td>无显著变化</td>
-<td>效果甚微</td>
-</tr>
-<tr>
-<td>不满1个月任期</td>
-<td>+34%</td>
-<td>新人获益最大</td>
-</tr>
-<tr>
-<td>超过1年任期</td>
-<td>无显著变化</td>
-<td>老人几乎无收益</td>
-</tr>
-</tbody>
-</table>
-<p><strong>关键发现</strong>:有2个月任期的AI辅助客服人员表现与超过6个月任期的非AI辅助客服人员相当_AI
-assistance显著加速了学习曲线.</p>
-<p><strong>主要发现3:最佳实践的捕捉与传播</strong></p>
-<ul>
-<li>遵循AI建议更多的客服人员获得更大的生产力提升</li>
-<li>AI对"中等罕见问题"(moderately rare
-problems)效果最大_这些问题人类经验较少但AI有足够训练数据</li>
-<li>AI改善了客服人员的英语流利程度,特别是对国际代理</li>
-</ul>
-<p><strong>主要发现4:客户体验改善</strong></p>
-<ul>
-<li>客户更有礼貌,更少要求与经理交流</li>
-<li>人工流失率下降,由新员工留住推动</li>
-</ul>
-<hr>
-<h2 id="结论conclusion">4. 结论(Conclusion)</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>生成式AI显著提高工人生产力</strong>:平均提高15%,由速度提升(减少处理时间)和多任务能力增强驱动</p></li>
-<li><p><strong>AI对低技能和低经验工人帮助最大</strong>:与先前IT技术研究结论相反,AI帮助缩小了技能差距而非扩大</p></li>
-<li><p><strong>AI捕捉并传播了高绩效工人的最佳实践</strong>:使低技能工人能够学习原本需要多年经验才能获得的技能</p></li>
-<li><p><strong>持久性学习效应</strong>:即使在AI不可用期间(如系统故障),接受过AI辅助的工人仍保持生产力提升</p></li>
-<li><p><strong>改善了工作体验</strong>:减少人员流失,特别是新员工流失</p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li>提供了生成式AI在真实工作场所大规模部署的首批因果证据</li>
-<li>揭示了AI如何改变不同技能水平工人的生产力分布</li>
-<li>提供了关于人机协作机制(依从性、学习、沟通模式)的深入证据</li>
-<li>强调了劳动市场影响方面需要考虑的长期动态</li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向(Future work)</h2>
-<h3 id="文献提及的未来研究">文献提及的未来研究</h3>
-<ol type="1">
-<li><p><strong>更长期效应</strong>:本研究捕捉的是中期效应,长期来看公司可能会调整招聘策略或开发更强大的AI系统</p></li>
-<li><p><strong>总体就业和工资效应</strong>:本研究未涉及总体就业或工资变化,需要更多研究</p></li>
-<li><p><strong>跨职业劳动力需求变化</strong>:虽然AI可能增加职业内低技能劳动力需求,但均衡响应可能导致跨职业转移,最终有利于高技能工人</p></li>
-</ol>
-<h3 id="作者思考的下一步研究">作者思考的下一步研究</h3>
-<ol type="1">
-<li><p><strong>AI对最高技能工人的长期影响</strong>:当前最高技能工人增加AI依赖性可能减少未来AI模型对新问题的效果,需要长期追踪</p></li>
-<li><p><strong>跨行业推广性</strong>:客服行业的结论是否适用于其他行业(如法律咨询、医疗诊断、金融分析)?</p></li>
-<li><p><strong>配套培训和组织变革</strong>:什么样的配套培训和组织结构能最大化AI效果?</p></li>
-<li><p><strong>对工资不平等的整体影响</strong>:尽管本研究显示AI缩小了职业内差距,但跨职业效应和对总体工资结构的影响仍需研究</p></li>
-<li><p><strong>AI质量维护</strong>:随着高技能工人增加依赖性,AI训练数据的多样性可能下降,如何维护AI质量?</p></li>
-</ol>
-<hr>
-<h2 id="学术思考">6. 学术思考</h2>
-<h3 id="核心学术问题">核心学术问题</h3>
-<ol type="1">
-<li><strong>技能偏向性技术变革(SBTC)的逆转?</strong>
-<ul>
-<li>先前研究证明IT技术补充高技能工人、替代低技能工人</li>
-<li>本研究显示生成式AI具有相反效果_补充低技能工人</li>
-<li>这是否意味着生成式AI代表了技术变革的新范式?</li>
-</ul></li>
-<li><strong>最佳实践的边际价值递减</strong>
-<ul>
-<li>AI对中等罕见问题效果最大</li>
-<li>对于最常见问题,人类已经足够熟练</li>
-<li>对于极罕见问题,AI训练数据不足</li>
-<li>这是否意味着存在一个"最佳实践库"被AI完全捕捉的临界点?</li>
-</ul></li>
-<li><strong>人类技能的路径依赖</strong>
-<ul>
-<li>即使AI可及性提高,高技能工人仍保持高产出</li>
-<li>但高技能工人的AI依赖性也在增加</li>
-<li>这是否意味着高技能工人正在将技能"外包"给AI,长期可能导致人类专业知识的退化?</li>
-</ul></li>
-<li><strong>学习vs依赖的边界</strong>
-<ul>
-<li>研究发现持久性学习效应(即使AI不可用也能保持生产力)</li>
-<li>但也有研究表明GPS导航会导致空间导航能力退化</li>
-<li>什么条件下AI辅助会产生真正的学习而非依赖?</li>
-</ul></li>
-<li><strong>生产力量化悖论</strong>
-<ul>
-<li>速度和数量通常存在权衡</li>
-<li>但本文发现AI同时提高了速度和某些质量指标</li>
-<li>这是否意味着传统经济学的边际分析框架需要修正?</li>
-</ul></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p><strong>这篇论文的识别策略是否存在内生性问题?</strong>
-管理者选择哪些客服人员优先获得AI访问权限,这是否会导致估计偏误?作者如何处理这个问题?</p></li>
-<li><p><strong>实验设计细节</strong>:作者在文中提到进行了RCT实验,但控制组信息缺失.这对因果推断的有效性有何影响?</p></li>
-<li><p><strong>异质性效应的机制</strong>:为什么最高技能工人在某些质量指标上反而下降?是因为他们过度依赖AI建议,还是因为遵循AI建议减少了他们的创造性贡献?</p></li>
-<li><p><strong>对劳动市场的宏观意义</strong>:尽管本研究显示AI提高了低技能工人的个体生产力,Autor,
-Levy, and Murnane (2003)和Acemoglu and Restrepo
-(2018)讨论的跨职业替代效应如何整合?</p></li>
-<li><p><strong>AI对工资的直接影响</strong>:研究显示人员流失减少(特别是新员工),但没有工资数据.生产力提升如何在公司和工人之间分配?</p></li>
-<li><p><strong>跨文化适用性</strong>:研究主要在菲律宾(呼叫中心外包中心)进行,其结论是否适用于其他文化和工作环境?</p></li>
-<li><p><strong>AI系统本身的学习vs静态分析</strong>:研究分析不同时间采用者的效果,发现类似结果.但AI系统本身在更新迭代,这些版本变化对结果的影响如何?</p></li>
-<li><p><strong>对其他行业的推广性</strong>:客服行业对对话式AI高度结构化,其他行业(如医疗诊断、法律咨询、创意产业)是否会有类似效果?</p></li>
-<li><p><strong>长期人力资本积累</strong>:虽然短期内生产力提升,但长期来看工人的专业技能是否会可能退化?是否有类似"技能锈蚀"(skill
-rot)的风险?</p></li>
-<li><p><strong>组织的适应性反应</strong>:公司是否会因为新员工上手更快而改变招聘策略?是否会导致整体劳动力构成的改变?</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>劳动经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -4340,218 +4340,6 @@ Issue 1, pp. 71-99</li>
       </tags>
   </entry>
   <entry>
-    <title>零和思维与美国政治分歧的根源 — 深度阅读笔记 — Chinoy, Nunn, Sequeira &amp; Stantcheva</title>
-    <url>/posts/chinoy2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Zero-Sum Thinking and the Roots of U.S.
-Political Differences</li>
-<li><strong>作者</strong>: Sahil Chinoy (Harvard), Nathan Nunn (UBC
-&amp; CIFAR), Sandra Sequeira (LSE), Stefanie Stantcheva (Harvard)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review</li>
-<li><strong>DOI</strong>: 10.1257/aer.20240692</li>
-<li><strong>难度评估</strong>: 高 -
-需要文化经济学、政治经济学、计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>零和思维（Zero-Sum
-Thinking）</strong>：一种世界观，认为一个人的收益必然导致另一个人的损失，社会产出是有限的而非可以创造新价值的。该概念最早由人类学家George
-Foster（1965, 1967）提出，称为"有限美好形象"（Image of Limited
-Good）。</p>
-<p><strong>文化演化模型（Cultural Evolution
-Models）</strong>：经济学中研究文化特质如何在代际间垂直传播的模型，通常假设文化特质从父母传递给子女（Bisin
-&amp; Verdier, 2000, 2011, 2017）。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>历史视角下的零和思维</strong>：零和思维在历史上普遍存在，从欧洲重商主义到现代贸易和移民政策。在资源稀缺、技术进步缓慢的前工业社会尤为常见。</p></li>
-<li><p><strong>美国独特的历史因素</strong>：美国历史上有三个关键因素影响零和思维的形成：代际经济流动性、移民和奴役。</p></li>
-<li><p><strong>现有研究的局限</strong>：先前研究使用种族或地理位置作为祖先经历的代理变量，但无法干净地隔离垂直传播渠道。</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>： - 零和思维如何影响政治和政策偏好？ -
-零和思维的祖先根源是什么？ -
-流动性、移民、奴役经历如何代际传递并影响当代人的零和思维？</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><p><strong>理论贡献</strong>：首次利用四代人的调查数据，直接测量祖先经历对零和思维的影响，推进了文化演化理论的检验。</p></li>
-<li><p><strong>实证贡献</strong>：收集了约20,400名美国居民的调查数据，将零和思维测量、政治偏好与丰富的祖先信息相结合。</p></li>
-<li><p><strong>政策意义</strong>：揭示了零和思维与再分配政策、种族/性别平等政策、移民政策的系统性关联。</p></li>
-</ol>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
-<ul>
-<li>Foster的零和思维假说介绍</li>
-<li>研究动机和数据概述</li>
-<li>三大贡献预告</li>
-</ul>
-<h3 id="第二节调查设计数据收集和零和思维测量">第二节：调查设计、数据收集和零和思维测量</h3>
-<ul>
-<li>调查方法和样本描述</li>
-<li>零和思维的四题项测量（民族、公民身份、贸易、收入）</li>
-<li>主成分分析构建综合指数</li>
-<li>数据质量检验</li>
-</ul>
-<h3 id="第三节零和思维的政治关联">第三节：零和思维的政治关联</h3>
-<ul>
-<li>零和思维与政党偏好的关系</li>
-<li>零和思维与四项政策态度（再分配、种族、性别、移民）</li>
-<li>零和思维与自身利益的交互分析</li>
-<li>零和思维与其他核心信念的比较</li>
-<li>跨国家的一般性检验（WVS数据）</li>
-</ul>
-<h3 id="第四节零和思维的历史预测因子">第四节：零和思维的历史预测因子</h3>
-<ul>
-<li>代际经济流动性的影响</li>
-<li>移民经历的直接和间接效应</li>
-<li>奴役经历的直接和间接效应</li>
-<li>奴隶制的溢出效应</li>
-</ul>
-<h3 id="第五节结论conclusion">第五节：结论（Conclusion）</h3>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="零和思维的理论基础">零和思维的理论基础</h4>
-<p>George
-Foster（1965）在研究墨西哥农村时提出"有限美好"假说：许多社会存在零和世界观，认为资源是有限的，一方的收益必然是另一方的损失。这种观点在资源稀缺、市场不发达、技术进步有限的前工业社会中尤为普遍。</p>
-<h4 id="美国历史背景的特殊性">美国历史背景的特殊性</h4>
-<p>美国历史上有三个关键因素塑造零和思维： 1.
-<strong>代际流动性</strong>：美国曾是"机会之地"，向上流动性高于其他工业化国家
-2.
-<strong>移民潮</strong>：大规模移民塑造了美国社会，移民通常在美国获得经济成功而不损害他人
-3. <strong>奴役制度</strong>：奴隶制是一种彻底的零和（或负和）制度</p>
-<h3 id="方法">方法</h3>
-<h4 id="数据集">数据集</h4>
-<p><strong>调查设计</strong>： -
-约20,400名美国居民，七轮调查（2020年10月至2023年7月） -
-通过在线调查公司Respondi/Bilendi招募 - 调查时长约20-30分钟</p>
-<p><strong>调查内容模块</strong>： 1.
-<strong>受访者背景</strong>：年龄、性别、政治倾向 2.
-<strong>祖先信息</strong>：父母、祖父母的信息（出生地、居住历史、教育、职业、经济地位）
-3. <strong>政策观点</strong>：再分配、种族、性别、移民等政策态度 4.
-<strong>零和思维测量</strong>：四个领域的零和思维问题</p>
-<p><strong>四题项零和思维测量</strong>： 1.
-<strong>民族维度</strong>："如果一个种族群体变富裕，这通常是以其他群体为代价的"
-2.
-<strong>公民身份维度</strong>："如果没有美国公民身份的人经济上做得更好，这通常是以美国公民为代价的"
-3.
-<strong>贸易维度</strong>："在国际贸易中，如果一个国家赚更多钱，另一个国家通常会赚得更少"
-4.
-<strong>收入维度</strong>："如果一个收入群体变得更富有，这通常是以其他群体为代价的"</p>
-<p><strong>指数构建</strong>：使用主成分分析（PCA）提取第一主成分，标准化为0-1区间的综合指数。</p>
-<h4 id="估计方程">估计方程</h4>
-<p><strong>政治关联分析</strong>： <span class="math display">\[Y_i =
-\alpha_{s(i)} + \beta \cdot ZeroSum_i + X_i\Gamma +
-\varepsilon_i\]</span></p>
-<p><strong>历史预测因子分析</strong>： <span class="math display">\[ZeroSum_i = \beta_{resp} \cdot
-RespondentExperience_i + \beta_p \cdot ParentsExperience_i + \beta_{gp}
-\cdot GrandparentsExperience_i + X_i\Gamma + \alpha_{s(i)} +
-\varepsilon_i\]</span></p>
-<h3 id="结果">结果</h3>
-<h4 id="发现一零和思维测量">发现一：零和思维测量</h4>
-<p><strong>因子结构</strong>：第一主成分的特征值为2.30，所有题项的因子载荷相似（0.40-0.55），表明存在一个潜在的零和思维因子。</p>
-<p><strong>人口学差异</strong>： - 年龄：较年长者零和思维较低 -
-种族：黑人和西班牙裔美国人零和思维最高，亚裔最低 -
-收入：最低收入群体（&lt;${<span class="math inline">\(25,000}\)</span>）零和思维最高 -
-党派：共和党人零和思维较低 - 教育：受教育程度较高者零和思维较低</p>
-<h4 id="发现二零和思维与政策偏好">发现二：零和思维与政策偏好</h4>
-<p><strong>核心结果</strong>：零和思维与四项政策态度显著正相关： -
-<strong>再分配指数</strong>：支持更多政府再分配 -
-<strong>种族态度指数</strong>：支持减少种族歧视的政策 -
-<strong>性别态度指数</strong>：支持促进性别平等的政策 -
-<strong>反移民指数</strong>：支持更严格的移民限制</p>
-<p><strong>效应大小</strong>：一标准差增加的零和思维，对再分配的支持相当于20%的标准差变化，与民主党倾向性相当。</p>
-<p><strong>与自身利益的交互</strong>： -
-零和思维与再分配的支持在所有收入群体中都显著为正，且在高收入群体中更强 -
-男性零和思维对性别平等的支持更强 -
-白人受访者零和思维对种族平等政策的支持更强</p>
-<p><strong>党内差异</strong>：零和思维可解释党内政策分歧： -
-民主党中零和思维更强的人更支持限制移民 -
-共和党中零和思维更强的人更支持再分配</p>
-<h4 id="发现三跨国家一般性wvs数据">发现三：跨国家一般性（WVS数据）</h4>
-<p>使用世界价值观调查（WVS）72个国家192,000名受访者数据验证： -
-零和思维与右翼政治立场显著负相关 -
-零和思维与支持再分配和反移民态度正相关</p>
-<p><strong>早期生活经济增长</strong>：使用WVS数据，控制出生年份和国家固定效应，发现早期生活暴露于更高的GDP增长与更低的零和思维相关。</p>
-<h4 id="发现四历史预测因子">发现四：历史预测因子</h4>
-<p><strong>代际流动性</strong>： -
-更大的代际向上流动性与更低的零和思维相关 -
-这种关系在所有代际（1代、2代、3代）中都显著 -
-主要由向上流动驱动，向下流动影响较小</p>
-<p><strong>移民</strong>： -
-直接效应：第一代移民零和思维最低，移民主裔子孙次之 -
-间接效应：祖父母在移民比例较高县市长大的受访者零和思维较低 -
-时间效应：近期移民效应更强</p>
-<p><strong>奴役</strong>： - 直接效应：有奴隶祖先的受访者零和思维更高 -
-所有形式的奴役（奴隶贸易、Holocaust、契约仆役、日裔美国人拘留、印第安人保留地）都与更高零和思维相关
-- 间接效应：在1860年奴隶比例较高的县市长大的受访者零和思维更高 -
-奴隶制溢出：南方白人移民到非南方县带来了更高的零和思维</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>零和思维是重要且独立的政策预测因子</strong>：零和思维与再分配、种族/性别平等、移民政策的态度有显著关联，且独立于其他核心信念。</p></li>
-<li><p><strong>零和思维不是简单的党派问题</strong>：它可以解释党内政策分歧——为什么部分民主党人支持限制移民，部分共和党人支持再分配。</p></li>
-<li><p><strong>零和思维有深厚的历史根源</strong>：三个关键历史因素——代际流动性、移民、奴役——通过直接和间接渠道影响当代人的零和思维。</p></li>
-<li><p><strong>零和思维的跨国一般性</strong>：WVS数据证实，零和思维与政治态度的关系在72个国家都成立。</p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><p><strong>测量贡献</strong>：开发了综合的跨情境零和思维测量方法，优于单一情境测量。</p></li>
-<li><p><strong>数据贡献</strong>：首次收集了四代人信息的调查数据，直接测量祖先经历。</p></li>
-<li><p><strong>理论贡献</strong>：推进了对文化演化模型的理解，证明垂直传播的重要性。</p></li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
-<ol type="1">
-<li><p><strong>党内分歧研究</strong>：探索零和思维对新党形成、联盟和竞选平台的影响</p></li>
-<li><p><strong>政治现象研究</strong>：零和思维是否能解释民粹主义、阴谋论、排外主义的起源？</p></li>
-<li><p><strong>气候与不平等</strong>：零和思维如何与气候变化和全球不平等的态度相关联？</p></li>
-</ol>
-<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
-<ol type="1">
-<li><p><strong>识别策略改进</strong>：使用工具变量或自然实验进一步验证因果关系</p></li>
-<li><p><strong>机制检验</strong>：代际传递的具体渠道——是通过语言、家庭互动还是行为？</p></li>
-<li><p><strong>干预研究</strong>：是否可以设计干预措施减少零和思维？</p></li>
-</ol>
-<hr>
-<h2 id="学术思考">7. 学术思考</h2>
-<h3 id="核心学术洞察">核心学术洞察</h3>
-<ol type="1">
-<li><p><strong>"有限美好"的现代延续</strong>：Foster的零和思维假说虽提出于1960年代研究墨西哥农村，但本文证明其在现代美国社会仍具有重要解释力。</p></li>
-<li><p><strong>政策态度的认知根源</strong>：传统研究将政策态度归因于自身利益或价值观，但本文揭示了零和思维作为一种独立的中介机制。</p></li>
-<li><p><strong>历史创伤的代际传递</strong>：奴役制度不仅影响直接受害者，还通过环境暴露和文化传递影响后代。</p></li>
-</ol>
-<h3 id="深层学术问题">深层学术问题</h3>
-<ol type="1">
-<li><p><strong>为什么向上流动而非向下流动影响零和思维？</strong>
-这种不对称性暗示什么心理或文化机制？</p></li>
-<li><p><strong>移民的"正能量"效应</strong>：移民如何降低零和思维？是通过榜样效应、接触效应还是家庭叙述传递？</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p><strong>零和思维的测量是否可信？</strong>
-四题项测量能否捕捉零和思维的全部维度？</p></li>
-<li><p><strong>祖先经历的因果识别</strong>：如何解决内生性问题？</p></li>
-<li><p><strong>黑人受访者零和思维最高但奴役边际效应最小</strong>：如何解释这个悖论？</p></li>
-<li><p><strong>零和思维与特朗普现象</strong>：数据显示零和思维预测了民主党人投票给特朗普？</p></li>
-<li><p><strong>政策含义</strong>：如果零和思维是可塑的，什么干预可以减少零和思维？</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Regulating Conglomerates: Evidence From an Energy Conservation Program in China — 深度阅读笔记 — AER</title>
     <url>/posts/chen2021/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -4848,6 +4636,218 @@ horizon 是多久?</strong></p></li>
 <li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD
 数据的质量和覆盖范围如何保证?</strong></p></li>
 <li><p><strong>在中国"双碳"目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>零和思维与美国政治分歧的根源 — 深度阅读笔记 — Chinoy, Nunn, Sequeira &amp; Stantcheva</title>
+    <url>/posts/chinoy2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Zero-Sum Thinking and the Roots of U.S.
+Political Differences</li>
+<li><strong>作者</strong>: Sahil Chinoy (Harvard), Nathan Nunn (UBC
+&amp; CIFAR), Sandra Sequeira (LSE), Stefanie Stantcheva (Harvard)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review</li>
+<li><strong>DOI</strong>: 10.1257/aer.20240692</li>
+<li><strong>难度评估</strong>: 高 -
+需要文化经济学、政治经济学、计量经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>零和思维（Zero-Sum
+Thinking）</strong>：一种世界观，认为一个人的收益必然导致另一个人的损失，社会产出是有限的而非可以创造新价值的。该概念最早由人类学家George
+Foster（1965, 1967）提出，称为"有限美好形象"（Image of Limited
+Good）。</p>
+<p><strong>文化演化模型（Cultural Evolution
+Models）</strong>：经济学中研究文化特质如何在代际间垂直传播的模型，通常假设文化特质从父母传递给子女（Bisin
+&amp; Verdier, 2000, 2011, 2017）。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>历史视角下的零和思维</strong>：零和思维在历史上普遍存在，从欧洲重商主义到现代贸易和移民政策。在资源稀缺、技术进步缓慢的前工业社会尤为常见。</p></li>
+<li><p><strong>美国独特的历史因素</strong>：美国历史上有三个关键因素影响零和思维的形成：代际经济流动性、移民和奴役。</p></li>
+<li><p><strong>现有研究的局限</strong>：先前研究使用种族或地理位置作为祖先经历的代理变量，但无法干净地隔离垂直传播渠道。</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>： - 零和思维如何影响政治和政策偏好？ -
+零和思维的祖先根源是什么？ -
+流动性、移民、奴役经历如何代际传递并影响当代人的零和思维？</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><p><strong>理论贡献</strong>：首次利用四代人的调查数据，直接测量祖先经历对零和思维的影响，推进了文化演化理论的检验。</p></li>
+<li><p><strong>实证贡献</strong>：收集了约20,400名美国居民的调查数据，将零和思维测量、政治偏好与丰富的祖先信息相结合。</p></li>
+<li><p><strong>政策意义</strong>：揭示了零和思维与再分配政策、种族/性别平等政策、移民政策的系统性关联。</p></li>
+</ol>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
+<ul>
+<li>Foster的零和思维假说介绍</li>
+<li>研究动机和数据概述</li>
+<li>三大贡献预告</li>
+</ul>
+<h3 id="第二节调查设计数据收集和零和思维测量">第二节：调查设计、数据收集和零和思维测量</h3>
+<ul>
+<li>调查方法和样本描述</li>
+<li>零和思维的四题项测量（民族、公民身份、贸易、收入）</li>
+<li>主成分分析构建综合指数</li>
+<li>数据质量检验</li>
+</ul>
+<h3 id="第三节零和思维的政治关联">第三节：零和思维的政治关联</h3>
+<ul>
+<li>零和思维与政党偏好的关系</li>
+<li>零和思维与四项政策态度（再分配、种族、性别、移民）</li>
+<li>零和思维与自身利益的交互分析</li>
+<li>零和思维与其他核心信念的比较</li>
+<li>跨国家的一般性检验（WVS数据）</li>
+</ul>
+<h3 id="第四节零和思维的历史预测因子">第四节：零和思维的历史预测因子</h3>
+<ul>
+<li>代际经济流动性的影响</li>
+<li>移民经历的直接和间接效应</li>
+<li>奴役经历的直接和间接效应</li>
+<li>奴隶制的溢出效应</li>
+</ul>
+<h3 id="第五节结论conclusion">第五节：结论（Conclusion）</h3>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="零和思维的理论基础">零和思维的理论基础</h4>
+<p>George
+Foster（1965）在研究墨西哥农村时提出"有限美好"假说：许多社会存在零和世界观，认为资源是有限的，一方的收益必然是另一方的损失。这种观点在资源稀缺、市场不发达、技术进步有限的前工业社会中尤为普遍。</p>
+<h4 id="美国历史背景的特殊性">美国历史背景的特殊性</h4>
+<p>美国历史上有三个关键因素塑造零和思维： 1.
+<strong>代际流动性</strong>：美国曾是"机会之地"，向上流动性高于其他工业化国家
+2.
+<strong>移民潮</strong>：大规模移民塑造了美国社会，移民通常在美国获得经济成功而不损害他人
+3. <strong>奴役制度</strong>：奴隶制是一种彻底的零和（或负和）制度</p>
+<h3 id="方法">方法</h3>
+<h4 id="数据集">数据集</h4>
+<p><strong>调查设计</strong>： -
+约20,400名美国居民，七轮调查（2020年10月至2023年7月） -
+通过在线调查公司Respondi/Bilendi招募 - 调查时长约20-30分钟</p>
+<p><strong>调查内容模块</strong>： 1.
+<strong>受访者背景</strong>：年龄、性别、政治倾向 2.
+<strong>祖先信息</strong>：父母、祖父母的信息（出生地、居住历史、教育、职业、经济地位）
+3. <strong>政策观点</strong>：再分配、种族、性别、移民等政策态度 4.
+<strong>零和思维测量</strong>：四个领域的零和思维问题</p>
+<p><strong>四题项零和思维测量</strong>： 1.
+<strong>民族维度</strong>："如果一个种族群体变富裕，这通常是以其他群体为代价的"
+2.
+<strong>公民身份维度</strong>："如果没有美国公民身份的人经济上做得更好，这通常是以美国公民为代价的"
+3.
+<strong>贸易维度</strong>："在国际贸易中，如果一个国家赚更多钱，另一个国家通常会赚得更少"
+4.
+<strong>收入维度</strong>："如果一个收入群体变得更富有，这通常是以其他群体为代价的"</p>
+<p><strong>指数构建</strong>：使用主成分分析（PCA）提取第一主成分，标准化为0-1区间的综合指数。</p>
+<h4 id="估计方程">估计方程</h4>
+<p><strong>政治关联分析</strong>： <span class="math display">\[Y_i =
+\alpha_{s(i)} + \beta \cdot ZeroSum_i + X_i\Gamma +
+\varepsilon_i\]</span></p>
+<p><strong>历史预测因子分析</strong>： <span class="math display">\[ZeroSum_i = \beta_{resp} \cdot
+RespondentExperience_i + \beta_p \cdot ParentsExperience_i + \beta_{gp}
+\cdot GrandparentsExperience_i + X_i\Gamma + \alpha_{s(i)} +
+\varepsilon_i\]</span></p>
+<h3 id="结果">结果</h3>
+<h4 id="发现一零和思维测量">发现一：零和思维测量</h4>
+<p><strong>因子结构</strong>：第一主成分的特征值为2.30，所有题项的因子载荷相似（0.40-0.55），表明存在一个潜在的零和思维因子。</p>
+<p><strong>人口学差异</strong>： - 年龄：较年长者零和思维较低 -
+种族：黑人和西班牙裔美国人零和思维最高，亚裔最低 -
+收入：最低收入群体（&lt;${<span class="math inline">\(25,000}\)</span>）零和思维最高 -
+党派：共和党人零和思维较低 - 教育：受教育程度较高者零和思维较低</p>
+<h4 id="发现二零和思维与政策偏好">发现二：零和思维与政策偏好</h4>
+<p><strong>核心结果</strong>：零和思维与四项政策态度显著正相关： -
+<strong>再分配指数</strong>：支持更多政府再分配 -
+<strong>种族态度指数</strong>：支持减少种族歧视的政策 -
+<strong>性别态度指数</strong>：支持促进性别平等的政策 -
+<strong>反移民指数</strong>：支持更严格的移民限制</p>
+<p><strong>效应大小</strong>：一标准差增加的零和思维，对再分配的支持相当于20%的标准差变化，与民主党倾向性相当。</p>
+<p><strong>与自身利益的交互</strong>： -
+零和思维与再分配的支持在所有收入群体中都显著为正，且在高收入群体中更强 -
+男性零和思维对性别平等的支持更强 -
+白人受访者零和思维对种族平等政策的支持更强</p>
+<p><strong>党内差异</strong>：零和思维可解释党内政策分歧： -
+民主党中零和思维更强的人更支持限制移民 -
+共和党中零和思维更强的人更支持再分配</p>
+<h4 id="发现三跨国家一般性wvs数据">发现三：跨国家一般性（WVS数据）</h4>
+<p>使用世界价值观调查（WVS）72个国家192,000名受访者数据验证： -
+零和思维与右翼政治立场显著负相关 -
+零和思维与支持再分配和反移民态度正相关</p>
+<p><strong>早期生活经济增长</strong>：使用WVS数据，控制出生年份和国家固定效应，发现早期生活暴露于更高的GDP增长与更低的零和思维相关。</p>
+<h4 id="发现四历史预测因子">发现四：历史预测因子</h4>
+<p><strong>代际流动性</strong>： -
+更大的代际向上流动性与更低的零和思维相关 -
+这种关系在所有代际（1代、2代、3代）中都显著 -
+主要由向上流动驱动，向下流动影响较小</p>
+<p><strong>移民</strong>： -
+直接效应：第一代移民零和思维最低，移民主裔子孙次之 -
+间接效应：祖父母在移民比例较高县市长大的受访者零和思维较低 -
+时间效应：近期移民效应更强</p>
+<p><strong>奴役</strong>： - 直接效应：有奴隶祖先的受访者零和思维更高 -
+所有形式的奴役（奴隶贸易、Holocaust、契约仆役、日裔美国人拘留、印第安人保留地）都与更高零和思维相关
+- 间接效应：在1860年奴隶比例较高的县市长大的受访者零和思维更高 -
+奴隶制溢出：南方白人移民到非南方县带来了更高的零和思维</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>零和思维是重要且独立的政策预测因子</strong>：零和思维与再分配、种族/性别平等、移民政策的态度有显著关联，且独立于其他核心信念。</p></li>
+<li><p><strong>零和思维不是简单的党派问题</strong>：它可以解释党内政策分歧——为什么部分民主党人支持限制移民，部分共和党人支持再分配。</p></li>
+<li><p><strong>零和思维有深厚的历史根源</strong>：三个关键历史因素——代际流动性、移民、奴役——通过直接和间接渠道影响当代人的零和思维。</p></li>
+<li><p><strong>零和思维的跨国一般性</strong>：WVS数据证实，零和思维与政治态度的关系在72个国家都成立。</p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><p><strong>测量贡献</strong>：开发了综合的跨情境零和思维测量方法，优于单一情境测量。</p></li>
+<li><p><strong>数据贡献</strong>：首次收集了四代人信息的调查数据，直接测量祖先经历。</p></li>
+<li><p><strong>理论贡献</strong>：推进了对文化演化模型的理解，证明垂直传播的重要性。</p></li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
+<ol type="1">
+<li><p><strong>党内分歧研究</strong>：探索零和思维对新党形成、联盟和竞选平台的影响</p></li>
+<li><p><strong>政治现象研究</strong>：零和思维是否能解释民粹主义、阴谋论、排外主义的起源？</p></li>
+<li><p><strong>气候与不平等</strong>：零和思维如何与气候变化和全球不平等的态度相关联？</p></li>
+</ol>
+<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
+<ol type="1">
+<li><p><strong>识别策略改进</strong>：使用工具变量或自然实验进一步验证因果关系</p></li>
+<li><p><strong>机制检验</strong>：代际传递的具体渠道——是通过语言、家庭互动还是行为？</p></li>
+<li><p><strong>干预研究</strong>：是否可以设计干预措施减少零和思维？</p></li>
+</ol>
+<hr>
+<h2 id="学术思考">7. 学术思考</h2>
+<h3 id="核心学术洞察">核心学术洞察</h3>
+<ol type="1">
+<li><p><strong>"有限美好"的现代延续</strong>：Foster的零和思维假说虽提出于1960年代研究墨西哥农村，但本文证明其在现代美国社会仍具有重要解释力。</p></li>
+<li><p><strong>政策态度的认知根源</strong>：传统研究将政策态度归因于自身利益或价值观，但本文揭示了零和思维作为一种独立的中介机制。</p></li>
+<li><p><strong>历史创伤的代际传递</strong>：奴役制度不仅影响直接受害者，还通过环境暴露和文化传递影响后代。</p></li>
+</ol>
+<h3 id="深层学术问题">深层学术问题</h3>
+<ol type="1">
+<li><p><strong>为什么向上流动而非向下流动影响零和思维？</strong>
+这种不对称性暗示什么心理或文化机制？</p></li>
+<li><p><strong>移民的"正能量"效应</strong>：移民如何降低零和思维？是通过榜样效应、接触效应还是家庭叙述传递？</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p><strong>零和思维的测量是否可信？</strong>
+四题项测量能否捕捉零和思维的全部维度？</p></li>
+<li><p><strong>祖先经历的因果识别</strong>：如何解决内生性问题？</p></li>
+<li><p><strong>黑人受访者零和思维最高但奴役边际效应最小</strong>：如何解释这个悖论？</p></li>
+<li><p><strong>零和思维与特朗普现象</strong>：数据显示零和思维预测了民主党人投票给特朗普？</p></li>
+<li><p><strong>政策含义</strong>：如果零和思维是可塑的，什么干预可以减少零和思维？</p></li>
 </ol>
 ]]></content>
       <categories>
@@ -7214,217 +7214,6 @@ Effects），永久降低增长路径？</li>
       </tags>
   </entry>
   <entry>
-    <title>A Long and a Short Leg Make for a Wobbly Equilibrium — 深度阅读笔记 — Gârleanu, Panageas &amp; Zheng</title>
-    <url>/posts/garleanu2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: A Long and a Short Leg Make for a Wobbly
-Equilibrium</li>
-<li><strong>作者</strong>: Nicolae Gârleanu(Washington University),
-Stavros Panageas(UCLA Anderson), Geoffery Zheng(NYU)</li>
-<li><strong>类型</strong>: 论文笔记 / 资产定价 / 卖空市场 /
-金融市场微观结构</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: American Economic Review, Vol. 116,
-No. 4, pp. 1234-1273</li>
-<li><strong>DOI</strong>: 10.1257/aer.20211548</li>
-<li><strong>难度评估</strong>: 高 -
-需要资产定价、金融市场微观结构、一般均衡理论基础 <span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>股票卖空（Short
-Selling）是指投资者借入股票卖出，期望在股价下跌后买回获利。卖空需要支付借券费（lending
-fee），该费用由借贷市场的供给曲线内生决定。卖空活动的不稳定性是资产定价领域的核心问题之一——个股的卖空兴趣（short
-interest）常表现出突然且大幅的变化。</p>
-<p>异质信念（Heterogeneous
-Beliefs）是金融学中解释交易发生的重要框架：一部分投资者过度乐观（I型投资者），另一部分投资者理性（R型投资者），信念差异驱动交易。理性投资者有动机卖空他们认为被高估的股票。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><strong>卖空活动的不稳定现象</strong>：个股卖空兴趣表现出"跳跃"特征——突然的大幅变化，而非平稳的连续变化</li>
-<li><strong>理论与现实的不匹配</strong>：传统模型预测卖空活动应平滑变化，但实证显示存在跳跃；现有文献多将其归因于投资组合约束、融资限制、代理问题等外生因素</li>
-<li><strong>反馈机制缺失</strong>：现有模型缺少现货市场与借贷市场之间的反馈回路，导致无法内生解释均衡的多重性和跳跃</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：股票现货市场与借贷市场的相互作用如何导致卖空活动的突然变化？为什么理性卖空者甚至会在错误定价扩大时放弃市场？</p>
-<p><strong>关键洞察</strong>：作者发现了借贷费用（lending
-fee）引发的反馈机制：利用率（utilization
-ratio）上升→做多收益增加→夏普比率下降→卖空需求增加→利用率进一步上升。这形成了一个自我强化的循环，可产生"向后弯曲的需求曲线"和均衡的突然转移。</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><strong>内生机制</strong>：不依赖外生约束（投资组合限制、融资限制），而是通过借贷费用的微结构建模内生产生多重均衡和跳跃</li>
-<li><strong>可检验预测</strong>：提供了关于何时应该观察到卖空活动跳跃的具体条件（Proposition
-4）</li>
-<li><strong>现实应用</strong>：解释了2020年11月至2021年1月期间广泛发生的卖空者撤退现象</li>
-</ol>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<p>论文结构如下：</p>
-<ol type="1">
-<li><strong>引言</strong>：问题陈述、主要结论预览</li>
-<li><strong>模型设定</strong>（Section
-I）：异质信念、借贷费用、预算约束</li>
-<li><strong>主要分析结果</strong>（Section
-II）：均衡多重性、反馈机制、放大效应</li>
-<li><strong>财富份额动态</strong>（Section
-III）：多均衡下理性投资者财富份额的漂移</li>
-<li><strong>任意供给曲线</strong>（Section
-IV）：推广到一般形式的f(y)，给出多重均衡的充分必要条件（Proposition
-4）</li>
-<li><strong>实证证据</strong>（Section
-V）：利用Markit数据验证理论预测</li>
-<li><strong>扩展</strong>（Section
-VI）：非单位跨期替代弹性（IES）和多股票模型</li>
-<li><strong>GameStop案例研究</strong>（Section
-VII）：2020年11月-2021年1月的卖空撤退</li>
-<li><strong>结论</strong>（Section VIII）</li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>考虑一个连续时间、无限期界的经济体。投资者分为两类： -
-<strong>理性投资者（R型）</strong>：占有份额ν，相信正确的DDG过程（均值μD，波动率σD）
-- <strong>过度乐观投资者（I型）</strong>：相信错误的DDG过程（均值μI &gt;
-μD，持有"教条式信念"不学习）</p>
-<p>经济体中有正供给的风险资产（股票），其股息增长服从几何布朗运动。</p>
-<p><strong>与传统文献的核心区别</strong>：卖空需要支付借贷费用ft。投资者要么做多（w&gt;0）获得借贷收入τf_tyt，要么做空（w&lt;0）支付费用ft。</p>
-<p>借贷市场的关键机制： -
-<strong>利用率yt</strong>：被借出的股票占所有可借出股票的比例 -
-<strong>借贷费用ft</strong>：由借贷市场的供给曲线f(yt)内生决定 -
-<strong>市场清理事先</strong>：yt × 做多总量 = 做空总量</p>
-<h3 id="挑战">挑战</h3>
-<ol type="1">
-<li><strong>多重均衡</strong>：反馈回路可能导致多个均衡共存，包括零卖空均衡和高卖空均衡</li>
-<li><strong>向后弯曲的需求曲线</strong>：供需均衡可能非单调，导致均衡的突然跳跃</li>
-<li><strong>动态不稳定性</strong>：财富份额的演化可能放大外生冲击</li>
-<li><strong>跳跃的内生性</strong>：跳跃不是外生假设，而是从均衡动态中自然产生</li>
-</ol>
-<h3 id="方法">方法</h3>
-<h4 id="最优投资组合">最优投资组合</h4>
-<p>对数效用下的最优组合选择给出：</p>
-<p><span class="math display">\[w_{ti} = \begin{cases}
-\frac{\hat{\mu}_{ti} - r_t + f_t}{\sigma_D^2} &amp; \text{if }
-\hat{\mu}_{ti} - r_t + f_t &lt; 0 \\ \frac{\hat{\mu}_{ti} - r_t + \tau
-f_t y_t}{\sigma_D^2} &amp; \text{if } \hat{\mu}_{ti} - r_t + \tau f_t
-y_t &gt; 0 \\ 0 &amp; \text{otherwise} \end{cases}\]</span></p>
-<p>存在一个"不行动区间"：当感知到的超额收益在<span class="math inline">\(-\frac{f_t}{\sigma_D^2}\)</span>和<span class="math inline">\(-\frac{\tau f_t
-y_t}{\sigma_D^2}\)</span>之间时，投资者选择零仓位。</p>
-<h4 id="均衡条件与反馈机制">均衡条件与反馈机制</h4>
-<p>市场清理事先要求： <span class="math display">\[y_t =
-\frac{W_t^-}{W_t^+} = -\frac{w_t^R}{w_t^I} \cdot
-\frac{\omega_t}{1-\omega_t}\]</span></p>
-<p>夏普比率的表达式为： <span class="math display">\[\kappa_t = \sigma_D
-- (1-\omega_t)\eta - \sigma\phi_D(\omega_t + \tau
-y_t(1-\omega_t))\]</span></p>
-<p>其中<span class="math inline">\(\eta \equiv \frac{\mu_I -
-\mu_D}{\sigma_D}\)</span>。</p>
-<p><strong>关键反馈回路</strong>： 1. y上升 →
-做多投资者收益增加（借贷收入） → 股票需求增加 2. 需求增加 →
-夏普比率κ下降 3. κ下降 → 卖空者动机增强 → 做空需求增加 4. 做空需求增加 →
-y进一步上升 → 循环...</p>
-<h4 id="多重均衡条件">多重均衡条件</h4>
-<p><strong>Proposition 4（核心结果）</strong>：设<span class="math inline">\(h(y) \equiv f(y)(1-\tau y)\)</span>。若存在<span class="math inline">\(y \in [0, 1)\)</span>使得： - (a) <span class="math inline">\(h'(y) &lt; 0\)</span> - (b) <span class="math inline">\(\sigma_D^2 &lt; \frac{1}{4}(1-y)^2
-|h'(y)|\)</span></p>
-<p>则存在信念的财富分布使得多重均衡存在。</p>
-<p><strong>直觉理解</strong>：<span class="math inline">\(h(y)\)</span>衡量的是空头支付的费率<span class="math inline">\(f(y)\)</span>与多头获得的实际收入<span class="math inline">\(\tau f(y) y\)</span>之间的差额。当<span class="math inline">\(h'(y) &lt;
-0\)</span>时，说明随着利用率上升，这一差额在缩小，意味着做空变得相对更"昂贵"而做多相对更"有利"。这种非线性导致均衡的多重性。</p>
-<h4 id="均衡结构">均衡结构</h4>
-<p><strong>Proposition 2</strong>描述了均衡的完整结构： - 当<span class="math inline">\(\omega_t \in (\omega_2^*,
-1]\)</span>：唯一均衡，无卖空 - 当<span class="math inline">\(\omega_t
-\in [\omega_1^*,
-\omega_2^*]\)</span>：三个均衡（无卖空、中等卖空、高卖空） - 当<span class="math inline">\(\omega_t \in [0,
-\omega_1^*)\)</span>：唯一均衡，有卖空</p>
-<p>其中<span class="math inline">\(\omega_1^*\)</span>和<span class="math inline">\(\omega_2^*\)</span>是临界财富份额，<span class="math inline">\(\omega_2^* &gt; \omega_1^*\)</span>。</p>
-<h3 id="结果results">结果（Results）</h3>
-<h4 id="理论结果">理论结果</h4>
-<ol type="1">
-<li><strong>多重均衡的存在性</strong>：在特定参数条件下，系统可以支持多达三个均衡</li>
-<li><strong>向后弯曲的需求曲线</strong>：aggregate需求<span class="math inline">\(D(\kappa)\)</span>是κ的非单调函数，导致均衡的突然跳跃</li>
-<li><strong>跳跃的内生性</strong>：当<span class="math inline">\(\omega_t\)</span>连续变化穿过临界区间<span class="math inline">\([\omega_1^*,
-\omega_2^*]\)</span>时，κ和y发生不连续的跳跃</li>
-<li><strong>放大效应</strong>：即使在唯一均衡区域，反馈回路仍然存在，产生放大效应（multiplier
-effect）</li>
-</ol>
-<h4 id="实证结果">实证结果</h4>
-<ol type="1">
-<li><strong>肥尾分布</strong>：利用率的周变化呈现明显的肥尾（超额峰度26），远非正态</li>
-<li><strong>借贷费用的非线性</strong>：借贷费用与利用率呈非线性关系，在高利用率区域急剧上升</li>
-<li><strong>h'(y)的符号</strong>：估计的h'(y)在低利用率区域显著为负，符合Proposition
-4的条件</li>
-<li><strong>跳跃预测</strong>：满足Proposition
-4条件（h'(y)在某处为负）的股票，跳跃发生率显著更高</li>
-<li><strong>2020-2021案例</strong>：广泛卖空撤退开始于GameStop事件前8周，影响了并未被在线讨论的股票</li>
-</ol>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<p>本文提供了卖空活动突然变化的理论解释，主要结论：</p>
-<ol type="1">
-<li><strong>反馈机制是核心</strong>：现货与借贷市场的相互作用产生反馈回路，导致均衡多重性和跳跃</li>
-<li><strong>必要充分条件</strong>：Proposition
-4给出了多重均衡存在性的简洁可检验条件（h'(y)在某处为负）</li>
-<li><strong>理性撤退</strong>：即使错误定价扩大，理性卖空者也可能撤退——因为他们预期其他卖空者会撤退，从而降低了关键性概率</li>
-<li><strong>实证支持</strong>：满足模型预测条件的股票确实表现出更高的利用率跳跃率</li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="文献提及的方向">文献提及的方向</h3>
-<ol type="1">
-<li><strong>更丰富的资产类别</strong>：当前模型针对单一资产，可扩展到多资产组合选择</li>
-<li><strong>学习动态</strong>：当前I型投资者持有"教条式信念"，引入贝叶斯学习可能改变动态</li>
-<li><strong>内生信息获取</strong>：投资者选择支付成本获取信息，这可能影响均衡结构</li>
-<li><strong>更一般的信念分布</strong>：当前假设两类投资者，可扩展到连续分布</li>
-</ol>
-<h3 id="未来研究思考">未来研究思考</h3>
-<ol type="1">
-<li><strong>实证应用</strong>：利用更细粒度的借贷数据检验模型在个股层面的预测</li>
-<li><strong>期权市场互动</strong>：卖空活动的跳跃可能影响期权定价，检验这一跨市场联系是有趣的方向</li>
-<li><strong>机构投资者行为</strong>：对冲基金作为主要卖空者，其融资约束和风险管理如何与模型预测互动？</li>
-<li><strong>市场
-microstructure</strong>：借贷市场的微观结构设计（如竞争vs垄断）如何影响均衡多重性？</li>
-<li><strong>高频数据</strong>：利用日内数据检验模型预测的动态调整过程</li>
-</ol>
-<hr>
-<h2 id="学术思考">6. 学术思考</h2>
-<ol type="1">
-<li><p><strong>h'(y) &lt; 0条件的稳健性</strong>：Proposition
-4的条件依赖于特定的函数形式假设。放松供给曲线函数形式的假设后，多重均衡是否仍然存在？是否存在更一般的充分条件？</p></li>
-<li><p><strong>从理论到可操作的投资策略</strong>：如果模型正确，那么满足h'(y)
-&lt;
-0条件的股票应该提供更多的错误定价机会。这是否意味着存在可盈利的Alpha机会？还是说跳跃风险会消除这种机会？</p></li>
-<li><p><strong>理性撤退的均衡稳定性</strong>：在模型中，卖空者撤退是因为预期他人会撤退。这是一种协调均衡（coordination
-equilibrium）。但在现实中，这种协调如何实现？是否存在某种信号机制触发协调崩溃？</p></li>
-<li><p><strong>与市场微观结构文献的联系</strong>：模型假设借贷市场是搜索市场（search
-market），但现货市场是瓦尔拉斯市场（Walrasian
-market）。这一分离是否符合现实？将两部分都建模为搜索市场会改变结论吗？</p></li>
-<li><p><strong>异质信念的来源</strong>：模型假设I型投资者过度乐观，但没有解释这种乐观的来源。如果乐观来自信息获取成本的差异，引入内生信息获取会如何改变分析？</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li>如何在实证中估计h'(y)并检验Proposition 4的条件？</li>
-<li>模型如何解释2020-2021年GameStop期间以及之前8周的广泛卖空撤退？</li>
-<li>卖空费用的具体微观结构模型（如搜索与议价）如何推导？</li>
-<li>在多资产模型中，借贷市场的反馈机制如何与组合选择相互作用？</li>
-<li>理性投资者（R型）如何在内生学习下形成信念？</li>
-<li>模型的均衡多重性与市场效率有何关系？是否存在"错误定价的教科书案例"？</li>
-<li>如何将模型扩展到期权市场，分析卖空跳跃对期权波动率曲面（volatility
-surface）的影响？</li>
-<li>机构投资者的融资约束（如margin
-calls）如何与模型中的反馈机制互动？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>资产定价</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>AER</tag>
-        <tag>资产定价</tag>
-        <tag>卖空市场</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Fiscal Volatility Shocks and Economic Activity — 深度阅读笔记 — AER</title>
     <url>/posts/fernandez2015/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -7758,6 +7547,217 @@ space)讨论有什么启示?发展中国家在 ZLB
       </categories>
       <tags>
         <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>A Long and a Short Leg Make for a Wobbly Equilibrium — 深度阅读笔记 — Gârleanu, Panageas &amp; Zheng</title>
+    <url>/posts/garleanu2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: A Long and a Short Leg Make for a Wobbly
+Equilibrium</li>
+<li><strong>作者</strong>: Nicolae Gârleanu(Washington University),
+Stavros Panageas(UCLA Anderson), Geoffery Zheng(NYU)</li>
+<li><strong>类型</strong>: 论文笔记 / 资产定价 / 卖空市场 /
+金融市场微观结构</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: American Economic Review, Vol. 116,
+No. 4, pp. 1234-1273</li>
+<li><strong>DOI</strong>: 10.1257/aer.20211548</li>
+<li><strong>难度评估</strong>: 高 -
+需要资产定价、金融市场微观结构、一般均衡理论基础 <span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>股票卖空（Short
+Selling）是指投资者借入股票卖出，期望在股价下跌后买回获利。卖空需要支付借券费（lending
+fee），该费用由借贷市场的供给曲线内生决定。卖空活动的不稳定性是资产定价领域的核心问题之一——个股的卖空兴趣（short
+interest）常表现出突然且大幅的变化。</p>
+<p>异质信念（Heterogeneous
+Beliefs）是金融学中解释交易发生的重要框架：一部分投资者过度乐观（I型投资者），另一部分投资者理性（R型投资者），信念差异驱动交易。理性投资者有动机卖空他们认为被高估的股票。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><strong>卖空活动的不稳定现象</strong>：个股卖空兴趣表现出"跳跃"特征——突然的大幅变化，而非平稳的连续变化</li>
+<li><strong>理论与现实的不匹配</strong>：传统模型预测卖空活动应平滑变化，但实证显示存在跳跃；现有文献多将其归因于投资组合约束、融资限制、代理问题等外生因素</li>
+<li><strong>反馈机制缺失</strong>：现有模型缺少现货市场与借贷市场之间的反馈回路，导致无法内生解释均衡的多重性和跳跃</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：股票现货市场与借贷市场的相互作用如何导致卖空活动的突然变化？为什么理性卖空者甚至会在错误定价扩大时放弃市场？</p>
+<p><strong>关键洞察</strong>：作者发现了借贷费用（lending
+fee）引发的反馈机制：利用率（utilization
+ratio）上升→做多收益增加→夏普比率下降→卖空需求增加→利用率进一步上升。这形成了一个自我强化的循环，可产生"向后弯曲的需求曲线"和均衡的突然转移。</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><strong>内生机制</strong>：不依赖外生约束（投资组合限制、融资限制），而是通过借贷费用的微结构建模内生产生多重均衡和跳跃</li>
+<li><strong>可检验预测</strong>：提供了关于何时应该观察到卖空活动跳跃的具体条件（Proposition
+4）</li>
+<li><strong>现实应用</strong>：解释了2020年11月至2021年1月期间广泛发生的卖空者撤退现象</li>
+</ol>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<p>论文结构如下：</p>
+<ol type="1">
+<li><strong>引言</strong>：问题陈述、主要结论预览</li>
+<li><strong>模型设定</strong>（Section
+I）：异质信念、借贷费用、预算约束</li>
+<li><strong>主要分析结果</strong>（Section
+II）：均衡多重性、反馈机制、放大效应</li>
+<li><strong>财富份额动态</strong>（Section
+III）：多均衡下理性投资者财富份额的漂移</li>
+<li><strong>任意供给曲线</strong>（Section
+IV）：推广到一般形式的f(y)，给出多重均衡的充分必要条件（Proposition
+4）</li>
+<li><strong>实证证据</strong>（Section
+V）：利用Markit数据验证理论预测</li>
+<li><strong>扩展</strong>（Section
+VI）：非单位跨期替代弹性（IES）和多股票模型</li>
+<li><strong>GameStop案例研究</strong>（Section
+VII）：2020年11月-2021年1月的卖空撤退</li>
+<li><strong>结论</strong>（Section VIII）</li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>考虑一个连续时间、无限期界的经济体。投资者分为两类： -
+<strong>理性投资者（R型）</strong>：占有份额ν，相信正确的DDG过程（均值μD，波动率σD）
+- <strong>过度乐观投资者（I型）</strong>：相信错误的DDG过程（均值μI &gt;
+μD，持有"教条式信念"不学习）</p>
+<p>经济体中有正供给的风险资产（股票），其股息增长服从几何布朗运动。</p>
+<p><strong>与传统文献的核心区别</strong>：卖空需要支付借贷费用ft。投资者要么做多（w&gt;0）获得借贷收入τf_tyt，要么做空（w&lt;0）支付费用ft。</p>
+<p>借贷市场的关键机制： -
+<strong>利用率yt</strong>：被借出的股票占所有可借出股票的比例 -
+<strong>借贷费用ft</strong>：由借贷市场的供给曲线f(yt)内生决定 -
+<strong>市场清理事先</strong>：yt × 做多总量 = 做空总量</p>
+<h3 id="挑战">挑战</h3>
+<ol type="1">
+<li><strong>多重均衡</strong>：反馈回路可能导致多个均衡共存，包括零卖空均衡和高卖空均衡</li>
+<li><strong>向后弯曲的需求曲线</strong>：供需均衡可能非单调，导致均衡的突然跳跃</li>
+<li><strong>动态不稳定性</strong>：财富份额的演化可能放大外生冲击</li>
+<li><strong>跳跃的内生性</strong>：跳跃不是外生假设，而是从均衡动态中自然产生</li>
+</ol>
+<h3 id="方法">方法</h3>
+<h4 id="最优投资组合">最优投资组合</h4>
+<p>对数效用下的最优组合选择给出：</p>
+<p><span class="math display">\[w_{ti} = \begin{cases}
+\frac{\hat{\mu}_{ti} - r_t + f_t}{\sigma_D^2} &amp; \text{if }
+\hat{\mu}_{ti} - r_t + f_t &lt; 0 \\ \frac{\hat{\mu}_{ti} - r_t + \tau
+f_t y_t}{\sigma_D^2} &amp; \text{if } \hat{\mu}_{ti} - r_t + \tau f_t
+y_t &gt; 0 \\ 0 &amp; \text{otherwise} \end{cases}\]</span></p>
+<p>存在一个"不行动区间"：当感知到的超额收益在<span class="math inline">\(-\frac{f_t}{\sigma_D^2}\)</span>和<span class="math inline">\(-\frac{\tau f_t
+y_t}{\sigma_D^2}\)</span>之间时，投资者选择零仓位。</p>
+<h4 id="均衡条件与反馈机制">均衡条件与反馈机制</h4>
+<p>市场清理事先要求： <span class="math display">\[y_t =
+\frac{W_t^-}{W_t^+} = -\frac{w_t^R}{w_t^I} \cdot
+\frac{\omega_t}{1-\omega_t}\]</span></p>
+<p>夏普比率的表达式为： <span class="math display">\[\kappa_t = \sigma_D
+- (1-\omega_t)\eta - \sigma\phi_D(\omega_t + \tau
+y_t(1-\omega_t))\]</span></p>
+<p>其中<span class="math inline">\(\eta \equiv \frac{\mu_I -
+\mu_D}{\sigma_D}\)</span>。</p>
+<p><strong>关键反馈回路</strong>： 1. y上升 →
+做多投资者收益增加（借贷收入） → 股票需求增加 2. 需求增加 →
+夏普比率κ下降 3. κ下降 → 卖空者动机增强 → 做空需求增加 4. 做空需求增加 →
+y进一步上升 → 循环...</p>
+<h4 id="多重均衡条件">多重均衡条件</h4>
+<p><strong>Proposition 4（核心结果）</strong>：设<span class="math inline">\(h(y) \equiv f(y)(1-\tau y)\)</span>。若存在<span class="math inline">\(y \in [0, 1)\)</span>使得： - (a) <span class="math inline">\(h'(y) &lt; 0\)</span> - (b) <span class="math inline">\(\sigma_D^2 &lt; \frac{1}{4}(1-y)^2
+|h'(y)|\)</span></p>
+<p>则存在信念的财富分布使得多重均衡存在。</p>
+<p><strong>直觉理解</strong>：<span class="math inline">\(h(y)\)</span>衡量的是空头支付的费率<span class="math inline">\(f(y)\)</span>与多头获得的实际收入<span class="math inline">\(\tau f(y) y\)</span>之间的差额。当<span class="math inline">\(h'(y) &lt;
+0\)</span>时，说明随着利用率上升，这一差额在缩小，意味着做空变得相对更"昂贵"而做多相对更"有利"。这种非线性导致均衡的多重性。</p>
+<h4 id="均衡结构">均衡结构</h4>
+<p><strong>Proposition 2</strong>描述了均衡的完整结构： - 当<span class="math inline">\(\omega_t \in (\omega_2^*,
+1]\)</span>：唯一均衡，无卖空 - 当<span class="math inline">\(\omega_t
+\in [\omega_1^*,
+\omega_2^*]\)</span>：三个均衡（无卖空、中等卖空、高卖空） - 当<span class="math inline">\(\omega_t \in [0,
+\omega_1^*)\)</span>：唯一均衡，有卖空</p>
+<p>其中<span class="math inline">\(\omega_1^*\)</span>和<span class="math inline">\(\omega_2^*\)</span>是临界财富份额，<span class="math inline">\(\omega_2^* &gt; \omega_1^*\)</span>。</p>
+<h3 id="结果results">结果（Results）</h3>
+<h4 id="理论结果">理论结果</h4>
+<ol type="1">
+<li><strong>多重均衡的存在性</strong>：在特定参数条件下，系统可以支持多达三个均衡</li>
+<li><strong>向后弯曲的需求曲线</strong>：aggregate需求<span class="math inline">\(D(\kappa)\)</span>是κ的非单调函数，导致均衡的突然跳跃</li>
+<li><strong>跳跃的内生性</strong>：当<span class="math inline">\(\omega_t\)</span>连续变化穿过临界区间<span class="math inline">\([\omega_1^*,
+\omega_2^*]\)</span>时，κ和y发生不连续的跳跃</li>
+<li><strong>放大效应</strong>：即使在唯一均衡区域，反馈回路仍然存在，产生放大效应（multiplier
+effect）</li>
+</ol>
+<h4 id="实证结果">实证结果</h4>
+<ol type="1">
+<li><strong>肥尾分布</strong>：利用率的周变化呈现明显的肥尾（超额峰度26），远非正态</li>
+<li><strong>借贷费用的非线性</strong>：借贷费用与利用率呈非线性关系，在高利用率区域急剧上升</li>
+<li><strong>h'(y)的符号</strong>：估计的h'(y)在低利用率区域显著为负，符合Proposition
+4的条件</li>
+<li><strong>跳跃预测</strong>：满足Proposition
+4条件（h'(y)在某处为负）的股票，跳跃发生率显著更高</li>
+<li><strong>2020-2021案例</strong>：广泛卖空撤退开始于GameStop事件前8周，影响了并未被在线讨论的股票</li>
+</ol>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<p>本文提供了卖空活动突然变化的理论解释，主要结论：</p>
+<ol type="1">
+<li><strong>反馈机制是核心</strong>：现货与借贷市场的相互作用产生反馈回路，导致均衡多重性和跳跃</li>
+<li><strong>必要充分条件</strong>：Proposition
+4给出了多重均衡存在性的简洁可检验条件（h'(y)在某处为负）</li>
+<li><strong>理性撤退</strong>：即使错误定价扩大，理性卖空者也可能撤退——因为他们预期其他卖空者会撤退，从而降低了关键性概率</li>
+<li><strong>实证支持</strong>：满足模型预测条件的股票确实表现出更高的利用率跳跃率</li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="文献提及的方向">文献提及的方向</h3>
+<ol type="1">
+<li><strong>更丰富的资产类别</strong>：当前模型针对单一资产，可扩展到多资产组合选择</li>
+<li><strong>学习动态</strong>：当前I型投资者持有"教条式信念"，引入贝叶斯学习可能改变动态</li>
+<li><strong>内生信息获取</strong>：投资者选择支付成本获取信息，这可能影响均衡结构</li>
+<li><strong>更一般的信念分布</strong>：当前假设两类投资者，可扩展到连续分布</li>
+</ol>
+<h3 id="未来研究思考">未来研究思考</h3>
+<ol type="1">
+<li><strong>实证应用</strong>：利用更细粒度的借贷数据检验模型在个股层面的预测</li>
+<li><strong>期权市场互动</strong>：卖空活动的跳跃可能影响期权定价，检验这一跨市场联系是有趣的方向</li>
+<li><strong>机构投资者行为</strong>：对冲基金作为主要卖空者，其融资约束和风险管理如何与模型预测互动？</li>
+<li><strong>市场
+microstructure</strong>：借贷市场的微观结构设计（如竞争vs垄断）如何影响均衡多重性？</li>
+<li><strong>高频数据</strong>：利用日内数据检验模型预测的动态调整过程</li>
+</ol>
+<hr>
+<h2 id="学术思考">6. 学术思考</h2>
+<ol type="1">
+<li><p><strong>h'(y) &lt; 0条件的稳健性</strong>：Proposition
+4的条件依赖于特定的函数形式假设。放松供给曲线函数形式的假设后，多重均衡是否仍然存在？是否存在更一般的充分条件？</p></li>
+<li><p><strong>从理论到可操作的投资策略</strong>：如果模型正确，那么满足h'(y)
+&lt;
+0条件的股票应该提供更多的错误定价机会。这是否意味着存在可盈利的Alpha机会？还是说跳跃风险会消除这种机会？</p></li>
+<li><p><strong>理性撤退的均衡稳定性</strong>：在模型中，卖空者撤退是因为预期他人会撤退。这是一种协调均衡（coordination
+equilibrium）。但在现实中，这种协调如何实现？是否存在某种信号机制触发协调崩溃？</p></li>
+<li><p><strong>与市场微观结构文献的联系</strong>：模型假设借贷市场是搜索市场（search
+market），但现货市场是瓦尔拉斯市场（Walrasian
+market）。这一分离是否符合现实？将两部分都建模为搜索市场会改变结论吗？</p></li>
+<li><p><strong>异质信念的来源</strong>：模型假设I型投资者过度乐观，但没有解释这种乐观的来源。如果乐观来自信息获取成本的差异，引入内生信息获取会如何改变分析？</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li>如何在实证中估计h'(y)并检验Proposition 4的条件？</li>
+<li>模型如何解释2020-2021年GameStop期间以及之前8周的广泛卖空撤退？</li>
+<li>卖空费用的具体微观结构模型（如搜索与议价）如何推导？</li>
+<li>在多资产模型中，借贷市场的反馈机制如何与组合选择相互作用？</li>
+<li>理性投资者（R型）如何在内生学习下形成信念？</li>
+<li>模型的均衡多重性与市场效率有何关系？是否存在"错误定价的教科书案例"？</li>
+<li>如何将模型扩展到期权市场，分析卖空跳跃对期权波动率曲面（volatility
+surface）的影响？</li>
+<li>机构投资者的融资约束（如margin
+calls）如何与模型中的反馈机制互动？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>资产定价</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>AER</tag>
+        <tag>资产定价</tag>
+        <tag>卖空市场</tag>
       </tags>
   </entry>
   <entry>
@@ -10753,187 +10753,6 @@ Studies</li>
       </tags>
   </entry>
   <entry>
-    <title>预算到期会导致年底浪费性支出吗?_ Liebman &amp; Mahoney (2017) 笔记</title>
-    <url>/posts/liebman2017/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Do Expiring Budgets Lead to Wasteful Year-End
-Spending? Evidence from Federal Procurement</li>
-<li><strong>作者</strong>: Jeffrey B. Liebman(哈佛大学), Neale
-Mahoney(芝加哥大学)</li>
-<li><strong>类型</strong>: 论文笔记 / 公共经济学 / 预算制度</li>
-<li><strong>出版年份</strong>: 2017</li>
-<li><strong>出版机构/期刊</strong>: American Economic Review</li>
-<li><strong>DOI</strong>: 10.1257/aer.20131296</li>
-<li><strong>难度评估</strong>: 高 -
-需要经济学、计量经济学、公共财政学基础</li>
-</ul>
-<span id="more"></span>
-<h2 id="引言">引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>本文属于公共经济学、行为经济学和管理学的交叉领域,探讨政府支出效率问题.核心概念包括:</p>
-<ul>
-<li><strong>预算约束</strong>: 政府机构在财政年度内可支配的资金总额</li>
-<li><strong>自由裁量支出</strong>:
-政府可以自行决定如何分配的预算部分,与法定支出(如社会保障)相对</li>
-<li><strong>公共采购</strong>: 政府购买商品和服务的行为</li>
-<li><strong>信息技术(IT)项目</strong>:
-政府对计算机硬件、软件和相关服务的投资</li>
-<li><strong>社会成本</strong>:
-指一项经济活动对整个社会造成的成本,包括直接成本和外部成本</li>
-<li><strong>滚动预算(Rollover Budget)</strong>:
-允许机构将未使用的预算资金转移到下一个财政年度</li>
-</ul>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p>政府机构通常面临"不使用就失去"的预算规则,即在一个财政年度结束时,任何未使用的预算资金都将返回国库,而不是留给该机构使用.这种规则可能会导致机构在财政年度末
-rush 支出,即使这意味着投资于低价值的项目.</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p>作者认为,"不使用就失去"的预算规则可能会导致政府浪费性支出.他们试图通过实证分析来检验这一观点,并探讨解决这一问题的潜在政策,例如允许机构将未使用的资金转入下一个财政年度.</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><strong>揭示了政府支出中潜在的浪费现象</strong>:
-通过量化财政年度末的支出高峰和质量下降,为政府支出效率问题提供了有力证据</li>
-<li><strong>评估了滚动预算的有效性</strong>:
-通过研究美国司法部的滚动预算政策,为解决浪费性支出提供了一个可行的解决方案</li>
-<li><strong>为政府预算管理提供了政策建议</strong>:
-研究结果表明,允许机构将未使用的资金转入下一个财政年度可以提高政府支出效率</li>
-</ol>
-<h2 id="论文结构">论文结构</h2>
-<ol type="1">
-<li><strong>引言</strong>: 概述研究背景、问题意识和研究意义</li>
-<li><strong>理论模型</strong>:
-建立一个简单的模型来解释"不使用就失去"的预算规则如何导致浪费性支出</li>
-<li><strong>数据描述</strong>:
-介绍用于实证分析的数据集,包括联邦采购数据系统(FPDS)和IT仪表板</li>
-<li><strong>实证分析1</strong>:
-使用FPDS数据检验财政年度末是否存在支出高峰</li>
-<li><strong>实证分析2</strong>:
-使用IT仪表板数据检验财政年度末的支出质量是否下降</li>
-<li><strong>政策分析</strong>: 研究滚动预算政策对支出行为的影响</li>
-<li><strong>福利分析</strong>:
-使用校准后的模型评估滚动预算政策的福利效应</li>
-<li><strong>结论</strong>:
-总结研究结果,讨论政策含义,并提出未来研究方向</li>
-</ol>
-<h2 id="背景">背景</h2>
-<p>许多组织都有在财政年度末到期的预算,这可能导致在年底匆忙将资源用于低质量的项目.美国联邦政府的自由裁量支出预算也面临类似情况,机构必须在财政年度结束前完成拨款.</p>
-<h3 id="挑战">挑战</h3>
-<ol type="1">
-<li><strong>"不使用就失去"的预算规则</strong>:
-如果机构不花完预算,剩余的资金将返回国库,降低了年底花钱的机会成本</li>
-<li><strong>预防性储蓄的动机</strong>:
-机构倾向于在预算周期开始时保留资金,以应对未来不确定的支出需求</li>
-<li><strong>缺乏关于年底浪费性支出的硬性证据</strong>:
-尽管有传闻证据,但缺乏关于美国联邦政府年底支出激增以及年底支出价值低于其他时间段的证据</li>
-</ol>
-<h2 id="方法">方法</h2>
-<h3 id="理论模型">理论模型</h3>
-<ul>
-<li><strong>模型设定</strong>:
-作者建立了一个年度预算模型,包括国会和一个政府机构.国会为该机构选择预算,该机构在一年中的每个时期都会获得一个参数,该参数决定了支出的边际价值,并选择一个支出水平以最大化收益递减的目标</li>
-<li><strong>模型特征</strong>:
-具有三个关键特征_预算到期、未来支出价值的不确定性以及每个时期内支出的收益递减</li>
-<li><strong>模型预测</strong>:
-由于不确定性和收益递减,该机构将在年初进行预防性储蓄;在年底,资金到期的前景导致该机构花掉所有剩余资源,即使边际价值低于资金的社会成本,导致年底支出量激增和质量下降</li>
-</ul>
-<h3 id="数据集">数据集</h3>
-<p><strong>1. 联邦采购数据系统(FPDS)</strong> - 时间范围:
-2004年至2009年财政年度 - 数据量: 1460万份合同 - 总支出: 2.6万亿美元 -
-主要内容:
-合同层面信息,包括金额、产品/服务代码、机构、供应商、合同类型、招标机制等
-- 用途: 用于分析联邦采购支出的总体模式,特别是年底支出高峰</p>
-<p><strong>2. IT仪表板(IT Dashboard)</strong> - 数据时间: 截至2010年3月
-- 项目数量: 686个主要IT项目 - 总计划支出: 1300亿美元 - 主要内容:
-项目绩效数据,包括总体评级、成本评级、进度评级、CIO评估等 - 用途:
-用于评估IT项目的质量,特别是年底开始的项目的质量</p>
-<h3 id="实证策略">实证策略</h3>
-<ol type="1">
-<li><strong>支出高峰检验</strong>:
-使用FPDS数据,分析财政年度内每周的采购支出模式,确定是否存在年底支出高峰</li>
-<li><strong>质量下降检验</strong>:
-使用IT仪表板数据,比较在财政年度最后一周开始的项目与在其他时间开始的项目的质量评级</li>
-<li><strong>政策分析</strong>:
-研究美国司法部(DOJ)的滚动预算政策对支出行为的影响.DOJ有权将未使用的IT项目预算转入下一财政年度,作者比较了DOJ的IT和非IT支出,以及DOJ和其他机构之间的支出模式</li>
-<li><strong>福利分析</strong>:
-通过校准模型以适应支出高峰和质量下降,分析允许滚动预算的潜在福利收益</li>
-</ol>
-<h3 id="关键术语">关键术语</h3>
-<ul>
-<li><strong>FPDS (Federal Procurement Data System)</strong>:
-联邦采购数据系统,跟踪所有联邦合同的数据系统</li>
-<li><strong>IT仪表板 (IT Dashboard)</strong>:
-跟踪联邦政府主要IT项目绩效的网站</li>
-<li><strong>CIO (Chief Information Officer)</strong>:
-首席信息官,负责机构的信息技术战略和管理</li>
-<li><strong>Ordered Logit Regression</strong>:
-有序Logit回归,用于分析有序分类因变量的统计模型</li>
-<li><strong>Difference-in-Differences</strong>:
-双重差分法,用于评估政策或干预效果的统计方法</li>
-<li><strong>CRRA (Constant Relative Risk Aversion)</strong>:
-恒定相对风险厌恶效用函数</li>
-<li><strong>CARA (Constant Absolute Risk Aversion)</strong>:
-恒定绝对风险厌恶效用函数</li>
-</ul>
-<h2 id="结果">结果</h2>
-<ol type="1">
-<li><strong>支出高峰</strong>:
-数据显示年底支出大幅增加.在财政年度的最后一周,支出是平时每周平均水平的4.9倍</li>
-<li><strong>质量下降</strong>:
-年底开始的IT项目的质量评级明显较低.在财政年度最后一周开始的项目,获得较低质量分数的可能性要高出2.3到5.6倍</li>
-<li><strong>滚动预算的影响</strong>:
-DOJ的IT支出没有出现支出高峰,最后一周的IT支出仅占3.3%,而非IT支出为9.3%.差异分析表明滚动预算减少了年底支出量</li>
-<li><strong>福利分析</strong>:
-允许滚动预算可以带来福利收益.即使是允许机构在短时间内转入资金的中间政策,也可以产生接近全部滚动价值四分之三的福利收益</li>
-</ol>
-<h2 id="结论">结论</h2>
-<p>本文的核心结论是:由于"不使用就失去"的预算规则,美国联邦政府存在年底浪费性支出现象.具体表现为:</p>
-<ul>
-<li><strong>年底支出量激增</strong>:
-财政年度末的支出明显高于其他时间段</li>
-<li><strong>年底支出质量下降</strong>:
-财政年度末开始的IT项目质量较低</li>
-</ul>
-<p>允许滚动预算可以有效地解决这个问题.DOJ的经验表明滚动预算可以减少年底支出量,并可能提高项目质量.福利分析表明,即使是有限制的滚动预算政策也可以带来显著的福利收益.</p>
-<p>作者建议可以通过允许机构将未使用的资金延期到下个财政年度,用于四个月的宽限期,从而消除因年底浪费性支出造成的大部分效率低下问题.</p>
-<h2 id="未来研究方向">未来研究方向</h2>
-<ol type="1">
-<li><strong>研究国会预算决策对机构支出行为的影响</strong>:
-深入研究国会如何应对滚动预算,以及如何设计预算规则以实现最佳效果</li>
-<li><strong>考虑机构内部的异质性</strong>:
-研究机构内部不同部门的支出行为差异,以及如何设计更有针对性的预算政策</li>
-<li><strong>探索其他解决浪费性支出问题的政策</strong>:
-例如改进预算预测,加强项目管理,或引入竞争性招标</li>
-<li><strong>研究不同类型的资金结转政策</strong>:
-比较无限期结转、有条件结转等不同方案对支出效率的影响</li>
-<li><strong>行为因素的影响</strong>:
-考虑认知偏差、损失厌恶等行为因素对政府部门年底支出行为的影响</li>
-<li><strong>政治因素</strong>:
-研究资金结转政策的政治可行性,以及立法机构对预算控制的考量</li>
-</ol>
-<h2 id="学术思考">学术思考</h2>
-<ol type="1">
-<li><strong>预算制度与创新</strong>:
-"使用或失效"的预算规则是否会抑制政府部门的创新活动?如果政府部门知道它们必须在当年用完所有资金,它们是否会更倾向于投资于风险较低、回报较快的项目?</li>
-<li><strong>政治周期与支出行为</strong>:
-政府部门的支出行为是否会受到政治周期的影响?</li>
-<li><strong>绩效评估指标的设计</strong>:
-如何设计更有效的绩效评估指标,以准确衡量政府部门的支出质量?</li>
-<li><strong>资金结转政策的适用性</strong>:
-资金结转政策是否适用于所有类型的政府部门和项目?</li>
-<li><strong>公共部门与私营部门的对比</strong>:
-比较公共部门和私营部门在预算管理和支出效率方面的差异</li>
-</ol>
-]]></content>
-      <categories>
-        <category>公共经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>公共经济学</tag>
-        <tag>预算制度</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>年末消费高峰 — 论文笔记 — McCue, Prier &amp; Lofaro</title>
     <url>/posts/mccue2021/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -11205,97 +11024,184 @@ study of procurement contracts》深度分析撰写。</em></p>
       </tags>
   </entry>
   <entry>
-    <title>用稻草做砖 — 深度阅读笔记 — Okeke</title>
-    <url>/posts/okeke2026/</url>
+    <title>预算到期会导致年底浪费性支出吗?_ Liebman &amp; Mahoney (2017) 笔记</title>
+    <url>/posts/liebman2017/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
 <ul>
-<li><strong>标题</strong>: Making Bricks from Straw: Resources and
-Productivity in Health Care</li>
-<li><strong>作者</strong>: Edward N. Okeke (RAND Corporation)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(4):
-1499-1539</li>
-<li><strong>DOI</strong>: 10.1257/aer.20241459</li>
+<li><strong>标题</strong>: Do Expiring Budgets Lead to Wasteful Year-End
+Spending? Evidence from Federal Procurement</li>
+<li><strong>作者</strong>: Jeffrey B. Liebman(哈佛大学), Neale
+Mahoney(芝加哥大学)</li>
+<li><strong>类型</strong>: 论文笔记 / 公共经济学 / 预算制度</li>
+<li><strong>出版年份</strong>: 2017</li>
+<li><strong>出版机构/期刊</strong>: American Economic Review</li>
+<li><strong>DOI</strong>: 10.1257/aer.20131296</li>
 <li><strong>难度评估</strong>: 高 -
-需要卫生经济学、发展经济学、实验经济学基础</li>
+需要经济学、计量经济学、公共财政学基础</li>
 </ul>
 <span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h2 id="引言">引言</h2>
 <h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>公共卫生设施生产率（Health Care Productivity）</strong>
-指卫生设施将投入（资金、人员、设备）转化为卫生服务产出的效率。在发展中国家，公共卫生设施普遍表现不佳，存在典型的"低质量-低数量"均衡陷阱。</p>
-<p><strong>财政约束（Financial Constraints）</strong>
-指行为主体无法获得足够资金来执行生产性投资的限制。</p>
+<p>本文属于公共经济学、行为经济学和管理学的交叉领域,探讨政府支出效率问题.核心概念包括:</p>
+<ul>
+<li><strong>预算约束</strong>: 政府机构在财政年度内可支配的资金总额</li>
+<li><strong>自由裁量支出</strong>:
+政府可以自行决定如何分配的预算部分,与法定支出(如社会保障)相对</li>
+<li><strong>公共采购</strong>: 政府购买商品和服务的行为</li>
+<li><strong>信息技术(IT)项目</strong>:
+政府对计算机硬件、软件和相关服务的投资</li>
+<li><strong>社会成本</strong>:
+指一项经济活动对整个社会造成的成本,包括直接成本和外部成本</li>
+<li><strong>滚动预算(Rollover Budget)</strong>:
+允许机构将未使用的预算资金转移到下一个财政年度</li>
+</ul>
 <h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>发展中国家的卫生设施表现糟糕</strong>：访客常发现设施在中午后只有少数患者和工作人员</p></li>
-<li><p><strong>财政约束的争论</strong>：卫生工作者认为资金不足，但证据参差不齐</p></li>
-<li><p><strong>研究缺口</strong>：缺乏对"卫生设施内部到底发生了什么"的系统研究</p></li>
-</ol>
+<p>政府机构通常面临"不使用就失去"的预算规则,即在一个财政年度结束时,任何未使用的预算资金都将返回国库,而不是留给该机构使用.这种规则可能会导致机构在财政年度末
+rush 支出,即使这意味着投资于低价值的项目.</p>
 <h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：为什么发展中国家的卫生设施表现如此糟糕？财政约束的作用是什么？</p>
-<p><strong>主要发现</strong>：额外财政资源带来了巨大的生产率提高，效果持续约两年</p>
-<hr>
-<h2 id="内容及结构">2. 内容及结构</h2>
+<p>作者认为,"不使用就失去"的预算规则可能会导致政府浪费性支出.他们试图通过实证分析来检验这一观点,并探讨解决这一问题的潜在政策,例如允许机构将未使用的资金转入下一个财政年度.</p>
+<h3 id="研究意义">研究意义</h3>
 <ol type="1">
-<li><strong>引言</strong>: 问题陈述和研究背景</li>
-<li><strong>机构背景</strong>: 尼日利亚医疗体系、实验设计</li>
-<li><strong>数据</strong>:
-rollout数据、设施调查、服务提供调查、患者调查、家庭调查</li>
-<li><strong>分析与结果</strong>:
-支出效应、资金使用、产出效应、质量效应、健康效应</li>
-<li><strong>机制讨论</strong>: 行动计划、"无形"效应、打破均衡陷阱</li>
-<li><strong>长期效应</strong>: 四年后效果持续</li>
-<li><strong>结论</strong>: 政策含义</li>
+<li><strong>揭示了政府支出中潜在的浪费现象</strong>:
+通过量化财政年度末的支出高峰和质量下降,为政府支出效率问题提供了有力证据</li>
+<li><strong>评估了滚动预算的有效性</strong>:
+通过研究美国司法部的滚动预算政策,为解决浪费性支出提供了一个可行的解决方案</li>
+<li><strong>为政府预算管理提供了政策建议</strong>:
+研究结果表明,允许机构将未使用的资金转入下一个财政年度可以提高政府支出效率</li>
 </ol>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p><strong>尼日利亚公共卫生设施的困境</strong>： - 28%没有电力供应 -
-26%没有自来水 - 11%没有正常工作的厕所 - 14%重复使用注射器</p>
-<p><strong>"Catch-22"困境</strong>：要吸引患者必须改善质量和价格，但没有资源无法实现。</p>
-<h3 id="方法">方法</h3>
-<p><strong>实验设计</strong>：288个公共卫生中心，来自四个州</p>
-<p><strong>随机分配</strong>（三组）： 1.
-<strong>Grant组</strong>（96个）：获得60万奈拉（约1,600美元）赠款 2.
-<strong>Encouragement组</strong>（96个）：仅获得会议干预 3.
-<strong>Control组</strong>（96个）：维持现状</p>
-<p><strong>关键设计特点</strong>： - "意外"宣布：在会议结束时才宣布赠款
-- 资金管理完全由卫生工作者自行决定 - 条件宽松（只需提供银行账户）</p>
-<h3 id="结果">结果</h3>
-<p><strong>资金使用</strong>： - 47%用于改善质量（设备、翻新、员工激励）
-- 35%用于降低患者价格 - 约82%可追踪</p>
-<p><strong>产出效应</strong>： - 产前访问：+17-41% - 分娩：+17-41% -
-住院：+66%</p>
-<p><strong>质量效应</strong>：总体质量指数提高0.4标准差</p>
-<p><strong>健康效应</strong>：儿童死亡率降低24%</p>
-<p><strong>"无形"效应</strong>： - Grant诊所更早制定书面行动计划 -
-计划更详细，更可能寻求社区投入</p>
-<p><strong>长期效应</strong>（四年后）： - 产前访问：+15 log points -
-儿童免疫：+17 log points</p>
-<hr>
-<h2 id="结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
+<h2 id="论文结构">论文结构</h2>
 <ol type="1">
-<li><p><strong>财政约束是真正的约束</strong>：向卫生设施提供额外资金带来了巨大的生产率提高</p></li>
-<li><p><strong>资金被有效使用</strong>：约47%用于改善质量，35%用于降低价格，没有明显的资金挪用</p></li>
-<li><p><strong>打破了"低质量-低数量"均衡</strong>：帮助卫生设施同时解决质量和价格两个约束</p></li>
-<li><p><strong>自主权产生了更好的效果</strong>：无条件赠款优于绩效挂钩拨款</p></li>
-<li><p><strong>效果持久</strong>：即使资金停止，改进仍持续约两年</p></li>
+<li><strong>引言</strong>: 概述研究背景、问题意识和研究意义</li>
+<li><strong>理论模型</strong>:
+建立一个简单的模型来解释"不使用就失去"的预算规则如何导致浪费性支出</li>
+<li><strong>数据描述</strong>:
+介绍用于实证分析的数据集,包括联邦采购数据系统(FPDS)和IT仪表板</li>
+<li><strong>实证分析1</strong>:
+使用FPDS数据检验财政年度末是否存在支出高峰</li>
+<li><strong>实证分析2</strong>:
+使用IT仪表板数据检验财政年度末的支出质量是否下降</li>
+<li><strong>政策分析</strong>: 研究滚动预算政策对支出行为的影响</li>
+<li><strong>福利分析</strong>:
+使用校准后的模型评估滚动预算政策的福利效应</li>
+<li><strong>结论</strong>:
+总结研究结果,讨论政策含义,并提出未来研究方向</li>
 </ol>
-<h3 id="政策含义">政策含义</h3>
+<h2 id="背景">背景</h2>
+<p>许多组织都有在财政年度末到期的预算,这可能导致在年底匆忙将资源用于低质量的项目.美国联邦政府的自由裁量支出预算也面临类似情况,机构必须在财政年度结束前完成拨款.</p>
+<h3 id="挑战">挑战</h3>
 <ol type="1">
-<li><p><strong>资本注入可以打破均衡</strong>：财务"大推动"可能帮助突破困境</p></li>
-<li><p><strong>自主权和灵活性很重要</strong>：让卫生工作者自行决定如何花钱比严格规定用途更有效</p></li>
-<li><p><strong>"培训"不一定是前提</strong>：卫生工作者能够管理赠款资金，即使没有额外培训</p></li>
+<li><strong>"不使用就失去"的预算规则</strong>:
+如果机构不花完预算,剩余的资金将返回国库,降低了年底花钱的机会成本</li>
+<li><strong>预防性储蓄的动机</strong>:
+机构倾向于在预算周期开始时保留资金,以应对未来不确定的支出需求</li>
+<li><strong>缺乏关于年底浪费性支出的硬性证据</strong>:
+尽管有传闻证据,但缺乏关于美国联邦政府年底支出激增以及年底支出价值低于其他时间段的证据</li>
+</ol>
+<h2 id="方法">方法</h2>
+<h3 id="理论模型">理论模型</h3>
+<ul>
+<li><strong>模型设定</strong>:
+作者建立了一个年度预算模型,包括国会和一个政府机构.国会为该机构选择预算,该机构在一年中的每个时期都会获得一个参数,该参数决定了支出的边际价值,并选择一个支出水平以最大化收益递减的目标</li>
+<li><strong>模型特征</strong>:
+具有三个关键特征_预算到期、未来支出价值的不确定性以及每个时期内支出的收益递减</li>
+<li><strong>模型预测</strong>:
+由于不确定性和收益递减,该机构将在年初进行预防性储蓄;在年底,资金到期的前景导致该机构花掉所有剩余资源,即使边际价值低于资金的社会成本,导致年底支出量激增和质量下降</li>
+</ul>
+<h3 id="数据集">数据集</h3>
+<p><strong>1. 联邦采购数据系统(FPDS)</strong> - 时间范围:
+2004年至2009年财政年度 - 数据量: 1460万份合同 - 总支出: 2.6万亿美元 -
+主要内容:
+合同层面信息,包括金额、产品/服务代码、机构、供应商、合同类型、招标机制等
+- 用途: 用于分析联邦采购支出的总体模式,特别是年底支出高峰</p>
+<p><strong>2. IT仪表板(IT Dashboard)</strong> - 数据时间: 截至2010年3月
+- 项目数量: 686个主要IT项目 - 总计划支出: 1300亿美元 - 主要内容:
+项目绩效数据,包括总体评级、成本评级、进度评级、CIO评估等 - 用途:
+用于评估IT项目的质量,特别是年底开始的项目的质量</p>
+<h3 id="实证策略">实证策略</h3>
+<ol type="1">
+<li><strong>支出高峰检验</strong>:
+使用FPDS数据,分析财政年度内每周的采购支出模式,确定是否存在年底支出高峰</li>
+<li><strong>质量下降检验</strong>:
+使用IT仪表板数据,比较在财政年度最后一周开始的项目与在其他时间开始的项目的质量评级</li>
+<li><strong>政策分析</strong>:
+研究美国司法部(DOJ)的滚动预算政策对支出行为的影响.DOJ有权将未使用的IT项目预算转入下一财政年度,作者比较了DOJ的IT和非IT支出,以及DOJ和其他机构之间的支出模式</li>
+<li><strong>福利分析</strong>:
+通过校准模型以适应支出高峰和质量下降,分析允许滚动预算的潜在福利收益</li>
+</ol>
+<h3 id="关键术语">关键术语</h3>
+<ul>
+<li><strong>FPDS (Federal Procurement Data System)</strong>:
+联邦采购数据系统,跟踪所有联邦合同的数据系统</li>
+<li><strong>IT仪表板 (IT Dashboard)</strong>:
+跟踪联邦政府主要IT项目绩效的网站</li>
+<li><strong>CIO (Chief Information Officer)</strong>:
+首席信息官,负责机构的信息技术战略和管理</li>
+<li><strong>Ordered Logit Regression</strong>:
+有序Logit回归,用于分析有序分类因变量的统计模型</li>
+<li><strong>Difference-in-Differences</strong>:
+双重差分法,用于评估政策或干预效果的统计方法</li>
+<li><strong>CRRA (Constant Relative Risk Aversion)</strong>:
+恒定相对风险厌恶效用函数</li>
+<li><strong>CARA (Constant Absolute Risk Aversion)</strong>:
+恒定绝对风险厌恶效用函数</li>
+</ul>
+<h2 id="结果">结果</h2>
+<ol type="1">
+<li><strong>支出高峰</strong>:
+数据显示年底支出大幅增加.在财政年度的最后一周,支出是平时每周平均水平的4.9倍</li>
+<li><strong>质量下降</strong>:
+年底开始的IT项目的质量评级明显较低.在财政年度最后一周开始的项目,获得较低质量分数的可能性要高出2.3到5.6倍</li>
+<li><strong>滚动预算的影响</strong>:
+DOJ的IT支出没有出现支出高峰,最后一周的IT支出仅占3.3%,而非IT支出为9.3%.差异分析表明滚动预算减少了年底支出量</li>
+<li><strong>福利分析</strong>:
+允许滚动预算可以带来福利收益.即使是允许机构在短时间内转入资金的中间政策,也可以产生接近全部滚动价值四分之三的福利收益</li>
+</ol>
+<h2 id="结论">结论</h2>
+<p>本文的核心结论是:由于"不使用就失去"的预算规则,美国联邦政府存在年底浪费性支出现象.具体表现为:</p>
+<ul>
+<li><strong>年底支出量激增</strong>:
+财政年度末的支出明显高于其他时间段</li>
+<li><strong>年底支出质量下降</strong>:
+财政年度末开始的IT项目质量较低</li>
+</ul>
+<p>允许滚动预算可以有效地解决这个问题.DOJ的经验表明滚动预算可以减少年底支出量,并可能提高项目质量.福利分析表明,即使是有限制的滚动预算政策也可以带来显著的福利收益.</p>
+<p>作者建议可以通过允许机构将未使用的资金延期到下个财政年度,用于四个月的宽限期,从而消除因年底浪费性支出造成的大部分效率低下问题.</p>
+<h2 id="未来研究方向">未来研究方向</h2>
+<ol type="1">
+<li><strong>研究国会预算决策对机构支出行为的影响</strong>:
+深入研究国会如何应对滚动预算,以及如何设计预算规则以实现最佳效果</li>
+<li><strong>考虑机构内部的异质性</strong>:
+研究机构内部不同部门的支出行为差异,以及如何设计更有针对性的预算政策</li>
+<li><strong>探索其他解决浪费性支出问题的政策</strong>:
+例如改进预算预测,加强项目管理,或引入竞争性招标</li>
+<li><strong>研究不同类型的资金结转政策</strong>:
+比较无限期结转、有条件结转等不同方案对支出效率的影响</li>
+<li><strong>行为因素的影响</strong>:
+考虑认知偏差、损失厌恶等行为因素对政府部门年底支出行为的影响</li>
+<li><strong>政治因素</strong>:
+研究资金结转政策的政治可行性,以及立法机构对预算控制的考量</li>
+</ol>
+<h2 id="学术思考">学术思考</h2>
+<ol type="1">
+<li><strong>预算制度与创新</strong>:
+"使用或失效"的预算规则是否会抑制政府部门的创新活动?如果政府部门知道它们必须在当年用完所有资金,它们是否会更倾向于投资于风险较低、回报较快的项目?</li>
+<li><strong>政治周期与支出行为</strong>:
+政府部门的支出行为是否会受到政治周期的影响?</li>
+<li><strong>绩效评估指标的设计</strong>:
+如何设计更有效的绩效评估指标,以准确衡量政府部门的支出质量?</li>
+<li><strong>资金结转政策的适用性</strong>:
+资金结转政策是否适用于所有类型的政府部门和项目?</li>
+<li><strong>公共部门与私营部门的对比</strong>:
+比较公共部门和私营部门在预算管理和支出效率方面的差异</li>
 </ol>
 ]]></content>
       <categories>
-        <category>AER</category>
+        <category>公共经济学</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
+        <tag>公共经济学</tag>
+        <tag>预算制度</tag>
       </tags>
   </entry>
   <entry>
@@ -11557,6 +11463,100 @@ Vol. 126, pp. 593-650</li>
       <tags>
         <tag>论文笔记</tag>
         <tag>经济史</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用稻草做砖 — 深度阅读笔记 — Okeke</title>
+    <url>/posts/okeke2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Making Bricks from Straw: Resources and
+Productivity in Health Care</li>
+<li><strong>作者</strong>: Edward N. Okeke (RAND Corporation)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(4):
+1499-1539</li>
+<li><strong>DOI</strong>: 10.1257/aer.20241459</li>
+<li><strong>难度评估</strong>: 高 -
+需要卫生经济学、发展经济学、实验经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>公共卫生设施生产率（Health Care Productivity）</strong>
+指卫生设施将投入（资金、人员、设备）转化为卫生服务产出的效率。在发展中国家，公共卫生设施普遍表现不佳，存在典型的"低质量-低数量"均衡陷阱。</p>
+<p><strong>财政约束（Financial Constraints）</strong>
+指行为主体无法获得足够资金来执行生产性投资的限制。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>发展中国家的卫生设施表现糟糕</strong>：访客常发现设施在中午后只有少数患者和工作人员</p></li>
+<li><p><strong>财政约束的争论</strong>：卫生工作者认为资金不足，但证据参差不齐</p></li>
+<li><p><strong>研究缺口</strong>：缺乏对"卫生设施内部到底发生了什么"的系统研究</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：为什么发展中国家的卫生设施表现如此糟糕？财政约束的作用是什么？</p>
+<p><strong>主要发现</strong>：额外财政资源带来了巨大的生产率提高，效果持续约两年</p>
+<hr>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ol type="1">
+<li><strong>引言</strong>: 问题陈述和研究背景</li>
+<li><strong>机构背景</strong>: 尼日利亚医疗体系、实验设计</li>
+<li><strong>数据</strong>:
+rollout数据、设施调查、服务提供调查、患者调查、家庭调查</li>
+<li><strong>分析与结果</strong>:
+支出效应、资金使用、产出效应、质量效应、健康效应</li>
+<li><strong>机制讨论</strong>: 行动计划、"无形"效应、打破均衡陷阱</li>
+<li><strong>长期效应</strong>: 四年后效果持续</li>
+<li><strong>结论</strong>: 政策含义</li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p><strong>尼日利亚公共卫生设施的困境</strong>： - 28%没有电力供应 -
+26%没有自来水 - 11%没有正常工作的厕所 - 14%重复使用注射器</p>
+<p><strong>"Catch-22"困境</strong>：要吸引患者必须改善质量和价格，但没有资源无法实现。</p>
+<h3 id="方法">方法</h3>
+<p><strong>实验设计</strong>：288个公共卫生中心，来自四个州</p>
+<p><strong>随机分配</strong>（三组）： 1.
+<strong>Grant组</strong>（96个）：获得60万奈拉（约1,600美元）赠款 2.
+<strong>Encouragement组</strong>（96个）：仅获得会议干预 3.
+<strong>Control组</strong>（96个）：维持现状</p>
+<p><strong>关键设计特点</strong>： - "意外"宣布：在会议结束时才宣布赠款
+- 资金管理完全由卫生工作者自行决定 - 条件宽松（只需提供银行账户）</p>
+<h3 id="结果">结果</h3>
+<p><strong>资金使用</strong>： - 47%用于改善质量（设备、翻新、员工激励）
+- 35%用于降低患者价格 - 约82%可追踪</p>
+<p><strong>产出效应</strong>： - 产前访问：+17-41% - 分娩：+17-41% -
+住院：+66%</p>
+<p><strong>质量效应</strong>：总体质量指数提高0.4标准差</p>
+<p><strong>健康效应</strong>：儿童死亡率降低24%</p>
+<p><strong>"无形"效应</strong>： - Grant诊所更早制定书面行动计划 -
+计划更详细，更可能寻求社区投入</p>
+<p><strong>长期效应</strong>（四年后）： - 产前访问：+15 log points -
+儿童免疫：+17 log points</p>
+<hr>
+<h2 id="结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>财政约束是真正的约束</strong>：向卫生设施提供额外资金带来了巨大的生产率提高</p></li>
+<li><p><strong>资金被有效使用</strong>：约47%用于改善质量，35%用于降低价格，没有明显的资金挪用</p></li>
+<li><p><strong>打破了"低质量-低数量"均衡</strong>：帮助卫生设施同时解决质量和价格两个约束</p></li>
+<li><p><strong>自主权产生了更好的效果</strong>：无条件赠款优于绩效挂钩拨款</p></li>
+<li><p><strong>效果持久</strong>：即使资金停止，改进仍持续约两年</p></li>
+</ol>
+<h3 id="政策含义">政策含义</h3>
+<ol type="1">
+<li><p><strong>资本注入可以打破均衡</strong>：财务"大推动"可能帮助突破困境</p></li>
+<li><p><strong>自主权和灵活性很重要</strong>：让卫生工作者自行决定如何花钱比严格规定用途更有效</p></li>
+<li><p><strong>"培训"不一定是前提</strong>：卫生工作者能够管理赠款资金，即使没有额外培训</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
