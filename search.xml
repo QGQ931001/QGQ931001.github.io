@@ -67,97 +67,6 @@ ATT\)</span>一定会比较大,基准模型会存在低估偏误</li>
       </tags>
   </entry>
   <entry>
-    <title>国家能力建设中的溢出效应 — 深度阅读笔记 — Aman-Rana &amp; Minaudier</title>
-    <url>/posts/aman-rana2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Spillovers in State Capacity Building:
-Evidence from the Digitization of Land Records in Pakistan</li>
-<li><strong>作者</strong>: Shan Aman-Rana (University of Virginia),
-Clement Minaudier (City University of London)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(4):
-1459-1498</li>
-<li><strong>DOI</strong>: 10.1257/aer.20240880</li>
-<li><strong>难度评估</strong>: 高 -
-需要发展经济学、组织经济学、计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>国家能力（State
-Capacity）</strong>：指国家有效执行政策和提供公共服务的能力，主要包括税收能力、产权保护和行政能力。</p>
-<p><strong>数字化改革（Digitization
-Reform）</strong>：在发展中国家被视为加强国家能力的有效手段，可减少官僚腐败，提高透明度和效率。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>数字化的双重性</strong>：数字化会"重塑"官僚机构的组织结构，改变不同机构间的关系</p></li>
-<li><p><strong>研究缺口</strong>：现有文献主要关注数字化的直接正面效应，对间接影响的系统性研究不足</p></li>
-<li><p><strong>巴基斯坦案例</strong>：旁遮普省的分阶段土地记录数字化改革（2011-2014年）提供理想准实验场景</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：技术引入官僚机构所带来的组织变化是否会削弱国家能力？</p>
-<p><strong>主要发现</strong>：土地记录数字化导致税收征收下降84%</p>
-<hr>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<h3 id="第1节引言">第1节：引言</h3>
-<h3 id="第2节背景与数据">第2节：背景与数据</h3>
-<ul>
-<li>巴基斯坦旁遮普省的农业收入税（AIT）制度</li>
-<li>土地记录数字化改革三阶段推出（2011-2014年）</li>
-<li>数据来源：税收行政数据、卫星数据、家庭调查数据</li>
-</ul>
-<h3 id="第3节识别策略与结果">第3节：识别策略与结果</h3>
-<ul>
-<li>交错推出的DID设计</li>
-<li>数字化导致税收征收下降84%</li>
-</ul>
-<h3 id="第4节机制分析">第4节：机制分析</h3>
-<ul>
-<li>税基变化</li>
-<li>官僚绩效变化（失去杠杆效应、腐败转移效应）</li>
-</ul>
-<h3 id="第5节讨论">第5节：讨论</h3>
-<h3 id="第6节结论">第6节：结论</h3>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="巴基斯坦农业收入税制度">巴基斯坦农业收入税制度</h4>
-<p>税收由地方官僚（Qanungo）征收，基于耕地面积或利润。征收流程包括年初作物检查（Girdawari）、发出税收需求通知、征收税款。</p>
-<h3 id="实证方法">实证方法</h3>
-<p><strong>识别策略</strong>： - 交错推出的DID设计 -
-使用计划推出时间而非实际时间定义处理变量 - 事件研究验证平行趋势</p>
-<p><strong>主要结果</strong>： - 数字化导致税收征收下降84%</p>
-<h3 id="机制分析">机制分析</h3>
-<p><strong>税基变化</strong>：使用卫星数据、农户调查数据验证</p>
-<p><strong>官僚绩效变化</strong>： -
-理论模型：失去杠杆效应、腐败转移效应 -
-税收评估变化：申报耕地面积下降10%、税收需求下降45% -
-征收绩效下降：征收率下降29.5个百分点</p>
-<hr>
-<h2 id="结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>技术引入可能损害国家能力</strong>：数字化在改善产权保护的同时，可能损害税收能力</p></li>
-<li><p><strong>组织变化是关键机制</strong>：官僚失去对农民土地信息的控制，导致征收能力下降</p></li>
-<li><p><strong>政策启示</strong>：技术投资必须配合组织变革</p></li>
-</ol>
-<hr>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<ol type="1">
-<li>其他国家类似数字化改革的验证</li>
-<li>配套政策干预的效果</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>When Should You Adjust Standard Errors for Clustering — 深度分析 — Abadie Et Al.</title>
     <url>/posts/abadie2023/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -434,6 +343,97 @@ Bootstrap是否是更好的选择?它与本文的TSCB有何关系?</p></li>
 ]]></content>
       <categories>
         <category>计量经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>国家能力建设中的溢出效应 — 深度阅读笔记 — Aman-Rana &amp; Minaudier</title>
+    <url>/posts/aman-rana2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Spillovers in State Capacity Building:
+Evidence from the Digitization of Land Records in Pakistan</li>
+<li><strong>作者</strong>: Shan Aman-Rana (University of Virginia),
+Clement Minaudier (City University of London)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(4):
+1459-1498</li>
+<li><strong>DOI</strong>: 10.1257/aer.20240880</li>
+<li><strong>难度评估</strong>: 高 -
+需要发展经济学、组织经济学、计量经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>国家能力（State
+Capacity）</strong>：指国家有效执行政策和提供公共服务的能力，主要包括税收能力、产权保护和行政能力。</p>
+<p><strong>数字化改革（Digitization
+Reform）</strong>：在发展中国家被视为加强国家能力的有效手段，可减少官僚腐败，提高透明度和效率。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>数字化的双重性</strong>：数字化会"重塑"官僚机构的组织结构，改变不同机构间的关系</p></li>
+<li><p><strong>研究缺口</strong>：现有文献主要关注数字化的直接正面效应，对间接影响的系统性研究不足</p></li>
+<li><p><strong>巴基斯坦案例</strong>：旁遮普省的分阶段土地记录数字化改革（2011-2014年）提供理想准实验场景</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：技术引入官僚机构所带来的组织变化是否会削弱国家能力？</p>
+<p><strong>主要发现</strong>：土地记录数字化导致税收征收下降84%</p>
+<hr>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<h3 id="第1节引言">第1节：引言</h3>
+<h3 id="第2节背景与数据">第2节：背景与数据</h3>
+<ul>
+<li>巴基斯坦旁遮普省的农业收入税（AIT）制度</li>
+<li>土地记录数字化改革三阶段推出（2011-2014年）</li>
+<li>数据来源：税收行政数据、卫星数据、家庭调查数据</li>
+</ul>
+<h3 id="第3节识别策略与结果">第3节：识别策略与结果</h3>
+<ul>
+<li>交错推出的DID设计</li>
+<li>数字化导致税收征收下降84%</li>
+</ul>
+<h3 id="第4节机制分析">第4节：机制分析</h3>
+<ul>
+<li>税基变化</li>
+<li>官僚绩效变化（失去杠杆效应、腐败转移效应）</li>
+</ul>
+<h3 id="第5节讨论">第5节：讨论</h3>
+<h3 id="第6节结论">第6节：结论</h3>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="巴基斯坦农业收入税制度">巴基斯坦农业收入税制度</h4>
+<p>税收由地方官僚（Qanungo）征收，基于耕地面积或利润。征收流程包括年初作物检查（Girdawari）、发出税收需求通知、征收税款。</p>
+<h3 id="实证方法">实证方法</h3>
+<p><strong>识别策略</strong>： - 交错推出的DID设计 -
+使用计划推出时间而非实际时间定义处理变量 - 事件研究验证平行趋势</p>
+<p><strong>主要结果</strong>： - 数字化导致税收征收下降84%</p>
+<h3 id="机制分析">机制分析</h3>
+<p><strong>税基变化</strong>：使用卫星数据、农户调查数据验证</p>
+<p><strong>官僚绩效变化</strong>： -
+理论模型：失去杠杆效应、腐败转移效应 -
+税收评估变化：申报耕地面积下降10%、税收需求下降45% -
+征收绩效下降：征收率下降29.5个百分点</p>
+<hr>
+<h2 id="结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>技术引入可能损害国家能力</strong>：数字化在改善产权保护的同时，可能损害税收能力</p></li>
+<li><p><strong>组织变化是关键机制</strong>：官僚失去对农民土地信息的控制，导致征收能力下降</p></li>
+<li><p><strong>政策启示</strong>：技术投资必须配合组织变革</p></li>
+</ol>
+<hr>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<ol type="1">
+<li>其他国家类似数字化改革的验证</li>
+<li>配套政策干预的效果</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -1162,184 +1162,6 @@ Cθ ≠ ∅（对所有全支撑先验）</p>
       </tags>
   </entry>
   <entry>
-    <title>长期住房收益率动态 — 深度阅读笔记 — Bäcker-Peral, Hazell &amp; Mian</title>
-    <url>/posts/backer-peral2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Dynamics of the Long-Term Housing Yield:
-Evidence from Natural Experiments</li>
-<li><strong>作者</strong>: Verónica Bäcker-Peral (普林斯顿), Jonathon
-Hazell (LSE), Atif Mian (普林斯顿 &amp; NBER)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3):
-1014-1051</li>
-<li><strong>DOI</strong>: 10.1257/aer.20240513</li>
-<li><strong>难度评估</strong>: 高 -
-需要房地产金融、计量经济学、自然实验方法基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>长期住房收益率（Long-Term Housing
-Yield）</strong>：预期长期均衡时的租金价格比率，反映市场对长期住房回报率的预期。</p>
-<p><strong>租约延长（Lease
-Extension）</strong>：英国房产的租约可以被延长90年或更长时间，形成自然实验。</p>
-<p><strong>自然实验方法（Natural Experiment
-Approach）</strong>：利用租约延长前后同一房产的价格变化来识别长期收益率。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>长期收益率的重要性</strong>：揭示市场对长期均衡的预期，帮助理解中期冲击消散后的经济状态</p></li>
-<li><p><strong>测量困难</strong>：长期收益率难以测量，需要能区分长期和中期价格行为的数据</p></li>
-<li><p><strong>英国独特制度</strong>：大多数公寓以长期租约（leasehold）形式买卖，可定期延长</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：如何利用英国租约延长的自然实验来估计预期的长期住房收益率y*？</p>
-<p><strong>主要发现</strong>： -
-y<em>从2000-2006年的约5.2%下降到2024年的2.7% - 非弹性市场下降更陡峭 -
-气候风险暴露较高的地区y</em>仍然较高</p>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
-<ul>
-<li>问题陈述和研究动机</li>
-<li>数据和方法概述</li>
-<li>主要发现预览</li>
-</ul>
-<h3 id="第二节预期长期住房收益率的定义">第二节：预期长期住房收益率的定义</h3>
-<ul>
-<li>收益率的定义</li>
-<li>y*的分解</li>
-</ul>
-<h3 id="第三节数据和租约延长详情">第三节：数据和租约延长详情</h3>
-<ul>
-<li><strong>3.1 数据构建</strong></li>
-<li><strong>3.2 租约延长制度详情</strong></li>
-<li><strong>3.3 交易滞后</strong></li>
-</ul>
-<h3 id="第四节实证方法">第四节：实证方法</h3>
-<ul>
-<li>双重差分估计</li>
-<li>非线性最小二乘估计y*</li>
-</ul>
-<h3 id="第五节主要结果">第五节：主要结果</h3>
-<ul>
-<li>y*的时间序列动态</li>
-<li>横截面异质性</li>
-</ul>
-<h3 id="第六节宏观经济含义">第六节：宏观经济含义</h3>
-<ul>
-<li>与其他市场的比较</li>
-<li>当前价格的持久性指标</li>
-<li>供给弹性和气候风险的影响</li>
-</ul>
-<h3 id="第七节结论">第七节：结论</h3>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="英国房产制度">英国房产制度</h4>
-<p><strong>两种产权形式</strong>： -
-Freehold（永久产权）：对房产的永久所有权 -
-Leasehold（租约）：长期租约，可买卖，通常在起源时长达100年以上</p>
-<p><strong>租约延长机制</strong>： -
-1993年《租约改革法》授予公寓租约持有人权利： -
-获得比原始租约长90年的新租约 - 需向永久产权持有人支付一次性协商费用</p>
-<p><strong>关键事实</strong>： - 英国有5百万租约房产 -
-70%的租约是剩余期限≤250年的"短租约" - 30%是剩余期限≥700年的"长租约" -
-几乎不存在250-700年之间的租约</p>
-<h3 id="实证方法">实证方法</h3>
-<h4 id="自然实验">自然实验</h4>
-<p><strong>核心洞察</strong>： -
-同一房产在延长前后的价格差异反映了长期收益率 - 延长前价格反映短期价值 -
-延长后价格反映短期和长期价值 - 价格差异几乎完全取决于长期收益率</p>
-<p><strong>识别策略</strong>： - 处理组：在t-u时刻延长租约的房产 -
-对照组：类似的未延长租约的房产 - 比较两组在延长前后的价格增长</p>
-<h4 id="估计方程">估计方程</h4>
-<p><strong>双重差分</strong>： <span class="math display">\[\Delta \log
-P_{it} = \alpha + \beta \cdot Extension_{i} + \gamma_t + \delta X_i +
-\varepsilon_{it}\]</span></p>
-<p><strong>非线最小二乘</strong>： 使用贴现现金流定价方程： <span class="math display">\[P_{extended} = P_{short} \cdot e^{y^* \cdot
-\Delta T}\]</span></p>
-<p>其中ΔT是延长的年数</p>
-<h3 id="主要结果">主要结果</h3>
-<h4 id="时间序列动态">时间序列动态</h4>
-<p><strong>核心发现</strong>： - 2000-2006年：y<em>稳定在约5.2% -
-2008年大衰退开始：y</em>开始下降 - 2024年：达到2.7%的低点 -
-大衰退导致的下降幅度大，相当于长期价格-租金比近翻倍</p>
-<p><strong>关键特征</strong>： - y*在疫情期间及之后保持相对稳定 -
-2024年的月度估计显示更精确</p>
-<h4 id="横截面异质性">横截面异质性</h4>
-<p><strong>供给弹性效应</strong>： -
-非弹性市场（供给受限地区）y*下降更陡峭 - 因为需求增加导致估值上升</p>
-<p><strong>气候风险效应</strong>： -
-长期气候风险较高的地区（洪水、沉降暴露） - y<em>水平较高 -
-说明y</em>包含住房风险溢价</p>
-<h3 id="宏观经济含义">宏观经济含义</h3>
-<h4 id="与其他市场的比较">与其他市场的比较</h4>
-<p><strong>长期债券收益率</strong>： - 长期债券收益率与y*密切追踪 -
-表明下降是广泛而非住房特有的</p>
-<p><strong>全球住房和其他资产</strong>： -
-全球住房和其他资产的长期收益率趋势类似 -
-表明下降可能与预期长期安全资产收益率r*的下降有关</p>
-<h4 id="当前vs长期收益率">当前vs长期收益率</h4>
-<p><strong>实时指标</strong>： - 当前租金价格比与y*的比较 -
-表明市场对未来住房估值的预期持久性</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p>**长期住房收益率y*显著下降**：从约5%下降到2.7%，与大衰退相关</p></li>
-<li><p><strong>方法论创新</strong>：利用租约延长的自然实验，"差掉"收益率曲线的短端</p></li>
-<li><p><strong>横截面异质性</strong>：供给弹性和气候风险影响y*的水平和动态</p></li>
-<li><p><strong>实时估计可用</strong>：数据和代码公开，实时更新</p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><p><strong>方法论</strong>：首个利用租约延长自然实验估计长期住房收益率</p></li>
-<li><p><strong>数据</strong>：构建并公开租约延长行政数据集</p></li>
-<li><p><strong>宏观经济</strong>：提供关于r*等重要宏观经济参数的见解</p></li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
-<ol type="1">
-<li><p>利用新方法研究其他资产类别的长期收益率</p></li>
-<li><p>扩展到其他国家的住房市场</p></li>
-</ol>
-<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
-<ol type="1">
-<li><p><strong>与结构模型的比较</strong>：自然实验方法与结构模型方法的优劣比较</p></li>
-<li><p><strong>政策应用</strong>：y*的实时估计如何用于货币政策和宏观审慎政策</p></li>
-</ol>
-<hr>
-<h2 id="学术思考">7. 学术思考</h2>
-<h3 id="核心学术洞察">核心学术洞察</h3>
-<ol type="1">
-<li><p><strong>"差掉短端"的识别策略</strong>：自然实验方法的核心洞察是，租约延长前的价格测量短期价值，延长后的价格测量短期和长期价值。因此，价格差异"差掉"了收益率曲线的短端，只反映长期收益率。</p></li>
-<li><p><strong>长期vs中期信息的权衡</strong>：金融资产的典型远期收益率最多提供10-30年的信息，而租约延长提供接近一个世纪的信息。</p></li>
-<li><p><strong>实时估计的优势</strong>：大多数宏观金融方法依赖于结构性假设，自然实验方法不依赖这些假设，因此可以提供更稳健的实时估计。</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p>**为什么长期住房收益率y*下降这么多？**
-与预期长期安全资产收益率r*的下降有何关系？</p></li>
-<li><p><strong>自然实验方法的识别假设是什么？</strong>
-平行趋势假设是否可靠？</p></li>
-<li><p><strong>租约延长数据如何构建？</strong>
-匹配关闭租约和开放租约的技术细节是什么？</p></li>
-<li><p>**y*与长期债券收益率的追踪关系有何含义？**
-这表明什么共同驱动因素？</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>In Harm&#39;s Way? Infrastructure Investments and the Persistence of Coastal Cities — 深度阅读笔记 — Balboni</title>
     <url>/posts/balboni2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -1699,6 +1521,184 @@ Moi改革后)，这是否影响校准的可靠性？</p>
         <tag>基础设施经济学</tag>
         <tag>空间经济学</tag>
         <tag>气候经济学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>长期住房收益率动态 — 深度阅读笔记 — Bäcker-Peral, Hazell &amp; Mian</title>
+    <url>/posts/backer-peral2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Dynamics of the Long-Term Housing Yield:
+Evidence from Natural Experiments</li>
+<li><strong>作者</strong>: Verónica Bäcker-Peral (普林斯顿), Jonathon
+Hazell (LSE), Atif Mian (普林斯顿 &amp; NBER)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(3):
+1014-1051</li>
+<li><strong>DOI</strong>: 10.1257/aer.20240513</li>
+<li><strong>难度评估</strong>: 高 -
+需要房地产金融、计量经济学、自然实验方法基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>长期住房收益率（Long-Term Housing
+Yield）</strong>：预期长期均衡时的租金价格比率，反映市场对长期住房回报率的预期。</p>
+<p><strong>租约延长（Lease
+Extension）</strong>：英国房产的租约可以被延长90年或更长时间，形成自然实验。</p>
+<p><strong>自然实验方法（Natural Experiment
+Approach）</strong>：利用租约延长前后同一房产的价格变化来识别长期收益率。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>长期收益率的重要性</strong>：揭示市场对长期均衡的预期，帮助理解中期冲击消散后的经济状态</p></li>
+<li><p><strong>测量困难</strong>：长期收益率难以测量，需要能区分长期和中期价格行为的数据</p></li>
+<li><p><strong>英国独特制度</strong>：大多数公寓以长期租约（leasehold）形式买卖，可定期延长</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：如何利用英国租约延长的自然实验来估计预期的长期住房收益率y*？</p>
+<p><strong>主要发现</strong>： -
+y<em>从2000-2006年的约5.2%下降到2024年的2.7% - 非弹性市场下降更陡峭 -
+气候风险暴露较高的地区y</em>仍然较高</p>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
+<ul>
+<li>问题陈述和研究动机</li>
+<li>数据和方法概述</li>
+<li>主要发现预览</li>
+</ul>
+<h3 id="第二节预期长期住房收益率的定义">第二节：预期长期住房收益率的定义</h3>
+<ul>
+<li>收益率的定义</li>
+<li>y*的分解</li>
+</ul>
+<h3 id="第三节数据和租约延长详情">第三节：数据和租约延长详情</h3>
+<ul>
+<li><strong>3.1 数据构建</strong></li>
+<li><strong>3.2 租约延长制度详情</strong></li>
+<li><strong>3.3 交易滞后</strong></li>
+</ul>
+<h3 id="第四节实证方法">第四节：实证方法</h3>
+<ul>
+<li>双重差分估计</li>
+<li>非线性最小二乘估计y*</li>
+</ul>
+<h3 id="第五节主要结果">第五节：主要结果</h3>
+<ul>
+<li>y*的时间序列动态</li>
+<li>横截面异质性</li>
+</ul>
+<h3 id="第六节宏观经济含义">第六节：宏观经济含义</h3>
+<ul>
+<li>与其他市场的比较</li>
+<li>当前价格的持久性指标</li>
+<li>供给弹性和气候风险的影响</li>
+</ul>
+<h3 id="第七节结论">第七节：结论</h3>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="英国房产制度">英国房产制度</h4>
+<p><strong>两种产权形式</strong>： -
+Freehold（永久产权）：对房产的永久所有权 -
+Leasehold（租约）：长期租约，可买卖，通常在起源时长达100年以上</p>
+<p><strong>租约延长机制</strong>： -
+1993年《租约改革法》授予公寓租约持有人权利： -
+获得比原始租约长90年的新租约 - 需向永久产权持有人支付一次性协商费用</p>
+<p><strong>关键事实</strong>： - 英国有5百万租约房产 -
+70%的租约是剩余期限≤250年的"短租约" - 30%是剩余期限≥700年的"长租约" -
+几乎不存在250-700年之间的租约</p>
+<h3 id="实证方法">实证方法</h3>
+<h4 id="自然实验">自然实验</h4>
+<p><strong>核心洞察</strong>： -
+同一房产在延长前后的价格差异反映了长期收益率 - 延长前价格反映短期价值 -
+延长后价格反映短期和长期价值 - 价格差异几乎完全取决于长期收益率</p>
+<p><strong>识别策略</strong>： - 处理组：在t-u时刻延长租约的房产 -
+对照组：类似的未延长租约的房产 - 比较两组在延长前后的价格增长</p>
+<h4 id="估计方程">估计方程</h4>
+<p><strong>双重差分</strong>： <span class="math display">\[\Delta \log
+P_{it} = \alpha + \beta \cdot Extension_{i} + \gamma_t + \delta X_i +
+\varepsilon_{it}\]</span></p>
+<p><strong>非线最小二乘</strong>： 使用贴现现金流定价方程： <span class="math display">\[P_{extended} = P_{short} \cdot e^{y^* \cdot
+\Delta T}\]</span></p>
+<p>其中ΔT是延长的年数</p>
+<h3 id="主要结果">主要结果</h3>
+<h4 id="时间序列动态">时间序列动态</h4>
+<p><strong>核心发现</strong>： - 2000-2006年：y<em>稳定在约5.2% -
+2008年大衰退开始：y</em>开始下降 - 2024年：达到2.7%的低点 -
+大衰退导致的下降幅度大，相当于长期价格-租金比近翻倍</p>
+<p><strong>关键特征</strong>： - y*在疫情期间及之后保持相对稳定 -
+2024年的月度估计显示更精确</p>
+<h4 id="横截面异质性">横截面异质性</h4>
+<p><strong>供给弹性效应</strong>： -
+非弹性市场（供给受限地区）y*下降更陡峭 - 因为需求增加导致估值上升</p>
+<p><strong>气候风险效应</strong>： -
+长期气候风险较高的地区（洪水、沉降暴露） - y<em>水平较高 -
+说明y</em>包含住房风险溢价</p>
+<h3 id="宏观经济含义">宏观经济含义</h3>
+<h4 id="与其他市场的比较">与其他市场的比较</h4>
+<p><strong>长期债券收益率</strong>： - 长期债券收益率与y*密切追踪 -
+表明下降是广泛而非住房特有的</p>
+<p><strong>全球住房和其他资产</strong>： -
+全球住房和其他资产的长期收益率趋势类似 -
+表明下降可能与预期长期安全资产收益率r*的下降有关</p>
+<h4 id="当前vs长期收益率">当前vs长期收益率</h4>
+<p><strong>实时指标</strong>： - 当前租金价格比与y*的比较 -
+表明市场对未来住房估值的预期持久性</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p>**长期住房收益率y*显著下降**：从约5%下降到2.7%，与大衰退相关</p></li>
+<li><p><strong>方法论创新</strong>：利用租约延长的自然实验，"差掉"收益率曲线的短端</p></li>
+<li><p><strong>横截面异质性</strong>：供给弹性和气候风险影响y*的水平和动态</p></li>
+<li><p><strong>实时估计可用</strong>：数据和代码公开，实时更新</p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><p><strong>方法论</strong>：首个利用租约延长自然实验估计长期住房收益率</p></li>
+<li><p><strong>数据</strong>：构建并公开租约延长行政数据集</p></li>
+<li><p><strong>宏观经济</strong>：提供关于r*等重要宏观经济参数的见解</p></li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
+<ol type="1">
+<li><p>利用新方法研究其他资产类别的长期收益率</p></li>
+<li><p>扩展到其他国家的住房市场</p></li>
+</ol>
+<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
+<ol type="1">
+<li><p><strong>与结构模型的比较</strong>：自然实验方法与结构模型方法的优劣比较</p></li>
+<li><p><strong>政策应用</strong>：y*的实时估计如何用于货币政策和宏观审慎政策</p></li>
+</ol>
+<hr>
+<h2 id="学术思考">7. 学术思考</h2>
+<h3 id="核心学术洞察">核心学术洞察</h3>
+<ol type="1">
+<li><p><strong>"差掉短端"的识别策略</strong>：自然实验方法的核心洞察是，租约延长前的价格测量短期价值，延长后的价格测量短期和长期价值。因此，价格差异"差掉"了收益率曲线的短端，只反映长期收益率。</p></li>
+<li><p><strong>长期vs中期信息的权衡</strong>：金融资产的典型远期收益率最多提供10-30年的信息，而租约延长提供接近一个世纪的信息。</p></li>
+<li><p><strong>实时估计的优势</strong>：大多数宏观金融方法依赖于结构性假设，自然实验方法不依赖这些假设，因此可以提供更稳健的实时估计。</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p>**为什么长期住房收益率y*下降这么多？**
+与预期长期安全资产收益率r*的下降有何关系？</p></li>
+<li><p><strong>自然实验方法的识别假设是什么？</strong>
+平行趋势假设是否可靠？</p></li>
+<li><p><strong>租约延长数据如何构建？</strong>
+匹配关闭租约和开放租约的技术细节是什么？</p></li>
+<li><p>**y*与长期债券收益率的追踪关系有何含义？**
+这表明什么共同驱动因素？</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -7550,80 +7550,6 @@ space)讨论有什么启示?发展中国家在 ZLB
       </tags>
   </entry>
   <entry>
-    <title>相似工作的同酬 — 深度阅读笔记 — Gentile Passaro, Kojima &amp; Pakzad-Hurson</title>
-    <url>/posts/gentile-passaro2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Equal Pay for Similar Work</li>
-<li><strong>作者</strong>: Diego Gentile Passaro (Amazon Science),
-Fuhito Kojima (东京大学), Bobak Pakzad-Hurson (布朗大学)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3):
-977-1013</li>
-<li><strong>DOI</strong>: 10.1257/aer.20230832</li>
-<li><strong>难度评估</strong>: 高 -
-需要劳动经济学、搜索理论、计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>同工同酬法（EPSW）</strong>：要求对"相似"工作支付同等报酬，比"相同工作"更宽泛。</p>
-<p><strong>性别工资差距（Gender Wage
-Gap）</strong>：男性和女性工人之间的平均工资差异。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><strong>EPSW政策日益普遍</strong>：美国45.9%的劳动力受EPSW管辖</li>
-<li><strong>执行困难</strong>："相同工作"难以定义</li>
-<li><strong>意外的均衡效应</strong>：EPSW可能产生违背政策初衷的均衡效应</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：EPSW对劳动力市场结果的均衡效应是什么？是否会反而加剧性别工资差距？</p>
-<p><strong>关键发现</strong>：EPSW导致企业按性别隔离劳动力，在男性占多数的劳动力市场中会增加性别工资差距</p>
-<hr>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ol type="1">
-<li><strong>引言</strong>: EPSW政策背景、研究问题、主要发现</li>
-<li><strong>静态模型</strong>:
-设定、无EPSW均衡、EPSW均衡、工资差距效应</li>
-<li><strong>动态搜索模型</strong>: 搜索摩擦和再配置摩擦、动态均衡</li>
-<li><strong>实证分析</strong>: 智利2009年EPSW政策、因果识别</li>
-<li><strong>结论</strong></li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="epsw-vs-epew">EPSW vs EPEW</h4>
-<p><strong>EPEW</strong>：要求"相同工作"获得相同报酬
-<strong>EPSW</strong>：更宽泛，要求对"相似工作"支付同等报酬</p>
-<h3 id="理论模型">理论模型</h3>
-<h4 id="静态模型">静态模型</h4>
-<p><strong>核心机制</strong>： -
-EPSW要求雇主对相似工作的所有工人支付相同工资 -
-企业会调整劳动力组合来降低成本 - 导致按性别隔离劳动力</p>
-<p><strong>均衡效应</strong>： -
-男性占多数的市场：女性被分配到低工资任务 - 女性占多数的市场：结果相反 -
-总体可能加剧工资差距</p>
-<h4 id="动态搜索模型">动态搜索模型</h4>
-<p><strong>搜索摩擦</strong>：工人寻找工作需要时间和成本
-<strong>再配置摩擦</strong>：企业调整劳动力组合需要成本</p>
-<hr>
-<h2 id="结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><strong>EPSW可能反效果</strong>：导致劳动力性别隔离</li>
-<li><strong>男性占多数市场中加剧差距</strong>：实证证实</li>
-<li><strong>政策启示</strong>：同酬法设计需考虑均衡效应</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>A Long and a Short Leg Make for a Wobbly Equilibrium — 深度阅读笔记 — Gârleanu, Panageas &amp; Zheng</title>
     <url>/posts/garleanu2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -7832,6 +7758,80 @@ calls）如何与模型中的反馈机制互动？</li>
         <tag>AER</tag>
         <tag>资产定价</tag>
         <tag>卖空市场</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>相似工作的同酬 — 深度阅读笔记 — Gentile Passaro, Kojima &amp; Pakzad-Hurson</title>
+    <url>/posts/gentile-passaro2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Equal Pay for Similar Work</li>
+<li><strong>作者</strong>: Diego Gentile Passaro (Amazon Science),
+Fuhito Kojima (东京大学), Bobak Pakzad-Hurson (布朗大学)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(3):
+977-1013</li>
+<li><strong>DOI</strong>: 10.1257/aer.20230832</li>
+<li><strong>难度评估</strong>: 高 -
+需要劳动经济学、搜索理论、计量经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>同工同酬法（EPSW）</strong>：要求对"相似"工作支付同等报酬，比"相同工作"更宽泛。</p>
+<p><strong>性别工资差距（Gender Wage
+Gap）</strong>：男性和女性工人之间的平均工资差异。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><strong>EPSW政策日益普遍</strong>：美国45.9%的劳动力受EPSW管辖</li>
+<li><strong>执行困难</strong>："相同工作"难以定义</li>
+<li><strong>意外的均衡效应</strong>：EPSW可能产生违背政策初衷的均衡效应</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：EPSW对劳动力市场结果的均衡效应是什么？是否会反而加剧性别工资差距？</p>
+<p><strong>关键发现</strong>：EPSW导致企业按性别隔离劳动力，在男性占多数的劳动力市场中会增加性别工资差距</p>
+<hr>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ol type="1">
+<li><strong>引言</strong>: EPSW政策背景、研究问题、主要发现</li>
+<li><strong>静态模型</strong>:
+设定、无EPSW均衡、EPSW均衡、工资差距效应</li>
+<li><strong>动态搜索模型</strong>: 搜索摩擦和再配置摩擦、动态均衡</li>
+<li><strong>实证分析</strong>: 智利2009年EPSW政策、因果识别</li>
+<li><strong>结论</strong></li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="epsw-vs-epew">EPSW vs EPEW</h4>
+<p><strong>EPEW</strong>：要求"相同工作"获得相同报酬
+<strong>EPSW</strong>：更宽泛，要求对"相似工作"支付同等报酬</p>
+<h3 id="理论模型">理论模型</h3>
+<h4 id="静态模型">静态模型</h4>
+<p><strong>核心机制</strong>： -
+EPSW要求雇主对相似工作的所有工人支付相同工资 -
+企业会调整劳动力组合来降低成本 - 导致按性别隔离劳动力</p>
+<p><strong>均衡效应</strong>： -
+男性占多数的市场：女性被分配到低工资任务 - 女性占多数的市场：结果相反 -
+总体可能加剧工资差距</p>
+<h4 id="动态搜索模型">动态搜索模型</h4>
+<p><strong>搜索摩擦</strong>：工人寻找工作需要时间和成本
+<strong>再配置摩擦</strong>：企业调整劳动力组合需要成本</p>
+<hr>
+<h2 id="结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><strong>EPSW可能反效果</strong>：导致劳动力性别隔离</li>
+<li><strong>男性占多数市场中加剧差距</strong>：实证证实</li>
+<li><strong>政策启示</strong>：同酬法设计需考虑均衡效应</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -8471,6 +8471,202 @@ care，而这些儿童的青少年期和早期成年期死亡率是同龄人的3
 ]]></content>
       <categories>
         <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>你所不知道的可能对你有益 — 深度阅读笔记 — Höner &amp; Samuelson</title>
+    <url>/posts/honner2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: What You Don't Know May Be Good for You</li>
+<li><strong>作者</strong>: Johannes Höner (Yale), Larry Samuelson
+(University of Nevada, Reno)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(3):
+1097-1147</li>
+<li><strong>DOI</strong>: 10.1257/aer.20250053</li>
+<li><strong>难度评估</strong>: 高 -
+需要博弈论、声誉理论、机制设计基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>专家-客户模型（Expert-Client
+Model）</strong>：长期存在的专家与短期客户匹配的经济学模型。专家拥有私人信息，选择客户类型，客户根据观察到的信息形成对专家的信念。</p>
+<p><strong>声誉理论（Reputation
+Theory）</strong>：研究代理人如何通过行为建立声誉的理论。经典工作包括Kreps
+&amp; Wilson（1982）的序列均衡声誉模型。</p>
+<p><strong>好斯特定律（Goodhart's
+Law）</strong>：当一个指标成为目标时，它就不再是一个好的指标。意味着度量本身会改变被度量行为的激励结构。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>医疗报告卡（Medical Report
+Cards）</strong>：纽约州1980年代末引入心脏手术报告系统，要求报告手术结果。医生评估称"所谓最好的外科医生只做最简单的病例"。</p></li>
+<li><p><strong>信息与激励的冲突</strong>：信息揭示帮助客户识别更好的专家，但同时也可能扭曲专家的激励，使其拒绝高风险客户以维护声誉。</p></li>
+<li><p><strong>声誉操纵问题</strong>：当信息由被评价者构建时，评价系统可能被操纵。</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：当声誉的构建者能够操纵相关信息时，声誉如何建立？信息揭示（如报告卡）是否总是有益的？</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><p><strong>理论贡献</strong>：构建了长期专家与短期客户匹配的一般模型，揭示了信息揭示的非直观后果。</p></li>
+<li><p><strong>政策含义</strong>：对医疗报告卡等政策设计有直接启示——信息揭示可能适得其反。</p></li>
+<li><p><strong>应用广泛</strong>：模型框架可应用于医疗、教育、金融等多个领域的声誉机制设计。</p></li>
+</ol>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
+<ul>
+<li>医疗报告卡案例</li>
+<li>Goodhart定律</li>
+<li>研究问题介绍</li>
+</ul>
+<h3 id="第二节模型the-model">第二节：模型（The Model）</h3>
+<ul>
+<li><strong>II.1 Stage Game</strong>：单期博弈中的专家-客户交互</li>
+<li><strong>II.2 Stage-Game均衡与有效配置</strong></li>
+<li><strong>II.3 重复博弈（无报告卡）均衡</strong></li>
+<li><strong>II.4 完全监控的重复博弈，有效配置</strong></li>
+<li><strong>II.5 完全监控的重复博弈，均衡</strong></li>
+</ul>
+<h3 id="第三节带报告卡的重复博弈">第三节：带报告卡的重复博弈</h3>
+<ul>
+<li><strong>III.1
+结构</strong>：连续时间，无限期界，专家连续统，客户连续统</li>
+<li><strong>III.2
+策略</strong>：确定性策略、极值策略、停时策略、截断策略</li>
+<li><strong>III.3 信念</strong>：专家信念与市场信念的区分</li>
+<li><strong>III.4 均衡定义</strong></li>
+<li><strong>III.5 有效配置</strong>：截断策略</li>
+<li><strong>III.6 均衡是无效率的</strong></li>
+<li><strong>III.7 等待的诱惑</strong></li>
+<li><strong>III.8 专家必须混合，但不确定能否做到</strong></li>
+<li><strong>III.9 均衡存在、唯一、是停时上的混合</strong></li>
+<li><strong>III.10 福利分析</strong></li>
+</ul>
+<h3 id="第四节扩展extensions">第四节：扩展（Extensions）</h3>
+<ul>
+<li><strong>IV.1 茶歇均衡</strong>：非马尔科夫均衡</li>
+<li><strong>IV.2 随机揭示柠檬</strong>：失败以一定概率被随机揭示</li>
+<li><strong>IV.3 随机隐藏柠檬</strong>：失败以一定概率被隐藏</li>
+<li><strong>IV.4 价格控制</strong>：固定价格可实现有效均衡</li>
+<li><strong>IV.5 好消息</strong>：突破性成果的特殊情况</li>
+<li><strong>IV.6 未知客户类型</strong>：客户不知自身类型</li>
+<li><strong>IV.7 干中学</strong>：专家类型可变</li>
+</ul>
+<h3 id="第五节讨论discussion">第五节：讨论（Discussion）</h3>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="医疗报告卡案例">医疗报告卡案例</h4>
+<p>纽约州1980年代末引入心脏手术报告系统，强制报告手术结果。这一政策的初衷是帮助患者识别更好的外科医生，但医生们反映"所谓最好的外科医生只做最简单的病例"。</p>
+<h4 id="goodhart定律的核心洞见">Goodhart定律的核心洞见</h4>
+<p>当一个度量成为目标时，它就不再是一个好的度量。度量的变化会改变被度量者的激励，可能导致行为扭曲。</p>
+<h3 id="模型设定">模型设定</h3>
+<h4 id="参与人">参与人</h4>
+<ol type="1">
+<li><strong>专家（Expert）</strong>：长期存在，有类型G（好）或B（坏），先验概率q</li>
+<li><strong>客户（Client）</strong>：短期存在，有类型H（高风险）或L（低风险）</li>
+<li><strong>市场</strong>：观察价格和报告卡，形成对专家类型的信念</li>
+</ol>
+<h4 id="阶段博弈stage-game">阶段博弈（Stage Game）</h4>
+<p><strong>成功概率</strong>： - 好专家（G）+ 高风险客户（H）：<span class="math inline">\({1-z}\)</span> - 好专家（G）+ 低风险客户（L）：1 -
+坏专家（B）+ 任何客户：1（无失败）</p>
+<h3 id="关键结果">关键结果</h3>
+<h4 id="有效配置">有效配置</h4>
+<p>有效政策是<strong>截断策略</strong>： <span class="math display">\[k_t = 1 \text{ 当且仅当 } q_t \geq
+\bar{q}\]</span></p>
+<p>其中<span class="math inline">\(\bar{q} \in (0,
+\theta)\)</span>是截断点。</p>
+<h4 id="核心命题有效政策不是均衡">核心命题：有效政策不是均衡</h4>
+<p><strong>证明逻辑</strong>： 1. 假设<span class="math inline">\(\bar{q} &lt; \theta\)</span>，考虑<span class="math inline">\(q_0 \in (\bar{q}, \theta)\)</span>： - <span class="math inline">\(q_0 - \theta &lt;
+0\)</span>：选择L客户比H客户获得更高奖励 - 选择L客户保证不发生失败 -
+因此对于<span class="math inline">\(q_0 &lt;
+\theta\)</span>，专家在均衡中必须选择L客户</p>
+<ol start="2" type="1">
+<li>因此<span class="math inline">\(\bar{q}\)</span>必须等于<span class="math inline">\(\theta\)</span>，但第一种情况的论证确保<span class="math inline">\(q_0\)</span>刚超过<span class="math inline">\(\theta\)</span>的专家会选择L而非H客户</li>
+</ol>
+<p><strong>结论</strong>：有效截断策略不是均衡！</p>
+<h4 id="均衡性质">均衡性质</h4>
+<p><strong>命题1</strong>：均衡存在且唯一，是停时上的混合。</p>
+<ul>
+<li>如果<span class="math inline">\(q_0 \leq
+\theta\)</span>：专家总是选择低风险客户</li>
+<li>如果<span class="math inline">\(q_0 \geq
+\bar{q}\)</span>：专家总是选择高风险客户</li>
+<li>如果<span class="math inline">\(q_0 \in (\theta,
+\bar{q})\)</span>：存在<span class="math inline">\(T &gt;
+0\)</span>，专家在随机时间<span class="math inline">\(s \leq
+T\)</span>按无原子分布选择</li>
+</ul>
+<h4 id="无效率的来源">无效率的来源</h4>
+<p><strong>等待的诱惑</strong>： -
+如果专家被预期只选择L客户，他会偏好选择H客户（更有利可图） -
+如果专家被预期只选择H客户，价格"快速"上涨，延迟H客户是有利可图的</p>
+<p><strong>问题</strong>：客户学习太快，价格上涨太快。专家难以使用混合策略——选择<span class="math inline">\(k \in (0, 1)\)</span>不会起作用。</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>信息揭示的双刃剑效应</strong>：报告卡帮助客户识别更好的专家，但同时扭曲了专家的激励——专家会拒绝高风险客户以建立声誉，导致无效率匹配。</p></li>
+<li><p><strong>Goodhart定律的正式模型</strong>：论文提供了Goodhart定律的形式化模型，展示了当度量成为目标时会发生什么。</p></li>
+<li><p><strong>声誉操纵的危害</strong>：长期专家有激励操纵市场对其类型的认知，通过选择性地接受低风险客户来建立"干净"的记录。</p></li>
+<li><p><strong>均衡必须是混合的</strong>：有效截断策略不是均衡，专家必须使用随机化策略，但这种随机化本身就导致无效率。</p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><p><strong>一般化模型</strong>：将声誉理论、信号博弈和机制设计统一在单一框架下。</p></li>
+<li><p><strong>新洞见</strong>：揭示了信息揭示可能降低福利的条件和机制。</p></li>
+<li><p><strong>政策启示</strong>：对医疗报告卡、教育评级等政策设计有直接指导意义。</p></li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
+<ol type="1">
+<li><p><strong>多维类型</strong>：专家和客户有多个维度的私人信息</p></li>
+<li><p><strong>动态客户学习</strong>：客户随时间积累经验</p></li>
+<li><p><strong>竞争性市场</strong>：多位专家竞争客户</p></li>
+</ol>
+<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
+<ol type="1">
+<li><p><strong>实证检验</strong>：如何在现实数据中识别这种声誉操纵效应？</p></li>
+<li><p><strong>最优机制设计</strong>：给定这些无效率，什么是最优的信息揭示政策？</p></li>
+<li><p><strong>替代激励机制</strong>：除了报告卡，什么机制可以激励专家说实话同时避免声誉操纵？</p></li>
+</ol>
+<hr>
+<h2 id="学术思考">7. 学术思考</h2>
+<h3 id="核心学术洞察">核心学术洞察</h3>
+<ol type="1">
+<li><p><strong>信息揭示的悖论</strong>：直觉上信息越多越好，但本文揭示了信息揭示可能"教会"专家如何操纵市场信念。</p></li>
+<li><p><strong>声誉资本的动态积累</strong>：专家的声誉是一种资本，其积累速度受市场学习速度的影响。</p></li>
+<li><p><strong>有效均衡的不可能性</strong>：在标准委托代理模型中，有效结果通常可以通过适当激励机制实现。但本文表明，当代理人有多个维度私人信息且可以操纵信号时，有效结果可能根本无法实现。</p></li>
+</ol>
+<h3 id="深层学术问题">深层学术问题</h3>
+<ol type="1">
+<li><p><strong>为什么专家不能承诺？</strong>
+如果专家可以承诺不操纵声誉，许多无效率就可以避免。是什么阻止了这种承诺？</p></li>
+<li><p><strong>客户如何应对？</strong>
+客户是否了解专家的激励结构？如果客户知道专家会拒绝他们，这会如何影响行为？</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p><strong>如何识别现实中的声誉操纵？</strong>
+有什么可检验的预测？</p></li>
+<li><p><strong>报告卡制度如何设计可以减少无效率？</strong>
+有什么替代方案？</p></li>
+<li><p><strong>与标准声誉模型的区别是什么？</strong>
+本文如何推进Kreps-Wilson类型的声誉理论？</p></li>
+<li><p><strong>在什么条件下信息揭示是有效的？</strong>
+"好消息"扩展表明存在有效情况，条件是什么？</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -9260,202 +9456,6 @@ _谢肇淛&lt;五杂俎&gt;(约1610年)</p>
         <tag>读书笔记</tag>
         <tag>中国研究</tag>
         <tag>人口史</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>你所不知道的可能对你有益 — 深度阅读笔记 — Höner &amp; Samuelson</title>
-    <url>/posts/honner2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: What You Don't Know May Be Good for You</li>
-<li><strong>作者</strong>: Johannes Höner (Yale), Larry Samuelson
-(University of Nevada, Reno)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3):
-1097-1147</li>
-<li><strong>DOI</strong>: 10.1257/aer.20250053</li>
-<li><strong>难度评估</strong>: 高 -
-需要博弈论、声誉理论、机制设计基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>专家-客户模型（Expert-Client
-Model）</strong>：长期存在的专家与短期客户匹配的经济学模型。专家拥有私人信息，选择客户类型，客户根据观察到的信息形成对专家的信念。</p>
-<p><strong>声誉理论（Reputation
-Theory）</strong>：研究代理人如何通过行为建立声誉的理论。经典工作包括Kreps
-&amp; Wilson（1982）的序列均衡声誉模型。</p>
-<p><strong>好斯特定律（Goodhart's
-Law）</strong>：当一个指标成为目标时，它就不再是一个好的指标。意味着度量本身会改变被度量行为的激励结构。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>医疗报告卡（Medical Report
-Cards）</strong>：纽约州1980年代末引入心脏手术报告系统，要求报告手术结果。医生评估称"所谓最好的外科医生只做最简单的病例"。</p></li>
-<li><p><strong>信息与激励的冲突</strong>：信息揭示帮助客户识别更好的专家，但同时也可能扭曲专家的激励，使其拒绝高风险客户以维护声誉。</p></li>
-<li><p><strong>声誉操纵问题</strong>：当信息由被评价者构建时，评价系统可能被操纵。</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：当声誉的构建者能够操纵相关信息时，声誉如何建立？信息揭示（如报告卡）是否总是有益的？</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><p><strong>理论贡献</strong>：构建了长期专家与短期客户匹配的一般模型，揭示了信息揭示的非直观后果。</p></li>
-<li><p><strong>政策含义</strong>：对医疗报告卡等政策设计有直接启示——信息揭示可能适得其反。</p></li>
-<li><p><strong>应用广泛</strong>：模型框架可应用于医疗、教育、金融等多个领域的声誉机制设计。</p></li>
-</ol>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
-<ul>
-<li>医疗报告卡案例</li>
-<li>Goodhart定律</li>
-<li>研究问题介绍</li>
-</ul>
-<h3 id="第二节模型the-model">第二节：模型（The Model）</h3>
-<ul>
-<li><strong>II.1 Stage Game</strong>：单期博弈中的专家-客户交互</li>
-<li><strong>II.2 Stage-Game均衡与有效配置</strong></li>
-<li><strong>II.3 重复博弈（无报告卡）均衡</strong></li>
-<li><strong>II.4 完全监控的重复博弈，有效配置</strong></li>
-<li><strong>II.5 完全监控的重复博弈，均衡</strong></li>
-</ul>
-<h3 id="第三节带报告卡的重复博弈">第三节：带报告卡的重复博弈</h3>
-<ul>
-<li><strong>III.1
-结构</strong>：连续时间，无限期界，专家连续统，客户连续统</li>
-<li><strong>III.2
-策略</strong>：确定性策略、极值策略、停时策略、截断策略</li>
-<li><strong>III.3 信念</strong>：专家信念与市场信念的区分</li>
-<li><strong>III.4 均衡定义</strong></li>
-<li><strong>III.5 有效配置</strong>：截断策略</li>
-<li><strong>III.6 均衡是无效率的</strong></li>
-<li><strong>III.7 等待的诱惑</strong></li>
-<li><strong>III.8 专家必须混合，但不确定能否做到</strong></li>
-<li><strong>III.9 均衡存在、唯一、是停时上的混合</strong></li>
-<li><strong>III.10 福利分析</strong></li>
-</ul>
-<h3 id="第四节扩展extensions">第四节：扩展（Extensions）</h3>
-<ul>
-<li><strong>IV.1 茶歇均衡</strong>：非马尔科夫均衡</li>
-<li><strong>IV.2 随机揭示柠檬</strong>：失败以一定概率被随机揭示</li>
-<li><strong>IV.3 随机隐藏柠檬</strong>：失败以一定概率被隐藏</li>
-<li><strong>IV.4 价格控制</strong>：固定价格可实现有效均衡</li>
-<li><strong>IV.5 好消息</strong>：突破性成果的特殊情况</li>
-<li><strong>IV.6 未知客户类型</strong>：客户不知自身类型</li>
-<li><strong>IV.7 干中学</strong>：专家类型可变</li>
-</ul>
-<h3 id="第五节讨论discussion">第五节：讨论（Discussion）</h3>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="医疗报告卡案例">医疗报告卡案例</h4>
-<p>纽约州1980年代末引入心脏手术报告系统，强制报告手术结果。这一政策的初衷是帮助患者识别更好的外科医生，但医生们反映"所谓最好的外科医生只做最简单的病例"。</p>
-<h4 id="goodhart定律的核心洞见">Goodhart定律的核心洞见</h4>
-<p>当一个度量成为目标时，它就不再是一个好的度量。度量的变化会改变被度量者的激励，可能导致行为扭曲。</p>
-<h3 id="模型设定">模型设定</h3>
-<h4 id="参与人">参与人</h4>
-<ol type="1">
-<li><strong>专家（Expert）</strong>：长期存在，有类型G（好）或B（坏），先验概率q</li>
-<li><strong>客户（Client）</strong>：短期存在，有类型H（高风险）或L（低风险）</li>
-<li><strong>市场</strong>：观察价格和报告卡，形成对专家类型的信念</li>
-</ol>
-<h4 id="阶段博弈stage-game">阶段博弈（Stage Game）</h4>
-<p><strong>成功概率</strong>： - 好专家（G）+ 高风险客户（H）：<span class="math inline">\({1-z}\)</span> - 好专家（G）+ 低风险客户（L）：1 -
-坏专家（B）+ 任何客户：1（无失败）</p>
-<h3 id="关键结果">关键结果</h3>
-<h4 id="有效配置">有效配置</h4>
-<p>有效政策是<strong>截断策略</strong>： <span class="math display">\[k_t = 1 \text{ 当且仅当 } q_t \geq
-\bar{q}\]</span></p>
-<p>其中<span class="math inline">\(\bar{q} \in (0,
-\theta)\)</span>是截断点。</p>
-<h4 id="核心命题有效政策不是均衡">核心命题：有效政策不是均衡</h4>
-<p><strong>证明逻辑</strong>： 1. 假设<span class="math inline">\(\bar{q} &lt; \theta\)</span>，考虑<span class="math inline">\(q_0 \in (\bar{q}, \theta)\)</span>： - <span class="math inline">\(q_0 - \theta &lt;
-0\)</span>：选择L客户比H客户获得更高奖励 - 选择L客户保证不发生失败 -
-因此对于<span class="math inline">\(q_0 &lt;
-\theta\)</span>，专家在均衡中必须选择L客户</p>
-<ol start="2" type="1">
-<li>因此<span class="math inline">\(\bar{q}\)</span>必须等于<span class="math inline">\(\theta\)</span>，但第一种情况的论证确保<span class="math inline">\(q_0\)</span>刚超过<span class="math inline">\(\theta\)</span>的专家会选择L而非H客户</li>
-</ol>
-<p><strong>结论</strong>：有效截断策略不是均衡！</p>
-<h4 id="均衡性质">均衡性质</h4>
-<p><strong>命题1</strong>：均衡存在且唯一，是停时上的混合。</p>
-<ul>
-<li>如果<span class="math inline">\(q_0 \leq
-\theta\)</span>：专家总是选择低风险客户</li>
-<li>如果<span class="math inline">\(q_0 \geq
-\bar{q}\)</span>：专家总是选择高风险客户</li>
-<li>如果<span class="math inline">\(q_0 \in (\theta,
-\bar{q})\)</span>：存在<span class="math inline">\(T &gt;
-0\)</span>，专家在随机时间<span class="math inline">\(s \leq
-T\)</span>按无原子分布选择</li>
-</ul>
-<h4 id="无效率的来源">无效率的来源</h4>
-<p><strong>等待的诱惑</strong>： -
-如果专家被预期只选择L客户，他会偏好选择H客户（更有利可图） -
-如果专家被预期只选择H客户，价格"快速"上涨，延迟H客户是有利可图的</p>
-<p><strong>问题</strong>：客户学习太快，价格上涨太快。专家难以使用混合策略——选择<span class="math inline">\(k \in (0, 1)\)</span>不会起作用。</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>信息揭示的双刃剑效应</strong>：报告卡帮助客户识别更好的专家，但同时扭曲了专家的激励——专家会拒绝高风险客户以建立声誉，导致无效率匹配。</p></li>
-<li><p><strong>Goodhart定律的正式模型</strong>：论文提供了Goodhart定律的形式化模型，展示了当度量成为目标时会发生什么。</p></li>
-<li><p><strong>声誉操纵的危害</strong>：长期专家有激励操纵市场对其类型的认知，通过选择性地接受低风险客户来建立"干净"的记录。</p></li>
-<li><p><strong>均衡必须是混合的</strong>：有效截断策略不是均衡，专家必须使用随机化策略，但这种随机化本身就导致无效率。</p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><p><strong>一般化模型</strong>：将声誉理论、信号博弈和机制设计统一在单一框架下。</p></li>
-<li><p><strong>新洞见</strong>：揭示了信息揭示可能降低福利的条件和机制。</p></li>
-<li><p><strong>政策启示</strong>：对医疗报告卡、教育评级等政策设计有直接指导意义。</p></li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
-<ol type="1">
-<li><p><strong>多维类型</strong>：专家和客户有多个维度的私人信息</p></li>
-<li><p><strong>动态客户学习</strong>：客户随时间积累经验</p></li>
-<li><p><strong>竞争性市场</strong>：多位专家竞争客户</p></li>
-</ol>
-<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
-<ol type="1">
-<li><p><strong>实证检验</strong>：如何在现实数据中识别这种声誉操纵效应？</p></li>
-<li><p><strong>最优机制设计</strong>：给定这些无效率，什么是最优的信息揭示政策？</p></li>
-<li><p><strong>替代激励机制</strong>：除了报告卡，什么机制可以激励专家说实话同时避免声誉操纵？</p></li>
-</ol>
-<hr>
-<h2 id="学术思考">7. 学术思考</h2>
-<h3 id="核心学术洞察">核心学术洞察</h3>
-<ol type="1">
-<li><p><strong>信息揭示的悖论</strong>：直觉上信息越多越好，但本文揭示了信息揭示可能"教会"专家如何操纵市场信念。</p></li>
-<li><p><strong>声誉资本的动态积累</strong>：专家的声誉是一种资本，其积累速度受市场学习速度的影响。</p></li>
-<li><p><strong>有效均衡的不可能性</strong>：在标准委托代理模型中，有效结果通常可以通过适当激励机制实现。但本文表明，当代理人有多个维度私人信息且可以操纵信号时，有效结果可能根本无法实现。</p></li>
-</ol>
-<h3 id="深层学术问题">深层学术问题</h3>
-<ol type="1">
-<li><p><strong>为什么专家不能承诺？</strong>
-如果专家可以承诺不操纵声誉，许多无效率就可以避免。是什么阻止了这种承诺？</p></li>
-<li><p><strong>客户如何应对？</strong>
-客户是否了解专家的激励结构？如果客户知道专家会拒绝他们，这会如何影响行为？</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p><strong>如何识别现实中的声誉操纵？</strong>
-有什么可检验的预测？</p></li>
-<li><p><strong>报告卡制度如何设计可以减少无效率？</strong>
-有什么替代方案？</p></li>
-<li><p><strong>与标准声誉模型的区别是什么？</strong>
-本文如何推进Kreps-Wilson类型的声誉理论？</p></li>
-<li><p><strong>在什么条件下信息揭示是有效的？</strong>
-"好消息"扩展表明存在有效情况，条件是什么？</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -10753,187 +10753,6 @@ Studies</li>
       </tags>
   </entry>
   <entry>
-    <title>预算到期会导致年底浪费性支出吗?_ Liebman &amp; Mahoney (2017) 笔记</title>
-    <url>/posts/liebman2017/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Do Expiring Budgets Lead to Wasteful Year-End
-Spending? Evidence from Federal Procurement</li>
-<li><strong>作者</strong>: Jeffrey B. Liebman(哈佛大学), Neale
-Mahoney(芝加哥大学)</li>
-<li><strong>类型</strong>: 论文笔记 / 公共经济学 / 预算制度</li>
-<li><strong>出版年份</strong>: 2017</li>
-<li><strong>出版机构/期刊</strong>: American Economic Review</li>
-<li><strong>DOI</strong>: 10.1257/aer.20131296</li>
-<li><strong>难度评估</strong>: 高 -
-需要经济学、计量经济学、公共财政学基础</li>
-</ul>
-<span id="more"></span>
-<h2 id="引言">引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>本文属于公共经济学、行为经济学和管理学的交叉领域,探讨政府支出效率问题.核心概念包括:</p>
-<ul>
-<li><strong>预算约束</strong>: 政府机构在财政年度内可支配的资金总额</li>
-<li><strong>自由裁量支出</strong>:
-政府可以自行决定如何分配的预算部分,与法定支出(如社会保障)相对</li>
-<li><strong>公共采购</strong>: 政府购买商品和服务的行为</li>
-<li><strong>信息技术(IT)项目</strong>:
-政府对计算机硬件、软件和相关服务的投资</li>
-<li><strong>社会成本</strong>:
-指一项经济活动对整个社会造成的成本,包括直接成本和外部成本</li>
-<li><strong>滚动预算(Rollover Budget)</strong>:
-允许机构将未使用的预算资金转移到下一个财政年度</li>
-</ul>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p>政府机构通常面临"不使用就失去"的预算规则,即在一个财政年度结束时,任何未使用的预算资金都将返回国库,而不是留给该机构使用.这种规则可能会导致机构在财政年度末
-rush 支出,即使这意味着投资于低价值的项目.</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p>作者认为,"不使用就失去"的预算规则可能会导致政府浪费性支出.他们试图通过实证分析来检验这一观点,并探讨解决这一问题的潜在政策,例如允许机构将未使用的资金转入下一个财政年度.</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><strong>揭示了政府支出中潜在的浪费现象</strong>:
-通过量化财政年度末的支出高峰和质量下降,为政府支出效率问题提供了有力证据</li>
-<li><strong>评估了滚动预算的有效性</strong>:
-通过研究美国司法部的滚动预算政策,为解决浪费性支出提供了一个可行的解决方案</li>
-<li><strong>为政府预算管理提供了政策建议</strong>:
-研究结果表明,允许机构将未使用的资金转入下一个财政年度可以提高政府支出效率</li>
-</ol>
-<h2 id="论文结构">论文结构</h2>
-<ol type="1">
-<li><strong>引言</strong>: 概述研究背景、问题意识和研究意义</li>
-<li><strong>理论模型</strong>:
-建立一个简单的模型来解释"不使用就失去"的预算规则如何导致浪费性支出</li>
-<li><strong>数据描述</strong>:
-介绍用于实证分析的数据集,包括联邦采购数据系统(FPDS)和IT仪表板</li>
-<li><strong>实证分析1</strong>:
-使用FPDS数据检验财政年度末是否存在支出高峰</li>
-<li><strong>实证分析2</strong>:
-使用IT仪表板数据检验财政年度末的支出质量是否下降</li>
-<li><strong>政策分析</strong>: 研究滚动预算政策对支出行为的影响</li>
-<li><strong>福利分析</strong>:
-使用校准后的模型评估滚动预算政策的福利效应</li>
-<li><strong>结论</strong>:
-总结研究结果,讨论政策含义,并提出未来研究方向</li>
-</ol>
-<h2 id="背景">背景</h2>
-<p>许多组织都有在财政年度末到期的预算,这可能导致在年底匆忙将资源用于低质量的项目.美国联邦政府的自由裁量支出预算也面临类似情况,机构必须在财政年度结束前完成拨款.</p>
-<h3 id="挑战">挑战</h3>
-<ol type="1">
-<li><strong>"不使用就失去"的预算规则</strong>:
-如果机构不花完预算,剩余的资金将返回国库,降低了年底花钱的机会成本</li>
-<li><strong>预防性储蓄的动机</strong>:
-机构倾向于在预算周期开始时保留资金,以应对未来不确定的支出需求</li>
-<li><strong>缺乏关于年底浪费性支出的硬性证据</strong>:
-尽管有传闻证据,但缺乏关于美国联邦政府年底支出激增以及年底支出价值低于其他时间段的证据</li>
-</ol>
-<h2 id="方法">方法</h2>
-<h3 id="理论模型">理论模型</h3>
-<ul>
-<li><strong>模型设定</strong>:
-作者建立了一个年度预算模型,包括国会和一个政府机构.国会为该机构选择预算,该机构在一年中的每个时期都会获得一个参数,该参数决定了支出的边际价值,并选择一个支出水平以最大化收益递减的目标</li>
-<li><strong>模型特征</strong>:
-具有三个关键特征_预算到期、未来支出价值的不确定性以及每个时期内支出的收益递减</li>
-<li><strong>模型预测</strong>:
-由于不确定性和收益递减,该机构将在年初进行预防性储蓄;在年底,资金到期的前景导致该机构花掉所有剩余资源,即使边际价值低于资金的社会成本,导致年底支出量激增和质量下降</li>
-</ul>
-<h3 id="数据集">数据集</h3>
-<p><strong>1. 联邦采购数据系统(FPDS)</strong> - 时间范围:
-2004年至2009年财政年度 - 数据量: 1460万份合同 - 总支出: 2.6万亿美元 -
-主要内容:
-合同层面信息,包括金额、产品/服务代码、机构、供应商、合同类型、招标机制等
-- 用途: 用于分析联邦采购支出的总体模式,特别是年底支出高峰</p>
-<p><strong>2. IT仪表板(IT Dashboard)</strong> - 数据时间: 截至2010年3月
-- 项目数量: 686个主要IT项目 - 总计划支出: 1300亿美元 - 主要内容:
-项目绩效数据,包括总体评级、成本评级、进度评级、CIO评估等 - 用途:
-用于评估IT项目的质量,特别是年底开始的项目的质量</p>
-<h3 id="实证策略">实证策略</h3>
-<ol type="1">
-<li><strong>支出高峰检验</strong>:
-使用FPDS数据,分析财政年度内每周的采购支出模式,确定是否存在年底支出高峰</li>
-<li><strong>质量下降检验</strong>:
-使用IT仪表板数据,比较在财政年度最后一周开始的项目与在其他时间开始的项目的质量评级</li>
-<li><strong>政策分析</strong>:
-研究美国司法部(DOJ)的滚动预算政策对支出行为的影响.DOJ有权将未使用的IT项目预算转入下一财政年度,作者比较了DOJ的IT和非IT支出,以及DOJ和其他机构之间的支出模式</li>
-<li><strong>福利分析</strong>:
-通过校准模型以适应支出高峰和质量下降,分析允许滚动预算的潜在福利收益</li>
-</ol>
-<h3 id="关键术语">关键术语</h3>
-<ul>
-<li><strong>FPDS (Federal Procurement Data System)</strong>:
-联邦采购数据系统,跟踪所有联邦合同的数据系统</li>
-<li><strong>IT仪表板 (IT Dashboard)</strong>:
-跟踪联邦政府主要IT项目绩效的网站</li>
-<li><strong>CIO (Chief Information Officer)</strong>:
-首席信息官,负责机构的信息技术战略和管理</li>
-<li><strong>Ordered Logit Regression</strong>:
-有序Logit回归,用于分析有序分类因变量的统计模型</li>
-<li><strong>Difference-in-Differences</strong>:
-双重差分法,用于评估政策或干预效果的统计方法</li>
-<li><strong>CRRA (Constant Relative Risk Aversion)</strong>:
-恒定相对风险厌恶效用函数</li>
-<li><strong>CARA (Constant Absolute Risk Aversion)</strong>:
-恒定绝对风险厌恶效用函数</li>
-</ul>
-<h2 id="结果">结果</h2>
-<ol type="1">
-<li><strong>支出高峰</strong>:
-数据显示年底支出大幅增加.在财政年度的最后一周,支出是平时每周平均水平的4.9倍</li>
-<li><strong>质量下降</strong>:
-年底开始的IT项目的质量评级明显较低.在财政年度最后一周开始的项目,获得较低质量分数的可能性要高出2.3到5.6倍</li>
-<li><strong>滚动预算的影响</strong>:
-DOJ的IT支出没有出现支出高峰,最后一周的IT支出仅占3.3%,而非IT支出为9.3%.差异分析表明滚动预算减少了年底支出量</li>
-<li><strong>福利分析</strong>:
-允许滚动预算可以带来福利收益.即使是允许机构在短时间内转入资金的中间政策,也可以产生接近全部滚动价值四分之三的福利收益</li>
-</ol>
-<h2 id="结论">结论</h2>
-<p>本文的核心结论是:由于"不使用就失去"的预算规则,美国联邦政府存在年底浪费性支出现象.具体表现为:</p>
-<ul>
-<li><strong>年底支出量激增</strong>:
-财政年度末的支出明显高于其他时间段</li>
-<li><strong>年底支出质量下降</strong>:
-财政年度末开始的IT项目质量较低</li>
-</ul>
-<p>允许滚动预算可以有效地解决这个问题.DOJ的经验表明滚动预算可以减少年底支出量,并可能提高项目质量.福利分析表明,即使是有限制的滚动预算政策也可以带来显著的福利收益.</p>
-<p>作者建议可以通过允许机构将未使用的资金延期到下个财政年度,用于四个月的宽限期,从而消除因年底浪费性支出造成的大部分效率低下问题.</p>
-<h2 id="未来研究方向">未来研究方向</h2>
-<ol type="1">
-<li><strong>研究国会预算决策对机构支出行为的影响</strong>:
-深入研究国会如何应对滚动预算,以及如何设计预算规则以实现最佳效果</li>
-<li><strong>考虑机构内部的异质性</strong>:
-研究机构内部不同部门的支出行为差异,以及如何设计更有针对性的预算政策</li>
-<li><strong>探索其他解决浪费性支出问题的政策</strong>:
-例如改进预算预测,加强项目管理,或引入竞争性招标</li>
-<li><strong>研究不同类型的资金结转政策</strong>:
-比较无限期结转、有条件结转等不同方案对支出效率的影响</li>
-<li><strong>行为因素的影响</strong>:
-考虑认知偏差、损失厌恶等行为因素对政府部门年底支出行为的影响</li>
-<li><strong>政治因素</strong>:
-研究资金结转政策的政治可行性,以及立法机构对预算控制的考量</li>
-</ol>
-<h2 id="学术思考">学术思考</h2>
-<ol type="1">
-<li><strong>预算制度与创新</strong>:
-"使用或失效"的预算规则是否会抑制政府部门的创新活动?如果政府部门知道它们必须在当年用完所有资金,它们是否会更倾向于投资于风险较低、回报较快的项目?</li>
-<li><strong>政治周期与支出行为</strong>:
-政府部门的支出行为是否会受到政治周期的影响?</li>
-<li><strong>绩效评估指标的设计</strong>:
-如何设计更有效的绩效评估指标,以准确衡量政府部门的支出质量?</li>
-<li><strong>资金结转政策的适用性</strong>:
-资金结转政策是否适用于所有类型的政府部门和项目?</li>
-<li><strong>公共部门与私营部门的对比</strong>:
-比较公共部门和私营部门在预算管理和支出效率方面的差异</li>
-</ol>
-]]></content>
-      <categories>
-        <category>公共经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>公共经济学</tag>
-        <tag>预算制度</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>年末消费高峰 — 论文笔记 — McCue, Prier &amp; Lofaro</title>
     <url>/posts/mccue2021/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -11202,6 +11021,187 @@ study of procurement contracts》深度分析撰写。</em></p>
         <tag>论文笔记</tag>
         <tag>公共财政</tag>
         <tag>政府采购</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>预算到期会导致年底浪费性支出吗?_ Liebman &amp; Mahoney (2017) 笔记</title>
+    <url>/posts/liebman2017/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Do Expiring Budgets Lead to Wasteful Year-End
+Spending? Evidence from Federal Procurement</li>
+<li><strong>作者</strong>: Jeffrey B. Liebman(哈佛大学), Neale
+Mahoney(芝加哥大学)</li>
+<li><strong>类型</strong>: 论文笔记 / 公共经济学 / 预算制度</li>
+<li><strong>出版年份</strong>: 2017</li>
+<li><strong>出版机构/期刊</strong>: American Economic Review</li>
+<li><strong>DOI</strong>: 10.1257/aer.20131296</li>
+<li><strong>难度评估</strong>: 高 -
+需要经济学、计量经济学、公共财政学基础</li>
+</ul>
+<span id="more"></span>
+<h2 id="引言">引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>本文属于公共经济学、行为经济学和管理学的交叉领域,探讨政府支出效率问题.核心概念包括:</p>
+<ul>
+<li><strong>预算约束</strong>: 政府机构在财政年度内可支配的资金总额</li>
+<li><strong>自由裁量支出</strong>:
+政府可以自行决定如何分配的预算部分,与法定支出(如社会保障)相对</li>
+<li><strong>公共采购</strong>: 政府购买商品和服务的行为</li>
+<li><strong>信息技术(IT)项目</strong>:
+政府对计算机硬件、软件和相关服务的投资</li>
+<li><strong>社会成本</strong>:
+指一项经济活动对整个社会造成的成本,包括直接成本和外部成本</li>
+<li><strong>滚动预算(Rollover Budget)</strong>:
+允许机构将未使用的预算资金转移到下一个财政年度</li>
+</ul>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<p>政府机构通常面临"不使用就失去"的预算规则,即在一个财政年度结束时,任何未使用的预算资金都将返回国库,而不是留给该机构使用.这种规则可能会导致机构在财政年度末
+rush 支出,即使这意味着投资于低价值的项目.</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p>作者认为,"不使用就失去"的预算规则可能会导致政府浪费性支出.他们试图通过实证分析来检验这一观点,并探讨解决这一问题的潜在政策,例如允许机构将未使用的资金转入下一个财政年度.</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><strong>揭示了政府支出中潜在的浪费现象</strong>:
+通过量化财政年度末的支出高峰和质量下降,为政府支出效率问题提供了有力证据</li>
+<li><strong>评估了滚动预算的有效性</strong>:
+通过研究美国司法部的滚动预算政策,为解决浪费性支出提供了一个可行的解决方案</li>
+<li><strong>为政府预算管理提供了政策建议</strong>:
+研究结果表明,允许机构将未使用的资金转入下一个财政年度可以提高政府支出效率</li>
+</ol>
+<h2 id="论文结构">论文结构</h2>
+<ol type="1">
+<li><strong>引言</strong>: 概述研究背景、问题意识和研究意义</li>
+<li><strong>理论模型</strong>:
+建立一个简单的模型来解释"不使用就失去"的预算规则如何导致浪费性支出</li>
+<li><strong>数据描述</strong>:
+介绍用于实证分析的数据集,包括联邦采购数据系统(FPDS)和IT仪表板</li>
+<li><strong>实证分析1</strong>:
+使用FPDS数据检验财政年度末是否存在支出高峰</li>
+<li><strong>实证分析2</strong>:
+使用IT仪表板数据检验财政年度末的支出质量是否下降</li>
+<li><strong>政策分析</strong>: 研究滚动预算政策对支出行为的影响</li>
+<li><strong>福利分析</strong>:
+使用校准后的模型评估滚动预算政策的福利效应</li>
+<li><strong>结论</strong>:
+总结研究结果,讨论政策含义,并提出未来研究方向</li>
+</ol>
+<h2 id="背景">背景</h2>
+<p>许多组织都有在财政年度末到期的预算,这可能导致在年底匆忙将资源用于低质量的项目.美国联邦政府的自由裁量支出预算也面临类似情况,机构必须在财政年度结束前完成拨款.</p>
+<h3 id="挑战">挑战</h3>
+<ol type="1">
+<li><strong>"不使用就失去"的预算规则</strong>:
+如果机构不花完预算,剩余的资金将返回国库,降低了年底花钱的机会成本</li>
+<li><strong>预防性储蓄的动机</strong>:
+机构倾向于在预算周期开始时保留资金,以应对未来不确定的支出需求</li>
+<li><strong>缺乏关于年底浪费性支出的硬性证据</strong>:
+尽管有传闻证据,但缺乏关于美国联邦政府年底支出激增以及年底支出价值低于其他时间段的证据</li>
+</ol>
+<h2 id="方法">方法</h2>
+<h3 id="理论模型">理论模型</h3>
+<ul>
+<li><strong>模型设定</strong>:
+作者建立了一个年度预算模型,包括国会和一个政府机构.国会为该机构选择预算,该机构在一年中的每个时期都会获得一个参数,该参数决定了支出的边际价值,并选择一个支出水平以最大化收益递减的目标</li>
+<li><strong>模型特征</strong>:
+具有三个关键特征_预算到期、未来支出价值的不确定性以及每个时期内支出的收益递减</li>
+<li><strong>模型预测</strong>:
+由于不确定性和收益递减,该机构将在年初进行预防性储蓄;在年底,资金到期的前景导致该机构花掉所有剩余资源,即使边际价值低于资金的社会成本,导致年底支出量激增和质量下降</li>
+</ul>
+<h3 id="数据集">数据集</h3>
+<p><strong>1. 联邦采购数据系统(FPDS)</strong> - 时间范围:
+2004年至2009年财政年度 - 数据量: 1460万份合同 - 总支出: 2.6万亿美元 -
+主要内容:
+合同层面信息,包括金额、产品/服务代码、机构、供应商、合同类型、招标机制等
+- 用途: 用于分析联邦采购支出的总体模式,特别是年底支出高峰</p>
+<p><strong>2. IT仪表板(IT Dashboard)</strong> - 数据时间: 截至2010年3月
+- 项目数量: 686个主要IT项目 - 总计划支出: 1300亿美元 - 主要内容:
+项目绩效数据,包括总体评级、成本评级、进度评级、CIO评估等 - 用途:
+用于评估IT项目的质量,特别是年底开始的项目的质量</p>
+<h3 id="实证策略">实证策略</h3>
+<ol type="1">
+<li><strong>支出高峰检验</strong>:
+使用FPDS数据,分析财政年度内每周的采购支出模式,确定是否存在年底支出高峰</li>
+<li><strong>质量下降检验</strong>:
+使用IT仪表板数据,比较在财政年度最后一周开始的项目与在其他时间开始的项目的质量评级</li>
+<li><strong>政策分析</strong>:
+研究美国司法部(DOJ)的滚动预算政策对支出行为的影响.DOJ有权将未使用的IT项目预算转入下一财政年度,作者比较了DOJ的IT和非IT支出,以及DOJ和其他机构之间的支出模式</li>
+<li><strong>福利分析</strong>:
+通过校准模型以适应支出高峰和质量下降,分析允许滚动预算的潜在福利收益</li>
+</ol>
+<h3 id="关键术语">关键术语</h3>
+<ul>
+<li><strong>FPDS (Federal Procurement Data System)</strong>:
+联邦采购数据系统,跟踪所有联邦合同的数据系统</li>
+<li><strong>IT仪表板 (IT Dashboard)</strong>:
+跟踪联邦政府主要IT项目绩效的网站</li>
+<li><strong>CIO (Chief Information Officer)</strong>:
+首席信息官,负责机构的信息技术战略和管理</li>
+<li><strong>Ordered Logit Regression</strong>:
+有序Logit回归,用于分析有序分类因变量的统计模型</li>
+<li><strong>Difference-in-Differences</strong>:
+双重差分法,用于评估政策或干预效果的统计方法</li>
+<li><strong>CRRA (Constant Relative Risk Aversion)</strong>:
+恒定相对风险厌恶效用函数</li>
+<li><strong>CARA (Constant Absolute Risk Aversion)</strong>:
+恒定绝对风险厌恶效用函数</li>
+</ul>
+<h2 id="结果">结果</h2>
+<ol type="1">
+<li><strong>支出高峰</strong>:
+数据显示年底支出大幅增加.在财政年度的最后一周,支出是平时每周平均水平的4.9倍</li>
+<li><strong>质量下降</strong>:
+年底开始的IT项目的质量评级明显较低.在财政年度最后一周开始的项目,获得较低质量分数的可能性要高出2.3到5.6倍</li>
+<li><strong>滚动预算的影响</strong>:
+DOJ的IT支出没有出现支出高峰,最后一周的IT支出仅占3.3%,而非IT支出为9.3%.差异分析表明滚动预算减少了年底支出量</li>
+<li><strong>福利分析</strong>:
+允许滚动预算可以带来福利收益.即使是允许机构在短时间内转入资金的中间政策,也可以产生接近全部滚动价值四分之三的福利收益</li>
+</ol>
+<h2 id="结论">结论</h2>
+<p>本文的核心结论是:由于"不使用就失去"的预算规则,美国联邦政府存在年底浪费性支出现象.具体表现为:</p>
+<ul>
+<li><strong>年底支出量激增</strong>:
+财政年度末的支出明显高于其他时间段</li>
+<li><strong>年底支出质量下降</strong>:
+财政年度末开始的IT项目质量较低</li>
+</ul>
+<p>允许滚动预算可以有效地解决这个问题.DOJ的经验表明滚动预算可以减少年底支出量,并可能提高项目质量.福利分析表明,即使是有限制的滚动预算政策也可以带来显著的福利收益.</p>
+<p>作者建议可以通过允许机构将未使用的资金延期到下个财政年度,用于四个月的宽限期,从而消除因年底浪费性支出造成的大部分效率低下问题.</p>
+<h2 id="未来研究方向">未来研究方向</h2>
+<ol type="1">
+<li><strong>研究国会预算决策对机构支出行为的影响</strong>:
+深入研究国会如何应对滚动预算,以及如何设计预算规则以实现最佳效果</li>
+<li><strong>考虑机构内部的异质性</strong>:
+研究机构内部不同部门的支出行为差异,以及如何设计更有针对性的预算政策</li>
+<li><strong>探索其他解决浪费性支出问题的政策</strong>:
+例如改进预算预测,加强项目管理,或引入竞争性招标</li>
+<li><strong>研究不同类型的资金结转政策</strong>:
+比较无限期结转、有条件结转等不同方案对支出效率的影响</li>
+<li><strong>行为因素的影响</strong>:
+考虑认知偏差、损失厌恶等行为因素对政府部门年底支出行为的影响</li>
+<li><strong>政治因素</strong>:
+研究资金结转政策的政治可行性,以及立法机构对预算控制的考量</li>
+</ol>
+<h2 id="学术思考">学术思考</h2>
+<ol type="1">
+<li><strong>预算制度与创新</strong>:
+"使用或失效"的预算规则是否会抑制政府部门的创新活动?如果政府部门知道它们必须在当年用完所有资金,它们是否会更倾向于投资于风险较低、回报较快的项目?</li>
+<li><strong>政治周期与支出行为</strong>:
+政府部门的支出行为是否会受到政治周期的影响?</li>
+<li><strong>绩效评估指标的设计</strong>:
+如何设计更有效的绩效评估指标,以准确衡量政府部门的支出质量?</li>
+<li><strong>资金结转政策的适用性</strong>:
+资金结转政策是否适用于所有类型的政府部门和项目?</li>
+<li><strong>公共部门与私营部门的对比</strong>:
+比较公共部门和私营部门在预算管理和支出效率方面的差异</li>
+</ol>
+]]></content>
+      <categories>
+        <category>公共经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>公共经济学</tag>
+        <tag>预算制度</tag>
       </tags>
   </entry>
   <entry>
@@ -12790,45 +12790,6 @@ an Endogenous Production Network</li>
       </tags>
   </entry>
   <entry>
-    <title>字体和公式的Display</title>
-    <url>/posts/15167/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<font face="Times New Roman">
-</font><p style="text-align:justify"><font face="Times New Roman">
-<b>"Evaluating the employment impact of a mandatory job search
-program"</b></font> <br> <br> <font face="Times New Roman">
-</font></p><p style="text-align:justify"><font face="Times New Roman">
-</font></p><p><font face="Times New Roman"><b>What treatment do the authors evaluate?</b></font> <br></p>
-<span id="more"></span>
-<font face="Tex Gyre Pagella">
-<p style="text-align:justify">
-</p><p><b>Answer: </b> In the parametric methods, the common trend
-assumption is:</p>
-<p><span class="math display">\[\begin{array}{l}
-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
-t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
-t=0\right)\right] \\
-=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
-t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
-t=0\right)\right]
-\end{array}\]</span> In the non-parametric methods, the common trend
-assumption is:</p>
-<p><span class="math display">\[\begin{array}{l}
-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i
-t}^{0} | P_{E X}, P_{t X}, N D=1, t=0\right) \\
-=E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=1\right)-E\left(Y_{i
-t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)
-\end{array}\]</span></p>
-</font><p><font face="Tex Gyre Pagella"></font></p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>blog_test</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>移民、创新与增长 — 深度阅读笔记 — Terry Et Al.</title>
     <url>/posts/terry2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -12925,6 +12886,45 @@ capita提高约5%</p></li>
       </categories>
       <tags>
         <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>字体和公式的Display</title>
+    <url>/posts/15167/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<font face="Times New Roman">
+</font><p style="text-align:justify"><font face="Times New Roman">
+<b>"Evaluating the employment impact of a mandatory job search
+program"</b></font> <br> <br> <font face="Times New Roman">
+</font></p><p style="text-align:justify"><font face="Times New Roman">
+</font></p><p><font face="Times New Roman"><b>What treatment do the authors evaluate?</b></font> <br></p>
+<span id="more"></span>
+<font face="Tex Gyre Pagella">
+<p style="text-align:justify">
+</p><p><b>Answer: </b> In the parametric methods, the common trend
+assumption is:</p>
+<p><span class="math display">\[\begin{array}{l}
+f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
+t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
+t=0\right)\right] \\
+=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
+t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
+t=0\right)\right]
+\end{array}\]</span> In the non-parametric methods, the common trend
+assumption is:</p>
+<p><span class="math display">\[\begin{array}{l}
+E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i
+t}^{0} | P_{E X}, P_{t X}, N D=1, t=0\right) \\
+=E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=1\right)-E\left(Y_{i
+t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)
+\end{array}\]</span></p>
+</font><p><font face="Tex Gyre Pagella"></font></p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>blog_test</tag>
       </tags>
   </entry>
   <entry>
