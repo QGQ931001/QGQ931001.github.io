@@ -2715,6 +2715,56 @@ Instruments论文的深度笔记,由Claude AI辅助生成.</em></p>
       </tags>
   </entry>
   <entry>
+    <title>大城市人口增长速度🦚</title>
+    <url>/posts/15523/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
+<center>
+上图即为最终效果
+</center>
+<h2 id="下载数据">下载数据</h2>
+<p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录.
+</p><figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="加载r包">加载R包</h2>
+<p>需要的R包如下所示.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
+<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<ol type="1">
+<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
+<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon,
+Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
+<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
+<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
+</ol>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
+<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.
+使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="绘图">绘图</h2>
+<p>代码如下,图见上文.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>绘图</category>
+        <category>map&amp;sf</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Generative AI at Work — 深度分析 — Brynjolfsson Et Al.</title>
     <url>/posts/bryn2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -2983,383 +3033,6 @@ rot)的风险?</p></li>
 ]]></content>
       <categories>
         <category>劳动经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大城市人口增长速度🦚</title>
-    <url>/posts/15523/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
-<center>
-上图即为最终效果
-</center>
-<h2 id="下载数据">下载数据</h2>
-<p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录.
-</p><figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<h2 id="加载r包">加载R包</h2>
-<p>需要的R包如下所示.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
-<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<ol type="1">
-<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
-<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon,
-Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
-<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
-<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
-</ol>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
-<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.
-使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="绘图">绘图</h2>
-<p>代码如下,图见上文.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>绘图</category>
-        <category>map&amp;sf</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>清洁水的价值 — 深度阅读笔记 — Burlig, Jina &amp; Sudarshan</title>
-    <url>/posts/burlig2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: The Value of Clean Water: Experimental
-Evidence from Rural India</li>
-<li><strong>作者</strong>: Fiona Burlig (University of Chicago Harris
-School, EPIC), Amir Jina (University of Chicago Harris School, EPIC,
-NBER), Anant Sudarshan (University of Warwick)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3):
-1148-1187</li>
-<li><strong>DOI</strong>: 10.1257/aer.20250278</li>
-<li><strong>难度评估</strong>: 高 -
-需要实验经济学、发展经济学、公共卫生经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>饮用水安全问题（Safe Drinking Water
-Access）</strong>：全球约20亿人缺乏安全饮用水，这是一个重大的公共卫生危机。传统解决方案包括自来水管道和点源氯处理，但各有问题：管道建设成本高昂（高成本），氯处理方案需求不足（低需求）。</p>
-<p><strong>分散式水处理与家庭配送（Decentralized Treatment and Home
-Delivery）</strong>：一种替代方案是将水处理分散化并配送到家庭。这种模式在巴西、中国、印度、印度尼西亚、墨西哥等国家日益普及，使用量在多年间增长了300%。</p>
-<p><strong>揭示偏好法（Revealed Preference
-Methods）</strong>：通过观察人们在现实市场中的实际选择来推断其支付意愿（WTP），而非依赖假设性的条件评估法。这种方法更接近真实价值。</p>
-<p><strong>DALY（Disability-Adjusted Life
-Year）</strong>：一种综合衡量疾病负担的指标，等于因早死而损失的生命年数加上因残疾而损失的健康年数。DALY越低表示健康状况越好。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><strong>全球水危机规模</strong>：
-<ul>
-<li>超过20亿人缺乏安全饮用水</li>
-<li>受污染饮用水每年导致约14亿例腹泻、50万儿童死亡</li>
-<li>清洁饮用水的缺乏是全球儿童死亡的主要原因之一</li>
-<li>联合国估计，实现普遍清洁饮用水获取需要将当前改善速度提高六倍</li>
-</ul></li>
-<li><strong>现有解决方案的局限性</strong>：
-<ul>
-<li><strong>管道供水</strong>：英国等发达国家花费近150年才实现普遍管道供水；低收入国家仅约30%农村人口能获得自来水，且经常受到污染</li>
-<li><strong>点源氯处理</strong>：成本低，有效，但使用率仅约5%，被描述为"不够好，无法完全解决"清洁水获取问题</li>
-<li><strong>其他方法</strong>：净水器、太阳消毒等替代方案虽有效果，但均存在局限性</li>
-</ul></li>
-<li><strong>新兴的第三种方案</strong>：
-<ul>
-<li>分散式水处理结合家庭配送模式正在兴起</li>
-<li>在中低收入国家城市贫民窟和农村地区服务越来越多的人口</li>
-<li>在巴西、中国、印度、印度尼西亚、墨西哥等国家增长显著</li>
-</ul></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>： 1.
-分散式家庭配送清洁水是否能够有效改善农村贫困人口的清洁水获取问题？ 2.
-家庭对清洁水的真实估值是多少？支付意愿（WTP）和接受意愿（WTA）各是多少？
-3. 政府应该使用价格机制还是免费分配来提供清洁水？ 4.
-这种干预的成本效益如何？</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><p><strong>理论贡献</strong>：首次通过随机对照实验直接测量农村贫困人口对清洁饮用水本身的支付意愿，填补了以往研究只测量净水技术需求的空白。</p></li>
-<li><p><strong>方法论贡献</strong>：同时测量了WTP（支付意愿）和WTA（接受意愿）两种揭示偏好指标，为理解发展中国家家庭对环境品的估值提供了更完整的图景。</p></li>
-<li><p><strong>政策贡献</strong>：为发展中国家政府如何最优分配有限的公共卫生资金提供了实证依据，对全球清洁水获取政策具有直接指导意义。</p></li>
-<li><p><strong>规模可扩展性证明</strong>：研究合作方Spring
-Health已运营10年、覆盖Odisha地区100个村庄，证明了这种模式在技术上的可行性和可持续性。</p></li>
-</ol>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
-<ul>
-<li>全球水危机概述</li>
-<li>现有解决方案的局限（管道高成本、氯处理低需求）</li>
-<li>研究问题介绍</li>
-<li>论文结构预览</li>
-</ul>
-<h3 id="第二节背景与研究地点background-and-setting">第二节：背景与研究地点（Background
-and Setting）</h3>
-<ul>
-<li><strong>II.1
-研究地点</strong>：印度Odisha邦——印度最贫穷的邦之一，农村家庭月支出约2600卢比</li>
-<li><strong>II.2
-水资源状况</strong>：地下水丰富但砷、铁等污染物普遍存在；约20%人口缺乏安全饮用水</li>
-<li><strong>II.3 Spring
-Health公司</strong>：研究合作方，提供分散式水处理和家庭配送服务</li>
-</ul>
-<h3 id="第三节实验设计experimental-design">第三节：实验设计（Experimental
-Design）</h3>
-<ul>
-<li><strong>III.1
-实验目标</strong>：测量清洁水需求和估值；测量对健康的影响</li>
-<li><strong>III.2
-实验结构</strong>：集群随机试验，600个村庄，60,000户家庭</li>
-<li><strong>III.3 处理组设置</strong>：
-<ul>
-<li>定价组：不同折扣（25%、50%、75%）的价格优惠</li>
-<li>定量配给组：每月免费定量供给</li>
-<li>可交换配额组：现金返还机制</li>
-</ul></li>
-<li><strong>III.4
-控制组</strong>：纯控制组（保持原有状态）和商家对照组</li>
-</ul>
-<h3 id="第四节数据收集data-collection">第四节：数据收集（Data
-Collection）</h3>
-<ul>
-<li><strong>IV.1 管理数据</strong>：Spring Health订单系统记录</li>
-<li><strong>IV.2 调查数据</strong>：高频检查和终线调查</li>
-<li><strong>IV.3 健康结果</strong>：自报疾病、健康支出、缺课情况等</li>
-<li><strong>IV.4 水质测试</strong>：样本水质检测结果</li>
-</ul>
-<h3 id="第五节需求分析结果results-demand-for-clean-water">第五节：需求分析结果（Results:
-Demand for Clean Water）</h3>
-<ul>
-<li><strong>V.1 需求价格弹性</strong>：从价格折扣组估计</li>
-<li><strong>V.2 需求曲线</strong>：绘制价格-需求量曲线</li>
-<li><strong>V.3 广延边际vs集约边际</strong>：是否订购 vs
-订购数量的区分</li>
-<li><strong>V.4 需求稳定性</strong>：整个实验期间需求保持高位</li>
-</ul>
-<h3 id="第六节估值分析results-valuation">第六节：估值分析（Results:
-Valuation）</h3>
-<ul>
-<li><strong>VI.1 支付意愿（WTP）</strong>：从价格数据估算</li>
-<li><strong>VI.2 接受意愿（WTA）</strong>：从现金返还机制估算</li>
-<li><strong>VI.3
-与以往研究的比较</strong>：本研究估值比以往间接估计高数倍</li>
-</ul>
-<h3 id="第七节健康影响results-health-effects">第七节：健康影响（Results:
-Health Effects）</h3>
-<ul>
-<li><strong>VII.1
-自报疾病减少</strong>：饮用水清洁水后自报生病概率下降</li>
-<li><strong>VII.2 健康支出减少</strong>：医疗支出显著降低</li>
-<li><strong>VII.3 缺课减少</strong>：家庭成员缺课情况改善</li>
-<li><strong>VII.4 异质性分析</strong>：不同亚组的健康影响差异</li>
-</ul>
-<h3 id="第八节成本效益分析cost-effectiveness-analysis">第八节：成本效益分析（Cost-Effectiveness
-Analysis）</h3>
-<ul>
-<li><strong>VIII.1 单位成本计算</strong>：每升水成本、每户每月成本</li>
-<li><strong>VIII.2 DALY计算</strong>：每DALY节省成本</li>
-<li><strong>VIII.3
-与其他干预比较</strong>：与氯片分配、优惠券等比较</li>
-<li><strong>VIII.4
-不同场景分析</strong>：全补贴vs部分补贴vs市场定价</li>
-</ul>
-<h3 id="第九节讨论与结论discussion-and-conclusion">第九节：讨论与结论（Discussion
-and Conclusion）</h3>
-<ul>
-<li><strong>IX.1 政策含义</strong>：免费配送vs现金转移支付的权衡</li>
-<li><strong>IX.2 机制优势</strong>：相比点源氯处理的优势</li>
-<li><strong>IX.3 局限性</strong>：研究样本特殊性、外部效度问题</li>
-<li><strong>IX.4
-结论</strong>：分散式水处理和家庭配送是值得认真考虑的政策选项</li>
-</ul>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="全球水危机">全球水危机</h4>
-<p>全球约20亿人缺乏安全饮用水，这一问题的规模令人震惊： -
-每年约14亿例腹泻病例与不安全饮用水相关 - 50万儿童因腹泻死亡 -
-清洁水获取是全球儿童死亡的主要原因之一 -
-联合国估计实现普遍清洁水获取需要将改善速度提高六倍</p>
-<h4 id="传统解决方案的失败">传统解决方案的失败</h4>
-<p><strong>管道供水的局限</strong>： -
-发达国家（如英国）花费了近一个世纪才实现普遍管道供水 -
-低收入国家仅有不到30%的农村人口能获得自来水 -
-更为关键的是，即使有管道的地区，水质也常常不达标 -
-印度国家首都区仅26%的管道水样本被认为是可饮用的</p>
-<p><strong>点源氯处理的局限</strong>： -
-成本低，有效：可显著改善健康结果 -
-<strong>核心问题</strong>：使用率极低——即使完全免费，使用率也仅约5% -
-低需求原因包括： - 味道问题（氯的异味） -
-便利性问题（需要记住处理、存储水） - 认知负担（需要改变日常行为） -
-污染风险（取水和运水过程中的二次污染）</p>
-<h4 id="新兴的第三种方案">新兴的第三种方案</h4>
-<p>分散式水处理结合家庭配送正在成为第三种解决方案： -
-在巴西、中国、印度、印度尼西亚、墨西哥等国家迅速普及 -
-使用量在多年间增长了300% -
-结合了管道供水（方便）和氯处理（便宜）的优点</p>
-<h3 id="挑战">挑战</h3>
-<h4 id="研究问题">研究问题</h4>
-<ol type="1">
-<li><p><strong>需求弹性问题</strong>：家庭对清洁水的需求价格弹性有多大？在什么价格水平上需求会大幅下降？</p></li>
-<li><p><strong>真实估值问题</strong>：家庭对清洁水的真实价值是多少？以往的研究只研究了净水技术需求，而非清洁水本身。</p></li>
-<li><p><strong>WTP vs
-WTA问题</strong>：支付意愿和接受意愿是否不同？经典理论预测WTA应该大于WTP，但在发展中国家环境中是否如此？</p></li>
-<li><p><strong>政策设计问题</strong>：政府应该提供免费水、补贴价格还是现金转移支付？哪种方式更有效率？</p></li>
-<li><p><strong>成本效益问题</strong>：与其他公共卫生干预相比，这种干预的成本效益如何？</p></li>
-</ol>
-<h3 id="方法数据集要突出">方法（数据集要突出）</h3>
-<h4 id="实验设置">实验设置</h4>
-<p><strong>地点</strong>：印度Odisha邦——印度最贫穷的邦之一，排名第29/35</p>
-<p><strong>样本规模</strong>： - 600个村庄 - 约60,000户家庭 -
-实施周期：2021年4月至2023年8月（约27个月）</p>
-<p><strong>合作方</strong>：Spring Health India -
-在Odisha农村地区运营分散式水处理和家庭配送 - 使用电动氯化处理工艺 -
-太阳能供电 - 当地企业家运营</p>
-<p><strong>随机化设计</strong>：</p>
-<p>600个村庄随机分为3组： - 定价组（200村）：以不同折扣购买清洁水 -
-25%折扣 - 50%折扣 - 75%折扣 - 定量配给组（200村）：每月免费定量供给 -
-可交换配额组（200村）：现金返还机制 - 控制组：纯控制组</p>
-<p><strong>价格设置</strong>： - 全价：10卢比/升 - 25%折扣：7.5卢比/升 -
-50%折扣：5卢比/升 - 75%折扣：2.5卢比/升</p>
-<p><strong>现金返还设置</strong>： -
-季度返还：返还购买金额的25%、50%、75% - 返还方式：移动支付或银行账户</p>
-<h4 id="数据收集">数据收集</h4>
-<p><strong>管理数据</strong>： - Spring Health订单系统完整记录所有订单 -
-每日订单数量、价格、用户信息 - 完整面板数据</p>
-<p><strong>调查数据</strong>： - 高频检查（约每季度一次） -
-终线调查（实验结束时） - 涵盖饮水习惯、健康结果等</p>
-<p><strong>水质测试</strong>： - 从不同水源采集样本 -
-检测大肠杆菌等生物污染物 - 金属污染物检测</p>
-<h3 id="结果results">结果（Results）</h3>
-<h4 id="主要发现一需求价格弹性">主要发现一：需求价格弹性</h4>
-<p><strong>关键结果</strong>：在低价位（免费或低价）时，需求超过90%，且在整个实验期间保持稳定。</p>
-<p>具体而言： - <strong>免费或低价时</strong>：超过90%的家庭订购清洁水 -
-<strong>高价时（10卢比/升）</strong>：需求下降约40% -
-<strong>价格弹性</strong>：估计约为<span class="math inline">\({-0.3}\)</span>至<span class="math inline">\({-0.5}\)</span>左右</p>
-<p><strong>需求曲线形态</strong>： - 呈现明显的非线性特征 -
-在低价位时需求高度无弹性 - 在价格上涨时需求弹性增加 -
-但即使高价也有相当需求（说明潜在市场存在）</p>
-<p><strong>广延边际vs集约边际</strong>： -
-<strong>广延边际</strong>（是否订购）：对价格高度敏感 -
-<strong>集约边际</strong>（订购多少）：对价格相对不敏感 -
-一旦决定订购，家庭倾向于订购满足大部分饮水需求的量</p>
-<h4 id="主要发现二支付意愿和接受意愿">主要发现二：支付意愿和接受意愿</h4>
-<p><strong>支付意愿（WTP）</strong>： - 远高于以往间接估计 -
-约为既往氯处理研究的3-5倍 - 月度WTP约为家庭月支出的5-10% -
-相当于年度清洁水价值约为月支出的60-120%</p>
-<p><strong>接受意愿（WTA）</strong>： - WTA &gt; WTP，符合理论预测 -
-WTA显著超过边际成本 - 表明存在相当大的消费者剩余</p>
-<p><strong>为什么WTP远高于既往研究？</strong> -
-既往研究测量的是净水技术需求，而非清洁水本身 -
-家庭需要承担额外的非货币成本（时间、麻烦、认知负担） -
-本研究直接测量了最终产品——清洁水本身 - 包含了时间节省等额外收益</p>
-<h4 id="主要发现三健康影响">主要发现三：健康影响</h4>
-<p><strong>自报疾病减少</strong>： -
-饮用水清洁水的家庭自报生病概率降低约5-8个百分点 -
-相当于相比对照组降低约25-30%</p>
-<p><strong>健康支出减少</strong>： - 每周健康支出显著减少 -
-减少幅度约15-20%</p>
-<p><strong>缺课减少</strong>： - 因病缺课情况改善 -
-对女性影响尤为显著（她们通常负责取水）</p>
-<p><strong>时间节省</strong>： - 每周取水平均时间减少约15-20分钟 -
-对于女性有特别的性别平等意义</p>
-<h4 id="主要发现四成本效益分析">主要发现四：成本效益分析</h4>
-<p><strong>成本估算</strong>： - 每升水边际成本：约2-3卢比 -
-每户每月运营成本：约150-200卢比</p>
-<p><strong>DALY计算结果</strong>： - 免费配送模式的每DALY成本：约${<span class="math inline">\(30-80}
-- 远低于世界卫生组织的成本效益阈值（\)</span>{$100}/DALY） -
-与其他高性价比公共卫生干预（如蚊帐、疫苗）相当</p>
-<p><strong>与其他干预比较</strong>： -
-比氯片分配稍贵，但覆盖面更广、效果更持续 -
-比管道供水便宜得多，且实施更快 -
-综合考虑健康收益和时间节省，性价比突出</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>分散式家庭配送模式有效</strong>：农村家庭对清洁水的需求强烈且稳定，低价时超过90%的家庭持续使用。</p></li>
-<li><p><strong>估值远高于既往估计</strong>：家庭对清洁水本身的支付意愿是既往净水技术研究的3-5倍，表明以往研究严重低估了清洁水的真实价值。</p></li>
-<li><p><strong>WTA &gt;
-WTP</strong>：接受意愿超过支付意愿，符合理论预测且差异显著，这对政策设计有重要含义。</p></li>
-<li><p><strong>健康收益显著</strong>：清洁水获取与自报疾病减少、健康支出下降、缺课减少相关。</p></li>
-<li><p><strong>成本效益高</strong>：以每DALY成本衡量，分散式水处理具有高成本效益，值得政策关注。</p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><p><strong>填补研究空白</strong>：首次通过随机实验直接测量农村贫困人口对清洁水本身的揭示偏好估值。</p></li>
-<li><p><strong>方法论示范</strong>：同时使用价格实验和现金返还机制分别识别WTP和WTA，为环境品估值提供了更完整的框架。</p></li>
-<li><p><strong>政策启示</strong>：证明分散式水处理和家庭配送是值得认真考虑的政策选项，可以作为管道供水和点源氯处理的补充或替代。</p></li>
-<li><p><strong>市场可行性证明</strong>：证明在适当价格下，这种商业模式可以盈利，为可持续扩展提供了可能。</p></li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
-<ol type="1">
-<li><p><strong>多地区复制</strong>：在其他地区复制这一实验，检验结果的外部效度</p></li>
-<li><p><strong>长期持续性</strong>：研究家庭使用清洁水的长期持续性，以及干预效果是否随时间衰减</p></li>
-<li><p><strong>补充干预</strong>：研究其他补充干预（如环境卫生教育）是否能进一步改善健康结果</p></li>
-<li><p><strong>比较研究</strong>：与其他清洁水干预（如不同类型的净水器、不同的配送模式）的直接比较</p></li>
-</ol>
-<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
-<ol type="1">
-<li><p><strong>外部效度问题</strong>：Odisha地区的结果能否推广到其他地区？需要更多跨地区研究。</p></li>
-<li><p><strong>竞争效应</strong>：如果政府大规模推广这一模式，对现有水供应商（如瓶装水、桶装水）会有什么影响？</p></li>
-<li><p><strong>动态效率</strong>：当前实验没有考虑动态激励——长期来看，这种模式是否会抑制私人投资？</p></li>
-<li><p><strong>制度设计</strong>：不同机构（政府、非营利组织、私人公司）在实施这一模式时效果是否相同？</p></li>
-<li><p><strong>行为偏差</strong>：家庭是否存在行为偏差（如Present
-Bias）导致低估值或无法坚持使用？</p></li>
-</ol>
-<hr>
-<h2 id="学术思考">7. 学术思考</h2>
-<h3 id="核心学术洞察">核心学术洞察</h3>
-<ol type="1">
-<li><p><strong>"产品"vs"技术"的估值差异</strong>：本文最重要的洞见之一是区分了"净水技术"和"清洁水本身"的价值。既往研究测量的是前者（氯片、水龙头等），而本文直接测量后者。这解释了为什么本研究WTP远高于以往——因为它测量的是最终产品的完整价值，包括了所有非货币成本（时间、麻烦、风险）的节省。</p></li>
-<li><p><strong>发展中国家环境品的WTP/WTA差距</strong>：本文发现WTA显著大于WTP，这与标准理论一致，但在发展中国家的实证检验仍然有限。本文提供了难得的发展中国家环境品WTA数据点。</p></li>
-<li><p><strong>免费分配的"地板效应"</strong>：有趣的是，即使在免费分配的情况下，需求也没有超过100%——说明确实存在某些家庭不使用清洁水。这可能与偏好、信息或其他障碍有关，值得进一步研究。</p></li>
-</ol>
-<h3 id="深层学术问题">深层学术问题</h3>
-<ol type="1">
-<li><p><strong>为什么Odisha的估值这么高？</strong>
-这是否与当地特殊的水资源状况有关（地下水砷污染严重）？还是反映了更普遍的心理和文化因素？</p></li>
-<li><p><strong>商业模式可持续性</strong>：Spring
-Health是一个成功的案例，但能否复制？在没有外部补贴的情况下，这种模式能否盈利？</p></li>
-<li><p><strong>价格机制的效率vs公平权衡</strong>：免费分配（或高额补贴）虽然能最大化覆盖率，但可能造成资源浪费。现金转移支付虽然更有效率，但可能不会全部用于购买清洁水。如何在这之间取得平衡？</p></li>
-<li><p><strong>自报健康结果的可靠性</strong>：本研究主要依赖自报健康数据，可能存在测量误差和报告偏差。是否有更客观的健康指标可以补充？</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p><strong>与其他发展中国家清洁水干预相比</strong>：本文的方法和结论与Kremer、Dupas等人在东非、南亚的研究有何异同？是否有系统性的跨国差异？</p></li>
-<li><p><strong>商业模式的规模扩展性</strong>：Spring
-Health能否在更大规模（县级、邦级、全国）复制？主要障碍是什么？</p></li>
-<li><p><strong>政府vs市场提供</strong>：在清洁水领域，政府免费提供、补贴价格、现金转移支付三种方式哪种最优？是否存在普遍适用的最优政策？</p></li>
-<li><p><strong>实证策略的可靠性</strong>：使用价格折扣和现金返还机制识别WTP和WTA是否会产生不同的偏差？如何验证估计的稳健性？</p></li>
-<li><p><strong>与中国农村饮水问题的关联</strong>：本文的研究结论对中国农村饮水安全政策有什么启示？中国是否有类似分散式水配送的实践？</p></li>
-<li><p><strong>女性赋权效应</strong>：研究提到女性通常负责取水，清洁水配送对女性时间和经济参与有什么长期影响？</p></li>
-<li><p><strong>与其他健康干预的组合</strong>：清洁水干预与其他公共卫生干预（如疫苗、营养补充）组合是否能产生更大的健康收益？</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -3744,6 +3417,333 @@ Mani et al. (2013)
         <tag>贫困研究</tag>
         <tag>行为经济学</tag>
         <tag>认知科学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>清洁水的价值 — 深度阅读笔记 — Burlig, Jina &amp; Sudarshan</title>
+    <url>/posts/burlig2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: The Value of Clean Water: Experimental
+Evidence from Rural India</li>
+<li><strong>作者</strong>: Fiona Burlig (University of Chicago Harris
+School, EPIC), Amir Jina (University of Chicago Harris School, EPIC,
+NBER), Anant Sudarshan (University of Warwick)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(3):
+1148-1187</li>
+<li><strong>DOI</strong>: 10.1257/aer.20250278</li>
+<li><strong>难度评估</strong>: 高 -
+需要实验经济学、发展经济学、公共卫生经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>饮用水安全问题（Safe Drinking Water
+Access）</strong>：全球约20亿人缺乏安全饮用水，这是一个重大的公共卫生危机。传统解决方案包括自来水管道和点源氯处理，但各有问题：管道建设成本高昂（高成本），氯处理方案需求不足（低需求）。</p>
+<p><strong>分散式水处理与家庭配送（Decentralized Treatment and Home
+Delivery）</strong>：一种替代方案是将水处理分散化并配送到家庭。这种模式在巴西、中国、印度、印度尼西亚、墨西哥等国家日益普及，使用量在多年间增长了300%。</p>
+<p><strong>揭示偏好法（Revealed Preference
+Methods）</strong>：通过观察人们在现实市场中的实际选择来推断其支付意愿（WTP），而非依赖假设性的条件评估法。这种方法更接近真实价值。</p>
+<p><strong>DALY（Disability-Adjusted Life
+Year）</strong>：一种综合衡量疾病负担的指标，等于因早死而损失的生命年数加上因残疾而损失的健康年数。DALY越低表示健康状况越好。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><strong>全球水危机规模</strong>：
+<ul>
+<li>超过20亿人缺乏安全饮用水</li>
+<li>受污染饮用水每年导致约14亿例腹泻、50万儿童死亡</li>
+<li>清洁饮用水的缺乏是全球儿童死亡的主要原因之一</li>
+<li>联合国估计，实现普遍清洁饮用水获取需要将当前改善速度提高六倍</li>
+</ul></li>
+<li><strong>现有解决方案的局限性</strong>：
+<ul>
+<li><strong>管道供水</strong>：英国等发达国家花费近150年才实现普遍管道供水；低收入国家仅约30%农村人口能获得自来水，且经常受到污染</li>
+<li><strong>点源氯处理</strong>：成本低，有效，但使用率仅约5%，被描述为"不够好，无法完全解决"清洁水获取问题</li>
+<li><strong>其他方法</strong>：净水器、太阳消毒等替代方案虽有效果，但均存在局限性</li>
+</ul></li>
+<li><strong>新兴的第三种方案</strong>：
+<ul>
+<li>分散式水处理结合家庭配送模式正在兴起</li>
+<li>在中低收入国家城市贫民窟和农村地区服务越来越多的人口</li>
+<li>在巴西、中国、印度、印度尼西亚、墨西哥等国家增长显著</li>
+</ul></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>： 1.
+分散式家庭配送清洁水是否能够有效改善农村贫困人口的清洁水获取问题？ 2.
+家庭对清洁水的真实估值是多少？支付意愿（WTP）和接受意愿（WTA）各是多少？
+3. 政府应该使用价格机制还是免费分配来提供清洁水？ 4.
+这种干预的成本效益如何？</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><p><strong>理论贡献</strong>：首次通过随机对照实验直接测量农村贫困人口对清洁饮用水本身的支付意愿，填补了以往研究只测量净水技术需求的空白。</p></li>
+<li><p><strong>方法论贡献</strong>：同时测量了WTP（支付意愿）和WTA（接受意愿）两种揭示偏好指标，为理解发展中国家家庭对环境品的估值提供了更完整的图景。</p></li>
+<li><p><strong>政策贡献</strong>：为发展中国家政府如何最优分配有限的公共卫生资金提供了实证依据，对全球清洁水获取政策具有直接指导意义。</p></li>
+<li><p><strong>规模可扩展性证明</strong>：研究合作方Spring
+Health已运营10年、覆盖Odisha地区100个村庄，证明了这种模式在技术上的可行性和可持续性。</p></li>
+</ol>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
+<ul>
+<li>全球水危机概述</li>
+<li>现有解决方案的局限（管道高成本、氯处理低需求）</li>
+<li>研究问题介绍</li>
+<li>论文结构预览</li>
+</ul>
+<h3 id="第二节背景与研究地点background-and-setting">第二节：背景与研究地点（Background
+and Setting）</h3>
+<ul>
+<li><strong>II.1
+研究地点</strong>：印度Odisha邦——印度最贫穷的邦之一，农村家庭月支出约2600卢比</li>
+<li><strong>II.2
+水资源状况</strong>：地下水丰富但砷、铁等污染物普遍存在；约20%人口缺乏安全饮用水</li>
+<li><strong>II.3 Spring
+Health公司</strong>：研究合作方，提供分散式水处理和家庭配送服务</li>
+</ul>
+<h3 id="第三节实验设计experimental-design">第三节：实验设计（Experimental
+Design）</h3>
+<ul>
+<li><strong>III.1
+实验目标</strong>：测量清洁水需求和估值；测量对健康的影响</li>
+<li><strong>III.2
+实验结构</strong>：集群随机试验，600个村庄，60,000户家庭</li>
+<li><strong>III.3 处理组设置</strong>：
+<ul>
+<li>定价组：不同折扣（25%、50%、75%）的价格优惠</li>
+<li>定量配给组：每月免费定量供给</li>
+<li>可交换配额组：现金返还机制</li>
+</ul></li>
+<li><strong>III.4
+控制组</strong>：纯控制组（保持原有状态）和商家对照组</li>
+</ul>
+<h3 id="第四节数据收集data-collection">第四节：数据收集（Data
+Collection）</h3>
+<ul>
+<li><strong>IV.1 管理数据</strong>：Spring Health订单系统记录</li>
+<li><strong>IV.2 调查数据</strong>：高频检查和终线调查</li>
+<li><strong>IV.3 健康结果</strong>：自报疾病、健康支出、缺课情况等</li>
+<li><strong>IV.4 水质测试</strong>：样本水质检测结果</li>
+</ul>
+<h3 id="第五节需求分析结果results-demand-for-clean-water">第五节：需求分析结果（Results:
+Demand for Clean Water）</h3>
+<ul>
+<li><strong>V.1 需求价格弹性</strong>：从价格折扣组估计</li>
+<li><strong>V.2 需求曲线</strong>：绘制价格-需求量曲线</li>
+<li><strong>V.3 广延边际vs集约边际</strong>：是否订购 vs
+订购数量的区分</li>
+<li><strong>V.4 需求稳定性</strong>：整个实验期间需求保持高位</li>
+</ul>
+<h3 id="第六节估值分析results-valuation">第六节：估值分析（Results:
+Valuation）</h3>
+<ul>
+<li><strong>VI.1 支付意愿（WTP）</strong>：从价格数据估算</li>
+<li><strong>VI.2 接受意愿（WTA）</strong>：从现金返还机制估算</li>
+<li><strong>VI.3
+与以往研究的比较</strong>：本研究估值比以往间接估计高数倍</li>
+</ul>
+<h3 id="第七节健康影响results-health-effects">第七节：健康影响（Results:
+Health Effects）</h3>
+<ul>
+<li><strong>VII.1
+自报疾病减少</strong>：饮用水清洁水后自报生病概率下降</li>
+<li><strong>VII.2 健康支出减少</strong>：医疗支出显著降低</li>
+<li><strong>VII.3 缺课减少</strong>：家庭成员缺课情况改善</li>
+<li><strong>VII.4 异质性分析</strong>：不同亚组的健康影响差异</li>
+</ul>
+<h3 id="第八节成本效益分析cost-effectiveness-analysis">第八节：成本效益分析（Cost-Effectiveness
+Analysis）</h3>
+<ul>
+<li><strong>VIII.1 单位成本计算</strong>：每升水成本、每户每月成本</li>
+<li><strong>VIII.2 DALY计算</strong>：每DALY节省成本</li>
+<li><strong>VIII.3
+与其他干预比较</strong>：与氯片分配、优惠券等比较</li>
+<li><strong>VIII.4
+不同场景分析</strong>：全补贴vs部分补贴vs市场定价</li>
+</ul>
+<h3 id="第九节讨论与结论discussion-and-conclusion">第九节：讨论与结论（Discussion
+and Conclusion）</h3>
+<ul>
+<li><strong>IX.1 政策含义</strong>：免费配送vs现金转移支付的权衡</li>
+<li><strong>IX.2 机制优势</strong>：相比点源氯处理的优势</li>
+<li><strong>IX.3 局限性</strong>：研究样本特殊性、外部效度问题</li>
+<li><strong>IX.4
+结论</strong>：分散式水处理和家庭配送是值得认真考虑的政策选项</li>
+</ul>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="全球水危机">全球水危机</h4>
+<p>全球约20亿人缺乏安全饮用水，这一问题的规模令人震惊： -
+每年约14亿例腹泻病例与不安全饮用水相关 - 50万儿童因腹泻死亡 -
+清洁水获取是全球儿童死亡的主要原因之一 -
+联合国估计实现普遍清洁水获取需要将改善速度提高六倍</p>
+<h4 id="传统解决方案的失败">传统解决方案的失败</h4>
+<p><strong>管道供水的局限</strong>： -
+发达国家（如英国）花费了近一个世纪才实现普遍管道供水 -
+低收入国家仅有不到30%的农村人口能获得自来水 -
+更为关键的是，即使有管道的地区，水质也常常不达标 -
+印度国家首都区仅26%的管道水样本被认为是可饮用的</p>
+<p><strong>点源氯处理的局限</strong>： -
+成本低，有效：可显著改善健康结果 -
+<strong>核心问题</strong>：使用率极低——即使完全免费，使用率也仅约5% -
+低需求原因包括： - 味道问题（氯的异味） -
+便利性问题（需要记住处理、存储水） - 认知负担（需要改变日常行为） -
+污染风险（取水和运水过程中的二次污染）</p>
+<h4 id="新兴的第三种方案">新兴的第三种方案</h4>
+<p>分散式水处理结合家庭配送正在成为第三种解决方案： -
+在巴西、中国、印度、印度尼西亚、墨西哥等国家迅速普及 -
+使用量在多年间增长了300% -
+结合了管道供水（方便）和氯处理（便宜）的优点</p>
+<h3 id="挑战">挑战</h3>
+<h4 id="研究问题">研究问题</h4>
+<ol type="1">
+<li><p><strong>需求弹性问题</strong>：家庭对清洁水的需求价格弹性有多大？在什么价格水平上需求会大幅下降？</p></li>
+<li><p><strong>真实估值问题</strong>：家庭对清洁水的真实价值是多少？以往的研究只研究了净水技术需求，而非清洁水本身。</p></li>
+<li><p><strong>WTP vs
+WTA问题</strong>：支付意愿和接受意愿是否不同？经典理论预测WTA应该大于WTP，但在发展中国家环境中是否如此？</p></li>
+<li><p><strong>政策设计问题</strong>：政府应该提供免费水、补贴价格还是现金转移支付？哪种方式更有效率？</p></li>
+<li><p><strong>成本效益问题</strong>：与其他公共卫生干预相比，这种干预的成本效益如何？</p></li>
+</ol>
+<h3 id="方法数据集要突出">方法（数据集要突出）</h3>
+<h4 id="实验设置">实验设置</h4>
+<p><strong>地点</strong>：印度Odisha邦——印度最贫穷的邦之一，排名第29/35</p>
+<p><strong>样本规模</strong>： - 600个村庄 - 约60,000户家庭 -
+实施周期：2021年4月至2023年8月（约27个月）</p>
+<p><strong>合作方</strong>：Spring Health India -
+在Odisha农村地区运营分散式水处理和家庭配送 - 使用电动氯化处理工艺 -
+太阳能供电 - 当地企业家运营</p>
+<p><strong>随机化设计</strong>：</p>
+<p>600个村庄随机分为3组： - 定价组（200村）：以不同折扣购买清洁水 -
+25%折扣 - 50%折扣 - 75%折扣 - 定量配给组（200村）：每月免费定量供给 -
+可交换配额组（200村）：现金返还机制 - 控制组：纯控制组</p>
+<p><strong>价格设置</strong>： - 全价：10卢比/升 - 25%折扣：7.5卢比/升 -
+50%折扣：5卢比/升 - 75%折扣：2.5卢比/升</p>
+<p><strong>现金返还设置</strong>： -
+季度返还：返还购买金额的25%、50%、75% - 返还方式：移动支付或银行账户</p>
+<h4 id="数据收集">数据收集</h4>
+<p><strong>管理数据</strong>： - Spring Health订单系统完整记录所有订单 -
+每日订单数量、价格、用户信息 - 完整面板数据</p>
+<p><strong>调查数据</strong>： - 高频检查（约每季度一次） -
+终线调查（实验结束时） - 涵盖饮水习惯、健康结果等</p>
+<p><strong>水质测试</strong>： - 从不同水源采集样本 -
+检测大肠杆菌等生物污染物 - 金属污染物检测</p>
+<h3 id="结果results">结果（Results）</h3>
+<h4 id="主要发现一需求价格弹性">主要发现一：需求价格弹性</h4>
+<p><strong>关键结果</strong>：在低价位（免费或低价）时，需求超过90%，且在整个实验期间保持稳定。</p>
+<p>具体而言： - <strong>免费或低价时</strong>：超过90%的家庭订购清洁水 -
+<strong>高价时（10卢比/升）</strong>：需求下降约40% -
+<strong>价格弹性</strong>：估计约为<span class="math inline">\({-0.3}\)</span>至<span class="math inline">\({-0.5}\)</span>左右</p>
+<p><strong>需求曲线形态</strong>： - 呈现明显的非线性特征 -
+在低价位时需求高度无弹性 - 在价格上涨时需求弹性增加 -
+但即使高价也有相当需求（说明潜在市场存在）</p>
+<p><strong>广延边际vs集约边际</strong>： -
+<strong>广延边际</strong>（是否订购）：对价格高度敏感 -
+<strong>集约边际</strong>（订购多少）：对价格相对不敏感 -
+一旦决定订购，家庭倾向于订购满足大部分饮水需求的量</p>
+<h4 id="主要发现二支付意愿和接受意愿">主要发现二：支付意愿和接受意愿</h4>
+<p><strong>支付意愿（WTP）</strong>： - 远高于以往间接估计 -
+约为既往氯处理研究的3-5倍 - 月度WTP约为家庭月支出的5-10% -
+相当于年度清洁水价值约为月支出的60-120%</p>
+<p><strong>接受意愿（WTA）</strong>： - WTA &gt; WTP，符合理论预测 -
+WTA显著超过边际成本 - 表明存在相当大的消费者剩余</p>
+<p><strong>为什么WTP远高于既往研究？</strong> -
+既往研究测量的是净水技术需求，而非清洁水本身 -
+家庭需要承担额外的非货币成本（时间、麻烦、认知负担） -
+本研究直接测量了最终产品——清洁水本身 - 包含了时间节省等额外收益</p>
+<h4 id="主要发现三健康影响">主要发现三：健康影响</h4>
+<p><strong>自报疾病减少</strong>： -
+饮用水清洁水的家庭自报生病概率降低约5-8个百分点 -
+相当于相比对照组降低约25-30%</p>
+<p><strong>健康支出减少</strong>： - 每周健康支出显著减少 -
+减少幅度约15-20%</p>
+<p><strong>缺课减少</strong>： - 因病缺课情况改善 -
+对女性影响尤为显著（她们通常负责取水）</p>
+<p><strong>时间节省</strong>： - 每周取水平均时间减少约15-20分钟 -
+对于女性有特别的性别平等意义</p>
+<h4 id="主要发现四成本效益分析">主要发现四：成本效益分析</h4>
+<p><strong>成本估算</strong>： - 每升水边际成本：约2-3卢比 -
+每户每月运营成本：约150-200卢比</p>
+<p><strong>DALY计算结果</strong>： - 免费配送模式的每DALY成本：约${<span class="math inline">\(30-80}
+- 远低于世界卫生组织的成本效益阈值（\)</span>{$100}/DALY） -
+与其他高性价比公共卫生干预（如蚊帐、疫苗）相当</p>
+<p><strong>与其他干预比较</strong>： -
+比氯片分配稍贵，但覆盖面更广、效果更持续 -
+比管道供水便宜得多，且实施更快 -
+综合考虑健康收益和时间节省，性价比突出</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>分散式家庭配送模式有效</strong>：农村家庭对清洁水的需求强烈且稳定，低价时超过90%的家庭持续使用。</p></li>
+<li><p><strong>估值远高于既往估计</strong>：家庭对清洁水本身的支付意愿是既往净水技术研究的3-5倍，表明以往研究严重低估了清洁水的真实价值。</p></li>
+<li><p><strong>WTA &gt;
+WTP</strong>：接受意愿超过支付意愿，符合理论预测且差异显著，这对政策设计有重要含义。</p></li>
+<li><p><strong>健康收益显著</strong>：清洁水获取与自报疾病减少、健康支出下降、缺课减少相关。</p></li>
+<li><p><strong>成本效益高</strong>：以每DALY成本衡量，分散式水处理具有高成本效益，值得政策关注。</p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><p><strong>填补研究空白</strong>：首次通过随机实验直接测量农村贫困人口对清洁水本身的揭示偏好估值。</p></li>
+<li><p><strong>方法论示范</strong>：同时使用价格实验和现金返还机制分别识别WTP和WTA，为环境品估值提供了更完整的框架。</p></li>
+<li><p><strong>政策启示</strong>：证明分散式水处理和家庭配送是值得认真考虑的政策选项，可以作为管道供水和点源氯处理的补充或替代。</p></li>
+<li><p><strong>市场可行性证明</strong>：证明在适当价格下，这种商业模式可以盈利，为可持续扩展提供了可能。</p></li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
+<ol type="1">
+<li><p><strong>多地区复制</strong>：在其他地区复制这一实验，检验结果的外部效度</p></li>
+<li><p><strong>长期持续性</strong>：研究家庭使用清洁水的长期持续性，以及干预效果是否随时间衰减</p></li>
+<li><p><strong>补充干预</strong>：研究其他补充干预（如环境卫生教育）是否能进一步改善健康结果</p></li>
+<li><p><strong>比较研究</strong>：与其他清洁水干预（如不同类型的净水器、不同的配送模式）的直接比较</p></li>
+</ol>
+<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
+<ol type="1">
+<li><p><strong>外部效度问题</strong>：Odisha地区的结果能否推广到其他地区？需要更多跨地区研究。</p></li>
+<li><p><strong>竞争效应</strong>：如果政府大规模推广这一模式，对现有水供应商（如瓶装水、桶装水）会有什么影响？</p></li>
+<li><p><strong>动态效率</strong>：当前实验没有考虑动态激励——长期来看，这种模式是否会抑制私人投资？</p></li>
+<li><p><strong>制度设计</strong>：不同机构（政府、非营利组织、私人公司）在实施这一模式时效果是否相同？</p></li>
+<li><p><strong>行为偏差</strong>：家庭是否存在行为偏差（如Present
+Bias）导致低估值或无法坚持使用？</p></li>
+</ol>
+<hr>
+<h2 id="学术思考">7. 学术思考</h2>
+<h3 id="核心学术洞察">核心学术洞察</h3>
+<ol type="1">
+<li><p><strong>"产品"vs"技术"的估值差异</strong>：本文最重要的洞见之一是区分了"净水技术"和"清洁水本身"的价值。既往研究测量的是前者（氯片、水龙头等），而本文直接测量后者。这解释了为什么本研究WTP远高于以往——因为它测量的是最终产品的完整价值，包括了所有非货币成本（时间、麻烦、风险）的节省。</p></li>
+<li><p><strong>发展中国家环境品的WTP/WTA差距</strong>：本文发现WTA显著大于WTP，这与标准理论一致，但在发展中国家的实证检验仍然有限。本文提供了难得的发展中国家环境品WTA数据点。</p></li>
+<li><p><strong>免费分配的"地板效应"</strong>：有趣的是，即使在免费分配的情况下，需求也没有超过100%——说明确实存在某些家庭不使用清洁水。这可能与偏好、信息或其他障碍有关，值得进一步研究。</p></li>
+</ol>
+<h3 id="深层学术问题">深层学术问题</h3>
+<ol type="1">
+<li><p><strong>为什么Odisha的估值这么高？</strong>
+这是否与当地特殊的水资源状况有关（地下水砷污染严重）？还是反映了更普遍的心理和文化因素？</p></li>
+<li><p><strong>商业模式可持续性</strong>：Spring
+Health是一个成功的案例，但能否复制？在没有外部补贴的情况下，这种模式能否盈利？</p></li>
+<li><p><strong>价格机制的效率vs公平权衡</strong>：免费分配（或高额补贴）虽然能最大化覆盖率，但可能造成资源浪费。现金转移支付虽然更有效率，但可能不会全部用于购买清洁水。如何在这之间取得平衡？</p></li>
+<li><p><strong>自报健康结果的可靠性</strong>：本研究主要依赖自报健康数据，可能存在测量误差和报告偏差。是否有更客观的健康指标可以补充？</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p><strong>与其他发展中国家清洁水干预相比</strong>：本文的方法和结论与Kremer、Dupas等人在东非、南亚的研究有何异同？是否有系统性的跨国差异？</p></li>
+<li><p><strong>商业模式的规模扩展性</strong>：Spring
+Health能否在更大规模（县级、邦级、全国）复制？主要障碍是什么？</p></li>
+<li><p><strong>政府vs市场提供</strong>：在清洁水领域，政府免费提供、补贴价格、现金转移支付三种方式哪种最优？是否存在普遍适用的最优政策？</p></li>
+<li><p><strong>实证策略的可靠性</strong>：使用价格折扣和现金返还机制识别WTP和WTA是否会产生不同的偏差？如何验证估计的稳健性？</p></li>
+<li><p><strong>与中国农村饮水问题的关联</strong>：本文的研究结论对中国农村饮水安全政策有什么启示？中国是否有类似分散式水配送的实践？</p></li>
+<li><p><strong>女性赋权效应</strong>：研究提到女性通常负责取水，清洁水配送对女性时间和经济参与有什么长期影响？</p></li>
+<li><p><strong>与其他健康干预的组合</strong>：清洁水干预与其他公共卫生干预（如疫苗、营养补充）组合是否能产生更大的健康收益？</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -9633,58 +9633,6 @@ Inequality - <strong>作者</strong>:Yannis M. Ioannides, L. Rachel Ngai -
       </tags>
   </entry>
   <entry>
-    <title>Endogenous Clustering and Analogy-Based Expectation Equilibrium — 深度阅读笔记 — Jehiel &amp; Weber</title>
-    <url>/posts/jehiel2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Endogenous Clustering and Analogy-Based
-Expectation Equilibrium</li>
-<li><strong>作者</strong>: Philippe Jehiel (PSE &amp; UCL), Giacomo
-Weber (PSE &amp; Bologna)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies
-(RES)</li>
-<li><strong>难度评估</strong>: 高 - 需要博弈论、行为经济学、机器学习基础
-<span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言">1. 引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>ABEE类比预期均衡、K-means聚类、原型理论。</p>
-<h3 id="研究背景">研究背景</h3>
-<p>理性预期假设要求过高；外生类比分割的局限性。</p>
-<h3 id="核心问题">核心问题</h3>
-<p>类比分割如何内生决定？玩家如何在记忆约束下最优分类情况？</p>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：理论框架</li>
-<li>第三节：应用</li>
-<li>第四节：结论</li>
-</ul>
-<h2 id="正文">3. 正文</h2>
-<h3 id="核心机制">核心机制</h3>
-<p>将类比分割内生化为聚类问题的解</p>
-<h3 id="关键发现">关键发现</h3>
-<ol type="1">
-<li>区分自排斥（需混合分区）vs自吸引（多重均衡）环境</li>
-<li>有限环境总存在聚类分布ABEE</li>
-<li>应用：美人竞赛（自吸引）、监控游戏（自排斥）</li>
-</ol>
-<h2 id="结论">4. 结论</h2>
-<p>内生类比分割框架提供了均衡多重性的新渠道。</p>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<p>实证检验、福利含义、规范分析。</p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
     <url>/posts/48526/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
@@ -9737,6 +9685,58 @@ inference</em></strong>):如何从样本数据获取总体因果关系信息,实
       </categories>
       <tags>
         <tag>学术讲座</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Endogenous Clustering and Analogy-Based Expectation Equilibrium — 深度阅读笔记 — Jehiel &amp; Weber</title>
+    <url>/posts/jehiel2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Endogenous Clustering and Analogy-Based
+Expectation Equilibrium</li>
+<li><strong>作者</strong>: Philippe Jehiel (PSE &amp; UCL), Giacomo
+Weber (PSE &amp; Bologna)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies
+(RES)</li>
+<li><strong>难度评估</strong>: 高 - 需要博弈论、行为经济学、机器学习基础
+<span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言">1. 引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>ABEE类比预期均衡、K-means聚类、原型理论。</p>
+<h3 id="研究背景">研究背景</h3>
+<p>理性预期假设要求过高；外生类比分割的局限性。</p>
+<h3 id="核心问题">核心问题</h3>
+<p>类比分割如何内生决定？玩家如何在记忆约束下最优分类情况？</p>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：理论框架</li>
+<li>第三节：应用</li>
+<li>第四节：结论</li>
+</ul>
+<h2 id="正文">3. 正文</h2>
+<h3 id="核心机制">核心机制</h3>
+<p>将类比分割内生化为聚类问题的解</p>
+<h3 id="关键发现">关键发现</h3>
+<ol type="1">
+<li>区分自排斥（需混合分区）vs自吸引（多重均衡）环境</li>
+<li>有限环境总存在聚类分布ABEE</li>
+<li>应用：美人竞赛（自吸引）、监控游戏（自排斥）</li>
+</ol>
+<h2 id="结论">4. 结论</h2>
+<p>内生类比分割框架提供了均衡多重性的新渠道。</p>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<p>实证检验、福利含义、规范分析。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -10694,65 +10694,6 @@ Studies</li>
       </tags>
   </entry>
   <entry>
-    <title>Hiring as Exploration — 深度阅读笔记 — Li, Raymond &amp; Bergman</title>
-    <url>/posts/li2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Hiring as Exploration</li>
-<li><strong>作者</strong>: Danielle Li (MIT &amp; NBER), Lindsey Raymond
-(MIT), Peter Bergman (UT Austin &amp; NBER)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies
-(RES)</li>
-<li><strong>DOI</strong>: 10.1093/restud/rdaf040</li>
-<li><strong>难度评估</strong>: 高 -
-需要机器学习、计量经济学、招聘经济学基础 <span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言">1. 引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>情境强盗问题、探索与利用的权衡、监督学习算法、UCB（上置信界）算法。</p>
-<h3 id="研究背景">研究背景</h3>
-<p>算法招聘日益普及；传统监督学习算法可能复制历史偏见；人类面试官预测能力有限。</p>
-<h3 id="核心问题">核心问题</h3>
-<p>将招聘视为情境强盗问题——如何平衡"利用"（选择已知最佳）与"探索"（学习新候选人质量）。探索式算法能否在提高招聘质量的同时增加人口多样性？</p>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：招聘偏见</li>
-<li>第三节：数据环境</li>
-<li>第四节：实证策略</li>
-<li>第五节：算法设计（SL vs UCB）</li>
-<li>第六节：主要结果</li>
-<li>第七节：扩展</li>
-<li>第八节：结论</li>
-</ul>
-<h2 id="正文">3. 正文</h2>
-<h3 id="核心机制">核心机制</h3>
-<ul>
-<li><strong>SL模型</strong>：仅利用——选择预期质量最高的候选人</li>
-<li><strong>UCB模型</strong>：利用+探索——对特征偏离训练数据均值的候选人给予探索溢价</li>
-</ul>
-<h3 id="关键发现">关键发现</h3>
-<ol type="1">
-<li><strong>多样性</strong>：UCB使黑人/西班牙裔代表从9.4%增至24.3%；SL降至5%以下</li>
-<li><strong>质量</strong>：SL录用率32%，UCB 27%，人类仅10%</li>
-<li><strong>帕累托改进</strong>：可能同时提升质量与多样性</li>
-</ol>
-<h2 id="结论">4. 结论</h2>
-<p>探索式算法可实现帕累托改进，挑战了效率-公平权衡的传统观点。</p>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<p>跨行业推广、长期动态效应、法律伦理风险、因果机制检验。</p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>预算到期会导致年底浪费性支出吗?_ Liebman &amp; Mahoney (2017) 笔记</title>
     <url>/posts/liebman2017/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -10931,6 +10872,65 @@ DOJ的IT支出没有出现支出高峰,最后一周的IT支出仅占3.3%,而非I
         <tag>论文笔记</tag>
         <tag>公共经济学</tag>
         <tag>预算制度</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hiring as Exploration — 深度阅读笔记 — Li, Raymond &amp; Bergman</title>
+    <url>/posts/li2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Hiring as Exploration</li>
+<li><strong>作者</strong>: Danielle Li (MIT &amp; NBER), Lindsey Raymond
+(MIT), Peter Bergman (UT Austin &amp; NBER)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies
+(RES)</li>
+<li><strong>DOI</strong>: 10.1093/restud/rdaf040</li>
+<li><strong>难度评估</strong>: 高 -
+需要机器学习、计量经济学、招聘经济学基础 <span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言">1. 引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>情境强盗问题、探索与利用的权衡、监督学习算法、UCB（上置信界）算法。</p>
+<h3 id="研究背景">研究背景</h3>
+<p>算法招聘日益普及；传统监督学习算法可能复制历史偏见；人类面试官预测能力有限。</p>
+<h3 id="核心问题">核心问题</h3>
+<p>将招聘视为情境强盗问题——如何平衡"利用"（选择已知最佳）与"探索"（学习新候选人质量）。探索式算法能否在提高招聘质量的同时增加人口多样性？</p>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：招聘偏见</li>
+<li>第三节：数据环境</li>
+<li>第四节：实证策略</li>
+<li>第五节：算法设计（SL vs UCB）</li>
+<li>第六节：主要结果</li>
+<li>第七节：扩展</li>
+<li>第八节：结论</li>
+</ul>
+<h2 id="正文">3. 正文</h2>
+<h3 id="核心机制">核心机制</h3>
+<ul>
+<li><strong>SL模型</strong>：仅利用——选择预期质量最高的候选人</li>
+<li><strong>UCB模型</strong>：利用+探索——对特征偏离训练数据均值的候选人给予探索溢价</li>
+</ul>
+<h3 id="关键发现">关键发现</h3>
+<ol type="1">
+<li><strong>多样性</strong>：UCB使黑人/西班牙裔代表从9.4%增至24.3%；SL降至5%以下</li>
+<li><strong>质量</strong>：SL录用率32%，UCB 27%，人类仅10%</li>
+<li><strong>帕累托改进</strong>：可能同时提升质量与多样性</li>
+</ol>
+<h2 id="结论">4. 结论</h2>
+<p>探索式算法可实现帕累托改进，挑战了效率-公平权衡的传统观点。</p>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<p>跨行业推广、长期动态效应、法律伦理风险、因果机制检验。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -11466,6 +11466,46 @@ Vol. 126, pp. 593-650</li>
       </tags>
   </entry>
   <entry>
+    <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
+    <url>/posts/32262/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
+<h2 id="研究问题"><strong>1. 研究问题</strong></h2>
+<p>本文以江苏省12个地级市"河长制"政策转移案例(2006 —
+2016)为研究对象,在识别政策转移案例中"复制"和"再生产"两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对"河长制"转移程度的影响.研究发现"河长制"政策转移中的"政策再生产"的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局.通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产.</p>
+<p>&nbsp;</p>
+<span id="more"></span>
+<h2 id="问题的提出"><strong>2. 问题的提出</strong></h2>
+<p><strong>2.1 政策转移的必要性</strong></p>
+<p>现实状况:政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有"后发优势"的意味、地区间的合作与竞争</p>
+<p>转移情形:政策转移并不意味着全盘复制,可分为"复制"和"再生产"两种形式</p>
+<p>核心问题:什么因素能够促成政策"再生产",政策"再生产"又体现出那些维度特征</p>
+<p><strong>2.2 河长制的背景介绍</strong></p>
+<p>河湖治理是跨界特性最典型的领域之一,涉及上下游、左右岸、不同行政区域和行业,呈现出高度的复杂性.河长制最早发轫于太湖蓝藻危机,2016年之前是一项地方政策,经政策扩散至多地.</p>
+<p>现实调查显示河长制在江苏省内的扩散过程中呈现出"复制"和"再生产"的典型差异.</p>
+<p>&nbsp;</p>
+<h2 id="研究思路和方法"><strong>3. 研究思路和方法</strong></h2>
+<p><strong>3.1 QCA</strong></p>
+<p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles
+Ragin)于<code>1987</code>年提出,适用于案例数量大于10小于60的研究.</p>
+<p>其使用布尔代数和集合论的思想来进行中小数量的跨案例比较,从而处理多个原因和一个结果之间的因果关系.</p>
+<p><strong>3.2 转移程度的刻画</strong></p>
+<p>道洛维茨和马什最早借鉴rose(1993)的连续统来划分政策转移程度:复制、模仿、混合、启发.</p>
+<p>本文简单划分为:"复制"和"再生产"</p>
+<p><strong>3.3 解释变量的选择</strong></p>
+<p>行政压力、资源禀赋、政策需求、外部力量</p>
+<p>&nbsp;</p>
+<h2 id="结论"><strong>4. 结论</strong></h2>
+<p>政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素.</p>
+]]></content>
+      <categories>
+        <category>公共管理</category>
+        <category>政策转移</category>
+      </categories>
+      <tags>
+        <tag>文献阅读</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>用稻草做砖 — 深度阅读笔记 — Okeke</title>
     <url>/posts/okeke2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -11557,46 +11597,6 @@ rollout数据、设施调查、服务提供调查、患者调查、家庭调查<
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
-    <url>/posts/32262/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
-<h2 id="研究问题"><strong>1. 研究问题</strong></h2>
-<p>本文以江苏省12个地级市"河长制"政策转移案例(2006 —
-2016)为研究对象,在识别政策转移案例中"复制"和"再生产"两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对"河长制"转移程度的影响.研究发现"河长制"政策转移中的"政策再生产"的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局.通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产.</p>
-<p>&nbsp;</p>
-<span id="more"></span>
-<h2 id="问题的提出"><strong>2. 问题的提出</strong></h2>
-<p><strong>2.1 政策转移的必要性</strong></p>
-<p>现实状况:政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有"后发优势"的意味、地区间的合作与竞争</p>
-<p>转移情形:政策转移并不意味着全盘复制,可分为"复制"和"再生产"两种形式</p>
-<p>核心问题:什么因素能够促成政策"再生产",政策"再生产"又体现出那些维度特征</p>
-<p><strong>2.2 河长制的背景介绍</strong></p>
-<p>河湖治理是跨界特性最典型的领域之一,涉及上下游、左右岸、不同行政区域和行业,呈现出高度的复杂性.河长制最早发轫于太湖蓝藻危机,2016年之前是一项地方政策,经政策扩散至多地.</p>
-<p>现实调查显示河长制在江苏省内的扩散过程中呈现出"复制"和"再生产"的典型差异.</p>
-<p>&nbsp;</p>
-<h2 id="研究思路和方法"><strong>3. 研究思路和方法</strong></h2>
-<p><strong>3.1 QCA</strong></p>
-<p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles
-Ragin)于<code>1987</code>年提出,适用于案例数量大于10小于60的研究.</p>
-<p>其使用布尔代数和集合论的思想来进行中小数量的跨案例比较,从而处理多个原因和一个结果之间的因果关系.</p>
-<p><strong>3.2 转移程度的刻画</strong></p>
-<p>道洛维茨和马什最早借鉴rose(1993)的连续统来划分政策转移程度:复制、模仿、混合、启发.</p>
-<p>本文简单划分为:"复制"和"再生产"</p>
-<p><strong>3.3 解释变量的选择</strong></p>
-<p>行政压力、资源禀赋、政策需求、外部力量</p>
-<p>&nbsp;</p>
-<h2 id="结论"><strong>4. 结论</strong></h2>
-<p>政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素.</p>
-]]></content>
-      <categories>
-        <category>公共管理</category>
-        <category>政策转移</category>
-      </categories>
-      <tags>
-        <tag>文献阅读</tag>
       </tags>
   </entry>
   <entry>
@@ -13251,6 +13251,42 @@ III资本要求对银行中介交易产生负面影响</p></li>
       </tags>
   </entry>
   <entry>
+    <title>画一幅我农所在地的道路图</title>
+    <url>/posts/42027/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;">
+<center>
+上图即为最终效果
+</center>
+<h2 id="一些必备的工具">一些必备的工具</h2>
+<p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="绘制路网地图">绘制路网地图</h2>
+<p>导入以下R 包:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>读入杨陵区的数据:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>获取杨陵区的经纬度范围:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
+<p>提取杨陵区的街道路线:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>把数据保存为<strong>rds</strong>:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>然后绘图:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>绘图</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>多层网络上的博弈 — 深度阅读笔记 — Zenou &amp; Zhou</title>
     <url>/posts/zenou2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -13345,42 +13381,6 @@ T\]</span></p>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>画一幅我农所在地的道路图</title>
-    <url>/posts/42027/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;">
-<center>
-上图即为最终效果
-</center>
-<h2 id="一些必备的工具">一些必备的工具</h2>
-<p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="绘制路网地图">绘制路网地图</h2>
-<p>导入以下R 包:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>读入杨陵区的数据:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>获取杨陵区的经纬度范围:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
-<p>提取杨陵区的街道路线:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>把数据保存为<strong>rds</strong>:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>然后绘图:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>绘图</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
       </tags>
   </entry>
 </search>
