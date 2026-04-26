@@ -67,6 +67,97 @@ ATT\)</span>一定会比较大,基准模型会存在低估偏误</li>
       </tags>
   </entry>
   <entry>
+    <title>国家能力建设中的溢出效应 — 深度阅读笔记 — Aman-Rana &amp; Minaudier</title>
+    <url>/posts/aman-rana2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Spillovers in State Capacity Building:
+Evidence from the Digitization of Land Records in Pakistan</li>
+<li><strong>作者</strong>: Shan Aman-Rana (University of Virginia),
+Clement Minaudier (City University of London)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(4):
+1459-1498</li>
+<li><strong>DOI</strong>: 10.1257/aer.20240880</li>
+<li><strong>难度评估</strong>: 高 -
+需要发展经济学、组织经济学、计量经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>国家能力（State
+Capacity）</strong>：指国家有效执行政策和提供公共服务的能力，主要包括税收能力、产权保护和行政能力。</p>
+<p><strong>数字化改革（Digitization
+Reform）</strong>：在发展中国家被视为加强国家能力的有效手段，可减少官僚腐败，提高透明度和效率。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>数字化的双重性</strong>：数字化会"重塑"官僚机构的组织结构，改变不同机构间的关系</p></li>
+<li><p><strong>研究缺口</strong>：现有文献主要关注数字化的直接正面效应，对间接影响的系统性研究不足</p></li>
+<li><p><strong>巴基斯坦案例</strong>：旁遮普省的分阶段土地记录数字化改革（2011-2014年）提供理想准实验场景</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：技术引入官僚机构所带来的组织变化是否会削弱国家能力？</p>
+<p><strong>主要发现</strong>：土地记录数字化导致税收征收下降84%</p>
+<hr>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<h3 id="第1节引言">第1节：引言</h3>
+<h3 id="第2节背景与数据">第2节：背景与数据</h3>
+<ul>
+<li>巴基斯坦旁遮普省的农业收入税（AIT）制度</li>
+<li>土地记录数字化改革三阶段推出（2011-2014年）</li>
+<li>数据来源：税收行政数据、卫星数据、家庭调查数据</li>
+</ul>
+<h3 id="第3节识别策略与结果">第3节：识别策略与结果</h3>
+<ul>
+<li>交错推出的DID设计</li>
+<li>数字化导致税收征收下降84%</li>
+</ul>
+<h3 id="第4节机制分析">第4节：机制分析</h3>
+<ul>
+<li>税基变化</li>
+<li>官僚绩效变化（失去杠杆效应、腐败转移效应）</li>
+</ul>
+<h3 id="第5节讨论">第5节：讨论</h3>
+<h3 id="第6节结论">第6节：结论</h3>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="巴基斯坦农业收入税制度">巴基斯坦农业收入税制度</h4>
+<p>税收由地方官僚（Qanungo）征收，基于耕地面积或利润。征收流程包括年初作物检查（Girdawari）、发出税收需求通知、征收税款。</p>
+<h3 id="实证方法">实证方法</h3>
+<p><strong>识别策略</strong>： - 交错推出的DID设计 -
+使用计划推出时间而非实际时间定义处理变量 - 事件研究验证平行趋势</p>
+<p><strong>主要结果</strong>： - 数字化导致税收征收下降84%</p>
+<h3 id="机制分析">机制分析</h3>
+<p><strong>税基变化</strong>：使用卫星数据、农户调查数据验证</p>
+<p><strong>官僚绩效变化</strong>： -
+理论模型：失去杠杆效应、腐败转移效应 -
+税收评估变化：申报耕地面积下降10%、税收需求下降45% -
+征收绩效下降：征收率下降29.5个百分点</p>
+<hr>
+<h2 id="结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>技术引入可能损害国家能力</strong>：数字化在改善产权保护的同时，可能损害税收能力</p></li>
+<li><p><strong>组织变化是关键机制</strong>：官僚失去对农民土地信息的控制，导致征收能力下降</p></li>
+<li><p><strong>政策启示</strong>：技术投资必须配合组织变革</p></li>
+</ol>
+<hr>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<ol type="1">
+<li>其他国家类似数字化改革的验证</li>
+<li>配套政策干预的效果</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>When Should You Adjust Standard Errors for Clustering — 深度分析 — Abadie Et Al.</title>
     <url>/posts/abadie2023/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -349,97 +440,6 @@ Bootstrap是否是更好的选择?它与本文的TSCB有何关系?</p></li>
       </tags>
   </entry>
   <entry>
-    <title>国家能力建设中的溢出效应 — 深度阅读笔记 — Aman-Rana &amp; Minaudier</title>
-    <url>/posts/aman-rana2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Spillovers in State Capacity Building:
-Evidence from the Digitization of Land Records in Pakistan</li>
-<li><strong>作者</strong>: Shan Aman-Rana (University of Virginia),
-Clement Minaudier (City University of London)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(4):
-1459-1498</li>
-<li><strong>DOI</strong>: 10.1257/aer.20240880</li>
-<li><strong>难度评估</strong>: 高 -
-需要发展经济学、组织经济学、计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>国家能力（State
-Capacity）</strong>：指国家有效执行政策和提供公共服务的能力，主要包括税收能力、产权保护和行政能力。</p>
-<p><strong>数字化改革（Digitization
-Reform）</strong>：在发展中国家被视为加强国家能力的有效手段，可减少官僚腐败，提高透明度和效率。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>数字化的双重性</strong>：数字化会"重塑"官僚机构的组织结构，改变不同机构间的关系</p></li>
-<li><p><strong>研究缺口</strong>：现有文献主要关注数字化的直接正面效应，对间接影响的系统性研究不足</p></li>
-<li><p><strong>巴基斯坦案例</strong>：旁遮普省的分阶段土地记录数字化改革（2011-2014年）提供理想准实验场景</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：技术引入官僚机构所带来的组织变化是否会削弱国家能力？</p>
-<p><strong>主要发现</strong>：土地记录数字化导致税收征收下降84%</p>
-<hr>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<h3 id="第1节引言">第1节：引言</h3>
-<h3 id="第2节背景与数据">第2节：背景与数据</h3>
-<ul>
-<li>巴基斯坦旁遮普省的农业收入税（AIT）制度</li>
-<li>土地记录数字化改革三阶段推出（2011-2014年）</li>
-<li>数据来源：税收行政数据、卫星数据、家庭调查数据</li>
-</ul>
-<h3 id="第3节识别策略与结果">第3节：识别策略与结果</h3>
-<ul>
-<li>交错推出的DID设计</li>
-<li>数字化导致税收征收下降84%</li>
-</ul>
-<h3 id="第4节机制分析">第4节：机制分析</h3>
-<ul>
-<li>税基变化</li>
-<li>官僚绩效变化（失去杠杆效应、腐败转移效应）</li>
-</ul>
-<h3 id="第5节讨论">第5节：讨论</h3>
-<h3 id="第6节结论">第6节：结论</h3>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="巴基斯坦农业收入税制度">巴基斯坦农业收入税制度</h4>
-<p>税收由地方官僚（Qanungo）征收，基于耕地面积或利润。征收流程包括年初作物检查（Girdawari）、发出税收需求通知、征收税款。</p>
-<h3 id="实证方法">实证方法</h3>
-<p><strong>识别策略</strong>： - 交错推出的DID设计 -
-使用计划推出时间而非实际时间定义处理变量 - 事件研究验证平行趋势</p>
-<p><strong>主要结果</strong>： - 数字化导致税收征收下降84%</p>
-<h3 id="机制分析">机制分析</h3>
-<p><strong>税基变化</strong>：使用卫星数据、农户调查数据验证</p>
-<p><strong>官僚绩效变化</strong>： -
-理论模型：失去杠杆效应、腐败转移效应 -
-税收评估变化：申报耕地面积下降10%、税收需求下降45% -
-征收绩效下降：征收率下降29.5个百分点</p>
-<hr>
-<h2 id="结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>技术引入可能损害国家能力</strong>：数字化在改善产权保护的同时，可能损害税收能力</p></li>
-<li><p><strong>组织变化是关键机制</strong>：官僚失去对农民土地信息的控制，导致征收能力下降</p></li>
-<li><p><strong>政策启示</strong>：技术投资必须配合组织变革</p></li>
-</ol>
-<hr>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<ol type="1">
-<li>其他国家类似数字化改革的验证</li>
-<li>配套政策干预的效果</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Search Direction — 深度阅读笔记 — Anderson &amp; Renault</title>
     <url>/posts/anderson2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -670,152 +670,6 @@ RDD),这为识别道路建设的因果效应提供了方法论上的创新.</p><
       </tags>
   </entry>
   <entry>
-    <title>走出非洲假说、人类遗传多样性与比较经济发展 _ Ashraf &amp; Galor (2013) 笔记</title>
-    <url>/posts/ashraf2013/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>本文是 Ashraf &amp; Galor 2013
-年的论文笔记,探讨了一个很有意思的问题:为什么全球各地的经济发展水平差异这么大?作者们从人类迁徙的历史出发,提出了一个相当有冲击力的观点_遗传多样性可能才是那个"深层根源".</p>
-<span id="more"></span>
-<h2 id="领域基础知识">领域基础知识</h2>
-<p>理解这篇论文需要先搞清楚几个核心概念:</p>
-<p><strong>比较经济发展 (Comparative Economic
-Development)</strong>:经济学的一个领域,研究为什么不同国家在经济繁荣程度上差距这么大.传统上经济学家会关注地理、制度、文化、人力资本这些因素.</p>
-<p><strong>"走出非洲"假说 (Out of Africa
-Hypothesis)</strong>:关于现代人类起源的主流理论.大约15万年前现代人类在东非演化形成,7-9万年前开始分批迁徙,逐步扩散到全球.每次迁徙都只有一部分人离开,带走的遗传多样性只是一小部分.</p>
-<p><strong>遗传多样性 (Genetic
-Diversity)</strong>:一个群体内部基因变异的程度.多样性高意味着人群基因类型更丰富;低则意味着相对单一.本文用"期望杂合度"来衡量,可以理解为随机选两个人,他们在基因上不同的概率.</p>
-<p><strong>序列建立者效应 (Serial-Founder
-Effect)</strong>:在人类迁徙过程中,每批离开的人只携带祖先群体遗传多样性的一部分.这个过程反复发生,导致离非洲越远,遗传多样性越低.就像从一副牌里每次只抽几张出去建立新的牌堆,离原牌堆越远,牌种越少.</p>
-<h2 id="研究背景">研究背景</h2>
-<p>解释全球经济发展差异,传统研究主要聚焦这几类因素:</p>
-<ol type="1">
-<li><p><strong>地理因素</strong>:戴蒙德在&lt;枪炮、病菌与钢铁&gt;里强调的_农作物的地理分布、大陆轴线方向(东西向有利于技术传播)等,对新石器革命时机和农业发展速度有深远影响.</p></li>
-<li><p><strong>制度因素</strong>:产权保护、法治、政府效率等,被认为是现代经济增长的关键驱动力.</p></li>
-<li><p><strong>文化因素</strong>:宗教信仰、社会信任水平等对经济活动的影响.</p></li>
-<li><p><strong>人力资本</strong>:教育和技能的积累.</p></li>
-<li><p><strong>民族-语言碎片化</strong>:社会内部民族/语言群体多样性通常被认为会增加冲突、阻碍发展.</p></li>
-</ol>
-<p>但这些大多是"近端"因素,论文想找的是更"深层"的源头_人类自身的遗传构成.</p>
-<h2 id="作者的问题意识">作者的问题意识</h2>
-<p>作者注意到,虽然地理、制度、文化等因素在不同地区差异显著,但这些本身也可能是更深层历史过程的产物.于是他们想回答:</p>
-<ul>
-<li>遗传多样性是否在农业社会出现之前,就对经济发展产生了持久影响?</li>
-<li>这种影响是单纯正面的,还是复杂的(既有好处也有坏处)?</li>
-<li>遗传多样性与经济发展的关系,能否通过"走出非洲"的迁徙路径来解释?</li>
-<li>这种影响是否独立于地理、制度和文化等传统因素?</li>
-</ul>
-<p>作者特别区分了<strong>遗传多样性</strong>(群体内部基因差异)和<strong>民族多样性</strong>(通常通过语言文化差异衡量).他们认为遗传多样性既有益处也有成本,关系可能是"驼峰状"的_适度的多样性最好,过高或过低都不利.</p>
-<h2 id="研究意义">研究意义</h2>
-<ol type="1">
-<li><p><strong>挑战传统理论</strong>:把影响因素追溯到数万年前的人类遗传多样性,为理解全球发展不平等提供了全新视角.</p></li>
-<li><p><strong>揭示双重效应</strong>:提出并实证了"驼峰状"影响_适度多样性有益,过高或过低都阻碍发展.这颠覆了以往对多样性多为负面影响的认知.</p></li>
-<li><p><strong>解决内生性</strong>:用"走出非洲"迁徙距离作为遗传多样性的外生工具变量,有效解决了内生性问题.</p></li>
-<li><p><strong>解释区域差异</strong>:亚洲和欧洲适中的遗传多样性有利于发展;非洲过高、美洲原住民过低的多样性则构成阻碍.</p></li>
-<li><p><strong>开启新方向</strong>:为经济学、人类学、遗传学的交叉研究开辟了新路径.</p></li>
-</ol>
-<h2 id="论文结构">论文结构</h2>
-<p>论文结构清晰,逻辑严谨:</p>
-<ol type="1">
-<li><p><strong>引言</strong>:提出核心论点_数万年前的遗传多样性差异对经济发展有长期"驼峰状"影响,且独立于地理、制度和文化因素.</p></li>
-<li><p><strong>相关文献</strong>:回顾传统发展因素,特别区分了本文与关注"群体间遗传距离"的文献的不同.</p></li>
-<li><p><strong>理论模型</strong>:建立模型形式化遗传多样性对生产力的双重影响_既扩张生产可能性边界(收益),又降低生产效率(成本).</p></li>
-<li><p><strong>历史分析</strong>:</p>
-<ul>
-<li>因变量:1500年人口密度(马尔萨斯时代技术进步主要转化为人口增长)</li>
-<li>自变量:观察到的遗传多样性(53民族)和预测的遗传多样性(145国家,用迁徙距离预测)</li>
-<li>控制变量:新石器革命时机、土地生产力、大陆固定效应等</li>
-<li>确认了显著的"驼峰状"关系</li>
-</ul></li>
-<li><p><strong>当代分析</strong>:</p>
-<ul>
-<li>因变量:2000年人均收入</li>
-<li>构建了"祖先调整后的当代国家人口多样性指数"</li>
-<li>控制了大量制度、文化、地理因素后,"驼峰状"效应依然显著</li>
-<li>机制验证:遗传多样性与信任负相关(成本),与科学知识创造正相关(收益)</li>
-</ul></li>
-<li><p><strong>结论</strong>:重申核心发现和遗传多样性的双重效应.</p></li>
-</ol>
-<h2 id="背景为什么关注遗传多样性">背景:为什么关注遗传多样性?</h2>
-<p>论文起点是全球经济发展巨大差异的反思.传统解释虽然有力,但作者想追溯更根本的源头_人类自身的生物学特性,具体就是遗传多样性.</p>
-<p>面临的主要挑战:</p>
-<ol type="1">
-<li><p><strong>数据稀缺</strong>:可靠遗传多样性数据只覆盖53个民族群体,跨国研究远远不够.</p></li>
-<li><p><strong>内生性问题</strong>:经济发展可能吸引移民从而增加多样性,因果关系难以厘清.</p></li>
-<li><p><strong>区分两个概念</strong>:遗传多样性(基因层面)和民族多样性(文化语言层面)是不同的.</p></li>
-<li><p><strong>识别机制</strong>:需要解释为什么遗传多样性会影响生产力.</p></li>
-</ol>
-<h2 id="研究方法">研究方法</h2>
-<p><strong>核心思想:用"走出非洲"的迁徙距离来预测遗传多样性.</strong></p>
-<h3 id="理论基石">理论基石</h3>
-<ul>
-<li>现代人类起源于东非,逐步向全球扩散</li>
-<li>序列建立者效应:离东非越远,遗传多样性越低</li>
-<li>Ramachandran等(2005)发现东非迁徙距离可解释53个民族近86%的遗传多样性变异</li>
-<li>迁徙距离是史前事件,与现代经济发展无直接因果关系,可作为外生工具变量</li>
-</ul>
-<h3 id="遗传多样性测量">遗传多样性测量</h3>
-<p><strong>期望杂合度</strong>:随机选两个个体在基因位点不同的概率.</p>
-<p><strong>历史样本</strong>:21个国家,直接用HGDP-CEPH数据.</p>
-<p><strong>扩展样本</strong>:计算从亚的斯亚贝巴到各国首都的陆路迁徙距离(考虑五个强制中继点),预测145个国家的遗传多样性.</p>
-<h3 id="当代指数构建">当代指数构建</h3>
-<p>考虑殖民后人口流动,构建了综合指数: - 各祖先群体内部的遗传多样性 -
-不同祖先群体之间的遗传距离</p>
-<h3 id="产出变量">产出变量</h3>
-<ul>
-<li><strong>历史时期</strong>:人口密度(马尔萨斯时代技术进步主要导致人口增长)</li>
-<li><strong>当代</strong>:人均GDP</li>
-<li><strong>机制验证</strong>:人际信任水平、科学知识创造强度</li>
-</ul>
-<h3 id="控制变量">控制变量</h3>
-<p>历史分析:新石器革命时机、土地生产力、大陆固定效应</p>
-<p>当代分析:加上制度(社会基础设施、民主程度、法律起源)、文化(宗教份额、欧洲裔人口比例)、地理(疟疾风险、热带区域)等因素.</p>
-<h2 id="核心发现">核心发现</h2>
-<p><strong>遗传多样性对经济发展有显著的"驼峰状"影响</strong>,无论在史前还是当代都成立.存在一个最优遗传多样性水平.</p>
-<h3 id="历史分析结果1500年人口密度">历史分析结果(1500年人口密度)</h3>
-<ul>
-<li>最优遗传多样性约为0.683(与日本接近)</li>
-<li>低于最优:每增加1%多样性,人口密度增加约36%</li>
-<li>高于最优:每减少1%多样性,人口密度增加约29%</li>
-<li>东非多样性最高,美洲原住民最低,亚洲和欧洲处于中间(接近最优)</li>
-</ul>
-<h3 id="当代分析结果2000年人均收入">当代分析结果(2000年人均收入)</h3>
-<ul>
-<li>最优遗传多样性约为0.721(与美国接近),略高于历史时期</li>
-<li>低于最优:每增加1%多样性,人均收入增加约39%</li>
-<li>高于最优:每减少1%多样性,人均收入增加约21%</li>
-</ul>
-<h3 id="机制验证">机制验证</h3>
-<ul>
-<li><strong>成本端</strong>:遗传多样性与人际信任显著负相关</li>
-<li><strong>收益端</strong>:遗传多样性与科学知识创造强度显著正相关</li>
-</ul>
-<p>这与理论模型预测完全一致.</p>
-<h3 id="关键概念图示">关键概念图示</h3>
-<p>想象一条先升后降的曲线: - 横轴是遗传多样性水平 - 纵轴是生产力</p>
-<p>低多样性时,增加多样性带来的创新和适应性好处大于不合作的成本,生产力上升;高多样性后,不合作成本占主导,生产力下降.</p>
-<h2 id="个人读后感">个人读后感</h2>
-<p>读这篇论文最深的感受是:原来四五万年前的人类迁徙,居然还在以"基因指纹"的方式影响着今天的世界经济发展格局.这个视角确实宏大.</p>
-<p>论文的方法论也很有意思.用迁徙距离作为工具变量解决内生性,这个思路很巧妙_毕竟没有人能"穿越"回去操控史前人类的迁徙路线.</p>
-<p>但我比较好奇的是:这个研究结论在政策层面能怎么用?作者在Q&amp;A里也提到了伦理风险问题.遗传多样性不像制度那样容易改变,总不能制定政策让人"调整基因"吧?所以这个研究更像是一个"理解世界的窗口",而非"行动指南".</p>
-<p>另外论文区分遗传多样性和民族多样性这点也很重要.以前总觉得"民族多样性"被研究得差不多了,没想到从基因层面看是完全不同的故事.</p>
-<p>总体来说,这是一篇很有野心、视角独特的论文,把生物学和经济学结合得相当紧密.虽然有些结论还需要更多研究来验证,但"深层根源"这个研究思路确实给人启发.</p>
-<hr>
-<p><strong>参考信息</strong></p>
-<ul>
-<li>论文:Ashraf, Q. H., &amp; Galor, O. (2013). The "Out of Africa"
-Hypothesis, Human Genetic Diversity, and Comparative Economic
-Development. <em>American Economic Review</em>, 103(1), 1-46.</li>
-</ul>
-]]></content>
-      <categories>
-        <category>经济史</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>发展经济学</tag>
-        <tag>经济史</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Macroeconomic Effects of Debt Relief 深度阅读笔记 — Auclert, Dobbie &amp; Goldsmith-Pinkham</title>
     <url>/posts/auclert2019/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -997,6 +851,152 @@ Economic Review.</li>
         <tag>债务减免</tag>
         <tag>大衰退</tag>
         <tag>破产制度</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>走出非洲假说、人类遗传多样性与比较经济发展 _ Ashraf &amp; Galor (2013) 笔记</title>
+    <url>/posts/ashraf2013/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>本文是 Ashraf &amp; Galor 2013
+年的论文笔记,探讨了一个很有意思的问题:为什么全球各地的经济发展水平差异这么大?作者们从人类迁徙的历史出发,提出了一个相当有冲击力的观点_遗传多样性可能才是那个"深层根源".</p>
+<span id="more"></span>
+<h2 id="领域基础知识">领域基础知识</h2>
+<p>理解这篇论文需要先搞清楚几个核心概念:</p>
+<p><strong>比较经济发展 (Comparative Economic
+Development)</strong>:经济学的一个领域,研究为什么不同国家在经济繁荣程度上差距这么大.传统上经济学家会关注地理、制度、文化、人力资本这些因素.</p>
+<p><strong>"走出非洲"假说 (Out of Africa
+Hypothesis)</strong>:关于现代人类起源的主流理论.大约15万年前现代人类在东非演化形成,7-9万年前开始分批迁徙,逐步扩散到全球.每次迁徙都只有一部分人离开,带走的遗传多样性只是一小部分.</p>
+<p><strong>遗传多样性 (Genetic
+Diversity)</strong>:一个群体内部基因变异的程度.多样性高意味着人群基因类型更丰富;低则意味着相对单一.本文用"期望杂合度"来衡量,可以理解为随机选两个人,他们在基因上不同的概率.</p>
+<p><strong>序列建立者效应 (Serial-Founder
+Effect)</strong>:在人类迁徙过程中,每批离开的人只携带祖先群体遗传多样性的一部分.这个过程反复发生,导致离非洲越远,遗传多样性越低.就像从一副牌里每次只抽几张出去建立新的牌堆,离原牌堆越远,牌种越少.</p>
+<h2 id="研究背景">研究背景</h2>
+<p>解释全球经济发展差异,传统研究主要聚焦这几类因素:</p>
+<ol type="1">
+<li><p><strong>地理因素</strong>:戴蒙德在&lt;枪炮、病菌与钢铁&gt;里强调的_农作物的地理分布、大陆轴线方向(东西向有利于技术传播)等,对新石器革命时机和农业发展速度有深远影响.</p></li>
+<li><p><strong>制度因素</strong>:产权保护、法治、政府效率等,被认为是现代经济增长的关键驱动力.</p></li>
+<li><p><strong>文化因素</strong>:宗教信仰、社会信任水平等对经济活动的影响.</p></li>
+<li><p><strong>人力资本</strong>:教育和技能的积累.</p></li>
+<li><p><strong>民族-语言碎片化</strong>:社会内部民族/语言群体多样性通常被认为会增加冲突、阻碍发展.</p></li>
+</ol>
+<p>但这些大多是"近端"因素,论文想找的是更"深层"的源头_人类自身的遗传构成.</p>
+<h2 id="作者的问题意识">作者的问题意识</h2>
+<p>作者注意到,虽然地理、制度、文化等因素在不同地区差异显著,但这些本身也可能是更深层历史过程的产物.于是他们想回答:</p>
+<ul>
+<li>遗传多样性是否在农业社会出现之前,就对经济发展产生了持久影响?</li>
+<li>这种影响是单纯正面的,还是复杂的(既有好处也有坏处)?</li>
+<li>遗传多样性与经济发展的关系,能否通过"走出非洲"的迁徙路径来解释?</li>
+<li>这种影响是否独立于地理、制度和文化等传统因素?</li>
+</ul>
+<p>作者特别区分了<strong>遗传多样性</strong>(群体内部基因差异)和<strong>民族多样性</strong>(通常通过语言文化差异衡量).他们认为遗传多样性既有益处也有成本,关系可能是"驼峰状"的_适度的多样性最好,过高或过低都不利.</p>
+<h2 id="研究意义">研究意义</h2>
+<ol type="1">
+<li><p><strong>挑战传统理论</strong>:把影响因素追溯到数万年前的人类遗传多样性,为理解全球发展不平等提供了全新视角.</p></li>
+<li><p><strong>揭示双重效应</strong>:提出并实证了"驼峰状"影响_适度多样性有益,过高或过低都阻碍发展.这颠覆了以往对多样性多为负面影响的认知.</p></li>
+<li><p><strong>解决内生性</strong>:用"走出非洲"迁徙距离作为遗传多样性的外生工具变量,有效解决了内生性问题.</p></li>
+<li><p><strong>解释区域差异</strong>:亚洲和欧洲适中的遗传多样性有利于发展;非洲过高、美洲原住民过低的多样性则构成阻碍.</p></li>
+<li><p><strong>开启新方向</strong>:为经济学、人类学、遗传学的交叉研究开辟了新路径.</p></li>
+</ol>
+<h2 id="论文结构">论文结构</h2>
+<p>论文结构清晰,逻辑严谨:</p>
+<ol type="1">
+<li><p><strong>引言</strong>:提出核心论点_数万年前的遗传多样性差异对经济发展有长期"驼峰状"影响,且独立于地理、制度和文化因素.</p></li>
+<li><p><strong>相关文献</strong>:回顾传统发展因素,特别区分了本文与关注"群体间遗传距离"的文献的不同.</p></li>
+<li><p><strong>理论模型</strong>:建立模型形式化遗传多样性对生产力的双重影响_既扩张生产可能性边界(收益),又降低生产效率(成本).</p></li>
+<li><p><strong>历史分析</strong>:</p>
+<ul>
+<li>因变量:1500年人口密度(马尔萨斯时代技术进步主要转化为人口增长)</li>
+<li>自变量:观察到的遗传多样性(53民族)和预测的遗传多样性(145国家,用迁徙距离预测)</li>
+<li>控制变量:新石器革命时机、土地生产力、大陆固定效应等</li>
+<li>确认了显著的"驼峰状"关系</li>
+</ul></li>
+<li><p><strong>当代分析</strong>:</p>
+<ul>
+<li>因变量:2000年人均收入</li>
+<li>构建了"祖先调整后的当代国家人口多样性指数"</li>
+<li>控制了大量制度、文化、地理因素后,"驼峰状"效应依然显著</li>
+<li>机制验证:遗传多样性与信任负相关(成本),与科学知识创造正相关(收益)</li>
+</ul></li>
+<li><p><strong>结论</strong>:重申核心发现和遗传多样性的双重效应.</p></li>
+</ol>
+<h2 id="背景为什么关注遗传多样性">背景:为什么关注遗传多样性?</h2>
+<p>论文起点是全球经济发展巨大差异的反思.传统解释虽然有力,但作者想追溯更根本的源头_人类自身的生物学特性,具体就是遗传多样性.</p>
+<p>面临的主要挑战:</p>
+<ol type="1">
+<li><p><strong>数据稀缺</strong>:可靠遗传多样性数据只覆盖53个民族群体,跨国研究远远不够.</p></li>
+<li><p><strong>内生性问题</strong>:经济发展可能吸引移民从而增加多样性,因果关系难以厘清.</p></li>
+<li><p><strong>区分两个概念</strong>:遗传多样性(基因层面)和民族多样性(文化语言层面)是不同的.</p></li>
+<li><p><strong>识别机制</strong>:需要解释为什么遗传多样性会影响生产力.</p></li>
+</ol>
+<h2 id="研究方法">研究方法</h2>
+<p><strong>核心思想:用"走出非洲"的迁徙距离来预测遗传多样性.</strong></p>
+<h3 id="理论基石">理论基石</h3>
+<ul>
+<li>现代人类起源于东非,逐步向全球扩散</li>
+<li>序列建立者效应:离东非越远,遗传多样性越低</li>
+<li>Ramachandran等(2005)发现东非迁徙距离可解释53个民族近86%的遗传多样性变异</li>
+<li>迁徙距离是史前事件,与现代经济发展无直接因果关系,可作为外生工具变量</li>
+</ul>
+<h3 id="遗传多样性测量">遗传多样性测量</h3>
+<p><strong>期望杂合度</strong>:随机选两个个体在基因位点不同的概率.</p>
+<p><strong>历史样本</strong>:21个国家,直接用HGDP-CEPH数据.</p>
+<p><strong>扩展样本</strong>:计算从亚的斯亚贝巴到各国首都的陆路迁徙距离(考虑五个强制中继点),预测145个国家的遗传多样性.</p>
+<h3 id="当代指数构建">当代指数构建</h3>
+<p>考虑殖民后人口流动,构建了综合指数: - 各祖先群体内部的遗传多样性 -
+不同祖先群体之间的遗传距离</p>
+<h3 id="产出变量">产出变量</h3>
+<ul>
+<li><strong>历史时期</strong>:人口密度(马尔萨斯时代技术进步主要导致人口增长)</li>
+<li><strong>当代</strong>:人均GDP</li>
+<li><strong>机制验证</strong>:人际信任水平、科学知识创造强度</li>
+</ul>
+<h3 id="控制变量">控制变量</h3>
+<p>历史分析:新石器革命时机、土地生产力、大陆固定效应</p>
+<p>当代分析:加上制度(社会基础设施、民主程度、法律起源)、文化(宗教份额、欧洲裔人口比例)、地理(疟疾风险、热带区域)等因素.</p>
+<h2 id="核心发现">核心发现</h2>
+<p><strong>遗传多样性对经济发展有显著的"驼峰状"影响</strong>,无论在史前还是当代都成立.存在一个最优遗传多样性水平.</p>
+<h3 id="历史分析结果1500年人口密度">历史分析结果(1500年人口密度)</h3>
+<ul>
+<li>最优遗传多样性约为0.683(与日本接近)</li>
+<li>低于最优:每增加1%多样性,人口密度增加约36%</li>
+<li>高于最优:每减少1%多样性,人口密度增加约29%</li>
+<li>东非多样性最高,美洲原住民最低,亚洲和欧洲处于中间(接近最优)</li>
+</ul>
+<h3 id="当代分析结果2000年人均收入">当代分析结果(2000年人均收入)</h3>
+<ul>
+<li>最优遗传多样性约为0.721(与美国接近),略高于历史时期</li>
+<li>低于最优:每增加1%多样性,人均收入增加约39%</li>
+<li>高于最优:每减少1%多样性,人均收入增加约21%</li>
+</ul>
+<h3 id="机制验证">机制验证</h3>
+<ul>
+<li><strong>成本端</strong>:遗传多样性与人际信任显著负相关</li>
+<li><strong>收益端</strong>:遗传多样性与科学知识创造强度显著正相关</li>
+</ul>
+<p>这与理论模型预测完全一致.</p>
+<h3 id="关键概念图示">关键概念图示</h3>
+<p>想象一条先升后降的曲线: - 横轴是遗传多样性水平 - 纵轴是生产力</p>
+<p>低多样性时,增加多样性带来的创新和适应性好处大于不合作的成本,生产力上升;高多样性后,不合作成本占主导,生产力下降.</p>
+<h2 id="个人读后感">个人读后感</h2>
+<p>读这篇论文最深的感受是:原来四五万年前的人类迁徙,居然还在以"基因指纹"的方式影响着今天的世界经济发展格局.这个视角确实宏大.</p>
+<p>论文的方法论也很有意思.用迁徙距离作为工具变量解决内生性,这个思路很巧妙_毕竟没有人能"穿越"回去操控史前人类的迁徙路线.</p>
+<p>但我比较好奇的是:这个研究结论在政策层面能怎么用?作者在Q&amp;A里也提到了伦理风险问题.遗传多样性不像制度那样容易改变,总不能制定政策让人"调整基因"吧?所以这个研究更像是一个"理解世界的窗口",而非"行动指南".</p>
+<p>另外论文区分遗传多样性和民族多样性这点也很重要.以前总觉得"民族多样性"被研究得差不多了,没想到从基因层面看是完全不同的故事.</p>
+<p>总体来说,这是一篇很有野心、视角独特的论文,把生物学和经济学结合得相当紧密.虽然有些结论还需要更多研究来验证,但"深层根源"这个研究思路确实给人启发.</p>
+<hr>
+<p><strong>参考信息</strong></p>
+<ul>
+<li>论文:Ashraf, Q. H., &amp; Galor, O. (2013). The "Out of Africa"
+Hypothesis, Human Genetic Diversity, and Comparative Economic
+Development. <em>American Economic Review</em>, 103(1), 1-46.</li>
+</ul>
+]]></content>
+      <categories>
+        <category>经济史</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>发展经济学</tag>
+        <tag>经济史</tag>
       </tags>
   </entry>
   <entry>
@@ -1702,151 +1702,6 @@ Moi改革后)，这是否影响校准的可靠性？</p>
       </tags>
   </entry>
   <entry>
-    <title>Do Governments Crowd Out Governments? — 深度阅读笔记 — Baumann &amp; Klymak</title>
-    <url>/posts/baumann2024/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Do governments crowd out governments?
-Evidence from a natural experiment</li>
-<li><strong>作者</strong>: Stuart Baumann, Margaryta Klymak</li>
-<li><strong>类型</strong>: 论文笔记 / 财政学 / 政府经济学</li>
-<li><strong>出版年份</strong>: 2024</li>
-<li><strong>出版机构/期刊</strong>: European Economic Review, Vol. 168,
-104803</li>
-<li><strong>难度评估</strong>: 中 - 需要计量经济学基础 <span id="more"></span>
----</li>
-</ul>
-<h2 id="引言背景和意义">引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>年终支出高峰(Year-End Spending
-Spike)是全球各国政府普遍存在的现象_政府部门在财政年度结束时集中大量支出.这种支出模式具有几个关键特征:</p>
-<p><strong>规模与普遍性.</strong>
-英国资本支出在财年最后一个月是月平均支出的约两倍;美国政府在财年最后一周的支出是平均周的4.9倍.这一现象在OECD
-27个国家均有观察到.</p>
-<p><strong>潜在浪费问题.</strong>
-年终仓促采购可能导致质量问题.Liebman和Mahoney(2017)发现,美国政府采购的IT项目在财年末执行的,其获得"低质量"评分的可能性是其他时间执行的2.2至5.6倍.</p>
-<p><strong>现有解释的局限.</strong>
-文献将年终支出归因于政府部门自身的预算周期(内部因素):如预防性储蓄基金、拖延行为、或规划不足.但这些解释均未考虑外部因素_其他政府部门和企业的支出行为.</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p><strong>拥堵效应与竞争机制.</strong>
-当多个政府部门同时高强度支出时,可能在供应商方面产生拥堵效应.具体机制包括:</p>
-<ul>
-<li><strong>价格上涨</strong>:供应商在高需求时期提高价格</li>
-<li><strong>采购替代</strong>:供应商不可用时被迫更换采购物品或供应商</li>
-<li><strong>销售策略</strong>:供应商增加销售人员、调整商品供应以利用高支出意愿</li>
-<li><strong>支出转移</strong>:部门可能将部分支出转移至其他时间以避免价格上涨</li>
-</ul>
-<p><strong>识别挑战.</strong>
-同一国家的政府机构通常遵循相同的财年规则,使得分离"部门自身财年影响"和"其他政府机构财年影响"成为重大识别挑战.</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:政府部门在财年末集中支出时,是否存在"政府挤出政府"的效应?</p>
-<p><strong>创新解决方案</strong>:利用英国驻海外办事处这一独特自然实验_这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
-<h3 id="研究意义">研究意义</h3>
-<ul>
-<li><strong>学术贡献</strong>:首次分离年终支出的"内部"与"外部"驱动因素</li>
-<li><strong>政策含义</strong>:错开不同部门的财年可能减少年终支出</li>
-</ul>
-<hr>
-<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
-<p><strong>第一节:引言(Introduction)</strong></p>
-<p>阐述年终支出高峰现象、潜在拥堵机制,研究挑战与创新.</p>
-<p><strong>第二节:方法论(Methodology)</strong></p>
-<p>数据:英国外交和联邦事务部(FCO)海外办事处2008-2019财年月度支出数据.实证策略:利用海外办事处沿用本国财年但所在国财年各异的自然实验.</p>
-<p><strong>第三节:结果(Results)</strong></p>
-<p>三个主要发现:本国财年末效应、当地政府挤出效应、当地企业财年效应.</p>
-<hr>
-<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
-<h3 id="一自然实验的设计优势">一、自然实验的设计优势</h3>
-<p><strong>英国海外办事处的独特性.</strong>
-英国在180多个国家设有399个海外办事处,这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
-<p>这种设置的优势:办事处的预算框架、管理和监督制度相同,执行相似的外交任务,可比较不同东道国办事处的支出模式差异.</p>
-<h3 id="二核心实证发现">二、核心实证发现</h3>
-<p><strong>发现1:本国财年末效应显著.</strong></p>
-<p>海外办事处在英国财年最后一个月(3月)的支出显著更高:</p>
-<ul>
-<li>资源预算:3月支出比月平均高1.359个标准差</li>
-<li>资本预算:3月支出比月平均高0.867个标准差</li>
-</ul>
-<p><strong>发现2:当地政府挤出效应显著.</strong></p>
-<p><span class="math inline">\(LFY End \times Home FY
-End\)</span>系数在资源支出模型中显著为正:在与英国财年重叠的国家,年终支出峰值更大.这表明东道国政府的年终支出确实产生了"挤出"效应.</p>
-<p><strong>发现3:当地企业财年效应显著.</strong></p>
-<p>在资本支出案例中,当地企业财年末越近,办事处支出越多.这与企业销售人员为最大化佣金的策略性行为一致.</p>
-<h3 id="三理论模型与预测">三、理论模型与预测</h3>
-<p>作者扩展了Liebman and
-Mahoney(2017)和Baumann(2019)的模型,加入"价格"和"拥堵效应"参数.</p>
-<p><strong>有趣发现</strong>:理论预测拥堵效应应减少年终支出峰值(理性部门会转移支出),但实证结果相反_拥堵效应加剧年终支出.这暗示政府部门的"行为惯性"可能比模型假设的更强.</p>
-<hr>
-<h2 id="结论conclusion">结论(Conclusion)</h2>
-<h3 id="核心结论总结">核心结论总结</h3>
-<p><strong>第一,本国财年是支出模式最重要的影响因素.</strong></p>
-<p><strong>第二,拥堵效应加剧年终支出.</strong>
-在与本国财年重叠的国家,年终支出规模更大.</p>
-<p><strong>第三,当地企业财年末后期,政府支出更高.</strong>
-企业销售人员的激励结构和行为也能影响政府部门的支出模式.</p>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ul>
-<li><strong>年终支出文献</strong>:首次分离内部与外部因素</li>
-<li><strong>财政溢出文献</strong>:发现"年终支出溢出"新概念</li>
-<li><strong>政策制定</strong>:错开财年可间接减少年终支出</li>
-</ul>
-<hr>
-<h2 id="未来研究方向">未来研究方向</h2>
-<h3 id="文献中提及的未来研究方向">文献中提及的未来研究方向</h3>
-<ul>
-<li>利用更细致的微观采购合同数据直接量化挤出效应的成本</li>
-<li>分析政府部门对拥堵效应的动态适应过程</li>
-</ul>
-<h3 id="基于本文思考的下一步研究工作">基于本文思考的下一步研究工作</h3>
-<p><strong>拥堵效应的成本量化.</strong>
-英国海外办事处在面临挤出效应时是否支付了更高价格?</p>
-<p><strong>政策错开财年的可行性分析.</strong>
-实施"错开财年"政策的实际可行性、潜在成本和过渡挑战.</p>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<p><strong>关于"个体理性"与"集体低效":</strong></p>
-<p>本文揭示了一个有趣的悖论:所有部门都在同一时间"理性"地加大支出以避免资金过期,这种个体理性可能导致整个经济体的集体低效_价格上涨、供应短缺、次优采购.</p>
-<p><strong>关于政府部门的价格敏感性:</strong></p>
-<p>理论模型预测理性部门会转移支出以避免拥堵,但实证结果相反.这暗示政府部门的"行为惯性"可能比新古典模型假设的更强.</p>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p><strong>拥堵效应具体如何测量?</strong>
-交互项系数的经济含义是什么?</p></li>
-<li><p><strong>资源预算和资本预算的响应为何不同?</strong></p></li>
-<li><p><strong>这对中国的政府采购改革有何启示?</strong></p></li>
-<li><p><strong>错开财年政策的实际可行性如何?</strong></p></li>
-</ol>
-<hr>
-<h2 id="参考文献">参考文献</h2>
-<ul>
-<li>Baumann, S. (2019). Procrastination and the Design of
-Government.</li>
-<li>Eichenauer, V. (2020). Budget Constraints and the Temporal Dynamics
-of Public Spending.</li>
-<li>Klymak, M., &amp; Baumann, S. (2022). Fiscal Year-End Procurement
-and Price Gouging.</li>
-<li>Liebman, J.B., &amp; Mahoney, N. (2017). Expiring Budgets and the
-Temporal Dynamics of Federal Spending.</li>
-<li>Oyer, P. (1998). Fiscal Year Ends and Intertemporal Labor
-Management.</li>
-</ul>
-<hr>
-<p><em>本笔记由 AI 生成,深度分析了&lt;Do governments crowd out
-governments?&gt;一文的核心内容、理论框架、实证发现和学术贡献.生成时间:2026年4月11日.</em></p>
-]]></content>
-      <categories>
-        <category>财政学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>财政学</tag>
-        <tag>政府支出</tag>
-        <tag>挤出效应</tag>
-        <tag>自然实验</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Similarity of Information and Collective Action — 深度阅读笔记 — Basak, Deb &amp; Kuvalekar</title>
     <url>/posts/basak2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -2058,6 +1913,151 @@ design）文献的联系值得深入。</p></li>
       </tags>
   </entry>
   <entry>
+    <title>Do Governments Crowd Out Governments? — 深度阅读笔记 — Baumann &amp; Klymak</title>
+    <url>/posts/baumann2024/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Do governments crowd out governments?
+Evidence from a natural experiment</li>
+<li><strong>作者</strong>: Stuart Baumann, Margaryta Klymak</li>
+<li><strong>类型</strong>: 论文笔记 / 财政学 / 政府经济学</li>
+<li><strong>出版年份</strong>: 2024</li>
+<li><strong>出版机构/期刊</strong>: European Economic Review, Vol. 168,
+104803</li>
+<li><strong>难度评估</strong>: 中 - 需要计量经济学基础 <span id="more"></span>
+---</li>
+</ul>
+<h2 id="引言背景和意义">引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>年终支出高峰(Year-End Spending
+Spike)是全球各国政府普遍存在的现象_政府部门在财政年度结束时集中大量支出.这种支出模式具有几个关键特征:</p>
+<p><strong>规模与普遍性.</strong>
+英国资本支出在财年最后一个月是月平均支出的约两倍;美国政府在财年最后一周的支出是平均周的4.9倍.这一现象在OECD
+27个国家均有观察到.</p>
+<p><strong>潜在浪费问题.</strong>
+年终仓促采购可能导致质量问题.Liebman和Mahoney(2017)发现,美国政府采购的IT项目在财年末执行的,其获得"低质量"评分的可能性是其他时间执行的2.2至5.6倍.</p>
+<p><strong>现有解释的局限.</strong>
+文献将年终支出归因于政府部门自身的预算周期(内部因素):如预防性储蓄基金、拖延行为、或规划不足.但这些解释均未考虑外部因素_其他政府部门和企业的支出行为.</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<p><strong>拥堵效应与竞争机制.</strong>
+当多个政府部门同时高强度支出时,可能在供应商方面产生拥堵效应.具体机制包括:</p>
+<ul>
+<li><strong>价格上涨</strong>:供应商在高需求时期提高价格</li>
+<li><strong>采购替代</strong>:供应商不可用时被迫更换采购物品或供应商</li>
+<li><strong>销售策略</strong>:供应商增加销售人员、调整商品供应以利用高支出意愿</li>
+<li><strong>支出转移</strong>:部门可能将部分支出转移至其他时间以避免价格上涨</li>
+</ul>
+<p><strong>识别挑战.</strong>
+同一国家的政府机构通常遵循相同的财年规则,使得分离"部门自身财年影响"和"其他政府机构财年影响"成为重大识别挑战.</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>:政府部门在财年末集中支出时,是否存在"政府挤出政府"的效应?</p>
+<p><strong>创新解决方案</strong>:利用英国驻海外办事处这一独特自然实验_这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
+<h3 id="研究意义">研究意义</h3>
+<ul>
+<li><strong>学术贡献</strong>:首次分离年终支出的"内部"与"外部"驱动因素</li>
+<li><strong>政策含义</strong>:错开不同部门的财年可能减少年终支出</li>
+</ul>
+<hr>
+<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
+<p><strong>第一节:引言(Introduction)</strong></p>
+<p>阐述年终支出高峰现象、潜在拥堵机制,研究挑战与创新.</p>
+<p><strong>第二节:方法论(Methodology)</strong></p>
+<p>数据:英国外交和联邦事务部(FCO)海外办事处2008-2019财年月度支出数据.实证策略:利用海外办事处沿用本国财年但所在国财年各异的自然实验.</p>
+<p><strong>第三节:结果(Results)</strong></p>
+<p>三个主要发现:本国财年末效应、当地政府挤出效应、当地企业财年效应.</p>
+<hr>
+<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
+<h3 id="一自然实验的设计优势">一、自然实验的设计优势</h3>
+<p><strong>英国海外办事处的独特性.</strong>
+英国在180多个国家设有399个海外办事处,这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
+<p>这种设置的优势:办事处的预算框架、管理和监督制度相同,执行相似的外交任务,可比较不同东道国办事处的支出模式差异.</p>
+<h3 id="二核心实证发现">二、核心实证发现</h3>
+<p><strong>发现1:本国财年末效应显著.</strong></p>
+<p>海外办事处在英国财年最后一个月(3月)的支出显著更高:</p>
+<ul>
+<li>资源预算:3月支出比月平均高1.359个标准差</li>
+<li>资本预算:3月支出比月平均高0.867个标准差</li>
+</ul>
+<p><strong>发现2:当地政府挤出效应显著.</strong></p>
+<p><span class="math inline">\(LFY End \times Home FY
+End\)</span>系数在资源支出模型中显著为正:在与英国财年重叠的国家,年终支出峰值更大.这表明东道国政府的年终支出确实产生了"挤出"效应.</p>
+<p><strong>发现3:当地企业财年效应显著.</strong></p>
+<p>在资本支出案例中,当地企业财年末越近,办事处支出越多.这与企业销售人员为最大化佣金的策略性行为一致.</p>
+<h3 id="三理论模型与预测">三、理论模型与预测</h3>
+<p>作者扩展了Liebman and
+Mahoney(2017)和Baumann(2019)的模型,加入"价格"和"拥堵效应"参数.</p>
+<p><strong>有趣发现</strong>:理论预测拥堵效应应减少年终支出峰值(理性部门会转移支出),但实证结果相反_拥堵效应加剧年终支出.这暗示政府部门的"行为惯性"可能比模型假设的更强.</p>
+<hr>
+<h2 id="结论conclusion">结论(Conclusion)</h2>
+<h3 id="核心结论总结">核心结论总结</h3>
+<p><strong>第一,本国财年是支出模式最重要的影响因素.</strong></p>
+<p><strong>第二,拥堵效应加剧年终支出.</strong>
+在与本国财年重叠的国家,年终支出规模更大.</p>
+<p><strong>第三,当地企业财年末后期,政府支出更高.</strong>
+企业销售人员的激励结构和行为也能影响政府部门的支出模式.</p>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ul>
+<li><strong>年终支出文献</strong>:首次分离内部与外部因素</li>
+<li><strong>财政溢出文献</strong>:发现"年终支出溢出"新概念</li>
+<li><strong>政策制定</strong>:错开财年可间接减少年终支出</li>
+</ul>
+<hr>
+<h2 id="未来研究方向">未来研究方向</h2>
+<h3 id="文献中提及的未来研究方向">文献中提及的未来研究方向</h3>
+<ul>
+<li>利用更细致的微观采购合同数据直接量化挤出效应的成本</li>
+<li>分析政府部门对拥堵效应的动态适应过程</li>
+</ul>
+<h3 id="基于本文思考的下一步研究工作">基于本文思考的下一步研究工作</h3>
+<p><strong>拥堵效应的成本量化.</strong>
+英国海外办事处在面临挤出效应时是否支付了更高价格?</p>
+<p><strong>政策错开财年的可行性分析.</strong>
+实施"错开财年"政策的实际可行性、潜在成本和过渡挑战.</p>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<p><strong>关于"个体理性"与"集体低效":</strong></p>
+<p>本文揭示了一个有趣的悖论:所有部门都在同一时间"理性"地加大支出以避免资金过期,这种个体理性可能导致整个经济体的集体低效_价格上涨、供应短缺、次优采购.</p>
+<p><strong>关于政府部门的价格敏感性:</strong></p>
+<p>理论模型预测理性部门会转移支出以避免拥堵,但实证结果相反.这暗示政府部门的"行为惯性"可能比新古典模型假设的更强.</p>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p><strong>拥堵效应具体如何测量?</strong>
+交互项系数的经济含义是什么?</p></li>
+<li><p><strong>资源预算和资本预算的响应为何不同?</strong></p></li>
+<li><p><strong>这对中国的政府采购改革有何启示?</strong></p></li>
+<li><p><strong>错开财年政策的实际可行性如何?</strong></p></li>
+</ol>
+<hr>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>Baumann, S. (2019). Procrastination and the Design of
+Government.</li>
+<li>Eichenauer, V. (2020). Budget Constraints and the Temporal Dynamics
+of Public Spending.</li>
+<li>Klymak, M., &amp; Baumann, S. (2022). Fiscal Year-End Procurement
+and Price Gouging.</li>
+<li>Liebman, J.B., &amp; Mahoney, N. (2017). Expiring Budgets and the
+Temporal Dynamics of Federal Spending.</li>
+<li>Oyer, P. (1998). Fiscal Year Ends and Intertemporal Labor
+Management.</li>
+</ul>
+<hr>
+<p><em>本笔记由 AI 生成,深度分析了&lt;Do governments crowd out
+governments?&gt;一文的核心内容、理论框架、实证发现和学术贡献.生成时间:2026年4月11日.</em></p>
+]]></content>
+      <categories>
+        <category>财政学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>财政学</tag>
+        <tag>政府支出</tag>
+        <tag>挤出效应</tag>
+        <tag>自然实验</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>致Berry</title>
     <url>/posts/51392/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
@@ -2076,24 +2076,6 @@ design）文献的联系值得深入。</p></li>
       </categories>
       <tags>
         <tag>妳</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何在双变量Probit中使用工具变量法IV估计</title>
-    <url>/posts/60676/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<h1 id="ml两步法">ML两步法</h1>
-<p>可以采用二步法进行ML估计,以下将会以一段样例代码展示:</p>
-<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">webuse</span> school, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">set</span> seed 1</span><br><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobit</span><br><span class="line"><span class="keyword">program</span> mybiprobit</span><br><span class="line"><span class="keyword">args</span> lnf m1   m2  athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"><span class="comment">**Here I am creating an artificial IV</span></span><br><span class="line"><span class="keyword">gen</span> z=logptax-rnormal()</span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobit (private:private=logptax loginc years)   (vote:vote=logptax loginc years)   /athrho (zb1:logptax=loginc  years z) /lns1</span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> maximize,</span><br><span class="line"><span class="keyword">matrix</span> b=<span class="built_in">e</span>(b)</span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobitiv</span><br><span class="line"><span class="keyword">program</span> mybiprobitiv</span><br><span class="line"><span class="keyword">args</span> lnf mm1 g1  mm2  g2 athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">tempvar</span> m1 m2</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m1'</span>=<span class="symbol">`mm1'</span>+<span class="symbol">`g1'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m2'</span>=<span class="symbol">`mm2'</span>+<span class="symbol">`g2'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobitiv (private:private=logptax loginc years) (g1:)  (vote:vote=logptax loginc years)  (g2:) /athrho (zb1:logptax=loginc  years z  ) /lns1, init(b)</span><br><span class="line"><span class="keyword">ml</span> maximize</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>计量</category>
-        <category>内生性问题</category>
-      </categories>
-      <tags>
-        <tag>stata</tag>
       </tags>
   </entry>
   <entry>
@@ -2286,6 +2268,24 @@ persistence）有何具体区别？</li>
         <tag>信贷周期</tag>
         <tag>诊断预期</tag>
         <tag>行为宏观经济学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何在双变量Probit中使用工具变量法IV估计</title>
+    <url>/posts/60676/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<h1 id="ml两步法">ML两步法</h1>
+<p>可以采用二步法进行ML估计,以下将会以一段样例代码展示:</p>
+<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">webuse</span> school, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">set</span> seed 1</span><br><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobit</span><br><span class="line"><span class="keyword">program</span> mybiprobit</span><br><span class="line"><span class="keyword">args</span> lnf m1   m2  athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"><span class="comment">**Here I am creating an artificial IV</span></span><br><span class="line"><span class="keyword">gen</span> z=logptax-rnormal()</span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobit (private:private=logptax loginc years)   (vote:vote=logptax loginc years)   /athrho (zb1:logptax=loginc  years z) /lns1</span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> maximize,</span><br><span class="line"><span class="keyword">matrix</span> b=<span class="built_in">e</span>(b)</span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobitiv</span><br><span class="line"><span class="keyword">program</span> mybiprobitiv</span><br><span class="line"><span class="keyword">args</span> lnf mm1 g1  mm2  g2 athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">tempvar</span> m1 m2</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m1'</span>=<span class="symbol">`mm1'</span>+<span class="symbol">`g1'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m2'</span>=<span class="symbol">`mm2'</span>+<span class="symbol">`g2'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobitiv (private:private=logptax loginc years) (g1:)  (vote:vote=logptax loginc years)  (g2:) /athrho (zb1:logptax=loginc  years z  ) /lns1, init(b)</span><br><span class="line"><span class="keyword">ml</span> maximize</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>计量</category>
+        <category>内生性问题</category>
+      </categories>
+      <tags>
+        <tag>stata</tag>
       </tags>
   </entry>
   <entry>
@@ -4020,312 +4020,6 @@ NJ快餐业研究的关系</strong>:为什么NJ快餐业研究发现了正效应
       </tags>
   </entry>
   <entry>
-    <title>Regulating Conglomerates: Evidence From an Energy Conservation Program in China — 深度阅读笔记 — AER</title>
-    <url>/posts/chen2021/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Regulating Conglomerates: Evidence from an
-Energy Conservation Program in China</li>
-<li><strong>作者</strong>: Qiaoyi Chen (复旦大学), Zhao Chen (复旦大学),
-Zhikuo Liu (复旦大学), Juan Carlos Suárez Serrato (Duke大学 &amp; NBER),
-Daniel Yi Xu (Duke大学 &amp; NBER)</li>
-<li><strong>年份</strong>: 2021</li>
-<li><strong>来源</strong>: American Economic Review (AER)</li>
-<li><strong>DOI</strong>: 未提供 <span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言背景和意义">引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>能源
-regulation和经济活动的关系是环境经济学研究的核心议题之一.在发展中国家,特别是中国这样的新兴经济体,政府面临着平衡经济增长与工业化负面效应(如碳排放和污染)的艰巨挑战.中国的工业能源消耗在全球占据主导地位,其工业能源使用不仅在国内经济中举足轻重,更对全球气候变化产生深远影响.</p>
-<p>能源效率 regulation
-的设计面临多重复杂性:首先,大型工业企业往往嵌入更广泛的商业网络(企业集团/
-conglomerate),这使得监管政策的评估必须考虑集团内部的资源配置和 spillover
-效应;其次,监管政策的有效性取决于企业响应的边际成本_是通过提高能源效率、降低产出,还是将生产转移到未受监管的关联企业来实现减排;第三,市场竞争和产业组织结构会放大或缩小政策的实际效果,产生所谓的"泄漏"(leakage)效应.</p>
-<p>本文研究的"千家企业"(Top-1,000)项目是中国"十一五"规划(2006-2011)期间最重要的能源节约政策之一.该项目针对能源密集型行业中的最大能耗企业,目标是到2011年实现工业能源强度(单位GDP能耗)降低20%的宏伟目标.</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p><strong>中国能源消耗的严峻形势</strong>:进入21世纪初期,中国的工业能源消耗已经远远超过其他主要经济体.以图1为参考,能源
-regulation
-对国家和全球都具有重要意义.这一背景下,理解大型能源监管政策的效果对于制定更有效的环境政策至关重要.</p>
-<p><strong>千家企业项目的设计逻辑</strong>:该项目设计参照了发达国家自愿协议项目的经验,相信企业能够通过提高能源效率显著减少能源使用.项目名称"千家企业"指的是9个能源密集型行业中能源消耗超过18万吨标准煤的1008家工业企业.这些企业的总能源消耗在2004年达到6.7亿吨标准煤,占中国工业能源消费的47%和全国能源消费的33%.</p>
-<p><strong>政策执行的制度背景</strong>:项目采用自上而下的目标分解机制:中央政府向每个省级政府分配能源使用减排目标,省级官员再向每个千家企业分配个人能源使用配额.千家企业须接受第三方年度能源审计,并可能面临工业和信息化部以及国家能源管理局的额外审计.</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p>现有政策评估存在关键缺陷:官方评估主要依赖千家企业自身的能源使用变化,得出项目高度有效的结论.然而,这一评估方法存在两个重要问题:</p>
-<p>第一,它忽视了企业集团内部的生产再分配效应.受监管企业可能不是通过提高能源效率,而是通过将生产转移到同一企业集团内不受监管的关联企业来满足监管要求.这种行为会导致监管政策出现"集团泄漏"(conglomerate
-leakage).</p>
-<p>第二,它忽视了市场竞争效应.受监管企业因减产而让出的市场份额可能被同行业不受监管的竞争对手获取,导致总体能源节约效果低于预期,即"市场泄漏"(market
-leakage).</p>
-<p>本文核心研究问题:千家企业项目对能源消耗的实际影响如何?企业集团内部的
-production shifting 在多大程度上削弱了政策效果?考虑到这些 spillover
-效应,政策的福利含义是什么?</p>
-<h3 id="研究意义">研究意义</h3>
-<p><strong>理论贡献</strong>:本文将 reduced-form 计量经济学方法与产业
-equilibrium 模型相结合,提供了一个分析能源 regulation
-的一般框架.这一框架能够同时刻画企业集团内部和市场竞争层面的 spillover
-效应,为准确评估能源政策的真实效果提供了方法论支撑.</p>
-<p><strong>政策含义</strong>:研究发现对设计更有效的能源 regulation
-具有直接启示.如果能够利用公开可得的企业集团所有权信息,针对整个企业集团而不仅是单个企业制定监管规则,可以显著提高政策的能源节约效果.</p>
-<p><strong>发展经济学价值</strong>:在印度、中国和拉丁美洲,企业集团的重要性日益上升(Ramachandran,
-Manikandan and Pant,
-2013).本文的发现对于理解企业集团如何响应政府监管具有普遍的参考价值.</p>
-<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
-<p>本文采用层层递进的研究设计,共分为7个主要部分:</p>
-<p><strong>第一部分:政策背景与数据</strong>(Policy Background and
-Data).详细描述千家企业能源节约项目,介绍用于测量经济活动和能源使用的数据集,以及构建中国企业集团所有权网络的研究策略.</p>
-<p><strong>第二部分:政策对受监管企业的影响</strong>(Effects of the
-Policy on Regulated
-Firms).使用双重差分法(difference-in-differences)识别政策效果,证明受监管企业通过降低产出而非提高能源效率来满足监管要求.</p>
-<p><strong>第三部分:企业集团内部的溢出效应</strong>(Within-Conglomerate
-Spillovers).利用详细的商业注册数据,发现受监管企业集团将生产转移到未受监管的关联企业,揭示了40%的产出下降被集团内部吸收.</p>
-<p><strong>第四部分:产业 equilibrium 模型</strong>(Industry Equilibrium
-Model).构建包含企业集团生产和市场 spillover 的产业 equilibrium
-模型,为第五部分的模型估计和第六部分的福利分析奠定基础.</p>
-<p><strong>第五部分:模型估计</strong>(Model
-Estimation).通过匹配企业规模分布和集团内部生产分配的 pre-regulation
-特征来估计模型参数.</p>
-<p><strong>第六部分:福利分析</strong>(Welfare Analysis).量化政策的
-aggregate 和 welfare
-效果,比较不同政策工具(扩展监管范围、依赖性能源税、基于公开信息的集团层面
-regulation)的效果.</p>
-<p><strong>第七部分:稳健性检验</strong>(Robustness).检验模型结果对替代模型设定和参数值的敏感性,包括考虑能源效率改善可能性和
-pre-existing 能源效率差异的模型扩展.</p>
-<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
-<h3 id="背景与挑战">背景与挑战</h3>
-<h4 id="中国的能源困境与政策应对">中国的能源困境与政策应对</h4>
-<p>中国作为世界最大的能源消费国,其工业能源消耗占全国总能耗的70%.在快速工业化和城市化的背景下,如何在保持经济增长的同时控制能源消耗和碳排放,是中国政府面临的核心政策挑战.2006年启动的"十一五"规划将能源强度降低20%作为约束性目标,这一目标通过多个政策和行业计划来实现,其中千家企业项目是最重要的举措之一.</p>
-<p>千家企业项目的设计体现了发展中国家的政策创新.与发达国家主要依赖自愿协议和市场激励不同,中国的项目采用了强有力的行政执行机制.项目针对9个能源密集型行业的1008家超大型企业,这些企业的能源消耗占工业总能耗的47%.由于政策于2006年宣布,但根据企业2004年的
-retrospectively 能源消耗数据选择参与者,企业无法操纵项目参与名单,这为准
-quasi-experimental 识别策略提供了外生性来源.</p>
-<h4 id="企业集团的重要性">企业集团的重要性</h4>
-<p>理解千家企业项目效果的关键在于认识到这些受监管企业并非孤立运营,而是嵌入在复杂的企业集团网络中.通过中国工商行政管理总局的行政注册数据库(CARD),作者能够追踪这些企业的所有权关系.</p>
-<p>研究发现,千家企业企业平均拥有2.45个同行业内的关联企业.由于千家企业通常是各行业的最大企业,其关联企业的规模明显较小,平均产出仅为受监管企业的19.3%.这一事实意味着企业集团可能有显著的
-scope 通过关联企业之间的生产替代来响应监管.</p>
-<p>然而,完全替代的可能性受到两个因素制约:首先,关联企业规模较小,无法完全吸收受监管企业的产出下降;其次,同一4-digit行业内同集团企业之间的
-production shifting 受到技术和物流约束.</p>
-<h4 id="识别策略的核心挑战">识别策略的核心挑战</h4>
-<p>准确评估千家企业项目效果面临三个层面的识别挑战:</p>
-<p><strong>第一层:受监管企业 vs.
-对照企业</strong>.理想的反事实是:如果没有千家企业项目,受监管企业的能源使用和产出会有怎样的变化?作者使用"万家"(Top-10,000)企业作为对照组_这些企业在2011年后才被纳入监管,因此2011年之前的时期提供了
-quasi-experimental variation.</p>
-<p><strong>第二层:集团内部的 production
-shifting</strong>.即使能够识别受监管企业相对于对照企业的效果,这仍然无法捕捉企业集团内部的再分配效应.受监管企业可能将生产转移到同一集团内的关联企业,从而降低政策的整体能源节约效果.</p>
-<p><strong>第三层:市场竞争效应</strong>.受监管企业的减产可能导致竞争对手获得更多市场份额,这种市场层面的泄漏也会影响政策的
-aggregate 效果.</p>
-<h3 id="方法论reduced-form-分析">方法论:Reduced-Form 分析</h3>
-<h4 id="双重差分设计">双重差分设计</h4>
-<p>作者采用多层双重差分策略来识别政策的直接效应和溢出效应.</p>
-<p><strong>第一个双重差分</strong>:比较受监管的千家企业与同行业但不受监管的万家企业的差异.这是标准的
-treatment vs. control
-比较,假设在政策实施前,两组企业的能源使用和产出趋势相似.</p>
-<p><strong>事件研究规范</strong>(Event-Study
-Specification)用于检验平行趋势假设:</p>
-<p><span class="math display">\[Y_{ijklt} = \sum_{\tau \neq 2006}
-\beta_\tau \times Treat_i \times Year_\tau + \alpha_i + \eta_{jt} +
-\delta_{kt} + \varepsilon_{ijklt}\]</span></p>
-<p>其中 <span class="math inline">\(Y_{ijklt}\)</span> 是企业 <span class="math inline">\(i\)</span> 在行业 <span class="math inline">\(j\)</span>、省份 <span class="math inline">\(k\)</span>、年份 <span class="math inline">\(t\)</span> 的 outcome 变量,<span class="math inline">\(Treat_i\)</span> 是处理组指示变量,<span class="math inline">\(\alpha_i\)</span> 是企业固定效应,<span class="math inline">\(\eta_{jt}\)</span> 是行业×年份固定效应,<span class="math inline">\(\delta_{kt}\)</span> 是省份×年份固定效应.</p>
-<p>图4展示了 event-study
-结果:处理组和对照组企业在政策实施前的趋势高度一致,支持平行趋势假设.政策实施后,千家企业的能源使用相对下降约16%.</p>
-<p><strong>第二个双重差分</strong>:比较同一企业集团内的关联企业与其他不受监管企业的差异.这一设计利用了企业集团所有权网络信息,识别集团内部的溢出效应.</p>
-<h4 id="主要-reduced-form-发现">主要 Reduced-Form 发现</h4>
-<p><strong>发现一:能源使用下降源于产出降低,而非效率提升</strong></p>
-<p>表3报告了政策对能源使用和产出的影响.结果显示:</p>
-<ul>
-<li>能源使用下降12%-16%,在不同的固定效应规范下保持稳健</li>
-<li>产出(以收入衡量)下降10%-23%</li>
-<li><strong>能源效率(产出/能源使用)没有显著变化</strong></li>
-</ul>
-<p>这一发现具有重要的政策含义:企业选择通过降低产出来满足监管要求,而非投资于能源效率提升.作者认为这可能是因为能源效率投资需要
-long-lived capital
-的更新,面临技术不确定性和中国政府政策承诺不确定性的制约.</p>
-<p><strong>发现二:集团内部生产转移</strong></p>
-<p>利用 CARD
-数据,作者识别了46,178家与千家企业有关联关系的企业.将这些关联企业与万家数据库匹配后,得到2,466家在同行业的关联企业.</p>
-<p>双重差分分析显示:</p>
-<ul>
-<li>关联企业的产出增加约12%</li>
-<li>关联企业的能源使用增加,但没有能源效率变化</li>
-<li>只有当关联企业的4-digit行业与受监管企业相同时,才出现显著的生产增加</li>
-<li>在其他行业的关联企业作为 placebo test,未发现产出增加</li>
-</ul>
-<p>基于规模差异(关联企业平均规模仅为受监管企业的19.3%),作者计算出企业集团能够将受监管企业40%的产出下降转移到关联企业.</p>
-<p><strong>发现三:市场层面的竞争效应</strong></p>
-<p>作者提供了市场泄漏的证据:同行业但不受监管的企业在政策实施后产出增加.这与千家企业减产让出市场份额的预期一致.</p>
-<h3 id="结构模型产业-equilibrium-模型">结构模型:产业 Equilibrium
-模型</h3>
-<h4 id="模型设定">模型设定</h4>
-<p>为了量化政策的 aggregate 和 welfare
-效果,作者构建了一个包含以下特征的产业 equilibrium 模型:</p>
-<p><strong>需求侧</strong>:使用常替代弹性(CES)聚合器描述消费者对不同企业产品的偏好:</p>
-<p><span class="math display">\[U = \left( \int_\Omega
-Q(\omega)^{\frac{\sigma-1}{\sigma}} d\omega
-\right)^{\frac{\sigma}{\sigma-1}}\]</span></p>
-<p>其中 <span class="math inline">\(\sigma &gt; 1\)</span>
-是替代弹性,<span class="math inline">\(\omega\)</span> 表示企业产品.</p>
-<p><strong>供给侧</strong>:每个企业生产单一产品面临常数边际成本 <span class="math inline">\(c\)</span> 和冰山成本 <span class="math inline">\(\tau\)</span>.企业可以选择在受监管状态(承担能源监管成本)或非监管状态下运营.</p>
-<p><strong>企业集团结构</strong>:模型明确允许企业在同一企业集团内共享投入和转移生产.设
-<span class="math inline">\(\lambda_s\)</span> 表示企业集团 <span class="math inline">\(s\)</span> 内的企业数量,<span class="math inline">\(\omega_{s,k}\)</span> 表示企业 <span class="math inline">\(k\)</span> 在集团 <span class="math inline">\(s\)</span> 中的相对规模.</p>
-<p><strong>关键参数</strong>:模型需要估计替代弹性 <span class="math inline">\(\sigma\)</span>、集团内部替代弹性 <span class="math inline">\(\gamma\)</span>、能源监管成本 <span class="math inline">\(\kappa\)</span> 等参数.</p>
-<h4 id="模型估计">模型估计</h4>
-<p>作者通过匹配以下矩条件来估计模型:</p>
-<ol type="1">
-<li><strong>企业规模分布</strong>:模型能够再现企业规模的集中度</li>
-<li><strong>集团内部生产分配</strong>:模型匹配观测到的集团内部相对规模分布</li>
-<li><strong>Reduced-form 估计</strong>:模型 out-of-sample
-验证双重差分估计结果</li>
-</ol>
-<p>模型与双重差分估计的一致性验证了模型正确捕捉了企业集团内部和市场层面的
-spillover 效应的定量重要性.</p>
-<h3 id="福利分析">福利分析</h3>
-<h4 id="政策效果的量化">政策效果的量化</h4>
-<p>基于估计的模型,作者量化了千家家企业项目的 aggregate 效果:</p>
-<ul>
-<li><strong>能源节约</strong>:政策使总能源使用降低4%,相当于每年减少约4800万吨标准煤</li>
-<li><strong>社会成本</strong>:影子成本约160美元/吨碳(当量)</li>
-</ul>
-<p>关键机制:企业集团通过内部 production shifting
-降低了千家企业的影子监管成本约30%.这是因为集团能够将部分产出转移到关联企业,从而部分抵消了对受监管企业的直接影响.</p>
-<h4 id="替代政策的模拟">替代政策的模拟</h4>
-<p>作者使用模型比较了三种替代政策:</p>
-<p><strong>政策A:扩展千家家企业项目</strong>.将更多企业纳入监管范围,但保持针对单个企业的监管结构.结果显示这只能带来边际的能源节约增加.</p>
-<p><strong>政策B:规模依赖性能源税</strong>.对所有属于有千家企业存在的企业集团的企业征收能源税.结果接近
-universal energy tax 的效果.</p>
-<p><strong>政策C:基于公开信息的集团层面
-regulation</strong>.利用公开可获得的企业所有权信息,针对整个企业集团制定监管规则.结果显示可以在相同
-welfare 成本下将能源节约提高10%.</p>
-<p><strong>核心洞察</strong>:由于企业集团内部的 production shifting
-是一种重要的泄漏渠道,针对 conglomerate
-层面的监管能够更有效地实现能源节约目标.</p>
-<h3 id="稳健性检验">稳健性检验</h3>
-<p>作者进行了广泛的稳健性检验:</p>
-<ol type="1">
-<li><p><strong>能源效率改善的长期可能性</strong>:扩展模型允许企业响应监管投资于能源效率,发现即使在长期视角下,能源效率改善仍然成本高昂</p></li>
-<li><p><strong>Pre-existing
-能源效率差异</strong>:假设千家企业比所有其他企业能源效率低20%,重新计算社会成本约133美元/吨碳</p></li>
-<li><p><strong>参数敏感性</strong>:不同的 <span class="math inline">\(\sigma\)</span>、<span class="math inline">\(\gamma\)</span> 和 <span class="math inline">\(\kappa\)</span> 参数值下的稳健性</p></li>
-<li><p><strong>数据构建的敏感性</strong>:使用行政税务数据填补缺失值、限制样本至样本期内持续存在的企业等</p></li>
-</ol>
-<h2 id="结论conclusion">结论(Conclusion)</h2>
-<h3 id="核心研究结论">核心研究结论</h3>
-<p>本文通过对千家企业能源节约项目的深入研究,得出以下核心结论:</p>
-<p><strong>第一,监管企业通过减产而非提高能源效率来响应政策</strong>.这一发现揭示了能源监管的边际成本结构,表明能源效率投资的成本远高于简单地接受产出损失.</p>
-<p><strong>第二,企业集团内部的 production shifting
-是政策效果的重要泄漏渠道</strong>.受监管企业集团将40%的产出下降转移到未受监管的关联企业,这一发现对仅关注受监管企业效果的政策评估提出了挑战.</p>
-<p><strong>第三,市场竞争效应进一步削弱了政策的能源节约效果</strong>.受监管企业减产让出的市场份额被竞争对手获取,降低了政策的
-aggregate 效果.</p>
-<p><strong>第四,政策的 welfare
-合理性取决于社会碳成本</strong>.当社会碳成本超过160美元/吨碳时,千家企业项目才能改善
-welfare,这一结果对当前碳定价政策具有直接启示.</p>
-<p><strong>第五,集团层面的监管设计能够显著提高政策效果</strong>.利用公开可获得的企业所有权信息,针对整个企业集团制定监管规则,可以在相同
-welfare 成本下将能源节约提高10%.</p>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<p><strong>对能源经济学 literature
-的贡献</strong>:本文提供了迄今为止最全面的中国能源监管政策评估,揭示了企业集团作为重要但此前被忽视的响应渠道的作用.</p>
-<p><strong>对环境 regulation literature 的贡献</strong>:本文将
-reduced-form 和 structural 方法相结合,为分析环境 regulation 的 spillover
-效应提供了可推广的框架.</p>
-<p><strong>对产业组织 literature
-的贡献</strong>:本文揭示了企业集团作为一种特殊的产业组织形式如何影响政府监管的有效性.</p>
-<h3 id="政策建议">政策建议</h3>
-<p><strong>短期建议</strong>:完善千家家企业项目的监管设计,考虑集团层面的信息披露要求和监管规则.</p>
-<p><strong>中期建议</strong>:扩展能源监管范围时,应优先考虑基于集团层面的
-targeting,而非简单地增加受监管企业数量.</p>
-<p><strong>长期建议</strong>:建立企业所有权信息的公开数据库,为更有效的监管设计提供信息基础.</p>
-<h2 id="未来研究方向提及">未来研究方向提及</h2>
-<p>作者在论文中提出了若干值得进一步研究的方向:</p>
-<p><strong>Long-run
-能源效率改善</strong>:模型扩展表明长期来看企业可能投资于能源效率,但时间和成本不确定性仍然很高.未来的研究可以深入分析能源效率投资决策的动态过程.</p>
-<p><strong>空间
-spillover</strong>:本文主要关注集团内部和国家层面的效应,省份间的
-production substitution 和污染转移也是重要议题.</p>
-<p><strong>行政执行约束</strong>:政府对监管范围和监管强度的行政约束是政策设计的重要摩擦来源,值得进一步研究.</p>
-<h2 id="未来研究方向思考">未来研究方向思考</h2>
-<p>基于对本文的深入理解,以下是值得进一步探索的研究方向:</p>
-<p><strong>第一,集团所有权网络的动态演化</strong>.本文使用2018年的 CARD
-数据构建所有权网络,无法捕捉政策实施后的网络调整.未来的研究可以分析监管如何驱动企业集团的重组和整合.</p>
-<p><strong>第二,跨国比较研究</strong>.不同国家的企业集团结构和监管执行机制存在显著差异.将中国的发现与印度、巴西等其他大型新兴经济体进行比较,可以揭示企业集团响应政府监管的一般性模式.</p>
-<p><strong>第三,供应链溢出效应</strong>.本文主要关注同一企业集团内部的横向溢出,但受监管企业的上游供应商和下游客户也可能受到影响.考虑供应链关系的溢出效应可以提供更完整的政策效果图景.</p>
-<p><strong>第四,碳定价与能源监管的相互作用</strong>.当存在碳定价机制时,能源监管政策的
-marginal cost
-会相应改变.未来的研究可以分析这两种政策工具的交互作用和最优组合.</p>
-<p><strong>第五,企业异质性的深入分析</strong>.本文假设企业是同质的,但不同类型的企业(国有企业
-vs. 民营企业、外资企业 vs.
-内资企业)可能有不同的响应模式.分析这些异质性可以提供更精细的政策建议.</p>
-<h2 id="学术思考">学术思考</h2>
-<p>本文引发了几个值得深入思考的学术问题:</p>
-<p><strong>关于识别策略的思考</strong>:双重差分方法的核心假设是处理组和对照组在政策实施前具有相同的趋势.然而,在中国特有的政治经济环境下,处理组企业可能因为"树大招风"而受到更多关注,或者反过来因为政策透明度而获得更好的监管信息.这些微观机制是否会影响平行趋势假设?</p>
-<p><strong>关于企业行为假设的思考</strong>:本文假设企业是理性的,能够最优地配置集团内部的资源.然而,在现实中,企业集团内部的资源配置还受到代理问题、政治联系和内部权力斗争等因素的影响.如何在模型中更好地刻画这些制度因素?</p>
-<p><strong>关于福利评估的思考</strong>:本文采用社会碳成本(SCC)作为
-welfare 评估的核心参数,但 SCC 本身存在很大的不确定性.不同的 SCC
-假设会导致不同的政策评价,这是否意味着 welfare 分析过于依赖参数设定?</p>
-<p><strong>关于政策可复制性的思考</strong>:千家企业项目的成功在很大程度上依赖于中国的特殊制度环境_强大的行政执行能力、将环境绩效与官员晋升挂钩的考核机制.将其经验复制到其他发展中国家时,需要考虑制度能力差异.</p>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<p>基于论文内容和上述分析,以下是用户接下来可能问的问题:</p>
-<ol type="1">
-<li><p><strong>千家企业项目中,哪些行业的企业能源效率响应最为显著?是否存在行业异质性?</strong></p></li>
-<li><p><strong>企业集团将生产转移到关联企业时,是否考虑了关联企业所在地区的环境成本(污染转移)?</strong></p></li>
-<li><p><strong>作者提到的160美元/吨碳的社会碳成本,如何与当前国际碳市场价格(如欧洲碳市场的50-100欧元/吨)进行比较?</strong></p></li>
-<li><p><strong>在模型中假设的 CES 需求替代弹性 σ 如何估计?不同假设对
-welfare 结果的敏感性如何?</strong></p></li>
-<li><p><strong>万家(Top-10,000)企业在2011年后被纳入监管,这是否意味着万家可以作为"第二阶段"的处理组?研究设计是否支持这种连续处理效应的分析?</strong></p></li>
-<li><p><strong>作者提到国有企业更可能被纳入千家企业项目,这是否与国企的政治联系有关?政治联系如何影响企业的能源效率投资决策?</strong></p></li>
-<li><p><strong>对于民营企业占主导的行业(如纺织业),能源监管的效果是否有所不同?所有制结构如何调节政策效果?</strong></p></li>
-<li><p><strong>模型中考虑能源效率改善的扩展模型,是否区分了短期和长期效应?长期效应的时间
-horizon 是多久?</strong></p></li>
-<li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD
-数据的质量和覆盖范围如何保证?</strong></p></li>
-<li><p><strong>在中国"双碳"目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p></li>
-</ol>
-<h2 id="学术思考-1">学术思考</h2>
-<p>本文引发了几个值得深入思考的学术问题:</p>
-<p><strong>关于识别策略的思考</strong>:双重差分方法的核心假设是处理组和对照组在政策实施前具有相同的趋势.然而,在中国特有的政治经济环境下,处理组企业可能因为"树大招风"而受到更多关注,或者反过来因为政策透明度而获得更好的监管信息.这些微观机制是否会影响平行趋势假设?</p>
-<p><strong>关于企业行为假设的思考</strong>:本文假设企业是理性的,能够最优地配置集团内部的资源.然而,在现实中,企业集团内部的资源配置还受到代理问题、政治联系和内部权力斗争等因素的影响.如何在模型中更好地刻画这些制度因素?</p>
-<p><strong>关于福利评估的思考</strong>:本文采用社会碳成本(SCC)作为
-welfare 评估的核心参数,但 SCC 本身存在很大的不确定性.不同的 SCC
-假设会导致不同的政策评价,这是否意味着 welfare 分析过于依赖参数设定?</p>
-<p><strong>关于政策可复制性的思考</strong>:千家企业项目的成功在很大程度上依赖于中国的特殊制度环境_强大的行政执行能力、将环境绩效与官员晋升挂钩的考核机制.将其经验复制到其他发展中国家时,需要考虑制度能力差异.</p>
-<h2 id="下一步用户可能提的问题-1">下一步用户可能提的问题</h2>
-<p>基于论文内容和上述分析,以下是用户接下来可能问的问题:</p>
-<ol type="1">
-<li><p><strong>千家企业项目中,哪些行业的企业能源效率响应最为显著?是否存在行业异质性?</strong></p></li>
-<li><p><strong>企业集团将生产转移到关联企业时,是否考虑了关联企业所在地区的环境成本(污染转移)?</strong></p></li>
-<li><p><strong>作者提到的160美元/吨碳的社会碳成本,如何与当前国际碳市场价格(如欧洲碳市场的50-100欧元/吨)进行比较?</strong></p></li>
-<li><p><strong>在模型中假设的 CES 需求替代弹性 σ 如何估计?不同假设对
-welfare 结果的敏感性如何?</strong></p></li>
-<li><p><strong>万家(Top-10,000)企业在2011年后被纳入监管,这是否意味着万家可以作为"第二阶段"的处理组?研究设计是否支持这种连续处理效应的分析?</strong></p></li>
-<li><p><strong>作者提到国有企业更可能被纳入千家企业项目,这是否与国企的政治联系有关?政治联系如何影响企业的能源效率投资决策?</strong></p></li>
-<li><p><strong>对于民营企业占主导的行业(如纺织业),能源监管的效果是否有所不同?所有制结构如何调节政策效果?</strong></p></li>
-<li><p><strong>模型中考虑能源效率改善的扩展模型,是否区分了短期和长期效应?长期效应的时间
-horizon 是多久?</strong></p></li>
-<li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD
-数据的质量和覆盖范围如何保证?</strong></p></li>
-<li><p><strong>在中国"双碳"目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p></li>
-</ol>
-<h2 id="下一步用户可能提的问题-2">下一步用户可能提的问题</h2>
-<p>基于论文内容和上述分析,以下是用户接下来可能问的问题:</p>
-<ol type="1">
-<li><p><strong>千家企业项目中,哪些行业的企业能源效率响应最为显著?是否存在行业异质性?</strong></p></li>
-<li><p><strong>企业集团将生产转移到关联企业时,是否考虑了关联企业所在地区的环境成本(污染转移)?</strong></p></li>
-<li><p><strong>作者提到的160美元/吨碳的社会碳成本,如何与当前国际碳市场价格(如欧洲碳市场的50-100欧元/吨)进行比较?</strong></p></li>
-<li><p><strong>在模型中假设的 CES 需求替代弹性 σ 如何估计?不同假设对
-welfare 结果的敏感性如何?</strong></p></li>
-<li><p><strong>万家(Top-10,000)企业在2011年后被纳入监管,这是否意味着万家可以作为"第二阶段"的处理组?研究设计是否支持这种连续处理效应的分析?</strong></p></li>
-<li><p><strong>作者提到国有企业更可能被纳入千家企业项目,这是否与国企的政治联系有关?政治联系如何影响企业的能源效率投资决策?</strong></p></li>
-<li><p><strong>对于民营企业占主导的行业(如纺织业),能源监管的效果是否有所不同?所有制结构如何调节政策效果?</strong></p></li>
-<li><p><strong>模型中考虑能源效率改善的扩展模型,是否区分了短期和长期效应?长期效应的时间
-horizon 是多久?</strong></p></li>
-<li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD
-数据的质量和覆盖范围如何保证?</strong></p></li>
-<li><p><strong>在中国"双碳"目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>&lt;玉米与人口&gt;深度阅读笔记 — Chen &amp; Kung</title>
     <url>/posts/chen2016/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -4646,76 +4340,302 @@ Issue 1, pp. 71-99</li>
       </tags>
   </entry>
   <entry>
-    <title>序列诅咒均衡 — 深度阅读笔记 — Cohen &amp; Li</title>
-    <url>/posts/cohen2026/</url>
+    <title>Regulating Conglomerates: Evidence From an Energy Conservation Program in China — 深度阅读笔记 — AER</title>
+    <url>/posts/chen2021/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
 <ul>
-<li><strong>标题</strong>: Sequential Cursed Equilibrium</li>
-<li><strong>作者</strong>: Shani Cohen (Harvard), Shengwu Li
-(Harvard)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3):
-934-976</li>
-<li><strong>DOI</strong>: 10.1257/aer.20230309</li>
-<li><strong>难度评估</strong>: 高 - 需要博弈论、行为经济学基础</li>
+<li><strong>标题</strong>: Regulating Conglomerates: Evidence from an
+Energy Conservation Program in China</li>
+<li><strong>作者</strong>: Qiaoyi Chen (复旦大学), Zhao Chen (复旦大学),
+Zhikuo Liu (复旦大学), Juan Carlos Suárez Serrato (Duke大学 &amp; NBER),
+Daniel Yi Xu (Duke大学 &amp; NBER)</li>
+<li><strong>年份</strong>: 2021</li>
+<li><strong>来源</strong>: American Economic Review (AER)</li>
+<li><strong>DOI</strong>: 未提供 <span id="more"></span></li>
 </ul>
-<span id="more"></span>
 <hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h2 id="引言背景和意义">引言(背景和意义)</h2>
 <h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>诅咒均衡（Cursed Equilibrium,
-CE）</strong>：Eyster和Rabin（2005）提出的解概念，玩家忽略其他玩家行为与其类型之间的相关性。</p>
-<p><strong>扩展式博弈（Extensive-Form
-Games）</strong>：具有时序结构的博弈，玩家依次行动。</p>
+<p>能源
+regulation和经济活动的关系是环境经济学研究的核心议题之一.在发展中国家,特别是中国这样的新兴经济体,政府面临着平衡经济增长与工业化负面效应(如碳排放和污染)的艰巨挑战.中国的工业能源消耗在全球占据主导地位,其工业能源使用不仅在国内经济中举足轻重,更对全球气候变化产生深远影响.</p>
+<p>能源效率 regulation
+的设计面临多重复杂性:首先,大型工业企业往往嵌入更广泛的商业网络(企业集团/
+conglomerate),这使得监管政策的评估必须考虑集团内部的资源配置和 spillover
+效应;其次,监管政策的有效性取决于企业响应的边际成本_是通过提高能源效率、降低产出,还是将生产转移到未受监管的关联企业来实现减排;第三,市场竞争和产业组织结构会放大或缩小政策的实际效果,产生所谓的"泄漏"(leakage)效应.</p>
+<p>本文研究的"千家企业"(Top-1,000)项目是中国"十一五"规划(2006-2011)期间最重要的能源节约政策之一.该项目针对能源密集型行业中的最大能耗企业,目标是到2011年实现工业能源强度(单位GDP能耗)降低20%的宏伟目标.</p>
 <h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>标准博弈论假设"三思而后行"</strong>：玩家在决策时会考虑假设性事件的信息</p></li>
-<li><p><strong>实际行为偏离</strong>：人们经常忽略假设性事件的含义，但从观察事件中进行推断</p></li>
-<li><p><strong>诅咒均衡的局限性</strong>：不适用于序列博弈；对内生信息也存在curse</p></li>
-</ol>
+<p><strong>中国能源消耗的严峻形势</strong>:进入21世纪初期,中国的工业能源消耗已经远远超过其他主要经济体.以图1为参考,能源
+regulation
+对国家和全球都具有重要意义.这一背景下,理解大型能源监管政策的效果对于制定更有效的环境政策至关重要.</p>
+<p><strong>千家企业项目的设计逻辑</strong>:该项目设计参照了发达国家自愿协议项目的经验,相信企业能够通过提高能源效率显著减少能源使用.项目名称"千家企业"指的是9个能源密集型行业中能源消耗超过18万吨标准煤的1008家工业企业.这些企业的总能源消耗在2004年达到6.7亿吨标准煤,占中国工业能源消费的47%和全国能源消费的33%.</p>
+<p><strong>政策执行的制度背景</strong>:项目采用自上而下的目标分解机制:中央政府向每个省级政府分配能源使用减排目标,省级官员再向每个千家企业分配个人能源使用配额.千家企业须接受第三方年度能源审计,并可能面临工业和信息化部以及国家能源管理局的额外审计.</p>
 <h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：如何修改诅咒均衡以适应扩展式博弈，使玩家能够从观察事件中学习但忽略假设事件的信息？</p>
-<hr>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<h3 id="第一节引言">第一节：引言</h3>
-<h3 id="第二节定义和一般结果">第二节：定义和一般结果</h3>
+<p>现有政策评估存在关键缺陷:官方评估主要依赖千家企业自身的能源使用变化,得出项目高度有效的结论.然而,这一评估方法存在两个重要问题:</p>
+<p>第一,它忽视了企业集团内部的生产再分配效应.受监管企业可能不是通过提高能源效率,而是通过将生产转移到同一企业集团内不受监管的关联企业来满足监管要求.这种行为会导致监管政策出现"集团泄漏"(conglomerate
+leakage).</p>
+<p>第二,它忽视了市场竞争效应.受监管企业因减产而让出的市场份额可能被同行业不受监管的竞争对手获取,导致总体能源节约效果低于预期,即"市场泄漏"(market
+leakage).</p>
+<p>本文核心研究问题:千家企业项目对能源消耗的实际影响如何?企业集团内部的
+production shifting 在多大程度上削弱了政策效果?考虑到这些 spillover
+效应,政策的福利含义是什么?</p>
+<h3 id="研究意义">研究意义</h3>
+<p><strong>理论贡献</strong>:本文将 reduced-form 计量经济学方法与产业
+equilibrium 模型相结合,提供了一个分析能源 regulation
+的一般框架.这一框架能够同时刻画企业集团内部和市场竞争层面的 spillover
+效应,为准确评估能源政策的真实效果提供了方法论支撑.</p>
+<p><strong>政策含义</strong>:研究发现对设计更有效的能源 regulation
+具有直接启示.如果能够利用公开可得的企业集团所有权信息,针对整个企业集团而不仅是单个企业制定监管规则,可以显著提高政策的能源节约效果.</p>
+<p><strong>发展经济学价值</strong>:在印度、中国和拉丁美洲,企业集团的重要性日益上升(Ramachandran,
+Manikandan and Pant,
+2013).本文的发现对于理解企业集团如何响应政府监管具有普遍的参考价值.</p>
+<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
+<p>本文采用层层递进的研究设计,共分为7个主要部分:</p>
+<p><strong>第一部分:政策背景与数据</strong>(Policy Background and
+Data).详细描述千家企业能源节约项目,介绍用于测量经济活动和能源使用的数据集,以及构建中国企业集团所有权网络的研究策略.</p>
+<p><strong>第二部分:政策对受监管企业的影响</strong>(Effects of the
+Policy on Regulated
+Firms).使用双重差分法(difference-in-differences)识别政策效果,证明受监管企业通过降低产出而非提高能源效率来满足监管要求.</p>
+<p><strong>第三部分:企业集团内部的溢出效应</strong>(Within-Conglomerate
+Spillovers).利用详细的商业注册数据,发现受监管企业集团将生产转移到未受监管的关联企业,揭示了40%的产出下降被集团内部吸收.</p>
+<p><strong>第四部分:产业 equilibrium 模型</strong>(Industry Equilibrium
+Model).构建包含企业集团生产和市场 spillover 的产业 equilibrium
+模型,为第五部分的模型估计和第六部分的福利分析奠定基础.</p>
+<p><strong>第五部分:模型估计</strong>(Model
+Estimation).通过匹配企业规模分布和集团内部生产分配的 pre-regulation
+特征来估计模型参数.</p>
+<p><strong>第六部分:福利分析</strong>(Welfare Analysis).量化政策的
+aggregate 和 welfare
+效果,比较不同政策工具(扩展监管范围、依赖性能源税、基于公开信息的集团层面
+regulation)的效果.</p>
+<p><strong>第七部分:稳健性检验</strong>(Robustness).检验模型结果对替代模型设定和参数值的敏感性,包括考虑能源效率改善可能性和
+pre-existing 能源效率差异的模型扩展.</p>
+<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
+<h3 id="背景与挑战">背景与挑战</h3>
+<h4 id="中国的能源困境与政策应对">中国的能源困境与政策应对</h4>
+<p>中国作为世界最大的能源消费国,其工业能源消耗占全国总能耗的70%.在快速工业化和城市化的背景下,如何在保持经济增长的同时控制能源消耗和碳排放,是中国政府面临的核心政策挑战.2006年启动的"十一五"规划将能源强度降低20%作为约束性目标,这一目标通过多个政策和行业计划来实现,其中千家企业项目是最重要的举措之一.</p>
+<p>千家企业项目的设计体现了发展中国家的政策创新.与发达国家主要依赖自愿协议和市场激励不同,中国的项目采用了强有力的行政执行机制.项目针对9个能源密集型行业的1008家超大型企业,这些企业的能源消耗占工业总能耗的47%.由于政策于2006年宣布,但根据企业2004年的
+retrospectively 能源消耗数据选择参与者,企业无法操纵项目参与名单,这为准
+quasi-experimental 识别策略提供了外生性来源.</p>
+<h4 id="企业集团的重要性">企业集团的重要性</h4>
+<p>理解千家企业项目效果的关键在于认识到这些受监管企业并非孤立运营,而是嵌入在复杂的企业集团网络中.通过中国工商行政管理总局的行政注册数据库(CARD),作者能够追踪这些企业的所有权关系.</p>
+<p>研究发现,千家企业企业平均拥有2.45个同行业内的关联企业.由于千家企业通常是各行业的最大企业,其关联企业的规模明显较小,平均产出仅为受监管企业的19.3%.这一事实意味着企业集团可能有显著的
+scope 通过关联企业之间的生产替代来响应监管.</p>
+<p>然而,完全替代的可能性受到两个因素制约:首先,关联企业规模较小,无法完全吸收受监管企业的产出下降;其次,同一4-digit行业内同集团企业之间的
+production shifting 受到技术和物流约束.</p>
+<h4 id="识别策略的核心挑战">识别策略的核心挑战</h4>
+<p>准确评估千家企业项目效果面临三个层面的识别挑战:</p>
+<p><strong>第一层:受监管企业 vs.
+对照企业</strong>.理想的反事实是:如果没有千家企业项目,受监管企业的能源使用和产出会有怎样的变化?作者使用"万家"(Top-10,000)企业作为对照组_这些企业在2011年后才被纳入监管,因此2011年之前的时期提供了
+quasi-experimental variation.</p>
+<p><strong>第二层:集团内部的 production
+shifting</strong>.即使能够识别受监管企业相对于对照企业的效果,这仍然无法捕捉企业集团内部的再分配效应.受监管企业可能将生产转移到同一集团内的关联企业,从而降低政策的整体能源节约效果.</p>
+<p><strong>第三层:市场竞争效应</strong>.受监管企业的减产可能导致竞争对手获得更多市场份额,这种市场层面的泄漏也会影响政策的
+aggregate 效果.</p>
+<h3 id="方法论reduced-form-分析">方法论:Reduced-Form 分析</h3>
+<h4 id="双重差分设计">双重差分设计</h4>
+<p>作者采用多层双重差分策略来识别政策的直接效应和溢出效应.</p>
+<p><strong>第一个双重差分</strong>:比较受监管的千家企业与同行业但不受监管的万家企业的差异.这是标准的
+treatment vs. control
+比较,假设在政策实施前,两组企业的能源使用和产出趋势相似.</p>
+<p><strong>事件研究规范</strong>(Event-Study
+Specification)用于检验平行趋势假设:</p>
+<p><span class="math display">\[Y_{ijklt} = \sum_{\tau \neq 2006}
+\beta_\tau \times Treat_i \times Year_\tau + \alpha_i + \eta_{jt} +
+\delta_{kt} + \varepsilon_{ijklt}\]</span></p>
+<p>其中 <span class="math inline">\(Y_{ijklt}\)</span> 是企业 <span class="math inline">\(i\)</span> 在行业 <span class="math inline">\(j\)</span>、省份 <span class="math inline">\(k\)</span>、年份 <span class="math inline">\(t\)</span> 的 outcome 变量,<span class="math inline">\(Treat_i\)</span> 是处理组指示变量,<span class="math inline">\(\alpha_i\)</span> 是企业固定效应,<span class="math inline">\(\eta_{jt}\)</span> 是行业×年份固定效应,<span class="math inline">\(\delta_{kt}\)</span> 是省份×年份固定效应.</p>
+<p>图4展示了 event-study
+结果:处理组和对照组企业在政策实施前的趋势高度一致,支持平行趋势假设.政策实施后,千家企业的能源使用相对下降约16%.</p>
+<p><strong>第二个双重差分</strong>:比较同一企业集团内的关联企业与其他不受监管企业的差异.这一设计利用了企业集团所有权网络信息,识别集团内部的溢出效应.</p>
+<h4 id="主要-reduced-form-发现">主要 Reduced-Form 发现</h4>
+<p><strong>发现一:能源使用下降源于产出降低,而非效率提升</strong></p>
+<p>表3报告了政策对能源使用和产出的影响.结果显示:</p>
 <ul>
-<li>SCE的定义和存在性</li>
-<li>同时博弈中的SCE</li>
-<li>部分诅咒</li>
+<li>能源使用下降12%-16%,在不同的固定效应规范下保持稳健</li>
+<li>产出(以收入衡量)下降10%-23%</li>
+<li><strong>能源效率(产出/能源使用)没有显著变化</strong></li>
 </ul>
-<h3 id="第三节实验应用">第三节：实验应用</h3>
+<p>这一发现具有重要的政策含义:企业选择通过降低产出来满足监管要求,而非投资于能源效率提升.作者认为这可能是因为能源效率投资需要
+long-lived capital
+的更新,面临技术不确定性和中国政府政策承诺不确定性的制约.</p>
+<p><strong>发现二:集团内部生产转移</strong></p>
+<p>利用 CARD
+数据,作者识别了46,178家与千家企业有关联关系的企业.将这些关联企业与万家数据库匹配后,得到2,466家在同行业的关联企业.</p>
+<p>双重差分分析显示:</p>
 <ul>
-<li>交易博弈实验</li>
-<li>成本信号博弈</li>
-<li>信息获取博弈</li>
+<li>关联企业的产出增加约12%</li>
+<li>关联企业的能源使用增加,但没有能源效率变化</li>
+<li>只有当关联企业的4-digit行业与受监管企业相同时,才出现显著的生产增加</li>
+<li>在其他行业的关联企业作为 placebo test,未发现产出增加</li>
 </ul>
-<h3 id="第四节动态拍卖">第四节：动态拍卖</h3>
-<h3 id="第五节讨论和结论">第五节：讨论和结论</h3>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="标准博弈论的问题">标准博弈论的问题</h4>
-<p><strong>"三思而后行"原则（Savage 1972）</strong>： -
-标准理论要求玩家在决策时考虑假设性事件的信息 -
-但实际上人们经常忽略这种信息</p>
-<p><strong>诅咒均衡（CE）的核心思想</strong>： -
-玩家理解对手行为的边缘分布 - 但忽略这些分布之间的相关性</p>
-<h4 id="诅咒均衡的两个局限性">诅咒均衡的两个局限性</h4>
-<p><strong>局限性1：不适应序列博弈</strong> -
-序列博弈与同时博弈有相同的贝叶斯正态形式 -
-因此CE预测相同，但这不符合直觉</p>
-<p><strong>局限性2：对内生信息的诅咒</strong></p>
-<h3 id="序列诅咒均衡sce">序列诅咒均衡（SCE）</h3>
-<p><strong>核心创新</strong>：允许玩家对内生信息受到诅咒</p>
-<p><strong>关键洞察</strong>：玩家从观察事件中学习，但忽略假设事件的信息</p>
-<hr>
-<h2 id="结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
+<p>基于规模差异(关联企业平均规模仅为受监管企业的19.3%),作者计算出企业集团能够将受监管企业40%的产出下降转移到关联企业.</p>
+<p><strong>发现三:市场层面的竞争效应</strong></p>
+<p>作者提供了市场泄漏的证据:同行业但不受监管的企业在政策实施后产出增加.这与千家企业减产让出市场份额的预期一致.</p>
+<h3 id="结构模型产业-equilibrium-模型">结构模型:产业 Equilibrium
+模型</h3>
+<h4 id="模型设定">模型设定</h4>
+<p>为了量化政策的 aggregate 和 welfare
+效果,作者构建了一个包含以下特征的产业 equilibrium 模型:</p>
+<p><strong>需求侧</strong>:使用常替代弹性(CES)聚合器描述消费者对不同企业产品的偏好:</p>
+<p><span class="math display">\[U = \left( \int_\Omega
+Q(\omega)^{\frac{\sigma-1}{\sigma}} d\omega
+\right)^{\frac{\sigma}{\sigma-1}}\]</span></p>
+<p>其中 <span class="math inline">\(\sigma &gt; 1\)</span>
+是替代弹性,<span class="math inline">\(\omega\)</span> 表示企业产品.</p>
+<p><strong>供给侧</strong>:每个企业生产单一产品面临常数边际成本 <span class="math inline">\(c\)</span> 和冰山成本 <span class="math inline">\(\tau\)</span>.企业可以选择在受监管状态(承担能源监管成本)或非监管状态下运营.</p>
+<p><strong>企业集团结构</strong>:模型明确允许企业在同一企业集团内共享投入和转移生产.设
+<span class="math inline">\(\lambda_s\)</span> 表示企业集团 <span class="math inline">\(s\)</span> 内的企业数量,<span class="math inline">\(\omega_{s,k}\)</span> 表示企业 <span class="math inline">\(k\)</span> 在集团 <span class="math inline">\(s\)</span> 中的相对规模.</p>
+<p><strong>关键参数</strong>:模型需要估计替代弹性 <span class="math inline">\(\sigma\)</span>、集团内部替代弹性 <span class="math inline">\(\gamma\)</span>、能源监管成本 <span class="math inline">\(\kappa\)</span> 等参数.</p>
+<h4 id="模型估计">模型估计</h4>
+<p>作者通过匹配以下矩条件来估计模型:</p>
 <ol type="1">
-<li><p><strong>SCE扩展了CE到扩展式博弈</strong></p></li>
-<li><p><strong>解释实验证据</strong>：为关于假设性思维的实验提供理论解释</p></li>
-<li><p><strong>应用广泛</strong>：交易博弈、成本信号博弈、信息获取博弈、动态拍卖</p></li>
+<li><strong>企业规模分布</strong>:模型能够再现企业规模的集中度</li>
+<li><strong>集团内部生产分配</strong>:模型匹配观测到的集团内部相对规模分布</li>
+<li><strong>Reduced-form 估计</strong>:模型 out-of-sample
+验证双重差分估计结果</li>
+</ol>
+<p>模型与双重差分估计的一致性验证了模型正确捕捉了企业集团内部和市场层面的
+spillover 效应的定量重要性.</p>
+<h3 id="福利分析">福利分析</h3>
+<h4 id="政策效果的量化">政策效果的量化</h4>
+<p>基于估计的模型,作者量化了千家家企业项目的 aggregate 效果:</p>
+<ul>
+<li><strong>能源节约</strong>:政策使总能源使用降低4%,相当于每年减少约4800万吨标准煤</li>
+<li><strong>社会成本</strong>:影子成本约160美元/吨碳(当量)</li>
+</ul>
+<p>关键机制:企业集团通过内部 production shifting
+降低了千家企业的影子监管成本约30%.这是因为集团能够将部分产出转移到关联企业,从而部分抵消了对受监管企业的直接影响.</p>
+<h4 id="替代政策的模拟">替代政策的模拟</h4>
+<p>作者使用模型比较了三种替代政策:</p>
+<p><strong>政策A:扩展千家家企业项目</strong>.将更多企业纳入监管范围,但保持针对单个企业的监管结构.结果显示这只能带来边际的能源节约增加.</p>
+<p><strong>政策B:规模依赖性能源税</strong>.对所有属于有千家企业存在的企业集团的企业征收能源税.结果接近
+universal energy tax 的效果.</p>
+<p><strong>政策C:基于公开信息的集团层面
+regulation</strong>.利用公开可获得的企业所有权信息,针对整个企业集团制定监管规则.结果显示可以在相同
+welfare 成本下将能源节约提高10%.</p>
+<p><strong>核心洞察</strong>:由于企业集团内部的 production shifting
+是一种重要的泄漏渠道,针对 conglomerate
+层面的监管能够更有效地实现能源节约目标.</p>
+<h3 id="稳健性检验">稳健性检验</h3>
+<p>作者进行了广泛的稳健性检验:</p>
+<ol type="1">
+<li><p><strong>能源效率改善的长期可能性</strong>:扩展模型允许企业响应监管投资于能源效率,发现即使在长期视角下,能源效率改善仍然成本高昂</p></li>
+<li><p><strong>Pre-existing
+能源效率差异</strong>:假设千家企业比所有其他企业能源效率低20%,重新计算社会成本约133美元/吨碳</p></li>
+<li><p><strong>参数敏感性</strong>:不同的 <span class="math inline">\(\sigma\)</span>、<span class="math inline">\(\gamma\)</span> 和 <span class="math inline">\(\kappa\)</span> 参数值下的稳健性</p></li>
+<li><p><strong>数据构建的敏感性</strong>:使用行政税务数据填补缺失值、限制样本至样本期内持续存在的企业等</p></li>
+</ol>
+<h2 id="结论conclusion">结论(Conclusion)</h2>
+<h3 id="核心研究结论">核心研究结论</h3>
+<p>本文通过对千家企业能源节约项目的深入研究,得出以下核心结论:</p>
+<p><strong>第一,监管企业通过减产而非提高能源效率来响应政策</strong>.这一发现揭示了能源监管的边际成本结构,表明能源效率投资的成本远高于简单地接受产出损失.</p>
+<p><strong>第二,企业集团内部的 production shifting
+是政策效果的重要泄漏渠道</strong>.受监管企业集团将40%的产出下降转移到未受监管的关联企业,这一发现对仅关注受监管企业效果的政策评估提出了挑战.</p>
+<p><strong>第三,市场竞争效应进一步削弱了政策的能源节约效果</strong>.受监管企业减产让出的市场份额被竞争对手获取,降低了政策的
+aggregate 效果.</p>
+<p><strong>第四,政策的 welfare
+合理性取决于社会碳成本</strong>.当社会碳成本超过160美元/吨碳时,千家企业项目才能改善
+welfare,这一结果对当前碳定价政策具有直接启示.</p>
+<p><strong>第五,集团层面的监管设计能够显著提高政策效果</strong>.利用公开可获得的企业所有权信息,针对整个企业集团制定监管规则,可以在相同
+welfare 成本下将能源节约提高10%.</p>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<p><strong>对能源经济学 literature
+的贡献</strong>:本文提供了迄今为止最全面的中国能源监管政策评估,揭示了企业集团作为重要但此前被忽视的响应渠道的作用.</p>
+<p><strong>对环境 regulation literature 的贡献</strong>:本文将
+reduced-form 和 structural 方法相结合,为分析环境 regulation 的 spillover
+效应提供了可推广的框架.</p>
+<p><strong>对产业组织 literature
+的贡献</strong>:本文揭示了企业集团作为一种特殊的产业组织形式如何影响政府监管的有效性.</p>
+<h3 id="政策建议">政策建议</h3>
+<p><strong>短期建议</strong>:完善千家家企业项目的监管设计,考虑集团层面的信息披露要求和监管规则.</p>
+<p><strong>中期建议</strong>:扩展能源监管范围时,应优先考虑基于集团层面的
+targeting,而非简单地增加受监管企业数量.</p>
+<p><strong>长期建议</strong>:建立企业所有权信息的公开数据库,为更有效的监管设计提供信息基础.</p>
+<h2 id="未来研究方向提及">未来研究方向提及</h2>
+<p>作者在论文中提出了若干值得进一步研究的方向:</p>
+<p><strong>Long-run
+能源效率改善</strong>:模型扩展表明长期来看企业可能投资于能源效率,但时间和成本不确定性仍然很高.未来的研究可以深入分析能源效率投资决策的动态过程.</p>
+<p><strong>空间
+spillover</strong>:本文主要关注集团内部和国家层面的效应,省份间的
+production substitution 和污染转移也是重要议题.</p>
+<p><strong>行政执行约束</strong>:政府对监管范围和监管强度的行政约束是政策设计的重要摩擦来源,值得进一步研究.</p>
+<h2 id="未来研究方向思考">未来研究方向思考</h2>
+<p>基于对本文的深入理解,以下是值得进一步探索的研究方向:</p>
+<p><strong>第一,集团所有权网络的动态演化</strong>.本文使用2018年的 CARD
+数据构建所有权网络,无法捕捉政策实施后的网络调整.未来的研究可以分析监管如何驱动企业集团的重组和整合.</p>
+<p><strong>第二,跨国比较研究</strong>.不同国家的企业集团结构和监管执行机制存在显著差异.将中国的发现与印度、巴西等其他大型新兴经济体进行比较,可以揭示企业集团响应政府监管的一般性模式.</p>
+<p><strong>第三,供应链溢出效应</strong>.本文主要关注同一企业集团内部的横向溢出,但受监管企业的上游供应商和下游客户也可能受到影响.考虑供应链关系的溢出效应可以提供更完整的政策效果图景.</p>
+<p><strong>第四,碳定价与能源监管的相互作用</strong>.当存在碳定价机制时,能源监管政策的
+marginal cost
+会相应改变.未来的研究可以分析这两种政策工具的交互作用和最优组合.</p>
+<p><strong>第五,企业异质性的深入分析</strong>.本文假设企业是同质的,但不同类型的企业(国有企业
+vs. 民营企业、外资企业 vs.
+内资企业)可能有不同的响应模式.分析这些异质性可以提供更精细的政策建议.</p>
+<h2 id="学术思考">学术思考</h2>
+<p>本文引发了几个值得深入思考的学术问题:</p>
+<p><strong>关于识别策略的思考</strong>:双重差分方法的核心假设是处理组和对照组在政策实施前具有相同的趋势.然而,在中国特有的政治经济环境下,处理组企业可能因为"树大招风"而受到更多关注,或者反过来因为政策透明度而获得更好的监管信息.这些微观机制是否会影响平行趋势假设?</p>
+<p><strong>关于企业行为假设的思考</strong>:本文假设企业是理性的,能够最优地配置集团内部的资源.然而,在现实中,企业集团内部的资源配置还受到代理问题、政治联系和内部权力斗争等因素的影响.如何在模型中更好地刻画这些制度因素?</p>
+<p><strong>关于福利评估的思考</strong>:本文采用社会碳成本(SCC)作为
+welfare 评估的核心参数,但 SCC 本身存在很大的不确定性.不同的 SCC
+假设会导致不同的政策评价,这是否意味着 welfare 分析过于依赖参数设定?</p>
+<p><strong>关于政策可复制性的思考</strong>:千家企业项目的成功在很大程度上依赖于中国的特殊制度环境_强大的行政执行能力、将环境绩效与官员晋升挂钩的考核机制.将其经验复制到其他发展中国家时,需要考虑制度能力差异.</p>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<p>基于论文内容和上述分析,以下是用户接下来可能问的问题:</p>
+<ol type="1">
+<li><p><strong>千家企业项目中,哪些行业的企业能源效率响应最为显著?是否存在行业异质性?</strong></p></li>
+<li><p><strong>企业集团将生产转移到关联企业时,是否考虑了关联企业所在地区的环境成本(污染转移)?</strong></p></li>
+<li><p><strong>作者提到的160美元/吨碳的社会碳成本,如何与当前国际碳市场价格(如欧洲碳市场的50-100欧元/吨)进行比较?</strong></p></li>
+<li><p><strong>在模型中假设的 CES 需求替代弹性 σ 如何估计?不同假设对
+welfare 结果的敏感性如何?</strong></p></li>
+<li><p><strong>万家(Top-10,000)企业在2011年后被纳入监管,这是否意味着万家可以作为"第二阶段"的处理组?研究设计是否支持这种连续处理效应的分析?</strong></p></li>
+<li><p><strong>作者提到国有企业更可能被纳入千家企业项目,这是否与国企的政治联系有关?政治联系如何影响企业的能源效率投资决策?</strong></p></li>
+<li><p><strong>对于民营企业占主导的行业(如纺织业),能源监管的效果是否有所不同?所有制结构如何调节政策效果?</strong></p></li>
+<li><p><strong>模型中考虑能源效率改善的扩展模型,是否区分了短期和长期效应?长期效应的时间
+horizon 是多久?</strong></p></li>
+<li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD
+数据的质量和覆盖范围如何保证?</strong></p></li>
+<li><p><strong>在中国"双碳"目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p></li>
+</ol>
+<h2 id="学术思考-1">学术思考</h2>
+<p>本文引发了几个值得深入思考的学术问题:</p>
+<p><strong>关于识别策略的思考</strong>:双重差分方法的核心假设是处理组和对照组在政策实施前具有相同的趋势.然而,在中国特有的政治经济环境下,处理组企业可能因为"树大招风"而受到更多关注,或者反过来因为政策透明度而获得更好的监管信息.这些微观机制是否会影响平行趋势假设?</p>
+<p><strong>关于企业行为假设的思考</strong>:本文假设企业是理性的,能够最优地配置集团内部的资源.然而,在现实中,企业集团内部的资源配置还受到代理问题、政治联系和内部权力斗争等因素的影响.如何在模型中更好地刻画这些制度因素?</p>
+<p><strong>关于福利评估的思考</strong>:本文采用社会碳成本(SCC)作为
+welfare 评估的核心参数,但 SCC 本身存在很大的不确定性.不同的 SCC
+假设会导致不同的政策评价,这是否意味着 welfare 分析过于依赖参数设定?</p>
+<p><strong>关于政策可复制性的思考</strong>:千家企业项目的成功在很大程度上依赖于中国的特殊制度环境_强大的行政执行能力、将环境绩效与官员晋升挂钩的考核机制.将其经验复制到其他发展中国家时,需要考虑制度能力差异.</p>
+<h2 id="下一步用户可能提的问题-1">下一步用户可能提的问题</h2>
+<p>基于论文内容和上述分析,以下是用户接下来可能问的问题:</p>
+<ol type="1">
+<li><p><strong>千家企业项目中,哪些行业的企业能源效率响应最为显著?是否存在行业异质性?</strong></p></li>
+<li><p><strong>企业集团将生产转移到关联企业时,是否考虑了关联企业所在地区的环境成本(污染转移)?</strong></p></li>
+<li><p><strong>作者提到的160美元/吨碳的社会碳成本,如何与当前国际碳市场价格(如欧洲碳市场的50-100欧元/吨)进行比较?</strong></p></li>
+<li><p><strong>在模型中假设的 CES 需求替代弹性 σ 如何估计?不同假设对
+welfare 结果的敏感性如何?</strong></p></li>
+<li><p><strong>万家(Top-10,000)企业在2011年后被纳入监管,这是否意味着万家可以作为"第二阶段"的处理组?研究设计是否支持这种连续处理效应的分析?</strong></p></li>
+<li><p><strong>作者提到国有企业更可能被纳入千家企业项目,这是否与国企的政治联系有关?政治联系如何影响企业的能源效率投资决策?</strong></p></li>
+<li><p><strong>对于民营企业占主导的行业(如纺织业),能源监管的效果是否有所不同?所有制结构如何调节政策效果?</strong></p></li>
+<li><p><strong>模型中考虑能源效率改善的扩展模型,是否区分了短期和长期效应?长期效应的时间
+horizon 是多久?</strong></p></li>
+<li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD
+数据的质量和覆盖范围如何保证?</strong></p></li>
+<li><p><strong>在中国"双碳"目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p></li>
+</ol>
+<h2 id="下一步用户可能提的问题-2">下一步用户可能提的问题</h2>
+<p>基于论文内容和上述分析,以下是用户接下来可能问的问题:</p>
+<ol type="1">
+<li><p><strong>千家企业项目中,哪些行业的企业能源效率响应最为显著?是否存在行业异质性?</strong></p></li>
+<li><p><strong>企业集团将生产转移到关联企业时,是否考虑了关联企业所在地区的环境成本(污染转移)?</strong></p></li>
+<li><p><strong>作者提到的160美元/吨碳的社会碳成本,如何与当前国际碳市场价格(如欧洲碳市场的50-100欧元/吨)进行比较?</strong></p></li>
+<li><p><strong>在模型中假设的 CES 需求替代弹性 σ 如何估计?不同假设对
+welfare 结果的敏感性如何?</strong></p></li>
+<li><p><strong>万家(Top-10,000)企业在2011年后被纳入监管,这是否意味着万家可以作为"第二阶段"的处理组?研究设计是否支持这种连续处理效应的分析?</strong></p></li>
+<li><p><strong>作者提到国有企业更可能被纳入千家企业项目,这是否与国企的政治联系有关?政治联系如何影响企业的能源效率投资决策?</strong></p></li>
+<li><p><strong>对于民营企业占主导的行业(如纺织业),能源监管的效果是否有所不同?所有制结构如何调节政策效果?</strong></p></li>
+<li><p><strong>模型中考虑能源效率改善的扩展模型,是否区分了短期和长期效应?长期效应的时间
+horizon 是多久?</strong></p></li>
+<li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD
+数据的质量和覆盖范围如何保证?</strong></p></li>
+<li><p><strong>在中国"双碳"目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p></li>
 </ol>
 ]]></content>
       <categories>
@@ -4928,6 +4848,86 @@ RespondentExperience_i + \beta_p \cdot ParentsExperience_i + \beta_{gp}
 <li><p><strong>黑人受访者零和思维最高但奴役边际效应最小</strong>：如何解释这个悖论？</p></li>
 <li><p><strong>零和思维与特朗普现象</strong>：数据显示零和思维预测了民主党人投票给特朗普？</p></li>
 <li><p><strong>政策含义</strong>：如果零和思维是可塑的，什么干预可以减少零和思维？</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>序列诅咒均衡 — 深度阅读笔记 — Cohen &amp; Li</title>
+    <url>/posts/cohen2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Sequential Cursed Equilibrium</li>
+<li><strong>作者</strong>: Shani Cohen (Harvard), Shengwu Li
+(Harvard)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(3):
+934-976</li>
+<li><strong>DOI</strong>: 10.1257/aer.20230309</li>
+<li><strong>难度评估</strong>: 高 - 需要博弈论、行为经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>诅咒均衡（Cursed Equilibrium,
+CE）</strong>：Eyster和Rabin（2005）提出的解概念，玩家忽略其他玩家行为与其类型之间的相关性。</p>
+<p><strong>扩展式博弈（Extensive-Form
+Games）</strong>：具有时序结构的博弈，玩家依次行动。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>标准博弈论假设"三思而后行"</strong>：玩家在决策时会考虑假设性事件的信息</p></li>
+<li><p><strong>实际行为偏离</strong>：人们经常忽略假设性事件的含义，但从观察事件中进行推断</p></li>
+<li><p><strong>诅咒均衡的局限性</strong>：不适用于序列博弈；对内生信息也存在curse</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：如何修改诅咒均衡以适应扩展式博弈，使玩家能够从观察事件中学习但忽略假设事件的信息？</p>
+<hr>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<h3 id="第一节引言">第一节：引言</h3>
+<h3 id="第二节定义和一般结果">第二节：定义和一般结果</h3>
+<ul>
+<li>SCE的定义和存在性</li>
+<li>同时博弈中的SCE</li>
+<li>部分诅咒</li>
+</ul>
+<h3 id="第三节实验应用">第三节：实验应用</h3>
+<ul>
+<li>交易博弈实验</li>
+<li>成本信号博弈</li>
+<li>信息获取博弈</li>
+</ul>
+<h3 id="第四节动态拍卖">第四节：动态拍卖</h3>
+<h3 id="第五节讨论和结论">第五节：讨论和结论</h3>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="标准博弈论的问题">标准博弈论的问题</h4>
+<p><strong>"三思而后行"原则（Savage 1972）</strong>： -
+标准理论要求玩家在决策时考虑假设性事件的信息 -
+但实际上人们经常忽略这种信息</p>
+<p><strong>诅咒均衡（CE）的核心思想</strong>： -
+玩家理解对手行为的边缘分布 - 但忽略这些分布之间的相关性</p>
+<h4 id="诅咒均衡的两个局限性">诅咒均衡的两个局限性</h4>
+<p><strong>局限性1：不适应序列博弈</strong> -
+序列博弈与同时博弈有相同的贝叶斯正态形式 -
+因此CE预测相同，但这不符合直觉</p>
+<p><strong>局限性2：对内生信息的诅咒</strong></p>
+<h3 id="序列诅咒均衡sce">序列诅咒均衡（SCE）</h3>
+<p><strong>核心创新</strong>：允许玩家对内生信息受到诅咒</p>
+<p><strong>关键洞察</strong>：玩家从观察事件中学习，但忽略假设事件的信息</p>
+<hr>
+<h2 id="结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>SCE扩展了CE到扩展式博弈</strong></p></li>
+<li><p><strong>解释实验证据</strong>：为关于假设性思维的实验提供理论解释</p></li>
+<li><p><strong>应用广泛</strong>：交易博弈、成本信号博弈、信息获取博弈、动态拍卖</p></li>
 </ol>
 ]]></content>
       <categories>
@@ -9513,113 +9513,6 @@ Christian Proebsting (EPFL), Linda L. Tesar (Michigan &amp; NBER)</li>
       </tags>
   </entry>
   <entry>
-    <title>Endogenous Clustering and Analogy-Based Expectation Equilibrium — 深度阅读笔记 — Jehiel &amp; Weber</title>
-    <url>/posts/jehiel2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Endogenous Clustering and Analogy-Based
-Expectation Equilibrium</li>
-<li><strong>作者</strong>: Philippe Jehiel (PSE &amp; UCL), Giacomo
-Weber (PSE &amp; Bologna)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies
-(RES)</li>
-<li><strong>难度评估</strong>: 高 - 需要博弈论、行为经济学、机器学习基础
-<span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言">1. 引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>ABEE类比预期均衡、K-means聚类、原型理论。</p>
-<h3 id="研究背景">研究背景</h3>
-<p>理性预期假设要求过高；外生类比分割的局限性。</p>
-<h3 id="核心问题">核心问题</h3>
-<p>类比分割如何内生决定？玩家如何在记忆约束下最优分类情况？</p>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：理论框架</li>
-<li>第三节：应用</li>
-<li>第四节：结论</li>
-</ul>
-<h2 id="正文">3. 正文</h2>
-<h3 id="核心机制">核心机制</h3>
-<p>将类比分割内生化为聚类问题的解</p>
-<h3 id="关键发现">关键发现</h3>
-<ol type="1">
-<li>区分自排斥（需混合分区）vs自吸引（多重均衡）环境</li>
-<li>有限环境总存在聚类分布ABEE</li>
-<li>应用：美人竞赛（自吸引）、监控游戏（自排斥）</li>
-</ol>
-<h2 id="结论">4. 结论</h2>
-<p>内生类比分割框架提供了均衡多重性的新渠道。</p>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<p>实证检验、福利含义、规范分析。</p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
-    <url>/posts/48526/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
-<ul>
-<li>因果识别+统计推断</li>
-<li>因果识别(<strong><em>causal
-identification</em></strong>):如果拥有总体,能否确定总体因果关系</li>
-<li>统计推断(<strong><em>statistical
-inference</em></strong>):如何从样本数据获取总体因果关系信息,实际是一种相关性事实</li>
-<li>识别假设,实际就是对 <span class="math inline">\(D\)</span> 和 <span class="math inline">\(\varepsilon\)</span>
-的关系作出表述,但这种过程是无法从理论上验证的</li>
-</ul>
-<span id="more"></span>
-<h2 id="section"><strong>1</strong></h2>
-<ul>
-<li><strong>1.1</strong>
-因果效应的定义:干预与否、处理与否时,潜在结果之间的差值.潜在结果一定是同一个时间点上的结果</li>
-<li><strong>1.2</strong> 潜在结果永远无法完全观测,除非存在平行宇宙</li>
-<li><strong>1.3</strong>
-通过识别假设可以进行"插值",可以化"相关关系"识别场景为"因果关系"识别场景</li>
-<li><strong>1.4</strong>
-鲁宾因果模型(潜在因果框架),一套描述因果关系的新语言</li>
-</ul>
-<h2 id="section-1"><strong>2</strong></h2>
-<ul>
-<li><strong>2.1</strong> 第一类识别假设:潜在结果均值独立于处理状态</li>
-<li><strong>2.2</strong>
-从干扰项中剥离出控制变量;或者寻找一个与干扰项不相关的工具变量</li>
-<li><strong>2.3</strong>
-第二类识别假设:潜在结果条件均值独立于处理状态</li>
-<li><strong>2.4</strong> 好的控制变量:既影响<span class="math inline">\(Y\)</span>,又影响<span class="math inline">\(D\)</span>.其本身和干扰项是否相关是不重要的,不是研究者关注的中心</li>
-<li><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</li>
-<li><strong>2.6</strong> 无需过渡阐释控制变量的系数</li>
-</ul>
-<h2 id="section-2"><strong>3</strong></h2>
-<ul>
-<li><strong>3.1</strong> 鲁宾因果模型并未规定具体的函数形式</li>
-<li><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</li>
-</ul>
-<h2 id="section-3"><strong>4</strong></h2>
-<ul>
-<li><strong>4.1</strong>
-选择性又称之为分配机制,每个个体如何接受处理,可以用倾向得分来表示</li>
-<li><strong>4.2</strong>
-建议现实使用IV、DID、RDD等识别方法时,称之为准实验</li>
-</ul>
-]]></content>
-      <categories>
-        <category>计量</category>
-      </categories>
-      <tags>
-        <tag>学术讲座</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>&lt;住房与不平等&gt;深度阅读笔记 — Ioannides &amp; Ngai</title>
     <url>/posts/ioannides2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -9737,6 +9630,113 @@ Inequality - <strong>作者</strong>:Yannis M. Ioannides, L. Rachel Ngai -
       <tags>
         <tag>论文笔记</tag>
         <tag>城市经济学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Endogenous Clustering and Analogy-Based Expectation Equilibrium — 深度阅读笔记 — Jehiel &amp; Weber</title>
+    <url>/posts/jehiel2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Endogenous Clustering and Analogy-Based
+Expectation Equilibrium</li>
+<li><strong>作者</strong>: Philippe Jehiel (PSE &amp; UCL), Giacomo
+Weber (PSE &amp; Bologna)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies
+(RES)</li>
+<li><strong>难度评估</strong>: 高 - 需要博弈论、行为经济学、机器学习基础
+<span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言">1. 引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>ABEE类比预期均衡、K-means聚类、原型理论。</p>
+<h3 id="研究背景">研究背景</h3>
+<p>理性预期假设要求过高；外生类比分割的局限性。</p>
+<h3 id="核心问题">核心问题</h3>
+<p>类比分割如何内生决定？玩家如何在记忆约束下最优分类情况？</p>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：理论框架</li>
+<li>第三节：应用</li>
+<li>第四节：结论</li>
+</ul>
+<h2 id="正文">3. 正文</h2>
+<h3 id="核心机制">核心机制</h3>
+<p>将类比分割内生化为聚类问题的解</p>
+<h3 id="关键发现">关键发现</h3>
+<ol type="1">
+<li>区分自排斥（需混合分区）vs自吸引（多重均衡）环境</li>
+<li>有限环境总存在聚类分布ABEE</li>
+<li>应用：美人竞赛（自吸引）、监控游戏（自排斥）</li>
+</ol>
+<h2 id="结论">4. 结论</h2>
+<p>内生类比分割框架提供了均衡多重性的新渠道。</p>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<p>实证检验、福利含义、规范分析。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
+    <url>/posts/48526/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
+<ul>
+<li>因果识别+统计推断</li>
+<li>因果识别(<strong><em>causal
+identification</em></strong>):如果拥有总体,能否确定总体因果关系</li>
+<li>统计推断(<strong><em>statistical
+inference</em></strong>):如何从样本数据获取总体因果关系信息,实际是一种相关性事实</li>
+<li>识别假设,实际就是对 <span class="math inline">\(D\)</span> 和 <span class="math inline">\(\varepsilon\)</span>
+的关系作出表述,但这种过程是无法从理论上验证的</li>
+</ul>
+<span id="more"></span>
+<h2 id="section"><strong>1</strong></h2>
+<ul>
+<li><strong>1.1</strong>
+因果效应的定义:干预与否、处理与否时,潜在结果之间的差值.潜在结果一定是同一个时间点上的结果</li>
+<li><strong>1.2</strong> 潜在结果永远无法完全观测,除非存在平行宇宙</li>
+<li><strong>1.3</strong>
+通过识别假设可以进行"插值",可以化"相关关系"识别场景为"因果关系"识别场景</li>
+<li><strong>1.4</strong>
+鲁宾因果模型(潜在因果框架),一套描述因果关系的新语言</li>
+</ul>
+<h2 id="section-1"><strong>2</strong></h2>
+<ul>
+<li><strong>2.1</strong> 第一类识别假设:潜在结果均值独立于处理状态</li>
+<li><strong>2.2</strong>
+从干扰项中剥离出控制变量;或者寻找一个与干扰项不相关的工具变量</li>
+<li><strong>2.3</strong>
+第二类识别假设:潜在结果条件均值独立于处理状态</li>
+<li><strong>2.4</strong> 好的控制变量:既影响<span class="math inline">\(Y\)</span>,又影响<span class="math inline">\(D\)</span>.其本身和干扰项是否相关是不重要的,不是研究者关注的中心</li>
+<li><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</li>
+<li><strong>2.6</strong> 无需过渡阐释控制变量的系数</li>
+</ul>
+<h2 id="section-2"><strong>3</strong></h2>
+<ul>
+<li><strong>3.1</strong> 鲁宾因果模型并未规定具体的函数形式</li>
+<li><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</li>
+</ul>
+<h2 id="section-3"><strong>4</strong></h2>
+<ul>
+<li><strong>4.1</strong>
+选择性又称之为分配机制,每个个体如何接受处理,可以用倾向得分来表示</li>
+<li><strong>4.2</strong>
+建议现实使用IV、DID、RDD等识别方法时,称之为准实验</li>
+</ul>
+]]></content>
+      <categories>
+        <category>计量</category>
+      </categories>
+      <tags>
+        <tag>学术讲座</tag>
       </tags>
   </entry>
   <entry>
@@ -11205,100 +11205,6 @@ study of procurement contracts》深度分析撰写。</em></p>
       </tags>
   </entry>
   <entry>
-    <title>用稻草做砖 — 深度阅读笔记 — Okeke</title>
-    <url>/posts/okeke2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Making Bricks from Straw: Resources and
-Productivity in Health Care</li>
-<li><strong>作者</strong>: Edward N. Okeke (RAND Corporation)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(4):
-1499-1539</li>
-<li><strong>DOI</strong>: 10.1257/aer.20241459</li>
-<li><strong>难度评估</strong>: 高 -
-需要卫生经济学、发展经济学、实验经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>公共卫生设施生产率（Health Care Productivity）</strong>
-指卫生设施将投入（资金、人员、设备）转化为卫生服务产出的效率。在发展中国家，公共卫生设施普遍表现不佳，存在典型的"低质量-低数量"均衡陷阱。</p>
-<p><strong>财政约束（Financial Constraints）</strong>
-指行为主体无法获得足够资金来执行生产性投资的限制。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>发展中国家的卫生设施表现糟糕</strong>：访客常发现设施在中午后只有少数患者和工作人员</p></li>
-<li><p><strong>财政约束的争论</strong>：卫生工作者认为资金不足，但证据参差不齐</p></li>
-<li><p><strong>研究缺口</strong>：缺乏对"卫生设施内部到底发生了什么"的系统研究</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：为什么发展中国家的卫生设施表现如此糟糕？财政约束的作用是什么？</p>
-<p><strong>主要发现</strong>：额外财政资源带来了巨大的生产率提高，效果持续约两年</p>
-<hr>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ol type="1">
-<li><strong>引言</strong>: 问题陈述和研究背景</li>
-<li><strong>机构背景</strong>: 尼日利亚医疗体系、实验设计</li>
-<li><strong>数据</strong>:
-rollout数据、设施调查、服务提供调查、患者调查、家庭调查</li>
-<li><strong>分析与结果</strong>:
-支出效应、资金使用、产出效应、质量效应、健康效应</li>
-<li><strong>机制讨论</strong>: 行动计划、"无形"效应、打破均衡陷阱</li>
-<li><strong>长期效应</strong>: 四年后效果持续</li>
-<li><strong>结论</strong>: 政策含义</li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p><strong>尼日利亚公共卫生设施的困境</strong>： - 28%没有电力供应 -
-26%没有自来水 - 11%没有正常工作的厕所 - 14%重复使用注射器</p>
-<p><strong>"Catch-22"困境</strong>：要吸引患者必须改善质量和价格，但没有资源无法实现。</p>
-<h3 id="方法">方法</h3>
-<p><strong>实验设计</strong>：288个公共卫生中心，来自四个州</p>
-<p><strong>随机分配</strong>（三组）： 1.
-<strong>Grant组</strong>（96个）：获得60万奈拉（约1,600美元）赠款 2.
-<strong>Encouragement组</strong>（96个）：仅获得会议干预 3.
-<strong>Control组</strong>（96个）：维持现状</p>
-<p><strong>关键设计特点</strong>： - "意外"宣布：在会议结束时才宣布赠款
-- 资金管理完全由卫生工作者自行决定 - 条件宽松（只需提供银行账户）</p>
-<h3 id="结果">结果</h3>
-<p><strong>资金使用</strong>： - 47%用于改善质量（设备、翻新、员工激励）
-- 35%用于降低患者价格 - 约82%可追踪</p>
-<p><strong>产出效应</strong>： - 产前访问：+17-41% - 分娩：+17-41% -
-住院：+66%</p>
-<p><strong>质量效应</strong>：总体质量指数提高0.4标准差</p>
-<p><strong>健康效应</strong>：儿童死亡率降低24%</p>
-<p><strong>"无形"效应</strong>： - Grant诊所更早制定书面行动计划 -
-计划更详细，更可能寻求社区投入</p>
-<p><strong>长期效应</strong>（四年后）： - 产前访问：+15 log points -
-儿童免疫：+17 log points</p>
-<hr>
-<h2 id="结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>财政约束是真正的约束</strong>：向卫生设施提供额外资金带来了巨大的生产率提高</p></li>
-<li><p><strong>资金被有效使用</strong>：约47%用于改善质量，35%用于降低价格，没有明显的资金挪用</p></li>
-<li><p><strong>打破了"低质量-低数量"均衡</strong>：帮助卫生设施同时解决质量和价格两个约束</p></li>
-<li><p><strong>自主权产生了更好的效果</strong>：无条件赠款优于绩效挂钩拨款</p></li>
-<li><p><strong>效果持久</strong>：即使资金停止，改进仍持续约两年</p></li>
-</ol>
-<h3 id="政策含义">政策含义</h3>
-<ol type="1">
-<li><p><strong>资本注入可以打破均衡</strong>：财务"大推动"可能帮助突破困境</p></li>
-<li><p><strong>自主权和灵活性很重要</strong>：让卫生工作者自行决定如何花钱比严格规定用途更有效</p></li>
-<li><p><strong>"培训"不一定是前提</strong>：卫生工作者能够管理赠款资金，即使没有额外培训</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>&lt;马铃薯与人口&gt;深度阅读笔记 — Nunn &amp; Qian</title>
     <url>/posts/nunn2011/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -11557,6 +11463,100 @@ Vol. 126, pp. 593-650</li>
       <tags>
         <tag>论文笔记</tag>
         <tag>经济史</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用稻草做砖 — 深度阅读笔记 — Okeke</title>
+    <url>/posts/okeke2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Making Bricks from Straw: Resources and
+Productivity in Health Care</li>
+<li><strong>作者</strong>: Edward N. Okeke (RAND Corporation)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(4):
+1499-1539</li>
+<li><strong>DOI</strong>: 10.1257/aer.20241459</li>
+<li><strong>难度评估</strong>: 高 -
+需要卫生经济学、发展经济学、实验经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>公共卫生设施生产率（Health Care Productivity）</strong>
+指卫生设施将投入（资金、人员、设备）转化为卫生服务产出的效率。在发展中国家，公共卫生设施普遍表现不佳，存在典型的"低质量-低数量"均衡陷阱。</p>
+<p><strong>财政约束（Financial Constraints）</strong>
+指行为主体无法获得足够资金来执行生产性投资的限制。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>发展中国家的卫生设施表现糟糕</strong>：访客常发现设施在中午后只有少数患者和工作人员</p></li>
+<li><p><strong>财政约束的争论</strong>：卫生工作者认为资金不足，但证据参差不齐</p></li>
+<li><p><strong>研究缺口</strong>：缺乏对"卫生设施内部到底发生了什么"的系统研究</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：为什么发展中国家的卫生设施表现如此糟糕？财政约束的作用是什么？</p>
+<p><strong>主要发现</strong>：额外财政资源带来了巨大的生产率提高，效果持续约两年</p>
+<hr>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ol type="1">
+<li><strong>引言</strong>: 问题陈述和研究背景</li>
+<li><strong>机构背景</strong>: 尼日利亚医疗体系、实验设计</li>
+<li><strong>数据</strong>:
+rollout数据、设施调查、服务提供调查、患者调查、家庭调查</li>
+<li><strong>分析与结果</strong>:
+支出效应、资金使用、产出效应、质量效应、健康效应</li>
+<li><strong>机制讨论</strong>: 行动计划、"无形"效应、打破均衡陷阱</li>
+<li><strong>长期效应</strong>: 四年后效果持续</li>
+<li><strong>结论</strong>: 政策含义</li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p><strong>尼日利亚公共卫生设施的困境</strong>： - 28%没有电力供应 -
+26%没有自来水 - 11%没有正常工作的厕所 - 14%重复使用注射器</p>
+<p><strong>"Catch-22"困境</strong>：要吸引患者必须改善质量和价格，但没有资源无法实现。</p>
+<h3 id="方法">方法</h3>
+<p><strong>实验设计</strong>：288个公共卫生中心，来自四个州</p>
+<p><strong>随机分配</strong>（三组）： 1.
+<strong>Grant组</strong>（96个）：获得60万奈拉（约1,600美元）赠款 2.
+<strong>Encouragement组</strong>（96个）：仅获得会议干预 3.
+<strong>Control组</strong>（96个）：维持现状</p>
+<p><strong>关键设计特点</strong>： - "意外"宣布：在会议结束时才宣布赠款
+- 资金管理完全由卫生工作者自行决定 - 条件宽松（只需提供银行账户）</p>
+<h3 id="结果">结果</h3>
+<p><strong>资金使用</strong>： - 47%用于改善质量（设备、翻新、员工激励）
+- 35%用于降低患者价格 - 约82%可追踪</p>
+<p><strong>产出效应</strong>： - 产前访问：+17-41% - 分娩：+17-41% -
+住院：+66%</p>
+<p><strong>质量效应</strong>：总体质量指数提高0.4标准差</p>
+<p><strong>健康效应</strong>：儿童死亡率降低24%</p>
+<p><strong>"无形"效应</strong>： - Grant诊所更早制定书面行动计划 -
+计划更详细，更可能寻求社区投入</p>
+<p><strong>长期效应</strong>（四年后）： - 产前访问：+15 log points -
+儿童免疫：+17 log points</p>
+<hr>
+<h2 id="结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>财政约束是真正的约束</strong>：向卫生设施提供额外资金带来了巨大的生产率提高</p></li>
+<li><p><strong>资金被有效使用</strong>：约47%用于改善质量，35%用于降低价格，没有明显的资金挪用</p></li>
+<li><p><strong>打破了"低质量-低数量"均衡</strong>：帮助卫生设施同时解决质量和价格两个约束</p></li>
+<li><p><strong>自主权产生了更好的效果</strong>：无条件赠款优于绩效挂钩拨款</p></li>
+<li><p><strong>效果持久</strong>：即使资金停止，改进仍持续约两年</p></li>
+</ol>
+<h3 id="政策含义">政策含义</h3>
+<ol type="1">
+<li><p><strong>资本注入可以打破均衡</strong>：财务"大推动"可能帮助突破困境</p></li>
+<li><p><strong>自主权和灵活性很重要</strong>：让卫生工作者自行决定如何花钱比严格规定用途更有效</p></li>
+<li><p><strong>"培训"不一定是前提</strong>：卫生工作者能够管理赠款资金，即使没有额外培训</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -12642,71 +12642,6 @@ World!"开始的,对于<strong>shell</strong>而言:</p>
       </tags>
   </entry>
   <entry>
-    <title>Behavioural Causal Inference — 深度阅读笔记 — Spiegler</title>
-    <url>/posts/spiegler2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Behavioural Causal Inference</li>
-<li><strong>作者</strong>: Ran Spiegler (Tel Aviv University and
-UCL)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies
-(RES)</li>
-<li><strong>DOI</strong>: 10.1093/restud/rdaf050</li>
-<li><strong>难度评估</strong>: 高 - 需要因果推断、博弈论基础
-<span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>因果推断（Causal
-Inference）</strong>：从观察数据推断变量间的因果关系。</p>
-<p><strong>控制变量（Control
-Variables）</strong>：控制潜在混杂因素的方法。不当控制导致错误因果推断。</p>
-<p><strong>行为因果推断</strong>：非专业决策者使用直觉性方法进行因果推断。</p>
-<h3 id="研究背景">研究背景</h3>
-<ol type="1">
-<li>专业研究者vs非专业决策者的差异</li>
-<li>非专业决策者与经济系统互动——行为影响数据本身</li>
-<li>不当控制的两种形式：控制不足、控制过度</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p>当数据生成过程与均衡行为一致时，因果推断错误的福利损失界限是多少？</p>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：模型</li>
-<li>第三节：同质偏好分析</li>
-<li>第四节：异质偏好分析</li>
-<li>第五节：非零因果效应扩展</li>
-<li>第六节：与早期框架的联系</li>
-</ul>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="核心洞察">核心洞察</h3>
-<p>均衡条件可以限制因果推断错误——当决策者根据错误推断行动时，他们改变了产生这些错误的数据。</p>
-<h3 id="关键二元关系p">关键二元关系P</h3>
-<p>iPj当Di ⊇ Cj——类型i控制/调整的变量集是类型j条件化变量集的超集。</p>
-<h3 id="主要结果">主要结果</h3>
-<ul>
-<li>当类型有序时：均衡消除福利损失</li>
-<li>当类型无序时：上界为1（与无均衡限制相同）</li>
-</ul>
-<h2 id="结论">4. 结论</h2>
-<p>数据类型结构决定均衡对因果推断错误的保护程度。</p>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<p>非零因果效应扩展、信息设计视角、实验验证。</p>
-<h2 id="学术思考">6. 学术思考</h2>
-<p>均衡作为自我纠正机制；控制变量选择作为类型特征。</p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2014到2021年:淘宝村分布散点图😲</title>
     <url>/posts/18898/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示"><strong>效果展示</strong></h2>
@@ -12781,6 +12716,71 @@ an Endogenous Production Network</li>
 <p>内生网络重组是宏观经济波动的重要来源，也是稳定机制。</p>
 <h2 id="未来研究方向">5. 未来研究方向</h2>
 <p>实证验证、政策干预、动态进入退出模型。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Behavioural Causal Inference — 深度阅读笔记 — Spiegler</title>
+    <url>/posts/spiegler2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Behavioural Causal Inference</li>
+<li><strong>作者</strong>: Ran Spiegler (Tel Aviv University and
+UCL)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies
+(RES)</li>
+<li><strong>DOI</strong>: 10.1093/restud/rdaf050</li>
+<li><strong>难度评估</strong>: 高 - 需要因果推断、博弈论基础
+<span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>因果推断（Causal
+Inference）</strong>：从观察数据推断变量间的因果关系。</p>
+<p><strong>控制变量（Control
+Variables）</strong>：控制潜在混杂因素的方法。不当控制导致错误因果推断。</p>
+<p><strong>行为因果推断</strong>：非专业决策者使用直觉性方法进行因果推断。</p>
+<h3 id="研究背景">研究背景</h3>
+<ol type="1">
+<li>专业研究者vs非专业决策者的差异</li>
+<li>非专业决策者与经济系统互动——行为影响数据本身</li>
+<li>不当控制的两种形式：控制不足、控制过度</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p>当数据生成过程与均衡行为一致时，因果推断错误的福利损失界限是多少？</p>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：模型</li>
+<li>第三节：同质偏好分析</li>
+<li>第四节：异质偏好分析</li>
+<li>第五节：非零因果效应扩展</li>
+<li>第六节：与早期框架的联系</li>
+</ul>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="核心洞察">核心洞察</h3>
+<p>均衡条件可以限制因果推断错误——当决策者根据错误推断行动时，他们改变了产生这些错误的数据。</p>
+<h3 id="关键二元关系p">关键二元关系P</h3>
+<p>iPj当Di ⊇ Cj——类型i控制/调整的变量集是类型j条件化变量集的超集。</p>
+<h3 id="主要结果">主要结果</h3>
+<ul>
+<li>当类型有序时：均衡消除福利损失</li>
+<li>当类型无序时：上界为1（与无均衡限制相同）</li>
+</ul>
+<h2 id="结论">4. 结论</h2>
+<p>数据类型结构决定均衡对因果推断错误的保护程度。</p>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<p>非零因果效应扩展、信息设计视角、实验验证。</p>
+<h2 id="学术思考">6. 学术思考</h2>
+<p>均衡作为自我纠正机制；控制变量选择作为类型特征。</p>
 ]]></content>
       <categories>
         <category>RES</category>
@@ -13158,6 +13158,42 @@ Economy</em>, 133(7), 2180-2228. https://doi.org/10.1086/734873</p>
       </tags>
   </entry>
   <entry>
+    <title>画一幅我农所在地的道路图</title>
+    <url>/posts/42027/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;">
+<center>
+上图即为最终效果
+</center>
+<h2 id="一些必备的工具">一些必备的工具</h2>
+<p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="绘制路网地图">绘制路网地图</h2>
+<p>导入以下R 包:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>读入杨陵区的数据:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>获取杨陵区的经纬度范围:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
+<p>提取杨陵区的街道路线:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>把数据保存为<strong>rds</strong>:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>然后绘图:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>绘图</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>市场力量与资本约束 — 深度阅读笔记 — Wittwer &amp; Allen</title>
     <url>/posts/wittwer2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -13248,42 +13284,6 @@ III资本要求对银行中介交易产生负面影响</p></li>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>画一幅我农所在地的道路图</title>
-    <url>/posts/42027/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;">
-<center>
-上图即为最终效果
-</center>
-<h2 id="一些必备的工具">一些必备的工具</h2>
-<p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="绘制路网地图">绘制路网地图</h2>
-<p>导入以下R 包:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>读入杨陵区的数据:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>获取杨陵区的经纬度范围:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
-<p>提取杨陵区的街道路线:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>把数据保存为<strong>rds</strong>:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>然后绘图:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>绘图</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
       </tags>
   </entry>
   <entry>
