@@ -1702,151 +1702,6 @@ Moi改革后)，这是否影响校准的可靠性？</p>
       </tags>
   </entry>
   <entry>
-    <title>Do Governments Crowd Out Governments? — 深度阅读笔记 — Baumann &amp; Klymak</title>
-    <url>/posts/baumann2024/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Do governments crowd out governments?
-Evidence from a natural experiment</li>
-<li><strong>作者</strong>: Stuart Baumann, Margaryta Klymak</li>
-<li><strong>类型</strong>: 论文笔记 / 财政学 / 政府经济学</li>
-<li><strong>出版年份</strong>: 2024</li>
-<li><strong>出版机构/期刊</strong>: European Economic Review, Vol. 168,
-104803</li>
-<li><strong>难度评估</strong>: 中 - 需要计量经济学基础 <span id="more"></span>
----</li>
-</ul>
-<h2 id="引言背景和意义">引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>年终支出高峰(Year-End Spending
-Spike)是全球各国政府普遍存在的现象_政府部门在财政年度结束时集中大量支出.这种支出模式具有几个关键特征:</p>
-<p><strong>规模与普遍性.</strong>
-英国资本支出在财年最后一个月是月平均支出的约两倍;美国政府在财年最后一周的支出是平均周的4.9倍.这一现象在OECD
-27个国家均有观察到.</p>
-<p><strong>潜在浪费问题.</strong>
-年终仓促采购可能导致质量问题.Liebman和Mahoney(2017)发现,美国政府采购的IT项目在财年末执行的,其获得"低质量"评分的可能性是其他时间执行的2.2至5.6倍.</p>
-<p><strong>现有解释的局限.</strong>
-文献将年终支出归因于政府部门自身的预算周期(内部因素):如预防性储蓄基金、拖延行为、或规划不足.但这些解释均未考虑外部因素_其他政府部门和企业的支出行为.</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p><strong>拥堵效应与竞争机制.</strong>
-当多个政府部门同时高强度支出时,可能在供应商方面产生拥堵效应.具体机制包括:</p>
-<ul>
-<li><strong>价格上涨</strong>:供应商在高需求时期提高价格</li>
-<li><strong>采购替代</strong>:供应商不可用时被迫更换采购物品或供应商</li>
-<li><strong>销售策略</strong>:供应商增加销售人员、调整商品供应以利用高支出意愿</li>
-<li><strong>支出转移</strong>:部门可能将部分支出转移至其他时间以避免价格上涨</li>
-</ul>
-<p><strong>识别挑战.</strong>
-同一国家的政府机构通常遵循相同的财年规则,使得分离"部门自身财年影响"和"其他政府机构财年影响"成为重大识别挑战.</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:政府部门在财年末集中支出时,是否存在"政府挤出政府"的效应?</p>
-<p><strong>创新解决方案</strong>:利用英国驻海外办事处这一独特自然实验_这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
-<h3 id="研究意义">研究意义</h3>
-<ul>
-<li><strong>学术贡献</strong>:首次分离年终支出的"内部"与"外部"驱动因素</li>
-<li><strong>政策含义</strong>:错开不同部门的财年可能减少年终支出</li>
-</ul>
-<hr>
-<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
-<p><strong>第一节:引言(Introduction)</strong></p>
-<p>阐述年终支出高峰现象、潜在拥堵机制,研究挑战与创新.</p>
-<p><strong>第二节:方法论(Methodology)</strong></p>
-<p>数据:英国外交和联邦事务部(FCO)海外办事处2008-2019财年月度支出数据.实证策略:利用海外办事处沿用本国财年但所在国财年各异的自然实验.</p>
-<p><strong>第三节:结果(Results)</strong></p>
-<p>三个主要发现:本国财年末效应、当地政府挤出效应、当地企业财年效应.</p>
-<hr>
-<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
-<h3 id="一自然实验的设计优势">一、自然实验的设计优势</h3>
-<p><strong>英国海外办事处的独特性.</strong>
-英国在180多个国家设有399个海外办事处,这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
-<p>这种设置的优势:办事处的预算框架、管理和监督制度相同,执行相似的外交任务,可比较不同东道国办事处的支出模式差异.</p>
-<h3 id="二核心实证发现">二、核心实证发现</h3>
-<p><strong>发现1:本国财年末效应显著.</strong></p>
-<p>海外办事处在英国财年最后一个月(3月)的支出显著更高:</p>
-<ul>
-<li>资源预算:3月支出比月平均高1.359个标准差</li>
-<li>资本预算:3月支出比月平均高0.867个标准差</li>
-</ul>
-<p><strong>发现2:当地政府挤出效应显著.</strong></p>
-<p><span class="math inline">\(LFY End \times Home FY
-End\)</span>系数在资源支出模型中显著为正:在与英国财年重叠的国家,年终支出峰值更大.这表明东道国政府的年终支出确实产生了"挤出"效应.</p>
-<p><strong>发现3:当地企业财年效应显著.</strong></p>
-<p>在资本支出案例中,当地企业财年末越近,办事处支出越多.这与企业销售人员为最大化佣金的策略性行为一致.</p>
-<h3 id="三理论模型与预测">三、理论模型与预测</h3>
-<p>作者扩展了Liebman and
-Mahoney(2017)和Baumann(2019)的模型,加入"价格"和"拥堵效应"参数.</p>
-<p><strong>有趣发现</strong>:理论预测拥堵效应应减少年终支出峰值(理性部门会转移支出),但实证结果相反_拥堵效应加剧年终支出.这暗示政府部门的"行为惯性"可能比模型假设的更强.</p>
-<hr>
-<h2 id="结论conclusion">结论(Conclusion)</h2>
-<h3 id="核心结论总结">核心结论总结</h3>
-<p><strong>第一,本国财年是支出模式最重要的影响因素.</strong></p>
-<p><strong>第二,拥堵效应加剧年终支出.</strong>
-在与本国财年重叠的国家,年终支出规模更大.</p>
-<p><strong>第三,当地企业财年末后期,政府支出更高.</strong>
-企业销售人员的激励结构和行为也能影响政府部门的支出模式.</p>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ul>
-<li><strong>年终支出文献</strong>:首次分离内部与外部因素</li>
-<li><strong>财政溢出文献</strong>:发现"年终支出溢出"新概念</li>
-<li><strong>政策制定</strong>:错开财年可间接减少年终支出</li>
-</ul>
-<hr>
-<h2 id="未来研究方向">未来研究方向</h2>
-<h3 id="文献中提及的未来研究方向">文献中提及的未来研究方向</h3>
-<ul>
-<li>利用更细致的微观采购合同数据直接量化挤出效应的成本</li>
-<li>分析政府部门对拥堵效应的动态适应过程</li>
-</ul>
-<h3 id="基于本文思考的下一步研究工作">基于本文思考的下一步研究工作</h3>
-<p><strong>拥堵效应的成本量化.</strong>
-英国海外办事处在面临挤出效应时是否支付了更高价格?</p>
-<p><strong>政策错开财年的可行性分析.</strong>
-实施"错开财年"政策的实际可行性、潜在成本和过渡挑战.</p>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<p><strong>关于"个体理性"与"集体低效":</strong></p>
-<p>本文揭示了一个有趣的悖论:所有部门都在同一时间"理性"地加大支出以避免资金过期,这种个体理性可能导致整个经济体的集体低效_价格上涨、供应短缺、次优采购.</p>
-<p><strong>关于政府部门的价格敏感性:</strong></p>
-<p>理论模型预测理性部门会转移支出以避免拥堵,但实证结果相反.这暗示政府部门的"行为惯性"可能比新古典模型假设的更强.</p>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p><strong>拥堵效应具体如何测量?</strong>
-交互项系数的经济含义是什么?</p></li>
-<li><p><strong>资源预算和资本预算的响应为何不同?</strong></p></li>
-<li><p><strong>这对中国的政府采购改革有何启示?</strong></p></li>
-<li><p><strong>错开财年政策的实际可行性如何?</strong></p></li>
-</ol>
-<hr>
-<h2 id="参考文献">参考文献</h2>
-<ul>
-<li>Baumann, S. (2019). Procrastination and the Design of
-Government.</li>
-<li>Eichenauer, V. (2020). Budget Constraints and the Temporal Dynamics
-of Public Spending.</li>
-<li>Klymak, M., &amp; Baumann, S. (2022). Fiscal Year-End Procurement
-and Price Gouging.</li>
-<li>Liebman, J.B., &amp; Mahoney, N. (2017). Expiring Budgets and the
-Temporal Dynamics of Federal Spending.</li>
-<li>Oyer, P. (1998). Fiscal Year Ends and Intertemporal Labor
-Management.</li>
-</ul>
-<hr>
-<p><em>本笔记由 AI 生成,深度分析了&lt;Do governments crowd out
-governments?&gt;一文的核心内容、理论框架、实证发现和学术贡献.生成时间:2026年4月11日.</em></p>
-]]></content>
-      <categories>
-        <category>财政学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>财政学</tag>
-        <tag>政府支出</tag>
-        <tag>挤出效应</tag>
-        <tag>自然实验</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Similarity of Information and Collective Action — 深度阅读笔记 — Basak, Deb &amp; Kuvalekar</title>
     <url>/posts/basak2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -2055,6 +1910,151 @@ design）文献的联系值得深入。</p></li>
         <tag>AER</tag>
         <tag>博弈论</tag>
         <tag>信息经济学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Do Governments Crowd Out Governments? — 深度阅读笔记 — Baumann &amp; Klymak</title>
+    <url>/posts/baumann2024/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Do governments crowd out governments?
+Evidence from a natural experiment</li>
+<li><strong>作者</strong>: Stuart Baumann, Margaryta Klymak</li>
+<li><strong>类型</strong>: 论文笔记 / 财政学 / 政府经济学</li>
+<li><strong>出版年份</strong>: 2024</li>
+<li><strong>出版机构/期刊</strong>: European Economic Review, Vol. 168,
+104803</li>
+<li><strong>难度评估</strong>: 中 - 需要计量经济学基础 <span id="more"></span>
+---</li>
+</ul>
+<h2 id="引言背景和意义">引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>年终支出高峰(Year-End Spending
+Spike)是全球各国政府普遍存在的现象_政府部门在财政年度结束时集中大量支出.这种支出模式具有几个关键特征:</p>
+<p><strong>规模与普遍性.</strong>
+英国资本支出在财年最后一个月是月平均支出的约两倍;美国政府在财年最后一周的支出是平均周的4.9倍.这一现象在OECD
+27个国家均有观察到.</p>
+<p><strong>潜在浪费问题.</strong>
+年终仓促采购可能导致质量问题.Liebman和Mahoney(2017)发现,美国政府采购的IT项目在财年末执行的,其获得"低质量"评分的可能性是其他时间执行的2.2至5.6倍.</p>
+<p><strong>现有解释的局限.</strong>
+文献将年终支出归因于政府部门自身的预算周期(内部因素):如预防性储蓄基金、拖延行为、或规划不足.但这些解释均未考虑外部因素_其他政府部门和企业的支出行为.</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<p><strong>拥堵效应与竞争机制.</strong>
+当多个政府部门同时高强度支出时,可能在供应商方面产生拥堵效应.具体机制包括:</p>
+<ul>
+<li><strong>价格上涨</strong>:供应商在高需求时期提高价格</li>
+<li><strong>采购替代</strong>:供应商不可用时被迫更换采购物品或供应商</li>
+<li><strong>销售策略</strong>:供应商增加销售人员、调整商品供应以利用高支出意愿</li>
+<li><strong>支出转移</strong>:部门可能将部分支出转移至其他时间以避免价格上涨</li>
+</ul>
+<p><strong>识别挑战.</strong>
+同一国家的政府机构通常遵循相同的财年规则,使得分离"部门自身财年影响"和"其他政府机构财年影响"成为重大识别挑战.</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>:政府部门在财年末集中支出时,是否存在"政府挤出政府"的效应?</p>
+<p><strong>创新解决方案</strong>:利用英国驻海外办事处这一独特自然实验_这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
+<h3 id="研究意义">研究意义</h3>
+<ul>
+<li><strong>学术贡献</strong>:首次分离年终支出的"内部"与"外部"驱动因素</li>
+<li><strong>政策含义</strong>:错开不同部门的财年可能减少年终支出</li>
+</ul>
+<hr>
+<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
+<p><strong>第一节:引言(Introduction)</strong></p>
+<p>阐述年终支出高峰现象、潜在拥堵机制,研究挑战与创新.</p>
+<p><strong>第二节:方法论(Methodology)</strong></p>
+<p>数据:英国外交和联邦事务部(FCO)海外办事处2008-2019财年月度支出数据.实证策略:利用海外办事处沿用本国财年但所在国财年各异的自然实验.</p>
+<p><strong>第三节:结果(Results)</strong></p>
+<p>三个主要发现:本国财年末效应、当地政府挤出效应、当地企业财年效应.</p>
+<hr>
+<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
+<h3 id="一自然实验的设计优势">一、自然实验的设计优势</h3>
+<p><strong>英国海外办事处的独特性.</strong>
+英国在180多个国家设有399个海外办事处,这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
+<p>这种设置的优势:办事处的预算框架、管理和监督制度相同,执行相似的外交任务,可比较不同东道国办事处的支出模式差异.</p>
+<h3 id="二核心实证发现">二、核心实证发现</h3>
+<p><strong>发现1:本国财年末效应显著.</strong></p>
+<p>海外办事处在英国财年最后一个月(3月)的支出显著更高:</p>
+<ul>
+<li>资源预算:3月支出比月平均高1.359个标准差</li>
+<li>资本预算:3月支出比月平均高0.867个标准差</li>
+</ul>
+<p><strong>发现2:当地政府挤出效应显著.</strong></p>
+<p><span class="math inline">\(LFY End \times Home FY
+End\)</span>系数在资源支出模型中显著为正:在与英国财年重叠的国家,年终支出峰值更大.这表明东道国政府的年终支出确实产生了"挤出"效应.</p>
+<p><strong>发现3:当地企业财年效应显著.</strong></p>
+<p>在资本支出案例中,当地企业财年末越近,办事处支出越多.这与企业销售人员为最大化佣金的策略性行为一致.</p>
+<h3 id="三理论模型与预测">三、理论模型与预测</h3>
+<p>作者扩展了Liebman and
+Mahoney(2017)和Baumann(2019)的模型,加入"价格"和"拥堵效应"参数.</p>
+<p><strong>有趣发现</strong>:理论预测拥堵效应应减少年终支出峰值(理性部门会转移支出),但实证结果相反_拥堵效应加剧年终支出.这暗示政府部门的"行为惯性"可能比模型假设的更强.</p>
+<hr>
+<h2 id="结论conclusion">结论(Conclusion)</h2>
+<h3 id="核心结论总结">核心结论总结</h3>
+<p><strong>第一,本国财年是支出模式最重要的影响因素.</strong></p>
+<p><strong>第二,拥堵效应加剧年终支出.</strong>
+在与本国财年重叠的国家,年终支出规模更大.</p>
+<p><strong>第三,当地企业财年末后期,政府支出更高.</strong>
+企业销售人员的激励结构和行为也能影响政府部门的支出模式.</p>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ul>
+<li><strong>年终支出文献</strong>:首次分离内部与外部因素</li>
+<li><strong>财政溢出文献</strong>:发现"年终支出溢出"新概念</li>
+<li><strong>政策制定</strong>:错开财年可间接减少年终支出</li>
+</ul>
+<hr>
+<h2 id="未来研究方向">未来研究方向</h2>
+<h3 id="文献中提及的未来研究方向">文献中提及的未来研究方向</h3>
+<ul>
+<li>利用更细致的微观采购合同数据直接量化挤出效应的成本</li>
+<li>分析政府部门对拥堵效应的动态适应过程</li>
+</ul>
+<h3 id="基于本文思考的下一步研究工作">基于本文思考的下一步研究工作</h3>
+<p><strong>拥堵效应的成本量化.</strong>
+英国海外办事处在面临挤出效应时是否支付了更高价格?</p>
+<p><strong>政策错开财年的可行性分析.</strong>
+实施"错开财年"政策的实际可行性、潜在成本和过渡挑战.</p>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<p><strong>关于"个体理性"与"集体低效":</strong></p>
+<p>本文揭示了一个有趣的悖论:所有部门都在同一时间"理性"地加大支出以避免资金过期,这种个体理性可能导致整个经济体的集体低效_价格上涨、供应短缺、次优采购.</p>
+<p><strong>关于政府部门的价格敏感性:</strong></p>
+<p>理论模型预测理性部门会转移支出以避免拥堵,但实证结果相反.这暗示政府部门的"行为惯性"可能比新古典模型假设的更强.</p>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p><strong>拥堵效应具体如何测量?</strong>
+交互项系数的经济含义是什么?</p></li>
+<li><p><strong>资源预算和资本预算的响应为何不同?</strong></p></li>
+<li><p><strong>这对中国的政府采购改革有何启示?</strong></p></li>
+<li><p><strong>错开财年政策的实际可行性如何?</strong></p></li>
+</ol>
+<hr>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>Baumann, S. (2019). Procrastination and the Design of
+Government.</li>
+<li>Eichenauer, V. (2020). Budget Constraints and the Temporal Dynamics
+of Public Spending.</li>
+<li>Klymak, M., &amp; Baumann, S. (2022). Fiscal Year-End Procurement
+and Price Gouging.</li>
+<li>Liebman, J.B., &amp; Mahoney, N. (2017). Expiring Budgets and the
+Temporal Dynamics of Federal Spending.</li>
+<li>Oyer, P. (1998). Fiscal Year Ends and Intertemporal Labor
+Management.</li>
+</ul>
+<hr>
+<p><em>本笔记由 AI 生成,深度分析了&lt;Do governments crowd out
+governments?&gt;一文的核心内容、理论框架、实证发现和学术贡献.生成时间:2026年4月11日.</em></p>
+]]></content>
+      <categories>
+        <category>财政学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>财政学</tag>
+        <tag>政府支出</tag>
+        <tag>挤出效应</tag>
+        <tag>自然实验</tag>
       </tags>
   </entry>
   <entry>
@@ -4020,312 +4020,6 @@ NJ快餐业研究的关系</strong>:为什么NJ快餐业研究发现了正效应
       </tags>
   </entry>
   <entry>
-    <title>Regulating Conglomerates: Evidence From an Energy Conservation Program in China — 深度阅读笔记 — AER</title>
-    <url>/posts/chen2021/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Regulating Conglomerates: Evidence from an
-Energy Conservation Program in China</li>
-<li><strong>作者</strong>: Qiaoyi Chen (复旦大学), Zhao Chen (复旦大学),
-Zhikuo Liu (复旦大学), Juan Carlos Suárez Serrato (Duke大学 &amp; NBER),
-Daniel Yi Xu (Duke大学 &amp; NBER)</li>
-<li><strong>年份</strong>: 2021</li>
-<li><strong>来源</strong>: American Economic Review (AER)</li>
-<li><strong>DOI</strong>: 未提供 <span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言背景和意义">引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>能源
-regulation和经济活动的关系是环境经济学研究的核心议题之一.在发展中国家,特别是中国这样的新兴经济体,政府面临着平衡经济增长与工业化负面效应(如碳排放和污染)的艰巨挑战.中国的工业能源消耗在全球占据主导地位,其工业能源使用不仅在国内经济中举足轻重,更对全球气候变化产生深远影响.</p>
-<p>能源效率 regulation
-的设计面临多重复杂性:首先,大型工业企业往往嵌入更广泛的商业网络(企业集团/
-conglomerate),这使得监管政策的评估必须考虑集团内部的资源配置和 spillover
-效应;其次,监管政策的有效性取决于企业响应的边际成本_是通过提高能源效率、降低产出,还是将生产转移到未受监管的关联企业来实现减排;第三,市场竞争和产业组织结构会放大或缩小政策的实际效果,产生所谓的"泄漏"(leakage)效应.</p>
-<p>本文研究的"千家企业"(Top-1,000)项目是中国"十一五"规划(2006-2011)期间最重要的能源节约政策之一.该项目针对能源密集型行业中的最大能耗企业,目标是到2011年实现工业能源强度(单位GDP能耗)降低20%的宏伟目标.</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p><strong>中国能源消耗的严峻形势</strong>:进入21世纪初期,中国的工业能源消耗已经远远超过其他主要经济体.以图1为参考,能源
-regulation
-对国家和全球都具有重要意义.这一背景下,理解大型能源监管政策的效果对于制定更有效的环境政策至关重要.</p>
-<p><strong>千家企业项目的设计逻辑</strong>:该项目设计参照了发达国家自愿协议项目的经验,相信企业能够通过提高能源效率显著减少能源使用.项目名称"千家企业"指的是9个能源密集型行业中能源消耗超过18万吨标准煤的1008家工业企业.这些企业的总能源消耗在2004年达到6.7亿吨标准煤,占中国工业能源消费的47%和全国能源消费的33%.</p>
-<p><strong>政策执行的制度背景</strong>:项目采用自上而下的目标分解机制:中央政府向每个省级政府分配能源使用减排目标,省级官员再向每个千家企业分配个人能源使用配额.千家企业须接受第三方年度能源审计,并可能面临工业和信息化部以及国家能源管理局的额外审计.</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p>现有政策评估存在关键缺陷:官方评估主要依赖千家企业自身的能源使用变化,得出项目高度有效的结论.然而,这一评估方法存在两个重要问题:</p>
-<p>第一,它忽视了企业集团内部的生产再分配效应.受监管企业可能不是通过提高能源效率,而是通过将生产转移到同一企业集团内不受监管的关联企业来满足监管要求.这种行为会导致监管政策出现"集团泄漏"(conglomerate
-leakage).</p>
-<p>第二,它忽视了市场竞争效应.受监管企业因减产而让出的市场份额可能被同行业不受监管的竞争对手获取,导致总体能源节约效果低于预期,即"市场泄漏"(market
-leakage).</p>
-<p>本文核心研究问题:千家企业项目对能源消耗的实际影响如何?企业集团内部的
-production shifting 在多大程度上削弱了政策效果?考虑到这些 spillover
-效应,政策的福利含义是什么?</p>
-<h3 id="研究意义">研究意义</h3>
-<p><strong>理论贡献</strong>:本文将 reduced-form 计量经济学方法与产业
-equilibrium 模型相结合,提供了一个分析能源 regulation
-的一般框架.这一框架能够同时刻画企业集团内部和市场竞争层面的 spillover
-效应,为准确评估能源政策的真实效果提供了方法论支撑.</p>
-<p><strong>政策含义</strong>:研究发现对设计更有效的能源 regulation
-具有直接启示.如果能够利用公开可得的企业集团所有权信息,针对整个企业集团而不仅是单个企业制定监管规则,可以显著提高政策的能源节约效果.</p>
-<p><strong>发展经济学价值</strong>:在印度、中国和拉丁美洲,企业集团的重要性日益上升(Ramachandran,
-Manikandan and Pant,
-2013).本文的发现对于理解企业集团如何响应政府监管具有普遍的参考价值.</p>
-<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
-<p>本文采用层层递进的研究设计,共分为7个主要部分:</p>
-<p><strong>第一部分:政策背景与数据</strong>(Policy Background and
-Data).详细描述千家企业能源节约项目,介绍用于测量经济活动和能源使用的数据集,以及构建中国企业集团所有权网络的研究策略.</p>
-<p><strong>第二部分:政策对受监管企业的影响</strong>(Effects of the
-Policy on Regulated
-Firms).使用双重差分法(difference-in-differences)识别政策效果,证明受监管企业通过降低产出而非提高能源效率来满足监管要求.</p>
-<p><strong>第三部分:企业集团内部的溢出效应</strong>(Within-Conglomerate
-Spillovers).利用详细的商业注册数据,发现受监管企业集团将生产转移到未受监管的关联企业,揭示了40%的产出下降被集团内部吸收.</p>
-<p><strong>第四部分:产业 equilibrium 模型</strong>(Industry Equilibrium
-Model).构建包含企业集团生产和市场 spillover 的产业 equilibrium
-模型,为第五部分的模型估计和第六部分的福利分析奠定基础.</p>
-<p><strong>第五部分:模型估计</strong>(Model
-Estimation).通过匹配企业规模分布和集团内部生产分配的 pre-regulation
-特征来估计模型参数.</p>
-<p><strong>第六部分:福利分析</strong>(Welfare Analysis).量化政策的
-aggregate 和 welfare
-效果,比较不同政策工具(扩展监管范围、依赖性能源税、基于公开信息的集团层面
-regulation)的效果.</p>
-<p><strong>第七部分:稳健性检验</strong>(Robustness).检验模型结果对替代模型设定和参数值的敏感性,包括考虑能源效率改善可能性和
-pre-existing 能源效率差异的模型扩展.</p>
-<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
-<h3 id="背景与挑战">背景与挑战</h3>
-<h4 id="中国的能源困境与政策应对">中国的能源困境与政策应对</h4>
-<p>中国作为世界最大的能源消费国,其工业能源消耗占全国总能耗的70%.在快速工业化和城市化的背景下,如何在保持经济增长的同时控制能源消耗和碳排放,是中国政府面临的核心政策挑战.2006年启动的"十一五"规划将能源强度降低20%作为约束性目标,这一目标通过多个政策和行业计划来实现,其中千家企业项目是最重要的举措之一.</p>
-<p>千家企业项目的设计体现了发展中国家的政策创新.与发达国家主要依赖自愿协议和市场激励不同,中国的项目采用了强有力的行政执行机制.项目针对9个能源密集型行业的1008家超大型企业,这些企业的能源消耗占工业总能耗的47%.由于政策于2006年宣布,但根据企业2004年的
-retrospectively 能源消耗数据选择参与者,企业无法操纵项目参与名单,这为准
-quasi-experimental 识别策略提供了外生性来源.</p>
-<h4 id="企业集团的重要性">企业集团的重要性</h4>
-<p>理解千家企业项目效果的关键在于认识到这些受监管企业并非孤立运营,而是嵌入在复杂的企业集团网络中.通过中国工商行政管理总局的行政注册数据库(CARD),作者能够追踪这些企业的所有权关系.</p>
-<p>研究发现,千家企业企业平均拥有2.45个同行业内的关联企业.由于千家企业通常是各行业的最大企业,其关联企业的规模明显较小,平均产出仅为受监管企业的19.3%.这一事实意味着企业集团可能有显著的
-scope 通过关联企业之间的生产替代来响应监管.</p>
-<p>然而,完全替代的可能性受到两个因素制约:首先,关联企业规模较小,无法完全吸收受监管企业的产出下降;其次,同一4-digit行业内同集团企业之间的
-production shifting 受到技术和物流约束.</p>
-<h4 id="识别策略的核心挑战">识别策略的核心挑战</h4>
-<p>准确评估千家企业项目效果面临三个层面的识别挑战:</p>
-<p><strong>第一层:受监管企业 vs.
-对照企业</strong>.理想的反事实是:如果没有千家企业项目,受监管企业的能源使用和产出会有怎样的变化?作者使用"万家"(Top-10,000)企业作为对照组_这些企业在2011年后才被纳入监管,因此2011年之前的时期提供了
-quasi-experimental variation.</p>
-<p><strong>第二层:集团内部的 production
-shifting</strong>.即使能够识别受监管企业相对于对照企业的效果,这仍然无法捕捉企业集团内部的再分配效应.受监管企业可能将生产转移到同一集团内的关联企业,从而降低政策的整体能源节约效果.</p>
-<p><strong>第三层:市场竞争效应</strong>.受监管企业的减产可能导致竞争对手获得更多市场份额,这种市场层面的泄漏也会影响政策的
-aggregate 效果.</p>
-<h3 id="方法论reduced-form-分析">方法论:Reduced-Form 分析</h3>
-<h4 id="双重差分设计">双重差分设计</h4>
-<p>作者采用多层双重差分策略来识别政策的直接效应和溢出效应.</p>
-<p><strong>第一个双重差分</strong>:比较受监管的千家企业与同行业但不受监管的万家企业的差异.这是标准的
-treatment vs. control
-比较,假设在政策实施前,两组企业的能源使用和产出趋势相似.</p>
-<p><strong>事件研究规范</strong>(Event-Study
-Specification)用于检验平行趋势假设:</p>
-<p><span class="math display">\[Y_{ijklt} = \sum_{\tau \neq 2006}
-\beta_\tau \times Treat_i \times Year_\tau + \alpha_i + \eta_{jt} +
-\delta_{kt} + \varepsilon_{ijklt}\]</span></p>
-<p>其中 <span class="math inline">\(Y_{ijklt}\)</span> 是企业 <span class="math inline">\(i\)</span> 在行业 <span class="math inline">\(j\)</span>、省份 <span class="math inline">\(k\)</span>、年份 <span class="math inline">\(t\)</span> 的 outcome 变量,<span class="math inline">\(Treat_i\)</span> 是处理组指示变量,<span class="math inline">\(\alpha_i\)</span> 是企业固定效应,<span class="math inline">\(\eta_{jt}\)</span> 是行业×年份固定效应,<span class="math inline">\(\delta_{kt}\)</span> 是省份×年份固定效应.</p>
-<p>图4展示了 event-study
-结果:处理组和对照组企业在政策实施前的趋势高度一致,支持平行趋势假设.政策实施后,千家企业的能源使用相对下降约16%.</p>
-<p><strong>第二个双重差分</strong>:比较同一企业集团内的关联企业与其他不受监管企业的差异.这一设计利用了企业集团所有权网络信息,识别集团内部的溢出效应.</p>
-<h4 id="主要-reduced-form-发现">主要 Reduced-Form 发现</h4>
-<p><strong>发现一:能源使用下降源于产出降低,而非效率提升</strong></p>
-<p>表3报告了政策对能源使用和产出的影响.结果显示:</p>
-<ul>
-<li>能源使用下降12%-16%,在不同的固定效应规范下保持稳健</li>
-<li>产出(以收入衡量)下降10%-23%</li>
-<li><strong>能源效率(产出/能源使用)没有显著变化</strong></li>
-</ul>
-<p>这一发现具有重要的政策含义:企业选择通过降低产出来满足监管要求,而非投资于能源效率提升.作者认为这可能是因为能源效率投资需要
-long-lived capital
-的更新,面临技术不确定性和中国政府政策承诺不确定性的制约.</p>
-<p><strong>发现二:集团内部生产转移</strong></p>
-<p>利用 CARD
-数据,作者识别了46,178家与千家企业有关联关系的企业.将这些关联企业与万家数据库匹配后,得到2,466家在同行业的关联企业.</p>
-<p>双重差分分析显示:</p>
-<ul>
-<li>关联企业的产出增加约12%</li>
-<li>关联企业的能源使用增加,但没有能源效率变化</li>
-<li>只有当关联企业的4-digit行业与受监管企业相同时,才出现显著的生产增加</li>
-<li>在其他行业的关联企业作为 placebo test,未发现产出增加</li>
-</ul>
-<p>基于规模差异(关联企业平均规模仅为受监管企业的19.3%),作者计算出企业集团能够将受监管企业40%的产出下降转移到关联企业.</p>
-<p><strong>发现三:市场层面的竞争效应</strong></p>
-<p>作者提供了市场泄漏的证据:同行业但不受监管的企业在政策实施后产出增加.这与千家企业减产让出市场份额的预期一致.</p>
-<h3 id="结构模型产业-equilibrium-模型">结构模型:产业 Equilibrium
-模型</h3>
-<h4 id="模型设定">模型设定</h4>
-<p>为了量化政策的 aggregate 和 welfare
-效果,作者构建了一个包含以下特征的产业 equilibrium 模型:</p>
-<p><strong>需求侧</strong>:使用常替代弹性(CES)聚合器描述消费者对不同企业产品的偏好:</p>
-<p><span class="math display">\[U = \left( \int_\Omega
-Q(\omega)^{\frac{\sigma-1}{\sigma}} d\omega
-\right)^{\frac{\sigma}{\sigma-1}}\]</span></p>
-<p>其中 <span class="math inline">\(\sigma &gt; 1\)</span>
-是替代弹性,<span class="math inline">\(\omega\)</span> 表示企业产品.</p>
-<p><strong>供给侧</strong>:每个企业生产单一产品面临常数边际成本 <span class="math inline">\(c\)</span> 和冰山成本 <span class="math inline">\(\tau\)</span>.企业可以选择在受监管状态(承担能源监管成本)或非监管状态下运营.</p>
-<p><strong>企业集团结构</strong>:模型明确允许企业在同一企业集团内共享投入和转移生产.设
-<span class="math inline">\(\lambda_s\)</span> 表示企业集团 <span class="math inline">\(s\)</span> 内的企业数量,<span class="math inline">\(\omega_{s,k}\)</span> 表示企业 <span class="math inline">\(k\)</span> 在集团 <span class="math inline">\(s\)</span> 中的相对规模.</p>
-<p><strong>关键参数</strong>:模型需要估计替代弹性 <span class="math inline">\(\sigma\)</span>、集团内部替代弹性 <span class="math inline">\(\gamma\)</span>、能源监管成本 <span class="math inline">\(\kappa\)</span> 等参数.</p>
-<h4 id="模型估计">模型估计</h4>
-<p>作者通过匹配以下矩条件来估计模型:</p>
-<ol type="1">
-<li><strong>企业规模分布</strong>:模型能够再现企业规模的集中度</li>
-<li><strong>集团内部生产分配</strong>:模型匹配观测到的集团内部相对规模分布</li>
-<li><strong>Reduced-form 估计</strong>:模型 out-of-sample
-验证双重差分估计结果</li>
-</ol>
-<p>模型与双重差分估计的一致性验证了模型正确捕捉了企业集团内部和市场层面的
-spillover 效应的定量重要性.</p>
-<h3 id="福利分析">福利分析</h3>
-<h4 id="政策效果的量化">政策效果的量化</h4>
-<p>基于估计的模型,作者量化了千家家企业项目的 aggregate 效果:</p>
-<ul>
-<li><strong>能源节约</strong>:政策使总能源使用降低4%,相当于每年减少约4800万吨标准煤</li>
-<li><strong>社会成本</strong>:影子成本约160美元/吨碳(当量)</li>
-</ul>
-<p>关键机制:企业集团通过内部 production shifting
-降低了千家企业的影子监管成本约30%.这是因为集团能够将部分产出转移到关联企业,从而部分抵消了对受监管企业的直接影响.</p>
-<h4 id="替代政策的模拟">替代政策的模拟</h4>
-<p>作者使用模型比较了三种替代政策:</p>
-<p><strong>政策A:扩展千家家企业项目</strong>.将更多企业纳入监管范围,但保持针对单个企业的监管结构.结果显示这只能带来边际的能源节约增加.</p>
-<p><strong>政策B:规模依赖性能源税</strong>.对所有属于有千家企业存在的企业集团的企业征收能源税.结果接近
-universal energy tax 的效果.</p>
-<p><strong>政策C:基于公开信息的集团层面
-regulation</strong>.利用公开可获得的企业所有权信息,针对整个企业集团制定监管规则.结果显示可以在相同
-welfare 成本下将能源节约提高10%.</p>
-<p><strong>核心洞察</strong>:由于企业集团内部的 production shifting
-是一种重要的泄漏渠道,针对 conglomerate
-层面的监管能够更有效地实现能源节约目标.</p>
-<h3 id="稳健性检验">稳健性检验</h3>
-<p>作者进行了广泛的稳健性检验:</p>
-<ol type="1">
-<li><p><strong>能源效率改善的长期可能性</strong>:扩展模型允许企业响应监管投资于能源效率,发现即使在长期视角下,能源效率改善仍然成本高昂</p></li>
-<li><p><strong>Pre-existing
-能源效率差异</strong>:假设千家企业比所有其他企业能源效率低20%,重新计算社会成本约133美元/吨碳</p></li>
-<li><p><strong>参数敏感性</strong>:不同的 <span class="math inline">\(\sigma\)</span>、<span class="math inline">\(\gamma\)</span> 和 <span class="math inline">\(\kappa\)</span> 参数值下的稳健性</p></li>
-<li><p><strong>数据构建的敏感性</strong>:使用行政税务数据填补缺失值、限制样本至样本期内持续存在的企业等</p></li>
-</ol>
-<h2 id="结论conclusion">结论(Conclusion)</h2>
-<h3 id="核心研究结论">核心研究结论</h3>
-<p>本文通过对千家企业能源节约项目的深入研究,得出以下核心结论:</p>
-<p><strong>第一,监管企业通过减产而非提高能源效率来响应政策</strong>.这一发现揭示了能源监管的边际成本结构,表明能源效率投资的成本远高于简单地接受产出损失.</p>
-<p><strong>第二,企业集团内部的 production shifting
-是政策效果的重要泄漏渠道</strong>.受监管企业集团将40%的产出下降转移到未受监管的关联企业,这一发现对仅关注受监管企业效果的政策评估提出了挑战.</p>
-<p><strong>第三,市场竞争效应进一步削弱了政策的能源节约效果</strong>.受监管企业减产让出的市场份额被竞争对手获取,降低了政策的
-aggregate 效果.</p>
-<p><strong>第四,政策的 welfare
-合理性取决于社会碳成本</strong>.当社会碳成本超过160美元/吨碳时,千家企业项目才能改善
-welfare,这一结果对当前碳定价政策具有直接启示.</p>
-<p><strong>第五,集团层面的监管设计能够显著提高政策效果</strong>.利用公开可获得的企业所有权信息,针对整个企业集团制定监管规则,可以在相同
-welfare 成本下将能源节约提高10%.</p>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<p><strong>对能源经济学 literature
-的贡献</strong>:本文提供了迄今为止最全面的中国能源监管政策评估,揭示了企业集团作为重要但此前被忽视的响应渠道的作用.</p>
-<p><strong>对环境 regulation literature 的贡献</strong>:本文将
-reduced-form 和 structural 方法相结合,为分析环境 regulation 的 spillover
-效应提供了可推广的框架.</p>
-<p><strong>对产业组织 literature
-的贡献</strong>:本文揭示了企业集团作为一种特殊的产业组织形式如何影响政府监管的有效性.</p>
-<h3 id="政策建议">政策建议</h3>
-<p><strong>短期建议</strong>:完善千家家企业项目的监管设计,考虑集团层面的信息披露要求和监管规则.</p>
-<p><strong>中期建议</strong>:扩展能源监管范围时,应优先考虑基于集团层面的
-targeting,而非简单地增加受监管企业数量.</p>
-<p><strong>长期建议</strong>:建立企业所有权信息的公开数据库,为更有效的监管设计提供信息基础.</p>
-<h2 id="未来研究方向提及">未来研究方向提及</h2>
-<p>作者在论文中提出了若干值得进一步研究的方向:</p>
-<p><strong>Long-run
-能源效率改善</strong>:模型扩展表明长期来看企业可能投资于能源效率,但时间和成本不确定性仍然很高.未来的研究可以深入分析能源效率投资决策的动态过程.</p>
-<p><strong>空间
-spillover</strong>:本文主要关注集团内部和国家层面的效应,省份间的
-production substitution 和污染转移也是重要议题.</p>
-<p><strong>行政执行约束</strong>:政府对监管范围和监管强度的行政约束是政策设计的重要摩擦来源,值得进一步研究.</p>
-<h2 id="未来研究方向思考">未来研究方向思考</h2>
-<p>基于对本文的深入理解,以下是值得进一步探索的研究方向:</p>
-<p><strong>第一,集团所有权网络的动态演化</strong>.本文使用2018年的 CARD
-数据构建所有权网络,无法捕捉政策实施后的网络调整.未来的研究可以分析监管如何驱动企业集团的重组和整合.</p>
-<p><strong>第二,跨国比较研究</strong>.不同国家的企业集团结构和监管执行机制存在显著差异.将中国的发现与印度、巴西等其他大型新兴经济体进行比较,可以揭示企业集团响应政府监管的一般性模式.</p>
-<p><strong>第三,供应链溢出效应</strong>.本文主要关注同一企业集团内部的横向溢出,但受监管企业的上游供应商和下游客户也可能受到影响.考虑供应链关系的溢出效应可以提供更完整的政策效果图景.</p>
-<p><strong>第四,碳定价与能源监管的相互作用</strong>.当存在碳定价机制时,能源监管政策的
-marginal cost
-会相应改变.未来的研究可以分析这两种政策工具的交互作用和最优组合.</p>
-<p><strong>第五,企业异质性的深入分析</strong>.本文假设企业是同质的,但不同类型的企业(国有企业
-vs. 民营企业、外资企业 vs.
-内资企业)可能有不同的响应模式.分析这些异质性可以提供更精细的政策建议.</p>
-<h2 id="学术思考">学术思考</h2>
-<p>本文引发了几个值得深入思考的学术问题:</p>
-<p><strong>关于识别策略的思考</strong>:双重差分方法的核心假设是处理组和对照组在政策实施前具有相同的趋势.然而,在中国特有的政治经济环境下,处理组企业可能因为"树大招风"而受到更多关注,或者反过来因为政策透明度而获得更好的监管信息.这些微观机制是否会影响平行趋势假设?</p>
-<p><strong>关于企业行为假设的思考</strong>:本文假设企业是理性的,能够最优地配置集团内部的资源.然而,在现实中,企业集团内部的资源配置还受到代理问题、政治联系和内部权力斗争等因素的影响.如何在模型中更好地刻画这些制度因素?</p>
-<p><strong>关于福利评估的思考</strong>:本文采用社会碳成本(SCC)作为
-welfare 评估的核心参数,但 SCC 本身存在很大的不确定性.不同的 SCC
-假设会导致不同的政策评价,这是否意味着 welfare 分析过于依赖参数设定?</p>
-<p><strong>关于政策可复制性的思考</strong>:千家企业项目的成功在很大程度上依赖于中国的特殊制度环境_强大的行政执行能力、将环境绩效与官员晋升挂钩的考核机制.将其经验复制到其他发展中国家时,需要考虑制度能力差异.</p>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<p>基于论文内容和上述分析,以下是用户接下来可能问的问题:</p>
-<ol type="1">
-<li><p><strong>千家企业项目中,哪些行业的企业能源效率响应最为显著?是否存在行业异质性?</strong></p></li>
-<li><p><strong>企业集团将生产转移到关联企业时,是否考虑了关联企业所在地区的环境成本(污染转移)?</strong></p></li>
-<li><p><strong>作者提到的160美元/吨碳的社会碳成本,如何与当前国际碳市场价格(如欧洲碳市场的50-100欧元/吨)进行比较?</strong></p></li>
-<li><p><strong>在模型中假设的 CES 需求替代弹性 σ 如何估计?不同假设对
-welfare 结果的敏感性如何?</strong></p></li>
-<li><p><strong>万家(Top-10,000)企业在2011年后被纳入监管,这是否意味着万家可以作为"第二阶段"的处理组?研究设计是否支持这种连续处理效应的分析?</strong></p></li>
-<li><p><strong>作者提到国有企业更可能被纳入千家企业项目,这是否与国企的政治联系有关?政治联系如何影响企业的能源效率投资决策?</strong></p></li>
-<li><p><strong>对于民营企业占主导的行业(如纺织业),能源监管的效果是否有所不同?所有制结构如何调节政策效果?</strong></p></li>
-<li><p><strong>模型中考虑能源效率改善的扩展模型,是否区分了短期和长期效应?长期效应的时间
-horizon 是多久?</strong></p></li>
-<li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD
-数据的质量和覆盖范围如何保证?</strong></p></li>
-<li><p><strong>在中国"双碳"目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p></li>
-</ol>
-<h2 id="学术思考-1">学术思考</h2>
-<p>本文引发了几个值得深入思考的学术问题:</p>
-<p><strong>关于识别策略的思考</strong>:双重差分方法的核心假设是处理组和对照组在政策实施前具有相同的趋势.然而,在中国特有的政治经济环境下,处理组企业可能因为"树大招风"而受到更多关注,或者反过来因为政策透明度而获得更好的监管信息.这些微观机制是否会影响平行趋势假设?</p>
-<p><strong>关于企业行为假设的思考</strong>:本文假设企业是理性的,能够最优地配置集团内部的资源.然而,在现实中,企业集团内部的资源配置还受到代理问题、政治联系和内部权力斗争等因素的影响.如何在模型中更好地刻画这些制度因素?</p>
-<p><strong>关于福利评估的思考</strong>:本文采用社会碳成本(SCC)作为
-welfare 评估的核心参数,但 SCC 本身存在很大的不确定性.不同的 SCC
-假设会导致不同的政策评价,这是否意味着 welfare 分析过于依赖参数设定?</p>
-<p><strong>关于政策可复制性的思考</strong>:千家企业项目的成功在很大程度上依赖于中国的特殊制度环境_强大的行政执行能力、将环境绩效与官员晋升挂钩的考核机制.将其经验复制到其他发展中国家时,需要考虑制度能力差异.</p>
-<h2 id="下一步用户可能提的问题-1">下一步用户可能提的问题</h2>
-<p>基于论文内容和上述分析,以下是用户接下来可能问的问题:</p>
-<ol type="1">
-<li><p><strong>千家企业项目中,哪些行业的企业能源效率响应最为显著?是否存在行业异质性?</strong></p></li>
-<li><p><strong>企业集团将生产转移到关联企业时,是否考虑了关联企业所在地区的环境成本(污染转移)?</strong></p></li>
-<li><p><strong>作者提到的160美元/吨碳的社会碳成本,如何与当前国际碳市场价格(如欧洲碳市场的50-100欧元/吨)进行比较?</strong></p></li>
-<li><p><strong>在模型中假设的 CES 需求替代弹性 σ 如何估计?不同假设对
-welfare 结果的敏感性如何?</strong></p></li>
-<li><p><strong>万家(Top-10,000)企业在2011年后被纳入监管,这是否意味着万家可以作为"第二阶段"的处理组?研究设计是否支持这种连续处理效应的分析?</strong></p></li>
-<li><p><strong>作者提到国有企业更可能被纳入千家企业项目,这是否与国企的政治联系有关?政治联系如何影响企业的能源效率投资决策?</strong></p></li>
-<li><p><strong>对于民营企业占主导的行业(如纺织业),能源监管的效果是否有所不同?所有制结构如何调节政策效果?</strong></p></li>
-<li><p><strong>模型中考虑能源效率改善的扩展模型,是否区分了短期和长期效应?长期效应的时间
-horizon 是多久?</strong></p></li>
-<li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD
-数据的质量和覆盖范围如何保证?</strong></p></li>
-<li><p><strong>在中国"双碳"目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p></li>
-</ol>
-<h2 id="下一步用户可能提的问题-2">下一步用户可能提的问题</h2>
-<p>基于论文内容和上述分析,以下是用户接下来可能问的问题:</p>
-<ol type="1">
-<li><p><strong>千家企业项目中,哪些行业的企业能源效率响应最为显著?是否存在行业异质性?</strong></p></li>
-<li><p><strong>企业集团将生产转移到关联企业时,是否考虑了关联企业所在地区的环境成本(污染转移)?</strong></p></li>
-<li><p><strong>作者提到的160美元/吨碳的社会碳成本,如何与当前国际碳市场价格(如欧洲碳市场的50-100欧元/吨)进行比较?</strong></p></li>
-<li><p><strong>在模型中假设的 CES 需求替代弹性 σ 如何估计?不同假设对
-welfare 结果的敏感性如何?</strong></p></li>
-<li><p><strong>万家(Top-10,000)企业在2011年后被纳入监管,这是否意味着万家可以作为"第二阶段"的处理组?研究设计是否支持这种连续处理效应的分析?</strong></p></li>
-<li><p><strong>作者提到国有企业更可能被纳入千家企业项目,这是否与国企的政治联系有关?政治联系如何影响企业的能源效率投资决策?</strong></p></li>
-<li><p><strong>对于民营企业占主导的行业(如纺织业),能源监管的效果是否有所不同?所有制结构如何调节政策效果?</strong></p></li>
-<li><p><strong>模型中考虑能源效率改善的扩展模型,是否区分了短期和长期效应?长期效应的时间
-horizon 是多久?</strong></p></li>
-<li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD
-数据的质量和覆盖范围如何保证?</strong></p></li>
-<li><p><strong>在中国"双碳"目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>&lt;玉米与人口&gt;深度阅读笔记 — Chen &amp; Kung</title>
     <url>/posts/chen2016/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -4643,6 +4337,312 @@ Issue 1, pp. 71-99</li>
       <tags>
         <tag>论文笔记</tag>
         <tag>经济史</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Regulating Conglomerates: Evidence From an Energy Conservation Program in China — 深度阅读笔记 — AER</title>
+    <url>/posts/chen2021/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Regulating Conglomerates: Evidence from an
+Energy Conservation Program in China</li>
+<li><strong>作者</strong>: Qiaoyi Chen (复旦大学), Zhao Chen (复旦大学),
+Zhikuo Liu (复旦大学), Juan Carlos Suárez Serrato (Duke大学 &amp; NBER),
+Daniel Yi Xu (Duke大学 &amp; NBER)</li>
+<li><strong>年份</strong>: 2021</li>
+<li><strong>来源</strong>: American Economic Review (AER)</li>
+<li><strong>DOI</strong>: 未提供 <span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言背景和意义">引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>能源
+regulation和经济活动的关系是环境经济学研究的核心议题之一.在发展中国家,特别是中国这样的新兴经济体,政府面临着平衡经济增长与工业化负面效应(如碳排放和污染)的艰巨挑战.中国的工业能源消耗在全球占据主导地位,其工业能源使用不仅在国内经济中举足轻重,更对全球气候变化产生深远影响.</p>
+<p>能源效率 regulation
+的设计面临多重复杂性:首先,大型工业企业往往嵌入更广泛的商业网络(企业集团/
+conglomerate),这使得监管政策的评估必须考虑集团内部的资源配置和 spillover
+效应;其次,监管政策的有效性取决于企业响应的边际成本_是通过提高能源效率、降低产出,还是将生产转移到未受监管的关联企业来实现减排;第三,市场竞争和产业组织结构会放大或缩小政策的实际效果,产生所谓的"泄漏"(leakage)效应.</p>
+<p>本文研究的"千家企业"(Top-1,000)项目是中国"十一五"规划(2006-2011)期间最重要的能源节约政策之一.该项目针对能源密集型行业中的最大能耗企业,目标是到2011年实现工业能源强度(单位GDP能耗)降低20%的宏伟目标.</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<p><strong>中国能源消耗的严峻形势</strong>:进入21世纪初期,中国的工业能源消耗已经远远超过其他主要经济体.以图1为参考,能源
+regulation
+对国家和全球都具有重要意义.这一背景下,理解大型能源监管政策的效果对于制定更有效的环境政策至关重要.</p>
+<p><strong>千家企业项目的设计逻辑</strong>:该项目设计参照了发达国家自愿协议项目的经验,相信企业能够通过提高能源效率显著减少能源使用.项目名称"千家企业"指的是9个能源密集型行业中能源消耗超过18万吨标准煤的1008家工业企业.这些企业的总能源消耗在2004年达到6.7亿吨标准煤,占中国工业能源消费的47%和全国能源消费的33%.</p>
+<p><strong>政策执行的制度背景</strong>:项目采用自上而下的目标分解机制:中央政府向每个省级政府分配能源使用减排目标,省级官员再向每个千家企业分配个人能源使用配额.千家企业须接受第三方年度能源审计,并可能面临工业和信息化部以及国家能源管理局的额外审计.</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p>现有政策评估存在关键缺陷:官方评估主要依赖千家企业自身的能源使用变化,得出项目高度有效的结论.然而,这一评估方法存在两个重要问题:</p>
+<p>第一,它忽视了企业集团内部的生产再分配效应.受监管企业可能不是通过提高能源效率,而是通过将生产转移到同一企业集团内不受监管的关联企业来满足监管要求.这种行为会导致监管政策出现"集团泄漏"(conglomerate
+leakage).</p>
+<p>第二,它忽视了市场竞争效应.受监管企业因减产而让出的市场份额可能被同行业不受监管的竞争对手获取,导致总体能源节约效果低于预期,即"市场泄漏"(market
+leakage).</p>
+<p>本文核心研究问题:千家企业项目对能源消耗的实际影响如何?企业集团内部的
+production shifting 在多大程度上削弱了政策效果?考虑到这些 spillover
+效应,政策的福利含义是什么?</p>
+<h3 id="研究意义">研究意义</h3>
+<p><strong>理论贡献</strong>:本文将 reduced-form 计量经济学方法与产业
+equilibrium 模型相结合,提供了一个分析能源 regulation
+的一般框架.这一框架能够同时刻画企业集团内部和市场竞争层面的 spillover
+效应,为准确评估能源政策的真实效果提供了方法论支撑.</p>
+<p><strong>政策含义</strong>:研究发现对设计更有效的能源 regulation
+具有直接启示.如果能够利用公开可得的企业集团所有权信息,针对整个企业集团而不仅是单个企业制定监管规则,可以显著提高政策的能源节约效果.</p>
+<p><strong>发展经济学价值</strong>:在印度、中国和拉丁美洲,企业集团的重要性日益上升(Ramachandran,
+Manikandan and Pant,
+2013).本文的发现对于理解企业集团如何响应政府监管具有普遍的参考价值.</p>
+<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
+<p>本文采用层层递进的研究设计,共分为7个主要部分:</p>
+<p><strong>第一部分:政策背景与数据</strong>(Policy Background and
+Data).详细描述千家企业能源节约项目,介绍用于测量经济活动和能源使用的数据集,以及构建中国企业集团所有权网络的研究策略.</p>
+<p><strong>第二部分:政策对受监管企业的影响</strong>(Effects of the
+Policy on Regulated
+Firms).使用双重差分法(difference-in-differences)识别政策效果,证明受监管企业通过降低产出而非提高能源效率来满足监管要求.</p>
+<p><strong>第三部分:企业集团内部的溢出效应</strong>(Within-Conglomerate
+Spillovers).利用详细的商业注册数据,发现受监管企业集团将生产转移到未受监管的关联企业,揭示了40%的产出下降被集团内部吸收.</p>
+<p><strong>第四部分:产业 equilibrium 模型</strong>(Industry Equilibrium
+Model).构建包含企业集团生产和市场 spillover 的产业 equilibrium
+模型,为第五部分的模型估计和第六部分的福利分析奠定基础.</p>
+<p><strong>第五部分:模型估计</strong>(Model
+Estimation).通过匹配企业规模分布和集团内部生产分配的 pre-regulation
+特征来估计模型参数.</p>
+<p><strong>第六部分:福利分析</strong>(Welfare Analysis).量化政策的
+aggregate 和 welfare
+效果,比较不同政策工具(扩展监管范围、依赖性能源税、基于公开信息的集团层面
+regulation)的效果.</p>
+<p><strong>第七部分:稳健性检验</strong>(Robustness).检验模型结果对替代模型设定和参数值的敏感性,包括考虑能源效率改善可能性和
+pre-existing 能源效率差异的模型扩展.</p>
+<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
+<h3 id="背景与挑战">背景与挑战</h3>
+<h4 id="中国的能源困境与政策应对">中国的能源困境与政策应对</h4>
+<p>中国作为世界最大的能源消费国,其工业能源消耗占全国总能耗的70%.在快速工业化和城市化的背景下,如何在保持经济增长的同时控制能源消耗和碳排放,是中国政府面临的核心政策挑战.2006年启动的"十一五"规划将能源强度降低20%作为约束性目标,这一目标通过多个政策和行业计划来实现,其中千家企业项目是最重要的举措之一.</p>
+<p>千家企业项目的设计体现了发展中国家的政策创新.与发达国家主要依赖自愿协议和市场激励不同,中国的项目采用了强有力的行政执行机制.项目针对9个能源密集型行业的1008家超大型企业,这些企业的能源消耗占工业总能耗的47%.由于政策于2006年宣布,但根据企业2004年的
+retrospectively 能源消耗数据选择参与者,企业无法操纵项目参与名单,这为准
+quasi-experimental 识别策略提供了外生性来源.</p>
+<h4 id="企业集团的重要性">企业集团的重要性</h4>
+<p>理解千家企业项目效果的关键在于认识到这些受监管企业并非孤立运营,而是嵌入在复杂的企业集团网络中.通过中国工商行政管理总局的行政注册数据库(CARD),作者能够追踪这些企业的所有权关系.</p>
+<p>研究发现,千家企业企业平均拥有2.45个同行业内的关联企业.由于千家企业通常是各行业的最大企业,其关联企业的规模明显较小,平均产出仅为受监管企业的19.3%.这一事实意味着企业集团可能有显著的
+scope 通过关联企业之间的生产替代来响应监管.</p>
+<p>然而,完全替代的可能性受到两个因素制约:首先,关联企业规模较小,无法完全吸收受监管企业的产出下降;其次,同一4-digit行业内同集团企业之间的
+production shifting 受到技术和物流约束.</p>
+<h4 id="识别策略的核心挑战">识别策略的核心挑战</h4>
+<p>准确评估千家企业项目效果面临三个层面的识别挑战:</p>
+<p><strong>第一层:受监管企业 vs.
+对照企业</strong>.理想的反事实是:如果没有千家企业项目,受监管企业的能源使用和产出会有怎样的变化?作者使用"万家"(Top-10,000)企业作为对照组_这些企业在2011年后才被纳入监管,因此2011年之前的时期提供了
+quasi-experimental variation.</p>
+<p><strong>第二层:集团内部的 production
+shifting</strong>.即使能够识别受监管企业相对于对照企业的效果,这仍然无法捕捉企业集团内部的再分配效应.受监管企业可能将生产转移到同一集团内的关联企业,从而降低政策的整体能源节约效果.</p>
+<p><strong>第三层:市场竞争效应</strong>.受监管企业的减产可能导致竞争对手获得更多市场份额,这种市场层面的泄漏也会影响政策的
+aggregate 效果.</p>
+<h3 id="方法论reduced-form-分析">方法论:Reduced-Form 分析</h3>
+<h4 id="双重差分设计">双重差分设计</h4>
+<p>作者采用多层双重差分策略来识别政策的直接效应和溢出效应.</p>
+<p><strong>第一个双重差分</strong>:比较受监管的千家企业与同行业但不受监管的万家企业的差异.这是标准的
+treatment vs. control
+比较,假设在政策实施前,两组企业的能源使用和产出趋势相似.</p>
+<p><strong>事件研究规范</strong>(Event-Study
+Specification)用于检验平行趋势假设:</p>
+<p><span class="math display">\[Y_{ijklt} = \sum_{\tau \neq 2006}
+\beta_\tau \times Treat_i \times Year_\tau + \alpha_i + \eta_{jt} +
+\delta_{kt} + \varepsilon_{ijklt}\]</span></p>
+<p>其中 <span class="math inline">\(Y_{ijklt}\)</span> 是企业 <span class="math inline">\(i\)</span> 在行业 <span class="math inline">\(j\)</span>、省份 <span class="math inline">\(k\)</span>、年份 <span class="math inline">\(t\)</span> 的 outcome 变量,<span class="math inline">\(Treat_i\)</span> 是处理组指示变量,<span class="math inline">\(\alpha_i\)</span> 是企业固定效应,<span class="math inline">\(\eta_{jt}\)</span> 是行业×年份固定效应,<span class="math inline">\(\delta_{kt}\)</span> 是省份×年份固定效应.</p>
+<p>图4展示了 event-study
+结果:处理组和对照组企业在政策实施前的趋势高度一致,支持平行趋势假设.政策实施后,千家企业的能源使用相对下降约16%.</p>
+<p><strong>第二个双重差分</strong>:比较同一企业集团内的关联企业与其他不受监管企业的差异.这一设计利用了企业集团所有权网络信息,识别集团内部的溢出效应.</p>
+<h4 id="主要-reduced-form-发现">主要 Reduced-Form 发现</h4>
+<p><strong>发现一:能源使用下降源于产出降低,而非效率提升</strong></p>
+<p>表3报告了政策对能源使用和产出的影响.结果显示:</p>
+<ul>
+<li>能源使用下降12%-16%,在不同的固定效应规范下保持稳健</li>
+<li>产出(以收入衡量)下降10%-23%</li>
+<li><strong>能源效率(产出/能源使用)没有显著变化</strong></li>
+</ul>
+<p>这一发现具有重要的政策含义:企业选择通过降低产出来满足监管要求,而非投资于能源效率提升.作者认为这可能是因为能源效率投资需要
+long-lived capital
+的更新,面临技术不确定性和中国政府政策承诺不确定性的制约.</p>
+<p><strong>发现二:集团内部生产转移</strong></p>
+<p>利用 CARD
+数据,作者识别了46,178家与千家企业有关联关系的企业.将这些关联企业与万家数据库匹配后,得到2,466家在同行业的关联企业.</p>
+<p>双重差分分析显示:</p>
+<ul>
+<li>关联企业的产出增加约12%</li>
+<li>关联企业的能源使用增加,但没有能源效率变化</li>
+<li>只有当关联企业的4-digit行业与受监管企业相同时,才出现显著的生产增加</li>
+<li>在其他行业的关联企业作为 placebo test,未发现产出增加</li>
+</ul>
+<p>基于规模差异(关联企业平均规模仅为受监管企业的19.3%),作者计算出企业集团能够将受监管企业40%的产出下降转移到关联企业.</p>
+<p><strong>发现三:市场层面的竞争效应</strong></p>
+<p>作者提供了市场泄漏的证据:同行业但不受监管的企业在政策实施后产出增加.这与千家企业减产让出市场份额的预期一致.</p>
+<h3 id="结构模型产业-equilibrium-模型">结构模型:产业 Equilibrium
+模型</h3>
+<h4 id="模型设定">模型设定</h4>
+<p>为了量化政策的 aggregate 和 welfare
+效果,作者构建了一个包含以下特征的产业 equilibrium 模型:</p>
+<p><strong>需求侧</strong>:使用常替代弹性(CES)聚合器描述消费者对不同企业产品的偏好:</p>
+<p><span class="math display">\[U = \left( \int_\Omega
+Q(\omega)^{\frac{\sigma-1}{\sigma}} d\omega
+\right)^{\frac{\sigma}{\sigma-1}}\]</span></p>
+<p>其中 <span class="math inline">\(\sigma &gt; 1\)</span>
+是替代弹性,<span class="math inline">\(\omega\)</span> 表示企业产品.</p>
+<p><strong>供给侧</strong>:每个企业生产单一产品面临常数边际成本 <span class="math inline">\(c\)</span> 和冰山成本 <span class="math inline">\(\tau\)</span>.企业可以选择在受监管状态(承担能源监管成本)或非监管状态下运营.</p>
+<p><strong>企业集团结构</strong>:模型明确允许企业在同一企业集团内共享投入和转移生产.设
+<span class="math inline">\(\lambda_s\)</span> 表示企业集团 <span class="math inline">\(s\)</span> 内的企业数量,<span class="math inline">\(\omega_{s,k}\)</span> 表示企业 <span class="math inline">\(k\)</span> 在集团 <span class="math inline">\(s\)</span> 中的相对规模.</p>
+<p><strong>关键参数</strong>:模型需要估计替代弹性 <span class="math inline">\(\sigma\)</span>、集团内部替代弹性 <span class="math inline">\(\gamma\)</span>、能源监管成本 <span class="math inline">\(\kappa\)</span> 等参数.</p>
+<h4 id="模型估计">模型估计</h4>
+<p>作者通过匹配以下矩条件来估计模型:</p>
+<ol type="1">
+<li><strong>企业规模分布</strong>:模型能够再现企业规模的集中度</li>
+<li><strong>集团内部生产分配</strong>:模型匹配观测到的集团内部相对规模分布</li>
+<li><strong>Reduced-form 估计</strong>:模型 out-of-sample
+验证双重差分估计结果</li>
+</ol>
+<p>模型与双重差分估计的一致性验证了模型正确捕捉了企业集团内部和市场层面的
+spillover 效应的定量重要性.</p>
+<h3 id="福利分析">福利分析</h3>
+<h4 id="政策效果的量化">政策效果的量化</h4>
+<p>基于估计的模型,作者量化了千家家企业项目的 aggregate 效果:</p>
+<ul>
+<li><strong>能源节约</strong>:政策使总能源使用降低4%,相当于每年减少约4800万吨标准煤</li>
+<li><strong>社会成本</strong>:影子成本约160美元/吨碳(当量)</li>
+</ul>
+<p>关键机制:企业集团通过内部 production shifting
+降低了千家企业的影子监管成本约30%.这是因为集团能够将部分产出转移到关联企业,从而部分抵消了对受监管企业的直接影响.</p>
+<h4 id="替代政策的模拟">替代政策的模拟</h4>
+<p>作者使用模型比较了三种替代政策:</p>
+<p><strong>政策A:扩展千家家企业项目</strong>.将更多企业纳入监管范围,但保持针对单个企业的监管结构.结果显示这只能带来边际的能源节约增加.</p>
+<p><strong>政策B:规模依赖性能源税</strong>.对所有属于有千家企业存在的企业集团的企业征收能源税.结果接近
+universal energy tax 的效果.</p>
+<p><strong>政策C:基于公开信息的集团层面
+regulation</strong>.利用公开可获得的企业所有权信息,针对整个企业集团制定监管规则.结果显示可以在相同
+welfare 成本下将能源节约提高10%.</p>
+<p><strong>核心洞察</strong>:由于企业集团内部的 production shifting
+是一种重要的泄漏渠道,针对 conglomerate
+层面的监管能够更有效地实现能源节约目标.</p>
+<h3 id="稳健性检验">稳健性检验</h3>
+<p>作者进行了广泛的稳健性检验:</p>
+<ol type="1">
+<li><p><strong>能源效率改善的长期可能性</strong>:扩展模型允许企业响应监管投资于能源效率,发现即使在长期视角下,能源效率改善仍然成本高昂</p></li>
+<li><p><strong>Pre-existing
+能源效率差异</strong>:假设千家企业比所有其他企业能源效率低20%,重新计算社会成本约133美元/吨碳</p></li>
+<li><p><strong>参数敏感性</strong>:不同的 <span class="math inline">\(\sigma\)</span>、<span class="math inline">\(\gamma\)</span> 和 <span class="math inline">\(\kappa\)</span> 参数值下的稳健性</p></li>
+<li><p><strong>数据构建的敏感性</strong>:使用行政税务数据填补缺失值、限制样本至样本期内持续存在的企业等</p></li>
+</ol>
+<h2 id="结论conclusion">结论(Conclusion)</h2>
+<h3 id="核心研究结论">核心研究结论</h3>
+<p>本文通过对千家企业能源节约项目的深入研究,得出以下核心结论:</p>
+<p><strong>第一,监管企业通过减产而非提高能源效率来响应政策</strong>.这一发现揭示了能源监管的边际成本结构,表明能源效率投资的成本远高于简单地接受产出损失.</p>
+<p><strong>第二,企业集团内部的 production shifting
+是政策效果的重要泄漏渠道</strong>.受监管企业集团将40%的产出下降转移到未受监管的关联企业,这一发现对仅关注受监管企业效果的政策评估提出了挑战.</p>
+<p><strong>第三,市场竞争效应进一步削弱了政策的能源节约效果</strong>.受监管企业减产让出的市场份额被竞争对手获取,降低了政策的
+aggregate 效果.</p>
+<p><strong>第四,政策的 welfare
+合理性取决于社会碳成本</strong>.当社会碳成本超过160美元/吨碳时,千家企业项目才能改善
+welfare,这一结果对当前碳定价政策具有直接启示.</p>
+<p><strong>第五,集团层面的监管设计能够显著提高政策效果</strong>.利用公开可获得的企业所有权信息,针对整个企业集团制定监管规则,可以在相同
+welfare 成本下将能源节约提高10%.</p>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<p><strong>对能源经济学 literature
+的贡献</strong>:本文提供了迄今为止最全面的中国能源监管政策评估,揭示了企业集团作为重要但此前被忽视的响应渠道的作用.</p>
+<p><strong>对环境 regulation literature 的贡献</strong>:本文将
+reduced-form 和 structural 方法相结合,为分析环境 regulation 的 spillover
+效应提供了可推广的框架.</p>
+<p><strong>对产业组织 literature
+的贡献</strong>:本文揭示了企业集团作为一种特殊的产业组织形式如何影响政府监管的有效性.</p>
+<h3 id="政策建议">政策建议</h3>
+<p><strong>短期建议</strong>:完善千家家企业项目的监管设计,考虑集团层面的信息披露要求和监管规则.</p>
+<p><strong>中期建议</strong>:扩展能源监管范围时,应优先考虑基于集团层面的
+targeting,而非简单地增加受监管企业数量.</p>
+<p><strong>长期建议</strong>:建立企业所有权信息的公开数据库,为更有效的监管设计提供信息基础.</p>
+<h2 id="未来研究方向提及">未来研究方向提及</h2>
+<p>作者在论文中提出了若干值得进一步研究的方向:</p>
+<p><strong>Long-run
+能源效率改善</strong>:模型扩展表明长期来看企业可能投资于能源效率,但时间和成本不确定性仍然很高.未来的研究可以深入分析能源效率投资决策的动态过程.</p>
+<p><strong>空间
+spillover</strong>:本文主要关注集团内部和国家层面的效应,省份间的
+production substitution 和污染转移也是重要议题.</p>
+<p><strong>行政执行约束</strong>:政府对监管范围和监管强度的行政约束是政策设计的重要摩擦来源,值得进一步研究.</p>
+<h2 id="未来研究方向思考">未来研究方向思考</h2>
+<p>基于对本文的深入理解,以下是值得进一步探索的研究方向:</p>
+<p><strong>第一,集团所有权网络的动态演化</strong>.本文使用2018年的 CARD
+数据构建所有权网络,无法捕捉政策实施后的网络调整.未来的研究可以分析监管如何驱动企业集团的重组和整合.</p>
+<p><strong>第二,跨国比较研究</strong>.不同国家的企业集团结构和监管执行机制存在显著差异.将中国的发现与印度、巴西等其他大型新兴经济体进行比较,可以揭示企业集团响应政府监管的一般性模式.</p>
+<p><strong>第三,供应链溢出效应</strong>.本文主要关注同一企业集团内部的横向溢出,但受监管企业的上游供应商和下游客户也可能受到影响.考虑供应链关系的溢出效应可以提供更完整的政策效果图景.</p>
+<p><strong>第四,碳定价与能源监管的相互作用</strong>.当存在碳定价机制时,能源监管政策的
+marginal cost
+会相应改变.未来的研究可以分析这两种政策工具的交互作用和最优组合.</p>
+<p><strong>第五,企业异质性的深入分析</strong>.本文假设企业是同质的,但不同类型的企业(国有企业
+vs. 民营企业、外资企业 vs.
+内资企业)可能有不同的响应模式.分析这些异质性可以提供更精细的政策建议.</p>
+<h2 id="学术思考">学术思考</h2>
+<p>本文引发了几个值得深入思考的学术问题:</p>
+<p><strong>关于识别策略的思考</strong>:双重差分方法的核心假设是处理组和对照组在政策实施前具有相同的趋势.然而,在中国特有的政治经济环境下,处理组企业可能因为"树大招风"而受到更多关注,或者反过来因为政策透明度而获得更好的监管信息.这些微观机制是否会影响平行趋势假设?</p>
+<p><strong>关于企业行为假设的思考</strong>:本文假设企业是理性的,能够最优地配置集团内部的资源.然而,在现实中,企业集团内部的资源配置还受到代理问题、政治联系和内部权力斗争等因素的影响.如何在模型中更好地刻画这些制度因素?</p>
+<p><strong>关于福利评估的思考</strong>:本文采用社会碳成本(SCC)作为
+welfare 评估的核心参数,但 SCC 本身存在很大的不确定性.不同的 SCC
+假设会导致不同的政策评价,这是否意味着 welfare 分析过于依赖参数设定?</p>
+<p><strong>关于政策可复制性的思考</strong>:千家企业项目的成功在很大程度上依赖于中国的特殊制度环境_强大的行政执行能力、将环境绩效与官员晋升挂钩的考核机制.将其经验复制到其他发展中国家时,需要考虑制度能力差异.</p>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<p>基于论文内容和上述分析,以下是用户接下来可能问的问题:</p>
+<ol type="1">
+<li><p><strong>千家企业项目中,哪些行业的企业能源效率响应最为显著?是否存在行业异质性?</strong></p></li>
+<li><p><strong>企业集团将生产转移到关联企业时,是否考虑了关联企业所在地区的环境成本(污染转移)?</strong></p></li>
+<li><p><strong>作者提到的160美元/吨碳的社会碳成本,如何与当前国际碳市场价格(如欧洲碳市场的50-100欧元/吨)进行比较?</strong></p></li>
+<li><p><strong>在模型中假设的 CES 需求替代弹性 σ 如何估计?不同假设对
+welfare 结果的敏感性如何?</strong></p></li>
+<li><p><strong>万家(Top-10,000)企业在2011年后被纳入监管,这是否意味着万家可以作为"第二阶段"的处理组?研究设计是否支持这种连续处理效应的分析?</strong></p></li>
+<li><p><strong>作者提到国有企业更可能被纳入千家企业项目,这是否与国企的政治联系有关?政治联系如何影响企业的能源效率投资决策?</strong></p></li>
+<li><p><strong>对于民营企业占主导的行业(如纺织业),能源监管的效果是否有所不同?所有制结构如何调节政策效果?</strong></p></li>
+<li><p><strong>模型中考虑能源效率改善的扩展模型,是否区分了短期和长期效应?长期效应的时间
+horizon 是多久?</strong></p></li>
+<li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD
+数据的质量和覆盖范围如何保证?</strong></p></li>
+<li><p><strong>在中国"双碳"目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p></li>
+</ol>
+<h2 id="学术思考-1">学术思考</h2>
+<p>本文引发了几个值得深入思考的学术问题:</p>
+<p><strong>关于识别策略的思考</strong>:双重差分方法的核心假设是处理组和对照组在政策实施前具有相同的趋势.然而,在中国特有的政治经济环境下,处理组企业可能因为"树大招风"而受到更多关注,或者反过来因为政策透明度而获得更好的监管信息.这些微观机制是否会影响平行趋势假设?</p>
+<p><strong>关于企业行为假设的思考</strong>:本文假设企业是理性的,能够最优地配置集团内部的资源.然而,在现实中,企业集团内部的资源配置还受到代理问题、政治联系和内部权力斗争等因素的影响.如何在模型中更好地刻画这些制度因素?</p>
+<p><strong>关于福利评估的思考</strong>:本文采用社会碳成本(SCC)作为
+welfare 评估的核心参数,但 SCC 本身存在很大的不确定性.不同的 SCC
+假设会导致不同的政策评价,这是否意味着 welfare 分析过于依赖参数设定?</p>
+<p><strong>关于政策可复制性的思考</strong>:千家企业项目的成功在很大程度上依赖于中国的特殊制度环境_强大的行政执行能力、将环境绩效与官员晋升挂钩的考核机制.将其经验复制到其他发展中国家时,需要考虑制度能力差异.</p>
+<h2 id="下一步用户可能提的问题-1">下一步用户可能提的问题</h2>
+<p>基于论文内容和上述分析,以下是用户接下来可能问的问题:</p>
+<ol type="1">
+<li><p><strong>千家企业项目中,哪些行业的企业能源效率响应最为显著?是否存在行业异质性?</strong></p></li>
+<li><p><strong>企业集团将生产转移到关联企业时,是否考虑了关联企业所在地区的环境成本(污染转移)?</strong></p></li>
+<li><p><strong>作者提到的160美元/吨碳的社会碳成本,如何与当前国际碳市场价格(如欧洲碳市场的50-100欧元/吨)进行比较?</strong></p></li>
+<li><p><strong>在模型中假设的 CES 需求替代弹性 σ 如何估计?不同假设对
+welfare 结果的敏感性如何?</strong></p></li>
+<li><p><strong>万家(Top-10,000)企业在2011年后被纳入监管,这是否意味着万家可以作为"第二阶段"的处理组?研究设计是否支持这种连续处理效应的分析?</strong></p></li>
+<li><p><strong>作者提到国有企业更可能被纳入千家企业项目,这是否与国企的政治联系有关?政治联系如何影响企业的能源效率投资决策?</strong></p></li>
+<li><p><strong>对于民营企业占主导的行业(如纺织业),能源监管的效果是否有所不同?所有制结构如何调节政策效果?</strong></p></li>
+<li><p><strong>模型中考虑能源效率改善的扩展模型,是否区分了短期和长期效应?长期效应的时间
+horizon 是多久?</strong></p></li>
+<li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD
+数据的质量和覆盖范围如何保证?</strong></p></li>
+<li><p><strong>在中国"双碳"目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p></li>
+</ol>
+<h2 id="下一步用户可能提的问题-2">下一步用户可能提的问题</h2>
+<p>基于论文内容和上述分析,以下是用户接下来可能问的问题:</p>
+<ol type="1">
+<li><p><strong>千家企业项目中,哪些行业的企业能源效率响应最为显著?是否存在行业异质性?</strong></p></li>
+<li><p><strong>企业集团将生产转移到关联企业时,是否考虑了关联企业所在地区的环境成本(污染转移)?</strong></p></li>
+<li><p><strong>作者提到的160美元/吨碳的社会碳成本,如何与当前国际碳市场价格(如欧洲碳市场的50-100欧元/吨)进行比较?</strong></p></li>
+<li><p><strong>在模型中假设的 CES 需求替代弹性 σ 如何估计?不同假设对
+welfare 结果的敏感性如何?</strong></p></li>
+<li><p><strong>万家(Top-10,000)企业在2011年后被纳入监管,这是否意味着万家可以作为"第二阶段"的处理组?研究设计是否支持这种连续处理效应的分析?</strong></p></li>
+<li><p><strong>作者提到国有企业更可能被纳入千家企业项目,这是否与国企的政治联系有关?政治联系如何影响企业的能源效率投资决策?</strong></p></li>
+<li><p><strong>对于民营企业占主导的行业(如纺织业),能源监管的效果是否有所不同?所有制结构如何调节政策效果?</strong></p></li>
+<li><p><strong>模型中考虑能源效率改善的扩展模型,是否区分了短期和长期效应?长期效应的时间
+horizon 是多久?</strong></p></li>
+<li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD
+数据的质量和覆盖范围如何保证?</strong></p></li>
+<li><p><strong>在中国"双碳"目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -6128,6 +6128,491 @@ charges)能否同时改善家庭经济状况和医疗系统效率?</p></li>
       </tags>
   </entry>
   <entry>
+    <title>The Price of War — 深度阅读笔记 — Federle Et Al.</title>
+    <url>/posts/federle2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: The Price of War</li>
+<li><strong>作者</strong>: Jonathan Federle, André Meier, Gernot J.
+Müller, Willi Mutschler, Moritz Schularick</li>
+<li><strong>类型</strong>: 论文笔记 / 战争经济学 / 宏观经济学 /
+经济史学</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: American Economic Review, 116(3):
+791-827</li>
+<li><strong>DOI</strong>: 10.1257/aer.20241355</li>
+<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量史学基础
+<span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>本文属于<strong>经济学研究领域</strong>，具体涉及发展经济学、国际经济学、经济史学、冲突经济学（Conflict
+Economics）以及宏观经济学等多个子领域的交叉地带。论文所研究的<strong>战争经济学</strong>（Economics
+of
+War）是一个重要但相对被忽视的研究方向，主要探讨战争如何影响参与各方的经济表现。</p>
+<p>论文使用了多个经典宏观经济指标来测度战争的经济影响：</p>
+<ul>
+<li><strong>实际GDP（Real
+GDP）</strong>：衡量一个国家商品和服务产出的最核心指标</li>
+<li><strong>消费者价格指数（CPI）</strong>：衡量通货膨胀和物价水平变化</li>
+<li><strong>资本存量（Capital
+Stock）</strong>：衡量经济体中可用于生产的固定资产总量</li>
+<li><strong>全要素生产率（TFP, Total Factor
+Productivity）</strong>：衡量技术进步和效率提升的关键指标</li>
+<li><strong>股权回报率（Equity
+Returns）</strong>：反映股票市场的整体表现</li>
+<li><strong>长期利率（Long-term Interest
+Rates）</strong>：反映资金成本和政府借贷成本</li>
+</ul>
+<h3 id="研究的主要背景分点说明">研究的主要背景（分点说明）</h3>
+<p><strong>第一，战争与全球经济风险上升的背景。</strong>
+近年来，全球政治经济格局正在经历深刻变化。经济碎片化加剧（Fernández-Villaverde,
+Mineyama, and Song 2024; Gopinath et al.
+2025），地缘政治紧张局势和冲突风险显著上升。在这一背景下，理解战争对经济的影响变得尤为重要。</p>
+<p><strong>第二，现有文献的局限性。</strong>
+虽然有大量研究关注特定战争（如两次世界大战、冷战时期冲突）的财政和货币影响，以及战争对交战国经济增长的影响，但这些研究存在以下不足：</p>
+<ul>
+<li>多为单一战争案例研究，缺乏系统性比较</li>
+<li>很少考虑战争的<strong>跨境溢出效应</strong>（Spillover
+Effects）</li>
+<li>对战争如何通过贸易网络影响第三方国家的机制理解不足</li>
+</ul>
+<p><strong>第三，数据可得性的突破。</strong>
+本文作者整合了"战争相关因素项目"（Correlates of War,
+COW）的战争数据与"Jordà-Schularick-Taylor宏观史数据库"（MacroHistory
+Database），构建了一个跨越150年、涵盖60个国家的新数据集，这使得系统性地研究战争的经济影响成为可能。</p>
+<p><strong>第四，战争频率与地理分布的重要事实。</strong>
+本文揭示了一个重要却常被忽视的事实：尽管一个国家在特定年份成为战场的概率只有6%，但与其接壤并可能受到战争影响的国家比例高达20%——这一比例是全球金融危机频率的约5倍。这意味着虽然直接经历战争的国家相对较少，但通过贸易和地理渠道受到战争间接影响的国家却非常普遍。</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心研究问题：战争对经济的影响是什么？这种影响如何溢出到非参战国？</strong></p>
+<p>具体而言，作者试图回答以下问题：</p>
+<ol type="1">
+<li>战争在战地国家造成的直接经济损失有多大？</li>
+<li>参战国（非战地）的经济表现与战地国家有何不同？</li>
+<li>第三方国家如何受到战争的经济影响？贸易联系和地理邻近如何调节这一影响？</li>
+<li>战争的宏观经济影响在不同类型的战争中是否存在系统性差异？</li>
+</ol>
+<p>作者明确指出，他们的研究目的是建立<strong>新的Stylized
+Facts（典型化事实）</strong>，即战争后经济发展的典型模式，而不试图进行因果解释。这是因为战争爆发与经济发展之间可能存在双向因果关系——经济状况可能既是战争爆发的原因，也是战争的结果。</p>
+<h3 id="研究意义">研究意义</h3>
+<p><strong>理论意义：</strong>
+本文首次系统性地分析了三类国家（战地国家、参战国、第三方国家）在战争前后的经济动态演化，并区分了不同传导渠道（贸易渠道、地理渠道）的作用。这为战争经济学领域提供了重要的实证基础。</p>
+<p><strong>政策意义：</strong>
+在当前地缘政治紧张局势加剧、全球化退潮的背景下，理解战争的经济代价及其传播途径对于政策制定者具有重要的参考价值。尤其是认识到与战地的贸易联系会放大对他国经济的冲击，有助于各国更好地评估和应对地缘政治风险。</p>
+<p><strong>方法论贡献：</strong> 作者采用的局部投影法（Local Projections
+Method）和多维度的暴露度（Exposure）分析框架为后续研究提供了方法论借鉴。</p>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<h3 id="论文整体框架">论文整体框架</h3>
+<p>本文共分为五个主要部分，外加附录和补充材料：</p>
+<p><strong>第一部分：引言（Introduction）</strong> -
+阐述研究背景、问题意识和研究贡献 -
+回顾相关文献，定位本文在现有研究中的位置</p>
+<p><strong>第二部分：数据与基本事实（Data and Basic Facts）</strong> -
+详细说明战争地点（War Sites）的识别方法 - 介绍数据集的构建过程 -
+提供描述性统计</p>
+<p><strong>第三部分：战争爆发后的经济动态（Economic Dynamics after the
+Outbreak of War）</strong> - 介绍实证分析框架（局部投影法） -
+报告基准回归结果 - 分析第三方国家的异质性 -
+考察制度质量等更广泛的社会变化</p>
+<p><strong>第四部分：因果推断（Causality）</strong> -
+利用国别战争的差异性检验因果关系 - 通过叙事性识别（Narrative
+Identification）排除内生性干扰</p>
+<p><strong>第五部分：结论（Conclusion）</strong> - 总结主要发现 -
+讨论政策含义和研究局限</p>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p><strong>全球政治经济格局的深刻变化</strong></p>
+<p>近年来，国际政治经济环境发生了显著变化。地缘政治紧张局势加剧，冲突风险上升。战争不仅造成生命和财产的直接损失，还会扰乱贸易、破坏公共财政。正如Barro
+(2006)所指出的，上个世纪许多重大经济灾难都与本土战争有关。</p>
+<p><strong>被忽视的战争跨境影响</strong></p>
+<p>尽管战争的经济影响重大，但现有研究存在明显空白：战争的经济影响不仅限于交战国，其他国家和第三方国家也会受到冲击。这一"战争的代价"（Price
+of War）问题在学术和政策讨论中都未得到足够重视。</p>
+<p><strong>Trotsky的警示</strong></p>
+<p>作者引用了Trotsky的名言"你可能对战争不感兴趣，但战争对你感兴趣"（You
+may not be interested in war, but war is interested in
+you），用以强调在全球化时代，战争的经济影响具有广泛的传播性，即使是未直接参战的国家也难以独善其身。</p>
+<h3 id="挑战">挑战</h3>
+<p><strong>数据缺乏的系统性</strong></p>
+<p>系统研究战争经济影响面临的首要挑战是<strong>数据缺乏</strong>。需要整合多来源的历史数据：</p>
+<ul>
+<li>战争事件数据（COW项目）</li>
+<li>宏观经济时间序列数据（Jordà-Schularick-Taylor数据库）</li>
+<li>贸易数据（Fouquin and Hugot 2016）</li>
+<li>地理边界和人口数据</li>
+</ul>
+<p><strong>战地识别的复杂性</strong></p>
+<p>COW项目提供的是参战国信息，但并未明确指出战争在哪些国家的领土上进行。为此，作者需要：</p>
+<ul>
+<li>收集Battle-level的详细信息</li>
+<li>手动编码1,737场战役的地理位置</li>
+<li>将战役层面的伤亡汇总到国家层面</li>
+</ul>
+<p><strong>战争类型差异的处理</strong></p>
+<p>战争分为不同类型：</p>
+<ul>
+<li><strong>国家间战争（Interstate
+Wars）</strong>：两国或多国间武装冲突，如一战、二战</li>
+<li><strong>其他战争（Other
+Wars）</strong>：内战、殖民战争、独立战争等</li>
+</ul>
+<p>这两类战争在频率、强度、持续时间和经济动机方面都存在系统性差异，需要在分析中加以区分。</p>
+<p><strong>内生性问题的处理</strong></p>
+<p>战争爆发与经济状况之间可能存在双向因果关系——经济困难可能既是战争爆发的原因（内生性），也是战争的结果（需要识别因果方向）。如何剥离这种内生性是因果推断的核心挑战。</p>
+<h3 id="方法数据集要突出">方法（数据集要突出）</h3>
+<h4 id="数据集构建">数据集构建</h4>
+<p><strong>样本范围</strong></p>
+<ul>
+<li>时间跨度：1870-2023年（150年）</li>
+<li>国家数量：60个国家（占1960年全球GDP的95%）</li>
+<li>战争样本：694场战争（国家-年观察值），其中约1/3为国家间战争</li>
+</ul>
+<p><strong>战争数据的分类与编码</strong></p>
+<p>作者遵循COW项目的定义，将战争分为：</p>
+<ol type="1">
+<li><strong>Interstate
+Wars（国家间战争）</strong>：至少两个国家间、12个月内战斗死亡人数不少于1000人的武装冲突</li>
+<li><strong>Other
+Wars（其他战争）</strong>：内战、殖民战争、解放战争等</li>
+</ol>
+<p><strong>战争强度测量</strong></p>
+<p>使用<strong>Casualties/Local Population
+Ratio</strong>作为战争强度指标：</p>
+<p><span class="math display">\[{Site_{j,t} =
+\frac{Casualties_{j,t}}{Population_{j, pre-war}}}\]</span></p>
+<p>其中伤亡包括死亡、失踪、受伤和战俘。</p>
+<p><strong>关键统计事实</strong></p>
+<ul>
+<li>国家间战争平均强度：3.5%（以伤亡/战前人口衡量）</li>
+<li>其他战争平均强度：0.74%</li>
+<li>战争持续时间中位数：2年</li>
+<li>总样本包括225个国家间战争和469场其他战争</li>
+</ul>
+<p><strong>Battle-Level地理编码</strong></p>
+<p>为识别战地，作者收集了1,737场战役的详细信息：</p>
+<ul>
+<li>来源：Clodfelter (2017)战争百科全书及多种历史资料</li>
+<li>每场战役记录：地理位置、伤亡人数、参战方</li>
+<li>最大战役：Brusilov Offensive（一战），超过100万伤亡</li>
+</ul>
+<p><strong>宏观经济指标</strong></p>
+<p>使用Jordà-Schularick-Taylor宏观史数据库，核心变量包括：</p>
+<ul>
+<li>实际GDP（Real GDP）</li>
+<li>消费者价格指数（CPI）</li>
+<li>资本存量（Capital Stock）</li>
+<li>全要素生产率（TFP）</li>
+<li>10年期政府债券收益率</li>
+<li>股权回报指数</li>
+<li>军事支出（占GDP比重）</li>
+<li>军事人员（占人口比重）</li>
+</ul>
+<p><strong>贸易数据</strong></p>
+<p>使用Fouquin and Hugot
+(2016)的双边贸易数据，并使用引力模型填补缺失值（伪<span class="math inline">\({R^2=0.95}\)</span>）。</p>
+<p><strong>GPT-4验证</strong></p>
+<p>作者还使用GPT-4
+API辅助验证战地编码的准确性，发现GPT-4识别结果与手工编码的Pearson相关系数为0.73（<span class="math inline">\({p&lt;0.001}\)</span>）。</p>
+<h4 id="实证方法局部投影法">实证方法：局部投影法</h4>
+<p><strong>Local Projections Method（局部投影法）</strong></p>
+<p>遵循Jordà (2005)的方法，估计以下规范：</p>
+<p><span class="math display">\[{y_{i,t+h} - y_{i,t-1} = \zeta_h'
+X_{i,t} + \sum_{c \in \{S,B,T\}} \phi_{c,h}(\gamma_{i,c,t}' \cdot
+Sites_t) + \sum_{c \in \{B,T\}} \psi_{c,h}(\epsilon_{i,c,t-1}' \cdot
+Sites_t) + u_{i,t+h}}\]</span></p>
+<p>其中：</p>
+<ul>
+<li><span class="math inline">\({y_{i,t}}\)</span>：结果变量（如实际GDP）</li>
+<li><span class="math inline">\({h}\)</span>：战争开始后的年数（<span class="math inline">\({h=0,1,...,8}\)</span>）</li>
+<li><span class="math inline">\({X_{i,t}}\)</span>：控制变量（包含4阶滞后项、国家固定效应、是否接壤战地国家）</li>
+<li><span class="math inline">\({\phi_{c,h}}\)</span>：捕捉c类国家（战地S、参战B、第三方T）在战争后的动态</li>
+<li><span class="math inline">\({\psi_{c,h}}\)</span>：允许暴露度（贸易联系、地理邻近）对溢出效应进行调节</li>
+</ul>
+<p><strong>暴露度向量（Exposure Vector）</strong></p>
+<p><span class="math display">\[{\epsilon_{i,c,t-1} = \frac{Import_{i
+\leftarrow j, t-1}}{GDP_{i, t-1}}}\]</span></p>
+<p>衡量第三方国家i与战地国家j之间的贸易暴露度。</p>
+<p><strong>固定效应设定</strong></p>
+<p>不包含时间固定效应，以捕捉特定国家组的完整经济动态，而非仅捕捉相对于平均值的动态变化。</p>
+<h3 id="结果results">结果（Results）</h3>
+<h4 id="基准结果三类国家的经济动态">基准结果：三类国家的经济动态</h4>
+<p><strong>产出（Output）</strong></p>
+<ul>
+<li><strong>战地国家</strong>：GDP下降约10%（相对于战前趋势），在战争开始后约4年达到谷底，此后恢复缓慢，8年后仍低约5%，完全恢复需要约12年</li>
+<li><strong>参战国</strong>：平均GDP未显示明显偏离趋势</li>
+<li><strong>第三方国家</strong>：平均GDP仅适度下降</li>
+</ul>
+<p><strong>消费者价格指数（CPI）</strong></p>
+<ul>
+<li><strong>战地国家</strong>：物价水平持续上涨，战争开始6年后达到峰值，比趋势高约20%</li>
+<li><strong>参战国和第三方国家</strong>：物价水平也有一定上涨，但幅度较小</li>
+</ul>
+<p><strong>资本存量（Capital Stock）</strong></p>
+<ul>
+<li><strong>战地国家</strong>：8年内下降超过4%</li>
+<li><strong>参战国和第三方国家</strong>：也有显著下降，但幅度小得多</li>
+<li>注意：资本存量下降可能反映物理破坏，也可能反映投资减少</li>
+</ul>
+<p><strong>全要素生产率（TFP）</strong></p>
+<ul>
+<li><strong>战地国家</strong>：TFP立即大幅下降，与战争严重破坏经济运作一致</li>
+<li><strong>参战国</strong>：TFP轻微（但不显著）上升</li>
+<li><strong>第三方国家</strong>：TFP基本不变</li>
+</ul>
+<p><strong>长期利率</strong></p>
+<ul>
+<li><strong>战地国家</strong>：10年期政府债券收益率上升约0.3个百分点，并持续
+elevated 约12年</li>
+<li><strong>参战国和第三方国家</strong>：也有适度上升，但不显著</li>
+</ul>
+<p><strong>股权回报率</strong></p>
+<ul>
+<li><strong>战地国家</strong>：股市指数持续下跌，相对趋势的累计跑输幅度在6年后达到20%</li>
+<li>初始反应微弱，表明市场未完全预期战争的不利发展</li>
+<li><strong>第三方国家</strong>：股市跌幅约为战地国家的一半</li>
+<li><strong>参战国</strong>：表现出最强的韧性</li>
+</ul>
+<p><strong>军事支出和人员</strong></p>
+<ul>
+<li><strong>战地和参战国</strong>：军事支出显著增加，初期约增加1个百分点GDP，4年后达到峰值2.5个百分点GDP</li>
+<li><strong>第三方国家</strong>：军事支出和人员基本不变</li>
+</ul>
+<h4 id="关键发现第三国异质性">关键发现：第三国异质性</h4>
+<p><strong>贸易暴露度的关键作用</strong></p>
+<p>当按贸易暴露度区分第三方国家时，发现显著差异：</p>
+<ul>
+<li><strong>高贸易暴露国家</strong>（从战地进口占GDP的3%）：产出下降2%，价格大幅上涨，资本存量下降，利率上升，股权回报下降</li>
+<li><strong>零贸易暴露国家</strong>：基本不受影响</li>
+</ul>
+<p>这一发现具有重要的政策含义：与战地的贸易联系是战争经济影响传导的关键渠道。</p>
+<p><strong>地理邻近的额外风险</strong></p>
+<p>接壤战地的国家面临额外的负面效应：</p>
+<ul>
+<li>长期利率略有下降（可能反映资本外逃）</li>
+<li>股权回报为负（符合灾难风险溢价上升）</li>
+<li>军事支出和人员略有增加（反映军事溢出风险）</li>
+</ul>
+<p><strong>贸易渠道的机制</strong></p>
+<p>贸易收缩是战争溢出效应的关键传导机制：</p>
+<ul>
+<li>战地出口下降：战地生产能力被破坏</li>
+<li>战地进口下降：供应链中断</li>
+<li>高暴露第三方国家：进出口均收缩</li>
+</ul>
+<h4 id="因果推断结果">因果推断结果</h4>
+<p><strong>国家间战争 vs. 其他战争</strong></p>
+<ul>
+<li><strong>国家间战争</strong>：爆发前，产出和通胀没有系统性变化</li>
+<li><strong>其他战争</strong>：爆发前通胀上升、产出增长放缓——这些战争可能是经济波动的原因和结果</li>
+</ul>
+<p><strong>叙事性识别（Narrative Identification）</strong></p>
+<p>作者识别了每场国家间战争的主要战争动机（casus belli）：</p>
+<ul>
+<li>大多数战争与民族主义、意识形态或历史原因相关（可能外生于商业周期）</li>
+<li>经济动机仅在少数6场战争中显得重要</li>
+<li>排除这6场战争后，样本中国际战争的经济影响估计与全样本非常相似</li>
+</ul>
+<p><strong>Granger因果检验</strong></p>
+<ul>
+<li>国家间战争：不被产出增长和通胀的滞后项Granger引起</li>
+<li>其他战争：存在反向因果关系</li>
+</ul>
+<p>这支持了因果解释：战争导致了所记录的经济动态。</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<h3 id="核心发现总结">核心发现总结</h3>
+<p><strong>发现一：战地国家的巨大经济代价</strong></p>
+<p>一场中等强度（2%伤亡/人口）的战争与战地国家产出下降约10%相关。消费者价格上涨约20%。资本存量、全要素生产率和股权回报均急剧下降。经济恢复是缓慢的——完全恢复需要约12年，尽管战争本身平均只持续2-3年。</p>
+<p><strong>发现二：参战国的相对韧性</strong></p>
+<p>尽管面临战争，参战国（非战地）的平均经济表现明显好于战地国家。这可能与军事支出增加带来的财政刺激效应有关——如Braun和McGrattan
+(1993)以及Ilzetzki
+(2024)研究所示，两次世界大战期间美国和英国的经济扩张与军费急剧增加有关。</p>
+<p><strong>发现三：第三方国家的显著溢出效应</strong></p>
+<p>战争的经济影响并不局限于战地。通过贸易渠道，第三方国家也受到显著影响：</p>
+<ul>
+<li>与战地有密切贸易联系的国家（进口占GDP 3%）：产出下降约2%</li>
+<li>接壤战地的国家：面临额外的负面金融效应</li>
+</ul>
+<p><strong>发现四：传播渠道</strong></p>
+<p>贸易联系和地理邻近是战争经济影响跨境传播的两个关键渠道。这与全球供应链的相互依存性以及地理邻近带来的直接风险暴露有关。</p>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><strong>首次系统性分析</strong>：首次全面分析150年间60个国家战争的经济影响，提供了战争经济学的典型化事实</li>
+<li><strong>跨境溢出效应</strong>：揭示了战争通过贸易和地理渠道对第三方国家的显著溢出效应</li>
+<li><strong>异质性分析</strong>：详细区分了不同类型国家（战地、参战、第三方）和不同暴露度下的经济动态差异</li>
+<li><strong>因果识别</strong>：通过叙事性方法识别战争的经济影响，为因果推断提供了合理依据</li>
+<li><strong>方法论贡献</strong>：提供了局部投影法在战争经济学应用的范例</li>
+</ol>
+<h3 id="更广泛的社会影响">更广泛的社会影响</h3>
+<p>除经济指标外，作者还记录了战争对更广泛社会制度的影响：</p>
+<ul>
+<li>媒体自由度下降</li>
+<li>司法独立性下降</li>
+<li>选举公平性下降</li>
+<li>制度质量下降</li>
+</ul>
+<p>这些变化主要局限于战地，但媒体自由度的下降也波及参战国。</p>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="论文中提及的未来研究方向">论文中提及的未来研究方向</h3>
+<ol type="1">
+<li><strong>福利损失的全面测度</strong>
+<ul>
+<li>现有指标无法完全捕捉战争的经济代价及其对人类福利的影响</li>
+<li>产出与福利可能在战时分歧：例如劳动力动员可能导致产出增加，即使整体福利下降</li>
+<li>需要更好的方法来衡量私人消费等人福利指标</li>
+</ul></li>
+<li><strong>战争性质的演变</strong>
+<ul>
+<li>战争性质随时间不断变化</li>
+<li>伤亡与其他候选统计指标之间的关系也可能变化</li>
+<li>需要动态更新的战争强度测量方法</li>
+</ul></li>
+<li><strong>局部战争的经济影响</strong>
+<ul>
+<li>未来可以专门研究有限地理范围的局部战争的经济影响</li>
+<li>分析核威慑下的有限战争与全面战争的差异</li>
+</ul></li>
+</ol>
+<h3 id="根据论文内容思考的下一步研究工作">根据论文内容思考的下一步研究工作</h3>
+<ol type="1">
+<li><strong>供应链渠道的深入研究</strong>
+<ul>
+<li>本文发现贸易是主要传导渠道，但未深入分析供应链网络的结构性特征</li>
+<li>可研究全球价值链（GVC）参与度如何调节战争溢出效应</li>
+<li>可使用投入产出表分析产业关联的具体路径</li>
+</ul></li>
+<li><strong>金融渠道的作用</strong>
+<ul>
+<li>本文发现股权回报在战地和第三方国家都大幅下降</li>
+<li>可深入研究战争如何通过金融市场（资本流动、汇率、信贷市场）传导</li>
+</ul></li>
+<li><strong>人力资本渠道</strong>
+<ul>
+<li>战争造成的人员伤亡和劳动力动员直接影响人力资本</li>
+<li>可研究战争对教育、健康和创新的人力资本长期影响</li>
+</ul></li>
+<li><strong>政策应对效果评估</strong>
+<ul>
+<li>什么样的政策可以缓冲战争的经济影响？</li>
+<li>贸易多元化、战略储备、区域经济一体化等政策工具的效果</li>
+</ul></li>
+<li><strong>不同战争类型的细分研究</strong>
+<ul>
+<li>国家间战争vs内战的经济影响机制可能不同</li>
+<li>代理战争（Proxy Wars）与直接战争的经济影响差异</li>
+</ul></li>
+<li><strong>数字化战争的新特征</strong>
+<ul>
+<li>网络战、信息战、制裁战等新型冲突形式的经济影响</li>
+<li>传统分析框架的适用性和局限性</li>
+</ul></li>
+</ol>
+<hr>
+<h2 id="学术思考">6. 学术思考</h2>
+<p>基于对本文的深入分析，以下学术问题值得关注和进一步探讨：</p>
+<h3 id="关于因果推断的思考">关于因果推断的思考</h3>
+<p><strong>问题一：内生性的残余挑战</strong></p>
+<p>尽管作者通过排除经济动机明确的战争来缓解内生性，但战争选择本身可能仍存在与经济因素相关的其他混淆。例如，一个国家在经济增长放缓时可能更倾向于卷入战争（通过军事转移国内矛盾）。这是否意味着即使在"外生"战争中，战前经济状况的某些特征也在发挥作用？如何在计量经济学框架下更彻底地解决这一问题？</p>
+<h3 id="关于传导机制的思考">关于传导机制的思考</h3>
+<p><strong>问题二：贸易渠道vs. 金融渠道的相对重要性</strong></p>
+<p>本文发现贸易是战争溢出效应的关键渠道，但金融渠道（如资本流动、汇率波动、信贷紧缩）的作用可能被低估。在当今全球金融一体化的背景下，金融渠道是否比贸易渠道更重要？尤其是在短期危机（如2022年乌克兰战争）中，金融市场的反应速度可能远快于贸易调整。</p>
+<p><strong>问题三：全球价值链的结构性作用</strong></p>
+<p>本文使用的贸易暴露度指标较为粗略，未能捕捉全球价值链（GVC）的复杂结构。一个深度嵌入GVC的国家可能同时面临供给中断（作为供应商）和需求萎缩（作为消费者）的双重冲击。如何构建更精细的GVC暴露度指标？</p>
+<h3 id="关于政策含义的思考">关于政策含义的思考</h3>
+<p><strong>问题四：经济一体化与战争脆弱性的权衡</strong></p>
+<p>本文发现贸易联系会放大战争的溢出效应。这意味着经济一体化在带来增长红利的同时，也使各国更容易受到地缘政治冲击。这是否意味着各国应该在追求经济效率和保持战略自主之间进行权衡？区域经济集团化（如EU）是否提供了在开放与安全之间的平衡？</p>
+<p><strong>问题五：战略储备和供应链多样化的价值</strong></p>
+<p>既然与战地的贸易联系会放大对他国的经济影响，那么战略储备和供应链多元化是否应该成为国家安全的必要组成部分？这对于小国和高度依赖进口的国家尤为重要。</p>
+<h3 id="关于研究方法的思考">关于研究方法的思考</h3>
+<p><strong>问题六：局部投影法的适用性</strong></p>
+<p>局部投影法在本文中被用来估计战争的经济动态，但这一方法假设了线性关系和固定效应结构。战争的非线性效应（如阈值效应、叠加效应）是否被遗漏？特别是当多个战争同时发生时，单独估计每场战争效应的高维问题如何处理？</p>
+<h3 id="关于历史演变的思考">关于历史演变的思考</h3>
+<p><strong>问题七：战争性质的范式转变</strong></p>
+<p>从1870年代到2020年代，战争的技术性质、参与主体、地理范围都发生了巨大变化。从大规模的国家间战争到小规模的代理人战争，再到可能包含网络战和贸易战的新型混合冲突。不同类型的冲突是否遵循相同的宏观经济动态规律？本文的150年样本是否掩盖了这些结构性变化？</p>
+<hr>
+<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
+<p>根据论文内容和上述分析，以下是用户接下来可能问的问题：</p>
+<h3 id="关于研究内容的深层问题">关于研究内容的深层问题</h3>
+<ol type="1">
+<li><strong>战争的长期经济后果是什么？</strong>
+<ul>
+<li>本文关注战后8年的动态，但恢复需要约12年</li>
+<li>长期（20-50年）经济轨迹如何？</li>
+<li>战争是否会造成"疤痕效应"（Scarring
+Effects），永久降低增长路径？</li>
+</ul></li>
+<li><strong>不同类型战争的经济影响有何差异？</strong>
+<ul>
+<li>国家间战争vs. 内战的传导机制是否不同？</li>
+<li>高强度vs. 低强度战争是否存在非线性阈值效应？</li>
+<li>代理战争与直接战争的经济影响差异？</li>
+</ul></li>
+<li><strong>疫情和战争叠加的影响是否不同？</strong>
+<ul>
+<li>COVID-19疫情可视为非战争的"经济灾难"</li>
+<li>两种灾难的经济影响机制和恢复模式是否可比？</li>
+</ul></li>
+</ol>
+<h3 id="关于方法论的问题">关于方法论的问题</h3>
+<ol start="4" type="1">
+<li><strong>如何进一步改进因果识别的可信度？</strong>
+<ul>
+<li>自然实验方法（如板块运动会）是否可用？</li>
+<li>工具变量方法是否可行？</li>
+<li>Difference-in-Differences设计是否适合此研究？</li>
+</ul></li>
+<li><strong>模型基础的解释是什么？</strong>
+<ul>
+<li>本文使用局部投影法进行简约式（Reduced-form）估计</li>
+<li>是否存在结构模型（如DSGE）能更好地解释这些动态？</li>
+<li>论文的工作论文版本（Federle et al. 2024）的模型结果如何？</li>
+</ul></li>
+</ol>
+<h3 id="关于政策应用的问题">关于政策应用的问题</h3>
+<ol start="6" type="1">
+<li><strong>如何将研究发现应用于当前的地缘政治风险评估？</strong>
+<ul>
+<li>对于台湾问题、中美博弈等当前热点，本文框架有何启示？</li>
+<li>如何量化"与中国发生贸易战"的潜在经济代价？</li>
+</ul></li>
+<li><strong>何种政策可以缓冲战争的经济冲击？</strong>
+<ul>
+<li>战略储备的效果如何？</li>
+<li>区域经济一体化的保护效应？</li>
+<li>金融稳定工具（如外汇储备、货币互换）的作用？</li>
+</ul></li>
+</ol>
+<h3 id="关于后续研究的问题">关于后续研究的问题</h3>
+<ol start="8" type="1">
+<li><strong>本文的主要贡献者（5位作者）后续还有哪些相关研究？</strong>
+<ul>
+<li>是否有关于特定战争案例的深度研究？</li>
+<li>是否有使用更细粒度数据（如月度、行业层面）的研究？</li>
+</ul></li>
+<li><strong>是否存在与本文发现相矛盾的文献？</strong>
+<ul>
+<li>质疑或修正本文结论的研究有哪些？</li>
+<li>这些矛盾是否可以通过样本选择、方法论差异或数据版本来解释？</li>
+</ul></li>
+</ol>
+<hr>
+<p><em>本分析报告为深度阅读笔记，梳理了论文的核心逻辑、主要发现和学术价值。</em></p>
+]]></content>
+      <categories>
+        <category>经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>宏观经济学</tag>
+        <tag>战争经济学</tag>
+        <tag>经济史学</tag>
+        <tag>地缘政治</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>&lt;中国的历史之路&gt;深度阅读笔记 — 伊懋可 Mark Elvin</title>
     <url>/posts/elvin1973/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="书籍信息">书籍信息</h2>
@@ -6726,491 +7211,6 @@ Fragments of Curious and Useful Knowledge from the Chinese Past</em>
         <tag>经济史</tag>
         <tag>读书笔记</tag>
         <tag>中国研究</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>The Price of War — 深度阅读笔记 — Federle Et Al.</title>
-    <url>/posts/federle2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: The Price of War</li>
-<li><strong>作者</strong>: Jonathan Federle, André Meier, Gernot J.
-Müller, Willi Mutschler, Moritz Schularick</li>
-<li><strong>类型</strong>: 论文笔记 / 战争经济学 / 宏观经济学 /
-经济史学</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: American Economic Review, 116(3):
-791-827</li>
-<li><strong>DOI</strong>: 10.1257/aer.20241355</li>
-<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量史学基础
-<span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>本文属于<strong>经济学研究领域</strong>，具体涉及发展经济学、国际经济学、经济史学、冲突经济学（Conflict
-Economics）以及宏观经济学等多个子领域的交叉地带。论文所研究的<strong>战争经济学</strong>（Economics
-of
-War）是一个重要但相对被忽视的研究方向，主要探讨战争如何影响参与各方的经济表现。</p>
-<p>论文使用了多个经典宏观经济指标来测度战争的经济影响：</p>
-<ul>
-<li><strong>实际GDP（Real
-GDP）</strong>：衡量一个国家商品和服务产出的最核心指标</li>
-<li><strong>消费者价格指数（CPI）</strong>：衡量通货膨胀和物价水平变化</li>
-<li><strong>资本存量（Capital
-Stock）</strong>：衡量经济体中可用于生产的固定资产总量</li>
-<li><strong>全要素生产率（TFP, Total Factor
-Productivity）</strong>：衡量技术进步和效率提升的关键指标</li>
-<li><strong>股权回报率（Equity
-Returns）</strong>：反映股票市场的整体表现</li>
-<li><strong>长期利率（Long-term Interest
-Rates）</strong>：反映资金成本和政府借贷成本</li>
-</ul>
-<h3 id="研究的主要背景分点说明">研究的主要背景（分点说明）</h3>
-<p><strong>第一，战争与全球经济风险上升的背景。</strong>
-近年来，全球政治经济格局正在经历深刻变化。经济碎片化加剧（Fernández-Villaverde,
-Mineyama, and Song 2024; Gopinath et al.
-2025），地缘政治紧张局势和冲突风险显著上升。在这一背景下，理解战争对经济的影响变得尤为重要。</p>
-<p><strong>第二，现有文献的局限性。</strong>
-虽然有大量研究关注特定战争（如两次世界大战、冷战时期冲突）的财政和货币影响，以及战争对交战国经济增长的影响，但这些研究存在以下不足：</p>
-<ul>
-<li>多为单一战争案例研究，缺乏系统性比较</li>
-<li>很少考虑战争的<strong>跨境溢出效应</strong>（Spillover
-Effects）</li>
-<li>对战争如何通过贸易网络影响第三方国家的机制理解不足</li>
-</ul>
-<p><strong>第三，数据可得性的突破。</strong>
-本文作者整合了"战争相关因素项目"（Correlates of War,
-COW）的战争数据与"Jordà-Schularick-Taylor宏观史数据库"（MacroHistory
-Database），构建了一个跨越150年、涵盖60个国家的新数据集，这使得系统性地研究战争的经济影响成为可能。</p>
-<p><strong>第四，战争频率与地理分布的重要事实。</strong>
-本文揭示了一个重要却常被忽视的事实：尽管一个国家在特定年份成为战场的概率只有6%，但与其接壤并可能受到战争影响的国家比例高达20%——这一比例是全球金融危机频率的约5倍。这意味着虽然直接经历战争的国家相对较少，但通过贸易和地理渠道受到战争间接影响的国家却非常普遍。</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心研究问题：战争对经济的影响是什么？这种影响如何溢出到非参战国？</strong></p>
-<p>具体而言，作者试图回答以下问题：</p>
-<ol type="1">
-<li>战争在战地国家造成的直接经济损失有多大？</li>
-<li>参战国（非战地）的经济表现与战地国家有何不同？</li>
-<li>第三方国家如何受到战争的经济影响？贸易联系和地理邻近如何调节这一影响？</li>
-<li>战争的宏观经济影响在不同类型的战争中是否存在系统性差异？</li>
-</ol>
-<p>作者明确指出，他们的研究目的是建立<strong>新的Stylized
-Facts（典型化事实）</strong>，即战争后经济发展的典型模式，而不试图进行因果解释。这是因为战争爆发与经济发展之间可能存在双向因果关系——经济状况可能既是战争爆发的原因，也是战争的结果。</p>
-<h3 id="研究意义">研究意义</h3>
-<p><strong>理论意义：</strong>
-本文首次系统性地分析了三类国家（战地国家、参战国、第三方国家）在战争前后的经济动态演化，并区分了不同传导渠道（贸易渠道、地理渠道）的作用。这为战争经济学领域提供了重要的实证基础。</p>
-<p><strong>政策意义：</strong>
-在当前地缘政治紧张局势加剧、全球化退潮的背景下，理解战争的经济代价及其传播途径对于政策制定者具有重要的参考价值。尤其是认识到与战地的贸易联系会放大对他国经济的冲击，有助于各国更好地评估和应对地缘政治风险。</p>
-<p><strong>方法论贡献：</strong> 作者采用的局部投影法（Local Projections
-Method）和多维度的暴露度（Exposure）分析框架为后续研究提供了方法论借鉴。</p>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<h3 id="论文整体框架">论文整体框架</h3>
-<p>本文共分为五个主要部分，外加附录和补充材料：</p>
-<p><strong>第一部分：引言（Introduction）</strong> -
-阐述研究背景、问题意识和研究贡献 -
-回顾相关文献，定位本文在现有研究中的位置</p>
-<p><strong>第二部分：数据与基本事实（Data and Basic Facts）</strong> -
-详细说明战争地点（War Sites）的识别方法 - 介绍数据集的构建过程 -
-提供描述性统计</p>
-<p><strong>第三部分：战争爆发后的经济动态（Economic Dynamics after the
-Outbreak of War）</strong> - 介绍实证分析框架（局部投影法） -
-报告基准回归结果 - 分析第三方国家的异质性 -
-考察制度质量等更广泛的社会变化</p>
-<p><strong>第四部分：因果推断（Causality）</strong> -
-利用国别战争的差异性检验因果关系 - 通过叙事性识别（Narrative
-Identification）排除内生性干扰</p>
-<p><strong>第五部分：结论（Conclusion）</strong> - 总结主要发现 -
-讨论政策含义和研究局限</p>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p><strong>全球政治经济格局的深刻变化</strong></p>
-<p>近年来，国际政治经济环境发生了显著变化。地缘政治紧张局势加剧，冲突风险上升。战争不仅造成生命和财产的直接损失，还会扰乱贸易、破坏公共财政。正如Barro
-(2006)所指出的，上个世纪许多重大经济灾难都与本土战争有关。</p>
-<p><strong>被忽视的战争跨境影响</strong></p>
-<p>尽管战争的经济影响重大，但现有研究存在明显空白：战争的经济影响不仅限于交战国，其他国家和第三方国家也会受到冲击。这一"战争的代价"（Price
-of War）问题在学术和政策讨论中都未得到足够重视。</p>
-<p><strong>Trotsky的警示</strong></p>
-<p>作者引用了Trotsky的名言"你可能对战争不感兴趣，但战争对你感兴趣"（You
-may not be interested in war, but war is interested in
-you），用以强调在全球化时代，战争的经济影响具有广泛的传播性，即使是未直接参战的国家也难以独善其身。</p>
-<h3 id="挑战">挑战</h3>
-<p><strong>数据缺乏的系统性</strong></p>
-<p>系统研究战争经济影响面临的首要挑战是<strong>数据缺乏</strong>。需要整合多来源的历史数据：</p>
-<ul>
-<li>战争事件数据（COW项目）</li>
-<li>宏观经济时间序列数据（Jordà-Schularick-Taylor数据库）</li>
-<li>贸易数据（Fouquin and Hugot 2016）</li>
-<li>地理边界和人口数据</li>
-</ul>
-<p><strong>战地识别的复杂性</strong></p>
-<p>COW项目提供的是参战国信息，但并未明确指出战争在哪些国家的领土上进行。为此，作者需要：</p>
-<ul>
-<li>收集Battle-level的详细信息</li>
-<li>手动编码1,737场战役的地理位置</li>
-<li>将战役层面的伤亡汇总到国家层面</li>
-</ul>
-<p><strong>战争类型差异的处理</strong></p>
-<p>战争分为不同类型：</p>
-<ul>
-<li><strong>国家间战争（Interstate
-Wars）</strong>：两国或多国间武装冲突，如一战、二战</li>
-<li><strong>其他战争（Other
-Wars）</strong>：内战、殖民战争、独立战争等</li>
-</ul>
-<p>这两类战争在频率、强度、持续时间和经济动机方面都存在系统性差异，需要在分析中加以区分。</p>
-<p><strong>内生性问题的处理</strong></p>
-<p>战争爆发与经济状况之间可能存在双向因果关系——经济困难可能既是战争爆发的原因（内生性），也是战争的结果（需要识别因果方向）。如何剥离这种内生性是因果推断的核心挑战。</p>
-<h3 id="方法数据集要突出">方法（数据集要突出）</h3>
-<h4 id="数据集构建">数据集构建</h4>
-<p><strong>样本范围</strong></p>
-<ul>
-<li>时间跨度：1870-2023年（150年）</li>
-<li>国家数量：60个国家（占1960年全球GDP的95%）</li>
-<li>战争样本：694场战争（国家-年观察值），其中约1/3为国家间战争</li>
-</ul>
-<p><strong>战争数据的分类与编码</strong></p>
-<p>作者遵循COW项目的定义，将战争分为：</p>
-<ol type="1">
-<li><strong>Interstate
-Wars（国家间战争）</strong>：至少两个国家间、12个月内战斗死亡人数不少于1000人的武装冲突</li>
-<li><strong>Other
-Wars（其他战争）</strong>：内战、殖民战争、解放战争等</li>
-</ol>
-<p><strong>战争强度测量</strong></p>
-<p>使用<strong>Casualties/Local Population
-Ratio</strong>作为战争强度指标：</p>
-<p><span class="math display">\[{Site_{j,t} =
-\frac{Casualties_{j,t}}{Population_{j, pre-war}}}\]</span></p>
-<p>其中伤亡包括死亡、失踪、受伤和战俘。</p>
-<p><strong>关键统计事实</strong></p>
-<ul>
-<li>国家间战争平均强度：3.5%（以伤亡/战前人口衡量）</li>
-<li>其他战争平均强度：0.74%</li>
-<li>战争持续时间中位数：2年</li>
-<li>总样本包括225个国家间战争和469场其他战争</li>
-</ul>
-<p><strong>Battle-Level地理编码</strong></p>
-<p>为识别战地，作者收集了1,737场战役的详细信息：</p>
-<ul>
-<li>来源：Clodfelter (2017)战争百科全书及多种历史资料</li>
-<li>每场战役记录：地理位置、伤亡人数、参战方</li>
-<li>最大战役：Brusilov Offensive（一战），超过100万伤亡</li>
-</ul>
-<p><strong>宏观经济指标</strong></p>
-<p>使用Jordà-Schularick-Taylor宏观史数据库，核心变量包括：</p>
-<ul>
-<li>实际GDP（Real GDP）</li>
-<li>消费者价格指数（CPI）</li>
-<li>资本存量（Capital Stock）</li>
-<li>全要素生产率（TFP）</li>
-<li>10年期政府债券收益率</li>
-<li>股权回报指数</li>
-<li>军事支出（占GDP比重）</li>
-<li>军事人员（占人口比重）</li>
-</ul>
-<p><strong>贸易数据</strong></p>
-<p>使用Fouquin and Hugot
-(2016)的双边贸易数据，并使用引力模型填补缺失值（伪<span class="math inline">\({R^2=0.95}\)</span>）。</p>
-<p><strong>GPT-4验证</strong></p>
-<p>作者还使用GPT-4
-API辅助验证战地编码的准确性，发现GPT-4识别结果与手工编码的Pearson相关系数为0.73（<span class="math inline">\({p&lt;0.001}\)</span>）。</p>
-<h4 id="实证方法局部投影法">实证方法：局部投影法</h4>
-<p><strong>Local Projections Method（局部投影法）</strong></p>
-<p>遵循Jordà (2005)的方法，估计以下规范：</p>
-<p><span class="math display">\[{y_{i,t+h} - y_{i,t-1} = \zeta_h'
-X_{i,t} + \sum_{c \in \{S,B,T\}} \phi_{c,h}(\gamma_{i,c,t}' \cdot
-Sites_t) + \sum_{c \in \{B,T\}} \psi_{c,h}(\epsilon_{i,c,t-1}' \cdot
-Sites_t) + u_{i,t+h}}\]</span></p>
-<p>其中：</p>
-<ul>
-<li><span class="math inline">\({y_{i,t}}\)</span>：结果变量（如实际GDP）</li>
-<li><span class="math inline">\({h}\)</span>：战争开始后的年数（<span class="math inline">\({h=0,1,...,8}\)</span>）</li>
-<li><span class="math inline">\({X_{i,t}}\)</span>：控制变量（包含4阶滞后项、国家固定效应、是否接壤战地国家）</li>
-<li><span class="math inline">\({\phi_{c,h}}\)</span>：捕捉c类国家（战地S、参战B、第三方T）在战争后的动态</li>
-<li><span class="math inline">\({\psi_{c,h}}\)</span>：允许暴露度（贸易联系、地理邻近）对溢出效应进行调节</li>
-</ul>
-<p><strong>暴露度向量（Exposure Vector）</strong></p>
-<p><span class="math display">\[{\epsilon_{i,c,t-1} = \frac{Import_{i
-\leftarrow j, t-1}}{GDP_{i, t-1}}}\]</span></p>
-<p>衡量第三方国家i与战地国家j之间的贸易暴露度。</p>
-<p><strong>固定效应设定</strong></p>
-<p>不包含时间固定效应，以捕捉特定国家组的完整经济动态，而非仅捕捉相对于平均值的动态变化。</p>
-<h3 id="结果results">结果（Results）</h3>
-<h4 id="基准结果三类国家的经济动态">基准结果：三类国家的经济动态</h4>
-<p><strong>产出（Output）</strong></p>
-<ul>
-<li><strong>战地国家</strong>：GDP下降约10%（相对于战前趋势），在战争开始后约4年达到谷底，此后恢复缓慢，8年后仍低约5%，完全恢复需要约12年</li>
-<li><strong>参战国</strong>：平均GDP未显示明显偏离趋势</li>
-<li><strong>第三方国家</strong>：平均GDP仅适度下降</li>
-</ul>
-<p><strong>消费者价格指数（CPI）</strong></p>
-<ul>
-<li><strong>战地国家</strong>：物价水平持续上涨，战争开始6年后达到峰值，比趋势高约20%</li>
-<li><strong>参战国和第三方国家</strong>：物价水平也有一定上涨，但幅度较小</li>
-</ul>
-<p><strong>资本存量（Capital Stock）</strong></p>
-<ul>
-<li><strong>战地国家</strong>：8年内下降超过4%</li>
-<li><strong>参战国和第三方国家</strong>：也有显著下降，但幅度小得多</li>
-<li>注意：资本存量下降可能反映物理破坏，也可能反映投资减少</li>
-</ul>
-<p><strong>全要素生产率（TFP）</strong></p>
-<ul>
-<li><strong>战地国家</strong>：TFP立即大幅下降，与战争严重破坏经济运作一致</li>
-<li><strong>参战国</strong>：TFP轻微（但不显著）上升</li>
-<li><strong>第三方国家</strong>：TFP基本不变</li>
-</ul>
-<p><strong>长期利率</strong></p>
-<ul>
-<li><strong>战地国家</strong>：10年期政府债券收益率上升约0.3个百分点，并持续
-elevated 约12年</li>
-<li><strong>参战国和第三方国家</strong>：也有适度上升，但不显著</li>
-</ul>
-<p><strong>股权回报率</strong></p>
-<ul>
-<li><strong>战地国家</strong>：股市指数持续下跌，相对趋势的累计跑输幅度在6年后达到20%</li>
-<li>初始反应微弱，表明市场未完全预期战争的不利发展</li>
-<li><strong>第三方国家</strong>：股市跌幅约为战地国家的一半</li>
-<li><strong>参战国</strong>：表现出最强的韧性</li>
-</ul>
-<p><strong>军事支出和人员</strong></p>
-<ul>
-<li><strong>战地和参战国</strong>：军事支出显著增加，初期约增加1个百分点GDP，4年后达到峰值2.5个百分点GDP</li>
-<li><strong>第三方国家</strong>：军事支出和人员基本不变</li>
-</ul>
-<h4 id="关键发现第三国异质性">关键发现：第三国异质性</h4>
-<p><strong>贸易暴露度的关键作用</strong></p>
-<p>当按贸易暴露度区分第三方国家时，发现显著差异：</p>
-<ul>
-<li><strong>高贸易暴露国家</strong>（从战地进口占GDP的3%）：产出下降2%，价格大幅上涨，资本存量下降，利率上升，股权回报下降</li>
-<li><strong>零贸易暴露国家</strong>：基本不受影响</li>
-</ul>
-<p>这一发现具有重要的政策含义：与战地的贸易联系是战争经济影响传导的关键渠道。</p>
-<p><strong>地理邻近的额外风险</strong></p>
-<p>接壤战地的国家面临额外的负面效应：</p>
-<ul>
-<li>长期利率略有下降（可能反映资本外逃）</li>
-<li>股权回报为负（符合灾难风险溢价上升）</li>
-<li>军事支出和人员略有增加（反映军事溢出风险）</li>
-</ul>
-<p><strong>贸易渠道的机制</strong></p>
-<p>贸易收缩是战争溢出效应的关键传导机制：</p>
-<ul>
-<li>战地出口下降：战地生产能力被破坏</li>
-<li>战地进口下降：供应链中断</li>
-<li>高暴露第三方国家：进出口均收缩</li>
-</ul>
-<h4 id="因果推断结果">因果推断结果</h4>
-<p><strong>国家间战争 vs. 其他战争</strong></p>
-<ul>
-<li><strong>国家间战争</strong>：爆发前，产出和通胀没有系统性变化</li>
-<li><strong>其他战争</strong>：爆发前通胀上升、产出增长放缓——这些战争可能是经济波动的原因和结果</li>
-</ul>
-<p><strong>叙事性识别（Narrative Identification）</strong></p>
-<p>作者识别了每场国家间战争的主要战争动机（casus belli）：</p>
-<ul>
-<li>大多数战争与民族主义、意识形态或历史原因相关（可能外生于商业周期）</li>
-<li>经济动机仅在少数6场战争中显得重要</li>
-<li>排除这6场战争后，样本中国际战争的经济影响估计与全样本非常相似</li>
-</ul>
-<p><strong>Granger因果检验</strong></p>
-<ul>
-<li>国家间战争：不被产出增长和通胀的滞后项Granger引起</li>
-<li>其他战争：存在反向因果关系</li>
-</ul>
-<p>这支持了因果解释：战争导致了所记录的经济动态。</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<h3 id="核心发现总结">核心发现总结</h3>
-<p><strong>发现一：战地国家的巨大经济代价</strong></p>
-<p>一场中等强度（2%伤亡/人口）的战争与战地国家产出下降约10%相关。消费者价格上涨约20%。资本存量、全要素生产率和股权回报均急剧下降。经济恢复是缓慢的——完全恢复需要约12年，尽管战争本身平均只持续2-3年。</p>
-<p><strong>发现二：参战国的相对韧性</strong></p>
-<p>尽管面临战争，参战国（非战地）的平均经济表现明显好于战地国家。这可能与军事支出增加带来的财政刺激效应有关——如Braun和McGrattan
-(1993)以及Ilzetzki
-(2024)研究所示，两次世界大战期间美国和英国的经济扩张与军费急剧增加有关。</p>
-<p><strong>发现三：第三方国家的显著溢出效应</strong></p>
-<p>战争的经济影响并不局限于战地。通过贸易渠道，第三方国家也受到显著影响：</p>
-<ul>
-<li>与战地有密切贸易联系的国家（进口占GDP 3%）：产出下降约2%</li>
-<li>接壤战地的国家：面临额外的负面金融效应</li>
-</ul>
-<p><strong>发现四：传播渠道</strong></p>
-<p>贸易联系和地理邻近是战争经济影响跨境传播的两个关键渠道。这与全球供应链的相互依存性以及地理邻近带来的直接风险暴露有关。</p>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><strong>首次系统性分析</strong>：首次全面分析150年间60个国家战争的经济影响，提供了战争经济学的典型化事实</li>
-<li><strong>跨境溢出效应</strong>：揭示了战争通过贸易和地理渠道对第三方国家的显著溢出效应</li>
-<li><strong>异质性分析</strong>：详细区分了不同类型国家（战地、参战、第三方）和不同暴露度下的经济动态差异</li>
-<li><strong>因果识别</strong>：通过叙事性方法识别战争的经济影响，为因果推断提供了合理依据</li>
-<li><strong>方法论贡献</strong>：提供了局部投影法在战争经济学应用的范例</li>
-</ol>
-<h3 id="更广泛的社会影响">更广泛的社会影响</h3>
-<p>除经济指标外，作者还记录了战争对更广泛社会制度的影响：</p>
-<ul>
-<li>媒体自由度下降</li>
-<li>司法独立性下降</li>
-<li>选举公平性下降</li>
-<li>制度质量下降</li>
-</ul>
-<p>这些变化主要局限于战地，但媒体自由度的下降也波及参战国。</p>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="论文中提及的未来研究方向">论文中提及的未来研究方向</h3>
-<ol type="1">
-<li><strong>福利损失的全面测度</strong>
-<ul>
-<li>现有指标无法完全捕捉战争的经济代价及其对人类福利的影响</li>
-<li>产出与福利可能在战时分歧：例如劳动力动员可能导致产出增加，即使整体福利下降</li>
-<li>需要更好的方法来衡量私人消费等人福利指标</li>
-</ul></li>
-<li><strong>战争性质的演变</strong>
-<ul>
-<li>战争性质随时间不断变化</li>
-<li>伤亡与其他候选统计指标之间的关系也可能变化</li>
-<li>需要动态更新的战争强度测量方法</li>
-</ul></li>
-<li><strong>局部战争的经济影响</strong>
-<ul>
-<li>未来可以专门研究有限地理范围的局部战争的经济影响</li>
-<li>分析核威慑下的有限战争与全面战争的差异</li>
-</ul></li>
-</ol>
-<h3 id="根据论文内容思考的下一步研究工作">根据论文内容思考的下一步研究工作</h3>
-<ol type="1">
-<li><strong>供应链渠道的深入研究</strong>
-<ul>
-<li>本文发现贸易是主要传导渠道，但未深入分析供应链网络的结构性特征</li>
-<li>可研究全球价值链（GVC）参与度如何调节战争溢出效应</li>
-<li>可使用投入产出表分析产业关联的具体路径</li>
-</ul></li>
-<li><strong>金融渠道的作用</strong>
-<ul>
-<li>本文发现股权回报在战地和第三方国家都大幅下降</li>
-<li>可深入研究战争如何通过金融市场（资本流动、汇率、信贷市场）传导</li>
-</ul></li>
-<li><strong>人力资本渠道</strong>
-<ul>
-<li>战争造成的人员伤亡和劳动力动员直接影响人力资本</li>
-<li>可研究战争对教育、健康和创新的人力资本长期影响</li>
-</ul></li>
-<li><strong>政策应对效果评估</strong>
-<ul>
-<li>什么样的政策可以缓冲战争的经济影响？</li>
-<li>贸易多元化、战略储备、区域经济一体化等政策工具的效果</li>
-</ul></li>
-<li><strong>不同战争类型的细分研究</strong>
-<ul>
-<li>国家间战争vs内战的经济影响机制可能不同</li>
-<li>代理战争（Proxy Wars）与直接战争的经济影响差异</li>
-</ul></li>
-<li><strong>数字化战争的新特征</strong>
-<ul>
-<li>网络战、信息战、制裁战等新型冲突形式的经济影响</li>
-<li>传统分析框架的适用性和局限性</li>
-</ul></li>
-</ol>
-<hr>
-<h2 id="学术思考">6. 学术思考</h2>
-<p>基于对本文的深入分析，以下学术问题值得关注和进一步探讨：</p>
-<h3 id="关于因果推断的思考">关于因果推断的思考</h3>
-<p><strong>问题一：内生性的残余挑战</strong></p>
-<p>尽管作者通过排除经济动机明确的战争来缓解内生性，但战争选择本身可能仍存在与经济因素相关的其他混淆。例如，一个国家在经济增长放缓时可能更倾向于卷入战争（通过军事转移国内矛盾）。这是否意味着即使在"外生"战争中，战前经济状况的某些特征也在发挥作用？如何在计量经济学框架下更彻底地解决这一问题？</p>
-<h3 id="关于传导机制的思考">关于传导机制的思考</h3>
-<p><strong>问题二：贸易渠道vs. 金融渠道的相对重要性</strong></p>
-<p>本文发现贸易是战争溢出效应的关键渠道，但金融渠道（如资本流动、汇率波动、信贷紧缩）的作用可能被低估。在当今全球金融一体化的背景下，金融渠道是否比贸易渠道更重要？尤其是在短期危机（如2022年乌克兰战争）中，金融市场的反应速度可能远快于贸易调整。</p>
-<p><strong>问题三：全球价值链的结构性作用</strong></p>
-<p>本文使用的贸易暴露度指标较为粗略，未能捕捉全球价值链（GVC）的复杂结构。一个深度嵌入GVC的国家可能同时面临供给中断（作为供应商）和需求萎缩（作为消费者）的双重冲击。如何构建更精细的GVC暴露度指标？</p>
-<h3 id="关于政策含义的思考">关于政策含义的思考</h3>
-<p><strong>问题四：经济一体化与战争脆弱性的权衡</strong></p>
-<p>本文发现贸易联系会放大战争的溢出效应。这意味着经济一体化在带来增长红利的同时，也使各国更容易受到地缘政治冲击。这是否意味着各国应该在追求经济效率和保持战略自主之间进行权衡？区域经济集团化（如EU）是否提供了在开放与安全之间的平衡？</p>
-<p><strong>问题五：战略储备和供应链多样化的价值</strong></p>
-<p>既然与战地的贸易联系会放大对他国的经济影响，那么战略储备和供应链多元化是否应该成为国家安全的必要组成部分？这对于小国和高度依赖进口的国家尤为重要。</p>
-<h3 id="关于研究方法的思考">关于研究方法的思考</h3>
-<p><strong>问题六：局部投影法的适用性</strong></p>
-<p>局部投影法在本文中被用来估计战争的经济动态，但这一方法假设了线性关系和固定效应结构。战争的非线性效应（如阈值效应、叠加效应）是否被遗漏？特别是当多个战争同时发生时，单独估计每场战争效应的高维问题如何处理？</p>
-<h3 id="关于历史演变的思考">关于历史演变的思考</h3>
-<p><strong>问题七：战争性质的范式转变</strong></p>
-<p>从1870年代到2020年代，战争的技术性质、参与主体、地理范围都发生了巨大变化。从大规模的国家间战争到小规模的代理人战争，再到可能包含网络战和贸易战的新型混合冲突。不同类型的冲突是否遵循相同的宏观经济动态规律？本文的150年样本是否掩盖了这些结构性变化？</p>
-<hr>
-<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
-<p>根据论文内容和上述分析，以下是用户接下来可能问的问题：</p>
-<h3 id="关于研究内容的深层问题">关于研究内容的深层问题</h3>
-<ol type="1">
-<li><strong>战争的长期经济后果是什么？</strong>
-<ul>
-<li>本文关注战后8年的动态，但恢复需要约12年</li>
-<li>长期（20-50年）经济轨迹如何？</li>
-<li>战争是否会造成"疤痕效应"（Scarring
-Effects），永久降低增长路径？</li>
-</ul></li>
-<li><strong>不同类型战争的经济影响有何差异？</strong>
-<ul>
-<li>国家间战争vs. 内战的传导机制是否不同？</li>
-<li>高强度vs. 低强度战争是否存在非线性阈值效应？</li>
-<li>代理战争与直接战争的经济影响差异？</li>
-</ul></li>
-<li><strong>疫情和战争叠加的影响是否不同？</strong>
-<ul>
-<li>COVID-19疫情可视为非战争的"经济灾难"</li>
-<li>两种灾难的经济影响机制和恢复模式是否可比？</li>
-</ul></li>
-</ol>
-<h3 id="关于方法论的问题">关于方法论的问题</h3>
-<ol start="4" type="1">
-<li><strong>如何进一步改进因果识别的可信度？</strong>
-<ul>
-<li>自然实验方法（如板块运动会）是否可用？</li>
-<li>工具变量方法是否可行？</li>
-<li>Difference-in-Differences设计是否适合此研究？</li>
-</ul></li>
-<li><strong>模型基础的解释是什么？</strong>
-<ul>
-<li>本文使用局部投影法进行简约式（Reduced-form）估计</li>
-<li>是否存在结构模型（如DSGE）能更好地解释这些动态？</li>
-<li>论文的工作论文版本（Federle et al. 2024）的模型结果如何？</li>
-</ul></li>
-</ol>
-<h3 id="关于政策应用的问题">关于政策应用的问题</h3>
-<ol start="6" type="1">
-<li><strong>如何将研究发现应用于当前的地缘政治风险评估？</strong>
-<ul>
-<li>对于台湾问题、中美博弈等当前热点，本文框架有何启示？</li>
-<li>如何量化"与中国发生贸易战"的潜在经济代价？</li>
-</ul></li>
-<li><strong>何种政策可以缓冲战争的经济冲击？</strong>
-<ul>
-<li>战略储备的效果如何？</li>
-<li>区域经济一体化的保护效应？</li>
-<li>金融稳定工具（如外汇储备、货币互换）的作用？</li>
-</ul></li>
-</ol>
-<h3 id="关于后续研究的问题">关于后续研究的问题</h3>
-<ol start="8" type="1">
-<li><strong>本文的主要贡献者（5位作者）后续还有哪些相关研究？</strong>
-<ul>
-<li>是否有关于特定战争案例的深度研究？</li>
-<li>是否有使用更细粒度数据（如月度、行业层面）的研究？</li>
-</ul></li>
-<li><strong>是否存在与本文发现相矛盾的文献？</strong>
-<ul>
-<li>质疑或修正本文结论的研究有哪些？</li>
-<li>这些矛盾是否可以通过样本选择、方法论差异或数据版本来解释？</li>
-</ul></li>
-</ol>
-<hr>
-<p><em>本分析报告为深度阅读笔记，梳理了论文的核心逻辑、主要发现和学术价值。</em></p>
-]]></content>
-      <categories>
-        <category>经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>宏观经济学</tag>
-        <tag>战争经济学</tag>
-        <tag>经济史学</tag>
-        <tag>地缘政治</tag>
       </tags>
   </entry>
   <entry>
@@ -9633,6 +9633,58 @@ Inequality - <strong>作者</strong>:Yannis M. Ioannides, L. Rachel Ngai -
       </tags>
   </entry>
   <entry>
+    <title>Endogenous Clustering and Analogy-Based Expectation Equilibrium — 深度阅读笔记 — Jehiel &amp; Weber</title>
+    <url>/posts/jehiel2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Endogenous Clustering and Analogy-Based
+Expectation Equilibrium</li>
+<li><strong>作者</strong>: Philippe Jehiel (PSE &amp; UCL), Giacomo
+Weber (PSE &amp; Bologna)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies
+(RES)</li>
+<li><strong>难度评估</strong>: 高 - 需要博弈论、行为经济学、机器学习基础
+<span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言">1. 引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>ABEE类比预期均衡、K-means聚类、原型理论。</p>
+<h3 id="研究背景">研究背景</h3>
+<p>理性预期假设要求过高；外生类比分割的局限性。</p>
+<h3 id="核心问题">核心问题</h3>
+<p>类比分割如何内生决定？玩家如何在记忆约束下最优分类情况？</p>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：理论框架</li>
+<li>第三节：应用</li>
+<li>第四节：结论</li>
+</ul>
+<h2 id="正文">3. 正文</h2>
+<h3 id="核心机制">核心机制</h3>
+<p>将类比分割内生化为聚类问题的解</p>
+<h3 id="关键发现">关键发现</h3>
+<ol type="1">
+<li>区分自排斥（需混合分区）vs自吸引（多重均衡）环境</li>
+<li>有限环境总存在聚类分布ABEE</li>
+<li>应用：美人竞赛（自吸引）、监控游戏（自排斥）</li>
+</ol>
+<h2 id="结论">4. 结论</h2>
+<p>内生类比分割框架提供了均衡多重性的新渠道。</p>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<p>实证检验、福利含义、规范分析。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
     <url>/posts/48526/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
@@ -9688,52 +9740,68 @@ inference</em></strong>):如何从样本数据获取总体因果关系信息,实
       </tags>
   </entry>
   <entry>
-    <title>Endogenous Clustering and Analogy-Based Expectation Equilibrium — 深度阅读笔记 — Jehiel &amp; Weber</title>
-    <url>/posts/jehiel2026/</url>
+    <title>海外的丰裕 — 深度阅读笔记 — Khanna Et Al.</title>
+    <url>/posts/khanna2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
 <ul>
-<li><strong>标题</strong>: Endogenous Clustering and Analogy-Based
-Expectation Equilibrium</li>
-<li><strong>作者</strong>: Philippe Jehiel (PSE &amp; UCL), Giacomo
-Weber (PSE &amp; Bologna)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies
-(RES)</li>
-<li><strong>难度评估</strong>: 高 - 需要博弈论、行为经济学、机器学习基础
-<span id="more"></span></li>
+<li><strong>标题</strong>: Abundance from Abroad: Migrant Income and
+Long-Run Economic Development</li>
+<li><strong>作者</strong>: Gaurav Khanna (UC San Diego), Emir
+Murathanoglu, Caroline B. Theoharides, Dean Yang</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(4):
+1540-1577</li>
+<li><strong>DOI</strong>: 10.1257/aer.20241465</li>
+<li><strong>难度评估</strong>: 高 -
+需要发展经济学、国际经济学、计量经济学基础</li>
 </ul>
+<span id="more"></span>
 <hr>
-<h2 id="引言">1. 引言</h2>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
 <h3 id="领域基础知识">领域基础知识</h3>
-<p>ABEE类比预期均衡、K-means聚类、原型理论。</p>
-<h3 id="研究背景">研究背景</h3>
-<p>理性预期假设要求过高；外生类比分割的局限性。</p>
-<h3 id="核心问题">核心问题</h3>
-<p>类比分割如何内生决定？玩家如何在记忆约束下最优分类情况？</p>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：理论框架</li>
-<li>第三节：应用</li>
-<li>第四节：结论</li>
-</ul>
-<h2 id="正文">3. 正文</h2>
-<h3 id="核心机制">核心机制</h3>
-<p>将类比分割内生化为聚类问题的解</p>
-<h3 id="关键发现">关键发现</h3>
+<p><strong>国际移民与发展</strong>：国际移民是发展中国家重要的经济现象，2019年全球有2.1亿来自发展中国家的国际移民。</p>
+<p><strong>转移份额设计（Shift-Share）</strong>：一种准实验识别策略，将总冲击分解为"份额"和"转移"两部分。</p>
+<p><strong>1997年亚洲金融危机</strong>：从泰国开始迅速蔓延，菲律宾比索贬值约40%。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
 <ol type="1">
-<li>区分自排斥（需混合分区）vs自吸引（多重均衡）环境</li>
-<li>有限环境总存在聚类分布ABEE</li>
-<li>应用：美人竞赛（自吸引）、监控游戏（自排斥）</li>
+<li><p><strong>移民的收入效应</strong>：移民到发达国家工作的收入收益远超任何已知的发展干预项目</p></li>
+<li><p><strong>移民对原籍地区的溢出效应</strong>：缺乏对更广泛原籍地区发展影响的研究</p></li>
+<li><p><strong>识别挑战</strong>：移民收入与原籍地区发展之间存在反向因果问题</p></li>
 </ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：国际移民收入前景如何影响原籍地区的长期经济发展？</p>
+<p><strong>主要发现</strong>：移民收入冲击的长期放大效应约为六倍</p>
+<hr>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ol type="1">
+<li><strong>引言</strong>: 问题陈述和研究背景</li>
+<li><strong>背景</strong>:
+国际劳动移民概况、菲律宾的移民体系、亚洲金融危机</li>
+<li><strong>数据</strong>: 移民合同数据、汇率数据、结果数据</li>
+<li><strong>实证方法</strong>: 转移份额变量的构建、因果识别</li>
+<li><strong>主要结果</strong>: 长期放大效应、国内收入vs移民收入</li>
+<li><strong>稳健性检验</strong></li>
+<li><strong>结论</strong></li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="实证方法">实证方法</h3>
+<p><strong>转移份额设计</strong>： - 使用1997年亚洲金融危机作为外生冲击
+- 构建"暴露于移民收入"的工具变量 -
+外生性假设：危机前各地区移民份额与危机后发展独立</p>
+<p><strong>主要结果</strong>： - 移民收入冲击的长期放大效应约为六倍 -
+74.9%来自国内收入效应 - 19.7%来自教育投资</p>
+<hr>
 <h2 id="结论">4. 结论</h2>
-<p>内生类比分割框架提供了均衡多重性的新渠道。</p>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<p>实证检验、福利含义、规范分析。</p>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>移民促进原籍发展</strong>：长期因果证据支持"良性循环"假说</p></li>
+<li><p><strong>放大机制</strong>：国内收入和教育投资是主要渠道</p></li>
+<li><p><strong>政策启示</strong>：移民政策可以成为全球减贫的重要工具</p></li>
+</ol>
 ]]></content>
       <categories>
-        <category>RES</category>
+        <category>AER</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -9921,237 +9989,6 @@ vs 10分位：8.3倍的价值产出差异</p>
       </tags>
   </entry>
   <entry>
-    <title>海外的丰裕 — 深度阅读笔记 — Khanna Et Al.</title>
-    <url>/posts/khanna2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Abundance from Abroad: Migrant Income and
-Long-Run Economic Development</li>
-<li><strong>作者</strong>: Gaurav Khanna (UC San Diego), Emir
-Murathanoglu, Caroline B. Theoharides, Dean Yang</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(4):
-1540-1577</li>
-<li><strong>DOI</strong>: 10.1257/aer.20241465</li>
-<li><strong>难度评估</strong>: 高 -
-需要发展经济学、国际经济学、计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>国际移民与发展</strong>：国际移民是发展中国家重要的经济现象，2019年全球有2.1亿来自发展中国家的国际移民。</p>
-<p><strong>转移份额设计（Shift-Share）</strong>：一种准实验识别策略，将总冲击分解为"份额"和"转移"两部分。</p>
-<p><strong>1997年亚洲金融危机</strong>：从泰国开始迅速蔓延，菲律宾比索贬值约40%。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>移民的收入效应</strong>：移民到发达国家工作的收入收益远超任何已知的发展干预项目</p></li>
-<li><p><strong>移民对原籍地区的溢出效应</strong>：缺乏对更广泛原籍地区发展影响的研究</p></li>
-<li><p><strong>识别挑战</strong>：移民收入与原籍地区发展之间存在反向因果问题</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：国际移民收入前景如何影响原籍地区的长期经济发展？</p>
-<p><strong>主要发现</strong>：移民收入冲击的长期放大效应约为六倍</p>
-<hr>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ol type="1">
-<li><strong>引言</strong>: 问题陈述和研究背景</li>
-<li><strong>背景</strong>:
-国际劳动移民概况、菲律宾的移民体系、亚洲金融危机</li>
-<li><strong>数据</strong>: 移民合同数据、汇率数据、结果数据</li>
-<li><strong>实证方法</strong>: 转移份额变量的构建、因果识别</li>
-<li><strong>主要结果</strong>: 长期放大效应、国内收入vs移民收入</li>
-<li><strong>稳健性检验</strong></li>
-<li><strong>结论</strong></li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="实证方法">实证方法</h3>
-<p><strong>转移份额设计</strong>： - 使用1997年亚洲金融危机作为外生冲击
-- 构建"暴露于移民收入"的工具变量 -
-外生性假设：危机前各地区移民份额与危机后发展独立</p>
-<p><strong>主要结果</strong>： - 移民收入冲击的长期放大效应约为六倍 -
-74.9%来自国内收入效应 - 19.7%来自教育投资</p>
-<hr>
-<h2 id="结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>移民促进原籍发展</strong>：长期因果证据支持"良性循环"假说</p></li>
-<li><p><strong>放大机制</strong>：国内收入和教育投资是主要渠道</p></li>
-<li><p><strong>政策启示</strong>：移民政策可以成为全球减贫的重要工具</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Auctions With Frictions — 深度阅读笔记 — Lauermann &amp; Wolinsky</title>
-    <url>/posts/lauermann2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Auctions with Frictions: Recruitment, Entry,
-and Limited Commitment</li>
-<li><strong>作者</strong>: Stephan Lauermann (University of Bonn), Asher
-Wolinsky (Northwestern University)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: Review of Economic Studies (RES), 93(2):
-1167-1199</li>
-<li><strong>DOI</strong>: https://doi.org/10.1093/restud/rdaf052</li>
-<li><strong>难度评估</strong>: 高 - 需要拍卖理论、博弈论基础
-<span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>拍卖（Frictionless
-Auction）</strong>：标准拍卖理论假设卖家可以招募竞拍者、竞拍者无成本参与、卖家可承诺于保留价格和参与水平。</p>
-<p><strong>招募成本（Recruitment
-Cost）</strong>：卖家吸引竞拍者的成本。</p>
-<p><strong>参与成本（Entry
-Cost）</strong>：竞拍者评估拍品、获取融资、准备报价的成本。</p>
-<p><strong>有限承诺（Limited
-Commitment）</strong>：卖家无法可信地承诺参与水平或其披露程度。</p>
-<p><strong>PO vs PU场景</strong>：PO=参与可观察；PU=参与不可观察。</p>
-<h3 id="研究背景">研究背景</h3>
-<ol type="1">
-<li><p><strong>实际拍卖的复杂性</strong>：招募和激励竞拍者是拍卖成功的关键。</p></li>
-<li><p><strong>摩擦的普遍性</strong>：在独特资产的出售中，招募成本和参与成本特别显著。</p></li>
-<li><p><strong>传统模型局限性</strong>：现有文献分别研究招募或参与摩擦。</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：当卖家承诺能力受限时，招募努力和竞拍者进入决策如何共同决定拍卖参与和结果？</p>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<ul>
-<li>第一节：Introduction</li>
-<li>第二节：The PO Auction</li>
-<li>第三节：Equilibrium Analysis for PO Scenario</li>
-<li>第四节：The PU Auction</li>
-<li>第五节：Comparison of PO and PU Scenarios</li>
-<li>第六节：Discussion and Extensions</li>
-<li>第七节：Conclusion</li>
-</ul>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="模型设定">模型设定</h3>
-<p><strong>核心要素</strong>： 1.
-<strong>卖家</strong>：选择招募努力γ（成本为γs），结果是泊松分布的潜在竞拍者
-2. <strong>竞拍者</strong>：支付成本c后观察到私人价值vi，决策是否进入 3.
-<strong>Bidding阶段</strong>：第一价格拍卖(FPA)</p>
-<p><strong>两种场景</strong>：PO（参与可观察）vs PU（参与不可观察）</p>
-<h3 id="po均衡分析">PO均衡分析</h3>
-<p><strong>逆向求解</strong>： 1. Stage 3 (Bidding)：标准对称FPA均衡 2.
-Stage 2 (Entry)：竞拍者基于期望收益决定是否进入 3. Stage 1
-(Recruitment)：卖家选择λ = qγ最大化利润</p>
-<p><strong>关键发现</strong>： - 存在均衡贸易的唯一条件：λc ≥ λo 且 s ≤
-s̄o - 当λc &lt; λo时：即使潜在贸易收益为正，市场也会崩溃</p>
-<h3 id="pu均衡分析">PU均衡分析</h3>
-<p><strong>关键差异</strong>：卖家无法可信地披露参与水平</p>
-<p><strong>均衡特征</strong>： - 对于所有(c,s)，存在λ*=0的无贸易均衡 -
-当s &lt; ξ(λpeak)且λc &gt; λu(s)时，存在两个贸易均衡</p>
-<h3 id="po-vs-pu比较">PO vs PU比较</h3>
-<p><strong>关键比较结果</strong>：</p>
-<table>
-<thead>
-<tr>
-<th>区域</th>
-<th>条件</th>
-<th>结果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I</td>
-<td>仅PO有贸易</td>
-<td>PO严格更优</td>
-</tr>
-<tr>
-<td>II</td>
-<td>两者都有贸易</td>
-<td>PO严格更优</td>
-</tr>
-<tr>
-<td>III</td>
-<td>两者都有贸易</td>
-<td>PU严格更优</td>
-</tr>
-<tr>
-<td>IV</td>
-<td>仅PU有贸易</td>
-<td>PU更优</td>
-</tr>
-</tbody>
-</table>
-<p><strong>直觉</strong>： -
-当c很小（竞拍者愿意进入）时：PO的更强招募激励→更高利润 -
-当s很小（招募便宜）时：PU的更弱招募激励作为部分承诺机制</p>
-<h3 id="fpa-vs-spa比较">FPA vs SPA比较</h3>
-<p><strong>Revenue
-Equivalence失效</strong>：当参与不可观察时，FPA和SPA不再等价</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>整合三种摩擦的必要性</strong>：招募成本、参与成本和有限承诺必须联合建模</p></li>
-<li><p><strong>可见性的关键作用</strong>：参与的可观察性对贸易量和利润有重大影响</p></li>
-<li><p><strong>标准等价失效</strong>：在存在摩擦时，FPA和SPA不再等价</p></li>
-<li><p><strong>市场崩溃的可能</strong>：即使潜在收益为正，市场也可能因承诺问题而崩溃</p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><p><strong>理论框架</strong>：整合了之前分开研究的各种摩擦</p></li>
-<li><p><strong>比较静态</strong>：完整描述了所有(c,s)组合下的均衡</p></li>
-<li><p><strong>实践意义</strong>：解释了拍卖行服务的价值</p></li>
-</ol>
-<hr>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<h3 id="文献提及的方向">文献提及的方向</h3>
-<ol type="1">
-<li>竞拍者进入前了解其价值的版本</li>
-<li>卖家可设置进入费/补贴或保留价格的版本</li>
-</ol>
-<h3 id="未来研究思考">未来研究思考</h3>
-<ol type="1">
-<li><strong>信息摩擦</strong>：信息不对称如何与招募/参与成本交互？</li>
-<li><strong>动态招募</strong>：多时期招募决策会如何改变结果？</li>
-</ol>
-<hr>
-<h2 id="学术思考">7. 学术思考</h2>
-<h3 id="核心理论洞察">核心理论洞察</h3>
-<ol type="1">
-<li><p><strong>"承诺作为市场结果的关键"</strong>：卖家有限承诺能力是市场摩擦的核心。</p></li>
-<li><p><strong>"可见性改变激励结构"</strong>：参与的可观察性改变了卖家的招募激励。</p></li>
-<li><p><strong>"价格等价不意味着激励等价"</strong>：在存在摩擦时，不同格式产生不同激励。</p></li>
-</ol>
-<h3 id="深层学术问题">深层学术问题</h3>
-<ol type="1">
-<li><strong>承诺的外生性</strong>：内生化承诺能力会如何改变结论？</li>
-<li><strong>信息获取时机</strong>：竞拍者进入前vs进入后了解价值会如何影响均衡？</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li><strong>PO和PU场景下的均衡具体是什么？</strong></li>
-<li><strong>过度招募的无效率具体是多少？</strong></li>
-<li><strong>Proposition 3中边界曲线ŝ(c)的形状是什么？</strong></li>
-<li><strong>SPA的"信念独立"出价具体是什么？</strong></li>
-<li><strong>拍卖行如何具体缓解这些摩擦？</strong></li>
-</ol>
-<hr>
-<p><em>本分析报告严格遵循精读文献skill规定的八部分结构完成，旨在为初学者提供全面、易懂的论文逻辑梳理与学术要点解读。</em></p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Extreme Categories and Overreaction to News — 深度阅读笔记 — Kwon &amp; Tang</title>
     <url>/posts/kwon2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -10320,6 +10157,169 @@ in extreme news categories</h3>
 极端程度与这些替代变量相比有何优势？</p></li>
 <li><p><strong>对投资者和资产管理人有何实践启示？</strong>
 如何利用这些发现来改进投资决策？</p></li>
+</ol>
+<hr>
+<p><em>本分析报告严格遵循精读文献skill规定的八部分结构完成，旨在为初学者提供全面、易懂的论文逻辑梳理与学术要点解读。</em></p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Auctions With Frictions — 深度阅读笔记 — Lauermann &amp; Wolinsky</title>
+    <url>/posts/lauermann2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Auctions with Frictions: Recruitment, Entry,
+and Limited Commitment</li>
+<li><strong>作者</strong>: Stephan Lauermann (University of Bonn), Asher
+Wolinsky (Northwestern University)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: Review of Economic Studies (RES), 93(2):
+1167-1199</li>
+<li><strong>DOI</strong>: https://doi.org/10.1093/restud/rdaf052</li>
+<li><strong>难度评估</strong>: 高 - 需要拍卖理论、博弈论基础
+<span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>拍卖（Frictionless
+Auction）</strong>：标准拍卖理论假设卖家可以招募竞拍者、竞拍者无成本参与、卖家可承诺于保留价格和参与水平。</p>
+<p><strong>招募成本（Recruitment
+Cost）</strong>：卖家吸引竞拍者的成本。</p>
+<p><strong>参与成本（Entry
+Cost）</strong>：竞拍者评估拍品、获取融资、准备报价的成本。</p>
+<p><strong>有限承诺（Limited
+Commitment）</strong>：卖家无法可信地承诺参与水平或其披露程度。</p>
+<p><strong>PO vs PU场景</strong>：PO=参与可观察；PU=参与不可观察。</p>
+<h3 id="研究背景">研究背景</h3>
+<ol type="1">
+<li><p><strong>实际拍卖的复杂性</strong>：招募和激励竞拍者是拍卖成功的关键。</p></li>
+<li><p><strong>摩擦的普遍性</strong>：在独特资产的出售中，招募成本和参与成本特别显著。</p></li>
+<li><p><strong>传统模型局限性</strong>：现有文献分别研究招募或参与摩擦。</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：当卖家承诺能力受限时，招募努力和竞拍者进入决策如何共同决定拍卖参与和结果？</p>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<ul>
+<li>第一节：Introduction</li>
+<li>第二节：The PO Auction</li>
+<li>第三节：Equilibrium Analysis for PO Scenario</li>
+<li>第四节：The PU Auction</li>
+<li>第五节：Comparison of PO and PU Scenarios</li>
+<li>第六节：Discussion and Extensions</li>
+<li>第七节：Conclusion</li>
+</ul>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="模型设定">模型设定</h3>
+<p><strong>核心要素</strong>： 1.
+<strong>卖家</strong>：选择招募努力γ（成本为γs），结果是泊松分布的潜在竞拍者
+2. <strong>竞拍者</strong>：支付成本c后观察到私人价值vi，决策是否进入 3.
+<strong>Bidding阶段</strong>：第一价格拍卖(FPA)</p>
+<p><strong>两种场景</strong>：PO（参与可观察）vs PU（参与不可观察）</p>
+<h3 id="po均衡分析">PO均衡分析</h3>
+<p><strong>逆向求解</strong>： 1. Stage 3 (Bidding)：标准对称FPA均衡 2.
+Stage 2 (Entry)：竞拍者基于期望收益决定是否进入 3. Stage 1
+(Recruitment)：卖家选择λ = qγ最大化利润</p>
+<p><strong>关键发现</strong>： - 存在均衡贸易的唯一条件：λc ≥ λo 且 s ≤
+s̄o - 当λc &lt; λo时：即使潜在贸易收益为正，市场也会崩溃</p>
+<h3 id="pu均衡分析">PU均衡分析</h3>
+<p><strong>关键差异</strong>：卖家无法可信地披露参与水平</p>
+<p><strong>均衡特征</strong>： - 对于所有(c,s)，存在λ*=0的无贸易均衡 -
+当s &lt; ξ(λpeak)且λc &gt; λu(s)时，存在两个贸易均衡</p>
+<h3 id="po-vs-pu比较">PO vs PU比较</h3>
+<p><strong>关键比较结果</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>区域</th>
+<th>条件</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I</td>
+<td>仅PO有贸易</td>
+<td>PO严格更优</td>
+</tr>
+<tr>
+<td>II</td>
+<td>两者都有贸易</td>
+<td>PO严格更优</td>
+</tr>
+<tr>
+<td>III</td>
+<td>两者都有贸易</td>
+<td>PU严格更优</td>
+</tr>
+<tr>
+<td>IV</td>
+<td>仅PU有贸易</td>
+<td>PU更优</td>
+</tr>
+</tbody>
+</table>
+<p><strong>直觉</strong>： -
+当c很小（竞拍者愿意进入）时：PO的更强招募激励→更高利润 -
+当s很小（招募便宜）时：PU的更弱招募激励作为部分承诺机制</p>
+<h3 id="fpa-vs-spa比较">FPA vs SPA比较</h3>
+<p><strong>Revenue
+Equivalence失效</strong>：当参与不可观察时，FPA和SPA不再等价</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>整合三种摩擦的必要性</strong>：招募成本、参与成本和有限承诺必须联合建模</p></li>
+<li><p><strong>可见性的关键作用</strong>：参与的可观察性对贸易量和利润有重大影响</p></li>
+<li><p><strong>标准等价失效</strong>：在存在摩擦时，FPA和SPA不再等价</p></li>
+<li><p><strong>市场崩溃的可能</strong>：即使潜在收益为正，市场也可能因承诺问题而崩溃</p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><p><strong>理论框架</strong>：整合了之前分开研究的各种摩擦</p></li>
+<li><p><strong>比较静态</strong>：完整描述了所有(c,s)组合下的均衡</p></li>
+<li><p><strong>实践意义</strong>：解释了拍卖行服务的价值</p></li>
+</ol>
+<hr>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<h3 id="文献提及的方向">文献提及的方向</h3>
+<ol type="1">
+<li>竞拍者进入前了解其价值的版本</li>
+<li>卖家可设置进入费/补贴或保留价格的版本</li>
+</ol>
+<h3 id="未来研究思考">未来研究思考</h3>
+<ol type="1">
+<li><strong>信息摩擦</strong>：信息不对称如何与招募/参与成本交互？</li>
+<li><strong>动态招募</strong>：多时期招募决策会如何改变结果？</li>
+</ol>
+<hr>
+<h2 id="学术思考">7. 学术思考</h2>
+<h3 id="核心理论洞察">核心理论洞察</h3>
+<ol type="1">
+<li><p><strong>"承诺作为市场结果的关键"</strong>：卖家有限承诺能力是市场摩擦的核心。</p></li>
+<li><p><strong>"可见性改变激励结构"</strong>：参与的可观察性改变了卖家的招募激励。</p></li>
+<li><p><strong>"价格等价不意味着激励等价"</strong>：在存在摩擦时，不同格式产生不同激励。</p></li>
+</ol>
+<h3 id="深层学术问题">深层学术问题</h3>
+<ol type="1">
+<li><strong>承诺的外生性</strong>：内生化承诺能力会如何改变结论？</li>
+<li><strong>信息获取时机</strong>：竞拍者进入前vs进入后了解价值会如何影响均衡？</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li><strong>PO和PU场景下的均衡具体是什么？</strong></li>
+<li><strong>过度招募的无效率具体是多少？</strong></li>
+<li><strong>Proposition 3中边界曲线ŝ(c)的形状是什么？</strong></li>
+<li><strong>SPA的"信念独立"出价具体是什么？</strong></li>
+<li><strong>拍卖行如何具体缓解这些摩擦？</strong></li>
 </ol>
 <hr>
 <p><em>本分析报告严格遵循精读文献skill规定的八部分结构完成，旨在为初学者提供全面、易懂的论文逻辑梳理与学术要点解读。</em></p>
@@ -10753,6 +10753,187 @@ Studies</li>
       </tags>
   </entry>
   <entry>
+    <title>预算到期会导致年底浪费性支出吗?_ Liebman &amp; Mahoney (2017) 笔记</title>
+    <url>/posts/liebman2017/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Do Expiring Budgets Lead to Wasteful Year-End
+Spending? Evidence from Federal Procurement</li>
+<li><strong>作者</strong>: Jeffrey B. Liebman(哈佛大学), Neale
+Mahoney(芝加哥大学)</li>
+<li><strong>类型</strong>: 论文笔记 / 公共经济学 / 预算制度</li>
+<li><strong>出版年份</strong>: 2017</li>
+<li><strong>出版机构/期刊</strong>: American Economic Review</li>
+<li><strong>DOI</strong>: 10.1257/aer.20131296</li>
+<li><strong>难度评估</strong>: 高 -
+需要经济学、计量经济学、公共财政学基础</li>
+</ul>
+<span id="more"></span>
+<h2 id="引言">引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>本文属于公共经济学、行为经济学和管理学的交叉领域,探讨政府支出效率问题.核心概念包括:</p>
+<ul>
+<li><strong>预算约束</strong>: 政府机构在财政年度内可支配的资金总额</li>
+<li><strong>自由裁量支出</strong>:
+政府可以自行决定如何分配的预算部分,与法定支出(如社会保障)相对</li>
+<li><strong>公共采购</strong>: 政府购买商品和服务的行为</li>
+<li><strong>信息技术(IT)项目</strong>:
+政府对计算机硬件、软件和相关服务的投资</li>
+<li><strong>社会成本</strong>:
+指一项经济活动对整个社会造成的成本,包括直接成本和外部成本</li>
+<li><strong>滚动预算(Rollover Budget)</strong>:
+允许机构将未使用的预算资金转移到下一个财政年度</li>
+</ul>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<p>政府机构通常面临"不使用就失去"的预算规则,即在一个财政年度结束时,任何未使用的预算资金都将返回国库,而不是留给该机构使用.这种规则可能会导致机构在财政年度末
+rush 支出,即使这意味着投资于低价值的项目.</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p>作者认为,"不使用就失去"的预算规则可能会导致政府浪费性支出.他们试图通过实证分析来检验这一观点,并探讨解决这一问题的潜在政策,例如允许机构将未使用的资金转入下一个财政年度.</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><strong>揭示了政府支出中潜在的浪费现象</strong>:
+通过量化财政年度末的支出高峰和质量下降,为政府支出效率问题提供了有力证据</li>
+<li><strong>评估了滚动预算的有效性</strong>:
+通过研究美国司法部的滚动预算政策,为解决浪费性支出提供了一个可行的解决方案</li>
+<li><strong>为政府预算管理提供了政策建议</strong>:
+研究结果表明,允许机构将未使用的资金转入下一个财政年度可以提高政府支出效率</li>
+</ol>
+<h2 id="论文结构">论文结构</h2>
+<ol type="1">
+<li><strong>引言</strong>: 概述研究背景、问题意识和研究意义</li>
+<li><strong>理论模型</strong>:
+建立一个简单的模型来解释"不使用就失去"的预算规则如何导致浪费性支出</li>
+<li><strong>数据描述</strong>:
+介绍用于实证分析的数据集,包括联邦采购数据系统(FPDS)和IT仪表板</li>
+<li><strong>实证分析1</strong>:
+使用FPDS数据检验财政年度末是否存在支出高峰</li>
+<li><strong>实证分析2</strong>:
+使用IT仪表板数据检验财政年度末的支出质量是否下降</li>
+<li><strong>政策分析</strong>: 研究滚动预算政策对支出行为的影响</li>
+<li><strong>福利分析</strong>:
+使用校准后的模型评估滚动预算政策的福利效应</li>
+<li><strong>结论</strong>:
+总结研究结果,讨论政策含义,并提出未来研究方向</li>
+</ol>
+<h2 id="背景">背景</h2>
+<p>许多组织都有在财政年度末到期的预算,这可能导致在年底匆忙将资源用于低质量的项目.美国联邦政府的自由裁量支出预算也面临类似情况,机构必须在财政年度结束前完成拨款.</p>
+<h3 id="挑战">挑战</h3>
+<ol type="1">
+<li><strong>"不使用就失去"的预算规则</strong>:
+如果机构不花完预算,剩余的资金将返回国库,降低了年底花钱的机会成本</li>
+<li><strong>预防性储蓄的动机</strong>:
+机构倾向于在预算周期开始时保留资金,以应对未来不确定的支出需求</li>
+<li><strong>缺乏关于年底浪费性支出的硬性证据</strong>:
+尽管有传闻证据,但缺乏关于美国联邦政府年底支出激增以及年底支出价值低于其他时间段的证据</li>
+</ol>
+<h2 id="方法">方法</h2>
+<h3 id="理论模型">理论模型</h3>
+<ul>
+<li><strong>模型设定</strong>:
+作者建立了一个年度预算模型,包括国会和一个政府机构.国会为该机构选择预算,该机构在一年中的每个时期都会获得一个参数,该参数决定了支出的边际价值,并选择一个支出水平以最大化收益递减的目标</li>
+<li><strong>模型特征</strong>:
+具有三个关键特征_预算到期、未来支出价值的不确定性以及每个时期内支出的收益递减</li>
+<li><strong>模型预测</strong>:
+由于不确定性和收益递减,该机构将在年初进行预防性储蓄;在年底,资金到期的前景导致该机构花掉所有剩余资源,即使边际价值低于资金的社会成本,导致年底支出量激增和质量下降</li>
+</ul>
+<h3 id="数据集">数据集</h3>
+<p><strong>1. 联邦采购数据系统(FPDS)</strong> - 时间范围:
+2004年至2009年财政年度 - 数据量: 1460万份合同 - 总支出: 2.6万亿美元 -
+主要内容:
+合同层面信息,包括金额、产品/服务代码、机构、供应商、合同类型、招标机制等
+- 用途: 用于分析联邦采购支出的总体模式,特别是年底支出高峰</p>
+<p><strong>2. IT仪表板(IT Dashboard)</strong> - 数据时间: 截至2010年3月
+- 项目数量: 686个主要IT项目 - 总计划支出: 1300亿美元 - 主要内容:
+项目绩效数据,包括总体评级、成本评级、进度评级、CIO评估等 - 用途:
+用于评估IT项目的质量,特别是年底开始的项目的质量</p>
+<h3 id="实证策略">实证策略</h3>
+<ol type="1">
+<li><strong>支出高峰检验</strong>:
+使用FPDS数据,分析财政年度内每周的采购支出模式,确定是否存在年底支出高峰</li>
+<li><strong>质量下降检验</strong>:
+使用IT仪表板数据,比较在财政年度最后一周开始的项目与在其他时间开始的项目的质量评级</li>
+<li><strong>政策分析</strong>:
+研究美国司法部(DOJ)的滚动预算政策对支出行为的影响.DOJ有权将未使用的IT项目预算转入下一财政年度,作者比较了DOJ的IT和非IT支出,以及DOJ和其他机构之间的支出模式</li>
+<li><strong>福利分析</strong>:
+通过校准模型以适应支出高峰和质量下降,分析允许滚动预算的潜在福利收益</li>
+</ol>
+<h3 id="关键术语">关键术语</h3>
+<ul>
+<li><strong>FPDS (Federal Procurement Data System)</strong>:
+联邦采购数据系统,跟踪所有联邦合同的数据系统</li>
+<li><strong>IT仪表板 (IT Dashboard)</strong>:
+跟踪联邦政府主要IT项目绩效的网站</li>
+<li><strong>CIO (Chief Information Officer)</strong>:
+首席信息官,负责机构的信息技术战略和管理</li>
+<li><strong>Ordered Logit Regression</strong>:
+有序Logit回归,用于分析有序分类因变量的统计模型</li>
+<li><strong>Difference-in-Differences</strong>:
+双重差分法,用于评估政策或干预效果的统计方法</li>
+<li><strong>CRRA (Constant Relative Risk Aversion)</strong>:
+恒定相对风险厌恶效用函数</li>
+<li><strong>CARA (Constant Absolute Risk Aversion)</strong>:
+恒定绝对风险厌恶效用函数</li>
+</ul>
+<h2 id="结果">结果</h2>
+<ol type="1">
+<li><strong>支出高峰</strong>:
+数据显示年底支出大幅增加.在财政年度的最后一周,支出是平时每周平均水平的4.9倍</li>
+<li><strong>质量下降</strong>:
+年底开始的IT项目的质量评级明显较低.在财政年度最后一周开始的项目,获得较低质量分数的可能性要高出2.3到5.6倍</li>
+<li><strong>滚动预算的影响</strong>:
+DOJ的IT支出没有出现支出高峰,最后一周的IT支出仅占3.3%,而非IT支出为9.3%.差异分析表明滚动预算减少了年底支出量</li>
+<li><strong>福利分析</strong>:
+允许滚动预算可以带来福利收益.即使是允许机构在短时间内转入资金的中间政策,也可以产生接近全部滚动价值四分之三的福利收益</li>
+</ol>
+<h2 id="结论">结论</h2>
+<p>本文的核心结论是:由于"不使用就失去"的预算规则,美国联邦政府存在年底浪费性支出现象.具体表现为:</p>
+<ul>
+<li><strong>年底支出量激增</strong>:
+财政年度末的支出明显高于其他时间段</li>
+<li><strong>年底支出质量下降</strong>:
+财政年度末开始的IT项目质量较低</li>
+</ul>
+<p>允许滚动预算可以有效地解决这个问题.DOJ的经验表明滚动预算可以减少年底支出量,并可能提高项目质量.福利分析表明,即使是有限制的滚动预算政策也可以带来显著的福利收益.</p>
+<p>作者建议可以通过允许机构将未使用的资金延期到下个财政年度,用于四个月的宽限期,从而消除因年底浪费性支出造成的大部分效率低下问题.</p>
+<h2 id="未来研究方向">未来研究方向</h2>
+<ol type="1">
+<li><strong>研究国会预算决策对机构支出行为的影响</strong>:
+深入研究国会如何应对滚动预算,以及如何设计预算规则以实现最佳效果</li>
+<li><strong>考虑机构内部的异质性</strong>:
+研究机构内部不同部门的支出行为差异,以及如何设计更有针对性的预算政策</li>
+<li><strong>探索其他解决浪费性支出问题的政策</strong>:
+例如改进预算预测,加强项目管理,或引入竞争性招标</li>
+<li><strong>研究不同类型的资金结转政策</strong>:
+比较无限期结转、有条件结转等不同方案对支出效率的影响</li>
+<li><strong>行为因素的影响</strong>:
+考虑认知偏差、损失厌恶等行为因素对政府部门年底支出行为的影响</li>
+<li><strong>政治因素</strong>:
+研究资金结转政策的政治可行性,以及立法机构对预算控制的考量</li>
+</ol>
+<h2 id="学术思考">学术思考</h2>
+<ol type="1">
+<li><strong>预算制度与创新</strong>:
+"使用或失效"的预算规则是否会抑制政府部门的创新活动?如果政府部门知道它们必须在当年用完所有资金,它们是否会更倾向于投资于风险较低、回报较快的项目?</li>
+<li><strong>政治周期与支出行为</strong>:
+政府部门的支出行为是否会受到政治周期的影响?</li>
+<li><strong>绩效评估指标的设计</strong>:
+如何设计更有效的绩效评估指标,以准确衡量政府部门的支出质量?</li>
+<li><strong>资金结转政策的适用性</strong>:
+资金结转政策是否适用于所有类型的政府部门和项目?</li>
+<li><strong>公共部门与私营部门的对比</strong>:
+比较公共部门和私营部门在预算管理和支出效率方面的差异</li>
+</ol>
+]]></content>
+      <categories>
+        <category>公共经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>公共经济学</tag>
+        <tag>预算制度</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>年末消费高峰 — 论文笔记 — McCue, Prier &amp; Lofaro</title>
     <url>/posts/mccue2021/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -11021,187 +11202,6 @@ study of procurement contracts》深度分析撰写。</em></p>
         <tag>论文笔记</tag>
         <tag>公共财政</tag>
         <tag>政府采购</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>预算到期会导致年底浪费性支出吗?_ Liebman &amp; Mahoney (2017) 笔记</title>
-    <url>/posts/liebman2017/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Do Expiring Budgets Lead to Wasteful Year-End
-Spending? Evidence from Federal Procurement</li>
-<li><strong>作者</strong>: Jeffrey B. Liebman(哈佛大学), Neale
-Mahoney(芝加哥大学)</li>
-<li><strong>类型</strong>: 论文笔记 / 公共经济学 / 预算制度</li>
-<li><strong>出版年份</strong>: 2017</li>
-<li><strong>出版机构/期刊</strong>: American Economic Review</li>
-<li><strong>DOI</strong>: 10.1257/aer.20131296</li>
-<li><strong>难度评估</strong>: 高 -
-需要经济学、计量经济学、公共财政学基础</li>
-</ul>
-<span id="more"></span>
-<h2 id="引言">引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>本文属于公共经济学、行为经济学和管理学的交叉领域,探讨政府支出效率问题.核心概念包括:</p>
-<ul>
-<li><strong>预算约束</strong>: 政府机构在财政年度内可支配的资金总额</li>
-<li><strong>自由裁量支出</strong>:
-政府可以自行决定如何分配的预算部分,与法定支出(如社会保障)相对</li>
-<li><strong>公共采购</strong>: 政府购买商品和服务的行为</li>
-<li><strong>信息技术(IT)项目</strong>:
-政府对计算机硬件、软件和相关服务的投资</li>
-<li><strong>社会成本</strong>:
-指一项经济活动对整个社会造成的成本,包括直接成本和外部成本</li>
-<li><strong>滚动预算(Rollover Budget)</strong>:
-允许机构将未使用的预算资金转移到下一个财政年度</li>
-</ul>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p>政府机构通常面临"不使用就失去"的预算规则,即在一个财政年度结束时,任何未使用的预算资金都将返回国库,而不是留给该机构使用.这种规则可能会导致机构在财政年度末
-rush 支出,即使这意味着投资于低价值的项目.</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p>作者认为,"不使用就失去"的预算规则可能会导致政府浪费性支出.他们试图通过实证分析来检验这一观点,并探讨解决这一问题的潜在政策,例如允许机构将未使用的资金转入下一个财政年度.</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><strong>揭示了政府支出中潜在的浪费现象</strong>:
-通过量化财政年度末的支出高峰和质量下降,为政府支出效率问题提供了有力证据</li>
-<li><strong>评估了滚动预算的有效性</strong>:
-通过研究美国司法部的滚动预算政策,为解决浪费性支出提供了一个可行的解决方案</li>
-<li><strong>为政府预算管理提供了政策建议</strong>:
-研究结果表明,允许机构将未使用的资金转入下一个财政年度可以提高政府支出效率</li>
-</ol>
-<h2 id="论文结构">论文结构</h2>
-<ol type="1">
-<li><strong>引言</strong>: 概述研究背景、问题意识和研究意义</li>
-<li><strong>理论模型</strong>:
-建立一个简单的模型来解释"不使用就失去"的预算规则如何导致浪费性支出</li>
-<li><strong>数据描述</strong>:
-介绍用于实证分析的数据集,包括联邦采购数据系统(FPDS)和IT仪表板</li>
-<li><strong>实证分析1</strong>:
-使用FPDS数据检验财政年度末是否存在支出高峰</li>
-<li><strong>实证分析2</strong>:
-使用IT仪表板数据检验财政年度末的支出质量是否下降</li>
-<li><strong>政策分析</strong>: 研究滚动预算政策对支出行为的影响</li>
-<li><strong>福利分析</strong>:
-使用校准后的模型评估滚动预算政策的福利效应</li>
-<li><strong>结论</strong>:
-总结研究结果,讨论政策含义,并提出未来研究方向</li>
-</ol>
-<h2 id="背景">背景</h2>
-<p>许多组织都有在财政年度末到期的预算,这可能导致在年底匆忙将资源用于低质量的项目.美国联邦政府的自由裁量支出预算也面临类似情况,机构必须在财政年度结束前完成拨款.</p>
-<h3 id="挑战">挑战</h3>
-<ol type="1">
-<li><strong>"不使用就失去"的预算规则</strong>:
-如果机构不花完预算,剩余的资金将返回国库,降低了年底花钱的机会成本</li>
-<li><strong>预防性储蓄的动机</strong>:
-机构倾向于在预算周期开始时保留资金,以应对未来不确定的支出需求</li>
-<li><strong>缺乏关于年底浪费性支出的硬性证据</strong>:
-尽管有传闻证据,但缺乏关于美国联邦政府年底支出激增以及年底支出价值低于其他时间段的证据</li>
-</ol>
-<h2 id="方法">方法</h2>
-<h3 id="理论模型">理论模型</h3>
-<ul>
-<li><strong>模型设定</strong>:
-作者建立了一个年度预算模型,包括国会和一个政府机构.国会为该机构选择预算,该机构在一年中的每个时期都会获得一个参数,该参数决定了支出的边际价值,并选择一个支出水平以最大化收益递减的目标</li>
-<li><strong>模型特征</strong>:
-具有三个关键特征_预算到期、未来支出价值的不确定性以及每个时期内支出的收益递减</li>
-<li><strong>模型预测</strong>:
-由于不确定性和收益递减,该机构将在年初进行预防性储蓄;在年底,资金到期的前景导致该机构花掉所有剩余资源,即使边际价值低于资金的社会成本,导致年底支出量激增和质量下降</li>
-</ul>
-<h3 id="数据集">数据集</h3>
-<p><strong>1. 联邦采购数据系统(FPDS)</strong> - 时间范围:
-2004年至2009年财政年度 - 数据量: 1460万份合同 - 总支出: 2.6万亿美元 -
-主要内容:
-合同层面信息,包括金额、产品/服务代码、机构、供应商、合同类型、招标机制等
-- 用途: 用于分析联邦采购支出的总体模式,特别是年底支出高峰</p>
-<p><strong>2. IT仪表板(IT Dashboard)</strong> - 数据时间: 截至2010年3月
-- 项目数量: 686个主要IT项目 - 总计划支出: 1300亿美元 - 主要内容:
-项目绩效数据,包括总体评级、成本评级、进度评级、CIO评估等 - 用途:
-用于评估IT项目的质量,特别是年底开始的项目的质量</p>
-<h3 id="实证策略">实证策略</h3>
-<ol type="1">
-<li><strong>支出高峰检验</strong>:
-使用FPDS数据,分析财政年度内每周的采购支出模式,确定是否存在年底支出高峰</li>
-<li><strong>质量下降检验</strong>:
-使用IT仪表板数据,比较在财政年度最后一周开始的项目与在其他时间开始的项目的质量评级</li>
-<li><strong>政策分析</strong>:
-研究美国司法部(DOJ)的滚动预算政策对支出行为的影响.DOJ有权将未使用的IT项目预算转入下一财政年度,作者比较了DOJ的IT和非IT支出,以及DOJ和其他机构之间的支出模式</li>
-<li><strong>福利分析</strong>:
-通过校准模型以适应支出高峰和质量下降,分析允许滚动预算的潜在福利收益</li>
-</ol>
-<h3 id="关键术语">关键术语</h3>
-<ul>
-<li><strong>FPDS (Federal Procurement Data System)</strong>:
-联邦采购数据系统,跟踪所有联邦合同的数据系统</li>
-<li><strong>IT仪表板 (IT Dashboard)</strong>:
-跟踪联邦政府主要IT项目绩效的网站</li>
-<li><strong>CIO (Chief Information Officer)</strong>:
-首席信息官,负责机构的信息技术战略和管理</li>
-<li><strong>Ordered Logit Regression</strong>:
-有序Logit回归,用于分析有序分类因变量的统计模型</li>
-<li><strong>Difference-in-Differences</strong>:
-双重差分法,用于评估政策或干预效果的统计方法</li>
-<li><strong>CRRA (Constant Relative Risk Aversion)</strong>:
-恒定相对风险厌恶效用函数</li>
-<li><strong>CARA (Constant Absolute Risk Aversion)</strong>:
-恒定绝对风险厌恶效用函数</li>
-</ul>
-<h2 id="结果">结果</h2>
-<ol type="1">
-<li><strong>支出高峰</strong>:
-数据显示年底支出大幅增加.在财政年度的最后一周,支出是平时每周平均水平的4.9倍</li>
-<li><strong>质量下降</strong>:
-年底开始的IT项目的质量评级明显较低.在财政年度最后一周开始的项目,获得较低质量分数的可能性要高出2.3到5.6倍</li>
-<li><strong>滚动预算的影响</strong>:
-DOJ的IT支出没有出现支出高峰,最后一周的IT支出仅占3.3%,而非IT支出为9.3%.差异分析表明滚动预算减少了年底支出量</li>
-<li><strong>福利分析</strong>:
-允许滚动预算可以带来福利收益.即使是允许机构在短时间内转入资金的中间政策,也可以产生接近全部滚动价值四分之三的福利收益</li>
-</ol>
-<h2 id="结论">结论</h2>
-<p>本文的核心结论是:由于"不使用就失去"的预算规则,美国联邦政府存在年底浪费性支出现象.具体表现为:</p>
-<ul>
-<li><strong>年底支出量激增</strong>:
-财政年度末的支出明显高于其他时间段</li>
-<li><strong>年底支出质量下降</strong>:
-财政年度末开始的IT项目质量较低</li>
-</ul>
-<p>允许滚动预算可以有效地解决这个问题.DOJ的经验表明滚动预算可以减少年底支出量,并可能提高项目质量.福利分析表明,即使是有限制的滚动预算政策也可以带来显著的福利收益.</p>
-<p>作者建议可以通过允许机构将未使用的资金延期到下个财政年度,用于四个月的宽限期,从而消除因年底浪费性支出造成的大部分效率低下问题.</p>
-<h2 id="未来研究方向">未来研究方向</h2>
-<ol type="1">
-<li><strong>研究国会预算决策对机构支出行为的影响</strong>:
-深入研究国会如何应对滚动预算,以及如何设计预算规则以实现最佳效果</li>
-<li><strong>考虑机构内部的异质性</strong>:
-研究机构内部不同部门的支出行为差异,以及如何设计更有针对性的预算政策</li>
-<li><strong>探索其他解决浪费性支出问题的政策</strong>:
-例如改进预算预测,加强项目管理,或引入竞争性招标</li>
-<li><strong>研究不同类型的资金结转政策</strong>:
-比较无限期结转、有条件结转等不同方案对支出效率的影响</li>
-<li><strong>行为因素的影响</strong>:
-考虑认知偏差、损失厌恶等行为因素对政府部门年底支出行为的影响</li>
-<li><strong>政治因素</strong>:
-研究资金结转政策的政治可行性,以及立法机构对预算控制的考量</li>
-</ol>
-<h2 id="学术思考">学术思考</h2>
-<ol type="1">
-<li><strong>预算制度与创新</strong>:
-"使用或失效"的预算规则是否会抑制政府部门的创新活动?如果政府部门知道它们必须在当年用完所有资金,它们是否会更倾向于投资于风险较低、回报较快的项目?</li>
-<li><strong>政治周期与支出行为</strong>:
-政府部门的支出行为是否会受到政治周期的影响?</li>
-<li><strong>绩效评估指标的设计</strong>:
-如何设计更有效的绩效评估指标,以准确衡量政府部门的支出质量?</li>
-<li><strong>资金结转政策的适用性</strong>:
-资金结转政策是否适用于所有类型的政府部门和项目?</li>
-<li><strong>公共部门与私营部门的对比</strong>:
-比较公共部门和私营部门在预算管理和支出效率方面的差异</li>
-</ol>
-]]></content>
-      <categories>
-        <category>公共经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>公共经济学</tag>
-        <tag>预算制度</tag>
       </tags>
   </entry>
   <entry>
@@ -11560,6 +11560,46 @@ rollout数据、设施调查、服务提供调查、患者调查、家庭调查<
       </tags>
   </entry>
   <entry>
+    <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
+    <url>/posts/32262/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
+<h2 id="研究问题"><strong>1. 研究问题</strong></h2>
+<p>本文以江苏省12个地级市"河长制"政策转移案例(2006 —
+2016)为研究对象,在识别政策转移案例中"复制"和"再生产"两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对"河长制"转移程度的影响.研究发现"河长制"政策转移中的"政策再生产"的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局.通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产.</p>
+<p>&nbsp;</p>
+<span id="more"></span>
+<h2 id="问题的提出"><strong>2. 问题的提出</strong></h2>
+<p><strong>2.1 政策转移的必要性</strong></p>
+<p>现实状况:政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有"后发优势"的意味、地区间的合作与竞争</p>
+<p>转移情形:政策转移并不意味着全盘复制,可分为"复制"和"再生产"两种形式</p>
+<p>核心问题:什么因素能够促成政策"再生产",政策"再生产"又体现出那些维度特征</p>
+<p><strong>2.2 河长制的背景介绍</strong></p>
+<p>河湖治理是跨界特性最典型的领域之一,涉及上下游、左右岸、不同行政区域和行业,呈现出高度的复杂性.河长制最早发轫于太湖蓝藻危机,2016年之前是一项地方政策,经政策扩散至多地.</p>
+<p>现实调查显示河长制在江苏省内的扩散过程中呈现出"复制"和"再生产"的典型差异.</p>
+<p>&nbsp;</p>
+<h2 id="研究思路和方法"><strong>3. 研究思路和方法</strong></h2>
+<p><strong>3.1 QCA</strong></p>
+<p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles
+Ragin)于<code>1987</code>年提出,适用于案例数量大于10小于60的研究.</p>
+<p>其使用布尔代数和集合论的思想来进行中小数量的跨案例比较,从而处理多个原因和一个结果之间的因果关系.</p>
+<p><strong>3.2 转移程度的刻画</strong></p>
+<p>道洛维茨和马什最早借鉴rose(1993)的连续统来划分政策转移程度:复制、模仿、混合、启发.</p>
+<p>本文简单划分为:"复制"和"再生产"</p>
+<p><strong>3.3 解释变量的选择</strong></p>
+<p>行政压力、资源禀赋、政策需求、外部力量</p>
+<p>&nbsp;</p>
+<h2 id="结论"><strong>4. 结论</strong></h2>
+<p>政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素.</p>
+]]></content>
+      <categories>
+        <category>公共管理</category>
+        <category>政策转移</category>
+      </categories>
+      <tags>
+        <tag>文献阅读</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>文献阅读# the Effect of Microinsurance on Economic Activities: Evidence From a Randomized Field Experiment</title>
     <url>/posts/51245/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
@@ -11618,46 +11658,6 @@ rollout数据、设施调查、服务提供调查、患者调查、家庭调查<
       <categories>
         <category>实验经济学</category>
         <category>保险</category>
-      </categories>
-      <tags>
-        <tag>文献阅读</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
-    <url>/posts/32262/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
-<h2 id="研究问题"><strong>1. 研究问题</strong></h2>
-<p>本文以江苏省12个地级市"河长制"政策转移案例(2006 —
-2016)为研究对象,在识别政策转移案例中"复制"和"再生产"两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对"河长制"转移程度的影响.研究发现"河长制"政策转移中的"政策再生产"的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局.通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产.</p>
-<p>&nbsp;</p>
-<span id="more"></span>
-<h2 id="问题的提出"><strong>2. 问题的提出</strong></h2>
-<p><strong>2.1 政策转移的必要性</strong></p>
-<p>现实状况:政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有"后发优势"的意味、地区间的合作与竞争</p>
-<p>转移情形:政策转移并不意味着全盘复制,可分为"复制"和"再生产"两种形式</p>
-<p>核心问题:什么因素能够促成政策"再生产",政策"再生产"又体现出那些维度特征</p>
-<p><strong>2.2 河长制的背景介绍</strong></p>
-<p>河湖治理是跨界特性最典型的领域之一,涉及上下游、左右岸、不同行政区域和行业,呈现出高度的复杂性.河长制最早发轫于太湖蓝藻危机,2016年之前是一项地方政策,经政策扩散至多地.</p>
-<p>现实调查显示河长制在江苏省内的扩散过程中呈现出"复制"和"再生产"的典型差异.</p>
-<p>&nbsp;</p>
-<h2 id="研究思路和方法"><strong>3. 研究思路和方法</strong></h2>
-<p><strong>3.1 QCA</strong></p>
-<p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles
-Ragin)于<code>1987</code>年提出,适用于案例数量大于10小于60的研究.</p>
-<p>其使用布尔代数和集合论的思想来进行中小数量的跨案例比较,从而处理多个原因和一个结果之间的因果关系.</p>
-<p><strong>3.2 转移程度的刻画</strong></p>
-<p>道洛维茨和马什最早借鉴rose(1993)的连续统来划分政策转移程度:复制、模仿、混合、启发.</p>
-<p>本文简单划分为:"复制"和"再生产"</p>
-<p><strong>3.3 解释变量的选择</strong></p>
-<p>行政压力、资源禀赋、政策需求、外部力量</p>
-<p>&nbsp;</p>
-<h2 id="结论"><strong>4. 结论</strong></h2>
-<p>政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素.</p>
-]]></content>
-      <categories>
-        <category>公共管理</category>
-        <category>政策转移</category>
       </categories>
       <tags>
         <tag>文献阅读</tag>
@@ -13251,6 +13251,42 @@ III资本要求对银行中介交易产生负面影响</p></li>
       </tags>
   </entry>
   <entry>
+    <title>画一幅我农所在地的道路图</title>
+    <url>/posts/42027/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;">
+<center>
+上图即为最终效果
+</center>
+<h2 id="一些必备的工具">一些必备的工具</h2>
+<p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="绘制路网地图">绘制路网地图</h2>
+<p>导入以下R 包:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>读入杨陵区的数据:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>获取杨陵区的经纬度范围:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
+<p>提取杨陵区的街道路线:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>把数据保存为<strong>rds</strong>:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>然后绘图:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>绘图</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>多层网络上的博弈 — 深度阅读笔记 — Zenou &amp; Zhou</title>
     <url>/posts/zenou2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -13345,42 +13381,6 @@ T\]</span></p>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>画一幅我农所在地的道路图</title>
-    <url>/posts/42027/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;">
-<center>
-上图即为最终效果
-</center>
-<h2 id="一些必备的工具">一些必备的工具</h2>
-<p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="绘制路网地图">绘制路网地图</h2>
-<p>导入以下R 包:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>读入杨陵区的数据:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>获取杨陵区的经纬度范围:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
-<p>提取杨陵区的街道路线:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>把数据保存为<strong>rds</strong>:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>然后绘图:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>绘图</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
       </tags>
   </entry>
 </search>
