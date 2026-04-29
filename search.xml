@@ -2715,6 +2715,56 @@ Instruments论文的深度笔记,由Claude AI辅助生成.</em></p>
       </tags>
   </entry>
   <entry>
+    <title>大城市人口增长速度🦚</title>
+    <url>/posts/15523/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
+<center>
+上图即为最终效果
+</center>
+<h2 id="下载数据">下载数据</h2>
+<p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录.
+</p><figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="加载r包">加载R包</h2>
+<p>需要的R包如下所示.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
+<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<ol type="1">
+<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
+<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon,
+Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
+<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
+<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
+</ol>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
+<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.
+使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="绘图">绘图</h2>
+<p>代码如下,图见上文.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>绘图</category>
+        <category>map&amp;sf</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Generative AI at Work — 深度分析 — Brynjolfsson Et Al.</title>
     <url>/posts/bryn2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -2986,56 +3036,6 @@ rot)的风险?</p></li>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大城市人口增长速度🦚</title>
-    <url>/posts/15523/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
-<center>
-上图即为最终效果
-</center>
-<h2 id="下载数据">下载数据</h2>
-<p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录.
-</p><figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<h2 id="加载r包">加载R包</h2>
-<p>需要的R包如下所示.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
-<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<ol type="1">
-<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
-<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon,
-Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
-<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
-<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
-</ol>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
-<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.
-使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="绘图">绘图</h2>
-<p>代码如下,图见上文.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>绘图</category>
-        <category>map&amp;sf</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
       </tags>
   </entry>
   <entry>
@@ -5431,6 +5431,245 @@ NCI测试检验"正确指定的约简形式"假设</p>
       </tags>
   </entry>
   <entry>
+    <title>The Economic Consequences of Hospital Admissions — 深度阅读笔记 — Dobkin Et Al.</title>
+    <url>/posts/dobkin2018/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: The Economic Consequences of Hospital
+Admissions</li>
+<li><strong>作者</strong>: Carlos Dobkin, Amy Finkelstein, Raymond
+Kluender, Matthew J. Notowidigdo</li>
+<li><strong>年份</strong>: 2018</li>
+<li><strong>来源</strong>: American Economic Review, Vol. 108, No. 2,
+pp. 308-352 <span id="more"></span></li>
+</ul>
+<h2 id="引言背景和意义">引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>健康风险是美国家庭面临的重要经济风险.美国的医疗保障体系以私人保险为主、政府保险(如Medicare、Medicaid)为辅.ACA(Affordable
+Care
+Act)改革大幅扩展了保险覆盖面,但家庭仍然面临自付医疗费用、劳动收入损失和医疗债务等经济风险.</p>
+<p>健康冲击(health shock)对家庭经济的影响渠道包括: 1.
+<strong>直接渠道</strong>:自付医疗费用增加 2.
+<strong>间接渠道</strong>:劳动能力下降→收入减少 3.
+<strong>财务渠道</strong>:医疗债务→信用受损→借贷能力下降</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>政策关切</strong>:美国医疗保险政策的目标是保护家庭免受健康风险的经济后果.从林登·约翰逊签署Medicare时的宣言,到ACA的推出,政策制定者一直将健康保险作为经济安全网的核心组成部分.</p></li>
+<li><p><strong>知识缺口</strong>:尽管政策高度重视,但关于美国家庭面临的经济风险程度的系统证据仍然不足.已有研究存在样本局限或方法论问题,难以提供可靠的因果估计.</p></li>
+<li><p><strong>数据机会</strong>:本研究利用两个独特的数据集:</p>
+<ul>
+<li>健康与退休研究(HRS)的20年面板调查数据</li>
+<li>加州医院出院数据与信用报告的关联数据</li>
+</ul></li>
+<li><p><strong>方法论创新</strong>:使用事件研究方法,在入院这一相对外生的健康事件发生时点前后观察经济结果的动态变化.</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p>本研究试图回答: - 住院对有保险的非老年人会产生哪些经济后果? -
+这些后果在多大程度上被健康保险覆盖? -
+无保险人群面临的风险与有保险人群有何不同? -
+住院引发的破产在所有破产中占比几何?</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><strong>政策评估</strong>:为评估美国健康保险政策的保护效果提供实证依据</li>
+<li><strong>机制理解</strong>:揭示健康冲击通过哪些渠道影响家庭经济状况</li>
+<li><strong>社会成本核算</strong>:量化住院的经济后果,为医疗改革提供成本效益分析基础</li>
+</ol>
+<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
+<p><strong>I.
+经济框架</strong>:建立两期跨期模型,分析健康冲击如何产生医疗费用和工资损失</p>
+<p><strong>II.
+数据与经验框架</strong>:描述HRS和信用报告数据,阐述事件研究方法论</p>
+<p><strong>III.
+医疗费用与收入结果</strong>:报告HRS中住院对自付费用和劳动收入的影响</p>
+<p><strong>IV.
+信用报告结果</strong>:报告住院对未付账单、破产和信贷可及性的影响</p>
+<p><strong>V. 政策含义</strong>:讨论研究发现的福利含义</p>
+<p><strong>VI. 结论</strong></p>
+<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
+<h3 id="一理论框架">一、理论框架</h3>
+<p>作者建立了一个简洁的两期跨期选择模型:</p>
+<p><strong>模型设定</strong>: - 个人存活两期,期初面临健康冲击(概率p) -
+健康冲击产生外生医疗费用m,并降低工资率 -
+健康保险覆盖λ_m比例的医疗费用和λ_α比例的工资损失 -
+个人在预算约束下最大化状态特定效用</p>
+<p><strong>核心命题(Proposition 1)</strong>: 未完全覆盖的健康冲击会导致:
+- 消费下降(Δc₁&lt;0, Δc₂&lt;0) - 效用下降(ΔU&lt;0) -
+未付账单增加(Δu&gt;0) - 但对借款和收入的影响方向不确定</p>
+<p><strong>政策含义</strong>: -
+通过观察健康冲击后经济结果的变化,可以reject完全保险假设 -
+任何经济结果的变化(收入、信贷限制、借款等)都是保险不足的证据</p>
+<h3 id="二数据与样本">二、数据与样本</h3>
+<h4 id="hrs数据">2.1 HRS数据</h4>
+<ul>
+<li>1992-2012年20年的健康与退休研究面板数据</li>
+<li>追踪50岁以上人群的健康和经济状况</li>
+<li>重点样本:约2,700名50-59岁有保险的住院成年人</li>
+</ul>
+<h4 id="加州信用报告数据">2.2 加州信用报告数据</h4>
+<ul>
+<li>2002-2011年的信用报告面板</li>
+<li>与2003-2007年加州医院出院数据关联</li>
+<li>重点样本:约38万名25-64岁有保险的住院成年人</li>
+</ul>
+<p><strong>样本构建原则</strong>: - 排除妊娠相关入院 -
+要求入院前至少3年无住院记录(确保"冲击"性质) -
+有保险定义为私人保险或Medicaid</p>
+<p><strong>表1关键特征</strong>: | 指标 | HRS (50-59岁) | 信用报告
+(25-64岁) | |------|---------------|-------------------| | 入院年龄 |
+55.6岁 | 48.5岁 | | 男性比例 | 47.6% | 45.1% | | 私人保险 | 94.1% |
+86.3% | | 平均住院天数 | n/a | 4.1天 | | 医院列表费用 | n/a | ${45,580
+|</p>
+<h3 id="三主要结果">三、主要结果</h3>
+<h4 id="hrs结果自付费用与收入">3.1 HRS结果:自付费用与收入</h4>
+<p><strong>表2核心数据(50-59岁有保险成年人)</strong>:</p>
+<p><strong>自付医疗费用</strong>: - 入院后12个月:增加}<span class="math inline">\(3,275
+- 入院后36个月:增加\)</span>{1,011 - 3年平均年增加:}$1,429</p>
+<p><strong>就业与劳动收入</strong>: -
+就业概率下降:12个月后下降8.9个百分点,36个月后下降11.1个百分点 -
+年劳动收入下降:12个月后下降${6,445,36个月后下降}<span class="math inline">\(11,071
+- **3年平均年收入下降\)</span>{8,753,相当于入院前收入的20%**</p>
+<p><strong>关键发现</strong>: 1.
+<strong>收入下降远超自付费用增加</strong>:自付费用3年平均每年增加}<span class="math inline">\(1,429,但收入下降\)</span>{8,753 2.
+<strong>收入损失几乎无保险</strong>:仅约10%的收入损失通过社会保险项目得到补偿
+3. ** spousal劳动供给无响应<strong>:配偶没有增加劳动供给来弥补收入损失
+4.
+</strong>效果持久**:收入下降似乎持久甚至加剧,反映健康冲击的持续影响</p>
+<h4 id="信用报告结果">3.2 信用报告结果</h4>
+<p><strong>表5-7核心数据(25-64岁有保险成年人)</strong>:</p>
+<p><strong>未付医疗账单</strong>: - 入院4年后,未付账单增加约}<span class="math inline">\(300(较小)
+- 但信用卡余额下降约\)</span>{1,700</p>
+<p><strong>破产</strong>: - 有保险的非老年人:入院增加破产概率0.4个百分点
+- 无保险的非老年人:入院增加破产概率1.4个百分点 -
+<strong>住院引发的破产:有保险者中占4%,无保险者中占6%</strong></p>
+<p><strong>借贷与信用</strong>: - 信用卡余额下降约10%(4年内) -
+信用额度下降约5%</p>
+<h4 id="关键对比50-59岁-vs-60-64岁">3.3 关键对比:50-59岁 vs 60-64岁</h4>
+<p><strong>60-64岁年龄组发现</strong>: - 收入下降幅度相似 -
+但超过60%的收入下降通过社会保障退休收入得到保险 -
+与50-59岁组仅10%的保险率形成鲜明对比</p>
+<p><strong>政策含义</strong>: -
+在美国,法定社会保障退休年龄(62岁)是重要的收入保险分水岭 -
+62岁之前的成年人几乎没有正式的 earnings insurance</p>
+<h3 id="四机制分析">四、机制分析</h3>
+<h4 id="为什么收入下降幅度这么大">4.1 为什么收入下降幅度这么大?</h4>
+<p>** Extensive margin(就业边际)**: - 入院后3年,就业概率下降11个百分点 -
+约60-85%的收入下降可由就业下降解释 -
+主要表现为从全职工作退出,部分进入退休状态</p>
+<p>** Intensive margin(工时边际)**: - 年工时下降约228小时(14%) -
+工资率本身(conditional on working)无显著变化</p>
+<p><strong>健康限制</strong>: -
+自报"健康原因限制工作能力"的比例上升9.5个百分点</p>
+<h4 id="为什么社会保险覆盖这么少">4.2 为什么社会保险覆盖这么少?</h4>
+<p><strong>失业保险(UI)不适用</strong>: - 住院不等于失业 -
+UI不覆盖因健康原因减少工时的情况</p>
+<p><strong>残疾保险(SSDI)</strong>: - 申请过程漫长且结果不确定 -
+50-59岁人群难以获得SSDI</p>
+<p><strong>社会保障退休收入(SSRI)</strong>: - 需要年满62岁才能领取 -
+60-64岁人群才开始有资格</p>
+<h3 id="五福利含义">五、福利含义</h3>
+<h4 id="总体经济后果的保险覆盖">5.1 总体经济后果的保险覆盖</h4>
+<p>作者估算(50-59岁有保险者): -
+<strong>第1年</strong>:超过90%的医疗费用被覆盖,但仅约80%的"总经济后果"(医疗费用+收入损失)被覆盖
+- <strong>第3年</strong>:仅约50%的总经济后果被覆盖</p>
+<p>随时间推移,收入损失在总经济后果中的比重越来越大,而社会保险对收入损失的保险几乎不存在.</p>
+<h4 id="医疗支出-vs-收入损失的福利权重">5.2 医疗支出 vs
+收入损失的福利权重</h4>
+<p><strong>重要区分</strong>: - 外生医疗支出(给定健康状态)→
+与同等金额的消费减少 welfare impact 相同 -
+收入变化可能反映劳动供给对健康状态的调整→ welfare impact 不同</p>
+<p><strong>福利计算</strong>: -
+一个简单模型显示:对于有健康保险的成年人,收入损失的 welfare consequences
+至少是自付医疗费用增加的3倍</p>
+<h4 id="无保险者的处境">5.3 无保险者的处境</h4>
+<p><strong>无保险者面临的更大风险</strong>: - 未付医疗账单增加}<span class="math inline">\(6,000(有保险者仅\)</span>{300) -
+破产率增幅是无保险者的3.5倍 - 但借贷反应的幅度相似</p>
+<p><strong>"隐性保险"现象</strong>: -
+所谓"无保险者"实际上通过其他渠道获得部分隐性保险 -
+例如,医院不能拒绝急诊患者,这形成了某种隐性公共保险 -
+外部各方(医院、纳税人)承担了部分医疗债务的 incidence</p>
+<h3 id="六医疗破产文献的贡献">六、"医疗破产"文献的贡献</h3>
+<p>本文对"医疗破产"文献提供了重要的校准证据:</p>
+<p><strong>先前研究的过高估计</strong>: -
+某些研究声称医疗事件可解释20-60%的所有破产 -
+这些研究通常基于自我报告的破产原因</p>
+<p><strong>本文的修正估计</strong>: -
+住院引发的破产:有保险者中约4%,无保险者中约6% -
+远低于先前研究声称的比例</p>
+<p><strong>原因分析</strong>: - 破产是多重因素共同作用的结果 -
+医疗事件可能是"最后一根稻草",而非根本原因 -
+破产申请人可能将医疗事件列为破产原因之一</p>
+<h2 id="结论conclusion">结论(Conclusion)</h2>
+<h3 id="研究核心结论">研究核心结论</h3>
+<ol type="1">
+<li><strong>住院对有保险的非老年人产生重大经济后果</strong>
+<ul>
+<li>就业概率下降11个百分点</li>
+<li>年收入下降约}$9,000(20%的入院前年收入)</li>
+<li>自付医疗费用增加,破产风险上升</li>
+</ul></li>
+<li><strong>收入损失几乎完全无保险</strong>
+<ul>
+<li>仅约10%的收入损失通过社会保险得到补偿</li>
+<li>这一发现挑战了美国医疗保险体系的"完整性"叙事</li>
+</ul></li>
+<li><strong>62岁是重要分水岭</strong>
+<ul>
+<li>60-64岁人群的收入损失保险率超过60%</li>
+<li>主要通过社会保障退休收入实现</li>
+</ul></li>
+<li><strong>无保险者的风险更大但幅度有限</strong>
+<ul>
+<li>未付账单和破产率增幅更大</li>
+<li>但借贷反应的幅度相似</li>
+</ul></li>
+<li><strong>住院引发的破产只是破产的一小部分</strong>
+<ul>
+<li>有保险者中约4%,无保险者中约6%</li>
+<li>远低于先前文献声称的比例</li>
+</ul></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><p><strong>数据贡献</strong>:首次将医院出院数据与信用报告数据关联,创建大规模住院经济后果数据集</p></li>
+<li><p><strong>方法论贡献</strong>:清晰的事件研究框架,结合非参数和参数估计,提供了可复制的模板</p></li>
+<li><p><strong>政策贡献</strong>:为评估ACA等健康保险改革的保护效果提供了实证依据</p></li>
+<li><p><strong>理论贡献</strong>:对"医疗破产"文献的校准提出了重要修正</p></li>
+</ol>
+<h3 id="未来研究方向">未来研究方向</h3>
+<ol type="1">
+<li>更长期的跟踪研究,评估收入下降的持久性</li>
+<li>探索不同类型入院(如心脏病 vs 骨折)的差异化影响</li>
+<li>跨国家比较:美国 vs 北欧国家的 earnings insurance 差异</li>
+<li>评估ACA改革后的效应变化</li>
+</ol>
+<h2 id="学术思考">学术思考</h2>
+<ol type="1">
+<li><p><strong>"完全保险"的定义问题</strong>:本文中"完全保险"的定义是消费在健康和健康状态间不变.但这是否等同于
+welfare 最优?考虑到健康状态本身影响效用函数(Viscusi &amp; Evans
+1990),消费平滑可能并非唯一目标.</p></li>
+<li><p><strong>内生性健康问题</strong>:住院可能反映潜在的健康恶化,而不仅仅是"外生冲击".如果健康和生产力之间存在反向因果,那么部分"收入效应"实际上可能是"生产力下降"而非"保险不足".</p></li>
+<li><p><strong>一般均衡效应</strong>:本文关注受影响个体的直接效应,但忽视了劳动力市场的
+general equilibrium_大量工人因健康原因退出劳动市场可能影响 wages
+和其他人就业机会.</p></li>
+<li><p><strong>动态视角的缺失</strong>:两期模型是否足以捕捉健康冲击的动态复杂性?实际中,健康冲击可能引发健康-收入恶化的"螺旋",需要更复杂的动态模型来刻画.</p></li>
+<li><p><strong>社会安全网的比较制度分析</strong>:美国和丹麦的对比(本文提及)揭示了制度设计的巨大差异.美国的
+disability insurance 和 paid sick leave
+系统是否应该向北欧模式转型?</p></li>
+<li><p><strong>医疗费用膨胀的外部性</strong>:本文揭示的经济后果部分源于医疗费用的高涨.如果医院收费改革(降低list
+charges)能否同时改善家庭经济状况和医疗系统效率?</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>AER</tag>
+        <tag>健康经济学</tag>
+        <tag>医疗保障</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Child Protection and Adult Crime: Using Investigator Assignment to Estimate Causal Effects of Foster Care -- 深度阅读笔记 -- Doyle</title>
     <url>/posts/doyle2008/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -5886,730 +6125,6 @@ Doyle
         <tag>儿童福利</tag>
         <tag>犯罪经济学</tag>
         <tag>因果推断</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>The Economic Consequences of Hospital Admissions — 深度阅读笔记 — Dobkin Et Al.</title>
-    <url>/posts/dobkin2018/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: The Economic Consequences of Hospital
-Admissions</li>
-<li><strong>作者</strong>: Carlos Dobkin, Amy Finkelstein, Raymond
-Kluender, Matthew J. Notowidigdo</li>
-<li><strong>年份</strong>: 2018</li>
-<li><strong>来源</strong>: American Economic Review, Vol. 108, No. 2,
-pp. 308-352 <span id="more"></span></li>
-</ul>
-<h2 id="引言背景和意义">引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>健康风险是美国家庭面临的重要经济风险.美国的医疗保障体系以私人保险为主、政府保险(如Medicare、Medicaid)为辅.ACA(Affordable
-Care
-Act)改革大幅扩展了保险覆盖面,但家庭仍然面临自付医疗费用、劳动收入损失和医疗债务等经济风险.</p>
-<p>健康冲击(health shock)对家庭经济的影响渠道包括: 1.
-<strong>直接渠道</strong>:自付医疗费用增加 2.
-<strong>间接渠道</strong>:劳动能力下降→收入减少 3.
-<strong>财务渠道</strong>:医疗债务→信用受损→借贷能力下降</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>政策关切</strong>:美国医疗保险政策的目标是保护家庭免受健康风险的经济后果.从林登·约翰逊签署Medicare时的宣言,到ACA的推出,政策制定者一直将健康保险作为经济安全网的核心组成部分.</p></li>
-<li><p><strong>知识缺口</strong>:尽管政策高度重视,但关于美国家庭面临的经济风险程度的系统证据仍然不足.已有研究存在样本局限或方法论问题,难以提供可靠的因果估计.</p></li>
-<li><p><strong>数据机会</strong>:本研究利用两个独特的数据集:</p>
-<ul>
-<li>健康与退休研究(HRS)的20年面板调查数据</li>
-<li>加州医院出院数据与信用报告的关联数据</li>
-</ul></li>
-<li><p><strong>方法论创新</strong>:使用事件研究方法,在入院这一相对外生的健康事件发生时点前后观察经济结果的动态变化.</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p>本研究试图回答: - 住院对有保险的非老年人会产生哪些经济后果? -
-这些后果在多大程度上被健康保险覆盖? -
-无保险人群面临的风险与有保险人群有何不同? -
-住院引发的破产在所有破产中占比几何?</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><strong>政策评估</strong>:为评估美国健康保险政策的保护效果提供实证依据</li>
-<li><strong>机制理解</strong>:揭示健康冲击通过哪些渠道影响家庭经济状况</li>
-<li><strong>社会成本核算</strong>:量化住院的经济后果,为医疗改革提供成本效益分析基础</li>
-</ol>
-<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
-<p><strong>I.
-经济框架</strong>:建立两期跨期模型,分析健康冲击如何产生医疗费用和工资损失</p>
-<p><strong>II.
-数据与经验框架</strong>:描述HRS和信用报告数据,阐述事件研究方法论</p>
-<p><strong>III.
-医疗费用与收入结果</strong>:报告HRS中住院对自付费用和劳动收入的影响</p>
-<p><strong>IV.
-信用报告结果</strong>:报告住院对未付账单、破产和信贷可及性的影响</p>
-<p><strong>V. 政策含义</strong>:讨论研究发现的福利含义</p>
-<p><strong>VI. 结论</strong></p>
-<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
-<h3 id="一理论框架">一、理论框架</h3>
-<p>作者建立了一个简洁的两期跨期选择模型:</p>
-<p><strong>模型设定</strong>: - 个人存活两期,期初面临健康冲击(概率p) -
-健康冲击产生外生医疗费用m,并降低工资率 -
-健康保险覆盖λ_m比例的医疗费用和λ_α比例的工资损失 -
-个人在预算约束下最大化状态特定效用</p>
-<p><strong>核心命题(Proposition 1)</strong>: 未完全覆盖的健康冲击会导致:
-- 消费下降(Δc₁&lt;0, Δc₂&lt;0) - 效用下降(ΔU&lt;0) -
-未付账单增加(Δu&gt;0) - 但对借款和收入的影响方向不确定</p>
-<p><strong>政策含义</strong>: -
-通过观察健康冲击后经济结果的变化,可以reject完全保险假设 -
-任何经济结果的变化(收入、信贷限制、借款等)都是保险不足的证据</p>
-<h3 id="二数据与样本">二、数据与样本</h3>
-<h4 id="hrs数据">2.1 HRS数据</h4>
-<ul>
-<li>1992-2012年20年的健康与退休研究面板数据</li>
-<li>追踪50岁以上人群的健康和经济状况</li>
-<li>重点样本:约2,700名50-59岁有保险的住院成年人</li>
-</ul>
-<h4 id="加州信用报告数据">2.2 加州信用报告数据</h4>
-<ul>
-<li>2002-2011年的信用报告面板</li>
-<li>与2003-2007年加州医院出院数据关联</li>
-<li>重点样本:约38万名25-64岁有保险的住院成年人</li>
-</ul>
-<p><strong>样本构建原则</strong>: - 排除妊娠相关入院 -
-要求入院前至少3年无住院记录(确保"冲击"性质) -
-有保险定义为私人保险或Medicaid</p>
-<p><strong>表1关键特征</strong>: | 指标 | HRS (50-59岁) | 信用报告
-(25-64岁) | |------|---------------|-------------------| | 入院年龄 |
-55.6岁 | 48.5岁 | | 男性比例 | 47.6% | 45.1% | | 私人保险 | 94.1% |
-86.3% | | 平均住院天数 | n/a | 4.1天 | | 医院列表费用 | n/a | ${45,580
-|</p>
-<h3 id="三主要结果">三、主要结果</h3>
-<h4 id="hrs结果自付费用与收入">3.1 HRS结果:自付费用与收入</h4>
-<p><strong>表2核心数据(50-59岁有保险成年人)</strong>:</p>
-<p><strong>自付医疗费用</strong>: - 入院后12个月:增加}<span class="math inline">\(3,275
-- 入院后36个月:增加\)</span>{1,011 - 3年平均年增加:}$1,429</p>
-<p><strong>就业与劳动收入</strong>: -
-就业概率下降:12个月后下降8.9个百分点,36个月后下降11.1个百分点 -
-年劳动收入下降:12个月后下降${6,445,36个月后下降}<span class="math inline">\(11,071
-- **3年平均年收入下降\)</span>{8,753,相当于入院前收入的20%**</p>
-<p><strong>关键发现</strong>: 1.
-<strong>收入下降远超自付费用增加</strong>:自付费用3年平均每年增加}<span class="math inline">\(1,429,但收入下降\)</span>{8,753 2.
-<strong>收入损失几乎无保险</strong>:仅约10%的收入损失通过社会保险项目得到补偿
-3. ** spousal劳动供给无响应<strong>:配偶没有增加劳动供给来弥补收入损失
-4.
-</strong>效果持久**:收入下降似乎持久甚至加剧,反映健康冲击的持续影响</p>
-<h4 id="信用报告结果">3.2 信用报告结果</h4>
-<p><strong>表5-7核心数据(25-64岁有保险成年人)</strong>:</p>
-<p><strong>未付医疗账单</strong>: - 入院4年后,未付账单增加约}<span class="math inline">\(300(较小)
-- 但信用卡余额下降约\)</span>{1,700</p>
-<p><strong>破产</strong>: - 有保险的非老年人:入院增加破产概率0.4个百分点
-- 无保险的非老年人:入院增加破产概率1.4个百分点 -
-<strong>住院引发的破产:有保险者中占4%,无保险者中占6%</strong></p>
-<p><strong>借贷与信用</strong>: - 信用卡余额下降约10%(4年内) -
-信用额度下降约5%</p>
-<h4 id="关键对比50-59岁-vs-60-64岁">3.3 关键对比:50-59岁 vs 60-64岁</h4>
-<p><strong>60-64岁年龄组发现</strong>: - 收入下降幅度相似 -
-但超过60%的收入下降通过社会保障退休收入得到保险 -
-与50-59岁组仅10%的保险率形成鲜明对比</p>
-<p><strong>政策含义</strong>: -
-在美国,法定社会保障退休年龄(62岁)是重要的收入保险分水岭 -
-62岁之前的成年人几乎没有正式的 earnings insurance</p>
-<h3 id="四机制分析">四、机制分析</h3>
-<h4 id="为什么收入下降幅度这么大">4.1 为什么收入下降幅度这么大?</h4>
-<p>** Extensive margin(就业边际)**: - 入院后3年,就业概率下降11个百分点 -
-约60-85%的收入下降可由就业下降解释 -
-主要表现为从全职工作退出,部分进入退休状态</p>
-<p>** Intensive margin(工时边际)**: - 年工时下降约228小时(14%) -
-工资率本身(conditional on working)无显著变化</p>
-<p><strong>健康限制</strong>: -
-自报"健康原因限制工作能力"的比例上升9.5个百分点</p>
-<h4 id="为什么社会保险覆盖这么少">4.2 为什么社会保险覆盖这么少?</h4>
-<p><strong>失业保险(UI)不适用</strong>: - 住院不等于失业 -
-UI不覆盖因健康原因减少工时的情况</p>
-<p><strong>残疾保险(SSDI)</strong>: - 申请过程漫长且结果不确定 -
-50-59岁人群难以获得SSDI</p>
-<p><strong>社会保障退休收入(SSRI)</strong>: - 需要年满62岁才能领取 -
-60-64岁人群才开始有资格</p>
-<h3 id="五福利含义">五、福利含义</h3>
-<h4 id="总体经济后果的保险覆盖">5.1 总体经济后果的保险覆盖</h4>
-<p>作者估算(50-59岁有保险者): -
-<strong>第1年</strong>:超过90%的医疗费用被覆盖,但仅约80%的"总经济后果"(医疗费用+收入损失)被覆盖
-- <strong>第3年</strong>:仅约50%的总经济后果被覆盖</p>
-<p>随时间推移,收入损失在总经济后果中的比重越来越大,而社会保险对收入损失的保险几乎不存在.</p>
-<h4 id="医疗支出-vs-收入损失的福利权重">5.2 医疗支出 vs
-收入损失的福利权重</h4>
-<p><strong>重要区分</strong>: - 外生医疗支出(给定健康状态)→
-与同等金额的消费减少 welfare impact 相同 -
-收入变化可能反映劳动供给对健康状态的调整→ welfare impact 不同</p>
-<p><strong>福利计算</strong>: -
-一个简单模型显示:对于有健康保险的成年人,收入损失的 welfare consequences
-至少是自付医疗费用增加的3倍</p>
-<h4 id="无保险者的处境">5.3 无保险者的处境</h4>
-<p><strong>无保险者面临的更大风险</strong>: - 未付医疗账单增加}<span class="math inline">\(6,000(有保险者仅\)</span>{300) -
-破产率增幅是无保险者的3.5倍 - 但借贷反应的幅度相似</p>
-<p><strong>"隐性保险"现象</strong>: -
-所谓"无保险者"实际上通过其他渠道获得部分隐性保险 -
-例如,医院不能拒绝急诊患者,这形成了某种隐性公共保险 -
-外部各方(医院、纳税人)承担了部分医疗债务的 incidence</p>
-<h3 id="六医疗破产文献的贡献">六、"医疗破产"文献的贡献</h3>
-<p>本文对"医疗破产"文献提供了重要的校准证据:</p>
-<p><strong>先前研究的过高估计</strong>: -
-某些研究声称医疗事件可解释20-60%的所有破产 -
-这些研究通常基于自我报告的破产原因</p>
-<p><strong>本文的修正估计</strong>: -
-住院引发的破产:有保险者中约4%,无保险者中约6% -
-远低于先前研究声称的比例</p>
-<p><strong>原因分析</strong>: - 破产是多重因素共同作用的结果 -
-医疗事件可能是"最后一根稻草",而非根本原因 -
-破产申请人可能将医疗事件列为破产原因之一</p>
-<h2 id="结论conclusion">结论(Conclusion)</h2>
-<h3 id="研究核心结论">研究核心结论</h3>
-<ol type="1">
-<li><strong>住院对有保险的非老年人产生重大经济后果</strong>
-<ul>
-<li>就业概率下降11个百分点</li>
-<li>年收入下降约}$9,000(20%的入院前年收入)</li>
-<li>自付医疗费用增加,破产风险上升</li>
-</ul></li>
-<li><strong>收入损失几乎完全无保险</strong>
-<ul>
-<li>仅约10%的收入损失通过社会保险得到补偿</li>
-<li>这一发现挑战了美国医疗保险体系的"完整性"叙事</li>
-</ul></li>
-<li><strong>62岁是重要分水岭</strong>
-<ul>
-<li>60-64岁人群的收入损失保险率超过60%</li>
-<li>主要通过社会保障退休收入实现</li>
-</ul></li>
-<li><strong>无保险者的风险更大但幅度有限</strong>
-<ul>
-<li>未付账单和破产率增幅更大</li>
-<li>但借贷反应的幅度相似</li>
-</ul></li>
-<li><strong>住院引发的破产只是破产的一小部分</strong>
-<ul>
-<li>有保险者中约4%,无保险者中约6%</li>
-<li>远低于先前文献声称的比例</li>
-</ul></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><p><strong>数据贡献</strong>:首次将医院出院数据与信用报告数据关联,创建大规模住院经济后果数据集</p></li>
-<li><p><strong>方法论贡献</strong>:清晰的事件研究框架,结合非参数和参数估计,提供了可复制的模板</p></li>
-<li><p><strong>政策贡献</strong>:为评估ACA等健康保险改革的保护效果提供了实证依据</p></li>
-<li><p><strong>理论贡献</strong>:对"医疗破产"文献的校准提出了重要修正</p></li>
-</ol>
-<h3 id="未来研究方向">未来研究方向</h3>
-<ol type="1">
-<li>更长期的跟踪研究,评估收入下降的持久性</li>
-<li>探索不同类型入院(如心脏病 vs 骨折)的差异化影响</li>
-<li>跨国家比较:美国 vs 北欧国家的 earnings insurance 差异</li>
-<li>评估ACA改革后的效应变化</li>
-</ol>
-<h2 id="学术思考">学术思考</h2>
-<ol type="1">
-<li><p><strong>"完全保险"的定义问题</strong>:本文中"完全保险"的定义是消费在健康和健康状态间不变.但这是否等同于
-welfare 最优?考虑到健康状态本身影响效用函数(Viscusi &amp; Evans
-1990),消费平滑可能并非唯一目标.</p></li>
-<li><p><strong>内生性健康问题</strong>:住院可能反映潜在的健康恶化,而不仅仅是"外生冲击".如果健康和生产力之间存在反向因果,那么部分"收入效应"实际上可能是"生产力下降"而非"保险不足".</p></li>
-<li><p><strong>一般均衡效应</strong>:本文关注受影响个体的直接效应,但忽视了劳动力市场的
-general equilibrium_大量工人因健康原因退出劳动市场可能影响 wages
-和其他人就业机会.</p></li>
-<li><p><strong>动态视角的缺失</strong>:两期模型是否足以捕捉健康冲击的动态复杂性?实际中,健康冲击可能引发健康-收入恶化的"螺旋",需要更复杂的动态模型来刻画.</p></li>
-<li><p><strong>社会安全网的比较制度分析</strong>:美国和丹麦的对比(本文提及)揭示了制度设计的巨大差异.美国的
-disability insurance 和 paid sick leave
-系统是否应该向北欧模式转型?</p></li>
-<li><p><strong>医疗费用膨胀的外部性</strong>:本文揭示的经济后果部分源于医疗费用的高涨.如果医院收费改革(降低list
-charges)能否同时改善家庭经济状况和医疗系统效率?</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>AER</tag>
-        <tag>健康经济学</tag>
-        <tag>医疗保障</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>The Price of War — 深度阅读笔记 — Federle Et Al.</title>
-    <url>/posts/federle2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: The Price of War</li>
-<li><strong>作者</strong>: Jonathan Federle, André Meier, Gernot J.
-Müller, Willi Mutschler, Moritz Schularick</li>
-<li><strong>类型</strong>: 论文笔记 / 战争经济学 / 宏观经济学 /
-经济史学</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: American Economic Review, 116(3):
-791-827</li>
-<li><strong>DOI</strong>: 10.1257/aer.20241355</li>
-<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量史学基础
-<span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>本文属于<strong>经济学研究领域</strong>，具体涉及发展经济学、国际经济学、经济史学、冲突经济学（Conflict
-Economics）以及宏观经济学等多个子领域的交叉地带。论文所研究的<strong>战争经济学</strong>（Economics
-of
-War）是一个重要但相对被忽视的研究方向，主要探讨战争如何影响参与各方的经济表现。</p>
-<p>论文使用了多个经典宏观经济指标来测度战争的经济影响：</p>
-<ul>
-<li><strong>实际GDP（Real
-GDP）</strong>：衡量一个国家商品和服务产出的最核心指标</li>
-<li><strong>消费者价格指数（CPI）</strong>：衡量通货膨胀和物价水平变化</li>
-<li><strong>资本存量（Capital
-Stock）</strong>：衡量经济体中可用于生产的固定资产总量</li>
-<li><strong>全要素生产率（TFP, Total Factor
-Productivity）</strong>：衡量技术进步和效率提升的关键指标</li>
-<li><strong>股权回报率（Equity
-Returns）</strong>：反映股票市场的整体表现</li>
-<li><strong>长期利率（Long-term Interest
-Rates）</strong>：反映资金成本和政府借贷成本</li>
-</ul>
-<h3 id="研究的主要背景分点说明">研究的主要背景（分点说明）</h3>
-<p><strong>第一，战争与全球经济风险上升的背景。</strong>
-近年来，全球政治经济格局正在经历深刻变化。经济碎片化加剧（Fernández-Villaverde,
-Mineyama, and Song 2024; Gopinath et al.
-2025），地缘政治紧张局势和冲突风险显著上升。在这一背景下，理解战争对经济的影响变得尤为重要。</p>
-<p><strong>第二，现有文献的局限性。</strong>
-虽然有大量研究关注特定战争（如两次世界大战、冷战时期冲突）的财政和货币影响，以及战争对交战国经济增长的影响，但这些研究存在以下不足：</p>
-<ul>
-<li>多为单一战争案例研究，缺乏系统性比较</li>
-<li>很少考虑战争的<strong>跨境溢出效应</strong>（Spillover
-Effects）</li>
-<li>对战争如何通过贸易网络影响第三方国家的机制理解不足</li>
-</ul>
-<p><strong>第三，数据可得性的突破。</strong>
-本文作者整合了"战争相关因素项目"（Correlates of War,
-COW）的战争数据与"Jordà-Schularick-Taylor宏观史数据库"（MacroHistory
-Database），构建了一个跨越150年、涵盖60个国家的新数据集，这使得系统性地研究战争的经济影响成为可能。</p>
-<p><strong>第四，战争频率与地理分布的重要事实。</strong>
-本文揭示了一个重要却常被忽视的事实：尽管一个国家在特定年份成为战场的概率只有6%，但与其接壤并可能受到战争影响的国家比例高达20%——这一比例是全球金融危机频率的约5倍。这意味着虽然直接经历战争的国家相对较少，但通过贸易和地理渠道受到战争间接影响的国家却非常普遍。</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心研究问题：战争对经济的影响是什么？这种影响如何溢出到非参战国？</strong></p>
-<p>具体而言，作者试图回答以下问题：</p>
-<ol type="1">
-<li>战争在战地国家造成的直接经济损失有多大？</li>
-<li>参战国（非战地）的经济表现与战地国家有何不同？</li>
-<li>第三方国家如何受到战争的经济影响？贸易联系和地理邻近如何调节这一影响？</li>
-<li>战争的宏观经济影响在不同类型的战争中是否存在系统性差异？</li>
-</ol>
-<p>作者明确指出，他们的研究目的是建立<strong>新的Stylized
-Facts（典型化事实）</strong>，即战争后经济发展的典型模式，而不试图进行因果解释。这是因为战争爆发与经济发展之间可能存在双向因果关系——经济状况可能既是战争爆发的原因，也是战争的结果。</p>
-<h3 id="研究意义">研究意义</h3>
-<p><strong>理论意义：</strong>
-本文首次系统性地分析了三类国家（战地国家、参战国、第三方国家）在战争前后的经济动态演化，并区分了不同传导渠道（贸易渠道、地理渠道）的作用。这为战争经济学领域提供了重要的实证基础。</p>
-<p><strong>政策意义：</strong>
-在当前地缘政治紧张局势加剧、全球化退潮的背景下，理解战争的经济代价及其传播途径对于政策制定者具有重要的参考价值。尤其是认识到与战地的贸易联系会放大对他国经济的冲击，有助于各国更好地评估和应对地缘政治风险。</p>
-<p><strong>方法论贡献：</strong> 作者采用的局部投影法（Local Projections
-Method）和多维度的暴露度（Exposure）分析框架为后续研究提供了方法论借鉴。</p>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<h3 id="论文整体框架">论文整体框架</h3>
-<p>本文共分为五个主要部分，外加附录和补充材料：</p>
-<p><strong>第一部分：引言（Introduction）</strong> -
-阐述研究背景、问题意识和研究贡献 -
-回顾相关文献，定位本文在现有研究中的位置</p>
-<p><strong>第二部分：数据与基本事实（Data and Basic Facts）</strong> -
-详细说明战争地点（War Sites）的识别方法 - 介绍数据集的构建过程 -
-提供描述性统计</p>
-<p><strong>第三部分：战争爆发后的经济动态（Economic Dynamics after the
-Outbreak of War）</strong> - 介绍实证分析框架（局部投影法） -
-报告基准回归结果 - 分析第三方国家的异质性 -
-考察制度质量等更广泛的社会变化</p>
-<p><strong>第四部分：因果推断（Causality）</strong> -
-利用国别战争的差异性检验因果关系 - 通过叙事性识别（Narrative
-Identification）排除内生性干扰</p>
-<p><strong>第五部分：结论（Conclusion）</strong> - 总结主要发现 -
-讨论政策含义和研究局限</p>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p><strong>全球政治经济格局的深刻变化</strong></p>
-<p>近年来，国际政治经济环境发生了显著变化。地缘政治紧张局势加剧，冲突风险上升。战争不仅造成生命和财产的直接损失，还会扰乱贸易、破坏公共财政。正如Barro
-(2006)所指出的，上个世纪许多重大经济灾难都与本土战争有关。</p>
-<p><strong>被忽视的战争跨境影响</strong></p>
-<p>尽管战争的经济影响重大，但现有研究存在明显空白：战争的经济影响不仅限于交战国，其他国家和第三方国家也会受到冲击。这一"战争的代价"（Price
-of War）问题在学术和政策讨论中都未得到足够重视。</p>
-<p><strong>Trotsky的警示</strong></p>
-<p>作者引用了Trotsky的名言"你可能对战争不感兴趣，但战争对你感兴趣"（You
-may not be interested in war, but war is interested in
-you），用以强调在全球化时代，战争的经济影响具有广泛的传播性，即使是未直接参战的国家也难以独善其身。</p>
-<h3 id="挑战">挑战</h3>
-<p><strong>数据缺乏的系统性</strong></p>
-<p>系统研究战争经济影响面临的首要挑战是<strong>数据缺乏</strong>。需要整合多来源的历史数据：</p>
-<ul>
-<li>战争事件数据（COW项目）</li>
-<li>宏观经济时间序列数据（Jordà-Schularick-Taylor数据库）</li>
-<li>贸易数据（Fouquin and Hugot 2016）</li>
-<li>地理边界和人口数据</li>
-</ul>
-<p><strong>战地识别的复杂性</strong></p>
-<p>COW项目提供的是参战国信息，但并未明确指出战争在哪些国家的领土上进行。为此，作者需要：</p>
-<ul>
-<li>收集Battle-level的详细信息</li>
-<li>手动编码1,737场战役的地理位置</li>
-<li>将战役层面的伤亡汇总到国家层面</li>
-</ul>
-<p><strong>战争类型差异的处理</strong></p>
-<p>战争分为不同类型：</p>
-<ul>
-<li><strong>国家间战争（Interstate
-Wars）</strong>：两国或多国间武装冲突，如一战、二战</li>
-<li><strong>其他战争（Other
-Wars）</strong>：内战、殖民战争、独立战争等</li>
-</ul>
-<p>这两类战争在频率、强度、持续时间和经济动机方面都存在系统性差异，需要在分析中加以区分。</p>
-<p><strong>内生性问题的处理</strong></p>
-<p>战争爆发与经济状况之间可能存在双向因果关系——经济困难可能既是战争爆发的原因（内生性），也是战争的结果（需要识别因果方向）。如何剥离这种内生性是因果推断的核心挑战。</p>
-<h3 id="方法数据集要突出">方法（数据集要突出）</h3>
-<h4 id="数据集构建">数据集构建</h4>
-<p><strong>样本范围</strong></p>
-<ul>
-<li>时间跨度：1870-2023年（150年）</li>
-<li>国家数量：60个国家（占1960年全球GDP的95%）</li>
-<li>战争样本：694场战争（国家-年观察值），其中约1/3为国家间战争</li>
-</ul>
-<p><strong>战争数据的分类与编码</strong></p>
-<p>作者遵循COW项目的定义，将战争分为：</p>
-<ol type="1">
-<li><strong>Interstate
-Wars（国家间战争）</strong>：至少两个国家间、12个月内战斗死亡人数不少于1000人的武装冲突</li>
-<li><strong>Other
-Wars（其他战争）</strong>：内战、殖民战争、解放战争等</li>
-</ol>
-<p><strong>战争强度测量</strong></p>
-<p>使用<strong>Casualties/Local Population
-Ratio</strong>作为战争强度指标：</p>
-<p><span class="math display">\[{Site_{j,t} =
-\frac{Casualties_{j,t}}{Population_{j, pre-war}}}\]</span></p>
-<p>其中伤亡包括死亡、失踪、受伤和战俘。</p>
-<p><strong>关键统计事实</strong></p>
-<ul>
-<li>国家间战争平均强度：3.5%（以伤亡/战前人口衡量）</li>
-<li>其他战争平均强度：0.74%</li>
-<li>战争持续时间中位数：2年</li>
-<li>总样本包括225个国家间战争和469场其他战争</li>
-</ul>
-<p><strong>Battle-Level地理编码</strong></p>
-<p>为识别战地，作者收集了1,737场战役的详细信息：</p>
-<ul>
-<li>来源：Clodfelter (2017)战争百科全书及多种历史资料</li>
-<li>每场战役记录：地理位置、伤亡人数、参战方</li>
-<li>最大战役：Brusilov Offensive（一战），超过100万伤亡</li>
-</ul>
-<p><strong>宏观经济指标</strong></p>
-<p>使用Jordà-Schularick-Taylor宏观史数据库，核心变量包括：</p>
-<ul>
-<li>实际GDP（Real GDP）</li>
-<li>消费者价格指数（CPI）</li>
-<li>资本存量（Capital Stock）</li>
-<li>全要素生产率（TFP）</li>
-<li>10年期政府债券收益率</li>
-<li>股权回报指数</li>
-<li>军事支出（占GDP比重）</li>
-<li>军事人员（占人口比重）</li>
-</ul>
-<p><strong>贸易数据</strong></p>
-<p>使用Fouquin and Hugot
-(2016)的双边贸易数据，并使用引力模型填补缺失值（伪<span class="math inline">\({R^2=0.95}\)</span>）。</p>
-<p><strong>GPT-4验证</strong></p>
-<p>作者还使用GPT-4
-API辅助验证战地编码的准确性，发现GPT-4识别结果与手工编码的Pearson相关系数为0.73（<span class="math inline">\({p&lt;0.001}\)</span>）。</p>
-<h4 id="实证方法局部投影法">实证方法：局部投影法</h4>
-<p><strong>Local Projections Method（局部投影法）</strong></p>
-<p>遵循Jordà (2005)的方法，估计以下规范：</p>
-<p><span class="math display">\[{y_{i,t+h} - y_{i,t-1} = \zeta_h'
-X_{i,t} + \sum_{c \in \{S,B,T\}} \phi_{c,h}(\gamma_{i,c,t}' \cdot
-Sites_t) + \sum_{c \in \{B,T\}} \psi_{c,h}(\epsilon_{i,c,t-1}' \cdot
-Sites_t) + u_{i,t+h}}\]</span></p>
-<p>其中：</p>
-<ul>
-<li><span class="math inline">\({y_{i,t}}\)</span>：结果变量（如实际GDP）</li>
-<li><span class="math inline">\({h}\)</span>：战争开始后的年数（<span class="math inline">\({h=0,1,...,8}\)</span>）</li>
-<li><span class="math inline">\({X_{i,t}}\)</span>：控制变量（包含4阶滞后项、国家固定效应、是否接壤战地国家）</li>
-<li><span class="math inline">\({\phi_{c,h}}\)</span>：捕捉c类国家（战地S、参战B、第三方T）在战争后的动态</li>
-<li><span class="math inline">\({\psi_{c,h}}\)</span>：允许暴露度（贸易联系、地理邻近）对溢出效应进行调节</li>
-</ul>
-<p><strong>暴露度向量（Exposure Vector）</strong></p>
-<p><span class="math display">\[{\epsilon_{i,c,t-1} = \frac{Import_{i
-\leftarrow j, t-1}}{GDP_{i, t-1}}}\]</span></p>
-<p>衡量第三方国家i与战地国家j之间的贸易暴露度。</p>
-<p><strong>固定效应设定</strong></p>
-<p>不包含时间固定效应，以捕捉特定国家组的完整经济动态，而非仅捕捉相对于平均值的动态变化。</p>
-<h3 id="结果results">结果（Results）</h3>
-<h4 id="基准结果三类国家的经济动态">基准结果：三类国家的经济动态</h4>
-<p><strong>产出（Output）</strong></p>
-<ul>
-<li><strong>战地国家</strong>：GDP下降约10%（相对于战前趋势），在战争开始后约4年达到谷底，此后恢复缓慢，8年后仍低约5%，完全恢复需要约12年</li>
-<li><strong>参战国</strong>：平均GDP未显示明显偏离趋势</li>
-<li><strong>第三方国家</strong>：平均GDP仅适度下降</li>
-</ul>
-<p><strong>消费者价格指数（CPI）</strong></p>
-<ul>
-<li><strong>战地国家</strong>：物价水平持续上涨，战争开始6年后达到峰值，比趋势高约20%</li>
-<li><strong>参战国和第三方国家</strong>：物价水平也有一定上涨，但幅度较小</li>
-</ul>
-<p><strong>资本存量（Capital Stock）</strong></p>
-<ul>
-<li><strong>战地国家</strong>：8年内下降超过4%</li>
-<li><strong>参战国和第三方国家</strong>：也有显著下降，但幅度小得多</li>
-<li>注意：资本存量下降可能反映物理破坏，也可能反映投资减少</li>
-</ul>
-<p><strong>全要素生产率（TFP）</strong></p>
-<ul>
-<li><strong>战地国家</strong>：TFP立即大幅下降，与战争严重破坏经济运作一致</li>
-<li><strong>参战国</strong>：TFP轻微（但不显著）上升</li>
-<li><strong>第三方国家</strong>：TFP基本不变</li>
-</ul>
-<p><strong>长期利率</strong></p>
-<ul>
-<li><strong>战地国家</strong>：10年期政府债券收益率上升约0.3个百分点，并持续
-elevated 约12年</li>
-<li><strong>参战国和第三方国家</strong>：也有适度上升，但不显著</li>
-</ul>
-<p><strong>股权回报率</strong></p>
-<ul>
-<li><strong>战地国家</strong>：股市指数持续下跌，相对趋势的累计跑输幅度在6年后达到20%</li>
-<li>初始反应微弱，表明市场未完全预期战争的不利发展</li>
-<li><strong>第三方国家</strong>：股市跌幅约为战地国家的一半</li>
-<li><strong>参战国</strong>：表现出最强的韧性</li>
-</ul>
-<p><strong>军事支出和人员</strong></p>
-<ul>
-<li><strong>战地和参战国</strong>：军事支出显著增加，初期约增加1个百分点GDP，4年后达到峰值2.5个百分点GDP</li>
-<li><strong>第三方国家</strong>：军事支出和人员基本不变</li>
-</ul>
-<h4 id="关键发现第三国异质性">关键发现：第三国异质性</h4>
-<p><strong>贸易暴露度的关键作用</strong></p>
-<p>当按贸易暴露度区分第三方国家时，发现显著差异：</p>
-<ul>
-<li><strong>高贸易暴露国家</strong>（从战地进口占GDP的3%）：产出下降2%，价格大幅上涨，资本存量下降，利率上升，股权回报下降</li>
-<li><strong>零贸易暴露国家</strong>：基本不受影响</li>
-</ul>
-<p>这一发现具有重要的政策含义：与战地的贸易联系是战争经济影响传导的关键渠道。</p>
-<p><strong>地理邻近的额外风险</strong></p>
-<p>接壤战地的国家面临额外的负面效应：</p>
-<ul>
-<li>长期利率略有下降（可能反映资本外逃）</li>
-<li>股权回报为负（符合灾难风险溢价上升）</li>
-<li>军事支出和人员略有增加（反映军事溢出风险）</li>
-</ul>
-<p><strong>贸易渠道的机制</strong></p>
-<p>贸易收缩是战争溢出效应的关键传导机制：</p>
-<ul>
-<li>战地出口下降：战地生产能力被破坏</li>
-<li>战地进口下降：供应链中断</li>
-<li>高暴露第三方国家：进出口均收缩</li>
-</ul>
-<h4 id="因果推断结果">因果推断结果</h4>
-<p><strong>国家间战争 vs. 其他战争</strong></p>
-<ul>
-<li><strong>国家间战争</strong>：爆发前，产出和通胀没有系统性变化</li>
-<li><strong>其他战争</strong>：爆发前通胀上升、产出增长放缓——这些战争可能是经济波动的原因和结果</li>
-</ul>
-<p><strong>叙事性识别（Narrative Identification）</strong></p>
-<p>作者识别了每场国家间战争的主要战争动机（casus belli）：</p>
-<ul>
-<li>大多数战争与民族主义、意识形态或历史原因相关（可能外生于商业周期）</li>
-<li>经济动机仅在少数6场战争中显得重要</li>
-<li>排除这6场战争后，样本中国际战争的经济影响估计与全样本非常相似</li>
-</ul>
-<p><strong>Granger因果检验</strong></p>
-<ul>
-<li>国家间战争：不被产出增长和通胀的滞后项Granger引起</li>
-<li>其他战争：存在反向因果关系</li>
-</ul>
-<p>这支持了因果解释：战争导致了所记录的经济动态。</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<h3 id="核心发现总结">核心发现总结</h3>
-<p><strong>发现一：战地国家的巨大经济代价</strong></p>
-<p>一场中等强度（2%伤亡/人口）的战争与战地国家产出下降约10%相关。消费者价格上涨约20%。资本存量、全要素生产率和股权回报均急剧下降。经济恢复是缓慢的——完全恢复需要约12年，尽管战争本身平均只持续2-3年。</p>
-<p><strong>发现二：参战国的相对韧性</strong></p>
-<p>尽管面临战争，参战国（非战地）的平均经济表现明显好于战地国家。这可能与军事支出增加带来的财政刺激效应有关——如Braun和McGrattan
-(1993)以及Ilzetzki
-(2024)研究所示，两次世界大战期间美国和英国的经济扩张与军费急剧增加有关。</p>
-<p><strong>发现三：第三方国家的显著溢出效应</strong></p>
-<p>战争的经济影响并不局限于战地。通过贸易渠道，第三方国家也受到显著影响：</p>
-<ul>
-<li>与战地有密切贸易联系的国家（进口占GDP 3%）：产出下降约2%</li>
-<li>接壤战地的国家：面临额外的负面金融效应</li>
-</ul>
-<p><strong>发现四：传播渠道</strong></p>
-<p>贸易联系和地理邻近是战争经济影响跨境传播的两个关键渠道。这与全球供应链的相互依存性以及地理邻近带来的直接风险暴露有关。</p>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><strong>首次系统性分析</strong>：首次全面分析150年间60个国家战争的经济影响，提供了战争经济学的典型化事实</li>
-<li><strong>跨境溢出效应</strong>：揭示了战争通过贸易和地理渠道对第三方国家的显著溢出效应</li>
-<li><strong>异质性分析</strong>：详细区分了不同类型国家（战地、参战、第三方）和不同暴露度下的经济动态差异</li>
-<li><strong>因果识别</strong>：通过叙事性方法识别战争的经济影响，为因果推断提供了合理依据</li>
-<li><strong>方法论贡献</strong>：提供了局部投影法在战争经济学应用的范例</li>
-</ol>
-<h3 id="更广泛的社会影响">更广泛的社会影响</h3>
-<p>除经济指标外，作者还记录了战争对更广泛社会制度的影响：</p>
-<ul>
-<li>媒体自由度下降</li>
-<li>司法独立性下降</li>
-<li>选举公平性下降</li>
-<li>制度质量下降</li>
-</ul>
-<p>这些变化主要局限于战地，但媒体自由度的下降也波及参战国。</p>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="论文中提及的未来研究方向">论文中提及的未来研究方向</h3>
-<ol type="1">
-<li><strong>福利损失的全面测度</strong>
-<ul>
-<li>现有指标无法完全捕捉战争的经济代价及其对人类福利的影响</li>
-<li>产出与福利可能在战时分歧：例如劳动力动员可能导致产出增加，即使整体福利下降</li>
-<li>需要更好的方法来衡量私人消费等人福利指标</li>
-</ul></li>
-<li><strong>战争性质的演变</strong>
-<ul>
-<li>战争性质随时间不断变化</li>
-<li>伤亡与其他候选统计指标之间的关系也可能变化</li>
-<li>需要动态更新的战争强度测量方法</li>
-</ul></li>
-<li><strong>局部战争的经济影响</strong>
-<ul>
-<li>未来可以专门研究有限地理范围的局部战争的经济影响</li>
-<li>分析核威慑下的有限战争与全面战争的差异</li>
-</ul></li>
-</ol>
-<h3 id="根据论文内容思考的下一步研究工作">根据论文内容思考的下一步研究工作</h3>
-<ol type="1">
-<li><strong>供应链渠道的深入研究</strong>
-<ul>
-<li>本文发现贸易是主要传导渠道，但未深入分析供应链网络的结构性特征</li>
-<li>可研究全球价值链（GVC）参与度如何调节战争溢出效应</li>
-<li>可使用投入产出表分析产业关联的具体路径</li>
-</ul></li>
-<li><strong>金融渠道的作用</strong>
-<ul>
-<li>本文发现股权回报在战地和第三方国家都大幅下降</li>
-<li>可深入研究战争如何通过金融市场（资本流动、汇率、信贷市场）传导</li>
-</ul></li>
-<li><strong>人力资本渠道</strong>
-<ul>
-<li>战争造成的人员伤亡和劳动力动员直接影响人力资本</li>
-<li>可研究战争对教育、健康和创新的人力资本长期影响</li>
-</ul></li>
-<li><strong>政策应对效果评估</strong>
-<ul>
-<li>什么样的政策可以缓冲战争的经济影响？</li>
-<li>贸易多元化、战略储备、区域经济一体化等政策工具的效果</li>
-</ul></li>
-<li><strong>不同战争类型的细分研究</strong>
-<ul>
-<li>国家间战争vs内战的经济影响机制可能不同</li>
-<li>代理战争（Proxy Wars）与直接战争的经济影响差异</li>
-</ul></li>
-<li><strong>数字化战争的新特征</strong>
-<ul>
-<li>网络战、信息战、制裁战等新型冲突形式的经济影响</li>
-<li>传统分析框架的适用性和局限性</li>
-</ul></li>
-</ol>
-<hr>
-<h2 id="学术思考">6. 学术思考</h2>
-<p>基于对本文的深入分析，以下学术问题值得关注和进一步探讨：</p>
-<h3 id="关于因果推断的思考">关于因果推断的思考</h3>
-<p><strong>问题一：内生性的残余挑战</strong></p>
-<p>尽管作者通过排除经济动机明确的战争来缓解内生性，但战争选择本身可能仍存在与经济因素相关的其他混淆。例如，一个国家在经济增长放缓时可能更倾向于卷入战争（通过军事转移国内矛盾）。这是否意味着即使在"外生"战争中，战前经济状况的某些特征也在发挥作用？如何在计量经济学框架下更彻底地解决这一问题？</p>
-<h3 id="关于传导机制的思考">关于传导机制的思考</h3>
-<p><strong>问题二：贸易渠道vs. 金融渠道的相对重要性</strong></p>
-<p>本文发现贸易是战争溢出效应的关键渠道，但金融渠道（如资本流动、汇率波动、信贷紧缩）的作用可能被低估。在当今全球金融一体化的背景下，金融渠道是否比贸易渠道更重要？尤其是在短期危机（如2022年乌克兰战争）中，金融市场的反应速度可能远快于贸易调整。</p>
-<p><strong>问题三：全球价值链的结构性作用</strong></p>
-<p>本文使用的贸易暴露度指标较为粗略，未能捕捉全球价值链（GVC）的复杂结构。一个深度嵌入GVC的国家可能同时面临供给中断（作为供应商）和需求萎缩（作为消费者）的双重冲击。如何构建更精细的GVC暴露度指标？</p>
-<h3 id="关于政策含义的思考">关于政策含义的思考</h3>
-<p><strong>问题四：经济一体化与战争脆弱性的权衡</strong></p>
-<p>本文发现贸易联系会放大战争的溢出效应。这意味着经济一体化在带来增长红利的同时，也使各国更容易受到地缘政治冲击。这是否意味着各国应该在追求经济效率和保持战略自主之间进行权衡？区域经济集团化（如EU）是否提供了在开放与安全之间的平衡？</p>
-<p><strong>问题五：战略储备和供应链多样化的价值</strong></p>
-<p>既然与战地的贸易联系会放大对他国的经济影响，那么战略储备和供应链多元化是否应该成为国家安全的必要组成部分？这对于小国和高度依赖进口的国家尤为重要。</p>
-<h3 id="关于研究方法的思考">关于研究方法的思考</h3>
-<p><strong>问题六：局部投影法的适用性</strong></p>
-<p>局部投影法在本文中被用来估计战争的经济动态，但这一方法假设了线性关系和固定效应结构。战争的非线性效应（如阈值效应、叠加效应）是否被遗漏？特别是当多个战争同时发生时，单独估计每场战争效应的高维问题如何处理？</p>
-<h3 id="关于历史演变的思考">关于历史演变的思考</h3>
-<p><strong>问题七：战争性质的范式转变</strong></p>
-<p>从1870年代到2020年代，战争的技术性质、参与主体、地理范围都发生了巨大变化。从大规模的国家间战争到小规模的代理人战争，再到可能包含网络战和贸易战的新型混合冲突。不同类型的冲突是否遵循相同的宏观经济动态规律？本文的150年样本是否掩盖了这些结构性变化？</p>
-<hr>
-<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
-<p>根据论文内容和上述分析，以下是用户接下来可能问的问题：</p>
-<h3 id="关于研究内容的深层问题">关于研究内容的深层问题</h3>
-<ol type="1">
-<li><strong>战争的长期经济后果是什么？</strong>
-<ul>
-<li>本文关注战后8年的动态，但恢复需要约12年</li>
-<li>长期（20-50年）经济轨迹如何？</li>
-<li>战争是否会造成"疤痕效应"（Scarring
-Effects），永久降低增长路径？</li>
-</ul></li>
-<li><strong>不同类型战争的经济影响有何差异？</strong>
-<ul>
-<li>国家间战争vs. 内战的传导机制是否不同？</li>
-<li>高强度vs. 低强度战争是否存在非线性阈值效应？</li>
-<li>代理战争与直接战争的经济影响差异？</li>
-</ul></li>
-<li><strong>疫情和战争叠加的影响是否不同？</strong>
-<ul>
-<li>COVID-19疫情可视为非战争的"经济灾难"</li>
-<li>两种灾难的经济影响机制和恢复模式是否可比？</li>
-</ul></li>
-</ol>
-<h3 id="关于方法论的问题">关于方法论的问题</h3>
-<ol start="4" type="1">
-<li><strong>如何进一步改进因果识别的可信度？</strong>
-<ul>
-<li>自然实验方法（如板块运动会）是否可用？</li>
-<li>工具变量方法是否可行？</li>
-<li>Difference-in-Differences设计是否适合此研究？</li>
-</ul></li>
-<li><strong>模型基础的解释是什么？</strong>
-<ul>
-<li>本文使用局部投影法进行简约式（Reduced-form）估计</li>
-<li>是否存在结构模型（如DSGE）能更好地解释这些动态？</li>
-<li>论文的工作论文版本（Federle et al. 2024）的模型结果如何？</li>
-</ul></li>
-</ol>
-<h3 id="关于政策应用的问题">关于政策应用的问题</h3>
-<ol start="6" type="1">
-<li><strong>如何将研究发现应用于当前的地缘政治风险评估？</strong>
-<ul>
-<li>对于台湾问题、中美博弈等当前热点，本文框架有何启示？</li>
-<li>如何量化"与中国发生贸易战"的潜在经济代价？</li>
-</ul></li>
-<li><strong>何种政策可以缓冲战争的经济冲击？</strong>
-<ul>
-<li>战略储备的效果如何？</li>
-<li>区域经济一体化的保护效应？</li>
-<li>金融稳定工具（如外汇储备、货币互换）的作用？</li>
-</ul></li>
-</ol>
-<h3 id="关于后续研究的问题">关于后续研究的问题</h3>
-<ol start="8" type="1">
-<li><strong>本文的主要贡献者（5位作者）后续还有哪些相关研究？</strong>
-<ul>
-<li>是否有关于特定战争案例的深度研究？</li>
-<li>是否有使用更细粒度数据（如月度、行业层面）的研究？</li>
-</ul></li>
-<li><strong>是否存在与本文发现相矛盾的文献？</strong>
-<ul>
-<li>质疑或修正本文结论的研究有哪些？</li>
-<li>这些矛盾是否可以通过样本选择、方法论差异或数据版本来解释？</li>
-</ul></li>
-</ol>
-<hr>
-<p><em>本分析报告为深度阅读笔记，梳理了论文的核心逻辑、主要发现和学术价值。</em></p>
-]]></content>
-      <categories>
-        <category>经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>宏观经济学</tag>
-        <tag>战争经济学</tag>
-        <tag>经济史学</tag>
-        <tag>地缘政治</tag>
       </tags>
   </entry>
   <entry>
@@ -7214,214 +6729,488 @@ Fragments of Curious and Useful Knowledge from the Chinese Past</em>
       </tags>
   </entry>
   <entry>
-    <title>A Long and a Short Leg Make for a Wobbly Equilibrium — 深度阅读笔记 — Gârleanu, Panageas &amp; Zheng</title>
-    <url>/posts/garleanu2026/</url>
+    <title>The Price of War — 深度阅读笔记 — Federle Et Al.</title>
+    <url>/posts/federle2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
 <ul>
-<li><strong>标题</strong>: A Long and a Short Leg Make for a Wobbly
-Equilibrium</li>
-<li><strong>作者</strong>: Nicolae Gârleanu(Washington University),
-Stavros Panageas(UCLA Anderson), Geoffery Zheng(NYU)</li>
-<li><strong>类型</strong>: 论文笔记 / 资产定价 / 卖空市场 /
-金融市场微观结构</li>
+<li><strong>标题</strong>: The Price of War</li>
+<li><strong>作者</strong>: Jonathan Federle, André Meier, Gernot J.
+Müller, Willi Mutschler, Moritz Schularick</li>
+<li><strong>类型</strong>: 论文笔记 / 战争经济学 / 宏观经济学 /
+经济史学</li>
 <li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: American Economic Review, Vol. 116,
-No. 4, pp. 1234-1273</li>
-<li><strong>DOI</strong>: 10.1257/aer.20211548</li>
-<li><strong>难度评估</strong>: 高 -
-需要资产定价、金融市场微观结构、一般均衡理论基础 <span id="more"></span></li>
+<li><strong>出版机构/期刊</strong>: American Economic Review, 116(3):
+791-827</li>
+<li><strong>DOI</strong>: 10.1257/aer.20241355</li>
+<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量史学基础
+<span id="more"></span></li>
 </ul>
 <hr>
 <h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
 <h3 id="领域基础知识">领域基础知识</h3>
-<p>股票卖空（Short
-Selling）是指投资者借入股票卖出，期望在股价下跌后买回获利。卖空需要支付借券费（lending
-fee），该费用由借贷市场的供给曲线内生决定。卖空活动的不稳定性是资产定价领域的核心问题之一——个股的卖空兴趣（short
-interest）常表现出突然且大幅的变化。</p>
-<p>异质信念（Heterogeneous
-Beliefs）是金融学中解释交易发生的重要框架：一部分投资者过度乐观（I型投资者），另一部分投资者理性（R型投资者），信念差异驱动交易。理性投资者有动机卖空他们认为被高估的股票。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><strong>卖空活动的不稳定现象</strong>：个股卖空兴趣表现出"跳跃"特征——突然的大幅变化，而非平稳的连续变化</li>
-<li><strong>理论与现实的不匹配</strong>：传统模型预测卖空活动应平滑变化，但实证显示存在跳跃；现有文献多将其归因于投资组合约束、融资限制、代理问题等外生因素</li>
-<li><strong>反馈机制缺失</strong>：现有模型缺少现货市场与借贷市场之间的反馈回路，导致无法内生解释均衡的多重性和跳跃</li>
-</ol>
+<p>本文属于<strong>经济学研究领域</strong>，具体涉及发展经济学、国际经济学、经济史学、冲突经济学（Conflict
+Economics）以及宏观经济学等多个子领域的交叉地带。论文所研究的<strong>战争经济学</strong>（Economics
+of
+War）是一个重要但相对被忽视的研究方向，主要探讨战争如何影响参与各方的经济表现。</p>
+<p>论文使用了多个经典宏观经济指标来测度战争的经济影响：</p>
+<ul>
+<li><strong>实际GDP（Real
+GDP）</strong>：衡量一个国家商品和服务产出的最核心指标</li>
+<li><strong>消费者价格指数（CPI）</strong>：衡量通货膨胀和物价水平变化</li>
+<li><strong>资本存量（Capital
+Stock）</strong>：衡量经济体中可用于生产的固定资产总量</li>
+<li><strong>全要素生产率（TFP, Total Factor
+Productivity）</strong>：衡量技术进步和效率提升的关键指标</li>
+<li><strong>股权回报率（Equity
+Returns）</strong>：反映股票市场的整体表现</li>
+<li><strong>长期利率（Long-term Interest
+Rates）</strong>：反映资金成本和政府借贷成本</li>
+</ul>
+<h3 id="研究的主要背景分点说明">研究的主要背景（分点说明）</h3>
+<p><strong>第一，战争与全球经济风险上升的背景。</strong>
+近年来，全球政治经济格局正在经历深刻变化。经济碎片化加剧（Fernández-Villaverde,
+Mineyama, and Song 2024; Gopinath et al.
+2025），地缘政治紧张局势和冲突风险显著上升。在这一背景下，理解战争对经济的影响变得尤为重要。</p>
+<p><strong>第二，现有文献的局限性。</strong>
+虽然有大量研究关注特定战争（如两次世界大战、冷战时期冲突）的财政和货币影响，以及战争对交战国经济增长的影响，但这些研究存在以下不足：</p>
+<ul>
+<li>多为单一战争案例研究，缺乏系统性比较</li>
+<li>很少考虑战争的<strong>跨境溢出效应</strong>（Spillover
+Effects）</li>
+<li>对战争如何通过贸易网络影响第三方国家的机制理解不足</li>
+</ul>
+<p><strong>第三，数据可得性的突破。</strong>
+本文作者整合了"战争相关因素项目"（Correlates of War,
+COW）的战争数据与"Jordà-Schularick-Taylor宏观史数据库"（MacroHistory
+Database），构建了一个跨越150年、涵盖60个国家的新数据集，这使得系统性地研究战争的经济影响成为可能。</p>
+<p><strong>第四，战争频率与地理分布的重要事实。</strong>
+本文揭示了一个重要却常被忽视的事实：尽管一个国家在特定年份成为战场的概率只有6%，但与其接壤并可能受到战争影响的国家比例高达20%——这一比例是全球金融危机频率的约5倍。这意味着虽然直接经历战争的国家相对较少，但通过贸易和地理渠道受到战争间接影响的国家却非常普遍。</p>
 <h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：股票现货市场与借贷市场的相互作用如何导致卖空活动的突然变化？为什么理性卖空者甚至会在错误定价扩大时放弃市场？</p>
-<p><strong>关键洞察</strong>：作者发现了借贷费用（lending
-fee）引发的反馈机制：利用率（utilization
-ratio）上升→做多收益增加→夏普比率下降→卖空需求增加→利用率进一步上升。这形成了一个自我强化的循环，可产生"向后弯曲的需求曲线"和均衡的突然转移。</p>
-<h3 id="研究意义">研究意义</h3>
+<p><strong>核心研究问题：战争对经济的影响是什么？这种影响如何溢出到非参战国？</strong></p>
+<p>具体而言，作者试图回答以下问题：</p>
 <ol type="1">
-<li><strong>内生机制</strong>：不依赖外生约束（投资组合限制、融资限制），而是通过借贷费用的微结构建模内生产生多重均衡和跳跃</li>
-<li><strong>可检验预测</strong>：提供了关于何时应该观察到卖空活动跳跃的具体条件（Proposition
-4）</li>
-<li><strong>现实应用</strong>：解释了2020年11月至2021年1月期间广泛发生的卖空者撤退现象</li>
+<li>战争在战地国家造成的直接经济损失有多大？</li>
+<li>参战国（非战地）的经济表现与战地国家有何不同？</li>
+<li>第三方国家如何受到战争的经济影响？贸易联系和地理邻近如何调节这一影响？</li>
+<li>战争的宏观经济影响在不同类型的战争中是否存在系统性差异？</li>
 </ol>
+<p>作者明确指出，他们的研究目的是建立<strong>新的Stylized
+Facts（典型化事实）</strong>，即战争后经济发展的典型模式，而不试图进行因果解释。这是因为战争爆发与经济发展之间可能存在双向因果关系——经济状况可能既是战争爆发的原因，也是战争的结果。</p>
+<h3 id="研究意义">研究意义</h3>
+<p><strong>理论意义：</strong>
+本文首次系统性地分析了三类国家（战地国家、参战国、第三方国家）在战争前后的经济动态演化，并区分了不同传导渠道（贸易渠道、地理渠道）的作用。这为战争经济学领域提供了重要的实证基础。</p>
+<p><strong>政策意义：</strong>
+在当前地缘政治紧张局势加剧、全球化退潮的背景下，理解战争的经济代价及其传播途径对于政策制定者具有重要的参考价值。尤其是认识到与战地的贸易联系会放大对他国经济的冲击，有助于各国更好地评估和应对地缘政治风险。</p>
+<p><strong>方法论贡献：</strong> 作者采用的局部投影法（Local Projections
+Method）和多维度的暴露度（Exposure）分析框架为后续研究提供了方法论借鉴。</p>
 <hr>
 <h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<p>论文结构如下：</p>
-<ol type="1">
-<li><strong>引言</strong>：问题陈述、主要结论预览</li>
-<li><strong>模型设定</strong>（Section
-I）：异质信念、借贷费用、预算约束</li>
-<li><strong>主要分析结果</strong>（Section
-II）：均衡多重性、反馈机制、放大效应</li>
-<li><strong>财富份额动态</strong>（Section
-III）：多均衡下理性投资者财富份额的漂移</li>
-<li><strong>任意供给曲线</strong>（Section
-IV）：推广到一般形式的f(y)，给出多重均衡的充分必要条件（Proposition
-4）</li>
-<li><strong>实证证据</strong>（Section
-V）：利用Markit数据验证理论预测</li>
-<li><strong>扩展</strong>（Section
-VI）：非单位跨期替代弹性（IES）和多股票模型</li>
-<li><strong>GameStop案例研究</strong>（Section
-VII）：2020年11月-2021年1月的卖空撤退</li>
-<li><strong>结论</strong>（Section VIII）</li>
-</ol>
+<h3 id="论文整体框架">论文整体框架</h3>
+<p>本文共分为五个主要部分，外加附录和补充材料：</p>
+<p><strong>第一部分：引言（Introduction）</strong> -
+阐述研究背景、问题意识和研究贡献 -
+回顾相关文献，定位本文在现有研究中的位置</p>
+<p><strong>第二部分：数据与基本事实（Data and Basic Facts）</strong> -
+详细说明战争地点（War Sites）的识别方法 - 介绍数据集的构建过程 -
+提供描述性统计</p>
+<p><strong>第三部分：战争爆发后的经济动态（Economic Dynamics after the
+Outbreak of War）</strong> - 介绍实证分析框架（局部投影法） -
+报告基准回归结果 - 分析第三方国家的异质性 -
+考察制度质量等更广泛的社会变化</p>
+<p><strong>第四部分：因果推断（Causality）</strong> -
+利用国别战争的差异性检验因果关系 - 通过叙事性识别（Narrative
+Identification）排除内生性干扰</p>
+<p><strong>第五部分：结论（Conclusion）</strong> - 总结主要发现 -
+讨论政策含义和研究局限</p>
 <hr>
 <h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
 <h3 id="背景">背景</h3>
-<p>考虑一个连续时间、无限期界的经济体。投资者分为两类： -
-<strong>理性投资者（R型）</strong>：占有份额ν，相信正确的DDG过程（均值μD，波动率σD）
-- <strong>过度乐观投资者（I型）</strong>：相信错误的DDG过程（均值μI &gt;
-μD，持有"教条式信念"不学习）</p>
-<p>经济体中有正供给的风险资产（股票），其股息增长服从几何布朗运动。</p>
-<p><strong>与传统文献的核心区别</strong>：卖空需要支付借贷费用ft。投资者要么做多（w&gt;0）获得借贷收入τf_tyt，要么做空（w&lt;0）支付费用ft。</p>
-<p>借贷市场的关键机制： -
-<strong>利用率yt</strong>：被借出的股票占所有可借出股票的比例 -
-<strong>借贷费用ft</strong>：由借贷市场的供给曲线f(yt)内生决定 -
-<strong>市场清理事先</strong>：yt × 做多总量 = 做空总量</p>
+<p><strong>全球政治经济格局的深刻变化</strong></p>
+<p>近年来，国际政治经济环境发生了显著变化。地缘政治紧张局势加剧，冲突风险上升。战争不仅造成生命和财产的直接损失，还会扰乱贸易、破坏公共财政。正如Barro
+(2006)所指出的，上个世纪许多重大经济灾难都与本土战争有关。</p>
+<p><strong>被忽视的战争跨境影响</strong></p>
+<p>尽管战争的经济影响重大，但现有研究存在明显空白：战争的经济影响不仅限于交战国，其他国家和第三方国家也会受到冲击。这一"战争的代价"（Price
+of War）问题在学术和政策讨论中都未得到足够重视。</p>
+<p><strong>Trotsky的警示</strong></p>
+<p>作者引用了Trotsky的名言"你可能对战争不感兴趣，但战争对你感兴趣"（You
+may not be interested in war, but war is interested in
+you），用以强调在全球化时代，战争的经济影响具有广泛的传播性，即使是未直接参战的国家也难以独善其身。</p>
 <h3 id="挑战">挑战</h3>
+<p><strong>数据缺乏的系统性</strong></p>
+<p>系统研究战争经济影响面临的首要挑战是<strong>数据缺乏</strong>。需要整合多来源的历史数据：</p>
+<ul>
+<li>战争事件数据（COW项目）</li>
+<li>宏观经济时间序列数据（Jordà-Schularick-Taylor数据库）</li>
+<li>贸易数据（Fouquin and Hugot 2016）</li>
+<li>地理边界和人口数据</li>
+</ul>
+<p><strong>战地识别的复杂性</strong></p>
+<p>COW项目提供的是参战国信息，但并未明确指出战争在哪些国家的领土上进行。为此，作者需要：</p>
+<ul>
+<li>收集Battle-level的详细信息</li>
+<li>手动编码1,737场战役的地理位置</li>
+<li>将战役层面的伤亡汇总到国家层面</li>
+</ul>
+<p><strong>战争类型差异的处理</strong></p>
+<p>战争分为不同类型：</p>
+<ul>
+<li><strong>国家间战争（Interstate
+Wars）</strong>：两国或多国间武装冲突，如一战、二战</li>
+<li><strong>其他战争（Other
+Wars）</strong>：内战、殖民战争、独立战争等</li>
+</ul>
+<p>这两类战争在频率、强度、持续时间和经济动机方面都存在系统性差异，需要在分析中加以区分。</p>
+<p><strong>内生性问题的处理</strong></p>
+<p>战争爆发与经济状况之间可能存在双向因果关系——经济困难可能既是战争爆发的原因（内生性），也是战争的结果（需要识别因果方向）。如何剥离这种内生性是因果推断的核心挑战。</p>
+<h3 id="方法数据集要突出">方法（数据集要突出）</h3>
+<h4 id="数据集构建">数据集构建</h4>
+<p><strong>样本范围</strong></p>
+<ul>
+<li>时间跨度：1870-2023年（150年）</li>
+<li>国家数量：60个国家（占1960年全球GDP的95%）</li>
+<li>战争样本：694场战争（国家-年观察值），其中约1/3为国家间战争</li>
+</ul>
+<p><strong>战争数据的分类与编码</strong></p>
+<p>作者遵循COW项目的定义，将战争分为：</p>
 <ol type="1">
-<li><strong>多重均衡</strong>：反馈回路可能导致多个均衡共存，包括零卖空均衡和高卖空均衡</li>
-<li><strong>向后弯曲的需求曲线</strong>：供需均衡可能非单调，导致均衡的突然跳跃</li>
-<li><strong>动态不稳定性</strong>：财富份额的演化可能放大外生冲击</li>
-<li><strong>跳跃的内生性</strong>：跳跃不是外生假设，而是从均衡动态中自然产生</li>
+<li><strong>Interstate
+Wars（国家间战争）</strong>：至少两个国家间、12个月内战斗死亡人数不少于1000人的武装冲突</li>
+<li><strong>Other
+Wars（其他战争）</strong>：内战、殖民战争、解放战争等</li>
 </ol>
-<h3 id="方法">方法</h3>
-<h4 id="最优投资组合">最优投资组合</h4>
-<p>对数效用下的最优组合选择给出：</p>
-<p><span class="math display">\[w_{ti} = \begin{cases}
-\frac{\hat{\mu}_{ti} - r_t + f_t}{\sigma_D^2} &amp; \text{if }
-\hat{\mu}_{ti} - r_t + f_t &lt; 0 \\ \frac{\hat{\mu}_{ti} - r_t + \tau
-f_t y_t}{\sigma_D^2} &amp; \text{if } \hat{\mu}_{ti} - r_t + \tau f_t
-y_t &gt; 0 \\ 0 &amp; \text{otherwise} \end{cases}\]</span></p>
-<p>存在一个"不行动区间"：当感知到的超额收益在<span class="math inline">\(-\frac{f_t}{\sigma_D^2}\)</span>和<span class="math inline">\(-\frac{\tau f_t
-y_t}{\sigma_D^2}\)</span>之间时，投资者选择零仓位。</p>
-<h4 id="均衡条件与反馈机制">均衡条件与反馈机制</h4>
-<p>市场清理事先要求： <span class="math display">\[y_t =
-\frac{W_t^-}{W_t^+} = -\frac{w_t^R}{w_t^I} \cdot
-\frac{\omega_t}{1-\omega_t}\]</span></p>
-<p>夏普比率的表达式为： <span class="math display">\[\kappa_t = \sigma_D
-- (1-\omega_t)\eta - \sigma\phi_D(\omega_t + \tau
-y_t(1-\omega_t))\]</span></p>
-<p>其中<span class="math inline">\(\eta \equiv \frac{\mu_I -
-\mu_D}{\sigma_D}\)</span>。</p>
-<p><strong>关键反馈回路</strong>： 1. y上升 →
-做多投资者收益增加（借贷收入） → 股票需求增加 2. 需求增加 →
-夏普比率κ下降 3. κ下降 → 卖空者动机增强 → 做空需求增加 4. 做空需求增加 →
-y进一步上升 → 循环...</p>
-<h4 id="多重均衡条件">多重均衡条件</h4>
-<p><strong>Proposition 4（核心结果）</strong>：设<span class="math inline">\(h(y) \equiv f(y)(1-\tau y)\)</span>。若存在<span class="math inline">\(y \in [0, 1)\)</span>使得： - (a) <span class="math inline">\(h'(y) &lt; 0\)</span> - (b) <span class="math inline">\(\sigma_D^2 &lt; \frac{1}{4}(1-y)^2
-|h'(y)|\)</span></p>
-<p>则存在信念的财富分布使得多重均衡存在。</p>
-<p><strong>直觉理解</strong>：<span class="math inline">\(h(y)\)</span>衡量的是空头支付的费率<span class="math inline">\(f(y)\)</span>与多头获得的实际收入<span class="math inline">\(\tau f(y) y\)</span>之间的差额。当<span class="math inline">\(h'(y) &lt;
-0\)</span>时，说明随着利用率上升，这一差额在缩小，意味着做空变得相对更"昂贵"而做多相对更"有利"。这种非线性导致均衡的多重性。</p>
-<h4 id="均衡结构">均衡结构</h4>
-<p><strong>Proposition 2</strong>描述了均衡的完整结构： - 当<span class="math inline">\(\omega_t \in (\omega_2^*,
-1]\)</span>：唯一均衡，无卖空 - 当<span class="math inline">\(\omega_t
-\in [\omega_1^*,
-\omega_2^*]\)</span>：三个均衡（无卖空、中等卖空、高卖空） - 当<span class="math inline">\(\omega_t \in [0,
-\omega_1^*)\)</span>：唯一均衡，有卖空</p>
-<p>其中<span class="math inline">\(\omega_1^*\)</span>和<span class="math inline">\(\omega_2^*\)</span>是临界财富份额，<span class="math inline">\(\omega_2^* &gt; \omega_1^*\)</span>。</p>
+<p><strong>战争强度测量</strong></p>
+<p>使用<strong>Casualties/Local Population
+Ratio</strong>作为战争强度指标：</p>
+<p><span class="math display">\[{Site_{j,t} =
+\frac{Casualties_{j,t}}{Population_{j, pre-war}}}\]</span></p>
+<p>其中伤亡包括死亡、失踪、受伤和战俘。</p>
+<p><strong>关键统计事实</strong></p>
+<ul>
+<li>国家间战争平均强度：3.5%（以伤亡/战前人口衡量）</li>
+<li>其他战争平均强度：0.74%</li>
+<li>战争持续时间中位数：2年</li>
+<li>总样本包括225个国家间战争和469场其他战争</li>
+</ul>
+<p><strong>Battle-Level地理编码</strong></p>
+<p>为识别战地，作者收集了1,737场战役的详细信息：</p>
+<ul>
+<li>来源：Clodfelter (2017)战争百科全书及多种历史资料</li>
+<li>每场战役记录：地理位置、伤亡人数、参战方</li>
+<li>最大战役：Brusilov Offensive（一战），超过100万伤亡</li>
+</ul>
+<p><strong>宏观经济指标</strong></p>
+<p>使用Jordà-Schularick-Taylor宏观史数据库，核心变量包括：</p>
+<ul>
+<li>实际GDP（Real GDP）</li>
+<li>消费者价格指数（CPI）</li>
+<li>资本存量（Capital Stock）</li>
+<li>全要素生产率（TFP）</li>
+<li>10年期政府债券收益率</li>
+<li>股权回报指数</li>
+<li>军事支出（占GDP比重）</li>
+<li>军事人员（占人口比重）</li>
+</ul>
+<p><strong>贸易数据</strong></p>
+<p>使用Fouquin and Hugot
+(2016)的双边贸易数据，并使用引力模型填补缺失值（伪<span class="math inline">\({R^2=0.95}\)</span>）。</p>
+<p><strong>GPT-4验证</strong></p>
+<p>作者还使用GPT-4
+API辅助验证战地编码的准确性，发现GPT-4识别结果与手工编码的Pearson相关系数为0.73（<span class="math inline">\({p&lt;0.001}\)</span>）。</p>
+<h4 id="实证方法局部投影法">实证方法：局部投影法</h4>
+<p><strong>Local Projections Method（局部投影法）</strong></p>
+<p>遵循Jordà (2005)的方法，估计以下规范：</p>
+<p><span class="math display">\[{y_{i,t+h} - y_{i,t-1} = \zeta_h'
+X_{i,t} + \sum_{c \in \{S,B,T\}} \phi_{c,h}(\gamma_{i,c,t}' \cdot
+Sites_t) + \sum_{c \in \{B,T\}} \psi_{c,h}(\epsilon_{i,c,t-1}' \cdot
+Sites_t) + u_{i,t+h}}\]</span></p>
+<p>其中：</p>
+<ul>
+<li><span class="math inline">\({y_{i,t}}\)</span>：结果变量（如实际GDP）</li>
+<li><span class="math inline">\({h}\)</span>：战争开始后的年数（<span class="math inline">\({h=0,1,...,8}\)</span>）</li>
+<li><span class="math inline">\({X_{i,t}}\)</span>：控制变量（包含4阶滞后项、国家固定效应、是否接壤战地国家）</li>
+<li><span class="math inline">\({\phi_{c,h}}\)</span>：捕捉c类国家（战地S、参战B、第三方T）在战争后的动态</li>
+<li><span class="math inline">\({\psi_{c,h}}\)</span>：允许暴露度（贸易联系、地理邻近）对溢出效应进行调节</li>
+</ul>
+<p><strong>暴露度向量（Exposure Vector）</strong></p>
+<p><span class="math display">\[{\epsilon_{i,c,t-1} = \frac{Import_{i
+\leftarrow j, t-1}}{GDP_{i, t-1}}}\]</span></p>
+<p>衡量第三方国家i与战地国家j之间的贸易暴露度。</p>
+<p><strong>固定效应设定</strong></p>
+<p>不包含时间固定效应，以捕捉特定国家组的完整经济动态，而非仅捕捉相对于平均值的动态变化。</p>
 <h3 id="结果results">结果（Results）</h3>
-<h4 id="理论结果">理论结果</h4>
-<ol type="1">
-<li><strong>多重均衡的存在性</strong>：在特定参数条件下，系统可以支持多达三个均衡</li>
-<li><strong>向后弯曲的需求曲线</strong>：aggregate需求<span class="math inline">\(D(\kappa)\)</span>是κ的非单调函数，导致均衡的突然跳跃</li>
-<li><strong>跳跃的内生性</strong>：当<span class="math inline">\(\omega_t\)</span>连续变化穿过临界区间<span class="math inline">\([\omega_1^*,
-\omega_2^*]\)</span>时，κ和y发生不连续的跳跃</li>
-<li><strong>放大效应</strong>：即使在唯一均衡区域，反馈回路仍然存在，产生放大效应（multiplier
-effect）</li>
-</ol>
-<h4 id="实证结果">实证结果</h4>
-<ol type="1">
-<li><strong>肥尾分布</strong>：利用率的周变化呈现明显的肥尾（超额峰度26），远非正态</li>
-<li><strong>借贷费用的非线性</strong>：借贷费用与利用率呈非线性关系，在高利用率区域急剧上升</li>
-<li><strong>h'(y)的符号</strong>：估计的h'(y)在低利用率区域显著为负，符合Proposition
-4的条件</li>
-<li><strong>跳跃预测</strong>：满足Proposition
-4条件（h'(y)在某处为负）的股票，跳跃发生率显著更高</li>
-<li><strong>2020-2021案例</strong>：广泛卖空撤退开始于GameStop事件前8周，影响了并未被在线讨论的股票</li>
-</ol>
+<h4 id="基准结果三类国家的经济动态">基准结果：三类国家的经济动态</h4>
+<p><strong>产出（Output）</strong></p>
+<ul>
+<li><strong>战地国家</strong>：GDP下降约10%（相对于战前趋势），在战争开始后约4年达到谷底，此后恢复缓慢，8年后仍低约5%，完全恢复需要约12年</li>
+<li><strong>参战国</strong>：平均GDP未显示明显偏离趋势</li>
+<li><strong>第三方国家</strong>：平均GDP仅适度下降</li>
+</ul>
+<p><strong>消费者价格指数（CPI）</strong></p>
+<ul>
+<li><strong>战地国家</strong>：物价水平持续上涨，战争开始6年后达到峰值，比趋势高约20%</li>
+<li><strong>参战国和第三方国家</strong>：物价水平也有一定上涨，但幅度较小</li>
+</ul>
+<p><strong>资本存量（Capital Stock）</strong></p>
+<ul>
+<li><strong>战地国家</strong>：8年内下降超过4%</li>
+<li><strong>参战国和第三方国家</strong>：也有显著下降，但幅度小得多</li>
+<li>注意：资本存量下降可能反映物理破坏，也可能反映投资减少</li>
+</ul>
+<p><strong>全要素生产率（TFP）</strong></p>
+<ul>
+<li><strong>战地国家</strong>：TFP立即大幅下降，与战争严重破坏经济运作一致</li>
+<li><strong>参战国</strong>：TFP轻微（但不显著）上升</li>
+<li><strong>第三方国家</strong>：TFP基本不变</li>
+</ul>
+<p><strong>长期利率</strong></p>
+<ul>
+<li><strong>战地国家</strong>：10年期政府债券收益率上升约0.3个百分点，并持续
+elevated 约12年</li>
+<li><strong>参战国和第三方国家</strong>：也有适度上升，但不显著</li>
+</ul>
+<p><strong>股权回报率</strong></p>
+<ul>
+<li><strong>战地国家</strong>：股市指数持续下跌，相对趋势的累计跑输幅度在6年后达到20%</li>
+<li>初始反应微弱，表明市场未完全预期战争的不利发展</li>
+<li><strong>第三方国家</strong>：股市跌幅约为战地国家的一半</li>
+<li><strong>参战国</strong>：表现出最强的韧性</li>
+</ul>
+<p><strong>军事支出和人员</strong></p>
+<ul>
+<li><strong>战地和参战国</strong>：军事支出显著增加，初期约增加1个百分点GDP，4年后达到峰值2.5个百分点GDP</li>
+<li><strong>第三方国家</strong>：军事支出和人员基本不变</li>
+</ul>
+<h4 id="关键发现第三国异质性">关键发现：第三国异质性</h4>
+<p><strong>贸易暴露度的关键作用</strong></p>
+<p>当按贸易暴露度区分第三方国家时，发现显著差异：</p>
+<ul>
+<li><strong>高贸易暴露国家</strong>（从战地进口占GDP的3%）：产出下降2%，价格大幅上涨，资本存量下降，利率上升，股权回报下降</li>
+<li><strong>零贸易暴露国家</strong>：基本不受影响</li>
+</ul>
+<p>这一发现具有重要的政策含义：与战地的贸易联系是战争经济影响传导的关键渠道。</p>
+<p><strong>地理邻近的额外风险</strong></p>
+<p>接壤战地的国家面临额外的负面效应：</p>
+<ul>
+<li>长期利率略有下降（可能反映资本外逃）</li>
+<li>股权回报为负（符合灾难风险溢价上升）</li>
+<li>军事支出和人员略有增加（反映军事溢出风险）</li>
+</ul>
+<p><strong>贸易渠道的机制</strong></p>
+<p>贸易收缩是战争溢出效应的关键传导机制：</p>
+<ul>
+<li>战地出口下降：战地生产能力被破坏</li>
+<li>战地进口下降：供应链中断</li>
+<li>高暴露第三方国家：进出口均收缩</li>
+</ul>
+<h4 id="因果推断结果">因果推断结果</h4>
+<p><strong>国家间战争 vs. 其他战争</strong></p>
+<ul>
+<li><strong>国家间战争</strong>：爆发前，产出和通胀没有系统性变化</li>
+<li><strong>其他战争</strong>：爆发前通胀上升、产出增长放缓——这些战争可能是经济波动的原因和结果</li>
+</ul>
+<p><strong>叙事性识别（Narrative Identification）</strong></p>
+<p>作者识别了每场国家间战争的主要战争动机（casus belli）：</p>
+<ul>
+<li>大多数战争与民族主义、意识形态或历史原因相关（可能外生于商业周期）</li>
+<li>经济动机仅在少数6场战争中显得重要</li>
+<li>排除这6场战争后，样本中国际战争的经济影响估计与全样本非常相似</li>
+</ul>
+<p><strong>Granger因果检验</strong></p>
+<ul>
+<li>国家间战争：不被产出增长和通胀的滞后项Granger引起</li>
+<li>其他战争：存在反向因果关系</li>
+</ul>
+<p>这支持了因果解释：战争导致了所记录的经济动态。</p>
 <hr>
 <h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<p>本文提供了卖空活动突然变化的理论解释，主要结论：</p>
+<h3 id="核心发现总结">核心发现总结</h3>
+<p><strong>发现一：战地国家的巨大经济代价</strong></p>
+<p>一场中等强度（2%伤亡/人口）的战争与战地国家产出下降约10%相关。消费者价格上涨约20%。资本存量、全要素生产率和股权回报均急剧下降。经济恢复是缓慢的——完全恢复需要约12年，尽管战争本身平均只持续2-3年。</p>
+<p><strong>发现二：参战国的相对韧性</strong></p>
+<p>尽管面临战争，参战国（非战地）的平均经济表现明显好于战地国家。这可能与军事支出增加带来的财政刺激效应有关——如Braun和McGrattan
+(1993)以及Ilzetzki
+(2024)研究所示，两次世界大战期间美国和英国的经济扩张与军费急剧增加有关。</p>
+<p><strong>发现三：第三方国家的显著溢出效应</strong></p>
+<p>战争的经济影响并不局限于战地。通过贸易渠道，第三方国家也受到显著影响：</p>
+<ul>
+<li>与战地有密切贸易联系的国家（进口占GDP 3%）：产出下降约2%</li>
+<li>接壤战地的国家：面临额外的负面金融效应</li>
+</ul>
+<p><strong>发现四：传播渠道</strong></p>
+<p>贸易联系和地理邻近是战争经济影响跨境传播的两个关键渠道。这与全球供应链的相互依存性以及地理邻近带来的直接风险暴露有关。</p>
+<h3 id="对领域的贡献">对领域的贡献</h3>
 <ol type="1">
-<li><strong>反馈机制是核心</strong>：现货与借贷市场的相互作用产生反馈回路，导致均衡多重性和跳跃</li>
-<li><strong>必要充分条件</strong>：Proposition
-4给出了多重均衡存在性的简洁可检验条件（h'(y)在某处为负）</li>
-<li><strong>理性撤退</strong>：即使错误定价扩大，理性卖空者也可能撤退——因为他们预期其他卖空者会撤退，从而降低了关键性概率</li>
-<li><strong>实证支持</strong>：满足模型预测条件的股票确实表现出更高的利用率跳跃率</li>
+<li><strong>首次系统性分析</strong>：首次全面分析150年间60个国家战争的经济影响，提供了战争经济学的典型化事实</li>
+<li><strong>跨境溢出效应</strong>：揭示了战争通过贸易和地理渠道对第三方国家的显著溢出效应</li>
+<li><strong>异质性分析</strong>：详细区分了不同类型国家（战地、参战、第三方）和不同暴露度下的经济动态差异</li>
+<li><strong>因果识别</strong>：通过叙事性方法识别战争的经济影响，为因果推断提供了合理依据</li>
+<li><strong>方法论贡献</strong>：提供了局部投影法在战争经济学应用的范例</li>
 </ol>
+<h3 id="更广泛的社会影响">更广泛的社会影响</h3>
+<p>除经济指标外，作者还记录了战争对更广泛社会制度的影响：</p>
+<ul>
+<li>媒体自由度下降</li>
+<li>司法独立性下降</li>
+<li>选举公平性下降</li>
+<li>制度质量下降</li>
+</ul>
+<p>这些变化主要局限于战地，但媒体自由度的下降也波及参战国。</p>
 <hr>
 <h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="文献提及的方向">文献提及的方向</h3>
+<h3 id="论文中提及的未来研究方向">论文中提及的未来研究方向</h3>
 <ol type="1">
-<li><strong>更丰富的资产类别</strong>：当前模型针对单一资产，可扩展到多资产组合选择</li>
-<li><strong>学习动态</strong>：当前I型投资者持有"教条式信念"，引入贝叶斯学习可能改变动态</li>
-<li><strong>内生信息获取</strong>：投资者选择支付成本获取信息，这可能影响均衡结构</li>
-<li><strong>更一般的信念分布</strong>：当前假设两类投资者，可扩展到连续分布</li>
+<li><strong>福利损失的全面测度</strong>
+<ul>
+<li>现有指标无法完全捕捉战争的经济代价及其对人类福利的影响</li>
+<li>产出与福利可能在战时分歧：例如劳动力动员可能导致产出增加，即使整体福利下降</li>
+<li>需要更好的方法来衡量私人消费等人福利指标</li>
+</ul></li>
+<li><strong>战争性质的演变</strong>
+<ul>
+<li>战争性质随时间不断变化</li>
+<li>伤亡与其他候选统计指标之间的关系也可能变化</li>
+<li>需要动态更新的战争强度测量方法</li>
+</ul></li>
+<li><strong>局部战争的经济影响</strong>
+<ul>
+<li>未来可以专门研究有限地理范围的局部战争的经济影响</li>
+<li>分析核威慑下的有限战争与全面战争的差异</li>
+</ul></li>
 </ol>
-<h3 id="未来研究思考">未来研究思考</h3>
+<h3 id="根据论文内容思考的下一步研究工作">根据论文内容思考的下一步研究工作</h3>
 <ol type="1">
-<li><strong>实证应用</strong>：利用更细粒度的借贷数据检验模型在个股层面的预测</li>
-<li><strong>期权市场互动</strong>：卖空活动的跳跃可能影响期权定价，检验这一跨市场联系是有趣的方向</li>
-<li><strong>机构投资者行为</strong>：对冲基金作为主要卖空者，其融资约束和风险管理如何与模型预测互动？</li>
-<li><strong>市场
-microstructure</strong>：借贷市场的微观结构设计（如竞争vs垄断）如何影响均衡多重性？</li>
-<li><strong>高频数据</strong>：利用日内数据检验模型预测的动态调整过程</li>
+<li><strong>供应链渠道的深入研究</strong>
+<ul>
+<li>本文发现贸易是主要传导渠道，但未深入分析供应链网络的结构性特征</li>
+<li>可研究全球价值链（GVC）参与度如何调节战争溢出效应</li>
+<li>可使用投入产出表分析产业关联的具体路径</li>
+</ul></li>
+<li><strong>金融渠道的作用</strong>
+<ul>
+<li>本文发现股权回报在战地和第三方国家都大幅下降</li>
+<li>可深入研究战争如何通过金融市场（资本流动、汇率、信贷市场）传导</li>
+</ul></li>
+<li><strong>人力资本渠道</strong>
+<ul>
+<li>战争造成的人员伤亡和劳动力动员直接影响人力资本</li>
+<li>可研究战争对教育、健康和创新的人力资本长期影响</li>
+</ul></li>
+<li><strong>政策应对效果评估</strong>
+<ul>
+<li>什么样的政策可以缓冲战争的经济影响？</li>
+<li>贸易多元化、战略储备、区域经济一体化等政策工具的效果</li>
+</ul></li>
+<li><strong>不同战争类型的细分研究</strong>
+<ul>
+<li>国家间战争vs内战的经济影响机制可能不同</li>
+<li>代理战争（Proxy Wars）与直接战争的经济影响差异</li>
+</ul></li>
+<li><strong>数字化战争的新特征</strong>
+<ul>
+<li>网络战、信息战、制裁战等新型冲突形式的经济影响</li>
+<li>传统分析框架的适用性和局限性</li>
+</ul></li>
 </ol>
 <hr>
 <h2 id="学术思考">6. 学术思考</h2>
-<ol type="1">
-<li><p><strong>h'(y) &lt; 0条件的稳健性</strong>：Proposition
-4的条件依赖于特定的函数形式假设。放松供给曲线函数形式的假设后，多重均衡是否仍然存在？是否存在更一般的充分条件？</p></li>
-<li><p><strong>从理论到可操作的投资策略</strong>：如果模型正确，那么满足h'(y)
-&lt;
-0条件的股票应该提供更多的错误定价机会。这是否意味着存在可盈利的Alpha机会？还是说跳跃风险会消除这种机会？</p></li>
-<li><p><strong>理性撤退的均衡稳定性</strong>：在模型中，卖空者撤退是因为预期他人会撤退。这是一种协调均衡（coordination
-equilibrium）。但在现实中，这种协调如何实现？是否存在某种信号机制触发协调崩溃？</p></li>
-<li><p><strong>与市场微观结构文献的联系</strong>：模型假设借贷市场是搜索市场（search
-market），但现货市场是瓦尔拉斯市场（Walrasian
-market）。这一分离是否符合现实？将两部分都建模为搜索市场会改变结论吗？</p></li>
-<li><p><strong>异质信念的来源</strong>：模型假设I型投资者过度乐观，但没有解释这种乐观的来源。如果乐观来自信息获取成本的差异，引入内生信息获取会如何改变分析？</p></li>
-</ol>
+<p>基于对本文的深入分析，以下学术问题值得关注和进一步探讨：</p>
+<h3 id="关于因果推断的思考">关于因果推断的思考</h3>
+<p><strong>问题一：内生性的残余挑战</strong></p>
+<p>尽管作者通过排除经济动机明确的战争来缓解内生性，但战争选择本身可能仍存在与经济因素相关的其他混淆。例如，一个国家在经济增长放缓时可能更倾向于卷入战争（通过军事转移国内矛盾）。这是否意味着即使在"外生"战争中，战前经济状况的某些特征也在发挥作用？如何在计量经济学框架下更彻底地解决这一问题？</p>
+<h3 id="关于传导机制的思考">关于传导机制的思考</h3>
+<p><strong>问题二：贸易渠道vs. 金融渠道的相对重要性</strong></p>
+<p>本文发现贸易是战争溢出效应的关键渠道，但金融渠道（如资本流动、汇率波动、信贷紧缩）的作用可能被低估。在当今全球金融一体化的背景下，金融渠道是否比贸易渠道更重要？尤其是在短期危机（如2022年乌克兰战争）中，金融市场的反应速度可能远快于贸易调整。</p>
+<p><strong>问题三：全球价值链的结构性作用</strong></p>
+<p>本文使用的贸易暴露度指标较为粗略，未能捕捉全球价值链（GVC）的复杂结构。一个深度嵌入GVC的国家可能同时面临供给中断（作为供应商）和需求萎缩（作为消费者）的双重冲击。如何构建更精细的GVC暴露度指标？</p>
+<h3 id="关于政策含义的思考">关于政策含义的思考</h3>
+<p><strong>问题四：经济一体化与战争脆弱性的权衡</strong></p>
+<p>本文发现贸易联系会放大战争的溢出效应。这意味着经济一体化在带来增长红利的同时，也使各国更容易受到地缘政治冲击。这是否意味着各国应该在追求经济效率和保持战略自主之间进行权衡？区域经济集团化（如EU）是否提供了在开放与安全之间的平衡？</p>
+<p><strong>问题五：战略储备和供应链多样化的价值</strong></p>
+<p>既然与战地的贸易联系会放大对他国的经济影响，那么战略储备和供应链多元化是否应该成为国家安全的必要组成部分？这对于小国和高度依赖进口的国家尤为重要。</p>
+<h3 id="关于研究方法的思考">关于研究方法的思考</h3>
+<p><strong>问题六：局部投影法的适用性</strong></p>
+<p>局部投影法在本文中被用来估计战争的经济动态，但这一方法假设了线性关系和固定效应结构。战争的非线性效应（如阈值效应、叠加效应）是否被遗漏？特别是当多个战争同时发生时，单独估计每场战争效应的高维问题如何处理？</p>
+<h3 id="关于历史演变的思考">关于历史演变的思考</h3>
+<p><strong>问题七：战争性质的范式转变</strong></p>
+<p>从1870年代到2020年代，战争的技术性质、参与主体、地理范围都发生了巨大变化。从大规模的国家间战争到小规模的代理人战争，再到可能包含网络战和贸易战的新型混合冲突。不同类型的冲突是否遵循相同的宏观经济动态规律？本文的150年样本是否掩盖了这些结构性变化？</p>
 <hr>
 <h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
+<p>根据论文内容和上述分析，以下是用户接下来可能问的问题：</p>
+<h3 id="关于研究内容的深层问题">关于研究内容的深层问题</h3>
 <ol type="1">
-<li>如何在实证中估计h'(y)并检验Proposition 4的条件？</li>
-<li>模型如何解释2020-2021年GameStop期间以及之前8周的广泛卖空撤退？</li>
-<li>卖空费用的具体微观结构模型（如搜索与议价）如何推导？</li>
-<li>在多资产模型中，借贷市场的反馈机制如何与组合选择相互作用？</li>
-<li>理性投资者（R型）如何在内生学习下形成信念？</li>
-<li>模型的均衡多重性与市场效率有何关系？是否存在"错误定价的教科书案例"？</li>
-<li>如何将模型扩展到期权市场，分析卖空跳跃对期权波动率曲面（volatility
-surface）的影响？</li>
-<li>机构投资者的融资约束（如margin
-calls）如何与模型中的反馈机制互动？</li>
+<li><strong>战争的长期经济后果是什么？</strong>
+<ul>
+<li>本文关注战后8年的动态，但恢复需要约12年</li>
+<li>长期（20-50年）经济轨迹如何？</li>
+<li>战争是否会造成"疤痕效应"（Scarring
+Effects），永久降低增长路径？</li>
+</ul></li>
+<li><strong>不同类型战争的经济影响有何差异？</strong>
+<ul>
+<li>国家间战争vs. 内战的传导机制是否不同？</li>
+<li>高强度vs. 低强度战争是否存在非线性阈值效应？</li>
+<li>代理战争与直接战争的经济影响差异？</li>
+</ul></li>
+<li><strong>疫情和战争叠加的影响是否不同？</strong>
+<ul>
+<li>COVID-19疫情可视为非战争的"经济灾难"</li>
+<li>两种灾难的经济影响机制和恢复模式是否可比？</li>
+</ul></li>
 </ol>
+<h3 id="关于方法论的问题">关于方法论的问题</h3>
+<ol start="4" type="1">
+<li><strong>如何进一步改进因果识别的可信度？</strong>
+<ul>
+<li>自然实验方法（如板块运动会）是否可用？</li>
+<li>工具变量方法是否可行？</li>
+<li>Difference-in-Differences设计是否适合此研究？</li>
+</ul></li>
+<li><strong>模型基础的解释是什么？</strong>
+<ul>
+<li>本文使用局部投影法进行简约式（Reduced-form）估计</li>
+<li>是否存在结构模型（如DSGE）能更好地解释这些动态？</li>
+<li>论文的工作论文版本（Federle et al. 2024）的模型结果如何？</li>
+</ul></li>
+</ol>
+<h3 id="关于政策应用的问题">关于政策应用的问题</h3>
+<ol start="6" type="1">
+<li><strong>如何将研究发现应用于当前的地缘政治风险评估？</strong>
+<ul>
+<li>对于台湾问题、中美博弈等当前热点，本文框架有何启示？</li>
+<li>如何量化"与中国发生贸易战"的潜在经济代价？</li>
+</ul></li>
+<li><strong>何种政策可以缓冲战争的经济冲击？</strong>
+<ul>
+<li>战略储备的效果如何？</li>
+<li>区域经济一体化的保护效应？</li>
+<li>金融稳定工具（如外汇储备、货币互换）的作用？</li>
+</ul></li>
+</ol>
+<h3 id="关于后续研究的问题">关于后续研究的问题</h3>
+<ol start="8" type="1">
+<li><strong>本文的主要贡献者（5位作者）后续还有哪些相关研究？</strong>
+<ul>
+<li>是否有关于特定战争案例的深度研究？</li>
+<li>是否有使用更细粒度数据（如月度、行业层面）的研究？</li>
+</ul></li>
+<li><strong>是否存在与本文发现相矛盾的文献？</strong>
+<ul>
+<li>质疑或修正本文结论的研究有哪些？</li>
+<li>这些矛盾是否可以通过样本选择、方法论差异或数据版本来解释？</li>
+</ul></li>
+</ol>
+<hr>
+<p><em>本分析报告为深度阅读笔记，梳理了论文的核心逻辑、主要发现和学术价值。</em></p>
 ]]></content>
       <categories>
-        <category>资产定价</category>
+        <category>经济学</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-        <tag>AER</tag>
-        <tag>资产定价</tag>
-        <tag>卖空市场</tag>
+        <tag>宏观经济学</tag>
+        <tag>战争经济学</tag>
+        <tag>经济史学</tag>
+        <tag>地缘政治</tag>
       </tags>
   </entry>
   <entry>
@@ -7758,6 +7547,217 @@ space)讨论有什么启示?发展中国家在 ZLB
       </categories>
       <tags>
         <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>A Long and a Short Leg Make for a Wobbly Equilibrium — 深度阅读笔记 — Gârleanu, Panageas &amp; Zheng</title>
+    <url>/posts/garleanu2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: A Long and a Short Leg Make for a Wobbly
+Equilibrium</li>
+<li><strong>作者</strong>: Nicolae Gârleanu(Washington University),
+Stavros Panageas(UCLA Anderson), Geoffery Zheng(NYU)</li>
+<li><strong>类型</strong>: 论文笔记 / 资产定价 / 卖空市场 /
+金融市场微观结构</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: American Economic Review, Vol. 116,
+No. 4, pp. 1234-1273</li>
+<li><strong>DOI</strong>: 10.1257/aer.20211548</li>
+<li><strong>难度评估</strong>: 高 -
+需要资产定价、金融市场微观结构、一般均衡理论基础 <span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>股票卖空（Short
+Selling）是指投资者借入股票卖出，期望在股价下跌后买回获利。卖空需要支付借券费（lending
+fee），该费用由借贷市场的供给曲线内生决定。卖空活动的不稳定性是资产定价领域的核心问题之一——个股的卖空兴趣（short
+interest）常表现出突然且大幅的变化。</p>
+<p>异质信念（Heterogeneous
+Beliefs）是金融学中解释交易发生的重要框架：一部分投资者过度乐观（I型投资者），另一部分投资者理性（R型投资者），信念差异驱动交易。理性投资者有动机卖空他们认为被高估的股票。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><strong>卖空活动的不稳定现象</strong>：个股卖空兴趣表现出"跳跃"特征——突然的大幅变化，而非平稳的连续变化</li>
+<li><strong>理论与现实的不匹配</strong>：传统模型预测卖空活动应平滑变化，但实证显示存在跳跃；现有文献多将其归因于投资组合约束、融资限制、代理问题等外生因素</li>
+<li><strong>反馈机制缺失</strong>：现有模型缺少现货市场与借贷市场之间的反馈回路，导致无法内生解释均衡的多重性和跳跃</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：股票现货市场与借贷市场的相互作用如何导致卖空活动的突然变化？为什么理性卖空者甚至会在错误定价扩大时放弃市场？</p>
+<p><strong>关键洞察</strong>：作者发现了借贷费用（lending
+fee）引发的反馈机制：利用率（utilization
+ratio）上升→做多收益增加→夏普比率下降→卖空需求增加→利用率进一步上升。这形成了一个自我强化的循环，可产生"向后弯曲的需求曲线"和均衡的突然转移。</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><strong>内生机制</strong>：不依赖外生约束（投资组合限制、融资限制），而是通过借贷费用的微结构建模内生产生多重均衡和跳跃</li>
+<li><strong>可检验预测</strong>：提供了关于何时应该观察到卖空活动跳跃的具体条件（Proposition
+4）</li>
+<li><strong>现实应用</strong>：解释了2020年11月至2021年1月期间广泛发生的卖空者撤退现象</li>
+</ol>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<p>论文结构如下：</p>
+<ol type="1">
+<li><strong>引言</strong>：问题陈述、主要结论预览</li>
+<li><strong>模型设定</strong>（Section
+I）：异质信念、借贷费用、预算约束</li>
+<li><strong>主要分析结果</strong>（Section
+II）：均衡多重性、反馈机制、放大效应</li>
+<li><strong>财富份额动态</strong>（Section
+III）：多均衡下理性投资者财富份额的漂移</li>
+<li><strong>任意供给曲线</strong>（Section
+IV）：推广到一般形式的f(y)，给出多重均衡的充分必要条件（Proposition
+4）</li>
+<li><strong>实证证据</strong>（Section
+V）：利用Markit数据验证理论预测</li>
+<li><strong>扩展</strong>（Section
+VI）：非单位跨期替代弹性（IES）和多股票模型</li>
+<li><strong>GameStop案例研究</strong>（Section
+VII）：2020年11月-2021年1月的卖空撤退</li>
+<li><strong>结论</strong>（Section VIII）</li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>考虑一个连续时间、无限期界的经济体。投资者分为两类： -
+<strong>理性投资者（R型）</strong>：占有份额ν，相信正确的DDG过程（均值μD，波动率σD）
+- <strong>过度乐观投资者（I型）</strong>：相信错误的DDG过程（均值μI &gt;
+μD，持有"教条式信念"不学习）</p>
+<p>经济体中有正供给的风险资产（股票），其股息增长服从几何布朗运动。</p>
+<p><strong>与传统文献的核心区别</strong>：卖空需要支付借贷费用ft。投资者要么做多（w&gt;0）获得借贷收入τf_tyt，要么做空（w&lt;0）支付费用ft。</p>
+<p>借贷市场的关键机制： -
+<strong>利用率yt</strong>：被借出的股票占所有可借出股票的比例 -
+<strong>借贷费用ft</strong>：由借贷市场的供给曲线f(yt)内生决定 -
+<strong>市场清理事先</strong>：yt × 做多总量 = 做空总量</p>
+<h3 id="挑战">挑战</h3>
+<ol type="1">
+<li><strong>多重均衡</strong>：反馈回路可能导致多个均衡共存，包括零卖空均衡和高卖空均衡</li>
+<li><strong>向后弯曲的需求曲线</strong>：供需均衡可能非单调，导致均衡的突然跳跃</li>
+<li><strong>动态不稳定性</strong>：财富份额的演化可能放大外生冲击</li>
+<li><strong>跳跃的内生性</strong>：跳跃不是外生假设，而是从均衡动态中自然产生</li>
+</ol>
+<h3 id="方法">方法</h3>
+<h4 id="最优投资组合">最优投资组合</h4>
+<p>对数效用下的最优组合选择给出：</p>
+<p><span class="math display">\[w_{ti} = \begin{cases}
+\frac{\hat{\mu}_{ti} - r_t + f_t}{\sigma_D^2} &amp; \text{if }
+\hat{\mu}_{ti} - r_t + f_t &lt; 0 \\ \frac{\hat{\mu}_{ti} - r_t + \tau
+f_t y_t}{\sigma_D^2} &amp; \text{if } \hat{\mu}_{ti} - r_t + \tau f_t
+y_t &gt; 0 \\ 0 &amp; \text{otherwise} \end{cases}\]</span></p>
+<p>存在一个"不行动区间"：当感知到的超额收益在<span class="math inline">\(-\frac{f_t}{\sigma_D^2}\)</span>和<span class="math inline">\(-\frac{\tau f_t
+y_t}{\sigma_D^2}\)</span>之间时，投资者选择零仓位。</p>
+<h4 id="均衡条件与反馈机制">均衡条件与反馈机制</h4>
+<p>市场清理事先要求： <span class="math display">\[y_t =
+\frac{W_t^-}{W_t^+} = -\frac{w_t^R}{w_t^I} \cdot
+\frac{\omega_t}{1-\omega_t}\]</span></p>
+<p>夏普比率的表达式为： <span class="math display">\[\kappa_t = \sigma_D
+- (1-\omega_t)\eta - \sigma\phi_D(\omega_t + \tau
+y_t(1-\omega_t))\]</span></p>
+<p>其中<span class="math inline">\(\eta \equiv \frac{\mu_I -
+\mu_D}{\sigma_D}\)</span>。</p>
+<p><strong>关键反馈回路</strong>： 1. y上升 →
+做多投资者收益增加（借贷收入） → 股票需求增加 2. 需求增加 →
+夏普比率κ下降 3. κ下降 → 卖空者动机增强 → 做空需求增加 4. 做空需求增加 →
+y进一步上升 → 循环...</p>
+<h4 id="多重均衡条件">多重均衡条件</h4>
+<p><strong>Proposition 4（核心结果）</strong>：设<span class="math inline">\(h(y) \equiv f(y)(1-\tau y)\)</span>。若存在<span class="math inline">\(y \in [0, 1)\)</span>使得： - (a) <span class="math inline">\(h'(y) &lt; 0\)</span> - (b) <span class="math inline">\(\sigma_D^2 &lt; \frac{1}{4}(1-y)^2
+|h'(y)|\)</span></p>
+<p>则存在信念的财富分布使得多重均衡存在。</p>
+<p><strong>直觉理解</strong>：<span class="math inline">\(h(y)\)</span>衡量的是空头支付的费率<span class="math inline">\(f(y)\)</span>与多头获得的实际收入<span class="math inline">\(\tau f(y) y\)</span>之间的差额。当<span class="math inline">\(h'(y) &lt;
+0\)</span>时，说明随着利用率上升，这一差额在缩小，意味着做空变得相对更"昂贵"而做多相对更"有利"。这种非线性导致均衡的多重性。</p>
+<h4 id="均衡结构">均衡结构</h4>
+<p><strong>Proposition 2</strong>描述了均衡的完整结构： - 当<span class="math inline">\(\omega_t \in (\omega_2^*,
+1]\)</span>：唯一均衡，无卖空 - 当<span class="math inline">\(\omega_t
+\in [\omega_1^*,
+\omega_2^*]\)</span>：三个均衡（无卖空、中等卖空、高卖空） - 当<span class="math inline">\(\omega_t \in [0,
+\omega_1^*)\)</span>：唯一均衡，有卖空</p>
+<p>其中<span class="math inline">\(\omega_1^*\)</span>和<span class="math inline">\(\omega_2^*\)</span>是临界财富份额，<span class="math inline">\(\omega_2^* &gt; \omega_1^*\)</span>。</p>
+<h3 id="结果results">结果（Results）</h3>
+<h4 id="理论结果">理论结果</h4>
+<ol type="1">
+<li><strong>多重均衡的存在性</strong>：在特定参数条件下，系统可以支持多达三个均衡</li>
+<li><strong>向后弯曲的需求曲线</strong>：aggregate需求<span class="math inline">\(D(\kappa)\)</span>是κ的非单调函数，导致均衡的突然跳跃</li>
+<li><strong>跳跃的内生性</strong>：当<span class="math inline">\(\omega_t\)</span>连续变化穿过临界区间<span class="math inline">\([\omega_1^*,
+\omega_2^*]\)</span>时，κ和y发生不连续的跳跃</li>
+<li><strong>放大效应</strong>：即使在唯一均衡区域，反馈回路仍然存在，产生放大效应（multiplier
+effect）</li>
+</ol>
+<h4 id="实证结果">实证结果</h4>
+<ol type="1">
+<li><strong>肥尾分布</strong>：利用率的周变化呈现明显的肥尾（超额峰度26），远非正态</li>
+<li><strong>借贷费用的非线性</strong>：借贷费用与利用率呈非线性关系，在高利用率区域急剧上升</li>
+<li><strong>h'(y)的符号</strong>：估计的h'(y)在低利用率区域显著为负，符合Proposition
+4的条件</li>
+<li><strong>跳跃预测</strong>：满足Proposition
+4条件（h'(y)在某处为负）的股票，跳跃发生率显著更高</li>
+<li><strong>2020-2021案例</strong>：广泛卖空撤退开始于GameStop事件前8周，影响了并未被在线讨论的股票</li>
+</ol>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<p>本文提供了卖空活动突然变化的理论解释，主要结论：</p>
+<ol type="1">
+<li><strong>反馈机制是核心</strong>：现货与借贷市场的相互作用产生反馈回路，导致均衡多重性和跳跃</li>
+<li><strong>必要充分条件</strong>：Proposition
+4给出了多重均衡存在性的简洁可检验条件（h'(y)在某处为负）</li>
+<li><strong>理性撤退</strong>：即使错误定价扩大，理性卖空者也可能撤退——因为他们预期其他卖空者会撤退，从而降低了关键性概率</li>
+<li><strong>实证支持</strong>：满足模型预测条件的股票确实表现出更高的利用率跳跃率</li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="文献提及的方向">文献提及的方向</h3>
+<ol type="1">
+<li><strong>更丰富的资产类别</strong>：当前模型针对单一资产，可扩展到多资产组合选择</li>
+<li><strong>学习动态</strong>：当前I型投资者持有"教条式信念"，引入贝叶斯学习可能改变动态</li>
+<li><strong>内生信息获取</strong>：投资者选择支付成本获取信息，这可能影响均衡结构</li>
+<li><strong>更一般的信念分布</strong>：当前假设两类投资者，可扩展到连续分布</li>
+</ol>
+<h3 id="未来研究思考">未来研究思考</h3>
+<ol type="1">
+<li><strong>实证应用</strong>：利用更细粒度的借贷数据检验模型在个股层面的预测</li>
+<li><strong>期权市场互动</strong>：卖空活动的跳跃可能影响期权定价，检验这一跨市场联系是有趣的方向</li>
+<li><strong>机构投资者行为</strong>：对冲基金作为主要卖空者，其融资约束和风险管理如何与模型预测互动？</li>
+<li><strong>市场
+microstructure</strong>：借贷市场的微观结构设计（如竞争vs垄断）如何影响均衡多重性？</li>
+<li><strong>高频数据</strong>：利用日内数据检验模型预测的动态调整过程</li>
+</ol>
+<hr>
+<h2 id="学术思考">6. 学术思考</h2>
+<ol type="1">
+<li><p><strong>h'(y) &lt; 0条件的稳健性</strong>：Proposition
+4的条件依赖于特定的函数形式假设。放松供给曲线函数形式的假设后，多重均衡是否仍然存在？是否存在更一般的充分条件？</p></li>
+<li><p><strong>从理论到可操作的投资策略</strong>：如果模型正确，那么满足h'(y)
+&lt;
+0条件的股票应该提供更多的错误定价机会。这是否意味着存在可盈利的Alpha机会？还是说跳跃风险会消除这种机会？</p></li>
+<li><p><strong>理性撤退的均衡稳定性</strong>：在模型中，卖空者撤退是因为预期他人会撤退。这是一种协调均衡（coordination
+equilibrium）。但在现实中，这种协调如何实现？是否存在某种信号机制触发协调崩溃？</p></li>
+<li><p><strong>与市场微观结构文献的联系</strong>：模型假设借贷市场是搜索市场（search
+market），但现货市场是瓦尔拉斯市场（Walrasian
+market）。这一分离是否符合现实？将两部分都建模为搜索市场会改变结论吗？</p></li>
+<li><p><strong>异质信念的来源</strong>：模型假设I型投资者过度乐观，但没有解释这种乐观的来源。如果乐观来自信息获取成本的差异，引入内生信息获取会如何改变分析？</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li>如何在实证中估计h'(y)并检验Proposition 4的条件？</li>
+<li>模型如何解释2020-2021年GameStop期间以及之前8周的广泛卖空撤退？</li>
+<li>卖空费用的具体微观结构模型（如搜索与议价）如何推导？</li>
+<li>在多资产模型中，借贷市场的反馈机制如何与组合选择相互作用？</li>
+<li>理性投资者（R型）如何在内生学习下形成信念？</li>
+<li>模型的均衡多重性与市场效率有何关系？是否存在"错误定价的教科书案例"？</li>
+<li>如何将模型扩展到期权市场，分析卖空跳跃对期权波动率曲面（volatility
+surface）的影响？</li>
+<li>机构投资者的融资约束（如margin
+calls）如何与模型中的反馈机制互动？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>资产定价</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>AER</tag>
+        <tag>资产定价</tag>
+        <tag>卖空市场</tag>
       </tags>
   </entry>
   <entry>
@@ -9263,60 +9263,6 @@ _谢肇淛&lt;五杂俎&gt;(约1610年)</p>
       </tags>
   </entry>
   <entry>
-    <title>Labor Mobility in Currency Union — 深度阅读笔记 — House, Proebsting &amp; Tesar</title>
-    <url>/posts/house2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Quantifying the Benefits of Labor Mobility in
-a Currency Union</li>
-<li><strong>作者</strong>: Christopher L. House (Michigan &amp; NBER),
-Christian Proebsting (EPFL), Linda L. Tesar (Michigan &amp; NBER)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies
-(RES)</li>
-<li><strong>难度评估</strong>: 高 -
-需要宏观经济学、国际经济学、DSGE模型基础 <span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言">1. 引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>最优货币区理论、搜索与匹配框架、货币联盟。</p>
-<h3 id="研究背景">研究背景</h3>
-<p>欧元区失业差异远大于美国；美国迁移响应大于欧洲；Mundell猜想流动性可替代货币政策。</p>
-<h3 id="核心问题">核心问题</h3>
-<p>劳动力流动性对货币联盟有多重要？流动性vs弹性汇率的效应比较？</p>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：相关文献</li>
-<li>第三节：实证分析</li>
-<li>第四节：模型</li>
-<li>第五节：量化分析</li>
-<li>第六节：结论</li>
-</ul>
-<h2 id="正文">3. 正文</h2>
-<h3 id="核心机制">核心机制</h3>
-<p>多国DSGE模型 + 搜索与匹配 + 跨境迁移</p>
-<h3 id="关键发现">关键发现</h3>
-<ol type="1">
-<li>欧洲若达美国流动性水平，失业差异降25%</li>
-<li>流动性和弹性汇率在降低失业上是替代品</li>
-<li>但在产出和通胀维度机制不同</li>
-</ol>
-<h2 id="结论">4. 结论</h2>
-<p>验证Mundell猜想——劳动力流动性确实可部分替代货币政策，但效果有限。</p>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<p>制度设计提高流动性、福利分析、过渡动态。</p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>你所不知道的可能对你有益 — 深度阅读笔记 — Höner &amp; Samuelson</title>
     <url>/posts/honner2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -9633,6 +9579,60 @@ Inequality - <strong>作者</strong>:Yannis M. Ioannides, L. Rachel Ngai -
       </tags>
   </entry>
   <entry>
+    <title>Labor Mobility in Currency Union — 深度阅读笔记 — House, Proebsting &amp; Tesar</title>
+    <url>/posts/house2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Quantifying the Benefits of Labor Mobility in
+a Currency Union</li>
+<li><strong>作者</strong>: Christopher L. House (Michigan &amp; NBER),
+Christian Proebsting (EPFL), Linda L. Tesar (Michigan &amp; NBER)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies
+(RES)</li>
+<li><strong>难度评估</strong>: 高 -
+需要宏观经济学、国际经济学、DSGE模型基础 <span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言">1. 引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>最优货币区理论、搜索与匹配框架、货币联盟。</p>
+<h3 id="研究背景">研究背景</h3>
+<p>欧元区失业差异远大于美国；美国迁移响应大于欧洲；Mundell猜想流动性可替代货币政策。</p>
+<h3 id="核心问题">核心问题</h3>
+<p>劳动力流动性对货币联盟有多重要？流动性vs弹性汇率的效应比较？</p>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：相关文献</li>
+<li>第三节：实证分析</li>
+<li>第四节：模型</li>
+<li>第五节：量化分析</li>
+<li>第六节：结论</li>
+</ul>
+<h2 id="正文">3. 正文</h2>
+<h3 id="核心机制">核心机制</h3>
+<p>多国DSGE模型 + 搜索与匹配 + 跨境迁移</p>
+<h3 id="关键发现">关键发现</h3>
+<ol type="1">
+<li>欧洲若达美国流动性水平，失业差异降25%</li>
+<li>流动性和弹性汇率在降低失业上是替代品</li>
+<li>但在产出和通胀维度机制不同</li>
+</ol>
+<h2 id="结论">4. 结论</h2>
+<p>验证Mundell猜想——劳动力流动性确实可部分替代货币政策，但效果有限。</p>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<p>制度设计提高流动性、福利分析、过渡动态。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Endogenous Clustering and Analogy-Based Expectation Equilibrium — 深度阅读笔记 — Jehiel &amp; Weber</title>
     <url>/posts/jehiel2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -9682,6 +9682,61 @@ Weber (PSE &amp; Bologna)</li>
       </categories>
       <tags>
         <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
+    <url>/posts/48526/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
+<ul>
+<li>因果识别+统计推断</li>
+<li>因果识别(<strong><em>causal
+identification</em></strong>):如果拥有总体,能否确定总体因果关系</li>
+<li>统计推断(<strong><em>statistical
+inference</em></strong>):如何从样本数据获取总体因果关系信息,实际是一种相关性事实</li>
+<li>识别假设,实际就是对 <span class="math inline">\(D\)</span> 和 <span class="math inline">\(\varepsilon\)</span>
+的关系作出表述,但这种过程是无法从理论上验证的</li>
+</ul>
+<span id="more"></span>
+<h2 id="section"><strong>1</strong></h2>
+<ul>
+<li><strong>1.1</strong>
+因果效应的定义:干预与否、处理与否时,潜在结果之间的差值.潜在结果一定是同一个时间点上的结果</li>
+<li><strong>1.2</strong> 潜在结果永远无法完全观测,除非存在平行宇宙</li>
+<li><strong>1.3</strong>
+通过识别假设可以进行"插值",可以化"相关关系"识别场景为"因果关系"识别场景</li>
+<li><strong>1.4</strong>
+鲁宾因果模型(潜在因果框架),一套描述因果关系的新语言</li>
+</ul>
+<h2 id="section-1"><strong>2</strong></h2>
+<ul>
+<li><strong>2.1</strong> 第一类识别假设:潜在结果均值独立于处理状态</li>
+<li><strong>2.2</strong>
+从干扰项中剥离出控制变量;或者寻找一个与干扰项不相关的工具变量</li>
+<li><strong>2.3</strong>
+第二类识别假设:潜在结果条件均值独立于处理状态</li>
+<li><strong>2.4</strong> 好的控制变量:既影响<span class="math inline">\(Y\)</span>,又影响<span class="math inline">\(D\)</span>.其本身和干扰项是否相关是不重要的,不是研究者关注的中心</li>
+<li><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</li>
+<li><strong>2.6</strong> 无需过渡阐释控制变量的系数</li>
+</ul>
+<h2 id="section-2"><strong>3</strong></h2>
+<ul>
+<li><strong>3.1</strong> 鲁宾因果模型并未规定具体的函数形式</li>
+<li><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</li>
+</ul>
+<h2 id="section-3"><strong>4</strong></h2>
+<ul>
+<li><strong>4.1</strong>
+选择性又称之为分配机制,每个个体如何接受处理,可以用倾向得分来表示</li>
+<li><strong>4.2</strong>
+建议现实使用IV、DID、RDD等识别方法时,称之为准实验</li>
+</ul>
+]]></content>
+      <categories>
+        <category>计量</category>
+      </categories>
+      <tags>
+        <tag>学术讲座</tag>
       </tags>
   </entry>
   <entry>
@@ -9866,129 +9921,6 @@ vs 10分位：8.3倍的价值产出差异</p>
       </tags>
   </entry>
   <entry>
-    <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
-    <url>/posts/48526/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
-<ul>
-<li>因果识别+统计推断</li>
-<li>因果识别(<strong><em>causal
-identification</em></strong>):如果拥有总体,能否确定总体因果关系</li>
-<li>统计推断(<strong><em>statistical
-inference</em></strong>):如何从样本数据获取总体因果关系信息,实际是一种相关性事实</li>
-<li>识别假设,实际就是对 <span class="math inline">\(D\)</span> 和 <span class="math inline">\(\varepsilon\)</span>
-的关系作出表述,但这种过程是无法从理论上验证的</li>
-</ul>
-<span id="more"></span>
-<h2 id="section"><strong>1</strong></h2>
-<ul>
-<li><strong>1.1</strong>
-因果效应的定义:干预与否、处理与否时,潜在结果之间的差值.潜在结果一定是同一个时间点上的结果</li>
-<li><strong>1.2</strong> 潜在结果永远无法完全观测,除非存在平行宇宙</li>
-<li><strong>1.3</strong>
-通过识别假设可以进行"插值",可以化"相关关系"识别场景为"因果关系"识别场景</li>
-<li><strong>1.4</strong>
-鲁宾因果模型(潜在因果框架),一套描述因果关系的新语言</li>
-</ul>
-<h2 id="section-1"><strong>2</strong></h2>
-<ul>
-<li><strong>2.1</strong> 第一类识别假设:潜在结果均值独立于处理状态</li>
-<li><strong>2.2</strong>
-从干扰项中剥离出控制变量;或者寻找一个与干扰项不相关的工具变量</li>
-<li><strong>2.3</strong>
-第二类识别假设:潜在结果条件均值独立于处理状态</li>
-<li><strong>2.4</strong> 好的控制变量:既影响<span class="math inline">\(Y\)</span>,又影响<span class="math inline">\(D\)</span>.其本身和干扰项是否相关是不重要的,不是研究者关注的中心</li>
-<li><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</li>
-<li><strong>2.6</strong> 无需过渡阐释控制变量的系数</li>
-</ul>
-<h2 id="section-2"><strong>3</strong></h2>
-<ul>
-<li><strong>3.1</strong> 鲁宾因果模型并未规定具体的函数形式</li>
-<li><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</li>
-</ul>
-<h2 id="section-3"><strong>4</strong></h2>
-<ul>
-<li><strong>4.1</strong>
-选择性又称之为分配机制,每个个体如何接受处理,可以用倾向得分来表示</li>
-<li><strong>4.2</strong>
-建议现实使用IV、DID、RDD等识别方法时,称之为准实验</li>
-</ul>
-]]></content>
-      <categories>
-        <category>计量</category>
-      </categories>
-      <tags>
-        <tag>学术讲座</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>海外的丰裕 — 深度阅读笔记 — Khanna Et Al.</title>
-    <url>/posts/khanna2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Abundance from Abroad: Migrant Income and
-Long-Run Economic Development</li>
-<li><strong>作者</strong>: Gaurav Khanna (UC San Diego), Emir
-Murathanoglu, Caroline B. Theoharides, Dean Yang</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(4):
-1540-1577</li>
-<li><strong>DOI</strong>: 10.1257/aer.20241465</li>
-<li><strong>难度评估</strong>: 高 -
-需要发展经济学、国际经济学、计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>国际移民与发展</strong>：国际移民是发展中国家重要的经济现象，2019年全球有2.1亿来自发展中国家的国际移民。</p>
-<p><strong>转移份额设计（Shift-Share）</strong>：一种准实验识别策略，将总冲击分解为"份额"和"转移"两部分。</p>
-<p><strong>1997年亚洲金融危机</strong>：从泰国开始迅速蔓延，菲律宾比索贬值约40%。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>移民的收入效应</strong>：移民到发达国家工作的收入收益远超任何已知的发展干预项目</p></li>
-<li><p><strong>移民对原籍地区的溢出效应</strong>：缺乏对更广泛原籍地区发展影响的研究</p></li>
-<li><p><strong>识别挑战</strong>：移民收入与原籍地区发展之间存在反向因果问题</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：国际移民收入前景如何影响原籍地区的长期经济发展？</p>
-<p><strong>主要发现</strong>：移民收入冲击的长期放大效应约为六倍</p>
-<hr>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ol type="1">
-<li><strong>引言</strong>: 问题陈述和研究背景</li>
-<li><strong>背景</strong>:
-国际劳动移民概况、菲律宾的移民体系、亚洲金融危机</li>
-<li><strong>数据</strong>: 移民合同数据、汇率数据、结果数据</li>
-<li><strong>实证方法</strong>: 转移份额变量的构建、因果识别</li>
-<li><strong>主要结果</strong>: 长期放大效应、国内收入vs移民收入</li>
-<li><strong>稳健性检验</strong></li>
-<li><strong>结论</strong></li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="实证方法">实证方法</h3>
-<p><strong>转移份额设计</strong>： - 使用1997年亚洲金融危机作为外生冲击
-- 构建"暴露于移民收入"的工具变量 -
-外生性假设：危机前各地区移民份额与危机后发展独立</p>
-<p><strong>主要结果</strong>： - 移民收入冲击的长期放大效应约为六倍 -
-74.9%来自国内收入效应 - 19.7%来自教育投资</p>
-<hr>
-<h2 id="结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>移民促进原籍发展</strong>：长期因果证据支持"良性循环"假说</p></li>
-<li><p><strong>放大机制</strong>：国内收入和教育投资是主要渠道</p></li>
-<li><p><strong>政策启示</strong>：移民政策可以成为全球减贫的重要工具</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Extreme Categories and Overreaction to News — 深度阅读笔记 — Kwon &amp; Tang</title>
     <url>/posts/kwon2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -10163,6 +10095,74 @@ in extreme news categories</h3>
 ]]></content>
       <categories>
         <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>海外的丰裕 — 深度阅读笔记 — Khanna Et Al.</title>
+    <url>/posts/khanna2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Abundance from Abroad: Migrant Income and
+Long-Run Economic Development</li>
+<li><strong>作者</strong>: Gaurav Khanna (UC San Diego), Emir
+Murathanoglu, Caroline B. Theoharides, Dean Yang</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(4):
+1540-1577</li>
+<li><strong>DOI</strong>: 10.1257/aer.20241465</li>
+<li><strong>难度评估</strong>: 高 -
+需要发展经济学、国际经济学、计量经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>国际移民与发展</strong>：国际移民是发展中国家重要的经济现象，2019年全球有2.1亿来自发展中国家的国际移民。</p>
+<p><strong>转移份额设计（Shift-Share）</strong>：一种准实验识别策略，将总冲击分解为"份额"和"转移"两部分。</p>
+<p><strong>1997年亚洲金融危机</strong>：从泰国开始迅速蔓延，菲律宾比索贬值约40%。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>移民的收入效应</strong>：移民到发达国家工作的收入收益远超任何已知的发展干预项目</p></li>
+<li><p><strong>移民对原籍地区的溢出效应</strong>：缺乏对更广泛原籍地区发展影响的研究</p></li>
+<li><p><strong>识别挑战</strong>：移民收入与原籍地区发展之间存在反向因果问题</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：国际移民收入前景如何影响原籍地区的长期经济发展？</p>
+<p><strong>主要发现</strong>：移民收入冲击的长期放大效应约为六倍</p>
+<hr>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ol type="1">
+<li><strong>引言</strong>: 问题陈述和研究背景</li>
+<li><strong>背景</strong>:
+国际劳动移民概况、菲律宾的移民体系、亚洲金融危机</li>
+<li><strong>数据</strong>: 移民合同数据、汇率数据、结果数据</li>
+<li><strong>实证方法</strong>: 转移份额变量的构建、因果识别</li>
+<li><strong>主要结果</strong>: 长期放大效应、国内收入vs移民收入</li>
+<li><strong>稳健性检验</strong></li>
+<li><strong>结论</strong></li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="实证方法">实证方法</h3>
+<p><strong>转移份额设计</strong>： - 使用1997年亚洲金融危机作为外生冲击
+- 构建"暴露于移民收入"的工具变量 -
+外生性假设：危机前各地区移民份额与危机后发展独立</p>
+<p><strong>主要结果</strong>： - 移民收入冲击的长期放大效应约为六倍 -
+74.9%来自国内收入效应 - 19.7%来自教育投资</p>
+<hr>
+<h2 id="结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>移民促进原籍发展</strong>：长期因果证据支持"良性循环"假说</p></li>
+<li><p><strong>放大机制</strong>：国内收入和教育投资是主要渠道</p></li>
+<li><p><strong>政策启示</strong>：移民政策可以成为全球减贫的重要工具</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -11205,6 +11205,100 @@ study of procurement contracts》深度分析撰写。</em></p>
       </tags>
   </entry>
   <entry>
+    <title>用稻草做砖 — 深度阅读笔记 — Okeke</title>
+    <url>/posts/okeke2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Making Bricks from Straw: Resources and
+Productivity in Health Care</li>
+<li><strong>作者</strong>: Edward N. Okeke (RAND Corporation)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(4):
+1499-1539</li>
+<li><strong>DOI</strong>: 10.1257/aer.20241459</li>
+<li><strong>难度评估</strong>: 高 -
+需要卫生经济学、发展经济学、实验经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>公共卫生设施生产率（Health Care Productivity）</strong>
+指卫生设施将投入（资金、人员、设备）转化为卫生服务产出的效率。在发展中国家，公共卫生设施普遍表现不佳，存在典型的"低质量-低数量"均衡陷阱。</p>
+<p><strong>财政约束（Financial Constraints）</strong>
+指行为主体无法获得足够资金来执行生产性投资的限制。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>发展中国家的卫生设施表现糟糕</strong>：访客常发现设施在中午后只有少数患者和工作人员</p></li>
+<li><p><strong>财政约束的争论</strong>：卫生工作者认为资金不足，但证据参差不齐</p></li>
+<li><p><strong>研究缺口</strong>：缺乏对"卫生设施内部到底发生了什么"的系统研究</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：为什么发展中国家的卫生设施表现如此糟糕？财政约束的作用是什么？</p>
+<p><strong>主要发现</strong>：额外财政资源带来了巨大的生产率提高，效果持续约两年</p>
+<hr>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ol type="1">
+<li><strong>引言</strong>: 问题陈述和研究背景</li>
+<li><strong>机构背景</strong>: 尼日利亚医疗体系、实验设计</li>
+<li><strong>数据</strong>:
+rollout数据、设施调查、服务提供调查、患者调查、家庭调查</li>
+<li><strong>分析与结果</strong>:
+支出效应、资金使用、产出效应、质量效应、健康效应</li>
+<li><strong>机制讨论</strong>: 行动计划、"无形"效应、打破均衡陷阱</li>
+<li><strong>长期效应</strong>: 四年后效果持续</li>
+<li><strong>结论</strong>: 政策含义</li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p><strong>尼日利亚公共卫生设施的困境</strong>： - 28%没有电力供应 -
+26%没有自来水 - 11%没有正常工作的厕所 - 14%重复使用注射器</p>
+<p><strong>"Catch-22"困境</strong>：要吸引患者必须改善质量和价格，但没有资源无法实现。</p>
+<h3 id="方法">方法</h3>
+<p><strong>实验设计</strong>：288个公共卫生中心，来自四个州</p>
+<p><strong>随机分配</strong>（三组）： 1.
+<strong>Grant组</strong>（96个）：获得60万奈拉（约1,600美元）赠款 2.
+<strong>Encouragement组</strong>（96个）：仅获得会议干预 3.
+<strong>Control组</strong>（96个）：维持现状</p>
+<p><strong>关键设计特点</strong>： - "意外"宣布：在会议结束时才宣布赠款
+- 资金管理完全由卫生工作者自行决定 - 条件宽松（只需提供银行账户）</p>
+<h3 id="结果">结果</h3>
+<p><strong>资金使用</strong>： - 47%用于改善质量（设备、翻新、员工激励）
+- 35%用于降低患者价格 - 约82%可追踪</p>
+<p><strong>产出效应</strong>： - 产前访问：+17-41% - 分娩：+17-41% -
+住院：+66%</p>
+<p><strong>质量效应</strong>：总体质量指数提高0.4标准差</p>
+<p><strong>健康效应</strong>：儿童死亡率降低24%</p>
+<p><strong>"无形"效应</strong>： - Grant诊所更早制定书面行动计划 -
+计划更详细，更可能寻求社区投入</p>
+<p><strong>长期效应</strong>（四年后）： - 产前访问：+15 log points -
+儿童免疫：+17 log points</p>
+<hr>
+<h2 id="结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>财政约束是真正的约束</strong>：向卫生设施提供额外资金带来了巨大的生产率提高</p></li>
+<li><p><strong>资金被有效使用</strong>：约47%用于改善质量，35%用于降低价格，没有明显的资金挪用</p></li>
+<li><p><strong>打破了"低质量-低数量"均衡</strong>：帮助卫生设施同时解决质量和价格两个约束</p></li>
+<li><p><strong>自主权产生了更好的效果</strong>：无条件赠款优于绩效挂钩拨款</p></li>
+<li><p><strong>效果持久</strong>：即使资金停止，改进仍持续约两年</p></li>
+</ol>
+<h3 id="政策含义">政策含义</h3>
+<ol type="1">
+<li><p><strong>资本注入可以打破均衡</strong>：财务"大推动"可能帮助突破困境</p></li>
+<li><p><strong>自主权和灵活性很重要</strong>：让卫生工作者自行决定如何花钱比严格规定用途更有效</p></li>
+<li><p><strong>"培训"不一定是前提</strong>：卫生工作者能够管理赠款资金，即使没有额外培训</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>&lt;马铃薯与人口&gt;深度阅读笔记 — Nunn &amp; Qian</title>
     <url>/posts/nunn2011/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -11463,100 +11557,6 @@ Vol. 126, pp. 593-650</li>
       <tags>
         <tag>论文笔记</tag>
         <tag>经济史</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>用稻草做砖 — 深度阅读笔记 — Okeke</title>
-    <url>/posts/okeke2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Making Bricks from Straw: Resources and
-Productivity in Health Care</li>
-<li><strong>作者</strong>: Edward N. Okeke (RAND Corporation)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(4):
-1499-1539</li>
-<li><strong>DOI</strong>: 10.1257/aer.20241459</li>
-<li><strong>难度评估</strong>: 高 -
-需要卫生经济学、发展经济学、实验经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>公共卫生设施生产率（Health Care Productivity）</strong>
-指卫生设施将投入（资金、人员、设备）转化为卫生服务产出的效率。在发展中国家，公共卫生设施普遍表现不佳，存在典型的"低质量-低数量"均衡陷阱。</p>
-<p><strong>财政约束（Financial Constraints）</strong>
-指行为主体无法获得足够资金来执行生产性投资的限制。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>发展中国家的卫生设施表现糟糕</strong>：访客常发现设施在中午后只有少数患者和工作人员</p></li>
-<li><p><strong>财政约束的争论</strong>：卫生工作者认为资金不足，但证据参差不齐</p></li>
-<li><p><strong>研究缺口</strong>：缺乏对"卫生设施内部到底发生了什么"的系统研究</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：为什么发展中国家的卫生设施表现如此糟糕？财政约束的作用是什么？</p>
-<p><strong>主要发现</strong>：额外财政资源带来了巨大的生产率提高，效果持续约两年</p>
-<hr>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ol type="1">
-<li><strong>引言</strong>: 问题陈述和研究背景</li>
-<li><strong>机构背景</strong>: 尼日利亚医疗体系、实验设计</li>
-<li><strong>数据</strong>:
-rollout数据、设施调查、服务提供调查、患者调查、家庭调查</li>
-<li><strong>分析与结果</strong>:
-支出效应、资金使用、产出效应、质量效应、健康效应</li>
-<li><strong>机制讨论</strong>: 行动计划、"无形"效应、打破均衡陷阱</li>
-<li><strong>长期效应</strong>: 四年后效果持续</li>
-<li><strong>结论</strong>: 政策含义</li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p><strong>尼日利亚公共卫生设施的困境</strong>： - 28%没有电力供应 -
-26%没有自来水 - 11%没有正常工作的厕所 - 14%重复使用注射器</p>
-<p><strong>"Catch-22"困境</strong>：要吸引患者必须改善质量和价格，但没有资源无法实现。</p>
-<h3 id="方法">方法</h3>
-<p><strong>实验设计</strong>：288个公共卫生中心，来自四个州</p>
-<p><strong>随机分配</strong>（三组）： 1.
-<strong>Grant组</strong>（96个）：获得60万奈拉（约1,600美元）赠款 2.
-<strong>Encouragement组</strong>（96个）：仅获得会议干预 3.
-<strong>Control组</strong>（96个）：维持现状</p>
-<p><strong>关键设计特点</strong>： - "意外"宣布：在会议结束时才宣布赠款
-- 资金管理完全由卫生工作者自行决定 - 条件宽松（只需提供银行账户）</p>
-<h3 id="结果">结果</h3>
-<p><strong>资金使用</strong>： - 47%用于改善质量（设备、翻新、员工激励）
-- 35%用于降低患者价格 - 约82%可追踪</p>
-<p><strong>产出效应</strong>： - 产前访问：+17-41% - 分娩：+17-41% -
-住院：+66%</p>
-<p><strong>质量效应</strong>：总体质量指数提高0.4标准差</p>
-<p><strong>健康效应</strong>：儿童死亡率降低24%</p>
-<p><strong>"无形"效应</strong>： - Grant诊所更早制定书面行动计划 -
-计划更详细，更可能寻求社区投入</p>
-<p><strong>长期效应</strong>（四年后）： - 产前访问：+15 log points -
-儿童免疫：+17 log points</p>
-<hr>
-<h2 id="结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>财政约束是真正的约束</strong>：向卫生设施提供额外资金带来了巨大的生产率提高</p></li>
-<li><p><strong>资金被有效使用</strong>：约47%用于改善质量，35%用于降低价格，没有明显的资金挪用</p></li>
-<li><p><strong>打破了"低质量-低数量"均衡</strong>：帮助卫生设施同时解决质量和价格两个约束</p></li>
-<li><p><strong>自主权产生了更好的效果</strong>：无条件赠款优于绩效挂钩拨款</p></li>
-<li><p><strong>效果持久</strong>：即使资金停止，改进仍持续约两年</p></li>
-</ol>
-<h3 id="政策含义">政策含义</h3>
-<ol type="1">
-<li><p><strong>资本注入可以打破均衡</strong>：财务"大推动"可能帮助突破困境</p></li>
-<li><p><strong>自主权和灵活性很重要</strong>：让卫生工作者自行决定如何花钱比严格规定用途更有效</p></li>
-<li><p><strong>"培训"不一定是前提</strong>：卫生工作者能够管理赠款资金，即使没有额外培训</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -13251,6 +13251,42 @@ III资本要求对银行中介交易产生负面影响</p></li>
       </tags>
   </entry>
   <entry>
+    <title>画一幅我农所在地的道路图</title>
+    <url>/posts/42027/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;">
+<center>
+上图即为最终效果
+</center>
+<h2 id="一些必备的工具">一些必备的工具</h2>
+<p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="绘制路网地图">绘制路网地图</h2>
+<p>导入以下R 包:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>读入杨陵区的数据:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>获取杨陵区的经纬度范围:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
+<p>提取杨陵区的街道路线:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>把数据保存为<strong>rds</strong>:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>然后绘图:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>绘图</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>多层网络上的博弈 — 深度阅读笔记 — Zenou &amp; Zhou</title>
     <url>/posts/zenou2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -13345,42 +13381,6 @@ T\]</span></p>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>画一幅我农所在地的道路图</title>
-    <url>/posts/42027/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;">
-<center>
-上图即为最终效果
-</center>
-<h2 id="一些必备的工具">一些必备的工具</h2>
-<p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="绘制路网地图">绘制路网地图</h2>
-<p>导入以下R 包:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>读入杨陵区的数据:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>获取杨陵区的经纬度范围:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
-<p>提取杨陵区的街道路线:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>把数据保存为<strong>rds</strong>:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>然后绘图:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>绘图</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
       </tags>
   </entry>
 </search>
