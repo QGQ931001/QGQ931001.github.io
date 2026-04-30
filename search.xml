@@ -1000,6 +1000,168 @@ Economic Review.</li>
       </tags>
   </entry>
   <entry>
+    <title>稳健的错误设定模型 — 深度阅读笔记 — Ba</title>
+    <url>/posts/ba2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Robust Misspecified Models</li>
+<li><strong>作者</strong>: Cuimin Ba (University of Pittsburgh)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, Vol. 116, No. 4,
+pp. 1340-1379</li>
+<li><strong>DOI</strong>: 10.1257/aer.20240246</li>
+<li><strong>难度评估</strong>: 高 -
+需要博弈论、学习理论、贝叶斯推断基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>模型错误设定（Model
+Misspecification）</strong>：指决策者将零概率分配给真实数据生成过程(DGP)的情况。这可能源于简化复杂现实的需要，或认知偏差如过度自信或相关性忽视。</p>
+<p><strong>自我确认均衡（Self-Confirming Equilibrium,
+SCE）</strong>：指代理人在给定一致信念下选择最优行动，但模型预测可能与真实DGP不匹配（仅在均衡路径上匹配）。</p>
+<p><strong>贝叶斯因子（Bayes
+Factor）</strong>：是两种模型相对于观察数据的似然比，用于决定是否切换模型。当贝叶斯因子超过阈值α时，代理人切换模型。</p>
+<p><strong>p-吸收性（P-absorbingness）</strong>：本文提出的新概念，要求使用某模型的教条主义者在正概率下最终只玩均衡行动。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><strong>模型与决策</strong>:
+人们使用模型指导决策，但常用模型往往是错误设定的</li>
+<li><strong>现有研究局限</strong>:
+大多数文献假设决策者是"教条的"——使用特定错误模型且不考虑改变</li>
+<li><strong>现实中的模型切换</strong>:
+科学家转换范式、经济学家采用新模型、个体在认知行为治疗中改变思维模式</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>:
+当决策者愿意切换模型时，哪些错误设定的模型会持续存在？</p>
+<p><strong>关键洞察</strong>:
+作者提出两个核心特征来表征稳健的错误设定模型：(1)模型在预测均衡分布方面的渐近准确性；(2)围绕均衡的先验"紧密度"。错误设定的模型可以是稳健的，即使决策者观察到无限数据，也能持续对抗任何竞争模型。</p>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<p>论文结构如下:</p>
+<ol type="1">
+<li><strong>引言</strong>: 问题陈述、动机、贡献预览</li>
+<li><strong>激励示例</strong>: 艺术家过度/不足自信的例子</li>
+<li><strong>框架</strong>:
+基本设定、模型设定、切换规则、持久性和稳健性定义</li>
+<li><strong>主要结果</strong>: 定理1-3</li>
+<li><strong>应用</strong>: 媒体偏见与极化、过度与不足自信</li>
+<li><strong>扩展</strong>: 替代切换规则、多个竞争模型，前瞻性代理人</li>
+<li><strong>结论</strong></li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="艺术家示例">艺术家示例</h4>
+<p>艺术家选择努力程度，真实能力b*=1，但艺术家可能过度自信(b̂=2)或不足自信(b̂=0)。</p>
+<p><strong>关键发现</strong>: 过度自信更稳健!</p>
+<ul>
+<li><strong>不足自信</strong>:
+导致负反馈循环，努力在1和2之间永远循环，无自我确认均衡</li>
+<li><strong>过度自信</strong>:
+导致正反馈循环，最终稳定在努力=0的均衡</li>
+</ul>
+<h3 id="框架设定">框架设定</h3>
+<p><strong>数据生成过程</strong>: 每个时期代理人生成内生数据 - 行动at →
+结果yt ~ Q*(·|at) - 结果取决于行动（内生数据）</p>
+<p><strong>主观模型</strong>: 每个模型θ是预测DGP的有限集合{ Qθ(·|a,ω)
+}</p>
+<p><strong>切换规则</strong>: - 计算贝叶斯因子λt - 如果λt &gt;
+α，切换到竞争模型 - 如果λt &lt; 1/α，切换回来 - α≥1控制切换粘性</p>
+<h3 id="主要结果">主要结果</h3>
+<h4 id="定理1哪些模型可以稳健">定理1：哪些模型可以稳健</h4>
+<p><strong>条件</strong>: α &gt; 1</p>
+<p><strong>等价命题</strong>: (i) 模型θ在某些先验下全局稳健 (ii)
+模型θ在某些先验下局部稳健 (iii) 模型θ存在p-吸收SCE</p>
+<p><strong>关键洞察</strong>:
+全局和局部稳健性是等价的——如果模型对重大范式转换脆弱，对局部变化也脆弱。</p>
+<h4 id="定理2何时模型是稳健的">定理2：何时模型是稳健的</h4>
+<p><strong>条件</strong>:
+模型θ无陷阱（可识别+所有p-吸收SCE是准严格）</p>
+<p><strong>核心概念</strong>: - <strong>一致参数</strong> Cθ:
+存在p-吸收SCE支持的参数 - <strong>先验紧密度</strong>: πθ0(Cθ) ≥ 1/α</p>
+<p><strong>结论</strong>: - 全局稳健 ⟺ 先验紧密度条件满足 - 局部稳健 ⟺
+Cθ ≠ ∅（对所有全支撑先验）</p>
+<h4 id="定理3非粘性切换-α-1">定理3：非粘性切换 (α = 1)</h4>
+<p><strong>结论</strong>: Cθ = Ωθ（全参数一致）才是稳健的</p>
+<p><strong>洞察</strong>: 粘性帮助更多错误模型持续存在</p>
+<h3 id="应用">应用</h3>
+<h4 id="a.-媒体偏见与极化">A. 媒体偏见与极化</h4>
+<p><strong>设定</strong>: - 代理人选择左翼、中间、右翼媒体 -
+真实状态是ωM（中间） - 媒体可能误导代理人</p>
+<p><strong>命题1</strong>: - θ̂在所有先验和切换阈值下全局稳健 -
+θ只在先验充分集中或切换阈值足够高时全局稳健 - θ̂最终以正概率永久替换θ</p>
+<p><strong>政治极化机制</strong>:
+错误模型θ̂因为简单，在数据拟合上表现更好，最终导致持久的政治极化。</p>
+<h4 id="b.-过度与不足自信">B. 过度与不足自信</h4>
+<p><strong>设定</strong>:
+代理人对能力有偏见(b̂)，学习另一个基本因素(ω)</p>
+<p><strong>命题2</strong>: - 过度自信(b̂ &gt; b<em>): 总是局部稳健 -
+不足自信(b̂ &lt; b</em>): 只在某些不连续区间局部稳健</p>
+<p><strong>机制差异</strong>: - 过度自信 → 正反馈 → 收敛到SCE - 不足自信
+→ 负反馈 → 在非SCE行动间振荡</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<p>本文研究了当决策者比较错误设定模型与竞争模型时，哪些模型会持续存在。主要结论:</p>
+<ol type="1">
+<li><strong>稳健性条件</strong>:
+错误设定模型的稳健性取决于两个特征——渐近准确性和先验紧密度</li>
+<li><strong>全局vs局部稳健</strong>:
+在粘性切换下(α&gt;1)两者等价;在非粘性切换下(α=1)只有全集中先验有效</li>
+<li><strong>反直觉发现</strong>:
+配备根深蒂固先验的简单错误模型可以比正确模型更稳健</li>
+<li><strong>应用广泛</strong>:
+从媒体极化到认知偏差,框架提供了预测哪些偏见更持久的工具</li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="文献提及的方向">文献提及的方向</h3>
+<ol type="1">
+<li><strong>最优切换阈值</strong>: 如何平衡I类和II类错误</li>
+<li><strong>持久性概率</strong>: 量化模型被永久采用的可能性</li>
+<li><strong>前瞻性代理人</strong>: 跨模型的前瞻性而非仅模型内</li>
+<li><strong>连续行动空间</strong>: 扩展框架到连续行动</li>
+</ol>
+<h3 id="未来研究思考">未来研究思考</h3>
+<ol type="1">
+<li><strong>政策设计</strong>:
+如果知道某些错误模型更稳健,如何设计干预来对抗它们?</li>
+<li><strong>模型复杂性</strong>:
+复杂模型vs简单模型的权衡是否与本文发现一致?</li>
+<li><strong>异质性学习</strong>:
+不同决策者是否以不同方式应用切换规则?</li>
+</ol>
+<hr>
+<h2 id="学术思考">7. 学术思考</h2>
+<h3 id="核心学术洞察">核心学术洞察</h3>
+<ol type="1">
+<li><p><strong>为什么简单错误模型更稳健?</strong>:
+本文的核心反直觉发现。直觉上,正确模型应该更受欢迎。但错误模型因为简单,先验更集中,而正确模型在每个参数上都可能不一致。</p></li>
+<li><p><strong>粘性切换的双刃剑效应</strong>:
+粘性(α&gt;1)帮助错误模型持续,但也防止因早期噪声过早放弃正确模型。</p></li>
+<li><p><strong>p-吸收性的概念创新</strong>:
+传统SCE只要求均衡存在,不要求可达到性。p-吸收性要求从正概率初始信念可达。</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li>定理1中"局部和全局稳健等价"的证明思路是什么?</li>
+<li>媒体极化应用中的"策略性误报"是如何设计的?</li>
+<li>p-吸收SCE和普通SCE有什么区别?</li>
+<li>错误模型持久性的概率有多高?</li>
+<li>在离散vs连续行动空间中,结论如何变化?</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>长期住房收益率动态 — 深度阅读笔记 — Bäcker-Peral, Hazell &amp; Mian</title>
     <url>/posts/backer-peral2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -1168,168 +1330,6 @@ P_{it} = \alpha + \beta \cdot Extension_{i} + \gamma_t + \delta X_i +
 匹配关闭租约和开放租约的技术细节是什么？</p></li>
 <li><p>**y*与长期债券收益率的追踪关系有何含义？**
 这表明什么共同驱动因素？</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>稳健的错误设定模型 — 深度阅读笔记 — Ba</title>
-    <url>/posts/ba2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Robust Misspecified Models</li>
-<li><strong>作者</strong>: Cuimin Ba (University of Pittsburgh)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, Vol. 116, No. 4,
-pp. 1340-1379</li>
-<li><strong>DOI</strong>: 10.1257/aer.20240246</li>
-<li><strong>难度评估</strong>: 高 -
-需要博弈论、学习理论、贝叶斯推断基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>模型错误设定（Model
-Misspecification）</strong>：指决策者将零概率分配给真实数据生成过程(DGP)的情况。这可能源于简化复杂现实的需要，或认知偏差如过度自信或相关性忽视。</p>
-<p><strong>自我确认均衡（Self-Confirming Equilibrium,
-SCE）</strong>：指代理人在给定一致信念下选择最优行动，但模型预测可能与真实DGP不匹配（仅在均衡路径上匹配）。</p>
-<p><strong>贝叶斯因子（Bayes
-Factor）</strong>：是两种模型相对于观察数据的似然比，用于决定是否切换模型。当贝叶斯因子超过阈值α时，代理人切换模型。</p>
-<p><strong>p-吸收性（P-absorbingness）</strong>：本文提出的新概念，要求使用某模型的教条主义者在正概率下最终只玩均衡行动。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><strong>模型与决策</strong>:
-人们使用模型指导决策，但常用模型往往是错误设定的</li>
-<li><strong>现有研究局限</strong>:
-大多数文献假设决策者是"教条的"——使用特定错误模型且不考虑改变</li>
-<li><strong>现实中的模型切换</strong>:
-科学家转换范式、经济学家采用新模型、个体在认知行为治疗中改变思维模式</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:
-当决策者愿意切换模型时，哪些错误设定的模型会持续存在？</p>
-<p><strong>关键洞察</strong>:
-作者提出两个核心特征来表征稳健的错误设定模型：(1)模型在预测均衡分布方面的渐近准确性；(2)围绕均衡的先验"紧密度"。错误设定的模型可以是稳健的，即使决策者观察到无限数据，也能持续对抗任何竞争模型。</p>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<p>论文结构如下:</p>
-<ol type="1">
-<li><strong>引言</strong>: 问题陈述、动机、贡献预览</li>
-<li><strong>激励示例</strong>: 艺术家过度/不足自信的例子</li>
-<li><strong>框架</strong>:
-基本设定、模型设定、切换规则、持久性和稳健性定义</li>
-<li><strong>主要结果</strong>: 定理1-3</li>
-<li><strong>应用</strong>: 媒体偏见与极化、过度与不足自信</li>
-<li><strong>扩展</strong>: 替代切换规则、多个竞争模型，前瞻性代理人</li>
-<li><strong>结论</strong></li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="艺术家示例">艺术家示例</h4>
-<p>艺术家选择努力程度，真实能力b*=1，但艺术家可能过度自信(b̂=2)或不足自信(b̂=0)。</p>
-<p><strong>关键发现</strong>: 过度自信更稳健!</p>
-<ul>
-<li><strong>不足自信</strong>:
-导致负反馈循环，努力在1和2之间永远循环，无自我确认均衡</li>
-<li><strong>过度自信</strong>:
-导致正反馈循环，最终稳定在努力=0的均衡</li>
-</ul>
-<h3 id="框架设定">框架设定</h3>
-<p><strong>数据生成过程</strong>: 每个时期代理人生成内生数据 - 行动at →
-结果yt ~ Q*(·|at) - 结果取决于行动（内生数据）</p>
-<p><strong>主观模型</strong>: 每个模型θ是预测DGP的有限集合{ Qθ(·|a,ω)
-}</p>
-<p><strong>切换规则</strong>: - 计算贝叶斯因子λt - 如果λt &gt;
-α，切换到竞争模型 - 如果λt &lt; 1/α，切换回来 - α≥1控制切换粘性</p>
-<h3 id="主要结果">主要结果</h3>
-<h4 id="定理1哪些模型可以稳健">定理1：哪些模型可以稳健</h4>
-<p><strong>条件</strong>: α &gt; 1</p>
-<p><strong>等价命题</strong>: (i) 模型θ在某些先验下全局稳健 (ii)
-模型θ在某些先验下局部稳健 (iii) 模型θ存在p-吸收SCE</p>
-<p><strong>关键洞察</strong>:
-全局和局部稳健性是等价的——如果模型对重大范式转换脆弱，对局部变化也脆弱。</p>
-<h4 id="定理2何时模型是稳健的">定理2：何时模型是稳健的</h4>
-<p><strong>条件</strong>:
-模型θ无陷阱（可识别+所有p-吸收SCE是准严格）</p>
-<p><strong>核心概念</strong>: - <strong>一致参数</strong> Cθ:
-存在p-吸收SCE支持的参数 - <strong>先验紧密度</strong>: πθ0(Cθ) ≥ 1/α</p>
-<p><strong>结论</strong>: - 全局稳健 ⟺ 先验紧密度条件满足 - 局部稳健 ⟺
-Cθ ≠ ∅（对所有全支撑先验）</p>
-<h4 id="定理3非粘性切换-α-1">定理3：非粘性切换 (α = 1)</h4>
-<p><strong>结论</strong>: Cθ = Ωθ（全参数一致）才是稳健的</p>
-<p><strong>洞察</strong>: 粘性帮助更多错误模型持续存在</p>
-<h3 id="应用">应用</h3>
-<h4 id="a.-媒体偏见与极化">A. 媒体偏见与极化</h4>
-<p><strong>设定</strong>: - 代理人选择左翼、中间、右翼媒体 -
-真实状态是ωM（中间） - 媒体可能误导代理人</p>
-<p><strong>命题1</strong>: - θ̂在所有先验和切换阈值下全局稳健 -
-θ只在先验充分集中或切换阈值足够高时全局稳健 - θ̂最终以正概率永久替换θ</p>
-<p><strong>政治极化机制</strong>:
-错误模型θ̂因为简单，在数据拟合上表现更好，最终导致持久的政治极化。</p>
-<h4 id="b.-过度与不足自信">B. 过度与不足自信</h4>
-<p><strong>设定</strong>:
-代理人对能力有偏见(b̂)，学习另一个基本因素(ω)</p>
-<p><strong>命题2</strong>: - 过度自信(b̂ &gt; b<em>): 总是局部稳健 -
-不足自信(b̂ &lt; b</em>): 只在某些不连续区间局部稳健</p>
-<p><strong>机制差异</strong>: - 过度自信 → 正反馈 → 收敛到SCE - 不足自信
-→ 负反馈 → 在非SCE行动间振荡</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<p>本文研究了当决策者比较错误设定模型与竞争模型时，哪些模型会持续存在。主要结论:</p>
-<ol type="1">
-<li><strong>稳健性条件</strong>:
-错误设定模型的稳健性取决于两个特征——渐近准确性和先验紧密度</li>
-<li><strong>全局vs局部稳健</strong>:
-在粘性切换下(α&gt;1)两者等价;在非粘性切换下(α=1)只有全集中先验有效</li>
-<li><strong>反直觉发现</strong>:
-配备根深蒂固先验的简单错误模型可以比正确模型更稳健</li>
-<li><strong>应用广泛</strong>:
-从媒体极化到认知偏差,框架提供了预测哪些偏见更持久的工具</li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="文献提及的方向">文献提及的方向</h3>
-<ol type="1">
-<li><strong>最优切换阈值</strong>: 如何平衡I类和II类错误</li>
-<li><strong>持久性概率</strong>: 量化模型被永久采用的可能性</li>
-<li><strong>前瞻性代理人</strong>: 跨模型的前瞻性而非仅模型内</li>
-<li><strong>连续行动空间</strong>: 扩展框架到连续行动</li>
-</ol>
-<h3 id="未来研究思考">未来研究思考</h3>
-<ol type="1">
-<li><strong>政策设计</strong>:
-如果知道某些错误模型更稳健,如何设计干预来对抗它们?</li>
-<li><strong>模型复杂性</strong>:
-复杂模型vs简单模型的权衡是否与本文发现一致?</li>
-<li><strong>异质性学习</strong>:
-不同决策者是否以不同方式应用切换规则?</li>
-</ol>
-<hr>
-<h2 id="学术思考">7. 学术思考</h2>
-<h3 id="核心学术洞察">核心学术洞察</h3>
-<ol type="1">
-<li><p><strong>为什么简单错误模型更稳健?</strong>:
-本文的核心反直觉发现。直觉上,正确模型应该更受欢迎。但错误模型因为简单,先验更集中,而正确模型在每个参数上都可能不一致。</p></li>
-<li><p><strong>粘性切换的双刃剑效应</strong>:
-粘性(α&gt;1)帮助错误模型持续,但也防止因早期噪声过早放弃正确模型。</p></li>
-<li><p><strong>p-吸收性的概念创新</strong>:
-传统SCE只要求均衡存在,不要求可达到性。p-吸收性要求从正概率初始信念可达。</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li>定理1中"局部和全局稳健等价"的证明思路是什么?</li>
-<li>媒体极化应用中的"策略性误报"是如何设计的?</li>
-<li>p-吸收SCE和普通SCE有什么区别?</li>
-<li>错误模型持久性的概率有多高?</li>
-<li>在离散vs连续行动空间中,结论如何变化?</li>
 </ol>
 ]]></content>
       <categories>
@@ -2715,56 +2715,6 @@ Instruments论文的深度笔记,由Claude AI辅助生成.</em></p>
       </tags>
   </entry>
   <entry>
-    <title>大城市人口增长速度🦚</title>
-    <url>/posts/15523/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
-<center>
-上图即为最终效果
-</center>
-<h2 id="下载数据">下载数据</h2>
-<p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录.
-</p><figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<h2 id="加载r包">加载R包</h2>
-<p>需要的R包如下所示.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
-<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<ol type="1">
-<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
-<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon,
-Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
-<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
-<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
-</ol>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
-<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.
-使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="绘图">绘图</h2>
-<p>代码如下,图见上文.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>绘图</category>
-        <category>map&amp;sf</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Generative AI at Work — 深度分析 — Brynjolfsson Et Al.</title>
     <url>/posts/bryn2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -3036,6 +2986,56 @@ rot)的风险?</p></li>
       </categories>
       <tags>
         <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大城市人口增长速度🦚</title>
+    <url>/posts/15523/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
+<center>
+上图即为最终效果
+</center>
+<h2 id="下载数据">下载数据</h2>
+<p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录.
+</p><figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="加载r包">加载R包</h2>
+<p>需要的R包如下所示.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
+<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<ol type="1">
+<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
+<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon,
+Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
+<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
+<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
+</ol>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
+<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.
+使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="绘图">绘图</h2>
+<p>代码如下,图见上文.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>绘图</category>
+        <category>map&amp;sf</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
       </tags>
   </entry>
   <entry>
@@ -3747,6 +3747,279 @@ Mani et al. (2013)
       </tags>
   </entry>
   <entry>
+    <title>The Effect of Minimum Wages on Low-Wage Jobs — 深度分析 — Cengiz Et Al.</title>
+    <url>/posts/cengiz2019/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: The Effect of Minimum Wages on Low-Wage
+Jobs</li>
+<li><strong>作者</strong>: Doruk Cengiz(University of Massachusetts
+Amherst), Arindrajit Dube(UMass Amherst, NBER), Attila Lindner(UCL, CEP,
+IFS), Ben Zipperer(Economic Policy Institute)</li>
+<li><strong>类型</strong>: 论文笔记 / 劳动经济学</li>
+<li><strong>出版年份</strong>: 2019</li>
+<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics,
+Volume 134, Issue 3, Pages 1405-1454</li>
+<li><strong>难度评估</strong>: 中 - 需要劳动经济学和计量经济学基础
+<span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言背景和意义">1. 引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>最低工资政策(Minimum Wage
+Policy)</strong>:政府规定的劳动力小时工资下限,是劳动经济学中最具争议的政策之一.支持者认为它能提高低收入工人的生活水平,反对者担心它会导致就业下降("unemployment").</p>
+<p><strong>"新最低工资研究"的起源</strong>:Card and Krueger
+(1995)&lt;神话与计量经济学:对最低工资的新研究&gt;对传统观点提出挑战,使用准实验方法发现最低工资提高并未导致就业下降.</p>
+<p><strong>bunching
+estimator(堆集估计量)</strong>:一种利用政策变化导致的结果分布聚集现象来识别因果效应的方法.</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>政策热潮</strong>:加州、伊利诺伊州、麻省、新泽西州、纽约州已通过将最低工资提高至$15/小时的立法;数十个城市也实施了城市级最低工资政策.</p></li>
+<li><p><strong>研究缺漏</strong>:尽管新最低工资研究已逾30年,但关于政策对总体就业影响的研究仍然很少.2014年国会预算办公室(CBO)报告承认相关研究匮乏,被迫使用青少年的弹性来推断对低工资工人的总体影响.</p></li>
+<li><p><strong>方法论挑战</strong>:传统方法使用双向固定效应回归,但存在一些问题,如对工资分布上尾部的影响可能干扰对底部效应的估计.</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>:最低工资对低工资工作的总体效应是什么?</p>
+<p><strong>具体子问题</strong>: - 最低工资对就业的影响是正还是负? -
+影响有多大? - 最低工资带来的工资上涨是否被就业损失所抵消? -
+效应的异质性如何?</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><strong>方法创新</strong>:提出"事件堆集"(EB-bunching)方法,将总体就业效应分解到各工资区间</li>
+<li><strong>对既有文献的贡献</strong>:澄清了最低工资文献中关于1980年代和1990年代早期样本选择的争议</li>
+<li><strong>政策意义</strong>:为当前$15最低工资运动提供实证依据</li>
+</ol>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构(论文结构)</h2>
+<table>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr>
+<th>章节</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I. Introduction</td>
+<td>研究背景、问题意识、文献贡献</td>
+</tr>
+<tr>
+<td>II. Methodology and Data</td>
+<td>概念框架、实证策略、数据</td>
+</tr>
+<tr>
+<td>III. Main Empirical Findings</td>
+<td>总体就业效应、工资溢出、异质性分析</td>
+</tr>
+<tr>
+<td>IV. Robustness and Threats to Identification</td>
+<td>对双向固定效应方法问题的解释</td>
+</tr>
+<tr>
+<td>V. Conclusion</td>
+<td>结论</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文(逻辑梳理)</h2>
+<h3 id="背景最低工资的理论预测">背景:最低工资的理论预测</h3>
+<p><strong>竞争性劳动力市场模型预测</strong>: -
+最低工资提高会导致低工资就业下降 - 下降幅度取决于劳动力需求弹性</p>
+<p><strong>monopsony模型预测</strong>: - 最低工资提高可能增加就业 -
+因为雇主的市場力量被削弱</p>
+<p><strong>实际预测的复杂性</strong>: -
+工资溢出效应(spillovers):最低工资可能推动高于最低工资的工人工资上涨 -
+劳动力替代:低技能工人可能被高技能工人替代 -
+就业损失可能分布在不同工资区间</p>
+<h3 id="挑战">挑战</h3>
+<ol type="1">
+<li><p><strong>识别问题</strong>:如何分离最低工资的因果效应?</p></li>
+<li><p><strong>聚类分配问题</strong>:传统双向固定效应方法可能因早期时期的混杂因素而产生偏误</p></li>
+<li><p><strong>效应的空间异质性</strong>:不同行业的最低工资效应可能不同</p></li>
+<li><p><strong>数据局限性</strong>:CPS调查数据可能存在测量误差</p></li>
+</ol>
+<h3 id="方法数据集要突出">方法(数据集要突出)</h3>
+<p><strong>数据来源</strong>: -
+1979-2016年CPS(当前人口调查)NBER合并出口轮次小组数据 - 137,000+观测值 -
+138个州级最低工资事件(1979-2016年间) -
+<strong>事件定义</strong>:州最低工资增加至少$0.25,且至少2%工人直接影响</p>
+<p><strong>核心概念</strong>: - <strong>缺失工作(Missing
+Jobs)</strong>:最低工资提高后,低于新最低工资的工作数量减少 -
+<strong>超额工作(Excess
+Jobs)</strong>:因最低工资提高而出现在最低工资水平或略高处的工作增加</p>
+<p><strong>实证策略_事件研究设计</strong>: <span class="math display">\[{E_{sjt} \over N_{st}} = \sum_{\tau=-3}^{4}
+\sum_{k=-4}^{17} \alpha_{\tau k} I_{\tau k}^{sjt} + \mu_{sj} + \rho_{jt}
++ \Omega_{sjt} + u_{sjt}}\]</span></p>
+<p>其中: - <span class="math inline">\(E_{sjt}\)</span>:j工资区间在s州的就业 - <span class="math inline">\(N_{st}\)</span>:s州当时的劳动力 - <span class="math inline">\(I_{\tau k}^{sjt}\)</span>:处理指示变量 - <span class="math inline">\(\mu_{sj}\)</span>:州×工资区间固定效应 - <span class="math inline">\(\rho_{jt}\)</span>:时间×工资区间固定效应 -
+标准误按州级聚类</p>
+<p><strong>关键创新</strong>: - 将就业变化按$0.25工资区间分解 -
+使用事件窗口前后对比 - 提供对上尾效应的检验</p>
+<h3 id="结果results">结果(Results)</h3>
+<p><strong>核心发现1:总体就业效应接近零</strong></p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>估计值</th>
+<th>标准误</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>受影响工人就业变化</td>
+<td>+2.8%</td>
+<td>(2.9%)</td>
+</tr>
+<tr>
+<td>就业弹性(相对于自身工资)</td>
+<td>0.41</td>
+<td>(0.43)</td>
+</tr>
+</tbody>
+</table>
+<p>→ 在95%置信水平下,排除低于-0.45的弹性</p>
+<p><strong>核心发现2:工资溢出效应显著</strong></p>
+<ul>
+<li>溢出效应向上延伸至最低工资以上约$3</li>
+<li>总体工资增长中约40%来自溢出效应</li>
+<li><strong>不对称性</strong>:留任工人获得显著工资溢出,但新进入者没有</li>
+</ul>
+<p><strong>核心发现3:行业异质性</strong></p>
+<table>
+<thead>
+<tr>
+<th>行业</th>
+<th>就业弹性</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>可贸易部门(制造业)</td>
+<td>-1.4</td>
+<td>显著负效应</td>
+</tr>
+<tr>
+<td>不可贸易部门(餐饮、零售)</td>
+<td>≈0</td>
+<td>几乎无效应</td>
+</tr>
+</tbody>
+</table>
+<p>→ 行业组成是决定最低工资就业效应的关键因素</p>
+<p><strong>核心发现4:人口群体异质性</strong></p>
+<ul>
+<li>按教育和年龄分组,未发现低技能工人被高技能工人替代的证据</li>
+<li>不同人口群体的就业效应大多接近零且不显著</li>
+<li>表明最低工资政策的好处理广泛共享</li>
+</ul>
+<p><strong>核心发现5:对Meer and West (2016)发现的解释</strong></p>
+<ul>
+<li>该研究使用双向固定效应发现大的负就业估计</li>
+<li>分解分析显示这一负效应由工资分布上尾的不大幅度下降驱动</li>
+<li>问题来源:1980年代和1990年代早期样本中包含的时期混杂因素</li>
+<li>1992年后,各种标准规范几乎没有就业减少的证据</li>
+</ul>
+<hr>
+<h2 id="结论conclusion">4. 结论(Conclusion)</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>最低工资对低工资工作数量的总体影响基本为零</strong>:五年观察期内,低工资工作数量基本保持不变</p></li>
+<li><p><strong>最低工资的直接工资效应被适度工资溢出放大</strong>:溢出效应约占总体工资增长的40%</p></li>
+<li><p><strong>就业效应不能用劳动力替代解释</strong>:不同教育和年龄群体的替代效应证据不成立</p></li>
+<li><p><strong>在更高最低工资水平下也未发现就业减少证据</strong>:但确实发现可贸易部门(制造业)减少的迹象</p></li>
+<li><p><strong>方法论贡献</strong>:EB-bunching方法提供了透明且稳健的估计最低工资就业效应的方法</p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><strong>澄清方法论争议</strong>:解释了为什么双向固定效应和事件研究方法产生不同结果</li>
+<li><strong>提供新的实证证据</strong>:使用更全面的数据和更细粒度的分解</li>
+<li><strong>扩展工资溢出分析</strong>:提供了关于溢出机制(相对工资关系 vs
+外部选择价值)的证据</li>
+<li><strong>政策意义</strong>:为$15最低工资运动提供实证支持</li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向(Future work)</h2>
+<h3 id="论文提及的拓展方向">论文提及的拓展方向</h3>
+<ol type="1">
+<li><p><strong>更高最低工资水平的研究</strong>:当Kaitz指数超过59%时会发生什么?需要更高最低工资的州的
+variation</p></li>
+<li><p><strong>长期效应</strong>:本研究关注5年窗口,更长期效应仍需研究</p></li>
+<li><p><strong>其他国家的证据</strong>:美国结果的国际可比性</p></li>
+</ol>
+<h3 id="思考的下一步研究">思考的下一步研究</h3>
+<ol type="1">
+<li><p><strong>动态一般均衡效应</strong>:行业层面的一般均衡调整如何影响就业?</p></li>
+<li><p><strong>非正规就业</strong>:最低工资对非正规经济(零工经济)的影响</p></li>
+<li><p><strong>非工资效应</strong>:最低工资对工作条件、培训机会等非工资方面的影响</p></li>
+<li><p><strong>家庭效应</strong>:最低工资对家庭收入分配和儿童贫困的影响</p></li>
+<li><p><strong>政治经济学</strong>:最低工资设定的决定因素及其政治经济学含义</p></li>
+</ol>
+<hr>
+<h2 id="学术思考">6. 学术思考</h2>
+<h3 id="核心学术问题">核心学术问题</h3>
+<ol type="1">
+<li><strong>竞争性 vs monopsony劳动力市场的边界</strong>
+<ul>
+<li>本研究发现总体就业效应接近零</li>
+<li>这是否意味着低工资劳动力市场更接近monopsony?</li>
+<li>还是正负效应相互抵消?</li>
+</ul></li>
+<li><strong>工资溢出的机制</strong>
+<ul>
+<li>研究发现溢出效应在最低工资以上约$3处消失</li>
+<li>且对留任工人和新进入者影响不对称</li>
+<li>这更支持"相对工资关系假设"而非"外部选择价值假设"</li>
+<li>但这是否意味着企业内部存在显著的工资刚性?</li>
+</ul></li>
+<li><strong>可贸易 vs 不可贸易部门的差异</strong>
+<ul>
+<li>制造业显著负效应 vs 零售餐饮零效应</li>
+<li>这是否意味着全球化压力降低了美国低技能工人的谈价能力?</li>
+<li>还是反映了不同的劳动力市场结构?</li>
+</ul></li>
+<li><strong>EB-bunching方法的普适性</strong>
+<ul>
+<li>将总体效应分解到各工资区间</li>
+<li>提供了"透明"的估计方式</li>
+<li>是否可以推广到其他政策评估?</li>
+</ul></li>
+<li><strong>对CBO政策分析的启示</strong>
+<ul>
+<li>CBO使用青少年弹性来推断总体影响</li>
+<li>本研究表明青少年可能是受最低工资影响最深的群体</li>
+<li>这是否意味着CBO的方法实际上低估了不确定性?</li>
+</ul></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p><strong>识别策略的有效性</strong>:如何检验平行趋势假设?事件前趋势检验的结果如何?</p></li>
+<li><p><strong>测量误差的影响</strong>:CPS数据中的测量误差如何影响估计?特别是对工资分布尾部的测量?</p></li>
+<li><p><strong>Kaitz指数的具体含义</strong>:Kaitz指数达到59%时会发生什么理论预测?</p></li>
+<li><p><strong>对理论模型的启示</strong>:这些发现如何区分竞争性模型和monopsony模型?</p></li>
+<li><p><strong>政策外部有效性</strong>:基于1979-2016年数据的发现在2020年代是否仍然适用?劳动力市场结构是否发生了根本性变化?</p></li>
+<li><p><strong>对工人流动的动态效应</strong>:最低工资是否影响了低工资工人的职业发展轨迹?</p></li>
+<li><p><strong>雇主反应的非工资渠道</strong>:雇主除了调整就业和工资外,是否在工时、工作条件、培训等方面做出了调整?</p></li>
+<li><p><strong>与Dube et al. (2010)
+NJ快餐业研究的关系</strong>:为什么NJ快餐业研究发现了正效应,而本研究对所有行业的汇总发现零效应?</p></li>
+<li><p><strong>对州际差异的控制</strong>:如何排除州级经济基本面对结果的混杂影响?各州经济多样性的作用是什么?</p></li>
+<li><p><strong>最低工资的收入分配效应</strong>:最低工资如何与税法、其他转移支付计划相互作用以影响收入不平等?</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>劳动经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>&lt;玉米与人口&gt;深度阅读笔记 — Chen &amp; Kung</title>
     <url>/posts/chen2016/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -4064,279 +4337,6 @@ Issue 1, pp. 71-99</li>
       <tags>
         <tag>论文笔记</tag>
         <tag>经济史</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>The Effect of Minimum Wages on Low-Wage Jobs — 深度分析 — Cengiz Et Al.</title>
-    <url>/posts/cengiz2019/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: The Effect of Minimum Wages on Low-Wage
-Jobs</li>
-<li><strong>作者</strong>: Doruk Cengiz(University of Massachusetts
-Amherst), Arindrajit Dube(UMass Amherst, NBER), Attila Lindner(UCL, CEP,
-IFS), Ben Zipperer(Economic Policy Institute)</li>
-<li><strong>类型</strong>: 论文笔记 / 劳动经济学</li>
-<li><strong>出版年份</strong>: 2019</li>
-<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics,
-Volume 134, Issue 3, Pages 1405-1454</li>
-<li><strong>难度评估</strong>: 中 - 需要劳动经济学和计量经济学基础
-<span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言背景和意义">1. 引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>最低工资政策(Minimum Wage
-Policy)</strong>:政府规定的劳动力小时工资下限,是劳动经济学中最具争议的政策之一.支持者认为它能提高低收入工人的生活水平,反对者担心它会导致就业下降("unemployment").</p>
-<p><strong>"新最低工资研究"的起源</strong>:Card and Krueger
-(1995)&lt;神话与计量经济学:对最低工资的新研究&gt;对传统观点提出挑战,使用准实验方法发现最低工资提高并未导致就业下降.</p>
-<p><strong>bunching
-estimator(堆集估计量)</strong>:一种利用政策变化导致的结果分布聚集现象来识别因果效应的方法.</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>政策热潮</strong>:加州、伊利诺伊州、麻省、新泽西州、纽约州已通过将最低工资提高至$15/小时的立法;数十个城市也实施了城市级最低工资政策.</p></li>
-<li><p><strong>研究缺漏</strong>:尽管新最低工资研究已逾30年,但关于政策对总体就业影响的研究仍然很少.2014年国会预算办公室(CBO)报告承认相关研究匮乏,被迫使用青少年的弹性来推断对低工资工人的总体影响.</p></li>
-<li><p><strong>方法论挑战</strong>:传统方法使用双向固定效应回归,但存在一些问题,如对工资分布上尾部的影响可能干扰对底部效应的估计.</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:最低工资对低工资工作的总体效应是什么?</p>
-<p><strong>具体子问题</strong>: - 最低工资对就业的影响是正还是负? -
-影响有多大? - 最低工资带来的工资上涨是否被就业损失所抵消? -
-效应的异质性如何?</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><strong>方法创新</strong>:提出"事件堆集"(EB-bunching)方法,将总体就业效应分解到各工资区间</li>
-<li><strong>对既有文献的贡献</strong>:澄清了最低工资文献中关于1980年代和1990年代早期样本选择的争议</li>
-<li><strong>政策意义</strong>:为当前$15最低工资运动提供实证依据</li>
-</ol>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构(论文结构)</h2>
-<table>
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr>
-<th>章节</th>
-<th>内容</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I. Introduction</td>
-<td>研究背景、问题意识、文献贡献</td>
-</tr>
-<tr>
-<td>II. Methodology and Data</td>
-<td>概念框架、实证策略、数据</td>
-</tr>
-<tr>
-<td>III. Main Empirical Findings</td>
-<td>总体就业效应、工资溢出、异质性分析</td>
-</tr>
-<tr>
-<td>IV. Robustness and Threats to Identification</td>
-<td>对双向固定效应方法问题的解释</td>
-</tr>
-<tr>
-<td>V. Conclusion</td>
-<td>结论</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文(逻辑梳理)</h2>
-<h3 id="背景最低工资的理论预测">背景:最低工资的理论预测</h3>
-<p><strong>竞争性劳动力市场模型预测</strong>: -
-最低工资提高会导致低工资就业下降 - 下降幅度取决于劳动力需求弹性</p>
-<p><strong>monopsony模型预测</strong>: - 最低工资提高可能增加就业 -
-因为雇主的市場力量被削弱</p>
-<p><strong>实际预测的复杂性</strong>: -
-工资溢出效应(spillovers):最低工资可能推动高于最低工资的工人工资上涨 -
-劳动力替代:低技能工人可能被高技能工人替代 -
-就业损失可能分布在不同工资区间</p>
-<h3 id="挑战">挑战</h3>
-<ol type="1">
-<li><p><strong>识别问题</strong>:如何分离最低工资的因果效应?</p></li>
-<li><p><strong>聚类分配问题</strong>:传统双向固定效应方法可能因早期时期的混杂因素而产生偏误</p></li>
-<li><p><strong>效应的空间异质性</strong>:不同行业的最低工资效应可能不同</p></li>
-<li><p><strong>数据局限性</strong>:CPS调查数据可能存在测量误差</p></li>
-</ol>
-<h3 id="方法数据集要突出">方法(数据集要突出)</h3>
-<p><strong>数据来源</strong>: -
-1979-2016年CPS(当前人口调查)NBER合并出口轮次小组数据 - 137,000+观测值 -
-138个州级最低工资事件(1979-2016年间) -
-<strong>事件定义</strong>:州最低工资增加至少$0.25,且至少2%工人直接影响</p>
-<p><strong>核心概念</strong>: - <strong>缺失工作(Missing
-Jobs)</strong>:最低工资提高后,低于新最低工资的工作数量减少 -
-<strong>超额工作(Excess
-Jobs)</strong>:因最低工资提高而出现在最低工资水平或略高处的工作增加</p>
-<p><strong>实证策略_事件研究设计</strong>: <span class="math display">\[{E_{sjt} \over N_{st}} = \sum_{\tau=-3}^{4}
-\sum_{k=-4}^{17} \alpha_{\tau k} I_{\tau k}^{sjt} + \mu_{sj} + \rho_{jt}
-+ \Omega_{sjt} + u_{sjt}}\]</span></p>
-<p>其中: - <span class="math inline">\(E_{sjt}\)</span>:j工资区间在s州的就业 - <span class="math inline">\(N_{st}\)</span>:s州当时的劳动力 - <span class="math inline">\(I_{\tau k}^{sjt}\)</span>:处理指示变量 - <span class="math inline">\(\mu_{sj}\)</span>:州×工资区间固定效应 - <span class="math inline">\(\rho_{jt}\)</span>:时间×工资区间固定效应 -
-标准误按州级聚类</p>
-<p><strong>关键创新</strong>: - 将就业变化按$0.25工资区间分解 -
-使用事件窗口前后对比 - 提供对上尾效应的检验</p>
-<h3 id="结果results">结果(Results)</h3>
-<p><strong>核心发现1:总体就业效应接近零</strong></p>
-<table>
-<thead>
-<tr>
-<th>指标</th>
-<th>估计值</th>
-<th>标准误</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>受影响工人就业变化</td>
-<td>+2.8%</td>
-<td>(2.9%)</td>
-</tr>
-<tr>
-<td>就业弹性(相对于自身工资)</td>
-<td>0.41</td>
-<td>(0.43)</td>
-</tr>
-</tbody>
-</table>
-<p>→ 在95%置信水平下,排除低于-0.45的弹性</p>
-<p><strong>核心发现2:工资溢出效应显著</strong></p>
-<ul>
-<li>溢出效应向上延伸至最低工资以上约$3</li>
-<li>总体工资增长中约40%来自溢出效应</li>
-<li><strong>不对称性</strong>:留任工人获得显著工资溢出,但新进入者没有</li>
-</ul>
-<p><strong>核心发现3:行业异质性</strong></p>
-<table>
-<thead>
-<tr>
-<th>行业</th>
-<th>就业弹性</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>可贸易部门(制造业)</td>
-<td>-1.4</td>
-<td>显著负效应</td>
-</tr>
-<tr>
-<td>不可贸易部门(餐饮、零售)</td>
-<td>≈0</td>
-<td>几乎无效应</td>
-</tr>
-</tbody>
-</table>
-<p>→ 行业组成是决定最低工资就业效应的关键因素</p>
-<p><strong>核心发现4:人口群体异质性</strong></p>
-<ul>
-<li>按教育和年龄分组,未发现低技能工人被高技能工人替代的证据</li>
-<li>不同人口群体的就业效应大多接近零且不显著</li>
-<li>表明最低工资政策的好处理广泛共享</li>
-</ul>
-<p><strong>核心发现5:对Meer and West (2016)发现的解释</strong></p>
-<ul>
-<li>该研究使用双向固定效应发现大的负就业估计</li>
-<li>分解分析显示这一负效应由工资分布上尾的不大幅度下降驱动</li>
-<li>问题来源:1980年代和1990年代早期样本中包含的时期混杂因素</li>
-<li>1992年后,各种标准规范几乎没有就业减少的证据</li>
-</ul>
-<hr>
-<h2 id="结论conclusion">4. 结论(Conclusion)</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>最低工资对低工资工作数量的总体影响基本为零</strong>:五年观察期内,低工资工作数量基本保持不变</p></li>
-<li><p><strong>最低工资的直接工资效应被适度工资溢出放大</strong>:溢出效应约占总体工资增长的40%</p></li>
-<li><p><strong>就业效应不能用劳动力替代解释</strong>:不同教育和年龄群体的替代效应证据不成立</p></li>
-<li><p><strong>在更高最低工资水平下也未发现就业减少证据</strong>:但确实发现可贸易部门(制造业)减少的迹象</p></li>
-<li><p><strong>方法论贡献</strong>:EB-bunching方法提供了透明且稳健的估计最低工资就业效应的方法</p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><strong>澄清方法论争议</strong>:解释了为什么双向固定效应和事件研究方法产生不同结果</li>
-<li><strong>提供新的实证证据</strong>:使用更全面的数据和更细粒度的分解</li>
-<li><strong>扩展工资溢出分析</strong>:提供了关于溢出机制(相对工资关系 vs
-外部选择价值)的证据</li>
-<li><strong>政策意义</strong>:为$15最低工资运动提供实证支持</li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向(Future work)</h2>
-<h3 id="论文提及的拓展方向">论文提及的拓展方向</h3>
-<ol type="1">
-<li><p><strong>更高最低工资水平的研究</strong>:当Kaitz指数超过59%时会发生什么?需要更高最低工资的州的
-variation</p></li>
-<li><p><strong>长期效应</strong>:本研究关注5年窗口,更长期效应仍需研究</p></li>
-<li><p><strong>其他国家的证据</strong>:美国结果的国际可比性</p></li>
-</ol>
-<h3 id="思考的下一步研究">思考的下一步研究</h3>
-<ol type="1">
-<li><p><strong>动态一般均衡效应</strong>:行业层面的一般均衡调整如何影响就业?</p></li>
-<li><p><strong>非正规就业</strong>:最低工资对非正规经济(零工经济)的影响</p></li>
-<li><p><strong>非工资效应</strong>:最低工资对工作条件、培训机会等非工资方面的影响</p></li>
-<li><p><strong>家庭效应</strong>:最低工资对家庭收入分配和儿童贫困的影响</p></li>
-<li><p><strong>政治经济学</strong>:最低工资设定的决定因素及其政治经济学含义</p></li>
-</ol>
-<hr>
-<h2 id="学术思考">6. 学术思考</h2>
-<h3 id="核心学术问题">核心学术问题</h3>
-<ol type="1">
-<li><strong>竞争性 vs monopsony劳动力市场的边界</strong>
-<ul>
-<li>本研究发现总体就业效应接近零</li>
-<li>这是否意味着低工资劳动力市场更接近monopsony?</li>
-<li>还是正负效应相互抵消?</li>
-</ul></li>
-<li><strong>工资溢出的机制</strong>
-<ul>
-<li>研究发现溢出效应在最低工资以上约$3处消失</li>
-<li>且对留任工人和新进入者影响不对称</li>
-<li>这更支持"相对工资关系假设"而非"外部选择价值假设"</li>
-<li>但这是否意味着企业内部存在显著的工资刚性?</li>
-</ul></li>
-<li><strong>可贸易 vs 不可贸易部门的差异</strong>
-<ul>
-<li>制造业显著负效应 vs 零售餐饮零效应</li>
-<li>这是否意味着全球化压力降低了美国低技能工人的谈价能力?</li>
-<li>还是反映了不同的劳动力市场结构?</li>
-</ul></li>
-<li><strong>EB-bunching方法的普适性</strong>
-<ul>
-<li>将总体效应分解到各工资区间</li>
-<li>提供了"透明"的估计方式</li>
-<li>是否可以推广到其他政策评估?</li>
-</ul></li>
-<li><strong>对CBO政策分析的启示</strong>
-<ul>
-<li>CBO使用青少年弹性来推断总体影响</li>
-<li>本研究表明青少年可能是受最低工资影响最深的群体</li>
-<li>这是否意味着CBO的方法实际上低估了不确定性?</li>
-</ul></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p><strong>识别策略的有效性</strong>:如何检验平行趋势假设?事件前趋势检验的结果如何?</p></li>
-<li><p><strong>测量误差的影响</strong>:CPS数据中的测量误差如何影响估计?特别是对工资分布尾部的测量?</p></li>
-<li><p><strong>Kaitz指数的具体含义</strong>:Kaitz指数达到59%时会发生什么理论预测?</p></li>
-<li><p><strong>对理论模型的启示</strong>:这些发现如何区分竞争性模型和monopsony模型?</p></li>
-<li><p><strong>政策外部有效性</strong>:基于1979-2016年数据的发现在2020年代是否仍然适用?劳动力市场结构是否发生了根本性变化?</p></li>
-<li><p><strong>对工人流动的动态效应</strong>:最低工资是否影响了低工资工人的职业发展轨迹?</p></li>
-<li><p><strong>雇主反应的非工资渠道</strong>:雇主除了调整就业和工资外,是否在工时、工作条件、培训等方面做出了调整?</p></li>
-<li><p><strong>与Dube et al. (2010)
-NJ快餐业研究的关系</strong>:为什么NJ快餐业研究发现了正效应,而本研究对所有行业的汇总发现零效应?</p></li>
-<li><p><strong>对州际差异的控制</strong>:如何排除州级经济基本面对结果的混杂影响?各州经济多样性的作用是什么?</p></li>
-<li><p><strong>最低工资的收入分配效应</strong>:最低工资如何与税法、其他转移支付计划相互作用以影响收入不平等?</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>劳动经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -5670,6 +5670,607 @@ charges)能否同时改善家庭经济状况和医疗系统效率?</p></li>
       </tags>
   </entry>
   <entry>
+    <title>&lt;中国的历史之路&gt;深度阅读笔记 — 伊懋可 Mark Elvin</title>
+    <url>/posts/elvin1973/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="书籍信息">书籍信息</h2>
+<ul>
+<li><strong>书名</strong>: The Pattern of the Chinese Past: A Social and
+Economic Interpretation(中国过去的模式:社会与经济诠释)</li>
+<li><strong>作者</strong>: Mark Elvin(伊懋可)</li>
+<li><strong>类型</strong>: 学术专著 / 经济史 / 中国研究</li>
+<li><strong>出版年份</strong>: 1973</li>
+<li><strong>出版机构</strong>: Stanford University
+Press(斯坦福大学出版社)</li>
+<li><strong>难度评估</strong>: 高 - 需要经济学、历史学、计量史学基础
+<span id="more"></span> ---</li>
+</ul>
+<h2 id="整体评价">整体评价</h2>
+<p>伊懋可(Mark Elvin,
+1918-2000)的&lt;中国过去的模式&gt;是20世纪中国史研究的里程碑式著作,1973年由斯坦福大学出版社出版.本书以技术经济的变迁为核心视角,系统解释了从古代到20世纪中国社会经济的独特发展轨迹.</p>
+<p>伊懋可最著名的理论贡献是<strong>"高水平均衡陷阱"(High-Level
+Equilibrium
+Trap)</strong>_他认为14世纪之后中国虽然经济规模持续扩张、人口继续增长,但由于农业和运输技术已臻化境、资源近乎耗尽、人口压力巨大,导致任何简单的技术改良都无利可图,从而抑制了工业革命的自主发生.这一理论至今仍是理解中国近代化迟滞的核心范式之一.</p>
+<p>全书以三个核心问题贯穿: 1.
+为什么中华帝国能够维系,而罗马帝国等古代帝国却崩溃了? 2.
+是什么导致了中世纪革命,使1100年后中国经济成为世界最先进? 3.
+为什么1350年后中国未能保持早期的技术进步步伐?</p>
+<hr>
+<h2 id="内容总览">内容总览</h2>
+<p>本书共分三大部分、十八章:</p>
+<p><strong>第一部分:世界最大持久性国家的形成(第1-8章)</strong> -
+帝国与其规模 - 早期中华帝国 - 公元前三世纪的危机 - 华北的胡汉融合 -
+中期帝国 - 无封建制的庄园制度 - 铁、 火药与蒙古人 -
+明朝的军事后勤体系</p>
+<p><strong>第二部分:中世纪经济革命(第9-13章)</strong> - 农业革命 -
+水运革命 - 货币与信贷革命 - 市场结构与城市化革命 - 科学和技术革命</p>
+<p><strong>第三部分:没有技术变革的经济发展(第14-18章)</strong> -
+14世纪的转折点 - 农奴制的消失 - 农村市场与农村工业 - 量的增长,质的停滞 -
+结论</p>
+<hr>
+<h2 id="第一部分核心论点">第一部分:核心论点</h2>
+<h3 id="一帝国的规模与维系">一、帝国的规模与维系</h3>
+<p><strong>核心论点:帝国的稳定取决于规模、生产力与国防行政成本之间的平衡</strong></p>
+<p>伊懋可提出了一个简洁而有力的分析框架: -
+<strong>规模</strong>:领土范围与通讯成本 -
+<strong>生产力</strong>:每人能生产的剩余产品 -
+<strong>国防行政成本</strong>:维护帝国统一所需的军事和行政开支</p>
+<p><strong>帝国的扩张条件</strong>: 1. 组织能力更有效(识字率、意识形态)
+2. 劳动生产率更高,能支撑更大的非生产性军事和行政机构 3.
+军事技术更先进</p>
+<p>这些优势可以相互补偿:技术优势可以弥补规模劣势.</p>
+<p><strong>帝国的稳定条件</strong>: -
+帝国必须不断改进技术,以抵消邻国或臣民的改进 - 任何技术扩散最终都无法阻止
+- 帝国的扩张极限由"技术水平决定的国防成本"决定</p>
+<p><strong>中华帝国的特殊性</strong>:
+中华帝国是世界前现代史上"最大却最持久"的政治单位.秦朝建立于公元前3世纪,经历了多次分裂但最终重组,这一现象需要特殊解释.</p>
+<p>伊懋可认为关键在于: 1.
+<strong>运河系统</strong>:将华北与华南连为一体,解决了大规模帝国的通讯问题
+2. <strong>汉字系统</strong>:超越了方言的障碍,成为帝国统一的文化纽带 3.
+<strong>儒家意识形态</strong>:提供了一套正当化帝国统治合法性的话语体系
+4. <strong>军事技术</strong>:始终保持对草原民族的相对优势</p>
+<h3 id="二中华帝国的形成与维系">二、中华帝国的形成与维系</h3>
+<p><strong>秦汉帝国(第1-3章)</strong></p>
+<p><strong>秦帝国的统一(前221年)</strong>: - 秦朝建立中央集权的郡县制 -
+统一度量衡、货币、文字 - 修建道路和运河系统</p>
+<p><strong>汉帝国的维系(前206-220年)</strong>: - 丝绸之路的开辟 -
+儒家意识形态的制度化 - 对匈奴的军事胜利</p>
+<p><strong>第3世纪的危机</strong>: - 东汉末年的黄巾起义 - 三国鼎立 -
+军事贵族化与中央政府弱化</p>
+<h3 id="三胡汉融合与北魏孝文帝改革第4章">三、胡汉融合与北魏孝文帝改革(第4章)</h3>
+<p><strong>核心论点</strong>:北方游牧民族与汉族的融合,为中华帝国注入了新的活力</p>
+<p>孝文帝改革(471-499年): - 强制汉化政策 - 迁都洛阳 -
+采用汉族官制和礼仪</p>
+<p>这一改革的重要性在于: - 北方政权通过汉化获得统治合法性 -
+游牧民族的军事传统与汉族的制度文明结合 - 为后来的隋唐帝国奠定基础</p>
+<h3 id="四唐朝的军事后勤体系第5-7章">四、唐朝的军事后勤体系(第5-7章)</h3>
+<p><strong>均田制与府兵制</strong>: -
+均田制:国家分配土地给农民,,农民承担兵役 -
+府兵制:军事与农业结合的制度</p>
+<p><strong>安史之乱的后果</strong>: - 藩镇割据 - 府兵制瓦解 -
+职业军队取代义务兵役</p>
+<h3 id="五蒙古帝国与技术传播第7章">五、蒙古帝国与技术传播(第7章)</h3>
+<p><strong>核心论点</strong>:蒙古帝国的扩张伴随着技术的大规模传播</p>
+<p><strong>蒙古对中国的技术获取</strong>: - 获得汉族冶铁技术 -
+获得攻城技术和武器制造 - 火药技术的西传</p>
+<p><strong>蒙古帝国崩溃后的技术遗产</strong>: -
+火药武器的普及改变了战争形态 - 印刷术的改进促进了文化传播</p>
+<h3 id="六明朝的军事后勤体系第8章">六、明朝的军事后勤体系(第8章)</h3>
+<p><strong>大运河系统</strong>: - 世界上最长的人工运河 -
+解决了南北物资调配问题 - 维持了帝国的政治统一</p>
+<p><strong>明朝的军事体系</strong>: - 卫所制度:军户与土地绑定 -
+军事后勤的集中化管理 - 火器的大规模使用</p>
+<hr>
+<h2 id="第二部分中世纪经济革命">第二部分:中世纪经济革命</h2>
+<h3 id="一中世纪革命的总体特征">一、中世纪革命的总体特征</h3>
+<p>伊懋可认为,1100年后中国经济经历了一场深刻的"中世纪革命",这场革命使中国经济在技术、组织和制度上都领先于世界.</p>
+<p><strong>革命的五大领域</strong>: 1. 农业革命 2. 水运革命 3.
+货币与信贷革命 4. 市场结构与城市化革命 5. 科学和技术革命</p>
+<h3 id="二农业革命第9章">二、农业革命(第9章)</h3>
+<p><strong>核心论点:农业技术的突破支撑了人口增长和经济繁荣</strong></p>
+<p><strong>宋朝农业革命的特征</strong>: 1.
+<strong>早熟稻的推广</strong>: - 占城稻从越南传入 -
+生长周期短,可种双季稻 - 大幅提高了单位面积产量</p>
+<ol start="2" type="1">
+<li><strong>水利系统的完善</strong>:
+<ul>
+<li>圩田、梯田的大规模开发</li>
+<li>灌溉技术的进步</li>
+<li>防洪排涝能力的增强</li>
+</ul></li>
+<li><strong>农业工具的改进</strong>:
+<ul>
+<li>铁制农具的普及</li>
+<li>犁的结构优化</li>
+<li>肥料使用技术的改进</li>
+</ul></li>
+<li><strong>土地利用效率的提高</strong>:
+<ul>
+<li>多熟制的推广</li>
+<li>农业与手工业的结合(稻桑轮作)</li>
+<li>土地利用集约化</li>
+</ul></li>
+</ol>
+<h3 id="三水运革命第10章">三、水运革命(第10章)</h3>
+<p><strong>核心论点:内河航运技术的突破使全国市场得以整合</strong></p>
+<p><strong>大运河的扩建</strong>: - 隋朝大运河的开凿(6世纪末) -
+唐朝进一步扩建 - 宋代运河系统的完善</p>
+<p><strong>船只技术的改进</strong>: - 四大发明中的指南针应用于航海 -
+船体结构的优化 - 帆装的改进</p>
+<p><strong>水运革命的经济影响</strong>: 1. 降低了长途运输成本 2.
+促进了区域间贸易 3. 使全国性市场的整合成为可能</p>
+<h3 id="四货币与信贷革命第11章">四、货币与信贷革命(第11章)</h3>
+<p><strong>核心论点:纸币的使用和信用制度的创新标志着货币经济的成熟</strong></p>
+<p><strong>宋朝货币革命</strong>: 1. <strong>铜钱的广泛流通</strong> 2.
+<strong>铁钱的区域性使用</strong> 3.
+<strong>纸币(交子、会子)的出现</strong></p>
+<p><strong>信用制度的创新</strong>: 1.
+<strong>飞钱</strong>:最早的纸币形式 2. <strong>柜坊</strong>:存款机构
+3. <strong>商铺</strong>:早期银行雏形</p>
+<p><strong>货币革命的意义</strong>: - 降低了交易成本 - 促进了商业繁荣 -
+为城市化提供了金融基础</p>
+<h3 id="五市场结构与城市化革命第12章">五、市场结构与城市化革命(第12章)</h3>
+<p><strong>核心论点:市场层级的完善和城市化水平的提高反映了经济的深度整合</strong></p>
+<p><strong>宋朝城市化特征</strong>: 1. <strong>城市数量激增</strong>: -
+10万以上人口城市超过10个 - 出现了专门的手工业城市</p>
+<ol start="2" type="1">
+<li><strong>市场层级结构</strong>:
+<ul>
+<li>中央市场(京城)</li>
+<li>区域市场(州府)</li>
+<li>地方市场(县城、集市)</li>
+</ul></li>
+<li><strong>城市功能分化</strong>:
+<ul>
+<li>政治中心</li>
+<li>商业中心</li>
+<li>手工业中心</li>
+</ul></li>
+</ol>
+<h3 id="六科学和技术革命第13章">六、科学和技术革命(第13章)</h3>
+<p><strong>核心论点:宋朝在科学和技术方面取得了令世界瞩目的成就</strong></p>
+<p><strong>四大发明的完善与应用</strong>: 1.
+<strong>活字印刷</strong>:毕升的发明(1040年代) 2.
+<strong>指南针</strong>:应用于航海和军事 3.
+<strong>火药</strong>:武器制造和爆破 4.
+<strong>造纸术</strong>:传播到中亚和欧洲</p>
+<p><strong>其他技术成就</strong>: - 冶铁技术的改进 - 瓷器制造工艺的提高
+- 纺织机械的改进 - 水利工程技术的进步</p>
+<p><strong>科学理论的发展</strong>: - 沈括的科学成就 - 医药学的发展 -
+天文历法的精确化</p>
+<hr>
+<h2 id="第三部分高水平均衡陷阱">第三部分:高水平均衡陷阱</h2>
+<h3 id="一第14章14世纪的转折点">一、第14章:14世纪的转折点</h3>
+<p><strong>核心论点:14世纪是中国历史的转折点,此后中国进入了"量的增长,质的停滞"阶段</strong></p>
+<p><strong>元末明初的社会危机</strong>: 1. <strong>人口锐减</strong>: -
+蒙古征服和统治期间的人口损失 - 瘟疫和自然灾害的影响</p>
+<ol start="2" type="1">
+<li><strong>经济崩溃</strong>:
+<ul>
+<li>货币体系的混乱</li>
+<li>贸易网络的破坏</li>
+<li>农业生产的衰退</li>
+</ul></li>
+<li><strong>政治动荡</strong>:
+<ul>
+<li>农民起义</li>
+<li>蒙古统治的崩溃</li>
+<li>明朝的建立</li>
+</ul></li>
+</ol>
+<h3 id="二第15章农奴制的消失">二、第15章:农奴制的消失</h3>
+<p><strong>核心论点:明清时期佃农地位的变化反映了土地制度的深层变革</strong></p>
+<p><strong>永佃制的发展</strong>: - 佃农获得了永久耕作权 -
+"田底权"与"田面权"的分离 - 地主与佃农关系的契约化</p>
+<p><strong>人身依附关系的松弛</strong>: - 贱民身份的废除 -
+匠籍制度的松弛 - 人口流动的增加</p>
+<h3 id="三第16章农村市场与农村工业">三、第16章:农村市场与农村工业</h3>
+<p><strong>核心论点:农村市场的密集化和手工业的发展是晚期传统中国经济的显著特征</strong></p>
+<p><strong>市镇网络的发展</strong>: - 每县平均有数十个集市 -
+集市间距通常在5-15里之间 - 形成了完整的基层市场体系</p>
+<p><strong>农村手工业的繁荣</strong>: 1. <strong>棉纺织业</strong>: -
+松江府成为棉纺织中心 - "松江布"行销全国 - 大量农村劳动力从事纺织</p>
+<ol start="2" type="1">
+<li><strong>丝绸业</strong>:
+<ul>
+<li>江南丝绸业的专业化</li>
+<li>苏州、杭州成为丝织业中心</li>
+</ul></li>
+<li><strong>其他手工业</strong>:
+<ul>
+<li>造纸业</li>
+<li>制茶业</li>
+<li>陶瓷业</li>
+</ul></li>
+</ol>
+<h3 id="四第17章量的增长与质的停滞_高水平均衡陷阱">四、第17章:量的增长与质的停滞_高水平均衡陷阱</h3>
+<p><strong>这是本书最核心、最具影响力的章节</strong></p>
+<h4 id="高水平均衡陷阱理论">高水平均衡陷阱理论</h4>
+<p>伊懋可提出的<strong>"高水平均衡陷阱"</strong>是理解中国近代化迟滞的经典理论.</p>
+<p><strong>问题的核心</strong>:
+为什么在人口继续增长、经济规模继续扩大的同时,中国却未能像英国那样发生工业革命?</p>
+<p><strong>陷阱的形成机制</strong>:</p>
+<p><strong>第一阶段:中世纪的技术突破</strong> - 农业技术达到极高水平 -
+水路运输效率接近物理极限 - 农业生产率极高</p>
+<p><strong>第二阶段:人口压力累积</strong> -
+人口从1400年的约6500万增长到1850年的约4.3亿 - 人均耕地面积持续下降 -
+劳动力变得廉价而资源日趋昂贵</p>
+<p><strong>第三阶段:均衡陷阱形成</strong></p>
+<p>当农业生产率和运输效率已经"非常之高,以至于无法通过简单的改进来提高产量"时:</p>
+<ol type="1">
+<li><strong>资源瓶颈</strong>:
+<ul>
+<li>木材短缺(建筑、船只、机械)</li>
+<li>燃料短缺(沿海芦苇沼泽被改为稻田)</li>
+<li>金属短缺(特别是铜)</li>
+<li>土地短缺(优质耕地耗尽)</li>
+</ul></li>
+<li><strong>资本成本上升</strong>:
+<ul>
+<li>建造即使简单的机器也可能超出农民承受能力</li>
+<li>金属价格高昂(铜泵成本太高)</li>
+<li>投资回报率低</li>
+</ul></li>
+<li><strong>劳动力的特点</strong>:
+<ul>
+<li>人口持续增长</li>
+<li>劳动力相对廉价</li>
+<li>缺乏采用劳动节约型机械的动力</li>
+</ul></li>
+<li><strong>市场特征</strong>:
+<ul>
+<li>庞大但近乎静态的市场</li>
+<li>生产系统不存在瓶颈来激发创新</li>
+<li>商人资本倾向于流通而非固定投资</li>
+</ul></li>
+</ol>
+<p><strong>理性策略的转变</strong>:
+面对这种情况,农民和商人的理性策略不是投资节省劳动力的机械,而是: -
+节约资源和固定资本 - 利用 mercantile 灵活性(基于廉价运输) -
+寻找速效但有限的解决方案</p>
+<p><strong>理论的含义</strong>: &gt;
+"这种情况可以描述为一种'高水平均衡陷阱'.在一个具有强烈经济理性意识、对发明有深刻欣赏(会为历史发明家建立祠堂,虽然没有专利法)的文明中,在机械方面有显著天赋,这可能是中国技术进步迟缓的一个充分解释."</p>
+<h3 id="五突破陷阱西方的冲击">五、突破陷阱:西方的冲击</h3>
+<p><strong>核心论点:西方的冲击打破了中国的技术水平均衡陷阱</strong></p>
+<p><strong>19世纪中叶开放通商</strong>: - 五口通商 - 外国机器的引入 -
+现代交通和通讯技术的传入</p>
+<p><strong>技术转移的机制</strong>: 1. <strong>直接引进</strong>: -
+蒸汽轮船 - 棉纺织机械 - 电信设备</p>
+<ol start="2" type="1">
+<li><strong>模仿与创新</strong>:
+<ul>
+<li>在外国机器基础上改进</li>
+<li>结合传统元素</li>
+<li>本土适应性创新</li>
+</ul></li>
+</ol>
+<p><strong>丝绸工业案例</strong>: 陈启元(1870年代): -
+访问法属安南,看到现代蒸汽缫丝机 - 回国后仿建,使用人力 -
+后来改进为蒸汽动力 - 雇用600多人</p>
+<p><strong>土布工业案例</strong>: 高阳手工织布业(河北): -
+1909年引入机器纱线 - 木织机被"铁轮织机"取代 - 多次技术改进 -
+但始终面临需求不足问题</p>
+<h3 id="六第18章结论">六、第18章:结论</h3>
+<p><strong>核心论点:技术与社会的互动是理解中国历史独特性的关键</strong></p>
+<p>伊懋可总结了他的核心洞见:</p>
+<ol type="1">
+<li><p><strong>技术与帝国的规模</strong>:
+中华帝国的持久性部分归因于其运河系统解决了通讯问题,使中央政府能够有效管理庞大领土.</p></li>
+<li><p><strong>中世纪革命的原因</strong>:</p></li>
+</ol>
+<ul>
+<li>高水平的农业和运输技术</li>
+<li>庞大但功能分化的市场网络</li>
+<li>货币和信贷体系的支持</li>
+</ul>
+<ol start="3" type="1">
+<li><strong>高水平均衡陷阱的机制</strong>:</li>
+</ol>
+<ul>
+<li>技术已臻化境</li>
+<li>资源近乎耗尽</li>
+<li>人口持续增长</li>
+<li>缺乏技术突破的动力</li>
+</ul>
+<ol start="4" type="1">
+<li><strong>西方的历史角色</strong>:
+现代西方打破了中国的高水平均衡陷阱,引入新技术和新组织方式,为中国的现代化奠定了基础.</li>
+</ol>
+<p><strong>方法论贡献</strong>:
+伊懋以及技术经济学为切入点,整合了政治史、军事史、经济史和制度史,提供了一个连贯的分析框架.</p>
+<hr>
+<h2 id="核心概念解析">核心概念解析</h2>
+<h3 id="高水平均衡陷阱high-level-equilibrium-trap">高水平均衡陷阱(High-Level
+Equilibrium Trap)</h3>
+<p><strong>定义</strong>:当一个经济体的技术已达到极高水平、资源近乎充分利用、人口压力巨大时,任何简单的技术改进都无法产生足够的回报来激励进一步的创新,从而形成一种停滞状态.</p>
+<p><strong>图示</strong>: </p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">农业技术极高</span><br><span class="line">     ↓</span><br><span class="line">资源利用近乎100%</span><br><span class="line">     ↓</span><br><span class="line">人口继续增长</span><br><span class="line">     ↓</span><br><span class="line">人均资源下降</span><br><span class="line">     ↓</span><br><span class="line">投资技术改良无利可图</span><br><span class="line">     ↓</span><br><span class="line">缺乏工业革命的动力</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h3 id="中世纪经济革命">中世纪经济革命</h3>
+<p><strong>定义</strong>:1100-1350年期间中国经济在农业、运输、货币、市场和技术方面经历的全面突破,使中国经济领先于世界.</p>
+<p><strong>五大领域</strong>: 1. 农业革命 2. 水运革命 3. 货币与信贷革命
+4. 市场结构与城市化革命 5. 科学和技术革命</p>
+<h3 id="帝国的稳定性条件">帝国的稳定性条件</h3>
+<p><strong>伊懋可公式</strong>: </p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">帝国稳定性 ∝ (技术优势) / (规模成本 × 国防需求)</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>帝国必须不断改进技术以抵消: - 邻国的改进 - 臣民的技术扩散 -
+通讯成本的增加</p>
+<hr>
+<h2 id="数据与统计">数据与统计</h2>
+<h3 id="人口变化ad-2-1953">人口变化(AD 2-1953)</h3>
+<p>根据书中引用的数据:</p>
+<table>
+<thead>
+<tr>
+<th>年代</th>
+<th>人口(百万)</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>约60</td>
+<td>东汉</td>
+</tr>
+<tr>
+<td>750</td>
+<td>约50</td>
+<td>唐朝盛期</td>
+</tr>
+<tr>
+<td>1100</td>
+<td>约100</td>
+<td>北宋</td>
+</tr>
+<tr>
+<td>1200</td>
+<td>约120</td>
+<td>南宋/金</td>
+</tr>
+<tr>
+<td>1350</td>
+<td>约65</td>
+<td>元末战乱</td>
+</tr>
+<tr>
+<td>1400</td>
+<td>约65</td>
+<td>明初</td>
+</tr>
+<tr>
+<td>1600</td>
+<td>约150</td>
+<td>明朝</td>
+</tr>
+<tr>
+<td>1750</td>
+<td>约260</td>
+<td>清朝</td>
+</tr>
+<tr>
+<td>1850</td>
+<td>约430</td>
+<td>清朝</td>
+</tr>
+<tr>
+<td>1953</td>
+<td>约583</td>
+<td>现代</td>
+</tr>
+</tbody>
+</table>
+<h3 id="明清经济发展数据">明清经济发展数据</h3>
+<p><strong>棉纺织业</strong>: - 松江府:17-18世纪成为棉纺织中心 -
+仅上海地区就有"十万织布工" - 产品远销全国乃至出口</p>
+<p><strong>丝绸业</strong>: - 扬州盐商1750-1800年利润:约2.5亿两白银 -
+个别盐商身家超过1000万两</p>
+<hr>
+<h2 id="案例分析">案例分析</h2>
+<h3 id="案例一山西煤炭运输案例1629年">案例一:山西煤炭运输案例(1629年)</h3>
+<p><strong>背景</strong>:陕西同官县煤炭运输成本高昂</p>
+<p><strong>问题</strong>: - 每担煤价不低于0.4两银子 - 运输成本占主要部分
+- 民众负担沉重</p>
+<p><strong>解决方案</strong>: - 改善河道通航 - 用船代替陆路运输 -
+成本降至原来的70%</p>
+<p><strong>结果</strong>: 每担煤价从0.4两降至0.25两</p>
+<p><strong>分析</strong>:这展示了晚明商业意识和企业家精神的存在.</p>
+<h3 id="案例二盐业生产技术变革">案例二:盐业生产技术变革</h3>
+<p><strong>背景</strong>:从煎熬法到日晒法的技术转变</p>
+<p><strong>煎熬法</strong>: - 利用每月两次高潮留下的盐 - 需要大量柴火 -
+每担盐成本约10文钱</p>
+<p><strong>日晒法</strong>: - 利用太阳蒸发 - 不需要柴火 -
+每担盐成本降至2文钱</p>
+<p><strong>分析</strong>:展示了技术选择如何受到资源相对价格的影响.</p>
+<h3 id="案例三铜泵的未使用">案例三:铜泵的未使用</h3>
+<p><strong>背景</strong>:西方cylinder
+pump(活塞泵)17世纪传入中国,但未被农业生产采用.</p>
+<p><strong>原因分析</strong>: - 需要大量铜材 - 铜价昂贵("solid money in
+a Chinese peasant's eyes") - 投资回报不确定</p>
+<p><strong>含义</strong>:这可能是高水平均衡陷阱的一个具体例证.</p>
+<h3 id="案例四高阳土布业现代化1909年后">案例四:高阳土布业现代化(1909年后)</h3>
+<p><strong>背景</strong>:河北高阳县约400个村庄的纺织业</p>
+<p><strong>技术变革</strong>: 1. 木织机 → "铁轮织机"(从日本引进) 2.
+效率提高数倍 3. 宽度增加</p>
+<p><strong>市场演变</strong>: - 1909年:进口棉纱打破原材料短缺 -
+一战后衰退 - 1930年代:再度繁荣(rayon经纱技术)</p>
+<p><strong>分析</strong>:展示了传统因素与现代技术结合的可能性,以及持续的需求不足问题.</p>
+<hr>
+<h2 id="学术贡献">学术贡献</h2>
+<h3 id="一理论贡献">一、理论贡献</h3>
+<ol type="1">
+<li><p><strong>高水平均衡陷阱理论</strong>:
+提出了解释中国近代化迟滞的经典理论,至今仍被广泛引用和讨论.</p></li>
+<li><p><strong>中世纪经济革命概念</strong>:
+系统论证了宋朝经济革命的五大领域,为理解中国前现代经济发展提供了框架.</p></li>
+<li><p><strong>帝国稳定性分析框架</strong>:
+将技术、规模、生产力和国防成本整合为一个分析帝国兴衰的统一框架.</p></li>
+</ol>
+<h3 id="二方法论贡献">二、方法论贡献</h3>
+<ol type="1">
+<li><p><strong>跨学科方法</strong>:
+整合经济学、技术史、社会史和政治史.</p></li>
+<li><p><strong>比较视角</strong>:
+始终将中国与欧洲进行比较,揭示两者的差异.</p></li>
+<li><p><strong>定量分析</strong>: 运用数据和统计支持论点.</p></li>
+</ol>
+<h3 id="三史料贡献">三、史料贡献</h3>
+<ol type="1">
+<li><p><strong>地方志的广泛运用</strong>:
+利用大量地方志资料支撑论点.</p></li>
+<li><p><strong>文献批判</strong>: 对传统史料的局限有清醒认识.</p></li>
+</ol>
+<hr>
+<h2 id="批判性评价">批判性评价</h2>
+<h3 id="一理论局限">一、理论局限</h3>
+<ol type="1">
+<li><p><strong>高水平均衡陷阱的适用性</strong>:
+一些学者认为该理论过度强调了技术因素,忽视了制度和文化因素.</p></li>
+<li><p><strong>欧洲比较的问题</strong>:
+部分学者质疑将英国模式作为参照系是否合适.</p></li>
+<li><p><strong>忽视了需求侧</strong>:
+一些研究强调了劳动力便宜的一面,但未充分考虑市场规模和消费需求.</p></li>
+</ol>
+<h3 id="二史料问题">二、史料问题</h3>
+<ol type="1">
+<li><p><strong>数据的不确定性</strong>:
+明清人口数据存在广泛争议.</p></li>
+<li><p><strong>地方志的代表性</strong>:
+不同地区差异巨大,概括需谨慎.</p></li>
+</ol>
+<h3 id="三后续发展">三、后续发展</h3>
+<ol type="1">
+<li><p><strong>彭慕兰的挑战</strong>:
+&lt;大分流&gt;对高水平均衡陷阱理论提出了修正.</p></li>
+<li><p><strong>加州学派</strong>:
+以黄宗智、彭慕兰为代表的加州学派提出了不同的解释框架.</p></li>
+</ol>
+<hr>
+<h2 id="重要引文摘录">重要引文摘录</h2>
+<h3 id="关于高水平均衡陷阱">关于高水平均衡陷阱</h3>
+<blockquote>
+<p>"With falling surplus in agriculture, and so falling per capita
+income and per capita demand, with cheapening labour but increasingly
+expensive resources and capital, with farming and transport technologies
+so good that no simple improvements could be made, rational strategy for
+peasant and merchant alike tended in the direction not so much of
+labour-saving machinery as of economizing on resources and fixed
+capital." _(p. 305)</p>
+</blockquote>
+<h3 id="关于技术停滞">关于技术停滞</h3>
+<blockquote>
+<p>"Clearly, the term 'technological stagnation' is a misleadingly
+oversimple description of this period." _(p. 298)</p>
+</blockquote>
+<h3 id="关于西方冲击">关于西方冲击</h3>
+<blockquote>
+<p>"It was the historic contribution of the modern West to ease and then
+break the high-level equilibrium trap in China." _(p. 315)</p>
+</blockquote>
+<h3 id="关于中世纪革命的原因">关于中世纪革命的原因</h3>
+<blockquote>
+<p>"The booming medieval Chinese economy, and especially its advanced
+metallurgical sector, could provide all its soldiery with armour and the
+best-known weapons, a luxury limited in the West by higher costs to a
+select minority." _(p. 319)</p>
+</blockquote>
+<hr>
+<h2 id="与何炳棣著作的比较">与何炳棣著作的比较</h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>何炳棣&lt;人口研究&gt;</th>
+<th>伊懋可&lt;中国过去的模式&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>核心问题</strong></td>
+<td>中国人口为何如此众多</td>
+<td>中国为何未能自主发生工业革命</td>
+</tr>
+<tr>
+<td><strong>时间跨度</strong></td>
+<td>1368-1953</td>
+<td>古代至19世纪</td>
+</tr>
+<tr>
+<td><strong>分析框架</strong></td>
+<td>制度变革与人口增长</td>
+<td>技术经济与高水平均衡陷阱</td>
+</tr>
+<tr>
+<td><strong>理论贡献</strong></td>
+<td>人口革命的制度解释</td>
+<td>高水平均衡陷阱理论</td>
+</tr>
+<tr>
+<td><strong>数据来源</strong></td>
+<td>地方志人口数据</td>
+<td>综合文献</td>
+</tr>
+<tr>
+<td><strong>主要论点</strong></td>
+<td>税制改革促进人口增长</td>
+<td>技术均衡抑制创新</td>
+</tr>
+</tbody>
+</table>
+<p><strong>互补性</strong>: - 何炳棣解释了为什么中国人口如此众多 -
+伊懋可解释了为什么经济持续发展却没有技术突破 -
+两者共同构成了理解中国前现代经济的完整图景</p>
+<hr>
+<h2 id="延伸阅读">延伸阅读</h2>
+<ol type="1">
+<li><strong>Kenneth Pomeranz</strong>, <em>The Great Divergence: China,
+Europe, and the Making of the Modern World Economy</em> (2000)</li>
+<li><strong>Philip Huang</strong>, <em>The Peasant Family and Rural
+Development in the Yangzi Delta, 1350-1988</em> (1990)</li>
+<li><strong>Dwight Perkins</strong>, <em>Agricultural Development in
+China, 1368-1968</em> (1969)</li>
+<li><strong>R. H. Tawney</strong>, <em>Land and Labour in China</em>
+(1932)</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol type="1">
+<li><p><strong>高水平均衡陷阱的现代意义</strong>:
+当代中国是否正在经历某种形式的"高水平均衡陷阱"?在哪些领域?</p></li>
+<li><p><strong>技术创新的路径依赖</strong>:
+早期的技术成功是否反而成为后续创新的障碍?</p></li>
+<li><p><strong>东西方比较的方法论</strong>:
+以欧洲经验为参照系是否会导致对中国历史的误读?</p></li>
+<li><p><strong>制度的角色</strong>:
+高水平均衡陷阱理论是否过度强调了技术因素而忽视了制度约束?</p></li>
+<li><p><strong>改革开放的历史背景</strong>:
+如果理解了高水平均衡陷阱的形成机制,如何理解1978年后的改革开放在打破这一陷阱中的作用?</p></li>
+</ol>
+<hr>
+<h2 id="附录伊懋可其人">附录:伊懋可其人</h2>
+<h3 id="学术背景">学术背景</h3>
+<p><strong>Mark Elvin(伊懋可,1918-2000)</strong>: -
+英国历史学家、经济史学家 - 曾在剑桥大学、悉尼大学任教 -
+专长:中国经济史、技术史</p>
+<h3 id="主要著作">主要著作</h3>
+<ol type="1">
+<li><em>The Pattern of the Chinese Past</em> (1973)</li>
+<li><em>The Retreat of the Elephants: An Environmental History of
+China</em> (2004)</li>
+<li><em>The Third Thousand Years: One Hundred and Seventy-Seven
+Fragments of Curious and Useful Knowledge from the Chinese Past</em>
+(1999)</li>
+</ol>
+<h3 id="学术地位">学术地位</h3>
+<p>伊懋可是20世纪后半叶最重要的中国史学家之一,&lt;中国过去的模式&gt;是其最具影响力的著作,其"高水平均衡陷阱"理论至今仍是理解中国近代化迟滞的核心范式之一.</p>
+]]></content>
+      <categories>
+        <category>历史</category>
+        <category>人口</category>
+      </categories>
+      <tags>
+        <tag>经济史</tag>
+        <tag>读书笔记</tag>
+        <tag>中国研究</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Child Protection and Adult Crime: Using Investigator Assignment to Estimate Causal Effects of Foster Care -- 深度阅读笔记 -- Doyle</title>
     <url>/posts/doyle2008/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -6613,818 +7214,6 @@ Effects），永久降低增长路径？</li>
       </tags>
   </entry>
   <entry>
-    <title>A Long and a Short Leg Make for a Wobbly Equilibrium — 深度阅读笔记 — Gârleanu, Panageas &amp; Zheng</title>
-    <url>/posts/garleanu2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: A Long and a Short Leg Make for a Wobbly
-Equilibrium</li>
-<li><strong>作者</strong>: Nicolae Gârleanu(Washington University),
-Stavros Panageas(UCLA Anderson), Geoffery Zheng(NYU)</li>
-<li><strong>类型</strong>: 论文笔记 / 资产定价 / 卖空市场 /
-金融市场微观结构</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: American Economic Review, Vol. 116,
-No. 4, pp. 1234-1273</li>
-<li><strong>DOI</strong>: 10.1257/aer.20211548</li>
-<li><strong>难度评估</strong>: 高 -
-需要资产定价、金融市场微观结构、一般均衡理论基础 <span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>股票卖空（Short
-Selling）是指投资者借入股票卖出，期望在股价下跌后买回获利。卖空需要支付借券费（lending
-fee），该费用由借贷市场的供给曲线内生决定。卖空活动的不稳定性是资产定价领域的核心问题之一——个股的卖空兴趣（short
-interest）常表现出突然且大幅的变化。</p>
-<p>异质信念（Heterogeneous
-Beliefs）是金融学中解释交易发生的重要框架：一部分投资者过度乐观（I型投资者），另一部分投资者理性（R型投资者），信念差异驱动交易。理性投资者有动机卖空他们认为被高估的股票。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><strong>卖空活动的不稳定现象</strong>：个股卖空兴趣表现出"跳跃"特征——突然的大幅变化，而非平稳的连续变化</li>
-<li><strong>理论与现实的不匹配</strong>：传统模型预测卖空活动应平滑变化，但实证显示存在跳跃；现有文献多将其归因于投资组合约束、融资限制、代理问题等外生因素</li>
-<li><strong>反馈机制缺失</strong>：现有模型缺少现货市场与借贷市场之间的反馈回路，导致无法内生解释均衡的多重性和跳跃</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：股票现货市场与借贷市场的相互作用如何导致卖空活动的突然变化？为什么理性卖空者甚至会在错误定价扩大时放弃市场？</p>
-<p><strong>关键洞察</strong>：作者发现了借贷费用（lending
-fee）引发的反馈机制：利用率（utilization
-ratio）上升→做多收益增加→夏普比率下降→卖空需求增加→利用率进一步上升。这形成了一个自我强化的循环，可产生"向后弯曲的需求曲线"和均衡的突然转移。</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><strong>内生机制</strong>：不依赖外生约束（投资组合限制、融资限制），而是通过借贷费用的微结构建模内生产生多重均衡和跳跃</li>
-<li><strong>可检验预测</strong>：提供了关于何时应该观察到卖空活动跳跃的具体条件（Proposition
-4）</li>
-<li><strong>现实应用</strong>：解释了2020年11月至2021年1月期间广泛发生的卖空者撤退现象</li>
-</ol>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<p>论文结构如下：</p>
-<ol type="1">
-<li><strong>引言</strong>：问题陈述、主要结论预览</li>
-<li><strong>模型设定</strong>（Section
-I）：异质信念、借贷费用、预算约束</li>
-<li><strong>主要分析结果</strong>（Section
-II）：均衡多重性、反馈机制、放大效应</li>
-<li><strong>财富份额动态</strong>（Section
-III）：多均衡下理性投资者财富份额的漂移</li>
-<li><strong>任意供给曲线</strong>（Section
-IV）：推广到一般形式的f(y)，给出多重均衡的充分必要条件（Proposition
-4）</li>
-<li><strong>实证证据</strong>（Section
-V）：利用Markit数据验证理论预测</li>
-<li><strong>扩展</strong>（Section
-VI）：非单位跨期替代弹性（IES）和多股票模型</li>
-<li><strong>GameStop案例研究</strong>（Section
-VII）：2020年11月-2021年1月的卖空撤退</li>
-<li><strong>结论</strong>（Section VIII）</li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>考虑一个连续时间、无限期界的经济体。投资者分为两类： -
-<strong>理性投资者（R型）</strong>：占有份额ν，相信正确的DDG过程（均值μD，波动率σD）
-- <strong>过度乐观投资者（I型）</strong>：相信错误的DDG过程（均值μI &gt;
-μD，持有"教条式信念"不学习）</p>
-<p>经济体中有正供给的风险资产（股票），其股息增长服从几何布朗运动。</p>
-<p><strong>与传统文献的核心区别</strong>：卖空需要支付借贷费用ft。投资者要么做多（w&gt;0）获得借贷收入τf_tyt，要么做空（w&lt;0）支付费用ft。</p>
-<p>借贷市场的关键机制： -
-<strong>利用率yt</strong>：被借出的股票占所有可借出股票的比例 -
-<strong>借贷费用ft</strong>：由借贷市场的供给曲线f(yt)内生决定 -
-<strong>市场清理事先</strong>：yt × 做多总量 = 做空总量</p>
-<h3 id="挑战">挑战</h3>
-<ol type="1">
-<li><strong>多重均衡</strong>：反馈回路可能导致多个均衡共存，包括零卖空均衡和高卖空均衡</li>
-<li><strong>向后弯曲的需求曲线</strong>：供需均衡可能非单调，导致均衡的突然跳跃</li>
-<li><strong>动态不稳定性</strong>：财富份额的演化可能放大外生冲击</li>
-<li><strong>跳跃的内生性</strong>：跳跃不是外生假设，而是从均衡动态中自然产生</li>
-</ol>
-<h3 id="方法">方法</h3>
-<h4 id="最优投资组合">最优投资组合</h4>
-<p>对数效用下的最优组合选择给出：</p>
-<p><span class="math display">\[w_{ti} = \begin{cases}
-\frac{\hat{\mu}_{ti} - r_t + f_t}{\sigma_D^2} &amp; \text{if }
-\hat{\mu}_{ti} - r_t + f_t &lt; 0 \\ \frac{\hat{\mu}_{ti} - r_t + \tau
-f_t y_t}{\sigma_D^2} &amp; \text{if } \hat{\mu}_{ti} - r_t + \tau f_t
-y_t &gt; 0 \\ 0 &amp; \text{otherwise} \end{cases}\]</span></p>
-<p>存在一个"不行动区间"：当感知到的超额收益在<span class="math inline">\(-\frac{f_t}{\sigma_D^2}\)</span>和<span class="math inline">\(-\frac{\tau f_t
-y_t}{\sigma_D^2}\)</span>之间时，投资者选择零仓位。</p>
-<h4 id="均衡条件与反馈机制">均衡条件与反馈机制</h4>
-<p>市场清理事先要求： <span class="math display">\[y_t =
-\frac{W_t^-}{W_t^+} = -\frac{w_t^R}{w_t^I} \cdot
-\frac{\omega_t}{1-\omega_t}\]</span></p>
-<p>夏普比率的表达式为： <span class="math display">\[\kappa_t = \sigma_D
-- (1-\omega_t)\eta - \sigma\phi_D(\omega_t + \tau
-y_t(1-\omega_t))\]</span></p>
-<p>其中<span class="math inline">\(\eta \equiv \frac{\mu_I -
-\mu_D}{\sigma_D}\)</span>。</p>
-<p><strong>关键反馈回路</strong>： 1. y上升 →
-做多投资者收益增加（借贷收入） → 股票需求增加 2. 需求增加 →
-夏普比率κ下降 3. κ下降 → 卖空者动机增强 → 做空需求增加 4. 做空需求增加 →
-y进一步上升 → 循环...</p>
-<h4 id="多重均衡条件">多重均衡条件</h4>
-<p><strong>Proposition 4（核心结果）</strong>：设<span class="math inline">\(h(y) \equiv f(y)(1-\tau y)\)</span>。若存在<span class="math inline">\(y \in [0, 1)\)</span>使得： - (a) <span class="math inline">\(h'(y) &lt; 0\)</span> - (b) <span class="math inline">\(\sigma_D^2 &lt; \frac{1}{4}(1-y)^2
-|h'(y)|\)</span></p>
-<p>则存在信念的财富分布使得多重均衡存在。</p>
-<p><strong>直觉理解</strong>：<span class="math inline">\(h(y)\)</span>衡量的是空头支付的费率<span class="math inline">\(f(y)\)</span>与多头获得的实际收入<span class="math inline">\(\tau f(y) y\)</span>之间的差额。当<span class="math inline">\(h'(y) &lt;
-0\)</span>时，说明随着利用率上升，这一差额在缩小，意味着做空变得相对更"昂贵"而做多相对更"有利"。这种非线性导致均衡的多重性。</p>
-<h4 id="均衡结构">均衡结构</h4>
-<p><strong>Proposition 2</strong>描述了均衡的完整结构： - 当<span class="math inline">\(\omega_t \in (\omega_2^*,
-1]\)</span>：唯一均衡，无卖空 - 当<span class="math inline">\(\omega_t
-\in [\omega_1^*,
-\omega_2^*]\)</span>：三个均衡（无卖空、中等卖空、高卖空） - 当<span class="math inline">\(\omega_t \in [0,
-\omega_1^*)\)</span>：唯一均衡，有卖空</p>
-<p>其中<span class="math inline">\(\omega_1^*\)</span>和<span class="math inline">\(\omega_2^*\)</span>是临界财富份额，<span class="math inline">\(\omega_2^* &gt; \omega_1^*\)</span>。</p>
-<h3 id="结果results">结果（Results）</h3>
-<h4 id="理论结果">理论结果</h4>
-<ol type="1">
-<li><strong>多重均衡的存在性</strong>：在特定参数条件下，系统可以支持多达三个均衡</li>
-<li><strong>向后弯曲的需求曲线</strong>：aggregate需求<span class="math inline">\(D(\kappa)\)</span>是κ的非单调函数，导致均衡的突然跳跃</li>
-<li><strong>跳跃的内生性</strong>：当<span class="math inline">\(\omega_t\)</span>连续变化穿过临界区间<span class="math inline">\([\omega_1^*,
-\omega_2^*]\)</span>时，κ和y发生不连续的跳跃</li>
-<li><strong>放大效应</strong>：即使在唯一均衡区域，反馈回路仍然存在，产生放大效应（multiplier
-effect）</li>
-</ol>
-<h4 id="实证结果">实证结果</h4>
-<ol type="1">
-<li><strong>肥尾分布</strong>：利用率的周变化呈现明显的肥尾（超额峰度26），远非正态</li>
-<li><strong>借贷费用的非线性</strong>：借贷费用与利用率呈非线性关系，在高利用率区域急剧上升</li>
-<li><strong>h'(y)的符号</strong>：估计的h'(y)在低利用率区域显著为负，符合Proposition
-4的条件</li>
-<li><strong>跳跃预测</strong>：满足Proposition
-4条件（h'(y)在某处为负）的股票，跳跃发生率显著更高</li>
-<li><strong>2020-2021案例</strong>：广泛卖空撤退开始于GameStop事件前8周，影响了并未被在线讨论的股票</li>
-</ol>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<p>本文提供了卖空活动突然变化的理论解释，主要结论：</p>
-<ol type="1">
-<li><strong>反馈机制是核心</strong>：现货与借贷市场的相互作用产生反馈回路，导致均衡多重性和跳跃</li>
-<li><strong>必要充分条件</strong>：Proposition
-4给出了多重均衡存在性的简洁可检验条件（h'(y)在某处为负）</li>
-<li><strong>理性撤退</strong>：即使错误定价扩大，理性卖空者也可能撤退——因为他们预期其他卖空者会撤退，从而降低了关键性概率</li>
-<li><strong>实证支持</strong>：满足模型预测条件的股票确实表现出更高的利用率跳跃率</li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="文献提及的方向">文献提及的方向</h3>
-<ol type="1">
-<li><strong>更丰富的资产类别</strong>：当前模型针对单一资产，可扩展到多资产组合选择</li>
-<li><strong>学习动态</strong>：当前I型投资者持有"教条式信念"，引入贝叶斯学习可能改变动态</li>
-<li><strong>内生信息获取</strong>：投资者选择支付成本获取信息，这可能影响均衡结构</li>
-<li><strong>更一般的信念分布</strong>：当前假设两类投资者，可扩展到连续分布</li>
-</ol>
-<h3 id="未来研究思考">未来研究思考</h3>
-<ol type="1">
-<li><strong>实证应用</strong>：利用更细粒度的借贷数据检验模型在个股层面的预测</li>
-<li><strong>期权市场互动</strong>：卖空活动的跳跃可能影响期权定价，检验这一跨市场联系是有趣的方向</li>
-<li><strong>机构投资者行为</strong>：对冲基金作为主要卖空者，其融资约束和风险管理如何与模型预测互动？</li>
-<li><strong>市场
-microstructure</strong>：借贷市场的微观结构设计（如竞争vs垄断）如何影响均衡多重性？</li>
-<li><strong>高频数据</strong>：利用日内数据检验模型预测的动态调整过程</li>
-</ol>
-<hr>
-<h2 id="学术思考">6. 学术思考</h2>
-<ol type="1">
-<li><p><strong>h'(y) &lt; 0条件的稳健性</strong>：Proposition
-4的条件依赖于特定的函数形式假设。放松供给曲线函数形式的假设后，多重均衡是否仍然存在？是否存在更一般的充分条件？</p></li>
-<li><p><strong>从理论到可操作的投资策略</strong>：如果模型正确，那么满足h'(y)
-&lt;
-0条件的股票应该提供更多的错误定价机会。这是否意味着存在可盈利的Alpha机会？还是说跳跃风险会消除这种机会？</p></li>
-<li><p><strong>理性撤退的均衡稳定性</strong>：在模型中，卖空者撤退是因为预期他人会撤退。这是一种协调均衡（coordination
-equilibrium）。但在现实中，这种协调如何实现？是否存在某种信号机制触发协调崩溃？</p></li>
-<li><p><strong>与市场微观结构文献的联系</strong>：模型假设借贷市场是搜索市场（search
-market），但现货市场是瓦尔拉斯市场（Walrasian
-market）。这一分离是否符合现实？将两部分都建模为搜索市场会改变结论吗？</p></li>
-<li><p><strong>异质信念的来源</strong>：模型假设I型投资者过度乐观，但没有解释这种乐观的来源。如果乐观来自信息获取成本的差异，引入内生信息获取会如何改变分析？</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li>如何在实证中估计h'(y)并检验Proposition 4的条件？</li>
-<li>模型如何解释2020-2021年GameStop期间以及之前8周的广泛卖空撤退？</li>
-<li>卖空费用的具体微观结构模型（如搜索与议价）如何推导？</li>
-<li>在多资产模型中，借贷市场的反馈机制如何与组合选择相互作用？</li>
-<li>理性投资者（R型）如何在内生学习下形成信念？</li>
-<li>模型的均衡多重性与市场效率有何关系？是否存在"错误定价的教科书案例"？</li>
-<li>如何将模型扩展到期权市场，分析卖空跳跃对期权波动率曲面（volatility
-surface）的影响？</li>
-<li>机构投资者的融资约束（如margin
-calls）如何与模型中的反馈机制互动？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>资产定价</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>AER</tag>
-        <tag>资产定价</tag>
-        <tag>卖空市场</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>&lt;中国的历史之路&gt;深度阅读笔记 — 伊懋可 Mark Elvin</title>
-    <url>/posts/elvin1973/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="书籍信息">书籍信息</h2>
-<ul>
-<li><strong>书名</strong>: The Pattern of the Chinese Past: A Social and
-Economic Interpretation(中国过去的模式:社会与经济诠释)</li>
-<li><strong>作者</strong>: Mark Elvin(伊懋可)</li>
-<li><strong>类型</strong>: 学术专著 / 经济史 / 中国研究</li>
-<li><strong>出版年份</strong>: 1973</li>
-<li><strong>出版机构</strong>: Stanford University
-Press(斯坦福大学出版社)</li>
-<li><strong>难度评估</strong>: 高 - 需要经济学、历史学、计量史学基础
-<span id="more"></span> ---</li>
-</ul>
-<h2 id="整体评价">整体评价</h2>
-<p>伊懋可(Mark Elvin,
-1918-2000)的&lt;中国过去的模式&gt;是20世纪中国史研究的里程碑式著作,1973年由斯坦福大学出版社出版.本书以技术经济的变迁为核心视角,系统解释了从古代到20世纪中国社会经济的独特发展轨迹.</p>
-<p>伊懋可最著名的理论贡献是<strong>"高水平均衡陷阱"(High-Level
-Equilibrium
-Trap)</strong>_他认为14世纪之后中国虽然经济规模持续扩张、人口继续增长,但由于农业和运输技术已臻化境、资源近乎耗尽、人口压力巨大,导致任何简单的技术改良都无利可图,从而抑制了工业革命的自主发生.这一理论至今仍是理解中国近代化迟滞的核心范式之一.</p>
-<p>全书以三个核心问题贯穿: 1.
-为什么中华帝国能够维系,而罗马帝国等古代帝国却崩溃了? 2.
-是什么导致了中世纪革命,使1100年后中国经济成为世界最先进? 3.
-为什么1350年后中国未能保持早期的技术进步步伐?</p>
-<hr>
-<h2 id="内容总览">内容总览</h2>
-<p>本书共分三大部分、十八章:</p>
-<p><strong>第一部分:世界最大持久性国家的形成(第1-8章)</strong> -
-帝国与其规模 - 早期中华帝国 - 公元前三世纪的危机 - 华北的胡汉融合 -
-中期帝国 - 无封建制的庄园制度 - 铁、 火药与蒙古人 -
-明朝的军事后勤体系</p>
-<p><strong>第二部分:中世纪经济革命(第9-13章)</strong> - 农业革命 -
-水运革命 - 货币与信贷革命 - 市场结构与城市化革命 - 科学和技术革命</p>
-<p><strong>第三部分:没有技术变革的经济发展(第14-18章)</strong> -
-14世纪的转折点 - 农奴制的消失 - 农村市场与农村工业 - 量的增长,质的停滞 -
-结论</p>
-<hr>
-<h2 id="第一部分核心论点">第一部分:核心论点</h2>
-<h3 id="一帝国的规模与维系">一、帝国的规模与维系</h3>
-<p><strong>核心论点:帝国的稳定取决于规模、生产力与国防行政成本之间的平衡</strong></p>
-<p>伊懋可提出了一个简洁而有力的分析框架: -
-<strong>规模</strong>:领土范围与通讯成本 -
-<strong>生产力</strong>:每人能生产的剩余产品 -
-<strong>国防行政成本</strong>:维护帝国统一所需的军事和行政开支</p>
-<p><strong>帝国的扩张条件</strong>: 1. 组织能力更有效(识字率、意识形态)
-2. 劳动生产率更高,能支撑更大的非生产性军事和行政机构 3.
-军事技术更先进</p>
-<p>这些优势可以相互补偿:技术优势可以弥补规模劣势.</p>
-<p><strong>帝国的稳定条件</strong>: -
-帝国必须不断改进技术,以抵消邻国或臣民的改进 - 任何技术扩散最终都无法阻止
-- 帝国的扩张极限由"技术水平决定的国防成本"决定</p>
-<p><strong>中华帝国的特殊性</strong>:
-中华帝国是世界前现代史上"最大却最持久"的政治单位.秦朝建立于公元前3世纪,经历了多次分裂但最终重组,这一现象需要特殊解释.</p>
-<p>伊懋可认为关键在于: 1.
-<strong>运河系统</strong>:将华北与华南连为一体,解决了大规模帝国的通讯问题
-2. <strong>汉字系统</strong>:超越了方言的障碍,成为帝国统一的文化纽带 3.
-<strong>儒家意识形态</strong>:提供了一套正当化帝国统治合法性的话语体系
-4. <strong>军事技术</strong>:始终保持对草原民族的相对优势</p>
-<h3 id="二中华帝国的形成与维系">二、中华帝国的形成与维系</h3>
-<p><strong>秦汉帝国(第1-3章)</strong></p>
-<p><strong>秦帝国的统一(前221年)</strong>: - 秦朝建立中央集权的郡县制 -
-统一度量衡、货币、文字 - 修建道路和运河系统</p>
-<p><strong>汉帝国的维系(前206-220年)</strong>: - 丝绸之路的开辟 -
-儒家意识形态的制度化 - 对匈奴的军事胜利</p>
-<p><strong>第3世纪的危机</strong>: - 东汉末年的黄巾起义 - 三国鼎立 -
-军事贵族化与中央政府弱化</p>
-<h3 id="三胡汉融合与北魏孝文帝改革第4章">三、胡汉融合与北魏孝文帝改革(第4章)</h3>
-<p><strong>核心论点</strong>:北方游牧民族与汉族的融合,为中华帝国注入了新的活力</p>
-<p>孝文帝改革(471-499年): - 强制汉化政策 - 迁都洛阳 -
-采用汉族官制和礼仪</p>
-<p>这一改革的重要性在于: - 北方政权通过汉化获得统治合法性 -
-游牧民族的军事传统与汉族的制度文明结合 - 为后来的隋唐帝国奠定基础</p>
-<h3 id="四唐朝的军事后勤体系第5-7章">四、唐朝的军事后勤体系(第5-7章)</h3>
-<p><strong>均田制与府兵制</strong>: -
-均田制:国家分配土地给农民,,农民承担兵役 -
-府兵制:军事与农业结合的制度</p>
-<p><strong>安史之乱的后果</strong>: - 藩镇割据 - 府兵制瓦解 -
-职业军队取代义务兵役</p>
-<h3 id="五蒙古帝国与技术传播第7章">五、蒙古帝国与技术传播(第7章)</h3>
-<p><strong>核心论点</strong>:蒙古帝国的扩张伴随着技术的大规模传播</p>
-<p><strong>蒙古对中国的技术获取</strong>: - 获得汉族冶铁技术 -
-获得攻城技术和武器制造 - 火药技术的西传</p>
-<p><strong>蒙古帝国崩溃后的技术遗产</strong>: -
-火药武器的普及改变了战争形态 - 印刷术的改进促进了文化传播</p>
-<h3 id="六明朝的军事后勤体系第8章">六、明朝的军事后勤体系(第8章)</h3>
-<p><strong>大运河系统</strong>: - 世界上最长的人工运河 -
-解决了南北物资调配问题 - 维持了帝国的政治统一</p>
-<p><strong>明朝的军事体系</strong>: - 卫所制度:军户与土地绑定 -
-军事后勤的集中化管理 - 火器的大规模使用</p>
-<hr>
-<h2 id="第二部分中世纪经济革命">第二部分:中世纪经济革命</h2>
-<h3 id="一中世纪革命的总体特征">一、中世纪革命的总体特征</h3>
-<p>伊懋可认为,1100年后中国经济经历了一场深刻的"中世纪革命",这场革命使中国经济在技术、组织和制度上都领先于世界.</p>
-<p><strong>革命的五大领域</strong>: 1. 农业革命 2. 水运革命 3.
-货币与信贷革命 4. 市场结构与城市化革命 5. 科学和技术革命</p>
-<h3 id="二农业革命第9章">二、农业革命(第9章)</h3>
-<p><strong>核心论点:农业技术的突破支撑了人口增长和经济繁荣</strong></p>
-<p><strong>宋朝农业革命的特征</strong>: 1.
-<strong>早熟稻的推广</strong>: - 占城稻从越南传入 -
-生长周期短,可种双季稻 - 大幅提高了单位面积产量</p>
-<ol start="2" type="1">
-<li><strong>水利系统的完善</strong>:
-<ul>
-<li>圩田、梯田的大规模开发</li>
-<li>灌溉技术的进步</li>
-<li>防洪排涝能力的增强</li>
-</ul></li>
-<li><strong>农业工具的改进</strong>:
-<ul>
-<li>铁制农具的普及</li>
-<li>犁的结构优化</li>
-<li>肥料使用技术的改进</li>
-</ul></li>
-<li><strong>土地利用效率的提高</strong>:
-<ul>
-<li>多熟制的推广</li>
-<li>农业与手工业的结合(稻桑轮作)</li>
-<li>土地利用集约化</li>
-</ul></li>
-</ol>
-<h3 id="三水运革命第10章">三、水运革命(第10章)</h3>
-<p><strong>核心论点:内河航运技术的突破使全国市场得以整合</strong></p>
-<p><strong>大运河的扩建</strong>: - 隋朝大运河的开凿(6世纪末) -
-唐朝进一步扩建 - 宋代运河系统的完善</p>
-<p><strong>船只技术的改进</strong>: - 四大发明中的指南针应用于航海 -
-船体结构的优化 - 帆装的改进</p>
-<p><strong>水运革命的经济影响</strong>: 1. 降低了长途运输成本 2.
-促进了区域间贸易 3. 使全国性市场的整合成为可能</p>
-<h3 id="四货币与信贷革命第11章">四、货币与信贷革命(第11章)</h3>
-<p><strong>核心论点:纸币的使用和信用制度的创新标志着货币经济的成熟</strong></p>
-<p><strong>宋朝货币革命</strong>: 1. <strong>铜钱的广泛流通</strong> 2.
-<strong>铁钱的区域性使用</strong> 3.
-<strong>纸币(交子、会子)的出现</strong></p>
-<p><strong>信用制度的创新</strong>: 1.
-<strong>飞钱</strong>:最早的纸币形式 2. <strong>柜坊</strong>:存款机构
-3. <strong>商铺</strong>:早期银行雏形</p>
-<p><strong>货币革命的意义</strong>: - 降低了交易成本 - 促进了商业繁荣 -
-为城市化提供了金融基础</p>
-<h3 id="五市场结构与城市化革命第12章">五、市场结构与城市化革命(第12章)</h3>
-<p><strong>核心论点:市场层级的完善和城市化水平的提高反映了经济的深度整合</strong></p>
-<p><strong>宋朝城市化特征</strong>: 1. <strong>城市数量激增</strong>: -
-10万以上人口城市超过10个 - 出现了专门的手工业城市</p>
-<ol start="2" type="1">
-<li><strong>市场层级结构</strong>:
-<ul>
-<li>中央市场(京城)</li>
-<li>区域市场(州府)</li>
-<li>地方市场(县城、集市)</li>
-</ul></li>
-<li><strong>城市功能分化</strong>:
-<ul>
-<li>政治中心</li>
-<li>商业中心</li>
-<li>手工业中心</li>
-</ul></li>
-</ol>
-<h3 id="六科学和技术革命第13章">六、科学和技术革命(第13章)</h3>
-<p><strong>核心论点:宋朝在科学和技术方面取得了令世界瞩目的成就</strong></p>
-<p><strong>四大发明的完善与应用</strong>: 1.
-<strong>活字印刷</strong>:毕升的发明(1040年代) 2.
-<strong>指南针</strong>:应用于航海和军事 3.
-<strong>火药</strong>:武器制造和爆破 4.
-<strong>造纸术</strong>:传播到中亚和欧洲</p>
-<p><strong>其他技术成就</strong>: - 冶铁技术的改进 - 瓷器制造工艺的提高
-- 纺织机械的改进 - 水利工程技术的进步</p>
-<p><strong>科学理论的发展</strong>: - 沈括的科学成就 - 医药学的发展 -
-天文历法的精确化</p>
-<hr>
-<h2 id="第三部分高水平均衡陷阱">第三部分:高水平均衡陷阱</h2>
-<h3 id="一第14章14世纪的转折点">一、第14章:14世纪的转折点</h3>
-<p><strong>核心论点:14世纪是中国历史的转折点,此后中国进入了"量的增长,质的停滞"阶段</strong></p>
-<p><strong>元末明初的社会危机</strong>: 1. <strong>人口锐减</strong>: -
-蒙古征服和统治期间的人口损失 - 瘟疫和自然灾害的影响</p>
-<ol start="2" type="1">
-<li><strong>经济崩溃</strong>:
-<ul>
-<li>货币体系的混乱</li>
-<li>贸易网络的破坏</li>
-<li>农业生产的衰退</li>
-</ul></li>
-<li><strong>政治动荡</strong>:
-<ul>
-<li>农民起义</li>
-<li>蒙古统治的崩溃</li>
-<li>明朝的建立</li>
-</ul></li>
-</ol>
-<h3 id="二第15章农奴制的消失">二、第15章:农奴制的消失</h3>
-<p><strong>核心论点:明清时期佃农地位的变化反映了土地制度的深层变革</strong></p>
-<p><strong>永佃制的发展</strong>: - 佃农获得了永久耕作权 -
-"田底权"与"田面权"的分离 - 地主与佃农关系的契约化</p>
-<p><strong>人身依附关系的松弛</strong>: - 贱民身份的废除 -
-匠籍制度的松弛 - 人口流动的增加</p>
-<h3 id="三第16章农村市场与农村工业">三、第16章:农村市场与农村工业</h3>
-<p><strong>核心论点:农村市场的密集化和手工业的发展是晚期传统中国经济的显著特征</strong></p>
-<p><strong>市镇网络的发展</strong>: - 每县平均有数十个集市 -
-集市间距通常在5-15里之间 - 形成了完整的基层市场体系</p>
-<p><strong>农村手工业的繁荣</strong>: 1. <strong>棉纺织业</strong>: -
-松江府成为棉纺织中心 - "松江布"行销全国 - 大量农村劳动力从事纺织</p>
-<ol start="2" type="1">
-<li><strong>丝绸业</strong>:
-<ul>
-<li>江南丝绸业的专业化</li>
-<li>苏州、杭州成为丝织业中心</li>
-</ul></li>
-<li><strong>其他手工业</strong>:
-<ul>
-<li>造纸业</li>
-<li>制茶业</li>
-<li>陶瓷业</li>
-</ul></li>
-</ol>
-<h3 id="四第17章量的增长与质的停滞_高水平均衡陷阱">四、第17章:量的增长与质的停滞_高水平均衡陷阱</h3>
-<p><strong>这是本书最核心、最具影响力的章节</strong></p>
-<h4 id="高水平均衡陷阱理论">高水平均衡陷阱理论</h4>
-<p>伊懋可提出的<strong>"高水平均衡陷阱"</strong>是理解中国近代化迟滞的经典理论.</p>
-<p><strong>问题的核心</strong>:
-为什么在人口继续增长、经济规模继续扩大的同时,中国却未能像英国那样发生工业革命?</p>
-<p><strong>陷阱的形成机制</strong>:</p>
-<p><strong>第一阶段:中世纪的技术突破</strong> - 农业技术达到极高水平 -
-水路运输效率接近物理极限 - 农业生产率极高</p>
-<p><strong>第二阶段:人口压力累积</strong> -
-人口从1400年的约6500万增长到1850年的约4.3亿 - 人均耕地面积持续下降 -
-劳动力变得廉价而资源日趋昂贵</p>
-<p><strong>第三阶段:均衡陷阱形成</strong></p>
-<p>当农业生产率和运输效率已经"非常之高,以至于无法通过简单的改进来提高产量"时:</p>
-<ol type="1">
-<li><strong>资源瓶颈</strong>:
-<ul>
-<li>木材短缺(建筑、船只、机械)</li>
-<li>燃料短缺(沿海芦苇沼泽被改为稻田)</li>
-<li>金属短缺(特别是铜)</li>
-<li>土地短缺(优质耕地耗尽)</li>
-</ul></li>
-<li><strong>资本成本上升</strong>:
-<ul>
-<li>建造即使简单的机器也可能超出农民承受能力</li>
-<li>金属价格高昂(铜泵成本太高)</li>
-<li>投资回报率低</li>
-</ul></li>
-<li><strong>劳动力的特点</strong>:
-<ul>
-<li>人口持续增长</li>
-<li>劳动力相对廉价</li>
-<li>缺乏采用劳动节约型机械的动力</li>
-</ul></li>
-<li><strong>市场特征</strong>:
-<ul>
-<li>庞大但近乎静态的市场</li>
-<li>生产系统不存在瓶颈来激发创新</li>
-<li>商人资本倾向于流通而非固定投资</li>
-</ul></li>
-</ol>
-<p><strong>理性策略的转变</strong>:
-面对这种情况,农民和商人的理性策略不是投资节省劳动力的机械,而是: -
-节约资源和固定资本 - 利用 mercantile 灵活性(基于廉价运输) -
-寻找速效但有限的解决方案</p>
-<p><strong>理论的含义</strong>: &gt;
-"这种情况可以描述为一种'高水平均衡陷阱'.在一个具有强烈经济理性意识、对发明有深刻欣赏(会为历史发明家建立祠堂,虽然没有专利法)的文明中,在机械方面有显著天赋,这可能是中国技术进步迟缓的一个充分解释."</p>
-<h3 id="五突破陷阱西方的冲击">五、突破陷阱:西方的冲击</h3>
-<p><strong>核心论点:西方的冲击打破了中国的技术水平均衡陷阱</strong></p>
-<p><strong>19世纪中叶开放通商</strong>: - 五口通商 - 外国机器的引入 -
-现代交通和通讯技术的传入</p>
-<p><strong>技术转移的机制</strong>: 1. <strong>直接引进</strong>: -
-蒸汽轮船 - 棉纺织机械 - 电信设备</p>
-<ol start="2" type="1">
-<li><strong>模仿与创新</strong>:
-<ul>
-<li>在外国机器基础上改进</li>
-<li>结合传统元素</li>
-<li>本土适应性创新</li>
-</ul></li>
-</ol>
-<p><strong>丝绸工业案例</strong>: 陈启元(1870年代): -
-访问法属安南,看到现代蒸汽缫丝机 - 回国后仿建,使用人力 -
-后来改进为蒸汽动力 - 雇用600多人</p>
-<p><strong>土布工业案例</strong>: 高阳手工织布业(河北): -
-1909年引入机器纱线 - 木织机被"铁轮织机"取代 - 多次技术改进 -
-但始终面临需求不足问题</p>
-<h3 id="六第18章结论">六、第18章:结论</h3>
-<p><strong>核心论点:技术与社会的互动是理解中国历史独特性的关键</strong></p>
-<p>伊懋可总结了他的核心洞见:</p>
-<ol type="1">
-<li><p><strong>技术与帝国的规模</strong>:
-中华帝国的持久性部分归因于其运河系统解决了通讯问题,使中央政府能够有效管理庞大领土.</p></li>
-<li><p><strong>中世纪革命的原因</strong>:</p></li>
-</ol>
-<ul>
-<li>高水平的农业和运输技术</li>
-<li>庞大但功能分化的市场网络</li>
-<li>货币和信贷体系的支持</li>
-</ul>
-<ol start="3" type="1">
-<li><strong>高水平均衡陷阱的机制</strong>:</li>
-</ol>
-<ul>
-<li>技术已臻化境</li>
-<li>资源近乎耗尽</li>
-<li>人口持续增长</li>
-<li>缺乏技术突破的动力</li>
-</ul>
-<ol start="4" type="1">
-<li><strong>西方的历史角色</strong>:
-现代西方打破了中国的高水平均衡陷阱,引入新技术和新组织方式,为中国的现代化奠定了基础.</li>
-</ol>
-<p><strong>方法论贡献</strong>:
-伊懋以及技术经济学为切入点,整合了政治史、军事史、经济史和制度史,提供了一个连贯的分析框架.</p>
-<hr>
-<h2 id="核心概念解析">核心概念解析</h2>
-<h3 id="高水平均衡陷阱high-level-equilibrium-trap">高水平均衡陷阱(High-Level
-Equilibrium Trap)</h3>
-<p><strong>定义</strong>:当一个经济体的技术已达到极高水平、资源近乎充分利用、人口压力巨大时,任何简单的技术改进都无法产生足够的回报来激励进一步的创新,从而形成一种停滞状态.</p>
-<p><strong>图示</strong>: </p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">农业技术极高</span><br><span class="line">     ↓</span><br><span class="line">资源利用近乎100%</span><br><span class="line">     ↓</span><br><span class="line">人口继续增长</span><br><span class="line">     ↓</span><br><span class="line">人均资源下降</span><br><span class="line">     ↓</span><br><span class="line">投资技术改良无利可图</span><br><span class="line">     ↓</span><br><span class="line">缺乏工业革命的动力</span><br></pre></td></tr></tbody></table></figure><p></p>
-<h3 id="中世纪经济革命">中世纪经济革命</h3>
-<p><strong>定义</strong>:1100-1350年期间中国经济在农业、运输、货币、市场和技术方面经历的全面突破,使中国经济领先于世界.</p>
-<p><strong>五大领域</strong>: 1. 农业革命 2. 水运革命 3. 货币与信贷革命
-4. 市场结构与城市化革命 5. 科学和技术革命</p>
-<h3 id="帝国的稳定性条件">帝国的稳定性条件</h3>
-<p><strong>伊懋可公式</strong>: </p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">帝国稳定性 ∝ (技术优势) / (规模成本 × 国防需求)</span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>帝国必须不断改进技术以抵消: - 邻国的改进 - 臣民的技术扩散 -
-通讯成本的增加</p>
-<hr>
-<h2 id="数据与统计">数据与统计</h2>
-<h3 id="人口变化ad-2-1953">人口变化(AD 2-1953)</h3>
-<p>根据书中引用的数据:</p>
-<table>
-<thead>
-<tr>
-<th>年代</th>
-<th>人口(百万)</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2</td>
-<td>约60</td>
-<td>东汉</td>
-</tr>
-<tr>
-<td>750</td>
-<td>约50</td>
-<td>唐朝盛期</td>
-</tr>
-<tr>
-<td>1100</td>
-<td>约100</td>
-<td>北宋</td>
-</tr>
-<tr>
-<td>1200</td>
-<td>约120</td>
-<td>南宋/金</td>
-</tr>
-<tr>
-<td>1350</td>
-<td>约65</td>
-<td>元末战乱</td>
-</tr>
-<tr>
-<td>1400</td>
-<td>约65</td>
-<td>明初</td>
-</tr>
-<tr>
-<td>1600</td>
-<td>约150</td>
-<td>明朝</td>
-</tr>
-<tr>
-<td>1750</td>
-<td>约260</td>
-<td>清朝</td>
-</tr>
-<tr>
-<td>1850</td>
-<td>约430</td>
-<td>清朝</td>
-</tr>
-<tr>
-<td>1953</td>
-<td>约583</td>
-<td>现代</td>
-</tr>
-</tbody>
-</table>
-<h3 id="明清经济发展数据">明清经济发展数据</h3>
-<p><strong>棉纺织业</strong>: - 松江府:17-18世纪成为棉纺织中心 -
-仅上海地区就有"十万织布工" - 产品远销全国乃至出口</p>
-<p><strong>丝绸业</strong>: - 扬州盐商1750-1800年利润:约2.5亿两白银 -
-个别盐商身家超过1000万两</p>
-<hr>
-<h2 id="案例分析">案例分析</h2>
-<h3 id="案例一山西煤炭运输案例1629年">案例一:山西煤炭运输案例(1629年)</h3>
-<p><strong>背景</strong>:陕西同官县煤炭运输成本高昂</p>
-<p><strong>问题</strong>: - 每担煤价不低于0.4两银子 - 运输成本占主要部分
-- 民众负担沉重</p>
-<p><strong>解决方案</strong>: - 改善河道通航 - 用船代替陆路运输 -
-成本降至原来的70%</p>
-<p><strong>结果</strong>: 每担煤价从0.4两降至0.25两</p>
-<p><strong>分析</strong>:这展示了晚明商业意识和企业家精神的存在.</p>
-<h3 id="案例二盐业生产技术变革">案例二:盐业生产技术变革</h3>
-<p><strong>背景</strong>:从煎熬法到日晒法的技术转变</p>
-<p><strong>煎熬法</strong>: - 利用每月两次高潮留下的盐 - 需要大量柴火 -
-每担盐成本约10文钱</p>
-<p><strong>日晒法</strong>: - 利用太阳蒸发 - 不需要柴火 -
-每担盐成本降至2文钱</p>
-<p><strong>分析</strong>:展示了技术选择如何受到资源相对价格的影响.</p>
-<h3 id="案例三铜泵的未使用">案例三:铜泵的未使用</h3>
-<p><strong>背景</strong>:西方cylinder
-pump(活塞泵)17世纪传入中国,但未被农业生产采用.</p>
-<p><strong>原因分析</strong>: - 需要大量铜材 - 铜价昂贵("solid money in
-a Chinese peasant's eyes") - 投资回报不确定</p>
-<p><strong>含义</strong>:这可能是高水平均衡陷阱的一个具体例证.</p>
-<h3 id="案例四高阳土布业现代化1909年后">案例四:高阳土布业现代化(1909年后)</h3>
-<p><strong>背景</strong>:河北高阳县约400个村庄的纺织业</p>
-<p><strong>技术变革</strong>: 1. 木织机 → "铁轮织机"(从日本引进) 2.
-效率提高数倍 3. 宽度增加</p>
-<p><strong>市场演变</strong>: - 1909年:进口棉纱打破原材料短缺 -
-一战后衰退 - 1930年代:再度繁荣(rayon经纱技术)</p>
-<p><strong>分析</strong>:展示了传统因素与现代技术结合的可能性,以及持续的需求不足问题.</p>
-<hr>
-<h2 id="学术贡献">学术贡献</h2>
-<h3 id="一理论贡献">一、理论贡献</h3>
-<ol type="1">
-<li><p><strong>高水平均衡陷阱理论</strong>:
-提出了解释中国近代化迟滞的经典理论,至今仍被广泛引用和讨论.</p></li>
-<li><p><strong>中世纪经济革命概念</strong>:
-系统论证了宋朝经济革命的五大领域,为理解中国前现代经济发展提供了框架.</p></li>
-<li><p><strong>帝国稳定性分析框架</strong>:
-将技术、规模、生产力和国防成本整合为一个分析帝国兴衰的统一框架.</p></li>
-</ol>
-<h3 id="二方法论贡献">二、方法论贡献</h3>
-<ol type="1">
-<li><p><strong>跨学科方法</strong>:
-整合经济学、技术史、社会史和政治史.</p></li>
-<li><p><strong>比较视角</strong>:
-始终将中国与欧洲进行比较,揭示两者的差异.</p></li>
-<li><p><strong>定量分析</strong>: 运用数据和统计支持论点.</p></li>
-</ol>
-<h3 id="三史料贡献">三、史料贡献</h3>
-<ol type="1">
-<li><p><strong>地方志的广泛运用</strong>:
-利用大量地方志资料支撑论点.</p></li>
-<li><p><strong>文献批判</strong>: 对传统史料的局限有清醒认识.</p></li>
-</ol>
-<hr>
-<h2 id="批判性评价">批判性评价</h2>
-<h3 id="一理论局限">一、理论局限</h3>
-<ol type="1">
-<li><p><strong>高水平均衡陷阱的适用性</strong>:
-一些学者认为该理论过度强调了技术因素,忽视了制度和文化因素.</p></li>
-<li><p><strong>欧洲比较的问题</strong>:
-部分学者质疑将英国模式作为参照系是否合适.</p></li>
-<li><p><strong>忽视了需求侧</strong>:
-一些研究强调了劳动力便宜的一面,但未充分考虑市场规模和消费需求.</p></li>
-</ol>
-<h3 id="二史料问题">二、史料问题</h3>
-<ol type="1">
-<li><p><strong>数据的不确定性</strong>:
-明清人口数据存在广泛争议.</p></li>
-<li><p><strong>地方志的代表性</strong>:
-不同地区差异巨大,概括需谨慎.</p></li>
-</ol>
-<h3 id="三后续发展">三、后续发展</h3>
-<ol type="1">
-<li><p><strong>彭慕兰的挑战</strong>:
-&lt;大分流&gt;对高水平均衡陷阱理论提出了修正.</p></li>
-<li><p><strong>加州学派</strong>:
-以黄宗智、彭慕兰为代表的加州学派提出了不同的解释框架.</p></li>
-</ol>
-<hr>
-<h2 id="重要引文摘录">重要引文摘录</h2>
-<h3 id="关于高水平均衡陷阱">关于高水平均衡陷阱</h3>
-<blockquote>
-<p>"With falling surplus in agriculture, and so falling per capita
-income and per capita demand, with cheapening labour but increasingly
-expensive resources and capital, with farming and transport technologies
-so good that no simple improvements could be made, rational strategy for
-peasant and merchant alike tended in the direction not so much of
-labour-saving machinery as of economizing on resources and fixed
-capital." _(p. 305)</p>
-</blockquote>
-<h3 id="关于技术停滞">关于技术停滞</h3>
-<blockquote>
-<p>"Clearly, the term 'technological stagnation' is a misleadingly
-oversimple description of this period." _(p. 298)</p>
-</blockquote>
-<h3 id="关于西方冲击">关于西方冲击</h3>
-<blockquote>
-<p>"It was the historic contribution of the modern West to ease and then
-break the high-level equilibrium trap in China." _(p. 315)</p>
-</blockquote>
-<h3 id="关于中世纪革命的原因">关于中世纪革命的原因</h3>
-<blockquote>
-<p>"The booming medieval Chinese economy, and especially its advanced
-metallurgical sector, could provide all its soldiery with armour and the
-best-known weapons, a luxury limited in the West by higher costs to a
-select minority." _(p. 319)</p>
-</blockquote>
-<hr>
-<h2 id="与何炳棣著作的比较">与何炳棣著作的比较</h2>
-<table>
-<thead>
-<tr>
-<th>维度</th>
-<th>何炳棣&lt;人口研究&gt;</th>
-<th>伊懋可&lt;中国过去的模式&gt;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>核心问题</strong></td>
-<td>中国人口为何如此众多</td>
-<td>中国为何未能自主发生工业革命</td>
-</tr>
-<tr>
-<td><strong>时间跨度</strong></td>
-<td>1368-1953</td>
-<td>古代至19世纪</td>
-</tr>
-<tr>
-<td><strong>分析框架</strong></td>
-<td>制度变革与人口增长</td>
-<td>技术经济与高水平均衡陷阱</td>
-</tr>
-<tr>
-<td><strong>理论贡献</strong></td>
-<td>人口革命的制度解释</td>
-<td>高水平均衡陷阱理论</td>
-</tr>
-<tr>
-<td><strong>数据来源</strong></td>
-<td>地方志人口数据</td>
-<td>综合文献</td>
-</tr>
-<tr>
-<td><strong>主要论点</strong></td>
-<td>税制改革促进人口增长</td>
-<td>技术均衡抑制创新</td>
-</tr>
-</tbody>
-</table>
-<p><strong>互补性</strong>: - 何炳棣解释了为什么中国人口如此众多 -
-伊懋可解释了为什么经济持续发展却没有技术突破 -
-两者共同构成了理解中国前现代经济的完整图景</p>
-<hr>
-<h2 id="延伸阅读">延伸阅读</h2>
-<ol type="1">
-<li><strong>Kenneth Pomeranz</strong>, <em>The Great Divergence: China,
-Europe, and the Making of the Modern World Economy</em> (2000)</li>
-<li><strong>Philip Huang</strong>, <em>The Peasant Family and Rural
-Development in the Yangzi Delta, 1350-1988</em> (1990)</li>
-<li><strong>Dwight Perkins</strong>, <em>Agricultural Development in
-China, 1368-1968</em> (1969)</li>
-<li><strong>R. H. Tawney</strong>, <em>Land and Labour in China</em>
-(1932)</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol type="1">
-<li><p><strong>高水平均衡陷阱的现代意义</strong>:
-当代中国是否正在经历某种形式的"高水平均衡陷阱"?在哪些领域?</p></li>
-<li><p><strong>技术创新的路径依赖</strong>:
-早期的技术成功是否反而成为后续创新的障碍?</p></li>
-<li><p><strong>东西方比较的方法论</strong>:
-以欧洲经验为参照系是否会导致对中国历史的误读?</p></li>
-<li><p><strong>制度的角色</strong>:
-高水平均衡陷阱理论是否过度强调了技术因素而忽视了制度约束?</p></li>
-<li><p><strong>改革开放的历史背景</strong>:
-如果理解了高水平均衡陷阱的形成机制,如何理解1978年后的改革开放在打破这一陷阱中的作用?</p></li>
-</ol>
-<hr>
-<h2 id="附录伊懋可其人">附录:伊懋可其人</h2>
-<h3 id="学术背景">学术背景</h3>
-<p><strong>Mark Elvin(伊懋可,1918-2000)</strong>: -
-英国历史学家、经济史学家 - 曾在剑桥大学、悉尼大学任教 -
-专长:中国经济史、技术史</p>
-<h3 id="主要著作">主要著作</h3>
-<ol type="1">
-<li><em>The Pattern of the Chinese Past</em> (1973)</li>
-<li><em>The Retreat of the Elephants: An Environmental History of
-China</em> (2004)</li>
-<li><em>The Third Thousand Years: One Hundred and Seventy-Seven
-Fragments of Curious and Useful Knowledge from the Chinese Past</em>
-(1999)</li>
-</ol>
-<h3 id="学术地位">学术地位</h3>
-<p>伊懋可是20世纪后半叶最重要的中国史学家之一,&lt;中国过去的模式&gt;是其最具影响力的著作,其"高水平均衡陷阱"理论至今仍是理解中国近代化迟滞的核心范式之一.</p>
-]]></content>
-      <categories>
-        <category>历史</category>
-        <category>人口</category>
-      </categories>
-      <tags>
-        <tag>经济史</tag>
-        <tag>读书笔记</tag>
-        <tag>中国研究</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Fiscal Volatility Shocks and Economic Activity — 深度阅读笔记 — AER</title>
     <url>/posts/fernandez2015/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -7758,6 +7547,217 @@ space)讨论有什么启示?发展中国家在 ZLB
       </categories>
       <tags>
         <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>A Long and a Short Leg Make for a Wobbly Equilibrium — 深度阅读笔记 — Gârleanu, Panageas &amp; Zheng</title>
+    <url>/posts/garleanu2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: A Long and a Short Leg Make for a Wobbly
+Equilibrium</li>
+<li><strong>作者</strong>: Nicolae Gârleanu(Washington University),
+Stavros Panageas(UCLA Anderson), Geoffery Zheng(NYU)</li>
+<li><strong>类型</strong>: 论文笔记 / 资产定价 / 卖空市场 /
+金融市场微观结构</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: American Economic Review, Vol. 116,
+No. 4, pp. 1234-1273</li>
+<li><strong>DOI</strong>: 10.1257/aer.20211548</li>
+<li><strong>难度评估</strong>: 高 -
+需要资产定价、金融市场微观结构、一般均衡理论基础 <span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>股票卖空（Short
+Selling）是指投资者借入股票卖出，期望在股价下跌后买回获利。卖空需要支付借券费（lending
+fee），该费用由借贷市场的供给曲线内生决定。卖空活动的不稳定性是资产定价领域的核心问题之一——个股的卖空兴趣（short
+interest）常表现出突然且大幅的变化。</p>
+<p>异质信念（Heterogeneous
+Beliefs）是金融学中解释交易发生的重要框架：一部分投资者过度乐观（I型投资者），另一部分投资者理性（R型投资者），信念差异驱动交易。理性投资者有动机卖空他们认为被高估的股票。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><strong>卖空活动的不稳定现象</strong>：个股卖空兴趣表现出"跳跃"特征——突然的大幅变化，而非平稳的连续变化</li>
+<li><strong>理论与现实的不匹配</strong>：传统模型预测卖空活动应平滑变化，但实证显示存在跳跃；现有文献多将其归因于投资组合约束、融资限制、代理问题等外生因素</li>
+<li><strong>反馈机制缺失</strong>：现有模型缺少现货市场与借贷市场之间的反馈回路，导致无法内生解释均衡的多重性和跳跃</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：股票现货市场与借贷市场的相互作用如何导致卖空活动的突然变化？为什么理性卖空者甚至会在错误定价扩大时放弃市场？</p>
+<p><strong>关键洞察</strong>：作者发现了借贷费用（lending
+fee）引发的反馈机制：利用率（utilization
+ratio）上升→做多收益增加→夏普比率下降→卖空需求增加→利用率进一步上升。这形成了一个自我强化的循环，可产生"向后弯曲的需求曲线"和均衡的突然转移。</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><strong>内生机制</strong>：不依赖外生约束（投资组合限制、融资限制），而是通过借贷费用的微结构建模内生产生多重均衡和跳跃</li>
+<li><strong>可检验预测</strong>：提供了关于何时应该观察到卖空活动跳跃的具体条件（Proposition
+4）</li>
+<li><strong>现实应用</strong>：解释了2020年11月至2021年1月期间广泛发生的卖空者撤退现象</li>
+</ol>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<p>论文结构如下：</p>
+<ol type="1">
+<li><strong>引言</strong>：问题陈述、主要结论预览</li>
+<li><strong>模型设定</strong>（Section
+I）：异质信念、借贷费用、预算约束</li>
+<li><strong>主要分析结果</strong>（Section
+II）：均衡多重性、反馈机制、放大效应</li>
+<li><strong>财富份额动态</strong>（Section
+III）：多均衡下理性投资者财富份额的漂移</li>
+<li><strong>任意供给曲线</strong>（Section
+IV）：推广到一般形式的f(y)，给出多重均衡的充分必要条件（Proposition
+4）</li>
+<li><strong>实证证据</strong>（Section
+V）：利用Markit数据验证理论预测</li>
+<li><strong>扩展</strong>（Section
+VI）：非单位跨期替代弹性（IES）和多股票模型</li>
+<li><strong>GameStop案例研究</strong>（Section
+VII）：2020年11月-2021年1月的卖空撤退</li>
+<li><strong>结论</strong>（Section VIII）</li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>考虑一个连续时间、无限期界的经济体。投资者分为两类： -
+<strong>理性投资者（R型）</strong>：占有份额ν，相信正确的DDG过程（均值μD，波动率σD）
+- <strong>过度乐观投资者（I型）</strong>：相信错误的DDG过程（均值μI &gt;
+μD，持有"教条式信念"不学习）</p>
+<p>经济体中有正供给的风险资产（股票），其股息增长服从几何布朗运动。</p>
+<p><strong>与传统文献的核心区别</strong>：卖空需要支付借贷费用ft。投资者要么做多（w&gt;0）获得借贷收入τf_tyt，要么做空（w&lt;0）支付费用ft。</p>
+<p>借贷市场的关键机制： -
+<strong>利用率yt</strong>：被借出的股票占所有可借出股票的比例 -
+<strong>借贷费用ft</strong>：由借贷市场的供给曲线f(yt)内生决定 -
+<strong>市场清理事先</strong>：yt × 做多总量 = 做空总量</p>
+<h3 id="挑战">挑战</h3>
+<ol type="1">
+<li><strong>多重均衡</strong>：反馈回路可能导致多个均衡共存，包括零卖空均衡和高卖空均衡</li>
+<li><strong>向后弯曲的需求曲线</strong>：供需均衡可能非单调，导致均衡的突然跳跃</li>
+<li><strong>动态不稳定性</strong>：财富份额的演化可能放大外生冲击</li>
+<li><strong>跳跃的内生性</strong>：跳跃不是外生假设，而是从均衡动态中自然产生</li>
+</ol>
+<h3 id="方法">方法</h3>
+<h4 id="最优投资组合">最优投资组合</h4>
+<p>对数效用下的最优组合选择给出：</p>
+<p><span class="math display">\[w_{ti} = \begin{cases}
+\frac{\hat{\mu}_{ti} - r_t + f_t}{\sigma_D^2} &amp; \text{if }
+\hat{\mu}_{ti} - r_t + f_t &lt; 0 \\ \frac{\hat{\mu}_{ti} - r_t + \tau
+f_t y_t}{\sigma_D^2} &amp; \text{if } \hat{\mu}_{ti} - r_t + \tau f_t
+y_t &gt; 0 \\ 0 &amp; \text{otherwise} \end{cases}\]</span></p>
+<p>存在一个"不行动区间"：当感知到的超额收益在<span class="math inline">\(-\frac{f_t}{\sigma_D^2}\)</span>和<span class="math inline">\(-\frac{\tau f_t
+y_t}{\sigma_D^2}\)</span>之间时，投资者选择零仓位。</p>
+<h4 id="均衡条件与反馈机制">均衡条件与反馈机制</h4>
+<p>市场清理事先要求： <span class="math display">\[y_t =
+\frac{W_t^-}{W_t^+} = -\frac{w_t^R}{w_t^I} \cdot
+\frac{\omega_t}{1-\omega_t}\]</span></p>
+<p>夏普比率的表达式为： <span class="math display">\[\kappa_t = \sigma_D
+- (1-\omega_t)\eta - \sigma\phi_D(\omega_t + \tau
+y_t(1-\omega_t))\]</span></p>
+<p>其中<span class="math inline">\(\eta \equiv \frac{\mu_I -
+\mu_D}{\sigma_D}\)</span>。</p>
+<p><strong>关键反馈回路</strong>： 1. y上升 →
+做多投资者收益增加（借贷收入） → 股票需求增加 2. 需求增加 →
+夏普比率κ下降 3. κ下降 → 卖空者动机增强 → 做空需求增加 4. 做空需求增加 →
+y进一步上升 → 循环...</p>
+<h4 id="多重均衡条件">多重均衡条件</h4>
+<p><strong>Proposition 4（核心结果）</strong>：设<span class="math inline">\(h(y) \equiv f(y)(1-\tau y)\)</span>。若存在<span class="math inline">\(y \in [0, 1)\)</span>使得： - (a) <span class="math inline">\(h'(y) &lt; 0\)</span> - (b) <span class="math inline">\(\sigma_D^2 &lt; \frac{1}{4}(1-y)^2
+|h'(y)|\)</span></p>
+<p>则存在信念的财富分布使得多重均衡存在。</p>
+<p><strong>直觉理解</strong>：<span class="math inline">\(h(y)\)</span>衡量的是空头支付的费率<span class="math inline">\(f(y)\)</span>与多头获得的实际收入<span class="math inline">\(\tau f(y) y\)</span>之间的差额。当<span class="math inline">\(h'(y) &lt;
+0\)</span>时，说明随着利用率上升，这一差额在缩小，意味着做空变得相对更"昂贵"而做多相对更"有利"。这种非线性导致均衡的多重性。</p>
+<h4 id="均衡结构">均衡结构</h4>
+<p><strong>Proposition 2</strong>描述了均衡的完整结构： - 当<span class="math inline">\(\omega_t \in (\omega_2^*,
+1]\)</span>：唯一均衡，无卖空 - 当<span class="math inline">\(\omega_t
+\in [\omega_1^*,
+\omega_2^*]\)</span>：三个均衡（无卖空、中等卖空、高卖空） - 当<span class="math inline">\(\omega_t \in [0,
+\omega_1^*)\)</span>：唯一均衡，有卖空</p>
+<p>其中<span class="math inline">\(\omega_1^*\)</span>和<span class="math inline">\(\omega_2^*\)</span>是临界财富份额，<span class="math inline">\(\omega_2^* &gt; \omega_1^*\)</span>。</p>
+<h3 id="结果results">结果（Results）</h3>
+<h4 id="理论结果">理论结果</h4>
+<ol type="1">
+<li><strong>多重均衡的存在性</strong>：在特定参数条件下，系统可以支持多达三个均衡</li>
+<li><strong>向后弯曲的需求曲线</strong>：aggregate需求<span class="math inline">\(D(\kappa)\)</span>是κ的非单调函数，导致均衡的突然跳跃</li>
+<li><strong>跳跃的内生性</strong>：当<span class="math inline">\(\omega_t\)</span>连续变化穿过临界区间<span class="math inline">\([\omega_1^*,
+\omega_2^*]\)</span>时，κ和y发生不连续的跳跃</li>
+<li><strong>放大效应</strong>：即使在唯一均衡区域，反馈回路仍然存在，产生放大效应（multiplier
+effect）</li>
+</ol>
+<h4 id="实证结果">实证结果</h4>
+<ol type="1">
+<li><strong>肥尾分布</strong>：利用率的周变化呈现明显的肥尾（超额峰度26），远非正态</li>
+<li><strong>借贷费用的非线性</strong>：借贷费用与利用率呈非线性关系，在高利用率区域急剧上升</li>
+<li><strong>h'(y)的符号</strong>：估计的h'(y)在低利用率区域显著为负，符合Proposition
+4的条件</li>
+<li><strong>跳跃预测</strong>：满足Proposition
+4条件（h'(y)在某处为负）的股票，跳跃发生率显著更高</li>
+<li><strong>2020-2021案例</strong>：广泛卖空撤退开始于GameStop事件前8周，影响了并未被在线讨论的股票</li>
+</ol>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<p>本文提供了卖空活动突然变化的理论解释，主要结论：</p>
+<ol type="1">
+<li><strong>反馈机制是核心</strong>：现货与借贷市场的相互作用产生反馈回路，导致均衡多重性和跳跃</li>
+<li><strong>必要充分条件</strong>：Proposition
+4给出了多重均衡存在性的简洁可检验条件（h'(y)在某处为负）</li>
+<li><strong>理性撤退</strong>：即使错误定价扩大，理性卖空者也可能撤退——因为他们预期其他卖空者会撤退，从而降低了关键性概率</li>
+<li><strong>实证支持</strong>：满足模型预测条件的股票确实表现出更高的利用率跳跃率</li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="文献提及的方向">文献提及的方向</h3>
+<ol type="1">
+<li><strong>更丰富的资产类别</strong>：当前模型针对单一资产，可扩展到多资产组合选择</li>
+<li><strong>学习动态</strong>：当前I型投资者持有"教条式信念"，引入贝叶斯学习可能改变动态</li>
+<li><strong>内生信息获取</strong>：投资者选择支付成本获取信息，这可能影响均衡结构</li>
+<li><strong>更一般的信念分布</strong>：当前假设两类投资者，可扩展到连续分布</li>
+</ol>
+<h3 id="未来研究思考">未来研究思考</h3>
+<ol type="1">
+<li><strong>实证应用</strong>：利用更细粒度的借贷数据检验模型在个股层面的预测</li>
+<li><strong>期权市场互动</strong>：卖空活动的跳跃可能影响期权定价，检验这一跨市场联系是有趣的方向</li>
+<li><strong>机构投资者行为</strong>：对冲基金作为主要卖空者，其融资约束和风险管理如何与模型预测互动？</li>
+<li><strong>市场
+microstructure</strong>：借贷市场的微观结构设计（如竞争vs垄断）如何影响均衡多重性？</li>
+<li><strong>高频数据</strong>：利用日内数据检验模型预测的动态调整过程</li>
+</ol>
+<hr>
+<h2 id="学术思考">6. 学术思考</h2>
+<ol type="1">
+<li><p><strong>h'(y) &lt; 0条件的稳健性</strong>：Proposition
+4的条件依赖于特定的函数形式假设。放松供给曲线函数形式的假设后，多重均衡是否仍然存在？是否存在更一般的充分条件？</p></li>
+<li><p><strong>从理论到可操作的投资策略</strong>：如果模型正确，那么满足h'(y)
+&lt;
+0条件的股票应该提供更多的错误定价机会。这是否意味着存在可盈利的Alpha机会？还是说跳跃风险会消除这种机会？</p></li>
+<li><p><strong>理性撤退的均衡稳定性</strong>：在模型中，卖空者撤退是因为预期他人会撤退。这是一种协调均衡（coordination
+equilibrium）。但在现实中，这种协调如何实现？是否存在某种信号机制触发协调崩溃？</p></li>
+<li><p><strong>与市场微观结构文献的联系</strong>：模型假设借贷市场是搜索市场（search
+market），但现货市场是瓦尔拉斯市场（Walrasian
+market）。这一分离是否符合现实？将两部分都建模为搜索市场会改变结论吗？</p></li>
+<li><p><strong>异质信念的来源</strong>：模型假设I型投资者过度乐观，但没有解释这种乐观的来源。如果乐观来自信息获取成本的差异，引入内生信息获取会如何改变分析？</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li>如何在实证中估计h'(y)并检验Proposition 4的条件？</li>
+<li>模型如何解释2020-2021年GameStop期间以及之前8周的广泛卖空撤退？</li>
+<li>卖空费用的具体微观结构模型（如搜索与议价）如何推导？</li>
+<li>在多资产模型中，借贷市场的反馈机制如何与组合选择相互作用？</li>
+<li>理性投资者（R型）如何在内生学习下形成信念？</li>
+<li>模型的均衡多重性与市场效率有何关系？是否存在"错误定价的教科书案例"？</li>
+<li>如何将模型扩展到期权市场，分析卖空跳跃对期权波动率曲面（volatility
+surface）的影响？</li>
+<li>机构投资者的融资约束（如margin
+calls）如何与模型中的反馈机制互动？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>资产定价</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>AER</tag>
+        <tag>资产定价</tag>
+        <tag>卖空市场</tag>
       </tags>
   </entry>
   <entry>
@@ -9459,6 +9459,60 @@ T\)</span>按无原子分布选择</li>
       </tags>
   </entry>
   <entry>
+    <title>Labor Mobility in Currency Union — 深度阅读笔记 — House, Proebsting &amp; Tesar</title>
+    <url>/posts/house2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Quantifying the Benefits of Labor Mobility in
+a Currency Union</li>
+<li><strong>作者</strong>: Christopher L. House (Michigan &amp; NBER),
+Christian Proebsting (EPFL), Linda L. Tesar (Michigan &amp; NBER)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies
+(RES)</li>
+<li><strong>难度评估</strong>: 高 -
+需要宏观经济学、国际经济学、DSGE模型基础 <span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言">1. 引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>最优货币区理论、搜索与匹配框架、货币联盟。</p>
+<h3 id="研究背景">研究背景</h3>
+<p>欧元区失业差异远大于美国；美国迁移响应大于欧洲；Mundell猜想流动性可替代货币政策。</p>
+<h3 id="核心问题">核心问题</h3>
+<p>劳动力流动性对货币联盟有多重要？流动性vs弹性汇率的效应比较？</p>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：相关文献</li>
+<li>第三节：实证分析</li>
+<li>第四节：模型</li>
+<li>第五节：量化分析</li>
+<li>第六节：结论</li>
+</ul>
+<h2 id="正文">3. 正文</h2>
+<h3 id="核心机制">核心机制</h3>
+<p>多国DSGE模型 + 搜索与匹配 + 跨境迁移</p>
+<h3 id="关键发现">关键发现</h3>
+<ol type="1">
+<li>欧洲若达美国流动性水平，失业差异降25%</li>
+<li>流动性和弹性汇率在降低失业上是替代品</li>
+<li>但在产出和通胀维度机制不同</li>
+</ol>
+<h2 id="结论">4. 结论</h2>
+<p>验证Mundell猜想——劳动力流动性确实可部分替代货币政策，但效果有限。</p>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<p>制度设计提高流动性、福利分析、过渡动态。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>&lt;住房与不平等&gt;深度阅读笔记 — Ioannides &amp; Ngai</title>
     <url>/posts/ioannides2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -9576,60 +9630,6 @@ Inequality - <strong>作者</strong>:Yannis M. Ioannides, L. Rachel Ngai -
       <tags>
         <tag>论文笔记</tag>
         <tag>城市经济学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Labor Mobility in Currency Union — 深度阅读笔记 — House, Proebsting &amp; Tesar</title>
-    <url>/posts/house2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Quantifying the Benefits of Labor Mobility in
-a Currency Union</li>
-<li><strong>作者</strong>: Christopher L. House (Michigan &amp; NBER),
-Christian Proebsting (EPFL), Linda L. Tesar (Michigan &amp; NBER)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies
-(RES)</li>
-<li><strong>难度评估</strong>: 高 -
-需要宏观经济学、国际经济学、DSGE模型基础 <span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言">1. 引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>最优货币区理论、搜索与匹配框架、货币联盟。</p>
-<h3 id="研究背景">研究背景</h3>
-<p>欧元区失业差异远大于美国；美国迁移响应大于欧洲；Mundell猜想流动性可替代货币政策。</p>
-<h3 id="核心问题">核心问题</h3>
-<p>劳动力流动性对货币联盟有多重要？流动性vs弹性汇率的效应比较？</p>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：相关文献</li>
-<li>第三节：实证分析</li>
-<li>第四节：模型</li>
-<li>第五节：量化分析</li>
-<li>第六节：结论</li>
-</ul>
-<h2 id="正文">3. 正文</h2>
-<h3 id="核心机制">核心机制</h3>
-<p>多国DSGE模型 + 搜索与匹配 + 跨境迁移</p>
-<h3 id="关键发现">关键发现</h3>
-<ol type="1">
-<li>欧洲若达美国流动性水平，失业差异降25%</li>
-<li>流动性和弹性汇率在降低失业上是替代品</li>
-<li>但在产出和通胀维度机制不同</li>
-</ol>
-<h2 id="结论">4. 结论</h2>
-<p>验证Mundell猜想——劳动力流动性确实可部分替代货币政策，但效果有限。</p>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<p>制度设计提高流动性、福利分析、过渡动态。</p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -10332,65 +10332,6 @@ Equivalence失效</strong>：当参与不可观察时，FPA和SPA不再等价</p
       </tags>
   </entry>
   <entry>
-    <title>Hiring as Exploration — 深度阅读笔记 — Li, Raymond &amp; Bergman</title>
-    <url>/posts/li2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Hiring as Exploration</li>
-<li><strong>作者</strong>: Danielle Li (MIT &amp; NBER), Lindsey Raymond
-(MIT), Peter Bergman (UT Austin &amp; NBER)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies
-(RES)</li>
-<li><strong>DOI</strong>: 10.1093/restud/rdaf040</li>
-<li><strong>难度评估</strong>: 高 -
-需要机器学习、计量经济学、招聘经济学基础 <span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言">1. 引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>情境强盗问题、探索与利用的权衡、监督学习算法、UCB（上置信界）算法。</p>
-<h3 id="研究背景">研究背景</h3>
-<p>算法招聘日益普及；传统监督学习算法可能复制历史偏见；人类面试官预测能力有限。</p>
-<h3 id="核心问题">核心问题</h3>
-<p>将招聘视为情境强盗问题——如何平衡"利用"（选择已知最佳）与"探索"（学习新候选人质量）。探索式算法能否在提高招聘质量的同时增加人口多样性？</p>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：招聘偏见</li>
-<li>第三节：数据环境</li>
-<li>第四节：实证策略</li>
-<li>第五节：算法设计（SL vs UCB）</li>
-<li>第六节：主要结果</li>
-<li>第七节：扩展</li>
-<li>第八节：结论</li>
-</ul>
-<h2 id="正文">3. 正文</h2>
-<h3 id="核心机制">核心机制</h3>
-<ul>
-<li><strong>SL模型</strong>：仅利用——选择预期质量最高的候选人</li>
-<li><strong>UCB模型</strong>：利用+探索——对特征偏离训练数据均值的候选人给予探索溢价</li>
-</ul>
-<h3 id="关键发现">关键发现</h3>
-<ol type="1">
-<li><strong>多样性</strong>：UCB使黑人/西班牙裔代表从9.4%增至24.3%；SL降至5%以下</li>
-<li><strong>质量</strong>：SL录用率32%，UCB 27%，人类仅10%</li>
-<li><strong>帕累托改进</strong>：可能同时提升质量与多样性</li>
-</ol>
-<h2 id="结论">4. 结论</h2>
-<p>探索式算法可实现帕累托改进，挑战了效率-公平权衡的传统观点。</p>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<p>跨行业推广、长期动态效应、法律伦理风险、因果机制检验。</p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>One Quarter of Humanity 深度阅读笔记 — James Z. Lee &amp; Wang Feng</title>
     <url>/posts/lee2001/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="书籍信息">书籍信息</h2>
@@ -10753,6 +10694,246 @@ Studies</li>
       </tags>
   </entry>
   <entry>
+    <title>Hiring as Exploration — 深度阅读笔记 — Li, Raymond &amp; Bergman</title>
+    <url>/posts/li2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Hiring as Exploration</li>
+<li><strong>作者</strong>: Danielle Li (MIT &amp; NBER), Lindsey Raymond
+(MIT), Peter Bergman (UT Austin &amp; NBER)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies
+(RES)</li>
+<li><strong>DOI</strong>: 10.1093/restud/rdaf040</li>
+<li><strong>难度评估</strong>: 高 -
+需要机器学习、计量经济学、招聘经济学基础 <span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言">1. 引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>情境强盗问题、探索与利用的权衡、监督学习算法、UCB（上置信界）算法。</p>
+<h3 id="研究背景">研究背景</h3>
+<p>算法招聘日益普及；传统监督学习算法可能复制历史偏见；人类面试官预测能力有限。</p>
+<h3 id="核心问题">核心问题</h3>
+<p>将招聘视为情境强盗问题——如何平衡"利用"（选择已知最佳）与"探索"（学习新候选人质量）。探索式算法能否在提高招聘质量的同时增加人口多样性？</p>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：招聘偏见</li>
+<li>第三节：数据环境</li>
+<li>第四节：实证策略</li>
+<li>第五节：算法设计（SL vs UCB）</li>
+<li>第六节：主要结果</li>
+<li>第七节：扩展</li>
+<li>第八节：结论</li>
+</ul>
+<h2 id="正文">3. 正文</h2>
+<h3 id="核心机制">核心机制</h3>
+<ul>
+<li><strong>SL模型</strong>：仅利用——选择预期质量最高的候选人</li>
+<li><strong>UCB模型</strong>：利用+探索——对特征偏离训练数据均值的候选人给予探索溢价</li>
+</ul>
+<h3 id="关键发现">关键发现</h3>
+<ol type="1">
+<li><strong>多样性</strong>：UCB使黑人/西班牙裔代表从9.4%增至24.3%；SL降至5%以下</li>
+<li><strong>质量</strong>：SL录用率32%，UCB 27%，人类仅10%</li>
+<li><strong>帕累托改进</strong>：可能同时提升质量与多样性</li>
+</ol>
+<h2 id="结论">4. 结论</h2>
+<p>探索式算法可实现帕累托改进，挑战了效率-公平权衡的传统观点。</p>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<p>跨行业推广、长期动态效应、法律伦理风险、因果机制检验。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>预算到期会导致年底浪费性支出吗?_ Liebman &amp; Mahoney (2017) 笔记</title>
+    <url>/posts/liebman2017/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Do Expiring Budgets Lead to Wasteful Year-End
+Spending? Evidence from Federal Procurement</li>
+<li><strong>作者</strong>: Jeffrey B. Liebman(哈佛大学), Neale
+Mahoney(芝加哥大学)</li>
+<li><strong>类型</strong>: 论文笔记 / 公共经济学 / 预算制度</li>
+<li><strong>出版年份</strong>: 2017</li>
+<li><strong>出版机构/期刊</strong>: American Economic Review</li>
+<li><strong>DOI</strong>: 10.1257/aer.20131296</li>
+<li><strong>难度评估</strong>: 高 -
+需要经济学、计量经济学、公共财政学基础</li>
+</ul>
+<span id="more"></span>
+<h2 id="引言">引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>本文属于公共经济学、行为经济学和管理学的交叉领域,探讨政府支出效率问题.核心概念包括:</p>
+<ul>
+<li><strong>预算约束</strong>: 政府机构在财政年度内可支配的资金总额</li>
+<li><strong>自由裁量支出</strong>:
+政府可以自行决定如何分配的预算部分,与法定支出(如社会保障)相对</li>
+<li><strong>公共采购</strong>: 政府购买商品和服务的行为</li>
+<li><strong>信息技术(IT)项目</strong>:
+政府对计算机硬件、软件和相关服务的投资</li>
+<li><strong>社会成本</strong>:
+指一项经济活动对整个社会造成的成本,包括直接成本和外部成本</li>
+<li><strong>滚动预算(Rollover Budget)</strong>:
+允许机构将未使用的预算资金转移到下一个财政年度</li>
+</ul>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<p>政府机构通常面临"不使用就失去"的预算规则,即在一个财政年度结束时,任何未使用的预算资金都将返回国库,而不是留给该机构使用.这种规则可能会导致机构在财政年度末
+rush 支出,即使这意味着投资于低价值的项目.</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p>作者认为,"不使用就失去"的预算规则可能会导致政府浪费性支出.他们试图通过实证分析来检验这一观点,并探讨解决这一问题的潜在政策,例如允许机构将未使用的资金转入下一个财政年度.</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><strong>揭示了政府支出中潜在的浪费现象</strong>:
+通过量化财政年度末的支出高峰和质量下降,为政府支出效率问题提供了有力证据</li>
+<li><strong>评估了滚动预算的有效性</strong>:
+通过研究美国司法部的滚动预算政策,为解决浪费性支出提供了一个可行的解决方案</li>
+<li><strong>为政府预算管理提供了政策建议</strong>:
+研究结果表明,允许机构将未使用的资金转入下一个财政年度可以提高政府支出效率</li>
+</ol>
+<h2 id="论文结构">论文结构</h2>
+<ol type="1">
+<li><strong>引言</strong>: 概述研究背景、问题意识和研究意义</li>
+<li><strong>理论模型</strong>:
+建立一个简单的模型来解释"不使用就失去"的预算规则如何导致浪费性支出</li>
+<li><strong>数据描述</strong>:
+介绍用于实证分析的数据集,包括联邦采购数据系统(FPDS)和IT仪表板</li>
+<li><strong>实证分析1</strong>:
+使用FPDS数据检验财政年度末是否存在支出高峰</li>
+<li><strong>实证分析2</strong>:
+使用IT仪表板数据检验财政年度末的支出质量是否下降</li>
+<li><strong>政策分析</strong>: 研究滚动预算政策对支出行为的影响</li>
+<li><strong>福利分析</strong>:
+使用校准后的模型评估滚动预算政策的福利效应</li>
+<li><strong>结论</strong>:
+总结研究结果,讨论政策含义,并提出未来研究方向</li>
+</ol>
+<h2 id="背景">背景</h2>
+<p>许多组织都有在财政年度末到期的预算,这可能导致在年底匆忙将资源用于低质量的项目.美国联邦政府的自由裁量支出预算也面临类似情况,机构必须在财政年度结束前完成拨款.</p>
+<h3 id="挑战">挑战</h3>
+<ol type="1">
+<li><strong>"不使用就失去"的预算规则</strong>:
+如果机构不花完预算,剩余的资金将返回国库,降低了年底花钱的机会成本</li>
+<li><strong>预防性储蓄的动机</strong>:
+机构倾向于在预算周期开始时保留资金,以应对未来不确定的支出需求</li>
+<li><strong>缺乏关于年底浪费性支出的硬性证据</strong>:
+尽管有传闻证据,但缺乏关于美国联邦政府年底支出激增以及年底支出价值低于其他时间段的证据</li>
+</ol>
+<h2 id="方法">方法</h2>
+<h3 id="理论模型">理论模型</h3>
+<ul>
+<li><strong>模型设定</strong>:
+作者建立了一个年度预算模型,包括国会和一个政府机构.国会为该机构选择预算,该机构在一年中的每个时期都会获得一个参数,该参数决定了支出的边际价值,并选择一个支出水平以最大化收益递减的目标</li>
+<li><strong>模型特征</strong>:
+具有三个关键特征_预算到期、未来支出价值的不确定性以及每个时期内支出的收益递减</li>
+<li><strong>模型预测</strong>:
+由于不确定性和收益递减,该机构将在年初进行预防性储蓄;在年底,资金到期的前景导致该机构花掉所有剩余资源,即使边际价值低于资金的社会成本,导致年底支出量激增和质量下降</li>
+</ul>
+<h3 id="数据集">数据集</h3>
+<p><strong>1. 联邦采购数据系统(FPDS)</strong> - 时间范围:
+2004年至2009年财政年度 - 数据量: 1460万份合同 - 总支出: 2.6万亿美元 -
+主要内容:
+合同层面信息,包括金额、产品/服务代码、机构、供应商、合同类型、招标机制等
+- 用途: 用于分析联邦采购支出的总体模式,特别是年底支出高峰</p>
+<p><strong>2. IT仪表板(IT Dashboard)</strong> - 数据时间: 截至2010年3月
+- 项目数量: 686个主要IT项目 - 总计划支出: 1300亿美元 - 主要内容:
+项目绩效数据,包括总体评级、成本评级、进度评级、CIO评估等 - 用途:
+用于评估IT项目的质量,特别是年底开始的项目的质量</p>
+<h3 id="实证策略">实证策略</h3>
+<ol type="1">
+<li><strong>支出高峰检验</strong>:
+使用FPDS数据,分析财政年度内每周的采购支出模式,确定是否存在年底支出高峰</li>
+<li><strong>质量下降检验</strong>:
+使用IT仪表板数据,比较在财政年度最后一周开始的项目与在其他时间开始的项目的质量评级</li>
+<li><strong>政策分析</strong>:
+研究美国司法部(DOJ)的滚动预算政策对支出行为的影响.DOJ有权将未使用的IT项目预算转入下一财政年度,作者比较了DOJ的IT和非IT支出,以及DOJ和其他机构之间的支出模式</li>
+<li><strong>福利分析</strong>:
+通过校准模型以适应支出高峰和质量下降,分析允许滚动预算的潜在福利收益</li>
+</ol>
+<h3 id="关键术语">关键术语</h3>
+<ul>
+<li><strong>FPDS (Federal Procurement Data System)</strong>:
+联邦采购数据系统,跟踪所有联邦合同的数据系统</li>
+<li><strong>IT仪表板 (IT Dashboard)</strong>:
+跟踪联邦政府主要IT项目绩效的网站</li>
+<li><strong>CIO (Chief Information Officer)</strong>:
+首席信息官,负责机构的信息技术战略和管理</li>
+<li><strong>Ordered Logit Regression</strong>:
+有序Logit回归,用于分析有序分类因变量的统计模型</li>
+<li><strong>Difference-in-Differences</strong>:
+双重差分法,用于评估政策或干预效果的统计方法</li>
+<li><strong>CRRA (Constant Relative Risk Aversion)</strong>:
+恒定相对风险厌恶效用函数</li>
+<li><strong>CARA (Constant Absolute Risk Aversion)</strong>:
+恒定绝对风险厌恶效用函数</li>
+</ul>
+<h2 id="结果">结果</h2>
+<ol type="1">
+<li><strong>支出高峰</strong>:
+数据显示年底支出大幅增加.在财政年度的最后一周,支出是平时每周平均水平的4.9倍</li>
+<li><strong>质量下降</strong>:
+年底开始的IT项目的质量评级明显较低.在财政年度最后一周开始的项目,获得较低质量分数的可能性要高出2.3到5.6倍</li>
+<li><strong>滚动预算的影响</strong>:
+DOJ的IT支出没有出现支出高峰,最后一周的IT支出仅占3.3%,而非IT支出为9.3%.差异分析表明滚动预算减少了年底支出量</li>
+<li><strong>福利分析</strong>:
+允许滚动预算可以带来福利收益.即使是允许机构在短时间内转入资金的中间政策,也可以产生接近全部滚动价值四分之三的福利收益</li>
+</ol>
+<h2 id="结论">结论</h2>
+<p>本文的核心结论是:由于"不使用就失去"的预算规则,美国联邦政府存在年底浪费性支出现象.具体表现为:</p>
+<ul>
+<li><strong>年底支出量激增</strong>:
+财政年度末的支出明显高于其他时间段</li>
+<li><strong>年底支出质量下降</strong>:
+财政年度末开始的IT项目质量较低</li>
+</ul>
+<p>允许滚动预算可以有效地解决这个问题.DOJ的经验表明滚动预算可以减少年底支出量,并可能提高项目质量.福利分析表明,即使是有限制的滚动预算政策也可以带来显著的福利收益.</p>
+<p>作者建议可以通过允许机构将未使用的资金延期到下个财政年度,用于四个月的宽限期,从而消除因年底浪费性支出造成的大部分效率低下问题.</p>
+<h2 id="未来研究方向">未来研究方向</h2>
+<ol type="1">
+<li><strong>研究国会预算决策对机构支出行为的影响</strong>:
+深入研究国会如何应对滚动预算,以及如何设计预算规则以实现最佳效果</li>
+<li><strong>考虑机构内部的异质性</strong>:
+研究机构内部不同部门的支出行为差异,以及如何设计更有针对性的预算政策</li>
+<li><strong>探索其他解决浪费性支出问题的政策</strong>:
+例如改进预算预测,加强项目管理,或引入竞争性招标</li>
+<li><strong>研究不同类型的资金结转政策</strong>:
+比较无限期结转、有条件结转等不同方案对支出效率的影响</li>
+<li><strong>行为因素的影响</strong>:
+考虑认知偏差、损失厌恶等行为因素对政府部门年底支出行为的影响</li>
+<li><strong>政治因素</strong>:
+研究资金结转政策的政治可行性,以及立法机构对预算控制的考量</li>
+</ol>
+<h2 id="学术思考">学术思考</h2>
+<ol type="1">
+<li><strong>预算制度与创新</strong>:
+"使用或失效"的预算规则是否会抑制政府部门的创新活动?如果政府部门知道它们必须在当年用完所有资金,它们是否会更倾向于投资于风险较低、回报较快的项目?</li>
+<li><strong>政治周期与支出行为</strong>:
+政府部门的支出行为是否会受到政治周期的影响?</li>
+<li><strong>绩效评估指标的设计</strong>:
+如何设计更有效的绩效评估指标,以准确衡量政府部门的支出质量?</li>
+<li><strong>资金结转政策的适用性</strong>:
+资金结转政策是否适用于所有类型的政府部门和项目?</li>
+<li><strong>公共部门与私营部门的对比</strong>:
+比较公共部门和私营部门在预算管理和支出效率方面的差异</li>
+</ol>
+]]></content>
+      <categories>
+        <category>公共经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>公共经济学</tag>
+        <tag>预算制度</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>年末消费高峰 — 论文笔记 — McCue, Prier &amp; Lofaro</title>
     <url>/posts/mccue2021/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -11021,187 +11202,6 @@ study of procurement contracts》深度分析撰写。</em></p>
         <tag>论文笔记</tag>
         <tag>公共财政</tag>
         <tag>政府采购</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>预算到期会导致年底浪费性支出吗?_ Liebman &amp; Mahoney (2017) 笔记</title>
-    <url>/posts/liebman2017/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Do Expiring Budgets Lead to Wasteful Year-End
-Spending? Evidence from Federal Procurement</li>
-<li><strong>作者</strong>: Jeffrey B. Liebman(哈佛大学), Neale
-Mahoney(芝加哥大学)</li>
-<li><strong>类型</strong>: 论文笔记 / 公共经济学 / 预算制度</li>
-<li><strong>出版年份</strong>: 2017</li>
-<li><strong>出版机构/期刊</strong>: American Economic Review</li>
-<li><strong>DOI</strong>: 10.1257/aer.20131296</li>
-<li><strong>难度评估</strong>: 高 -
-需要经济学、计量经济学、公共财政学基础</li>
-</ul>
-<span id="more"></span>
-<h2 id="引言">引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>本文属于公共经济学、行为经济学和管理学的交叉领域,探讨政府支出效率问题.核心概念包括:</p>
-<ul>
-<li><strong>预算约束</strong>: 政府机构在财政年度内可支配的资金总额</li>
-<li><strong>自由裁量支出</strong>:
-政府可以自行决定如何分配的预算部分,与法定支出(如社会保障)相对</li>
-<li><strong>公共采购</strong>: 政府购买商品和服务的行为</li>
-<li><strong>信息技术(IT)项目</strong>:
-政府对计算机硬件、软件和相关服务的投资</li>
-<li><strong>社会成本</strong>:
-指一项经济活动对整个社会造成的成本,包括直接成本和外部成本</li>
-<li><strong>滚动预算(Rollover Budget)</strong>:
-允许机构将未使用的预算资金转移到下一个财政年度</li>
-</ul>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p>政府机构通常面临"不使用就失去"的预算规则,即在一个财政年度结束时,任何未使用的预算资金都将返回国库,而不是留给该机构使用.这种规则可能会导致机构在财政年度末
-rush 支出,即使这意味着投资于低价值的项目.</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p>作者认为,"不使用就失去"的预算规则可能会导致政府浪费性支出.他们试图通过实证分析来检验这一观点,并探讨解决这一问题的潜在政策,例如允许机构将未使用的资金转入下一个财政年度.</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><strong>揭示了政府支出中潜在的浪费现象</strong>:
-通过量化财政年度末的支出高峰和质量下降,为政府支出效率问题提供了有力证据</li>
-<li><strong>评估了滚动预算的有效性</strong>:
-通过研究美国司法部的滚动预算政策,为解决浪费性支出提供了一个可行的解决方案</li>
-<li><strong>为政府预算管理提供了政策建议</strong>:
-研究结果表明,允许机构将未使用的资金转入下一个财政年度可以提高政府支出效率</li>
-</ol>
-<h2 id="论文结构">论文结构</h2>
-<ol type="1">
-<li><strong>引言</strong>: 概述研究背景、问题意识和研究意义</li>
-<li><strong>理论模型</strong>:
-建立一个简单的模型来解释"不使用就失去"的预算规则如何导致浪费性支出</li>
-<li><strong>数据描述</strong>:
-介绍用于实证分析的数据集,包括联邦采购数据系统(FPDS)和IT仪表板</li>
-<li><strong>实证分析1</strong>:
-使用FPDS数据检验财政年度末是否存在支出高峰</li>
-<li><strong>实证分析2</strong>:
-使用IT仪表板数据检验财政年度末的支出质量是否下降</li>
-<li><strong>政策分析</strong>: 研究滚动预算政策对支出行为的影响</li>
-<li><strong>福利分析</strong>:
-使用校准后的模型评估滚动预算政策的福利效应</li>
-<li><strong>结论</strong>:
-总结研究结果,讨论政策含义,并提出未来研究方向</li>
-</ol>
-<h2 id="背景">背景</h2>
-<p>许多组织都有在财政年度末到期的预算,这可能导致在年底匆忙将资源用于低质量的项目.美国联邦政府的自由裁量支出预算也面临类似情况,机构必须在财政年度结束前完成拨款.</p>
-<h3 id="挑战">挑战</h3>
-<ol type="1">
-<li><strong>"不使用就失去"的预算规则</strong>:
-如果机构不花完预算,剩余的资金将返回国库,降低了年底花钱的机会成本</li>
-<li><strong>预防性储蓄的动机</strong>:
-机构倾向于在预算周期开始时保留资金,以应对未来不确定的支出需求</li>
-<li><strong>缺乏关于年底浪费性支出的硬性证据</strong>:
-尽管有传闻证据,但缺乏关于美国联邦政府年底支出激增以及年底支出价值低于其他时间段的证据</li>
-</ol>
-<h2 id="方法">方法</h2>
-<h3 id="理论模型">理论模型</h3>
-<ul>
-<li><strong>模型设定</strong>:
-作者建立了一个年度预算模型,包括国会和一个政府机构.国会为该机构选择预算,该机构在一年中的每个时期都会获得一个参数,该参数决定了支出的边际价值,并选择一个支出水平以最大化收益递减的目标</li>
-<li><strong>模型特征</strong>:
-具有三个关键特征_预算到期、未来支出价值的不确定性以及每个时期内支出的收益递减</li>
-<li><strong>模型预测</strong>:
-由于不确定性和收益递减,该机构将在年初进行预防性储蓄;在年底,资金到期的前景导致该机构花掉所有剩余资源,即使边际价值低于资金的社会成本,导致年底支出量激增和质量下降</li>
-</ul>
-<h3 id="数据集">数据集</h3>
-<p><strong>1. 联邦采购数据系统(FPDS)</strong> - 时间范围:
-2004年至2009年财政年度 - 数据量: 1460万份合同 - 总支出: 2.6万亿美元 -
-主要内容:
-合同层面信息,包括金额、产品/服务代码、机构、供应商、合同类型、招标机制等
-- 用途: 用于分析联邦采购支出的总体模式,特别是年底支出高峰</p>
-<p><strong>2. IT仪表板(IT Dashboard)</strong> - 数据时间: 截至2010年3月
-- 项目数量: 686个主要IT项目 - 总计划支出: 1300亿美元 - 主要内容:
-项目绩效数据,包括总体评级、成本评级、进度评级、CIO评估等 - 用途:
-用于评估IT项目的质量,特别是年底开始的项目的质量</p>
-<h3 id="实证策略">实证策略</h3>
-<ol type="1">
-<li><strong>支出高峰检验</strong>:
-使用FPDS数据,分析财政年度内每周的采购支出模式,确定是否存在年底支出高峰</li>
-<li><strong>质量下降检验</strong>:
-使用IT仪表板数据,比较在财政年度最后一周开始的项目与在其他时间开始的项目的质量评级</li>
-<li><strong>政策分析</strong>:
-研究美国司法部(DOJ)的滚动预算政策对支出行为的影响.DOJ有权将未使用的IT项目预算转入下一财政年度,作者比较了DOJ的IT和非IT支出,以及DOJ和其他机构之间的支出模式</li>
-<li><strong>福利分析</strong>:
-通过校准模型以适应支出高峰和质量下降,分析允许滚动预算的潜在福利收益</li>
-</ol>
-<h3 id="关键术语">关键术语</h3>
-<ul>
-<li><strong>FPDS (Federal Procurement Data System)</strong>:
-联邦采购数据系统,跟踪所有联邦合同的数据系统</li>
-<li><strong>IT仪表板 (IT Dashboard)</strong>:
-跟踪联邦政府主要IT项目绩效的网站</li>
-<li><strong>CIO (Chief Information Officer)</strong>:
-首席信息官,负责机构的信息技术战略和管理</li>
-<li><strong>Ordered Logit Regression</strong>:
-有序Logit回归,用于分析有序分类因变量的统计模型</li>
-<li><strong>Difference-in-Differences</strong>:
-双重差分法,用于评估政策或干预效果的统计方法</li>
-<li><strong>CRRA (Constant Relative Risk Aversion)</strong>:
-恒定相对风险厌恶效用函数</li>
-<li><strong>CARA (Constant Absolute Risk Aversion)</strong>:
-恒定绝对风险厌恶效用函数</li>
-</ul>
-<h2 id="结果">结果</h2>
-<ol type="1">
-<li><strong>支出高峰</strong>:
-数据显示年底支出大幅增加.在财政年度的最后一周,支出是平时每周平均水平的4.9倍</li>
-<li><strong>质量下降</strong>:
-年底开始的IT项目的质量评级明显较低.在财政年度最后一周开始的项目,获得较低质量分数的可能性要高出2.3到5.6倍</li>
-<li><strong>滚动预算的影响</strong>:
-DOJ的IT支出没有出现支出高峰,最后一周的IT支出仅占3.3%,而非IT支出为9.3%.差异分析表明滚动预算减少了年底支出量</li>
-<li><strong>福利分析</strong>:
-允许滚动预算可以带来福利收益.即使是允许机构在短时间内转入资金的中间政策,也可以产生接近全部滚动价值四分之三的福利收益</li>
-</ol>
-<h2 id="结论">结论</h2>
-<p>本文的核心结论是:由于"不使用就失去"的预算规则,美国联邦政府存在年底浪费性支出现象.具体表现为:</p>
-<ul>
-<li><strong>年底支出量激增</strong>:
-财政年度末的支出明显高于其他时间段</li>
-<li><strong>年底支出质量下降</strong>:
-财政年度末开始的IT项目质量较低</li>
-</ul>
-<p>允许滚动预算可以有效地解决这个问题.DOJ的经验表明滚动预算可以减少年底支出量,并可能提高项目质量.福利分析表明,即使是有限制的滚动预算政策也可以带来显著的福利收益.</p>
-<p>作者建议可以通过允许机构将未使用的资金延期到下个财政年度,用于四个月的宽限期,从而消除因年底浪费性支出造成的大部分效率低下问题.</p>
-<h2 id="未来研究方向">未来研究方向</h2>
-<ol type="1">
-<li><strong>研究国会预算决策对机构支出行为的影响</strong>:
-深入研究国会如何应对滚动预算,以及如何设计预算规则以实现最佳效果</li>
-<li><strong>考虑机构内部的异质性</strong>:
-研究机构内部不同部门的支出行为差异,以及如何设计更有针对性的预算政策</li>
-<li><strong>探索其他解决浪费性支出问题的政策</strong>:
-例如改进预算预测,加强项目管理,或引入竞争性招标</li>
-<li><strong>研究不同类型的资金结转政策</strong>:
-比较无限期结转、有条件结转等不同方案对支出效率的影响</li>
-<li><strong>行为因素的影响</strong>:
-考虑认知偏差、损失厌恶等行为因素对政府部门年底支出行为的影响</li>
-<li><strong>政治因素</strong>:
-研究资金结转政策的政治可行性,以及立法机构对预算控制的考量</li>
-</ol>
-<h2 id="学术思考">学术思考</h2>
-<ol type="1">
-<li><strong>预算制度与创新</strong>:
-"使用或失效"的预算规则是否会抑制政府部门的创新活动?如果政府部门知道它们必须在当年用完所有资金,它们是否会更倾向于投资于风险较低、回报较快的项目?</li>
-<li><strong>政治周期与支出行为</strong>:
-政府部门的支出行为是否会受到政治周期的影响?</li>
-<li><strong>绩效评估指标的设计</strong>:
-如何设计更有效的绩效评估指标,以准确衡量政府部门的支出质量?</li>
-<li><strong>资金结转政策的适用性</strong>:
-资金结转政策是否适用于所有类型的政府部门和项目?</li>
-<li><strong>公共部门与私营部门的对比</strong>:
-比较公共部门和私营部门在预算管理和支出效率方面的差异</li>
-</ol>
-]]></content>
-      <categories>
-        <category>公共经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>公共经济学</tag>
-        <tag>预算制度</tag>
       </tags>
   </entry>
   <entry>
