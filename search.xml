@@ -3202,6 +3202,24 @@ LBD产生的成本降低主要通过价格竞争传递给了EV生产商和最终
       </tags>
   </entry>
   <entry>
+    <title>如何在双变量Probit中使用工具变量法IV估计</title>
+    <url>/posts/60676/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<h1>ML两步法</h1>
+<p>可以采用二步法进行ML估计,以下将会以一段样例代码展示:</p>
+<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">webuse</span> school, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">set</span> seed 1</span><br><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobit</span><br><span class="line"><span class="keyword">program</span> mybiprobit</span><br><span class="line"><span class="keyword">args</span> lnf m1   m2  athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"><span class="comment">**Here I am creating an artificial IV</span></span><br><span class="line"><span class="keyword">gen</span> z=logptax-rnormal()</span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobit (private:private=logptax loginc years)   (vote:vote=logptax loginc years)   /athrho (zb1:logptax=loginc  years z) /lns1</span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> maximize,</span><br><span class="line"><span class="keyword">matrix</span> b=<span class="built_in">e</span>(b)</span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobitiv</span><br><span class="line"><span class="keyword">program</span> mybiprobitiv</span><br><span class="line"><span class="keyword">args</span> lnf mm1 g1  mm2  g2 athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">tempvar</span> m1 m2</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m1'</span>=<span class="symbol">`mm1'</span>+<span class="symbol">`g1'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m2'</span>=<span class="symbol">`mm2'</span>+<span class="symbol">`g2'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobitiv (private:private=logptax loginc years) (g1:)  (vote:vote=logptax loginc years)  (g2:) /athrho (zb1:logptax=loginc  years z  ) /lns1, init(b)</span><br><span class="line"><span class="keyword">ml</span> maximize</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>计量</category>
+        <category>内生性问题</category>
+      </categories>
+      <tags>
+        <tag>stata</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Real Credit Cycles — 深度阅读笔记 — Bordalo, Gennaioli, Shleifer &amp; Terry</title>
     <url>/posts/bordalo2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -3377,24 +3395,6 @@ LBD产生的成本降低主要通过价格竞争传递给了EV生产商和最终
         <tag>信贷周期</tag>
         <tag>诊断预期</tag>
         <tag>行为宏观经济学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何在双变量Probit中使用工具变量法IV估计</title>
-    <url>/posts/60676/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<h1>ML两步法</h1>
-<p>可以采用二步法进行ML估计,以下将会以一段样例代码展示:</p>
-<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">webuse</span> school, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">set</span> seed 1</span><br><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobit</span><br><span class="line"><span class="keyword">program</span> mybiprobit</span><br><span class="line"><span class="keyword">args</span> lnf m1   m2  athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"><span class="comment">**Here I am creating an artificial IV</span></span><br><span class="line"><span class="keyword">gen</span> z=logptax-rnormal()</span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobit (private:private=logptax loginc years)   (vote:vote=logptax loginc years)   /athrho (zb1:logptax=loginc  years z) /lns1</span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> maximize,</span><br><span class="line"><span class="keyword">matrix</span> b=<span class="built_in">e</span>(b)</span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobitiv</span><br><span class="line"><span class="keyword">program</span> mybiprobitiv</span><br><span class="line"><span class="keyword">args</span> lnf mm1 g1  mm2  g2 athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">tempvar</span> m1 m2</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m1'</span>=<span class="symbol">`mm1'</span>+<span class="symbol">`g1'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m2'</span>=<span class="symbol">`mm2'</span>+<span class="symbol">`g2'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobitiv (private:private=logptax loginc years) (g1:)  (vote:vote=logptax loginc years)  (g2:) /athrho (zb1:logptax=loginc  years z  ) /lns1, init(b)</span><br><span class="line"><span class="keyword">ml</span> maximize</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>计量</category>
-        <category>内生性问题</category>
-      </categories>
-      <tags>
-        <tag>stata</tag>
       </tags>
   </entry>
   <entry>
@@ -3988,54 +3988,6 @@ TWFE 的问题究竟是什么？是否可以在一个统一框架下同时解决
       </tags>
   </entry>
   <entry>
-    <title>大城市人口增长速度🦚</title>
-    <url>/posts/15523/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
-<center>上图即为最终效果</center>
-<h2 id="下载数据">下载数据</h2>
-<p>将代码中的**<code>~/文档/</code>**更换为要保存的目录.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="加载R包">加载R包</h2>
-<p>需要的R包如下所示.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
-<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<ol>
-<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
-<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon, Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
-<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
-<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
-</ol>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
-<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.<br>
-使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="绘图">绘图</h2>
-<p>代码如下,图见上文.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>绘图</category>
-        <category>map&amp;sf</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Generative AI at Work — 深度分析 — Brynjolfsson Et Al.</title>
     <url>/posts/bryn2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -4421,169 +4373,51 @@ $${y_{it} = \delta_t + \alpha_i + \beta AI_{it} + \gamma X_{it} + \epsilon_{it}}
       </tags>
   </entry>
   <entry>
-    <title>被误认的社会规范：沙特阿拉伯女性外出工作 — 深度阅读笔记 — Bursztyn, González &amp; Yanagizawa-Drott</title>
-    <url>/posts/bursztyn2020/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Misperceived Social Norms: Women Working Outside the Home in Saudi Arabia</li>
-<li><strong>作者</strong>: Leonardo Bursztyn (Chicago), Alessandra L. González (Toronto), David Yanagizawa-Drott (Zurich)</li>
-<li><strong>年份</strong>: 2020</li>
-<li><strong>来源</strong>: American Economic Review, 110(10): 2997-3029</li>
-<li><strong>DOI</strong>: 10.1257/aer.20180975</li>
-</ul>
+    <title>大城市人口增长速度🦚</title>
+    <url>/posts/15523/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
+<center>上图即为最终效果</center>
+<h2 id="下载数据">下载数据</h2>
+<p>将代码中的**<code>~/文档/</code>**更换为要保存的目录.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="加载R包">加载R包</h2>
+<p>需要的R包如下所示.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
 <span id="more"></span>
-<hr>
-<hr>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-社会规范（social norms）是调节个体行为的重要机制。经济学将社会规范理解为对特定行为的"社会奖惩"体系——人们不仅有自己的私人偏好，还会根据对他人看法的预期来调整行为，以避免社会制裁或获得社会认可。“多元无知”（pluralistic ignorance）是一种特殊的社会困境：大多数人私下持有某种观点，但错误地认为多数人持有相反观点，于是所有人的公开行为都与自身私人观点相悖，形成一种虚假的社会共识。历史上，苏联晚期对政权的公开支持、20世纪60年代美国对种族隔离的公开沉默，都被认为是多元无知的典型案例。</p>
-<p><strong>研究背景</strong><br>
-沙特阿拉伯的女性劳动力参与率极低——2017年15岁及以上女性就业率不足15%。在研究者2018年开展的全国调查中，仅有4%的已婚男性表示其妻子目前在家庭以外工作。沙特社会的"男性监护人制度"使丈夫对妻子的就业决策拥有最终决定权，这是社会规范约束女性就业的制度化体现。但沙特社会对女性就业的真实看法是否如外界所见那样保守，抑或存在大量被压制的私人支持？</p>
-<p><strong>作者的问题意识</strong><br>
-（1）沙特已婚男性对"女性外出工作"（WWOH）的私人态度与他们对他人看法的认知之间是否存在系统性偏差（即多元无知）？（2）如果纠正这种误认，是否能够改变男性的行为（允许妻子求职）？（3）若直接向女性提供关于社会规范的准确信息，是否能提高她们的劳动供给意愿？</p>
-<p><strong>研究意义</strong><br>
-本文提供了社会规范误认（misperception）影响真实经济行为的直接因果证据。研究表明，信息干预这一低成本政策工具就能打破虚假的社会共识、促进女性劳动力市场参与，对人口众多的保守型社会具有广泛的政策启示。同时，本文也是行为经济学与劳动经济学、发展经济学交叉领域的重要实证贡献。</p>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
+<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
 <ol>
-<li><strong>引言</strong>：提出多元无知框架，概述三组实验的设计与主要发现。</li>
-<li><strong>主实验（Main Experiment）</strong>：500名已婚男性在场次内接受调查和随机信息干预，测量即时行为决策（是否为妻子注册求职App）。</li>
-<li><strong>全国调查（National Survey）</strong>：约1500名已婚男性的全国调查，外部效度检验；含列举实验（list experiment）排除社会期望偏差。</li>
-<li><strong>追踪调查（Follow-up Survey）</strong>：3-5个月后追踪主实验参与者，测量妻子的实际求职行为和规范感知的持续变化。</li>
-<li><strong>招聘实验（Recruitment Experiment）</strong>：与真实企业合作，向291名女性提供是否接受"外出工作版"工作的选择，检验直接向女性提供信息的效果。</li>
-<li><strong>结论</strong>：总结发现，讨论信息传播与未来研究方向。</li>
+<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
+<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon, Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
+<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
+<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
 </ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>沙特阿拉伯女性劳动参与率极低，而丈夫的决策权在制度上起关键作用。外界通常将此归因于保守的社会规范——大多数人不支持女性外出工作。但如果这种"保守共识"本身是误认，而真实的私人观点其实较为开明，那么问题的根源就不是偏好，而是信息缺失。</p>
-<h3 id="挑战">挑战</h3>
-<p><strong>因果识别挑战</strong>：要证明社会规范误认是女性就业的真正障碍，需要做到：<br>
-（1）直接测量私人态度（排除社会期望偏差）；<br>
-（2）测量对他人态度的主观预期；<br>
-（3）随机干预（纠正误认），测量行为变化。<br>
-普通调查数据无法区分"真实偏好"“社会期望偏差"和"策略性报告”。</p>
-<h3 id="方法与数据">方法与数据</h3>
-<p><strong>主实验设计</strong>：</p>
-<ul>
-<li>样本：从利雅得不同社区招募的500名已婚男性（18-35岁），每次以同社区约30人为一场次举行。</li>
-<li>测量私人态度：匿名在线问卷，询问是否同意"女性应被允许在家外工作"（87%同意）。</li>
-<li>测量规范认知：激励相容地猜测同场次其他参与者的回答比例（约75%低估了支持率）。</li>
-<li><strong>随机干预</strong>：随机一半参与者获得反馈，告知其场次中真实支持WWOH的比例。</li>
-<li><strong>行为结果</strong>：在实验结束时，要求参与者选择：（a）额外奖金礼品卡，或（b）为妻子注册一个女性求职手机App（这是一项有成本的行为，因为注册后妻子将收到可见的就业机会）。</li>
-</ul>
-<p><strong>全国调查</strong>：</p>
-<ul>
-<li>约1500名全国代表性已婚男性在线调查（2018年初）</li>
-<li>含列举实验：在问卷设计上给出"否认空间"，排除社会期望偏差；结果支持率同样约80%</li>
-<li>额外测量：第二次全国调查（2020年）增加了沟通频率的问题</li>
-</ul>
-<p><strong>追踪调查</strong>：</p>
-<ul>
-<li>主实验3-5个月后电话追踪参与者</li>
-<li>测量妻子是否申请/面试了家外工作、参与者对邻居规范的感知、是否愿意为妻子报名驾校</li>
-</ul>
-<p><strong>招聘实验</strong>：</p>
-<ul>
-<li>与沙特大型调查公司合作</li>
-<li>样本：291名女性（来自吉达、利雅得、达曼），先确认对临时调查员职位有兴趣</li>
-<li>随机干预：一半受试者在选择工作版本（家中 vs. 外出）之前被告知"82%的已婚沙特男性支持女性外出工作"</li>
-<li>结果：比较两组女性选择"外出工作版本"的比例和实际出勤率</li>
-</ul>
-<h3 id="结果">结果</h3>
-<p><strong>结果一：多元无知的存在</strong></p>
-<ul>
-<li>87%的参与者私下支持WWOH，但约75%低估了同场次他人的支持比例。</li>
-<li>全国调查：82%私下支持，92%低估他人支持，平均认知偏差约25-28个百分点（即他们认为支持的人比实际少约25-28pp）。</li>
-<li>列举实验结果（约80%支持）与直接报告（82%）高度一致，排除社会期望偏差。</li>
-<li>沟通频率与认知偏差呈单调相关：几乎从不讨论WWOH的人，平均认知偏差达40pp；经常讨论的人，偏差仅4pp。</li>
-</ul>
-<p><strong>结果二：信念纠正影响男性的即时行为</strong></p>
-<ul>
-<li>控制组注册求职App的比例：23%</li>
-<li>处理组（获得反馈）：32%（+9pp，即+36%）</li>
-<li>效应由低估他人支持的群体驱动：该群体从21%上升至33%（+57%）；而未低估的人群不受影响（基线更高，约31%）。</li>
-</ul>
-<p><strong>结果三：信念纠正影响妻子的真实求职行为（3-5个月后追踪）</strong></p>
-<ul>
-<li>处理组妻子申请家外工作的概率：+10pp（从基线6%上升）</li>
-<li>处理组妻子面试家外工作的概率：+5pp（从基线1%上升）</li>
-<li>对妻子是否已在家外就业的效应方向为正但不显著（检验效力不足）</li>
-<li>持续效应：处理组参与者对"邻居支持WWOH的比例"的估计显著更高</li>
-<li>溢出效应：处理组参与者更愿意为妻子报驾校（驾车在外出工作研究期间也刚解禁）</li>
-</ul>
-<p><strong>结果四：直接向女性提供信息同样有效（招聘实验）</strong></p>
-<ul>
-<li>控制组选择外出工作版本的比例：18%</li>
-<li>信息处理组：33%（+15pp，p=0.001）</li>
-<li>实际出勤率：控制组15%，处理组27%（+12pp，p=0.009）</li>
-</ul>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<p><strong>核心发现</strong>：沙特社会中存在对女性就业社会规范的系统性多元无知——绝大多数男性私下支持WWOH，但严重低估了他人的支持程度。纠正这一误认不仅改变了男性的即时决策，还在数月后影响了妻子的真实就业行为；向女性直接提供规范信息同样有效。</p>
-<p><strong>对领域的贡献</strong>：</p>
-<ol>
-<li>首次提供了多元无知影响劳动力市场参与的直接因果证据；</li>
-<li>联合使用实验室实验、全国调查、追踪调查和现实招聘实验的多重设计，大幅增强了结论的可信度和外部效度；</li>
-<li>揭示了信息干预在改变社会规范方面的潜力，即使在政治和社会约束较强的环境下。</li>
-</ol>
-<p><strong>政策含义</strong>：</p>
-<ul>
-<li>准确的社会规范信息是低成本但可能高回报的政策工具；</li>
-<li>信息干预在民主机制（选举、民调等自然聚合信息渠道）受限的社会中尤为重要；</li>
-<li>打破沉默螺旋、促进公开讨论可能是消除多元无知的关键机制。</li>
-</ul>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文中明确提及的方向</strong>：</p>
-<ol>
-<li>扩大信息干预规模，观察信息在社会网络中如何传播，以及对更广泛结果的影响；</li>
-<li>研究女性自身的规范认知和偏好（本文主要关注男性监护人）；</li>
-<li>深入理解WWOH污名化的根源——丈夫通过限制妻子外出工作向他人发出了什么社会信号（信号机制）？</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li>多元无知能否在规模化信息干预下自我强化？当大量人群同时获得信息修正，会不会产生"雪崩效应"（社会规范的急速重新校准）？</li>
-<li>信息干预的异质性效应：不同宗教虔诚度、教育背景、城乡背景的家庭对信息纠正的反应是否不同？</li>
-<li>将研究延伸至其他多元无知场景：环境保护行为、疫苗接种、性别平等态度在不同保守型社会的比较研究；</li>
-<li>网络传播机制：若实验中的信息纠正通过社交媒体在家庭-朋友圈网络中扩散，效应是否会放大或衰减？</li>
-</ol>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>监护人行为 vs. 真实偏好</strong>：处理组男性更愿意为妻子注册求职App，这究竟是因为他们真的更支持妻子工作，还是因为他们认为被其他人看到支持WWOH更"安全"了（形象管理）？两种机制的区分对政策设计有不同含义——前者意味着私人偏好的释放，后者意味着社会激励的改变。</p>
-</li>
-<li>
-<p><strong>列举实验的局限性</strong>：列举实验证明了支持率与直接报告高度一致，排除了社会期望偏差。但列举实验本身测量的是"整体同意数"而非"个人是否同意WWOH"，其精确度有内在限制。如何进一步验证直接报告的真实性？</p>
-</li>
-<li>
-<p><strong>多元无知的持续机制</strong>：论文发现沟通频率越低，认知偏差越大，提示"沉默"维持了多元无知。但这种相关性存在反向因果——正因为认为大家都保守，才不愿开口讨论。如何用外生干预来识别"沉默→误认"的因果方向？</p>
-</li>
-<li>
-<p><strong>规范变化的动态</strong>：这一研究的背景是沙特2018年前后的快速社会变革（驾车权利、Vision 2030等）。在这一特殊时期，社会规范的流动性本身可能高于常态，信息干预的效果可能被放大。结论的外部有效性如何推广至规范较为稳固的其他社会？</p>
-</li>
-<li>
-<p><strong>女性决策自主性</strong>：本文的男性实验假设了"丈夫是决策者"的框架。但招聘实验表明女性自身的规范认知也限制了其劳动供给意愿。丈夫与妻子在决策中的相对权重如何？信息干预是否能绕过男性监护人直接赋权女性？</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
+<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.<br>
+使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="绘图">绘图</h2>
+<p>代码如下,图见上文.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>"多元无知"在经济学文献中还有哪些经典应用？Bursztyn et al.的框架与Kuran（1995）的"偏好伪装"理论有何异同？</li>
-<li>主实验中为什么用"注册求职App"而不是"直接让妻子工作"作为结果变量？如何确保这个决策有足够的外部效度？</li>
-<li>追踪调查的衰减率是多少？电话联系成功率和样本代表性如何？是否存在选择性追踪问题？</li>
-<li>招聘实验的外出工作版本比家中版本多20%薪酬，为什么只有18%的控制组女性选择它？这说明了什么关于社会规范约束的强度？</li>
-<li>本文的结论在其他中东或保守型社会（如伊朗、巴基斯坦）是否有可重复性？沙特特殊的政治时机（Vision 2030）会不会使结论难以推广？</li>
-<li>如果信息干预大规模推广，社会规范会发生实质性转变（"雪崩"效应）还是会有反弹（保守势力的对抗）？有什么理论或实证可以回答这个问题？</li>
-<li>本文的机制分析指出"沉默导致误认"，那么促进公开讨论（如媒体、公开民调）是否是比直接信息干预更具规模效应的政策工具？</li>
-</ol>
-<hr>
+</section>
 ]]></content>
       <categories>
-        <category>AER</category>
+        <category>绘图</category>
+        <category>map&amp;sf</category>
       </categories>
       <tags>
-        <tag>论文笔记</tag>
+        <tag>R</tag>
       </tags>
   </entry>
   <entry>
@@ -5051,6 +4885,172 @@ $${y_{it} = \delta_t + \alpha_i + \beta AI_{it} + \gamma X_{it} + \epsilon_{it}}
 <p><strong>与其他健康干预的组合</strong>：清洁水干预与其他公共卫生干预（如疫苗、营养补充）组合是否能产生更大的健康收益？</p>
 </li>
 </ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>被误认的社会规范：沙特阿拉伯女性外出工作 — 深度阅读笔记 — Bursztyn, González &amp; Yanagizawa-Drott</title>
+    <url>/posts/bursztyn2020/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Misperceived Social Norms: Women Working Outside the Home in Saudi Arabia</li>
+<li><strong>作者</strong>: Leonardo Bursztyn (Chicago), Alessandra L. González (Toronto), David Yanagizawa-Drott (Zurich)</li>
+<li><strong>年份</strong>: 2020</li>
+<li><strong>来源</strong>: American Economic Review, 110(10): 2997-3029</li>
+<li><strong>DOI</strong>: 10.1257/aer.20180975</li>
+</ul>
+<span id="more"></span>
+<hr>
+<hr>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+社会规范（social norms）是调节个体行为的重要机制。经济学将社会规范理解为对特定行为的"社会奖惩"体系——人们不仅有自己的私人偏好，还会根据对他人看法的预期来调整行为，以避免社会制裁或获得社会认可。“多元无知”（pluralistic ignorance）是一种特殊的社会困境：大多数人私下持有某种观点，但错误地认为多数人持有相反观点，于是所有人的公开行为都与自身私人观点相悖，形成一种虚假的社会共识。历史上，苏联晚期对政权的公开支持、20世纪60年代美国对种族隔离的公开沉默，都被认为是多元无知的典型案例。</p>
+<p><strong>研究背景</strong><br>
+沙特阿拉伯的女性劳动力参与率极低——2017年15岁及以上女性就业率不足15%。在研究者2018年开展的全国调查中，仅有4%的已婚男性表示其妻子目前在家庭以外工作。沙特社会的"男性监护人制度"使丈夫对妻子的就业决策拥有最终决定权，这是社会规范约束女性就业的制度化体现。但沙特社会对女性就业的真实看法是否如外界所见那样保守，抑或存在大量被压制的私人支持？</p>
+<p><strong>作者的问题意识</strong><br>
+（1）沙特已婚男性对"女性外出工作"（WWOH）的私人态度与他们对他人看法的认知之间是否存在系统性偏差（即多元无知）？（2）如果纠正这种误认，是否能够改变男性的行为（允许妻子求职）？（3）若直接向女性提供关于社会规范的准确信息，是否能提高她们的劳动供给意愿？</p>
+<p><strong>研究意义</strong><br>
+本文提供了社会规范误认（misperception）影响真实经济行为的直接因果证据。研究表明，信息干预这一低成本政策工具就能打破虚假的社会共识、促进女性劳动力市场参与，对人口众多的保守型社会具有广泛的政策启示。同时，本文也是行为经济学与劳动经济学、发展经济学交叉领域的重要实证贡献。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：提出多元无知框架，概述三组实验的设计与主要发现。</li>
+<li><strong>主实验（Main Experiment）</strong>：500名已婚男性在场次内接受调查和随机信息干预，测量即时行为决策（是否为妻子注册求职App）。</li>
+<li><strong>全国调查（National Survey）</strong>：约1500名已婚男性的全国调查，外部效度检验；含列举实验（list experiment）排除社会期望偏差。</li>
+<li><strong>追踪调查（Follow-up Survey）</strong>：3-5个月后追踪主实验参与者，测量妻子的实际求职行为和规范感知的持续变化。</li>
+<li><strong>招聘实验（Recruitment Experiment）</strong>：与真实企业合作，向291名女性提供是否接受"外出工作版"工作的选择，检验直接向女性提供信息的效果。</li>
+<li><strong>结论</strong>：总结发现，讨论信息传播与未来研究方向。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>沙特阿拉伯女性劳动参与率极低，而丈夫的决策权在制度上起关键作用。外界通常将此归因于保守的社会规范——大多数人不支持女性外出工作。但如果这种"保守共识"本身是误认，而真实的私人观点其实较为开明，那么问题的根源就不是偏好，而是信息缺失。</p>
+<h3 id="挑战">挑战</h3>
+<p><strong>因果识别挑战</strong>：要证明社会规范误认是女性就业的真正障碍，需要做到：<br>
+（1）直接测量私人态度（排除社会期望偏差）；<br>
+（2）测量对他人态度的主观预期；<br>
+（3）随机干预（纠正误认），测量行为变化。<br>
+普通调查数据无法区分"真实偏好"“社会期望偏差"和"策略性报告”。</p>
+<h3 id="方法与数据">方法与数据</h3>
+<p><strong>主实验设计</strong>：</p>
+<ul>
+<li>样本：从利雅得不同社区招募的500名已婚男性（18-35岁），每次以同社区约30人为一场次举行。</li>
+<li>测量私人态度：匿名在线问卷，询问是否同意"女性应被允许在家外工作"（87%同意）。</li>
+<li>测量规范认知：激励相容地猜测同场次其他参与者的回答比例（约75%低估了支持率）。</li>
+<li><strong>随机干预</strong>：随机一半参与者获得反馈，告知其场次中真实支持WWOH的比例。</li>
+<li><strong>行为结果</strong>：在实验结束时，要求参与者选择：（a）额外奖金礼品卡，或（b）为妻子注册一个女性求职手机App（这是一项有成本的行为，因为注册后妻子将收到可见的就业机会）。</li>
+</ul>
+<p><strong>全国调查</strong>：</p>
+<ul>
+<li>约1500名全国代表性已婚男性在线调查（2018年初）</li>
+<li>含列举实验：在问卷设计上给出"否认空间"，排除社会期望偏差；结果支持率同样约80%</li>
+<li>额外测量：第二次全国调查（2020年）增加了沟通频率的问题</li>
+</ul>
+<p><strong>追踪调查</strong>：</p>
+<ul>
+<li>主实验3-5个月后电话追踪参与者</li>
+<li>测量妻子是否申请/面试了家外工作、参与者对邻居规范的感知、是否愿意为妻子报名驾校</li>
+</ul>
+<p><strong>招聘实验</strong>：</p>
+<ul>
+<li>与沙特大型调查公司合作</li>
+<li>样本：291名女性（来自吉达、利雅得、达曼），先确认对临时调查员职位有兴趣</li>
+<li>随机干预：一半受试者在选择工作版本（家中 vs. 外出）之前被告知"82%的已婚沙特男性支持女性外出工作"</li>
+<li>结果：比较两组女性选择"外出工作版本"的比例和实际出勤率</li>
+</ul>
+<h3 id="结果">结果</h3>
+<p><strong>结果一：多元无知的存在</strong></p>
+<ul>
+<li>87%的参与者私下支持WWOH，但约75%低估了同场次他人的支持比例。</li>
+<li>全国调查：82%私下支持，92%低估他人支持，平均认知偏差约25-28个百分点（即他们认为支持的人比实际少约25-28pp）。</li>
+<li>列举实验结果（约80%支持）与直接报告（82%）高度一致，排除社会期望偏差。</li>
+<li>沟通频率与认知偏差呈单调相关：几乎从不讨论WWOH的人，平均认知偏差达40pp；经常讨论的人，偏差仅4pp。</li>
+</ul>
+<p><strong>结果二：信念纠正影响男性的即时行为</strong></p>
+<ul>
+<li>控制组注册求职App的比例：23%</li>
+<li>处理组（获得反馈）：32%（+9pp，即+36%）</li>
+<li>效应由低估他人支持的群体驱动：该群体从21%上升至33%（+57%）；而未低估的人群不受影响（基线更高，约31%）。</li>
+</ul>
+<p><strong>结果三：信念纠正影响妻子的真实求职行为（3-5个月后追踪）</strong></p>
+<ul>
+<li>处理组妻子申请家外工作的概率：+10pp（从基线6%上升）</li>
+<li>处理组妻子面试家外工作的概率：+5pp（从基线1%上升）</li>
+<li>对妻子是否已在家外就业的效应方向为正但不显著（检验效力不足）</li>
+<li>持续效应：处理组参与者对"邻居支持WWOH的比例"的估计显著更高</li>
+<li>溢出效应：处理组参与者更愿意为妻子报驾校（驾车在外出工作研究期间也刚解禁）</li>
+</ul>
+<p><strong>结果四：直接向女性提供信息同样有效（招聘实验）</strong></p>
+<ul>
+<li>控制组选择外出工作版本的比例：18%</li>
+<li>信息处理组：33%（+15pp，p=0.001）</li>
+<li>实际出勤率：控制组15%，处理组27%（+12pp，p=0.009）</li>
+</ul>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<p><strong>核心发现</strong>：沙特社会中存在对女性就业社会规范的系统性多元无知——绝大多数男性私下支持WWOH，但严重低估了他人的支持程度。纠正这一误认不仅改变了男性的即时决策，还在数月后影响了妻子的真实就业行为；向女性直接提供规范信息同样有效。</p>
+<p><strong>对领域的贡献</strong>：</p>
+<ol>
+<li>首次提供了多元无知影响劳动力市场参与的直接因果证据；</li>
+<li>联合使用实验室实验、全国调查、追踪调查和现实招聘实验的多重设计，大幅增强了结论的可信度和外部效度；</li>
+<li>揭示了信息干预在改变社会规范方面的潜力，即使在政治和社会约束较强的环境下。</li>
+</ol>
+<p><strong>政策含义</strong>：</p>
+<ul>
+<li>准确的社会规范信息是低成本但可能高回报的政策工具；</li>
+<li>信息干预在民主机制（选举、民调等自然聚合信息渠道）受限的社会中尤为重要；</li>
+<li>打破沉默螺旋、促进公开讨论可能是消除多元无知的关键机制。</li>
+</ul>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文中明确提及的方向</strong>：</p>
+<ol>
+<li>扩大信息干预规模，观察信息在社会网络中如何传播，以及对更广泛结果的影响；</li>
+<li>研究女性自身的规范认知和偏好（本文主要关注男性监护人）；</li>
+<li>深入理解WWOH污名化的根源——丈夫通过限制妻子外出工作向他人发出了什么社会信号（信号机制）？</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li>多元无知能否在规模化信息干预下自我强化？当大量人群同时获得信息修正，会不会产生"雪崩效应"（社会规范的急速重新校准）？</li>
+<li>信息干预的异质性效应：不同宗教虔诚度、教育背景、城乡背景的家庭对信息纠正的反应是否不同？</li>
+<li>将研究延伸至其他多元无知场景：环境保护行为、疫苗接种、性别平等态度在不同保守型社会的比较研究；</li>
+<li>网络传播机制：若实验中的信息纠正通过社交媒体在家庭-朋友圈网络中扩散，效应是否会放大或衰减？</li>
+</ol>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>监护人行为 vs. 真实偏好</strong>：处理组男性更愿意为妻子注册求职App，这究竟是因为他们真的更支持妻子工作，还是因为他们认为被其他人看到支持WWOH更"安全"了（形象管理）？两种机制的区分对政策设计有不同含义——前者意味着私人偏好的释放，后者意味着社会激励的改变。</p>
+</li>
+<li>
+<p><strong>列举实验的局限性</strong>：列举实验证明了支持率与直接报告高度一致，排除了社会期望偏差。但列举实验本身测量的是"整体同意数"而非"个人是否同意WWOH"，其精确度有内在限制。如何进一步验证直接报告的真实性？</p>
+</li>
+<li>
+<p><strong>多元无知的持续机制</strong>：论文发现沟通频率越低，认知偏差越大，提示"沉默"维持了多元无知。但这种相关性存在反向因果——正因为认为大家都保守，才不愿开口讨论。如何用外生干预来识别"沉默→误认"的因果方向？</p>
+</li>
+<li>
+<p><strong>规范变化的动态</strong>：这一研究的背景是沙特2018年前后的快速社会变革（驾车权利、Vision 2030等）。在这一特殊时期，社会规范的流动性本身可能高于常态，信息干预的效果可能被放大。结论的外部有效性如何推广至规范较为稳固的其他社会？</p>
+</li>
+<li>
+<p><strong>女性决策自主性</strong>：本文的男性实验假设了"丈夫是决策者"的框架。但招聘实验表明女性自身的规范认知也限制了其劳动供给意愿。丈夫与妻子在决策中的相对权重如何？信息干预是否能绕过男性监护人直接赋权女性？</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>"多元无知"在经济学文献中还有哪些经典应用？Bursztyn et al.的框架与Kuran（1995）的"偏好伪装"理论有何异同？</li>
+<li>主实验中为什么用"注册求职App"而不是"直接让妻子工作"作为结果变量？如何确保这个决策有足够的外部效度？</li>
+<li>追踪调查的衰减率是多少？电话联系成功率和样本代表性如何？是否存在选择性追踪问题？</li>
+<li>招聘实验的外出工作版本比家中版本多20%薪酬，为什么只有18%的控制组女性选择它？这说明了什么关于社会规范约束的强度？</li>
+<li>本文的结论在其他中东或保守型社会（如伊朗、巴基斯坦）是否有可重复性？沙特特殊的政治时机（Vision 2030）会不会使结论难以推广？</li>
+<li>如果信息干预大规模推广，社会规范会发生实质性转变（"雪崩"效应）还是会有反弹（保守势力的对抗）？有什么理论或实证可以回答这个问题？</li>
+<li>本文的机制分析指出"沉默导致误认"，那么促进公开讨论（如媒体、公开民调）是否是比直接信息干预更具规模效应的政策工具？</li>
+</ol>
+<hr>
 ]]></content>
       <categories>
         <category>AER</category>
@@ -13638,154 +13638,6 @@ $$k_t = 1 \text{ 当且仅当 } q_t \geq \bar{q}$$</p>
       </tags>
   </entry>
   <entry>
-    <title>性别构成、社会情境与高考学业表现 — 深度阅读笔记 — Huang Et Al.</title>
-    <url>/posts/huang2025/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Gender Composition, Social Context, and Academic Performance in High-Stakes Examinations<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/JZXZD7BS/Huang 等 - 2025 - Gender Composition, Social Context, and Academic Performance in High-Stakes Examinations.pdf<br>
-Zotero Item Key:: QM7ZRJL9</p>
-<hr>
-<span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-同伴效应（peer effects）是教育经济学的核心议题——同伴的性别、能力、行为都可能影响个体表现。性别与竞争表现的关系已有丰富文献：女性在高风险竞争性环境中系统性地表现弱于同等能力的男性（Niederle &amp; Vesterlund 2011）。同伴性别构成效应的大量文献集中在长期持续暴露（如同班同学），而短暂暴露（如临时同考场）是否同样影响表现，研究相对匮乏。此外，社会规范（性别平等程度、儒家文化强度等）在调节同伴效应中的作用也尚未充分探索。</p>
-<p><strong>研究背景</strong><br>
-中国高考（Gaokao）是全球最重要的高风险标准化考试之一，每年约有1000万学生参加。高考成绩直接决定能否进入理想大学，因此具有深远的人生影响。现有研究（Cai et al., 2019）已记录到女生在高考中系统性弱于男生的现象。识别考场性别构成对成绩的影响，因果推断的挑战在于：学生通常会自我选择考场，传统研究无法排除选择偏差。本研究利用高考随机座位分配制度提供了外生性识别机会。</p>
-<p><strong>作者的问题意识</strong><br>
-（1）考场的性别构成是否影响学生表现？效应是否因性别而异？（2）视觉暴露（同伴是否在视野内）是否是传导机制的关键？（3）地方社会规范（性别平等程度、儒家文化影响）如何调节这种效应？</p>
-<p><strong>研究意义</strong><br>
-本文提供了高风险竞争环境中临时性同伴构成影响表现的因果证据，并首次在大样本跨地区数据中揭示了社会规范对同伴效应的调节作用，对减少教育性别差距的政策设计有直接启示。</p>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言</strong>：文献综述、研究问题与贡献。</li>
-<li><strong>数据与背景</strong>：高考考场制度、随机分座、数据来源（15个地市）。</li>
-<li><strong>主效应估计</strong>：性别构成对女生和男生成绩的影响。</li>
-<li><strong>视觉暴露机制</strong>：前排/后排、直接在前方的同伴的差异效应。</li>
-<li><strong>时序效应</strong>：考试日程靠后的科目效应是否更大。</li>
-<li><strong>异质性分析（社会规范）</strong>：性别平等程度、儒家文化、经济发展水平、环境因素的调节作用。</li>
-<li><strong>结论</strong>：政策含义与研究局限。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>高考考场由省级考试机构统一随机分配座位，学生凭准考证号对应固定考场和座位，学生、家长和学校均无法干预。每个考场约25名学生，按"蛇形"（zigzag）模式排列。平衡性检验证实：学生的预先特征（性别、年龄、所在高中）与考场女生比例之间没有显著相关——随机分座的假设成立。</p>
-<h3 id="挑战">挑战</h3>
-<p>过去的研究大多使用单一学校数据，无法研究社会规范的调节作用，因为缺乏地区间的差异。本文利用三个省（含新疆/青海等文化差异显著的地区）15个地市的数据，获得了地区间文化和经济条件的充足变异。</p>
-<h3 id="数据">数据</h3>
-<ul>
-<li><strong>样本</strong>：2000-2003年参加高考、来自15个地市的25万余名学生（主样本）；扩展样本纳入1999年河北、湖南学生</li>
-<li><strong>成绩结果</strong>：高考总分（标准化）；是否考入第一批（重点）大学</li>
-<li><strong>性别构成变量</strong>：考场女生比例</li>
-<li><strong>地区社会规范指标</strong>：同龄出生队列中女性比例（性别平等代理）、当地高考录取率的性别差距、距最近孔庙的距离（儒家文化影响代理）</li>
-<li><strong>经济和环境控制</strong>：人均GDP、PM2.5浓度、高考期间气温</li>
-</ul>
-<h3 id="识别策略">识别策略</h3>
-<p>利用考场层面随机座位分配产生的女生比例外生变化，OLS回归考场女生比例对个人标准化成绩的影响，控制学生个人特征和固定效应。</p>
-<h3 id="主要结果">主要结果</h3>
-<p><strong>结果一：女生受益于更多女性同伴，男生无显著反应</strong></p>
-<ul>
-<li>考场女生比例增加1个标准差 → 女生成绩增加1.56%标准差（显著）</li>
-<li>男生对考场性别构成无显著反应</li>
-<li>女生的大学录取机会同样提升：考入第一批大学的概率增加1.2%标准差</li>
-</ul>
-<p><strong>结果二：视觉暴露是关键机制</strong></p>
-<ul>
-<li>将考场学生分为四个区域（前左、前右、后左、后右）</li>
-<li>前排区域的女生比例对后排女生成绩有显著正效应；后排区域的女生比例对后排女生无显著影响</li>
-<li>每名学生"直接正前方"（immediate view）的同伴为女性，对成绩有显著正效应</li>
-<li>结论：眼睛能看到的女性同伴才会带来效应，而非整个考场的性别氛围</li>
-</ul>
-<p><strong>结果三：时序效应——越靠后的科目效应越强</strong></p>
-<ul>
-<li>高考分两至三天进行，首日首科效应最小，后续科目效应逐渐增大</li>
-<li>可能的解释：随着考试进行，学生对考场性别构成越来越了解，积累了更多"性别同伴意识"</li>
-</ul>
-<p><strong>结果四：科目差异——仅在文科出现效应</strong></p>
-<ul>
-<li>对理科生无显著效应</li>
-<li>对文科生效应显著（文科考场女生占比本身更高，更容易形成女性团结和支持文化）</li>
-</ul>
-<p><strong>结果五（异质性）：社会规范调节效应显著；经济发展和环境因素无作用</strong></p>
-<ul>
-<li>性别平等程度更高的县（女性出生比例更高、大学录取性别差距更小）中，女生的性别构成效应显著更大</li>
-<li>距孔庙更远的县（儒家文化影响较弱）中，女生性别构成效应更大</li>
-<li>人均GDP、PM2.5浓度、高考气温分位上下组无显著差异——说明经济发展和自然环境不是调节渠道</li>
-</ul>
-<h3 id="机制讨论">机制讨论</h3>
-<p>作者提出两种不互斥的机制：</p>
-<ol>
-<li><strong>女性团结效应（female solidarity）</strong>：更多女性同伴在场，增加了情感支持、心理认同感，降低了考试焦虑，促进表现。</li>
-<li><strong>女性依赖效应（female dependence）</strong>：性别平等地区女性受教育机会更广，考生总体能力偏低，更依赖外部同伴支持；而在这样的环境中，女性化同伴环境提供了更大的心理支撑。</li>
-</ol>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<p><strong>核心发现</strong>：利用高考随机座位分配，女生的成绩在女性同伴比例更高的考场中显著更好（+1.56% SD），男生无反应。视觉暴露是关键机制：直接在眼前的女性同伴效应最强。效应在文科生中存在、理科生中不显著。效应在性别平等程度高、儒家文化影响弱的地区更大；与经济发展水平和自然环境无关。</p>
-<p><strong>对领域的贡献</strong>：</p>
-<ol>
-<li>首次在高风险考试场景中提供大规模随机性证据证明临时性同伴性别构成影响表现；</li>
-<li>拓展了同伴效应文献——短暂暴露也能产生可测量的成绩影响；</li>
-<li>揭示社会规范作为同伴效应调节变量的角色，为理解文化情境下异质性同伴效应提供了新框架；</li>
-<li>视觉注意力理论（visual attention）与同伴效应的结合是方法论上的创新。</li>
-</ol>
-<p><strong>政策含义</strong>：</p>
-<ul>
-<li>考场实行性别同质化座位安排（女生集中考场）可能有助于提升女生成绩</li>
-<li>效应在性别平等地区更强，表明文化变革与考场政策相互补充</li>
-<li>发现有助于减小高考中的性别差距，改善女性高等教育入学机会</li>
-</ul>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文中提及的方向</strong>：</p>
-<ol>
-<li>用更近年的高考数据验证效应是否随时间演变（样本仅覆盖2000-2003年，加入WTO和快速市场化的特殊时期）；</li>
-<li>实验设计以更好地区分"女性团结效应"与"女性依赖效应"两种机制。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li>考场性别构成政策的成本效益分析：重新设计考场性别分配的实施成本 vs. 女生升学率提升带来的人力资本收益；</li>
-<li>效应的长期影响：高考中的性别构成效应是否影响大学专业选择、职业发展（尤其是女性进入STEM领域的决策）？</li>
-<li>类似效应在其他高风险情景（执业资格考试、公务员考试、国际标准化考试如GRE）的可复制性；</li>
-<li>男性为何不受影响？探究男性对同伴性别构成的反应机制（竞争压力、自我形象）是否与女性根本不同。</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>随机性的"质量"</strong>：研究依赖随机座位分配提供外生性。平衡性检验证实了随机性，但如果学生系统性地在同一社区被分配同一考场（可能源于准考证号生成机制），会不会仍有同伴选择问题？文章是否充分排除了这种可能？</p>
-</li>
-<li>
-<p><strong>视觉暴露机制的另一解读</strong>：前排区域女生比例的效应强于后排，作者解释为"视觉暴露"。但前排学生成绩本身是否系统性地更好？如果前排座位不完全随机（比如成绩优异者被安排在前排），效应可能混入了"高质量同伴"的影响，而非纯粹的视觉效应。</p>
-</li>
-<li>
-<p><strong>儒家文化指标的可靠性</strong>：用"距最近孔庙的距离"作为儒家文化影响的代理变量，这一变量的历史合理性可以接受，但"孔庙"的分布也受历史城市化、旅游开发等因素影响，现代孔庙分布与儒家文化强度的映射关系值得进一步评估。</p>
-</li>
-<li>
-<p><strong>为什么只在文科出现效应</strong>：文科生考场女生占比确实更高，这本身是否是一个内生问题？如果文科女生的绝对数量和质量都不同，"女性多数"的含义在理科和文科可能根本不同，直接比较两个群体可能不恰当。</p>
-</li>
-<li>
-<p><strong>政策实施的道德困境</strong>：如果"性别隔离考场"可以帮助女生考更高分，政策上是否应该推行？这一政策会不会反而强化了"女生在单性别环境中才能表现好"的刻板印象？与鼓励女生进入混合竞争环境的长期目标是否矛盾？</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>这篇文章和 Cai et al. (2019) 的关系是什么？为什么在高考中女生整体成绩低于男生，而女生实际接受高等教育的人数却已超过男生？</li>
-<li>该研究的样本时期（2000-2003年）是特殊历史时期，效应现在还适用吗？当今中国高考中女生表现是否已经超过男生？</li>
-<li>"直接视野内女性同伴"产生效应的心理机制是什么？是社会比较（social comparison）、情感支持，还是降低了威胁感（stereotype threat reduction）？</li>
-<li>为什么男生对考场性别构成没有反应？有无研究显示男生在女多男少的考场中会感到压力（或竞争刺激）而表现更好或更差？</li>
-<li>性别构成效应是否与其他同伴效应（能力同伴效应、高考状态焦虑）存在交互？如果考场高分学生比例和女生比例同时变化，效应会叠加还是相互抵消？</li>
-<li>本文的政策建议（性别同质化考场）在实践中是否可行？会有哪些政治阻力和操作挑战？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>社会位置与不平等的公平观 — 深度阅读笔记 — Hvidberg Et Al.</title>
     <url>/posts/hvidberg2023/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Social Positions and Fairness Views on Inequality<br>
@@ -13928,6 +13780,154 @@ Zotero Item Key:: FQ76EBZJ</p>
 <li>"同工同酬"诉求在中国语境下的实证研究：中国工人是否也对同事/同岗位内部薪酬差异更为敏感？</li>
 <li>本文发现的"centre bias"与"Dunning-Kruger效应"（高能力者低估自己、低能力者高估自己）有什么异同？是否可以用类似的统计框架来解释？</li>
 <li>如果给中国受访者实施类似的信息干预（告知真实收入排名），预期会有什么反应？鉴于中国社会对公开讨论收入的文化禁忌（“工资不能问别人”），这类研究在中国面临什么独特挑战？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>性别构成、社会情境与高考学业表现 — 深度阅读笔记 — Huang Et Al.</title>
+    <url>/posts/huang2025/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Gender Composition, Social Context, and Academic Performance in High-Stakes Examinations<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/JZXZD7BS/Huang 等 - 2025 - Gender Composition, Social Context, and Academic Performance in High-Stakes Examinations.pdf<br>
+Zotero Item Key:: QM7ZRJL9</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+同伴效应（peer effects）是教育经济学的核心议题——同伴的性别、能力、行为都可能影响个体表现。性别与竞争表现的关系已有丰富文献：女性在高风险竞争性环境中系统性地表现弱于同等能力的男性（Niederle &amp; Vesterlund 2011）。同伴性别构成效应的大量文献集中在长期持续暴露（如同班同学），而短暂暴露（如临时同考场）是否同样影响表现，研究相对匮乏。此外，社会规范（性别平等程度、儒家文化强度等）在调节同伴效应中的作用也尚未充分探索。</p>
+<p><strong>研究背景</strong><br>
+中国高考（Gaokao）是全球最重要的高风险标准化考试之一，每年约有1000万学生参加。高考成绩直接决定能否进入理想大学，因此具有深远的人生影响。现有研究（Cai et al., 2019）已记录到女生在高考中系统性弱于男生的现象。识别考场性别构成对成绩的影响，因果推断的挑战在于：学生通常会自我选择考场，传统研究无法排除选择偏差。本研究利用高考随机座位分配制度提供了外生性识别机会。</p>
+<p><strong>作者的问题意识</strong><br>
+（1）考场的性别构成是否影响学生表现？效应是否因性别而异？（2）视觉暴露（同伴是否在视野内）是否是传导机制的关键？（3）地方社会规范（性别平等程度、儒家文化影响）如何调节这种效应？</p>
+<p><strong>研究意义</strong><br>
+本文提供了高风险竞争环境中临时性同伴构成影响表现的因果证据，并首次在大样本跨地区数据中揭示了社会规范对同伴效应的调节作用，对减少教育性别差距的政策设计有直接启示。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：文献综述、研究问题与贡献。</li>
+<li><strong>数据与背景</strong>：高考考场制度、随机分座、数据来源（15个地市）。</li>
+<li><strong>主效应估计</strong>：性别构成对女生和男生成绩的影响。</li>
+<li><strong>视觉暴露机制</strong>：前排/后排、直接在前方的同伴的差异效应。</li>
+<li><strong>时序效应</strong>：考试日程靠后的科目效应是否更大。</li>
+<li><strong>异质性分析（社会规范）</strong>：性别平等程度、儒家文化、经济发展水平、环境因素的调节作用。</li>
+<li><strong>结论</strong>：政策含义与研究局限。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>高考考场由省级考试机构统一随机分配座位，学生凭准考证号对应固定考场和座位，学生、家长和学校均无法干预。每个考场约25名学生，按"蛇形"（zigzag）模式排列。平衡性检验证实：学生的预先特征（性别、年龄、所在高中）与考场女生比例之间没有显著相关——随机分座的假设成立。</p>
+<h3 id="挑战">挑战</h3>
+<p>过去的研究大多使用单一学校数据，无法研究社会规范的调节作用，因为缺乏地区间的差异。本文利用三个省（含新疆/青海等文化差异显著的地区）15个地市的数据，获得了地区间文化和经济条件的充足变异。</p>
+<h3 id="数据">数据</h3>
+<ul>
+<li><strong>样本</strong>：2000-2003年参加高考、来自15个地市的25万余名学生（主样本）；扩展样本纳入1999年河北、湖南学生</li>
+<li><strong>成绩结果</strong>：高考总分（标准化）；是否考入第一批（重点）大学</li>
+<li><strong>性别构成变量</strong>：考场女生比例</li>
+<li><strong>地区社会规范指标</strong>：同龄出生队列中女性比例（性别平等代理）、当地高考录取率的性别差距、距最近孔庙的距离（儒家文化影响代理）</li>
+<li><strong>经济和环境控制</strong>：人均GDP、PM2.5浓度、高考期间气温</li>
+</ul>
+<h3 id="识别策略">识别策略</h3>
+<p>利用考场层面随机座位分配产生的女生比例外生变化，OLS回归考场女生比例对个人标准化成绩的影响，控制学生个人特征和固定效应。</p>
+<h3 id="主要结果">主要结果</h3>
+<p><strong>结果一：女生受益于更多女性同伴，男生无显著反应</strong></p>
+<ul>
+<li>考场女生比例增加1个标准差 → 女生成绩增加1.56%标准差（显著）</li>
+<li>男生对考场性别构成无显著反应</li>
+<li>女生的大学录取机会同样提升：考入第一批大学的概率增加1.2%标准差</li>
+</ul>
+<p><strong>结果二：视觉暴露是关键机制</strong></p>
+<ul>
+<li>将考场学生分为四个区域（前左、前右、后左、后右）</li>
+<li>前排区域的女生比例对后排女生成绩有显著正效应；后排区域的女生比例对后排女生无显著影响</li>
+<li>每名学生"直接正前方"（immediate view）的同伴为女性，对成绩有显著正效应</li>
+<li>结论：眼睛能看到的女性同伴才会带来效应，而非整个考场的性别氛围</li>
+</ul>
+<p><strong>结果三：时序效应——越靠后的科目效应越强</strong></p>
+<ul>
+<li>高考分两至三天进行，首日首科效应最小，后续科目效应逐渐增大</li>
+<li>可能的解释：随着考试进行，学生对考场性别构成越来越了解，积累了更多"性别同伴意识"</li>
+</ul>
+<p><strong>结果四：科目差异——仅在文科出现效应</strong></p>
+<ul>
+<li>对理科生无显著效应</li>
+<li>对文科生效应显著（文科考场女生占比本身更高，更容易形成女性团结和支持文化）</li>
+</ul>
+<p><strong>结果五（异质性）：社会规范调节效应显著；经济发展和环境因素无作用</strong></p>
+<ul>
+<li>性别平等程度更高的县（女性出生比例更高、大学录取性别差距更小）中，女生的性别构成效应显著更大</li>
+<li>距孔庙更远的县（儒家文化影响较弱）中，女生性别构成效应更大</li>
+<li>人均GDP、PM2.5浓度、高考气温分位上下组无显著差异——说明经济发展和自然环境不是调节渠道</li>
+</ul>
+<h3 id="机制讨论">机制讨论</h3>
+<p>作者提出两种不互斥的机制：</p>
+<ol>
+<li><strong>女性团结效应（female solidarity）</strong>：更多女性同伴在场，增加了情感支持、心理认同感，降低了考试焦虑，促进表现。</li>
+<li><strong>女性依赖效应（female dependence）</strong>：性别平等地区女性受教育机会更广，考生总体能力偏低，更依赖外部同伴支持；而在这样的环境中，女性化同伴环境提供了更大的心理支撑。</li>
+</ol>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<p><strong>核心发现</strong>：利用高考随机座位分配，女生的成绩在女性同伴比例更高的考场中显著更好（+1.56% SD），男生无反应。视觉暴露是关键机制：直接在眼前的女性同伴效应最强。效应在文科生中存在、理科生中不显著。效应在性别平等程度高、儒家文化影响弱的地区更大；与经济发展水平和自然环境无关。</p>
+<p><strong>对领域的贡献</strong>：</p>
+<ol>
+<li>首次在高风险考试场景中提供大规模随机性证据证明临时性同伴性别构成影响表现；</li>
+<li>拓展了同伴效应文献——短暂暴露也能产生可测量的成绩影响；</li>
+<li>揭示社会规范作为同伴效应调节变量的角色，为理解文化情境下异质性同伴效应提供了新框架；</li>
+<li>视觉注意力理论（visual attention）与同伴效应的结合是方法论上的创新。</li>
+</ol>
+<p><strong>政策含义</strong>：</p>
+<ul>
+<li>考场实行性别同质化座位安排（女生集中考场）可能有助于提升女生成绩</li>
+<li>效应在性别平等地区更强，表明文化变革与考场政策相互补充</li>
+<li>发现有助于减小高考中的性别差距，改善女性高等教育入学机会</li>
+</ul>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文中提及的方向</strong>：</p>
+<ol>
+<li>用更近年的高考数据验证效应是否随时间演变（样本仅覆盖2000-2003年，加入WTO和快速市场化的特殊时期）；</li>
+<li>实验设计以更好地区分"女性团结效应"与"女性依赖效应"两种机制。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li>考场性别构成政策的成本效益分析：重新设计考场性别分配的实施成本 vs. 女生升学率提升带来的人力资本收益；</li>
+<li>效应的长期影响：高考中的性别构成效应是否影响大学专业选择、职业发展（尤其是女性进入STEM领域的决策）？</li>
+<li>类似效应在其他高风险情景（执业资格考试、公务员考试、国际标准化考试如GRE）的可复制性；</li>
+<li>男性为何不受影响？探究男性对同伴性别构成的反应机制（竞争压力、自我形象）是否与女性根本不同。</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>随机性的"质量"</strong>：研究依赖随机座位分配提供外生性。平衡性检验证实了随机性，但如果学生系统性地在同一社区被分配同一考场（可能源于准考证号生成机制），会不会仍有同伴选择问题？文章是否充分排除了这种可能？</p>
+</li>
+<li>
+<p><strong>视觉暴露机制的另一解读</strong>：前排区域女生比例的效应强于后排，作者解释为"视觉暴露"。但前排学生成绩本身是否系统性地更好？如果前排座位不完全随机（比如成绩优异者被安排在前排），效应可能混入了"高质量同伴"的影响，而非纯粹的视觉效应。</p>
+</li>
+<li>
+<p><strong>儒家文化指标的可靠性</strong>：用"距最近孔庙的距离"作为儒家文化影响的代理变量，这一变量的历史合理性可以接受，但"孔庙"的分布也受历史城市化、旅游开发等因素影响，现代孔庙分布与儒家文化强度的映射关系值得进一步评估。</p>
+</li>
+<li>
+<p><strong>为什么只在文科出现效应</strong>：文科生考场女生占比确实更高，这本身是否是一个内生问题？如果文科女生的绝对数量和质量都不同，"女性多数"的含义在理科和文科可能根本不同，直接比较两个群体可能不恰当。</p>
+</li>
+<li>
+<p><strong>政策实施的道德困境</strong>：如果"性别隔离考场"可以帮助女生考更高分，政策上是否应该推行？这一政策会不会反而强化了"女生在单性别环境中才能表现好"的刻板印象？与鼓励女生进入混合竞争环境的长期目标是否矛盾？</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>这篇文章和 Cai et al. (2019) 的关系是什么？为什么在高考中女生整体成绩低于男生，而女生实际接受高等教育的人数却已超过男生？</li>
+<li>该研究的样本时期（2000-2003年）是特殊历史时期，效应现在还适用吗？当今中国高考中女生表现是否已经超过男生？</li>
+<li>"直接视野内女性同伴"产生效应的心理机制是什么？是社会比较（social comparison）、情感支持，还是降低了威胁感（stereotype threat reduction）？</li>
+<li>为什么男生对考场性别构成没有反应？有无研究显示男生在女多男少的考场中会感到压力（或竞争刺激）而表现更好或更差？</li>
+<li>性别构成效应是否与其他同伴效应（能力同伴效应、高考状态焦虑）存在交互？如果考场高分学生比例和女生比例同时变化，效应会叠加还是相互抵消？</li>
+<li>本文的政策建议（性别同质化考场）在实践中是否可行？会有哪些政治阻力和操作挑战？</li>
 </ol>
 ]]></content>
       <categories>
@@ -14105,51 +14105,6 @@ Zotero Item Key:: FQ76EBZJ</p>
       </tags>
   </entry>
   <entry>
-    <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
-    <url>/posts/48526/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
-<ul>
-<li>因果识别+统计推断</li>
-<li>因果识别(<em><strong>causal identification</strong></em>):如果拥有总体,能否确定总体因果关系</li>
-<li>统计推断(<em><strong>statistical inference</strong></em>):如何从样本数据获取总体因果关系信息,实际是一种相关性事实</li>
-<li>识别假设,实际就是对 $D$ 和 $\varepsilon$ 的关系作出表述,但这种过程是无法从理论上验证的</li>
-</ul>
-<span id="more"></span>
-<h2 id="1"><strong>1</strong></h2>
-<ul>
-<li><strong>1.1</strong> 因果效应的定义:干预与否、处理与否时,潜在结果之间的差值.潜在结果一定是同一个时间点上的结果</li>
-<li><strong>1.2</strong> 潜在结果永远无法完全观测,除非存在平行宇宙</li>
-<li><strong>1.3</strong> 通过识别假设可以进行"插值",可以化"相关关系"识别场景为"因果关系"识别场景</li>
-<li><strong>1.4</strong> 鲁宾因果模型(潜在因果框架),一套描述因果关系的新语言</li>
-</ul>
-<h2 id="2"><strong>2</strong></h2>
-<ul>
-<li><strong>2.1</strong> 第一类识别假设:潜在结果均值独立于处理状态</li>
-<li><strong>2.2</strong> 从干扰项中剥离出控制变量;或者寻找一个与干扰项不相关的工具变量</li>
-<li><strong>2.3</strong> 第二类识别假设:潜在结果条件均值独立于处理状态</li>
-<li><strong>2.4</strong> 好的控制变量:既影响$Y$,又影响$D$.其本身和干扰项是否相关是不重要的,不是研究者关注的中心</li>
-<li><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</li>
-<li><strong>2.6</strong> 无需过渡阐释控制变量的系数</li>
-</ul>
-<h2 id="3"><strong>3</strong></h2>
-<ul>
-<li><strong>3.1</strong> 鲁宾因果模型并未规定具体的函数形式</li>
-<li><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</li>
-</ul>
-<h2 id="4"><strong>4</strong></h2>
-<ul>
-<li><strong>4.1</strong> 选择性又称之为分配机制,每个个体如何接受处理,可以用倾向得分来表示</li>
-<li><strong>4.2</strong> 建议现实使用IV、DID、RDD等识别方法时,称之为准实验</li>
-</ul>
-]]></content>
-      <categories>
-        <category>计量</category>
-      </categories>
-      <tags>
-        <tag>学术讲座</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>新技术的扩散 — 深度阅读笔记 — Kalyani Et Al.</title>
     <url>/posts/kalyani2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: The Diffusion of New Technologies<br>
@@ -14309,6 +14264,51 @@ Zotero Item Key:: HH5K2TY4</p>
       </categories>
       <tags>
         <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
+    <url>/posts/48526/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
+<ul>
+<li>因果识别+统计推断</li>
+<li>因果识别(<em><strong>causal identification</strong></em>):如果拥有总体,能否确定总体因果关系</li>
+<li>统计推断(<em><strong>statistical inference</strong></em>):如何从样本数据获取总体因果关系信息,实际是一种相关性事实</li>
+<li>识别假设,实际就是对 $D$ 和 $\varepsilon$ 的关系作出表述,但这种过程是无法从理论上验证的</li>
+</ul>
+<span id="more"></span>
+<h2 id="1"><strong>1</strong></h2>
+<ul>
+<li><strong>1.1</strong> 因果效应的定义:干预与否、处理与否时,潜在结果之间的差值.潜在结果一定是同一个时间点上的结果</li>
+<li><strong>1.2</strong> 潜在结果永远无法完全观测,除非存在平行宇宙</li>
+<li><strong>1.3</strong> 通过识别假设可以进行"插值",可以化"相关关系"识别场景为"因果关系"识别场景</li>
+<li><strong>1.4</strong> 鲁宾因果模型(潜在因果框架),一套描述因果关系的新语言</li>
+</ul>
+<h2 id="2"><strong>2</strong></h2>
+<ul>
+<li><strong>2.1</strong> 第一类识别假设:潜在结果均值独立于处理状态</li>
+<li><strong>2.2</strong> 从干扰项中剥离出控制变量;或者寻找一个与干扰项不相关的工具变量</li>
+<li><strong>2.3</strong> 第二类识别假设:潜在结果条件均值独立于处理状态</li>
+<li><strong>2.4</strong> 好的控制变量:既影响$Y$,又影响$D$.其本身和干扰项是否相关是不重要的,不是研究者关注的中心</li>
+<li><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</li>
+<li><strong>2.6</strong> 无需过渡阐释控制变量的系数</li>
+</ul>
+<h2 id="3"><strong>3</strong></h2>
+<ul>
+<li><strong>3.1</strong> 鲁宾因果模型并未规定具体的函数形式</li>
+<li><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</li>
+</ul>
+<h2 id="4"><strong>4</strong></h2>
+<ul>
+<li><strong>4.1</strong> 选择性又称之为分配机制,每个个体如何接受处理,可以用倾向得分来表示</li>
+<li><strong>4.2</strong> 建议现实使用IV、DID、RDD等识别方法时,称之为准实验</li>
+</ul>
+]]></content>
+      <categories>
+        <category>计量</category>
+      </categories>
+      <tags>
+        <tag>学术讲座</tag>
       </tags>
   </entry>
   <entry>
@@ -15360,6 +15360,150 @@ Zotero Item Key:: BY7Y7TDL</p>
       </tags>
   </entry>
   <entry>
+    <title>自下而上的制度变迁与中国经济增长 — 深度阅读笔记 — Li Et Al.</title>
+    <url>/posts/li2024bottomup/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Bottom-Up Institutional Change and Growth in China<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/GWVNMPJA/Li 等 - 2024 - Bottom-Up Institutional Change and Growth in China .pdf<br>
+Zotero Item Key:: 2XKAAMHY</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+已有研究在解释中国1978-2007年TFP增长时，发现要素再配置、贸易自由化等因素只能解释其中较小部分，大量"残差"仍未解释。与此同时，关于中国改革模式，主流叙事聚焦于"中央主导的政策试验"（先试点后推广），即中央政府在晋升激励下激励地方政府实施试验性政策。制度经济学理论（Acemoglu et al. 2001; Rodrik et al. 2004）也强调制度变迁对经济发展的重要性，但系统研究实际制度变迁过程及其增长效应的实证研究仍然缺乏。</p>
+<p><strong>研究背景</strong><br>
+1978-2005年中国改革期间，大量重要的经济和社会制度改革（如农村土地联产承包责任制、国有企业私有化）实际上是由基层地方政府在未获中央明确授权、甚至在被明确禁止的情况下自发推行的。中央政府在这一时期对地方自发创新保持了相对的容忍（胡耀邦1980年曾明确表达此立场）。这种"自下而上"的制度变迁与"自上而下的中央主导试验"并存，但其相对重要性及增长效应从未得到系统实证研究。</p>
+<p><strong>作者的问题意识</strong><br>
+改革时期，不同改革政策中"自下而上"力量与"自上而下"指令的相对重要性如何？哪类地区更有可能成为自下而上的改革先行者？改革政策如何在空间上扩散，自下而上与自上而下的扩散模式有何不同？最重要的是，两类改革对经济增长和TFP的贡献有何差异？</p>
+<p><strong>研究意义</strong><br>
+首次系统实证研究自下而上制度变迁对中国增长的独立贡献；提供了一套基于地方志文本分析的"自下而上指数"测量框架；揭示了两类改革在增长来源（TFP vs 资本投资）上的根本差异；对理解当前中国增长减速的制度原因具有重要政策含义。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：问题提出、数据概述、主要发现。</li>
+<li><strong>数据</strong>：1.8百万条县级重大事件，4,800余册地方志，25项关键经济改革，1976-2005年。</li>
+<li><strong>改革分类方法</strong>：文本分析识别县级政策创新；构建自下而上指数。</li>
+<li><strong>改革先行者特征（Section 3）</strong>：谁成为改革创新者，两类改革先行者有何系统差异。</li>
+<li><strong>空间扩散模式（Section 4）</strong>：学习与适宜性渠道的作用，两类改革扩散机制差异。</li>
+<li><strong>增长效应（Section 5）</strong>：自下而上改革 vs 中央主导改革对GDP和TFP的影响差异。</li>
+<li><strong>结论</strong>：含对当前中国增长减速的政策含义讨论。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>中国1978-2005年经历了深刻的市场化制度转型，TFP是增长的核心驱动力，但其机制来源仍不明确。作者提出"自下而上的制度变迁"是一个被忽视的重要来源。</p>
+<h3 id="挑战">挑战</h3>
+<p>如何系统识别哪些改革是"自下而上"、哪些是"自上而下"？如何测量其对增长的独立因果效应？</p>
+<h3 id="数据构建">数据构建</h3>
+<p><strong>县级重大事件数据库</strong>：</p>
+<ul>
+<li>来源：4,800余册地方志（local gazetteers），这是中国各县的官方历史年鉴</li>
+<li>规模：超过<strong>180万条</strong>县级重大事件，覆盖1976-2005年，25项关键经济改革</li>
+<li>文本分析：利用机器学习方法识别与各项改革相关的事件，捕捉改革的实际发生时间（de facto policy innovation）而非正式法规颁布时间</li>
+</ul>
+<p><strong>两类改革的识别特征</strong>：</p>
+<ol>
+<li><strong>自下而上型</strong>：县域先于中央批准自发启动改革；扩散曲线平滑连续（各县自发跟进）</li>
+<li><strong>中央主导型</strong>：中央指令发布后出现采纳跳跃（abrupt jumps）；各地同步跟进</li>
+</ol>
+<p><strong>自下而上指数</strong>：基于两类改革的识别特征，为25项改革中每一项构建一个连续的"自下而上程度"指数，实现了两种改革类型在同一框架内的比较。</p>
+<h3 id="发现一：改革先行者特征">发现一：改革先行者特征</h3>
+<p><strong>共同特征</strong>（两类改革创新者都具备）：</p>
+<ul>
+<li>人口规模更大、教育水平更高的县域</li>
+<li>农业和工业人均产出更高</li>
+</ul>
+<p><strong>自下而上特有特征</strong>：</p>
+<ul>
+<li>与铁路网络的<strong>距离更远</strong>（更偏远）→ 政治影响力弱但政治风险反而更低（“地处偏远，天高皇帝远”）</li>
+<li><strong>财政能力弱</strong>：地方政府财政资源少的县域反而更多发起自下而上改革</li>
+<li>改革发生前<strong>政治局常委（PSC）视察次数更少</strong>——意味着中央关注度低，自下而上创新者面临更少的政治监督</li>
+</ul>
+<p><strong>中央主导特有特征</strong>：</p>
+<ul>
+<li>PSC成员在改革前后访问频次显著更高（中央积极背书）</li>
+</ul>
+<p><strong>关键解读</strong>：自下而上改革是由那些有能力但政治上更为边缘（更远离中央、更少被观察）的县发起的——符合"政治庇护所"（political shelter）逻辑。</p>
+<h3 id="发现二：空间扩散模式">发现二：空间扩散模式</h3>
+<p><strong>学习渠道</strong>：与早期采纳者在地理上更近、经济联系更强的县域，更容易了解改革效益和政治风险，从而更早跟进。</p>
+<p><strong>适宜性渠道</strong>：一项改革对一个县是否"适合"，取决于该县在人口构成、行业结构、人力资本方面与早期采纳者的相似程度。</p>
+<p><strong>关键差异</strong>：适宜性对自下而上改革的扩散影响<strong>更强</strong>——中央主导改革由上而下强制推广，地方无权选择；自下而上改革扩散时地方有更大裁量权，倾向于向条件相似的地区扩散。</p>
+<h3 id="发现三：增长效应">发现三：增长效应</h3>
+<p><strong>GDP增长</strong>（省级面板，DiD策略）：</p>
+<ul>
+<li>改革政策创新和扩散均与GDP增长显著正相关</li>
+<li>效应随扩散深度递减（初始创新者效应大于后继跟进者）</li>
+</ul>
+<p><strong>关键结论——两类改革的增长来源不同</strong>：</p>
+<ul>
+<li><strong>自下而上改革 → TFP增长</strong>：1省内10%人口暴露于改革 × 自下而上指数提高1个标准差 → 3年GDP per worker增长+1.1个百分点，TFP增长+0.74个百分点</li>
+<li><strong>中央主导型改革 → 固定资本投资增加</strong>：这类改革主要拉动资本投入，而非效率提升</li>
+</ul>
+<p><strong>替代结果指标（稳健性）</strong>：</p>
+<ul>
+<li>自下而上改革与农业→非农业的结构转型加速相关</li>
+<li>自下而上改革与私营企业进入数量增加相关</li>
+<li>以上效应在自下而上程度更高的改革中均更显著</li>
+</ul>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<p>1978-2005年中国改革中，自下而上的制度变迁（地方政治企业家在未获中央授权时自发推行改革）扮演了一个比既有文献所承认的更为重要的角色。这类改革具有独特特征：由偏远、财政弱但人力资本充裕的县域发起，扩散时遵循适宜性原则，生长周期更长。关键在于：自下而上改革是TFP增长（而非资本积累）的来源，这与中国经济增长的"效率"叙事高度匹配。</p>
+<p>作者指出了两个悬而未决的重要问题：</p>
+<ol>
+<li>如果当时中央政府拒绝了自下而上的创新，中国会损失多少经济增长？</li>
+<li>2010年代以来，权力日益向中央集中、自上而下产业政策盛行、地方政府发起制度创新的激励减弱，这种"自下而上供给的下降"是否是近年增长减速的制度原因？</li>
+</ol>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文明确提及的方向</strong>：</p>
+<ol>
+<li>反事实估算：如果没有自下而上创新，改革时期会有多少增长损失？</li>
+<li>权力再集中化的代价：2010年代以来自下而上改革减少与中国经济减速的定量关联。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li><strong>政策含义</strong>：如何在保持政治集权的同时，重新激活地方政治企业家的改革创新激励？设计什么样的制度环境可以同时实现中央控制和地方创新？</li>
+<li><strong>技术进步与制度变迁的比较</strong>：本文将改革政策类比为技术创新/扩散，下一步可以实证比较"政策创新"和"技术创新"在扩散模式和增长效应上的异同；</li>
+<li><strong>其他发展中国家的适用性</strong>：自下而上制度变迁的驱动逻辑（偏远+有能力+政治庇护）是否在越南、印度等多级政府体制国家中也能找到对应？</li>
+<li><strong>地方志数据的潜力</strong>：本文证明地方志是中国历史微观数据的宝贵来源，对其他研究（如政策执行、社会运动、地方官员行为）也有启示。</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>因果识别的挑战</strong>：论文发现"自下而上改革与TFP增长正相关"，但识别仍面临挑战：哪些省份率先出现自下而上改革，可能本来就是那些有更好潜在TFP增长条件的省份。文中使用的工具变量或自然实验策略的强度和可信度值得仔细审视。</p>
+</li>
+<li>
+<p><strong>自下而上指数的测量效度</strong>：指数基于"地方政府先于中央发起改革"的程度，但地方志记录的准确性和完整性可能存在系统偏差——受到中央重视的改革可能有更完整的地方志记录，而真正"冒险"的底层创新反而记录不全，这会导致"自下而上指数"被低估，测量误差可能带来衰减偏误。</p>
+</li>
+<li>
+<p><strong>与Wang &amp; Yang (2024) 的张力</strong>：Wang &amp; Yang发现中央主导政策试验存在三重偏误（样本偏误、官员额外努力、非成熟解读）。本文则发现自下而上改革带来更强TFP增长。二者并不矛盾——Wang &amp; Yang研究的是中央主导试验的"内在失真"，本文研究的是"自下而上"的增量贡献。但这两篇论文合在一起，表明中国改革中信息和激励扭曲无处不在，需要对"中国政策学习"保持更深的审慎。</p>
+</li>
+<li>
+<p><strong>自下而上创新的供给为何减少</strong>：论文指出近年来自下而上改革减少，但未深入分析机制。是因为"低垂的果子"（容易改的已经改完）还是"制度结构变化"（习近平时代的权力集中）？这两种解释的政策含义截然不同：前者意味着增长减速是结构性的，后者意味着可以通过制度改革缓解。</p>
+</li>
+<li>
+<p><strong>地方志的历史偏见</strong>：地方志由地方政府官员编撰，倾向于记录"成功的"改革创新而淡化失败案例。这意味着本文的样本可能系统性地只包含了"最终成功的改革"，而那些被记录为失败或被扼杀的自下而上创新无从观察，造成幸存者偏误（survivorship bias）。</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>本文关注的"自下而上改革"样例包括哪些？家庭联产承包责任制、国企私有化——这些改革在地方志中是如何被记录的？</li>
+<li>本文的增长回归如何解决省份层面的时序内生性？用了哪些工具变量或识别策略？</li>
+<li>2010年后习近平执政以来，权力再集中化是否确实导致了"自下而上改革供给"的显著下降？有没有定量证据支持这一判断？</li>
+<li>"自下而上改革 → TFP增长 vs 中央主导改革 → 资本投入"这一发现的直觉是什么？为什么中央主导改革倾向于拉动投资而非效率？</li>
+<li>本文的地方志数据库（1.8百万条事件）是否开放共享？其他学者如何可以利用这一数据？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>One Quarter of Humanity 深度阅读笔记 — James Z. Lee &amp; Wang Feng</title>
     <url>/posts/lee2001/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="书籍信息">书籍信息</h2>
@@ -15758,150 +15902,6 @@ Zotero Item Key:: BY7Y7TDL</p>
       </tags>
   </entry>
   <entry>
-    <title>自下而上的制度变迁与中国经济增长 — 深度阅读笔记 — Li Et Al.</title>
-    <url>/posts/li2024bottomup/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Bottom-Up Institutional Change and Growth in China<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/GWVNMPJA/Li 等 - 2024 - Bottom-Up Institutional Change and Growth in China .pdf<br>
-Zotero Item Key:: 2XKAAMHY</p>
-<hr>
-<span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-已有研究在解释中国1978-2007年TFP增长时，发现要素再配置、贸易自由化等因素只能解释其中较小部分，大量"残差"仍未解释。与此同时，关于中国改革模式，主流叙事聚焦于"中央主导的政策试验"（先试点后推广），即中央政府在晋升激励下激励地方政府实施试验性政策。制度经济学理论（Acemoglu et al. 2001; Rodrik et al. 2004）也强调制度变迁对经济发展的重要性，但系统研究实际制度变迁过程及其增长效应的实证研究仍然缺乏。</p>
-<p><strong>研究背景</strong><br>
-1978-2005年中国改革期间，大量重要的经济和社会制度改革（如农村土地联产承包责任制、国有企业私有化）实际上是由基层地方政府在未获中央明确授权、甚至在被明确禁止的情况下自发推行的。中央政府在这一时期对地方自发创新保持了相对的容忍（胡耀邦1980年曾明确表达此立场）。这种"自下而上"的制度变迁与"自上而下的中央主导试验"并存，但其相对重要性及增长效应从未得到系统实证研究。</p>
-<p><strong>作者的问题意识</strong><br>
-改革时期，不同改革政策中"自下而上"力量与"自上而下"指令的相对重要性如何？哪类地区更有可能成为自下而上的改革先行者？改革政策如何在空间上扩散，自下而上与自上而下的扩散模式有何不同？最重要的是，两类改革对经济增长和TFP的贡献有何差异？</p>
-<p><strong>研究意义</strong><br>
-首次系统实证研究自下而上制度变迁对中国增长的独立贡献；提供了一套基于地方志文本分析的"自下而上指数"测量框架；揭示了两类改革在增长来源（TFP vs 资本投资）上的根本差异；对理解当前中国增长减速的制度原因具有重要政策含义。</p>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言</strong>：问题提出、数据概述、主要发现。</li>
-<li><strong>数据</strong>：1.8百万条县级重大事件，4,800余册地方志，25项关键经济改革，1976-2005年。</li>
-<li><strong>改革分类方法</strong>：文本分析识别县级政策创新；构建自下而上指数。</li>
-<li><strong>改革先行者特征（Section 3）</strong>：谁成为改革创新者，两类改革先行者有何系统差异。</li>
-<li><strong>空间扩散模式（Section 4）</strong>：学习与适宜性渠道的作用，两类改革扩散机制差异。</li>
-<li><strong>增长效应（Section 5）</strong>：自下而上改革 vs 中央主导改革对GDP和TFP的影响差异。</li>
-<li><strong>结论</strong>：含对当前中国增长减速的政策含义讨论。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>中国1978-2005年经历了深刻的市场化制度转型，TFP是增长的核心驱动力，但其机制来源仍不明确。作者提出"自下而上的制度变迁"是一个被忽视的重要来源。</p>
-<h3 id="挑战">挑战</h3>
-<p>如何系统识别哪些改革是"自下而上"、哪些是"自上而下"？如何测量其对增长的独立因果效应？</p>
-<h3 id="数据构建">数据构建</h3>
-<p><strong>县级重大事件数据库</strong>：</p>
-<ul>
-<li>来源：4,800余册地方志（local gazetteers），这是中国各县的官方历史年鉴</li>
-<li>规模：超过<strong>180万条</strong>县级重大事件，覆盖1976-2005年，25项关键经济改革</li>
-<li>文本分析：利用机器学习方法识别与各项改革相关的事件，捕捉改革的实际发生时间（de facto policy innovation）而非正式法规颁布时间</li>
-</ul>
-<p><strong>两类改革的识别特征</strong>：</p>
-<ol>
-<li><strong>自下而上型</strong>：县域先于中央批准自发启动改革；扩散曲线平滑连续（各县自发跟进）</li>
-<li><strong>中央主导型</strong>：中央指令发布后出现采纳跳跃（abrupt jumps）；各地同步跟进</li>
-</ol>
-<p><strong>自下而上指数</strong>：基于两类改革的识别特征，为25项改革中每一项构建一个连续的"自下而上程度"指数，实现了两种改革类型在同一框架内的比较。</p>
-<h3 id="发现一：改革先行者特征">发现一：改革先行者特征</h3>
-<p><strong>共同特征</strong>（两类改革创新者都具备）：</p>
-<ul>
-<li>人口规模更大、教育水平更高的县域</li>
-<li>农业和工业人均产出更高</li>
-</ul>
-<p><strong>自下而上特有特征</strong>：</p>
-<ul>
-<li>与铁路网络的<strong>距离更远</strong>（更偏远）→ 政治影响力弱但政治风险反而更低（“地处偏远，天高皇帝远”）</li>
-<li><strong>财政能力弱</strong>：地方政府财政资源少的县域反而更多发起自下而上改革</li>
-<li>改革发生前<strong>政治局常委（PSC）视察次数更少</strong>——意味着中央关注度低，自下而上创新者面临更少的政治监督</li>
-</ul>
-<p><strong>中央主导特有特征</strong>：</p>
-<ul>
-<li>PSC成员在改革前后访问频次显著更高（中央积极背书）</li>
-</ul>
-<p><strong>关键解读</strong>：自下而上改革是由那些有能力但政治上更为边缘（更远离中央、更少被观察）的县发起的——符合"政治庇护所"（political shelter）逻辑。</p>
-<h3 id="发现二：空间扩散模式">发现二：空间扩散模式</h3>
-<p><strong>学习渠道</strong>：与早期采纳者在地理上更近、经济联系更强的县域，更容易了解改革效益和政治风险，从而更早跟进。</p>
-<p><strong>适宜性渠道</strong>：一项改革对一个县是否"适合"，取决于该县在人口构成、行业结构、人力资本方面与早期采纳者的相似程度。</p>
-<p><strong>关键差异</strong>：适宜性对自下而上改革的扩散影响<strong>更强</strong>——中央主导改革由上而下强制推广，地方无权选择；自下而上改革扩散时地方有更大裁量权，倾向于向条件相似的地区扩散。</p>
-<h3 id="发现三：增长效应">发现三：增长效应</h3>
-<p><strong>GDP增长</strong>（省级面板，DiD策略）：</p>
-<ul>
-<li>改革政策创新和扩散均与GDP增长显著正相关</li>
-<li>效应随扩散深度递减（初始创新者效应大于后继跟进者）</li>
-</ul>
-<p><strong>关键结论——两类改革的增长来源不同</strong>：</p>
-<ul>
-<li><strong>自下而上改革 → TFP增长</strong>：1省内10%人口暴露于改革 × 自下而上指数提高1个标准差 → 3年GDP per worker增长+1.1个百分点，TFP增长+0.74个百分点</li>
-<li><strong>中央主导型改革 → 固定资本投资增加</strong>：这类改革主要拉动资本投入，而非效率提升</li>
-</ul>
-<p><strong>替代结果指标（稳健性）</strong>：</p>
-<ul>
-<li>自下而上改革与农业→非农业的结构转型加速相关</li>
-<li>自下而上改革与私营企业进入数量增加相关</li>
-<li>以上效应在自下而上程度更高的改革中均更显著</li>
-</ul>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<p>1978-2005年中国改革中，自下而上的制度变迁（地方政治企业家在未获中央授权时自发推行改革）扮演了一个比既有文献所承认的更为重要的角色。这类改革具有独特特征：由偏远、财政弱但人力资本充裕的县域发起，扩散时遵循适宜性原则，生长周期更长。关键在于：自下而上改革是TFP增长（而非资本积累）的来源，这与中国经济增长的"效率"叙事高度匹配。</p>
-<p>作者指出了两个悬而未决的重要问题：</p>
-<ol>
-<li>如果当时中央政府拒绝了自下而上的创新，中国会损失多少经济增长？</li>
-<li>2010年代以来，权力日益向中央集中、自上而下产业政策盛行、地方政府发起制度创新的激励减弱，这种"自下而上供给的下降"是否是近年增长减速的制度原因？</li>
-</ol>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文明确提及的方向</strong>：</p>
-<ol>
-<li>反事实估算：如果没有自下而上创新，改革时期会有多少增长损失？</li>
-<li>权力再集中化的代价：2010年代以来自下而上改革减少与中国经济减速的定量关联。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li><strong>政策含义</strong>：如何在保持政治集权的同时，重新激活地方政治企业家的改革创新激励？设计什么样的制度环境可以同时实现中央控制和地方创新？</li>
-<li><strong>技术进步与制度变迁的比较</strong>：本文将改革政策类比为技术创新/扩散，下一步可以实证比较"政策创新"和"技术创新"在扩散模式和增长效应上的异同；</li>
-<li><strong>其他发展中国家的适用性</strong>：自下而上制度变迁的驱动逻辑（偏远+有能力+政治庇护）是否在越南、印度等多级政府体制国家中也能找到对应？</li>
-<li><strong>地方志数据的潜力</strong>：本文证明地方志是中国历史微观数据的宝贵来源，对其他研究（如政策执行、社会运动、地方官员行为）也有启示。</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>因果识别的挑战</strong>：论文发现"自下而上改革与TFP增长正相关"，但识别仍面临挑战：哪些省份率先出现自下而上改革，可能本来就是那些有更好潜在TFP增长条件的省份。文中使用的工具变量或自然实验策略的强度和可信度值得仔细审视。</p>
-</li>
-<li>
-<p><strong>自下而上指数的测量效度</strong>：指数基于"地方政府先于中央发起改革"的程度，但地方志记录的准确性和完整性可能存在系统偏差——受到中央重视的改革可能有更完整的地方志记录，而真正"冒险"的底层创新反而记录不全，这会导致"自下而上指数"被低估，测量误差可能带来衰减偏误。</p>
-</li>
-<li>
-<p><strong>与Wang &amp; Yang (2024) 的张力</strong>：Wang &amp; Yang发现中央主导政策试验存在三重偏误（样本偏误、官员额外努力、非成熟解读）。本文则发现自下而上改革带来更强TFP增长。二者并不矛盾——Wang &amp; Yang研究的是中央主导试验的"内在失真"，本文研究的是"自下而上"的增量贡献。但这两篇论文合在一起，表明中国改革中信息和激励扭曲无处不在，需要对"中国政策学习"保持更深的审慎。</p>
-</li>
-<li>
-<p><strong>自下而上创新的供给为何减少</strong>：论文指出近年来自下而上改革减少，但未深入分析机制。是因为"低垂的果子"（容易改的已经改完）还是"制度结构变化"（习近平时代的权力集中）？这两种解释的政策含义截然不同：前者意味着增长减速是结构性的，后者意味着可以通过制度改革缓解。</p>
-</li>
-<li>
-<p><strong>地方志的历史偏见</strong>：地方志由地方政府官员编撰，倾向于记录"成功的"改革创新而淡化失败案例。这意味着本文的样本可能系统性地只包含了"最终成功的改革"，而那些被记录为失败或被扼杀的自下而上创新无从观察，造成幸存者偏误（survivorship bias）。</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>本文关注的"自下而上改革"样例包括哪些？家庭联产承包责任制、国企私有化——这些改革在地方志中是如何被记录的？</li>
-<li>本文的增长回归如何解决省份层面的时序内生性？用了哪些工具变量或识别策略？</li>
-<li>2010年后习近平执政以来，权力再集中化是否确实导致了"自下而上改革供给"的显著下降？有没有定量证据支持这一判断？</li>
-<li>"自下而上改革 → TFP增长 vs 中央主导改革 → 资本投入"这一发现的直觉是什么？为什么中央主导改革倾向于拉动投资而非效率？</li>
-<li>本文的地方志数据库（1.8百万条事件）是否开放共享？其他学者如何可以利用这一数据？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hiring as Exploration — 深度阅读笔记 — Li, Raymond &amp; Bergman</title>
     <url>/posts/li2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -15956,143 +15956,6 @@ Zotero Item Key:: 2XKAAMHY</p>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>预算到期会导致年底浪费性支出吗?_ Liebman &amp; Mahoney (2017) 笔记</title>
-    <url>/posts/liebman2017/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Do Expiring Budgets Lead to Wasteful Year-End Spending? Evidence from Federal Procurement</li>
-<li><strong>作者</strong>: Jeffrey B. Liebman(哈佛大学), Neale Mahoney(芝加哥大学)</li>
-<li><strong>类型</strong>: 论文笔记 / 公共经济学 / 预算制度</li>
-<li><strong>出版年份</strong>: 2017</li>
-<li><strong>出版机构/期刊</strong>: American Economic Review</li>
-<li><strong>DOI</strong>: 10.1257/aer.20131296</li>
-<li><strong>难度评估</strong>: 高 - 需要经济学、计量经济学、公共财政学基础</li>
-</ul>
-<span id="more"></span>
-<h2 id="引言">引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>本文属于公共经济学、行为经济学和管理学的交叉领域,探讨政府支出效率问题.核心概念包括:</p>
-<ul>
-<li><strong>预算约束</strong>: 政府机构在财政年度内可支配的资金总额</li>
-<li><strong>自由裁量支出</strong>: 政府可以自行决定如何分配的预算部分,与法定支出(如社会保障)相对</li>
-<li><strong>公共采购</strong>: 政府购买商品和服务的行为</li>
-<li><strong>信息技术(IT)项目</strong>: 政府对计算机硬件、软件和相关服务的投资</li>
-<li><strong>社会成本</strong>: 指一项经济活动对整个社会造成的成本,包括直接成本和外部成本</li>
-<li><strong>滚动预算(Rollover Budget)</strong>: 允许机构将未使用的预算资金转移到下一个财政年度</li>
-</ul>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p>政府机构通常面临"不使用就失去"的预算规则,即在一个财政年度结束时,任何未使用的预算资金都将返回国库,而不是留给该机构使用.这种规则可能会导致机构在财政年度末 rush 支出,即使这意味着投资于低价值的项目.</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p>作者认为,"不使用就失去"的预算规则可能会导致政府浪费性支出.他们试图通过实证分析来检验这一观点,并探讨解决这一问题的潜在政策,例如允许机构将未使用的资金转入下一个财政年度.</p>
-<h3 id="研究意义">研究意义</h3>
-<ol>
-<li><strong>揭示了政府支出中潜在的浪费现象</strong>: 通过量化财政年度末的支出高峰和质量下降,为政府支出效率问题提供了有力证据</li>
-<li><strong>评估了滚动预算的有效性</strong>: 通过研究美国司法部的滚动预算政策,为解决浪费性支出提供了一个可行的解决方案</li>
-<li><strong>为政府预算管理提供了政策建议</strong>: 研究结果表明,允许机构将未使用的资金转入下一个财政年度可以提高政府支出效率</li>
-</ol>
-<h2 id="论文结构">论文结构</h2>
-<ol>
-<li><strong>引言</strong>: 概述研究背景、问题意识和研究意义</li>
-<li><strong>理论模型</strong>: 建立一个简单的模型来解释"不使用就失去"的预算规则如何导致浪费性支出</li>
-<li><strong>数据描述</strong>: 介绍用于实证分析的数据集,包括联邦采购数据系统(FPDS)和IT仪表板</li>
-<li><strong>实证分析1</strong>: 使用FPDS数据检验财政年度末是否存在支出高峰</li>
-<li><strong>实证分析2</strong>: 使用IT仪表板数据检验财政年度末的支出质量是否下降</li>
-<li><strong>政策分析</strong>: 研究滚动预算政策对支出行为的影响</li>
-<li><strong>福利分析</strong>: 使用校准后的模型评估滚动预算政策的福利效应</li>
-<li><strong>结论</strong>: 总结研究结果,讨论政策含义,并提出未来研究方向</li>
-</ol>
-<h2 id="背景">背景</h2>
-<p>许多组织都有在财政年度末到期的预算,这可能导致在年底匆忙将资源用于低质量的项目.美国联邦政府的自由裁量支出预算也面临类似情况,机构必须在财政年度结束前完成拨款.</p>
-<h3 id="挑战">挑战</h3>
-<ol>
-<li><strong>"不使用就失去"的预算规则</strong>: 如果机构不花完预算,剩余的资金将返回国库,降低了年底花钱的机会成本</li>
-<li><strong>预防性储蓄的动机</strong>: 机构倾向于在预算周期开始时保留资金,以应对未来不确定的支出需求</li>
-<li><strong>缺乏关于年底浪费性支出的硬性证据</strong>: 尽管有传闻证据,但缺乏关于美国联邦政府年底支出激增以及年底支出价值低于其他时间段的证据</li>
-</ol>
-<h2 id="方法">方法</h2>
-<h3 id="理论模型">理论模型</h3>
-<ul>
-<li><strong>模型设定</strong>: 作者建立了一个年度预算模型,包括国会和一个政府机构.国会为该机构选择预算,该机构在一年中的每个时期都会获得一个参数,该参数决定了支出的边际价值,并选择一个支出水平以最大化收益递减的目标</li>
-<li><strong>模型特征</strong>: 具有三个关键特征_预算到期、未来支出价值的不确定性以及每个时期内支出的收益递减</li>
-<li><strong>模型预测</strong>: 由于不确定性和收益递减,该机构将在年初进行预防性储蓄;在年底,资金到期的前景导致该机构花掉所有剩余资源,即使边际价值低于资金的社会成本,导致年底支出量激增和质量下降</li>
-</ul>
-<h3 id="数据集">数据集</h3>
-<p><strong>1. 联邦采购数据系统(FPDS)</strong></p>
-<ul>
-<li>时间范围: 2004年至2009年财政年度</li>
-<li>数据量: 1460万份合同</li>
-<li>总支出: 2.6万亿美元</li>
-<li>主要内容: 合同层面信息,包括金额、产品/服务代码、机构、供应商、合同类型、招标机制等</li>
-<li>用途: 用于分析联邦采购支出的总体模式,特别是年底支出高峰</li>
-</ul>
-<p><strong>2. IT仪表板(IT Dashboard)</strong></p>
-<ul>
-<li>数据时间: 截至2010年3月</li>
-<li>项目数量: 686个主要IT项目</li>
-<li>总计划支出: 1300亿美元</li>
-<li>主要内容: 项目绩效数据,包括总体评级、成本评级、进度评级、CIO评估等</li>
-<li>用途: 用于评估IT项目的质量,特别是年底开始的项目的质量</li>
-</ul>
-<h3 id="实证策略">实证策略</h3>
-<ol>
-<li><strong>支出高峰检验</strong>: 使用FPDS数据,分析财政年度内每周的采购支出模式,确定是否存在年底支出高峰</li>
-<li><strong>质量下降检验</strong>: 使用IT仪表板数据,比较在财政年度最后一周开始的项目与在其他时间开始的项目的质量评级</li>
-<li><strong>政策分析</strong>: 研究美国司法部(DOJ)的滚动预算政策对支出行为的影响.DOJ有权将未使用的IT项目预算转入下一财政年度,作者比较了DOJ的IT和非IT支出,以及DOJ和其他机构之间的支出模式</li>
-<li><strong>福利分析</strong>: 通过校准模型以适应支出高峰和质量下降,分析允许滚动预算的潜在福利收益</li>
-</ol>
-<h3 id="关键术语">关键术语</h3>
-<ul>
-<li><strong>FPDS (Federal Procurement Data System)</strong>: 联邦采购数据系统,跟踪所有联邦合同的数据系统</li>
-<li><strong>IT仪表板 (IT Dashboard)</strong>: 跟踪联邦政府主要IT项目绩效的网站</li>
-<li><strong>CIO (Chief Information Officer)</strong>: 首席信息官,负责机构的信息技术战略和管理</li>
-<li><strong>Ordered Logit Regression</strong>: 有序Logit回归,用于分析有序分类因变量的统计模型</li>
-<li><strong>Difference-in-Differences</strong>: 双重差分法,用于评估政策或干预效果的统计方法</li>
-<li><strong>CRRA (Constant Relative Risk Aversion)</strong>: 恒定相对风险厌恶效用函数</li>
-<li><strong>CARA (Constant Absolute Risk Aversion)</strong>: 恒定绝对风险厌恶效用函数</li>
-</ul>
-<h2 id="结果">结果</h2>
-<ol>
-<li><strong>支出高峰</strong>: 数据显示年底支出大幅增加.在财政年度的最后一周,支出是平时每周平均水平的4.9倍</li>
-<li><strong>质量下降</strong>: 年底开始的IT项目的质量评级明显较低.在财政年度最后一周开始的项目,获得较低质量分数的可能性要高出2.3到5.6倍</li>
-<li><strong>滚动预算的影响</strong>: DOJ的IT支出没有出现支出高峰,最后一周的IT支出仅占3.3%,而非IT支出为9.3%.差异分析表明滚动预算减少了年底支出量</li>
-<li><strong>福利分析</strong>: 允许滚动预算可以带来福利收益.即使是允许机构在短时间内转入资金的中间政策,也可以产生接近全部滚动价值四分之三的福利收益</li>
-</ol>
-<h2 id="结论">结论</h2>
-<p>本文的核心结论是:由于"不使用就失去"的预算规则,美国联邦政府存在年底浪费性支出现象.具体表现为:</p>
-<ul>
-<li><strong>年底支出量激增</strong>: 财政年度末的支出明显高于其他时间段</li>
-<li><strong>年底支出质量下降</strong>: 财政年度末开始的IT项目质量较低</li>
-</ul>
-<p>允许滚动预算可以有效地解决这个问题.DOJ的经验表明滚动预算可以减少年底支出量,并可能提高项目质量.福利分析表明,即使是有限制的滚动预算政策也可以带来显著的福利收益.</p>
-<p>作者建议可以通过允许机构将未使用的资金延期到下个财政年度,用于四个月的宽限期,从而消除因年底浪费性支出造成的大部分效率低下问题.</p>
-<h2 id="未来研究方向">未来研究方向</h2>
-<ol>
-<li><strong>研究国会预算决策对机构支出行为的影响</strong>: 深入研究国会如何应对滚动预算,以及如何设计预算规则以实现最佳效果</li>
-<li><strong>考虑机构内部的异质性</strong>: 研究机构内部不同部门的支出行为差异,以及如何设计更有针对性的预算政策</li>
-<li><strong>探索其他解决浪费性支出问题的政策</strong>: 例如改进预算预测,加强项目管理,或引入竞争性招标</li>
-<li><strong>研究不同类型的资金结转政策</strong>: 比较无限期结转、有条件结转等不同方案对支出效率的影响</li>
-<li><strong>行为因素的影响</strong>: 考虑认知偏差、损失厌恶等行为因素对政府部门年底支出行为的影响</li>
-<li><strong>政治因素</strong>: 研究资金结转政策的政治可行性,以及立法机构对预算控制的考量</li>
-</ol>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li><strong>预算制度与创新</strong>: "使用或失效"的预算规则是否会抑制政府部门的创新活动?如果政府部门知道它们必须在当年用完所有资金,它们是否会更倾向于投资于风险较低、回报较快的项目?</li>
-<li><strong>政治周期与支出行为</strong>: 政府部门的支出行为是否会受到政治周期的影响?</li>
-<li><strong>绩效评估指标的设计</strong>: 如何设计更有效的绩效评估指标,以准确衡量政府部门的支出质量?</li>
-<li><strong>资金结转政策的适用性</strong>: 资金结转政策是否适用于所有类型的政府部门和项目?</li>
-<li><strong>公共部门与私营部门的对比</strong>: 比较公共部门和私营部门在预算管理和支出效率方面的差异</li>
-</ol>
-]]></content>
-      <categories>
-        <category>公共经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>公共经济学</tag>
-        <tag>预算制度</tag>
       </tags>
   </entry>
   <entry>
@@ -16243,6 +16106,143 @@ Zotero Item Key:: LWFR6PLB</p>
       </categories>
       <tags>
         <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>预算到期会导致年底浪费性支出吗?_ Liebman &amp; Mahoney (2017) 笔记</title>
+    <url>/posts/liebman2017/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Do Expiring Budgets Lead to Wasteful Year-End Spending? Evidence from Federal Procurement</li>
+<li><strong>作者</strong>: Jeffrey B. Liebman(哈佛大学), Neale Mahoney(芝加哥大学)</li>
+<li><strong>类型</strong>: 论文笔记 / 公共经济学 / 预算制度</li>
+<li><strong>出版年份</strong>: 2017</li>
+<li><strong>出版机构/期刊</strong>: American Economic Review</li>
+<li><strong>DOI</strong>: 10.1257/aer.20131296</li>
+<li><strong>难度评估</strong>: 高 - 需要经济学、计量经济学、公共财政学基础</li>
+</ul>
+<span id="more"></span>
+<h2 id="引言">引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>本文属于公共经济学、行为经济学和管理学的交叉领域,探讨政府支出效率问题.核心概念包括:</p>
+<ul>
+<li><strong>预算约束</strong>: 政府机构在财政年度内可支配的资金总额</li>
+<li><strong>自由裁量支出</strong>: 政府可以自行决定如何分配的预算部分,与法定支出(如社会保障)相对</li>
+<li><strong>公共采购</strong>: 政府购买商品和服务的行为</li>
+<li><strong>信息技术(IT)项目</strong>: 政府对计算机硬件、软件和相关服务的投资</li>
+<li><strong>社会成本</strong>: 指一项经济活动对整个社会造成的成本,包括直接成本和外部成本</li>
+<li><strong>滚动预算(Rollover Budget)</strong>: 允许机构将未使用的预算资金转移到下一个财政年度</li>
+</ul>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<p>政府机构通常面临"不使用就失去"的预算规则,即在一个财政年度结束时,任何未使用的预算资金都将返回国库,而不是留给该机构使用.这种规则可能会导致机构在财政年度末 rush 支出,即使这意味着投资于低价值的项目.</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p>作者认为,"不使用就失去"的预算规则可能会导致政府浪费性支出.他们试图通过实证分析来检验这一观点,并探讨解决这一问题的潜在政策,例如允许机构将未使用的资金转入下一个财政年度.</p>
+<h3 id="研究意义">研究意义</h3>
+<ol>
+<li><strong>揭示了政府支出中潜在的浪费现象</strong>: 通过量化财政年度末的支出高峰和质量下降,为政府支出效率问题提供了有力证据</li>
+<li><strong>评估了滚动预算的有效性</strong>: 通过研究美国司法部的滚动预算政策,为解决浪费性支出提供了一个可行的解决方案</li>
+<li><strong>为政府预算管理提供了政策建议</strong>: 研究结果表明,允许机构将未使用的资金转入下一个财政年度可以提高政府支出效率</li>
+</ol>
+<h2 id="论文结构">论文结构</h2>
+<ol>
+<li><strong>引言</strong>: 概述研究背景、问题意识和研究意义</li>
+<li><strong>理论模型</strong>: 建立一个简单的模型来解释"不使用就失去"的预算规则如何导致浪费性支出</li>
+<li><strong>数据描述</strong>: 介绍用于实证分析的数据集,包括联邦采购数据系统(FPDS)和IT仪表板</li>
+<li><strong>实证分析1</strong>: 使用FPDS数据检验财政年度末是否存在支出高峰</li>
+<li><strong>实证分析2</strong>: 使用IT仪表板数据检验财政年度末的支出质量是否下降</li>
+<li><strong>政策分析</strong>: 研究滚动预算政策对支出行为的影响</li>
+<li><strong>福利分析</strong>: 使用校准后的模型评估滚动预算政策的福利效应</li>
+<li><strong>结论</strong>: 总结研究结果,讨论政策含义,并提出未来研究方向</li>
+</ol>
+<h2 id="背景">背景</h2>
+<p>许多组织都有在财政年度末到期的预算,这可能导致在年底匆忙将资源用于低质量的项目.美国联邦政府的自由裁量支出预算也面临类似情况,机构必须在财政年度结束前完成拨款.</p>
+<h3 id="挑战">挑战</h3>
+<ol>
+<li><strong>"不使用就失去"的预算规则</strong>: 如果机构不花完预算,剩余的资金将返回国库,降低了年底花钱的机会成本</li>
+<li><strong>预防性储蓄的动机</strong>: 机构倾向于在预算周期开始时保留资金,以应对未来不确定的支出需求</li>
+<li><strong>缺乏关于年底浪费性支出的硬性证据</strong>: 尽管有传闻证据,但缺乏关于美国联邦政府年底支出激增以及年底支出价值低于其他时间段的证据</li>
+</ol>
+<h2 id="方法">方法</h2>
+<h3 id="理论模型">理论模型</h3>
+<ul>
+<li><strong>模型设定</strong>: 作者建立了一个年度预算模型,包括国会和一个政府机构.国会为该机构选择预算,该机构在一年中的每个时期都会获得一个参数,该参数决定了支出的边际价值,并选择一个支出水平以最大化收益递减的目标</li>
+<li><strong>模型特征</strong>: 具有三个关键特征_预算到期、未来支出价值的不确定性以及每个时期内支出的收益递减</li>
+<li><strong>模型预测</strong>: 由于不确定性和收益递减,该机构将在年初进行预防性储蓄;在年底,资金到期的前景导致该机构花掉所有剩余资源,即使边际价值低于资金的社会成本,导致年底支出量激增和质量下降</li>
+</ul>
+<h3 id="数据集">数据集</h3>
+<p><strong>1. 联邦采购数据系统(FPDS)</strong></p>
+<ul>
+<li>时间范围: 2004年至2009年财政年度</li>
+<li>数据量: 1460万份合同</li>
+<li>总支出: 2.6万亿美元</li>
+<li>主要内容: 合同层面信息,包括金额、产品/服务代码、机构、供应商、合同类型、招标机制等</li>
+<li>用途: 用于分析联邦采购支出的总体模式,特别是年底支出高峰</li>
+</ul>
+<p><strong>2. IT仪表板(IT Dashboard)</strong></p>
+<ul>
+<li>数据时间: 截至2010年3月</li>
+<li>项目数量: 686个主要IT项目</li>
+<li>总计划支出: 1300亿美元</li>
+<li>主要内容: 项目绩效数据,包括总体评级、成本评级、进度评级、CIO评估等</li>
+<li>用途: 用于评估IT项目的质量,特别是年底开始的项目的质量</li>
+</ul>
+<h3 id="实证策略">实证策略</h3>
+<ol>
+<li><strong>支出高峰检验</strong>: 使用FPDS数据,分析财政年度内每周的采购支出模式,确定是否存在年底支出高峰</li>
+<li><strong>质量下降检验</strong>: 使用IT仪表板数据,比较在财政年度最后一周开始的项目与在其他时间开始的项目的质量评级</li>
+<li><strong>政策分析</strong>: 研究美国司法部(DOJ)的滚动预算政策对支出行为的影响.DOJ有权将未使用的IT项目预算转入下一财政年度,作者比较了DOJ的IT和非IT支出,以及DOJ和其他机构之间的支出模式</li>
+<li><strong>福利分析</strong>: 通过校准模型以适应支出高峰和质量下降,分析允许滚动预算的潜在福利收益</li>
+</ol>
+<h3 id="关键术语">关键术语</h3>
+<ul>
+<li><strong>FPDS (Federal Procurement Data System)</strong>: 联邦采购数据系统,跟踪所有联邦合同的数据系统</li>
+<li><strong>IT仪表板 (IT Dashboard)</strong>: 跟踪联邦政府主要IT项目绩效的网站</li>
+<li><strong>CIO (Chief Information Officer)</strong>: 首席信息官,负责机构的信息技术战略和管理</li>
+<li><strong>Ordered Logit Regression</strong>: 有序Logit回归,用于分析有序分类因变量的统计模型</li>
+<li><strong>Difference-in-Differences</strong>: 双重差分法,用于评估政策或干预效果的统计方法</li>
+<li><strong>CRRA (Constant Relative Risk Aversion)</strong>: 恒定相对风险厌恶效用函数</li>
+<li><strong>CARA (Constant Absolute Risk Aversion)</strong>: 恒定绝对风险厌恶效用函数</li>
+</ul>
+<h2 id="结果">结果</h2>
+<ol>
+<li><strong>支出高峰</strong>: 数据显示年底支出大幅增加.在财政年度的最后一周,支出是平时每周平均水平的4.9倍</li>
+<li><strong>质量下降</strong>: 年底开始的IT项目的质量评级明显较低.在财政年度最后一周开始的项目,获得较低质量分数的可能性要高出2.3到5.6倍</li>
+<li><strong>滚动预算的影响</strong>: DOJ的IT支出没有出现支出高峰,最后一周的IT支出仅占3.3%,而非IT支出为9.3%.差异分析表明滚动预算减少了年底支出量</li>
+<li><strong>福利分析</strong>: 允许滚动预算可以带来福利收益.即使是允许机构在短时间内转入资金的中间政策,也可以产生接近全部滚动价值四分之三的福利收益</li>
+</ol>
+<h2 id="结论">结论</h2>
+<p>本文的核心结论是:由于"不使用就失去"的预算规则,美国联邦政府存在年底浪费性支出现象.具体表现为:</p>
+<ul>
+<li><strong>年底支出量激增</strong>: 财政年度末的支出明显高于其他时间段</li>
+<li><strong>年底支出质量下降</strong>: 财政年度末开始的IT项目质量较低</li>
+</ul>
+<p>允许滚动预算可以有效地解决这个问题.DOJ的经验表明滚动预算可以减少年底支出量,并可能提高项目质量.福利分析表明,即使是有限制的滚动预算政策也可以带来显著的福利收益.</p>
+<p>作者建议可以通过允许机构将未使用的资金延期到下个财政年度,用于四个月的宽限期,从而消除因年底浪费性支出造成的大部分效率低下问题.</p>
+<h2 id="未来研究方向">未来研究方向</h2>
+<ol>
+<li><strong>研究国会预算决策对机构支出行为的影响</strong>: 深入研究国会如何应对滚动预算,以及如何设计预算规则以实现最佳效果</li>
+<li><strong>考虑机构内部的异质性</strong>: 研究机构内部不同部门的支出行为差异,以及如何设计更有针对性的预算政策</li>
+<li><strong>探索其他解决浪费性支出问题的政策</strong>: 例如改进预算预测,加强项目管理,或引入竞争性招标</li>
+<li><strong>研究不同类型的资金结转政策</strong>: 比较无限期结转、有条件结转等不同方案对支出效率的影响</li>
+<li><strong>行为因素的影响</strong>: 考虑认知偏差、损失厌恶等行为因素对政府部门年底支出行为的影响</li>
+<li><strong>政治因素</strong>: 研究资金结转政策的政治可行性,以及立法机构对预算控制的考量</li>
+</ol>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li><strong>预算制度与创新</strong>: "使用或失效"的预算规则是否会抑制政府部门的创新活动?如果政府部门知道它们必须在当年用完所有资金,它们是否会更倾向于投资于风险较低、回报较快的项目?</li>
+<li><strong>政治周期与支出行为</strong>: 政府部门的支出行为是否会受到政治周期的影响?</li>
+<li><strong>绩效评估指标的设计</strong>: 如何设计更有效的绩效评估指标,以准确衡量政府部门的支出质量?</li>
+<li><strong>资金结转政策的适用性</strong>: 资金结转政策是否适用于所有类型的政府部门和项目?</li>
+<li><strong>公共部门与私营部门的对比</strong>: 比较公共部门和私营部门在预算管理和支出效率方面的差异</li>
+</ol>
+]]></content>
+      <categories>
+        <category>公共经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>公共经济学</tag>
+        <tag>预算制度</tag>
       </tags>
   </entry>
   <entry>
@@ -17688,60 +17688,6 @@ Zotero Item Key:: 5VM9WE7W</p>
       </tags>
   </entry>
   <entry>
-    <title>Racial Discrimination and the Social Contract — 深度阅读笔记 — Qian &amp; Tabellini</title>
-    <url>/posts/qian2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Racial Discrimination and the Social Contract: Evidence from U.S. Army Enlistment during WWII</li>
-<li><strong>作者</strong>: Nancy Qian (Northwestern &amp; NBER), Marco Tabellini (Harvard &amp; CEPR &amp; NBER)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies (RES)</li>
-<li><strong>难度评估</strong>: 高 - 需要政治经济学、计量经济学、历史背景知识</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言">1. 引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>社会契约理论、歧视与政治排斥、战争与政治加入。</p>
-<h3 id="研究背景">研究背景</h3>
-<p>社会契约理论认为战争和革命是政治加入的重要触发因素；排除效应在战时如何影响公民对政府的支持尚无直接证据。</p>
-<h3 id="核心问题">核心问题</h3>
-<p>歧视和政治排斥如何影响公民在战时对政府的支持？排除效应是正向（信号价值）还是负向（挫败感）？</p>
-<h2 id="2-内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：历史背景（Jim Crow时代的歧视、 WWII与珍珠港事件）</li>
-<li>第三节：概念框架</li>
-<li>第四节：数据</li>
-<li>第五节：主要结果</li>
-<li>第六节：额外分析</li>
-<li>第七节：结论</li>
-</ul>
-<h2 id="3-正文">3. 正文</h2>
-<h3 id="核心机制">核心机制</h3>
-<p>珍珠港袭击作为外生冲击；识别歧视对入伍影响的供给侧效应。</p>
-<h3 id="关键发现">关键发现</h3>
-<ol>
-<li>珍珠港后志愿入伍率急剧上升，但黑人增幅小于白人</li>
-<li>歧视越高的郡，黑人入伍率增幅越小（相对于白人）</li>
-<li>歧视减少黑人的数量和质量（教育水平）</li>
-<li>距离珍珠港越远、州加入联邦越晚，歧视效应越强</li>
-<li>日裔美国人在未被拘禁地区入伍率更高</li>
-</ol>
-<h2 id="4-结论">4. 结论</h2>
-<p>歧视和政治排斥降低被排斥群体在战时对政府的支持，为社会契约理论提供实证支持。</p>
-<h2 id="5-未来研究方向">5. 未来研究方向</h2>
-<p>一战遗产的代际传递、宣传运动的效果、跨语境验证。</p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>R数据科学_ggplot2笔记(1)</title>
     <url>/posts/29862/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="一个说明">一个说明</h2>
@@ -17974,6 +17920,221 @@ Zotero Item Key:: 5VM9WE7W</p>
       </tags>
   </entry>
   <entry>
+    <title>Racial Discrimination and the Social Contract — 深度阅读笔记 — Qian &amp; Tabellini</title>
+    <url>/posts/qian2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Racial Discrimination and the Social Contract: Evidence from U.S. Army Enlistment during WWII</li>
+<li><strong>作者</strong>: Nancy Qian (Northwestern &amp; NBER), Marco Tabellini (Harvard &amp; CEPR &amp; NBER)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies (RES)</li>
+<li><strong>难度评估</strong>: 高 - 需要政治经济学、计量经济学、历史背景知识</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言">1. 引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>社会契约理论、歧视与政治排斥、战争与政治加入。</p>
+<h3 id="研究背景">研究背景</h3>
+<p>社会契约理论认为战争和革命是政治加入的重要触发因素；排除效应在战时如何影响公民对政府的支持尚无直接证据。</p>
+<h3 id="核心问题">核心问题</h3>
+<p>歧视和政治排斥如何影响公民在战时对政府的支持？排除效应是正向（信号价值）还是负向（挫败感）？</p>
+<h2 id="2-内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：历史背景（Jim Crow时代的歧视、 WWII与珍珠港事件）</li>
+<li>第三节：概念框架</li>
+<li>第四节：数据</li>
+<li>第五节：主要结果</li>
+<li>第六节：额外分析</li>
+<li>第七节：结论</li>
+</ul>
+<h2 id="3-正文">3. 正文</h2>
+<h3 id="核心机制">核心机制</h3>
+<p>珍珠港袭击作为外生冲击；识别歧视对入伍影响的供给侧效应。</p>
+<h3 id="关键发现">关键发现</h3>
+<ol>
+<li>珍珠港后志愿入伍率急剧上升，但黑人增幅小于白人</li>
+<li>歧视越高的郡，黑人入伍率增幅越小（相对于白人）</li>
+<li>歧视减少黑人的数量和质量（教育水平）</li>
+<li>距离珍珠港越远、州加入联邦越晚，歧视效应越强</li>
+<li>日裔美国人在未被拘禁地区入伍率更高</li>
+</ol>
+<h2 id="4-结论">4. 结论</h2>
+<p>歧视和政治排斥降低被排斥群体在战时对政府的支持，为社会契约理论提供实证支持。</p>
+<h2 id="5-未来研究方向">5. 未来研究方向</h2>
+<p>一战遗产的代际传递、宣传运动的效果、跨语境验证。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>腐败作为地方优势：尼日利亚石油本土化的证据 — 深度阅读笔记 — Rexer</title>
+    <url>/posts/rexer2025/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Corruption as a Local Advantage: Evidence from the Indigenization of Nigerian Oil<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/AA7QHMMD/Rexer - 2025 - Corruption as a Local Advantage Evidence from the Indigenization of Nigerian Oil.pdf<br>
+Zotero Item Key:: Y7FT49B5</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+资源诅咒（resource curse）文献记录了资源丰富国家面临的治理困境：腐败、冲突、低增长。在制度薄弱的国家，自然资源开采区常伴随有组织武装集团的暴力抢劫和石油黑市（如尼日利亚、刚果、哥伦比亚）。理论上，企业愿意为国家保护支付费用，但实际上国家往往不提供有效保护（Coasean bargaining失败），这是一个重要的政治经济谜题。</p>
+<p><strong>研究背景</strong><br>
+尼日利亚是非洲最大的石油生产国，但其石油部门长期深陷石油盗窃、管道破坏和武装暴力。2006—2016年间，尼日利亚推行"本土化"（indigenization）政策，跨国公司（MNC）大规模出售陆上油田资产给本土公司，本土公司的陆上产量份额从6.4%上升至40%。Shell于2021年宣布退出尼日利亚，标志着跨国公司数十年来无法解决石油盗窃问题的彻底失败。</p>
+<p><strong>作者的问题意识</strong><br>
+为什么国家不保护愿意缴税的跨国公司，反而纵容武装盗窃？本土化政策（跨国公司将资产出售给本土企业）是否能提高石油产量和整体福利？如果能，通过什么机制？腐败在其中扮演什么角色？</p>
+<p><strong>研究意义</strong><br>
+本文揭示了"腐败作为本土优势"的机制：在弱国家制度下，本土企业通过任命军事精英为股东/董事来与执法力量分享利润，从而获得执法保护，减少石油盗窃，提高产量。这不仅为尼日利亚石油部门的本土化政策提供了严格的因果评估，更对所有采掘部门制度薄弱国家的外资vs本土企业比较具有普遍启示。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言与动机</strong>：尼日利亚石油盗窃问题；本土化政策背景；三个实证问题。</li>
+<li><strong>理论模型</strong>：企业与国家执法力量之间的讨价还价模型；政治联系如何解决承诺问题。</li>
+<li><strong>数据与实证设计</strong>：油田面板数据（2006–2016）；双重差分识别策略。</li>
+<li><strong>主要结果</strong>：本土化对产量、石油盗窃、暴力冲突的影响。</li>
+<li><strong>机制检验</strong>：执法行动数据；企业高管政治联系数据。</li>
+<li><strong>福利分析</strong>：本土化的政府收入效应、净社会福利估算。</li>
+<li><strong>结论</strong>。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>尼日利亚石油黑市规模庞大（全球被盗原油市场约1000亿美元/年）。跨国公司雇佣私人保安，但资产仍受武装集团盗窃。腐败的执法力量不但不保护企业，反而分享非法收益。与此同时，一些本土企业在相似条件下运营但损失明显更小——为什么？</p>
+<h3 id="挑战">挑战</h3>
+<p><strong>为什么国家不保护缴税的企业？<strong>核心是</strong>承诺问题</strong>（commitment problem）：</p>
+<ul>
+<li>在弱制度下，即使企业愿意支付一次性贿赂换取保护，执法力量可以随时背约（renege），索取更多</li>
+<li>纯粹的货币转移无法约束执法力量——他们随时可以选择收取武装集团的好处而不保护企业</li>
+<li>解决方案：让执法力量成为合法石油收益的<strong>剩余索取者</strong>（residual claimants），即持有公司股份/担任董事，从而将其利益与企业绑定</li>
+</ul>
+<p><strong>本土企业的比较优势</strong>：</p>
+<ul>
+<li>本土企业（尤其是与军事精英有联系的）更容易任命军警高官为股东/董事</li>
+<li>外国腐败法（如FCPA、英国反行贿法）限制了跨国公司进行此类政治安排的能力，增加了其腐败成本</li>
+<li>结果：本土企业能以更低的成本获得执法保护</li>
+</ul>
+<h3 id="方法（识别策略）">方法（识别策略）</h3>
+<p><strong>数据</strong>：</p>
+<ul>
+<li>尼日利亚274个油田，2006—2016年面板数据</li>
+<li>产量数据（法定申报）、石油盗窃事件数据（新闻媒体）、武装冲突数据（ACLED）、执法行动数据（新闻媒体）</li>
+<li>企业高管/股东政治联系数据（手工收集，尼日利亚石油部门所有高管传记）</li>
+</ul>
+<p><strong>识别</strong>：双重差分（DiD）</p>
+<ul>
+<li>处理：油田被跨国公司出售给本土公司（本土化）</li>
+<li>控制：仍由跨国公司运营的对照油田</li>
+<li>识别假设：如果不发生本土化，被出售油田的产量趋势应与对照油田平行</li>
+<li>稳健性：安慰剂检验——将被终止或搁置的交易作为安慰剂处理组（同样面临选择效应，但实际上产权未发生变化），结果无显著效应，支持平行趋势假设</li>
+<li>异质性DiD检验（Goodman-Bacon分解；Callaway &amp; Sant’Anna非参数估计）：结果稳健，TWFE结果甚至偏保守</li>
+</ul>
+<h3 id="数据与主要结果">数据与主要结果</h3>
+<p><strong>产量效应</strong>：</p>
+<ul>
+<li>本土化后，油田的法定石油产量增加约<strong>30%</strong>（约100万桶/年）</li>
+<li>这一增益尽管本土企业在技术上明显较差（更多设备故障导致溢油，燃气燃烧增加41%）</li>
+</ul>
+<p><strong>盗窃与暴力减少</strong>：</p>
+<ul>
+<li>本土化油田石油盗窃事件减少<strong>54%</strong>（平均每年减少5.7起）</li>
+<li>每年暴力冲突死亡人数减少3人</li>
+<li>机制分析：盗窃减少可解释产量增加的<strong>66%</strong>（其中24%是直接从武装集团转回，42%是原先因盗窃风险而推迟的产量恢复）</li>
+</ul>
+<p><strong>地域异质性</strong>：</p>
+<ul>
+<li>本土优势（产量增加、盗窃减少）<strong>完全集中在陆上油田</strong>（政治风险更高）</li>
+<li>技术劣势（溢油增加）<strong>更集中在海上油田</strong>（技术要求更高）</li>
+</ul>
+<h3 id="机制检验">机制检验</h3>
+<p><strong>执法行动数据</strong>：</p>
+<ul>
+<li>本土化导致针对石油盗窃的执法行动增加<strong>83%</strong></li>
+<li>覆盖整个黑市链条（非法炼油、出口走私）</li>
+<li>安慰剂：非石油类犯罪的执法行动无显著变化，排除地区整体治安改善的替代解释</li>
+</ul>
+<p><strong>政治联系数据</strong>：</p>
+<ul>
+<li>跨国公司与本土公司在整体政治联系比例上相似</li>
+<li>但本土公司<strong>更多拥有军事/警察背景的高管</strong></li>
+<li>油田层面固定效应回归：与<strong>安全部门</strong>（军警）精英的联系与盗窃减少显著相关；其他类型政治联系（如官僚、商界）无效</li>
+<li>补充证据：本土化还增加了运营方的股权比例（+11%），使其内化更多盗窃损失，提高保护意愿</li>
+</ul>
+<h3 id="福利分析">福利分析</h3>
+<p><strong>政府收入</strong>：本土化使每个油田的政府税收平均增加40%，2006—2016年间累计额外收入265亿美元（占石油部门产值的3.8%）</p>
+<p><strong>净社会福利上界</strong>：229亿美元，占尼日利亚2016年GDP的5.7%；保守估计2.4%—3.3%</p>
+<p><strong>福利权衡</strong>：</p>
+<ul>
+<li>正面：产量增加、黑市效率损失（溢油、折价出售、开采成本）减少</li>
+<li>负面：技术更差的本土企业造成更多溢油和气体燃烧的环境外部性；安全支出增加</li>
+<li><strong>重要前提</strong>：这是在腐败和盗窃制度既定条件下的次优（second-best）政策评估，不是全球最优</li>
+</ul>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<p>在制度薄弱的弱国家采掘部门中：</p>
+<ol>
+<li>本土企业通过任命军事精英为股东/董事，将执法力量利益与企业绑定，从而获得保护，减少盗窃，提高合法产量；</li>
+<li>跨国公司的技术优势被更高的腐败成本（受外国反腐法约束）所抵消；</li>
+<li>本土化在尼日利亚石油部门产生了显著正的产出和财政效应；</li>
+<li>但福利增益的分配问题（谁获益？谁付出代价？）需要进一步考量；</li>
+<li>这一"本土优势"机制在其他类似情境（刚果矿业、哥伦比亚黄金等）有普遍适用性。</li>
+</ol>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文明确提及的方向</strong>：</p>
+<ol>
+<li>为什么跨国公司不能识别并建立有效的政治影响网络（如通过合资企业）？</li>
+<li>本土化收益的分配问题（incidence of gains）。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li><strong>中国语境的类比</strong>：中国国有企业在海外采掘项目中的表现——是否因拥有"国家背景"而同样获得类似的执法保护优势？与纯私人MNC相比，表现有何不同？</li>
+<li><strong>动态演变</strong>：随着本土企业在市场中巩固地位，是否会出现新的腐败均衡（如本土企业间的执法竞争）？长期来看政治精英入股会导致更大的腐败问题吗？</li>
+<li><strong>其他弱国家采掘部门</strong>：刚果矿业中，中国国有企业是否也具有类似的"本土优势"？（不是本土企业，但可能有类似的政治联系机制）</li>
+<li><strong>反事实政策</strong>：如果跨国公司被允许直接向执法力量合法支付费用（类似"特许经营权"制度），是否可以绕过本土化的需要，同时避免技术劣势？</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>因果识别的核心挑战</strong>：研究者用"被终止/搁置的交易"作为安慰剂处理组，是一个创意十足的设计。但这些交易被终止是否本身也是内生的？是否是因为预见到盗窃问题更严重而终止？如果是，安慰剂对照组可能存在系统性差异。</p>
+</li>
+<li>
+<p><strong>政治联系的内生性</strong>：本文将"本土公司任命军事精英为高管"作为机制变量。但为什么有些本土公司能任命军事精英而有些不能？如果任命决定本身受油田盗窃风险影响，则机制分析存在内生性问题。未来研究可以利用高管任命的外生变化（如军官退休后的随机性）来进一步验证。</p>
+</li>
+<li>
+<p><strong>技术劣势的长期问题</strong>：本文记录了本土企业更多溢油（+油田质量下降）和气体燃烧，这些是显著的环境成本。但如果本土化是长期政策趋势，技术劣势会随时间改善吗（learning by doing）？还是会系统性锁定低质量生产？</p>
+</li>
+<li>
+<p><strong>福利框架的局限</strong>：作者的福利估算是在"腐败既定"的条件下进行的第二最优评估。这隐含了一个关键假设：制度改革成本极高或不可行。但如果尼日利亚通过改革执法体制（如增加薪资、独立监察）能从根本上解决腐败问题，本土化可能反而是对制度改革动力的挤出（因为本土精英已从腐败中获益，不愿改革）。这一政治经济均衡效应在福利框架中未被考虑。</p>
+</li>
+<li>
+<p><strong>对中国的启示</strong>：在中国企业大量进入非洲采掘部门的背景下，中国国有企业是否具有类似的"国家支持型腐败优势"？与尼日利亚不同，中国国企的政治连接来自北京而非当地军队，这一机制是否同样有效？是一个有趣的比较研究方向。</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>本文的机制——通过政治联系买通执法力量——是否也能解释发展中国家其他行业（如采矿、基础设施建设）中本土企业vs跨国公司的表现差异？</li>
+<li>尼日利亚的反腐法律（如EFCC）与英美的FCPA/英国反行贿法对跨国公司约束的差异具体是怎样的？本文的福利结论是否依赖于这种法律不对称？</li>
+<li>本文提到钻石（如DRC矿业）和黄金（哥伦比亚）行业有类似问题，有没有类似的实证研究可以进行比较？</li>
+<li>SafeGraph数据（在Spatial Treatments那篇里用到）和ACLED数据在尼日利亚的应用有什么数据质量问题？非正式的冲突事件是否存在严重的漏报问题？</li>
+<li>本文发现本土化增加了政府税收39亿美元/年。这些收益是否真的流入了政府财政，还是通过腐败的执法精英流失？从政府预算数据中能否检验这一点？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>邻里效应：伦敦战时破坏的证据 — 深度阅读笔记 — Redding &amp; Sturm</title>
     <url>/posts/redding2024/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Neighborhood Effects: Evidence from Wartime Destruction in London<br>
@@ -18169,167 +18330,6 @@ Zotero Item Key:: Y7PUT4SC</p>
 ]]></content>
       <categories>
         <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>腐败作为地方优势：尼日利亚石油本土化的证据 — 深度阅读笔记 — Rexer</title>
-    <url>/posts/rexer2025/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Corruption as a Local Advantage: Evidence from the Indigenization of Nigerian Oil<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/AA7QHMMD/Rexer - 2025 - Corruption as a Local Advantage Evidence from the Indigenization of Nigerian Oil.pdf<br>
-Zotero Item Key:: Y7FT49B5</p>
-<hr>
-<span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-资源诅咒（resource curse）文献记录了资源丰富国家面临的治理困境：腐败、冲突、低增长。在制度薄弱的国家，自然资源开采区常伴随有组织武装集团的暴力抢劫和石油黑市（如尼日利亚、刚果、哥伦比亚）。理论上，企业愿意为国家保护支付费用，但实际上国家往往不提供有效保护（Coasean bargaining失败），这是一个重要的政治经济谜题。</p>
-<p><strong>研究背景</strong><br>
-尼日利亚是非洲最大的石油生产国，但其石油部门长期深陷石油盗窃、管道破坏和武装暴力。2006—2016年间，尼日利亚推行"本土化"（indigenization）政策，跨国公司（MNC）大规模出售陆上油田资产给本土公司，本土公司的陆上产量份额从6.4%上升至40%。Shell于2021年宣布退出尼日利亚，标志着跨国公司数十年来无法解决石油盗窃问题的彻底失败。</p>
-<p><strong>作者的问题意识</strong><br>
-为什么国家不保护愿意缴税的跨国公司，反而纵容武装盗窃？本土化政策（跨国公司将资产出售给本土企业）是否能提高石油产量和整体福利？如果能，通过什么机制？腐败在其中扮演什么角色？</p>
-<p><strong>研究意义</strong><br>
-本文揭示了"腐败作为本土优势"的机制：在弱国家制度下，本土企业通过任命军事精英为股东/董事来与执法力量分享利润，从而获得执法保护，减少石油盗窃，提高产量。这不仅为尼日利亚石油部门的本土化政策提供了严格的因果评估，更对所有采掘部门制度薄弱国家的外资vs本土企业比较具有普遍启示。</p>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言与动机</strong>：尼日利亚石油盗窃问题；本土化政策背景；三个实证问题。</li>
-<li><strong>理论模型</strong>：企业与国家执法力量之间的讨价还价模型；政治联系如何解决承诺问题。</li>
-<li><strong>数据与实证设计</strong>：油田面板数据（2006–2016）；双重差分识别策略。</li>
-<li><strong>主要结果</strong>：本土化对产量、石油盗窃、暴力冲突的影响。</li>
-<li><strong>机制检验</strong>：执法行动数据；企业高管政治联系数据。</li>
-<li><strong>福利分析</strong>：本土化的政府收入效应、净社会福利估算。</li>
-<li><strong>结论</strong>。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>尼日利亚石油黑市规模庞大（全球被盗原油市场约1000亿美元/年）。跨国公司雇佣私人保安，但资产仍受武装集团盗窃。腐败的执法力量不但不保护企业，反而分享非法收益。与此同时，一些本土企业在相似条件下运营但损失明显更小——为什么？</p>
-<h3 id="挑战">挑战</h3>
-<p><strong>为什么国家不保护缴税的企业？<strong>核心是</strong>承诺问题</strong>（commitment problem）：</p>
-<ul>
-<li>在弱制度下，即使企业愿意支付一次性贿赂换取保护，执法力量可以随时背约（renege），索取更多</li>
-<li>纯粹的货币转移无法约束执法力量——他们随时可以选择收取武装集团的好处而不保护企业</li>
-<li>解决方案：让执法力量成为合法石油收益的<strong>剩余索取者</strong>（residual claimants），即持有公司股份/担任董事，从而将其利益与企业绑定</li>
-</ul>
-<p><strong>本土企业的比较优势</strong>：</p>
-<ul>
-<li>本土企业（尤其是与军事精英有联系的）更容易任命军警高官为股东/董事</li>
-<li>外国腐败法（如FCPA、英国反行贿法）限制了跨国公司进行此类政治安排的能力，增加了其腐败成本</li>
-<li>结果：本土企业能以更低的成本获得执法保护</li>
-</ul>
-<h3 id="方法（识别策略）">方法（识别策略）</h3>
-<p><strong>数据</strong>：</p>
-<ul>
-<li>尼日利亚274个油田，2006—2016年面板数据</li>
-<li>产量数据（法定申报）、石油盗窃事件数据（新闻媒体）、武装冲突数据（ACLED）、执法行动数据（新闻媒体）</li>
-<li>企业高管/股东政治联系数据（手工收集，尼日利亚石油部门所有高管传记）</li>
-</ul>
-<p><strong>识别</strong>：双重差分（DiD）</p>
-<ul>
-<li>处理：油田被跨国公司出售给本土公司（本土化）</li>
-<li>控制：仍由跨国公司运营的对照油田</li>
-<li>识别假设：如果不发生本土化，被出售油田的产量趋势应与对照油田平行</li>
-<li>稳健性：安慰剂检验——将被终止或搁置的交易作为安慰剂处理组（同样面临选择效应，但实际上产权未发生变化），结果无显著效应，支持平行趋势假设</li>
-<li>异质性DiD检验（Goodman-Bacon分解；Callaway &amp; Sant’Anna非参数估计）：结果稳健，TWFE结果甚至偏保守</li>
-</ul>
-<h3 id="数据与主要结果">数据与主要结果</h3>
-<p><strong>产量效应</strong>：</p>
-<ul>
-<li>本土化后，油田的法定石油产量增加约<strong>30%</strong>（约100万桶/年）</li>
-<li>这一增益尽管本土企业在技术上明显较差（更多设备故障导致溢油，燃气燃烧增加41%）</li>
-</ul>
-<p><strong>盗窃与暴力减少</strong>：</p>
-<ul>
-<li>本土化油田石油盗窃事件减少<strong>54%</strong>（平均每年减少5.7起）</li>
-<li>每年暴力冲突死亡人数减少3人</li>
-<li>机制分析：盗窃减少可解释产量增加的<strong>66%</strong>（其中24%是直接从武装集团转回，42%是原先因盗窃风险而推迟的产量恢复）</li>
-</ul>
-<p><strong>地域异质性</strong>：</p>
-<ul>
-<li>本土优势（产量增加、盗窃减少）<strong>完全集中在陆上油田</strong>（政治风险更高）</li>
-<li>技术劣势（溢油增加）<strong>更集中在海上油田</strong>（技术要求更高）</li>
-</ul>
-<h3 id="机制检验">机制检验</h3>
-<p><strong>执法行动数据</strong>：</p>
-<ul>
-<li>本土化导致针对石油盗窃的执法行动增加<strong>83%</strong></li>
-<li>覆盖整个黑市链条（非法炼油、出口走私）</li>
-<li>安慰剂：非石油类犯罪的执法行动无显著变化，排除地区整体治安改善的替代解释</li>
-</ul>
-<p><strong>政治联系数据</strong>：</p>
-<ul>
-<li>跨国公司与本土公司在整体政治联系比例上相似</li>
-<li>但本土公司<strong>更多拥有军事/警察背景的高管</strong></li>
-<li>油田层面固定效应回归：与<strong>安全部门</strong>（军警）精英的联系与盗窃减少显著相关；其他类型政治联系（如官僚、商界）无效</li>
-<li>补充证据：本土化还增加了运营方的股权比例（+11%），使其内化更多盗窃损失，提高保护意愿</li>
-</ul>
-<h3 id="福利分析">福利分析</h3>
-<p><strong>政府收入</strong>：本土化使每个油田的政府税收平均增加40%，2006—2016年间累计额外收入265亿美元（占石油部门产值的3.8%）</p>
-<p><strong>净社会福利上界</strong>：229亿美元，占尼日利亚2016年GDP的5.7%；保守估计2.4%—3.3%</p>
-<p><strong>福利权衡</strong>：</p>
-<ul>
-<li>正面：产量增加、黑市效率损失（溢油、折价出售、开采成本）减少</li>
-<li>负面：技术更差的本土企业造成更多溢油和气体燃烧的环境外部性；安全支出增加</li>
-<li><strong>重要前提</strong>：这是在腐败和盗窃制度既定条件下的次优（second-best）政策评估，不是全球最优</li>
-</ul>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<p>在制度薄弱的弱国家采掘部门中：</p>
-<ol>
-<li>本土企业通过任命军事精英为股东/董事，将执法力量利益与企业绑定，从而获得保护，减少盗窃，提高合法产量；</li>
-<li>跨国公司的技术优势被更高的腐败成本（受外国反腐法约束）所抵消；</li>
-<li>本土化在尼日利亚石油部门产生了显著正的产出和财政效应；</li>
-<li>但福利增益的分配问题（谁获益？谁付出代价？）需要进一步考量；</li>
-<li>这一"本土优势"机制在其他类似情境（刚果矿业、哥伦比亚黄金等）有普遍适用性。</li>
-</ol>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文明确提及的方向</strong>：</p>
-<ol>
-<li>为什么跨国公司不能识别并建立有效的政治影响网络（如通过合资企业）？</li>
-<li>本土化收益的分配问题（incidence of gains）。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li><strong>中国语境的类比</strong>：中国国有企业在海外采掘项目中的表现——是否因拥有"国家背景"而同样获得类似的执法保护优势？与纯私人MNC相比，表现有何不同？</li>
-<li><strong>动态演变</strong>：随着本土企业在市场中巩固地位，是否会出现新的腐败均衡（如本土企业间的执法竞争）？长期来看政治精英入股会导致更大的腐败问题吗？</li>
-<li><strong>其他弱国家采掘部门</strong>：刚果矿业中，中国国有企业是否也具有类似的"本土优势"？（不是本土企业，但可能有类似的政治联系机制）</li>
-<li><strong>反事实政策</strong>：如果跨国公司被允许直接向执法力量合法支付费用（类似"特许经营权"制度），是否可以绕过本土化的需要，同时避免技术劣势？</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>因果识别的核心挑战</strong>：研究者用"被终止/搁置的交易"作为安慰剂处理组，是一个创意十足的设计。但这些交易被终止是否本身也是内生的？是否是因为预见到盗窃问题更严重而终止？如果是，安慰剂对照组可能存在系统性差异。</p>
-</li>
-<li>
-<p><strong>政治联系的内生性</strong>：本文将"本土公司任命军事精英为高管"作为机制变量。但为什么有些本土公司能任命军事精英而有些不能？如果任命决定本身受油田盗窃风险影响，则机制分析存在内生性问题。未来研究可以利用高管任命的外生变化（如军官退休后的随机性）来进一步验证。</p>
-</li>
-<li>
-<p><strong>技术劣势的长期问题</strong>：本文记录了本土企业更多溢油（+油田质量下降）和气体燃烧，这些是显著的环境成本。但如果本土化是长期政策趋势，技术劣势会随时间改善吗（learning by doing）？还是会系统性锁定低质量生产？</p>
-</li>
-<li>
-<p><strong>福利框架的局限</strong>：作者的福利估算是在"腐败既定"的条件下进行的第二最优评估。这隐含了一个关键假设：制度改革成本极高或不可行。但如果尼日利亚通过改革执法体制（如增加薪资、独立监察）能从根本上解决腐败问题，本土化可能反而是对制度改革动力的挤出（因为本土精英已从腐败中获益，不愿改革）。这一政治经济均衡效应在福利框架中未被考虑。</p>
-</li>
-<li>
-<p><strong>对中国的启示</strong>：在中国企业大量进入非洲采掘部门的背景下，中国国有企业是否具有类似的"国家支持型腐败优势"？与尼日利亚不同，中国国企的政治连接来自北京而非当地军队，这一机制是否同样有效？是一个有趣的比较研究方向。</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>本文的机制——通过政治联系买通执法力量——是否也能解释发展中国家其他行业（如采矿、基础设施建设）中本土企业vs跨国公司的表现差异？</li>
-<li>尼日利亚的反腐法律（如EFCC）与英美的FCPA/英国反行贿法对跨国公司约束的差异具体是怎样的？本文的福利结论是否依赖于这种法律不对称？</li>
-<li>本文提到钻石（如DRC矿业）和黄金（哥伦比亚）行业有类似问题，有没有类似的实证研究可以进行比较？</li>
-<li>SafeGraph数据（在Spatial Treatments那篇里用到）和ACLED数据在尼日利亚的应用有什么数据质量问题？非正式的冲突事件是否存在严重的漏报问题？</li>
-<li>本文发现本土化增加了政府税收39亿美元/年。这些收益是否真的流入了政府财政，还是通过腐败的执法精英流失？从政府预算数据中能否检验这一点？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -18775,6 +18775,35 @@ Zotero Item Key:: Y7FT49B5</p>
       </tags>
   </entry>
   <entry>
+    <title>字体和公式的Display</title>
+    <url>/posts/15167/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<p><font face="Times New Roman"></font></p><p style="text-align:justify"><font face="Times New Roman"><b>“Evaluating the employment impact of a mandatory job search program”</b></font><br>
+<br><br>
+<br><br>
+<font face="Times New Roman"></font></p><p style="text-align:justify"><font face="Times New Roman"><b>What treatment do the authors evaluate?</b></font><br>
+<br></p>
+<span id="more"></span>
+<p><font face="Tex Gyre Pagella"></font></p><p style="text-align:justify"><font face="Tex Gyre Pagella"><b>Answer: </b> In the parametric methods, the common trend assumption is:</font></p><font face="Tex Gyre Pagella">
+<p>$$\begin{array}{l}<br>
+f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=0\right)\right] \<br>
+=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=0\right)\right]<br>
+\end{array}$$<br>
+In the non-parametric methods, the common trend assumption is:</p>
+<p>$$\begin{array}{l}<br>
+E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=0\right) \<br>
+=E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=1\right)-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)<br>
+\end{array}$$</p>
+</font>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>blog_test</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>多重原因的祝福：去混淆 — 深度阅读笔记 — Wang &amp; Blei</title>
     <url>/posts/wang2019blessings/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: The Blessings of Multiple Causes<br>
@@ -18912,35 +18941,6 @@ Zotero Item Key:: GQKZ35CQ</p>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>字体和公式的Display</title>
-    <url>/posts/15167/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<p><font face="Times New Roman"></font></p><p style="text-align:justify"><font face="Times New Roman"><b>“Evaluating the employment impact of a mandatory job search program”</b></font><br>
-<br><br>
-<br><br>
-<font face="Times New Roman"></font></p><p style="text-align:justify"><font face="Times New Roman"><b>What treatment do the authors evaluate?</b></font><br>
-<br></p>
-<span id="more"></span>
-<p><font face="Tex Gyre Pagella"></font></p><p style="text-align:justify"><font face="Tex Gyre Pagella"><b>Answer: </b> In the parametric methods, the common trend assumption is:</font></p><font face="Tex Gyre Pagella">
-<p>$$\begin{array}{l}<br>
-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=0\right)\right] \<br>
-=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=0\right)\right]<br>
-\end{array}$$<br>
-In the non-parametric methods, the common trend assumption is:</p>
-<p>$$\begin{array}{l}<br>
-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=0\right) \<br>
-=E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=1\right)-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)<br>
-\end{array}$$</p>
-</font>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>blog_test</tag>
       </tags>
   </entry>
   <entry>
