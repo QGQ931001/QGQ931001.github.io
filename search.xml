@@ -563,112 +563,6 @@ Zotero Item Key:: KEQ65SD3</p>
       </tags>
   </entry>
   <entry>
-    <title>国家能力建设中的溢出效应 — 深度阅读笔记 — Aman-Rana &amp; Minaudier</title>
-    <url>/posts/aman-rana2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Spillovers in State Capacity Building: Evidence from the Digitization of Land Records in Pakistan</li>
-<li><strong>作者</strong>: Shan Aman-Rana (University of Virginia), Clement Minaudier (City University of London)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(4): 1459-1498</li>
-<li><strong>DOI</strong>: 10.1257/aer.20240880</li>
-<li><strong>难度评估</strong>: 高 - 需要发展经济学、组织经济学、计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>国家能力（State Capacity）</strong>：指国家有效执行政策和提供公共服务的能力，主要包括税收能力、产权保护和行政能力。</p>
-<p><strong>数字化改革（Digitization Reform）</strong>：在发展中国家被视为加强国家能力的有效手段，可减少官僚腐败，提高透明度和效率。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol>
-<li>
-<p><strong>数字化的双重性</strong>：数字化会"重塑"官僚机构的组织结构，改变不同机构间的关系</p>
-</li>
-<li>
-<p><strong>研究缺口</strong>：现有文献主要关注数字化的直接正面效应，对间接影响的系统性研究不足</p>
-</li>
-<li>
-<p><strong>巴基斯坦案例</strong>：旁遮普省的分阶段土地记录数字化改革（2011-2014年）提供理想准实验场景</p>
-</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：技术引入官僚机构所带来的组织变化是否会削弱国家能力？</p>
-<p><strong>主要发现</strong>：土地记录数字化导致税收征收下降84%</p>
-<hr>
-<h2 id="2-内容及结构">2. 内容及结构</h2>
-<h3 id="第1节：引言">第1节：引言</h3>
-<h3 id="第2节：背景与数据">第2节：背景与数据</h3>
-<ul>
-<li>巴基斯坦旁遮普省的农业收入税（AIT）制度</li>
-<li>土地记录数字化改革三阶段推出（2011-2014年）</li>
-<li>数据来源：税收行政数据、卫星数据、家庭调查数据</li>
-</ul>
-<h3 id="第3节：识别策略与结果">第3节：识别策略与结果</h3>
-<ul>
-<li>交错推出的DID设计</li>
-<li>数字化导致税收征收下降84%</li>
-</ul>
-<h3 id="第4节：机制分析">第4节：机制分析</h3>
-<ul>
-<li>税基变化</li>
-<li>官僚绩效变化（失去杠杆效应、腐败转移效应）</li>
-</ul>
-<h3 id="第5节：讨论">第5节：讨论</h3>
-<h3 id="第6节：结论">第6节：结论</h3>
-<hr>
-<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="巴基斯坦农业收入税制度">巴基斯坦农业收入税制度</h4>
-<p>税收由地方官僚（Qanungo）征收，基于耕地面积或利润。征收流程包括年初作物检查（Girdawari）、发出税收需求通知、征收税款。</p>
-<h3 id="实证方法">实证方法</h3>
-<p><strong>识别策略</strong>：</p>
-<ul>
-<li>交错推出的DID设计</li>
-<li>使用计划推出时间而非实际时间定义处理变量</li>
-<li>事件研究验证平行趋势</li>
-</ul>
-<p><strong>主要结果</strong>：</p>
-<ul>
-<li>数字化导致税收征收下降84%</li>
-</ul>
-<h3 id="机制分析">机制分析</h3>
-<p><strong>税基变化</strong>：使用卫星数据、农户调查数据验证</p>
-<p><strong>官僚绩效变化</strong>：</p>
-<ul>
-<li>理论模型：失去杠杆效应、腐败转移效应</li>
-<li>税收评估变化：申报耕地面积下降10%、税收需求下降45%</li>
-<li>征收绩效下降：征收率下降29.5个百分点</li>
-</ul>
-<hr>
-<h2 id="4-结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol>
-<li>
-<p><strong>技术引入可能损害国家能力</strong>：数字化在改善产权保护的同时，可能损害税收能力</p>
-</li>
-<li>
-<p><strong>组织变化是关键机制</strong>：官僚失去对农民土地信息的控制，导致征收能力下降</p>
-</li>
-<li>
-<p><strong>政策启示</strong>：技术投资必须配合组织变革</p>
-</li>
-</ol>
-<hr>
-<h2 id="5-未来研究方向">5. 未来研究方向</h2>
-<ol>
-<li>其他国家类似数字化改革的验证</li>
-<li>配套政策干预的效果</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>AI 与就业：在线职位空缺的证据 — 深度阅读笔记 — Acemoglu, Autor, Hazell &amp; Restrepo</title>
     <url>/posts/acemoglu2022/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -806,6 +700,112 @@ Zotero Item Key:: KEQ65SD3</p>
 ]]></content>
       <categories>
         <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>国家能力建设中的溢出效应 — 深度阅读笔记 — Aman-Rana &amp; Minaudier</title>
+    <url>/posts/aman-rana2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Spillovers in State Capacity Building: Evidence from the Digitization of Land Records in Pakistan</li>
+<li><strong>作者</strong>: Shan Aman-Rana (University of Virginia), Clement Minaudier (City University of London)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(4): 1459-1498</li>
+<li><strong>DOI</strong>: 10.1257/aer.20240880</li>
+<li><strong>难度评估</strong>: 高 - 需要发展经济学、组织经济学、计量经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>国家能力（State Capacity）</strong>：指国家有效执行政策和提供公共服务的能力，主要包括税收能力、产权保护和行政能力。</p>
+<p><strong>数字化改革（Digitization Reform）</strong>：在发展中国家被视为加强国家能力的有效手段，可减少官僚腐败，提高透明度和效率。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol>
+<li>
+<p><strong>数字化的双重性</strong>：数字化会"重塑"官僚机构的组织结构，改变不同机构间的关系</p>
+</li>
+<li>
+<p><strong>研究缺口</strong>：现有文献主要关注数字化的直接正面效应，对间接影响的系统性研究不足</p>
+</li>
+<li>
+<p><strong>巴基斯坦案例</strong>：旁遮普省的分阶段土地记录数字化改革（2011-2014年）提供理想准实验场景</p>
+</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：技术引入官僚机构所带来的组织变化是否会削弱国家能力？</p>
+<p><strong>主要发现</strong>：土地记录数字化导致税收征收下降84%</p>
+<hr>
+<h2 id="2-内容及结构">2. 内容及结构</h2>
+<h3 id="第1节：引言">第1节：引言</h3>
+<h3 id="第2节：背景与数据">第2节：背景与数据</h3>
+<ul>
+<li>巴基斯坦旁遮普省的农业收入税（AIT）制度</li>
+<li>土地记录数字化改革三阶段推出（2011-2014年）</li>
+<li>数据来源：税收行政数据、卫星数据、家庭调查数据</li>
+</ul>
+<h3 id="第3节：识别策略与结果">第3节：识别策略与结果</h3>
+<ul>
+<li>交错推出的DID设计</li>
+<li>数字化导致税收征收下降84%</li>
+</ul>
+<h3 id="第4节：机制分析">第4节：机制分析</h3>
+<ul>
+<li>税基变化</li>
+<li>官僚绩效变化（失去杠杆效应、腐败转移效应）</li>
+</ul>
+<h3 id="第5节：讨论">第5节：讨论</h3>
+<h3 id="第6节：结论">第6节：结论</h3>
+<hr>
+<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="巴基斯坦农业收入税制度">巴基斯坦农业收入税制度</h4>
+<p>税收由地方官僚（Qanungo）征收，基于耕地面积或利润。征收流程包括年初作物检查（Girdawari）、发出税收需求通知、征收税款。</p>
+<h3 id="实证方法">实证方法</h3>
+<p><strong>识别策略</strong>：</p>
+<ul>
+<li>交错推出的DID设计</li>
+<li>使用计划推出时间而非实际时间定义处理变量</li>
+<li>事件研究验证平行趋势</li>
+</ul>
+<p><strong>主要结果</strong>：</p>
+<ul>
+<li>数字化导致税收征收下降84%</li>
+</ul>
+<h3 id="机制分析">机制分析</h3>
+<p><strong>税基变化</strong>：使用卫星数据、农户调查数据验证</p>
+<p><strong>官僚绩效变化</strong>：</p>
+<ul>
+<li>理论模型：失去杠杆效应、腐败转移效应</li>
+<li>税收评估变化：申报耕地面积下降10%、税收需求下降45%</li>
+<li>征收绩效下降：征收率下降29.5个百分点</li>
+</ul>
+<hr>
+<h2 id="4-结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol>
+<li>
+<p><strong>技术引入可能损害国家能力</strong>：数字化在改善产权保护的同时，可能损害税收能力</p>
+</li>
+<li>
+<p><strong>组织变化是关键机制</strong>：官僚失去对农民土地信息的控制，导致征收能力下降</p>
+</li>
+<li>
+<p><strong>政策启示</strong>：技术投资必须配合组织变革</p>
+</li>
+</ol>
+<hr>
+<h2 id="5-未来研究方向">5. 未来研究方向</h2>
+<ol>
+<li>其他国家类似数字化改革的验证</li>
+<li>配套政策干预的效果</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -3528,391 +3528,6 @@ TWFE 的问题究竟是什么？是否可以在一个统一框架下同时解决
       </tags>
   </entry>
   <entry>
-    <title>Generative AI at Work — 深度分析 — Brynjolfsson Et Al.</title>
-    <url>/posts/bryn2025/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Generative AI at Work</li>
-<li><strong>作者</strong>: Erik Brynjolfsson(Stanford University, MIT), Danielle Li(MIT), Lindsey Raymond(MIT)</li>
-<li><strong>类型</strong>: 论文笔记 / 劳动经济学</li>
-<li><strong>出版年份</strong>: 2025</li>
-<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics, Volume 140, Issue 2, Pages 889-942</li>
-<li><strong>难度评估</strong>: 中 - 需要劳动经济学和实证方法基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言-背景和意义">1. 引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>生成式人工智能(Generative AI)</strong> 是一类能够基于已有数据模型生成新内容(如文本、图像、音乐、视频)的机器学习技术.本文聚焦于大型语言模型(LLM),这是一种专门处理序列数据的神经网络模型,通过学习预测序列中的下一个词来生成文本.GPT-3是本研究的核心技术基础.</p>
-<p><strong>客服行业特征</strong>:客服行业是AI采用率最高的行业之一(Chui et al. 2021).该行业面临高员工流动率(每年60%)、高培训成本(每个客服人员10,000-20,000美元),以及客服人员之间生产力高度差异化的挑战.</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol>
-<li>
-<p><strong>技术革命性变化</strong>:传统计算机程序需要明确的指令来执行任务,而机器学习算法通过从示例中推断指令来工作.这种差异使AI能够执行难以编程的routine任务.</p>
-</li>
-<li>
-<p><strong>实验室vs现实世界</strong>:尽管各种生成式AI工具在实验室环境中表现良好,但其在现实世界中的效果仍存在疑问_AI可能遇到不熟悉的问题、面临组织阻力,或提供误导性信息.</p>
-</li>
-<li>
-<p><strong>AI对不同技能工人的差异化影响</strong>:先前信息技术研究(如计算机和机器人技术)发现技术倾向于补充高技能工人.但生成式AI可能具有不同的效果,因为它能够捕捉和传播高绩效工人的行为模式.</p>
-</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:生成式AI在工作场所的实际效果如何?AI是否能够捕捉和传播高绩效工人的最佳实践?AI对不同技能水平的工人影响是否相同?</p>
-<h3 id="研究意义">研究意义</h3>
-<p>本文提供了生成式AI在工作场所大规模采用的早期证据,对于理解AI对生产力、劳动市场不平等和工资的影响具有重要政策含义.</p>
-<hr>
-<h2 id="2-内容及结构-论文结构">2. 内容及结构(论文结构)</h2>
-<p>本文共分为九个主要部分:</p>
-<table>
-<thead>
-<tr>
-<th>章节</th>
-<th>内容</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I. Introduction</td>
-<td>研究背景、问题意识、主要发现和文献贡献</td>
-</tr>
-<tr>
-<td>II. Generative AI and Large Language Models</td>
-<td>技术背景:LLM的技术原理和经济影响</td>
-</tr>
-<tr>
-<td>III. Our Setting: LLMs for Customer Support</td>
-<td>研究环境:客服行业和AI系统设计</td>
-</tr>
-<tr>
-<td>IV. Deployment, Data, and Empirical Strategy</td>
-<td>部署过程、数据和实证策略</td>
-</tr>
-<tr>
-<td>V. Main Results</td>
-<td>主要结果:总体生产率效应和异质性分析</td>
-</tr>
-<tr>
-<td>VI. Adherence, Learning, Topic Handling, and Conversational Change</td>
-<td>机制分析:依从性、学习、话题处理和对话变化</td>
-</tr>
-<tr>
-<td>VII. Effects on Customers and Agents</td>
-<td>AI对客户和客服人员体验的影响</td>
-</tr>
-<tr>
-<td>VIII. Discussion</td>
-<td>讨论和局限性</td>
-</tr>
-<tr>
-<td>IX. Conclusion</td>
-<td>结论</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="3-正文-逻辑梳理">3. 正文(逻辑梳理)</h2>
-<h3 id="背景">背景</h3>
-<p><strong>传统IT技术与生成式AI的核心区别</strong>:</p>
-<ul>
-<li><strong>传统IT</strong>:需要明确的、详细的指令来将输入转化为输出</li>
-<li><strong>机器学习</strong>:通过示例推断指令,能够执行即使没有明确指令的任务</li>
-<li><strong>生成式AI</strong>:不需要明确指令来执行任务,能从大量数据中学习模型并生成新内容</li>
-</ul>
-<p><strong>客服行业的特殊性</strong>:</p>
-<ul>
-<li>客户对话可以被视为一系列模式匹配问题</li>
-<li>需要结合产品知识、问题解决能力和处理沮丧客户的能力</li>
-<li>对话被广泛记录和数字化,适合LLM微调</li>
-</ul>
-<h3 id="挑战">挑战</h3>
-<ol>
-<li>
-<p><strong>真实世界环境的复杂性</strong>:实验室环境与现实世界的差异,AI可能遇到不可预测的问题</p>
-</li>
-<li>
-<p><strong>人机协作的困难</strong>:先前研究表明,集成AI的决策支持系统往往表现不如单独依赖人类或AI的系统</p>
-</li>
-<li>
-<p><strong>有效组合人类和AI专业知识的难度</strong>:AI建议何时有效、何时无效的判断困难</p>
-</li>
-<li>
-<p><strong>组织因素</strong>:有前景的技术可能因需要互补的组织投资、技能发展或业务流程重新设计而在实践中效果有限</p>
-</li>
-</ol>
-<h3 id="方法-数据集要突出">方法(数据集要突出)</h3>
-<p><strong>数据来源</strong>:</p>
-<ul>
-<li>财富500强企业,销售中小企业业务流程软件</li>
-<li>3,006,395次客户对话</li>
-<li>5,172名客服人员</li>
-<li>1,200万次聊天(后AI时期)</li>
-<li>89%的客服人员位于菲律宾,其余主要在美国和其他国家</li>
-</ul>
-<p><strong>AI系统</strong>:</p>
-<ul>
-<li>基于GPT-3的对话助手</li>
-<li>实时生成响应建议和内部文档链接</li>
-<li>设计为增强(而非取代)人类客服</li>
-</ul>
-<p><strong>关键绩效指标(KPIs)</strong>:</p>
-<table>
-<thead>
-<tr>
-<th>指标</th>
-<th>缩写</th>
-<th>定义</th>
-<th>基准均值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>每小时解决数</td>
-<td>RPH</td>
-<td>每小时成功解决的客户问题数</td>
-<td>2.1</td>
-</tr>
-<tr>
-<td>平均处理时间</td>
-<td>AHT</td>
-<td>完成一次聊天的平均时间</td>
-<td>41分钟</td>
-</tr>
-<tr>
-<td>聊天/小时</td>
-<td>CPH</td>
-<td>每小时处理的聊天数(考虑多任务)</td>
-<td>-</td>
-</tr>
-<tr>
-<td>解决率</td>
-<td>RR</td>
-<td>成功解决的对话比例</td>
-<td>82%</td>
-</tr>
-<tr>
-<td>净推荐值</td>
-<td>NPS</td>
-<td>客户满意度指标</td>
-<td>79</td>
-</tr>
-</tbody>
-</table>
-<p><strong>实证策略</strong>:</p>
-<ul>
-<li>
-<p><strong>标准双重差分</strong>(Difference-in-Differences)<br>
-$${y_{it} = \delta_t + \alpha_i + \beta AI_{it} + \gamma X_{it} + \epsilon_{it}}$$</p>
-</li>
-<li>
-<p>控制年月固定效应、客服人员固定效应和客服任期固定效应</p>
-</li>
-<li>
-<p>使用Sun and Abraham (2021)的交互加权(IW)估计量处理异质性处理效应</p>
-</li>
-</ul>
-<h3 id="结果-Results">结果(Results)</h3>
-<p><strong>主要发现1:总体生产力效应</strong></p>
-<p>AI assistance使客服人员生产力<strong>平均提高15%</strong>:</p>
-<ul>
-<li>每小时解决数(RPH):增加0.30(15.2%)</li>
-<li>平均处理时间(AHT):减少3.7分钟(8.5%)</li>
-<li>每小时聊天数(CPH):增加0.37(15%)</li>
-<li>解决率(RR):小幅度增加1.3个百分点(不显著)</li>
-<li>客户满意度(NPS):无显著变化</li>
-</ul>
-<p><strong>主要发现2:异质性效应</strong></p>
-<table>
-<thead>
-<tr>
-<th>工人类型</th>
-<th>RPH变化</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>最低技能五分位数</td>
-<td>+36%</td>
-<td>大幅提升</td>
-</tr>
-<tr>
-<td>最高技能五分位数</td>
-<td>无显著变化</td>
-<td>效果甚微</td>
-</tr>
-<tr>
-<td>不满1个月任期</td>
-<td>+34%</td>
-<td>新人获益最大</td>
-</tr>
-<tr>
-<td>超过1年任期</td>
-<td>无显著变化</td>
-<td>老人几乎无收益</td>
-</tr>
-</tbody>
-</table>
-<p><strong>关键发现</strong>:有2个月任期的AI辅助客服人员表现与超过6个月任期的非AI辅助客服人员相当_AI assistance显著加速了学习曲线.</p>
-<p><strong>主要发现3:最佳实践的捕捉与传播</strong></p>
-<ul>
-<li>遵循AI建议更多的客服人员获得更大的生产力提升</li>
-<li>AI对"中等罕见问题"(moderately rare problems)效果最大_这些问题人类经验较少但AI有足够训练数据</li>
-<li>AI改善了客服人员的英语流利程度,特别是对国际代理</li>
-</ul>
-<p><strong>主要发现4:客户体验改善</strong></p>
-<ul>
-<li>客户更有礼貌,更少要求与经理交流</li>
-<li>人工流失率下降,由新员工留住推动</li>
-</ul>
-<hr>
-<h2 id="4-结论-Conclusion">4. 结论(Conclusion)</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol>
-<li>
-<p><strong>生成式AI显著提高工人生产力</strong>:平均提高15%,由速度提升(减少处理时间)和多任务能力增强驱动</p>
-</li>
-<li>
-<p><strong>AI对低技能和低经验工人帮助最大</strong>:与先前IT技术研究结论相反,AI帮助缩小了技能差距而非扩大</p>
-</li>
-<li>
-<p><strong>AI捕捉并传播了高绩效工人的最佳实践</strong>:使低技能工人能够学习原本需要多年经验才能获得的技能</p>
-</li>
-<li>
-<p><strong>持久性学习效应</strong>:即使在AI不可用期间(如系统故障),接受过AI辅助的工人仍保持生产力提升</p>
-</li>
-<li>
-<p><strong>改善了工作体验</strong>:减少人员流失,特别是新员工流失</p>
-</li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol>
-<li>提供了生成式AI在真实工作场所大规模部署的首批因果证据</li>
-<li>揭示了AI如何改变不同技能水平工人的生产力分布</li>
-<li>提供了关于人机协作机制(依从性、学习、沟通模式)的深入证据</li>
-<li>强调了劳动市场影响方面需要考虑的长期动态</li>
-</ol>
-<hr>
-<h2 id="5-未来研究方向-Future-work">5. 未来研究方向(Future work)</h2>
-<h3 id="文献提及的未来研究">文献提及的未来研究</h3>
-<ol>
-<li>
-<p><strong>更长期效应</strong>:本研究捕捉的是中期效应,长期来看公司可能会调整招聘策略或开发更强大的AI系统</p>
-</li>
-<li>
-<p><strong>总体就业和工资效应</strong>:本研究未涉及总体就业或工资变化,需要更多研究</p>
-</li>
-<li>
-<p><strong>跨职业劳动力需求变化</strong>:虽然AI可能增加职业内低技能劳动力需求,但均衡响应可能导致跨职业转移,最终有利于高技能工人</p>
-</li>
-</ol>
-<h3 id="作者思考的下一步研究">作者思考的下一步研究</h3>
-<ol>
-<li>
-<p><strong>AI对最高技能工人的长期影响</strong>:当前最高技能工人增加AI依赖性可能减少未来AI模型对新问题的效果,需要长期追踪</p>
-</li>
-<li>
-<p><strong>跨行业推广性</strong>:客服行业的结论是否适用于其他行业(如法律咨询、医疗诊断、金融分析)?</p>
-</li>
-<li>
-<p><strong>配套培训和组织变革</strong>:什么样的配套培训和组织结构能最大化AI效果?</p>
-</li>
-<li>
-<p><strong>对工资不平等的整体影响</strong>:尽管本研究显示AI缩小了职业内差距,但跨职业效应和对总体工资结构的影响仍需研究</p>
-</li>
-<li>
-<p><strong>AI质量维护</strong>:随着高技能工人增加依赖性,AI训练数据的多样性可能下降,如何维护AI质量?</p>
-</li>
-</ol>
-<hr>
-<h2 id="6-学术思考">6. 学术思考</h2>
-<h3 id="核心学术问题">核心学术问题</h3>
-<ol>
-<li>
-<p><strong>技能偏向性技术变革(SBTC)的逆转?</strong></p>
-<ul>
-<li>先前研究证明IT技术补充高技能工人、替代低技能工人</li>
-<li>本研究显示生成式AI具有相反效果_补充低技能工人</li>
-<li>这是否意味着生成式AI代表了技术变革的新范式?</li>
-</ul>
-</li>
-<li>
-<p><strong>最佳实践的边际价值递减</strong></p>
-<ul>
-<li>AI对中等罕见问题效果最大</li>
-<li>对于最常见问题,人类已经足够熟练</li>
-<li>对于极罕见问题,AI训练数据不足</li>
-<li>这是否意味着存在一个"最佳实践库"被AI完全捕捉的临界点?</li>
-</ul>
-</li>
-<li>
-<p><strong>人类技能的路径依赖</strong></p>
-<ul>
-<li>即使AI可及性提高,高技能工人仍保持高产出</li>
-<li>但高技能工人的AI依赖性也在增加</li>
-<li>这是否意味着高技能工人正在将技能"外包"给AI,长期可能导致人类专业知识的退化?</li>
-</ul>
-</li>
-<li>
-<p><strong>学习vs依赖的边界</strong></p>
-<ul>
-<li>研究发现持久性学习效应(即使AI不可用也能保持生产力)</li>
-<li>但也有研究表明GPS导航会导致空间导航能力退化</li>
-<li>什么条件下AI辅助会产生真正的学习而非依赖?</li>
-</ul>
-</li>
-<li>
-<p><strong>生产力量化悖论</strong></p>
-<ul>
-<li>速度和数量通常存在权衡</li>
-<li>但本文发现AI同时提高了速度和某些质量指标</li>
-<li>这是否意味着传统经济学的边际分析框架需要修正?</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2 id="7-下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
-<ol>
-<li>
-<p><strong>这篇论文的识别策略是否存在内生性问题?</strong> 管理者选择哪些客服人员优先获得AI访问权限,这是否会导致估计偏误?作者如何处理这个问题?</p>
-</li>
-<li>
-<p><strong>实验设计细节</strong>:作者在文中提到进行了RCT实验,但控制组信息缺失.这对因果推断的有效性有何影响?</p>
-</li>
-<li>
-<p><strong>异质性效应的机制</strong>:为什么最高技能工人在某些质量指标上反而下降?是因为他们过度依赖AI建议,还是因为遵循AI建议减少了他们的创造性贡献?</p>
-</li>
-<li>
-<p><strong>对劳动市场的宏观意义</strong>:尽管本研究显示AI提高了低技能工人的个体生产力,Autor, Levy, and Murnane (2003)和Acemoglu and Restrepo (2018)讨论的跨职业替代效应如何整合?</p>
-</li>
-<li>
-<p><strong>AI对工资的直接影响</strong>:研究显示人员流失减少(特别是新员工),但没有工资数据.生产力提升如何在公司和工人之间分配?</p>
-</li>
-<li>
-<p><strong>跨文化适用性</strong>:研究主要在菲律宾(呼叫中心外包中心)进行,其结论是否适用于其他文化和工作环境?</p>
-</li>
-<li>
-<p><strong>AI系统本身的学习vs静态分析</strong>:研究分析不同时间采用者的效果,发现类似结果.但AI系统本身在更新迭代,这些版本变化对结果的影响如何?</p>
-</li>
-<li>
-<p><strong>对其他行业的推广性</strong>:客服行业对对话式AI高度结构化,其他行业(如医疗诊断、法律咨询、创意产业)是否会有类似效果?</p>
-</li>
-<li>
-<p><strong>长期人力资本积累</strong>:虽然短期内生产力提升,但长期来看工人的专业技能是否会可能退化?是否有类似"技能锈蚀"(skill rot)的风险?</p>
-</li>
-<li>
-<p><strong>组织的适应性反应</strong>:公司是否会因为新员工上手更快而改变招聘策略?是否会导致整体劳动力构成的改变?</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>劳动经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>A Practical Guide to Shift-Share Instruments 论文笔记 — Borusyak, Hull &amp; Jaravel</title>
     <url>/posts/boru2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -4370,6 +3985,391 @@ $${y_{it} = \delta_t + \alpha_i + \beta AI_{it} + \gamma X_{it} + \epsilon_{it}}
         <tag>论文笔记</tag>
         <tag>计量经济学</tag>
         <tag>工具变量</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Generative AI at Work — 深度分析 — Brynjolfsson Et Al.</title>
+    <url>/posts/bryn2025/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Generative AI at Work</li>
+<li><strong>作者</strong>: Erik Brynjolfsson(Stanford University, MIT), Danielle Li(MIT), Lindsey Raymond(MIT)</li>
+<li><strong>类型</strong>: 论文笔记 / 劳动经济学</li>
+<li><strong>出版年份</strong>: 2025</li>
+<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics, Volume 140, Issue 2, Pages 889-942</li>
+<li><strong>难度评估</strong>: 中 - 需要劳动经济学和实证方法基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言-背景和意义">1. 引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>生成式人工智能(Generative AI)</strong> 是一类能够基于已有数据模型生成新内容(如文本、图像、音乐、视频)的机器学习技术.本文聚焦于大型语言模型(LLM),这是一种专门处理序列数据的神经网络模型,通过学习预测序列中的下一个词来生成文本.GPT-3是本研究的核心技术基础.</p>
+<p><strong>客服行业特征</strong>:客服行业是AI采用率最高的行业之一(Chui et al. 2021).该行业面临高员工流动率(每年60%)、高培训成本(每个客服人员10,000-20,000美元),以及客服人员之间生产力高度差异化的挑战.</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol>
+<li>
+<p><strong>技术革命性变化</strong>:传统计算机程序需要明确的指令来执行任务,而机器学习算法通过从示例中推断指令来工作.这种差异使AI能够执行难以编程的routine任务.</p>
+</li>
+<li>
+<p><strong>实验室vs现实世界</strong>:尽管各种生成式AI工具在实验室环境中表现良好,但其在现实世界中的效果仍存在疑问_AI可能遇到不熟悉的问题、面临组织阻力,或提供误导性信息.</p>
+</li>
+<li>
+<p><strong>AI对不同技能工人的差异化影响</strong>:先前信息技术研究(如计算机和机器人技术)发现技术倾向于补充高技能工人.但生成式AI可能具有不同的效果,因为它能够捕捉和传播高绩效工人的行为模式.</p>
+</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>:生成式AI在工作场所的实际效果如何?AI是否能够捕捉和传播高绩效工人的最佳实践?AI对不同技能水平的工人影响是否相同?</p>
+<h3 id="研究意义">研究意义</h3>
+<p>本文提供了生成式AI在工作场所大规模采用的早期证据,对于理解AI对生产力、劳动市场不平等和工资的影响具有重要政策含义.</p>
+<hr>
+<h2 id="2-内容及结构-论文结构">2. 内容及结构(论文结构)</h2>
+<p>本文共分为九个主要部分:</p>
+<table>
+<thead>
+<tr>
+<th>章节</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I. Introduction</td>
+<td>研究背景、问题意识、主要发现和文献贡献</td>
+</tr>
+<tr>
+<td>II. Generative AI and Large Language Models</td>
+<td>技术背景:LLM的技术原理和经济影响</td>
+</tr>
+<tr>
+<td>III. Our Setting: LLMs for Customer Support</td>
+<td>研究环境:客服行业和AI系统设计</td>
+</tr>
+<tr>
+<td>IV. Deployment, Data, and Empirical Strategy</td>
+<td>部署过程、数据和实证策略</td>
+</tr>
+<tr>
+<td>V. Main Results</td>
+<td>主要结果:总体生产率效应和异质性分析</td>
+</tr>
+<tr>
+<td>VI. Adherence, Learning, Topic Handling, and Conversational Change</td>
+<td>机制分析:依从性、学习、话题处理和对话变化</td>
+</tr>
+<tr>
+<td>VII. Effects on Customers and Agents</td>
+<td>AI对客户和客服人员体验的影响</td>
+</tr>
+<tr>
+<td>VIII. Discussion</td>
+<td>讨论和局限性</td>
+</tr>
+<tr>
+<td>IX. Conclusion</td>
+<td>结论</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="3-正文-逻辑梳理">3. 正文(逻辑梳理)</h2>
+<h3 id="背景">背景</h3>
+<p><strong>传统IT技术与生成式AI的核心区别</strong>:</p>
+<ul>
+<li><strong>传统IT</strong>:需要明确的、详细的指令来将输入转化为输出</li>
+<li><strong>机器学习</strong>:通过示例推断指令,能够执行即使没有明确指令的任务</li>
+<li><strong>生成式AI</strong>:不需要明确指令来执行任务,能从大量数据中学习模型并生成新内容</li>
+</ul>
+<p><strong>客服行业的特殊性</strong>:</p>
+<ul>
+<li>客户对话可以被视为一系列模式匹配问题</li>
+<li>需要结合产品知识、问题解决能力和处理沮丧客户的能力</li>
+<li>对话被广泛记录和数字化,适合LLM微调</li>
+</ul>
+<h3 id="挑战">挑战</h3>
+<ol>
+<li>
+<p><strong>真实世界环境的复杂性</strong>:实验室环境与现实世界的差异,AI可能遇到不可预测的问题</p>
+</li>
+<li>
+<p><strong>人机协作的困难</strong>:先前研究表明,集成AI的决策支持系统往往表现不如单独依赖人类或AI的系统</p>
+</li>
+<li>
+<p><strong>有效组合人类和AI专业知识的难度</strong>:AI建议何时有效、何时无效的判断困难</p>
+</li>
+<li>
+<p><strong>组织因素</strong>:有前景的技术可能因需要互补的组织投资、技能发展或业务流程重新设计而在实践中效果有限</p>
+</li>
+</ol>
+<h3 id="方法-数据集要突出">方法(数据集要突出)</h3>
+<p><strong>数据来源</strong>:</p>
+<ul>
+<li>财富500强企业,销售中小企业业务流程软件</li>
+<li>3,006,395次客户对话</li>
+<li>5,172名客服人员</li>
+<li>1,200万次聊天(后AI时期)</li>
+<li>89%的客服人员位于菲律宾,其余主要在美国和其他国家</li>
+</ul>
+<p><strong>AI系统</strong>:</p>
+<ul>
+<li>基于GPT-3的对话助手</li>
+<li>实时生成响应建议和内部文档链接</li>
+<li>设计为增强(而非取代)人类客服</li>
+</ul>
+<p><strong>关键绩效指标(KPIs)</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>缩写</th>
+<th>定义</th>
+<th>基准均值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>每小时解决数</td>
+<td>RPH</td>
+<td>每小时成功解决的客户问题数</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>平均处理时间</td>
+<td>AHT</td>
+<td>完成一次聊天的平均时间</td>
+<td>41分钟</td>
+</tr>
+<tr>
+<td>聊天/小时</td>
+<td>CPH</td>
+<td>每小时处理的聊天数(考虑多任务)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>解决率</td>
+<td>RR</td>
+<td>成功解决的对话比例</td>
+<td>82%</td>
+</tr>
+<tr>
+<td>净推荐值</td>
+<td>NPS</td>
+<td>客户满意度指标</td>
+<td>79</td>
+</tr>
+</tbody>
+</table>
+<p><strong>实证策略</strong>:</p>
+<ul>
+<li>
+<p><strong>标准双重差分</strong>(Difference-in-Differences)<br>
+$${y_{it} = \delta_t + \alpha_i + \beta AI_{it} + \gamma X_{it} + \epsilon_{it}}$$</p>
+</li>
+<li>
+<p>控制年月固定效应、客服人员固定效应和客服任期固定效应</p>
+</li>
+<li>
+<p>使用Sun and Abraham (2021)的交互加权(IW)估计量处理异质性处理效应</p>
+</li>
+</ul>
+<h3 id="结果-Results">结果(Results)</h3>
+<p><strong>主要发现1:总体生产力效应</strong></p>
+<p>AI assistance使客服人员生产力<strong>平均提高15%</strong>:</p>
+<ul>
+<li>每小时解决数(RPH):增加0.30(15.2%)</li>
+<li>平均处理时间(AHT):减少3.7分钟(8.5%)</li>
+<li>每小时聊天数(CPH):增加0.37(15%)</li>
+<li>解决率(RR):小幅度增加1.3个百分点(不显著)</li>
+<li>客户满意度(NPS):无显著变化</li>
+</ul>
+<p><strong>主要发现2:异质性效应</strong></p>
+<table>
+<thead>
+<tr>
+<th>工人类型</th>
+<th>RPH变化</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>最低技能五分位数</td>
+<td>+36%</td>
+<td>大幅提升</td>
+</tr>
+<tr>
+<td>最高技能五分位数</td>
+<td>无显著变化</td>
+<td>效果甚微</td>
+</tr>
+<tr>
+<td>不满1个月任期</td>
+<td>+34%</td>
+<td>新人获益最大</td>
+</tr>
+<tr>
+<td>超过1年任期</td>
+<td>无显著变化</td>
+<td>老人几乎无收益</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键发现</strong>:有2个月任期的AI辅助客服人员表现与超过6个月任期的非AI辅助客服人员相当_AI assistance显著加速了学习曲线.</p>
+<p><strong>主要发现3:最佳实践的捕捉与传播</strong></p>
+<ul>
+<li>遵循AI建议更多的客服人员获得更大的生产力提升</li>
+<li>AI对"中等罕见问题"(moderately rare problems)效果最大_这些问题人类经验较少但AI有足够训练数据</li>
+<li>AI改善了客服人员的英语流利程度,特别是对国际代理</li>
+</ul>
+<p><strong>主要发现4:客户体验改善</strong></p>
+<ul>
+<li>客户更有礼貌,更少要求与经理交流</li>
+<li>人工流失率下降,由新员工留住推动</li>
+</ul>
+<hr>
+<h2 id="4-结论-Conclusion">4. 结论(Conclusion)</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol>
+<li>
+<p><strong>生成式AI显著提高工人生产力</strong>:平均提高15%,由速度提升(减少处理时间)和多任务能力增强驱动</p>
+</li>
+<li>
+<p><strong>AI对低技能和低经验工人帮助最大</strong>:与先前IT技术研究结论相反,AI帮助缩小了技能差距而非扩大</p>
+</li>
+<li>
+<p><strong>AI捕捉并传播了高绩效工人的最佳实践</strong>:使低技能工人能够学习原本需要多年经验才能获得的技能</p>
+</li>
+<li>
+<p><strong>持久性学习效应</strong>:即使在AI不可用期间(如系统故障),接受过AI辅助的工人仍保持生产力提升</p>
+</li>
+<li>
+<p><strong>改善了工作体验</strong>:减少人员流失,特别是新员工流失</p>
+</li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol>
+<li>提供了生成式AI在真实工作场所大规模部署的首批因果证据</li>
+<li>揭示了AI如何改变不同技能水平工人的生产力分布</li>
+<li>提供了关于人机协作机制(依从性、学习、沟通模式)的深入证据</li>
+<li>强调了劳动市场影响方面需要考虑的长期动态</li>
+</ol>
+<hr>
+<h2 id="5-未来研究方向-Future-work">5. 未来研究方向(Future work)</h2>
+<h3 id="文献提及的未来研究">文献提及的未来研究</h3>
+<ol>
+<li>
+<p><strong>更长期效应</strong>:本研究捕捉的是中期效应,长期来看公司可能会调整招聘策略或开发更强大的AI系统</p>
+</li>
+<li>
+<p><strong>总体就业和工资效应</strong>:本研究未涉及总体就业或工资变化,需要更多研究</p>
+</li>
+<li>
+<p><strong>跨职业劳动力需求变化</strong>:虽然AI可能增加职业内低技能劳动力需求,但均衡响应可能导致跨职业转移,最终有利于高技能工人</p>
+</li>
+</ol>
+<h3 id="作者思考的下一步研究">作者思考的下一步研究</h3>
+<ol>
+<li>
+<p><strong>AI对最高技能工人的长期影响</strong>:当前最高技能工人增加AI依赖性可能减少未来AI模型对新问题的效果,需要长期追踪</p>
+</li>
+<li>
+<p><strong>跨行业推广性</strong>:客服行业的结论是否适用于其他行业(如法律咨询、医疗诊断、金融分析)?</p>
+</li>
+<li>
+<p><strong>配套培训和组织变革</strong>:什么样的配套培训和组织结构能最大化AI效果?</p>
+</li>
+<li>
+<p><strong>对工资不平等的整体影响</strong>:尽管本研究显示AI缩小了职业内差距,但跨职业效应和对总体工资结构的影响仍需研究</p>
+</li>
+<li>
+<p><strong>AI质量维护</strong>:随着高技能工人增加依赖性,AI训练数据的多样性可能下降,如何维护AI质量?</p>
+</li>
+</ol>
+<hr>
+<h2 id="6-学术思考">6. 学术思考</h2>
+<h3 id="核心学术问题">核心学术问题</h3>
+<ol>
+<li>
+<p><strong>技能偏向性技术变革(SBTC)的逆转?</strong></p>
+<ul>
+<li>先前研究证明IT技术补充高技能工人、替代低技能工人</li>
+<li>本研究显示生成式AI具有相反效果_补充低技能工人</li>
+<li>这是否意味着生成式AI代表了技术变革的新范式?</li>
+</ul>
+</li>
+<li>
+<p><strong>最佳实践的边际价值递减</strong></p>
+<ul>
+<li>AI对中等罕见问题效果最大</li>
+<li>对于最常见问题,人类已经足够熟练</li>
+<li>对于极罕见问题,AI训练数据不足</li>
+<li>这是否意味着存在一个"最佳实践库"被AI完全捕捉的临界点?</li>
+</ul>
+</li>
+<li>
+<p><strong>人类技能的路径依赖</strong></p>
+<ul>
+<li>即使AI可及性提高,高技能工人仍保持高产出</li>
+<li>但高技能工人的AI依赖性也在增加</li>
+<li>这是否意味着高技能工人正在将技能"外包"给AI,长期可能导致人类专业知识的退化?</li>
+</ul>
+</li>
+<li>
+<p><strong>学习vs依赖的边界</strong></p>
+<ul>
+<li>研究发现持久性学习效应(即使AI不可用也能保持生产力)</li>
+<li>但也有研究表明GPS导航会导致空间导航能力退化</li>
+<li>什么条件下AI辅助会产生真正的学习而非依赖?</li>
+</ul>
+</li>
+<li>
+<p><strong>生产力量化悖论</strong></p>
+<ul>
+<li>速度和数量通常存在权衡</li>
+<li>但本文发现AI同时提高了速度和某些质量指标</li>
+<li>这是否意味着传统经济学的边际分析框架需要修正?</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="7-下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
+<ol>
+<li>
+<p><strong>这篇论文的识别策略是否存在内生性问题?</strong> 管理者选择哪些客服人员优先获得AI访问权限,这是否会导致估计偏误?作者如何处理这个问题?</p>
+</li>
+<li>
+<p><strong>实验设计细节</strong>:作者在文中提到进行了RCT实验,但控制组信息缺失.这对因果推断的有效性有何影响?</p>
+</li>
+<li>
+<p><strong>异质性效应的机制</strong>:为什么最高技能工人在某些质量指标上反而下降?是因为他们过度依赖AI建议,还是因为遵循AI建议减少了他们的创造性贡献?</p>
+</li>
+<li>
+<p><strong>对劳动市场的宏观意义</strong>:尽管本研究显示AI提高了低技能工人的个体生产力,Autor, Levy, and Murnane (2003)和Acemoglu and Restrepo (2018)讨论的跨职业替代效应如何整合?</p>
+</li>
+<li>
+<p><strong>AI对工资的直接影响</strong>:研究显示人员流失减少(特别是新员工),但没有工资数据.生产力提升如何在公司和工人之间分配?</p>
+</li>
+<li>
+<p><strong>跨文化适用性</strong>:研究主要在菲律宾(呼叫中心外包中心)进行,其结论是否适用于其他文化和工作环境?</p>
+</li>
+<li>
+<p><strong>AI系统本身的学习vs静态分析</strong>:研究分析不同时间采用者的效果,发现类似结果.但AI系统本身在更新迭代,这些版本变化对结果的影响如何?</p>
+</li>
+<li>
+<p><strong>对其他行业的推广性</strong>:客服行业对对话式AI高度结构化,其他行业(如医疗诊断、法律咨询、创意产业)是否会有类似效果?</p>
+</li>
+<li>
+<p><strong>长期人力资本积累</strong>:虽然短期内生产力提升,但长期来看工人的专业技能是否会可能退化?是否有类似"技能锈蚀"(skill rot)的风险?</p>
+</li>
+<li>
+<p><strong>组织的适应性反应</strong>:公司是否会因为新员工上手更快而改变招聘策略?是否会导致整体劳动力构成的改变?</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>劳动经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -6001,282 +6001,6 @@ Zotero Item Key:: LDPJ5VUP</p>
       </tags>
   </entry>
   <entry>
-    <title>&lt;玉米与人口&gt;深度阅读笔记 — Chen &amp; Kung</title>
-    <url>/posts/chen2016/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Of maize and men: the effect of a New World crop on population and economic growth in China</li>
-<li><strong>作者</strong>: Shuo Chen, James Kai-sing Kung</li>
-<li><strong>类型</strong>: 论文笔记 / 经济史 / 人口史 / 计量史学</li>
-<li><strong>出版年份</strong>: 2016</li>
-<li><strong>出版机构/期刊</strong>: Journal of Economic Growth</li>
-<li><strong>DOI</strong>: 10.1007/s10887-016-9125-8</li>
-<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量史学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言-马尔萨斯陷阱与中国">引言:马尔萨斯陷阱与中国</h2>
-<p>本研究聚焦于17世纪至20世纪初的中国,探讨在新大陆作物_特别是玉米_引入后,中国是否仍然深陷"马尔萨斯陷阱",以及这种新的农业技术对人口和经济增长产生了何种影响.</p>
-<h3 id="领域基础知识">领域基础知识</h3>
-<ol>
-<li>
-<p><strong>马尔萨斯陷阱 (Malthusian Trap):</strong> 人口总是倾向于以几何级数增长,而食物生产却只能以算术级数增长.任何技术进步或土地扩张带来的食物增加,最终都会被更快增长的人口所消耗殆尽.</p>
-<ul>
-<li><strong>积极抑制 (Positive Checks):</strong> 增加死亡率的因素,如饥荒、瘟疫和战争.</li>
-<li><strong>预防性抑制 (Preventive Checks):</strong> 降低出生率的因素,如晚婚、禁欲或生育控制.</li>
-</ul>
-</li>
-<li>
-<p><strong>现代经济增长 (Modern Economic Growth):</strong> 人均收入能够持续、快速增长的经济发展阶段.通常伴随着工业化、技术创新、教育水平提升、人口结构转变以及城市化进程.</p>
-</li>
-<li>
-<p><strong>哥伦布大交换 (Columbian Exchange):</strong> 15世纪末哥伦布发现新大陆后,欧洲、非洲和美洲之间动植物、病菌、思想和人口的大规模交流.</p>
-</li>
-<li>
-<p><strong>大分流 (Great Divergence):</strong> 18世纪以来,西方欧洲(特别是英国)与东亚(特别是中国)在经济发展道路上出现的分岔.</p>
-</li>
-</ol>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol>
-<li>
-<p><strong>中国的人口爆炸性增长与人均收入停滞:</strong></p>
-<ul>
-<li>从1500年的1.3亿人口到1900年的4亿人口,中国人口在400年间几乎增长了两倍.然而,根据Maddison (2001) 的数据,中国的人均GDP却长期停滞在约600美元(经调整),处于温饱水平.</li>
-<li>当时中国处于一种"高压人口体制",生产力的任何增长都极有可能被人口增长以远高于欧洲的速度所转化和消耗.</li>
-</ul>
-</li>
-<li>
-<p><strong>新大陆作物在旧世界的影响_以马铃薯为例:</strong></p>
-<ul>
-<li>Nunn 和 Qian (2011) 的研究发现,马铃薯的引入在1700-1900年间使旧世界人口增长了25-26%,城市化率提高了27-34%.</li>
-<li>中国也引入了三种主要的新大陆作物_玉米、甘薯和马铃薯.其中玉米因其对中国地理条件的适应性(抗旱、耐寒,适合山地和丘陵种植),以及数据可得性,成为本研究的重点.</li>
-</ul>
-</li>
-<li>
-<p><strong>中国未能工业化之谜:</strong></p>
-<ul>
-<li>传统观点认为是中国农业剩余不足以支撑工业化.</li>
-<li>本研究观点认为,人口增长是农业生产力提高(部分归因于玉米的引入)的内生结果,而非导致农业剩余不足的根本原因.</li>
-</ul>
-</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<ul>
-<li><strong>新大陆作物(特别是玉米)的引入,是否帮助中国摆脱了马尔萨斯陷阱,实现了人口和经济增长?</strong></li>
-<li><strong>或者,玉米的引入是否仅仅导致了人口增长,而人均收入和城市化水平仍然停滞不前?</strong></li>
-<li><strong>与欧洲马铃薯的经验相比,中国玉米的引入为何产生了不同的经济增长轨迹?</strong></li>
-</ul>
-<h3 id="研究意义">研究意义</h3>
-<ol>
-<li>为马尔萨斯理论提供了丰富的经验支持</li>
-<li>对"统一增长理论"的重要贡献</li>
-<li>深化了对中欧"大分流"原因的理解</li>
-<li>构建了独特的历史数据集</li>
-<li>方法论上的严谨性</li>
-</ol>
-<h2 id="内容及结构">内容及结构</h2>
-<ol>
-<li>引言 (Introduction)</li>
-<li>玉米在中国的传播,1600-1910年 (The diffusion of Maize in China)</li>
-<li>数据和测量 (Data and measurement)</li>
-<li>估计策略和实证结果 (Estimation strategy and empirical results)</li>
-<li>有效性和稳健性检验 (Validity and robustness checks)</li>
-<li>人口增长而无经济发展 (Population growth without economics development)</li>
-<li>结论 (Conclusion)</li>
-</ol>
-<h2 id="数据集">数据集</h2>
-<ul>
-<li><strong>地理单位:</strong> 267个"府"(相当于今天的地级市),涵盖中国18个省</li>
-<li><strong>时间跨度:</strong> 1600年至1910年</li>
-</ul>
-<p><strong>主要数据来源:</strong></p>
-<ol>
-<li>玉米种植(核心自变量):查阅了1119卷府级地方志</li>
-<li>人口密度(核心因变量):来源于梁方仲 (1980) 和曹树基 (2000) 的历史人口数据</li>
-<li>内战和瘟疫:来源于&lt;中国历代战争年表&gt;和宋正海 (1992) 的灾害记录</li>
-<li>粮食价格:来源于清代粮食价格数据库</li>
-<li>城市化率:来源于曹树基 (2000) 和Stauffer (1922) 的数据</li>
-<li>实际工资:来源于清代借贷纠纷案件的判例</li>
-</ol>
-<h2 id="核心方法-差分中差分-Difference-in-Differences-DID">核心方法:差分中差分 (Difference-in-Differences, DID)</h2>
-<p><strong>基本思想:</strong></p>
-<ol>
-<li><strong>“处理”:</strong> 玉米在某个府开始种植</li>
-<li><strong>“处理组”:</strong> 玉米开始种植的府</li>
-<li><strong>“对照组”:</strong> 尚未开始种植玉米的府</li>
-<li><strong>“处理前"与"处理后”:</strong> 基于玉米采用年份划分的时间段</li>
-</ol>
-<p><strong>计量模型:</strong></p>
-<p>$$\text{popden}<em>{it} = \alpha \text{Maize}</em>{it} + \beta X_{it} + f_i + p_t + \epsilon_{it}$$</p>
-<ul>
-<li>$\text{popden}_{it}$:府 $i$ 在时期 $t$ 的人口密度(取自然对数)</li>
-<li>$\text{Maize}_{it}$:核心解释变量,如果府 $i$ 在时期 $t$ 已经采用了玉米则为1,否则为0.其系数 $\alpha$ 是本研究关注的核心参数</li>
-<li>$X_{it}$:一系列控制变量,包括战争和瘟疫的发生频率</li>
-<li>$f_i$:<strong>府固定效应</strong></li>
-<li>$p_t$:<strong>时期固定效应</strong></li>
-<li>$\epsilon_{it}$:误差项</li>
-</ul>
-<p><strong>DID方法的关键假设:平行趋势假设 (Parallel Trend Assumption).</strong> 即在没有玉米种植的情况下,玉米采用区和非采用区的人口密度变化趋势应该是平行的.</p>
-<h2 id="玉米扩散机制">玉米扩散机制</h2>
-<ul>
-<li><strong>引入路线:</strong> 16世纪中叶,玉米经由三条路线传入中国:丝绸之路(进入甘肃)、印度/缅甸(进入云南)、葡萄牙海路(进入福建)</li>
-<li><strong>地理适宜性:</strong> 中国超过55%的土地适宜种植玉米(相比甘薯20%,马铃薯10%)</li>
-<li><strong>扩散模式:</strong> 早期(前200年)扩散缓慢,1750年后扩散速度显著加快,到20世纪初几乎遍布全国</li>
-<li><strong>影响:</strong> 玉米种植面积和产量大幅增加,被誉为继占城稻引入后的"第二次农业革命"</li>
-</ul>
-<h2 id="稳健性检验">稳健性检验</h2>
-<ol>
-<li>府特异性时间趋势</li>
-<li>标准误聚类:使用Conley标准误</li>
-<li>空间计量方法:广义空间二阶段最小二乘法(GS2SLS)</li>
-<li>子样本分析:限制样本到华北地区(北纬33度以北)</li>
-<li>离群值和数据敏感性</li>
-<li>粮食价格验证</li>
-</ol>
-<h2 id="主要结果">主要结果</h2>
-<h3 id="1-玉米显著促进了中国人口增长">1. 玉米显著促进了中国人口增长</h3>
-<ul>
-<li><strong>基线回归 (表3):</strong> 玉米种植使府级人口密度增加了约 <strong>9.9%</strong></li>
-<li><strong>量化贡献:</strong> 在1776-1910年间,玉米种植导致中国人口增长了约 <strong>18.77%</strong></li>
-<li><strong>机制:</strong> 玉米引入确实增加了粮食供给,导致粮食价格下降(玉米种植后粮食价格下降3.7%)</li>
-</ul>
-<h3 id="2-玉米未能带来显著的经济发展">2. 玉米未能带来显著的经济发展</h3>
-<ul>
-<li><strong>城市化率:</strong> 玉米种植对府级城市化率没有统计学上的显著影响</li>
-<li><strong>实际工资:</strong> 玉米种植对府级农业长期雇工的实际工资也没有统计学上的显著影响</li>
-<li><strong>长期效应:</strong> 即使考虑滞后一期的玉米种植效应,对城市化率和实际工资的影响仍然不显著</li>
-</ul>
-<h3 id="3-与欧洲马铃薯的对比">3. 与欧洲马铃薯的对比</h3>
-<p>Nunn和Qian (2011) 发现马铃薯在旧世界不仅促进了人口增长,也推动了城市化和经济增长.本研究的发现为这一论断提供了"反例":在中国,玉米带来的大规模人口增长并非工业革命的充分条件.</p>
-<h2 id="核心发现图示">核心发现图示</h2>
-<ul>
-<li><strong>图5:</strong> 玉米采用前后人口密度变化趋势,验证了平行趋势假设,并显示采用后人口密度显著上升</li>
-<li><strong>图6:</strong> 玉米采用前后战乱发生频率变化趋势</li>
-<li><strong>图8:</strong> 玉米采用前后粮食价格变化趋势</li>
-<li><strong>图9:</strong> 玉米采用前后城市化率变化趋势,显示没有显著变化</li>
-<li><strong>图11:</strong> 玉米采用前后实际工资变化趋势,显示没有显著变化</li>
-</ul>
-<h2 id="结论">结论</h2>
-<ol>
-<li>
-<p><strong>玉米显著促进了中国人口增长,但未能提升人均收入:</strong> 玉米的广泛种植在1776-1910年间使中国人口增加了近19%.然而,这一农业生产力的提升并未转化为人均收入的显著增加,也未能推动城市化进程或提高实际工资水平.</p>
-</li>
-<li>
-<p><strong>中国在18-19世纪仍深陷马尔萨斯陷阱:</strong> 尽管引入了具有革命性潜力的新农业技术,中国经济仍然未能摆脱马尔萨斯力量的束缚.</p>
-</li>
-<li>
-<p><strong>与欧洲经验形成对比,为"大分流"提供反例:</strong> 这强调了大规模人口增长并非工业革命或经济现代化的充分条件.</p>
-</li>
-</ol>
-<p><strong>对领域的贡献:</strong> 强化了马尔萨斯理论的实证基础、深化了对统一增长理论的理解、为历史经济学研究提供了宝贵的数据和方法、拓宽了对"哥伦布大交换"影响的认知</p>
-<h2 id="未来研究方向">未来研究方向</h2>
-<h3 id="文献中提及的方向">文献中提及的方向</h3>
-<ol>
-<li>其他新大陆作物的影响:由于数据限制,本文只研究了玉米</li>
-<li>更细致的区域异质性分析:不同区域的社会经济结构和制度环境差异巨大</li>
-</ol>
-<h3 id="进一步思考">进一步思考</h3>
-<ol>
-<li>玉米引入对中国社会结构和制度变迁的深层影响</li>
-<li>中欧"大分流"中技术扩散与制度环境的比较研究</li>
-<li>长期环境变化对新大陆作物效应的调节</li>
-<li>玉米与地方经济专业化和市场整合</li>
-<li>马尔萨斯陷阱中的"质量-数量权衡"</li>
-</ol>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>**"马尔萨斯陷阱"的衡量边界与逃逸机制的复杂性问题</li>
-<li>**新大陆作物的异质性与"次级农业革命"的可能性</li>
-<li>**微观层面的农民采纳行为与宏观效应的联系</li>
-<li>**"经济增长"代理变量的局限性与替代指标的探索</li>
-<li>**中国内部区域异质性的深层机制</li>
-</ol>
-<hr>
-<h2 id="深度评析-玉米与人-新大陆作物对中国人口与经济增长的影响">深度评析:玉米与人_新大陆作物对中国人口与经济增长的影响</h2>
-<h3 id="领域基础知识-什么是-马尔萨斯陷阱">领域基础知识:什么是"马尔萨斯陷阱"?</h3>
-<p>在18世纪工业革命之前,人类社会普遍处于"马尔萨斯陷阱"(Malthusian Trap)中.简单来说,这个理论认为:<strong>技术进步带来的产出增加,最终会被人口增长所抵消.</strong></p>
-<ul>
-<li>如果农民发明了更好的耕作方法(比如引入了高产作物),短期内粮食多了,人均收入会提高</li>
-<li>但随后,人们会生更多的孩子,或者因为营养改善导致死亡率下降</li>
-<li>最终,新增的粮食养活了更多的人,但平均到每个人头上的粮食和收入又回到了"勉强维持生存"的水平(Subsistence Level)</li>
-</ul>
-<h3 id="研究背景-新大陆作物的-哥伦布大交换">研究背景:新大陆作物的"哥伦布大交换"</h3>
-<p>1492年哥伦布发现新大陆后,玉米、番薯、马铃薯等高产作物传向全世界.学术界(如 Nunn 和 Qian)曾发现,马铃薯在欧洲不仅促进了人口增长,还通过提高农业效率促进了城市化,从而助力欧洲开启了现代经济增长(工业革命).</p>
-<h3 id="作者的问题意识-中国为什么是个例外">作者的问题意识:中国为什么是个例外?</h3>
-<p>中国在 1500 年到 1900 年间,人口从 1.3 亿激增到 4 亿,约占全球增长的三分之一,但人均 GDP 却长期停滞在 600 美元左右.作者想探究:<strong>玉米这种新技术的引入,在中国究竟是开启了"现代经济增长之门",还是仅仅让中国在马尔萨斯陷阱里越陷越深?</strong></p>
-<h2 id="内容及结构-v2">内容及结构</h2>
-<p>论文共分为七个核心部分:</p>
-<ol>
-<li>引言:提出核心议题</li>
-<li>玉米在中国的传播:梳理 1600-1910 年玉米进入中国的路径及生态适应性</li>
-<li>数据与度量:利用历史地方志、粮价、人口密度等构建 267 个府的面板数据</li>
-<li>实证策略与结果:使用"双重差分法"(DID)测算玉米对人口的影响</li>
-<li>稳健性检验:排除战乱、瘟疫及水稻改良等干扰因素</li>
-<li>经济增长分析:考察玉米对城市化率和实际工资的影响</li>
-<li>结论:总结发现</li>
-</ol>
-<h2 id="正文">正文</h2>
-<h3 id="1-背景与挑战-如何证明是-玉米-导致了人口增长">1. 背景与挑战:如何证明是"玉米"导致了人口增长?</h3>
-<p><strong>挑战:</strong> 18 世纪中国人口在增长,农业技术也在进步,但我们怎么知道人口增长是因为种了玉米?</p>
-<p><strong>解决方法:</strong> 作者利用了玉米传播的"时空差异".</p>
-<ul>
-<li><strong>空间差异:</strong> 有些府(地级市)适合种玉米,有些不适合(土地干旱程度、坡度不同)</li>
-<li><strong>时间差异:</strong> 玉米在不同府落户的时间有早有晚</li>
-</ul>
-<h3 id="2-方法-地方志里的密码">2. 方法:地方志里的密码</h3>
-<ul>
-<li><strong>核心数据集:</strong> 作者查阅了 <strong>1119 部地方志</strong>.地方志就像古代的"百科全书",如果某地的"物产"章节第一次出现了"玉蜀黍"或"包谷",作者就将其记录为该府开始采用玉米的时间</li>
-<li><strong>地理范围:</strong> 涵盖中国 18 个省的 267 个府,时间跨度 1600 年到 1910 年</li>
-</ul>
-<h3 id="3-结果一-人口-19-的贡献率">3. 结果一(人口):19% 的贡献率</h3>
-<ul>
-<li><strong>发现:</strong> 在控制了所有其他变量后,作者发现玉米的种植使得中国 1776 年至 1910 年间的人口增长了近 <strong>19%</strong></li>
-<li><strong>逻辑:</strong> 玉米耐旱、耐寒,且能在山坡地生长.它不与水稻抢夺肥沃的平原地,而是开辟了原本无法耕种的边际土地</li>
-<li><strong>粮价验证:</strong> 引入玉米后,粮价显著下降(约 3.7%),这证明了玉米确实增加了食物供应</li>
-</ul>
-<h3 id="4-结果二-经济-人口多了-钱没变多">4. 结果二(经济):人口多了,钱没变多</h3>
-<p>这是本文最核心的发现.在欧洲,高产作物促进了城市化;但在中国:</p>
-<ul>
-<li><strong>城市化率:</strong> 玉米种植对城市化率没有任何显著的正向推动.人们依然留在农村,只是人更多了</li>
-<li><strong>实际工资:</strong> 玉米种植不仅没能提高实际工资,甚至因为人口过多导致劳动力边际报酬递减</li>
-<li><strong>边际报酬递减:</strong> 就像一亩地本来 2 个人种,粮食够吃;现在种了玉米产出多了点,但也挤进来了 4 个人种,虽然总粮食多了,但平分到每个人手里的粮食并没变多</li>
-</ul>
-<h2 id="结论-v2">结论</h2>
-<ol>
-<li><strong>实证结论</strong>:玉米在中国成功引发了"人口爆炸",贡献了约五分之一的人口增长</li>
-<li><strong>理论意义</strong>:玉米作为一项"新技术",在中国遭遇了典型的<strong>马尔萨斯结局</strong>_它只创造了"更多的中国人",而没有创造"更富裕的中国人"</li>
-<li><strong>大分流解释</strong>:中国的人口密度过高,将技术红利迅速吞噬,形成了"内卷化"(Involution)的自我循环</li>
-</ol>
-<h2 id="未来研究方向-v2">未来研究方向</h2>
-<h3 id="文献中提及的方向-v2">文献中提及的方向</h3>
-<ul>
-<li>其他新大陆作物:番薯(地瓜)为中国的推广作用</li>
-<li>质量-数量权衡:探究当时中国父母为何选择生更多孩子</li>
-</ul>
-<h3 id="学术思考-v2">学术思考</h3>
-<ol>
-<li>作物特性与工业化:作物的"生态属性"是否决定了一个国家的工业化命运?</li>
-<li>制度的调节作用:如果晚清政府拥有更强的产权保护或不同的土地税制,玉米产生的粮食盈余是否有可能转化为工业资本?</li>
-<li>内卷化的现代启示:如果高科技(如 AI)的产出被某些社会因素抵消,我们会面临"数字化的马尔萨斯陷阱"吗?</li>
-</ol>
-<hr>
-<p><strong>文献信息:</strong></p>
-<ul>
-<li><strong>标题:</strong> Of maize and men: the effect of a New World crop on population and economic growth in China</li>
-<li><strong>作者:</strong> Shuo Chen, James Kai-sing Kung</li>
-<li><strong>期刊:</strong> Journal of Economic Growth, 2016, Vol. 21, Issue 1, pp. 71-99</li>
-<li><strong>DOI:</strong> 10.1007/s10887-016-9125-8</li>
-</ul>
-]]></content>
-      <categories>
-        <category>历史</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>经济史</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>The Effect of Minimum Wages on Low-Wage Jobs — 深度分析 — Cengiz Et Al.</title>
     <url>/posts/cengiz2019/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -6629,6 +6353,282 @@ $${E_{sjt} \over N_{st}} = \sum_{\tau=-3}^{4} \sum_{k=-4}^{17} \alpha_{\tau k} I
       </categories>
       <tags>
         <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>&lt;玉米与人口&gt;深度阅读笔记 — Chen &amp; Kung</title>
+    <url>/posts/chen2016/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Of maize and men: the effect of a New World crop on population and economic growth in China</li>
+<li><strong>作者</strong>: Shuo Chen, James Kai-sing Kung</li>
+<li><strong>类型</strong>: 论文笔记 / 经济史 / 人口史 / 计量史学</li>
+<li><strong>出版年份</strong>: 2016</li>
+<li><strong>出版机构/期刊</strong>: Journal of Economic Growth</li>
+<li><strong>DOI</strong>: 10.1007/s10887-016-9125-8</li>
+<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量史学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言-马尔萨斯陷阱与中国">引言:马尔萨斯陷阱与中国</h2>
+<p>本研究聚焦于17世纪至20世纪初的中国,探讨在新大陆作物_特别是玉米_引入后,中国是否仍然深陷"马尔萨斯陷阱",以及这种新的农业技术对人口和经济增长产生了何种影响.</p>
+<h3 id="领域基础知识">领域基础知识</h3>
+<ol>
+<li>
+<p><strong>马尔萨斯陷阱 (Malthusian Trap):</strong> 人口总是倾向于以几何级数增长,而食物生产却只能以算术级数增长.任何技术进步或土地扩张带来的食物增加,最终都会被更快增长的人口所消耗殆尽.</p>
+<ul>
+<li><strong>积极抑制 (Positive Checks):</strong> 增加死亡率的因素,如饥荒、瘟疫和战争.</li>
+<li><strong>预防性抑制 (Preventive Checks):</strong> 降低出生率的因素,如晚婚、禁欲或生育控制.</li>
+</ul>
+</li>
+<li>
+<p><strong>现代经济增长 (Modern Economic Growth):</strong> 人均收入能够持续、快速增长的经济发展阶段.通常伴随着工业化、技术创新、教育水平提升、人口结构转变以及城市化进程.</p>
+</li>
+<li>
+<p><strong>哥伦布大交换 (Columbian Exchange):</strong> 15世纪末哥伦布发现新大陆后,欧洲、非洲和美洲之间动植物、病菌、思想和人口的大规模交流.</p>
+</li>
+<li>
+<p><strong>大分流 (Great Divergence):</strong> 18世纪以来,西方欧洲(特别是英国)与东亚(特别是中国)在经济发展道路上出现的分岔.</p>
+</li>
+</ol>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol>
+<li>
+<p><strong>中国的人口爆炸性增长与人均收入停滞:</strong></p>
+<ul>
+<li>从1500年的1.3亿人口到1900年的4亿人口,中国人口在400年间几乎增长了两倍.然而,根据Maddison (2001) 的数据,中国的人均GDP却长期停滞在约600美元(经调整),处于温饱水平.</li>
+<li>当时中国处于一种"高压人口体制",生产力的任何增长都极有可能被人口增长以远高于欧洲的速度所转化和消耗.</li>
+</ul>
+</li>
+<li>
+<p><strong>新大陆作物在旧世界的影响_以马铃薯为例:</strong></p>
+<ul>
+<li>Nunn 和 Qian (2011) 的研究发现,马铃薯的引入在1700-1900年间使旧世界人口增长了25-26%,城市化率提高了27-34%.</li>
+<li>中国也引入了三种主要的新大陆作物_玉米、甘薯和马铃薯.其中玉米因其对中国地理条件的适应性(抗旱、耐寒,适合山地和丘陵种植),以及数据可得性,成为本研究的重点.</li>
+</ul>
+</li>
+<li>
+<p><strong>中国未能工业化之谜:</strong></p>
+<ul>
+<li>传统观点认为是中国农业剩余不足以支撑工业化.</li>
+<li>本研究观点认为,人口增长是农业生产力提高(部分归因于玉米的引入)的内生结果,而非导致农业剩余不足的根本原因.</li>
+</ul>
+</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<ul>
+<li><strong>新大陆作物(特别是玉米)的引入,是否帮助中国摆脱了马尔萨斯陷阱,实现了人口和经济增长?</strong></li>
+<li><strong>或者,玉米的引入是否仅仅导致了人口增长,而人均收入和城市化水平仍然停滞不前?</strong></li>
+<li><strong>与欧洲马铃薯的经验相比,中国玉米的引入为何产生了不同的经济增长轨迹?</strong></li>
+</ul>
+<h3 id="研究意义">研究意义</h3>
+<ol>
+<li>为马尔萨斯理论提供了丰富的经验支持</li>
+<li>对"统一增长理论"的重要贡献</li>
+<li>深化了对中欧"大分流"原因的理解</li>
+<li>构建了独特的历史数据集</li>
+<li>方法论上的严谨性</li>
+</ol>
+<h2 id="内容及结构">内容及结构</h2>
+<ol>
+<li>引言 (Introduction)</li>
+<li>玉米在中国的传播,1600-1910年 (The diffusion of Maize in China)</li>
+<li>数据和测量 (Data and measurement)</li>
+<li>估计策略和实证结果 (Estimation strategy and empirical results)</li>
+<li>有效性和稳健性检验 (Validity and robustness checks)</li>
+<li>人口增长而无经济发展 (Population growth without economics development)</li>
+<li>结论 (Conclusion)</li>
+</ol>
+<h2 id="数据集">数据集</h2>
+<ul>
+<li><strong>地理单位:</strong> 267个"府"(相当于今天的地级市),涵盖中国18个省</li>
+<li><strong>时间跨度:</strong> 1600年至1910年</li>
+</ul>
+<p><strong>主要数据来源:</strong></p>
+<ol>
+<li>玉米种植(核心自变量):查阅了1119卷府级地方志</li>
+<li>人口密度(核心因变量):来源于梁方仲 (1980) 和曹树基 (2000) 的历史人口数据</li>
+<li>内战和瘟疫:来源于&lt;中国历代战争年表&gt;和宋正海 (1992) 的灾害记录</li>
+<li>粮食价格:来源于清代粮食价格数据库</li>
+<li>城市化率:来源于曹树基 (2000) 和Stauffer (1922) 的数据</li>
+<li>实际工资:来源于清代借贷纠纷案件的判例</li>
+</ol>
+<h2 id="核心方法-差分中差分-Difference-in-Differences-DID">核心方法:差分中差分 (Difference-in-Differences, DID)</h2>
+<p><strong>基本思想:</strong></p>
+<ol>
+<li><strong>“处理”:</strong> 玉米在某个府开始种植</li>
+<li><strong>“处理组”:</strong> 玉米开始种植的府</li>
+<li><strong>“对照组”:</strong> 尚未开始种植玉米的府</li>
+<li><strong>“处理前"与"处理后”:</strong> 基于玉米采用年份划分的时间段</li>
+</ol>
+<p><strong>计量模型:</strong></p>
+<p>$$\text{popden}<em>{it} = \alpha \text{Maize}</em>{it} + \beta X_{it} + f_i + p_t + \epsilon_{it}$$</p>
+<ul>
+<li>$\text{popden}_{it}$:府 $i$ 在时期 $t$ 的人口密度(取自然对数)</li>
+<li>$\text{Maize}_{it}$:核心解释变量,如果府 $i$ 在时期 $t$ 已经采用了玉米则为1,否则为0.其系数 $\alpha$ 是本研究关注的核心参数</li>
+<li>$X_{it}$:一系列控制变量,包括战争和瘟疫的发生频率</li>
+<li>$f_i$:<strong>府固定效应</strong></li>
+<li>$p_t$:<strong>时期固定效应</strong></li>
+<li>$\epsilon_{it}$:误差项</li>
+</ul>
+<p><strong>DID方法的关键假设:平行趋势假设 (Parallel Trend Assumption).</strong> 即在没有玉米种植的情况下,玉米采用区和非采用区的人口密度变化趋势应该是平行的.</p>
+<h2 id="玉米扩散机制">玉米扩散机制</h2>
+<ul>
+<li><strong>引入路线:</strong> 16世纪中叶,玉米经由三条路线传入中国:丝绸之路(进入甘肃)、印度/缅甸(进入云南)、葡萄牙海路(进入福建)</li>
+<li><strong>地理适宜性:</strong> 中国超过55%的土地适宜种植玉米(相比甘薯20%,马铃薯10%)</li>
+<li><strong>扩散模式:</strong> 早期(前200年)扩散缓慢,1750年后扩散速度显著加快,到20世纪初几乎遍布全国</li>
+<li><strong>影响:</strong> 玉米种植面积和产量大幅增加,被誉为继占城稻引入后的"第二次农业革命"</li>
+</ul>
+<h2 id="稳健性检验">稳健性检验</h2>
+<ol>
+<li>府特异性时间趋势</li>
+<li>标准误聚类:使用Conley标准误</li>
+<li>空间计量方法:广义空间二阶段最小二乘法(GS2SLS)</li>
+<li>子样本分析:限制样本到华北地区(北纬33度以北)</li>
+<li>离群值和数据敏感性</li>
+<li>粮食价格验证</li>
+</ol>
+<h2 id="主要结果">主要结果</h2>
+<h3 id="1-玉米显著促进了中国人口增长">1. 玉米显著促进了中国人口增长</h3>
+<ul>
+<li><strong>基线回归 (表3):</strong> 玉米种植使府级人口密度增加了约 <strong>9.9%</strong></li>
+<li><strong>量化贡献:</strong> 在1776-1910年间,玉米种植导致中国人口增长了约 <strong>18.77%</strong></li>
+<li><strong>机制:</strong> 玉米引入确实增加了粮食供给,导致粮食价格下降(玉米种植后粮食价格下降3.7%)</li>
+</ul>
+<h3 id="2-玉米未能带来显著的经济发展">2. 玉米未能带来显著的经济发展</h3>
+<ul>
+<li><strong>城市化率:</strong> 玉米种植对府级城市化率没有统计学上的显著影响</li>
+<li><strong>实际工资:</strong> 玉米种植对府级农业长期雇工的实际工资也没有统计学上的显著影响</li>
+<li><strong>长期效应:</strong> 即使考虑滞后一期的玉米种植效应,对城市化率和实际工资的影响仍然不显著</li>
+</ul>
+<h3 id="3-与欧洲马铃薯的对比">3. 与欧洲马铃薯的对比</h3>
+<p>Nunn和Qian (2011) 发现马铃薯在旧世界不仅促进了人口增长,也推动了城市化和经济增长.本研究的发现为这一论断提供了"反例":在中国,玉米带来的大规模人口增长并非工业革命的充分条件.</p>
+<h2 id="核心发现图示">核心发现图示</h2>
+<ul>
+<li><strong>图5:</strong> 玉米采用前后人口密度变化趋势,验证了平行趋势假设,并显示采用后人口密度显著上升</li>
+<li><strong>图6:</strong> 玉米采用前后战乱发生频率变化趋势</li>
+<li><strong>图8:</strong> 玉米采用前后粮食价格变化趋势</li>
+<li><strong>图9:</strong> 玉米采用前后城市化率变化趋势,显示没有显著变化</li>
+<li><strong>图11:</strong> 玉米采用前后实际工资变化趋势,显示没有显著变化</li>
+</ul>
+<h2 id="结论">结论</h2>
+<ol>
+<li>
+<p><strong>玉米显著促进了中国人口增长,但未能提升人均收入:</strong> 玉米的广泛种植在1776-1910年间使中国人口增加了近19%.然而,这一农业生产力的提升并未转化为人均收入的显著增加,也未能推动城市化进程或提高实际工资水平.</p>
+</li>
+<li>
+<p><strong>中国在18-19世纪仍深陷马尔萨斯陷阱:</strong> 尽管引入了具有革命性潜力的新农业技术,中国经济仍然未能摆脱马尔萨斯力量的束缚.</p>
+</li>
+<li>
+<p><strong>与欧洲经验形成对比,为"大分流"提供反例:</strong> 这强调了大规模人口增长并非工业革命或经济现代化的充分条件.</p>
+</li>
+</ol>
+<p><strong>对领域的贡献:</strong> 强化了马尔萨斯理论的实证基础、深化了对统一增长理论的理解、为历史经济学研究提供了宝贵的数据和方法、拓宽了对"哥伦布大交换"影响的认知</p>
+<h2 id="未来研究方向">未来研究方向</h2>
+<h3 id="文献中提及的方向">文献中提及的方向</h3>
+<ol>
+<li>其他新大陆作物的影响:由于数据限制,本文只研究了玉米</li>
+<li>更细致的区域异质性分析:不同区域的社会经济结构和制度环境差异巨大</li>
+</ol>
+<h3 id="进一步思考">进一步思考</h3>
+<ol>
+<li>玉米引入对中国社会结构和制度变迁的深层影响</li>
+<li>中欧"大分流"中技术扩散与制度环境的比较研究</li>
+<li>长期环境变化对新大陆作物效应的调节</li>
+<li>玉米与地方经济专业化和市场整合</li>
+<li>马尔萨斯陷阱中的"质量-数量权衡"</li>
+</ol>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>**"马尔萨斯陷阱"的衡量边界与逃逸机制的复杂性问题</li>
+<li>**新大陆作物的异质性与"次级农业革命"的可能性</li>
+<li>**微观层面的农民采纳行为与宏观效应的联系</li>
+<li>**"经济增长"代理变量的局限性与替代指标的探索</li>
+<li>**中国内部区域异质性的深层机制</li>
+</ol>
+<hr>
+<h2 id="深度评析-玉米与人-新大陆作物对中国人口与经济增长的影响">深度评析:玉米与人_新大陆作物对中国人口与经济增长的影响</h2>
+<h3 id="领域基础知识-什么是-马尔萨斯陷阱">领域基础知识:什么是"马尔萨斯陷阱"?</h3>
+<p>在18世纪工业革命之前,人类社会普遍处于"马尔萨斯陷阱"(Malthusian Trap)中.简单来说,这个理论认为:<strong>技术进步带来的产出增加,最终会被人口增长所抵消.</strong></p>
+<ul>
+<li>如果农民发明了更好的耕作方法(比如引入了高产作物),短期内粮食多了,人均收入会提高</li>
+<li>但随后,人们会生更多的孩子,或者因为营养改善导致死亡率下降</li>
+<li>最终,新增的粮食养活了更多的人,但平均到每个人头上的粮食和收入又回到了"勉强维持生存"的水平(Subsistence Level)</li>
+</ul>
+<h3 id="研究背景-新大陆作物的-哥伦布大交换">研究背景:新大陆作物的"哥伦布大交换"</h3>
+<p>1492年哥伦布发现新大陆后,玉米、番薯、马铃薯等高产作物传向全世界.学术界(如 Nunn 和 Qian)曾发现,马铃薯在欧洲不仅促进了人口增长,还通过提高农业效率促进了城市化,从而助力欧洲开启了现代经济增长(工业革命).</p>
+<h3 id="作者的问题意识-中国为什么是个例外">作者的问题意识:中国为什么是个例外?</h3>
+<p>中国在 1500 年到 1900 年间,人口从 1.3 亿激增到 4 亿,约占全球增长的三分之一,但人均 GDP 却长期停滞在 600 美元左右.作者想探究:<strong>玉米这种新技术的引入,在中国究竟是开启了"现代经济增长之门",还是仅仅让中国在马尔萨斯陷阱里越陷越深?</strong></p>
+<h2 id="内容及结构-v2">内容及结构</h2>
+<p>论文共分为七个核心部分:</p>
+<ol>
+<li>引言:提出核心议题</li>
+<li>玉米在中国的传播:梳理 1600-1910 年玉米进入中国的路径及生态适应性</li>
+<li>数据与度量:利用历史地方志、粮价、人口密度等构建 267 个府的面板数据</li>
+<li>实证策略与结果:使用"双重差分法"(DID)测算玉米对人口的影响</li>
+<li>稳健性检验:排除战乱、瘟疫及水稻改良等干扰因素</li>
+<li>经济增长分析:考察玉米对城市化率和实际工资的影响</li>
+<li>结论:总结发现</li>
+</ol>
+<h2 id="正文">正文</h2>
+<h3 id="1-背景与挑战-如何证明是-玉米-导致了人口增长">1. 背景与挑战:如何证明是"玉米"导致了人口增长?</h3>
+<p><strong>挑战:</strong> 18 世纪中国人口在增长,农业技术也在进步,但我们怎么知道人口增长是因为种了玉米?</p>
+<p><strong>解决方法:</strong> 作者利用了玉米传播的"时空差异".</p>
+<ul>
+<li><strong>空间差异:</strong> 有些府(地级市)适合种玉米,有些不适合(土地干旱程度、坡度不同)</li>
+<li><strong>时间差异:</strong> 玉米在不同府落户的时间有早有晚</li>
+</ul>
+<h3 id="2-方法-地方志里的密码">2. 方法:地方志里的密码</h3>
+<ul>
+<li><strong>核心数据集:</strong> 作者查阅了 <strong>1119 部地方志</strong>.地方志就像古代的"百科全书",如果某地的"物产"章节第一次出现了"玉蜀黍"或"包谷",作者就将其记录为该府开始采用玉米的时间</li>
+<li><strong>地理范围:</strong> 涵盖中国 18 个省的 267 个府,时间跨度 1600 年到 1910 年</li>
+</ul>
+<h3 id="3-结果一-人口-19-的贡献率">3. 结果一(人口):19% 的贡献率</h3>
+<ul>
+<li><strong>发现:</strong> 在控制了所有其他变量后,作者发现玉米的种植使得中国 1776 年至 1910 年间的人口增长了近 <strong>19%</strong></li>
+<li><strong>逻辑:</strong> 玉米耐旱、耐寒,且能在山坡地生长.它不与水稻抢夺肥沃的平原地,而是开辟了原本无法耕种的边际土地</li>
+<li><strong>粮价验证:</strong> 引入玉米后,粮价显著下降(约 3.7%),这证明了玉米确实增加了食物供应</li>
+</ul>
+<h3 id="4-结果二-经济-人口多了-钱没变多">4. 结果二(经济):人口多了,钱没变多</h3>
+<p>这是本文最核心的发现.在欧洲,高产作物促进了城市化;但在中国:</p>
+<ul>
+<li><strong>城市化率:</strong> 玉米种植对城市化率没有任何显著的正向推动.人们依然留在农村,只是人更多了</li>
+<li><strong>实际工资:</strong> 玉米种植不仅没能提高实际工资,甚至因为人口过多导致劳动力边际报酬递减</li>
+<li><strong>边际报酬递减:</strong> 就像一亩地本来 2 个人种,粮食够吃;现在种了玉米产出多了点,但也挤进来了 4 个人种,虽然总粮食多了,但平分到每个人手里的粮食并没变多</li>
+</ul>
+<h2 id="结论-v2">结论</h2>
+<ol>
+<li><strong>实证结论</strong>:玉米在中国成功引发了"人口爆炸",贡献了约五分之一的人口增长</li>
+<li><strong>理论意义</strong>:玉米作为一项"新技术",在中国遭遇了典型的<strong>马尔萨斯结局</strong>_它只创造了"更多的中国人",而没有创造"更富裕的中国人"</li>
+<li><strong>大分流解释</strong>:中国的人口密度过高,将技术红利迅速吞噬,形成了"内卷化"(Involution)的自我循环</li>
+</ol>
+<h2 id="未来研究方向-v2">未来研究方向</h2>
+<h3 id="文献中提及的方向-v2">文献中提及的方向</h3>
+<ul>
+<li>其他新大陆作物:番薯(地瓜)为中国的推广作用</li>
+<li>质量-数量权衡:探究当时中国父母为何选择生更多孩子</li>
+</ul>
+<h3 id="学术思考-v2">学术思考</h3>
+<ol>
+<li>作物特性与工业化:作物的"生态属性"是否决定了一个国家的工业化命运?</li>
+<li>制度的调节作用:如果晚清政府拥有更强的产权保护或不同的土地税制,玉米产生的粮食盈余是否有可能转化为工业资本?</li>
+<li>内卷化的现代启示:如果高科技(如 AI)的产出被某些社会因素抵消,我们会面临"数字化的马尔萨斯陷阱"吗?</li>
+</ol>
+<hr>
+<p><strong>文献信息:</strong></p>
+<ul>
+<li><strong>标题:</strong> Of maize and men: the effect of a New World crop on population and economic growth in China</li>
+<li><strong>作者:</strong> Shuo Chen, James Kai-sing Kung</li>
+<li><strong>期刊:</strong> Journal of Economic Growth, 2016, Vol. 21, Issue 1, pp. 71-99</li>
+<li><strong>DOI:</strong> 10.1007/s10887-016-9125-8</li>
+</ul>
+]]></content>
+      <categories>
+        <category>历史</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>经济史</tag>
       </tags>
   </entry>
   <entry>
@@ -7095,101 +7095,6 @@ Zotero Item Key:: P56CV7CK</p>
       </tags>
   </entry>
   <entry>
-    <title>序列诅咒均衡 — 深度阅读笔记 — Cohen &amp; Li</title>
-    <url>/posts/cohen2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Sequential Cursed Equilibrium</li>
-<li><strong>作者</strong>: Shani Cohen (Harvard), Shengwu Li (Harvard)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3): 934-976</li>
-<li><strong>DOI</strong>: 10.1257/aer.20230309</li>
-<li><strong>难度评估</strong>: 高 - 需要博弈论、行为经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>诅咒均衡（Cursed Equilibrium, CE）</strong>：Eyster和Rabin（2005）提出的解概念，玩家忽略其他玩家行为与其类型之间的相关性。</p>
-<p><strong>扩展式博弈（Extensive-Form Games）</strong>：具有时序结构的博弈，玩家依次行动。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol>
-<li>
-<p><strong>标准博弈论假设"三思而后行"</strong>：玩家在决策时会考虑假设性事件的信息</p>
-</li>
-<li>
-<p><strong>实际行为偏离</strong>：人们经常忽略假设性事件的含义，但从观察事件中进行推断</p>
-</li>
-<li>
-<p><strong>诅咒均衡的局限性</strong>：不适用于序列博弈；对内生信息也存在curse</p>
-</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：如何修改诅咒均衡以适应扩展式博弈，使玩家能够从观察事件中学习但忽略假设事件的信息？</p>
-<hr>
-<h2 id="2-内容及结构">2. 内容及结构</h2>
-<h3 id="第一节：引言">第一节：引言</h3>
-<h3 id="第二节：定义和一般结果">第二节：定义和一般结果</h3>
-<ul>
-<li>SCE的定义和存在性</li>
-<li>同时博弈中的SCE</li>
-<li>部分诅咒</li>
-</ul>
-<h3 id="第三节：实验应用">第三节：实验应用</h3>
-<ul>
-<li>交易博弈实验</li>
-<li>成本信号博弈</li>
-<li>信息获取博弈</li>
-</ul>
-<h3 id="第四节：动态拍卖">第四节：动态拍卖</h3>
-<h3 id="第五节：讨论和结论">第五节：讨论和结论</h3>
-<hr>
-<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="标准博弈论的问题">标准博弈论的问题</h4>
-<p><strong>"三思而后行"原则（Savage 1972）</strong>：</p>
-<ul>
-<li>标准理论要求玩家在决策时考虑假设性事件的信息</li>
-<li>但实际上人们经常忽略这种信息</li>
-</ul>
-<p><strong>诅咒均衡（CE）的核心思想</strong>：</p>
-<ul>
-<li>玩家理解对手行为的边缘分布</li>
-<li>但忽略这些分布之间的相关性</li>
-</ul>
-<h4 id="诅咒均衡的两个局限性">诅咒均衡的两个局限性</h4>
-<p><strong>局限性1：不适应序列博弈</strong></p>
-<ul>
-<li>序列博弈与同时博弈有相同的贝叶斯正态形式</li>
-<li>因此CE预测相同，但这不符合直觉</li>
-</ul>
-<p><strong>局限性2：对内生信息的诅咒</strong></p>
-<h3 id="序列诅咒均衡（SCE）">序列诅咒均衡（SCE）</h3>
-<p><strong>核心创新</strong>：允许玩家对内生信息受到诅咒</p>
-<p><strong>关键洞察</strong>：玩家从观察事件中学习，但忽略假设事件的信息</p>
-<hr>
-<h2 id="4-结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol>
-<li>
-<p><strong>SCE扩展了CE到扩展式博弈</strong></p>
-</li>
-<li>
-<p><strong>解释实验证据</strong>：为关于假设性思维的实验提供理论解释</p>
-</li>
-<li>
-<p><strong>应用广泛</strong>：交易博弈、成本信号博弈、信息获取博弈、动态拍卖</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>零和思维与美国政治分歧的根源 — 深度阅读笔记 — Chinoy, Nunn, Sequeira &amp; Stantcheva</title>
     <url>/posts/chinoy2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -7473,110 +7378,90 @@ $$ZeroSum_i = \beta_{resp} \cdot RespondentExperience_i + \beta_p \cdot ParentsE
       </tags>
   </entry>
   <entry>
-    <title>工作场所性骚扰为何被低估 — 深度阅读笔记 — Dahl &amp; Knepper</title>
-    <url>/posts/dahl2026/</url>
+    <title>序列诅咒均衡 — 深度阅读笔记 — Cohen &amp; Li</title>
+    <url>/posts/cohen2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
 <ul>
-<li><strong>标题</strong>: Why Is Workplace Sexual Harassment Underreported? The Value of Outside Options amid the Threat of Retaliation</li>
-<li><strong>作者</strong>: Gordon B. Dahl (UC San Diego, NBER), Matthew Knepper (University of Georgia)</li>
+<li><strong>标题</strong>: Sequential Cursed Equilibrium</li>
+<li><strong>作者</strong>: Shani Cohen (Harvard), Shengwu Li (Harvard)</li>
 <li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3): 897-933</li>
-<li><strong>DOI</strong>: 10.1257/aer.20221703</li>
-<li><strong>难度评估</strong>: 高 - 需要劳动经济学、法律经济学、应用微观计量基础</li>
+<li><strong>来源</strong>: American Economic Review, 116(3): 934-976</li>
+<li><strong>DOI</strong>: 10.1257/aer.20230309</li>
+<li><strong>难度评估</strong>: 高 - 需要博弈论、行为经济学基础</li>
 </ul>
 <span id="more"></span>
 <hr>
 <h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
 <h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>性骚扰举报率（Underreporting）</strong>：据调查，1/28的美国工人每年报告遭受工作场所性骚扰，但只有1/11,000向EEOC提出指控。</p>
-<p><strong>报复性解雇（Retaliatory Firing）</strong>：雇主对提出指控的员工进行惩罚的行为，在性骚扰案件中越来越常见，从2000年的52%上升到2015年的72%。</p>
-<p><strong>EEOC（平等就业机会委员会）</strong>：负责执行联邦反歧视法律的机构，负责处理性骚扰投诉并判定案件是否有价值。</p>
+<p><strong>诅咒均衡（Cursed Equilibrium, CE）</strong>：Eyster和Rabin（2005）提出的解概念，玩家忽略其他玩家行为与其类型之间的相关性。</p>
+<p><strong>扩展式博弈（Extensive-Form Games）</strong>：具有时序结构的博弈，玩家依次行动。</p>
 <h3 id="研究的主要背景">研究的主要背景</h3>
 <ol>
 <li>
-<p><strong>性骚扰漏报严重</strong>：每年约500万工人受影响，但举报率极低</p>
+<p><strong>标准博弈论假设"三思而后行"</strong>：玩家在决策时会考虑假设性事件的信息</p>
 </li>
 <li>
-<p><strong>雇主报复威胁假设</strong>：雇主可能通过解雇威胁迫使受害者保持沉默</p>
+<p><strong>实际行为偏离</strong>：人们经常忽略假设性事件的含义，但从观察事件中进行推断</p>
 </li>
 <li>
-<p><strong>传统识别困难</strong>：难以测量未被报告的事件</p>
+<p><strong>诅咒均衡的局限性</strong>：不适用于序列博弈；对内生信息也存在curse</p>
 </li>
 </ol>
 <h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：为什么工作场所性骚扰长期被低估？外部选择如何影响举报决策？</p>
-<p><strong>关键洞察</strong>：外部冲击（失业率上升、UI福利削减）减少工人的外部选择价值，增加举报的机会成本，从而增加漏报</p>
+<p><strong>核心问题</strong>：如何修改诅咒均衡以适应扩展式博弈，使玩家能够从观察事件中学习但忽略假设事件的信息？</p>
 <hr>
 <h2 id="2-内容及结构">2. 内容及结构</h2>
 <h3 id="第一节：引言">第一节：引言</h3>
+<h3 id="第二节：定义和一般结果">第二节：定义和一般结果</h3>
 <ul>
-<li>问题陈述和文献综述</li>
-<li>理论假设</li>
-<li>研究贡献概述</li>
+<li>SCE的定义和存在性</li>
+<li>同时博弈中的SCE</li>
+<li>部分诅咒</li>
 </ul>
-<h3 id="第二节：制度和政策背景">第二节：制度和政策背景</h3>
+<h3 id="第三节：实验应用">第三节：实验应用</h3>
 <ul>
-<li>EEOC的性骚扰执法</li>
-<li>北卡罗来纳州UI项目削减</li>
+<li>交易博弈实验</li>
+<li>成本信号博弈</li>
+<li>信息获取博弈</li>
 </ul>
-<h3 id="第三节：数据和样本构建">第三节：数据和样本构建</h3>
-<ul>
-<li>EEOC指控数据</li>
-<li>州和行业失业数据</li>
-<li>EEO-1就业文件</li>
-<li>失业保险数据</li>
-</ul>
-<h3 id="第四节：模型">第四节：模型</h3>
-<ul>
-<li>阈值报告模型</li>
-</ul>
-<h3 id="第五节：识别策略">第五节：识别策略</h3>
-<ul>
-<li>失业率冲击</li>
-<li>UI福利削减</li>
-</ul>
-<h3 id="第六节：经济条件和性别权力差异的结果">第六节：经济条件和性别权力差异的结果</h3>
-<h3 id="第七节：UI改革的效应">第七节：UI改革的效应</h3>
-<h3 id="第八节：结论">第八节：结论</h3>
+<h3 id="第四节：动态拍卖">第四节：动态拍卖</h3>
+<h3 id="第五节：讨论和结论">第五节：讨论和结论</h3>
 <hr>
 <h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
 <h3 id="背景">背景</h3>
-<h4 id="性骚扰漏报问题">性骚扰漏报问题</h4>
+<h4 id="标准博弈论的问题">标准博弈论的问题</h4>
+<p><strong>"三思而后行"原则（Savage 1972）</strong>：</p>
 <ul>
-<li>1/28的美国工人每年报告遭受工作场所性骚扰</li>
-<li>只有1/11,000向EEOC提出指控</li>
-<li>报复性解雇从2000年的52%上升到2015年的72%</li>
+<li>标准理论要求玩家在决策时考虑假设性事件的信息</li>
+<li>但实际上人们经常忽略这种信息</li>
 </ul>
-<h3 id="理论框架">理论框架</h3>
-<p><strong>阈值报告模型</strong>：</p>
+<p><strong>诅咒均衡（CE）的核心思想</strong>：</p>
 <ul>
-<li>工人在举报的预期收益和成本之间权衡</li>
-<li>外部选择价值（失业保险、工作机会）影响机会成本</li>
-<li>失业率上升 → 外部选择价值下降 → 举报机会成本上升 → 举报率下降</li>
+<li>玩家理解对手行为的边缘分布</li>
+<li>但忽略这些分布之间的相关性</li>
 </ul>
-<h3 id="识别策略">识别策略</h3>
-<p><strong>失业率冲击</strong>：</p>
+<h4 id="诅咒均衡的两个局限性">诅咒均衡的两个局限性</h4>
+<p><strong>局限性1：不适应序列博弈</strong></p>
 <ul>
-<li>使用失业率作为外部选择价值的代理变量</li>
-<li>交错识别策略</li>
+<li>序列博弈与同时博弈有相同的贝叶斯正态形式</li>
+<li>因此CE预测相同，但这不符合直觉</li>
 </ul>
-<p><strong>UI福利削减</strong>：</p>
-<ul>
-<li>北卡罗来纳州2013年UI福利削减作为准实验</li>
-<li>提供外生冲击验证</li>
-</ul>
+<p><strong>局限性2：对内生信息的诅咒</strong></p>
+<h3 id="序列诅咒均衡（SCE）">序列诅咒均衡（SCE）</h3>
+<p><strong>核心创新</strong>：允许玩家对内生信息受到诅咒</p>
+<p><strong>关键洞察</strong>：玩家从观察事件中学习，但忽略假设事件的信息</p>
 <hr>
 <h2 id="4-结论">4. 结论</h2>
 <h3 id="核心结论">核心结论</h3>
 <ol>
 <li>
-<p><strong>外部选择影响举报决策</strong>：失业率上升和UI福利削减降低举报率</p>
+<p><strong>SCE扩展了CE到扩展式博弈</strong></p>
 </li>
 <li>
-<p><strong>报复威胁真实存在</strong>：证实了报复威胁假设</p>
+<p><strong>解释实验证据</strong>：为关于假设性思维的实验提供理论解释</p>
 </li>
 <li>
-<p><strong>政策启示</strong>：保护工人的外部选择对增加举报率至关重要</p>
+<p><strong>应用广泛</strong>：交易博弈、成本信号博弈、信息获取博弈、动态拍卖</p>
 </li>
 </ol>
 ]]></content>
@@ -7827,6 +7712,121 @@ $$ZeroSum_i = \beta_{resp} \cdot RespondentExperience_i + \beta_p \cdot ParentsE
         <tag>政治经济学</tag>
         <tag>政治选拔</tag>
         <tag>民主理论</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>工作场所性骚扰为何被低估 — 深度阅读笔记 — Dahl &amp; Knepper</title>
+    <url>/posts/dahl2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Why Is Workplace Sexual Harassment Underreported? The Value of Outside Options amid the Threat of Retaliation</li>
+<li><strong>作者</strong>: Gordon B. Dahl (UC San Diego, NBER), Matthew Knepper (University of Georgia)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(3): 897-933</li>
+<li><strong>DOI</strong>: 10.1257/aer.20221703</li>
+<li><strong>难度评估</strong>: 高 - 需要劳动经济学、法律经济学、应用微观计量基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>性骚扰举报率（Underreporting）</strong>：据调查，1/28的美国工人每年报告遭受工作场所性骚扰，但只有1/11,000向EEOC提出指控。</p>
+<p><strong>报复性解雇（Retaliatory Firing）</strong>：雇主对提出指控的员工进行惩罚的行为，在性骚扰案件中越来越常见，从2000年的52%上升到2015年的72%。</p>
+<p><strong>EEOC（平等就业机会委员会）</strong>：负责执行联邦反歧视法律的机构，负责处理性骚扰投诉并判定案件是否有价值。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol>
+<li>
+<p><strong>性骚扰漏报严重</strong>：每年约500万工人受影响，但举报率极低</p>
+</li>
+<li>
+<p><strong>雇主报复威胁假设</strong>：雇主可能通过解雇威胁迫使受害者保持沉默</p>
+</li>
+<li>
+<p><strong>传统识别困难</strong>：难以测量未被报告的事件</p>
+</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：为什么工作场所性骚扰长期被低估？外部选择如何影响举报决策？</p>
+<p><strong>关键洞察</strong>：外部冲击（失业率上升、UI福利削减）减少工人的外部选择价值，增加举报的机会成本，从而增加漏报</p>
+<hr>
+<h2 id="2-内容及结构">2. 内容及结构</h2>
+<h3 id="第一节：引言">第一节：引言</h3>
+<ul>
+<li>问题陈述和文献综述</li>
+<li>理论假设</li>
+<li>研究贡献概述</li>
+</ul>
+<h3 id="第二节：制度和政策背景">第二节：制度和政策背景</h3>
+<ul>
+<li>EEOC的性骚扰执法</li>
+<li>北卡罗来纳州UI项目削减</li>
+</ul>
+<h3 id="第三节：数据和样本构建">第三节：数据和样本构建</h3>
+<ul>
+<li>EEOC指控数据</li>
+<li>州和行业失业数据</li>
+<li>EEO-1就业文件</li>
+<li>失业保险数据</li>
+</ul>
+<h3 id="第四节：模型">第四节：模型</h3>
+<ul>
+<li>阈值报告模型</li>
+</ul>
+<h3 id="第五节：识别策略">第五节：识别策略</h3>
+<ul>
+<li>失业率冲击</li>
+<li>UI福利削减</li>
+</ul>
+<h3 id="第六节：经济条件和性别权力差异的结果">第六节：经济条件和性别权力差异的结果</h3>
+<h3 id="第七节：UI改革的效应">第七节：UI改革的效应</h3>
+<h3 id="第八节：结论">第八节：结论</h3>
+<hr>
+<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="性骚扰漏报问题">性骚扰漏报问题</h4>
+<ul>
+<li>1/28的美国工人每年报告遭受工作场所性骚扰</li>
+<li>只有1/11,000向EEOC提出指控</li>
+<li>报复性解雇从2000年的52%上升到2015年的72%</li>
+</ul>
+<h3 id="理论框架">理论框架</h3>
+<p><strong>阈值报告模型</strong>：</p>
+<ul>
+<li>工人在举报的预期收益和成本之间权衡</li>
+<li>外部选择价值（失业保险、工作机会）影响机会成本</li>
+<li>失业率上升 → 外部选择价值下降 → 举报机会成本上升 → 举报率下降</li>
+</ul>
+<h3 id="识别策略">识别策略</h3>
+<p><strong>失业率冲击</strong>：</p>
+<ul>
+<li>使用失业率作为外部选择价值的代理变量</li>
+<li>交错识别策略</li>
+</ul>
+<p><strong>UI福利削减</strong>：</p>
+<ul>
+<li>北卡罗来纳州2013年UI福利削减作为准实验</li>
+<li>提供外生冲击验证</li>
+</ul>
+<hr>
+<h2 id="4-结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol>
+<li>
+<p><strong>外部选择影响举报决策</strong>：失业率上升和UI福利削减降低举报率</p>
+</li>
+<li>
+<p><strong>报复威胁真实存在</strong>：证实了报复威胁假设</p>
+</li>
+<li>
+<p><strong>政策启示</strong>：保护工人的外部选择对增加举报率至关重要</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -11591,81 +11591,6 @@ $$\kappa_t = \sigma_D - (1-\omega_t)\eta - \sigma\phi_D(\omega_t + \tau y_t(1-\o
       </tags>
   </entry>
   <entry>
-    <title>相似工作的同酬 — 深度阅读笔记 — Gentile Passaro, Kojima &amp; Pakzad-Hurson</title>
-    <url>/posts/gentile-passaro2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Equal Pay for Similar Work</li>
-<li><strong>作者</strong>: Diego Gentile Passaro (Amazon Science), Fuhito Kojima (东京大学), Bobak Pakzad-Hurson (布朗大学)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3): 977-1013</li>
-<li><strong>DOI</strong>: 10.1257/aer.20230832</li>
-<li><strong>难度评估</strong>: 高 - 需要劳动经济学、搜索理论、计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>同工同酬法（EPSW）</strong>：要求对"相似"工作支付同等报酬，比"相同工作"更宽泛。</p>
-<p><strong>性别工资差距（Gender Wage Gap）</strong>：男性和女性工人之间的平均工资差异。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol>
-<li><strong>EPSW政策日益普遍</strong>：美国45.9%的劳动力受EPSW管辖</li>
-<li><strong>执行困难</strong>："相同工作"难以定义</li>
-<li><strong>意外的均衡效应</strong>：EPSW可能产生违背政策初衷的均衡效应</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：EPSW对劳动力市场结果的均衡效应是什么？是否会反而加剧性别工资差距？</p>
-<p><strong>关键发现</strong>：EPSW导致企业按性别隔离劳动力，在男性占多数的劳动力市场中会增加性别工资差距</p>
-<hr>
-<h2 id="2-内容及结构">2. 内容及结构</h2>
-<ol>
-<li><strong>引言</strong>: EPSW政策背景、研究问题、主要发现</li>
-<li><strong>静态模型</strong>: 设定、无EPSW均衡、EPSW均衡、工资差距效应</li>
-<li><strong>动态搜索模型</strong>: 搜索摩擦和再配置摩擦、动态均衡</li>
-<li><strong>实证分析</strong>: 智利2009年EPSW政策、因果识别</li>
-<li><strong>结论</strong></li>
-</ol>
-<hr>
-<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="EPSW-vs-EPEW">EPSW vs EPEW</h4>
-<p><strong>EPEW</strong>：要求"相同工作"获得相同报酬<br>
-<strong>EPSW</strong>：更宽泛，要求对"相似工作"支付同等报酬</p>
-<h3 id="理论模型">理论模型</h3>
-<h4 id="静态模型">静态模型</h4>
-<p><strong>核心机制</strong>：</p>
-<ul>
-<li>EPSW要求雇主对相似工作的所有工人支付相同工资</li>
-<li>企业会调整劳动力组合来降低成本</li>
-<li>导致按性别隔离劳动力</li>
-</ul>
-<p><strong>均衡效应</strong>：</p>
-<ul>
-<li>男性占多数的市场：女性被分配到低工资任务</li>
-<li>女性占多数的市场：结果相反</li>
-<li>总体可能加剧工资差距</li>
-</ul>
-<h4 id="动态搜索模型">动态搜索模型</h4>
-<p><strong>搜索摩擦</strong>：工人寻找工作需要时间和成本<br>
-<strong>再配置摩擦</strong>：企业调整劳动力组合需要成本</p>
-<hr>
-<h2 id="4-结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol>
-<li><strong>EPSW可能反效果</strong>：导致劳动力性别隔离</li>
-<li><strong>男性占多数市场中加剧差距</strong>：实证证实</li>
-<li><strong>政策启示</strong>：同酬法设计需考虑均衡效应</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>临时性裁员与周期性失业动态 — 深度阅读笔记 — Gertler, Huckfeldt &amp; Trigari</title>
     <url>/posts/gertler2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -11766,6 +11691,81 @@ $$\kappa_t = \sigma_D - (1-\omega_t)\eta - \sigma\phi_D(\omega_t + \tau y_t(1-\o
 <li>
 <p><strong>政策启示</strong>：PPP通过减少召回损失产生可观的就业增长</p>
 </li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>相似工作的同酬 — 深度阅读笔记 — Gentile Passaro, Kojima &amp; Pakzad-Hurson</title>
+    <url>/posts/gentile-passaro2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Equal Pay for Similar Work</li>
+<li><strong>作者</strong>: Diego Gentile Passaro (Amazon Science), Fuhito Kojima (东京大学), Bobak Pakzad-Hurson (布朗大学)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(3): 977-1013</li>
+<li><strong>DOI</strong>: 10.1257/aer.20230832</li>
+<li><strong>难度评估</strong>: 高 - 需要劳动经济学、搜索理论、计量经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>同工同酬法（EPSW）</strong>：要求对"相似"工作支付同等报酬，比"相同工作"更宽泛。</p>
+<p><strong>性别工资差距（Gender Wage Gap）</strong>：男性和女性工人之间的平均工资差异。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol>
+<li><strong>EPSW政策日益普遍</strong>：美国45.9%的劳动力受EPSW管辖</li>
+<li><strong>执行困难</strong>："相同工作"难以定义</li>
+<li><strong>意外的均衡效应</strong>：EPSW可能产生违背政策初衷的均衡效应</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：EPSW对劳动力市场结果的均衡效应是什么？是否会反而加剧性别工资差距？</p>
+<p><strong>关键发现</strong>：EPSW导致企业按性别隔离劳动力，在男性占多数的劳动力市场中会增加性别工资差距</p>
+<hr>
+<h2 id="2-内容及结构">2. 内容及结构</h2>
+<ol>
+<li><strong>引言</strong>: EPSW政策背景、研究问题、主要发现</li>
+<li><strong>静态模型</strong>: 设定、无EPSW均衡、EPSW均衡、工资差距效应</li>
+<li><strong>动态搜索模型</strong>: 搜索摩擦和再配置摩擦、动态均衡</li>
+<li><strong>实证分析</strong>: 智利2009年EPSW政策、因果识别</li>
+<li><strong>结论</strong></li>
+</ol>
+<hr>
+<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="EPSW-vs-EPEW">EPSW vs EPEW</h4>
+<p><strong>EPEW</strong>：要求"相同工作"获得相同报酬<br>
+<strong>EPSW</strong>：更宽泛，要求对"相似工作"支付同等报酬</p>
+<h3 id="理论模型">理论模型</h3>
+<h4 id="静态模型">静态模型</h4>
+<p><strong>核心机制</strong>：</p>
+<ul>
+<li>EPSW要求雇主对相似工作的所有工人支付相同工资</li>
+<li>企业会调整劳动力组合来降低成本</li>
+<li>导致按性别隔离劳动力</li>
+</ul>
+<p><strong>均衡效应</strong>：</p>
+<ul>
+<li>男性占多数的市场：女性被分配到低工资任务</li>
+<li>女性占多数的市场：结果相反</li>
+<li>总体可能加剧工资差距</li>
+</ul>
+<h4 id="动态搜索模型">动态搜索模型</h4>
+<p><strong>搜索摩擦</strong>：工人寻找工作需要时间和成本<br>
+<strong>再配置摩擦</strong>：企业调整劳动力组合需要成本</p>
+<hr>
+<h2 id="4-结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol>
+<li><strong>EPSW可能反效果</strong>：导致劳动力性别隔离</li>
+<li><strong>男性占多数市场中加剧差距</strong>：实证证实</li>
+<li><strong>政策启示</strong>：同酬法设计需考虑均衡效应</li>
 </ol>
 ]]></content>
       <categories>
@@ -12441,6 +12441,249 @@ Zotero Item Key:: BZPCLS8S</p>
 ]]></content>
       <categories>
         <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>你所不知道的可能对你有益 — 深度阅读笔记 — Höner &amp; Samuelson</title>
+    <url>/posts/honner2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: What You Don’t Know May Be Good for You</li>
+<li><strong>作者</strong>: Johannes Höner (Yale), Larry Samuelson (University of Nevada, Reno)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(3): 1097-1147</li>
+<li><strong>DOI</strong>: 10.1257/aer.20250053</li>
+<li><strong>难度评估</strong>: 高 - 需要博弈论、声誉理论、机制设计基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>专家-客户模型（Expert-Client Model）</strong>：长期存在的专家与短期客户匹配的经济学模型。专家拥有私人信息，选择客户类型，客户根据观察到的信息形成对专家的信念。</p>
+<p><strong>声誉理论（Reputation Theory）</strong>：研究代理人如何通过行为建立声誉的理论。经典工作包括Kreps &amp; Wilson（1982）的序列均衡声誉模型。</p>
+<p><strong>好斯特定律（Goodhart’s Law）</strong>：当一个指标成为目标时，它就不再是一个好的指标。意味着度量本身会改变被度量行为的激励结构。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol>
+<li>
+<p><strong>医疗报告卡（Medical Report Cards）</strong>：纽约州1980年代末引入心脏手术报告系统，要求报告手术结果。医生评估称"所谓最好的外科医生只做最简单的病例"。</p>
+</li>
+<li>
+<p><strong>信息与激励的冲突</strong>：信息揭示帮助客户识别更好的专家，但同时也可能扭曲专家的激励，使其拒绝高风险客户以维护声誉。</p>
+</li>
+<li>
+<p><strong>声誉操纵问题</strong>：当信息由被评价者构建时，评价系统可能被操纵。</p>
+</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：当声誉的构建者能够操纵相关信息时，声誉如何建立？信息揭示（如报告卡）是否总是有益的？</p>
+<h3 id="研究意义">研究意义</h3>
+<ol>
+<li>
+<p><strong>理论贡献</strong>：构建了长期专家与短期客户匹配的一般模型，揭示了信息揭示的非直观后果。</p>
+</li>
+<li>
+<p><strong>政策含义</strong>：对医疗报告卡等政策设计有直接启示——信息揭示可能适得其反。</p>
+</li>
+<li>
+<p><strong>应用广泛</strong>：模型框架可应用于医疗、教育、金融等多个领域的声誉机制设计。</p>
+</li>
+</ol>
+<hr>
+<h2 id="2-内容及结构（论文结构）">2. 内容及结构（论文结构）</h2>
+<h3 id="第一节：引言（Introduction）">第一节：引言（Introduction）</h3>
+<ul>
+<li>医疗报告卡案例</li>
+<li>Goodhart定律</li>
+<li>研究问题介绍</li>
+</ul>
+<h3 id="第二节：模型（The-Model）">第二节：模型（The Model）</h3>
+<ul>
+<li><strong>II.1 Stage Game</strong>：单期博弈中的专家-客户交互</li>
+<li><strong>II.2 Stage-Game均衡与有效配置</strong></li>
+<li><strong>II.3 重复博弈（无报告卡）均衡</strong></li>
+<li><strong>II.4 完全监控的重复博弈，有效配置</strong></li>
+<li><strong>II.5 完全监控的重复博弈，均衡</strong></li>
+</ul>
+<h3 id="第三节：带报告卡的重复博弈">第三节：带报告卡的重复博弈</h3>
+<ul>
+<li><strong>III.1 结构</strong>：连续时间，无限期界，专家连续统，客户连续统</li>
+<li><strong>III.2 策略</strong>：确定性策略、极值策略、停时策略、截断策略</li>
+<li><strong>III.3 信念</strong>：专家信念与市场信念的区分</li>
+<li><strong>III.4 均衡定义</strong></li>
+<li><strong>III.5 有效配置</strong>：截断策略</li>
+<li><strong>III.6 均衡是无效率的</strong></li>
+<li><strong>III.7 等待的诱惑</strong></li>
+<li><strong>III.8 专家必须混合，但不确定能否做到</strong></li>
+<li><strong>III.9 均衡存在、唯一、是停时上的混合</strong></li>
+<li><strong>III.10 福利分析</strong></li>
+</ul>
+<h3 id="第四节：扩展（Extensions）">第四节：扩展（Extensions）</h3>
+<ul>
+<li><strong>IV.1 茶歇均衡</strong>：非马尔科夫均衡</li>
+<li><strong>IV.2 随机揭示柠檬</strong>：失败以一定概率被随机揭示</li>
+<li><strong>IV.3 随机隐藏柠檬</strong>：失败以一定概率被隐藏</li>
+<li><strong>IV.4 价格控制</strong>：固定价格可实现有效均衡</li>
+<li><strong>IV.5 好消息</strong>：突破性成果的特殊情况</li>
+<li><strong>IV.6 未知客户类型</strong>：客户不知自身类型</li>
+<li><strong>IV.7 干中学</strong>：专家类型可变</li>
+</ul>
+<h3 id="第五节：讨论（Discussion）">第五节：讨论（Discussion）</h3>
+<hr>
+<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="医疗报告卡案例">医疗报告卡案例</h4>
+<p>纽约州1980年代末引入心脏手术报告系统，强制报告手术结果。这一政策的初衷是帮助患者识别更好的外科医生，但医生们反映"所谓最好的外科医生只做最简单的病例"。</p>
+<h4 id="Goodhart定律的核心洞见">Goodhart定律的核心洞见</h4>
+<p>当一个度量成为目标时，它就不再是一个好的度量。度量的变化会改变被度量者的激励，可能导致行为扭曲。</p>
+<h3 id="模型设定">模型设定</h3>
+<h4 id="参与人">参与人</h4>
+<ol>
+<li><strong>专家（Expert）</strong>：长期存在，有类型G（好）或B（坏），先验概率q</li>
+<li><strong>客户（Client）</strong>：短期存在，有类型H（高风险）或L（低风险）</li>
+<li><strong>市场</strong>：观察价格和报告卡，形成对专家类型的信念</li>
+</ol>
+<h4 id="阶段博弈（Stage-Game）">阶段博弈（Stage Game）</h4>
+<p><strong>成功概率</strong>：</p>
+<ul>
+<li>好专家（G）+ 高风险客户（H）：${1-z}$</li>
+<li>好专家（G）+ 低风险客户（L）：1</li>
+<li>坏专家（B）+ 任何客户：1（无失败）</li>
+</ul>
+<h3 id="关键结果">关键结果</h3>
+<h4 id="有效配置">有效配置</h4>
+<p>有效政策是<strong>截断策略</strong>：<br>
+$$k_t = 1 \text{ 当且仅当 } q_t \geq \bar{q}$$</p>
+<p>其中$\bar{q} \in (0, \theta)$是截断点。</p>
+<h4 id="核心命题：有效政策不是均衡">核心命题：有效政策不是均衡</h4>
+<p><strong>证明逻辑</strong>：</p>
+<ol>
+<li>
+<p>假设$\bar{q} &lt; \theta$，考虑$q_0 \in (\bar{q}, \theta)$：</p>
+<ul>
+<li>$q_0 - \theta &lt; 0$：选择L客户比H客户获得更高奖励</li>
+<li>选择L客户保证不发生失败</li>
+<li>因此对于$q_0 &lt; \theta$，专家在均衡中必须选择L客户</li>
+</ul>
+</li>
+<li>
+<p>因此$\bar{q}$必须等于$\theta$，但第一种情况的论证确保$q_0$刚超过$\theta$的专家会选择L而非H客户</p>
+</li>
+</ol>
+<p><strong>结论</strong>：有效截断策略不是均衡！</p>
+<h4 id="均衡性质">均衡性质</h4>
+<p><strong>命题1</strong>：均衡存在且唯一，是停时上的混合。</p>
+<ul>
+<li>如果$q_0 \leq \theta$：专家总是选择低风险客户</li>
+<li>如果$q_0 \geq \bar{q}$：专家总是选择高风险客户</li>
+<li>如果$q_0 \in (\theta, \bar{q})$：存在$T &gt; 0$，专家在随机时间$s \leq T$按无原子分布选择</li>
+</ul>
+<h4 id="无效率的来源">无效率的来源</h4>
+<p><strong>等待的诱惑</strong>：</p>
+<ul>
+<li>如果专家被预期只选择L客户，他会偏好选择H客户（更有利可图）</li>
+<li>如果专家被预期只选择H客户，价格"快速"上涨，延迟H客户是有利可图的</li>
+</ul>
+<p><strong>问题</strong>：客户学习太快，价格上涨太快。专家难以使用混合策略——选择$k \in (0, 1)$不会起作用。</p>
+<hr>
+<h2 id="4-结论（Conclusion）">4. 结论（Conclusion）</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol>
+<li>
+<p><strong>信息揭示的双刃剑效应</strong>：报告卡帮助客户识别更好的专家，但同时扭曲了专家的激励——专家会拒绝高风险客户以建立声誉，导致无效率匹配。</p>
+</li>
+<li>
+<p><strong>Goodhart定律的正式模型</strong>：论文提供了Goodhart定律的形式化模型，展示了当度量成为目标时会发生什么。</p>
+</li>
+<li>
+<p><strong>声誉操纵的危害</strong>：长期专家有激励操纵市场对其类型的认知，通过选择性地接受低风险客户来建立"干净"的记录。</p>
+</li>
+<li>
+<p><strong>均衡必须是混合的</strong>：有效截断策略不是均衡，专家必须使用随机化策略，但这种随机化本身就导致无效率。</p>
+</li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol>
+<li>
+<p><strong>一般化模型</strong>：将声誉理论、信号博弈和机制设计统一在单一框架下。</p>
+</li>
+<li>
+<p><strong>新洞见</strong>：揭示了信息揭示可能降低福利的条件和机制。</p>
+</li>
+<li>
+<p><strong>政策启示</strong>：对医疗报告卡、教育评级等政策设计有直接指导意义。</p>
+</li>
+</ol>
+<hr>
+<h2 id="5-未来研究方向（Future-work）">5. 未来研究方向（Future work）</h2>
+<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
+<ol>
+<li>
+<p><strong>多维类型</strong>：专家和客户有多个维度的私人信息</p>
+</li>
+<li>
+<p><strong>动态客户学习</strong>：客户随时间积累经验</p>
+</li>
+<li>
+<p><strong>竞争性市场</strong>：多位专家竞争客户</p>
+</li>
+</ol>
+<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
+<ol>
+<li>
+<p><strong>实证检验</strong>：如何在现实数据中识别这种声誉操纵效应？</p>
+</li>
+<li>
+<p><strong>最优机制设计</strong>：给定这些无效率，什么是最优的信息揭示政策？</p>
+</li>
+<li>
+<p><strong>替代激励机制</strong>：除了报告卡，什么机制可以激励专家说实话同时避免声誉操纵？</p>
+</li>
+</ol>
+<hr>
+<h2 id="7-学术思考">7. 学术思考</h2>
+<h3 id="核心学术洞察">核心学术洞察</h3>
+<ol>
+<li>
+<p><strong>信息揭示的悖论</strong>：直觉上信息越多越好，但本文揭示了信息揭示可能"教会"专家如何操纵市场信念。</p>
+</li>
+<li>
+<p><strong>声誉资本的动态积累</strong>：专家的声誉是一种资本，其积累速度受市场学习速度的影响。</p>
+</li>
+<li>
+<p><strong>有效均衡的不可能性</strong>：在标准委托代理模型中，有效结果通常可以通过适当激励机制实现。但本文表明，当代理人有多个维度私人信息且可以操纵信号时，有效结果可能根本无法实现。</p>
+</li>
+</ol>
+<h3 id="深层学术问题">深层学术问题</h3>
+<ol>
+<li>
+<p><strong>为什么专家不能承诺？</strong> 如果专家可以承诺不操纵声誉，许多无效率就可以避免。是什么阻止了这种承诺？</p>
+</li>
+<li>
+<p><strong>客户如何应对？</strong> 客户是否了解专家的激励结构？如果客户知道专家会拒绝他们，这会如何影响行为？</p>
+</li>
+</ol>
+<hr>
+<h2 id="8-下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol>
+<li>
+<p><strong>如何识别现实中的声誉操纵？</strong> 有什么可检验的预测？</p>
+</li>
+<li>
+<p><strong>报告卡制度如何设计可以减少无效率？</strong> 有什么替代方案？</p>
+</li>
+<li>
+<p><strong>与标准声誉模型的区别是什么？</strong> 本文如何推进Kreps-Wilson类型的声誉理论？</p>
+</li>
+<li>
+<p><strong>在什么条件下信息揭示是有效的？</strong> "好消息"扩展表明存在有效情况，条件是什么？</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -13344,300 +13587,6 @@ _谢肇淛&lt;五杂俎&gt;(约1610年)</p>
       </tags>
   </entry>
   <entry>
-    <title>你所不知道的可能对你有益 — 深度阅读笔记 — Höner &amp; Samuelson</title>
-    <url>/posts/honner2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: What You Don’t Know May Be Good for You</li>
-<li><strong>作者</strong>: Johannes Höner (Yale), Larry Samuelson (University of Nevada, Reno)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3): 1097-1147</li>
-<li><strong>DOI</strong>: 10.1257/aer.20250053</li>
-<li><strong>难度评估</strong>: 高 - 需要博弈论、声誉理论、机制设计基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>专家-客户模型（Expert-Client Model）</strong>：长期存在的专家与短期客户匹配的经济学模型。专家拥有私人信息，选择客户类型，客户根据观察到的信息形成对专家的信念。</p>
-<p><strong>声誉理论（Reputation Theory）</strong>：研究代理人如何通过行为建立声誉的理论。经典工作包括Kreps &amp; Wilson（1982）的序列均衡声誉模型。</p>
-<p><strong>好斯特定律（Goodhart’s Law）</strong>：当一个指标成为目标时，它就不再是一个好的指标。意味着度量本身会改变被度量行为的激励结构。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol>
-<li>
-<p><strong>医疗报告卡（Medical Report Cards）</strong>：纽约州1980年代末引入心脏手术报告系统，要求报告手术结果。医生评估称"所谓最好的外科医生只做最简单的病例"。</p>
-</li>
-<li>
-<p><strong>信息与激励的冲突</strong>：信息揭示帮助客户识别更好的专家，但同时也可能扭曲专家的激励，使其拒绝高风险客户以维护声誉。</p>
-</li>
-<li>
-<p><strong>声誉操纵问题</strong>：当信息由被评价者构建时，评价系统可能被操纵。</p>
-</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：当声誉的构建者能够操纵相关信息时，声誉如何建立？信息揭示（如报告卡）是否总是有益的？</p>
-<h3 id="研究意义">研究意义</h3>
-<ol>
-<li>
-<p><strong>理论贡献</strong>：构建了长期专家与短期客户匹配的一般模型，揭示了信息揭示的非直观后果。</p>
-</li>
-<li>
-<p><strong>政策含义</strong>：对医疗报告卡等政策设计有直接启示——信息揭示可能适得其反。</p>
-</li>
-<li>
-<p><strong>应用广泛</strong>：模型框架可应用于医疗、教育、金融等多个领域的声誉机制设计。</p>
-</li>
-</ol>
-<hr>
-<h2 id="2-内容及结构（论文结构）">2. 内容及结构（论文结构）</h2>
-<h3 id="第一节：引言（Introduction）">第一节：引言（Introduction）</h3>
-<ul>
-<li>医疗报告卡案例</li>
-<li>Goodhart定律</li>
-<li>研究问题介绍</li>
-</ul>
-<h3 id="第二节：模型（The-Model）">第二节：模型（The Model）</h3>
-<ul>
-<li><strong>II.1 Stage Game</strong>：单期博弈中的专家-客户交互</li>
-<li><strong>II.2 Stage-Game均衡与有效配置</strong></li>
-<li><strong>II.3 重复博弈（无报告卡）均衡</strong></li>
-<li><strong>II.4 完全监控的重复博弈，有效配置</strong></li>
-<li><strong>II.5 完全监控的重复博弈，均衡</strong></li>
-</ul>
-<h3 id="第三节：带报告卡的重复博弈">第三节：带报告卡的重复博弈</h3>
-<ul>
-<li><strong>III.1 结构</strong>：连续时间，无限期界，专家连续统，客户连续统</li>
-<li><strong>III.2 策略</strong>：确定性策略、极值策略、停时策略、截断策略</li>
-<li><strong>III.3 信念</strong>：专家信念与市场信念的区分</li>
-<li><strong>III.4 均衡定义</strong></li>
-<li><strong>III.5 有效配置</strong>：截断策略</li>
-<li><strong>III.6 均衡是无效率的</strong></li>
-<li><strong>III.7 等待的诱惑</strong></li>
-<li><strong>III.8 专家必须混合，但不确定能否做到</strong></li>
-<li><strong>III.9 均衡存在、唯一、是停时上的混合</strong></li>
-<li><strong>III.10 福利分析</strong></li>
-</ul>
-<h3 id="第四节：扩展（Extensions）">第四节：扩展（Extensions）</h3>
-<ul>
-<li><strong>IV.1 茶歇均衡</strong>：非马尔科夫均衡</li>
-<li><strong>IV.2 随机揭示柠檬</strong>：失败以一定概率被随机揭示</li>
-<li><strong>IV.3 随机隐藏柠檬</strong>：失败以一定概率被隐藏</li>
-<li><strong>IV.4 价格控制</strong>：固定价格可实现有效均衡</li>
-<li><strong>IV.5 好消息</strong>：突破性成果的特殊情况</li>
-<li><strong>IV.6 未知客户类型</strong>：客户不知自身类型</li>
-<li><strong>IV.7 干中学</strong>：专家类型可变</li>
-</ul>
-<h3 id="第五节：讨论（Discussion）">第五节：讨论（Discussion）</h3>
-<hr>
-<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="医疗报告卡案例">医疗报告卡案例</h4>
-<p>纽约州1980年代末引入心脏手术报告系统，强制报告手术结果。这一政策的初衷是帮助患者识别更好的外科医生，但医生们反映"所谓最好的外科医生只做最简单的病例"。</p>
-<h4 id="Goodhart定律的核心洞见">Goodhart定律的核心洞见</h4>
-<p>当一个度量成为目标时，它就不再是一个好的度量。度量的变化会改变被度量者的激励，可能导致行为扭曲。</p>
-<h3 id="模型设定">模型设定</h3>
-<h4 id="参与人">参与人</h4>
-<ol>
-<li><strong>专家（Expert）</strong>：长期存在，有类型G（好）或B（坏），先验概率q</li>
-<li><strong>客户（Client）</strong>：短期存在，有类型H（高风险）或L（低风险）</li>
-<li><strong>市场</strong>：观察价格和报告卡，形成对专家类型的信念</li>
-</ol>
-<h4 id="阶段博弈（Stage-Game）">阶段博弈（Stage Game）</h4>
-<p><strong>成功概率</strong>：</p>
-<ul>
-<li>好专家（G）+ 高风险客户（H）：${1-z}$</li>
-<li>好专家（G）+ 低风险客户（L）：1</li>
-<li>坏专家（B）+ 任何客户：1（无失败）</li>
-</ul>
-<h3 id="关键结果">关键结果</h3>
-<h4 id="有效配置">有效配置</h4>
-<p>有效政策是<strong>截断策略</strong>：<br>
-$$k_t = 1 \text{ 当且仅当 } q_t \geq \bar{q}$$</p>
-<p>其中$\bar{q} \in (0, \theta)$是截断点。</p>
-<h4 id="核心命题：有效政策不是均衡">核心命题：有效政策不是均衡</h4>
-<p><strong>证明逻辑</strong>：</p>
-<ol>
-<li>
-<p>假设$\bar{q} &lt; \theta$，考虑$q_0 \in (\bar{q}, \theta)$：</p>
-<ul>
-<li>$q_0 - \theta &lt; 0$：选择L客户比H客户获得更高奖励</li>
-<li>选择L客户保证不发生失败</li>
-<li>因此对于$q_0 &lt; \theta$，专家在均衡中必须选择L客户</li>
-</ul>
-</li>
-<li>
-<p>因此$\bar{q}$必须等于$\theta$，但第一种情况的论证确保$q_0$刚超过$\theta$的专家会选择L而非H客户</p>
-</li>
-</ol>
-<p><strong>结论</strong>：有效截断策略不是均衡！</p>
-<h4 id="均衡性质">均衡性质</h4>
-<p><strong>命题1</strong>：均衡存在且唯一，是停时上的混合。</p>
-<ul>
-<li>如果$q_0 \leq \theta$：专家总是选择低风险客户</li>
-<li>如果$q_0 \geq \bar{q}$：专家总是选择高风险客户</li>
-<li>如果$q_0 \in (\theta, \bar{q})$：存在$T &gt; 0$，专家在随机时间$s \leq T$按无原子分布选择</li>
-</ul>
-<h4 id="无效率的来源">无效率的来源</h4>
-<p><strong>等待的诱惑</strong>：</p>
-<ul>
-<li>如果专家被预期只选择L客户，他会偏好选择H客户（更有利可图）</li>
-<li>如果专家被预期只选择H客户，价格"快速"上涨，延迟H客户是有利可图的</li>
-</ul>
-<p><strong>问题</strong>：客户学习太快，价格上涨太快。专家难以使用混合策略——选择$k \in (0, 1)$不会起作用。</p>
-<hr>
-<h2 id="4-结论（Conclusion）">4. 结论（Conclusion）</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol>
-<li>
-<p><strong>信息揭示的双刃剑效应</strong>：报告卡帮助客户识别更好的专家，但同时扭曲了专家的激励——专家会拒绝高风险客户以建立声誉，导致无效率匹配。</p>
-</li>
-<li>
-<p><strong>Goodhart定律的正式模型</strong>：论文提供了Goodhart定律的形式化模型，展示了当度量成为目标时会发生什么。</p>
-</li>
-<li>
-<p><strong>声誉操纵的危害</strong>：长期专家有激励操纵市场对其类型的认知，通过选择性地接受低风险客户来建立"干净"的记录。</p>
-</li>
-<li>
-<p><strong>均衡必须是混合的</strong>：有效截断策略不是均衡，专家必须使用随机化策略，但这种随机化本身就导致无效率。</p>
-</li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol>
-<li>
-<p><strong>一般化模型</strong>：将声誉理论、信号博弈和机制设计统一在单一框架下。</p>
-</li>
-<li>
-<p><strong>新洞见</strong>：揭示了信息揭示可能降低福利的条件和机制。</p>
-</li>
-<li>
-<p><strong>政策启示</strong>：对医疗报告卡、教育评级等政策设计有直接指导意义。</p>
-</li>
-</ol>
-<hr>
-<h2 id="5-未来研究方向（Future-work）">5. 未来研究方向（Future work）</h2>
-<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
-<ol>
-<li>
-<p><strong>多维类型</strong>：专家和客户有多个维度的私人信息</p>
-</li>
-<li>
-<p><strong>动态客户学习</strong>：客户随时间积累经验</p>
-</li>
-<li>
-<p><strong>竞争性市场</strong>：多位专家竞争客户</p>
-</li>
-</ol>
-<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
-<ol>
-<li>
-<p><strong>实证检验</strong>：如何在现实数据中识别这种声誉操纵效应？</p>
-</li>
-<li>
-<p><strong>最优机制设计</strong>：给定这些无效率，什么是最优的信息揭示政策？</p>
-</li>
-<li>
-<p><strong>替代激励机制</strong>：除了报告卡，什么机制可以激励专家说实话同时避免声誉操纵？</p>
-</li>
-</ol>
-<hr>
-<h2 id="7-学术思考">7. 学术思考</h2>
-<h3 id="核心学术洞察">核心学术洞察</h3>
-<ol>
-<li>
-<p><strong>信息揭示的悖论</strong>：直觉上信息越多越好，但本文揭示了信息揭示可能"教会"专家如何操纵市场信念。</p>
-</li>
-<li>
-<p><strong>声誉资本的动态积累</strong>：专家的声誉是一种资本，其积累速度受市场学习速度的影响。</p>
-</li>
-<li>
-<p><strong>有效均衡的不可能性</strong>：在标准委托代理模型中，有效结果通常可以通过适当激励机制实现。但本文表明，当代理人有多个维度私人信息且可以操纵信号时，有效结果可能根本无法实现。</p>
-</li>
-</ol>
-<h3 id="深层学术问题">深层学术问题</h3>
-<ol>
-<li>
-<p><strong>为什么专家不能承诺？</strong> 如果专家可以承诺不操纵声誉，许多无效率就可以避免。是什么阻止了这种承诺？</p>
-</li>
-<li>
-<p><strong>客户如何应对？</strong> 客户是否了解专家的激励结构？如果客户知道专家会拒绝他们，这会如何影响行为？</p>
-</li>
-</ol>
-<hr>
-<h2 id="8-下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol>
-<li>
-<p><strong>如何识别现实中的声誉操纵？</strong> 有什么可检验的预测？</p>
-</li>
-<li>
-<p><strong>报告卡制度如何设计可以减少无效率？</strong> 有什么替代方案？</p>
-</li>
-<li>
-<p><strong>与标准声誉模型的区别是什么？</strong> 本文如何推进Kreps-Wilson类型的声誉理论？</p>
-</li>
-<li>
-<p><strong>在什么条件下信息揭示是有效的？</strong> "好消息"扩展表明存在有效情况，条件是什么？</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Labor Mobility in Currency Union — 深度阅读笔记 — House, Proebsting &amp; Tesar</title>
-    <url>/posts/house2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Quantifying the Benefits of Labor Mobility in a Currency Union</li>
-<li><strong>作者</strong>: Christopher L. House (Michigan &amp; NBER), Christian Proebsting (EPFL), Linda L. Tesar (Michigan &amp; NBER)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies (RES)</li>
-<li><strong>难度评估</strong>: 高 - 需要宏观经济学、国际经济学、DSGE模型基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言">1. 引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>最优货币区理论、搜索与匹配框架、货币联盟。</p>
-<h3 id="研究背景">研究背景</h3>
-<p>欧元区失业差异远大于美国；美国迁移响应大于欧洲；Mundell猜想流动性可替代货币政策。</p>
-<h3 id="核心问题">核心问题</h3>
-<p>劳动力流动性对货币联盟有多重要？流动性vs弹性汇率的效应比较？</p>
-<h2 id="2-内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：相关文献</li>
-<li>第三节：实证分析</li>
-<li>第四节：模型</li>
-<li>第五节：量化分析</li>
-<li>第六节：结论</li>
-</ul>
-<h2 id="3-正文">3. 正文</h2>
-<h3 id="核心机制">核心机制</h3>
-<p>多国DSGE模型 + 搜索与匹配 + 跨境迁移</p>
-<h3 id="关键发现">关键发现</h3>
-<ol>
-<li>欧洲若达美国流动性水平，失业差异降25%</li>
-<li>流动性和弹性汇率在降低失业上是替代品</li>
-<li>但在产出和通胀维度机制不同</li>
-</ol>
-<h2 id="4-结论">4. 结论</h2>
-<p>验证Mundell猜想——劳动力流动性确实可部分替代货币政策，但效果有限。</p>
-<h2 id="5-未来研究方向">5. 未来研究方向</h2>
-<p>制度设计提高流动性、福利分析、过渡动态。</p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>性别构成、社会情境与高考学业表现 — 深度阅读笔记 — Huang Et Al.</title>
     <url>/posts/huang2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Gender Composition, Social Context, and Academic Performance in High-Stakes Examinations<br>
@@ -13780,6 +13729,57 @@ Zotero Item Key:: QM7ZRJL9</p>
 ]]></content>
       <categories>
         <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Labor Mobility in Currency Union — 深度阅读笔记 — House, Proebsting &amp; Tesar</title>
+    <url>/posts/house2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Quantifying the Benefits of Labor Mobility in a Currency Union</li>
+<li><strong>作者</strong>: Christopher L. House (Michigan &amp; NBER), Christian Proebsting (EPFL), Linda L. Tesar (Michigan &amp; NBER)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies (RES)</li>
+<li><strong>难度评估</strong>: 高 - 需要宏观经济学、国际经济学、DSGE模型基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言">1. 引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>最优货币区理论、搜索与匹配框架、货币联盟。</p>
+<h3 id="研究背景">研究背景</h3>
+<p>欧元区失业差异远大于美国；美国迁移响应大于欧洲；Mundell猜想流动性可替代货币政策。</p>
+<h3 id="核心问题">核心问题</h3>
+<p>劳动力流动性对货币联盟有多重要？流动性vs弹性汇率的效应比较？</p>
+<h2 id="2-内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：相关文献</li>
+<li>第三节：实证分析</li>
+<li>第四节：模型</li>
+<li>第五节：量化分析</li>
+<li>第六节：结论</li>
+</ul>
+<h2 id="3-正文">3. 正文</h2>
+<h3 id="核心机制">核心机制</h3>
+<p>多国DSGE模型 + 搜索与匹配 + 跨境迁移</p>
+<h3 id="关键发现">关键发现</h3>
+<ol>
+<li>欧洲若达美国流动性水平，失业差异降25%</li>
+<li>流动性和弹性汇率在降低失业上是替代品</li>
+<li>但在产出和通胀维度机制不同</li>
+</ol>
+<h2 id="4-结论">4. 结论</h2>
+<p>验证Mundell猜想——劳动力流动性确实可部分替代货币政策，但效果有限。</p>
+<h2 id="5-未来研究方向">5. 未来研究方向</h2>
+<p>制度设计提高流动性、福利分析、过渡动态。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -15166,200 +15166,6 @@ Zotero Item Key:: BY7Y7TDL</p>
       </tags>
   </entry>
   <entry>
-    <title>Auctions With Frictions — 深度阅读笔记 — Lauermann &amp; Wolinsky</title>
-    <url>/posts/lauermann2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Auctions with Frictions: Recruitment, Entry, and Limited Commitment</li>
-<li><strong>作者</strong>: Stephan Lauermann (University of Bonn), Asher Wolinsky (Northwestern University)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: Review of Economic Studies (RES), 93(2): 1167-1199</li>
-<li><strong>DOI</strong>: <a href="https://doi.org/10.1093/restud/rdaf052">https://doi.org/10.1093/restud/rdaf052</a></li>
-<li><strong>难度评估</strong>: 高 - 需要拍卖理论、博弈论基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>拍卖（Frictionless Auction）</strong>：标准拍卖理论假设卖家可以招募竞拍者、竞拍者无成本参与、卖家可承诺于保留价格和参与水平。</p>
-<p><strong>招募成本（Recruitment Cost）</strong>：卖家吸引竞拍者的成本。</p>
-<p><strong>参与成本（Entry Cost）</strong>：竞拍者评估拍品、获取融资、准备报价的成本。</p>
-<p><strong>有限承诺（Limited Commitment）</strong>：卖家无法可信地承诺参与水平或其披露程度。</p>
-<p><strong>PO vs PU场景</strong>：PO=参与可观察；PU=参与不可观察。</p>
-<h3 id="研究背景">研究背景</h3>
-<ol>
-<li>
-<p><strong>实际拍卖的复杂性</strong>：招募和激励竞拍者是拍卖成功的关键。</p>
-</li>
-<li>
-<p><strong>摩擦的普遍性</strong>：在独特资产的出售中，招募成本和参与成本特别显著。</p>
-</li>
-<li>
-<p><strong>传统模型局限性</strong>：现有文献分别研究招募或参与摩擦。</p>
-</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：当卖家承诺能力受限时，招募努力和竞拍者进入决策如何共同决定拍卖参与和结果？</p>
-<hr>
-<h2 id="2-内容及结构（论文结构）">2. 内容及结构（论文结构）</h2>
-<ul>
-<li>第一节：Introduction</li>
-<li>第二节：The PO Auction</li>
-<li>第三节：Equilibrium Analysis for PO Scenario</li>
-<li>第四节：The PU Auction</li>
-<li>第五节：Comparison of PO and PU Scenarios</li>
-<li>第六节：Discussion and Extensions</li>
-<li>第七节：Conclusion</li>
-</ul>
-<hr>
-<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
-<h3 id="模型设定">模型设定</h3>
-<p><strong>核心要素</strong>：</p>
-<ol>
-<li><strong>卖家</strong>：选择招募努力γ（成本为γs），结果是泊松分布的潜在竞拍者</li>
-<li><strong>竞拍者</strong>：支付成本c后观察到私人价值vi，决策是否进入</li>
-<li><strong>Bidding阶段</strong>：第一价格拍卖(FPA)</li>
-</ol>
-<p><strong>两种场景</strong>：PO（参与可观察）vs PU（参与不可观察）</p>
-<h3 id="PO均衡分析">PO均衡分析</h3>
-<p><strong>逆向求解</strong>：</p>
-<ol>
-<li>Stage 3 (Bidding)：标准对称FPA均衡</li>
-<li>Stage 2 (Entry)：竞拍者基于期望收益决定是否进入</li>
-<li>Stage 1 (Recruitment)：卖家选择λ = qγ最大化利润</li>
-</ol>
-<p><strong>关键发现</strong>：</p>
-<ul>
-<li>存在均衡贸易的唯一条件：λc ≥ λo 且 s ≤ s̄o</li>
-<li>当λc &lt; λo时：即使潜在贸易收益为正，市场也会崩溃</li>
-</ul>
-<h3 id="PU均衡分析">PU均衡分析</h3>
-<p><strong>关键差异</strong>：卖家无法可信地披露参与水平</p>
-<p><strong>均衡特征</strong>：</p>
-<ul>
-<li>对于所有(c,s)，存在λ*=0的无贸易均衡</li>
-<li>当s &lt; ξ(λpeak)且λc &gt; λu(s)时，存在两个贸易均衡</li>
-</ul>
-<h3 id="PO-vs-PU比较">PO vs PU比较</h3>
-<p><strong>关键比较结果</strong>：</p>
-<table>
-<thead>
-<tr>
-<th>区域</th>
-<th>条件</th>
-<th>结果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I</td>
-<td>仅PO有贸易</td>
-<td>PO严格更优</td>
-</tr>
-<tr>
-<td>II</td>
-<td>两者都有贸易</td>
-<td>PO严格更优</td>
-</tr>
-<tr>
-<td>III</td>
-<td>两者都有贸易</td>
-<td>PU严格更优</td>
-</tr>
-<tr>
-<td>IV</td>
-<td>仅PU有贸易</td>
-<td>PU更优</td>
-</tr>
-</tbody>
-</table>
-<p><strong>直觉</strong>：</p>
-<ul>
-<li>当c很小（竞拍者愿意进入）时：PO的更强招募激励→更高利润</li>
-<li>当s很小（招募便宜）时：PU的更弱招募激励作为部分承诺机制</li>
-</ul>
-<h3 id="FPA-vs-SPA比较">FPA vs SPA比较</h3>
-<p><strong>Revenue Equivalence失效</strong>：当参与不可观察时，FPA和SPA不再等价</p>
-<hr>
-<h2 id="4-结论（Conclusion）">4. 结论（Conclusion）</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol>
-<li>
-<p><strong>整合三种摩擦的必要性</strong>：招募成本、参与成本和有限承诺必须联合建模</p>
-</li>
-<li>
-<p><strong>可见性的关键作用</strong>：参与的可观察性对贸易量和利润有重大影响</p>
-</li>
-<li>
-<p><strong>标准等价失效</strong>：在存在摩擦时，FPA和SPA不再等价</p>
-</li>
-<li>
-<p><strong>市场崩溃的可能</strong>：即使潜在收益为正，市场也可能因承诺问题而崩溃</p>
-</li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol>
-<li>
-<p><strong>理论框架</strong>：整合了之前分开研究的各种摩擦</p>
-</li>
-<li>
-<p><strong>比较静态</strong>：完整描述了所有(c,s)组合下的均衡</p>
-</li>
-<li>
-<p><strong>实践意义</strong>：解释了拍卖行服务的价值</p>
-</li>
-</ol>
-<hr>
-<h2 id="5-未来研究方向">5. 未来研究方向</h2>
-<h3 id="文献提及的方向">文献提及的方向</h3>
-<ol>
-<li>竞拍者进入前了解其价值的版本</li>
-<li>卖家可设置进入费/补贴或保留价格的版本</li>
-</ol>
-<h3 id="未来研究思考">未来研究思考</h3>
-<ol>
-<li><strong>信息摩擦</strong>：信息不对称如何与招募/参与成本交互？</li>
-<li><strong>动态招募</strong>：多时期招募决策会如何改变结果？</li>
-</ol>
-<hr>
-<h2 id="7-学术思考">7. 学术思考</h2>
-<h3 id="核心理论洞察">核心理论洞察</h3>
-<ol>
-<li>
-<p><strong>“承诺作为市场结果的关键”</strong>：卖家有限承诺能力是市场摩擦的核心。</p>
-</li>
-<li>
-<p><strong>“可见性改变激励结构”</strong>：参与的可观察性改变了卖家的招募激励。</p>
-</li>
-<li>
-<p><strong>“价格等价不意味着激励等价”</strong>：在存在摩擦时，不同格式产生不同激励。</p>
-</li>
-</ol>
-<h3 id="深层学术问题">深层学术问题</h3>
-<ol>
-<li><strong>承诺的外生性</strong>：内生化承诺能力会如何改变结论？</li>
-<li><strong>信息获取时机</strong>：竞拍者进入前vs进入后了解价值会如何影响均衡？</li>
-</ol>
-<hr>
-<h2 id="8-下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol>
-<li><strong>PO和PU场景下的均衡具体是什么？</strong></li>
-<li><strong>过度招募的无效率具体是多少？</strong></li>
-<li><strong>Proposition 3中边界曲线ŝ©的形状是什么？</strong></li>
-<li><strong>SPA的"信念独立"出价具体是什么？</strong></li>
-<li><strong>拍卖行如何具体缓解这些摩擦？</strong></li>
-</ol>
-<hr>
-<p><em>本分析报告严格遵循精读文献skill规定的八部分结构完成，旨在为初学者提供全面、易懂的论文逻辑梳理与学术要点解读。</em></p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>One Quarter of Humanity 深度阅读笔记 — James Z. Lee &amp; Wang Feng</title>
     <url>/posts/lee2001/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="书籍信息">书籍信息</h2>
@@ -15758,6 +15564,200 @@ Zotero Item Key:: BY7Y7TDL</p>
       </tags>
   </entry>
   <entry>
+    <title>Auctions With Frictions — 深度阅读笔记 — Lauermann &amp; Wolinsky</title>
+    <url>/posts/lauermann2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Auctions with Frictions: Recruitment, Entry, and Limited Commitment</li>
+<li><strong>作者</strong>: Stephan Lauermann (University of Bonn), Asher Wolinsky (Northwestern University)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: Review of Economic Studies (RES), 93(2): 1167-1199</li>
+<li><strong>DOI</strong>: <a href="https://doi.org/10.1093/restud/rdaf052">https://doi.org/10.1093/restud/rdaf052</a></li>
+<li><strong>难度评估</strong>: 高 - 需要拍卖理论、博弈论基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>拍卖（Frictionless Auction）</strong>：标准拍卖理论假设卖家可以招募竞拍者、竞拍者无成本参与、卖家可承诺于保留价格和参与水平。</p>
+<p><strong>招募成本（Recruitment Cost）</strong>：卖家吸引竞拍者的成本。</p>
+<p><strong>参与成本（Entry Cost）</strong>：竞拍者评估拍品、获取融资、准备报价的成本。</p>
+<p><strong>有限承诺（Limited Commitment）</strong>：卖家无法可信地承诺参与水平或其披露程度。</p>
+<p><strong>PO vs PU场景</strong>：PO=参与可观察；PU=参与不可观察。</p>
+<h3 id="研究背景">研究背景</h3>
+<ol>
+<li>
+<p><strong>实际拍卖的复杂性</strong>：招募和激励竞拍者是拍卖成功的关键。</p>
+</li>
+<li>
+<p><strong>摩擦的普遍性</strong>：在独特资产的出售中，招募成本和参与成本特别显著。</p>
+</li>
+<li>
+<p><strong>传统模型局限性</strong>：现有文献分别研究招募或参与摩擦。</p>
+</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：当卖家承诺能力受限时，招募努力和竞拍者进入决策如何共同决定拍卖参与和结果？</p>
+<hr>
+<h2 id="2-内容及结构（论文结构）">2. 内容及结构（论文结构）</h2>
+<ul>
+<li>第一节：Introduction</li>
+<li>第二节：The PO Auction</li>
+<li>第三节：Equilibrium Analysis for PO Scenario</li>
+<li>第四节：The PU Auction</li>
+<li>第五节：Comparison of PO and PU Scenarios</li>
+<li>第六节：Discussion and Extensions</li>
+<li>第七节：Conclusion</li>
+</ul>
+<hr>
+<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
+<h3 id="模型设定">模型设定</h3>
+<p><strong>核心要素</strong>：</p>
+<ol>
+<li><strong>卖家</strong>：选择招募努力γ（成本为γs），结果是泊松分布的潜在竞拍者</li>
+<li><strong>竞拍者</strong>：支付成本c后观察到私人价值vi，决策是否进入</li>
+<li><strong>Bidding阶段</strong>：第一价格拍卖(FPA)</li>
+</ol>
+<p><strong>两种场景</strong>：PO（参与可观察）vs PU（参与不可观察）</p>
+<h3 id="PO均衡分析">PO均衡分析</h3>
+<p><strong>逆向求解</strong>：</p>
+<ol>
+<li>Stage 3 (Bidding)：标准对称FPA均衡</li>
+<li>Stage 2 (Entry)：竞拍者基于期望收益决定是否进入</li>
+<li>Stage 1 (Recruitment)：卖家选择λ = qγ最大化利润</li>
+</ol>
+<p><strong>关键发现</strong>：</p>
+<ul>
+<li>存在均衡贸易的唯一条件：λc ≥ λo 且 s ≤ s̄o</li>
+<li>当λc &lt; λo时：即使潜在贸易收益为正，市场也会崩溃</li>
+</ul>
+<h3 id="PU均衡分析">PU均衡分析</h3>
+<p><strong>关键差异</strong>：卖家无法可信地披露参与水平</p>
+<p><strong>均衡特征</strong>：</p>
+<ul>
+<li>对于所有(c,s)，存在λ*=0的无贸易均衡</li>
+<li>当s &lt; ξ(λpeak)且λc &gt; λu(s)时，存在两个贸易均衡</li>
+</ul>
+<h3 id="PO-vs-PU比较">PO vs PU比较</h3>
+<p><strong>关键比较结果</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>区域</th>
+<th>条件</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I</td>
+<td>仅PO有贸易</td>
+<td>PO严格更优</td>
+</tr>
+<tr>
+<td>II</td>
+<td>两者都有贸易</td>
+<td>PO严格更优</td>
+</tr>
+<tr>
+<td>III</td>
+<td>两者都有贸易</td>
+<td>PU严格更优</td>
+</tr>
+<tr>
+<td>IV</td>
+<td>仅PU有贸易</td>
+<td>PU更优</td>
+</tr>
+</tbody>
+</table>
+<p><strong>直觉</strong>：</p>
+<ul>
+<li>当c很小（竞拍者愿意进入）时：PO的更强招募激励→更高利润</li>
+<li>当s很小（招募便宜）时：PU的更弱招募激励作为部分承诺机制</li>
+</ul>
+<h3 id="FPA-vs-SPA比较">FPA vs SPA比较</h3>
+<p><strong>Revenue Equivalence失效</strong>：当参与不可观察时，FPA和SPA不再等价</p>
+<hr>
+<h2 id="4-结论（Conclusion）">4. 结论（Conclusion）</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol>
+<li>
+<p><strong>整合三种摩擦的必要性</strong>：招募成本、参与成本和有限承诺必须联合建模</p>
+</li>
+<li>
+<p><strong>可见性的关键作用</strong>：参与的可观察性对贸易量和利润有重大影响</p>
+</li>
+<li>
+<p><strong>标准等价失效</strong>：在存在摩擦时，FPA和SPA不再等价</p>
+</li>
+<li>
+<p><strong>市场崩溃的可能</strong>：即使潜在收益为正，市场也可能因承诺问题而崩溃</p>
+</li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol>
+<li>
+<p><strong>理论框架</strong>：整合了之前分开研究的各种摩擦</p>
+</li>
+<li>
+<p><strong>比较静态</strong>：完整描述了所有(c,s)组合下的均衡</p>
+</li>
+<li>
+<p><strong>实践意义</strong>：解释了拍卖行服务的价值</p>
+</li>
+</ol>
+<hr>
+<h2 id="5-未来研究方向">5. 未来研究方向</h2>
+<h3 id="文献提及的方向">文献提及的方向</h3>
+<ol>
+<li>竞拍者进入前了解其价值的版本</li>
+<li>卖家可设置进入费/补贴或保留价格的版本</li>
+</ol>
+<h3 id="未来研究思考">未来研究思考</h3>
+<ol>
+<li><strong>信息摩擦</strong>：信息不对称如何与招募/参与成本交互？</li>
+<li><strong>动态招募</strong>：多时期招募决策会如何改变结果？</li>
+</ol>
+<hr>
+<h2 id="7-学术思考">7. 学术思考</h2>
+<h3 id="核心理论洞察">核心理论洞察</h3>
+<ol>
+<li>
+<p><strong>“承诺作为市场结果的关键”</strong>：卖家有限承诺能力是市场摩擦的核心。</p>
+</li>
+<li>
+<p><strong>“可见性改变激励结构”</strong>：参与的可观察性改变了卖家的招募激励。</p>
+</li>
+<li>
+<p><strong>“价格等价不意味着激励等价”</strong>：在存在摩擦时，不同格式产生不同激励。</p>
+</li>
+</ol>
+<h3 id="深层学术问题">深层学术问题</h3>
+<ol>
+<li><strong>承诺的外生性</strong>：内生化承诺能力会如何改变结论？</li>
+<li><strong>信息获取时机</strong>：竞拍者进入前vs进入后了解价值会如何影响均衡？</li>
+</ol>
+<hr>
+<h2 id="8-下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol>
+<li><strong>PO和PU场景下的均衡具体是什么？</strong></li>
+<li><strong>过度招募的无效率具体是多少？</strong></li>
+<li><strong>Proposition 3中边界曲线ŝ©的形状是什么？</strong></li>
+<li><strong>SPA的"信念独立"出价具体是什么？</strong></li>
+<li><strong>拍卖行如何具体缓解这些摩擦？</strong></li>
+</ol>
+<hr>
+<p><em>本分析报告严格遵循精读文献skill规定的八部分结构完成，旨在为初学者提供全面、易懂的论文逻辑梳理与学术要点解读。</em></p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>自下而上的制度变迁与中国经济增长 — 深度阅读笔记 — Li Et Al.</title>
     <url>/posts/li2024bottomup/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Bottom-Up Institutional Change and Growth in China<br>
@@ -16096,6 +16096,156 @@ Zotero Item Key:: 2XKAAMHY</p>
       </tags>
   </entry>
   <entry>
+    <title>财富税的行为响应：哥伦比亚的证据 — 深度阅读笔记 — Londoño-Vélez &amp; Ávila-Mahecha</title>
+    <url>/posts/londono-velez2024/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Behavioural Responses to Wealth Taxation: Evidence from Colombia<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/D72FU22M/Londoño-Vélez和Ávila-Mahecha - 2024 - Behavioural Responses to Wealth Taxation Evidence from Colombia.pdf<br>
+Zotero Item Key:: LWFR6PLB</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+财富税（wealth tax）是对个人净资产（资产减负债）征收的税，与所得税不同。近年来围绕是否应推行财富税的政策讨论非常热烈（如美国Warren和Sanders的财富税提案，疫情后多国临时财富税）。核心问题是：富人会如何回应财富税？会真的减少财富积累，还是通过逃税/避税将财富藏匿起来？现有欧洲文献给出的弹性估计差异巨大（从几乎为0到极高），且机制不清晰。</p>
+<p><strong>研究背景</strong><br>
+哥伦比亚自1993年至2016年持续对高净值个人征收财富税，历经四次重大改革（2003、2006、2010、2014年），税率从0到6%不等，豁免阈值和征税期限多次变化，且在阈值处存在"缺口"（notch）——略高于门槛的财富会触发大幅跳跃的税收负担。这为识别行为反应提供了近乎理想的实验条件。</p>
+<p><strong>作者的问题意识</strong><br>
+四个关键问题：</p>
+<ol>
+<li>面对财富税，纳税人是否立即减少申报财富？</li>
+<li>这一效应在税收废止后是否持续（滞后效应/hysteresis）？</li>
+<li>反应通过什么机制实现（真实行为变化 vs. 逃税/漏报）？</li>
+<li>最富有的人是否通过离岸转移将财富藏入避税天堂？</li>
+</ol>
+<p><strong>研究意义</strong><br>
+本文提供了发展中国家财富税行为反应的首个严格因果证据，发现了<strong>财富税的滞后效应（hysteresis）</strong>——临时财富税对申报财富的影响可以在税收废止后数年持续，这对临时财富税的政策评估具有根本性影响。同时，利用泄露的巴拿马文件（Panama Papers），首次将财富税改革与离岸避税行为直接链接。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：财富税政策背景；三大贡献（滞后效应、离岸避税机制、发展中国家证据）。</li>
+<li><strong>哥伦比亚财富税制度介绍（Section 2）</strong>。</li>
+<li><strong>数据（Section 3）</strong>：税收行政记录 + 巴拿马文件链接。</li>
+<li><strong>行为反应：立即效应与滞后效应（Section 4）</strong>。</li>
+<li><strong>反应机制分解（Section 5）</strong>：漏报资产；离岸转移。</li>
+<li><strong>结论与政策含义（Section 6）</strong>。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p><strong>为什么财富税行为反应难以研究</strong>：</p>
+<ul>
+<li>理想的识别需要来自税率变化的外生变异，但大多数国家的税制改革是多维度、难以分离的</li>
+<li>欧洲研究（瑞典、挪威、法国、瑞士等）发现的弹性估计分布极广（0.054到43.2，800倍差异），部分原因是识别方法不同（bunching vs DiD）且测量的行为不同（真实行为vs申报行为）</li>
+<li>发展中国家高净值人群的数据极难获取</li>
+</ul>
+<p><strong>哥伦比亚的独特优势</strong>：</p>
+<ul>
+<li>历史最长的财富税制度（1993—2016年）</li>
+<li>四次重大改革，产生大量识别变异</li>
+<li>在财富阈值处存在"缺口"（notch），产生大幅税收跳跃，适合bunching估计</li>
+<li>覆盖全部高净值个人的税收行政微观数据（资产分项：银行存款、股权、企业资产、房产、车辆等）</li>
+<li>与巴拿马文件链接，追踪离岸行为</li>
+</ul>
+<h3 id="识别策略">识别策略</h3>
+<p><strong>双重识别</strong>：</p>
+<ol>
+<li><strong>Bunching估计</strong>：在财富阈值（notch）处，纳税人将申报财富压低到门槛以下以规避税收。比较实际财富分布与反事实分布（如果没有税收缺口的分布），可以估计弹性。创新之处：作者不依赖反事实分布假设，而是直接用改革前后的<strong>真实面板数据</strong>对比同一纳税人的财富。</li>
+<li><strong>DiD估计</strong>：利用四次改革，比较处于阈值附近的纳税人（受税率变化影响更大）与远离阈值的纳税人（影响较小），在改革前后进行差分。事件研究设计，检验改革前无预趋势。</li>
+</ol>
+<h3 id="数据与主要结果">数据与主要结果</h3>
+<p><strong>数据</strong>：</p>
+<ul>
+<li>哥伦比亚税务总局（DIAN）行政税收数据，1993—2016年，覆盖所有申报财富税的个人（年均约5万人）</li>
+<li>资产分项数据：金融资产（第三方报告）、企业资产（非第三方报告）、房产、车辆、债务</li>
+<li>巴拿马文件：Mossack Fonseca客户数据，与哥伦比亚税收记录链接，识别在巴拿马设立实体的哥伦比亚人</li>
+</ul>
+<p><strong>发现一：立即反应</strong></p>
+<ul>
+<li>财富税增加后，纳税人<strong>立即减少申报财富</strong>以跌落更低税率档次（bunching集中在阈值以下）</li>
+<li>净财富税率提高1%（即"一减税率"提高1%）导致申报财富<strong>立即增加约2%</strong>（弹性≈2）</li>
+<li>Bunching和DiD两种方法给出数量上相近的结果（这不同于欧洲研究中两种方法结果差异很大的情况）</li>
+<li>即时反应损失高达<strong>五分之一的潜在税收收入</strong></li>
+</ul>
+<p><strong>发现二：滞后效应（Hysteresis）——首次证据</strong></p>
+<ul>
+<li><strong>关键发现</strong>：在哥伦比亚临时财富税废止后，纳税人仍然<strong>持续低报财富数年</strong>，即使已经没有税收缺口的经济激励</li>
+<li>具体表现：（a）原先因财富税而把财富压低到阈值以下的人，在税收废止后继续保持低申报水平；（b）原先就低于阈值的人，也预防性地避免跨越已废止的阈值（以防未来财富税重新出台）</li>
+<li>这一效应<strong>不能用税收激励、固定调整成本或收入测量误差</strong>来解释——它反映的是纳税人<strong>战略性地维持低申报</strong>以掩盖资产、规避未来税收</li>
+<li>政策含义：临时财富税（如COVID-19后的应急财富税）可能对财富分布和政府税收产生长期持续影响</li>
+</ul>
+<p><strong>发现三：反应机制——漏报而非真实减少财富</strong></p>
+<ul>
+<li>通过IV方法识别应对财富税的"buncher"（即因税收而调整申报的纳税人）</li>
+<li>特征：buncher拥有更多<strong>非第三方报告资产</strong>（企业股权等当局无法交叉验证的资产）；持有的固定资产（房产）更少（难以随意调整的）</li>
+<li>具体逃税手段：（a）<strong>低报企业资产</strong>（尤其是非上市私有企业股权）；（b）<strong>虚报债务</strong>（夸大负债以降低净资产）</li>
+<li>这与欧洲研究发现一致（Brülhart等2022；Seim 2017）——纳税人利用"第三方信息覆盖率"的差异来逃税</li>
+</ul>
+<p><strong>发现四：离岸转移——与巴拿马文件的证据</strong></p>
+<ul>
+<li>哥伦比亚重新征收财富税后，<strong>每年新增哥伦比亚人在巴拿马注册离岸实体的数量显著增加</strong>（与其他国家相比，控制全球趋势后仍显著）</li>
+<li>财富税税率提高后，<strong>富裕纳税人将更多资产转移到避税天堂</strong>（事件研究证实因果性）</li>
+<li>这些在税收高的年份注册离岸实体的人，随后向哥伦比亚当局申报的资产明显减少</li>
+</ul>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<p><strong>政策含义</strong>：</p>
+<ol>
+<li><strong>信息建设</strong>：扩大第三方报告覆盖范围（尤其是企业股权等目前无需第三方报告的资产），是遏制逃税的关键</li>
+<li><strong>离岸合作</strong>：建立受益所有权登记制度；要求申报境外资产；与其他国家签订自动税收信息交换协议（TIEAs）</li>
+<li><strong>临时财富税的慎用</strong>：滞后效应意味着临时财富税的长期成本可能被低估——即使废止，申报财富长期下降仍会影响税基</li>
+</ol>
+<p><strong>两个未来研究方向（论文明确提及）</strong>：</p>
+<ol>
+<li>哥伦比亚逐步废除<strong>企业财富税</strong>（2018年完全废止）期间，是否存在资产从个人向企业的转移？</li>
+<li>2016年后的自动税收信息交换协议（FATCA等）如何影响离岸逃税行为？当逃税机会受限时，是否会引发真实行为反应（如减少储蓄/投资）？</li>
+</ol>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文明确提及的方向</strong>（见上）</p>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li><strong>中国语境</strong>：中国目前没有财富税，但正在讨论房产税改革（一种形式的财富税）。哥伦比亚的滞后效应结果对中国房产税的政策设计有何启示？如果房产税只是临时征收（如试点城市），是否也会产生持久的价格/申报抑制效应？</li>
+<li><strong>与所得税逃税的比较</strong>：本文的逃税机制（低报非第三方报告资产）与所得税逃税（低报收入）有何共同点和差异？两者在信息环境和审计威慑下的行为反应是否相似？</li>
+<li><strong>贫困国家的信息环境</strong>：哥伦比亚已有金融资产第三方报告，但企业资产没有。对于信息环境更差的最贫困国家，财富税是否根本上不可行（全部税基都无法核验）？</li>
+<li><strong>财富税 vs. 财富增值税</strong>：本文研究的是对存量财富的税收；而卡皮塔尔利得税（capital gains tax）是对流量（增值）征税。两者的逃税弹性有多不同？</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>滞后效应的经济学解释</strong>：本文发现hysteresis不能用固定调整成本（如因调整申报需要会计费用）来解释，而归因于"掩盖资产以避免未来税收"的战略预期。但这一解释隐含纳税人对未来政策的理性预期——他们预见财富税可能回来，因此提前维持低申报。这是一种相当复杂的理性行为。一个替代解释是：低申报可能形成"惯性"（纳税人懒得恢复原来的高申报水平），而非纯粹的战略行为。能否设计实验或利用异质性来区分这两种解释？</p>
+</li>
+<li>
+<p><strong>巴拿马文件的代表性</strong>：巴拿马文件来自Mossack Fonseca这一特定律师事务所，可能无法代表所有离岸逃税行为（只是一家中介商的客户）。如果使用其他来源的离岸数据，结论是否会改变？本文的离岸效应估计可能是低估的（如果还有其他途径逃税）。</p>
+</li>
+<li>
+<p><strong>哥伦比亚结果的外推性</strong>：哥伦比亚是上中等收入国家，有相对成熟的税务系统（DIAN）。对于税务系统更弱、腐败更严重的低收入国家，财富税的逃税行为可能更严重（弹性更高）。对于欧洲这类第三方报告更全面的高收入国家，弹性可能更低。本文的结果处于"中间地带"，为不同制度环境提供参考基准。</p>
+</li>
+<li>
+<p><strong>政策设计含义的层次</strong>：作者建议扩大第三方报告覆盖范围以遏制逃税。但在哥伦比亚（及类似发展中国家），私有企业估值本身就是核心挑战——即使要求第三方报告，如何对非上市企业进行可核验的估值？这是一个数据可用性之外的根本性产权问题。</p>
+</li>
+<li>
+<p><strong>与在逃税文献中的定位</strong>：本文的机制分解结果（第三方报告vs非第三方报告资产）与Kleven等人在所得税中的发现高度一致：第三方信息覆盖率是决定税收合规的最重要因素。这说明"第三方报告"可能是比税率本身更关键的政策杠杆，无论是所得税还是财富税。</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>本文的弹性估计（≈2）与欧洲财富税文献相比处于什么水平？为什么哥伦比亚的弹性比许多欧洲国家更高？是因为第三方报告覆盖率低，还是有其他因素？</li>
+<li>Hysteresis效应的机制——“战略维持低申报以避免未来税收”——是否有理论模型支持？与标准的"一次性调整成本"模型有何不同？</li>
+<li>如果中国推行房产税（如上海、重庆的试点扩大），基于本文的结果，中国纳税人可能会通过什么渠道来应对（房产申报价值低报？转移到企业名下？）？</li>
+<li>Panama Papers作为研究数据的可靠性如何？其他研究（如Alstadsæter等2019用挪威数据）也用到了类似数据，发现了什么可比较的结论？</li>
+<li>本文是否估计了财富税对真实行为（储蓄、投资、消费）的影响？还是只关注申报行为？如果税收主要导致逃税而非真实行为改变，对效率损失（deadweight loss）的评估有何影响？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>年末消费高峰 — 论文笔记 — McCue, Prier &amp; Lofaro</title>
     <url>/posts/mccue2021/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -16351,156 +16501,6 @@ Zotero Item Key:: 2XKAAMHY</p>
         <tag>论文笔记</tag>
         <tag>公共财政</tag>
         <tag>政府采购</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>财富税的行为响应：哥伦比亚的证据 — 深度阅读笔记 — Londoño-Vélez &amp; Ávila-Mahecha</title>
-    <url>/posts/londono-velez2024/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Behavioural Responses to Wealth Taxation: Evidence from Colombia<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/D72FU22M/Londoño-Vélez和Ávila-Mahecha - 2024 - Behavioural Responses to Wealth Taxation Evidence from Colombia.pdf<br>
-Zotero Item Key:: LWFR6PLB</p>
-<hr>
-<span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-财富税（wealth tax）是对个人净资产（资产减负债）征收的税，与所得税不同。近年来围绕是否应推行财富税的政策讨论非常热烈（如美国Warren和Sanders的财富税提案，疫情后多国临时财富税）。核心问题是：富人会如何回应财富税？会真的减少财富积累，还是通过逃税/避税将财富藏匿起来？现有欧洲文献给出的弹性估计差异巨大（从几乎为0到极高），且机制不清晰。</p>
-<p><strong>研究背景</strong><br>
-哥伦比亚自1993年至2016年持续对高净值个人征收财富税，历经四次重大改革（2003、2006、2010、2014年），税率从0到6%不等，豁免阈值和征税期限多次变化，且在阈值处存在"缺口"（notch）——略高于门槛的财富会触发大幅跳跃的税收负担。这为识别行为反应提供了近乎理想的实验条件。</p>
-<p><strong>作者的问题意识</strong><br>
-四个关键问题：</p>
-<ol>
-<li>面对财富税，纳税人是否立即减少申报财富？</li>
-<li>这一效应在税收废止后是否持续（滞后效应/hysteresis）？</li>
-<li>反应通过什么机制实现（真实行为变化 vs. 逃税/漏报）？</li>
-<li>最富有的人是否通过离岸转移将财富藏入避税天堂？</li>
-</ol>
-<p><strong>研究意义</strong><br>
-本文提供了发展中国家财富税行为反应的首个严格因果证据，发现了<strong>财富税的滞后效应（hysteresis）</strong>——临时财富税对申报财富的影响可以在税收废止后数年持续，这对临时财富税的政策评估具有根本性影响。同时，利用泄露的巴拿马文件（Panama Papers），首次将财富税改革与离岸避税行为直接链接。</p>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言</strong>：财富税政策背景；三大贡献（滞后效应、离岸避税机制、发展中国家证据）。</li>
-<li><strong>哥伦比亚财富税制度介绍（Section 2）</strong>。</li>
-<li><strong>数据（Section 3）</strong>：税收行政记录 + 巴拿马文件链接。</li>
-<li><strong>行为反应：立即效应与滞后效应（Section 4）</strong>。</li>
-<li><strong>反应机制分解（Section 5）</strong>：漏报资产；离岸转移。</li>
-<li><strong>结论与政策含义（Section 6）</strong>。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p><strong>为什么财富税行为反应难以研究</strong>：</p>
-<ul>
-<li>理想的识别需要来自税率变化的外生变异，但大多数国家的税制改革是多维度、难以分离的</li>
-<li>欧洲研究（瑞典、挪威、法国、瑞士等）发现的弹性估计分布极广（0.054到43.2，800倍差异），部分原因是识别方法不同（bunching vs DiD）且测量的行为不同（真实行为vs申报行为）</li>
-<li>发展中国家高净值人群的数据极难获取</li>
-</ul>
-<p><strong>哥伦比亚的独特优势</strong>：</p>
-<ul>
-<li>历史最长的财富税制度（1993—2016年）</li>
-<li>四次重大改革，产生大量识别变异</li>
-<li>在财富阈值处存在"缺口"（notch），产生大幅税收跳跃，适合bunching估计</li>
-<li>覆盖全部高净值个人的税收行政微观数据（资产分项：银行存款、股权、企业资产、房产、车辆等）</li>
-<li>与巴拿马文件链接，追踪离岸行为</li>
-</ul>
-<h3 id="识别策略">识别策略</h3>
-<p><strong>双重识别</strong>：</p>
-<ol>
-<li><strong>Bunching估计</strong>：在财富阈值（notch）处，纳税人将申报财富压低到门槛以下以规避税收。比较实际财富分布与反事实分布（如果没有税收缺口的分布），可以估计弹性。创新之处：作者不依赖反事实分布假设，而是直接用改革前后的<strong>真实面板数据</strong>对比同一纳税人的财富。</li>
-<li><strong>DiD估计</strong>：利用四次改革，比较处于阈值附近的纳税人（受税率变化影响更大）与远离阈值的纳税人（影响较小），在改革前后进行差分。事件研究设计，检验改革前无预趋势。</li>
-</ol>
-<h3 id="数据与主要结果">数据与主要结果</h3>
-<p><strong>数据</strong>：</p>
-<ul>
-<li>哥伦比亚税务总局（DIAN）行政税收数据，1993—2016年，覆盖所有申报财富税的个人（年均约5万人）</li>
-<li>资产分项数据：金融资产（第三方报告）、企业资产（非第三方报告）、房产、车辆、债务</li>
-<li>巴拿马文件：Mossack Fonseca客户数据，与哥伦比亚税收记录链接，识别在巴拿马设立实体的哥伦比亚人</li>
-</ul>
-<p><strong>发现一：立即反应</strong></p>
-<ul>
-<li>财富税增加后，纳税人<strong>立即减少申报财富</strong>以跌落更低税率档次（bunching集中在阈值以下）</li>
-<li>净财富税率提高1%（即"一减税率"提高1%）导致申报财富<strong>立即增加约2%</strong>（弹性≈2）</li>
-<li>Bunching和DiD两种方法给出数量上相近的结果（这不同于欧洲研究中两种方法结果差异很大的情况）</li>
-<li>即时反应损失高达<strong>五分之一的潜在税收收入</strong></li>
-</ul>
-<p><strong>发现二：滞后效应（Hysteresis）——首次证据</strong></p>
-<ul>
-<li><strong>关键发现</strong>：在哥伦比亚临时财富税废止后，纳税人仍然<strong>持续低报财富数年</strong>，即使已经没有税收缺口的经济激励</li>
-<li>具体表现：（a）原先因财富税而把财富压低到阈值以下的人，在税收废止后继续保持低申报水平；（b）原先就低于阈值的人，也预防性地避免跨越已废止的阈值（以防未来财富税重新出台）</li>
-<li>这一效应<strong>不能用税收激励、固定调整成本或收入测量误差</strong>来解释——它反映的是纳税人<strong>战略性地维持低申报</strong>以掩盖资产、规避未来税收</li>
-<li>政策含义：临时财富税（如COVID-19后的应急财富税）可能对财富分布和政府税收产生长期持续影响</li>
-</ul>
-<p><strong>发现三：反应机制——漏报而非真实减少财富</strong></p>
-<ul>
-<li>通过IV方法识别应对财富税的"buncher"（即因税收而调整申报的纳税人）</li>
-<li>特征：buncher拥有更多<strong>非第三方报告资产</strong>（企业股权等当局无法交叉验证的资产）；持有的固定资产（房产）更少（难以随意调整的）</li>
-<li>具体逃税手段：（a）<strong>低报企业资产</strong>（尤其是非上市私有企业股权）；（b）<strong>虚报债务</strong>（夸大负债以降低净资产）</li>
-<li>这与欧洲研究发现一致（Brülhart等2022；Seim 2017）——纳税人利用"第三方信息覆盖率"的差异来逃税</li>
-</ul>
-<p><strong>发现四：离岸转移——与巴拿马文件的证据</strong></p>
-<ul>
-<li>哥伦比亚重新征收财富税后，<strong>每年新增哥伦比亚人在巴拿马注册离岸实体的数量显著增加</strong>（与其他国家相比，控制全球趋势后仍显著）</li>
-<li>财富税税率提高后，<strong>富裕纳税人将更多资产转移到避税天堂</strong>（事件研究证实因果性）</li>
-<li>这些在税收高的年份注册离岸实体的人，随后向哥伦比亚当局申报的资产明显减少</li>
-</ul>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<p><strong>政策含义</strong>：</p>
-<ol>
-<li><strong>信息建设</strong>：扩大第三方报告覆盖范围（尤其是企业股权等目前无需第三方报告的资产），是遏制逃税的关键</li>
-<li><strong>离岸合作</strong>：建立受益所有权登记制度；要求申报境外资产；与其他国家签订自动税收信息交换协议（TIEAs）</li>
-<li><strong>临时财富税的慎用</strong>：滞后效应意味着临时财富税的长期成本可能被低估——即使废止，申报财富长期下降仍会影响税基</li>
-</ol>
-<p><strong>两个未来研究方向（论文明确提及）</strong>：</p>
-<ol>
-<li>哥伦比亚逐步废除<strong>企业财富税</strong>（2018年完全废止）期间，是否存在资产从个人向企业的转移？</li>
-<li>2016年后的自动税收信息交换协议（FATCA等）如何影响离岸逃税行为？当逃税机会受限时，是否会引发真实行为反应（如减少储蓄/投资）？</li>
-</ol>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文明确提及的方向</strong>（见上）</p>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li><strong>中国语境</strong>：中国目前没有财富税，但正在讨论房产税改革（一种形式的财富税）。哥伦比亚的滞后效应结果对中国房产税的政策设计有何启示？如果房产税只是临时征收（如试点城市），是否也会产生持久的价格/申报抑制效应？</li>
-<li><strong>与所得税逃税的比较</strong>：本文的逃税机制（低报非第三方报告资产）与所得税逃税（低报收入）有何共同点和差异？两者在信息环境和审计威慑下的行为反应是否相似？</li>
-<li><strong>贫困国家的信息环境</strong>：哥伦比亚已有金融资产第三方报告，但企业资产没有。对于信息环境更差的最贫困国家，财富税是否根本上不可行（全部税基都无法核验）？</li>
-<li><strong>财富税 vs. 财富增值税</strong>：本文研究的是对存量财富的税收；而卡皮塔尔利得税（capital gains tax）是对流量（增值）征税。两者的逃税弹性有多不同？</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>滞后效应的经济学解释</strong>：本文发现hysteresis不能用固定调整成本（如因调整申报需要会计费用）来解释，而归因于"掩盖资产以避免未来税收"的战略预期。但这一解释隐含纳税人对未来政策的理性预期——他们预见财富税可能回来，因此提前维持低申报。这是一种相当复杂的理性行为。一个替代解释是：低申报可能形成"惯性"（纳税人懒得恢复原来的高申报水平），而非纯粹的战略行为。能否设计实验或利用异质性来区分这两种解释？</p>
-</li>
-<li>
-<p><strong>巴拿马文件的代表性</strong>：巴拿马文件来自Mossack Fonseca这一特定律师事务所，可能无法代表所有离岸逃税行为（只是一家中介商的客户）。如果使用其他来源的离岸数据，结论是否会改变？本文的离岸效应估计可能是低估的（如果还有其他途径逃税）。</p>
-</li>
-<li>
-<p><strong>哥伦比亚结果的外推性</strong>：哥伦比亚是上中等收入国家，有相对成熟的税务系统（DIAN）。对于税务系统更弱、腐败更严重的低收入国家，财富税的逃税行为可能更严重（弹性更高）。对于欧洲这类第三方报告更全面的高收入国家，弹性可能更低。本文的结果处于"中间地带"，为不同制度环境提供参考基准。</p>
-</li>
-<li>
-<p><strong>政策设计含义的层次</strong>：作者建议扩大第三方报告覆盖范围以遏制逃税。但在哥伦比亚（及类似发展中国家），私有企业估值本身就是核心挑战——即使要求第三方报告，如何对非上市企业进行可核验的估值？这是一个数据可用性之外的根本性产权问题。</p>
-</li>
-<li>
-<p><strong>与在逃税文献中的定位</strong>：本文的机制分解结果（第三方报告vs非第三方报告资产）与Kleven等人在所得税中的发现高度一致：第三方信息覆盖率是决定税收合规的最重要因素。这说明"第三方报告"可能是比税率本身更关键的政策杠杆，无论是所得税还是财富税。</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>本文的弹性估计（≈2）与欧洲财富税文献相比处于什么水平？为什么哥伦比亚的弹性比许多欧洲国家更高？是因为第三方报告覆盖率低，还是有其他因素？</li>
-<li>Hysteresis效应的机制——“战略维持低申报以避免未来税收”——是否有理论模型支持？与标准的"一次性调整成本"模型有何不同？</li>
-<li>如果中国推行房产税（如上海、重庆的试点扩大），基于本文的结果，中国纳税人可能会通过什么渠道来应对（房产申报价值低报？转移到企业名下？）？</li>
-<li>Panama Papers作为研究数据的可靠性如何？其他研究（如Alstadsæter等2019用挪威数据）也用到了类似数据，发现了什么可比较的结论？</li>
-<li>本文是否估计了财富税对真实行为（储蓄、投资、消费）的影响？还是只关注申报行为？如果税收主要导致逃税而非真实行为改变，对效率损失（deadweight loss）的评估有何影响？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -18336,6 +18336,28 @@ Zotero Item Key:: Y7FT49B5</p>
       </tags>
   </entry>
   <entry>
+    <title>Shell脚本笔记(1)</title>
+    <url>/posts/2510/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<h1>引言</h1>
+<p>shell是用C语言编写的程序,但它自身同时也是一种程序设计语言.你可能经常听说"shell脚本",但实际上shell编程并非等同于"shell脚本"编程,前者指shell程序本身的开发,后者则是利用shell程序进行开发.都说java和javascript的区别是周杰和周杰伦的区别,shell和shell script或许也有那么点意思.</p>
+<h1>shell脚本</h1>
+<p>似乎任何程序学习都是从"Hello World!"开始的,对于<strong>shell</strong>而言:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Hello World !"</span></span><br></pre></td></tr></tbody></table></figure>
+<p><strong>#!<strong>是个标记,告知这段命令将用bash执行.echo则是一个向窗口展示文本的命令.<br>
+你可以将以上代码框的内容存为一个以.sh为后缀的文件,比如</strong><a href="http://hw.sh">hw.sh</a></strong>,并赋予文件执行权限:</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">chmod +x ./hw.sh         #赋予执行权限</span><br><span class="line">bash hw.sh               #执行脚本</span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<p>未完待续</p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>竞标企业：美国补贴竞争 — 深度阅读笔记 — Slattery</title>
     <url>/posts/slattery2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -18484,28 +18506,6 @@ Zotero Item Key:: Y7FT49B5</p>
       </tags>
   </entry>
   <entry>
-    <title>Shell脚本笔记(1)</title>
-    <url>/posts/2510/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<h1>引言</h1>
-<p>shell是用C语言编写的程序,但它自身同时也是一种程序设计语言.你可能经常听说"shell脚本",但实际上shell编程并非等同于"shell脚本"编程,前者指shell程序本身的开发,后者则是利用shell程序进行开发.都说java和javascript的区别是周杰和周杰伦的区别,shell和shell script或许也有那么点意思.</p>
-<h1>shell脚本</h1>
-<p>似乎任何程序学习都是从"Hello World!"开始的,对于<strong>shell</strong>而言:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Hello World !"</span></span><br></pre></td></tr></tbody></table></figure>
-<p><strong>#!<strong>是个标记,告知这段命令将用bash执行.echo则是一个向窗口展示文本的命令.<br>
-你可以将以上代码框的内容存为一个以.sh为后缀的文件,比如</strong><a href="http://hw.sh">hw.sh</a></strong>,并赋予文件执行权限:</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">chmod +x ./hw.sh         #赋予执行权限</span><br><span class="line">bash hw.sh               #执行脚本</span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<p>未完待续</p>
-]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>shell</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Behavioural Causal Inference — 深度阅读笔记 — Spiegler</title>
     <url>/posts/spiegler2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -18584,6 +18584,63 @@ Zotero Item Key:: Y7FT49B5</p>
       </categories>
       <tags>
         <tag>R</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Cascades and Fluctuations — 深度阅读笔记 — Taschereau-Dumouchel</title>
+    <url>/posts/taschereau2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Cascades and Fluctuations in an Economy with an Endogenous Production Network</li>
+<li><strong>作者</strong>: Mathieu Taschereau-Dumouchel (Wharton)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies (RES)</li>
+<li><strong>DOI</strong>: 10.1093/restud/rdaf036</li>
+<li><strong>难度评估</strong>: 高 - 需要宏观经济学、生产网络理论、计算经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>生产网络</strong>：企业通过投入产出联系形成的网络结构。</p>
+<p><strong>级联倒闭</strong>：一家企业倒闭引发相邻企业连锁倒闭。</p>
+<p><strong>内生网络形成</strong>：网络结构由企业运营决策内生决定。</p>
+<h3 id="研究背景">研究背景</h3>
+<ol>
+<li>现有文献主要关注外生网络</li>
+<li>缺乏网络结构内生化的联合理论</li>
+<li>需要理解网络与商业周期的相互作用</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p>网络结构的内生变化如何影响微观冲击向宏观经济波动的传导？</p>
+<h2 id="2-内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：模型与解法</li>
+<li>第三节：最优配置特征</li>
+<li>第四节：定量探索</li>
+<li>第五节：结论</li>
+</ul>
+<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
+<h3 id="核心机制">核心机制</h3>
+<p>企业从多种投入中受益→相邻企业运营决策间的互补性→内生形成网络结构。</p>
+<h3 id="关键发现">关键发现</h3>
+<ol>
+<li>高度连接企业更能抵御冲击但触发更大级联</li>
+<li>衰退期网络更分散、聚类程度降低</li>
+<li>允许网络重组减少35%以上波动</li>
+</ol>
+<h2 id="4-结论">4. 结论</h2>
+<p>内生网络重组是宏观经济波动的重要来源，也是稳定机制。</p>
+<h2 id="5-未来研究方向">5. 未来研究方向</h2>
+<p>实证验证、政策干预、动态进入退出模型。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -18712,63 +18769,6 @@ Zotero Item Key:: Y7FT49B5</p>
 ]]></content>
       <categories>
         <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Cascades and Fluctuations — 深度阅读笔记 — Taschereau-Dumouchel</title>
-    <url>/posts/taschereau2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Cascades and Fluctuations in an Economy with an Endogenous Production Network</li>
-<li><strong>作者</strong>: Mathieu Taschereau-Dumouchel (Wharton)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies (RES)</li>
-<li><strong>DOI</strong>: 10.1093/restud/rdaf036</li>
-<li><strong>难度评估</strong>: 高 - 需要宏观经济学、生产网络理论、计算经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>生产网络</strong>：企业通过投入产出联系形成的网络结构。</p>
-<p><strong>级联倒闭</strong>：一家企业倒闭引发相邻企业连锁倒闭。</p>
-<p><strong>内生网络形成</strong>：网络结构由企业运营决策内生决定。</p>
-<h3 id="研究背景">研究背景</h3>
-<ol>
-<li>现有文献主要关注外生网络</li>
-<li>缺乏网络结构内生化的联合理论</li>
-<li>需要理解网络与商业周期的相互作用</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p>网络结构的内生变化如何影响微观冲击向宏观经济波动的传导？</p>
-<h2 id="2-内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：模型与解法</li>
-<li>第三节：最优配置特征</li>
-<li>第四节：定量探索</li>
-<li>第五节：结论</li>
-</ul>
-<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
-<h3 id="核心机制">核心机制</h3>
-<p>企业从多种投入中受益→相邻企业运营决策间的互补性→内生形成网络结构。</p>
-<h3 id="关键发现">关键发现</h3>
-<ol>
-<li>高度连接企业更能抵御冲击但触发更大级联</li>
-<li>衰退期网络更分散、聚类程度降低</li>
-<li>允许网络重组减少35%以上波动</li>
-</ol>
-<h2 id="4-结论">4. 结论</h2>
-<p>内生网络重组是宏观经济波动的重要来源，也是稳定机制。</p>
-<h2 id="5-未来研究方向">5. 未来研究方向</h2>
-<p>实证验证、政策干预、动态进入退出模型。</p>
-]]></content>
-      <categories>
-        <category>RES</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
