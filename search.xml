@@ -1,6 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>学术讲座# 中国人民大学经济学院江艇:渐进DID的最新进展</title>
+    <url>/posts/836/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="关于did因果识别"><strong>关于DID因果识别</strong></h2>
+<ul>
+<li>Imbens:
+任何的因果识别归根结底都是做<strong>插值</strong>与<strong>差值</strong></li>
+<li>传统<span class="math inline">\(DID\)</span>最大的两类威胁是:①平行趋势不成立;②存在混淆政策</li>
+<li><span class="math inline">\(DID\)</span>的重要前提是平行趋势,但这种前提实际并不能完全验证:事前平行并不意味着事后平行趋势,但事前不平行一定能验证平行趋势不成立</li>
+<li>最经典的例子就是经济特区,深圳在改革开放前可能和中原地区的一个小村庄没有什么不同,但是即使深圳没有被划为经济特区,改革开放后其经济增长趋势也有可能因为地缘优势而呈现较快的增长趋势</li>
+<li>两期的数据做<span class="math inline">\(DID\)</span>会退化为<span class="math inline">\(FD\)</span>,此时的截距项代表时间变化趋势</li>
+<li>Good control: 既影响<span class="math inline">\(y\)</span>,又影响<span class="math inline">\(D\cdot T\)</span></li>
+<li>Bad control: 既影响y,又被<span class="math inline">\(D\cdot
+T\)</span>影响</li>
+<li>无法判断影响样本进入处理组的因素是否还影响其变化趋势</li>
+<li>潜在结果:使用上标表示,想象中的结果</li>
+<li><span class="math inline">\(ATT\)</span>:处理组接受处理后的平均处理效应</li>
+<li><span class="math inline">\(D\)</span>实际可以理解为处理组的固定效应</li>
+</ul>
+<span id="more"></span>
+<h2 id="交错型didstaggered-did"><strong>1. 交错型DID(staggered
+DID)</strong></h2>
+<ul>
+<li>没有办法构造<span class="math inline">\(D\cdot
+T\)</span>,可以直接定义<span class="math inline">\(D\cdot
+T\)</span>,表示接受处理的虚拟变量</li>
+<li>干预事件的发生时间不一致,极可能意味着,事后趋势不一致.为此,应尽量控制影响<span class="math inline">\(X_i\)</span>,避免控制既影响<span class="math inline">\(y\)</span>,又被<span class="math inline">\(D⋅T\)</span>影响的<span class="math inline">\(X_{it}\)</span></li>
+<li>Goodman-Bacon定理:任何一个交错<span class="math inline">\(DID\)</span>的双向固定效应模型都可以分解为<span class="math inline">\(K^2\)</span>个传统双重差分估计结果的加权平均</li>
+<li>导致偏误的原因在于:以晚处理组为处理组,以早处理组为对照组,此时双重差分估计中包含了一项<span class="math inline">\(\Delta
+ATT\)</span>,即早处理组的政策效应存在明显的动态变化</li>
+<li>交错<span class="math inline">\(DID\)</span>估计出的<span class="math inline">\(\beta\)</span>究竟意味着什么?由三部分构成:①方差加权的<span class="math inline">\(ATT\)</span>;②方差加权的趋势差异;③<span class="math inline">\(\Delta ATT\)</span></li>
+</ul>
+<h2 id="改进策略_基于事件研究法"><strong>2.
+改进策略_基于事件研究法</strong></h2>
+<ul>
+<li><strong>2.1</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解,观察以早处理组为控制组的系数和权重,判断其是否影响了最终系数的估计</li>
+<li><strong>2.2</strong> 进行协变量的平衡性检验.在交错<span class="math inline">\(DID\)</span>的情形下,平行趋势检验没办法做.干预时间的不一致,平衡性检验可作为一种替代手段.此做法的目的在于判断事前变量与干预处理进度之间的关系.进行匹配时,都可以以政策执行前某一期为准</li>
+<li><strong>2.3</strong>
+进一步,可以按照各组作为控制组的贡献作为权重,对事前变量与干预处理进度进行加权<span class="math inline">\(OLS\)</span></li>
+<li><strong>2.4</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解,必须是平衡面板数据,所以要删除一些样本</li>
+<li><strong>2.5</strong>
+事件研究法:变日历时间为相对时间.按照相对时间进行校准,如果存在非常明显的趋势,则<span class="math inline">\(\Delta
+ATT\)</span>一定会比较大,基准模型会存在低估偏误</li>
+<li><strong>2.6</strong>
+可以根据事件研究法的结果,将核心解释变量乘以一个<span class="math inline">\((t-T^*)\)</span></li>
+</ul>
+<h2 id="改进策略_堆叠didstacked-did"><strong>3.改进策略_堆叠<span class="math inline">\(DID\)</span>(Stacked <span class="math inline">\(DID\)</span>)</strong></h2>
+<ul>
+<li><strong>3.1</strong>
+假定存在K个处理时点,构造K个数据集.每个数据集中只保留可以为处理组服务的控制组,比如晚处理组和一直未处理的组.标准误需要聚类到数据集上面</li>
+<li><strong>3.2</strong> 从构造上保证了早处理组不能作为控制组</li>
+</ul>
+<h2 id="改进策略_对事件研究法的反思寻找干净的控制组"><strong>4.改进策略_对事件研究法的反思,寻找干净的控制组</strong></h2>
+<ul>
+<li><strong>4.1</strong>
+仅不同时间队列样本的动态处理效应变化方式是一样的,事件研究法的估计才是有效的</li>
+</ul>
+]]></content>
+      <categories>
+        <category>计量</category>
+        <category>DID</category>
+      </categories>
+      <tags>
+        <tag>学术讲座</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>When Should You Adjust Standard Errors for Clustering — 深度分析 — Abadie Et Al.</title>
     <url>/posts/abadie2023/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -280,72 +346,6 @@ Bootstrap是否是更好的选择?它与本文的TSCB有何关系?</p></li>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>学术讲座# 中国人民大学经济学院江艇:渐进DID的最新进展</title>
-    <url>/posts/836/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="关于did因果识别"><strong>关于DID因果识别</strong></h2>
-<ul>
-<li>Imbens:
-任何的因果识别归根结底都是做<strong>插值</strong>与<strong>差值</strong></li>
-<li>传统<span class="math inline">\(DID\)</span>最大的两类威胁是:①平行趋势不成立;②存在混淆政策</li>
-<li><span class="math inline">\(DID\)</span>的重要前提是平行趋势,但这种前提实际并不能完全验证:事前平行并不意味着事后平行趋势,但事前不平行一定能验证平行趋势不成立</li>
-<li>最经典的例子就是经济特区,深圳在改革开放前可能和中原地区的一个小村庄没有什么不同,但是即使深圳没有被划为经济特区,改革开放后其经济增长趋势也有可能因为地缘优势而呈现较快的增长趋势</li>
-<li>两期的数据做<span class="math inline">\(DID\)</span>会退化为<span class="math inline">\(FD\)</span>,此时的截距项代表时间变化趋势</li>
-<li>Good control: 既影响<span class="math inline">\(y\)</span>,又影响<span class="math inline">\(D\cdot T\)</span></li>
-<li>Bad control: 既影响y,又被<span class="math inline">\(D\cdot
-T\)</span>影响</li>
-<li>无法判断影响样本进入处理组的因素是否还影响其变化趋势</li>
-<li>潜在结果:使用上标表示,想象中的结果</li>
-<li><span class="math inline">\(ATT\)</span>:处理组接受处理后的平均处理效应</li>
-<li><span class="math inline">\(D\)</span>实际可以理解为处理组的固定效应</li>
-</ul>
-<span id="more"></span>
-<h2 id="交错型didstaggered-did"><strong>1. 交错型DID(staggered
-DID)</strong></h2>
-<ul>
-<li>没有办法构造<span class="math inline">\(D\cdot
-T\)</span>,可以直接定义<span class="math inline">\(D\cdot
-T\)</span>,表示接受处理的虚拟变量</li>
-<li>干预事件的发生时间不一致,极可能意味着,事后趋势不一致.为此,应尽量控制影响<span class="math inline">\(X_i\)</span>,避免控制既影响<span class="math inline">\(y\)</span>,又被<span class="math inline">\(D⋅T\)</span>影响的<span class="math inline">\(X_{it}\)</span></li>
-<li>Goodman-Bacon定理:任何一个交错<span class="math inline">\(DID\)</span>的双向固定效应模型都可以分解为<span class="math inline">\(K^2\)</span>个传统双重差分估计结果的加权平均</li>
-<li>导致偏误的原因在于:以晚处理组为处理组,以早处理组为对照组,此时双重差分估计中包含了一项<span class="math inline">\(\Delta
-ATT\)</span>,即早处理组的政策效应存在明显的动态变化</li>
-<li>交错<span class="math inline">\(DID\)</span>估计出的<span class="math inline">\(\beta\)</span>究竟意味着什么?由三部分构成:①方差加权的<span class="math inline">\(ATT\)</span>;②方差加权的趋势差异;③<span class="math inline">\(\Delta ATT\)</span></li>
-</ul>
-<h2 id="改进策略_基于事件研究法"><strong>2.
-改进策略_基于事件研究法</strong></h2>
-<ul>
-<li><strong>2.1</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解,观察以早处理组为控制组的系数和权重,判断其是否影响了最终系数的估计</li>
-<li><strong>2.2</strong> 进行协变量的平衡性检验.在交错<span class="math inline">\(DID\)</span>的情形下,平行趋势检验没办法做.干预时间的不一致,平衡性检验可作为一种替代手段.此做法的目的在于判断事前变量与干预处理进度之间的关系.进行匹配时,都可以以政策执行前某一期为准</li>
-<li><strong>2.3</strong>
-进一步,可以按照各组作为控制组的贡献作为权重,对事前变量与干预处理进度进行加权<span class="math inline">\(OLS\)</span></li>
-<li><strong>2.4</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解,必须是平衡面板数据,所以要删除一些样本</li>
-<li><strong>2.5</strong>
-事件研究法:变日历时间为相对时间.按照相对时间进行校准,如果存在非常明显的趋势,则<span class="math inline">\(\Delta
-ATT\)</span>一定会比较大,基准模型会存在低估偏误</li>
-<li><strong>2.6</strong>
-可以根据事件研究法的结果,将核心解释变量乘以一个<span class="math inline">\((t-T^*)\)</span></li>
-</ul>
-<h2 id="改进策略_堆叠didstacked-did"><strong>3.改进策略_堆叠<span class="math inline">\(DID\)</span>(Stacked <span class="math inline">\(DID\)</span>)</strong></h2>
-<ul>
-<li><strong>3.1</strong>
-假定存在K个处理时点,构造K个数据集.每个数据集中只保留可以为处理组服务的控制组,比如晚处理组和一直未处理的组.标准误需要聚类到数据集上面</li>
-<li><strong>3.2</strong> 从构造上保证了早处理组不能作为控制组</li>
-</ul>
-<h2 id="改进策略_对事件研究法的反思寻找干净的控制组"><strong>4.改进策略_对事件研究法的反思,寻找干净的控制组</strong></h2>
-<ul>
-<li><strong>4.1</strong>
-仅不同时间队列样本的动态处理效应变化方式是一样的,事件研究法的估计才是有效的</li>
-</ul>
-]]></content>
-      <categories>
-        <category>计量</category>
-        <category>DID</category>
-      </categories>
-      <tags>
-        <tag>学术讲座</tag>
       </tags>
   </entry>
   <entry>
@@ -1256,6 +1256,168 @@ Development. <em>American Economic Review</em>, 103(1), 1-46.</li>
       </tags>
   </entry>
   <entry>
+    <title>稳健的错误设定模型 — 深度阅读笔记 — Ba</title>
+    <url>/posts/ba2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Robust Misspecified Models</li>
+<li><strong>作者</strong>: Cuimin Ba (University of Pittsburgh)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, Vol. 116, No. 4,
+pp. 1340-1379</li>
+<li><strong>DOI</strong>: 10.1257/aer.20240246</li>
+<li><strong>难度评估</strong>: 高 -
+需要博弈论、学习理论、贝叶斯推断基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>模型错误设定（Model
+Misspecification）</strong>：指决策者将零概率分配给真实数据生成过程(DGP)的情况。这可能源于简化复杂现实的需要，或认知偏差如过度自信或相关性忽视。</p>
+<p><strong>自我确认均衡（Self-Confirming Equilibrium,
+SCE）</strong>：指代理人在给定一致信念下选择最优行动，但模型预测可能与真实DGP不匹配（仅在均衡路径上匹配）。</p>
+<p><strong>贝叶斯因子（Bayes
+Factor）</strong>：是两种模型相对于观察数据的似然比，用于决定是否切换模型。当贝叶斯因子超过阈值α时，代理人切换模型。</p>
+<p><strong>p-吸收性（P-absorbingness）</strong>：本文提出的新概念，要求使用某模型的教条主义者在正概率下最终只玩均衡行动。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><strong>模型与决策</strong>:
+人们使用模型指导决策，但常用模型往往是错误设定的</li>
+<li><strong>现有研究局限</strong>:
+大多数文献假设决策者是"教条的"——使用特定错误模型且不考虑改变</li>
+<li><strong>现实中的模型切换</strong>:
+科学家转换范式、经济学家采用新模型、个体在认知行为治疗中改变思维模式</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>:
+当决策者愿意切换模型时，哪些错误设定的模型会持续存在？</p>
+<p><strong>关键洞察</strong>:
+作者提出两个核心特征来表征稳健的错误设定模型：(1)模型在预测均衡分布方面的渐近准确性；(2)围绕均衡的先验"紧密度"。错误设定的模型可以是稳健的，即使决策者观察到无限数据，也能持续对抗任何竞争模型。</p>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<p>论文结构如下:</p>
+<ol type="1">
+<li><strong>引言</strong>: 问题陈述、动机、贡献预览</li>
+<li><strong>激励示例</strong>: 艺术家过度/不足自信的例子</li>
+<li><strong>框架</strong>:
+基本设定、模型设定、切换规则、持久性和稳健性定义</li>
+<li><strong>主要结果</strong>: 定理1-3</li>
+<li><strong>应用</strong>: 媒体偏见与极化、过度与不足自信</li>
+<li><strong>扩展</strong>: 替代切换规则、多个竞争模型，前瞻性代理人</li>
+<li><strong>结论</strong></li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="艺术家示例">艺术家示例</h4>
+<p>艺术家选择努力程度，真实能力b*=1，但艺术家可能过度自信(b̂=2)或不足自信(b̂=0)。</p>
+<p><strong>关键发现</strong>: 过度自信更稳健!</p>
+<ul>
+<li><strong>不足自信</strong>:
+导致负反馈循环，努力在1和2之间永远循环，无自我确认均衡</li>
+<li><strong>过度自信</strong>:
+导致正反馈循环，最终稳定在努力=0的均衡</li>
+</ul>
+<h3 id="框架设定">框架设定</h3>
+<p><strong>数据生成过程</strong>: 每个时期代理人生成内生数据 - 行动at →
+结果yt ~ Q*(·|at) - 结果取决于行动（内生数据）</p>
+<p><strong>主观模型</strong>: 每个模型θ是预测DGP的有限集合{ Qθ(·|a,ω)
+}</p>
+<p><strong>切换规则</strong>: - 计算贝叶斯因子λt - 如果λt &gt;
+α，切换到竞争模型 - 如果λt &lt; 1/α，切换回来 - α≥1控制切换粘性</p>
+<h3 id="主要结果">主要结果</h3>
+<h4 id="定理1哪些模型可以稳健">定理1：哪些模型可以稳健</h4>
+<p><strong>条件</strong>: α &gt; 1</p>
+<p><strong>等价命题</strong>: (i) 模型θ在某些先验下全局稳健 (ii)
+模型θ在某些先验下局部稳健 (iii) 模型θ存在p-吸收SCE</p>
+<p><strong>关键洞察</strong>:
+全局和局部稳健性是等价的——如果模型对重大范式转换脆弱，对局部变化也脆弱。</p>
+<h4 id="定理2何时模型是稳健的">定理2：何时模型是稳健的</h4>
+<p><strong>条件</strong>:
+模型θ无陷阱（可识别+所有p-吸收SCE是准严格）</p>
+<p><strong>核心概念</strong>: - <strong>一致参数</strong> Cθ:
+存在p-吸收SCE支持的参数 - <strong>先验紧密度</strong>: πθ0(Cθ) ≥ 1/α</p>
+<p><strong>结论</strong>: - 全局稳健 ⟺ 先验紧密度条件满足 - 局部稳健 ⟺
+Cθ ≠ ∅（对所有全支撑先验）</p>
+<h4 id="定理3非粘性切换-α-1">定理3：非粘性切换 (α = 1)</h4>
+<p><strong>结论</strong>: Cθ = Ωθ（全参数一致）才是稳健的</p>
+<p><strong>洞察</strong>: 粘性帮助更多错误模型持续存在</p>
+<h3 id="应用">应用</h3>
+<h4 id="a.-媒体偏见与极化">A. 媒体偏见与极化</h4>
+<p><strong>设定</strong>: - 代理人选择左翼、中间、右翼媒体 -
+真实状态是ωM（中间） - 媒体可能误导代理人</p>
+<p><strong>命题1</strong>: - θ̂在所有先验和切换阈值下全局稳健 -
+θ只在先验充分集中或切换阈值足够高时全局稳健 - θ̂最终以正概率永久替换θ</p>
+<p><strong>政治极化机制</strong>:
+错误模型θ̂因为简单，在数据拟合上表现更好，最终导致持久的政治极化。</p>
+<h4 id="b.-过度与不足自信">B. 过度与不足自信</h4>
+<p><strong>设定</strong>:
+代理人对能力有偏见(b̂)，学习另一个基本因素(ω)</p>
+<p><strong>命题2</strong>: - 过度自信(b̂ &gt; b<em>): 总是局部稳健 -
+不足自信(b̂ &lt; b</em>): 只在某些不连续区间局部稳健</p>
+<p><strong>机制差异</strong>: - 过度自信 → 正反馈 → 收敛到SCE - 不足自信
+→ 负反馈 → 在非SCE行动间振荡</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<p>本文研究了当决策者比较错误设定模型与竞争模型时，哪些模型会持续存在。主要结论:</p>
+<ol type="1">
+<li><strong>稳健性条件</strong>:
+错误设定模型的稳健性取决于两个特征——渐近准确性和先验紧密度</li>
+<li><strong>全局vs局部稳健</strong>:
+在粘性切换下(α&gt;1)两者等价;在非粘性切换下(α=1)只有全集中先验有效</li>
+<li><strong>反直觉发现</strong>:
+配备根深蒂固先验的简单错误模型可以比正确模型更稳健</li>
+<li><strong>应用广泛</strong>:
+从媒体极化到认知偏差,框架提供了预测哪些偏见更持久的工具</li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="文献提及的方向">文献提及的方向</h3>
+<ol type="1">
+<li><strong>最优切换阈值</strong>: 如何平衡I类和II类错误</li>
+<li><strong>持久性概率</strong>: 量化模型被永久采用的可能性</li>
+<li><strong>前瞻性代理人</strong>: 跨模型的前瞻性而非仅模型内</li>
+<li><strong>连续行动空间</strong>: 扩展框架到连续行动</li>
+</ol>
+<h3 id="未来研究思考">未来研究思考</h3>
+<ol type="1">
+<li><strong>政策设计</strong>:
+如果知道某些错误模型更稳健,如何设计干预来对抗它们?</li>
+<li><strong>模型复杂性</strong>:
+复杂模型vs简单模型的权衡是否与本文发现一致?</li>
+<li><strong>异质性学习</strong>:
+不同决策者是否以不同方式应用切换规则?</li>
+</ol>
+<hr>
+<h2 id="学术思考">7. 学术思考</h2>
+<h3 id="核心学术洞察">核心学术洞察</h3>
+<ol type="1">
+<li><p><strong>为什么简单错误模型更稳健?</strong>:
+本文的核心反直觉发现。直觉上,正确模型应该更受欢迎。但错误模型因为简单,先验更集中,而正确模型在每个参数上都可能不一致。</p></li>
+<li><p><strong>粘性切换的双刃剑效应</strong>:
+粘性(α&gt;1)帮助错误模型持续,但也防止因早期噪声过早放弃正确模型。</p></li>
+<li><p><strong>p-吸收性的概念创新</strong>:
+传统SCE只要求均衡存在,不要求可达到性。p-吸收性要求从正概率初始信念可达。</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li>定理1中"局部和全局稳健等价"的证明思路是什么?</li>
+<li>媒体极化应用中的"策略性误报"是如何设计的?</li>
+<li>p-吸收SCE和普通SCE有什么区别?</li>
+<li>错误模型持久性的概率有多高?</li>
+<li>在离散vs连续行动空间中,结论如何变化?</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Macroeconomic Effects of Debt Relief 深度阅读笔记 — Auclert, Dobbie &amp; Goldsmith-Pinkham</title>
     <url>/posts/auclert2019/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -1437,168 +1599,6 @@ Economic Review.</li>
         <tag>债务减免</tag>
         <tag>大衰退</tag>
         <tag>破产制度</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>稳健的错误设定模型 — 深度阅读笔记 — Ba</title>
-    <url>/posts/ba2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Robust Misspecified Models</li>
-<li><strong>作者</strong>: Cuimin Ba (University of Pittsburgh)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, Vol. 116, No. 4,
-pp. 1340-1379</li>
-<li><strong>DOI</strong>: 10.1257/aer.20240246</li>
-<li><strong>难度评估</strong>: 高 -
-需要博弈论、学习理论、贝叶斯推断基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>模型错误设定（Model
-Misspecification）</strong>：指决策者将零概率分配给真实数据生成过程(DGP)的情况。这可能源于简化复杂现实的需要，或认知偏差如过度自信或相关性忽视。</p>
-<p><strong>自我确认均衡（Self-Confirming Equilibrium,
-SCE）</strong>：指代理人在给定一致信念下选择最优行动，但模型预测可能与真实DGP不匹配（仅在均衡路径上匹配）。</p>
-<p><strong>贝叶斯因子（Bayes
-Factor）</strong>：是两种模型相对于观察数据的似然比，用于决定是否切换模型。当贝叶斯因子超过阈值α时，代理人切换模型。</p>
-<p><strong>p-吸收性（P-absorbingness）</strong>：本文提出的新概念，要求使用某模型的教条主义者在正概率下最终只玩均衡行动。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><strong>模型与决策</strong>:
-人们使用模型指导决策，但常用模型往往是错误设定的</li>
-<li><strong>现有研究局限</strong>:
-大多数文献假设决策者是"教条的"——使用特定错误模型且不考虑改变</li>
-<li><strong>现实中的模型切换</strong>:
-科学家转换范式、经济学家采用新模型、个体在认知行为治疗中改变思维模式</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:
-当决策者愿意切换模型时，哪些错误设定的模型会持续存在？</p>
-<p><strong>关键洞察</strong>:
-作者提出两个核心特征来表征稳健的错误设定模型：(1)模型在预测均衡分布方面的渐近准确性；(2)围绕均衡的先验"紧密度"。错误设定的模型可以是稳健的，即使决策者观察到无限数据，也能持续对抗任何竞争模型。</p>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<p>论文结构如下:</p>
-<ol type="1">
-<li><strong>引言</strong>: 问题陈述、动机、贡献预览</li>
-<li><strong>激励示例</strong>: 艺术家过度/不足自信的例子</li>
-<li><strong>框架</strong>:
-基本设定、模型设定、切换规则、持久性和稳健性定义</li>
-<li><strong>主要结果</strong>: 定理1-3</li>
-<li><strong>应用</strong>: 媒体偏见与极化、过度与不足自信</li>
-<li><strong>扩展</strong>: 替代切换规则、多个竞争模型，前瞻性代理人</li>
-<li><strong>结论</strong></li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="艺术家示例">艺术家示例</h4>
-<p>艺术家选择努力程度，真实能力b*=1，但艺术家可能过度自信(b̂=2)或不足自信(b̂=0)。</p>
-<p><strong>关键发现</strong>: 过度自信更稳健!</p>
-<ul>
-<li><strong>不足自信</strong>:
-导致负反馈循环，努力在1和2之间永远循环，无自我确认均衡</li>
-<li><strong>过度自信</strong>:
-导致正反馈循环，最终稳定在努力=0的均衡</li>
-</ul>
-<h3 id="框架设定">框架设定</h3>
-<p><strong>数据生成过程</strong>: 每个时期代理人生成内生数据 - 行动at →
-结果yt ~ Q*(·|at) - 结果取决于行动（内生数据）</p>
-<p><strong>主观模型</strong>: 每个模型θ是预测DGP的有限集合{ Qθ(·|a,ω)
-}</p>
-<p><strong>切换规则</strong>: - 计算贝叶斯因子λt - 如果λt &gt;
-α，切换到竞争模型 - 如果λt &lt; 1/α，切换回来 - α≥1控制切换粘性</p>
-<h3 id="主要结果">主要结果</h3>
-<h4 id="定理1哪些模型可以稳健">定理1：哪些模型可以稳健</h4>
-<p><strong>条件</strong>: α &gt; 1</p>
-<p><strong>等价命题</strong>: (i) 模型θ在某些先验下全局稳健 (ii)
-模型θ在某些先验下局部稳健 (iii) 模型θ存在p-吸收SCE</p>
-<p><strong>关键洞察</strong>:
-全局和局部稳健性是等价的——如果模型对重大范式转换脆弱，对局部变化也脆弱。</p>
-<h4 id="定理2何时模型是稳健的">定理2：何时模型是稳健的</h4>
-<p><strong>条件</strong>:
-模型θ无陷阱（可识别+所有p-吸收SCE是准严格）</p>
-<p><strong>核心概念</strong>: - <strong>一致参数</strong> Cθ:
-存在p-吸收SCE支持的参数 - <strong>先验紧密度</strong>: πθ0(Cθ) ≥ 1/α</p>
-<p><strong>结论</strong>: - 全局稳健 ⟺ 先验紧密度条件满足 - 局部稳健 ⟺
-Cθ ≠ ∅（对所有全支撑先验）</p>
-<h4 id="定理3非粘性切换-α-1">定理3：非粘性切换 (α = 1)</h4>
-<p><strong>结论</strong>: Cθ = Ωθ（全参数一致）才是稳健的</p>
-<p><strong>洞察</strong>: 粘性帮助更多错误模型持续存在</p>
-<h3 id="应用">应用</h3>
-<h4 id="a.-媒体偏见与极化">A. 媒体偏见与极化</h4>
-<p><strong>设定</strong>: - 代理人选择左翼、中间、右翼媒体 -
-真实状态是ωM（中间） - 媒体可能误导代理人</p>
-<p><strong>命题1</strong>: - θ̂在所有先验和切换阈值下全局稳健 -
-θ只在先验充分集中或切换阈值足够高时全局稳健 - θ̂最终以正概率永久替换θ</p>
-<p><strong>政治极化机制</strong>:
-错误模型θ̂因为简单，在数据拟合上表现更好，最终导致持久的政治极化。</p>
-<h4 id="b.-过度与不足自信">B. 过度与不足自信</h4>
-<p><strong>设定</strong>:
-代理人对能力有偏见(b̂)，学习另一个基本因素(ω)</p>
-<p><strong>命题2</strong>: - 过度自信(b̂ &gt; b<em>): 总是局部稳健 -
-不足自信(b̂ &lt; b</em>): 只在某些不连续区间局部稳健</p>
-<p><strong>机制差异</strong>: - 过度自信 → 正反馈 → 收敛到SCE - 不足自信
-→ 负反馈 → 在非SCE行动间振荡</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<p>本文研究了当决策者比较错误设定模型与竞争模型时，哪些模型会持续存在。主要结论:</p>
-<ol type="1">
-<li><strong>稳健性条件</strong>:
-错误设定模型的稳健性取决于两个特征——渐近准确性和先验紧密度</li>
-<li><strong>全局vs局部稳健</strong>:
-在粘性切换下(α&gt;1)两者等价;在非粘性切换下(α=1)只有全集中先验有效</li>
-<li><strong>反直觉发现</strong>:
-配备根深蒂固先验的简单错误模型可以比正确模型更稳健</li>
-<li><strong>应用广泛</strong>:
-从媒体极化到认知偏差,框架提供了预测哪些偏见更持久的工具</li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="文献提及的方向">文献提及的方向</h3>
-<ol type="1">
-<li><strong>最优切换阈值</strong>: 如何平衡I类和II类错误</li>
-<li><strong>持久性概率</strong>: 量化模型被永久采用的可能性</li>
-<li><strong>前瞻性代理人</strong>: 跨模型的前瞻性而非仅模型内</li>
-<li><strong>连续行动空间</strong>: 扩展框架到连续行动</li>
-</ol>
-<h3 id="未来研究思考">未来研究思考</h3>
-<ol type="1">
-<li><strong>政策设计</strong>:
-如果知道某些错误模型更稳健,如何设计干预来对抗它们?</li>
-<li><strong>模型复杂性</strong>:
-复杂模型vs简单模型的权衡是否与本文发现一致?</li>
-<li><strong>异质性学习</strong>:
-不同决策者是否以不同方式应用切换规则?</li>
-</ol>
-<hr>
-<h2 id="学术思考">7. 学术思考</h2>
-<h3 id="核心学术洞察">核心学术洞察</h3>
-<ol type="1">
-<li><p><strong>为什么简单错误模型更稳健?</strong>:
-本文的核心反直觉发现。直觉上,正确模型应该更受欢迎。但错误模型因为简单,先验更集中,而正确模型在每个参数上都可能不一致。</p></li>
-<li><p><strong>粘性切换的双刃剑效应</strong>:
-粘性(α&gt;1)帮助错误模型持续,但也防止因早期噪声过早放弃正确模型。</p></li>
-<li><p><strong>p-吸收性的概念创新</strong>:
-传统SCE只要求均衡存在,不要求可达到性。p-吸收性要求从正概率初始信念可达。</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li>定理1中"局部和全局稳健等价"的证明思路是什么?</li>
-<li>媒体极化应用中的"策略性误报"是如何设计的?</li>
-<li>p-吸收SCE和普通SCE有什么区别?</li>
-<li>错误模型持久性的概率有多高?</li>
-<li>在离散vs连续行动空间中,结论如何变化?</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -2499,148 +2499,6 @@ Moi改革后)，这是否影响校准的可靠性？</p>
       </tags>
   </entry>
   <entry>
-    <title>压低成本：干中学与全球电动汽车电池产业政府政策 — 深度阅读笔记 — Barwick Et Al.</title>
-    <url>/posts/barwick2025/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Drive Down the Cost: Learning by Doing and
-Government Policies in the Global EV Battery Industry</li>
-<li><strong>作者</strong>: Panle Jia Barwick (Wisconsin), Hyuk-Soo Kwon
-(Singapore), Shanjun Li (Cornell), Nahim Zahur (Queens)</li>
-<li><strong>年份</strong>: 2025</li>
-<li><strong>来源</strong>: NBER Working Paper No. 33378</li>
-<li><strong>DOI</strong>: 10.3386/w33378</li>
-</ul>
-<span id="more"></span>
-<hr>
-<hr>
-<h2 id="引言背景和意义">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong> "干中学"（Learning by Doing,
-LBD）是产业经济学和增长理论的经典概念：企业在生产过程中积累经验，进而降低单位生产成本。"Wright's
-Law"（1936年由航空工程师Theodore
-Wright提出）将这一规律量化为"累计产量每翻倍，单位成本下降固定比例"。LBD在半导体、太阳能电池等绿色技术行业均有大量记录。在政策设计上，LBD带来正外部性——当前生产提高了整个行业未来的效率，因此存在补贴当前生产的理由（以纠正动态外部性）。</p>
-<p><strong>研究背景</strong>
-电动汽车（EV）电池成本在2010-2020年间下降了近90%，是过去十年绿色能源技术中最引人注目的成本下降之一。这一变化对全球气候政策目标至关重要——电池成本是EV相对于内燃机车价格劣势的主要来源。全球各国政府为促进EV普及投入了大量补贴（2022年全球EV消费补贴达430亿美元），并通过产业政策（如中国白名单政策、美国IRA本地含量要求）扶持本土电池产业。然而，LBD在多大程度上驱动了成本下降？政府政策通过哪些渠道影响LBD进程？这些问题此前缺乏可信的量化研究。</p>
-<p><strong>作者的问题意识</strong>
-（1）LBD在多大程度上解释了EV电池成本的下降（相对于技术进步、规模经济、原材料成本等其他因素）？（2）LBD如何改变消费者EV补贴的政策效果？（3）中国的"白名单"本地含量要求政策通过LBD对全球EV市场产生了怎样的影响？（4）LBD在全球供应链中产生怎样的跨国溢出效应？</p>
-<p><strong>研究意义</strong>
-本文为绿色技术政策设计提供了直接量化依据：若忽视LBD，政策评估将大幅低估补贴的长期效益；同时揭示了消费端补贴与产业政策的相互作用，对评估美国IRA、中国产业政策的全球影响具有直接参考价值。</p>
-<hr>
-<h2 id="内容及结构论文结构">内容及结构（论文结构）</h2>
-<ol type="1">
-<li><strong>引言</strong>：提出问题，概述主要发现（LBD学习率7.5%，与补贴互补放大效果，跨国溢出效应）。</li>
-<li><strong>数据</strong>：全球13国EV销售数据（2013-2020），电池供应商信息，各国补贴政策。</li>
-<li><strong>需求模型</strong>：异质消费者离散选择模型（BLP类型），估计消费者对EV特性（价格、续航、充电速度等）的偏好。</li>
-<li><strong>供给模型与电池成本恢复</strong>：通过Nash议价模型（上游电池供应商与下游EV生产商之间）推断上下游加成，从而恢复电池成本。</li>
-<li><strong>LBD估计</strong>：用工具变量方法识别LBD学习率，控制内生性（高效企业多生产更多、积累更多经验）。</li>
-<li><strong>反事实政策分析</strong>：（a）评估消费者EV补贴在有无LBD情况下的效果；（b）评估中国白名单政策及其时间安排的影响。</li>
-<li><strong>结论</strong>：总结核心发现及政策含义。</li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>EV电池成本是EV普及的关键障碍，而其90%的成本降幅是过去十年绿色技术领域最显著的成就之一。产业界将这一降幅归因于LBD，但缺乏可信的因果估计：LBD究竟贡献了多少？还是技术进步、规模经济、原材料价格下降等因素更重要？政府大规模补贴政策是否加速了这一进程？</p>
-<h3 id="挑战">挑战</h3>
-<p><strong>挑战一：电池成本不可观测</strong><br>
-电池供应协议是商业机密，无法直接观测到每款EV型号的电池成本。解决方法：通过构建EV生产商与电池供应商之间Nash议价模型，结合观测到的车辆价格和估计的需求弹性，反推上下游加成，进而推断电池成本。</p>
-<p><strong>挑战二：LBD识别的内生性</strong><br>
-企业的累计产量（生产经验，experience）与不可观测的成本冲击相关——成本优势大的企业往往产量更大、经验积累更快。若直接用经验变量回归成本，估计结果会有偏差。<br>
-<strong>工具变量策略</strong>：利用各电池供应商对下游不同国家EV补贴的差异暴露（variation）来构造工具变量。若甲国对某款车型提供慷慨补贴，供应该车型电池的供应商将更快积累经验。这一"补贴暴露"外生地推动了部分供应商的经验积累，从而识别LBD的因果效应。此外，还利用了中国白名单政策（2016-2019年）对电池供应商经验的外生冲击。</p>
-<h3 id="方法">方法</h3>
-<p><strong>需求端</strong>：BLP类型的随机系数离散选择模型，用于估计异质消费者对EV特性（价格、续航、充电功率、品牌等）的偏好，从而估计需求弹性。</p>
-<p><strong>供给端</strong>：Nash议价框架（EV生产商与电池供应商之间的纳什讨价还价），考察同步定价（Simultaneous）、顺序定价（Sequential）和线性定价（Linear
-Pricing）多种供给侧模型，并比较其对成本恢复的稳健性。</p>
-<p><strong>LBD估计方程</strong>（核心）： -
-以电池成本（对数）对累计生产经验（对数）做回归，控制行业整体技术进步、EV整车装配经验、原材料投入成本、规模经济等，并用工具变量处理经验的内生性。
-- 学习率（learning rate）定义为经验每翻倍时成本下降的百分比。</p>
-<p><strong>数据</strong>： -
-全球13国（覆盖&gt;95%全球EV销售）2013-2020年逐车型逐年销量数据（含BEV和PHEV）
-- 电池供应商数据库（植物地点、供应的EV车型列表） -
-各国EV购置补贴数据（金额、起止时间） -
-社会经济变量（收入分布等，用于校准消费者异质性）</p>
-<h3 id="结果">结果</h3>
-<p><strong>核心结果一：LBD学习率为7.5%</strong><br>
-控制行业技术进步、整车装配经验、原材料成本和规模经济后，LBD学习率估计为<strong>7.5%</strong>——即电池生产经验每翻倍，单位成本下降7.5%。该学习率处于文献估计的较低端，但仍具有重要经济意义。在2013-2020年电池总成本降幅中，LBD贡献了<strong>35.5%</strong>，行业技术进步贡献了<strong>39.9%</strong>，其余由整车装配经验、电池化学材料变化、原材料价格和规模经济共同解释。</p>
-<p><strong>核心结果二：LBD大幅放大EV补贴效果</strong><br>
--
-无LBD时，各国补贴估计使2013-2020年全球累计EV销量增加<strong>29.9%</strong>。
--
-同时考虑补贴和LBD时，全球EV销量相比无补贴无LBD基准增加<strong>170%</strong>。
--
-二者的联合效果比各自独立效果之和高出<strong>60%</strong>——说明补贴与LBD具有强互补性。</p>
-<p><strong>核心结果三：消费端补贴产生跨国溢出效应</strong><br>
-EV电池供应链是全球化的（主要集中在中、日、韩三国），一国补贴可通过LBD降低全球电池成本，产生跨国外溢：
--
-美国约131亿美元EV补贴产生了约165亿美元全球福利净增益；美国和加拿大获得其中49%，日韩电池供应商获得28%，中国仅获得3%（因为样本期内中国EV和电池与国际市场贸易有限）。
--
-欧盟约164亿美元补贴产生约116亿美元全球福利增益，欧盟仅获得其中26%（因为欧洲大量进口EV，且采用统一补贴而非有针对性补贴）。</p>
-<p><strong>核心结果四：上游电池供应商仅获得LBD收益的一小部分</strong><br>
-LBD产生的成本降低主要通过价格竞争传递给了EV生产商和最终消费者，而非被电池供应商内部保留——与完全竞争的产业组织逻辑一致。</p>
-<p><strong>政策结果五：中国白名单政策的影响</strong><br>
-中国白名单政策（2016-2019年）将EV补贴限于使用"白名单"国内电池供应商的车辆，为CATL等中国电池企业提供了保护性市场，帮助其积累经验、形成竞争优势。但这一政策具有两面性：
--
-实际实施时间（2016-2019年）对中国电池产业有正面效果（通过加速中国供应商的LBD积累）。
--
-若将该政策延迟5年实施（2021-2024年），由于中国电池企业已通过出口积累足够经验，白名单的保护效果将大幅减弱，且因阻碍全球供应链效率，中国国内福利净效果将转为负值。</p>
-<hr>
-<h2 id="结论conclusion">结论（Conclusion）</h2>
-<p><strong>核心发现</strong>：LBD在EV电池成本下降中发挥了实质性作用（贡献35.5%），但并非唯一因素，行业技术进步同样重要。LBD与消费者补贴之间的强互补性意味着：忽视LBD将大幅低估补贴的长期效益。消费端补贴产生显著的跨国溢出效应，其全球效益往往远超国内效益，这对单国政策评估具有重要启示。中国的产业政策（白名单）在特定历史时机下对国内产业发展有正效果，但若时机不当则可能适得其反。</p>
-<p><strong>对领域的贡献</strong>： 1.
-提出了在无法直接观测上游成本时通过结构性供给模型恢复电池成本的方法论框架；
-2. 构建了全球EV行业的结构性模型，联合识别LBD、需求偏好和政策互动效应；
-3. 量化了EV补贴的动态长期效益，纠正了现有静态评估文献的系统性低估； 4.
-揭示了全球化供应链下单国产业政策的跨境外溢机制。</p>
-<p><strong>政策含义</strong>： -
-EV补贴的动态效益远大于静态效益，政策评估应纳入LBD渠道； -
-美国IRA的本地含量要求在短期内可能阻碍全球LBD进程，长期效果取决于本土供应链的学习速度；
--
-政策时机（timing）至关重要：早期的保护性产业政策（如中国白名单）可能在企业尚未具备竞争力时发挥关键作用，但过晚则适得其反。</p>
-<hr>
-<h2 id="未来研究方向future-work">未来研究方向（Future work）</h2>
-<p><strong>论文中明确提及的方向</strong>： 1.
-评估美国IRA本地含量要求对全球LBD和EV普及的长期影响； 2.
-研究上游供应商如何将LBD收益分配给劳动者和股东（分配效应）； 3.
-将分析拓展到EV以外的绿色技术（如太阳能、储能电池等）。</p>
-<p><strong>从论文引申的研究方向</strong>： 1.
-内外部LBD的分解：企业内部的知识积累vs.跨企业的知识溢出各贡献多少？这对政策选择（补贴全行业
-vs. 扶持龙头企业）有重大影响； 2.
-动态寡头垄断框架下的战略性LBD——企业是否会为了积累经验而战略性定低价（forward-looking
-pricing）； 3.
-将模型扩展至2020年后：IRA颁布后（2022年），本地含量要求如何重塑全球电池供应链的LBD路径；
-4.
-LBD与研发投入的互动：研发投入（技术进步）与生产经验（LBD）是否互补，影响政策组合的最优设计。</p>
-<h2 id="学术思考">学术思考</h2>
-<ol type="1">
-<li><p><strong>电池成本恢复的模型依赖性</strong>：电池成本无法直接观测，需通过结构模型推断。不同供给侧假设（同步
-vs.
-顺序议价）是否会产生实质性不同的学习率估计？作者如何验证这些替代模型的可信度？</p></li>
-<li><p><strong>工具变量的有效性</strong>：利用"供应商对下游不同国家补贴的差异暴露"构造IV，这一策略要求EV补贴变动对电池成本没有直接效应（排他性限制）。若补贴政策同时改变了原材料需求（如锂、镍），可能违反这一假设——如何检验？</p></li>
-<li><p><strong>LBD的溢出结构</strong>：论文将LBD建模为企业层面的内部学习。但实际上，工程师流动、专利公开等机制可能使LBD在企业间溢出。内外部LBD的混淆对学习率估计和政策评估会产生怎样的影响？</p></li>
-<li><p><strong>本地含量要求的动态合理性</strong>：中国白名单实际上是保护主义政策，但本文发现在特定时机下它对国内产业有正面作用。这是否意味着"战略性贸易政策"在绿色技术的早期发展阶段具有动态合理性？如何区分"促进LBD积累"的合理保护与一般意义上的低效保护主义？</p></li>
-<li><p><strong>样本期外推的风险</strong>：研究覆盖2013-2020年，但EV市场在2020年后经历了爆炸式增长（中国BEV渗透率超过30%）。LBD在高渗透率阶段是否会放缓？本文的政策结论对IRA（2022年后）是否仍然适用？</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol type="1">
-<li>"学习率7.5%"是怎么估计出来的？工具变量策略的具体构造方法是什么？</li>
-<li>为什么上游电池供应商只获得了LBD收益的"一小部分"？这是市场结构（竞争激烈）的结果，还是谈判权力（bargaining
-power）不对等的结果？</li>
-<li>美国IRA的本地含量要求是否会减慢全球LBD进程、推高全球EV价格？本文的框架如何用于评估IRA？</li>
-<li>中国白名单政策在实际实施时间下对全球（非中国）消费者的福利影响是正面还是负面？</li>
-<li>如果未来电池技术路线（如固态电池）发生重大转变，现有的LBD积累是否会"归零"？政策设计如何应对这种技术不确定性？</li>
-<li>论文的供给侧模型（Nash议价）对最终结论的敏感性如何？若改用更简单的加成定价模型，学习率估计会有多大变化？</li>
-<li>为什么中国在美国补贴的全球福利中只获得3%？这是否意味着美国的补贴实际上是在补贴日韩企业而非中国竞争对手？</li>
-</ol>
-<hr>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>降低成本：电动车电池产业的干中学与政府政策 — 深度阅读笔记 — Barwick Et Al.</title>
     <url>/posts/barwick2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Drive Down the Cost: Learning by Doing and Government Policies in the Global EV Battery Industry<br>
@@ -2778,6 +2636,148 @@ LBD产生的成本降低主要通过价格竞争传递给了EV生产商和最终
 <li>论文的供给侧模型（Nash议价）对最终结论的敏感性如何？若改用更简单的加成定价模型，学习率估计会有多大变化？</li>
 <li>为什么中国在美国补贴的全球福利中只获得3%？这是否意味着美国的补贴实际上是在补贴日韩企业而非中国竞争对手？</li>
 </ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>压低成本：干中学与全球电动汽车电池产业政府政策 — 深度阅读笔记 — Barwick Et Al.</title>
+    <url>/posts/barwick2025/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Drive Down the Cost: Learning by Doing and
+Government Policies in the Global EV Battery Industry</li>
+<li><strong>作者</strong>: Panle Jia Barwick (Wisconsin), Hyuk-Soo Kwon
+(Singapore), Shanjun Li (Cornell), Nahim Zahur (Queens)</li>
+<li><strong>年份</strong>: 2025</li>
+<li><strong>来源</strong>: NBER Working Paper No. 33378</li>
+<li><strong>DOI</strong>: 10.3386/w33378</li>
+</ul>
+<span id="more"></span>
+<hr>
+<hr>
+<h2 id="引言背景和意义">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong> "干中学"（Learning by Doing,
+LBD）是产业经济学和增长理论的经典概念：企业在生产过程中积累经验，进而降低单位生产成本。"Wright's
+Law"（1936年由航空工程师Theodore
+Wright提出）将这一规律量化为"累计产量每翻倍，单位成本下降固定比例"。LBD在半导体、太阳能电池等绿色技术行业均有大量记录。在政策设计上，LBD带来正外部性——当前生产提高了整个行业未来的效率，因此存在补贴当前生产的理由（以纠正动态外部性）。</p>
+<p><strong>研究背景</strong>
+电动汽车（EV）电池成本在2010-2020年间下降了近90%，是过去十年绿色能源技术中最引人注目的成本下降之一。这一变化对全球气候政策目标至关重要——电池成本是EV相对于内燃机车价格劣势的主要来源。全球各国政府为促进EV普及投入了大量补贴（2022年全球EV消费补贴达430亿美元），并通过产业政策（如中国白名单政策、美国IRA本地含量要求）扶持本土电池产业。然而，LBD在多大程度上驱动了成本下降？政府政策通过哪些渠道影响LBD进程？这些问题此前缺乏可信的量化研究。</p>
+<p><strong>作者的问题意识</strong>
+（1）LBD在多大程度上解释了EV电池成本的下降（相对于技术进步、规模经济、原材料成本等其他因素）？（2）LBD如何改变消费者EV补贴的政策效果？（3）中国的"白名单"本地含量要求政策通过LBD对全球EV市场产生了怎样的影响？（4）LBD在全球供应链中产生怎样的跨国溢出效应？</p>
+<p><strong>研究意义</strong>
+本文为绿色技术政策设计提供了直接量化依据：若忽视LBD，政策评估将大幅低估补贴的长期效益；同时揭示了消费端补贴与产业政策的相互作用，对评估美国IRA、中国产业政策的全球影响具有直接参考价值。</p>
+<hr>
+<h2 id="内容及结构论文结构">内容及结构（论文结构）</h2>
+<ol type="1">
+<li><strong>引言</strong>：提出问题，概述主要发现（LBD学习率7.5%，与补贴互补放大效果，跨国溢出效应）。</li>
+<li><strong>数据</strong>：全球13国EV销售数据（2013-2020），电池供应商信息，各国补贴政策。</li>
+<li><strong>需求模型</strong>：异质消费者离散选择模型（BLP类型），估计消费者对EV特性（价格、续航、充电速度等）的偏好。</li>
+<li><strong>供给模型与电池成本恢复</strong>：通过Nash议价模型（上游电池供应商与下游EV生产商之间）推断上下游加成，从而恢复电池成本。</li>
+<li><strong>LBD估计</strong>：用工具变量方法识别LBD学习率，控制内生性（高效企业多生产更多、积累更多经验）。</li>
+<li><strong>反事实政策分析</strong>：（a）评估消费者EV补贴在有无LBD情况下的效果；（b）评估中国白名单政策及其时间安排的影响。</li>
+<li><strong>结论</strong>：总结核心发现及政策含义。</li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>EV电池成本是EV普及的关键障碍，而其90%的成本降幅是过去十年绿色技术领域最显著的成就之一。产业界将这一降幅归因于LBD，但缺乏可信的因果估计：LBD究竟贡献了多少？还是技术进步、规模经济、原材料价格下降等因素更重要？政府大规模补贴政策是否加速了这一进程？</p>
+<h3 id="挑战">挑战</h3>
+<p><strong>挑战一：电池成本不可观测</strong><br>
+电池供应协议是商业机密，无法直接观测到每款EV型号的电池成本。解决方法：通过构建EV生产商与电池供应商之间Nash议价模型，结合观测到的车辆价格和估计的需求弹性，反推上下游加成，进而推断电池成本。</p>
+<p><strong>挑战二：LBD识别的内生性</strong><br>
+企业的累计产量（生产经验，experience）与不可观测的成本冲击相关——成本优势大的企业往往产量更大、经验积累更快。若直接用经验变量回归成本，估计结果会有偏差。<br>
+<strong>工具变量策略</strong>：利用各电池供应商对下游不同国家EV补贴的差异暴露（variation）来构造工具变量。若甲国对某款车型提供慷慨补贴，供应该车型电池的供应商将更快积累经验。这一"补贴暴露"外生地推动了部分供应商的经验积累，从而识别LBD的因果效应。此外，还利用了中国白名单政策（2016-2019年）对电池供应商经验的外生冲击。</p>
+<h3 id="方法">方法</h3>
+<p><strong>需求端</strong>：BLP类型的随机系数离散选择模型，用于估计异质消费者对EV特性（价格、续航、充电功率、品牌等）的偏好，从而估计需求弹性。</p>
+<p><strong>供给端</strong>：Nash议价框架（EV生产商与电池供应商之间的纳什讨价还价），考察同步定价（Simultaneous）、顺序定价（Sequential）和线性定价（Linear
+Pricing）多种供给侧模型，并比较其对成本恢复的稳健性。</p>
+<p><strong>LBD估计方程</strong>（核心）： -
+以电池成本（对数）对累计生产经验（对数）做回归，控制行业整体技术进步、EV整车装配经验、原材料投入成本、规模经济等，并用工具变量处理经验的内生性。
+- 学习率（learning rate）定义为经验每翻倍时成本下降的百分比。</p>
+<p><strong>数据</strong>： -
+全球13国（覆盖&gt;95%全球EV销售）2013-2020年逐车型逐年销量数据（含BEV和PHEV）
+- 电池供应商数据库（植物地点、供应的EV车型列表） -
+各国EV购置补贴数据（金额、起止时间） -
+社会经济变量（收入分布等，用于校准消费者异质性）</p>
+<h3 id="结果">结果</h3>
+<p><strong>核心结果一：LBD学习率为7.5%</strong><br>
+控制行业技术进步、整车装配经验、原材料成本和规模经济后，LBD学习率估计为<strong>7.5%</strong>——即电池生产经验每翻倍，单位成本下降7.5%。该学习率处于文献估计的较低端，但仍具有重要经济意义。在2013-2020年电池总成本降幅中，LBD贡献了<strong>35.5%</strong>，行业技术进步贡献了<strong>39.9%</strong>，其余由整车装配经验、电池化学材料变化、原材料价格和规模经济共同解释。</p>
+<p><strong>核心结果二：LBD大幅放大EV补贴效果</strong><br>
+-
+无LBD时，各国补贴估计使2013-2020年全球累计EV销量增加<strong>29.9%</strong>。
+-
+同时考虑补贴和LBD时，全球EV销量相比无补贴无LBD基准增加<strong>170%</strong>。
+-
+二者的联合效果比各自独立效果之和高出<strong>60%</strong>——说明补贴与LBD具有强互补性。</p>
+<p><strong>核心结果三：消费端补贴产生跨国溢出效应</strong><br>
+EV电池供应链是全球化的（主要集中在中、日、韩三国），一国补贴可通过LBD降低全球电池成本，产生跨国外溢：
+-
+美国约131亿美元EV补贴产生了约165亿美元全球福利净增益；美国和加拿大获得其中49%，日韩电池供应商获得28%，中国仅获得3%（因为样本期内中国EV和电池与国际市场贸易有限）。
+-
+欧盟约164亿美元补贴产生约116亿美元全球福利增益，欧盟仅获得其中26%（因为欧洲大量进口EV，且采用统一补贴而非有针对性补贴）。</p>
+<p><strong>核心结果四：上游电池供应商仅获得LBD收益的一小部分</strong><br>
+LBD产生的成本降低主要通过价格竞争传递给了EV生产商和最终消费者，而非被电池供应商内部保留——与完全竞争的产业组织逻辑一致。</p>
+<p><strong>政策结果五：中国白名单政策的影响</strong><br>
+中国白名单政策（2016-2019年）将EV补贴限于使用"白名单"国内电池供应商的车辆，为CATL等中国电池企业提供了保护性市场，帮助其积累经验、形成竞争优势。但这一政策具有两面性：
+-
+实际实施时间（2016-2019年）对中国电池产业有正面效果（通过加速中国供应商的LBD积累）。
+-
+若将该政策延迟5年实施（2021-2024年），由于中国电池企业已通过出口积累足够经验，白名单的保护效果将大幅减弱，且因阻碍全球供应链效率，中国国内福利净效果将转为负值。</p>
+<hr>
+<h2 id="结论conclusion">结论（Conclusion）</h2>
+<p><strong>核心发现</strong>：LBD在EV电池成本下降中发挥了实质性作用（贡献35.5%），但并非唯一因素，行业技术进步同样重要。LBD与消费者补贴之间的强互补性意味着：忽视LBD将大幅低估补贴的长期效益。消费端补贴产生显著的跨国溢出效应，其全球效益往往远超国内效益，这对单国政策评估具有重要启示。中国的产业政策（白名单）在特定历史时机下对国内产业发展有正效果，但若时机不当则可能适得其反。</p>
+<p><strong>对领域的贡献</strong>： 1.
+提出了在无法直接观测上游成本时通过结构性供给模型恢复电池成本的方法论框架；
+2. 构建了全球EV行业的结构性模型，联合识别LBD、需求偏好和政策互动效应；
+3. 量化了EV补贴的动态长期效益，纠正了现有静态评估文献的系统性低估； 4.
+揭示了全球化供应链下单国产业政策的跨境外溢机制。</p>
+<p><strong>政策含义</strong>： -
+EV补贴的动态效益远大于静态效益，政策评估应纳入LBD渠道； -
+美国IRA的本地含量要求在短期内可能阻碍全球LBD进程，长期效果取决于本土供应链的学习速度；
+-
+政策时机（timing）至关重要：早期的保护性产业政策（如中国白名单）可能在企业尚未具备竞争力时发挥关键作用，但过晚则适得其反。</p>
+<hr>
+<h2 id="未来研究方向future-work">未来研究方向（Future work）</h2>
+<p><strong>论文中明确提及的方向</strong>： 1.
+评估美国IRA本地含量要求对全球LBD和EV普及的长期影响； 2.
+研究上游供应商如何将LBD收益分配给劳动者和股东（分配效应）； 3.
+将分析拓展到EV以外的绿色技术（如太阳能、储能电池等）。</p>
+<p><strong>从论文引申的研究方向</strong>： 1.
+内外部LBD的分解：企业内部的知识积累vs.跨企业的知识溢出各贡献多少？这对政策选择（补贴全行业
+vs. 扶持龙头企业）有重大影响； 2.
+动态寡头垄断框架下的战略性LBD——企业是否会为了积累经验而战略性定低价（forward-looking
+pricing）； 3.
+将模型扩展至2020年后：IRA颁布后（2022年），本地含量要求如何重塑全球电池供应链的LBD路径；
+4.
+LBD与研发投入的互动：研发投入（技术进步）与生产经验（LBD）是否互补，影响政策组合的最优设计。</p>
+<h2 id="学术思考">学术思考</h2>
+<ol type="1">
+<li><p><strong>电池成本恢复的模型依赖性</strong>：电池成本无法直接观测，需通过结构模型推断。不同供给侧假设（同步
+vs.
+顺序议价）是否会产生实质性不同的学习率估计？作者如何验证这些替代模型的可信度？</p></li>
+<li><p><strong>工具变量的有效性</strong>：利用"供应商对下游不同国家补贴的差异暴露"构造IV，这一策略要求EV补贴变动对电池成本没有直接效应（排他性限制）。若补贴政策同时改变了原材料需求（如锂、镍），可能违反这一假设——如何检验？</p></li>
+<li><p><strong>LBD的溢出结构</strong>：论文将LBD建模为企业层面的内部学习。但实际上，工程师流动、专利公开等机制可能使LBD在企业间溢出。内外部LBD的混淆对学习率估计和政策评估会产生怎样的影响？</p></li>
+<li><p><strong>本地含量要求的动态合理性</strong>：中国白名单实际上是保护主义政策，但本文发现在特定时机下它对国内产业有正面作用。这是否意味着"战略性贸易政策"在绿色技术的早期发展阶段具有动态合理性？如何区分"促进LBD积累"的合理保护与一般意义上的低效保护主义？</p></li>
+<li><p><strong>样本期外推的风险</strong>：研究覆盖2013-2020年，但EV市场在2020年后经历了爆炸式增长（中国BEV渗透率超过30%）。LBD在高渗透率阶段是否会放缓？本文的政策结论对IRA（2022年后）是否仍然适用？</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol type="1">
+<li>"学习率7.5%"是怎么估计出来的？工具变量策略的具体构造方法是什么？</li>
+<li>为什么上游电池供应商只获得了LBD收益的"一小部分"？这是市场结构（竞争激烈）的结果，还是谈判权力（bargaining
+power）不对等的结果？</li>
+<li>美国IRA的本地含量要求是否会减慢全球LBD进程、推高全球EV价格？本文的框架如何用于评估IRA？</li>
+<li>中国白名单政策在实际实施时间下对全球（非中国）消费者的福利影响是正面还是负面？</li>
+<li>如果未来电池技术路线（如固态电池）发生重大转变，现有的LBD积累是否会"归零"？政策设计如何应对这种技术不确定性？</li>
+<li>论文的供给侧模型（Nash议价）对最终结论的敏感性如何？若改用更简单的加成定价模型，学习率估计会有多大变化？</li>
+<li>为什么中国在美国补贴的全球福利中只获得3%？这是否意味着美国的补贴实际上是在补贴日韩企业而非中国竞争对手？</li>
+</ol>
+<hr>
 ]]></content>
       <categories>
         <category>有趣的文章</category>
@@ -6441,218 +6441,6 @@ Zotero Item Key:: P56CV7CK</p>
       </tags>
   </entry>
   <entry>
-    <title>零和思维与美国政治分歧的根源 — 深度阅读笔记 — Chinoy, Nunn, Sequeira &amp; Stantcheva</title>
-    <url>/posts/chinoy2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Zero-Sum Thinking and the Roots of U.S.
-Political Differences</li>
-<li><strong>作者</strong>: Sahil Chinoy (Harvard), Nathan Nunn (UBC
-&amp; CIFAR), Sandra Sequeira (LSE), Stefanie Stantcheva (Harvard)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review</li>
-<li><strong>DOI</strong>: 10.1257/aer.20240692</li>
-<li><strong>难度评估</strong>: 高 -
-需要文化经济学、政治经济学、计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>零和思维（Zero-Sum
-Thinking）</strong>：一种世界观，认为一个人的收益必然导致另一个人的损失，社会产出是有限的而非可以创造新价值的。该概念最早由人类学家George
-Foster（1965, 1967）提出，称为"有限美好形象"（Image of Limited
-Good）。</p>
-<p><strong>文化演化模型（Cultural Evolution
-Models）</strong>：经济学中研究文化特质如何在代际间垂直传播的模型，通常假设文化特质从父母传递给子女（Bisin
-&amp; Verdier, 2000, 2011, 2017）。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>历史视角下的零和思维</strong>：零和思维在历史上普遍存在，从欧洲重商主义到现代贸易和移民政策。在资源稀缺、技术进步缓慢的前工业社会尤为常见。</p></li>
-<li><p><strong>美国独特的历史因素</strong>：美国历史上有三个关键因素影响零和思维的形成：代际经济流动性、移民和奴役。</p></li>
-<li><p><strong>现有研究的局限</strong>：先前研究使用种族或地理位置作为祖先经历的代理变量，但无法干净地隔离垂直传播渠道。</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>： - 零和思维如何影响政治和政策偏好？ -
-零和思维的祖先根源是什么？ -
-流动性、移民、奴役经历如何代际传递并影响当代人的零和思维？</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><p><strong>理论贡献</strong>：首次利用四代人的调查数据，直接测量祖先经历对零和思维的影响，推进了文化演化理论的检验。</p></li>
-<li><p><strong>实证贡献</strong>：收集了约20,400名美国居民的调查数据，将零和思维测量、政治偏好与丰富的祖先信息相结合。</p></li>
-<li><p><strong>政策意义</strong>：揭示了零和思维与再分配政策、种族/性别平等政策、移民政策的系统性关联。</p></li>
-</ol>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
-<ul>
-<li>Foster的零和思维假说介绍</li>
-<li>研究动机和数据概述</li>
-<li>三大贡献预告</li>
-</ul>
-<h3 id="第二节调查设计数据收集和零和思维测量">第二节：调查设计、数据收集和零和思维测量</h3>
-<ul>
-<li>调查方法和样本描述</li>
-<li>零和思维的四题项测量（民族、公民身份、贸易、收入）</li>
-<li>主成分分析构建综合指数</li>
-<li>数据质量检验</li>
-</ul>
-<h3 id="第三节零和思维的政治关联">第三节：零和思维的政治关联</h3>
-<ul>
-<li>零和思维与政党偏好的关系</li>
-<li>零和思维与四项政策态度（再分配、种族、性别、移民）</li>
-<li>零和思维与自身利益的交互分析</li>
-<li>零和思维与其他核心信念的比较</li>
-<li>跨国家的一般性检验（WVS数据）</li>
-</ul>
-<h3 id="第四节零和思维的历史预测因子">第四节：零和思维的历史预测因子</h3>
-<ul>
-<li>代际经济流动性的影响</li>
-<li>移民经历的直接和间接效应</li>
-<li>奴役经历的直接和间接效应</li>
-<li>奴隶制的溢出效应</li>
-</ul>
-<h3 id="第五节结论conclusion">第五节：结论（Conclusion）</h3>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="零和思维的理论基础">零和思维的理论基础</h4>
-<p>George
-Foster（1965）在研究墨西哥农村时提出"有限美好"假说：许多社会存在零和世界观，认为资源是有限的，一方的收益必然是另一方的损失。这种观点在资源稀缺、市场不发达、技术进步有限的前工业社会中尤为普遍。</p>
-<h4 id="美国历史背景的特殊性">美国历史背景的特殊性</h4>
-<p>美国历史上有三个关键因素塑造零和思维： 1.
-<strong>代际流动性</strong>：美国曾是"机会之地"，向上流动性高于其他工业化国家
-2.
-<strong>移民潮</strong>：大规模移民塑造了美国社会，移民通常在美国获得经济成功而不损害他人
-3. <strong>奴役制度</strong>：奴隶制是一种彻底的零和（或负和）制度</p>
-<h3 id="方法">方法</h3>
-<h4 id="数据集">数据集</h4>
-<p><strong>调查设计</strong>： -
-约20,400名美国居民，七轮调查（2020年10月至2023年7月） -
-通过在线调查公司Respondi/Bilendi招募 - 调查时长约20-30分钟</p>
-<p><strong>调查内容模块</strong>： 1.
-<strong>受访者背景</strong>：年龄、性别、政治倾向 2.
-<strong>祖先信息</strong>：父母、祖父母的信息（出生地、居住历史、教育、职业、经济地位）
-3. <strong>政策观点</strong>：再分配、种族、性别、移民等政策态度 4.
-<strong>零和思维测量</strong>：四个领域的零和思维问题</p>
-<p><strong>四题项零和思维测量</strong>： 1.
-<strong>民族维度</strong>："如果一个种族群体变富裕，这通常是以其他群体为代价的"
-2.
-<strong>公民身份维度</strong>："如果没有美国公民身份的人经济上做得更好，这通常是以美国公民为代价的"
-3.
-<strong>贸易维度</strong>："在国际贸易中，如果一个国家赚更多钱，另一个国家通常会赚得更少"
-4.
-<strong>收入维度</strong>："如果一个收入群体变得更富有，这通常是以其他群体为代价的"</p>
-<p><strong>指数构建</strong>：使用主成分分析（PCA）提取第一主成分，标准化为0-1区间的综合指数。</p>
-<h4 id="估计方程">估计方程</h4>
-<p><strong>政治关联分析</strong>： <span class="math display">\[Y_i =
-\alpha_{s(i)} + \beta \cdot ZeroSum_i + X_i\Gamma +
-\varepsilon_i\]</span></p>
-<p><strong>历史预测因子分析</strong>： <span class="math display">\[ZeroSum_i = \beta_{resp} \cdot
-RespondentExperience_i + \beta_p \cdot ParentsExperience_i + \beta_{gp}
-\cdot GrandparentsExperience_i + X_i\Gamma + \alpha_{s(i)} +
-\varepsilon_i\]</span></p>
-<h3 id="结果">结果</h3>
-<h4 id="发现一零和思维测量">发现一：零和思维测量</h4>
-<p><strong>因子结构</strong>：第一主成分的特征值为2.30，所有题项的因子载荷相似（0.40-0.55），表明存在一个潜在的零和思维因子。</p>
-<p><strong>人口学差异</strong>： - 年龄：较年长者零和思维较低 -
-种族：黑人和西班牙裔美国人零和思维最高，亚裔最低 -
-收入：最低收入群体（&lt;${<span class="math inline">\(25,000}\)</span>）零和思维最高 -
-党派：共和党人零和思维较低 - 教育：受教育程度较高者零和思维较低</p>
-<h4 id="发现二零和思维与政策偏好">发现二：零和思维与政策偏好</h4>
-<p><strong>核心结果</strong>：零和思维与四项政策态度显著正相关： -
-<strong>再分配指数</strong>：支持更多政府再分配 -
-<strong>种族态度指数</strong>：支持减少种族歧视的政策 -
-<strong>性别态度指数</strong>：支持促进性别平等的政策 -
-<strong>反移民指数</strong>：支持更严格的移民限制</p>
-<p><strong>效应大小</strong>：一标准差增加的零和思维，对再分配的支持相当于20%的标准差变化，与民主党倾向性相当。</p>
-<p><strong>与自身利益的交互</strong>： -
-零和思维与再分配的支持在所有收入群体中都显著为正，且在高收入群体中更强 -
-男性零和思维对性别平等的支持更强 -
-白人受访者零和思维对种族平等政策的支持更强</p>
-<p><strong>党内差异</strong>：零和思维可解释党内政策分歧： -
-民主党中零和思维更强的人更支持限制移民 -
-共和党中零和思维更强的人更支持再分配</p>
-<h4 id="发现三跨国家一般性wvs数据">发现三：跨国家一般性（WVS数据）</h4>
-<p>使用世界价值观调查（WVS）72个国家192,000名受访者数据验证： -
-零和思维与右翼政治立场显著负相关 -
-零和思维与支持再分配和反移民态度正相关</p>
-<p><strong>早期生活经济增长</strong>：使用WVS数据，控制出生年份和国家固定效应，发现早期生活暴露于更高的GDP增长与更低的零和思维相关。</p>
-<h4 id="发现四历史预测因子">发现四：历史预测因子</h4>
-<p><strong>代际流动性</strong>： -
-更大的代际向上流动性与更低的零和思维相关 -
-这种关系在所有代际（1代、2代、3代）中都显著 -
-主要由向上流动驱动，向下流动影响较小</p>
-<p><strong>移民</strong>： -
-直接效应：第一代移民零和思维最低，移民主裔子孙次之 -
-间接效应：祖父母在移民比例较高县市长大的受访者零和思维较低 -
-时间效应：近期移民效应更强</p>
-<p><strong>奴役</strong>： - 直接效应：有奴隶祖先的受访者零和思维更高 -
-所有形式的奴役（奴隶贸易、Holocaust、契约仆役、日裔美国人拘留、印第安人保留地）都与更高零和思维相关
-- 间接效应：在1860年奴隶比例较高的县市长大的受访者零和思维更高 -
-奴隶制溢出：南方白人移民到非南方县带来了更高的零和思维</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>零和思维是重要且独立的政策预测因子</strong>：零和思维与再分配、种族/性别平等、移民政策的态度有显著关联，且独立于其他核心信念。</p></li>
-<li><p><strong>零和思维不是简单的党派问题</strong>：它可以解释党内政策分歧——为什么部分民主党人支持限制移民，部分共和党人支持再分配。</p></li>
-<li><p><strong>零和思维有深厚的历史根源</strong>：三个关键历史因素——代际流动性、移民、奴役——通过直接和间接渠道影响当代人的零和思维。</p></li>
-<li><p><strong>零和思维的跨国一般性</strong>：WVS数据证实，零和思维与政治态度的关系在72个国家都成立。</p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><p><strong>测量贡献</strong>：开发了综合的跨情境零和思维测量方法，优于单一情境测量。</p></li>
-<li><p><strong>数据贡献</strong>：首次收集了四代人信息的调查数据，直接测量祖先经历。</p></li>
-<li><p><strong>理论贡献</strong>：推进了对文化演化模型的理解，证明垂直传播的重要性。</p></li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
-<ol type="1">
-<li><p><strong>党内分歧研究</strong>：探索零和思维对新党形成、联盟和竞选平台的影响</p></li>
-<li><p><strong>政治现象研究</strong>：零和思维是否能解释民粹主义、阴谋论、排外主义的起源？</p></li>
-<li><p><strong>气候与不平等</strong>：零和思维如何与气候变化和全球不平等的态度相关联？</p></li>
-</ol>
-<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
-<ol type="1">
-<li><p><strong>识别策略改进</strong>：使用工具变量或自然实验进一步验证因果关系</p></li>
-<li><p><strong>机制检验</strong>：代际传递的具体渠道——是通过语言、家庭互动还是行为？</p></li>
-<li><p><strong>干预研究</strong>：是否可以设计干预措施减少零和思维？</p></li>
-</ol>
-<hr>
-<h2 id="学术思考">7. 学术思考</h2>
-<h3 id="核心学术洞察">核心学术洞察</h3>
-<ol type="1">
-<li><p><strong>"有限美好"的现代延续</strong>：Foster的零和思维假说虽提出于1960年代研究墨西哥农村，但本文证明其在现代美国社会仍具有重要解释力。</p></li>
-<li><p><strong>政策态度的认知根源</strong>：传统研究将政策态度归因于自身利益或价值观，但本文揭示了零和思维作为一种独立的中介机制。</p></li>
-<li><p><strong>历史创伤的代际传递</strong>：奴役制度不仅影响直接受害者，还通过环境暴露和文化传递影响后代。</p></li>
-</ol>
-<h3 id="深层学术问题">深层学术问题</h3>
-<ol type="1">
-<li><p><strong>为什么向上流动而非向下流动影响零和思维？</strong>
-这种不对称性暗示什么心理或文化机制？</p></li>
-<li><p><strong>移民的"正能量"效应</strong>：移民如何降低零和思维？是通过榜样效应、接触效应还是家庭叙述传递？</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p><strong>零和思维的测量是否可信？</strong>
-四题项测量能否捕捉零和思维的全部维度？</p></li>
-<li><p><strong>祖先经历的因果识别</strong>：如何解决内生性问题？</p></li>
-<li><p><strong>黑人受访者零和思维最高但奴役边际效应最小</strong>：如何解释这个悖论？</p></li>
-<li><p><strong>零和思维与特朗普现象</strong>：数据显示零和思维预测了民主党人投票给特朗普？</p></li>
-<li><p><strong>政策含义</strong>：如果零和思维是可塑的，什么干预可以减少零和思维？</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Regulating Conglomerates: Evidence From an Energy Conservation Program in China — 深度阅读笔记 — AER</title>
     <url>/posts/chen2021/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -6949,6 +6737,218 @@ horizon 是多久?</strong></p></li>
 <li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD
 数据的质量和覆盖范围如何保证?</strong></p></li>
 <li><p><strong>在中国"双碳"目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>零和思维与美国政治分歧的根源 — 深度阅读笔记 — Chinoy, Nunn, Sequeira &amp; Stantcheva</title>
+    <url>/posts/chinoy2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Zero-Sum Thinking and the Roots of U.S.
+Political Differences</li>
+<li><strong>作者</strong>: Sahil Chinoy (Harvard), Nathan Nunn (UBC
+&amp; CIFAR), Sandra Sequeira (LSE), Stefanie Stantcheva (Harvard)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review</li>
+<li><strong>DOI</strong>: 10.1257/aer.20240692</li>
+<li><strong>难度评估</strong>: 高 -
+需要文化经济学、政治经济学、计量经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>零和思维（Zero-Sum
+Thinking）</strong>：一种世界观，认为一个人的收益必然导致另一个人的损失，社会产出是有限的而非可以创造新价值的。该概念最早由人类学家George
+Foster（1965, 1967）提出，称为"有限美好形象"（Image of Limited
+Good）。</p>
+<p><strong>文化演化模型（Cultural Evolution
+Models）</strong>：经济学中研究文化特质如何在代际间垂直传播的模型，通常假设文化特质从父母传递给子女（Bisin
+&amp; Verdier, 2000, 2011, 2017）。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>历史视角下的零和思维</strong>：零和思维在历史上普遍存在，从欧洲重商主义到现代贸易和移民政策。在资源稀缺、技术进步缓慢的前工业社会尤为常见。</p></li>
+<li><p><strong>美国独特的历史因素</strong>：美国历史上有三个关键因素影响零和思维的形成：代际经济流动性、移民和奴役。</p></li>
+<li><p><strong>现有研究的局限</strong>：先前研究使用种族或地理位置作为祖先经历的代理变量，但无法干净地隔离垂直传播渠道。</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>： - 零和思维如何影响政治和政策偏好？ -
+零和思维的祖先根源是什么？ -
+流动性、移民、奴役经历如何代际传递并影响当代人的零和思维？</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><p><strong>理论贡献</strong>：首次利用四代人的调查数据，直接测量祖先经历对零和思维的影响，推进了文化演化理论的检验。</p></li>
+<li><p><strong>实证贡献</strong>：收集了约20,400名美国居民的调查数据，将零和思维测量、政治偏好与丰富的祖先信息相结合。</p></li>
+<li><p><strong>政策意义</strong>：揭示了零和思维与再分配政策、种族/性别平等政策、移民政策的系统性关联。</p></li>
+</ol>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
+<ul>
+<li>Foster的零和思维假说介绍</li>
+<li>研究动机和数据概述</li>
+<li>三大贡献预告</li>
+</ul>
+<h3 id="第二节调查设计数据收集和零和思维测量">第二节：调查设计、数据收集和零和思维测量</h3>
+<ul>
+<li>调查方法和样本描述</li>
+<li>零和思维的四题项测量（民族、公民身份、贸易、收入）</li>
+<li>主成分分析构建综合指数</li>
+<li>数据质量检验</li>
+</ul>
+<h3 id="第三节零和思维的政治关联">第三节：零和思维的政治关联</h3>
+<ul>
+<li>零和思维与政党偏好的关系</li>
+<li>零和思维与四项政策态度（再分配、种族、性别、移民）</li>
+<li>零和思维与自身利益的交互分析</li>
+<li>零和思维与其他核心信念的比较</li>
+<li>跨国家的一般性检验（WVS数据）</li>
+</ul>
+<h3 id="第四节零和思维的历史预测因子">第四节：零和思维的历史预测因子</h3>
+<ul>
+<li>代际经济流动性的影响</li>
+<li>移民经历的直接和间接效应</li>
+<li>奴役经历的直接和间接效应</li>
+<li>奴隶制的溢出效应</li>
+</ul>
+<h3 id="第五节结论conclusion">第五节：结论（Conclusion）</h3>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="零和思维的理论基础">零和思维的理论基础</h4>
+<p>George
+Foster（1965）在研究墨西哥农村时提出"有限美好"假说：许多社会存在零和世界观，认为资源是有限的，一方的收益必然是另一方的损失。这种观点在资源稀缺、市场不发达、技术进步有限的前工业社会中尤为普遍。</p>
+<h4 id="美国历史背景的特殊性">美国历史背景的特殊性</h4>
+<p>美国历史上有三个关键因素塑造零和思维： 1.
+<strong>代际流动性</strong>：美国曾是"机会之地"，向上流动性高于其他工业化国家
+2.
+<strong>移民潮</strong>：大规模移民塑造了美国社会，移民通常在美国获得经济成功而不损害他人
+3. <strong>奴役制度</strong>：奴隶制是一种彻底的零和（或负和）制度</p>
+<h3 id="方法">方法</h3>
+<h4 id="数据集">数据集</h4>
+<p><strong>调查设计</strong>： -
+约20,400名美国居民，七轮调查（2020年10月至2023年7月） -
+通过在线调查公司Respondi/Bilendi招募 - 调查时长约20-30分钟</p>
+<p><strong>调查内容模块</strong>： 1.
+<strong>受访者背景</strong>：年龄、性别、政治倾向 2.
+<strong>祖先信息</strong>：父母、祖父母的信息（出生地、居住历史、教育、职业、经济地位）
+3. <strong>政策观点</strong>：再分配、种族、性别、移民等政策态度 4.
+<strong>零和思维测量</strong>：四个领域的零和思维问题</p>
+<p><strong>四题项零和思维测量</strong>： 1.
+<strong>民族维度</strong>："如果一个种族群体变富裕，这通常是以其他群体为代价的"
+2.
+<strong>公民身份维度</strong>："如果没有美国公民身份的人经济上做得更好，这通常是以美国公民为代价的"
+3.
+<strong>贸易维度</strong>："在国际贸易中，如果一个国家赚更多钱，另一个国家通常会赚得更少"
+4.
+<strong>收入维度</strong>："如果一个收入群体变得更富有，这通常是以其他群体为代价的"</p>
+<p><strong>指数构建</strong>：使用主成分分析（PCA）提取第一主成分，标准化为0-1区间的综合指数。</p>
+<h4 id="估计方程">估计方程</h4>
+<p><strong>政治关联分析</strong>： <span class="math display">\[Y_i =
+\alpha_{s(i)} + \beta \cdot ZeroSum_i + X_i\Gamma +
+\varepsilon_i\]</span></p>
+<p><strong>历史预测因子分析</strong>： <span class="math display">\[ZeroSum_i = \beta_{resp} \cdot
+RespondentExperience_i + \beta_p \cdot ParentsExperience_i + \beta_{gp}
+\cdot GrandparentsExperience_i + X_i\Gamma + \alpha_{s(i)} +
+\varepsilon_i\]</span></p>
+<h3 id="结果">结果</h3>
+<h4 id="发现一零和思维测量">发现一：零和思维测量</h4>
+<p><strong>因子结构</strong>：第一主成分的特征值为2.30，所有题项的因子载荷相似（0.40-0.55），表明存在一个潜在的零和思维因子。</p>
+<p><strong>人口学差异</strong>： - 年龄：较年长者零和思维较低 -
+种族：黑人和西班牙裔美国人零和思维最高，亚裔最低 -
+收入：最低收入群体（&lt;${<span class="math inline">\(25,000}\)</span>）零和思维最高 -
+党派：共和党人零和思维较低 - 教育：受教育程度较高者零和思维较低</p>
+<h4 id="发现二零和思维与政策偏好">发现二：零和思维与政策偏好</h4>
+<p><strong>核心结果</strong>：零和思维与四项政策态度显著正相关： -
+<strong>再分配指数</strong>：支持更多政府再分配 -
+<strong>种族态度指数</strong>：支持减少种族歧视的政策 -
+<strong>性别态度指数</strong>：支持促进性别平等的政策 -
+<strong>反移民指数</strong>：支持更严格的移民限制</p>
+<p><strong>效应大小</strong>：一标准差增加的零和思维，对再分配的支持相当于20%的标准差变化，与民主党倾向性相当。</p>
+<p><strong>与自身利益的交互</strong>： -
+零和思维与再分配的支持在所有收入群体中都显著为正，且在高收入群体中更强 -
+男性零和思维对性别平等的支持更强 -
+白人受访者零和思维对种族平等政策的支持更强</p>
+<p><strong>党内差异</strong>：零和思维可解释党内政策分歧： -
+民主党中零和思维更强的人更支持限制移民 -
+共和党中零和思维更强的人更支持再分配</p>
+<h4 id="发现三跨国家一般性wvs数据">发现三：跨国家一般性（WVS数据）</h4>
+<p>使用世界价值观调查（WVS）72个国家192,000名受访者数据验证： -
+零和思维与右翼政治立场显著负相关 -
+零和思维与支持再分配和反移民态度正相关</p>
+<p><strong>早期生活经济增长</strong>：使用WVS数据，控制出生年份和国家固定效应，发现早期生活暴露于更高的GDP增长与更低的零和思维相关。</p>
+<h4 id="发现四历史预测因子">发现四：历史预测因子</h4>
+<p><strong>代际流动性</strong>： -
+更大的代际向上流动性与更低的零和思维相关 -
+这种关系在所有代际（1代、2代、3代）中都显著 -
+主要由向上流动驱动，向下流动影响较小</p>
+<p><strong>移民</strong>： -
+直接效应：第一代移民零和思维最低，移民主裔子孙次之 -
+间接效应：祖父母在移民比例较高县市长大的受访者零和思维较低 -
+时间效应：近期移民效应更强</p>
+<p><strong>奴役</strong>： - 直接效应：有奴隶祖先的受访者零和思维更高 -
+所有形式的奴役（奴隶贸易、Holocaust、契约仆役、日裔美国人拘留、印第安人保留地）都与更高零和思维相关
+- 间接效应：在1860年奴隶比例较高的县市长大的受访者零和思维更高 -
+奴隶制溢出：南方白人移民到非南方县带来了更高的零和思维</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>零和思维是重要且独立的政策预测因子</strong>：零和思维与再分配、种族/性别平等、移民政策的态度有显著关联，且独立于其他核心信念。</p></li>
+<li><p><strong>零和思维不是简单的党派问题</strong>：它可以解释党内政策分歧——为什么部分民主党人支持限制移民，部分共和党人支持再分配。</p></li>
+<li><p><strong>零和思维有深厚的历史根源</strong>：三个关键历史因素——代际流动性、移民、奴役——通过直接和间接渠道影响当代人的零和思维。</p></li>
+<li><p><strong>零和思维的跨国一般性</strong>：WVS数据证实，零和思维与政治态度的关系在72个国家都成立。</p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><p><strong>测量贡献</strong>：开发了综合的跨情境零和思维测量方法，优于单一情境测量。</p></li>
+<li><p><strong>数据贡献</strong>：首次收集了四代人信息的调查数据，直接测量祖先经历。</p></li>
+<li><p><strong>理论贡献</strong>：推进了对文化演化模型的理解，证明垂直传播的重要性。</p></li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
+<ol type="1">
+<li><p><strong>党内分歧研究</strong>：探索零和思维对新党形成、联盟和竞选平台的影响</p></li>
+<li><p><strong>政治现象研究</strong>：零和思维是否能解释民粹主义、阴谋论、排外主义的起源？</p></li>
+<li><p><strong>气候与不平等</strong>：零和思维如何与气候变化和全球不平等的态度相关联？</p></li>
+</ol>
+<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
+<ol type="1">
+<li><p><strong>识别策略改进</strong>：使用工具变量或自然实验进一步验证因果关系</p></li>
+<li><p><strong>机制检验</strong>：代际传递的具体渠道——是通过语言、家庭互动还是行为？</p></li>
+<li><p><strong>干预研究</strong>：是否可以设计干预措施减少零和思维？</p></li>
+</ol>
+<hr>
+<h2 id="学术思考">7. 学术思考</h2>
+<h3 id="核心学术洞察">核心学术洞察</h3>
+<ol type="1">
+<li><p><strong>"有限美好"的现代延续</strong>：Foster的零和思维假说虽提出于1960年代研究墨西哥农村，但本文证明其在现代美国社会仍具有重要解释力。</p></li>
+<li><p><strong>政策态度的认知根源</strong>：传统研究将政策态度归因于自身利益或价值观，但本文揭示了零和思维作为一种独立的中介机制。</p></li>
+<li><p><strong>历史创伤的代际传递</strong>：奴役制度不仅影响直接受害者，还通过环境暴露和文化传递影响后代。</p></li>
+</ol>
+<h3 id="深层学术问题">深层学术问题</h3>
+<ol type="1">
+<li><p><strong>为什么向上流动而非向下流动影响零和思维？</strong>
+这种不对称性暗示什么心理或文化机制？</p></li>
+<li><p><strong>移民的"正能量"效应</strong>：移民如何降低零和思维？是通过榜样效应、接触效应还是家庭叙述传递？</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p><strong>零和思维的测量是否可信？</strong>
+四题项测量能否捕捉零和思维的全部维度？</p></li>
+<li><p><strong>祖先经历的因果识别</strong>：如何解决内生性问题？</p></li>
+<li><p><strong>黑人受访者零和思维最高但奴役边际效应最小</strong>：如何解释这个悖论？</p></li>
+<li><p><strong>零和思维与特朗普现象</strong>：数据显示零和思维预测了民主党人投票给特朗普？</p></li>
+<li><p><strong>政策含义</strong>：如果零和思维是可塑的，什么干预可以减少零和思维？</p></li>
 </ol>
 ]]></content>
       <categories>
@@ -11925,202 +11925,6 @@ Zotero Item Key:: BZPCLS8S</p>
       </tags>
   </entry>
   <entry>
-    <title>你所不知道的可能对你有益 — 深度阅读笔记 — Höner &amp; Samuelson</title>
-    <url>/posts/honner2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: What You Don't Know May Be Good for You</li>
-<li><strong>作者</strong>: Johannes Höner (Yale), Larry Samuelson
-(University of Nevada, Reno)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3):
-1097-1147</li>
-<li><strong>DOI</strong>: 10.1257/aer.20250053</li>
-<li><strong>难度评估</strong>: 高 -
-需要博弈论、声誉理论、机制设计基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>专家-客户模型（Expert-Client
-Model）</strong>：长期存在的专家与短期客户匹配的经济学模型。专家拥有私人信息，选择客户类型，客户根据观察到的信息形成对专家的信念。</p>
-<p><strong>声誉理论（Reputation
-Theory）</strong>：研究代理人如何通过行为建立声誉的理论。经典工作包括Kreps
-&amp; Wilson（1982）的序列均衡声誉模型。</p>
-<p><strong>好斯特定律（Goodhart's
-Law）</strong>：当一个指标成为目标时，它就不再是一个好的指标。意味着度量本身会改变被度量行为的激励结构。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>医疗报告卡（Medical Report
-Cards）</strong>：纽约州1980年代末引入心脏手术报告系统，要求报告手术结果。医生评估称"所谓最好的外科医生只做最简单的病例"。</p></li>
-<li><p><strong>信息与激励的冲突</strong>：信息揭示帮助客户识别更好的专家，但同时也可能扭曲专家的激励，使其拒绝高风险客户以维护声誉。</p></li>
-<li><p><strong>声誉操纵问题</strong>：当信息由被评价者构建时，评价系统可能被操纵。</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：当声誉的构建者能够操纵相关信息时，声誉如何建立？信息揭示（如报告卡）是否总是有益的？</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><p><strong>理论贡献</strong>：构建了长期专家与短期客户匹配的一般模型，揭示了信息揭示的非直观后果。</p></li>
-<li><p><strong>政策含义</strong>：对医疗报告卡等政策设计有直接启示——信息揭示可能适得其反。</p></li>
-<li><p><strong>应用广泛</strong>：模型框架可应用于医疗、教育、金融等多个领域的声誉机制设计。</p></li>
-</ol>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
-<ul>
-<li>医疗报告卡案例</li>
-<li>Goodhart定律</li>
-<li>研究问题介绍</li>
-</ul>
-<h3 id="第二节模型the-model">第二节：模型（The Model）</h3>
-<ul>
-<li><strong>II.1 Stage Game</strong>：单期博弈中的专家-客户交互</li>
-<li><strong>II.2 Stage-Game均衡与有效配置</strong></li>
-<li><strong>II.3 重复博弈（无报告卡）均衡</strong></li>
-<li><strong>II.4 完全监控的重复博弈，有效配置</strong></li>
-<li><strong>II.5 完全监控的重复博弈，均衡</strong></li>
-</ul>
-<h3 id="第三节带报告卡的重复博弈">第三节：带报告卡的重复博弈</h3>
-<ul>
-<li><strong>III.1
-结构</strong>：连续时间，无限期界，专家连续统，客户连续统</li>
-<li><strong>III.2
-策略</strong>：确定性策略、极值策略、停时策略、截断策略</li>
-<li><strong>III.3 信念</strong>：专家信念与市场信念的区分</li>
-<li><strong>III.4 均衡定义</strong></li>
-<li><strong>III.5 有效配置</strong>：截断策略</li>
-<li><strong>III.6 均衡是无效率的</strong></li>
-<li><strong>III.7 等待的诱惑</strong></li>
-<li><strong>III.8 专家必须混合，但不确定能否做到</strong></li>
-<li><strong>III.9 均衡存在、唯一、是停时上的混合</strong></li>
-<li><strong>III.10 福利分析</strong></li>
-</ul>
-<h3 id="第四节扩展extensions">第四节：扩展（Extensions）</h3>
-<ul>
-<li><strong>IV.1 茶歇均衡</strong>：非马尔科夫均衡</li>
-<li><strong>IV.2 随机揭示柠檬</strong>：失败以一定概率被随机揭示</li>
-<li><strong>IV.3 随机隐藏柠檬</strong>：失败以一定概率被隐藏</li>
-<li><strong>IV.4 价格控制</strong>：固定价格可实现有效均衡</li>
-<li><strong>IV.5 好消息</strong>：突破性成果的特殊情况</li>
-<li><strong>IV.6 未知客户类型</strong>：客户不知自身类型</li>
-<li><strong>IV.7 干中学</strong>：专家类型可变</li>
-</ul>
-<h3 id="第五节讨论discussion">第五节：讨论（Discussion）</h3>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="医疗报告卡案例">医疗报告卡案例</h4>
-<p>纽约州1980年代末引入心脏手术报告系统，强制报告手术结果。这一政策的初衷是帮助患者识别更好的外科医生，但医生们反映"所谓最好的外科医生只做最简单的病例"。</p>
-<h4 id="goodhart定律的核心洞见">Goodhart定律的核心洞见</h4>
-<p>当一个度量成为目标时，它就不再是一个好的度量。度量的变化会改变被度量者的激励，可能导致行为扭曲。</p>
-<h3 id="模型设定">模型设定</h3>
-<h4 id="参与人">参与人</h4>
-<ol type="1">
-<li><strong>专家（Expert）</strong>：长期存在，有类型G（好）或B（坏），先验概率q</li>
-<li><strong>客户（Client）</strong>：短期存在，有类型H（高风险）或L（低风险）</li>
-<li><strong>市场</strong>：观察价格和报告卡，形成对专家类型的信念</li>
-</ol>
-<h4 id="阶段博弈stage-game">阶段博弈（Stage Game）</h4>
-<p><strong>成功概率</strong>： - 好专家（G）+ 高风险客户（H）：<span class="math inline">\({1-z}\)</span> - 好专家（G）+ 低风险客户（L）：1 -
-坏专家（B）+ 任何客户：1（无失败）</p>
-<h3 id="关键结果">关键结果</h3>
-<h4 id="有效配置">有效配置</h4>
-<p>有效政策是<strong>截断策略</strong>： <span class="math display">\[k_t = 1 \text{ 当且仅当 } q_t \geq
-\bar{q}\]</span></p>
-<p>其中<span class="math inline">\(\bar{q} \in (0,
-\theta)\)</span>是截断点。</p>
-<h4 id="核心命题有效政策不是均衡">核心命题：有效政策不是均衡</h4>
-<p><strong>证明逻辑</strong>： 1. 假设<span class="math inline">\(\bar{q} &lt; \theta\)</span>，考虑<span class="math inline">\(q_0 \in (\bar{q}, \theta)\)</span>： - <span class="math inline">\(q_0 - \theta &lt;
-0\)</span>：选择L客户比H客户获得更高奖励 - 选择L客户保证不发生失败 -
-因此对于<span class="math inline">\(q_0 &lt;
-\theta\)</span>，专家在均衡中必须选择L客户</p>
-<ol start="2" type="1">
-<li>因此<span class="math inline">\(\bar{q}\)</span>必须等于<span class="math inline">\(\theta\)</span>，但第一种情况的论证确保<span class="math inline">\(q_0\)</span>刚超过<span class="math inline">\(\theta\)</span>的专家会选择L而非H客户</li>
-</ol>
-<p><strong>结论</strong>：有效截断策略不是均衡！</p>
-<h4 id="均衡性质">均衡性质</h4>
-<p><strong>命题1</strong>：均衡存在且唯一，是停时上的混合。</p>
-<ul>
-<li>如果<span class="math inline">\(q_0 \leq
-\theta\)</span>：专家总是选择低风险客户</li>
-<li>如果<span class="math inline">\(q_0 \geq
-\bar{q}\)</span>：专家总是选择高风险客户</li>
-<li>如果<span class="math inline">\(q_0 \in (\theta,
-\bar{q})\)</span>：存在<span class="math inline">\(T &gt;
-0\)</span>，专家在随机时间<span class="math inline">\(s \leq
-T\)</span>按无原子分布选择</li>
-</ul>
-<h4 id="无效率的来源">无效率的来源</h4>
-<p><strong>等待的诱惑</strong>： -
-如果专家被预期只选择L客户，他会偏好选择H客户（更有利可图） -
-如果专家被预期只选择H客户，价格"快速"上涨，延迟H客户是有利可图的</p>
-<p><strong>问题</strong>：客户学习太快，价格上涨太快。专家难以使用混合策略——选择<span class="math inline">\(k \in (0, 1)\)</span>不会起作用。</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>信息揭示的双刃剑效应</strong>：报告卡帮助客户识别更好的专家，但同时扭曲了专家的激励——专家会拒绝高风险客户以建立声誉，导致无效率匹配。</p></li>
-<li><p><strong>Goodhart定律的正式模型</strong>：论文提供了Goodhart定律的形式化模型，展示了当度量成为目标时会发生什么。</p></li>
-<li><p><strong>声誉操纵的危害</strong>：长期专家有激励操纵市场对其类型的认知，通过选择性地接受低风险客户来建立"干净"的记录。</p></li>
-<li><p><strong>均衡必须是混合的</strong>：有效截断策略不是均衡，专家必须使用随机化策略，但这种随机化本身就导致无效率。</p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><p><strong>一般化模型</strong>：将声誉理论、信号博弈和机制设计统一在单一框架下。</p></li>
-<li><p><strong>新洞见</strong>：揭示了信息揭示可能降低福利的条件和机制。</p></li>
-<li><p><strong>政策启示</strong>：对医疗报告卡、教育评级等政策设计有直接指导意义。</p></li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
-<ol type="1">
-<li><p><strong>多维类型</strong>：专家和客户有多个维度的私人信息</p></li>
-<li><p><strong>动态客户学习</strong>：客户随时间积累经验</p></li>
-<li><p><strong>竞争性市场</strong>：多位专家竞争客户</p></li>
-</ol>
-<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
-<ol type="1">
-<li><p><strong>实证检验</strong>：如何在现实数据中识别这种声誉操纵效应？</p></li>
-<li><p><strong>最优机制设计</strong>：给定这些无效率，什么是最优的信息揭示政策？</p></li>
-<li><p><strong>替代激励机制</strong>：除了报告卡，什么机制可以激励专家说实话同时避免声誉操纵？</p></li>
-</ol>
-<hr>
-<h2 id="学术思考">7. 学术思考</h2>
-<h3 id="核心学术洞察">核心学术洞察</h3>
-<ol type="1">
-<li><p><strong>信息揭示的悖论</strong>：直觉上信息越多越好，但本文揭示了信息揭示可能"教会"专家如何操纵市场信念。</p></li>
-<li><p><strong>声誉资本的动态积累</strong>：专家的声誉是一种资本，其积累速度受市场学习速度的影响。</p></li>
-<li><p><strong>有效均衡的不可能性</strong>：在标准委托代理模型中，有效结果通常可以通过适当激励机制实现。但本文表明，当代理人有多个维度私人信息且可以操纵信号时，有效结果可能根本无法实现。</p></li>
-</ol>
-<h3 id="深层学术问题">深层学术问题</h3>
-<ol type="1">
-<li><p><strong>为什么专家不能承诺？</strong>
-如果专家可以承诺不操纵声誉，许多无效率就可以避免。是什么阻止了这种承诺？</p></li>
-<li><p><strong>客户如何应对？</strong>
-客户是否了解专家的激励结构？如果客户知道专家会拒绝他们，这会如何影响行为？</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p><strong>如何识别现实中的声誉操纵？</strong>
-有什么可检验的预测？</p></li>
-<li><p><strong>报告卡制度如何设计可以减少无效率？</strong>
-有什么替代方案？</p></li>
-<li><p><strong>与标准声誉模型的区别是什么？</strong>
-本文如何推进Kreps-Wilson类型的声誉理论？</p></li>
-<li><p><strong>在什么条件下信息揭示是有效的？</strong>
-"好消息"扩展表明存在有效情况，条件是什么？</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>&lt;中国人口研究 1368-1953&gt;深度阅读笔记 — 何炳棣 Ping-Ti Ho</title>
     <url>/posts/ho1959/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="书籍信息">书籍信息</h2>
@@ -12907,6 +12711,202 @@ _谢肇淛&lt;五杂俎&gt;(约1610年)</p>
       </tags>
   </entry>
   <entry>
+    <title>你所不知道的可能对你有益 — 深度阅读笔记 — Höner &amp; Samuelson</title>
+    <url>/posts/honner2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: What You Don't Know May Be Good for You</li>
+<li><strong>作者</strong>: Johannes Höner (Yale), Larry Samuelson
+(University of Nevada, Reno)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(3):
+1097-1147</li>
+<li><strong>DOI</strong>: 10.1257/aer.20250053</li>
+<li><strong>难度评估</strong>: 高 -
+需要博弈论、声誉理论、机制设计基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>专家-客户模型（Expert-Client
+Model）</strong>：长期存在的专家与短期客户匹配的经济学模型。专家拥有私人信息，选择客户类型，客户根据观察到的信息形成对专家的信念。</p>
+<p><strong>声誉理论（Reputation
+Theory）</strong>：研究代理人如何通过行为建立声誉的理论。经典工作包括Kreps
+&amp; Wilson（1982）的序列均衡声誉模型。</p>
+<p><strong>好斯特定律（Goodhart's
+Law）</strong>：当一个指标成为目标时，它就不再是一个好的指标。意味着度量本身会改变被度量行为的激励结构。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>医疗报告卡（Medical Report
+Cards）</strong>：纽约州1980年代末引入心脏手术报告系统，要求报告手术结果。医生评估称"所谓最好的外科医生只做最简单的病例"。</p></li>
+<li><p><strong>信息与激励的冲突</strong>：信息揭示帮助客户识别更好的专家，但同时也可能扭曲专家的激励，使其拒绝高风险客户以维护声誉。</p></li>
+<li><p><strong>声誉操纵问题</strong>：当信息由被评价者构建时，评价系统可能被操纵。</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：当声誉的构建者能够操纵相关信息时，声誉如何建立？信息揭示（如报告卡）是否总是有益的？</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><p><strong>理论贡献</strong>：构建了长期专家与短期客户匹配的一般模型，揭示了信息揭示的非直观后果。</p></li>
+<li><p><strong>政策含义</strong>：对医疗报告卡等政策设计有直接启示——信息揭示可能适得其反。</p></li>
+<li><p><strong>应用广泛</strong>：模型框架可应用于医疗、教育、金融等多个领域的声誉机制设计。</p></li>
+</ol>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
+<ul>
+<li>医疗报告卡案例</li>
+<li>Goodhart定律</li>
+<li>研究问题介绍</li>
+</ul>
+<h3 id="第二节模型the-model">第二节：模型（The Model）</h3>
+<ul>
+<li><strong>II.1 Stage Game</strong>：单期博弈中的专家-客户交互</li>
+<li><strong>II.2 Stage-Game均衡与有效配置</strong></li>
+<li><strong>II.3 重复博弈（无报告卡）均衡</strong></li>
+<li><strong>II.4 完全监控的重复博弈，有效配置</strong></li>
+<li><strong>II.5 完全监控的重复博弈，均衡</strong></li>
+</ul>
+<h3 id="第三节带报告卡的重复博弈">第三节：带报告卡的重复博弈</h3>
+<ul>
+<li><strong>III.1
+结构</strong>：连续时间，无限期界，专家连续统，客户连续统</li>
+<li><strong>III.2
+策略</strong>：确定性策略、极值策略、停时策略、截断策略</li>
+<li><strong>III.3 信念</strong>：专家信念与市场信念的区分</li>
+<li><strong>III.4 均衡定义</strong></li>
+<li><strong>III.5 有效配置</strong>：截断策略</li>
+<li><strong>III.6 均衡是无效率的</strong></li>
+<li><strong>III.7 等待的诱惑</strong></li>
+<li><strong>III.8 专家必须混合，但不确定能否做到</strong></li>
+<li><strong>III.9 均衡存在、唯一、是停时上的混合</strong></li>
+<li><strong>III.10 福利分析</strong></li>
+</ul>
+<h3 id="第四节扩展extensions">第四节：扩展（Extensions）</h3>
+<ul>
+<li><strong>IV.1 茶歇均衡</strong>：非马尔科夫均衡</li>
+<li><strong>IV.2 随机揭示柠檬</strong>：失败以一定概率被随机揭示</li>
+<li><strong>IV.3 随机隐藏柠檬</strong>：失败以一定概率被隐藏</li>
+<li><strong>IV.4 价格控制</strong>：固定价格可实现有效均衡</li>
+<li><strong>IV.5 好消息</strong>：突破性成果的特殊情况</li>
+<li><strong>IV.6 未知客户类型</strong>：客户不知自身类型</li>
+<li><strong>IV.7 干中学</strong>：专家类型可变</li>
+</ul>
+<h3 id="第五节讨论discussion">第五节：讨论（Discussion）</h3>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="医疗报告卡案例">医疗报告卡案例</h4>
+<p>纽约州1980年代末引入心脏手术报告系统，强制报告手术结果。这一政策的初衷是帮助患者识别更好的外科医生，但医生们反映"所谓最好的外科医生只做最简单的病例"。</p>
+<h4 id="goodhart定律的核心洞见">Goodhart定律的核心洞见</h4>
+<p>当一个度量成为目标时，它就不再是一个好的度量。度量的变化会改变被度量者的激励，可能导致行为扭曲。</p>
+<h3 id="模型设定">模型设定</h3>
+<h4 id="参与人">参与人</h4>
+<ol type="1">
+<li><strong>专家（Expert）</strong>：长期存在，有类型G（好）或B（坏），先验概率q</li>
+<li><strong>客户（Client）</strong>：短期存在，有类型H（高风险）或L（低风险）</li>
+<li><strong>市场</strong>：观察价格和报告卡，形成对专家类型的信念</li>
+</ol>
+<h4 id="阶段博弈stage-game">阶段博弈（Stage Game）</h4>
+<p><strong>成功概率</strong>： - 好专家（G）+ 高风险客户（H）：<span class="math inline">\({1-z}\)</span> - 好专家（G）+ 低风险客户（L）：1 -
+坏专家（B）+ 任何客户：1（无失败）</p>
+<h3 id="关键结果">关键结果</h3>
+<h4 id="有效配置">有效配置</h4>
+<p>有效政策是<strong>截断策略</strong>： <span class="math display">\[k_t = 1 \text{ 当且仅当 } q_t \geq
+\bar{q}\]</span></p>
+<p>其中<span class="math inline">\(\bar{q} \in (0,
+\theta)\)</span>是截断点。</p>
+<h4 id="核心命题有效政策不是均衡">核心命题：有效政策不是均衡</h4>
+<p><strong>证明逻辑</strong>： 1. 假设<span class="math inline">\(\bar{q} &lt; \theta\)</span>，考虑<span class="math inline">\(q_0 \in (\bar{q}, \theta)\)</span>： - <span class="math inline">\(q_0 - \theta &lt;
+0\)</span>：选择L客户比H客户获得更高奖励 - 选择L客户保证不发生失败 -
+因此对于<span class="math inline">\(q_0 &lt;
+\theta\)</span>，专家在均衡中必须选择L客户</p>
+<ol start="2" type="1">
+<li>因此<span class="math inline">\(\bar{q}\)</span>必须等于<span class="math inline">\(\theta\)</span>，但第一种情况的论证确保<span class="math inline">\(q_0\)</span>刚超过<span class="math inline">\(\theta\)</span>的专家会选择L而非H客户</li>
+</ol>
+<p><strong>结论</strong>：有效截断策略不是均衡！</p>
+<h4 id="均衡性质">均衡性质</h4>
+<p><strong>命题1</strong>：均衡存在且唯一，是停时上的混合。</p>
+<ul>
+<li>如果<span class="math inline">\(q_0 \leq
+\theta\)</span>：专家总是选择低风险客户</li>
+<li>如果<span class="math inline">\(q_0 \geq
+\bar{q}\)</span>：专家总是选择高风险客户</li>
+<li>如果<span class="math inline">\(q_0 \in (\theta,
+\bar{q})\)</span>：存在<span class="math inline">\(T &gt;
+0\)</span>，专家在随机时间<span class="math inline">\(s \leq
+T\)</span>按无原子分布选择</li>
+</ul>
+<h4 id="无效率的来源">无效率的来源</h4>
+<p><strong>等待的诱惑</strong>： -
+如果专家被预期只选择L客户，他会偏好选择H客户（更有利可图） -
+如果专家被预期只选择H客户，价格"快速"上涨，延迟H客户是有利可图的</p>
+<p><strong>问题</strong>：客户学习太快，价格上涨太快。专家难以使用混合策略——选择<span class="math inline">\(k \in (0, 1)\)</span>不会起作用。</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>信息揭示的双刃剑效应</strong>：报告卡帮助客户识别更好的专家，但同时扭曲了专家的激励——专家会拒绝高风险客户以建立声誉，导致无效率匹配。</p></li>
+<li><p><strong>Goodhart定律的正式模型</strong>：论文提供了Goodhart定律的形式化模型，展示了当度量成为目标时会发生什么。</p></li>
+<li><p><strong>声誉操纵的危害</strong>：长期专家有激励操纵市场对其类型的认知，通过选择性地接受低风险客户来建立"干净"的记录。</p></li>
+<li><p><strong>均衡必须是混合的</strong>：有效截断策略不是均衡，专家必须使用随机化策略，但这种随机化本身就导致无效率。</p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><p><strong>一般化模型</strong>：将声誉理论、信号博弈和机制设计统一在单一框架下。</p></li>
+<li><p><strong>新洞见</strong>：揭示了信息揭示可能降低福利的条件和机制。</p></li>
+<li><p><strong>政策启示</strong>：对医疗报告卡、教育评级等政策设计有直接指导意义。</p></li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
+<ol type="1">
+<li><p><strong>多维类型</strong>：专家和客户有多个维度的私人信息</p></li>
+<li><p><strong>动态客户学习</strong>：客户随时间积累经验</p></li>
+<li><p><strong>竞争性市场</strong>：多位专家竞争客户</p></li>
+</ol>
+<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
+<ol type="1">
+<li><p><strong>实证检验</strong>：如何在现实数据中识别这种声誉操纵效应？</p></li>
+<li><p><strong>最优机制设计</strong>：给定这些无效率，什么是最优的信息揭示政策？</p></li>
+<li><p><strong>替代激励机制</strong>：除了报告卡，什么机制可以激励专家说实话同时避免声誉操纵？</p></li>
+</ol>
+<hr>
+<h2 id="学术思考">7. 学术思考</h2>
+<h3 id="核心学术洞察">核心学术洞察</h3>
+<ol type="1">
+<li><p><strong>信息揭示的悖论</strong>：直觉上信息越多越好，但本文揭示了信息揭示可能"教会"专家如何操纵市场信念。</p></li>
+<li><p><strong>声誉资本的动态积累</strong>：专家的声誉是一种资本，其积累速度受市场学习速度的影响。</p></li>
+<li><p><strong>有效均衡的不可能性</strong>：在标准委托代理模型中，有效结果通常可以通过适当激励机制实现。但本文表明，当代理人有多个维度私人信息且可以操纵信号时，有效结果可能根本无法实现。</p></li>
+</ol>
+<h3 id="深层学术问题">深层学术问题</h3>
+<ol type="1">
+<li><p><strong>为什么专家不能承诺？</strong>
+如果专家可以承诺不操纵声誉，许多无效率就可以避免。是什么阻止了这种承诺？</p></li>
+<li><p><strong>客户如何应对？</strong>
+客户是否了解专家的激励结构？如果客户知道专家会拒绝他们，这会如何影响行为？</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p><strong>如何识别现实中的声誉操纵？</strong>
+有什么可检验的预测？</p></li>
+<li><p><strong>报告卡制度如何设计可以减少无效率？</strong>
+有什么替代方案？</p></li>
+<li><p><strong>与标准声誉模型的区别是什么？</strong>
+本文如何推进Kreps-Wilson类型的声誉理论？</p></li>
+<li><p><strong>在什么条件下信息揭示是有效的？</strong>
+"好消息"扩展表明存在有效情况，条件是什么？</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Labor Mobility in Currency Union — 深度阅读笔记 — House, Proebsting &amp; Tesar</title>
     <url>/posts/house2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -13650,68 +13650,147 @@ Zotero Item Key:: HH5K2TY4</p>
       </tags>
   </entry>
   <entry>
-    <title>海外的丰裕 — 深度阅读笔记 — Khanna Et Al.</title>
-    <url>/posts/khanna2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Abundance from Abroad: Migrant Income and
-Long-Run Economic Development</li>
-<li><strong>作者</strong>: Gaurav Khanna (UC San Diego), Emir
-Murathanoglu, Caroline B. Theoharides, Dean Yang</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(4):
-1540-1577</li>
-<li><strong>DOI</strong>: 10.1257/aer.20241465</li>
-<li><strong>难度评估</strong>: 高 -
-需要发展经济学、国际经济学、计量经济学基础</li>
-</ul>
+    <title>村庄网络中的传播与保险 — 深度阅读笔记 — Kinnan Et Al.</title>
+    <url>/posts/kinnan2024/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Propagation and Insurance in Village Networks<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/U82LFZSS/Kinnan 等 - 2024 - Propagation and Insurance in Village Networks.pdf<br>
+Zotero Item Key:: MJSN77J6</p>
+<hr>
 <span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+发展中国家的小企业通常由家庭直接经营，生产和消费难以分离（“家庭生产单元”）。当家庭面临冲击（如疾病、意外），他们往往通过削减生产支出来平滑消费。这种调整会通过供应链和劳动力雇佣关系传导到其他家庭（企业），形成局部经济网络中的冲击传播（propagation）。发展经济学中有大量研究网络与风险分担的文献，但鲜有研究细粒度追踪冲击如何通过<strong>供应链网络</strong>和<strong>劳动力雇佣网络</strong>这两类不同渠道传播，以及保险如何阻断这种传播。</p>
+<p><strong>研究背景</strong><br>
+发达国家关于供应链传播（如Carvalho et al. 2021）的文献聚焦于大型企业和全球供应链。但低中收入国家（LMICs）的小型家庭企业面临完全不同的情形：（a）生产-消费高度混合；（b）面临健康冲击等个体性风险；（c）同时参与供应链网络和劳动力雇佣网络。<strong>Townsend Thai Dataset</strong>（泰国农村/近郊月度面板）提供了罕见的细粒度村内网络数据，使得追踪冲击传播成为可能。</p>
+<p><strong>作者的问题意识</strong><br>
+当一个家庭受到健康冲击后削减生产，这会如何影响网络中的其他家庭？供应链传播和劳动力网络传播哪个更重要？网络结构（密度、中心性）和保险（正式/非正式）如何影响传播程度？</p>
+<p><strong>研究意义</strong><br>
+本文首次<strong>微观追踪</strong>冲击从被冲击家庭向网络中其他家庭传播的全过程（包括生产侧和消费侧），并估算了乘数效应（multiplier≈1.2）。政策含义：安全网（健康保险、现金转移支付）的社会收益大于私人收益，因为它不仅帮助了受冲击家庭，还通过阻断冲击传播间接惠及网络中的其他家庭。</p>
 <hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>国际移民与发展</strong>：国际移民是发展中国家重要的经济现象，2019年全球有2.1亿来自发展中国家的国际移民。</p>
-<p><strong>转移份额设计（Shift-Share）</strong>：一种准实验识别策略，将总冲击分解为"份额"和"转移"两部分。</p>
-<p><strong>1997年亚洲金融危机</strong>：从泰国开始迅速蔓延，菲律宾比索贬值约40%。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>移民的收入效应</strong>：移民到发达国家工作的收入收益远超任何已知的发展干预项目</p></li>
-<li><p><strong>移民对原籍地区的溢出效应</strong>：缺乏对更广泛原籍地区发展影响的研究</p></li>
-<li><p><strong>识别挑战</strong>：移民收入与原籍地区发展之间存在反向因果问题</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：国际移民收入前景如何影响原籍地区的长期经济发展？</p>
-<p><strong>主要发现</strong>：移民收入冲击的长期放大效应约为六倍</p>
-<hr>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ol type="1">
-<li><strong>引言</strong>: 问题陈述和研究背景</li>
-<li><strong>背景</strong>:
-国际劳动移民概况、菲律宾的移民体系、亚洲金融危机</li>
-<li><strong>数据</strong>: 移民合同数据、汇率数据、结果数据</li>
-<li><strong>实证方法</strong>: 转移份额变量的构建、因果识别</li>
-<li><strong>主要结果</strong>: 长期放大效应、国内收入vs移民收入</li>
-<li><strong>稳健性检验</strong></li>
-<li><strong>结论</strong></li>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言与三大发现</strong>。</li>
+<li><strong>背景与数据</strong>：泰国Townsend月度调查；网络构建（供应链网络 + 劳动力雇佣网络）。</li>
+<li><strong>直接效应</strong>：被冲击家庭的生产和消费调整。</li>
+<li><strong>间接效应（传播）</strong>：网络中其他家庭的生产和消费变化。</li>
+<li><strong>异质性分析</strong>：网络结构、保险、劳动力市场摩擦的调节作用。</li>
+<li><strong>结论与政策含义</strong>。</li>
 </ol>
 <hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="实证方法">实证方法</h3>
-<p><strong>转移份额设计</strong>： - 使用1997年亚洲金融危机作为外生冲击
-- 构建"暴露于移民收入"的工具变量 -
-外生性假设：危机前各地区移民份额与危机后发展独立</p>
-<p><strong>主要结果</strong>： - 移民收入冲击的长期放大效应约为六倍 -
-74.9%来自国内收入效应 - 19.7%来自教育投资</p>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>在LMICs，家庭同时扮演消费者和企业主的角色，经营的小企业通过商品购销（供应链）和劳动力雇佣（雇佣-被雇佣关系）与其他家庭连接。当一个家庭面临健康冲击（如家庭成员重病），他们需要支付大量医疗费用，可能通过减少企业投入/减少雇工来平滑消费。这种调整会波及到：</p>
+<ul>
+<li><strong>上游供应商</strong>：少购买原材料和服务</li>
+<li><strong>下游劳动者</strong>：减少雇工需求</li>
+</ul>
+<h3 id="挑战与识别">挑战与识别</h3>
+<p><strong>关键挑战</strong>：如何识别冲击传播的<strong>因果</strong>效应，而非网络中共同冲击的相关效应（如村庄整体受影响）？</p>
+<p><strong>识别策略</strong>：借鉴Fadlon &amp; Nielsen (2019)的"未来被冲击对照组"设计：</p>
+<ul>
+<li><strong>处理组</strong>：当期发生健康冲击的家庭及其网络邻居</li>
+<li><strong>对照组</strong>：将在未来发生类似冲击的家庭（用其未来冲击前的轨迹作为当期被冲击家庭的反事实）</li>
+<li><strong>间接效应识别</strong>：比较网络中距被冲击家庭更近（高暴露）vs 更远（低暴露）的家庭，在冲击前后的变化差异</li>
+</ul>
+<h3 id="数据">数据</h3>
+<p><strong>Townsend泰国月度调查（Townsend Thai Dataset）</strong>：</p>
+<ul>
+<li>16个村庄（8个农村、8个近郊），1997—2011年14年月度面板</li>
+<li>每月追踪家庭企业的所有购销交易、雇佣/受雇关系、消费支出、健康状况</li>
+<li>构建两类网络：<strong>供应链网络</strong>（货物购销）和<strong>劳动力雇佣网络</strong>（雇主-雇员）</li>
+<li>冲击：使用健康状况的大幅下降（严重疾病）作为外生冲击</li>
+</ul>
+<h3 id="主要结果">主要结果</h3>
+<p><strong>直接效应（被冲击家庭）</strong>：</p>
+<ul>
+<li>被冲击家庭<strong>消费平滑成功</strong>：非医疗性家庭支出未显著减少</li>
+<li>但平滑代价巨大：企业支出减少<strong>23%</strong>，雇佣外部劳动力几乎完全停止（减少<strong>82%</strong>）</li>
+<li>说明：消费-生产不分离（consumption-production non-separation）在此设定中确实成立</li>
+</ul>
+<p><strong>间接效应（传播）</strong>——三大发现：</p>
+<p><strong>发现一：冲击传播至网络中的其他家庭</strong></p>
+<ul>
+<li>距被冲击家庭网络距离越近的家庭，受到的间接冲击越大</li>
+<li>总交易量下降19%（每单位"接近度"）；收入下降7%；消费下降3%</li>
+<li>间接效应从直接相连的一级邻居延伸到二级、三级邻居</li>
+<li><strong>消费侧效应</strong>：不只是生产侧影响，还传导到其他家庭的消费——这是文献中<strong>首次记录</strong></li>
+</ul>
+<p><strong>发现二：劳动力网络传播 &gt; 供应链网络传播</strong></p>
+<ul>
+<li>通过劳动力网络的传播比通过供应链的传播更强</li>
+<li>原因：货物可以跨村采购，但劳动力市场具有强烈的<strong>本地性</strong>（临时外出务工成本高）——一旦雇主减少用工，工人很难在短期内找到替代雇主</li>
+<li>这与Baqaee &amp; Farhi (2020)的理论一致：当投入品替代性低时，传播更严重</li>
+</ul>
+<p><strong>网络弹性缺乏</strong>：被冲击后，不受冲击的家庭并不会在两年内替换"断裂"的网络连接——供应商难以找到新客户，工人难以找到新雇主。这说明村内网络的刚性（rigidity）很高。</p>
+<p><strong>乘数效应</strong>：初步估算消费乘数约为<strong>1.2</strong>（即每1元的直接冲击最终产生1.2元的消费损失）</p>
+<p><strong>发现三：网络结构和保险决定传播程度</strong></p>
+<ul>
+<li><strong>密度效应</strong>：网络越密集的村庄，单一冲击的间接效应越大（更多传播渠道，但替换"断裂"连接也更难）</li>
+<li><strong>中心性效应</strong>：冲击越核心（中心度高）的家庭，传播越广</li>
+<li><strong>保险的缓解作用</strong>：拥有正式保险（如政府健康保险）或非正式保险（网络内互助）的家庭在受冲击后，对外部劳动力需求削减更少，因此传播更小——保险通过"斩断消费-生产联系"来阻止传播</li>
+</ul>
+<h3 id="政策含义">政策含义</h3>
+<ol>
+<li><strong>预防性医疗投资</strong>的社会收益高于私人收益（受益不只是被帮助的家庭，也包括其网络中的其他家庭）</li>
+<li><strong>安全网的社会乘数</strong>：健康保险、现金转移支付、公共就业项目（如印度NREGS）的社会收益高于传统评估——需考虑阻断传播带来的网络溢出收益</li>
+<li><strong>政策靶向性</strong>：应优先保障网络中更"中心"的家庭和网络密度更高的村庄</li>
+<li><strong>劳动力市场改善</strong>：加强劳动力合同执行、拓展超出本村的产品和要素市场，减少网络刚性</li>
+</ol>
 <hr>
-<h2 id="结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>移民促进原籍发展</strong>：长期因果证据支持"良性循环"假说</p></li>
-<li><p><strong>放大机制</strong>：国内收入和教育投资是主要渠道</p></li>
-<li><p><strong>政策启示</strong>：移民政策可以成为全球减贫的重要工具</p></li>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<ol>
+<li>个体健康冲击通过当地供应链和劳动力网络传播，同时影响其他家庭的<strong>生产</strong>和<strong>消费</strong>；</li>
+<li>劳动力网络传播效果强于供应链网络传播（劳动力市场本地性 + 替换成本高）；</li>
+<li>网络越密集、被冲击方越中心、保险越少 → 传播越大；</li>
+<li>保险通过切断"消费压力→生产削减→传播"这一因果链来抑制传播；</li>
+<li>政策含义：扩大安全网的社会收益（网络外部效应）高于私人收益，应靶向中心节点和高密度网络。</li>
+</ol>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文明确提及的方向</strong>：</p>
+<ol>
+<li>改善劳动力合同执行和扩展产品/要素市场以减少网络刚性；</li>
+<li>利用电子支付平台识别网络关键节点以改善保险定向投放。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li><strong>COVID-19冲击</strong>：疫情本身也是对部分家庭/企业的健康+生产冲击，且通过网络传播。文中方法可以直接应用于COVID-19对发展中国家村级经济的冲击研究。</li>
+<li><strong>中国乡村经济</strong>：中国农村"买卖关系"网络（village production networks）的数据能否构建？健康冲击（如劳动年龄人口疾病）如何在中国农村传播？</li>
+<li><strong>工业集群</strong>：类似的网络传播机制是否也存在于城市工业集群中（如温州小商品生产链）？若一家关键供应商倒闭，产业集群内其他企业的反应？</li>
+<li><strong>保险设计</strong>：基于网络结构的最优保险机制设计——是否应该对中心节点实施更高的保险保障（“关键节点保险”）？</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>消费-生产不分离假设的普遍性</strong>：本文的核心机制依赖于"家庭为平滑消费而削减生产投入"。但这一机制在不同类型的家庭中可能差异很大——有储蓄/借贷能力的家庭可能不需要削减生产。本文的结果是否在保险和储蓄可及性更好的样本中同样成立？如果不成立，那么发展金融基础设施（银行普惠）可能也是减少传播的有效途径。</p>
+</li>
+<li>
+<p><strong>网络密度的双重效应</strong>：论文发现密度更高的网络中传播更大。但传统文献发现密度更高的网络中的风险分担能力也更强（Feigenberg et al. 2013）。这种矛盾意味着密度有"保险能力↑"和"传播风险↑"的双重效应。在政策上，是否存在一个"最优网络密度"？或者说，正确的政策干预是改变网络密度本身，还是在既有密度下改善保险机制？</p>
+</li>
+<li>
+<p><strong>识别策略的关键假设</strong>：本文用"未来将受到冲击的家庭"作为反事实对照组，隐含假设这些家庭在未受冲击前与已受冲击家庭的趋势是相同的。但如果健康冲击的发生本身是内生的（如相对贫困、不健康的家庭更早受到冲击），对照组的趋势可能与处理组不同。作者提供了一些安慰剂检验，但这一基本假设的可信度值得关注。</p>
+</li>
+<li>
+<p><strong>乘数的政策诠释</strong>：消费乘数1.2意味着村庄内个体冲击的总消费效应是直接效应的1.2倍。但这仅是村内网络的乘数，没有考虑村间贸易和劳动力流动的调节（跨村市场可以稀释部分冲击）。因此文中乘数可能高估了整个经济中的传播，政策响应时需要考虑这一点。</p>
+</li>
+<li>
+<p><strong>保险阻断传播的机制细节</strong>：论文显示保险减少了传播，解释是"保险让被冲击家庭不需要削减雇工"。但保险的来源有两种（正式保险 vs. 非正式网络互助）。非正式保险（网络内转账）是否同时改变了网络中其他家庭的财务状况，从而直接影响他们的消费，而非单纯通过"减少传播"来改善？区分这两条路径在设计干预上很重要。</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>泰国农村劳动力市场和供应链的双重网络结构（同一家庭既是供应商又是雇主）在中国农村是否普遍存在？中国"能人经济"和产业集群中是否有类似机制？</li>
+<li>本文发现扩大安全网的社会收益高于私人收益，这对中国正在推进的基本养老保险、医疗保险农村覆盖具有什么政策含义？覆盖率提升对农村生产网络的稳定性有多大改善？</li>
+<li>网络中心性（centrality）在这篇文章中是如何测量的？本文用的是哪种中心性指标（度中心性、接近中心性、中介中心性）？是否对结果稳健？</li>
+<li>供应链传播 vs 劳动力网络传播的差异如何与中国农村的情形对应？中国农村劳动力市场的本地性程度（vs 城市化、外出务工）是否比泰国农村更低？</li>
+<li>Townsend Thai Dataset是公开数据吗？如何获取？是否有类似质量的中国农村家庭月度面板数据？</li>
 </ol>
 ]]></content>
       <categories>
-        <category>AER</category>
+        <category>有趣的文章</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -13899,147 +13978,68 @@ vs 10分位：8.3倍的价值产出差异</p>
       </tags>
   </entry>
   <entry>
-    <title>村庄网络中的传播与保险 — 深度阅读笔记 — Kinnan Et Al.</title>
-    <url>/posts/kinnan2024/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Propagation and Insurance in Village Networks<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/U82LFZSS/Kinnan 等 - 2024 - Propagation and Insurance in Village Networks.pdf<br>
-Zotero Item Key:: MJSN77J6</p>
-<hr>
+    <title>海外的丰裕 — 深度阅读笔记 — Khanna Et Al.</title>
+    <url>/posts/khanna2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Abundance from Abroad: Migrant Income and
+Long-Run Economic Development</li>
+<li><strong>作者</strong>: Gaurav Khanna (UC San Diego), Emir
+Murathanoglu, Caroline B. Theoharides, Dean Yang</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(4):
+1540-1577</li>
+<li><strong>DOI</strong>: 10.1257/aer.20241465</li>
+<li><strong>难度评估</strong>: 高 -
+需要发展经济学、国际经济学、计量经济学基础</li>
+</ul>
 <span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-发展中国家的小企业通常由家庭直接经营，生产和消费难以分离（“家庭生产单元”）。当家庭面临冲击（如疾病、意外），他们往往通过削减生产支出来平滑消费。这种调整会通过供应链和劳动力雇佣关系传导到其他家庭（企业），形成局部经济网络中的冲击传播（propagation）。发展经济学中有大量研究网络与风险分担的文献，但鲜有研究细粒度追踪冲击如何通过<strong>供应链网络</strong>和<strong>劳动力雇佣网络</strong>这两类不同渠道传播，以及保险如何阻断这种传播。</p>
-<p><strong>研究背景</strong><br>
-发达国家关于供应链传播（如Carvalho et al. 2021）的文献聚焦于大型企业和全球供应链。但低中收入国家（LMICs）的小型家庭企业面临完全不同的情形：（a）生产-消费高度混合；（b）面临健康冲击等个体性风险；（c）同时参与供应链网络和劳动力雇佣网络。<strong>Townsend Thai Dataset</strong>（泰国农村/近郊月度面板）提供了罕见的细粒度村内网络数据，使得追踪冲击传播成为可能。</p>
-<p><strong>作者的问题意识</strong><br>
-当一个家庭受到健康冲击后削减生产，这会如何影响网络中的其他家庭？供应链传播和劳动力网络传播哪个更重要？网络结构（密度、中心性）和保险（正式/非正式）如何影响传播程度？</p>
-<p><strong>研究意义</strong><br>
-本文首次<strong>微观追踪</strong>冲击从被冲击家庭向网络中其他家庭传播的全过程（包括生产侧和消费侧），并估算了乘数效应（multiplier≈1.2）。政策含义：安全网（健康保险、现金转移支付）的社会收益大于私人收益，因为它不仅帮助了受冲击家庭，还通过阻断冲击传播间接惠及网络中的其他家庭。</p>
 <hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言与三大发现</strong>。</li>
-<li><strong>背景与数据</strong>：泰国Townsend月度调查；网络构建（供应链网络 + 劳动力雇佣网络）。</li>
-<li><strong>直接效应</strong>：被冲击家庭的生产和消费调整。</li>
-<li><strong>间接效应（传播）</strong>：网络中其他家庭的生产和消费变化。</li>
-<li><strong>异质性分析</strong>：网络结构、保险、劳动力市场摩擦的调节作用。</li>
-<li><strong>结论与政策含义</strong>。</li>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>国际移民与发展</strong>：国际移民是发展中国家重要的经济现象，2019年全球有2.1亿来自发展中国家的国际移民。</p>
+<p><strong>转移份额设计（Shift-Share）</strong>：一种准实验识别策略，将总冲击分解为"份额"和"转移"两部分。</p>
+<p><strong>1997年亚洲金融危机</strong>：从泰国开始迅速蔓延，菲律宾比索贬值约40%。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>移民的收入效应</strong>：移民到发达国家工作的收入收益远超任何已知的发展干预项目</p></li>
+<li><p><strong>移民对原籍地区的溢出效应</strong>：缺乏对更广泛原籍地区发展影响的研究</p></li>
+<li><p><strong>识别挑战</strong>：移民收入与原籍地区发展之间存在反向因果问题</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：国际移民收入前景如何影响原籍地区的长期经济发展？</p>
+<p><strong>主要发现</strong>：移民收入冲击的长期放大效应约为六倍</p>
+<hr>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ol type="1">
+<li><strong>引言</strong>: 问题陈述和研究背景</li>
+<li><strong>背景</strong>:
+国际劳动移民概况、菲律宾的移民体系、亚洲金融危机</li>
+<li><strong>数据</strong>: 移民合同数据、汇率数据、结果数据</li>
+<li><strong>实证方法</strong>: 转移份额变量的构建、因果识别</li>
+<li><strong>主要结果</strong>: 长期放大效应、国内收入vs移民收入</li>
+<li><strong>稳健性检验</strong></li>
+<li><strong>结论</strong></li>
 </ol>
 <hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>在LMICs，家庭同时扮演消费者和企业主的角色，经营的小企业通过商品购销（供应链）和劳动力雇佣（雇佣-被雇佣关系）与其他家庭连接。当一个家庭面临健康冲击（如家庭成员重病），他们需要支付大量医疗费用，可能通过减少企业投入/减少雇工来平滑消费。这种调整会波及到：</p>
-<ul>
-<li><strong>上游供应商</strong>：少购买原材料和服务</li>
-<li><strong>下游劳动者</strong>：减少雇工需求</li>
-</ul>
-<h3 id="挑战与识别">挑战与识别</h3>
-<p><strong>关键挑战</strong>：如何识别冲击传播的<strong>因果</strong>效应，而非网络中共同冲击的相关效应（如村庄整体受影响）？</p>
-<p><strong>识别策略</strong>：借鉴Fadlon &amp; Nielsen (2019)的"未来被冲击对照组"设计：</p>
-<ul>
-<li><strong>处理组</strong>：当期发生健康冲击的家庭及其网络邻居</li>
-<li><strong>对照组</strong>：将在未来发生类似冲击的家庭（用其未来冲击前的轨迹作为当期被冲击家庭的反事实）</li>
-<li><strong>间接效应识别</strong>：比较网络中距被冲击家庭更近（高暴露）vs 更远（低暴露）的家庭，在冲击前后的变化差异</li>
-</ul>
-<h3 id="数据">数据</h3>
-<p><strong>Townsend泰国月度调查（Townsend Thai Dataset）</strong>：</p>
-<ul>
-<li>16个村庄（8个农村、8个近郊），1997—2011年14年月度面板</li>
-<li>每月追踪家庭企业的所有购销交易、雇佣/受雇关系、消费支出、健康状况</li>
-<li>构建两类网络：<strong>供应链网络</strong>（货物购销）和<strong>劳动力雇佣网络</strong>（雇主-雇员）</li>
-<li>冲击：使用健康状况的大幅下降（严重疾病）作为外生冲击</li>
-</ul>
-<h3 id="主要结果">主要结果</h3>
-<p><strong>直接效应（被冲击家庭）</strong>：</p>
-<ul>
-<li>被冲击家庭<strong>消费平滑成功</strong>：非医疗性家庭支出未显著减少</li>
-<li>但平滑代价巨大：企业支出减少<strong>23%</strong>，雇佣外部劳动力几乎完全停止（减少<strong>82%</strong>）</li>
-<li>说明：消费-生产不分离（consumption-production non-separation）在此设定中确实成立</li>
-</ul>
-<p><strong>间接效应（传播）</strong>——三大发现：</p>
-<p><strong>发现一：冲击传播至网络中的其他家庭</strong></p>
-<ul>
-<li>距被冲击家庭网络距离越近的家庭，受到的间接冲击越大</li>
-<li>总交易量下降19%（每单位"接近度"）；收入下降7%；消费下降3%</li>
-<li>间接效应从直接相连的一级邻居延伸到二级、三级邻居</li>
-<li><strong>消费侧效应</strong>：不只是生产侧影响，还传导到其他家庭的消费——这是文献中<strong>首次记录</strong></li>
-</ul>
-<p><strong>发现二：劳动力网络传播 &gt; 供应链网络传播</strong></p>
-<ul>
-<li>通过劳动力网络的传播比通过供应链的传播更强</li>
-<li>原因：货物可以跨村采购，但劳动力市场具有强烈的<strong>本地性</strong>（临时外出务工成本高）——一旦雇主减少用工，工人很难在短期内找到替代雇主</li>
-<li>这与Baqaee &amp; Farhi (2020)的理论一致：当投入品替代性低时，传播更严重</li>
-</ul>
-<p><strong>网络弹性缺乏</strong>：被冲击后，不受冲击的家庭并不会在两年内替换"断裂"的网络连接——供应商难以找到新客户，工人难以找到新雇主。这说明村内网络的刚性（rigidity）很高。</p>
-<p><strong>乘数效应</strong>：初步估算消费乘数约为<strong>1.2</strong>（即每1元的直接冲击最终产生1.2元的消费损失）</p>
-<p><strong>发现三：网络结构和保险决定传播程度</strong></p>
-<ul>
-<li><strong>密度效应</strong>：网络越密集的村庄，单一冲击的间接效应越大（更多传播渠道，但替换"断裂"连接也更难）</li>
-<li><strong>中心性效应</strong>：冲击越核心（中心度高）的家庭，传播越广</li>
-<li><strong>保险的缓解作用</strong>：拥有正式保险（如政府健康保险）或非正式保险（网络内互助）的家庭在受冲击后，对外部劳动力需求削减更少，因此传播更小——保险通过"斩断消费-生产联系"来阻止传播</li>
-</ul>
-<h3 id="政策含义">政策含义</h3>
-<ol>
-<li><strong>预防性医疗投资</strong>的社会收益高于私人收益（受益不只是被帮助的家庭，也包括其网络中的其他家庭）</li>
-<li><strong>安全网的社会乘数</strong>：健康保险、现金转移支付、公共就业项目（如印度NREGS）的社会收益高于传统评估——需考虑阻断传播带来的网络溢出收益</li>
-<li><strong>政策靶向性</strong>：应优先保障网络中更"中心"的家庭和网络密度更高的村庄</li>
-<li><strong>劳动力市场改善</strong>：加强劳动力合同执行、拓展超出本村的产品和要素市场，减少网络刚性</li>
-</ol>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="实证方法">实证方法</h3>
+<p><strong>转移份额设计</strong>： - 使用1997年亚洲金融危机作为外生冲击
+- 构建"暴露于移民收入"的工具变量 -
+外生性假设：危机前各地区移民份额与危机后发展独立</p>
+<p><strong>主要结果</strong>： - 移民收入冲击的长期放大效应约为六倍 -
+74.9%来自国内收入效应 - 19.7%来自教育投资</p>
 <hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<ol>
-<li>个体健康冲击通过当地供应链和劳动力网络传播，同时影响其他家庭的<strong>生产</strong>和<strong>消费</strong>；</li>
-<li>劳动力网络传播效果强于供应链网络传播（劳动力市场本地性 + 替换成本高）；</li>
-<li>网络越密集、被冲击方越中心、保险越少 → 传播越大；</li>
-<li>保险通过切断"消费压力→生产削减→传播"这一因果链来抑制传播；</li>
-<li>政策含义：扩大安全网的社会收益（网络外部效应）高于私人收益，应靶向中心节点和高密度网络。</li>
-</ol>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文明确提及的方向</strong>：</p>
-<ol>
-<li>改善劳动力合同执行和扩展产品/要素市场以减少网络刚性；</li>
-<li>利用电子支付平台识别网络关键节点以改善保险定向投放。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li><strong>COVID-19冲击</strong>：疫情本身也是对部分家庭/企业的健康+生产冲击，且通过网络传播。文中方法可以直接应用于COVID-19对发展中国家村级经济的冲击研究。</li>
-<li><strong>中国乡村经济</strong>：中国农村"买卖关系"网络（village production networks）的数据能否构建？健康冲击（如劳动年龄人口疾病）如何在中国农村传播？</li>
-<li><strong>工业集群</strong>：类似的网络传播机制是否也存在于城市工业集群中（如温州小商品生产链）？若一家关键供应商倒闭，产业集群内其他企业的反应？</li>
-<li><strong>保险设计</strong>：基于网络结构的最优保险机制设计——是否应该对中心节点实施更高的保险保障（“关键节点保险”）？</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>消费-生产不分离假设的普遍性</strong>：本文的核心机制依赖于"家庭为平滑消费而削减生产投入"。但这一机制在不同类型的家庭中可能差异很大——有储蓄/借贷能力的家庭可能不需要削减生产。本文的结果是否在保险和储蓄可及性更好的样本中同样成立？如果不成立，那么发展金融基础设施（银行普惠）可能也是减少传播的有效途径。</p>
-</li>
-<li>
-<p><strong>网络密度的双重效应</strong>：论文发现密度更高的网络中传播更大。但传统文献发现密度更高的网络中的风险分担能力也更强（Feigenberg et al. 2013）。这种矛盾意味着密度有"保险能力↑"和"传播风险↑"的双重效应。在政策上，是否存在一个"最优网络密度"？或者说，正确的政策干预是改变网络密度本身，还是在既有密度下改善保险机制？</p>
-</li>
-<li>
-<p><strong>识别策略的关键假设</strong>：本文用"未来将受到冲击的家庭"作为反事实对照组，隐含假设这些家庭在未受冲击前与已受冲击家庭的趋势是相同的。但如果健康冲击的发生本身是内生的（如相对贫困、不健康的家庭更早受到冲击），对照组的趋势可能与处理组不同。作者提供了一些安慰剂检验，但这一基本假设的可信度值得关注。</p>
-</li>
-<li>
-<p><strong>乘数的政策诠释</strong>：消费乘数1.2意味着村庄内个体冲击的总消费效应是直接效应的1.2倍。但这仅是村内网络的乘数，没有考虑村间贸易和劳动力流动的调节（跨村市场可以稀释部分冲击）。因此文中乘数可能高估了整个经济中的传播，政策响应时需要考虑这一点。</p>
-</li>
-<li>
-<p><strong>保险阻断传播的机制细节</strong>：论文显示保险减少了传播，解释是"保险让被冲击家庭不需要削减雇工"。但保险的来源有两种（正式保险 vs. 非正式网络互助）。非正式保险（网络内转账）是否同时改变了网络中其他家庭的财务状况，从而直接影响他们的消费，而非单纯通过"减少传播"来改善？区分这两条路径在设计干预上很重要。</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>泰国农村劳动力市场和供应链的双重网络结构（同一家庭既是供应商又是雇主）在中国农村是否普遍存在？中国"能人经济"和产业集群中是否有类似机制？</li>
-<li>本文发现扩大安全网的社会收益高于私人收益，这对中国正在推进的基本养老保险、医疗保险农村覆盖具有什么政策含义？覆盖率提升对农村生产网络的稳定性有多大改善？</li>
-<li>网络中心性（centrality）在这篇文章中是如何测量的？本文用的是哪种中心性指标（度中心性、接近中心性、中介中心性）？是否对结果稳健？</li>
-<li>供应链传播 vs 劳动力网络传播的差异如何与中国农村的情形对应？中国农村劳动力市场的本地性程度（vs 城市化、外出务工）是否比泰国农村更低？</li>
-<li>Townsend Thai Dataset是公开数据吗？如何获取？是否有类似质量的中国农村家庭月度面板数据？</li>
+<h2 id="结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>移民促进原籍发展</strong>：长期因果证据支持"良性循环"假说</p></li>
+<li><p><strong>放大机制</strong>：国内收入和教育投资是主要渠道</p></li>
+<li><p><strong>政策启示</strong>：移民政策可以成为全球减贫的重要工具</p></li>
 </ol>
 ]]></content>
       <categories>
-        <category>有趣的文章</category>
+        <category>AER</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -15431,267 +15431,6 @@ Zotero Item Key:: LWFR6PLB</p>
       </tags>
   </entry>
   <entry>
-    <title>&lt;马铃薯与人口&gt;深度阅读笔记 — Nunn &amp; Qian</title>
-    <url>/posts/nunn2011/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: The Potato's Contribution to Population and
-Urbanization: Evidence From A Historical Experiment</li>
-<li><strong>作者</strong>: Nathan Nunn(哈佛大学), Nancy
-Qian(耶鲁大学)</li>
-<li><strong>类型</strong>: 论文笔记 / 经济史 / 人口史 / 计量史学</li>
-<li><strong>出版年份</strong>: 2011</li>
-<li><strong>出版机构/期刊</strong>: The Quarterly Journal of
-Economics</li>
-<li><strong>DOI</strong>: 10.1093/qje/qjr009</li>
-<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量史学基础
-<span id="more"></span> ---</li>
-</ul>
-<h2 id="引言马铃薯_改变世界的作物">引言:马铃薯_改变世界的作物</h2>
-<p>This is a landmark paper by Nathan Nunn and Nancy Qian, published in
-the Quarterly Journal of Economics in 2011.</p>
-<h3 id="研究背景">研究背景</h3>
-<p>1000-1900年间,世界人口从不到3亿增长到16亿,城市人口比例从2%上升到超过9%,增长四倍多.尤其引人注目的是,这种增长并非匀速的,而是在后半段(特别是18和19世纪)急剧加速.</p>
-<p>许多学者注意到,马铃薯从美洲传入旧大陆后,凭借其卓越的营养价值和单位面积产量优势,可能在推动人口增长和经济发展方面发挥了关键作用.历史学家William
-Langer(1963)指出:"马铃薯种植的传播与人口的快速增长在各地都相互对应".William
-McNeill(1999)甚至认为马铃薯是解释1750至1950年间欧洲少数国家主导全球的"一个必要_尽管绝非唯一的_因素".</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p>尽管大量定性的历史叙述支持马铃薯对旧大陆人口和经济发展具有重要影响的观点,但实证量化马铃薯总体影响的证据却非常匮乏.造成这一知识缺口的主要原因是估计中的内生性问题:</p>
-<ul>
-<li><strong>反向因果(Reverse Causality):</strong>
-马铃薯的采纳可能导致了人口增长,但反过来,潜在的人口压力及其对食物的需求也可能驱动了马铃薯的采纳</li>
-<li><strong>联合决定(Joint Determination):</strong>
-人口增长和新农业技术的采纳可能同时受到第三个不可观测因素的驱动</li>
-</ul>
-<h2 id="内容及结构">内容及结构</h2>
-<p>这篇论文共分为七个主要部分:</p>
-<ol type="1">
-<li><strong>引言(Introduction):</strong>
-概述研究问题、动机、识别策略和主要结论</li>
-<li><strong>背景(Background):</strong>
-马铃薯的营养优势,从新大陆到旧大陆的传播,其他新大陆主粮作物</li>
-<li><strong>概念框架(Conceptual Framework):</strong>
-构建简单的两部门一般均衡模型</li>
-<li><strong>数据(Data):</strong> 作物适宜度数据(FAO
-GAEZ数据库)和人口/城市化数据</li>
-<li><strong>实证策略与主要结果(Empirical Strategy and Main
-Results):</strong> 核心估计方程和基准估计结果</li>
-<li><strong>稳健性检验(Robustness):</strong>
-控制额外变量、洲内变异分析、城市人口分析、法国士兵身高分析</li>
-<li><strong>结论(Conclusions):</strong> 总结主要发现和学术贡献</li>
-</ol>
-<h2 id="马铃薯的营养优势">马铃薯的营养优势</h2>
-<h3 id="营养完整性">营养完整性</h3>
-<p>马铃薯是所有主粮中营养最为全面的作物之一:</p>
-<ul>
-<li>一个中等大小的马铃薯(150克)连皮食用,可提供29.55毫克的维生素C(占每日建议摄入量的45%),以及丰富的钾,维生素B6等</li>
-<li>其他旧大陆的主粮_小麦、燕麦,大麦、稻米和玉米_都不含维生素C</li>
-</ul>
-<h3 id="单位面积热量优势">单位面积热量优势</h3>
-<table>
-<colgroup>
-<col style="width: 8%">
-<col style="width: 27%">
-<col style="width: 30%">
-<col style="width: 32%">
-</colgroup>
-<thead>
-<tr>
-<th>作物</th>
-<th>每英亩产量(公斤)</th>
-<th>每英亩能量值(兆焦)</th>
-<th>养活一家五口所需英亩数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>小麦</td>
-<td>650</td>
-<td>8,900</td>
-<td>1.70</td>
-</tr>
-<tr>
-<td>大麦</td>
-<td>820</td>
-<td>11,400</td>
-<td>1.40</td>
-</tr>
-<tr>
-<td>燕麦</td>
-<td>690</td>
-<td>9,300</td>
-<td>1.60</td>
-</tr>
-<tr>
-<td>马铃薯</td>
-<td>10,900</td>
-<td>31,900</td>
-<td>0.50</td>
-</tr>
-</tbody>
-</table>
-<p>一英亩种植马铃薯的土地加上一头奶牛的乳制品,就足以养活六到八口人的大家庭.</p>
-<h2 id="马铃薯的传播史">马铃薯的传播史</h2>
-<p><strong>起源与发现:</strong>
-考古证据表明,马铃薯最早在七千到一万年前就已在安第斯山脉被驯化种植</p>
-<p><strong>传入欧洲:</strong>
-马铃薯在欧洲消费的最早记录是1573年西班牙塞维利亚一家医院购买马铃薯的账目,此后依次传入意大利(1586年)、英国(1596年)和德国(1601年)</p>
-<p><strong>缓慢采纳的原因:</strong></p>
-<ul>
-<li><strong>毒性恐惧:</strong>
-马铃薯属于有毒的茄科植物,最初被推测为有毒</li>
-<li><strong>麻风病联想:</strong>
-马铃薯变色、凹凸不平的外观与麻风病患者的皮肤相似</li>
-<li><strong>种植方式的陌生:</strong>
-马铃薯是欧洲第一种通过块茎而非种子种植的食用植物</li>
-</ul>
-<h2 id="实证策略与估计方程">实证策略与估计方程</h2>
-<h3 id="核心估计方程">核心估计方程</h3>
-<p><span class="math display">\[\begin{array}{l}
-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
-t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
-t=0\right)\right] \\
-=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
-t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
-t=0\right)\right]
-\end{array}\]</span></p>
-<p>其中:</p>
-<ul>
-<li><span class="math inline">\(i\)</span> 索引国家,<span class="math inline">\(t\)</span> 索引时间</li>
-<li><span class="math inline">\(y_{it}\)</span> 是因变量:国家<span class="math inline">\(i\)</span>在时期<span class="math inline">\(t\)</span>的总人口自然对数或城市化率</li>
-<li><span class="math inline">\(\ln(\text{Potato Area}_i)\)</span>
-是国家<span class="math inline">\(i\)</span>适合种植马铃薯的土地面积的自然对数</li>
-<li><span class="math inline">\(I^{\text{Post}}_t\)</span>
-是指示变量,在1750、1800、1850、1900年取值为1</li>
-</ul>
-<h3 id="主要结果">主要结果</h3>
-<p><strong>人口方面(Table IV):</strong></p>
-<ul>
-<li>基线规格(列3):β = 0.032(标准误 0.012)</li>
-<li>马铃薯解释了旧大陆1700-1900年间<strong>约25-26%</strong>的人口增长</li>
-</ul>
-<p><strong>城市化方面:</strong></p>
-<ul>
-<li>基线规格:β = 0.0036(标准误 0.0012)</li>
-<li>马铃薯解释了城市化增长的<strong>约27-34%</strong></li>
-</ul>
-<h3 id="城市化效应的滞后">城市化效应的滞后</h3>
-<p>马铃薯对城市化的影响相对于对人口的影响<strong>延迟了50-100年</strong>.这一模式与统一增长理论(Galor
-and Weil 2000)的预测一致:</p>
-<ul>
-<li><strong>马尔萨斯时期:</strong> 生产力提升主要转化为人口增长</li>
-<li><strong>后马尔萨斯时期(约19世纪):</strong>
-才观察到明显的人均收入和城市化改善</li>
-</ul>
-<h2 id="稳健性检验">稳健性检验</h2>
-<p>作者进行了大量稳健性检验,结果均保持正、显著且量级稳定:</p>
-<table>
-<thead>
-<tr>
-<th>额外控制变量</th>
-<th>人口系数</th>
-<th>城市化系数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>赤道距离</td>
-<td>0.030</td>
-<td>0.0037</td>
-</tr>
-<tr>
-<td>疟疾指数</td>
-<td>0.025</td>
-<td>0.0034</td>
-</tr>
-<tr>
-<td>法律渊源</td>
-<td>0.029</td>
-<td>0.0035</td>
-</tr>
-<tr>
-<td>殖民者身份</td>
-<td>0.033</td>
-<td>0.0036</td>
-</tr>
-<tr>
-<td><strong>全部同时控制</strong></td>
-<td><strong>0.031</strong></td>
-<td><strong>0.0029</strong></td>
-</tr>
-</tbody>
-</table>
-<p>洲内变异分析、城市人口分析、成人身高分析等进一步支持了主要结论.</p>
-<h2 id="结论">结论</h2>
-<ol type="1">
-<li><p><strong>因果效应估计:</strong>
-马铃薯在1700-1900年间解释了旧大陆人口增长的约25-26%,城市化增长的约27-34%</p></li>
-<li><p><strong>学术贡献:</strong>
-首次在整个旧大陆范围内、跨越数百年时间尺度,利用双重差分策略来估计马铃薯引入的因果效应</p></li>
-<li><p><strong>理论意义:</strong>
-为营养改善在历史人口增长中的关键作用提供因果证据,支持了Fogel的"营养假说"</p></li>
-</ol>
-<h2 id="未来研究方向">未来研究方向</h2>
-<ol type="1">
-<li><strong>不同人口学渠道的分解:</strong>
-进一步分解马铃薯对人口的具体人口学效应</li>
-<li><strong>更精细的时间纵深:</strong>
-利用更高频的地方档案数据,构建更精细的时间序列</li>
-<li><strong>马铃薯采纳的过程研究:</strong>
-收集各国/地区的具体采纳数据</li>
-<li><strong>对其他新大陆作物的深化比较:</strong>
-对这些作物的相对效应进行深入探讨</li>
-<li><strong>政治经济分析:</strong>
-探讨不同地区的政治、宗教,社会结构等因素影响了马铃薯的采纳速度</li>
-</ol>
-<h2 id="学术思考启发性问题">学术思考:启发性问题</h2>
-<h3 id="问题一技术的不可替代性与历史路径依赖">问题一:技术的"不可替代性"与历史路径依赖</h3>
-<p>论文证实了马铃薯对人口增长的重大贡献(约占1/4-1/3),但这引发了一个深层的历史反事实问题:<strong>如果欧洲没有获得马铃薯,会有什么替代品来满足不断增长的粮食需求?</strong></p>
-<h3 id="问题二制度与地理的互动为什么是爱尔兰">问题二:制度与地理的互动:为什么是爱尔兰?</h3>
-<p>论文表明马铃薯首先在爱尔兰被广泛采纳(17世纪末),然后才是欧洲大陆和其他地区.爱尔兰采纳马铃薯较早,不仅因为其地理条件适合,还因为:</p>
-<ul>
-<li>爱尔兰的土地所有制结构使得小农更需要高产作物</li>
-<li>爱尔兰的传统作物产出长期以地租形式被外流</li>
-<li>英国殖民统治的政治经济结构</li>
-</ul>
-<h3 id="问题三营养与认知为什么采纳需要那么久">问题三:营养与认知:为什么采纳需要那么久?</h3>
-<p>如果马铃薯如此优越,为什么从1573年首次出现在塞维利亚到1700年前后才被广泛种植,中间相隔超过一个世纪?</p>
-<p>论文提到了文化恐惧(毒性恐惧,麻风病关联等),但更深层的问题涉及<strong>信息扩散,学习机制和认知障碍</strong>.</p>
-<h3 id="问题四人口-资源悖论的永久破解">问题四:人口-资源悖论的永久破解?</h3>
-<p>Malthus担忧任何生产力改善最终都会被人口增长所抵消.但论文通过展示马铃薯促进了人口增长,同时也暗示了这一机制的逐步减弱(到19世纪末,人口增长不再完全抵消收入增长).</p>
-<h3 id="问题五历史因果推断的局限性与必要性">问题五:历史因果推断的"局限性与必要性"</h3>
-<p>论文采用的"地理×时间"交互识别策略非常精巧,但仍然依赖于一个关键假设:1700年前后没有与马铃薯适宜度相关的其他冲击.</p>
-<hr>
-<h2 id="总结性反思">总结性反思</h2>
-<h3 id="学术启示一历史因果推断的价值">学术启示一:历史因果推断的价值</h3>
-<p>在当代计量经济学和因果推断日益强调RCT、IV,断点回归等"高精度"方法的背景下,本文通过相对"低端"的双重差分方法,成功回答了一个关系到几亿人生命轨迹的大问题.</p>
-<h3 id="学术启示二定量与定性的融合">学术启示二:定量与定性的融合</h3>
-<p>虽然论文的标题和结论强调了定量分析,但论文的强度实际上来自于定量与定性证据的紧密融合.</p>
-<h3 id="学术启示三对大问题的执着">学术启示三:对"大问题"的执着</h3>
-<p>这篇论文成功的根本原因,也许不在于其方法学的新颖性(双重差分已是标准方法),而在于作者选择坚持追问一个"大问题"_<strong>技术进步如何改变了人类的物质生活和社会结构?</strong></p>
-<h3 id="学术启示四全球视野下的历史经济学">学术启示四:全球视野下的历史经济学</h3>
-<p>论文涵盖了130个旧大陆国家、跨越900年的时间尺度,这种宏大的全球视野相对于当代经济史研究中常见的"区域聚焦"而言,是罕见和珍贵的.</p>
-<hr>
-<p><strong>文献信息:</strong></p>
-<ul>
-<li><strong>标题:</strong> The Potato's Contribution to Population and
-Urbanization: Evidence From A Historical Experiment</li>
-<li><strong>作者:</strong> Nathan Nunn(哈佛大学)、Nancy
-Qian(耶鲁大学)</li>
-<li><strong>期刊:</strong> The Quarterly Journal of Economics, 2011,
-Vol. 126, pp. 593-650</li>
-<li><strong>DOI:</strong> 10.1093/qje/qjr009</li>
-</ul>
-]]></content>
-      <categories>
-        <category>历史</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>经济史</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>年末消费高峰 — 论文笔记 — McCue, Prier &amp; Lofaro</title>
     <url>/posts/mccue2021/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -15960,6 +15699,267 @@ study of procurement contracts》深度分析撰写。</em></p>
         <tag>论文笔记</tag>
         <tag>公共财政</tag>
         <tag>政府采购</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>&lt;马铃薯与人口&gt;深度阅读笔记 — Nunn &amp; Qian</title>
+    <url>/posts/nunn2011/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: The Potato's Contribution to Population and
+Urbanization: Evidence From A Historical Experiment</li>
+<li><strong>作者</strong>: Nathan Nunn(哈佛大学), Nancy
+Qian(耶鲁大学)</li>
+<li><strong>类型</strong>: 论文笔记 / 经济史 / 人口史 / 计量史学</li>
+<li><strong>出版年份</strong>: 2011</li>
+<li><strong>出版机构/期刊</strong>: The Quarterly Journal of
+Economics</li>
+<li><strong>DOI</strong>: 10.1093/qje/qjr009</li>
+<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量史学基础
+<span id="more"></span> ---</li>
+</ul>
+<h2 id="引言马铃薯_改变世界的作物">引言:马铃薯_改变世界的作物</h2>
+<p>This is a landmark paper by Nathan Nunn and Nancy Qian, published in
+the Quarterly Journal of Economics in 2011.</p>
+<h3 id="研究背景">研究背景</h3>
+<p>1000-1900年间,世界人口从不到3亿增长到16亿,城市人口比例从2%上升到超过9%,增长四倍多.尤其引人注目的是,这种增长并非匀速的,而是在后半段(特别是18和19世纪)急剧加速.</p>
+<p>许多学者注意到,马铃薯从美洲传入旧大陆后,凭借其卓越的营养价值和单位面积产量优势,可能在推动人口增长和经济发展方面发挥了关键作用.历史学家William
+Langer(1963)指出:"马铃薯种植的传播与人口的快速增长在各地都相互对应".William
+McNeill(1999)甚至认为马铃薯是解释1750至1950年间欧洲少数国家主导全球的"一个必要_尽管绝非唯一的_因素".</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p>尽管大量定性的历史叙述支持马铃薯对旧大陆人口和经济发展具有重要影响的观点,但实证量化马铃薯总体影响的证据却非常匮乏.造成这一知识缺口的主要原因是估计中的内生性问题:</p>
+<ul>
+<li><strong>反向因果(Reverse Causality):</strong>
+马铃薯的采纳可能导致了人口增长,但反过来,潜在的人口压力及其对食物的需求也可能驱动了马铃薯的采纳</li>
+<li><strong>联合决定(Joint Determination):</strong>
+人口增长和新农业技术的采纳可能同时受到第三个不可观测因素的驱动</li>
+</ul>
+<h2 id="内容及结构">内容及结构</h2>
+<p>这篇论文共分为七个主要部分:</p>
+<ol type="1">
+<li><strong>引言(Introduction):</strong>
+概述研究问题、动机、识别策略和主要结论</li>
+<li><strong>背景(Background):</strong>
+马铃薯的营养优势,从新大陆到旧大陆的传播,其他新大陆主粮作物</li>
+<li><strong>概念框架(Conceptual Framework):</strong>
+构建简单的两部门一般均衡模型</li>
+<li><strong>数据(Data):</strong> 作物适宜度数据(FAO
+GAEZ数据库)和人口/城市化数据</li>
+<li><strong>实证策略与主要结果(Empirical Strategy and Main
+Results):</strong> 核心估计方程和基准估计结果</li>
+<li><strong>稳健性检验(Robustness):</strong>
+控制额外变量、洲内变异分析、城市人口分析、法国士兵身高分析</li>
+<li><strong>结论(Conclusions):</strong> 总结主要发现和学术贡献</li>
+</ol>
+<h2 id="马铃薯的营养优势">马铃薯的营养优势</h2>
+<h3 id="营养完整性">营养完整性</h3>
+<p>马铃薯是所有主粮中营养最为全面的作物之一:</p>
+<ul>
+<li>一个中等大小的马铃薯(150克)连皮食用,可提供29.55毫克的维生素C(占每日建议摄入量的45%),以及丰富的钾,维生素B6等</li>
+<li>其他旧大陆的主粮_小麦、燕麦,大麦、稻米和玉米_都不含维生素C</li>
+</ul>
+<h3 id="单位面积热量优势">单位面积热量优势</h3>
+<table>
+<colgroup>
+<col style="width: 8%">
+<col style="width: 27%">
+<col style="width: 30%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr>
+<th>作物</th>
+<th>每英亩产量(公斤)</th>
+<th>每英亩能量值(兆焦)</th>
+<th>养活一家五口所需英亩数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>小麦</td>
+<td>650</td>
+<td>8,900</td>
+<td>1.70</td>
+</tr>
+<tr>
+<td>大麦</td>
+<td>820</td>
+<td>11,400</td>
+<td>1.40</td>
+</tr>
+<tr>
+<td>燕麦</td>
+<td>690</td>
+<td>9,300</td>
+<td>1.60</td>
+</tr>
+<tr>
+<td>马铃薯</td>
+<td>10,900</td>
+<td>31,900</td>
+<td>0.50</td>
+</tr>
+</tbody>
+</table>
+<p>一英亩种植马铃薯的土地加上一头奶牛的乳制品,就足以养活六到八口人的大家庭.</p>
+<h2 id="马铃薯的传播史">马铃薯的传播史</h2>
+<p><strong>起源与发现:</strong>
+考古证据表明,马铃薯最早在七千到一万年前就已在安第斯山脉被驯化种植</p>
+<p><strong>传入欧洲:</strong>
+马铃薯在欧洲消费的最早记录是1573年西班牙塞维利亚一家医院购买马铃薯的账目,此后依次传入意大利(1586年)、英国(1596年)和德国(1601年)</p>
+<p><strong>缓慢采纳的原因:</strong></p>
+<ul>
+<li><strong>毒性恐惧:</strong>
+马铃薯属于有毒的茄科植物,最初被推测为有毒</li>
+<li><strong>麻风病联想:</strong>
+马铃薯变色、凹凸不平的外观与麻风病患者的皮肤相似</li>
+<li><strong>种植方式的陌生:</strong>
+马铃薯是欧洲第一种通过块茎而非种子种植的食用植物</li>
+</ul>
+<h2 id="实证策略与估计方程">实证策略与估计方程</h2>
+<h3 id="核心估计方程">核心估计方程</h3>
+<p><span class="math display">\[\begin{array}{l}
+f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
+t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
+t=0\right)\right] \\
+=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
+t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
+t=0\right)\right]
+\end{array}\]</span></p>
+<p>其中:</p>
+<ul>
+<li><span class="math inline">\(i\)</span> 索引国家,<span class="math inline">\(t\)</span> 索引时间</li>
+<li><span class="math inline">\(y_{it}\)</span> 是因变量:国家<span class="math inline">\(i\)</span>在时期<span class="math inline">\(t\)</span>的总人口自然对数或城市化率</li>
+<li><span class="math inline">\(\ln(\text{Potato Area}_i)\)</span>
+是国家<span class="math inline">\(i\)</span>适合种植马铃薯的土地面积的自然对数</li>
+<li><span class="math inline">\(I^{\text{Post}}_t\)</span>
+是指示变量,在1750、1800、1850、1900年取值为1</li>
+</ul>
+<h3 id="主要结果">主要结果</h3>
+<p><strong>人口方面(Table IV):</strong></p>
+<ul>
+<li>基线规格(列3):β = 0.032(标准误 0.012)</li>
+<li>马铃薯解释了旧大陆1700-1900年间<strong>约25-26%</strong>的人口增长</li>
+</ul>
+<p><strong>城市化方面:</strong></p>
+<ul>
+<li>基线规格:β = 0.0036(标准误 0.0012)</li>
+<li>马铃薯解释了城市化增长的<strong>约27-34%</strong></li>
+</ul>
+<h3 id="城市化效应的滞后">城市化效应的滞后</h3>
+<p>马铃薯对城市化的影响相对于对人口的影响<strong>延迟了50-100年</strong>.这一模式与统一增长理论(Galor
+and Weil 2000)的预测一致:</p>
+<ul>
+<li><strong>马尔萨斯时期:</strong> 生产力提升主要转化为人口增长</li>
+<li><strong>后马尔萨斯时期(约19世纪):</strong>
+才观察到明显的人均收入和城市化改善</li>
+</ul>
+<h2 id="稳健性检验">稳健性检验</h2>
+<p>作者进行了大量稳健性检验,结果均保持正、显著且量级稳定:</p>
+<table>
+<thead>
+<tr>
+<th>额外控制变量</th>
+<th>人口系数</th>
+<th>城市化系数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>赤道距离</td>
+<td>0.030</td>
+<td>0.0037</td>
+</tr>
+<tr>
+<td>疟疾指数</td>
+<td>0.025</td>
+<td>0.0034</td>
+</tr>
+<tr>
+<td>法律渊源</td>
+<td>0.029</td>
+<td>0.0035</td>
+</tr>
+<tr>
+<td>殖民者身份</td>
+<td>0.033</td>
+<td>0.0036</td>
+</tr>
+<tr>
+<td><strong>全部同时控制</strong></td>
+<td><strong>0.031</strong></td>
+<td><strong>0.0029</strong></td>
+</tr>
+</tbody>
+</table>
+<p>洲内变异分析、城市人口分析、成人身高分析等进一步支持了主要结论.</p>
+<h2 id="结论">结论</h2>
+<ol type="1">
+<li><p><strong>因果效应估计:</strong>
+马铃薯在1700-1900年间解释了旧大陆人口增长的约25-26%,城市化增长的约27-34%</p></li>
+<li><p><strong>学术贡献:</strong>
+首次在整个旧大陆范围内、跨越数百年时间尺度,利用双重差分策略来估计马铃薯引入的因果效应</p></li>
+<li><p><strong>理论意义:</strong>
+为营养改善在历史人口增长中的关键作用提供因果证据,支持了Fogel的"营养假说"</p></li>
+</ol>
+<h2 id="未来研究方向">未来研究方向</h2>
+<ol type="1">
+<li><strong>不同人口学渠道的分解:</strong>
+进一步分解马铃薯对人口的具体人口学效应</li>
+<li><strong>更精细的时间纵深:</strong>
+利用更高频的地方档案数据,构建更精细的时间序列</li>
+<li><strong>马铃薯采纳的过程研究:</strong>
+收集各国/地区的具体采纳数据</li>
+<li><strong>对其他新大陆作物的深化比较:</strong>
+对这些作物的相对效应进行深入探讨</li>
+<li><strong>政治经济分析:</strong>
+探讨不同地区的政治、宗教,社会结构等因素影响了马铃薯的采纳速度</li>
+</ol>
+<h2 id="学术思考启发性问题">学术思考:启发性问题</h2>
+<h3 id="问题一技术的不可替代性与历史路径依赖">问题一:技术的"不可替代性"与历史路径依赖</h3>
+<p>论文证实了马铃薯对人口增长的重大贡献(约占1/4-1/3),但这引发了一个深层的历史反事实问题:<strong>如果欧洲没有获得马铃薯,会有什么替代品来满足不断增长的粮食需求?</strong></p>
+<h3 id="问题二制度与地理的互动为什么是爱尔兰">问题二:制度与地理的互动:为什么是爱尔兰?</h3>
+<p>论文表明马铃薯首先在爱尔兰被广泛采纳(17世纪末),然后才是欧洲大陆和其他地区.爱尔兰采纳马铃薯较早,不仅因为其地理条件适合,还因为:</p>
+<ul>
+<li>爱尔兰的土地所有制结构使得小农更需要高产作物</li>
+<li>爱尔兰的传统作物产出长期以地租形式被外流</li>
+<li>英国殖民统治的政治经济结构</li>
+</ul>
+<h3 id="问题三营养与认知为什么采纳需要那么久">问题三:营养与认知:为什么采纳需要那么久?</h3>
+<p>如果马铃薯如此优越,为什么从1573年首次出现在塞维利亚到1700年前后才被广泛种植,中间相隔超过一个世纪?</p>
+<p>论文提到了文化恐惧(毒性恐惧,麻风病关联等),但更深层的问题涉及<strong>信息扩散,学习机制和认知障碍</strong>.</p>
+<h3 id="问题四人口-资源悖论的永久破解">问题四:人口-资源悖论的永久破解?</h3>
+<p>Malthus担忧任何生产力改善最终都会被人口增长所抵消.但论文通过展示马铃薯促进了人口增长,同时也暗示了这一机制的逐步减弱(到19世纪末,人口增长不再完全抵消收入增长).</p>
+<h3 id="问题五历史因果推断的局限性与必要性">问题五:历史因果推断的"局限性与必要性"</h3>
+<p>论文采用的"地理×时间"交互识别策略非常精巧,但仍然依赖于一个关键假设:1700年前后没有与马铃薯适宜度相关的其他冲击.</p>
+<hr>
+<h2 id="总结性反思">总结性反思</h2>
+<h3 id="学术启示一历史因果推断的价值">学术启示一:历史因果推断的价值</h3>
+<p>在当代计量经济学和因果推断日益强调RCT、IV,断点回归等"高精度"方法的背景下,本文通过相对"低端"的双重差分方法,成功回答了一个关系到几亿人生命轨迹的大问题.</p>
+<h3 id="学术启示二定量与定性的融合">学术启示二:定量与定性的融合</h3>
+<p>虽然论文的标题和结论强调了定量分析,但论文的强度实际上来自于定量与定性证据的紧密融合.</p>
+<h3 id="学术启示三对大问题的执着">学术启示三:对"大问题"的执着</h3>
+<p>这篇论文成功的根本原因,也许不在于其方法学的新颖性(双重差分已是标准方法),而在于作者选择坚持追问一个"大问题"_<strong>技术进步如何改变了人类的物质生活和社会结构?</strong></p>
+<h3 id="学术启示四全球视野下的历史经济学">学术启示四:全球视野下的历史经济学</h3>
+<p>论文涵盖了130个旧大陆国家、跨越900年的时间尺度,这种宏大的全球视野相对于当代经济史研究中常见的"区域聚焦"而言,是罕见和珍贵的.</p>
+<hr>
+<p><strong>文献信息:</strong></p>
+<ul>
+<li><strong>标题:</strong> The Potato's Contribution to Population and
+Urbanization: Evidence From A Historical Experiment</li>
+<li><strong>作者:</strong> Nathan Nunn(哈佛大学)、Nancy
+Qian(耶鲁大学)</li>
+<li><strong>期刊:</strong> The Quarterly Journal of Economics, 2011,
+Vol. 126, pp. 593-650</li>
+<li><strong>DOI:</strong> 10.1093/qje/qjr009</li>
+</ul>
+]]></content>
+      <categories>
+        <category>历史</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>经济史</tag>
       </tags>
   </entry>
   <entry>
@@ -16965,6 +16965,156 @@ Tabellini (Harvard &amp; CEPR &amp; NBER)</li>
       </tags>
   </entry>
   <entry>
+    <title>邻里效应：伦敦战时破坏的证据 — 深度阅读笔记 — Redding &amp; Sturm</title>
+    <url>/posts/redding2024/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Neighborhood Effects: Evidence from Wartime Destruction in London<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/394PKQGT/Redding和Sturm - 2024 - Neighborhood Effects Evidence from Wartime Destruction in London.pdf<br>
+Zotero Item Key:: Y7PUT4SC</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+城市经济学的一个核心问题是：为什么同一城市内不同地段的房价和社会经济水平差异如此之大？理论上存在两类竞争性解释：（1）<strong>自然禀赋差异</strong>（fundamentals）——绿地、景观等自然优势；（2）<strong>邻里效应</strong>（neighborhood effects）——个体行为受周边邻里特征影响（如邻里构成影响居民选择），形成正反馈循环。这两类机制对政策有截然不同的含义：如果是自然禀赋主导，地方干预需要改变禀赋本身；如果是邻里效应主导，即使小规模干预也可能通过改变邻里构成引发持久的社会变迁。</p>
+<p><strong>研究背景</strong><br>
+已有研究（Chetty et al. 2016 "移动到机会"项目等）尝试估计邻里效应，但面临根本性的内生性问题：居民在哪里住是自我选择的结果，富裕社区可能本来就具有更好的禀赋，而不是因为"邻里"本身的影响。外生识别邻里效应非常困难，需要大规模、外生的冲击来打破居民与环境之间的共同决定关系。</p>
+<p><strong>作者的问题意识</strong><br>
+能否利用大规模的历史外生冲击——二战期间德国对伦敦的轰炸——来识别邻里效应？轰炸的（条件）随机性使其成为一个天然实验，可以比较被炸和未被炸地区在二战后长期的社会经济演变差异，以及相邻地区之间的溢出效应。</p>
+<p><strong>研究意义</strong><br>
+首次利用战争轰炸作为外生冲击估计邻里效应的强度；构建了细至单栋建筑的历史-现代链接数据集；将量化城市模型（quantitative urban model）与邻里效应相结合，实现了"自然禀赋 vs 邻里效应"的反事实分解。对理解城市内空间不平等的成因，以及评估以地方为基础的政策干预（place-based interventions）的效果，具有重要启示。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：问题提出、自然实验设计、主要发现。</li>
+<li><strong>历史背景</strong>：二战伦敦轰炸及战后重建（以公屋建设为主）。</li>
+<li><strong>数据</strong>：构建个体建筑层面的战时破坏×战前-战后社会经济数据集。</li>
+<li><strong>简化型证据（Section 4）</strong>：战时破坏对战后房价和社会经济构成的直接效应与溢出效应。</li>
+<li><strong>理论模型（Section 5）</strong>：含邻里效应的空间分选量化城市模型。</li>
+<li><strong>模型参数估计（Section 6）</strong>。</li>
+<li><strong>反事实分析（Section 7）</strong>：邻里效应对轰炸冲击的放大作用及其对整体空间差异的贡献。</li>
+<li><strong>结论</strong>。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>伦敦城市内部社会经济分化显著，理解其成因对于"社会住房政策""邻里更新"等地方干预的效果评估至关重要。然而，传统研究面临根本性的内生性挑战：社会经济好的地区很可能本来就有更好的自然禀赋。</p>
+<h3 id="挑战">挑战</h3>
+<p>如何在不随机分配居民的情况下，识别出"邻里效应"相对于"自然禀赋"的独立贡献？作者的答案：二战期间德军的伦敦轰炸为这一问题提供了一个罕见的外生冲击。</p>
+<h3 id="识别策略（自然实验）">识别策略（自然实验）</h3>
+<p><strong>外生性验证</strong>：</p>
+<ul>
+<li>从整个伦敦来看，轰炸与战前贫困有相关性（德军最初以东伦敦码头区为目标，而东伦敦历史上更贫困）；</li>
+<li>但<strong>在1km六边形网格（hexagonal grid）内控制地理位置后</strong>，轰炸与战前房价和社会经济构成<strong>不相关</strong>；</li>
+<li>这与当时落后的炸弹瞄准技术（且多为夜间轰炸、战时灯火管制）相符——无法精准打击特定街道或建筑。</li>
+</ul>
+<h3 id="数据构建">数据构建</h3>
+<p><strong>历史-现代链接，建筑层面数据</strong>：</p>
+<ul>
+<li><strong>战时破坏</strong>：数字化并地理编码伦敦郡议会（LCC）绘制的轰炸损毁地图（bomb damage maps）</li>
+<li><strong>战前房产价值</strong>：各栋建筑的商业和住宅地产评估值</li>
+<li><strong>战前社会经济构成</strong>：《伦敦生活与劳动新调查》（NSOL）按街段记录的各社会阶层比例</li>
+<li><strong>战后房产价值</strong>：1995–2020年个人房产交易数据</li>
+<li><strong>战后社会经济构成</strong>：2001年（及2011年）人口普查，9,041个Output Area层级</li>
+</ul>
+<h3 id="减少型证据（Reduced-Form-Results）">减少型证据（Reduced-Form Results）</h3>
+<p><strong>直接效应（对被炸地区）</strong>：</p>
+<ul>
+<li>完全被毁地区 vs 未损毁地区（控制1km网格固定效应）：
+<ul>
+<li>战后房价下降 <strong>11–18%</strong></li>
+<li>高收入居民比例下降 <strong>4个百分点</strong></li>
+<li>低收入居民比例上升 <strong>6个百分点</strong></li>
+<li>综合社会经济指数下降 <strong>5%</strong></li>
+</ul>
+</li>
+<li><strong>机制</strong>：战后重建主要通过建设公房（council housing/social housing）完成——轰炸导致了"设施降级"（downgrading），而非升级</li>
+</ul>
+<p><strong>溢出效应（对相邻未被炸地区）</strong>：</p>
+<ul>
+<li>相邻100米内邻居被完全摧毁：本地房价下降 <strong>7–8%</strong>，社会经济指数下降 <strong>3个百分点</strong></li>
+<li>溢出效应随距离急剧衰减：<strong>超过300米后不再显著</strong></li>
+<li>这说明邻里效应高度局部化（localized）</li>
+</ul>
+<h3 id="量化城市模型">量化城市模型</h3>
+<p><strong>结构</strong>：</p>
+<ul>
+<li>三类社会经济群体（低/中/高收入）在伦敦各地点之间选择居住地和工作地</li>
+<li>工资、居住便利性（amenities）、生活成本、通勤成本共同影响选址</li>
+<li>三类群体是生产中的不完全替代，工资不同；对住房支出占比也不同（高收入群体住房支出占比低，因此更愿意为高便利性支付溢价）</li>
+<li><strong>邻里效应</strong>：每个地点的便利性依赖于周边地点的社会经济构成</li>
+</ul>
+<p><strong>模型逻辑</strong>：</p>
+<ul>
+<li>轰炸→公房建设→降低被炸地区对高收入居民的相对吸引力</li>
+<li>高收入居民离开被炸地点→被炸地点便利性进一步下降（邻里效应）→向相邻地区溢出</li>
+<li>通过模型结构参数估计，将上述机制转化为可量化的一般均衡效应</li>
+</ul>
+<p><strong>反事实分解</strong>：</p>
+<ol>
+<li><strong>邻里效应放大倍数</strong>：剔除邻里效应后，轰炸直接效应远小——邻里效应大幅放大了轰炸的直接冲击</li>
+<li><strong>对整体空间差异的贡献</strong>：即使在没有战时轰炸的反事实情景中，邻里效应（基于对周边社会经济构成的偏好）也能解释相当大比例的当前空间社会经济差异</li>
+</ol>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<p>利用二战伦敦轰炸的外生冲击，结合建筑层面的历史-现代链接数据和含邻里效应的量化城市模型，本文发现：</p>
+<ol>
+<li>轰炸（经公房重建）对被炸地区的房价和社会经济构成产生了<strong>持久的直接负面效应</strong>；</li>
+<li>轰炸对<strong>相邻未被炸地区</strong>产生了<strong>强烈但高度局部化</strong>（300米内衰减至零）的溢出效应；</li>
+<li>邻里效应在量级上<strong>大幅放大</strong>了轰炸冲击的直接影响；</li>
+<li>邻里效应对于解释城市内部空间社会经济分化具有<strong>实质性的独立贡献</strong>（相对于自然禀赋）。</li>
+</ol>
+<p><strong>政策含义</strong>：即便是小规模的地方干预，也可能通过邻里效应的链式反应引发较大的社会经济变迁——地方干预的效果不应仅用其直接冲击来衡量，而应将邻里效应放大机制纳入评估框架。</p>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文明确提及的限制</strong>：</p>
+<ol>
+<li>邻里效应的具体机制（是社会互动、犯罪安全、学校质量，还是纯粹的偏好-构成效应）未被明确区分；</li>
+<li>研究未探讨哪类政策干预能够最有效地利用邻里效应的放大机制。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li><strong>机制分解</strong>：300米内的溢出效应驱动因素是什么？可以探讨犯罪率、学校质量、社会网络各机制的相对贡献；</li>
+<li><strong>最优公房区位</strong>：如果公房建设放大了邻里效应，应将公房分散在高收入地区还是集中建设？本文提供了参数，可进一步做最优区位设计分析；</li>
+<li><strong>历史持久性</strong>：战后70余年，"公房区"的社会标签是否仍然存在？有没有通过绅士化（gentrification）逆转的地区，其机制是什么？</li>
+<li><strong>发展中国家的自然实验</strong>：非洲或亚洲城市是否有类似的外生破坏冲击（内战、洪灾）可以复制这一设计，检验邻里效应在不同城市化水平下的强度？</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>识别假设的微妙之处</strong>：虽然轰炸在1km网格内"条件随机"，但1km网格本身的划分是任意的。如果将网格缩小（如500m），结论是否仍然成立？如果轰炸恰好与网格边界附近的某些微环境特征相关，结论可能被影响。这是空间自然实验的通用挑战。</p>
+</li>
+<li>
+<p><strong>公房重建是关键机制</strong>：论文的核心机制是"轰炸→公房建设→设施降级→高收入居民外迁"。这意味着，如果战后重建采用了高档私人开发而非公房，邻里效应的放大作用可能反向（吸引高收入居民）。因此，本文的发现对轰炸本身的普遍性较弱，更是一个"公房政策+轰炸"的联合效应估计。</p>
+</li>
+<li>
+<p><strong>溢出效应的高度局部性（300米）</strong>：这个范围非常小，大约相当于三四个街区的步行距离。这隐含着邻里效应高度地方化，可能反映了视觉暴露（看到公房）或面对面的社会互动机制，而非学区（通常覆盖更大范围）。如何设计干预来突破这一局限是重要的政策问题。</p>
+</li>
+<li>
+<p><strong>量化模型中"邻里效应"的识别</strong>：论文将邻里效应参数化为"对周边社会经济构成的偏好"。但这一参数的识别依赖于轰炸带来的冲击——结构参数估计和简化型证据在本质上使用了相同的识别变异，可能导致标准误被低估。独立地检验这些参数是否稳健是一个潜在的技术挑战。</p>
+</li>
+<li>
+<p><strong>反事实分析的外推性</strong>：论文通过模型做了"无轰炸"反事实，发现邻里效应仍然解释了相当部分的空间分化。然而，这一反事实依赖于均衡的唯一性和全局稳定性——量化城市模型通常在均衡附近做局部估计，对大幅度反事实的外推可靠性值得关注。</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>Chetty et al. (2016) 的"移动到机会"（Moving to Opportunity, MTO）实验与本文的研究发现是否一致？两种识别策略的结论有何异同？</li>
+<li>英国战后公房政策在伦敦各区是如何分布的？是否存在系统性选址偏差，可能影响本文的识别？</li>
+<li>本文发现邻里效应在300米内显著，这一距离在不同城市（如发展中国家特大城市）中是否相同？是否存在文化差异？</li>
+<li>在中国的城市化背景下，城中村改造、棚户区更新等政策是否有类似的邻里效应机制？能否用中国历史冲击做类似研究？</li>
+<li>量化城市模型中如何将"公房"与"高档私宅"的差异参数化？如果战后是高档私人开发，模型预测的长期社会经济分布会有多大不同？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>R数据科学_ggplot2笔记(1)</title>
     <url>/posts/29862/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="一个说明">一个说明</h2>
@@ -17408,156 +17558,6 @@ Evidence from Chess</li>
 ]]></content>
       <categories>
         <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>邻里效应：伦敦战时破坏的证据 — 深度阅读笔记 — Redding &amp; Sturm</title>
-    <url>/posts/redding2024/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Neighborhood Effects: Evidence from Wartime Destruction in London<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/394PKQGT/Redding和Sturm - 2024 - Neighborhood Effects Evidence from Wartime Destruction in London.pdf<br>
-Zotero Item Key:: Y7PUT4SC</p>
-<hr>
-<span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-城市经济学的一个核心问题是：为什么同一城市内不同地段的房价和社会经济水平差异如此之大？理论上存在两类竞争性解释：（1）<strong>自然禀赋差异</strong>（fundamentals）——绿地、景观等自然优势；（2）<strong>邻里效应</strong>（neighborhood effects）——个体行为受周边邻里特征影响（如邻里构成影响居民选择），形成正反馈循环。这两类机制对政策有截然不同的含义：如果是自然禀赋主导，地方干预需要改变禀赋本身；如果是邻里效应主导，即使小规模干预也可能通过改变邻里构成引发持久的社会变迁。</p>
-<p><strong>研究背景</strong><br>
-已有研究（Chetty et al. 2016 "移动到机会"项目等）尝试估计邻里效应，但面临根本性的内生性问题：居民在哪里住是自我选择的结果，富裕社区可能本来就具有更好的禀赋，而不是因为"邻里"本身的影响。外生识别邻里效应非常困难，需要大规模、外生的冲击来打破居民与环境之间的共同决定关系。</p>
-<p><strong>作者的问题意识</strong><br>
-能否利用大规模的历史外生冲击——二战期间德国对伦敦的轰炸——来识别邻里效应？轰炸的（条件）随机性使其成为一个天然实验，可以比较被炸和未被炸地区在二战后长期的社会经济演变差异，以及相邻地区之间的溢出效应。</p>
-<p><strong>研究意义</strong><br>
-首次利用战争轰炸作为外生冲击估计邻里效应的强度；构建了细至单栋建筑的历史-现代链接数据集；将量化城市模型（quantitative urban model）与邻里效应相结合，实现了"自然禀赋 vs 邻里效应"的反事实分解。对理解城市内空间不平等的成因，以及评估以地方为基础的政策干预（place-based interventions）的效果，具有重要启示。</p>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言</strong>：问题提出、自然实验设计、主要发现。</li>
-<li><strong>历史背景</strong>：二战伦敦轰炸及战后重建（以公屋建设为主）。</li>
-<li><strong>数据</strong>：构建个体建筑层面的战时破坏×战前-战后社会经济数据集。</li>
-<li><strong>简化型证据（Section 4）</strong>：战时破坏对战后房价和社会经济构成的直接效应与溢出效应。</li>
-<li><strong>理论模型（Section 5）</strong>：含邻里效应的空间分选量化城市模型。</li>
-<li><strong>模型参数估计（Section 6）</strong>。</li>
-<li><strong>反事实分析（Section 7）</strong>：邻里效应对轰炸冲击的放大作用及其对整体空间差异的贡献。</li>
-<li><strong>结论</strong>。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>伦敦城市内部社会经济分化显著，理解其成因对于"社会住房政策""邻里更新"等地方干预的效果评估至关重要。然而，传统研究面临根本性的内生性挑战：社会经济好的地区很可能本来就有更好的自然禀赋。</p>
-<h3 id="挑战">挑战</h3>
-<p>如何在不随机分配居民的情况下，识别出"邻里效应"相对于"自然禀赋"的独立贡献？作者的答案：二战期间德军的伦敦轰炸为这一问题提供了一个罕见的外生冲击。</p>
-<h3 id="识别策略（自然实验）">识别策略（自然实验）</h3>
-<p><strong>外生性验证</strong>：</p>
-<ul>
-<li>从整个伦敦来看，轰炸与战前贫困有相关性（德军最初以东伦敦码头区为目标，而东伦敦历史上更贫困）；</li>
-<li>但<strong>在1km六边形网格（hexagonal grid）内控制地理位置后</strong>，轰炸与战前房价和社会经济构成<strong>不相关</strong>；</li>
-<li>这与当时落后的炸弹瞄准技术（且多为夜间轰炸、战时灯火管制）相符——无法精准打击特定街道或建筑。</li>
-</ul>
-<h3 id="数据构建">数据构建</h3>
-<p><strong>历史-现代链接，建筑层面数据</strong>：</p>
-<ul>
-<li><strong>战时破坏</strong>：数字化并地理编码伦敦郡议会（LCC）绘制的轰炸损毁地图（bomb damage maps）</li>
-<li><strong>战前房产价值</strong>：各栋建筑的商业和住宅地产评估值</li>
-<li><strong>战前社会经济构成</strong>：《伦敦生活与劳动新调查》（NSOL）按街段记录的各社会阶层比例</li>
-<li><strong>战后房产价值</strong>：1995–2020年个人房产交易数据</li>
-<li><strong>战后社会经济构成</strong>：2001年（及2011年）人口普查，9,041个Output Area层级</li>
-</ul>
-<h3 id="减少型证据（Reduced-Form-Results）">减少型证据（Reduced-Form Results）</h3>
-<p><strong>直接效应（对被炸地区）</strong>：</p>
-<ul>
-<li>完全被毁地区 vs 未损毁地区（控制1km网格固定效应）：
-<ul>
-<li>战后房价下降 <strong>11–18%</strong></li>
-<li>高收入居民比例下降 <strong>4个百分点</strong></li>
-<li>低收入居民比例上升 <strong>6个百分点</strong></li>
-<li>综合社会经济指数下降 <strong>5%</strong></li>
-</ul>
-</li>
-<li><strong>机制</strong>：战后重建主要通过建设公房（council housing/social housing）完成——轰炸导致了"设施降级"（downgrading），而非升级</li>
-</ul>
-<p><strong>溢出效应（对相邻未被炸地区）</strong>：</p>
-<ul>
-<li>相邻100米内邻居被完全摧毁：本地房价下降 <strong>7–8%</strong>，社会经济指数下降 <strong>3个百分点</strong></li>
-<li>溢出效应随距离急剧衰减：<strong>超过300米后不再显著</strong></li>
-<li>这说明邻里效应高度局部化（localized）</li>
-</ul>
-<h3 id="量化城市模型">量化城市模型</h3>
-<p><strong>结构</strong>：</p>
-<ul>
-<li>三类社会经济群体（低/中/高收入）在伦敦各地点之间选择居住地和工作地</li>
-<li>工资、居住便利性（amenities）、生活成本、通勤成本共同影响选址</li>
-<li>三类群体是生产中的不完全替代，工资不同；对住房支出占比也不同（高收入群体住房支出占比低，因此更愿意为高便利性支付溢价）</li>
-<li><strong>邻里效应</strong>：每个地点的便利性依赖于周边地点的社会经济构成</li>
-</ul>
-<p><strong>模型逻辑</strong>：</p>
-<ul>
-<li>轰炸→公房建设→降低被炸地区对高收入居民的相对吸引力</li>
-<li>高收入居民离开被炸地点→被炸地点便利性进一步下降（邻里效应）→向相邻地区溢出</li>
-<li>通过模型结构参数估计，将上述机制转化为可量化的一般均衡效应</li>
-</ul>
-<p><strong>反事实分解</strong>：</p>
-<ol>
-<li><strong>邻里效应放大倍数</strong>：剔除邻里效应后，轰炸直接效应远小——邻里效应大幅放大了轰炸的直接冲击</li>
-<li><strong>对整体空间差异的贡献</strong>：即使在没有战时轰炸的反事实情景中，邻里效应（基于对周边社会经济构成的偏好）也能解释相当大比例的当前空间社会经济差异</li>
-</ol>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<p>利用二战伦敦轰炸的外生冲击，结合建筑层面的历史-现代链接数据和含邻里效应的量化城市模型，本文发现：</p>
-<ol>
-<li>轰炸（经公房重建）对被炸地区的房价和社会经济构成产生了<strong>持久的直接负面效应</strong>；</li>
-<li>轰炸对<strong>相邻未被炸地区</strong>产生了<strong>强烈但高度局部化</strong>（300米内衰减至零）的溢出效应；</li>
-<li>邻里效应在量级上<strong>大幅放大</strong>了轰炸冲击的直接影响；</li>
-<li>邻里效应对于解释城市内部空间社会经济分化具有<strong>实质性的独立贡献</strong>（相对于自然禀赋）。</li>
-</ol>
-<p><strong>政策含义</strong>：即便是小规模的地方干预，也可能通过邻里效应的链式反应引发较大的社会经济变迁——地方干预的效果不应仅用其直接冲击来衡量，而应将邻里效应放大机制纳入评估框架。</p>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文明确提及的限制</strong>：</p>
-<ol>
-<li>邻里效应的具体机制（是社会互动、犯罪安全、学校质量，还是纯粹的偏好-构成效应）未被明确区分；</li>
-<li>研究未探讨哪类政策干预能够最有效地利用邻里效应的放大机制。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li><strong>机制分解</strong>：300米内的溢出效应驱动因素是什么？可以探讨犯罪率、学校质量、社会网络各机制的相对贡献；</li>
-<li><strong>最优公房区位</strong>：如果公房建设放大了邻里效应，应将公房分散在高收入地区还是集中建设？本文提供了参数，可进一步做最优区位设计分析；</li>
-<li><strong>历史持久性</strong>：战后70余年，"公房区"的社会标签是否仍然存在？有没有通过绅士化（gentrification）逆转的地区，其机制是什么？</li>
-<li><strong>发展中国家的自然实验</strong>：非洲或亚洲城市是否有类似的外生破坏冲击（内战、洪灾）可以复制这一设计，检验邻里效应在不同城市化水平下的强度？</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>识别假设的微妙之处</strong>：虽然轰炸在1km网格内"条件随机"，但1km网格本身的划分是任意的。如果将网格缩小（如500m），结论是否仍然成立？如果轰炸恰好与网格边界附近的某些微环境特征相关，结论可能被影响。这是空间自然实验的通用挑战。</p>
-</li>
-<li>
-<p><strong>公房重建是关键机制</strong>：论文的核心机制是"轰炸→公房建设→设施降级→高收入居民外迁"。这意味着，如果战后重建采用了高档私人开发而非公房，邻里效应的放大作用可能反向（吸引高收入居民）。因此，本文的发现对轰炸本身的普遍性较弱，更是一个"公房政策+轰炸"的联合效应估计。</p>
-</li>
-<li>
-<p><strong>溢出效应的高度局部性（300米）</strong>：这个范围非常小，大约相当于三四个街区的步行距离。这隐含着邻里效应高度地方化，可能反映了视觉暴露（看到公房）或面对面的社会互动机制，而非学区（通常覆盖更大范围）。如何设计干预来突破这一局限是重要的政策问题。</p>
-</li>
-<li>
-<p><strong>量化模型中"邻里效应"的识别</strong>：论文将邻里效应参数化为"对周边社会经济构成的偏好"。但这一参数的识别依赖于轰炸带来的冲击——结构参数估计和简化型证据在本质上使用了相同的识别变异，可能导致标准误被低估。独立地检验这些参数是否稳健是一个潜在的技术挑战。</p>
-</li>
-<li>
-<p><strong>反事实分析的外推性</strong>：论文通过模型做了"无轰炸"反事实，发现邻里效应仍然解释了相当部分的空间分化。然而，这一反事实依赖于均衡的唯一性和全局稳定性——量化城市模型通常在均衡附近做局部估计，对大幅度反事实的外推可靠性值得关注。</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>Chetty et al. (2016) 的"移动到机会"（Moving to Opportunity, MTO）实验与本文的研究发现是否一致？两种识别策略的结论有何异同？</li>
-<li>英国战后公房政策在伦敦各区是如何分布的？是否存在系统性选址偏差，可能影响本文的识别？</li>
-<li>本文发现邻里效应在300米内显著，这一距离在不同城市（如发展中国家特大城市）中是否相同？是否存在文化差异？</li>
-<li>在中国的城市化背景下，城中村改造、棚户区更新等政策是否有类似的邻里效应机制？能否用中国历史冲击做类似研究？</li>
-<li>量化城市模型中如何将"公房"与"高档私宅"的差异参数化？如果战后是高档私人开发，模型预测的长期社会经济分布会有多大不同？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -18733,6 +18733,42 @@ Zotero Item Key:: PPNBQ8SY</p>
       </tags>
   </entry>
   <entry>
+    <title>画一幅我农所在地的道路图</title>
+    <url>/posts/42027/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;">
+<center>
+上图即为最终效果
+</center>
+<h2 id="一些必备的工具">一些必备的工具</h2>
+<p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="绘制路网地图">绘制路网地图</h2>
+<p>导入以下R 包:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>读入杨陵区的数据:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>获取杨陵区的经纬度范围:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
+<p>提取杨陵区的街道路线:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>把数据保存为<strong>rds</strong>:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>然后绘图:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>绘图</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>多层网络上的博弈 — 深度阅读笔记 — Zenou &amp; Zhou</title>
     <url>/posts/zenou2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -18827,42 +18863,6 @@ T\]</span></p>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>画一幅我农所在地的道路图</title>
-    <url>/posts/42027/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;">
-<center>
-上图即为最终效果
-</center>
-<h2 id="一些必备的工具">一些必备的工具</h2>
-<p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="绘制路网地图">绘制路网地图</h2>
-<p>导入以下R 包:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>读入杨陵区的数据:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>获取杨陵区的经纬度范围:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
-<p>提取杨陵区的街道路线:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>把数据保存为<strong>rds</strong>:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>然后绘图:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>绘图</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
       </tags>
   </entry>
 </search>
