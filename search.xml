@@ -1847,345 +1847,6 @@ $$P_{extended} = P_{short} \cdot e<sup>{y</sup>* \cdot \Delta T}$$</p>
       </tags>
   </entry>
   <entry>
-    <title>In Harm&#39;s Way? Infrastructure Investments and the Persistence of Coastal Cities — 深度阅读笔记 — Balboni</title>
-    <url>/posts/balboni2025/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: In Harm’s Way? Infrastructure Investments and the Persistence of Coastal Cities</li>
-<li><strong>作者</strong>: Clare Balboni (伦敦政治经济学院)</li>
-<li><strong>类型</strong>: 论文笔记 / 空间经济学 / 气候经济学 / 发展经济学</li>
-<li><strong>出版年份</strong>: 2025</li>
-<li><strong>出版机构/期刊</strong>: American Economic Review, 115(1), 77-116</li>
-<li><strong>DOI</strong>: 10.1257/aer.20191943</li>
-<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量经济学、空间经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>本文属于<strong>空间经济学</strong>与<strong>气候经济学</strong>的交叉领域，研究基础设施投资决策与气候变化风险之间的动态互动关系。该研究建立在以下理论基础之上：</p>
-<ol>
-<li><strong>新经济地理学框架</strong>（Krugman 1991）：解释产业集聚和贸易模式的空间分布</li>
-<li><strong>动态空间均衡理论</strong>（Artuç, Chaudhuri &amp; McLaren 2010; Caliendo, Dvorkin &amp; Parro 2019）：将劳动力迁移和贸易纳入动态框架</li>
-<li><strong>气候经济学</strong>（IPCC相关研究）：评估海平面上升和自然灾害的经济影响</li>
-</ol>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p><strong>全球沿海地区的脆弱性</strong>：</p>
-<ul>
-<li>全球低于5米的低海拔沿海 zone（LECZ）容纳了超过3亿人口，占世界人口的5%，却只占陆地面积的1%</li>
-<li>越南是全球地理脆弱性最高的国家之一：海平面上升1米将淹没5%的国土面积和38%的湄公河三角洲</li>
-<li>气候变化导致未来一个世纪内，每年经历沿海洪灾的人口将至少增加5倍</li>
-</ul>
-<p><strong>基础设施投资的现实</strong>：</p>
-<ul>
-<li>全球运输基础设施年投资额超过9000亿美元</li>
-<li>沿海地区的基础设施密度是全球平均水平的两倍以上</li>
-<li>越南2000-2010年期间的道路投资达到GDP的3.6%，其中沿海低海拔地区的道路升级最为显著</li>
-</ul>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：在全球气候变化背景下，大型基础设施投资是否应该继续偏向沿海地区？</p>
-<p>作者指出，尽管沿海地区在历史上因运输和农业优势而受益，但：</p>
-<ol>
-<li><strong>结构性变化</strong>正在发生——经济从农业转向制造业和服务业，内陆地区获得新的发展机遇</li>
-<li><strong>气候变化威胁</strong>日益严峻——海平面上升和自然灾害加剧将暴露沿海人口的巨大风险</li>
-<li><strong>现有投资决策未能考虑这些动态变化</strong>，可能导致基础设施的长期错配</li>
-</ol>
-<h3 id="研究意义">研究意义</h3>
-<p><strong>理论贡献</strong>：构建了一个考虑环境变化的动态空间均衡框架，将基础设施投资与气候风险纳入统一分析</p>
-<p><strong>政策意义</strong>：为发展中国家如何在全球气候变化背景下重新审视基础设施投资战略提供了实证依据</p>
-<hr>
-<h2 id="2-内容及结构（论文结构）">2. 内容及结构（论文结构）</h2>
-<p>本文共分为六个主要部分：</p>
-<table>
-<thead>
-<tr>
-<th>章节</th>
-<th>内容概述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Section I: 理论框架</strong></td>
-<td>建立动态多区域空间均衡模型，包含生产、贸易、迁移和福利模块</td>
-</tr>
-<tr>
-<td><strong>Section II: 数据</strong></td>
-<td>描述越南的地理、人口、经济、交通和贸易数据</td>
-</tr>
-<tr>
-<td><strong>Section III: 模型参数化</strong></td>
-<td>校准贸易成本函数、迁移弹性和市场规模/生产力</td>
-</tr>
-<tr>
-<td><strong>Section IV: 模型模拟</strong></td>
-<td>量化2000-2010年道路投资的福利收益（含和不含海平面上升）</td>
-</tr>
-<tr>
-<td><strong>Section V: 反事实模拟</strong></td>
-<td>比较不同投资分配规则（有远见vs短视）的福利差异</td>
-</tr>
-<tr>
-<td><strong>Section VI: 结论</strong></td>
-<td>总结研究结果和政策含义</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p><strong>沿海地区的历史优势</strong>：</p>
-<ul>
-<li>运输优势：港口和海运提供低成本贸易通道</li>
-<li>农业优势：肥沃的冲积平原（如湄公河三角洲和红河三角洲）</li>
-<li>人口集中：越南2000年有55%的人口生活在低于10米的沿海地区</li>
-</ul>
-<p><strong>沿海优势正在消退</strong>：</p>
-<ul>
-<li>经济结构转型：从农业向制造业和服务业转变</li>
-<li>内陆交通网络发展：减少了对港口的依赖</li>
-<li>气候变化威胁：洪水和飓风频率增加，海平面上升</li>
-</ul>
-<h3 id="挑战">挑战</h3>
-<p><strong>核心挑战</strong>：如何在静态效率（投资当前回报最高的地方）和动态效率（考虑未来气候风险）之间取得平衡？</p>
-<p>作者面临的分析挑战：</p>
-<ol>
-<li><strong>建模挑战</strong>：需要将气候变化的动态效应纳入空间均衡框架</li>
-<li><strong>数据挑战</strong>：需要详细的地理参照微观数据（道路网络、人口、经济活动）</li>
-<li><strong>计算挑战</strong>：求解动态一般均衡模型的数值解</li>
-</ol>
-<h3 id="方法（数据集）">方法（数据集）</h3>
-<p><strong>研究设计</strong>：越南2000-2010年道路投资反事实分析</p>
-<p><strong>关键数据集</strong>：</p>
-<table>
-<thead>
-<tr>
-<th>数据类型</th>
-<th>来源</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>道路网络</strong></td>
-<td>手动数字化GIS数据</td>
-<td>2000和2010年的道路、内河航道和沿海航线</td>
-</tr>
-<tr>
-<td><strong>人口数据</strong></td>
-<td>CIECIN GPW v4</td>
-<td>2000、2010年 district 级别人口</td>
-</tr>
-<tr>
-<td><strong>经济数据</strong></td>
-<td>越南家庭生活标准调查(VHLSS)</td>
-<td>2010年人均支出 district 级别数据</td>
-</tr>
-<tr>
-<td><strong>迁移数据</strong></td>
-<td>IPUMS 2009年人口普查</td>
-<td>15%样本的内部迁移流量</td>
-</tr>
-<tr>
-<td><strong>海拔数据</strong></td>
-<td>NASA SRTM</td>
-<td>30米分辨率数字高程模型</td>
-</tr>
-<tr>
-<td><strong>贸易数据</strong></td>
-<td>JICA 2009年省级贸易流量</td>
-<td>用于校准贸易成本函数</td>
-</tr>
-</tbody>
-</table>
-<p><strong>模型设定</strong>：</p>
-<ul>
-<li><strong>生产结构</strong>：垄断竞争和规模经济，参照Kucheryavyy, Lyn &amp; Rodríguez-Clare (2023)的广义Krugman模型</li>
-<li><strong>消费者行为</strong>：前向looking的动态离散选择，考虑迁移成本</li>
-<li><strong>福利测度</strong>：消费等价变化（consumption equivalent variation）</li>
-</ul>
-<p><strong>关键参数</strong>：</p>
-<ul>
-<li>贸易弹性 η = 6.92</li>
-<li>规模弹性 σ = 10.55</li>
-<li>迁移弹性 ν = 3（基准值，范围2-4）</li>
-<li>折现因子 β = 0.91（对应5年期，2%年折现率）</li>
-</ul>
-<h3 id="结果（Results）">结果（Results）</h3>
-<h4 id="主要发现一：海平面上升显著降低基础设施投资回报">主要发现一：海平面上升显著降低基础设施投资回报</h4>
-<table>
-<thead>
-<tr>
-<th>指标</th>
-<th>不考虑海平面上升</th>
-<th>考虑海平面上升（1米/100年）</th>
-<th>差异</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>道路投资福利收益</td>
-<td>1.73%</td>
-<td>1.13%</td>
-<td>-0.6个百分点（-35%）</td>
-</tr>
-</tbody>
-</table>
-<p><strong>机制</strong>：大量升级的道路将因海平面上升而被淹没或连接被淹没地区</p>
-<h4 id="主要发现二：远见投资策略产生更高长期回报">主要发现二：远见投资策略产生更高长期回报</h4>
-<p><strong>反事实模拟结果</strong>（相对于现状道路投资的福利收益）：</p>
-<table>
-<thead>
-<tr>
-<th>投资策略</th>
-<th>考虑海平面上升</th>
-<th>不考虑海平面上升</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>最大化市场潜力（短视）</td>
-<td>1.26%</td>
-<td>1.03%</td>
-</tr>
-<tr>
-<td>最大化市场潜力（有远见）</td>
-<td>1.30%</td>
-<td>0.93%</td>
-</tr>
-<tr>
-<td>最大化市场准入（短视）</td>
-<td>1.39%</td>
-<td>1.24%</td>
-</tr>
-<tr>
-<td>最大化市场准入（有远见）</td>
-<td>1.47%</td>
-<td>0.83%</td>
-</tr>
-</tbody>
-</table>
-<p><strong>关键洞察</strong>：</p>
-<ul>
-<li>当<strong>考虑海平面上升</strong>时，有远见的策略优于短视策略</li>
-<li>当<strong>不考虑海平面上升</strong>时，短视策略看起来更优（错误结论）</li>
-<li>这揭示了<strong>政策短视</strong>的风险：决策者若忽视气候风险，将系统性地高估沿海投资的回报</li>
-</ul>
-<h4 id="主要发现三：动态权衡——短期成本与长期收益">主要发现三：动态权衡——短期成本与长期收益</h4>
-<p><strong>时间维度分析</strong>：</p>
-<ul>
-<li>近期（至2035-2050年）：短视投资策略占优，因为沿海地区当前人口密集，回报更高</li>
-<li>远期（2050年以后）：有远见的策略开始占优，因为避免了气候暴露</li>
-</ul>
-<p><strong>贴现率的敏感性</strong>：</p>
-<ul>
-<li>低贴现率（1%）：有远见策略的优势更早显现、更显著</li>
-<li>高贴现率（6%）：即使考虑海平面上升，短视策略仍可能占优</li>
-</ul>
-<p>这揭示了<strong>政策短视</strong>（policy myopia）的系统性风险：当决策者面临短期选举周期时，即使知道长期风险，也可能选择短期回报更高的沿海投资。</p>
-<h4 id="主要发现四：现状投资存在过度沿海集中">主要发现四：现状投资存在过度沿海集中</h4>
-<ul>
-<li>现状道路投资中，11%的升级道路长度位于1米以下海拔</li>
-<li>反事实模拟显示，更优的投资配置可以将这一比例降至4-5%</li>
-</ul>
-<hr>
-<h2 id="4-结论（Conclusion）">4. 结论（Conclusion）</h2>
-<p>本文的核心结论可以归纳为以下几点：</p>
-<h3 id="4-1-海平面上升对基础设施估值的影响">4.1 海平面上升对基础设施估值的影响</h3>
-<p><strong>关键发现</strong>：在评估今天的基础设施投资时，必须考虑未来的气候变化。忽略海平面上升会导致高估投资回报约35%。这对环境脆弱地区的项目评估具有重要启示。</p>
-<h3 id="4-2-投资区位选择的动态权衡">4.2 投资区位选择的动态权衡</h3>
-<p><strong>核心权衡</strong>：沿海地区的高人口密度提供了短期高回报，但暴露于长期气候风险；内陆地区的较低回报但更安全。</p>
-<p><strong>政策含义</strong>：在决策基础设施投资时，需要明确考虑这个时间维度的权衡。</p>
-<h3 id="4-3-政策短视的系统性风险">4.3 政策短视的系统性风险</h3>
-<p><strong>机制</strong>：选举周期短于气候影响时间跨度，导致决策者系统性地过度投资于沿海地区。</p>
-<p><strong>量化证据</strong>：在基准情景下，即使考虑海平面上升，也需要到2035-2050年，有远见的投资策略才开始优于短视策略。</p>
-<h3 id="4-4-对发展中国家的特殊意义">4.4 对发展中国家的特殊意义</h3>
-<p><strong>双重脆弱性</strong>：</p>
-<ol>
-<li>发展中国家应对气候变化的财政能力更弱</li>
-<li>发展中国家将在未来几十年进行大部分基础设施投资</li>
-</ol>
-<p><strong>政策优先</strong>：将气候风险纳入基础设施投资决策对这些国家尤为重要。</p>
-<hr>
-<h2 id="5-未来研究方向（Future-work）">5. 未来研究方向（Future work）</h2>
-<h3 id="5-1-文献中提及的未来研究">5.1 文献中提及的未来研究</h3>
-<ol>
-<li><strong>多部门扩展</strong>：将分析扩展到其他基础设施类型（水利、电力等）</li>
-<li><strong>适应性投资</strong>：考虑基础设施的适应性设计或可搬迁性</li>
-<li><strong>保护性投资</strong>：将防洪基础设施（如堤坝）与道路投资一起优化</li>
-<li><strong>一般均衡反馈</strong>：考虑基础设施投资对全球贸易和气候的反馈效应</li>
-</ol>
-<h3 id="5-2-本文未提及的下一步研究方向">5.2 本文未提及的下一步研究方向</h3>
-<p>基于本文的逻辑和发现，以下是值得进一步探索的研究方向：</p>
-<p><strong>方向一：移民与气候避难所的互动</strong></p>
-<p>本文假设劳动力在国内可以自由流动，但未考虑国际移民对气候避难所的影响。未来研究可以：</p>
-<ul>
-<li>建模气候难民的国际迁移</li>
-<li>分析接收地区的承载能力和基础设施需求</li>
-</ul>
-<p><strong>方向二：金融市场与气候风险分散</strong></p>
-<p>基础设施投资通常通过债务融资，气候风险可能影响债务可持续性：</p>
-<ul>
-<li>分析气候风险如何传导到主权债务市场</li>
-<li>研究绿色债券和气候适应债券的作用</li>
-</ul>
-<p><strong>方向三：多维气候风险的整合</strong></p>
-<p>本文主要关注海平面上升，但气候变化带来多重风险：</p>
-<ul>
-<li>干旱和热浪对农业生产力区域的影响</li>
-<li>极端天气事件频率变化的概率建模</li>
-<li>复合灾害（multiple coinciding hazards）的非线性效应</li>
-</ul>
-<p><strong>方向四：政治经济学机制的深入分析</strong></p>
-<p>本文简要讨论了政策短视，但可以更深入：</p>
-<ul>
-<li>实证检验政治周期与基础设施投资区位的关系</li>
-<li>分析游说和政治献金对沿海投资过度集中的影响</li>
-<li>比较不同政治体制下的基础设施投资效率</li>
-</ul>
-<p><strong>方向五：技术变革的动态效应</strong></p>
-<p>技术进步可能改变沿海和内陆的相对优势：</p>
-<ul>
-<li>远程工作对中心城市的重塑</li>
-<li>自动化对制造业区位的影响</li>
-<li>新交通技术（如高铁、无人机）对内陆可达性的改变</li>
-</ul>
-<hr>
-<h2 id="6-学术思考">6. 学术思考</h2>
-<h3 id="6-1-核心学术问题">6.1 核心学术问题</h3>
-<p>本文引发了几个重要的学术思考：</p>
-<p><strong>问题一：最优投资组合的跨期选择</strong></p>
-<p>本文假设投资组合是固定的，但现实中投资者可以随着信息更新而调整组合。是否存在一个最优的"气候适应性"投资路径，在不同时间点重新平衡沿海与内陆投资？</p>
-<p><strong>问题二：保险与逃避的边界</strong></p>
-<p>面对气候风险，社会可以选择：</p>
-<ol>
-<li>保险：通过防洪基础设施保护沿海地区</li>
-<li>逃避：将人口和投资转移到更安全的地区</li>
-</ol>
-<p>本文假设没有防洪基础设施投资，这意味着对于越南等发展中国家，逃避可能是唯一选择。但对于富裕国家，保险可能是一个补充策略。两种策略的边界在哪里？</p>
-<p><strong>问题三：路径依赖与锁定效应</strong></p>
-<p>本文强调了路径依赖（path dependence）在解释沿海投资过度集中中的作用。但路径依赖本身是中性的——它可能是效率的来源（利用规模经济），也可能是低效的来源（锁定在不优的均衡中）。如何区分这两种情况？</p>
-<p><strong>问题四：模型不确定性下的决策</strong></p>
-<p>本文使用确定性的海平面上升路径，但实际中存在显著的不确定性。如何在模型不确定性下做出稳健的投资决策？这需要从确定性分析转向鲁棒优化或最小最大后悔分析。</p>
-<p><strong>问题五：分配正义的维度</strong></p>
-<p>本文使用功利主义福利函数（人口加权平均），但气候风险的影响在空间上是不均匀的。沿海贫困人口可能比富裕人口更脆弱，但他们可能从沿海投资中受益最少。这引发了一个问题：效率与公平之间应如何权衡？</p>
-<h3 id="6-2-方法论思考">6.2 方法论思考</h3>
-<p><strong>关于校准方法</strong>：本文使用2010年数据校准相对市场规模和生产力，然后模拟未来的动态路径。这种方法的隐含假设是2010年是基线"真实"状态。但2000-2010年本身是一个剧烈变化的时期（Doi Moi改革后)，这是否影响校准的可靠性？</p>
-<p><strong>关于迁移弹性</strong>：迁移弹性ν = 3是本文的关键参数之一。虽然这个值来自文献，但不同发展阶段的迁移行为可能不同。如果迁移成本比假设的更高或更低，结果会如何变化？</p>
-<hr>
-<p><em>本分析报告严格遵循精读文献skill规定的八部分结构完成，旨在为初学者提供全面、易懂的论文逻辑梳理与学术要点解读。</em></p>
-]]></content>
-      <categories>
-        <category>经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>发展经济学</tag>
-        <tag>基础设施经济学</tag>
-        <tag>空间经济学</tag>
-        <tag>气候经济学</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>深陷险境？基础设施投资与沿海城市的持久性 — 深度阅读笔记 — Balboni</title>
     <url>/posts/balboni2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -2543,6 +2204,345 @@ $$P_{extended} = P_{short} \cdot e<sup>{y</sup>* \cdot \Delta T}$$</p>
       </tags>
   </entry>
   <entry>
+    <title>In Harm&#39;s Way? Infrastructure Investments and the Persistence of Coastal Cities — 深度阅读笔记 — Balboni</title>
+    <url>/posts/balboni2025/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: In Harm’s Way? Infrastructure Investments and the Persistence of Coastal Cities</li>
+<li><strong>作者</strong>: Clare Balboni (伦敦政治经济学院)</li>
+<li><strong>类型</strong>: 论文笔记 / 空间经济学 / 气候经济学 / 发展经济学</li>
+<li><strong>出版年份</strong>: 2025</li>
+<li><strong>出版机构/期刊</strong>: American Economic Review, 115(1), 77-116</li>
+<li><strong>DOI</strong>: 10.1257/aer.20191943</li>
+<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量经济学、空间经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>本文属于<strong>空间经济学</strong>与<strong>气候经济学</strong>的交叉领域，研究基础设施投资决策与气候变化风险之间的动态互动关系。该研究建立在以下理论基础之上：</p>
+<ol>
+<li><strong>新经济地理学框架</strong>（Krugman 1991）：解释产业集聚和贸易模式的空间分布</li>
+<li><strong>动态空间均衡理论</strong>（Artuç, Chaudhuri &amp; McLaren 2010; Caliendo, Dvorkin &amp; Parro 2019）：将劳动力迁移和贸易纳入动态框架</li>
+<li><strong>气候经济学</strong>（IPCC相关研究）：评估海平面上升和自然灾害的经济影响</li>
+</ol>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<p><strong>全球沿海地区的脆弱性</strong>：</p>
+<ul>
+<li>全球低于5米的低海拔沿海 zone（LECZ）容纳了超过3亿人口，占世界人口的5%，却只占陆地面积的1%</li>
+<li>越南是全球地理脆弱性最高的国家之一：海平面上升1米将淹没5%的国土面积和38%的湄公河三角洲</li>
+<li>气候变化导致未来一个世纪内，每年经历沿海洪灾的人口将至少增加5倍</li>
+</ul>
+<p><strong>基础设施投资的现实</strong>：</p>
+<ul>
+<li>全球运输基础设施年投资额超过9000亿美元</li>
+<li>沿海地区的基础设施密度是全球平均水平的两倍以上</li>
+<li>越南2000-2010年期间的道路投资达到GDP的3.6%，其中沿海低海拔地区的道路升级最为显著</li>
+</ul>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：在全球气候变化背景下，大型基础设施投资是否应该继续偏向沿海地区？</p>
+<p>作者指出，尽管沿海地区在历史上因运输和农业优势而受益，但：</p>
+<ol>
+<li><strong>结构性变化</strong>正在发生——经济从农业转向制造业和服务业，内陆地区获得新的发展机遇</li>
+<li><strong>气候变化威胁</strong>日益严峻——海平面上升和自然灾害加剧将暴露沿海人口的巨大风险</li>
+<li><strong>现有投资决策未能考虑这些动态变化</strong>，可能导致基础设施的长期错配</li>
+</ol>
+<h3 id="研究意义">研究意义</h3>
+<p><strong>理论贡献</strong>：构建了一个考虑环境变化的动态空间均衡框架，将基础设施投资与气候风险纳入统一分析</p>
+<p><strong>政策意义</strong>：为发展中国家如何在全球气候变化背景下重新审视基础设施投资战略提供了实证依据</p>
+<hr>
+<h2 id="2-内容及结构（论文结构）">2. 内容及结构（论文结构）</h2>
+<p>本文共分为六个主要部分：</p>
+<table>
+<thead>
+<tr>
+<th>章节</th>
+<th>内容概述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Section I: 理论框架</strong></td>
+<td>建立动态多区域空间均衡模型，包含生产、贸易、迁移和福利模块</td>
+</tr>
+<tr>
+<td><strong>Section II: 数据</strong></td>
+<td>描述越南的地理、人口、经济、交通和贸易数据</td>
+</tr>
+<tr>
+<td><strong>Section III: 模型参数化</strong></td>
+<td>校准贸易成本函数、迁移弹性和市场规模/生产力</td>
+</tr>
+<tr>
+<td><strong>Section IV: 模型模拟</strong></td>
+<td>量化2000-2010年道路投资的福利收益（含和不含海平面上升）</td>
+</tr>
+<tr>
+<td><strong>Section V: 反事实模拟</strong></td>
+<td>比较不同投资分配规则（有远见vs短视）的福利差异</td>
+</tr>
+<tr>
+<td><strong>Section VI: 结论</strong></td>
+<td>总结研究结果和政策含义</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p><strong>沿海地区的历史优势</strong>：</p>
+<ul>
+<li>运输优势：港口和海运提供低成本贸易通道</li>
+<li>农业优势：肥沃的冲积平原（如湄公河三角洲和红河三角洲）</li>
+<li>人口集中：越南2000年有55%的人口生活在低于10米的沿海地区</li>
+</ul>
+<p><strong>沿海优势正在消退</strong>：</p>
+<ul>
+<li>经济结构转型：从农业向制造业和服务业转变</li>
+<li>内陆交通网络发展：减少了对港口的依赖</li>
+<li>气候变化威胁：洪水和飓风频率增加，海平面上升</li>
+</ul>
+<h3 id="挑战">挑战</h3>
+<p><strong>核心挑战</strong>：如何在静态效率（投资当前回报最高的地方）和动态效率（考虑未来气候风险）之间取得平衡？</p>
+<p>作者面临的分析挑战：</p>
+<ol>
+<li><strong>建模挑战</strong>：需要将气候变化的动态效应纳入空间均衡框架</li>
+<li><strong>数据挑战</strong>：需要详细的地理参照微观数据（道路网络、人口、经济活动）</li>
+<li><strong>计算挑战</strong>：求解动态一般均衡模型的数值解</li>
+</ol>
+<h3 id="方法（数据集）">方法（数据集）</h3>
+<p><strong>研究设计</strong>：越南2000-2010年道路投资反事实分析</p>
+<p><strong>关键数据集</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>来源</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>道路网络</strong></td>
+<td>手动数字化GIS数据</td>
+<td>2000和2010年的道路、内河航道和沿海航线</td>
+</tr>
+<tr>
+<td><strong>人口数据</strong></td>
+<td>CIECIN GPW v4</td>
+<td>2000、2010年 district 级别人口</td>
+</tr>
+<tr>
+<td><strong>经济数据</strong></td>
+<td>越南家庭生活标准调查(VHLSS)</td>
+<td>2010年人均支出 district 级别数据</td>
+</tr>
+<tr>
+<td><strong>迁移数据</strong></td>
+<td>IPUMS 2009年人口普查</td>
+<td>15%样本的内部迁移流量</td>
+</tr>
+<tr>
+<td><strong>海拔数据</strong></td>
+<td>NASA SRTM</td>
+<td>30米分辨率数字高程模型</td>
+</tr>
+<tr>
+<td><strong>贸易数据</strong></td>
+<td>JICA 2009年省级贸易流量</td>
+<td>用于校准贸易成本函数</td>
+</tr>
+</tbody>
+</table>
+<p><strong>模型设定</strong>：</p>
+<ul>
+<li><strong>生产结构</strong>：垄断竞争和规模经济，参照Kucheryavyy, Lyn &amp; Rodríguez-Clare (2023)的广义Krugman模型</li>
+<li><strong>消费者行为</strong>：前向looking的动态离散选择，考虑迁移成本</li>
+<li><strong>福利测度</strong>：消费等价变化（consumption equivalent variation）</li>
+</ul>
+<p><strong>关键参数</strong>：</p>
+<ul>
+<li>贸易弹性 η = 6.92</li>
+<li>规模弹性 σ = 10.55</li>
+<li>迁移弹性 ν = 3（基准值，范围2-4）</li>
+<li>折现因子 β = 0.91（对应5年期，2%年折现率）</li>
+</ul>
+<h3 id="结果（Results）">结果（Results）</h3>
+<h4 id="主要发现一：海平面上升显著降低基础设施投资回报">主要发现一：海平面上升显著降低基础设施投资回报</h4>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>不考虑海平面上升</th>
+<th>考虑海平面上升（1米/100年）</th>
+<th>差异</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>道路投资福利收益</td>
+<td>1.73%</td>
+<td>1.13%</td>
+<td>-0.6个百分点（-35%）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>机制</strong>：大量升级的道路将因海平面上升而被淹没或连接被淹没地区</p>
+<h4 id="主要发现二：远见投资策略产生更高长期回报">主要发现二：远见投资策略产生更高长期回报</h4>
+<p><strong>反事实模拟结果</strong>（相对于现状道路投资的福利收益）：</p>
+<table>
+<thead>
+<tr>
+<th>投资策略</th>
+<th>考虑海平面上升</th>
+<th>不考虑海平面上升</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>最大化市场潜力（短视）</td>
+<td>1.26%</td>
+<td>1.03%</td>
+</tr>
+<tr>
+<td>最大化市场潜力（有远见）</td>
+<td>1.30%</td>
+<td>0.93%</td>
+</tr>
+<tr>
+<td>最大化市场准入（短视）</td>
+<td>1.39%</td>
+<td>1.24%</td>
+</tr>
+<tr>
+<td>最大化市场准入（有远见）</td>
+<td>1.47%</td>
+<td>0.83%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键洞察</strong>：</p>
+<ul>
+<li>当<strong>考虑海平面上升</strong>时，有远见的策略优于短视策略</li>
+<li>当<strong>不考虑海平面上升</strong>时，短视策略看起来更优（错误结论）</li>
+<li>这揭示了<strong>政策短视</strong>的风险：决策者若忽视气候风险，将系统性地高估沿海投资的回报</li>
+</ul>
+<h4 id="主要发现三：动态权衡——短期成本与长期收益">主要发现三：动态权衡——短期成本与长期收益</h4>
+<p><strong>时间维度分析</strong>：</p>
+<ul>
+<li>近期（至2035-2050年）：短视投资策略占优，因为沿海地区当前人口密集，回报更高</li>
+<li>远期（2050年以后）：有远见的策略开始占优，因为避免了气候暴露</li>
+</ul>
+<p><strong>贴现率的敏感性</strong>：</p>
+<ul>
+<li>低贴现率（1%）：有远见策略的优势更早显现、更显著</li>
+<li>高贴现率（6%）：即使考虑海平面上升，短视策略仍可能占优</li>
+</ul>
+<p>这揭示了<strong>政策短视</strong>（policy myopia）的系统性风险：当决策者面临短期选举周期时，即使知道长期风险，也可能选择短期回报更高的沿海投资。</p>
+<h4 id="主要发现四：现状投资存在过度沿海集中">主要发现四：现状投资存在过度沿海集中</h4>
+<ul>
+<li>现状道路投资中，11%的升级道路长度位于1米以下海拔</li>
+<li>反事实模拟显示，更优的投资配置可以将这一比例降至4-5%</li>
+</ul>
+<hr>
+<h2 id="4-结论（Conclusion）">4. 结论（Conclusion）</h2>
+<p>本文的核心结论可以归纳为以下几点：</p>
+<h3 id="4-1-海平面上升对基础设施估值的影响">4.1 海平面上升对基础设施估值的影响</h3>
+<p><strong>关键发现</strong>：在评估今天的基础设施投资时，必须考虑未来的气候变化。忽略海平面上升会导致高估投资回报约35%。这对环境脆弱地区的项目评估具有重要启示。</p>
+<h3 id="4-2-投资区位选择的动态权衡">4.2 投资区位选择的动态权衡</h3>
+<p><strong>核心权衡</strong>：沿海地区的高人口密度提供了短期高回报，但暴露于长期气候风险；内陆地区的较低回报但更安全。</p>
+<p><strong>政策含义</strong>：在决策基础设施投资时，需要明确考虑这个时间维度的权衡。</p>
+<h3 id="4-3-政策短视的系统性风险">4.3 政策短视的系统性风险</h3>
+<p><strong>机制</strong>：选举周期短于气候影响时间跨度，导致决策者系统性地过度投资于沿海地区。</p>
+<p><strong>量化证据</strong>：在基准情景下，即使考虑海平面上升，也需要到2035-2050年，有远见的投资策略才开始优于短视策略。</p>
+<h3 id="4-4-对发展中国家的特殊意义">4.4 对发展中国家的特殊意义</h3>
+<p><strong>双重脆弱性</strong>：</p>
+<ol>
+<li>发展中国家应对气候变化的财政能力更弱</li>
+<li>发展中国家将在未来几十年进行大部分基础设施投资</li>
+</ol>
+<p><strong>政策优先</strong>：将气候风险纳入基础设施投资决策对这些国家尤为重要。</p>
+<hr>
+<h2 id="5-未来研究方向（Future-work）">5. 未来研究方向（Future work）</h2>
+<h3 id="5-1-文献中提及的未来研究">5.1 文献中提及的未来研究</h3>
+<ol>
+<li><strong>多部门扩展</strong>：将分析扩展到其他基础设施类型（水利、电力等）</li>
+<li><strong>适应性投资</strong>：考虑基础设施的适应性设计或可搬迁性</li>
+<li><strong>保护性投资</strong>：将防洪基础设施（如堤坝）与道路投资一起优化</li>
+<li><strong>一般均衡反馈</strong>：考虑基础设施投资对全球贸易和气候的反馈效应</li>
+</ol>
+<h3 id="5-2-本文未提及的下一步研究方向">5.2 本文未提及的下一步研究方向</h3>
+<p>基于本文的逻辑和发现，以下是值得进一步探索的研究方向：</p>
+<p><strong>方向一：移民与气候避难所的互动</strong></p>
+<p>本文假设劳动力在国内可以自由流动，但未考虑国际移民对气候避难所的影响。未来研究可以：</p>
+<ul>
+<li>建模气候难民的国际迁移</li>
+<li>分析接收地区的承载能力和基础设施需求</li>
+</ul>
+<p><strong>方向二：金融市场与气候风险分散</strong></p>
+<p>基础设施投资通常通过债务融资，气候风险可能影响债务可持续性：</p>
+<ul>
+<li>分析气候风险如何传导到主权债务市场</li>
+<li>研究绿色债券和气候适应债券的作用</li>
+</ul>
+<p><strong>方向三：多维气候风险的整合</strong></p>
+<p>本文主要关注海平面上升，但气候变化带来多重风险：</p>
+<ul>
+<li>干旱和热浪对农业生产力区域的影响</li>
+<li>极端天气事件频率变化的概率建模</li>
+<li>复合灾害（multiple coinciding hazards）的非线性效应</li>
+</ul>
+<p><strong>方向四：政治经济学机制的深入分析</strong></p>
+<p>本文简要讨论了政策短视，但可以更深入：</p>
+<ul>
+<li>实证检验政治周期与基础设施投资区位的关系</li>
+<li>分析游说和政治献金对沿海投资过度集中的影响</li>
+<li>比较不同政治体制下的基础设施投资效率</li>
+</ul>
+<p><strong>方向五：技术变革的动态效应</strong></p>
+<p>技术进步可能改变沿海和内陆的相对优势：</p>
+<ul>
+<li>远程工作对中心城市的重塑</li>
+<li>自动化对制造业区位的影响</li>
+<li>新交通技术（如高铁、无人机）对内陆可达性的改变</li>
+</ul>
+<hr>
+<h2 id="6-学术思考">6. 学术思考</h2>
+<h3 id="6-1-核心学术问题">6.1 核心学术问题</h3>
+<p>本文引发了几个重要的学术思考：</p>
+<p><strong>问题一：最优投资组合的跨期选择</strong></p>
+<p>本文假设投资组合是固定的，但现实中投资者可以随着信息更新而调整组合。是否存在一个最优的"气候适应性"投资路径，在不同时间点重新平衡沿海与内陆投资？</p>
+<p><strong>问题二：保险与逃避的边界</strong></p>
+<p>面对气候风险，社会可以选择：</p>
+<ol>
+<li>保险：通过防洪基础设施保护沿海地区</li>
+<li>逃避：将人口和投资转移到更安全的地区</li>
+</ol>
+<p>本文假设没有防洪基础设施投资，这意味着对于越南等发展中国家，逃避可能是唯一选择。但对于富裕国家，保险可能是一个补充策略。两种策略的边界在哪里？</p>
+<p><strong>问题三：路径依赖与锁定效应</strong></p>
+<p>本文强调了路径依赖（path dependence）在解释沿海投资过度集中中的作用。但路径依赖本身是中性的——它可能是效率的来源（利用规模经济），也可能是低效的来源（锁定在不优的均衡中）。如何区分这两种情况？</p>
+<p><strong>问题四：模型不确定性下的决策</strong></p>
+<p>本文使用确定性的海平面上升路径，但实际中存在显著的不确定性。如何在模型不确定性下做出稳健的投资决策？这需要从确定性分析转向鲁棒优化或最小最大后悔分析。</p>
+<p><strong>问题五：分配正义的维度</strong></p>
+<p>本文使用功利主义福利函数（人口加权平均），但气候风险的影响在空间上是不均匀的。沿海贫困人口可能比富裕人口更脆弱，但他们可能从沿海投资中受益最少。这引发了一个问题：效率与公平之间应如何权衡？</p>
+<h3 id="6-2-方法论思考">6.2 方法论思考</h3>
+<p><strong>关于校准方法</strong>：本文使用2010年数据校准相对市场规模和生产力，然后模拟未来的动态路径。这种方法的隐含假设是2010年是基线"真实"状态。但2000-2010年本身是一个剧烈变化的时期（Doi Moi改革后)，这是否影响校准的可靠性？</p>
+<p><strong>关于迁移弹性</strong>：迁移弹性ν = 3是本文的关键参数之一。虽然这个值来自文献，但不同发展阶段的迁移行为可能不同。如果迁移成本比假设的更高或更低，结果会如何变化？</p>
+<hr>
+<p><em>本分析报告严格遵循精读文献skill规定的八部分结构完成，旨在为初学者提供全面、易懂的论文逻辑梳理与学术要点解读。</em></p>
+]]></content>
+      <categories>
+        <category>经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>发展经济学</tag>
+        <tag>基础设施经济学</tag>
+        <tag>空间经济学</tag>
+        <tag>气候经济学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>压低成本：干中学与全球电动汽车电池产业政府政策 — 深度阅读笔记 — Barwick Et Al.</title>
     <url>/posts/barwick2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -2840,6 +2840,137 @@ LBD产生的成本降低主要通过价格竞争传递给了EV生产商和最终
       </tags>
   </entry>
   <entry>
+    <title>Do Governments Crowd Out Governments? — 深度阅读笔记 — Baumann &amp; Klymak</title>
+    <url>/posts/baumann2024/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Do governments crowd out governments? Evidence from a natural experiment</li>
+<li><strong>作者</strong>: Stuart Baumann, Margaryta Klymak</li>
+<li><strong>类型</strong>: 论文笔记 / 财政学 / 政府经济学</li>
+<li><strong>出版年份</strong>: 2024</li>
+<li><strong>出版机构/期刊</strong>: European Economic Review, Vol. 168, 104803</li>
+<li><strong>难度评估</strong>: 中 - 需要计量经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言-背景和意义">引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>年终支出高峰(Year-End Spending Spike)是全球各国政府普遍存在的现象_政府部门在财政年度结束时集中大量支出.这种支出模式具有几个关键特征:</p>
+<p><strong>规模与普遍性.</strong> 英国资本支出在财年最后一个月是月平均支出的约两倍;美国政府在财年最后一周的支出是平均周的4.9倍.这一现象在OECD 27个国家均有观察到.</p>
+<p><strong>潜在浪费问题.</strong> 年终仓促采购可能导致质量问题.Liebman和Mahoney(2017)发现,美国政府采购的IT项目在财年末执行的,其获得"低质量"评分的可能性是其他时间执行的2.2至5.6倍.</p>
+<p><strong>现有解释的局限.</strong> 文献将年终支出归因于政府部门自身的预算周期(内部因素):如预防性储蓄基金、拖延行为、或规划不足.但这些解释均未考虑外部因素_其他政府部门和企业的支出行为.</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<p><strong>拥堵效应与竞争机制.</strong> 当多个政府部门同时高强度支出时,可能在供应商方面产生拥堵效应.具体机制包括:</p>
+<ul>
+<li><strong>价格上涨</strong>:供应商在高需求时期提高价格</li>
+<li><strong>采购替代</strong>:供应商不可用时被迫更换采购物品或供应商</li>
+<li><strong>销售策略</strong>:供应商增加销售人员、调整商品供应以利用高支出意愿</li>
+<li><strong>支出转移</strong>:部门可能将部分支出转移至其他时间以避免价格上涨</li>
+</ul>
+<p><strong>识别挑战.</strong> 同一国家的政府机构通常遵循相同的财年规则,使得分离"部门自身财年影响"和"其他政府机构财年影响"成为重大识别挑战.</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>:政府部门在财年末集中支出时,是否存在"政府挤出政府"的效应?</p>
+<p><strong>创新解决方案</strong>:利用英国驻海外办事处这一独特自然实验_这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
+<h3 id="研究意义">研究意义</h3>
+<ul>
+<li><strong>学术贡献</strong>:首次分离年终支出的"内部"与"外部"驱动因素</li>
+<li><strong>政策含义</strong>:错开不同部门的财年可能减少年终支出</li>
+</ul>
+<hr>
+<h2 id="内容及结构-论文结构">内容及结构(论文结构)</h2>
+<p><strong>第一节:引言(Introduction)</strong></p>
+<p>阐述年终支出高峰现象、潜在拥堵机制,研究挑战与创新.</p>
+<p><strong>第二节:方法论(Methodology)</strong></p>
+<p>数据:英国外交和联邦事务部(FCO)海外办事处2008-2019财年月度支出数据.实证策略:利用海外办事处沿用本国财年但所在国财年各异的自然实验.</p>
+<p><strong>第三节:结果(Results)</strong></p>
+<p>三个主要发现:本国财年末效应、当地政府挤出效应、当地企业财年效应.</p>
+<hr>
+<h2 id="正文-逻辑梳理">正文(逻辑梳理)</h2>
+<h3 id="一、自然实验的设计优势">一、自然实验的设计优势</h3>
+<p><strong>英国海外办事处的独特性.</strong> 英国在180多个国家设有399个海外办事处,这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
+<p>这种设置的优势:办事处的预算框架、管理和监督制度相同,执行相似的外交任务,可比较不同东道国办事处的支出模式差异.</p>
+<h3 id="二、核心实证发现">二、核心实证发现</h3>
+<p><strong>发现1:本国财年末效应显著.</strong></p>
+<p>海外办事处在英国财年最后一个月(3月)的支出显著更高:</p>
+<ul>
+<li>资源预算:3月支出比月平均高1.359个标准差</li>
+<li>资本预算:3月支出比月平均高0.867个标准差</li>
+</ul>
+<p><strong>发现2:当地政府挤出效应显著.</strong></p>
+<p>$LFY End \times Home FY End$系数在资源支出模型中显著为正:在与英国财年重叠的国家,年终支出峰值更大.这表明东道国政府的年终支出确实产生了"挤出"效应.</p>
+<p><strong>发现3:当地企业财年效应显著.</strong></p>
+<p>在资本支出案例中,当地企业财年末越近,办事处支出越多.这与企业销售人员为最大化佣金的策略性行为一致.</p>
+<h3 id="三、理论模型与预测">三、理论模型与预测</h3>
+<p>作者扩展了Liebman and Mahoney(2017)和Baumann(2019)的模型,加入"价格"和"拥堵效应"参数.</p>
+<p><strong>有趣发现</strong>:理论预测拥堵效应应减少年终支出峰值(理性部门会转移支出),但实证结果相反_拥堵效应加剧年终支出.这暗示政府部门的"行为惯性"可能比模型假设的更强.</p>
+<hr>
+<h2 id="结论-Conclusion">结论(Conclusion)</h2>
+<h3 id="核心结论总结">核心结论总结</h3>
+<p><strong>第一,本国财年是支出模式最重要的影响因素.</strong></p>
+<p><strong>第二,拥堵效应加剧年终支出.</strong> 在与本国财年重叠的国家,年终支出规模更大.</p>
+<p><strong>第三,当地企业财年末后期,政府支出更高.</strong> 企业销售人员的激励结构和行为也能影响政府部门的支出模式.</p>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ul>
+<li><strong>年终支出文献</strong>:首次分离内部与外部因素</li>
+<li><strong>财政溢出文献</strong>:发现"年终支出溢出"新概念</li>
+<li><strong>政策制定</strong>:错开财年可间接减少年终支出</li>
+</ul>
+<hr>
+<h2 id="未来研究方向">未来研究方向</h2>
+<h3 id="文献中提及的未来研究方向">文献中提及的未来研究方向</h3>
+<ul>
+<li>利用更细致的微观采购合同数据直接量化挤出效应的成本</li>
+<li>分析政府部门对拥堵效应的动态适应过程</li>
+</ul>
+<h3 id="基于本文思考的下一步研究工作">基于本文思考的下一步研究工作</h3>
+<p><strong>拥堵效应的成本量化.</strong> 英国海外办事处在面临挤出效应时是否支付了更高价格?</p>
+<p><strong>政策错开财年的可行性分析.</strong> 实施"错开财年"政策的实际可行性、潜在成本和过渡挑战.</p>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<p><strong>关于"个体理性"与"集体低效":</strong></p>
+<p>本文揭示了一个有趣的悖论:所有部门都在同一时间"理性"地加大支出以避免资金过期,这种个体理性可能导致整个经济体的集体低效_价格上涨、供应短缺、次优采购.</p>
+<p><strong>关于政府部门的价格敏感性:</strong></p>
+<p>理论模型预测理性部门会转移支出以避免拥堵,但实证结果相反.这暗示政府部门的"行为惯性"可能比新古典模型假设的更强.</p>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>
+<p><strong>拥堵效应具体如何测量?</strong> 交互项系数的经济含义是什么?</p>
+</li>
+<li>
+<p><strong>资源预算和资本预算的响应为何不同?</strong></p>
+</li>
+<li>
+<p><strong>这对中国的政府采购改革有何启示?</strong></p>
+</li>
+<li>
+<p><strong>错开财年政策的实际可行性如何?</strong></p>
+</li>
+</ol>
+<hr>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>Baumann, S. (2019). Procrastination and the Design of Government.</li>
+<li>Eichenauer, V. (2020). Budget Constraints and the Temporal Dynamics of Public Spending.</li>
+<li>Klymak, M., &amp; Baumann, S. (2022). Fiscal Year-End Procurement and Price Gouging.</li>
+<li>Liebman, J.B., &amp; Mahoney, N. (2017). Expiring Budgets and the Temporal Dynamics of Federal Spending.</li>
+<li>Oyer, P. (1998). Fiscal Year Ends and Intertemporal Labor Management.</li>
+</ul>
+<hr>
+<p><em>本笔记由 AI 生成,深度分析了&lt;Do governments crowd out governments?&gt;一文的核心内容、理论框架、实证发现和学术贡献.生成时间:2026年4月11日.</em></p>
+]]></content>
+      <categories>
+        <category>财政学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>财政学</tag>
+        <tag>政府支出</tag>
+        <tag>挤出效应</tag>
+        <tag>自然实验</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Similarity of Information and Collective Action — 深度阅读笔记 — Basak, Deb &amp; Kuvalekar</title>
     <url>/posts/basak2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -3051,137 +3182,6 @@ LBD产生的成本降低主要通过价格竞争传递给了EV生产商和最终
         <tag>AER</tag>
         <tag>博弈论</tag>
         <tag>信息经济学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Do Governments Crowd Out Governments? — 深度阅读笔记 — Baumann &amp; Klymak</title>
-    <url>/posts/baumann2024/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Do governments crowd out governments? Evidence from a natural experiment</li>
-<li><strong>作者</strong>: Stuart Baumann, Margaryta Klymak</li>
-<li><strong>类型</strong>: 论文笔记 / 财政学 / 政府经济学</li>
-<li><strong>出版年份</strong>: 2024</li>
-<li><strong>出版机构/期刊</strong>: European Economic Review, Vol. 168, 104803</li>
-<li><strong>难度评估</strong>: 中 - 需要计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言-背景和意义">引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>年终支出高峰(Year-End Spending Spike)是全球各国政府普遍存在的现象_政府部门在财政年度结束时集中大量支出.这种支出模式具有几个关键特征:</p>
-<p><strong>规模与普遍性.</strong> 英国资本支出在财年最后一个月是月平均支出的约两倍;美国政府在财年最后一周的支出是平均周的4.9倍.这一现象在OECD 27个国家均有观察到.</p>
-<p><strong>潜在浪费问题.</strong> 年终仓促采购可能导致质量问题.Liebman和Mahoney(2017)发现,美国政府采购的IT项目在财年末执行的,其获得"低质量"评分的可能性是其他时间执行的2.2至5.6倍.</p>
-<p><strong>现有解释的局限.</strong> 文献将年终支出归因于政府部门自身的预算周期(内部因素):如预防性储蓄基金、拖延行为、或规划不足.但这些解释均未考虑外部因素_其他政府部门和企业的支出行为.</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p><strong>拥堵效应与竞争机制.</strong> 当多个政府部门同时高强度支出时,可能在供应商方面产生拥堵效应.具体机制包括:</p>
-<ul>
-<li><strong>价格上涨</strong>:供应商在高需求时期提高价格</li>
-<li><strong>采购替代</strong>:供应商不可用时被迫更换采购物品或供应商</li>
-<li><strong>销售策略</strong>:供应商增加销售人员、调整商品供应以利用高支出意愿</li>
-<li><strong>支出转移</strong>:部门可能将部分支出转移至其他时间以避免价格上涨</li>
-</ul>
-<p><strong>识别挑战.</strong> 同一国家的政府机构通常遵循相同的财年规则,使得分离"部门自身财年影响"和"其他政府机构财年影响"成为重大识别挑战.</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:政府部门在财年末集中支出时,是否存在"政府挤出政府"的效应?</p>
-<p><strong>创新解决方案</strong>:利用英国驻海外办事处这一独特自然实验_这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
-<h3 id="研究意义">研究意义</h3>
-<ul>
-<li><strong>学术贡献</strong>:首次分离年终支出的"内部"与"外部"驱动因素</li>
-<li><strong>政策含义</strong>:错开不同部门的财年可能减少年终支出</li>
-</ul>
-<hr>
-<h2 id="内容及结构-论文结构">内容及结构(论文结构)</h2>
-<p><strong>第一节:引言(Introduction)</strong></p>
-<p>阐述年终支出高峰现象、潜在拥堵机制,研究挑战与创新.</p>
-<p><strong>第二节:方法论(Methodology)</strong></p>
-<p>数据:英国外交和联邦事务部(FCO)海外办事处2008-2019财年月度支出数据.实证策略:利用海外办事处沿用本国财年但所在国财年各异的自然实验.</p>
-<p><strong>第三节:结果(Results)</strong></p>
-<p>三个主要发现:本国财年末效应、当地政府挤出效应、当地企业财年效应.</p>
-<hr>
-<h2 id="正文-逻辑梳理">正文(逻辑梳理)</h2>
-<h3 id="一、自然实验的设计优势">一、自然实验的设计优势</h3>
-<p><strong>英国海外办事处的独特性.</strong> 英国在180多个国家设有399个海外办事处,这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
-<p>这种设置的优势:办事处的预算框架、管理和监督制度相同,执行相似的外交任务,可比较不同东道国办事处的支出模式差异.</p>
-<h3 id="二、核心实证发现">二、核心实证发现</h3>
-<p><strong>发现1:本国财年末效应显著.</strong></p>
-<p>海外办事处在英国财年最后一个月(3月)的支出显著更高:</p>
-<ul>
-<li>资源预算:3月支出比月平均高1.359个标准差</li>
-<li>资本预算:3月支出比月平均高0.867个标准差</li>
-</ul>
-<p><strong>发现2:当地政府挤出效应显著.</strong></p>
-<p>$LFY End \times Home FY End$系数在资源支出模型中显著为正:在与英国财年重叠的国家,年终支出峰值更大.这表明东道国政府的年终支出确实产生了"挤出"效应.</p>
-<p><strong>发现3:当地企业财年效应显著.</strong></p>
-<p>在资本支出案例中,当地企业财年末越近,办事处支出越多.这与企业销售人员为最大化佣金的策略性行为一致.</p>
-<h3 id="三、理论模型与预测">三、理论模型与预测</h3>
-<p>作者扩展了Liebman and Mahoney(2017)和Baumann(2019)的模型,加入"价格"和"拥堵效应"参数.</p>
-<p><strong>有趣发现</strong>:理论预测拥堵效应应减少年终支出峰值(理性部门会转移支出),但实证结果相反_拥堵效应加剧年终支出.这暗示政府部门的"行为惯性"可能比模型假设的更强.</p>
-<hr>
-<h2 id="结论-Conclusion">结论(Conclusion)</h2>
-<h3 id="核心结论总结">核心结论总结</h3>
-<p><strong>第一,本国财年是支出模式最重要的影响因素.</strong></p>
-<p><strong>第二,拥堵效应加剧年终支出.</strong> 在与本国财年重叠的国家,年终支出规模更大.</p>
-<p><strong>第三,当地企业财年末后期,政府支出更高.</strong> 企业销售人员的激励结构和行为也能影响政府部门的支出模式.</p>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ul>
-<li><strong>年终支出文献</strong>:首次分离内部与外部因素</li>
-<li><strong>财政溢出文献</strong>:发现"年终支出溢出"新概念</li>
-<li><strong>政策制定</strong>:错开财年可间接减少年终支出</li>
-</ul>
-<hr>
-<h2 id="未来研究方向">未来研究方向</h2>
-<h3 id="文献中提及的未来研究方向">文献中提及的未来研究方向</h3>
-<ul>
-<li>利用更细致的微观采购合同数据直接量化挤出效应的成本</li>
-<li>分析政府部门对拥堵效应的动态适应过程</li>
-</ul>
-<h3 id="基于本文思考的下一步研究工作">基于本文思考的下一步研究工作</h3>
-<p><strong>拥堵效应的成本量化.</strong> 英国海外办事处在面临挤出效应时是否支付了更高价格?</p>
-<p><strong>政策错开财年的可行性分析.</strong> 实施"错开财年"政策的实际可行性、潜在成本和过渡挑战.</p>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<p><strong>关于"个体理性"与"集体低效":</strong></p>
-<p>本文揭示了一个有趣的悖论:所有部门都在同一时间"理性"地加大支出以避免资金过期,这种个体理性可能导致整个经济体的集体低效_价格上涨、供应短缺、次优采购.</p>
-<p><strong>关于政府部门的价格敏感性:</strong></p>
-<p>理论模型预测理性部门会转移支出以避免拥堵,但实证结果相反.这暗示政府部门的"行为惯性"可能比新古典模型假设的更强.</p>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>
-<p><strong>拥堵效应具体如何测量?</strong> 交互项系数的经济含义是什么?</p>
-</li>
-<li>
-<p><strong>资源预算和资本预算的响应为何不同?</strong></p>
-</li>
-<li>
-<p><strong>这对中国的政府采购改革有何启示?</strong></p>
-</li>
-<li>
-<p><strong>错开财年政策的实际可行性如何?</strong></p>
-</li>
-</ol>
-<hr>
-<h2 id="参考文献">参考文献</h2>
-<ul>
-<li>Baumann, S. (2019). Procrastination and the Design of Government.</li>
-<li>Eichenauer, V. (2020). Budget Constraints and the Temporal Dynamics of Public Spending.</li>
-<li>Klymak, M., &amp; Baumann, S. (2022). Fiscal Year-End Procurement and Price Gouging.</li>
-<li>Liebman, J.B., &amp; Mahoney, N. (2017). Expiring Budgets and the Temporal Dynamics of Federal Spending.</li>
-<li>Oyer, P. (1998). Fiscal Year Ends and Intertemporal Labor Management.</li>
-</ul>
-<hr>
-<p><em>本笔记由 AI 生成,深度分析了&lt;Do governments crowd out governments?&gt;一文的核心内容、理论框架、实证发现和学术贡献.生成时间:2026年4月11日.</em></p>
-]]></content>
-      <categories>
-        <category>财政学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>财政学</tag>
-        <tag>政府支出</tag>
-        <tag>挤出效应</tag>
-        <tag>自然实验</tag>
       </tags>
   </entry>
   <entry>
@@ -5613,6 +5613,361 @@ Zotero Item Key:: LDPJ5VUP</p>
       </tags>
   </entry>
   <entry>
+    <title>The Effect of Minimum Wages on Low-Wage Jobs — 深度分析 — Cengiz Et Al.</title>
+    <url>/posts/cengiz2019/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: The Effect of Minimum Wages on Low-Wage Jobs</li>
+<li><strong>作者</strong>: Doruk Cengiz(University of Massachusetts Amherst), Arindrajit Dube(UMass Amherst, NBER), Attila Lindner(UCL, CEP, IFS), Ben Zipperer(Economic Policy Institute)</li>
+<li><strong>类型</strong>: 论文笔记 / 劳动经济学</li>
+<li><strong>出版年份</strong>: 2019</li>
+<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics, Volume 134, Issue 3, Pages 1405-1454</li>
+<li><strong>难度评估</strong>: 中 - 需要劳动经济学和计量经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言-背景和意义">1. 引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>最低工资政策(Minimum Wage Policy)</strong>:政府规定的劳动力小时工资下限,是劳动经济学中最具争议的政策之一.支持者认为它能提高低收入工人的生活水平,反对者担心它会导致就业下降(“unemployment”).</p>
+<p><strong>"新最低工资研究"的起源</strong>:Card and Krueger (1995)&lt;神话与计量经济学:对最低工资的新研究&gt;对传统观点提出挑战,使用准实验方法发现最低工资提高并未导致就业下降.</p>
+<p><strong>bunching estimator(堆集估计量)</strong>:一种利用政策变化导致的结果分布聚集现象来识别因果效应的方法.</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol>
+<li>
+<p><strong>政策热潮</strong>:加州、伊利诺伊州、麻省、新泽西州、纽约州已通过将最低工资提高至$15/小时的立法;数十个城市也实施了城市级最低工资政策.</p>
+</li>
+<li>
+<p><strong>研究缺漏</strong>:尽管新最低工资研究已逾30年,但关于政策对总体就业影响的研究仍然很少.2014年国会预算办公室(CBO)报告承认相关研究匮乏,被迫使用青少年的弹性来推断对低工资工人的总体影响.</p>
+</li>
+<li>
+<p><strong>方法论挑战</strong>:传统方法使用双向固定效应回归,但存在一些问题,如对工资分布上尾部的影响可能干扰对底部效应的估计.</p>
+</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>:最低工资对低工资工作的总体效应是什么?</p>
+<p><strong>具体子问题</strong>:</p>
+<ul>
+<li>最低工资对就业的影响是正还是负?</li>
+<li>影响有多大?</li>
+<li>最低工资带来的工资上涨是否被就业损失所抵消?</li>
+<li>效应的异质性如何?</li>
+</ul>
+<h3 id="研究意义">研究意义</h3>
+<ol>
+<li><strong>方法创新</strong>:提出"事件堆集"(EB-bunching)方法,将总体就业效应分解到各工资区间</li>
+<li><strong>对既有文献的贡献</strong>:澄清了最低工资文献中关于1980年代和1990年代早期样本选择的争议</li>
+<li><strong>政策意义</strong>:为当前$15最低工资运动提供实证依据</li>
+</ol>
+<hr>
+<h2 id="2-内容及结构-论文结构">2. 内容及结构(论文结构)</h2>
+<table>
+<thead>
+<tr>
+<th>章节</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I. Introduction</td>
+<td>研究背景、问题意识、文献贡献</td>
+</tr>
+<tr>
+<td>II. Methodology and Data</td>
+<td>概念框架、实证策略、数据</td>
+</tr>
+<tr>
+<td>III. Main Empirical Findings</td>
+<td>总体就业效应、工资溢出、异质性分析</td>
+</tr>
+<tr>
+<td>IV. Robustness and Threats to Identification</td>
+<td>对双向固定效应方法问题的解释</td>
+</tr>
+<tr>
+<td>V. Conclusion</td>
+<td>结论</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="3-正文-逻辑梳理">3. 正文(逻辑梳理)</h2>
+<h3 id="背景-最低工资的理论预测">背景:最低工资的理论预测</h3>
+<p><strong>竞争性劳动力市场模型预测</strong>:</p>
+<ul>
+<li>最低工资提高会导致低工资就业下降</li>
+<li>下降幅度取决于劳动力需求弹性</li>
+</ul>
+<p><strong>monopsony模型预测</strong>:</p>
+<ul>
+<li>最低工资提高可能增加就业</li>
+<li>因为雇主的市場力量被削弱</li>
+</ul>
+<p><strong>实际预测的复杂性</strong>:</p>
+<ul>
+<li>工资溢出效应(spillovers):最低工资可能推动高于最低工资的工人工资上涨</li>
+<li>劳动力替代:低技能工人可能被高技能工人替代</li>
+<li>就业损失可能分布在不同工资区间</li>
+</ul>
+<h3 id="挑战">挑战</h3>
+<ol>
+<li>
+<p><strong>识别问题</strong>:如何分离最低工资的因果效应?</p>
+</li>
+<li>
+<p><strong>聚类分配问题</strong>:传统双向固定效应方法可能因早期时期的混杂因素而产生偏误</p>
+</li>
+<li>
+<p><strong>效应的空间异质性</strong>:不同行业的最低工资效应可能不同</p>
+</li>
+<li>
+<p><strong>数据局限性</strong>:CPS调查数据可能存在测量误差</p>
+</li>
+</ol>
+<h3 id="方法-数据集要突出">方法(数据集要突出)</h3>
+<p><strong>数据来源</strong>:</p>
+<ul>
+<li>1979-2016年CPS(当前人口调查)NBER合并出口轮次小组数据</li>
+<li>137,000+观测值</li>
+<li>138个州级最低工资事件(1979-2016年间)</li>
+<li><strong>事件定义</strong>:州最低工资增加至少$0.25,且至少2%工人直接影响</li>
+</ul>
+<p><strong>核心概念</strong>:</p>
+<ul>
+<li><strong>缺失工作(Missing Jobs)</strong>:最低工资提高后,低于新最低工资的工作数量减少</li>
+<li><strong>超额工作(Excess Jobs)</strong>:因最低工资提高而出现在最低工资水平或略高处的工作增加</li>
+</ul>
+<p><strong>实证策略_事件研究设计</strong>:<br>
+$${E_{sjt} \over N_{st}} = \sum_{\tau=-3}^{4} \sum_{k=-4}^{17} \alpha_{\tau k} I_{\tau k}^{sjt} + \mu_{sj} + \rho_{jt} + \Omega_{sjt} + u_{sjt}}$$</p>
+<p>其中:</p>
+<ul>
+<li>$E_{sjt}$:j工资区间在s州的就业</li>
+<li>$N_{st}$:s州当时的劳动力</li>
+<li>$I_{\tau k}^{sjt}$:处理指示变量</li>
+<li>$\mu_{sj}$:州×工资区间固定效应</li>
+<li>$\rho_{jt}$:时间×工资区间固定效应</li>
+<li>标准误按州级聚类</li>
+</ul>
+<p><strong>关键创新</strong>:</p>
+<ul>
+<li>将就业变化按$0.25工资区间分解</li>
+<li>使用事件窗口前后对比</li>
+<li>提供对上尾效应的检验</li>
+</ul>
+<h3 id="结果-Results">结果(Results)</h3>
+<p><strong>核心发现1:总体就业效应接近零</strong></p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>估计值</th>
+<th>标准误</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>受影响工人就业变化</td>
+<td>+2.8%</td>
+<td>(2.9%)</td>
+</tr>
+<tr>
+<td>就业弹性(相对于自身工资)</td>
+<td>0.41</td>
+<td>(0.43)</td>
+</tr>
+</tbody>
+</table>
+<p>→ 在95%置信水平下,排除低于-0.45的弹性</p>
+<p><strong>核心发现2:工资溢出效应显著</strong></p>
+<ul>
+<li>溢出效应向上延伸至最低工资以上约$3</li>
+<li>总体工资增长中约40%来自溢出效应</li>
+<li><strong>不对称性</strong>:留任工人获得显著工资溢出,但新进入者没有</li>
+</ul>
+<p><strong>核心发现3:行业异质性</strong></p>
+<table>
+<thead>
+<tr>
+<th>行业</th>
+<th>就业弹性</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>可贸易部门(制造业)</td>
+<td>-1.4</td>
+<td>显著负效应</td>
+</tr>
+<tr>
+<td>不可贸易部门(餐饮、零售)</td>
+<td>≈0</td>
+<td>几乎无效应</td>
+</tr>
+</tbody>
+</table>
+<p>→ 行业组成是决定最低工资就业效应的关键因素</p>
+<p><strong>核心发现4:人口群体异质性</strong></p>
+<ul>
+<li>按教育和年龄分组,未发现低技能工人被高技能工人替代的证据</li>
+<li>不同人口群体的就业效应大多接近零且不显著</li>
+<li>表明最低工资政策的好处理广泛共享</li>
+</ul>
+<p><strong>核心发现5:对Meer and West (2016)发现的解释</strong></p>
+<ul>
+<li>该研究使用双向固定效应发现大的负就业估计</li>
+<li>分解分析显示这一负效应由工资分布上尾的不大幅度下降驱动</li>
+<li>问题来源:1980年代和1990年代早期样本中包含的时期混杂因素</li>
+<li>1992年后,各种标准规范几乎没有就业减少的证据</li>
+</ul>
+<hr>
+<h2 id="4-结论-Conclusion">4. 结论(Conclusion)</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol>
+<li>
+<p><strong>最低工资对低工资工作数量的总体影响基本为零</strong>:五年观察期内,低工资工作数量基本保持不变</p>
+</li>
+<li>
+<p><strong>最低工资的直接工资效应被适度工资溢出放大</strong>:溢出效应约占总体工资增长的40%</p>
+</li>
+<li>
+<p><strong>就业效应不能用劳动力替代解释</strong>:不同教育和年龄群体的替代效应证据不成立</p>
+</li>
+<li>
+<p><strong>在更高最低工资水平下也未发现就业减少证据</strong>:但确实发现可贸易部门(制造业)减少的迹象</p>
+</li>
+<li>
+<p><strong>方法论贡献</strong>:EB-bunching方法提供了透明且稳健的估计最低工资就业效应的方法</p>
+</li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol>
+<li><strong>澄清方法论争议</strong>:解释了为什么双向固定效应和事件研究方法产生不同结果</li>
+<li><strong>提供新的实证证据</strong>:使用更全面的数据和更细粒度的分解</li>
+<li><strong>扩展工资溢出分析</strong>:提供了关于溢出机制(相对工资关系 vs 外部选择价值)的证据</li>
+<li><strong>政策意义</strong>:为$15最低工资运动提供实证支持</li>
+</ol>
+<hr>
+<h2 id="5-未来研究方向-Future-work">5. 未来研究方向(Future work)</h2>
+<h3 id="论文提及的拓展方向">论文提及的拓展方向</h3>
+<ol>
+<li>
+<p><strong>更高最低工资水平的研究</strong>:当Kaitz指数超过59%时会发生什么?需要更高最低工资的州的 variation</p>
+</li>
+<li>
+<p><strong>长期效应</strong>:本研究关注5年窗口,更长期效应仍需研究</p>
+</li>
+<li>
+<p><strong>其他国家的证据</strong>:美国结果的国际可比性</p>
+</li>
+</ol>
+<h3 id="思考的下一步研究">思考的下一步研究</h3>
+<ol>
+<li>
+<p><strong>动态一般均衡效应</strong>:行业层面的一般均衡调整如何影响就业?</p>
+</li>
+<li>
+<p><strong>非正规就业</strong>:最低工资对非正规经济(零工经济)的影响</p>
+</li>
+<li>
+<p><strong>非工资效应</strong>:最低工资对工作条件、培训机会等非工资方面的影响</p>
+</li>
+<li>
+<p><strong>家庭效应</strong>:最低工资对家庭收入分配和儿童贫困的影响</p>
+</li>
+<li>
+<p><strong>政治经济学</strong>:最低工资设定的决定因素及其政治经济学含义</p>
+</li>
+</ol>
+<hr>
+<h2 id="6-学术思考">6. 学术思考</h2>
+<h3 id="核心学术问题">核心学术问题</h3>
+<ol>
+<li>
+<p><strong>竞争性 vs monopsony劳动力市场的边界</strong></p>
+<ul>
+<li>本研究发现总体就业效应接近零</li>
+<li>这是否意味着低工资劳动力市场更接近monopsony?</li>
+<li>还是正负效应相互抵消?</li>
+</ul>
+</li>
+<li>
+<p><strong>工资溢出的机制</strong></p>
+<ul>
+<li>研究发现溢出效应在最低工资以上约$3处消失</li>
+<li>且对留任工人和新进入者影响不对称</li>
+<li>这更支持"相对工资关系假设"而非"外部选择价值假设"</li>
+<li>但这是否意味着企业内部存在显著的工资刚性?</li>
+</ul>
+</li>
+<li>
+<p><strong>可贸易 vs 不可贸易部门的差异</strong></p>
+<ul>
+<li>制造业显著负效应 vs 零售餐饮零效应</li>
+<li>这是否意味着全球化压力降低了美国低技能工人的谈价能力?</li>
+<li>还是反映了不同的劳动力市场结构?</li>
+</ul>
+</li>
+<li>
+<p><strong>EB-bunching方法的普适性</strong></p>
+<ul>
+<li>将总体效应分解到各工资区间</li>
+<li>提供了"透明"的估计方式</li>
+<li>是否可以推广到其他政策评估?</li>
+</ul>
+</li>
+<li>
+<p><strong>对CBO政策分析的启示</strong></p>
+<ul>
+<li>CBO使用青少年弹性来推断总体影响</li>
+<li>本研究表明青少年可能是受最低工资影响最深的群体</li>
+<li>这是否意味着CBO的方法实际上低估了不确定性?</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="7-下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
+<ol>
+<li>
+<p><strong>识别策略的有效性</strong>:如何检验平行趋势假设?事件前趋势检验的结果如何?</p>
+</li>
+<li>
+<p><strong>测量误差的影响</strong>:CPS数据中的测量误差如何影响估计?特别是对工资分布尾部的测量?</p>
+</li>
+<li>
+<p><strong>Kaitz指数的具体含义</strong>:Kaitz指数达到59%时会发生什么理论预测?</p>
+</li>
+<li>
+<p><strong>对理论模型的启示</strong>:这些发现如何区分竞争性模型和monopsony模型?</p>
+</li>
+<li>
+<p><strong>政策外部有效性</strong>:基于1979-2016年数据的发现在2020年代是否仍然适用?劳动力市场结构是否发生了根本性变化?</p>
+</li>
+<li>
+<p><strong>对工人流动的动态效应</strong>:最低工资是否影响了低工资工人的职业发展轨迹?</p>
+</li>
+<li>
+<p><strong>雇主反应的非工资渠道</strong>:雇主除了调整就业和工资外,是否在工时、工作条件、培训等方面做出了调整?</p>
+</li>
+<li>
+<p><strong>与Dube et al. (2010) NJ快餐业研究的关系</strong>:为什么NJ快餐业研究发现了正效应,而本研究对所有行业的汇总发现零效应?</p>
+</li>
+<li>
+<p><strong>对州际差异的控制</strong>:如何排除州级经济基本面对结果的混杂影响?各州经济多样性的作用是什么?</p>
+</li>
+<li>
+<p><strong>最低工资的收入分配效应</strong>:最低工资如何与税法、其他转移支付计划相互作用以影响收入不平等?</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>劳动经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Poverty and Economic Decision-Making — 深度阅读笔记 — Carvalho, Meier &amp; Wang</title>
     <url>/posts/carvalho2016/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -5998,361 +6353,6 @@ Zotero Item Key:: LDPJ5VUP</p>
         <tag>贫困研究</tag>
         <tag>行为经济学</tag>
         <tag>认知科学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>The Effect of Minimum Wages on Low-Wage Jobs — 深度分析 — Cengiz Et Al.</title>
-    <url>/posts/cengiz2019/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: The Effect of Minimum Wages on Low-Wage Jobs</li>
-<li><strong>作者</strong>: Doruk Cengiz(University of Massachusetts Amherst), Arindrajit Dube(UMass Amherst, NBER), Attila Lindner(UCL, CEP, IFS), Ben Zipperer(Economic Policy Institute)</li>
-<li><strong>类型</strong>: 论文笔记 / 劳动经济学</li>
-<li><strong>出版年份</strong>: 2019</li>
-<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics, Volume 134, Issue 3, Pages 1405-1454</li>
-<li><strong>难度评估</strong>: 中 - 需要劳动经济学和计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言-背景和意义">1. 引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>最低工资政策(Minimum Wage Policy)</strong>:政府规定的劳动力小时工资下限,是劳动经济学中最具争议的政策之一.支持者认为它能提高低收入工人的生活水平,反对者担心它会导致就业下降(“unemployment”).</p>
-<p><strong>"新最低工资研究"的起源</strong>:Card and Krueger (1995)&lt;神话与计量经济学:对最低工资的新研究&gt;对传统观点提出挑战,使用准实验方法发现最低工资提高并未导致就业下降.</p>
-<p><strong>bunching estimator(堆集估计量)</strong>:一种利用政策变化导致的结果分布聚集现象来识别因果效应的方法.</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol>
-<li>
-<p><strong>政策热潮</strong>:加州、伊利诺伊州、麻省、新泽西州、纽约州已通过将最低工资提高至$15/小时的立法;数十个城市也实施了城市级最低工资政策.</p>
-</li>
-<li>
-<p><strong>研究缺漏</strong>:尽管新最低工资研究已逾30年,但关于政策对总体就业影响的研究仍然很少.2014年国会预算办公室(CBO)报告承认相关研究匮乏,被迫使用青少年的弹性来推断对低工资工人的总体影响.</p>
-</li>
-<li>
-<p><strong>方法论挑战</strong>:传统方法使用双向固定效应回归,但存在一些问题,如对工资分布上尾部的影响可能干扰对底部效应的估计.</p>
-</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:最低工资对低工资工作的总体效应是什么?</p>
-<p><strong>具体子问题</strong>:</p>
-<ul>
-<li>最低工资对就业的影响是正还是负?</li>
-<li>影响有多大?</li>
-<li>最低工资带来的工资上涨是否被就业损失所抵消?</li>
-<li>效应的异质性如何?</li>
-</ul>
-<h3 id="研究意义">研究意义</h3>
-<ol>
-<li><strong>方法创新</strong>:提出"事件堆集"(EB-bunching)方法,将总体就业效应分解到各工资区间</li>
-<li><strong>对既有文献的贡献</strong>:澄清了最低工资文献中关于1980年代和1990年代早期样本选择的争议</li>
-<li><strong>政策意义</strong>:为当前$15最低工资运动提供实证依据</li>
-</ol>
-<hr>
-<h2 id="2-内容及结构-论文结构">2. 内容及结构(论文结构)</h2>
-<table>
-<thead>
-<tr>
-<th>章节</th>
-<th>内容</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I. Introduction</td>
-<td>研究背景、问题意识、文献贡献</td>
-</tr>
-<tr>
-<td>II. Methodology and Data</td>
-<td>概念框架、实证策略、数据</td>
-</tr>
-<tr>
-<td>III. Main Empirical Findings</td>
-<td>总体就业效应、工资溢出、异质性分析</td>
-</tr>
-<tr>
-<td>IV. Robustness and Threats to Identification</td>
-<td>对双向固定效应方法问题的解释</td>
-</tr>
-<tr>
-<td>V. Conclusion</td>
-<td>结论</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="3-正文-逻辑梳理">3. 正文(逻辑梳理)</h2>
-<h3 id="背景-最低工资的理论预测">背景:最低工资的理论预测</h3>
-<p><strong>竞争性劳动力市场模型预测</strong>:</p>
-<ul>
-<li>最低工资提高会导致低工资就业下降</li>
-<li>下降幅度取决于劳动力需求弹性</li>
-</ul>
-<p><strong>monopsony模型预测</strong>:</p>
-<ul>
-<li>最低工资提高可能增加就业</li>
-<li>因为雇主的市場力量被削弱</li>
-</ul>
-<p><strong>实际预测的复杂性</strong>:</p>
-<ul>
-<li>工资溢出效应(spillovers):最低工资可能推动高于最低工资的工人工资上涨</li>
-<li>劳动力替代:低技能工人可能被高技能工人替代</li>
-<li>就业损失可能分布在不同工资区间</li>
-</ul>
-<h3 id="挑战">挑战</h3>
-<ol>
-<li>
-<p><strong>识别问题</strong>:如何分离最低工资的因果效应?</p>
-</li>
-<li>
-<p><strong>聚类分配问题</strong>:传统双向固定效应方法可能因早期时期的混杂因素而产生偏误</p>
-</li>
-<li>
-<p><strong>效应的空间异质性</strong>:不同行业的最低工资效应可能不同</p>
-</li>
-<li>
-<p><strong>数据局限性</strong>:CPS调查数据可能存在测量误差</p>
-</li>
-</ol>
-<h3 id="方法-数据集要突出">方法(数据集要突出)</h3>
-<p><strong>数据来源</strong>:</p>
-<ul>
-<li>1979-2016年CPS(当前人口调查)NBER合并出口轮次小组数据</li>
-<li>137,000+观测值</li>
-<li>138个州级最低工资事件(1979-2016年间)</li>
-<li><strong>事件定义</strong>:州最低工资增加至少$0.25,且至少2%工人直接影响</li>
-</ul>
-<p><strong>核心概念</strong>:</p>
-<ul>
-<li><strong>缺失工作(Missing Jobs)</strong>:最低工资提高后,低于新最低工资的工作数量减少</li>
-<li><strong>超额工作(Excess Jobs)</strong>:因最低工资提高而出现在最低工资水平或略高处的工作增加</li>
-</ul>
-<p><strong>实证策略_事件研究设计</strong>:<br>
-$${E_{sjt} \over N_{st}} = \sum_{\tau=-3}^{4} \sum_{k=-4}^{17} \alpha_{\tau k} I_{\tau k}^{sjt} + \mu_{sj} + \rho_{jt} + \Omega_{sjt} + u_{sjt}}$$</p>
-<p>其中:</p>
-<ul>
-<li>$E_{sjt}$:j工资区间在s州的就业</li>
-<li>$N_{st}$:s州当时的劳动力</li>
-<li>$I_{\tau k}^{sjt}$:处理指示变量</li>
-<li>$\mu_{sj}$:州×工资区间固定效应</li>
-<li>$\rho_{jt}$:时间×工资区间固定效应</li>
-<li>标准误按州级聚类</li>
-</ul>
-<p><strong>关键创新</strong>:</p>
-<ul>
-<li>将就业变化按$0.25工资区间分解</li>
-<li>使用事件窗口前后对比</li>
-<li>提供对上尾效应的检验</li>
-</ul>
-<h3 id="结果-Results">结果(Results)</h3>
-<p><strong>核心发现1:总体就业效应接近零</strong></p>
-<table>
-<thead>
-<tr>
-<th>指标</th>
-<th>估计值</th>
-<th>标准误</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>受影响工人就业变化</td>
-<td>+2.8%</td>
-<td>(2.9%)</td>
-</tr>
-<tr>
-<td>就业弹性(相对于自身工资)</td>
-<td>0.41</td>
-<td>(0.43)</td>
-</tr>
-</tbody>
-</table>
-<p>→ 在95%置信水平下,排除低于-0.45的弹性</p>
-<p><strong>核心发现2:工资溢出效应显著</strong></p>
-<ul>
-<li>溢出效应向上延伸至最低工资以上约$3</li>
-<li>总体工资增长中约40%来自溢出效应</li>
-<li><strong>不对称性</strong>:留任工人获得显著工资溢出,但新进入者没有</li>
-</ul>
-<p><strong>核心发现3:行业异质性</strong></p>
-<table>
-<thead>
-<tr>
-<th>行业</th>
-<th>就业弹性</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>可贸易部门(制造业)</td>
-<td>-1.4</td>
-<td>显著负效应</td>
-</tr>
-<tr>
-<td>不可贸易部门(餐饮、零售)</td>
-<td>≈0</td>
-<td>几乎无效应</td>
-</tr>
-</tbody>
-</table>
-<p>→ 行业组成是决定最低工资就业效应的关键因素</p>
-<p><strong>核心发现4:人口群体异质性</strong></p>
-<ul>
-<li>按教育和年龄分组,未发现低技能工人被高技能工人替代的证据</li>
-<li>不同人口群体的就业效应大多接近零且不显著</li>
-<li>表明最低工资政策的好处理广泛共享</li>
-</ul>
-<p><strong>核心发现5:对Meer and West (2016)发现的解释</strong></p>
-<ul>
-<li>该研究使用双向固定效应发现大的负就业估计</li>
-<li>分解分析显示这一负效应由工资分布上尾的不大幅度下降驱动</li>
-<li>问题来源:1980年代和1990年代早期样本中包含的时期混杂因素</li>
-<li>1992年后,各种标准规范几乎没有就业减少的证据</li>
-</ul>
-<hr>
-<h2 id="4-结论-Conclusion">4. 结论(Conclusion)</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol>
-<li>
-<p><strong>最低工资对低工资工作数量的总体影响基本为零</strong>:五年观察期内,低工资工作数量基本保持不变</p>
-</li>
-<li>
-<p><strong>最低工资的直接工资效应被适度工资溢出放大</strong>:溢出效应约占总体工资增长的40%</p>
-</li>
-<li>
-<p><strong>就业效应不能用劳动力替代解释</strong>:不同教育和年龄群体的替代效应证据不成立</p>
-</li>
-<li>
-<p><strong>在更高最低工资水平下也未发现就业减少证据</strong>:但确实发现可贸易部门(制造业)减少的迹象</p>
-</li>
-<li>
-<p><strong>方法论贡献</strong>:EB-bunching方法提供了透明且稳健的估计最低工资就业效应的方法</p>
-</li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol>
-<li><strong>澄清方法论争议</strong>:解释了为什么双向固定效应和事件研究方法产生不同结果</li>
-<li><strong>提供新的实证证据</strong>:使用更全面的数据和更细粒度的分解</li>
-<li><strong>扩展工资溢出分析</strong>:提供了关于溢出机制(相对工资关系 vs 外部选择价值)的证据</li>
-<li><strong>政策意义</strong>:为$15最低工资运动提供实证支持</li>
-</ol>
-<hr>
-<h2 id="5-未来研究方向-Future-work">5. 未来研究方向(Future work)</h2>
-<h3 id="论文提及的拓展方向">论文提及的拓展方向</h3>
-<ol>
-<li>
-<p><strong>更高最低工资水平的研究</strong>:当Kaitz指数超过59%时会发生什么?需要更高最低工资的州的 variation</p>
-</li>
-<li>
-<p><strong>长期效应</strong>:本研究关注5年窗口,更长期效应仍需研究</p>
-</li>
-<li>
-<p><strong>其他国家的证据</strong>:美国结果的国际可比性</p>
-</li>
-</ol>
-<h3 id="思考的下一步研究">思考的下一步研究</h3>
-<ol>
-<li>
-<p><strong>动态一般均衡效应</strong>:行业层面的一般均衡调整如何影响就业?</p>
-</li>
-<li>
-<p><strong>非正规就业</strong>:最低工资对非正规经济(零工经济)的影响</p>
-</li>
-<li>
-<p><strong>非工资效应</strong>:最低工资对工作条件、培训机会等非工资方面的影响</p>
-</li>
-<li>
-<p><strong>家庭效应</strong>:最低工资对家庭收入分配和儿童贫困的影响</p>
-</li>
-<li>
-<p><strong>政治经济学</strong>:最低工资设定的决定因素及其政治经济学含义</p>
-</li>
-</ol>
-<hr>
-<h2 id="6-学术思考">6. 学术思考</h2>
-<h3 id="核心学术问题">核心学术问题</h3>
-<ol>
-<li>
-<p><strong>竞争性 vs monopsony劳动力市场的边界</strong></p>
-<ul>
-<li>本研究发现总体就业效应接近零</li>
-<li>这是否意味着低工资劳动力市场更接近monopsony?</li>
-<li>还是正负效应相互抵消?</li>
-</ul>
-</li>
-<li>
-<p><strong>工资溢出的机制</strong></p>
-<ul>
-<li>研究发现溢出效应在最低工资以上约$3处消失</li>
-<li>且对留任工人和新进入者影响不对称</li>
-<li>这更支持"相对工资关系假设"而非"外部选择价值假设"</li>
-<li>但这是否意味着企业内部存在显著的工资刚性?</li>
-</ul>
-</li>
-<li>
-<p><strong>可贸易 vs 不可贸易部门的差异</strong></p>
-<ul>
-<li>制造业显著负效应 vs 零售餐饮零效应</li>
-<li>这是否意味着全球化压力降低了美国低技能工人的谈价能力?</li>
-<li>还是反映了不同的劳动力市场结构?</li>
-</ul>
-</li>
-<li>
-<p><strong>EB-bunching方法的普适性</strong></p>
-<ul>
-<li>将总体效应分解到各工资区间</li>
-<li>提供了"透明"的估计方式</li>
-<li>是否可以推广到其他政策评估?</li>
-</ul>
-</li>
-<li>
-<p><strong>对CBO政策分析的启示</strong></p>
-<ul>
-<li>CBO使用青少年弹性来推断总体影响</li>
-<li>本研究表明青少年可能是受最低工资影响最深的群体</li>
-<li>这是否意味着CBO的方法实际上低估了不确定性?</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2 id="7-下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
-<ol>
-<li>
-<p><strong>识别策略的有效性</strong>:如何检验平行趋势假设?事件前趋势检验的结果如何?</p>
-</li>
-<li>
-<p><strong>测量误差的影响</strong>:CPS数据中的测量误差如何影响估计?特别是对工资分布尾部的测量?</p>
-</li>
-<li>
-<p><strong>Kaitz指数的具体含义</strong>:Kaitz指数达到59%时会发生什么理论预测?</p>
-</li>
-<li>
-<p><strong>对理论模型的启示</strong>:这些发现如何区分竞争性模型和monopsony模型?</p>
-</li>
-<li>
-<p><strong>政策外部有效性</strong>:基于1979-2016年数据的发现在2020年代是否仍然适用?劳动力市场结构是否发生了根本性变化?</p>
-</li>
-<li>
-<p><strong>对工人流动的动态效应</strong>:最低工资是否影响了低工资工人的职业发展轨迹?</p>
-</li>
-<li>
-<p><strong>雇主反应的非工资渠道</strong>:雇主除了调整就业和工资外,是否在工时、工作条件、培训等方面做出了调整?</p>
-</li>
-<li>
-<p><strong>与Dube et al. (2010) NJ快餐业研究的关系</strong>:为什么NJ快餐业研究发现了正效应,而本研究对所有行业的汇总发现零效应?</p>
-</li>
-<li>
-<p><strong>对州际差异的控制</strong>:如何排除州级经济基本面对结果的混杂影响?各州经济多样性的作用是什么?</p>
-</li>
-<li>
-<p><strong>最低工资的收入分配效应</strong>:最低工资如何与税法、其他转移支付计划相互作用以影响收入不平等?</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>劳动经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -7378,101 +7378,6 @@ $$ZeroSum_i = \beta_{resp} \cdot RespondentExperience_i + \beta_p \cdot ParentsE
       </tags>
   </entry>
   <entry>
-    <title>序列诅咒均衡 — 深度阅读笔记 — Cohen &amp; Li</title>
-    <url>/posts/cohen2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Sequential Cursed Equilibrium</li>
-<li><strong>作者</strong>: Shani Cohen (Harvard), Shengwu Li (Harvard)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3): 934-976</li>
-<li><strong>DOI</strong>: 10.1257/aer.20230309</li>
-<li><strong>难度评估</strong>: 高 - 需要博弈论、行为经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>诅咒均衡（Cursed Equilibrium, CE）</strong>：Eyster和Rabin（2005）提出的解概念，玩家忽略其他玩家行为与其类型之间的相关性。</p>
-<p><strong>扩展式博弈（Extensive-Form Games）</strong>：具有时序结构的博弈，玩家依次行动。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol>
-<li>
-<p><strong>标准博弈论假设"三思而后行"</strong>：玩家在决策时会考虑假设性事件的信息</p>
-</li>
-<li>
-<p><strong>实际行为偏离</strong>：人们经常忽略假设性事件的含义，但从观察事件中进行推断</p>
-</li>
-<li>
-<p><strong>诅咒均衡的局限性</strong>：不适用于序列博弈；对内生信息也存在curse</p>
-</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：如何修改诅咒均衡以适应扩展式博弈，使玩家能够从观察事件中学习但忽略假设事件的信息？</p>
-<hr>
-<h2 id="2-内容及结构">2. 内容及结构</h2>
-<h3 id="第一节：引言">第一节：引言</h3>
-<h3 id="第二节：定义和一般结果">第二节：定义和一般结果</h3>
-<ul>
-<li>SCE的定义和存在性</li>
-<li>同时博弈中的SCE</li>
-<li>部分诅咒</li>
-</ul>
-<h3 id="第三节：实验应用">第三节：实验应用</h3>
-<ul>
-<li>交易博弈实验</li>
-<li>成本信号博弈</li>
-<li>信息获取博弈</li>
-</ul>
-<h3 id="第四节：动态拍卖">第四节：动态拍卖</h3>
-<h3 id="第五节：讨论和结论">第五节：讨论和结论</h3>
-<hr>
-<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="标准博弈论的问题">标准博弈论的问题</h4>
-<p><strong>"三思而后行"原则（Savage 1972）</strong>：</p>
-<ul>
-<li>标准理论要求玩家在决策时考虑假设性事件的信息</li>
-<li>但实际上人们经常忽略这种信息</li>
-</ul>
-<p><strong>诅咒均衡（CE）的核心思想</strong>：</p>
-<ul>
-<li>玩家理解对手行为的边缘分布</li>
-<li>但忽略这些分布之间的相关性</li>
-</ul>
-<h4 id="诅咒均衡的两个局限性">诅咒均衡的两个局限性</h4>
-<p><strong>局限性1：不适应序列博弈</strong></p>
-<ul>
-<li>序列博弈与同时博弈有相同的贝叶斯正态形式</li>
-<li>因此CE预测相同，但这不符合直觉</li>
-</ul>
-<p><strong>局限性2：对内生信息的诅咒</strong></p>
-<h3 id="序列诅咒均衡（SCE）">序列诅咒均衡（SCE）</h3>
-<p><strong>核心创新</strong>：允许玩家对内生信息受到诅咒</p>
-<p><strong>关键洞察</strong>：玩家从观察事件中学习，但忽略假设事件的信息</p>
-<hr>
-<h2 id="4-结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol>
-<li>
-<p><strong>SCE扩展了CE到扩展式博弈</strong></p>
-</li>
-<li>
-<p><strong>解释实验证据</strong>：为关于假设性思维的实验提供理论解释</p>
-</li>
-<li>
-<p><strong>应用广泛</strong>：交易博弈、成本信号博弈、信息获取博弈、动态拍卖</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>工作场所性骚扰为何被低估 — 深度阅读笔记 — Dahl &amp; Knepper</title>
     <url>/posts/dahl2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -7827,6 +7732,101 @@ $$ZeroSum_i = \beta_{resp} \cdot RespondentExperience_i + \beta_p \cdot ParentsE
         <tag>政治经济学</tag>
         <tag>政治选拔</tag>
         <tag>民主理论</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>序列诅咒均衡 — 深度阅读笔记 — Cohen &amp; Li</title>
+    <url>/posts/cohen2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Sequential Cursed Equilibrium</li>
+<li><strong>作者</strong>: Shani Cohen (Harvard), Shengwu Li (Harvard)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(3): 934-976</li>
+<li><strong>DOI</strong>: 10.1257/aer.20230309</li>
+<li><strong>难度评估</strong>: 高 - 需要博弈论、行为经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>诅咒均衡（Cursed Equilibrium, CE）</strong>：Eyster和Rabin（2005）提出的解概念，玩家忽略其他玩家行为与其类型之间的相关性。</p>
+<p><strong>扩展式博弈（Extensive-Form Games）</strong>：具有时序结构的博弈，玩家依次行动。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol>
+<li>
+<p><strong>标准博弈论假设"三思而后行"</strong>：玩家在决策时会考虑假设性事件的信息</p>
+</li>
+<li>
+<p><strong>实际行为偏离</strong>：人们经常忽略假设性事件的含义，但从观察事件中进行推断</p>
+</li>
+<li>
+<p><strong>诅咒均衡的局限性</strong>：不适用于序列博弈；对内生信息也存在curse</p>
+</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：如何修改诅咒均衡以适应扩展式博弈，使玩家能够从观察事件中学习但忽略假设事件的信息？</p>
+<hr>
+<h2 id="2-内容及结构">2. 内容及结构</h2>
+<h3 id="第一节：引言">第一节：引言</h3>
+<h3 id="第二节：定义和一般结果">第二节：定义和一般结果</h3>
+<ul>
+<li>SCE的定义和存在性</li>
+<li>同时博弈中的SCE</li>
+<li>部分诅咒</li>
+</ul>
+<h3 id="第三节：实验应用">第三节：实验应用</h3>
+<ul>
+<li>交易博弈实验</li>
+<li>成本信号博弈</li>
+<li>信息获取博弈</li>
+</ul>
+<h3 id="第四节：动态拍卖">第四节：动态拍卖</h3>
+<h3 id="第五节：讨论和结论">第五节：讨论和结论</h3>
+<hr>
+<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="标准博弈论的问题">标准博弈论的问题</h4>
+<p><strong>"三思而后行"原则（Savage 1972）</strong>：</p>
+<ul>
+<li>标准理论要求玩家在决策时考虑假设性事件的信息</li>
+<li>但实际上人们经常忽略这种信息</li>
+</ul>
+<p><strong>诅咒均衡（CE）的核心思想</strong>：</p>
+<ul>
+<li>玩家理解对手行为的边缘分布</li>
+<li>但忽略这些分布之间的相关性</li>
+</ul>
+<h4 id="诅咒均衡的两个局限性">诅咒均衡的两个局限性</h4>
+<p><strong>局限性1：不适应序列博弈</strong></p>
+<ul>
+<li>序列博弈与同时博弈有相同的贝叶斯正态形式</li>
+<li>因此CE预测相同，但这不符合直觉</li>
+</ul>
+<p><strong>局限性2：对内生信息的诅咒</strong></p>
+<h3 id="序列诅咒均衡（SCE）">序列诅咒均衡（SCE）</h3>
+<p><strong>核心创新</strong>：允许玩家对内生信息受到诅咒</p>
+<p><strong>关键洞察</strong>：玩家从观察事件中学习，但忽略假设事件的信息</p>
+<hr>
+<h2 id="4-结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol>
+<li>
+<p><strong>SCE扩展了CE到扩展式博弈</strong></p>
+</li>
+<li>
+<p><strong>解释实验证据</strong>：为关于假设性思维的实验提供理论解释</p>
+</li>
+<li>
+<p><strong>应用广泛</strong>：交易博弈、成本信号博弈、信息获取博弈、动态拍卖</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -12115,140 +12115,6 @@ $$\kappa_t = \sigma_D - (1-\omega_t)\eta - \sigma\phi_D(\omega_t + \tau y_t(1-\o
       </tags>
   </entry>
   <entry>
-    <title>Surviving Childhood — 深度阅读笔记 — Helénsdotter</title>
-    <url>/posts/helensdotter2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Surviving Childhood: Effects of Removing a Child From Home</li>
-<li><strong>作者</strong>: Ronja Helénsdotter (MIT and University of Gothenburg)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies (RES)</li>
-<li><strong>DOI</strong>: 10.1093/restud/rdae053</li>
-<li><strong>难度评估</strong>: 高 - 需要计量经济学（IV）、儿童保护制度背景知识</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>工具变量设计（Instrumental Variable, IV Design）</strong>：利用外生的准随机变量（法官分配）来识别因果效应。在本文中，法官对是否移除儿童的决定存在个体差异，这种差异与儿童本身特征无关，可以作为"移除决定"的工具变量。</p>
-<p><strong>法庭命令的安置（Court-Ordered Removal）</strong>：指父母或儿童不同意移除时，法院强制命令将儿童从家中带走的程序。在瑞典，约30%的寄养儿童属于此类非自愿安置，这是本文的研究对象。</p>
-<p><strong>外化问题（Externalizing Problems）</strong>：指儿童向外部环境表现出的问题行为，如犯罪、物质滥用、自残等，与内化问题（如焦虑、抑郁）相对。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol>
-<li>
-<p><strong>脆弱群体的严峻现实</strong>：在许多西方国家，自杀和药物使用障碍是青少年死亡的三大原因之一。数据显示，2-6%的儿童在18岁前会被安置在外home care，而这些儿童的青少年期和早期成年期死亡率是同龄人的3-5倍。</p>
-</li>
-<li>
-<p><strong>数据稀缺的困境</strong>：由于需要大规模、纵向、个体层面的丰富数据集，关于儿童移除对健康影响的因果证据极为匮乏。</p>
-</li>
-<li>
-<p><strong>政策相关性强</strong>：儿童保护系统涉及政府权力与个人家庭权利之间的冲突。</p>
-</li>
-<li>
-<p><strong>现有研究的空白</strong>：多数研究仅关注教育、犯罪和劳动力市场结果，仅5篇论文研究健康相关结果，且几乎所有可信研究都来自北美。</p>
-</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：法庭命令的儿童从家中移除，对健康、犯罪和教育会产生什么影响？</p>
-<p><strong>研究方法</strong>：利用法官分配的准随机变化和法官间移除倾向的差异，构建工具变量（IV）设计来隔离因果效应。</p>
-<h2 id="2-内容及结构（论文结构）">2. 内容及结构（论文结构）</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：制度背景（瑞典儿童保护系统流程、安置条件）</li>
-<li>第三节：数据（法院文件、登记数据、法官移除倾向）</li>
-<li>第四节：识别策略（法官IV设计）</li>
-<li>第五节：基准结果（死亡率、医疗利用、犯罪）</li>
-<li>第六节：机制探索（照料条件、同伴效应、父母渠道）</li>
-<li>第七节：稳健性检验</li>
-<li>第八节：结论</li>
-</ul>
-<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
-<h3 id="识别策略">识别策略</h3>
-<p><strong>法官工具变量的构建</strong>：<br>
-$$Z_j© = \frac{\sum_{i \neq c} R_j(i) - \sum_{i \in c} R_j(i)}{n_j - n_j©}$$</p>
-<p><strong>瑞典制度背景的关键特征</strong>：</p>
-<ul>
-<li>法官仅在听证期间与家庭接触（通常1小时）</li>
-<li>法官只做一个二元决定：是否移除儿童</li>
-<li>所有其他决定由社会福利委员会（SWC）做出</li>
-</ul>
-<h3 id="主要结果">主要结果</h3>
-<p><strong>死亡率的基准IV估计</strong>：</p>
-<ul>
-<li>移除使19岁前死亡风险增加6.8个百分点（相对控制组均值1.8%）</li>
-<li>效应主要由自杀驱动，主要发生在安置期间</li>
-<li>对10岁以上儿童，9个月后自杀风险显著增加</li>
-</ul>
-<p><strong>机制探索</strong>：</p>
-<ul>
-<li>照料条件缺陷导致超过一半的死亡</li>
-<li>有害同伴暴露显著增加自残和物质滥用风险</li>
-<li>移除显著增加非麻醉药犯罪风险</li>
-</ul>
-<h2 id="4-结论（Conclusion）">4. 结论（Conclusion）</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol>
-<li>
-<p><strong>法庭命令的儿童移除对死亡率有重大的负面影响</strong>——移除使边际儿童的19岁前死亡风险增加6.8个百分点（相对增幅约378%）</p>
-</li>
-<li>
-<p><strong>同伴效应和照料条件是重要渠道</strong></p>
-</li>
-<li>
-<p><strong>对出生父母影响有限</strong></p>
-</li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol>
-<li>首次利用法官IV研究儿童保护</li>
-<li>填补健康结果研究的空白</li>
-<li>打破北美研究垄断，为欧洲研究提供框架</li>
-</ol>
-<h2 id="5-未来研究方向（Future-work）">5. 未来研究方向（Future work）</h2>
-<h3 id="文献提及的方向">文献提及的方向</h3>
-<ol>
-<li>短期vs长期效应</li>
-<li>其他欧洲国家复制</li>
-<li>干预设计</li>
-</ol>
-<h3 id="未来研究思考">未来研究思考</h3>
-<ol>
-<li>效应异质性（不同年龄、安置类型、基础原因）</li>
-<li>动态效应（安置结束后的长期效应）</li>
-<li>照料质量的因果效应</li>
-</ol>
-<h2 id="6-学术思考">6. 学术思考</h2>
-<h3 id="核心理论洞察">核心理论洞察</h3>
-<ol>
-<li>
-<p><strong>“工具变量作为准实验的黄金标准”</strong>：法官的准随机分配和个体间移除倾向的差异提供了一个"自然实验"。瑞典法官只做一个二元决定、且几乎不与家庭接触，这使得排除限制更容易满足。</p>
-</li>
-<li>
-<p><strong>“机制识别的艰难性”</strong>：虽然本文努力探索影响机制，但照料条件、同伴暴露、中断效应可能相互关联，难以区分独立贡献。</p>
-</li>
-</ol>
-<h3 id="深层学术问题">深层学术问题</h3>
-<ol>
-<li>效应边界：本文识别的是"边际儿童"的效应，对其他儿童是否相同？</li>
-<li>外部有效性：瑞典的制度环境与北美不同，结论能否推广？</li>
-</ol>
-<h2 id="7-下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
-<ol>
-<li>法官IV vs CPS工作者IV的区别是什么？</li>
-<li>如何理解"边际儿童"的概念？</li>
-<li>照料条件缺陷导致超过一半的死亡——这是系统性问题吗？</li>
-<li>从政策角度，应该如何权衡移除的风险和收益？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>政府政策的统一福利分析 — 深度阅读笔记 — Hendren &amp; Sprung-Keyser</title>
     <url>/posts/hendren2020/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: A Unified Welfare Analysis of Government Policies<br>
@@ -12441,6 +12307,140 @@ Zotero Item Key:: BZPCLS8S</p>
 ]]></content>
       <categories>
         <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Surviving Childhood — 深度阅读笔记 — Helénsdotter</title>
+    <url>/posts/helensdotter2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Surviving Childhood: Effects of Removing a Child From Home</li>
+<li><strong>作者</strong>: Ronja Helénsdotter (MIT and University of Gothenburg)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies (RES)</li>
+<li><strong>DOI</strong>: 10.1093/restud/rdae053</li>
+<li><strong>难度评估</strong>: 高 - 需要计量经济学（IV）、儿童保护制度背景知识</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>工具变量设计（Instrumental Variable, IV Design）</strong>：利用外生的准随机变量（法官分配）来识别因果效应。在本文中，法官对是否移除儿童的决定存在个体差异，这种差异与儿童本身特征无关，可以作为"移除决定"的工具变量。</p>
+<p><strong>法庭命令的安置（Court-Ordered Removal）</strong>：指父母或儿童不同意移除时，法院强制命令将儿童从家中带走的程序。在瑞典，约30%的寄养儿童属于此类非自愿安置，这是本文的研究对象。</p>
+<p><strong>外化问题（Externalizing Problems）</strong>：指儿童向外部环境表现出的问题行为，如犯罪、物质滥用、自残等，与内化问题（如焦虑、抑郁）相对。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol>
+<li>
+<p><strong>脆弱群体的严峻现实</strong>：在许多西方国家，自杀和药物使用障碍是青少年死亡的三大原因之一。数据显示，2-6%的儿童在18岁前会被安置在外home care，而这些儿童的青少年期和早期成年期死亡率是同龄人的3-5倍。</p>
+</li>
+<li>
+<p><strong>数据稀缺的困境</strong>：由于需要大规模、纵向、个体层面的丰富数据集，关于儿童移除对健康影响的因果证据极为匮乏。</p>
+</li>
+<li>
+<p><strong>政策相关性强</strong>：儿童保护系统涉及政府权力与个人家庭权利之间的冲突。</p>
+</li>
+<li>
+<p><strong>现有研究的空白</strong>：多数研究仅关注教育、犯罪和劳动力市场结果，仅5篇论文研究健康相关结果，且几乎所有可信研究都来自北美。</p>
+</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：法庭命令的儿童从家中移除，对健康、犯罪和教育会产生什么影响？</p>
+<p><strong>研究方法</strong>：利用法官分配的准随机变化和法官间移除倾向的差异，构建工具变量（IV）设计来隔离因果效应。</p>
+<h2 id="2-内容及结构（论文结构）">2. 内容及结构（论文结构）</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：制度背景（瑞典儿童保护系统流程、安置条件）</li>
+<li>第三节：数据（法院文件、登记数据、法官移除倾向）</li>
+<li>第四节：识别策略（法官IV设计）</li>
+<li>第五节：基准结果（死亡率、医疗利用、犯罪）</li>
+<li>第六节：机制探索（照料条件、同伴效应、父母渠道）</li>
+<li>第七节：稳健性检验</li>
+<li>第八节：结论</li>
+</ul>
+<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
+<h3 id="识别策略">识别策略</h3>
+<p><strong>法官工具变量的构建</strong>：<br>
+$$Z_j© = \frac{\sum_{i \neq c} R_j(i) - \sum_{i \in c} R_j(i)}{n_j - n_j©}$$</p>
+<p><strong>瑞典制度背景的关键特征</strong>：</p>
+<ul>
+<li>法官仅在听证期间与家庭接触（通常1小时）</li>
+<li>法官只做一个二元决定：是否移除儿童</li>
+<li>所有其他决定由社会福利委员会（SWC）做出</li>
+</ul>
+<h3 id="主要结果">主要结果</h3>
+<p><strong>死亡率的基准IV估计</strong>：</p>
+<ul>
+<li>移除使19岁前死亡风险增加6.8个百分点（相对控制组均值1.8%）</li>
+<li>效应主要由自杀驱动，主要发生在安置期间</li>
+<li>对10岁以上儿童，9个月后自杀风险显著增加</li>
+</ul>
+<p><strong>机制探索</strong>：</p>
+<ul>
+<li>照料条件缺陷导致超过一半的死亡</li>
+<li>有害同伴暴露显著增加自残和物质滥用风险</li>
+<li>移除显著增加非麻醉药犯罪风险</li>
+</ul>
+<h2 id="4-结论（Conclusion）">4. 结论（Conclusion）</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol>
+<li>
+<p><strong>法庭命令的儿童移除对死亡率有重大的负面影响</strong>——移除使边际儿童的19岁前死亡风险增加6.8个百分点（相对增幅约378%）</p>
+</li>
+<li>
+<p><strong>同伴效应和照料条件是重要渠道</strong></p>
+</li>
+<li>
+<p><strong>对出生父母影响有限</strong></p>
+</li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol>
+<li>首次利用法官IV研究儿童保护</li>
+<li>填补健康结果研究的空白</li>
+<li>打破北美研究垄断，为欧洲研究提供框架</li>
+</ol>
+<h2 id="5-未来研究方向（Future-work）">5. 未来研究方向（Future work）</h2>
+<h3 id="文献提及的方向">文献提及的方向</h3>
+<ol>
+<li>短期vs长期效应</li>
+<li>其他欧洲国家复制</li>
+<li>干预设计</li>
+</ol>
+<h3 id="未来研究思考">未来研究思考</h3>
+<ol>
+<li>效应异质性（不同年龄、安置类型、基础原因）</li>
+<li>动态效应（安置结束后的长期效应）</li>
+<li>照料质量的因果效应</li>
+</ol>
+<h2 id="6-学术思考">6. 学术思考</h2>
+<h3 id="核心理论洞察">核心理论洞察</h3>
+<ol>
+<li>
+<p><strong>“工具变量作为准实验的黄金标准”</strong>：法官的准随机分配和个体间移除倾向的差异提供了一个"自然实验"。瑞典法官只做一个二元决定、且几乎不与家庭接触，这使得排除限制更容易满足。</p>
+</li>
+<li>
+<p><strong>“机制识别的艰难性”</strong>：虽然本文努力探索影响机制，但照料条件、同伴暴露、中断效应可能相互关联，难以区分独立贡献。</p>
+</li>
+</ol>
+<h3 id="深层学术问题">深层学术问题</h3>
+<ol>
+<li>效应边界：本文识别的是"边际儿童"的效应，对其他儿童是否相同？</li>
+<li>外部有效性：瑞典的制度环境与北美不同，结论能否推广？</li>
+</ol>
+<h2 id="7-下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
+<ol>
+<li>法官IV vs CPS工作者IV的区别是什么？</li>
+<li>如何理解"边际儿童"的概念？</li>
+<li>照料条件缺陷导致超过一半的死亡——这是系统性问题吗？</li>
+<li>从政策角度，应该如何权衡移除的风险和收益？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>RES</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -13344,57 +13344,6 @@ _谢肇淛&lt;五杂俎&gt;(约1610年)</p>
       </tags>
   </entry>
   <entry>
-    <title>Labor Mobility in Currency Union — 深度阅读笔记 — House, Proebsting &amp; Tesar</title>
-    <url>/posts/house2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Quantifying the Benefits of Labor Mobility in a Currency Union</li>
-<li><strong>作者</strong>: Christopher L. House (Michigan &amp; NBER), Christian Proebsting (EPFL), Linda L. Tesar (Michigan &amp; NBER)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies (RES)</li>
-<li><strong>难度评估</strong>: 高 - 需要宏观经济学、国际经济学、DSGE模型基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言">1. 引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>最优货币区理论、搜索与匹配框架、货币联盟。</p>
-<h3 id="研究背景">研究背景</h3>
-<p>欧元区失业差异远大于美国；美国迁移响应大于欧洲；Mundell猜想流动性可替代货币政策。</p>
-<h3 id="核心问题">核心问题</h3>
-<p>劳动力流动性对货币联盟有多重要？流动性vs弹性汇率的效应比较？</p>
-<h2 id="2-内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：相关文献</li>
-<li>第三节：实证分析</li>
-<li>第四节：模型</li>
-<li>第五节：量化分析</li>
-<li>第六节：结论</li>
-</ul>
-<h2 id="3-正文">3. 正文</h2>
-<h3 id="核心机制">核心机制</h3>
-<p>多国DSGE模型 + 搜索与匹配 + 跨境迁移</p>
-<h3 id="关键发现">关键发现</h3>
-<ol>
-<li>欧洲若达美国流动性水平，失业差异降25%</li>
-<li>流动性和弹性汇率在降低失业上是替代品</li>
-<li>但在产出和通胀维度机制不同</li>
-</ol>
-<h2 id="4-结论">4. 结论</h2>
-<p>验证Mundell猜想——劳动力流动性确实可部分替代货币政策，但效果有限。</p>
-<h2 id="5-未来研究方向">5. 未来研究方向</h2>
-<p>制度设计提高流动性、福利分析、过渡动态。</p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>你所不知道的可能对你有益 — 深度阅读笔记 — Höner &amp; Samuelson</title>
     <url>/posts/honner2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -13632,6 +13581,57 @@ $$k_t = 1 \text{ 当且仅当 } q_t \geq \bar{q}$$</p>
 ]]></content>
       <categories>
         <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Labor Mobility in Currency Union — 深度阅读笔记 — House, Proebsting &amp; Tesar</title>
+    <url>/posts/house2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Quantifying the Benefits of Labor Mobility in a Currency Union</li>
+<li><strong>作者</strong>: Christopher L. House (Michigan &amp; NBER), Christian Proebsting (EPFL), Linda L. Tesar (Michigan &amp; NBER)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies (RES)</li>
+<li><strong>难度评估</strong>: 高 - 需要宏观经济学、国际经济学、DSGE模型基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言">1. 引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>最优货币区理论、搜索与匹配框架、货币联盟。</p>
+<h3 id="研究背景">研究背景</h3>
+<p>欧元区失业差异远大于美国；美国迁移响应大于欧洲；Mundell猜想流动性可替代货币政策。</p>
+<h3 id="核心问题">核心问题</h3>
+<p>劳动力流动性对货币联盟有多重要？流动性vs弹性汇率的效应比较？</p>
+<h2 id="2-内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：相关文献</li>
+<li>第三节：实证分析</li>
+<li>第四节：模型</li>
+<li>第五节：量化分析</li>
+<li>第六节：结论</li>
+</ul>
+<h2 id="3-正文">3. 正文</h2>
+<h3 id="核心机制">核心机制</h3>
+<p>多国DSGE模型 + 搜索与匹配 + 跨境迁移</p>
+<h3 id="关键发现">关键发现</h3>
+<ol>
+<li>欧洲若达美国流动性水平，失业差异降25%</li>
+<li>流动性和弹性汇率在降低失业上是替代品</li>
+<li>但在产出和通胀维度机制不同</li>
+</ol>
+<h2 id="4-结论">4. 结论</h2>
+<p>验证Mundell猜想——劳动力流动性确实可部分替代货币政策，但效果有限。</p>
+<h2 id="5-未来研究方向">5. 未来研究方向</h2>
+<p>制度设计提高流动性、福利分析、过渡动态。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -14312,88 +14312,6 @@ Zotero Item Key:: HH5K2TY4</p>
       </tags>
   </entry>
   <entry>
-    <title>海外的丰裕 — 深度阅读笔记 — Khanna Et Al.</title>
-    <url>/posts/khanna2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Abundance from Abroad: Migrant Income and Long-Run Economic Development</li>
-<li><strong>作者</strong>: Gaurav Khanna (UC San Diego), Emir Murathanoglu, Caroline B. Theoharides, Dean Yang</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(4): 1540-1577</li>
-<li><strong>DOI</strong>: 10.1257/aer.20241465</li>
-<li><strong>难度评估</strong>: 高 - 需要发展经济学、国际经济学、计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>国际移民与发展</strong>：国际移民是发展中国家重要的经济现象，2019年全球有2.1亿来自发展中国家的国际移民。</p>
-<p><strong>转移份额设计（Shift-Share）</strong>：一种准实验识别策略，将总冲击分解为"份额"和"转移"两部分。</p>
-<p><strong>1997年亚洲金融危机</strong>：从泰国开始迅速蔓延，菲律宾比索贬值约40%。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol>
-<li>
-<p><strong>移民的收入效应</strong>：移民到发达国家工作的收入收益远超任何已知的发展干预项目</p>
-</li>
-<li>
-<p><strong>移民对原籍地区的溢出效应</strong>：缺乏对更广泛原籍地区发展影响的研究</p>
-</li>
-<li>
-<p><strong>识别挑战</strong>：移民收入与原籍地区发展之间存在反向因果问题</p>
-</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：国际移民收入前景如何影响原籍地区的长期经济发展？</p>
-<p><strong>主要发现</strong>：移民收入冲击的长期放大效应约为六倍</p>
-<hr>
-<h2 id="2-内容及结构">2. 内容及结构</h2>
-<ol>
-<li><strong>引言</strong>: 问题陈述和研究背景</li>
-<li><strong>背景</strong>: 国际劳动移民概况、菲律宾的移民体系、亚洲金融危机</li>
-<li><strong>数据</strong>: 移民合同数据、汇率数据、结果数据</li>
-<li><strong>实证方法</strong>: 转移份额变量的构建、因果识别</li>
-<li><strong>主要结果</strong>: 长期放大效应、国内收入vs移民收入</li>
-<li><strong>稳健性检验</strong></li>
-<li><strong>结论</strong></li>
-</ol>
-<hr>
-<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
-<h3 id="实证方法">实证方法</h3>
-<p><strong>转移份额设计</strong>：</p>
-<ul>
-<li>使用1997年亚洲金融危机作为外生冲击</li>
-<li>构建"暴露于移民收入"的工具变量</li>
-<li>外生性假设：危机前各地区移民份额与危机后发展独立</li>
-</ul>
-<p><strong>主要结果</strong>：</p>
-<ul>
-<li>移民收入冲击的长期放大效应约为六倍</li>
-<li>74.9%来自国内收入效应</li>
-<li>19.7%来自教育投资</li>
-</ul>
-<hr>
-<h2 id="4-结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol>
-<li>
-<p><strong>移民促进原籍发展</strong>：长期因果证据支持"良性循环"假说</p>
-</li>
-<li>
-<p><strong>放大机制</strong>：国内收入和教育投资是主要渠道</p>
-</li>
-<li>
-<p><strong>政策启示</strong>：移民政策可以成为全球减贫的重要工具</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Good Dispersion, Bad Dispersion — 深度阅读笔记 — Kehrig &amp; Vincent</title>
     <url>/posts/kehrig2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -14638,6 +14556,234 @@ Zotero Item Key:: HH5K2TY4</p>
       </tags>
   </entry>
   <entry>
+    <title>海外的丰裕 — 深度阅读笔记 — Khanna Et Al.</title>
+    <url>/posts/khanna2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Abundance from Abroad: Migrant Income and Long-Run Economic Development</li>
+<li><strong>作者</strong>: Gaurav Khanna (UC San Diego), Emir Murathanoglu, Caroline B. Theoharides, Dean Yang</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(4): 1540-1577</li>
+<li><strong>DOI</strong>: 10.1257/aer.20241465</li>
+<li><strong>难度评估</strong>: 高 - 需要发展经济学、国际经济学、计量经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>国际移民与发展</strong>：国际移民是发展中国家重要的经济现象，2019年全球有2.1亿来自发展中国家的国际移民。</p>
+<p><strong>转移份额设计（Shift-Share）</strong>：一种准实验识别策略，将总冲击分解为"份额"和"转移"两部分。</p>
+<p><strong>1997年亚洲金融危机</strong>：从泰国开始迅速蔓延，菲律宾比索贬值约40%。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol>
+<li>
+<p><strong>移民的收入效应</strong>：移民到发达国家工作的收入收益远超任何已知的发展干预项目</p>
+</li>
+<li>
+<p><strong>移民对原籍地区的溢出效应</strong>：缺乏对更广泛原籍地区发展影响的研究</p>
+</li>
+<li>
+<p><strong>识别挑战</strong>：移民收入与原籍地区发展之间存在反向因果问题</p>
+</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：国际移民收入前景如何影响原籍地区的长期经济发展？</p>
+<p><strong>主要发现</strong>：移民收入冲击的长期放大效应约为六倍</p>
+<hr>
+<h2 id="2-内容及结构">2. 内容及结构</h2>
+<ol>
+<li><strong>引言</strong>: 问题陈述和研究背景</li>
+<li><strong>背景</strong>: 国际劳动移民概况、菲律宾的移民体系、亚洲金融危机</li>
+<li><strong>数据</strong>: 移民合同数据、汇率数据、结果数据</li>
+<li><strong>实证方法</strong>: 转移份额变量的构建、因果识别</li>
+<li><strong>主要结果</strong>: 长期放大效应、国内收入vs移民收入</li>
+<li><strong>稳健性检验</strong></li>
+<li><strong>结论</strong></li>
+</ol>
+<hr>
+<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
+<h3 id="实证方法">实证方法</h3>
+<p><strong>转移份额设计</strong>：</p>
+<ul>
+<li>使用1997年亚洲金融危机作为外生冲击</li>
+<li>构建"暴露于移民收入"的工具变量</li>
+<li>外生性假设：危机前各地区移民份额与危机后发展独立</li>
+</ul>
+<p><strong>主要结果</strong>：</p>
+<ul>
+<li>移民收入冲击的长期放大效应约为六倍</li>
+<li>74.9%来自国内收入效应</li>
+<li>19.7%来自教育投资</li>
+</ul>
+<hr>
+<h2 id="4-结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol>
+<li>
+<p><strong>移民促进原籍发展</strong>：长期因果证据支持"良性循环"假说</p>
+</li>
+<li>
+<p><strong>放大机制</strong>：国内收入和教育投资是主要渠道</p>
+</li>
+<li>
+<p><strong>政策启示</strong>：移民政策可以成为全球减贫的重要工具</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>动态研发网络中的内生技术周期 — 深度阅读笔记 — König &amp; Rogers</title>
+    <url>/posts/konig2023/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Endogenous technology cycles in dynamic R&amp;D networks<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/2VH5NS6L/König和Rogers - 2023 - Endogenous technology cycles in dynamic R&amp;D networks.pdf<br>
+Zotero Item Key:: BY7Y7TDL</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+创新是经济增长的驱动力，但创新很少单独发生——企业之间通过研发合作（R&amp;D collaborations）共享知识、获取互补技术。R&amp;D合作形成的网络结构本身会影响知识传播的效率和范围。已有文献分别研究了网络结构（静态）对创新的影响，以及创新对网络演化的影响，但二者的<strong>共同内生性</strong>（coevolution）迄今研究甚少。</p>
+<p><strong>研究背景</strong><br>
+已有R&amp;D网络模型将企业知识简化为抽象的标量（一维知识水平），且通常假设网络是外生给定的，或忽略技术组合变化对合作激励的反馈。本文发现现实中R&amp;D合作强度存在<strong>显著振荡（周期性）模式</strong>（来自Thomson SDC Alliance数据库的多十年R&amp;D联盟数据），但这一现象无法被现有模型解释。</p>
+<p><strong>作者的问题意识</strong><br>
+如何建立一个模型，能够内生地同时解释：（1）R&amp;D合作网络的形成；（2）技术组合的演化（创新+知识溢出+技术淘汰）；（3）观察到的R&amp;D合作强度周期性振荡？这种振荡对政策有什么含义？</p>
+<p><strong>研究意义</strong><br>
+首次将企业知识表示为<strong>多维技术组合（technology portfolio）</strong>，并将网络形成和知识创造建模为<strong>共同内生过程</strong>。发现了两个新结论：溢出效应存在<strong>临界阈值</strong>，以及R&amp;D网络存在<strong>内生周期性波动</strong>。为创新政策提供新的理论基础。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：研究动机、两大发现（阈值 + 周期性）。</li>
+<li><strong>模型设定</strong>：技术组合模型 + 网络形成规则 + 知识动态（创新/溢出/淘汰）。</li>
+<li><strong>静态分析</strong>：稳态特征；溢出阈值的推导。</li>
+<li><strong>动态分析</strong>：稳态的稳定性分析；振荡（阻尼振荡）的理论来源。</li>
+<li><strong>实证验证</strong>：R&amp;D联盟数据的周期性证据（Fourier回归；网络结构图）。</li>
+<li><strong>政策含义</strong>：阈值对研发政策的含义；竞争政策与网络稳定性的权衡。</li>
+<li><strong>结论</strong>。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景与模型动机">背景与模型动机</h3>
+<p>传统R&amp;D网络模型中，企业的"知识"是一个抽象标量（例如一个代表技术水平的单一数字）。但现实中，企业拥有的是<strong>多项技术的组合</strong>（如一家生物科技公司掌握基因编辑、蛋白质合成、化学合成等多项技术）。</p>
+<p>关键洞察（来自Jovanovic &amp; Rob, 1989）：</p>
+<blockquote>
+<p>“如果大家都知道同一件事，彼此就无法互相学习。”<br>
+知识的互补性才是R&amp;D合作的真正动机——企业只有在对方的技术组合与自己互补时，才有激励合作。</p>
+</blockquote>
+<p>因此本文的技术互补性驱动合作，而合作带来的知识溢出又改变了企业的技术组合，进而影响下一期的合作激励——<strong>网络形成与知识演化形成相互反馈的内生循环</strong>。</p>
+<h3 id="模型">模型</h3>
+<p><strong>企业</strong>：每家企业拥有一个多维技术组合向量（持有/不持有某项技术）。<br>
+<strong>合作规则</strong>：企业i与企业j在以下条件下形成合作（边）：</p>
+<ul>
+<li>j拥有i尚未持有的技术（互补性）</li>
+<li>合作成本低于预期学习收益（有利可图）</li>
+<li>网络中每条边有固定持续时间（合作有寿命）</li>
+</ul>
+<p><strong>知识动态</strong>：</p>
+<ul>
+<li><strong>创新（Innovation）</strong>：企业以一定概率发明新技术</li>
+<li><strong>溢出（Spillover）</strong>：通过合作，企业以概率β从合作伙伴那里学习新技术</li>
+<li><strong>淘汰（Obsolescence）</strong>：技术以一定速率过时消亡</li>
+</ul>
+<p>这三个过程共同决定了企业技术组合随时间的演化，进而影响合作激励和网络结构。</p>
+<h3 id="主要结果一：溢出阈值">主要结果一：溢出阈值</h3>
+<p><strong>核心发现</strong>：存在一个关键的溢出概率阈值β_c，使得：</p>
+<ul>
+<li>β &gt; β_c：技术扩散过程超过技术淘汰过程 → 经济中知识存量持续增长 → R&amp;D合作有实质意义</li>
+<li>β &lt; β_c：技术淘汰速度超过扩散速度 → 即使有R&amp;D合作，经济中知识存量无法积累</li>
+</ul>
+<p><strong>直觉</strong>：如果企业从合作伙伴处学到技术的概率太低（溢出太弱），合作就变成"摆样子"——网络连接存在，但没有真实的技术转移；知识不断被淘汰，无法积累。</p>
+<p><strong>β_c的影响因素</strong>：</p>
+<ul>
+<li>竞争<strong>降低</strong>阈值：更激烈的产品市场竞争使得更高效（技术更丰富）的企业主导市场，吸引更多合作，形成更集中的网络结构，有助于技术传播</li>
+<li>知识淘汰率升高 → β_c升高（需要更强的溢出才能赶上淘汰速度）</li>
+<li>合作成本升高 → β_c升高</li>
+<li>企业生产率升高 → β_c降低</li>
+<li>联盟持续时间延长 → β_c降低</li>
+</ul>
+<p><strong>政策含义</strong>：支持R&amp;D合作的政策（如补贴、减税）只有当溢出效应超过阈值才有效——“不够强的政策没有用”。这可以解释为什么硅谷成功（低合作成本让溢出超过阈值），而Boston Route 128失败（合作文化更封闭，溢出可能低于阈值）。</p>
+<h3 id="主要结果二：内生技术周期（振荡）">主要结果二：内生技术周期（振荡）</h3>
+<p><strong>核心发现</strong>：稳态的稳定性分析表明，R&amp;D合作强度（网络密度）会呈现<strong>阻尼振荡（damped oscillation）</strong>——即随时间周期性上升和下降，振幅逐渐减小。</p>
+<p><strong>周期机制（类Schumpeter创造性破坏）</strong>：</p>
+<ol>
+<li>当前技术组合广泛共享 → 互补性低 → 合作动机减弱 → 网络密度下降（d̄ ↓）</li>
+<li>知识淘汰 + 企业退出 → 平均知识存量下降（h̄ ↓）</li>
+<li>知识存量低 → 新企业进入寻找新技术 → 某企业创新出新技术</li>
+<li>新技术出现 → 互补性高 → 合作激励上升 → 网络密度上升（d̄ ↑）</li>
+<li>新技术扩散 → 知识趋于同质 → 回到第1步</li>
+</ol>
+<p>这个循环类似于熊彼特的"创造性破坏"：旧技术普及后互补性耗尽 → 网络衰退 → 新技术创新 → 新一轮合作繁荣。</p>
+<p><strong>实证支持</strong>：Thompson SDC Alliance数据库中的R&amp;D联盟数据显示，全样本的平均合作度数（average degree）在数十年内确实呈现出周期性振荡模式（Fourier回归）。这与互联网技术扩散周期（dot-com兴衰）以及技术生命周期理论一致。</p>
+<p><strong>政策含义</strong>：加强竞争（如市场开放、反垄断）虽然能降低溢出阈值（有利于创新），但也会<strong>加剧网络的振荡</strong>——让创新繁荣-衰退周期更剧烈，可能导致经济不稳定。这提示了创新政策中竞争促进（competition enhancement）和稳定性之间的<strong>权衡（trade-off）</strong>。</p>
+<h3 id="数据">数据</h3>
+<p><strong>Thomson SDC Alliance数据库</strong>：全球大规模R&amp;D联盟数据，覆盖多个十年，包含联盟的形成/解散日期、参与企业、技术领域等信息。因为是付费数据库，作者无法公开。分析中使用了Fourier回归来捕捉振荡模式，并通过行业分解和反事实检验证实周期性并非商业周期的反映。</p>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<ol>
+<li>企业技术组合多维化建模是解释R&amp;D合作格局（互补驱动）的关键；</li>
+<li>技术溢出存在<strong>临界阈值β_c</strong>：低于此阈值，R&amp;D合作无助于知识积累，促进合作的政策形同虚设；</li>
+<li>竞争可以<strong>降低</strong>阈值，因此竞争促进政策与R&amp;D支持政策组合比单一政策更有效；</li>
+<li>R&amp;D合作强度呈现<strong>内生周期性振荡</strong>（阻尼振荡），与R&amp;D联盟数据相符；</li>
+<li>竞争促进政策的副作用是加剧振荡幅度，可能不利于网络稳定性——政策需要权衡创新促进与稳定性。</li>
+</ol>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文明确提及的方向</strong>：</p>
+<ol>
+<li>将模型扩展到多产品竞争情形（已在附录中实现单产品vs多产品的对比）；</li>
+<li>利用非付费数据（如欧盟R&amp;D合作数据）复验振荡结论；</li>
+<li>将阈值理论用于预测特定创新集群成败的分析。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li><strong>中国R&amp;D网络的振荡模式</strong>：中国企业间、高校-企业间的研发合作网络（如国家科技支撑计划、产学研联盟）是否也呈现类似的周期性振荡？中国政府大规模的合作补贴能否突破溢出阈值？</li>
+<li><strong>政府参与的外生冲击</strong>：政府专项资金往往是对R&amp;D网络的外生冲击（非内生形成），如何修改模型以纳入国家主导R&amp;D？这对周期性动态有何影响？</li>
+<li><strong>技术生命周期的预测</strong>：本模型预测特定技术扩散完成后网络密度会下降。能否用实时R&amp;D联盟数据对AI、量子计算等技术的网络密度变化进行实时追踪，提前预警"技术周期顶部"？</li>
+<li><strong>知识淘汰率的估计</strong>：β_c对知识淘汰率敏感，但淘汰率本身很难实证测量。结合专利引用衰减、技术词汇老化（类似前文Kalyani et al.的方法）等数据，能否构建技术淘汰率的经验测量？</li>
+<li><strong>中小企业 vs 大企业的不对称</strong>：本文表明大企业可能愿意与拥有关键技术的小企业合作。这对中国政府推进"专精特新"小企业的政策是否提供了理论支撑？</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>多维技术组合假设的实证可操作性</strong>：本文将企业知识表示为多维技术组合向量，这在理论上更真实，但在实证中如何测量企业的"技术组合"？一种可能是用专利分类（IPC）来刻画企业的技术维度分布，但专利并不覆盖所有知识，且专利策略本身是内生的。如何构建一个外生且可信的技术组合度量？</p>
+</li>
+<li>
+<p><strong>阻尼振荡的稳健性</strong>：论文用Thompson SDC Alliance数据展示了振荡模式，并用Fourier回归拟合。但Fourier回归的灵活性很高，几乎可以拟合任意时间序列形状。如何更严格地检验振荡的存在性（而不仅仅是"可以被Fourier拟合"）？有没有自然实验可以识别振荡的来源？</p>
+</li>
+<li>
+<p><strong>竞争-稳定性权衡的政策含义</strong>：论文发现竞争促进政策（如降低市场准入壁垒）在降低溢出阈值的同时，也会加剧R&amp;D网络的振荡。这意味着"创新政策+竞争政策"的组合可能存在根本性矛盾。现实中，中国同时推进产业集中（强化大企业垄断地位）和R&amp;D合作补贴的政策，是否可以理解为一种有意识的"以稳定换创新"的选择？</p>
+</li>
+<li>
+<p><strong>溢出阈值在不同产业的异质性</strong>：β_c依赖于合作成本、淘汰率、企业生产率等参数，这些参数在不同行业差异巨大（生物技术 vs 汽车制造 vs 软件）。阈值是否也因行业而大相径庭？政府在制定行业R&amp;D支持政策时是否应该针对不同行业设定不同的"最低有效补贴剂量"？</p>
+</li>
+<li>
+<p><strong>"先驱位置优势"与本文的连接</strong>：本文发现竞争可以降低阈值，使得即便溢出较弱的集群也能维持创新；而前文（Kalyani et al.）发现先驱位置保持长期优势。两文的机制联系值得深思：是否先驱位置的合作文化（低成本）+规模化溢出让它们长期高于阈值，而后发地区即使获得技术也因为低于阈值而无法形成持续的R&amp;D合作生态？</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>文中的"技术溢出阈值"β_c具体是怎么推导的？主要的数学工具是什么（分岔分析、图谱方法等）？</li>
+<li>论文如何处理R&amp;D网络的幂律分布（部分企业拥有非常多的合作伙伴）？与现实中的明星企业/枢纽节点（hub）如何对应？</li>
+<li>知识淘汰（obsolescence）在模型中如何参数化？现实中，技术淘汰率如何估计？</li>
+<li>该模型是否可以应用于中国大学-企业产学研联盟网络的研究？有没有类似Thompson SDC的中国R&amp;D合作数据？</li>
+<li>本文与创新经济学中的"竞争 vs 合作"（competition vs. cooperation）讨论有何关系？Aghion等人关于"倒U形竞争-创新关系"的发现如何与本文的阈值和振荡结论相联系？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>村庄网络中的传播与保险 — 深度阅读笔记 — Kinnan Et Al.</title>
     <url>/posts/kinnan2024/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Propagation and Insurance in Village Networks<br>
@@ -14785,146 +14931,194 @@ Zotero Item Key:: MJSN77J6</p>
       </tags>
   </entry>
   <entry>
-    <title>动态研发网络中的内生技术周期 — 深度阅读笔记 — König &amp; Rogers</title>
-    <url>/posts/konig2023/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Endogenous technology cycles in dynamic R&amp;D networks<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/2VH5NS6L/König和Rogers - 2023 - Endogenous technology cycles in dynamic R&amp;D networks.pdf<br>
-Zotero Item Key:: BY7Y7TDL</p>
-<hr>
+    <title>Auctions With Frictions — 深度阅读笔记 — Lauermann &amp; Wolinsky</title>
+    <url>/posts/lauermann2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Auctions with Frictions: Recruitment, Entry, and Limited Commitment</li>
+<li><strong>作者</strong>: Stephan Lauermann (University of Bonn), Asher Wolinsky (Northwestern University)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: Review of Economic Studies (RES), 93(2): 1167-1199</li>
+<li><strong>DOI</strong>: <a href="https://doi.org/10.1093/restud/rdaf052">https://doi.org/10.1093/restud/rdaf052</a></li>
+<li><strong>难度评估</strong>: 高 - 需要拍卖理论、博弈论基础</li>
+</ul>
 <span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-创新是经济增长的驱动力，但创新很少单独发生——企业之间通过研发合作（R&amp;D collaborations）共享知识、获取互补技术。R&amp;D合作形成的网络结构本身会影响知识传播的效率和范围。已有文献分别研究了网络结构（静态）对创新的影响，以及创新对网络演化的影响，但二者的<strong>共同内生性</strong>（coevolution）迄今研究甚少。</p>
-<p><strong>研究背景</strong><br>
-已有R&amp;D网络模型将企业知识简化为抽象的标量（一维知识水平），且通常假设网络是外生给定的，或忽略技术组合变化对合作激励的反馈。本文发现现实中R&amp;D合作强度存在<strong>显著振荡（周期性）模式</strong>（来自Thomson SDC Alliance数据库的多十年R&amp;D联盟数据），但这一现象无法被现有模型解释。</p>
-<p><strong>作者的问题意识</strong><br>
-如何建立一个模型，能够内生地同时解释：（1）R&amp;D合作网络的形成；（2）技术组合的演化（创新+知识溢出+技术淘汰）；（3）观察到的R&amp;D合作强度周期性振荡？这种振荡对政策有什么含义？</p>
-<p><strong>研究意义</strong><br>
-首次将企业知识表示为<strong>多维技术组合（technology portfolio）</strong>，并将网络形成和知识创造建模为<strong>共同内生过程</strong>。发现了两个新结论：溢出效应存在<strong>临界阈值</strong>，以及R&amp;D网络存在<strong>内生周期性波动</strong>。为创新政策提供新的理论基础。</p>
 <hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>拍卖（Frictionless Auction）</strong>：标准拍卖理论假设卖家可以招募竞拍者、竞拍者无成本参与、卖家可承诺于保留价格和参与水平。</p>
+<p><strong>招募成本（Recruitment Cost）</strong>：卖家吸引竞拍者的成本。</p>
+<p><strong>参与成本（Entry Cost）</strong>：竞拍者评估拍品、获取融资、准备报价的成本。</p>
+<p><strong>有限承诺（Limited Commitment）</strong>：卖家无法可信地承诺参与水平或其披露程度。</p>
+<p><strong>PO vs PU场景</strong>：PO=参与可观察；PU=参与不可观察。</p>
+<h3 id="研究背景">研究背景</h3>
 <ol>
-<li><strong>引言</strong>：研究动机、两大发现（阈值 + 周期性）。</li>
-<li><strong>模型设定</strong>：技术组合模型 + 网络形成规则 + 知识动态（创新/溢出/淘汰）。</li>
-<li><strong>静态分析</strong>：稳态特征；溢出阈值的推导。</li>
-<li><strong>动态分析</strong>：稳态的稳定性分析；振荡（阻尼振荡）的理论来源。</li>
-<li><strong>实证验证</strong>：R&amp;D联盟数据的周期性证据（Fourier回归；网络结构图）。</li>
-<li><strong>政策含义</strong>：阈值对研发政策的含义；竞争政策与网络稳定性的权衡。</li>
-<li><strong>结论</strong>。</li>
+<li>
+<p><strong>实际拍卖的复杂性</strong>：招募和激励竞拍者是拍卖成功的关键。</p>
+</li>
+<li>
+<p><strong>摩擦的普遍性</strong>：在独特资产的出售中，招募成本和参与成本特别显著。</p>
+</li>
+<li>
+<p><strong>传统模型局限性</strong>：现有文献分别研究招募或参与摩擦。</p>
+</li>
 </ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：当卖家承诺能力受限时，招募努力和竞拍者进入决策如何共同决定拍卖参与和结果？</p>
 <hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景与模型动机">背景与模型动机</h3>
-<p>传统R&amp;D网络模型中，企业的"知识"是一个抽象标量（例如一个代表技术水平的单一数字）。但现实中，企业拥有的是<strong>多项技术的组合</strong>（如一家生物科技公司掌握基因编辑、蛋白质合成、化学合成等多项技术）。</p>
-<p>关键洞察（来自Jovanovic &amp; Rob, 1989）：</p>
-<blockquote>
-<p>“如果大家都知道同一件事，彼此就无法互相学习。”<br>
-知识的互补性才是R&amp;D合作的真正动机——企业只有在对方的技术组合与自己互补时，才有激励合作。</p>
-</blockquote>
-<p>因此本文的技术互补性驱动合作，而合作带来的知识溢出又改变了企业的技术组合，进而影响下一期的合作激励——<strong>网络形成与知识演化形成相互反馈的内生循环</strong>。</p>
-<h3 id="模型">模型</h3>
-<p><strong>企业</strong>：每家企业拥有一个多维技术组合向量（持有/不持有某项技术）。<br>
-<strong>合作规则</strong>：企业i与企业j在以下条件下形成合作（边）：</p>
+<h2 id="2-内容及结构（论文结构）">2. 内容及结构（论文结构）</h2>
 <ul>
-<li>j拥有i尚未持有的技术（互补性）</li>
-<li>合作成本低于预期学习收益（有利可图）</li>
-<li>网络中每条边有固定持续时间（合作有寿命）</li>
+<li>第一节：Introduction</li>
+<li>第二节：The PO Auction</li>
+<li>第三节：Equilibrium Analysis for PO Scenario</li>
+<li>第四节：The PU Auction</li>
+<li>第五节：Comparison of PO and PU Scenarios</li>
+<li>第六节：Discussion and Extensions</li>
+<li>第七节：Conclusion</li>
 </ul>
-<p><strong>知识动态</strong>：</p>
+<hr>
+<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
+<h3 id="模型设定">模型设定</h3>
+<p><strong>核心要素</strong>：</p>
+<ol>
+<li><strong>卖家</strong>：选择招募努力γ（成本为γs），结果是泊松分布的潜在竞拍者</li>
+<li><strong>竞拍者</strong>：支付成本c后观察到私人价值vi，决策是否进入</li>
+<li><strong>Bidding阶段</strong>：第一价格拍卖(FPA)</li>
+</ol>
+<p><strong>两种场景</strong>：PO（参与可观察）vs PU（参与不可观察）</p>
+<h3 id="PO均衡分析">PO均衡分析</h3>
+<p><strong>逆向求解</strong>：</p>
+<ol>
+<li>Stage 3 (Bidding)：标准对称FPA均衡</li>
+<li>Stage 2 (Entry)：竞拍者基于期望收益决定是否进入</li>
+<li>Stage 1 (Recruitment)：卖家选择λ = qγ最大化利润</li>
+</ol>
+<p><strong>关键发现</strong>：</p>
 <ul>
-<li><strong>创新（Innovation）</strong>：企业以一定概率发明新技术</li>
-<li><strong>溢出（Spillover）</strong>：通过合作，企业以概率β从合作伙伴那里学习新技术</li>
-<li><strong>淘汰（Obsolescence）</strong>：技术以一定速率过时消亡</li>
+<li>存在均衡贸易的唯一条件：λc ≥ λo 且 s ≤ s̄o</li>
+<li>当λc &lt; λo时：即使潜在贸易收益为正，市场也会崩溃</li>
 </ul>
-<p>这三个过程共同决定了企业技术组合随时间的演化，进而影响合作激励和网络结构。</p>
-<h3 id="主要结果一：溢出阈值">主要结果一：溢出阈值</h3>
-<p><strong>核心发现</strong>：存在一个关键的溢出概率阈值β_c，使得：</p>
+<h3 id="PU均衡分析">PU均衡分析</h3>
+<p><strong>关键差异</strong>：卖家无法可信地披露参与水平</p>
+<p><strong>均衡特征</strong>：</p>
 <ul>
-<li>β &gt; β_c：技术扩散过程超过技术淘汰过程 → 经济中知识存量持续增长 → R&amp;D合作有实质意义</li>
-<li>β &lt; β_c：技术淘汰速度超过扩散速度 → 即使有R&amp;D合作，经济中知识存量无法积累</li>
+<li>对于所有(c,s)，存在λ*=0的无贸易均衡</li>
+<li>当s &lt; ξ(λpeak)且λc &gt; λu(s)时，存在两个贸易均衡</li>
 </ul>
-<p><strong>直觉</strong>：如果企业从合作伙伴处学到技术的概率太低（溢出太弱），合作就变成"摆样子"——网络连接存在，但没有真实的技术转移；知识不断被淘汰，无法积累。</p>
-<p><strong>β_c的影响因素</strong>：</p>
+<h3 id="PO-vs-PU比较">PO vs PU比较</h3>
+<p><strong>关键比较结果</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>区域</th>
+<th>条件</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I</td>
+<td>仅PO有贸易</td>
+<td>PO严格更优</td>
+</tr>
+<tr>
+<td>II</td>
+<td>两者都有贸易</td>
+<td>PO严格更优</td>
+</tr>
+<tr>
+<td>III</td>
+<td>两者都有贸易</td>
+<td>PU严格更优</td>
+</tr>
+<tr>
+<td>IV</td>
+<td>仅PU有贸易</td>
+<td>PU更优</td>
+</tr>
+</tbody>
+</table>
+<p><strong>直觉</strong>：</p>
 <ul>
-<li>竞争<strong>降低</strong>阈值：更激烈的产品市场竞争使得更高效（技术更丰富）的企业主导市场，吸引更多合作，形成更集中的网络结构，有助于技术传播</li>
-<li>知识淘汰率升高 → β_c升高（需要更强的溢出才能赶上淘汰速度）</li>
-<li>合作成本升高 → β_c升高</li>
-<li>企业生产率升高 → β_c降低</li>
-<li>联盟持续时间延长 → β_c降低</li>
+<li>当c很小（竞拍者愿意进入）时：PO的更强招募激励→更高利润</li>
+<li>当s很小（招募便宜）时：PU的更弱招募激励作为部分承诺机制</li>
 </ul>
-<p><strong>政策含义</strong>：支持R&amp;D合作的政策（如补贴、减税）只有当溢出效应超过阈值才有效——“不够强的政策没有用”。这可以解释为什么硅谷成功（低合作成本让溢出超过阈值），而Boston Route 128失败（合作文化更封闭，溢出可能低于阈值）。</p>
-<h3 id="主要结果二：内生技术周期（振荡）">主要结果二：内生技术周期（振荡）</h3>
-<p><strong>核心发现</strong>：稳态的稳定性分析表明，R&amp;D合作强度（网络密度）会呈现<strong>阻尼振荡（damped oscillation）</strong>——即随时间周期性上升和下降，振幅逐渐减小。</p>
-<p><strong>周期机制（类Schumpeter创造性破坏）</strong>：</p>
-<ol>
-<li>当前技术组合广泛共享 → 互补性低 → 合作动机减弱 → 网络密度下降（d̄ ↓）</li>
-<li>知识淘汰 + 企业退出 → 平均知识存量下降（h̄ ↓）</li>
-<li>知识存量低 → 新企业进入寻找新技术 → 某企业创新出新技术</li>
-<li>新技术出现 → 互补性高 → 合作激励上升 → 网络密度上升（d̄ ↑）</li>
-<li>新技术扩散 → 知识趋于同质 → 回到第1步</li>
-</ol>
-<p>这个循环类似于熊彼特的"创造性破坏"：旧技术普及后互补性耗尽 → 网络衰退 → 新技术创新 → 新一轮合作繁荣。</p>
-<p><strong>实证支持</strong>：Thompson SDC Alliance数据库中的R&amp;D联盟数据显示，全样本的平均合作度数（average degree）在数十年内确实呈现出周期性振荡模式（Fourier回归）。这与互联网技术扩散周期（dot-com兴衰）以及技术生命周期理论一致。</p>
-<p><strong>政策含义</strong>：加强竞争（如市场开放、反垄断）虽然能降低溢出阈值（有利于创新），但也会<strong>加剧网络的振荡</strong>——让创新繁荣-衰退周期更剧烈，可能导致经济不稳定。这提示了创新政策中竞争促进（competition enhancement）和稳定性之间的<strong>权衡（trade-off）</strong>。</p>
-<h3 id="数据">数据</h3>
-<p><strong>Thomson SDC Alliance数据库</strong>：全球大规模R&amp;D联盟数据，覆盖多个十年，包含联盟的形成/解散日期、参与企业、技术领域等信息。因为是付费数据库，作者无法公开。分析中使用了Fourier回归来捕捉振荡模式，并通过行业分解和反事实检验证实周期性并非商业周期的反映。</p>
+<h3 id="FPA-vs-SPA比较">FPA vs SPA比较</h3>
+<p><strong>Revenue Equivalence失效</strong>：当参与不可观察时，FPA和SPA不再等价</p>
 <hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<h2 id="4-结论（Conclusion）">4. 结论（Conclusion）</h2>
+<h3 id="核心结论">核心结论</h3>
 <ol>
-<li>企业技术组合多维化建模是解释R&amp;D合作格局（互补驱动）的关键；</li>
-<li>技术溢出存在<strong>临界阈值β_c</strong>：低于此阈值，R&amp;D合作无助于知识积累，促进合作的政策形同虚设；</li>
-<li>竞争可以<strong>降低</strong>阈值，因此竞争促进政策与R&amp;D支持政策组合比单一政策更有效；</li>
-<li>R&amp;D合作强度呈现<strong>内生周期性振荡</strong>（阻尼振荡），与R&amp;D联盟数据相符；</li>
-<li>竞争促进政策的副作用是加剧振荡幅度，可能不利于网络稳定性——政策需要权衡创新促进与稳定性。</li>
+<li>
+<p><strong>整合三种摩擦的必要性</strong>：招募成本、参与成本和有限承诺必须联合建模</p>
+</li>
+<li>
+<p><strong>可见性的关键作用</strong>：参与的可观察性对贸易量和利润有重大影响</p>
+</li>
+<li>
+<p><strong>标准等价失效</strong>：在存在摩擦时，FPA和SPA不再等价</p>
+</li>
+<li>
+<p><strong>市场崩溃的可能</strong>：即使潜在收益为正，市场也可能因承诺问题而崩溃</p>
+</li>
 </ol>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文明确提及的方向</strong>：</p>
-<ol>
-<li>将模型扩展到多产品竞争情形（已在附录中实现单产品vs多产品的对比）；</li>
-<li>利用非付费数据（如欧盟R&amp;D合作数据）复验振荡结论；</li>
-<li>将阈值理论用于预测特定创新集群成败的分析。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li><strong>中国R&amp;D网络的振荡模式</strong>：中国企业间、高校-企业间的研发合作网络（如国家科技支撑计划、产学研联盟）是否也呈现类似的周期性振荡？中国政府大规模的合作补贴能否突破溢出阈值？</li>
-<li><strong>政府参与的外生冲击</strong>：政府专项资金往往是对R&amp;D网络的外生冲击（非内生形成），如何修改模型以纳入国家主导R&amp;D？这对周期性动态有何影响？</li>
-<li><strong>技术生命周期的预测</strong>：本模型预测特定技术扩散完成后网络密度会下降。能否用实时R&amp;D联盟数据对AI、量子计算等技术的网络密度变化进行实时追踪，提前预警"技术周期顶部"？</li>
-<li><strong>知识淘汰率的估计</strong>：β_c对知识淘汰率敏感，但淘汰率本身很难实证测量。结合专利引用衰减、技术词汇老化（类似前文Kalyani et al.的方法）等数据，能否构建技术淘汰率的经验测量？</li>
-<li><strong>中小企业 vs 大企业的不对称</strong>：本文表明大企业可能愿意与拥有关键技术的小企业合作。这对中国政府推进"专精特新"小企业的政策是否提供了理论支撑？</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
+<h3 id="对领域的贡献">对领域的贡献</h3>
 <ol>
 <li>
-<p><strong>多维技术组合假设的实证可操作性</strong>：本文将企业知识表示为多维技术组合向量，这在理论上更真实，但在实证中如何测量企业的"技术组合"？一种可能是用专利分类（IPC）来刻画企业的技术维度分布，但专利并不覆盖所有知识，且专利策略本身是内生的。如何构建一个外生且可信的技术组合度量？</p>
+<p><strong>理论框架</strong>：整合了之前分开研究的各种摩擦</p>
 </li>
 <li>
-<p><strong>阻尼振荡的稳健性</strong>：论文用Thompson SDC Alliance数据展示了振荡模式，并用Fourier回归拟合。但Fourier回归的灵活性很高，几乎可以拟合任意时间序列形状。如何更严格地检验振荡的存在性（而不仅仅是"可以被Fourier拟合"）？有没有自然实验可以识别振荡的来源？</p>
+<p><strong>比较静态</strong>：完整描述了所有(c,s)组合下的均衡</p>
 </li>
 <li>
-<p><strong>竞争-稳定性权衡的政策含义</strong>：论文发现竞争促进政策（如降低市场准入壁垒）在降低溢出阈值的同时，也会加剧R&amp;D网络的振荡。这意味着"创新政策+竞争政策"的组合可能存在根本性矛盾。现实中，中国同时推进产业集中（强化大企业垄断地位）和R&amp;D合作补贴的政策，是否可以理解为一种有意识的"以稳定换创新"的选择？</p>
-</li>
-<li>
-<p><strong>溢出阈值在不同产业的异质性</strong>：β_c依赖于合作成本、淘汰率、企业生产率等参数，这些参数在不同行业差异巨大（生物技术 vs 汽车制造 vs 软件）。阈值是否也因行业而大相径庭？政府在制定行业R&amp;D支持政策时是否应该针对不同行业设定不同的"最低有效补贴剂量"？</p>
-</li>
-<li>
-<p><strong>"先驱位置优势"与本文的连接</strong>：本文发现竞争可以降低阈值，使得即便溢出较弱的集群也能维持创新；而前文（Kalyani et al.）发现先驱位置保持长期优势。两文的机制联系值得深思：是否先驱位置的合作文化（低成本）+规模化溢出让它们长期高于阈值，而后发地区即使获得技术也因为低于阈值而无法形成持续的R&amp;D合作生态？</p>
+<p><strong>实践意义</strong>：解释了拍卖行服务的价值</p>
 </li>
 </ol>
 <hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<h2 id="5-未来研究方向">5. 未来研究方向</h2>
+<h3 id="文献提及的方向">文献提及的方向</h3>
 <ol>
-<li>文中的"技术溢出阈值"β_c具体是怎么推导的？主要的数学工具是什么（分岔分析、图谱方法等）？</li>
-<li>论文如何处理R&amp;D网络的幂律分布（部分企业拥有非常多的合作伙伴）？与现实中的明星企业/枢纽节点（hub）如何对应？</li>
-<li>知识淘汰（obsolescence）在模型中如何参数化？现实中，技术淘汰率如何估计？</li>
-<li>该模型是否可以应用于中国大学-企业产学研联盟网络的研究？有没有类似Thompson SDC的中国R&amp;D合作数据？</li>
-<li>本文与创新经济学中的"竞争 vs 合作"（competition vs. cooperation）讨论有何关系？Aghion等人关于"倒U形竞争-创新关系"的发现如何与本文的阈值和振荡结论相联系？</li>
+<li>竞拍者进入前了解其价值的版本</li>
+<li>卖家可设置进入费/补贴或保留价格的版本</li>
 </ol>
+<h3 id="未来研究思考">未来研究思考</h3>
+<ol>
+<li><strong>信息摩擦</strong>：信息不对称如何与招募/参与成本交互？</li>
+<li><strong>动态招募</strong>：多时期招募决策会如何改变结果？</li>
+</ol>
+<hr>
+<h2 id="7-学术思考">7. 学术思考</h2>
+<h3 id="核心理论洞察">核心理论洞察</h3>
+<ol>
+<li>
+<p><strong>“承诺作为市场结果的关键”</strong>：卖家有限承诺能力是市场摩擦的核心。</p>
+</li>
+<li>
+<p><strong>“可见性改变激励结构”</strong>：参与的可观察性改变了卖家的招募激励。</p>
+</li>
+<li>
+<p><strong>“价格等价不意味着激励等价”</strong>：在存在摩擦时，不同格式产生不同激励。</p>
+</li>
+</ol>
+<h3 id="深层学术问题">深层学术问题</h3>
+<ol>
+<li><strong>承诺的外生性</strong>：内生化承诺能力会如何改变结论？</li>
+<li><strong>信息获取时机</strong>：竞拍者进入前vs进入后了解价值会如何影响均衡？</li>
+</ol>
+<hr>
+<h2 id="8-下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol>
+<li><strong>PO和PU场景下的均衡具体是什么？</strong></li>
+<li><strong>过度招募的无效率具体是多少？</strong></li>
+<li><strong>Proposition 3中边界曲线ŝ©的形状是什么？</strong></li>
+<li><strong>SPA的"信念独立"出价具体是什么？</strong></li>
+<li><strong>拍卖行如何具体缓解这些摩擦？</strong></li>
+</ol>
+<hr>
+<p><em>本分析报告严格遵循精读文献skill规定的八部分结构完成，旨在为初学者提供全面、易懂的论文逻辑梳理与学术要点解读。</em></p>
 ]]></content>
       <categories>
-        <category>有趣的文章</category>
+        <category>RES</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -15154,200 +15348,6 @@ Zotero Item Key:: BY7Y7TDL</p>
 <li>
 <p><strong>对投资者和资产管理人有何实践启示？</strong> 如何利用这些发现来改进投资决策？</p>
 </li>
-</ol>
-<hr>
-<p><em>本分析报告严格遵循精读文献skill规定的八部分结构完成，旨在为初学者提供全面、易懂的论文逻辑梳理与学术要点解读。</em></p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Auctions With Frictions — 深度阅读笔记 — Lauermann &amp; Wolinsky</title>
-    <url>/posts/lauermann2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Auctions with Frictions: Recruitment, Entry, and Limited Commitment</li>
-<li><strong>作者</strong>: Stephan Lauermann (University of Bonn), Asher Wolinsky (Northwestern University)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: Review of Economic Studies (RES), 93(2): 1167-1199</li>
-<li><strong>DOI</strong>: <a href="https://doi.org/10.1093/restud/rdaf052">https://doi.org/10.1093/restud/rdaf052</a></li>
-<li><strong>难度评估</strong>: 高 - 需要拍卖理论、博弈论基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>拍卖（Frictionless Auction）</strong>：标准拍卖理论假设卖家可以招募竞拍者、竞拍者无成本参与、卖家可承诺于保留价格和参与水平。</p>
-<p><strong>招募成本（Recruitment Cost）</strong>：卖家吸引竞拍者的成本。</p>
-<p><strong>参与成本（Entry Cost）</strong>：竞拍者评估拍品、获取融资、准备报价的成本。</p>
-<p><strong>有限承诺（Limited Commitment）</strong>：卖家无法可信地承诺参与水平或其披露程度。</p>
-<p><strong>PO vs PU场景</strong>：PO=参与可观察；PU=参与不可观察。</p>
-<h3 id="研究背景">研究背景</h3>
-<ol>
-<li>
-<p><strong>实际拍卖的复杂性</strong>：招募和激励竞拍者是拍卖成功的关键。</p>
-</li>
-<li>
-<p><strong>摩擦的普遍性</strong>：在独特资产的出售中，招募成本和参与成本特别显著。</p>
-</li>
-<li>
-<p><strong>传统模型局限性</strong>：现有文献分别研究招募或参与摩擦。</p>
-</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：当卖家承诺能力受限时，招募努力和竞拍者进入决策如何共同决定拍卖参与和结果？</p>
-<hr>
-<h2 id="2-内容及结构（论文结构）">2. 内容及结构（论文结构）</h2>
-<ul>
-<li>第一节：Introduction</li>
-<li>第二节：The PO Auction</li>
-<li>第三节：Equilibrium Analysis for PO Scenario</li>
-<li>第四节：The PU Auction</li>
-<li>第五节：Comparison of PO and PU Scenarios</li>
-<li>第六节：Discussion and Extensions</li>
-<li>第七节：Conclusion</li>
-</ul>
-<hr>
-<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
-<h3 id="模型设定">模型设定</h3>
-<p><strong>核心要素</strong>：</p>
-<ol>
-<li><strong>卖家</strong>：选择招募努力γ（成本为γs），结果是泊松分布的潜在竞拍者</li>
-<li><strong>竞拍者</strong>：支付成本c后观察到私人价值vi，决策是否进入</li>
-<li><strong>Bidding阶段</strong>：第一价格拍卖(FPA)</li>
-</ol>
-<p><strong>两种场景</strong>：PO（参与可观察）vs PU（参与不可观察）</p>
-<h3 id="PO均衡分析">PO均衡分析</h3>
-<p><strong>逆向求解</strong>：</p>
-<ol>
-<li>Stage 3 (Bidding)：标准对称FPA均衡</li>
-<li>Stage 2 (Entry)：竞拍者基于期望收益决定是否进入</li>
-<li>Stage 1 (Recruitment)：卖家选择λ = qγ最大化利润</li>
-</ol>
-<p><strong>关键发现</strong>：</p>
-<ul>
-<li>存在均衡贸易的唯一条件：λc ≥ λo 且 s ≤ s̄o</li>
-<li>当λc &lt; λo时：即使潜在贸易收益为正，市场也会崩溃</li>
-</ul>
-<h3 id="PU均衡分析">PU均衡分析</h3>
-<p><strong>关键差异</strong>：卖家无法可信地披露参与水平</p>
-<p><strong>均衡特征</strong>：</p>
-<ul>
-<li>对于所有(c,s)，存在λ*=0的无贸易均衡</li>
-<li>当s &lt; ξ(λpeak)且λc &gt; λu(s)时，存在两个贸易均衡</li>
-</ul>
-<h3 id="PO-vs-PU比较">PO vs PU比较</h3>
-<p><strong>关键比较结果</strong>：</p>
-<table>
-<thead>
-<tr>
-<th>区域</th>
-<th>条件</th>
-<th>结果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I</td>
-<td>仅PO有贸易</td>
-<td>PO严格更优</td>
-</tr>
-<tr>
-<td>II</td>
-<td>两者都有贸易</td>
-<td>PO严格更优</td>
-</tr>
-<tr>
-<td>III</td>
-<td>两者都有贸易</td>
-<td>PU严格更优</td>
-</tr>
-<tr>
-<td>IV</td>
-<td>仅PU有贸易</td>
-<td>PU更优</td>
-</tr>
-</tbody>
-</table>
-<p><strong>直觉</strong>：</p>
-<ul>
-<li>当c很小（竞拍者愿意进入）时：PO的更强招募激励→更高利润</li>
-<li>当s很小（招募便宜）时：PU的更弱招募激励作为部分承诺机制</li>
-</ul>
-<h3 id="FPA-vs-SPA比较">FPA vs SPA比较</h3>
-<p><strong>Revenue Equivalence失效</strong>：当参与不可观察时，FPA和SPA不再等价</p>
-<hr>
-<h2 id="4-结论（Conclusion）">4. 结论（Conclusion）</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol>
-<li>
-<p><strong>整合三种摩擦的必要性</strong>：招募成本、参与成本和有限承诺必须联合建模</p>
-</li>
-<li>
-<p><strong>可见性的关键作用</strong>：参与的可观察性对贸易量和利润有重大影响</p>
-</li>
-<li>
-<p><strong>标准等价失效</strong>：在存在摩擦时，FPA和SPA不再等价</p>
-</li>
-<li>
-<p><strong>市场崩溃的可能</strong>：即使潜在收益为正，市场也可能因承诺问题而崩溃</p>
-</li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol>
-<li>
-<p><strong>理论框架</strong>：整合了之前分开研究的各种摩擦</p>
-</li>
-<li>
-<p><strong>比较静态</strong>：完整描述了所有(c,s)组合下的均衡</p>
-</li>
-<li>
-<p><strong>实践意义</strong>：解释了拍卖行服务的价值</p>
-</li>
-</ol>
-<hr>
-<h2 id="5-未来研究方向">5. 未来研究方向</h2>
-<h3 id="文献提及的方向">文献提及的方向</h3>
-<ol>
-<li>竞拍者进入前了解其价值的版本</li>
-<li>卖家可设置进入费/补贴或保留价格的版本</li>
-</ol>
-<h3 id="未来研究思考">未来研究思考</h3>
-<ol>
-<li><strong>信息摩擦</strong>：信息不对称如何与招募/参与成本交互？</li>
-<li><strong>动态招募</strong>：多时期招募决策会如何改变结果？</li>
-</ol>
-<hr>
-<h2 id="7-学术思考">7. 学术思考</h2>
-<h3 id="核心理论洞察">核心理论洞察</h3>
-<ol>
-<li>
-<p><strong>“承诺作为市场结果的关键”</strong>：卖家有限承诺能力是市场摩擦的核心。</p>
-</li>
-<li>
-<p><strong>“可见性改变激励结构”</strong>：参与的可观察性改变了卖家的招募激励。</p>
-</li>
-<li>
-<p><strong>“价格等价不意味着激励等价”</strong>：在存在摩擦时，不同格式产生不同激励。</p>
-</li>
-</ol>
-<h3 id="深层学术问题">深层学术问题</h3>
-<ol>
-<li><strong>承诺的外生性</strong>：内生化承诺能力会如何改变结论？</li>
-<li><strong>信息获取时机</strong>：竞拍者进入前vs进入后了解价值会如何影响均衡？</li>
-</ol>
-<hr>
-<h2 id="8-下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol>
-<li><strong>PO和PU场景下的均衡具体是什么？</strong></li>
-<li><strong>过度招募的无效率具体是多少？</strong></li>
-<li><strong>Proposition 3中边界曲线ŝ©的形状是什么？</strong></li>
-<li><strong>SPA的"信念独立"出价具体是什么？</strong></li>
-<li><strong>拍卖行如何具体缓解这些摩擦？</strong></li>
 </ol>
 <hr>
 <p><em>本分析报告严格遵循精读文献skill规定的八部分结构完成，旨在为初学者提供全面、易懂的论文逻辑梳理与学术要点解读。</em></p>
@@ -16728,6 +16728,46 @@ f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=1\right)\right]-f^{-1}\left[E\left(
       </tags>
   </entry>
   <entry>
+    <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
+    <url>/posts/32262/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp;<br>
+&nbsp;<br>
+&nbsp;</p>
+<h2 id="1-研究问题"><strong>1. 研究问题</strong></h2>
+<p>本文以江苏省12个地级市"河长制"政策转移案例(2006 — 2016)为研究对象,在识别政策转移案例中"复制"和"再生产"两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对"河长制"转移程度的影响.研究发现"河长制"政策转移中的"政策再生产"的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局.通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产.</p>
+<p>&nbsp;</p>
+<span id="more"></span>
+<h2 id="2-问题的提出"><strong>2. 问题的提出</strong></h2>
+<p><strong>2.1 政策转移的必要性</strong></p>
+<p>现实状况:政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有"后发优势"的意味、地区间的合作与竞争</p>
+<p>转移情形:政策转移并不意味着全盘复制,可分为"复制"和"再生产"两种形式</p>
+<p>核心问题:什么因素能够促成政策"再生产",政策"再生产"又体现出那些维度特征</p>
+<p><strong>2.2 河长制的背景介绍</strong></p>
+<p>河湖治理是跨界特性最典型的领域之一,涉及上下游、左右岸、不同行政区域和行业,呈现出高度的复杂性.河长制最早发轫于太湖蓝藻危机,2016年之前是一项地方政策,经政策扩散至多地.</p>
+<p>现实调查显示河长制在江苏省内的扩散过程中呈现出"复制"和"再生产"的典型差异.</p>
+<p>&nbsp;</p>
+<h2 id="3-研究思路和方法"><strong>3. 研究思路和方法</strong></h2>
+<p><strong>3.1 QCA</strong></p>
+<p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles Ragin)于<code>1987</code>年提出,适用于案例数量大于10小于60的研究.</p>
+<p>其使用布尔代数和集合论的思想来进行中小数量的跨案例比较,从而处理多个原因和一个结果之间的因果关系.</p>
+<p><strong>3.2 转移程度的刻画</strong></p>
+<p>道洛维茨和马什最早借鉴rose(1993)的连续统来划分政策转移程度:复制、模仿、混合、启发.</p>
+<p>本文简单划分为:“复制"和"再生产”</p>
+<p><strong>3.3 解释变量的选择</strong></p>
+<p>行政压力、资源禀赋、政策需求、外部力量</p>
+<p>&nbsp;</p>
+<h2 id="4-结论"><strong>4. 结论</strong></h2>
+<p>政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素.</p>
+]]></content>
+      <categories>
+        <category>公共管理</category>
+        <category>政策转移</category>
+      </categories>
+      <tags>
+        <tag>文献阅读</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>用稻草做砖 — 深度阅读笔记 — Okeke</title>
     <url>/posts/okeke2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -16862,46 +16902,6 @@ f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=1\right)\right]-f^{-1}\left[E\left(
       </tags>
   </entry>
   <entry>
-    <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
-    <url>/posts/32262/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp;<br>
-&nbsp;<br>
-&nbsp;</p>
-<h2 id="1-研究问题"><strong>1. 研究问题</strong></h2>
-<p>本文以江苏省12个地级市"河长制"政策转移案例(2006 — 2016)为研究对象,在识别政策转移案例中"复制"和"再生产"两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对"河长制"转移程度的影响.研究发现"河长制"政策转移中的"政策再生产"的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局.通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产.</p>
-<p>&nbsp;</p>
-<span id="more"></span>
-<h2 id="2-问题的提出"><strong>2. 问题的提出</strong></h2>
-<p><strong>2.1 政策转移的必要性</strong></p>
-<p>现实状况:政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有"后发优势"的意味、地区间的合作与竞争</p>
-<p>转移情形:政策转移并不意味着全盘复制,可分为"复制"和"再生产"两种形式</p>
-<p>核心问题:什么因素能够促成政策"再生产",政策"再生产"又体现出那些维度特征</p>
-<p><strong>2.2 河长制的背景介绍</strong></p>
-<p>河湖治理是跨界特性最典型的领域之一,涉及上下游、左右岸、不同行政区域和行业,呈现出高度的复杂性.河长制最早发轫于太湖蓝藻危机,2016年之前是一项地方政策,经政策扩散至多地.</p>
-<p>现实调查显示河长制在江苏省内的扩散过程中呈现出"复制"和"再生产"的典型差异.</p>
-<p>&nbsp;</p>
-<h2 id="3-研究思路和方法"><strong>3. 研究思路和方法</strong></h2>
-<p><strong>3.1 QCA</strong></p>
-<p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles Ragin)于<code>1987</code>年提出,适用于案例数量大于10小于60的研究.</p>
-<p>其使用布尔代数和集合论的思想来进行中小数量的跨案例比较,从而处理多个原因和一个结果之间的因果关系.</p>
-<p><strong>3.2 转移程度的刻画</strong></p>
-<p>道洛维茨和马什最早借鉴rose(1993)的连续统来划分政策转移程度:复制、模仿、混合、启发.</p>
-<p>本文简单划分为:“复制"和"再生产”</p>
-<p><strong>3.3 解释变量的选择</strong></p>
-<p>行政压力、资源禀赋、政策需求、外部力量</p>
-<p>&nbsp;</p>
-<h2 id="4-结论"><strong>4. 结论</strong></h2>
-<p>政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素.</p>
-]]></content>
-      <categories>
-        <category>公共管理</category>
-        <category>政策转移</category>
-      </categories>
-      <tags>
-        <tag>文献阅读</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>文献阅读# the Effect of Microinsurance on Economic Activities: Evidence From a Randomized Field Experiment</title>
     <url>/posts/51245/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp;<br>
@@ -16956,62 +16956,6 @@ f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=1\right)\right]-f^{-1}\left[E\left(
       </categories>
       <tags>
         <tag>文献阅读</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Community Enforcement With Endogenous Records — 深度阅读笔记 — Pei</title>
-    <url>/posts/pei2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Community Enforcement with Endogenous Records</li>
-<li><strong>作者</strong>: Harry Pei (Northwestern University)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies (RES)</li>
-<li><strong>DOI</strong>: 10.1093/restud/rdaf049</li>
-<li><strong>难度评估</strong>: 高 - 需要重复博弈理论、社区执行理论基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言">1. 引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>社区执行、内生记录、重复博弈、匿名随机匹配。</p>
-<h3 id="研究背景">研究背景</h3>
-<p>小型社区可无需历史信息合作；大社区需要关于伙伴历史的信息；在线评价等场景存在记录操纵问题。</p>
-<h3 id="核心问题">核心问题</h3>
-<p>当玩家可以操纵自己的记录（添加或删除信号）时，合作如何可能？</p>
-<h2 id="2-内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：基准模型</li>
-<li>第三节：反民间定理</li>
-<li>第四节：中等寿命下的合作</li>
-<li>第五节：不可能合作的情况</li>
-<li>第六节：扩展</li>
-<li>第七节：结论</li>
-</ul>
-<h2 id="3-正文">3. 正文</h2>
-<h3 id="核心机制">核心机制</h3>
-<ul>
-<li><strong>擦除信号</strong>：玩家可选择任意子序列作为下期记录 → 延续价值非递减</li>
-<li><strong>添加信号</strong>：玩家可向记录添加信号 → 延续价值非递增</li>
-</ul>
-<h3 id="主要结果">主要结果</h3>
-<ol>
-<li><strong>Theorem 1</strong>：足够长寿玩家几乎从不合作（无论擦除还是添加）</li>
-<li><strong>Theorem 2</strong>：中等寿命下可维持部分合作（取决于互补性/替代性）</li>
-<li><strong>Theorem 3</strong>：某些条件下无论寿命如何都必不合作</li>
-</ol>
-<h2 id="4-结论">4. 结论</h2>
-<p>合作与玩家预期寿命非单调相关；记录操纵形式和行动互补性决定合作可能性。</p>
-<h2 id="5-未来研究方向">5. 未来研究方向</h2>
-<p>有限社区推广、异质性寿命分析、实验验证、机制设计。</p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -17550,51 +17494,53 @@ f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=1\right)\right]-f^{-1}\left[E\left(
       </tags>
   </entry>
   <entry>
-    <title>Racial Discrimination and the Social Contract — 深度阅读笔记 — Qian &amp; Tabellini</title>
-    <url>/posts/qian2026/</url>
+    <title>Community Enforcement With Endogenous Records — 深度阅读笔记 — Pei</title>
+    <url>/posts/pei2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
 <ul>
-<li><strong>标题</strong>: Racial Discrimination and the Social Contract: Evidence from U.S. Army Enlistment during WWII</li>
-<li><strong>作者</strong>: Nancy Qian (Northwestern &amp; NBER), Marco Tabellini (Harvard &amp; CEPR &amp; NBER)</li>
+<li><strong>标题</strong>: Community Enforcement with Endogenous Records</li>
+<li><strong>作者</strong>: Harry Pei (Northwestern University)</li>
 <li><strong>类型</strong>: 论文笔记</li>
 <li><strong>出版年份</strong>: 2026</li>
 <li><strong>出版机构/期刊</strong>: Review of Economic Studies (RES)</li>
-<li><strong>难度评估</strong>: 高 - 需要政治经济学、计量经济学、历史背景知识</li>
+<li><strong>DOI</strong>: 10.1093/restud/rdaf049</li>
+<li><strong>难度评估</strong>: 高 - 需要重复博弈理论、社区执行理论基础</li>
 </ul>
 <span id="more"></span>
 <hr>
 <h2 id="1-引言">1. 引言</h2>
 <h3 id="领域基础知识">领域基础知识</h3>
-<p>社会契约理论、歧视与政治排斥、战争与政治加入。</p>
+<p>社区执行、内生记录、重复博弈、匿名随机匹配。</p>
 <h3 id="研究背景">研究背景</h3>
-<p>社会契约理论认为战争和革命是政治加入的重要触发因素；排除效应在战时如何影响公民对政府的支持尚无直接证据。</p>
+<p>小型社区可无需历史信息合作；大社区需要关于伙伴历史的信息；在线评价等场景存在记录操纵问题。</p>
 <h3 id="核心问题">核心问题</h3>
-<p>歧视和政治排斥如何影响公民在战时对政府的支持？排除效应是正向（信号价值）还是负向（挫败感）？</p>
+<p>当玩家可以操纵自己的记录（添加或删除信号）时，合作如何可能？</p>
 <h2 id="2-内容及结构">2. 内容及结构</h2>
 <ul>
 <li>第一节：引言</li>
-<li>第二节：历史背景（Jim Crow时代的歧视、 WWII与珍珠港事件）</li>
-<li>第三节：概念框架</li>
-<li>第四节：数据</li>
-<li>第五节：主要结果</li>
-<li>第六节：额外分析</li>
+<li>第二节：基准模型</li>
+<li>第三节：反民间定理</li>
+<li>第四节：中等寿命下的合作</li>
+<li>第五节：不可能合作的情况</li>
+<li>第六节：扩展</li>
 <li>第七节：结论</li>
 </ul>
 <h2 id="3-正文">3. 正文</h2>
 <h3 id="核心机制">核心机制</h3>
-<p>珍珠港袭击作为外生冲击；识别歧视对入伍影响的供给侧效应。</p>
-<h3 id="关键发现">关键发现</h3>
+<ul>
+<li><strong>擦除信号</strong>：玩家可选择任意子序列作为下期记录 → 延续价值非递减</li>
+<li><strong>添加信号</strong>：玩家可向记录添加信号 → 延续价值非递增</li>
+</ul>
+<h3 id="主要结果">主要结果</h3>
 <ol>
-<li>珍珠港后志愿入伍率急剧上升，但黑人增幅小于白人</li>
-<li>歧视越高的郡，黑人入伍率增幅越小（相对于白人）</li>
-<li>歧视减少黑人的数量和质量（教育水平）</li>
-<li>距离珍珠港越远、州加入联邦越晚，歧视效应越强</li>
-<li>日裔美国人在未被拘禁地区入伍率更高</li>
+<li><strong>Theorem 1</strong>：足够长寿玩家几乎从不合作（无论擦除还是添加）</li>
+<li><strong>Theorem 2</strong>：中等寿命下可维持部分合作（取决于互补性/替代性）</li>
+<li><strong>Theorem 3</strong>：某些条件下无论寿命如何都必不合作</li>
 </ol>
 <h2 id="4-结论">4. 结论</h2>
-<p>歧视和政治排斥降低被排斥群体在战时对政府的支持，为社会契约理论提供实证支持。</p>
+<p>合作与玩家预期寿命非单调相关；记录操纵形式和行动互补性决定合作可能性。</p>
 <h2 id="5-未来研究方向">5. 未来研究方向</h2>
-<p>一战遗产的代际传递、宣传运动的效果、跨语境验证。</p>
+<p>有限社区推广、异质性寿命分析、实验验证、机制设计。</p>
 ]]></content>
       <categories>
         <category>RES</category>
@@ -17732,6 +17678,210 @@ Zotero Item Key:: 5VM9WE7W</p>
 <li>论文代码在GitHub开放（spatialTreat-example），其中CNN的输入格式是什么？对经济数据集（如OpenStreetMap商业位置数据）的预处理需要哪些步骤？</li>
 <li>内外环策略在哪些实证文献中被使用？其中哪些结论可能因为采用了正确的方法论而发生改变？</li>
 <li>本文提出的"设计基础方差"与bootstrap方法相比有何优势？在小样本情形下（如只有少数处理地点）表现如何？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Racial Discrimination and the Social Contract — 深度阅读笔记 — Qian &amp; Tabellini</title>
+    <url>/posts/qian2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Racial Discrimination and the Social Contract: Evidence from U.S. Army Enlistment during WWII</li>
+<li><strong>作者</strong>: Nancy Qian (Northwestern &amp; NBER), Marco Tabellini (Harvard &amp; CEPR &amp; NBER)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies (RES)</li>
+<li><strong>难度评估</strong>: 高 - 需要政治经济学、计量经济学、历史背景知识</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言">1. 引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>社会契约理论、歧视与政治排斥、战争与政治加入。</p>
+<h3 id="研究背景">研究背景</h3>
+<p>社会契约理论认为战争和革命是政治加入的重要触发因素；排除效应在战时如何影响公民对政府的支持尚无直接证据。</p>
+<h3 id="核心问题">核心问题</h3>
+<p>歧视和政治排斥如何影响公民在战时对政府的支持？排除效应是正向（信号价值）还是负向（挫败感）？</p>
+<h2 id="2-内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：历史背景（Jim Crow时代的歧视、 WWII与珍珠港事件）</li>
+<li>第三节：概念框架</li>
+<li>第四节：数据</li>
+<li>第五节：主要结果</li>
+<li>第六节：额外分析</li>
+<li>第七节：结论</li>
+</ul>
+<h2 id="3-正文">3. 正文</h2>
+<h3 id="核心机制">核心机制</h3>
+<p>珍珠港袭击作为外生冲击；识别歧视对入伍影响的供给侧效应。</p>
+<h3 id="关键发现">关键发现</h3>
+<ol>
+<li>珍珠港后志愿入伍率急剧上升，但黑人增幅小于白人</li>
+<li>歧视越高的郡，黑人入伍率增幅越小（相对于白人）</li>
+<li>歧视减少黑人的数量和质量（教育水平）</li>
+<li>距离珍珠港越远、州加入联邦越晚，歧视效应越强</li>
+<li>日裔美国人在未被拘禁地区入伍率更高</li>
+</ol>
+<h2 id="4-结论">4. 结论</h2>
+<p>歧视和政治排斥降低被排斥群体在战时对政府的支持，为社会契约理论提供实证支持。</p>
+<h2 id="5-未来研究方向">5. 未来研究方向</h2>
+<p>一战遗产的代际传递、宣传运动的效果、跨语境验证。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>邻里效应：伦敦战时破坏的证据 — 深度阅读笔记 — Redding &amp; Sturm</title>
+    <url>/posts/redding2024/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Neighborhood Effects: Evidence from Wartime Destruction in London<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/394PKQGT/Redding和Sturm - 2024 - Neighborhood Effects Evidence from Wartime Destruction in London.pdf<br>
+Zotero Item Key:: Y7PUT4SC</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+城市经济学的一个核心问题是：为什么同一城市内不同地段的房价和社会经济水平差异如此之大？理论上存在两类竞争性解释：（1）<strong>自然禀赋差异</strong>（fundamentals）——绿地、景观等自然优势；（2）<strong>邻里效应</strong>（neighborhood effects）——个体行为受周边邻里特征影响（如邻里构成影响居民选择），形成正反馈循环。这两类机制对政策有截然不同的含义：如果是自然禀赋主导，地方干预需要改变禀赋本身；如果是邻里效应主导，即使小规模干预也可能通过改变邻里构成引发持久的社会变迁。</p>
+<p><strong>研究背景</strong><br>
+已有研究（Chetty et al. 2016 "移动到机会"项目等）尝试估计邻里效应，但面临根本性的内生性问题：居民在哪里住是自我选择的结果，富裕社区可能本来就具有更好的禀赋，而不是因为"邻里"本身的影响。外生识别邻里效应非常困难，需要大规模、外生的冲击来打破居民与环境之间的共同决定关系。</p>
+<p><strong>作者的问题意识</strong><br>
+能否利用大规模的历史外生冲击——二战期间德国对伦敦的轰炸——来识别邻里效应？轰炸的（条件）随机性使其成为一个天然实验，可以比较被炸和未被炸地区在二战后长期的社会经济演变差异，以及相邻地区之间的溢出效应。</p>
+<p><strong>研究意义</strong><br>
+首次利用战争轰炸作为外生冲击估计邻里效应的强度；构建了细至单栋建筑的历史-现代链接数据集；将量化城市模型（quantitative urban model）与邻里效应相结合，实现了"自然禀赋 vs 邻里效应"的反事实分解。对理解城市内空间不平等的成因，以及评估以地方为基础的政策干预（place-based interventions）的效果，具有重要启示。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：问题提出、自然实验设计、主要发现。</li>
+<li><strong>历史背景</strong>：二战伦敦轰炸及战后重建（以公屋建设为主）。</li>
+<li><strong>数据</strong>：构建个体建筑层面的战时破坏×战前-战后社会经济数据集。</li>
+<li><strong>简化型证据（Section 4）</strong>：战时破坏对战后房价和社会经济构成的直接效应与溢出效应。</li>
+<li><strong>理论模型（Section 5）</strong>：含邻里效应的空间分选量化城市模型。</li>
+<li><strong>模型参数估计（Section 6）</strong>。</li>
+<li><strong>反事实分析（Section 7）</strong>：邻里效应对轰炸冲击的放大作用及其对整体空间差异的贡献。</li>
+<li><strong>结论</strong>。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>伦敦城市内部社会经济分化显著，理解其成因对于"社会住房政策""邻里更新"等地方干预的效果评估至关重要。然而，传统研究面临根本性的内生性挑战：社会经济好的地区很可能本来就有更好的自然禀赋。</p>
+<h3 id="挑战">挑战</h3>
+<p>如何在不随机分配居民的情况下，识别出"邻里效应"相对于"自然禀赋"的独立贡献？作者的答案：二战期间德军的伦敦轰炸为这一问题提供了一个罕见的外生冲击。</p>
+<h3 id="识别策略（自然实验）">识别策略（自然实验）</h3>
+<p><strong>外生性验证</strong>：</p>
+<ul>
+<li>从整个伦敦来看，轰炸与战前贫困有相关性（德军最初以东伦敦码头区为目标，而东伦敦历史上更贫困）；</li>
+<li>但<strong>在1km六边形网格（hexagonal grid）内控制地理位置后</strong>，轰炸与战前房价和社会经济构成<strong>不相关</strong>；</li>
+<li>这与当时落后的炸弹瞄准技术（且多为夜间轰炸、战时灯火管制）相符——无法精准打击特定街道或建筑。</li>
+</ul>
+<h3 id="数据构建">数据构建</h3>
+<p><strong>历史-现代链接，建筑层面数据</strong>：</p>
+<ul>
+<li><strong>战时破坏</strong>：数字化并地理编码伦敦郡议会（LCC）绘制的轰炸损毁地图（bomb damage maps）</li>
+<li><strong>战前房产价值</strong>：各栋建筑的商业和住宅地产评估值</li>
+<li><strong>战前社会经济构成</strong>：《伦敦生活与劳动新调查》（NSOL）按街段记录的各社会阶层比例</li>
+<li><strong>战后房产价值</strong>：1995–2020年个人房产交易数据</li>
+<li><strong>战后社会经济构成</strong>：2001年（及2011年）人口普查，9,041个Output Area层级</li>
+</ul>
+<h3 id="减少型证据（Reduced-Form-Results）">减少型证据（Reduced-Form Results）</h3>
+<p><strong>直接效应（对被炸地区）</strong>：</p>
+<ul>
+<li>完全被毁地区 vs 未损毁地区（控制1km网格固定效应）：
+<ul>
+<li>战后房价下降 <strong>11–18%</strong></li>
+<li>高收入居民比例下降 <strong>4个百分点</strong></li>
+<li>低收入居民比例上升 <strong>6个百分点</strong></li>
+<li>综合社会经济指数下降 <strong>5%</strong></li>
+</ul>
+</li>
+<li><strong>机制</strong>：战后重建主要通过建设公房（council housing/social housing）完成——轰炸导致了"设施降级"（downgrading），而非升级</li>
+</ul>
+<p><strong>溢出效应（对相邻未被炸地区）</strong>：</p>
+<ul>
+<li>相邻100米内邻居被完全摧毁：本地房价下降 <strong>7–8%</strong>，社会经济指数下降 <strong>3个百分点</strong></li>
+<li>溢出效应随距离急剧衰减：<strong>超过300米后不再显著</strong></li>
+<li>这说明邻里效应高度局部化（localized）</li>
+</ul>
+<h3 id="量化城市模型">量化城市模型</h3>
+<p><strong>结构</strong>：</p>
+<ul>
+<li>三类社会经济群体（低/中/高收入）在伦敦各地点之间选择居住地和工作地</li>
+<li>工资、居住便利性（amenities）、生活成本、通勤成本共同影响选址</li>
+<li>三类群体是生产中的不完全替代，工资不同；对住房支出占比也不同（高收入群体住房支出占比低，因此更愿意为高便利性支付溢价）</li>
+<li><strong>邻里效应</strong>：每个地点的便利性依赖于周边地点的社会经济构成</li>
+</ul>
+<p><strong>模型逻辑</strong>：</p>
+<ul>
+<li>轰炸→公房建设→降低被炸地区对高收入居民的相对吸引力</li>
+<li>高收入居民离开被炸地点→被炸地点便利性进一步下降（邻里效应）→向相邻地区溢出</li>
+<li>通过模型结构参数估计，将上述机制转化为可量化的一般均衡效应</li>
+</ul>
+<p><strong>反事实分解</strong>：</p>
+<ol>
+<li><strong>邻里效应放大倍数</strong>：剔除邻里效应后，轰炸直接效应远小——邻里效应大幅放大了轰炸的直接冲击</li>
+<li><strong>对整体空间差异的贡献</strong>：即使在没有战时轰炸的反事实情景中，邻里效应（基于对周边社会经济构成的偏好）也能解释相当大比例的当前空间社会经济差异</li>
+</ol>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<p>利用二战伦敦轰炸的外生冲击，结合建筑层面的历史-现代链接数据和含邻里效应的量化城市模型，本文发现：</p>
+<ol>
+<li>轰炸（经公房重建）对被炸地区的房价和社会经济构成产生了<strong>持久的直接负面效应</strong>；</li>
+<li>轰炸对<strong>相邻未被炸地区</strong>产生了<strong>强烈但高度局部化</strong>（300米内衰减至零）的溢出效应；</li>
+<li>邻里效应在量级上<strong>大幅放大</strong>了轰炸冲击的直接影响；</li>
+<li>邻里效应对于解释城市内部空间社会经济分化具有<strong>实质性的独立贡献</strong>（相对于自然禀赋）。</li>
+</ol>
+<p><strong>政策含义</strong>：即便是小规模的地方干预，也可能通过邻里效应的链式反应引发较大的社会经济变迁——地方干预的效果不应仅用其直接冲击来衡量，而应将邻里效应放大机制纳入评估框架。</p>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文明确提及的限制</strong>：</p>
+<ol>
+<li>邻里效应的具体机制（是社会互动、犯罪安全、学校质量，还是纯粹的偏好-构成效应）未被明确区分；</li>
+<li>研究未探讨哪类政策干预能够最有效地利用邻里效应的放大机制。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li><strong>机制分解</strong>：300米内的溢出效应驱动因素是什么？可以探讨犯罪率、学校质量、社会网络各机制的相对贡献；</li>
+<li><strong>最优公房区位</strong>：如果公房建设放大了邻里效应，应将公房分散在高收入地区还是集中建设？本文提供了参数，可进一步做最优区位设计分析；</li>
+<li><strong>历史持久性</strong>：战后70余年，"公房区"的社会标签是否仍然存在？有没有通过绅士化（gentrification）逆转的地区，其机制是什么？</li>
+<li><strong>发展中国家的自然实验</strong>：非洲或亚洲城市是否有类似的外生破坏冲击（内战、洪灾）可以复制这一设计，检验邻里效应在不同城市化水平下的强度？</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>识别假设的微妙之处</strong>：虽然轰炸在1km网格内"条件随机"，但1km网格本身的划分是任意的。如果将网格缩小（如500m），结论是否仍然成立？如果轰炸恰好与网格边界附近的某些微环境特征相关，结论可能被影响。这是空间自然实验的通用挑战。</p>
+</li>
+<li>
+<p><strong>公房重建是关键机制</strong>：论文的核心机制是"轰炸→公房建设→设施降级→高收入居民外迁"。这意味着，如果战后重建采用了高档私人开发而非公房，邻里效应的放大作用可能反向（吸引高收入居民）。因此，本文的发现对轰炸本身的普遍性较弱，更是一个"公房政策+轰炸"的联合效应估计。</p>
+</li>
+<li>
+<p><strong>溢出效应的高度局部性（300米）</strong>：这个范围非常小，大约相当于三四个街区的步行距离。这隐含着邻里效应高度地方化，可能反映了视觉暴露（看到公房）或面对面的社会互动机制，而非学区（通常覆盖更大范围）。如何设计干预来突破这一局限是重要的政策问题。</p>
+</li>
+<li>
+<p><strong>量化模型中"邻里效应"的识别</strong>：论文将邻里效应参数化为"对周边社会经济构成的偏好"。但这一参数的识别依赖于轰炸带来的冲击——结构参数估计和简化型证据在本质上使用了相同的识别变异，可能导致标准误被低估。独立地检验这些参数是否稳健是一个潜在的技术挑战。</p>
+</li>
+<li>
+<p><strong>反事实分析的外推性</strong>：论文通过模型做了"无轰炸"反事实，发现邻里效应仍然解释了相当部分的空间分化。然而，这一反事实依赖于均衡的唯一性和全局稳定性——量化城市模型通常在均衡附近做局部估计，对大幅度反事实的外推可靠性值得关注。</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>Chetty et al. (2016) 的"移动到机会"（Moving to Opportunity, MTO）实验与本文的研究发现是否一致？两种识别策略的结论有何异同？</li>
+<li>英国战后公房政策在伦敦各区是如何分布的？是否存在系统性选址偏差，可能影响本文的识别？</li>
+<li>本文发现邻里效应在300米内显著，这一距离在不同城市（如发展中国家特大城市）中是否相同？是否存在文化差异？</li>
+<li>在中国的城市化背景下，城中村改造、棚户区更新等政策是否有类似的邻里效应机制？能否用中国历史冲击做类似研究？</li>
+<li>量化城市模型中如何将"公房"与"高档私宅"的差异参数化？如果战后是高档私人开发，模型预测的长期社会经济分布会有多大不同？</li>
 </ol>
 ]]></content>
       <categories>
@@ -17971,156 +18121,6 @@ Zotero Item Key:: 5VM9WE7W</p>
       </categories>
       <tags>
         <tag>R</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>邻里效应：伦敦战时破坏的证据 — 深度阅读笔记 — Redding &amp; Sturm</title>
-    <url>/posts/redding2024/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Neighborhood Effects: Evidence from Wartime Destruction in London<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/394PKQGT/Redding和Sturm - 2024 - Neighborhood Effects Evidence from Wartime Destruction in London.pdf<br>
-Zotero Item Key:: Y7PUT4SC</p>
-<hr>
-<span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-城市经济学的一个核心问题是：为什么同一城市内不同地段的房价和社会经济水平差异如此之大？理论上存在两类竞争性解释：（1）<strong>自然禀赋差异</strong>（fundamentals）——绿地、景观等自然优势；（2）<strong>邻里效应</strong>（neighborhood effects）——个体行为受周边邻里特征影响（如邻里构成影响居民选择），形成正反馈循环。这两类机制对政策有截然不同的含义：如果是自然禀赋主导，地方干预需要改变禀赋本身；如果是邻里效应主导，即使小规模干预也可能通过改变邻里构成引发持久的社会变迁。</p>
-<p><strong>研究背景</strong><br>
-已有研究（Chetty et al. 2016 "移动到机会"项目等）尝试估计邻里效应，但面临根本性的内生性问题：居民在哪里住是自我选择的结果，富裕社区可能本来就具有更好的禀赋，而不是因为"邻里"本身的影响。外生识别邻里效应非常困难，需要大规模、外生的冲击来打破居民与环境之间的共同决定关系。</p>
-<p><strong>作者的问题意识</strong><br>
-能否利用大规模的历史外生冲击——二战期间德国对伦敦的轰炸——来识别邻里效应？轰炸的（条件）随机性使其成为一个天然实验，可以比较被炸和未被炸地区在二战后长期的社会经济演变差异，以及相邻地区之间的溢出效应。</p>
-<p><strong>研究意义</strong><br>
-首次利用战争轰炸作为外生冲击估计邻里效应的强度；构建了细至单栋建筑的历史-现代链接数据集；将量化城市模型（quantitative urban model）与邻里效应相结合，实现了"自然禀赋 vs 邻里效应"的反事实分解。对理解城市内空间不平等的成因，以及评估以地方为基础的政策干预（place-based interventions）的效果，具有重要启示。</p>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言</strong>：问题提出、自然实验设计、主要发现。</li>
-<li><strong>历史背景</strong>：二战伦敦轰炸及战后重建（以公屋建设为主）。</li>
-<li><strong>数据</strong>：构建个体建筑层面的战时破坏×战前-战后社会经济数据集。</li>
-<li><strong>简化型证据（Section 4）</strong>：战时破坏对战后房价和社会经济构成的直接效应与溢出效应。</li>
-<li><strong>理论模型（Section 5）</strong>：含邻里效应的空间分选量化城市模型。</li>
-<li><strong>模型参数估计（Section 6）</strong>。</li>
-<li><strong>反事实分析（Section 7）</strong>：邻里效应对轰炸冲击的放大作用及其对整体空间差异的贡献。</li>
-<li><strong>结论</strong>。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>伦敦城市内部社会经济分化显著，理解其成因对于"社会住房政策""邻里更新"等地方干预的效果评估至关重要。然而，传统研究面临根本性的内生性挑战：社会经济好的地区很可能本来就有更好的自然禀赋。</p>
-<h3 id="挑战">挑战</h3>
-<p>如何在不随机分配居民的情况下，识别出"邻里效应"相对于"自然禀赋"的独立贡献？作者的答案：二战期间德军的伦敦轰炸为这一问题提供了一个罕见的外生冲击。</p>
-<h3 id="识别策略（自然实验）">识别策略（自然实验）</h3>
-<p><strong>外生性验证</strong>：</p>
-<ul>
-<li>从整个伦敦来看，轰炸与战前贫困有相关性（德军最初以东伦敦码头区为目标，而东伦敦历史上更贫困）；</li>
-<li>但<strong>在1km六边形网格（hexagonal grid）内控制地理位置后</strong>，轰炸与战前房价和社会经济构成<strong>不相关</strong>；</li>
-<li>这与当时落后的炸弹瞄准技术（且多为夜间轰炸、战时灯火管制）相符——无法精准打击特定街道或建筑。</li>
-</ul>
-<h3 id="数据构建">数据构建</h3>
-<p><strong>历史-现代链接，建筑层面数据</strong>：</p>
-<ul>
-<li><strong>战时破坏</strong>：数字化并地理编码伦敦郡议会（LCC）绘制的轰炸损毁地图（bomb damage maps）</li>
-<li><strong>战前房产价值</strong>：各栋建筑的商业和住宅地产评估值</li>
-<li><strong>战前社会经济构成</strong>：《伦敦生活与劳动新调查》（NSOL）按街段记录的各社会阶层比例</li>
-<li><strong>战后房产价值</strong>：1995–2020年个人房产交易数据</li>
-<li><strong>战后社会经济构成</strong>：2001年（及2011年）人口普查，9,041个Output Area层级</li>
-</ul>
-<h3 id="减少型证据（Reduced-Form-Results）">减少型证据（Reduced-Form Results）</h3>
-<p><strong>直接效应（对被炸地区）</strong>：</p>
-<ul>
-<li>完全被毁地区 vs 未损毁地区（控制1km网格固定效应）：
-<ul>
-<li>战后房价下降 <strong>11–18%</strong></li>
-<li>高收入居民比例下降 <strong>4个百分点</strong></li>
-<li>低收入居民比例上升 <strong>6个百分点</strong></li>
-<li>综合社会经济指数下降 <strong>5%</strong></li>
-</ul>
-</li>
-<li><strong>机制</strong>：战后重建主要通过建设公房（council housing/social housing）完成——轰炸导致了"设施降级"（downgrading），而非升级</li>
-</ul>
-<p><strong>溢出效应（对相邻未被炸地区）</strong>：</p>
-<ul>
-<li>相邻100米内邻居被完全摧毁：本地房价下降 <strong>7–8%</strong>，社会经济指数下降 <strong>3个百分点</strong></li>
-<li>溢出效应随距离急剧衰减：<strong>超过300米后不再显著</strong></li>
-<li>这说明邻里效应高度局部化（localized）</li>
-</ul>
-<h3 id="量化城市模型">量化城市模型</h3>
-<p><strong>结构</strong>：</p>
-<ul>
-<li>三类社会经济群体（低/中/高收入）在伦敦各地点之间选择居住地和工作地</li>
-<li>工资、居住便利性（amenities）、生活成本、通勤成本共同影响选址</li>
-<li>三类群体是生产中的不完全替代，工资不同；对住房支出占比也不同（高收入群体住房支出占比低，因此更愿意为高便利性支付溢价）</li>
-<li><strong>邻里效应</strong>：每个地点的便利性依赖于周边地点的社会经济构成</li>
-</ul>
-<p><strong>模型逻辑</strong>：</p>
-<ul>
-<li>轰炸→公房建设→降低被炸地区对高收入居民的相对吸引力</li>
-<li>高收入居民离开被炸地点→被炸地点便利性进一步下降（邻里效应）→向相邻地区溢出</li>
-<li>通过模型结构参数估计，将上述机制转化为可量化的一般均衡效应</li>
-</ul>
-<p><strong>反事实分解</strong>：</p>
-<ol>
-<li><strong>邻里效应放大倍数</strong>：剔除邻里效应后，轰炸直接效应远小——邻里效应大幅放大了轰炸的直接冲击</li>
-<li><strong>对整体空间差异的贡献</strong>：即使在没有战时轰炸的反事实情景中，邻里效应（基于对周边社会经济构成的偏好）也能解释相当大比例的当前空间社会经济差异</li>
-</ol>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<p>利用二战伦敦轰炸的外生冲击，结合建筑层面的历史-现代链接数据和含邻里效应的量化城市模型，本文发现：</p>
-<ol>
-<li>轰炸（经公房重建）对被炸地区的房价和社会经济构成产生了<strong>持久的直接负面效应</strong>；</li>
-<li>轰炸对<strong>相邻未被炸地区</strong>产生了<strong>强烈但高度局部化</strong>（300米内衰减至零）的溢出效应；</li>
-<li>邻里效应在量级上<strong>大幅放大</strong>了轰炸冲击的直接影响；</li>
-<li>邻里效应对于解释城市内部空间社会经济分化具有<strong>实质性的独立贡献</strong>（相对于自然禀赋）。</li>
-</ol>
-<p><strong>政策含义</strong>：即便是小规模的地方干预，也可能通过邻里效应的链式反应引发较大的社会经济变迁——地方干预的效果不应仅用其直接冲击来衡量，而应将邻里效应放大机制纳入评估框架。</p>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文明确提及的限制</strong>：</p>
-<ol>
-<li>邻里效应的具体机制（是社会互动、犯罪安全、学校质量，还是纯粹的偏好-构成效应）未被明确区分；</li>
-<li>研究未探讨哪类政策干预能够最有效地利用邻里效应的放大机制。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li><strong>机制分解</strong>：300米内的溢出效应驱动因素是什么？可以探讨犯罪率、学校质量、社会网络各机制的相对贡献；</li>
-<li><strong>最优公房区位</strong>：如果公房建设放大了邻里效应，应将公房分散在高收入地区还是集中建设？本文提供了参数，可进一步做最优区位设计分析；</li>
-<li><strong>历史持久性</strong>：战后70余年，"公房区"的社会标签是否仍然存在？有没有通过绅士化（gentrification）逆转的地区，其机制是什么？</li>
-<li><strong>发展中国家的自然实验</strong>：非洲或亚洲城市是否有类似的外生破坏冲击（内战、洪灾）可以复制这一设计，检验邻里效应在不同城市化水平下的强度？</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>识别假设的微妙之处</strong>：虽然轰炸在1km网格内"条件随机"，但1km网格本身的划分是任意的。如果将网格缩小（如500m），结论是否仍然成立？如果轰炸恰好与网格边界附近的某些微环境特征相关，结论可能被影响。这是空间自然实验的通用挑战。</p>
-</li>
-<li>
-<p><strong>公房重建是关键机制</strong>：论文的核心机制是"轰炸→公房建设→设施降级→高收入居民外迁"。这意味着，如果战后重建采用了高档私人开发而非公房，邻里效应的放大作用可能反向（吸引高收入居民）。因此，本文的发现对轰炸本身的普遍性较弱，更是一个"公房政策+轰炸"的联合效应估计。</p>
-</li>
-<li>
-<p><strong>溢出效应的高度局部性（300米）</strong>：这个范围非常小，大约相当于三四个街区的步行距离。这隐含着邻里效应高度地方化，可能反映了视觉暴露（看到公房）或面对面的社会互动机制，而非学区（通常覆盖更大范围）。如何设计干预来突破这一局限是重要的政策问题。</p>
-</li>
-<li>
-<p><strong>量化模型中"邻里效应"的识别</strong>：论文将邻里效应参数化为"对周边社会经济构成的偏好"。但这一参数的识别依赖于轰炸带来的冲击——结构参数估计和简化型证据在本质上使用了相同的识别变异，可能导致标准误被低估。独立地检验这些参数是否稳健是一个潜在的技术挑战。</p>
-</li>
-<li>
-<p><strong>反事实分析的外推性</strong>：论文通过模型做了"无轰炸"反事实，发现邻里效应仍然解释了相当部分的空间分化。然而，这一反事实依赖于均衡的唯一性和全局稳定性——量化城市模型通常在均衡附近做局部估计，对大幅度反事实的外推可靠性值得关注。</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>Chetty et al. (2016) 的"移动到机会"（Moving to Opportunity, MTO）实验与本文的研究发现是否一致？两种识别策略的结论有何异同？</li>
-<li>英国战后公房政策在伦敦各区是如何分布的？是否存在系统性选址偏差，可能影响本文的识别？</li>
-<li>本文发现邻里效应在300米内显著，这一距离在不同城市（如发展中国家特大城市）中是否相同？是否存在文化差异？</li>
-<li>在中国的城市化背景下，城中村改造、棚户区更新等政策是否有类似的邻里效应机制？能否用中国历史冲击做类似研究？</li>
-<li>量化城市模型中如何将"公房"与"高档私宅"的差异参数化？如果战后是高档私人开发，模型预测的长期社会经济分布会有多大不同？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -18506,6 +18506,26 @@ Zotero Item Key:: Y7FT49B5</p>
       </tags>
   </entry>
   <entry>
+    <title>2014到2021年:淘宝村分布散点图😲</title>
+    <url>/posts/18898/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示"><strong>效果展示</strong></h2>
+<img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235354537.svg" width="80%" height="80%" align="middle">
+<center>2014年的淘宝村分布</center>
+<span id="more"></span>
+<img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235404847.svg" width="80%" height="80%" align="middle">
+<center>2021年的淘宝村分布</center>
+<h2 id="从最初3个增长至7023个"><strong>从最初3个增长至7023个</strong></h2>
+<p>从2009年到2021年,中国淘宝村呈现裂变式的扩散增长,从最初3个增长至7023个,无论是数量规模,还是分布广度都经历了飞跃式的发展.从萌芽至发展阶段,“小农户连接大市场"的电商逻辑长期被认为是淘宝村的主要内涵.围绕这一内涵,市场、政策、技术、人才一度不断汇聚,为淘宝村发展创造了十余年的黄金机遇,形成了一场边缘人群连接现代网络、边缘地区接壤现代市场、边缘产品汇聚现代需求的"边缘革命”.然而,在经历十余年的飞速发展后,淘宝村开始面临红利期消失、消费升级、同质化竞争、规范治理等适应性挑战,转型变革已是必然选择.在这一过程中,过往遵循传统电商逻辑的淘宝村正经历蜕变.一方面,垂直电商、内容电商等多元化的销售互联网生态正加速形成;另一方面,由差异化、个性化、碎片化需求所驱动的产业数字化升级不断涌现.可以认为,以"消费互联网+产业互联网"为特征的产销全域数字化逻辑正在为淘宝村注入新的内涵,其核心不再是"连接大市场",而是"洞悉大市场、细分小市场、塑造新市场".这种内涵演进对淘宝村发展提出了更高的要求,即能否充分利用数字技术提高经营主体的市场洞察力,能否通过数据信息整合优化生产流程,能否基于数字供应链实现快速的市场反馈.在此意义上,新时代的淘宝村将不再是"逆边缘化"的地理名词,而是一类凭借数字技术突破分散决策、分散生产、分散经营劣势的组织指称.</p>
+]]></content>
+      <categories>
+        <category>绘图</category>
+        <category>map&amp;sf</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Behavioural Causal Inference — 深度阅读笔记 — Spiegler</title>
     <url>/posts/spiegler2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -18624,23 +18644,32 @@ Zotero Item Key:: Y7FT49B5</p>
       </tags>
   </entry>
   <entry>
-    <title>2014到2021年:淘宝村分布散点图😲</title>
-    <url>/posts/18898/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示"><strong>效果展示</strong></h2>
-<img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235354537.svg" width="80%" height="80%" align="middle">
-<center>2014年的淘宝村分布</center>
+    <title>字体和公式的Display</title>
+    <url>/posts/15167/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<p><font face="Times New Roman"></font></p><p style="text-align:justify"><font face="Times New Roman"><b>“Evaluating the employment impact of a mandatory job search program”</b></font><br>
+<br><br>
+<br><br>
+<font face="Times New Roman"></font></p><p style="text-align:justify"><font face="Times New Roman"><b>What treatment do the authors evaluate?</b></font><br>
+<br></p>
 <span id="more"></span>
-<img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235404847.svg" width="80%" height="80%" align="middle">
-<center>2021年的淘宝村分布</center>
-<h2 id="从最初3个增长至7023个"><strong>从最初3个增长至7023个</strong></h2>
-<p>从2009年到2021年,中国淘宝村呈现裂变式的扩散增长,从最初3个增长至7023个,无论是数量规模,还是分布广度都经历了飞跃式的发展.从萌芽至发展阶段,“小农户连接大市场"的电商逻辑长期被认为是淘宝村的主要内涵.围绕这一内涵,市场、政策、技术、人才一度不断汇聚,为淘宝村发展创造了十余年的黄金机遇,形成了一场边缘人群连接现代网络、边缘地区接壤现代市场、边缘产品汇聚现代需求的"边缘革命”.然而,在经历十余年的飞速发展后,淘宝村开始面临红利期消失、消费升级、同质化竞争、规范治理等适应性挑战,转型变革已是必然选择.在这一过程中,过往遵循传统电商逻辑的淘宝村正经历蜕变.一方面,垂直电商、内容电商等多元化的销售互联网生态正加速形成;另一方面,由差异化、个性化、碎片化需求所驱动的产业数字化升级不断涌现.可以认为,以"消费互联网+产业互联网"为特征的产销全域数字化逻辑正在为淘宝村注入新的内涵,其核心不再是"连接大市场",而是"洞悉大市场、细分小市场、塑造新市场".这种内涵演进对淘宝村发展提出了更高的要求,即能否充分利用数字技术提高经营主体的市场洞察力,能否通过数据信息整合优化生产流程,能否基于数字供应链实现快速的市场反馈.在此意义上,新时代的淘宝村将不再是"逆边缘化"的地理名词,而是一类凭借数字技术突破分散决策、分散生产、分散经营劣势的组织指称.</p>
+<p><font face="Tex Gyre Pagella"></font></p><p style="text-align:justify"><font face="Tex Gyre Pagella"><b>Answer: </b> In the parametric methods, the common trend assumption is:</font></p><font face="Tex Gyre Pagella">
+<p>$$\begin{array}{l}<br>
+f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=0\right)\right] \<br>
+=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=0\right)\right]<br>
+\end{array}$$<br>
+In the non-parametric methods, the common trend assumption is:</p>
+<p>$$\begin{array}{l}<br>
+E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=0\right) \<br>
+=E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=1\right)-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)<br>
+\end{array}$$</p>
+</font>
 ]]></content>
       <categories>
-        <category>绘图</category>
-        <category>map&amp;sf</category>
+        <category>调试</category>
       </categories>
       <tags>
-        <tag>R</tag>
+        <tag>blog_test</tag>
       </tags>
   </entry>
   <entry>
@@ -18769,165 +18798,6 @@ Zotero Item Key:: Y7FT49B5</p>
 ]]></content>
       <categories>
         <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>字体和公式的Display</title>
-    <url>/posts/15167/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<p><font face="Times New Roman"></font></p><p style="text-align:justify"><font face="Times New Roman"><b>“Evaluating the employment impact of a mandatory job search program”</b></font><br>
-<br><br>
-<br><br>
-<font face="Times New Roman"></font></p><p style="text-align:justify"><font face="Times New Roman"><b>What treatment do the authors evaluate?</b></font><br>
-<br></p>
-<span id="more"></span>
-<p><font face="Tex Gyre Pagella"></font></p><p style="text-align:justify"><font face="Tex Gyre Pagella"><b>Answer: </b> In the parametric methods, the common trend assumption is:</font></p><font face="Tex Gyre Pagella">
-<p>$$\begin{array}{l}<br>
-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=0\right)\right] \<br>
-=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=0\right)\right]<br>
-\end{array}$$<br>
-In the non-parametric methods, the common trend assumption is:</p>
-<p>$$\begin{array}{l}<br>
-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=0\right) \<br>
-=E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=1\right)-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)<br>
-\end{array}$$</p>
-</font>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>blog_test</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>中国的政策试验：政策学习的政治经济学 — 深度阅读笔记 — Wang &amp; Yang</title>
-    <url>/posts/wang2022policy/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Policy Experimentation in China: The Political Economy of Policy Learning<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/4V9L54XQ/Wang和Yang - 2022 - Policy Experimentation in China The Political Economy of Policy Learning.pdf<br>
-Zotero Item Key:: CIWNLWK2</p>
-<hr>
-<span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-政策学习（policy learning）是政府决策的核心难题：政策效果受多重因素影响（政策本身性质、实施方式、地方条件、官员激励），信息环境极为复杂。许多国家的政府采取政策试验（policy experimentation）——在局部地区先行试点，观察效果后再决定是否全面推行——作为解决政策不确定性的手段。理论文献（Roland 2000; Mukand &amp; Rodrik 2005; Callander 2011 等）探讨了在不同政治结构下，政策实验如何促进信息获取与政策学习。</p>
-<p><strong>研究背景</strong><br>
-1980年代以来，中国政府形成了高度系统化的政策试验制度（“先试点、后推广”）：由中央各部委发起，指定若干地方试点，积累经验后决定是否转变为全国性政策。这一制度覆盖财税、环保、土地、社会保障等几乎所有政策领域，规模之大、持续时间之长，在近现代各国政府中罕见。不少学者认为，这一机制是中国改革开放成功的关键制度基础之一。然而，关于这一制度的具体特征、运作机制，以及它是否能实现有效政策学习，系统性实证证据极为缺乏。</p>
-<p><strong>作者的问题意识</strong><br>
-中国政策试验的基本特征是什么？试验的样本是否有代表性？试验过程中的制度环境（特别是官员晋升激励）是否系统性地扭曲了试验本身？中央政府在解读试验结果时是否"足够理性"？这些因素综合起来，对政策学习和全国政策效果意味着什么？</p>
-<p><strong>研究意义</strong><br>
-本文是首次基于中国四十年政策试验综合数据库开展的系统实证研究。揭示了政策试验中"样本偏误"和"情境偏误"的结构性来源，对既有"中国经验"的解读提出重要修正：政策试验的制度条件既是中国改革的发动机，也是其政策学习的制约因素。对理解政治集权与政策有效性的关系、"政府学习"的边界，以及如何设计更好的政策试验机制，具有重要理论和现实意义。</p>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言</strong>：提出问题，预告三大发现及其含义。</li>
-<li><strong>制度背景</strong>：中国政策试验的运作机制——中央发起、地方试点、全国推广。</li>
-<li><strong>数据</strong>：652项政策试验数据库（19,812份政府文件，1980–2020年）。</li>
-<li><strong>分析框架</strong>：政策学习可能出现偏误的三条路径。</li>
-<li><strong>事实一（第5节）</strong>：试验地点的正向选择（positive site selection）。</li>
-<li><strong>事实二（第6节）</strong>：试验期间官员的策略性努力（strategic effort）。</li>
-<li><strong>事实三（第7节）</strong>：中央政府对试验结果的非成熟解读（non-sophisticated interpretation）。</li>
-<li><strong>综合分析（第8节）</strong>：三大事实对政策学习和国家政策效果的含义。</li>
-<li><strong>结论</strong>。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>中国通过"先试点后推广"制度化地实践政策学习。中央各部委发起652项政策试验（1980-2020年），覆盖地方政府文件达19,812份，其中42%的试点政策最终推向全国。问题是：这一大规模的政策试验是否真的有助于中央有效学习？</p>
-<h3 id="挑战（三大偏误）">挑战（三大偏误）</h3>
-<p><strong>事实一：试验地点的正向选择（Sample Selection Bias）</strong></p>
-<ul>
-<li>在652项政策试验中，<strong>87.7%的试验地点在经济发展水平上存在正向选择</strong>——被选为试点的地方平均财政收入比未被选中的地方高出<strong>44.2%</strong>。</li>
-<li>这一规律在不同政策领域、不同控制变量设定下均稳健。</li>
-<li>富裕地区被选中更可能是因为"政策更容易成功"，而非代表全国平均情况。</li>
-</ul>
-<p><strong>事实二：试验期间的策略性努力（Non-Representative Experimental Situation）</strong></p>
-<ul>
-<li>晋升激励机制下，参与成功试验（即最终推向全国的试验）的地方官员明显有<strong>更高的晋升概率</strong>。</li>
-<li>利用三重差分策略（triple-differences）：在试验期间（而非试验前），试点地区对该试点政策相关领域的财政拨款<strong>增加约1.3%</strong>；</li>
-<li>当政策全面推广至全国时，这种额外的财政支持消失——意味着试验期间官员创造的努力<strong>无法在全国推广时复制</strong>。</li>
-<li>晋升压力越大的官员，额外努力越明显。</li>
-</ul>
-<p><strong>事实三：中央政府的非成熟解读（Non-Sophisticated Interpretation）</strong></p>
-<ul>
-<li>理想情境下，只有与政策内在有效性相关的信息应影响全国推广决策。</li>
-<li>实证发现：（1）试验期间土地出让金意外增加（<strong>外生财政冲击</strong>，与政策本身无关）→ 中央更可能推广该政策；（2）试验期间官员的<strong>常规政治人事更迭</strong>（改变激励但与政策质量无关）→ 也影响全国推广决策。</li>
-<li>这说明中央政府无法完全将"政策本身效果"与"外生噪音"分离——也就是说，政府并未"完全理性"地处理试验信息。</li>
-</ul>
-<h3 id="数据">数据</h3>
-<ul>
-<li><strong>政策试验数据库</strong>：19,812份政府文件 → 652项政策试验，来自92个中央部委和委员会，1980–2020年；记录了每项试验的地点、时间、推广情况。</li>
-<li><strong>官员晋升数据</strong>：追踪参与试验的地方官员的职业轨迹。</li>
-<li><strong>地方财政数据</strong>：年度财政分项拨款，用于测量官员的策略性努力。</li>
-<li><strong>土地出让金数据</strong>：作为外生财政冲击工具变量。</li>
-</ul>
-<h3 id="结果：政策学习的含义">结果：政策学习的含义</h3>
-<p><strong>71.1%的全面推广政策出现效果"收缩"（shrinkage）</strong>——即政策在全国推广后，效果相比试点期间下降。</p>
-<p><strong>机制分解</strong>：</p>
-<ul>
-<li>与试验地点经济条件相似的地区，从推广政策中获益更多；</li>
-<li>与试验官员有类似晋升激励的地方，从推广政策中获益更多；</li>
-<li>这意味着"谁更像试点地"决定了"谁更受益"，产生了区域间的系统性分配不平等。</li>
-</ul>
-<p><strong>致命逻辑</strong>：</p>
-<ul>
-<li>中央政府依赖的是"简单事前-事后比较"（pre-post comparison at experimentation sites）作为推广决策依据——这种方法强烈预测了全国推广；</li>
-<li>但用<strong>合成控制（synthetic control）等更精细的估计方法</strong>，则不能预测推广决策——说明中央实际上没有使用更精确的信息来判断政策效果。</li>
-</ul>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<p>中国四十年政策试验存在三重系统性偏误：（1）试点地点非代表性（较富裕）；（2）试点期间官员投入的额外努力不可复制；（3）中央政府在解读试验结果时被外生噪音干扰。这三点共同导致：来自试验的政策学习可能是有偏的，全面推广后政策效果系统性收缩，且不平等地惠及与试点条件相近的（通常是更富裕的）地区。</p>
-<p>作者指出：造成以上问题的，恰恰是使中国政策试验规模如此之大的同一制度条件——政治集权与晋升锦标赛。这一制度作为克服"地方不合作"的引擎，同时也内嵌了系统性信息扭曲。这是政治集权在"不完全契约"下的经典代价。</p>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文明确提及的方向</strong>：</p>
-<ol>
-<li>如何设计动态政策试验（dynamic experimentation）以纠偏；</li>
-<li>研究哪些政策最初被纳入试验、哪些重大政策失败被试验所避免——完整评估试验制度的整体收益/成本；</li>
-<li>评价完整政策制定周期（包括"不试验"的反事实）。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li><strong>纠偏机制设计</strong>：如何在保留晋升激励的同时，通过改变试点选择规则（如随机分配试点、跨地区比较）来减少选择偏误？</li>
-<li><strong>比较制度研究</strong>：美国各州的政策扩散（policy diffusion）研究发现正向选择偏误相对有限（DellaVigna &amp; Kim 2022），与中国形成对比——什么制度特征导致了这一差异？</li>
-<li><strong>信息处理能力</strong>：中央政府的"非成熟解读"是否随时间改善？与行政技术能力（如数据分析部门的建立）有什么关系？</li>
-<li><strong>政策内容的调适</strong>：政策在推广时是否经过了修改（truncation/adaptation）？这是否部分解释了效果收缩？</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>晋升激励的双刃剑</strong>：本文核心发现是，晋升激励使官员在试点期间额外努力，但这种努力不可复制。然而，这种额外努力在试点期间是否确实提高了试点政策的效果？如果是，那么对于那些只在特定条件下有效的政策，试验依然能够发现它们在理想条件下的潜力——这对政策学习也有价值，只是需要更谨慎地外推。</p>
-</li>
-<li>
-<p><strong>代表性选择 vs. 有效试验的悖论</strong>：如果随机选择试点（代表性更高），但落后地区官员可能缺乏执行能力，导致试验本身失败——无法区分"政策本身不好"和"执行能力不足"。因此，选择"有能力执行"的较好地区可能是中央政府在有限执行能力下的理性选择，而非单纯的偏误。</p>
-</li>
-<li>
-<p><strong>外部有效性的条件性</strong>：作者发现推广效果与试点条件的相似程度正相关，这说明中国政策效果的外推性（external validity）高度依赖于地方条件匹配。这提示政策推广不应该是简单的"全国统一实施"，而是应该根据地方条件分类推广——但这又与中国"中央统一部署"的政治逻辑相悖。</p>
-</li>
-<li>
-<p><strong>中央政府是否真的"非成熟"</strong>：论文证明外生财政冲击影响推广决策，这被解读为"非成熟"。但也存在另一种解读：中央政府可能有意识地将"试验期间地方经济活跃"作为"政策可以激励地方动力"的代理指标，从而有意使用这一信号。辨别"主动误判"与"被动愚弄"需要更精细的机制识别。</p>
-</li>
-<li>
-<p><strong>中央-地方信息不对称的长期趋势</strong>：随着大数据和数字政府建设（"数字威权主义"研究，如 Beraja et al. 2023），中央政府处理试验信息的能力是否在增强？本文基于1980-2020年的数据，但2015年后政府数字化治理能力的提升是否改变了"非成熟解读"的程度？</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>中国政策试验的"三步走"制度（试点→评估→全国推广）与国际通行的随机对照试验（RCT）相比，有哪些根本性的制度差异？</li>
-<li>是否有证据表明某些政策领域（如财税改革 vs. 社会保障）的试验效果收缩程度更大？领域差异背后的机制是什么？</li>
-<li>晋升激励是中国政策试验偏误的核心——在近年来习近平时代对地方官员晋升标准的调整（减少GDP权重、增加质量指标）下，本文的结论是否仍然成立？</li>
-<li>合成控制法（synthetic control）和普通事前-事后比较在预测政策推广结果上表现差异极大，这是否意味着中央政府事实上依赖信息较差的评估方法——如何从行政信息处理的角度解释这一现象？</li>
-<li>有没有政策试验制度设计上的"最佳实践"——哪些国家或地区的政策实验在控制上述三类偏误方面做得更好，可以为中国提供借鉴？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -19064,6 +18934,266 @@ Zotero Item Key:: GQKZ35CQ</p>
 <li>在经济学的实证研究中，有哪些论文实际应用了deconfounder？效果如何？</li>
 <li>"无单一原因混杂变量"假设在GWAS（基因组关联研究）中是否特别合理？为什么群体结构会是多原因混杂而非单一原因混杂？</li>
 <li>如果因子模型选择错误（如用过少或过多的潜在因子），deconfounder的因果估计会如何偏误？是否存在对因子数量选择的稳健性检验？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>中国的政策试验：政策学习的政治经济学 — 深度阅读笔记 — Wang &amp; Yang</title>
+    <url>/posts/wang2022policy/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Policy Experimentation in China: The Political Economy of Policy Learning<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/4V9L54XQ/Wang和Yang - 2022 - Policy Experimentation in China The Political Economy of Policy Learning.pdf<br>
+Zotero Item Key:: CIWNLWK2</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+政策学习（policy learning）是政府决策的核心难题：政策效果受多重因素影响（政策本身性质、实施方式、地方条件、官员激励），信息环境极为复杂。许多国家的政府采取政策试验（policy experimentation）——在局部地区先行试点，观察效果后再决定是否全面推行——作为解决政策不确定性的手段。理论文献（Roland 2000; Mukand &amp; Rodrik 2005; Callander 2011 等）探讨了在不同政治结构下，政策实验如何促进信息获取与政策学习。</p>
+<p><strong>研究背景</strong><br>
+1980年代以来，中国政府形成了高度系统化的政策试验制度（“先试点、后推广”）：由中央各部委发起，指定若干地方试点，积累经验后决定是否转变为全国性政策。这一制度覆盖财税、环保、土地、社会保障等几乎所有政策领域，规模之大、持续时间之长，在近现代各国政府中罕见。不少学者认为，这一机制是中国改革开放成功的关键制度基础之一。然而，关于这一制度的具体特征、运作机制，以及它是否能实现有效政策学习，系统性实证证据极为缺乏。</p>
+<p><strong>作者的问题意识</strong><br>
+中国政策试验的基本特征是什么？试验的样本是否有代表性？试验过程中的制度环境（特别是官员晋升激励）是否系统性地扭曲了试验本身？中央政府在解读试验结果时是否"足够理性"？这些因素综合起来，对政策学习和全国政策效果意味着什么？</p>
+<p><strong>研究意义</strong><br>
+本文是首次基于中国四十年政策试验综合数据库开展的系统实证研究。揭示了政策试验中"样本偏误"和"情境偏误"的结构性来源，对既有"中国经验"的解读提出重要修正：政策试验的制度条件既是中国改革的发动机，也是其政策学习的制约因素。对理解政治集权与政策有效性的关系、"政府学习"的边界，以及如何设计更好的政策试验机制，具有重要理论和现实意义。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：提出问题，预告三大发现及其含义。</li>
+<li><strong>制度背景</strong>：中国政策试验的运作机制——中央发起、地方试点、全国推广。</li>
+<li><strong>数据</strong>：652项政策试验数据库（19,812份政府文件，1980–2020年）。</li>
+<li><strong>分析框架</strong>：政策学习可能出现偏误的三条路径。</li>
+<li><strong>事实一（第5节）</strong>：试验地点的正向选择（positive site selection）。</li>
+<li><strong>事实二（第6节）</strong>：试验期间官员的策略性努力（strategic effort）。</li>
+<li><strong>事实三（第7节）</strong>：中央政府对试验结果的非成熟解读（non-sophisticated interpretation）。</li>
+<li><strong>综合分析（第8节）</strong>：三大事实对政策学习和国家政策效果的含义。</li>
+<li><strong>结论</strong>。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>中国通过"先试点后推广"制度化地实践政策学习。中央各部委发起652项政策试验（1980-2020年），覆盖地方政府文件达19,812份，其中42%的试点政策最终推向全国。问题是：这一大规模的政策试验是否真的有助于中央有效学习？</p>
+<h3 id="挑战（三大偏误）">挑战（三大偏误）</h3>
+<p><strong>事实一：试验地点的正向选择（Sample Selection Bias）</strong></p>
+<ul>
+<li>在652项政策试验中，<strong>87.7%的试验地点在经济发展水平上存在正向选择</strong>——被选为试点的地方平均财政收入比未被选中的地方高出<strong>44.2%</strong>。</li>
+<li>这一规律在不同政策领域、不同控制变量设定下均稳健。</li>
+<li>富裕地区被选中更可能是因为"政策更容易成功"，而非代表全国平均情况。</li>
+</ul>
+<p><strong>事实二：试验期间的策略性努力（Non-Representative Experimental Situation）</strong></p>
+<ul>
+<li>晋升激励机制下，参与成功试验（即最终推向全国的试验）的地方官员明显有<strong>更高的晋升概率</strong>。</li>
+<li>利用三重差分策略（triple-differences）：在试验期间（而非试验前），试点地区对该试点政策相关领域的财政拨款<strong>增加约1.3%</strong>；</li>
+<li>当政策全面推广至全国时，这种额外的财政支持消失——意味着试验期间官员创造的努力<strong>无法在全国推广时复制</strong>。</li>
+<li>晋升压力越大的官员，额外努力越明显。</li>
+</ul>
+<p><strong>事实三：中央政府的非成熟解读（Non-Sophisticated Interpretation）</strong></p>
+<ul>
+<li>理想情境下，只有与政策内在有效性相关的信息应影响全国推广决策。</li>
+<li>实证发现：（1）试验期间土地出让金意外增加（<strong>外生财政冲击</strong>，与政策本身无关）→ 中央更可能推广该政策；（2）试验期间官员的<strong>常规政治人事更迭</strong>（改变激励但与政策质量无关）→ 也影响全国推广决策。</li>
+<li>这说明中央政府无法完全将"政策本身效果"与"外生噪音"分离——也就是说，政府并未"完全理性"地处理试验信息。</li>
+</ul>
+<h3 id="数据">数据</h3>
+<ul>
+<li><strong>政策试验数据库</strong>：19,812份政府文件 → 652项政策试验，来自92个中央部委和委员会，1980–2020年；记录了每项试验的地点、时间、推广情况。</li>
+<li><strong>官员晋升数据</strong>：追踪参与试验的地方官员的职业轨迹。</li>
+<li><strong>地方财政数据</strong>：年度财政分项拨款，用于测量官员的策略性努力。</li>
+<li><strong>土地出让金数据</strong>：作为外生财政冲击工具变量。</li>
+</ul>
+<h3 id="结果：政策学习的含义">结果：政策学习的含义</h3>
+<p><strong>71.1%的全面推广政策出现效果"收缩"（shrinkage）</strong>——即政策在全国推广后，效果相比试点期间下降。</p>
+<p><strong>机制分解</strong>：</p>
+<ul>
+<li>与试验地点经济条件相似的地区，从推广政策中获益更多；</li>
+<li>与试验官员有类似晋升激励的地方，从推广政策中获益更多；</li>
+<li>这意味着"谁更像试点地"决定了"谁更受益"，产生了区域间的系统性分配不平等。</li>
+</ul>
+<p><strong>致命逻辑</strong>：</p>
+<ul>
+<li>中央政府依赖的是"简单事前-事后比较"（pre-post comparison at experimentation sites）作为推广决策依据——这种方法强烈预测了全国推广；</li>
+<li>但用<strong>合成控制（synthetic control）等更精细的估计方法</strong>，则不能预测推广决策——说明中央实际上没有使用更精确的信息来判断政策效果。</li>
+</ul>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<p>中国四十年政策试验存在三重系统性偏误：（1）试点地点非代表性（较富裕）；（2）试点期间官员投入的额外努力不可复制；（3）中央政府在解读试验结果时被外生噪音干扰。这三点共同导致：来自试验的政策学习可能是有偏的，全面推广后政策效果系统性收缩，且不平等地惠及与试点条件相近的（通常是更富裕的）地区。</p>
+<p>作者指出：造成以上问题的，恰恰是使中国政策试验规模如此之大的同一制度条件——政治集权与晋升锦标赛。这一制度作为克服"地方不合作"的引擎，同时也内嵌了系统性信息扭曲。这是政治集权在"不完全契约"下的经典代价。</p>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文明确提及的方向</strong>：</p>
+<ol>
+<li>如何设计动态政策试验（dynamic experimentation）以纠偏；</li>
+<li>研究哪些政策最初被纳入试验、哪些重大政策失败被试验所避免——完整评估试验制度的整体收益/成本；</li>
+<li>评价完整政策制定周期（包括"不试验"的反事实）。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li><strong>纠偏机制设计</strong>：如何在保留晋升激励的同时，通过改变试点选择规则（如随机分配试点、跨地区比较）来减少选择偏误？</li>
+<li><strong>比较制度研究</strong>：美国各州的政策扩散（policy diffusion）研究发现正向选择偏误相对有限（DellaVigna &amp; Kim 2022），与中国形成对比——什么制度特征导致了这一差异？</li>
+<li><strong>信息处理能力</strong>：中央政府的"非成熟解读"是否随时间改善？与行政技术能力（如数据分析部门的建立）有什么关系？</li>
+<li><strong>政策内容的调适</strong>：政策在推广时是否经过了修改（truncation/adaptation）？这是否部分解释了效果收缩？</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>晋升激励的双刃剑</strong>：本文核心发现是，晋升激励使官员在试点期间额外努力，但这种努力不可复制。然而，这种额外努力在试点期间是否确实提高了试点政策的效果？如果是，那么对于那些只在特定条件下有效的政策，试验依然能够发现它们在理想条件下的潜力——这对政策学习也有价值，只是需要更谨慎地外推。</p>
+</li>
+<li>
+<p><strong>代表性选择 vs. 有效试验的悖论</strong>：如果随机选择试点（代表性更高），但落后地区官员可能缺乏执行能力，导致试验本身失败——无法区分"政策本身不好"和"执行能力不足"。因此，选择"有能力执行"的较好地区可能是中央政府在有限执行能力下的理性选择，而非单纯的偏误。</p>
+</li>
+<li>
+<p><strong>外部有效性的条件性</strong>：作者发现推广效果与试点条件的相似程度正相关，这说明中国政策效果的外推性（external validity）高度依赖于地方条件匹配。这提示政策推广不应该是简单的"全国统一实施"，而是应该根据地方条件分类推广——但这又与中国"中央统一部署"的政治逻辑相悖。</p>
+</li>
+<li>
+<p><strong>中央政府是否真的"非成熟"</strong>：论文证明外生财政冲击影响推广决策，这被解读为"非成熟"。但也存在另一种解读：中央政府可能有意识地将"试验期间地方经济活跃"作为"政策可以激励地方动力"的代理指标，从而有意使用这一信号。辨别"主动误判"与"被动愚弄"需要更精细的机制识别。</p>
+</li>
+<li>
+<p><strong>中央-地方信息不对称的长期趋势</strong>：随着大数据和数字政府建设（"数字威权主义"研究，如 Beraja et al. 2023），中央政府处理试验信息的能力是否在增强？本文基于1980-2020年的数据，但2015年后政府数字化治理能力的提升是否改变了"非成熟解读"的程度？</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>中国政策试验的"三步走"制度（试点→评估→全国推广）与国际通行的随机对照试验（RCT）相比，有哪些根本性的制度差异？</li>
+<li>是否有证据表明某些政策领域（如财税改革 vs. 社会保障）的试验效果收缩程度更大？领域差异背后的机制是什么？</li>
+<li>晋升激励是中国政策试验偏误的核心——在近年来习近平时代对地方官员晋升标准的调整（减少GDP权重、增加质量指标）下，本文的结论是否仍然成立？</li>
+<li>合成控制法（synthetic control）和普通事前-事后比较在预测政策推广结果上表现差异极大，这是否意味着中央政府事实上依赖信息较差的评估方法——如何从行政信息处理的角度解释这一现象？</li>
+<li>有没有政策试验制度设计上的"最佳实践"——哪些国家或地区的政策实验在控制上述三类偏误方面做得更好，可以为中国提供借鉴？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>石油的族群地理分布与族群冲突升级 — 深度阅读笔记 — 熊易寒 &amp; 唐世平</title>
+    <url>/posts/xiong2015/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: 石油的族群地理分布与族群冲突升级<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/N62DTXKZ/熊易寒和唐世平 - 2015 - 石油的族群地理分布与族群冲突升级.pdf<br>
+Zotero Item Key:: PPNBQ8SY</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+族群冲突是经济学、政治学、社会学和国际关系学的共同热门议题。“资源诅咒”（resource curse）研究揭示了自然资源与内战、内部冲突之间的联系，石油因其巨大的战略价值尤受关注。现有解释路径包括四种：（1）贪婪假说（greedy/separatist incentive）——控制资源的财富激励叛乱；（2）怨恨假说（grievance）——资源开采带来土地征用、环境破坏和利益分配不公，激化历史积怨；（3）弱国家假说（weak state）——石油租金使国家走向食利型（rentier state），失去合法性基础；（4）劫掠假说（looting）——石油提供了反叛军的劫掠目标，降低内战成本。</p>
+<p><strong>研究背景</strong><br>
+既有研究已注意到"石油→族群冲突"的相关性，但不同国家的经验高度不一致：有的产油国族群冲突剧烈（苏丹、伊拉克、尼日利亚），有的则相对稳定（沙特、阿联酋）。这说明"有没有石油"本身不是决定性变量，背后一定有更精细的条件机制尚未被识别。</p>
+<p><strong>作者的问题意识</strong><br>
+现有四种假说都有一定解释力，但都未能指出核心变量。作者认为：<strong>石油在哪里（ethnogeographic location）</strong> 才是决定石油是否引发或加剧族群冲突的关键——即石油的族群地理分布（oil is located within the core territory of a minority ethnic group vs. majority territory）。</p>
+<p><strong>研究意义</strong><br>
+本文将族群地理（ethnography）与资源政治学（resource politics）结合，提出了一个更精细的因果机制，有助于统一解释看似矛盾的经验现象，并对中国海外资源投资的政治风险管理有直接政策含义。本文是唐世平教授"族群冲突广义理论"研究项目的组成部分，在理论建构层面具有重要地位。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>问题的提出</strong>：梳理石油与族群冲突的四种既有解释路径，指出其不足。</li>
+<li><strong>核心理论</strong>：提出"石油的族群地理分布"是决定石油是否导致族群冲突的核心变量，并推导出三个因果机制。</li>
+<li><strong>案例分析</strong>：通过过程追踪（process tracing），用苏丹、伊拉克、尼日利亚、加蓬四个案例验证理论假说。</li>
+<li><strong>政策含义</strong>：讨论对多族群产油国冲突管理、中国海外资源企业风险规避和对外投资的启示。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>二战以来族群冲突日趋频繁，尤其在产油国更为突出。但"石油→冲突"的关系并非普遍规律，必须找到调节变量才能提供更有解释力的理论。</p>
+<h3 id="挑战（理论空白）">挑战（理论空白）</h3>
+<p>四种既有假说（贪婪、怨恨、弱国家、劫掠）各有合理之处，但都未能解释为什么同样有石油资源的国家冲突程度相差如此悬殊。它们也缺乏对"机制"（mechanism）的完整阐述，无法进行过程追踪验证。</p>
+<h3 id="方法：理论推导-比较案例（过程追踪）">方法：理论推导 + 比较案例（过程追踪）</h3>
+<p>本文是理论构建与定性比较研究，不是定量经济学研究。</p>
+<p><strong>核心变量</strong>：大型油田（最终可采储量≥1亿桶）的族群地理位置：</p>
+<ul>
+<li><strong>情形A</strong>：大型油田位于多数族群/中央政府控制区 → 强化中央政府经济实力 → 少数族群与多数族群实力差距拉大 → 冲突强度下降或不变</li>
+<li><strong>情形B</strong>：大型油田位于少数族群核心聚居区（core territory） → <strong>三重因果机制叠加</strong> → 冲突强度升级</li>
+</ul>
+<p><strong>三个因果机制</strong>（情形B下）：</p>
+<ol>
+<li>
+<p><strong>经济冲击机制</strong>（economic shock）：少数族群聚居地发现大型油田，将同时激励中央政府（希望集中控制石油收益、防止分离）和少数族群（视石油财富为本民族权益，独立是最大化收益的路径）。这大幅提高了族群竞争的"赌注"，使双方都更倾向于动武。</p>
+</li>
+<li>
+<p><strong>安全困境机制</strong>（security dilemma）：石油带来的潜在收益改变了双方的相对实力预期。中央政府担忧少数族群用石油收益武装自身寻求独立，少数族群担忧中央政府先下手为强控制油田。双方的防御行为被对方解读为进攻信号，陷入安全困境。</p>
+</li>
+<li>
+<p><strong>螺旋模型机制</strong>（spiral model）：在安全困境的基础上，误解和不信任导致双方行动逐步升级——中央压制→少数族群武装反抗→中央加大镇压→更大规模叛乱，形成螺旋上升的冲突动态。</p>
+</li>
+</ol>
+<h3 id="案例">案例</h3>
+<ul>
+<li>
+<p><strong>苏丹</strong>：南苏丹为非洲黑人（努尔族、丁卡族等）聚居地，而大型油田正在南方。北方阿拉伯主导的中央政府长期试图控制南方石油，南苏丹武装反抗由此演化成数十年内战，最终导致南苏丹2011年独立。三种机制均可追踪到具体历史节点。</p>
+</li>
+<li>
+<p><strong>伊拉克</strong>：库尔德族聚居的北部（基尔库克地区）和什叶派聚居的南部都是大型油田所在地，逊尼派主导的萨达姆政府与这两个少数族群的冲突均符合模型预测（大规模镇压库尔德人、对南部什叶派的打压）。</p>
+</li>
+<li>
+<p><strong>尼日利亚</strong>：尼日尔三角洲是伊比比奥族、伊乔族等少数族群的聚居地，也是尼日利亚最重要的产油区。豪萨-富拉尼族主导的联邦政府与当地族群的利益分配冲突由来已久，武装反抗组织（MEND等）也符合三种机制的分析。</p>
+</li>
+<li>
+<p><strong>加蓬</strong>：对照案例——加蓬的石油资源相对集中在首都利伯维尔附近的多数族群地区（冯族），而非少数族群聚居地，对应情形A，族群冲突程度显著低于其他三个国家，验证了理论的反事实预测。</p>
+</li>
+</ul>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<p><strong>核心发现</strong>：石油的族群地理分布（而非石油资源本身的有无）才是决定石油是否导致族群冲突升级的核心变量。当大型油田位于少数族群的核心聚居区时，经济冲击、安全困境和螺旋模型三重机制叠加，使族群冲突升级的概率显著提升。</p>
+<p><strong>理论贡献</strong>：</p>
+<ol>
+<li>超越了贪婪/怨恨/弱国家/劫掠等既有解释的单一逻辑，整合了经济激励与国际关系中的安全困境框架；</li>
+<li>将"族群地理"作为一个独立的分析维度引入资源与冲突文献，为跨国比较研究提供了更精细的理论框架；</li>
+<li>本文作为族群冲突广义理论的子研究，证明了广义理论对资源冲突这一特定领域的整合解释力。</li>
+</ol>
+<p><strong>政策含义</strong>：</p>
+<ol>
+<li>多族群产油国（如巴布亚新几内亚、伊拉克、尼日利亚）：应设计公平的石油收益分享机制（如尼日利亚的联邦石油分配），避免少数族群聚居区的石油被中央政府独占；</li>
+<li>中国资源型企业：投资前应评估目标油田的族群地理位置，优先选择非少数族群聚居地区的项目，降低武装冲突风险；</li>
+<li>中国海外投资：需在经济利益和国家形象之间权衡，在冲突地区（如南苏丹）的投资可能强化对某一族群（多数族群政府）的支持，损害中国的中立形象。</li>
+</ol>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文中提及的方向</strong>：</p>
+<ol>
+<li>理论扩展：从石油推广到一般自然资源的族群地理分布与冲突关系（如天然气、钻石、铜矿等）；</li>
+<li>量化验证：构建全球大型油田位置与族群聚居地重叠度的数据集，进行跨国定量检验。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li>石油发现的随机性：油田勘探本身带有一定的外生性，是否可以用"油田发现时间"或"勘探技术突破"作为因果识别的工具变量，进行断点回归或事件研究？</li>
+<li>收益分享制度的作用：比较不同产油国（如挪威、阿联酋、尼日利亚）的石油收益分配机制，评估制度设计是否能缓解族群地理带来的冲突风险；</li>
+<li>中国海外资源投资风险：系统评估中国在非洲产油国（苏丹、安哥拉、利比亚）的投资损失与当地族群地理格局的关系，提炼政治风险识别方法论。</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>因果机制 vs. 相关性</strong>：本文的理论推导逻辑清晰，案例过程追踪也在一定程度上印证了机制。但案例选择（苏丹、伊拉克、尼日利亚、加蓬）本身存在一定的选择偏差——这四个国家都是产油国且冲突经历各异。如何系统地排除遗漏变量（如国家能力、殖民历史、地理因素），以及如何在大样本数据中检验这一假说，仍是本文留下的挑战。</p>
+</li>
+<li>
+<p><strong>"核心领地"的测量</strong>：理论的核心变量是"少数族群核心聚居区"与"大型油田"是否重叠。但族群聚居边界在历史上是动态变化的，且定义本身往往存在争议。如何客观测量这一变量，是将理论转化为可检验假说的最大挑战。</p>
+</li>
+<li>
+<p><strong>反事实逻辑</strong>：加蓬作为对照案例的说服力取决于加蓬的其他条件是否与苏丹/伊拉克/尼日利亚可比。若其他决定冲突的变量（如国家能力、族群构成复杂度、民主化程度）在各国间差异显著，则案例比较的内部效度存疑。</p>
+</li>
+<li>
+<p><strong>政策建议的可操作性</strong>：论文建议通过"石油收益公平分配"来缓和冲突，但实际的分配谈判往往在已经高度政治化的环境中进行，产权安排、分配比例等问题都会成为冲突焦点。如何在制度设计层面超越"利益均分"这一原则，提供可实施的具体方案，值得进一步研究。</p>
+</li>
+<li>
+<p><strong>与"资源诅咒"文献的对话</strong>：本文实际上对"资源诅咒"做出了条件化（conditionalize），认为只有特定的族群地理条件下资源才是诅咒。这一思路与"制度质量调节资源影响"的文献（如Mehlum et al. 2006）有共通之处，二者能否整合在同一框架内？</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>本文的过程追踪方法如何确保"机制"被观察到，而不是将结果反向推论为机制？过程追踪在方法论上有哪些要求和局限？</li>
+<li>如果要对本文的假说进行大样本定量检验，应该如何构建数据集？有哪些关于族群聚居地边界和大型油田位置的公开数据源可用（如EPR数据集、Giant Oil Fields数据库）？</li>
+<li>安全困境机制通常在国家间关系中使用，将其应用于国内族群冲突需要什么额外假设？族群冲突中的"国家行为者"和"非国家行为者"能否被视为类似于国家的理性主体？</li>
+<li>苏丹南北冲突最终以南苏丹独立告终，但南苏丹独立后内部族群冲突（丁卡 vs. 努尔）依然激烈——这如何被纳入本文的理论框架？是否说明框架需要延伸到"独立后的国家建构"阶段？</li>
+<li>唐世平教授的"族群冲突广义理论"具体是什么？本文作为其子研究，在理论体系中处于什么位置？广义理论还有哪些其他子研究？</li>
 </ol>
 ]]></content>
       <categories>
@@ -19353,136 +19483,6 @@ Zotero Item Key:: GQKZ35CQ</p>
         <tag>政治经济学</tag>
         <tag>政策实验</tag>
         <tag>中国经济</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>石油的族群地理分布与族群冲突升级 — 深度阅读笔记 — 熊易寒 &amp; 唐世平</title>
-    <url>/posts/xiong2015/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: 石油的族群地理分布与族群冲突升级<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/N62DTXKZ/熊易寒和唐世平 - 2015 - 石油的族群地理分布与族群冲突升级.pdf<br>
-Zotero Item Key:: PPNBQ8SY</p>
-<hr>
-<span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-族群冲突是经济学、政治学、社会学和国际关系学的共同热门议题。“资源诅咒”（resource curse）研究揭示了自然资源与内战、内部冲突之间的联系，石油因其巨大的战略价值尤受关注。现有解释路径包括四种：（1）贪婪假说（greedy/separatist incentive）——控制资源的财富激励叛乱；（2）怨恨假说（grievance）——资源开采带来土地征用、环境破坏和利益分配不公，激化历史积怨；（3）弱国家假说（weak state）——石油租金使国家走向食利型（rentier state），失去合法性基础；（4）劫掠假说（looting）——石油提供了反叛军的劫掠目标，降低内战成本。</p>
-<p><strong>研究背景</strong><br>
-既有研究已注意到"石油→族群冲突"的相关性，但不同国家的经验高度不一致：有的产油国族群冲突剧烈（苏丹、伊拉克、尼日利亚），有的则相对稳定（沙特、阿联酋）。这说明"有没有石油"本身不是决定性变量，背后一定有更精细的条件机制尚未被识别。</p>
-<p><strong>作者的问题意识</strong><br>
-现有四种假说都有一定解释力，但都未能指出核心变量。作者认为：<strong>石油在哪里（ethnogeographic location）</strong> 才是决定石油是否引发或加剧族群冲突的关键——即石油的族群地理分布（oil is located within the core territory of a minority ethnic group vs. majority territory）。</p>
-<p><strong>研究意义</strong><br>
-本文将族群地理（ethnography）与资源政治学（resource politics）结合，提出了一个更精细的因果机制，有助于统一解释看似矛盾的经验现象，并对中国海外资源投资的政治风险管理有直接政策含义。本文是唐世平教授"族群冲突广义理论"研究项目的组成部分，在理论建构层面具有重要地位。</p>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>问题的提出</strong>：梳理石油与族群冲突的四种既有解释路径，指出其不足。</li>
-<li><strong>核心理论</strong>：提出"石油的族群地理分布"是决定石油是否导致族群冲突的核心变量，并推导出三个因果机制。</li>
-<li><strong>案例分析</strong>：通过过程追踪（process tracing），用苏丹、伊拉克、尼日利亚、加蓬四个案例验证理论假说。</li>
-<li><strong>政策含义</strong>：讨论对多族群产油国冲突管理、中国海外资源企业风险规避和对外投资的启示。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>二战以来族群冲突日趋频繁，尤其在产油国更为突出。但"石油→冲突"的关系并非普遍规律，必须找到调节变量才能提供更有解释力的理论。</p>
-<h3 id="挑战（理论空白）">挑战（理论空白）</h3>
-<p>四种既有假说（贪婪、怨恨、弱国家、劫掠）各有合理之处，但都未能解释为什么同样有石油资源的国家冲突程度相差如此悬殊。它们也缺乏对"机制"（mechanism）的完整阐述，无法进行过程追踪验证。</p>
-<h3 id="方法：理论推导-比较案例（过程追踪）">方法：理论推导 + 比较案例（过程追踪）</h3>
-<p>本文是理论构建与定性比较研究，不是定量经济学研究。</p>
-<p><strong>核心变量</strong>：大型油田（最终可采储量≥1亿桶）的族群地理位置：</p>
-<ul>
-<li><strong>情形A</strong>：大型油田位于多数族群/中央政府控制区 → 强化中央政府经济实力 → 少数族群与多数族群实力差距拉大 → 冲突强度下降或不变</li>
-<li><strong>情形B</strong>：大型油田位于少数族群核心聚居区（core territory） → <strong>三重因果机制叠加</strong> → 冲突强度升级</li>
-</ul>
-<p><strong>三个因果机制</strong>（情形B下）：</p>
-<ol>
-<li>
-<p><strong>经济冲击机制</strong>（economic shock）：少数族群聚居地发现大型油田，将同时激励中央政府（希望集中控制石油收益、防止分离）和少数族群（视石油财富为本民族权益，独立是最大化收益的路径）。这大幅提高了族群竞争的"赌注"，使双方都更倾向于动武。</p>
-</li>
-<li>
-<p><strong>安全困境机制</strong>（security dilemma）：石油带来的潜在收益改变了双方的相对实力预期。中央政府担忧少数族群用石油收益武装自身寻求独立，少数族群担忧中央政府先下手为强控制油田。双方的防御行为被对方解读为进攻信号，陷入安全困境。</p>
-</li>
-<li>
-<p><strong>螺旋模型机制</strong>（spiral model）：在安全困境的基础上，误解和不信任导致双方行动逐步升级——中央压制→少数族群武装反抗→中央加大镇压→更大规模叛乱，形成螺旋上升的冲突动态。</p>
-</li>
-</ol>
-<h3 id="案例">案例</h3>
-<ul>
-<li>
-<p><strong>苏丹</strong>：南苏丹为非洲黑人（努尔族、丁卡族等）聚居地，而大型油田正在南方。北方阿拉伯主导的中央政府长期试图控制南方石油，南苏丹武装反抗由此演化成数十年内战，最终导致南苏丹2011年独立。三种机制均可追踪到具体历史节点。</p>
-</li>
-<li>
-<p><strong>伊拉克</strong>：库尔德族聚居的北部（基尔库克地区）和什叶派聚居的南部都是大型油田所在地，逊尼派主导的萨达姆政府与这两个少数族群的冲突均符合模型预测（大规模镇压库尔德人、对南部什叶派的打压）。</p>
-</li>
-<li>
-<p><strong>尼日利亚</strong>：尼日尔三角洲是伊比比奥族、伊乔族等少数族群的聚居地，也是尼日利亚最重要的产油区。豪萨-富拉尼族主导的联邦政府与当地族群的利益分配冲突由来已久，武装反抗组织（MEND等）也符合三种机制的分析。</p>
-</li>
-<li>
-<p><strong>加蓬</strong>：对照案例——加蓬的石油资源相对集中在首都利伯维尔附近的多数族群地区（冯族），而非少数族群聚居地，对应情形A，族群冲突程度显著低于其他三个国家，验证了理论的反事实预测。</p>
-</li>
-</ul>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<p><strong>核心发现</strong>：石油的族群地理分布（而非石油资源本身的有无）才是决定石油是否导致族群冲突升级的核心变量。当大型油田位于少数族群的核心聚居区时，经济冲击、安全困境和螺旋模型三重机制叠加，使族群冲突升级的概率显著提升。</p>
-<p><strong>理论贡献</strong>：</p>
-<ol>
-<li>超越了贪婪/怨恨/弱国家/劫掠等既有解释的单一逻辑，整合了经济激励与国际关系中的安全困境框架；</li>
-<li>将"族群地理"作为一个独立的分析维度引入资源与冲突文献，为跨国比较研究提供了更精细的理论框架；</li>
-<li>本文作为族群冲突广义理论的子研究，证明了广义理论对资源冲突这一特定领域的整合解释力。</li>
-</ol>
-<p><strong>政策含义</strong>：</p>
-<ol>
-<li>多族群产油国（如巴布亚新几内亚、伊拉克、尼日利亚）：应设计公平的石油收益分享机制（如尼日利亚的联邦石油分配），避免少数族群聚居区的石油被中央政府独占；</li>
-<li>中国资源型企业：投资前应评估目标油田的族群地理位置，优先选择非少数族群聚居地区的项目，降低武装冲突风险；</li>
-<li>中国海外投资：需在经济利益和国家形象之间权衡，在冲突地区（如南苏丹）的投资可能强化对某一族群（多数族群政府）的支持，损害中国的中立形象。</li>
-</ol>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文中提及的方向</strong>：</p>
-<ol>
-<li>理论扩展：从石油推广到一般自然资源的族群地理分布与冲突关系（如天然气、钻石、铜矿等）；</li>
-<li>量化验证：构建全球大型油田位置与族群聚居地重叠度的数据集，进行跨国定量检验。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li>石油发现的随机性：油田勘探本身带有一定的外生性，是否可以用"油田发现时间"或"勘探技术突破"作为因果识别的工具变量，进行断点回归或事件研究？</li>
-<li>收益分享制度的作用：比较不同产油国（如挪威、阿联酋、尼日利亚）的石油收益分配机制，评估制度设计是否能缓解族群地理带来的冲突风险；</li>
-<li>中国海外资源投资风险：系统评估中国在非洲产油国（苏丹、安哥拉、利比亚）的投资损失与当地族群地理格局的关系，提炼政治风险识别方法论。</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>因果机制 vs. 相关性</strong>：本文的理论推导逻辑清晰，案例过程追踪也在一定程度上印证了机制。但案例选择（苏丹、伊拉克、尼日利亚、加蓬）本身存在一定的选择偏差——这四个国家都是产油国且冲突经历各异。如何系统地排除遗漏变量（如国家能力、殖民历史、地理因素），以及如何在大样本数据中检验这一假说，仍是本文留下的挑战。</p>
-</li>
-<li>
-<p><strong>"核心领地"的测量</strong>：理论的核心变量是"少数族群核心聚居区"与"大型油田"是否重叠。但族群聚居边界在历史上是动态变化的，且定义本身往往存在争议。如何客观测量这一变量，是将理论转化为可检验假说的最大挑战。</p>
-</li>
-<li>
-<p><strong>反事实逻辑</strong>：加蓬作为对照案例的说服力取决于加蓬的其他条件是否与苏丹/伊拉克/尼日利亚可比。若其他决定冲突的变量（如国家能力、族群构成复杂度、民主化程度）在各国间差异显著，则案例比较的内部效度存疑。</p>
-</li>
-<li>
-<p><strong>政策建议的可操作性</strong>：论文建议通过"石油收益公平分配"来缓和冲突，但实际的分配谈判往往在已经高度政治化的环境中进行，产权安排、分配比例等问题都会成为冲突焦点。如何在制度设计层面超越"利益均分"这一原则，提供可实施的具体方案，值得进一步研究。</p>
-</li>
-<li>
-<p><strong>与"资源诅咒"文献的对话</strong>：本文实际上对"资源诅咒"做出了条件化（conditionalize），认为只有特定的族群地理条件下资源才是诅咒。这一思路与"制度质量调节资源影响"的文献（如Mehlum et al. 2006）有共通之处，二者能否整合在同一框架内？</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>本文的过程追踪方法如何确保"机制"被观察到，而不是将结果反向推论为机制？过程追踪在方法论上有哪些要求和局限？</li>
-<li>如果要对本文的假说进行大样本定量检验，应该如何构建数据集？有哪些关于族群聚居地边界和大型油田位置的公开数据源可用（如EPR数据集、Giant Oil Fields数据库）？</li>
-<li>安全困境机制通常在国家间关系中使用，将其应用于国内族群冲突需要什么额外假设？族群冲突中的"国家行为者"和"非国家行为者"能否被视为类似于国家的理性主体？</li>
-<li>苏丹南北冲突最终以南苏丹独立告终，但南苏丹独立后内部族群冲突（丁卡 vs. 努尔）依然激烈——这如何被纳入本文的理论框架？是否说明框架需要延伸到"独立后的国家建构"阶段？</li>
-<li>唐世平教授的"族群冲突广义理论"具体是什么？本文作为其子研究，在理论体系中处于什么位置？广义理论还有哪些其他子研究？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
