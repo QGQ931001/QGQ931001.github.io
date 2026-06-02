@@ -706,112 +706,6 @@ Zotero Item Key:: KEQ65SD3</p>
       </tags>
   </entry>
   <entry>
-    <title>国家能力建设中的溢出效应 — 深度阅读笔记 — Aman-Rana &amp; Minaudier</title>
-    <url>/posts/aman-rana2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Spillovers in State Capacity Building: Evidence from the Digitization of Land Records in Pakistan</li>
-<li><strong>作者</strong>: Shan Aman-Rana (University of Virginia), Clement Minaudier (City University of London)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(4): 1459-1498</li>
-<li><strong>DOI</strong>: 10.1257/aer.20240880</li>
-<li><strong>难度评估</strong>: 高 - 需要发展经济学、组织经济学、计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>国家能力（State Capacity）</strong>：指国家有效执行政策和提供公共服务的能力，主要包括税收能力、产权保护和行政能力。</p>
-<p><strong>数字化改革（Digitization Reform）</strong>：在发展中国家被视为加强国家能力的有效手段，可减少官僚腐败，提高透明度和效率。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol>
-<li>
-<p><strong>数字化的双重性</strong>：数字化会"重塑"官僚机构的组织结构，改变不同机构间的关系</p>
-</li>
-<li>
-<p><strong>研究缺口</strong>：现有文献主要关注数字化的直接正面效应，对间接影响的系统性研究不足</p>
-</li>
-<li>
-<p><strong>巴基斯坦案例</strong>：旁遮普省的分阶段土地记录数字化改革（2011-2014年）提供理想准实验场景</p>
-</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：技术引入官僚机构所带来的组织变化是否会削弱国家能力？</p>
-<p><strong>主要发现</strong>：土地记录数字化导致税收征收下降84%</p>
-<hr>
-<h2 id="2-内容及结构">2. 内容及结构</h2>
-<h3 id="第1节：引言">第1节：引言</h3>
-<h3 id="第2节：背景与数据">第2节：背景与数据</h3>
-<ul>
-<li>巴基斯坦旁遮普省的农业收入税（AIT）制度</li>
-<li>土地记录数字化改革三阶段推出（2011-2014年）</li>
-<li>数据来源：税收行政数据、卫星数据、家庭调查数据</li>
-</ul>
-<h3 id="第3节：识别策略与结果">第3节：识别策略与结果</h3>
-<ul>
-<li>交错推出的DID设计</li>
-<li>数字化导致税收征收下降84%</li>
-</ul>
-<h3 id="第4节：机制分析">第4节：机制分析</h3>
-<ul>
-<li>税基变化</li>
-<li>官僚绩效变化（失去杠杆效应、腐败转移效应）</li>
-</ul>
-<h3 id="第5节：讨论">第5节：讨论</h3>
-<h3 id="第6节：结论">第6节：结论</h3>
-<hr>
-<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="巴基斯坦农业收入税制度">巴基斯坦农业收入税制度</h4>
-<p>税收由地方官僚（Qanungo）征收，基于耕地面积或利润。征收流程包括年初作物检查（Girdawari）、发出税收需求通知、征收税款。</p>
-<h3 id="实证方法">实证方法</h3>
-<p><strong>识别策略</strong>：</p>
-<ul>
-<li>交错推出的DID设计</li>
-<li>使用计划推出时间而非实际时间定义处理变量</li>
-<li>事件研究验证平行趋势</li>
-</ul>
-<p><strong>主要结果</strong>：</p>
-<ul>
-<li>数字化导致税收征收下降84%</li>
-</ul>
-<h3 id="机制分析">机制分析</h3>
-<p><strong>税基变化</strong>：使用卫星数据、农户调查数据验证</p>
-<p><strong>官僚绩效变化</strong>：</p>
-<ul>
-<li>理论模型：失去杠杆效应、腐败转移效应</li>
-<li>税收评估变化：申报耕地面积下降10%、税收需求下降45%</li>
-<li>征收绩效下降：征收率下降29.5个百分点</li>
-</ul>
-<hr>
-<h2 id="4-结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol>
-<li>
-<p><strong>技术引入可能损害国家能力</strong>：数字化在改善产权保护的同时，可能损害税收能力</p>
-</li>
-<li>
-<p><strong>组织变化是关键机制</strong>：官僚失去对农民土地信息的控制，导致征收能力下降</p>
-</li>
-<li>
-<p><strong>政策启示</strong>：技术投资必须配合组织变革</p>
-</li>
-</ol>
-<hr>
-<h2 id="5-未来研究方向">5. 未来研究方向</h2>
-<ol>
-<li>其他国家类似数字化改革的验证</li>
-<li>配套政策干预的效果</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Search Direction — 深度阅读笔记 — Anderson &amp; Renault</title>
     <url>/posts/anderson2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -1096,6 +990,112 @@ Zotero Item Key:: KEQ65SD3</p>
         <tag>发展经济学</tag>
         <tag>基础设施</tag>
         <tag>AER</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>国家能力建设中的溢出效应 — 深度阅读笔记 — Aman-Rana &amp; Minaudier</title>
+    <url>/posts/aman-rana2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Spillovers in State Capacity Building: Evidence from the Digitization of Land Records in Pakistan</li>
+<li><strong>作者</strong>: Shan Aman-Rana (University of Virginia), Clement Minaudier (City University of London)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(4): 1459-1498</li>
+<li><strong>DOI</strong>: 10.1257/aer.20240880</li>
+<li><strong>难度评估</strong>: 高 - 需要发展经济学、组织经济学、计量经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>国家能力（State Capacity）</strong>：指国家有效执行政策和提供公共服务的能力，主要包括税收能力、产权保护和行政能力。</p>
+<p><strong>数字化改革（Digitization Reform）</strong>：在发展中国家被视为加强国家能力的有效手段，可减少官僚腐败，提高透明度和效率。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol>
+<li>
+<p><strong>数字化的双重性</strong>：数字化会"重塑"官僚机构的组织结构，改变不同机构间的关系</p>
+</li>
+<li>
+<p><strong>研究缺口</strong>：现有文献主要关注数字化的直接正面效应，对间接影响的系统性研究不足</p>
+</li>
+<li>
+<p><strong>巴基斯坦案例</strong>：旁遮普省的分阶段土地记录数字化改革（2011-2014年）提供理想准实验场景</p>
+</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：技术引入官僚机构所带来的组织变化是否会削弱国家能力？</p>
+<p><strong>主要发现</strong>：土地记录数字化导致税收征收下降84%</p>
+<hr>
+<h2 id="2-内容及结构">2. 内容及结构</h2>
+<h3 id="第1节：引言">第1节：引言</h3>
+<h3 id="第2节：背景与数据">第2节：背景与数据</h3>
+<ul>
+<li>巴基斯坦旁遮普省的农业收入税（AIT）制度</li>
+<li>土地记录数字化改革三阶段推出（2011-2014年）</li>
+<li>数据来源：税收行政数据、卫星数据、家庭调查数据</li>
+</ul>
+<h3 id="第3节：识别策略与结果">第3节：识别策略与结果</h3>
+<ul>
+<li>交错推出的DID设计</li>
+<li>数字化导致税收征收下降84%</li>
+</ul>
+<h3 id="第4节：机制分析">第4节：机制分析</h3>
+<ul>
+<li>税基变化</li>
+<li>官僚绩效变化（失去杠杆效应、腐败转移效应）</li>
+</ul>
+<h3 id="第5节：讨论">第5节：讨论</h3>
+<h3 id="第6节：结论">第6节：结论</h3>
+<hr>
+<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="巴基斯坦农业收入税制度">巴基斯坦农业收入税制度</h4>
+<p>税收由地方官僚（Qanungo）征收，基于耕地面积或利润。征收流程包括年初作物检查（Girdawari）、发出税收需求通知、征收税款。</p>
+<h3 id="实证方法">实证方法</h3>
+<p><strong>识别策略</strong>：</p>
+<ul>
+<li>交错推出的DID设计</li>
+<li>使用计划推出时间而非实际时间定义处理变量</li>
+<li>事件研究验证平行趋势</li>
+</ul>
+<p><strong>主要结果</strong>：</p>
+<ul>
+<li>数字化导致税收征收下降84%</li>
+</ul>
+<h3 id="机制分析">机制分析</h3>
+<p><strong>税基变化</strong>：使用卫星数据、农户调查数据验证</p>
+<p><strong>官僚绩效变化</strong>：</p>
+<ul>
+<li>理论模型：失去杠杆效应、腐败转移效应</li>
+<li>税收评估变化：申报耕地面积下降10%、税收需求下降45%</li>
+<li>征收绩效下降：征收率下降29.5个百分点</li>
+</ul>
+<hr>
+<h2 id="4-结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol>
+<li>
+<p><strong>技术引入可能损害国家能力</strong>：数字化在改善产权保护的同时，可能损害税收能力</p>
+</li>
+<li>
+<p><strong>组织变化是关键机制</strong>：官僚失去对农民土地信息的控制，导致征收能力下降</p>
+</li>
+<li>
+<p><strong>政策启示</strong>：技术投资必须配合组织变革</p>
+</li>
+</ol>
+<hr>
+<h2 id="5-未来研究方向">5. 未来研究方向</h2>
+<ol>
+<li>其他国家类似数字化改革的验证</li>
+<li>配套政策干预的效果</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -2186,157 +2186,6 @@ $$P_{extended} = P_{short} \cdot e<sup>{y</sup>* \cdot \Delta T}$$</p>
       </tags>
   </entry>
   <entry>
-    <title>压低成本：干中学与全球电动汽车电池产业政府政策 — 深度阅读笔记 — Barwick Et Al.</title>
-    <url>/posts/barwick2025/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Drive Down the Cost: Learning by Doing and Government Policies in the Global EV Battery Industry</li>
-<li><strong>作者</strong>: Panle Jia Barwick (Wisconsin), Hyuk-Soo Kwon (Singapore), Shanjun Li (Cornell), Nahim Zahur (Queens)</li>
-<li><strong>年份</strong>: 2025</li>
-<li><strong>来源</strong>: NBER Working Paper No. 33378</li>
-<li><strong>DOI</strong>: 10.3386/w33378</li>
-</ul>
-<span id="more"></span>
-<hr>
-<hr>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-“干中学”（Learning by Doing, LBD）是产业经济学和增长理论的经典概念：企业在生产过程中积累经验，进而降低单位生产成本。“Wright’s Law”（1936年由航空工程师Theodore Wright提出）将这一规律量化为"累计产量每翻倍，单位成本下降固定比例"。LBD在半导体、太阳能电池等绿色技术行业均有大量记录。在政策设计上，LBD带来正外部性——当前生产提高了整个行业未来的效率，因此存在补贴当前生产的理由（以纠正动态外部性）。</p>
-<p><strong>研究背景</strong><br>
-电动汽车（EV）电池成本在2010-2020年间下降了近90%，是过去十年绿色能源技术中最引人注目的成本下降之一。这一变化对全球气候政策目标至关重要——电池成本是EV相对于内燃机车价格劣势的主要来源。全球各国政府为促进EV普及投入了大量补贴（2022年全球EV消费补贴达430亿美元），并通过产业政策（如中国白名单政策、美国IRA本地含量要求）扶持本土电池产业。然而，LBD在多大程度上驱动了成本下降？政府政策通过哪些渠道影响LBD进程？这些问题此前缺乏可信的量化研究。</p>
-<p><strong>作者的问题意识</strong><br>
-（1）LBD在多大程度上解释了EV电池成本的下降（相对于技术进步、规模经济、原材料成本等其他因素）？（2）LBD如何改变消费者EV补贴的政策效果？（3）中国的"白名单"本地含量要求政策通过LBD对全球EV市场产生了怎样的影响？（4）LBD在全球供应链中产生怎样的跨国溢出效应？</p>
-<p><strong>研究意义</strong><br>
-本文为绿色技术政策设计提供了直接量化依据：若忽视LBD，政策评估将大幅低估补贴的长期效益；同时揭示了消费端补贴与产业政策的相互作用，对评估美国IRA、中国产业政策的全球影响具有直接参考价值。</p>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言</strong>：提出问题，概述主要发现（LBD学习率7.5%，与补贴互补放大效果，跨国溢出效应）。</li>
-<li><strong>数据</strong>：全球13国EV销售数据（2013-2020），电池供应商信息，各国补贴政策。</li>
-<li><strong>需求模型</strong>：异质消费者离散选择模型（BLP类型），估计消费者对EV特性（价格、续航、充电速度等）的偏好。</li>
-<li><strong>供给模型与电池成本恢复</strong>：通过Nash议价模型（上游电池供应商与下游EV生产商之间）推断上下游加成，从而恢复电池成本。</li>
-<li><strong>LBD估计</strong>：用工具变量方法识别LBD学习率，控制内生性（高效企业多生产更多、积累更多经验）。</li>
-<li><strong>反事实政策分析</strong>：（a）评估消费者EV补贴在有无LBD情况下的效果；（b）评估中国白名单政策及其时间安排的影响。</li>
-<li><strong>结论</strong>：总结核心发现及政策含义。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>EV电池成本是EV普及的关键障碍，而其90%的成本降幅是过去十年绿色技术领域最显著的成就之一。产业界将这一降幅归因于LBD，但缺乏可信的因果估计：LBD究竟贡献了多少？还是技术进步、规模经济、原材料价格下降等因素更重要？政府大规模补贴政策是否加速了这一进程？</p>
-<h3 id="挑战">挑战</h3>
-<p><strong>挑战一：电池成本不可观测</strong><br>
-电池供应协议是商业机密，无法直接观测到每款EV型号的电池成本。解决方法：通过构建EV生产商与电池供应商之间Nash议价模型，结合观测到的车辆价格和估计的需求弹性，反推上下游加成，进而推断电池成本。</p>
-<p><strong>挑战二：LBD识别的内生性</strong><br>
-企业的累计产量（生产经验，experience）与不可观测的成本冲击相关——成本优势大的企业往往产量更大、经验积累更快。若直接用经验变量回归成本，估计结果会有偏差。<br>
-<strong>工具变量策略</strong>：利用各电池供应商对下游不同国家EV补贴的差异暴露（variation）来构造工具变量。若甲国对某款车型提供慷慨补贴，供应该车型电池的供应商将更快积累经验。这一"补贴暴露"外生地推动了部分供应商的经验积累，从而识别LBD的因果效应。此外，还利用了中国白名单政策（2016-2019年）对电池供应商经验的外生冲击。</p>
-<h3 id="方法">方法</h3>
-<p><strong>需求端</strong>：BLP类型的随机系数离散选择模型，用于估计异质消费者对EV特性（价格、续航、充电功率、品牌等）的偏好，从而估计需求弹性。</p>
-<p><strong>供给端</strong>：Nash议价框架（EV生产商与电池供应商之间的纳什讨价还价），考察同步定价（Simultaneous）、顺序定价（Sequential）和线性定价（Linear Pricing）多种供给侧模型，并比较其对成本恢复的稳健性。</p>
-<p><strong>LBD估计方程</strong>（核心）：</p>
-<ul>
-<li>以电池成本（对数）对累计生产经验（对数）做回归，控制行业整体技术进步、EV整车装配经验、原材料投入成本、规模经济等，并用工具变量处理经验的内生性。</li>
-<li>学习率（learning rate）定义为经验每翻倍时成本下降的百分比。</li>
-</ul>
-<p><strong>数据</strong>：</p>
-<ul>
-<li>全球13国（覆盖&gt;95%全球EV销售）2013-2020年逐车型逐年销量数据（含BEV和PHEV）</li>
-<li>电池供应商数据库（植物地点、供应的EV车型列表）</li>
-<li>各国EV购置补贴数据（金额、起止时间）</li>
-<li>社会经济变量（收入分布等，用于校准消费者异质性）</li>
-</ul>
-<h3 id="结果">结果</h3>
-<p><strong>核心结果一：LBD学习率为7.5%</strong><br>
-控制行业技术进步、整车装配经验、原材料成本和规模经济后，LBD学习率估计为<strong>7.5%</strong>——即电池生产经验每翻倍，单位成本下降7.5%。该学习率处于文献估计的较低端，但仍具有重要经济意义。在2013-2020年电池总成本降幅中，LBD贡献了<strong>35.5%</strong>，行业技术进步贡献了<strong>39.9%</strong>，其余由整车装配经验、电池化学材料变化、原材料价格和规模经济共同解释。</p>
-<p><strong>核心结果二：LBD大幅放大EV补贴效果</strong></p>
-<ul>
-<li>无LBD时，各国补贴估计使2013-2020年全球累计EV销量增加<strong>29.9%</strong>。</li>
-<li>同时考虑补贴和LBD时，全球EV销量相比无补贴无LBD基准增加<strong>170%</strong>。</li>
-<li>二者的联合效果比各自独立效果之和高出<strong>60%</strong>——说明补贴与LBD具有强互补性。</li>
-</ul>
-<p><strong>核心结果三：消费端补贴产生跨国溢出效应</strong><br>
-EV电池供应链是全球化的（主要集中在中、日、韩三国），一国补贴可通过LBD降低全球电池成本，产生跨国外溢：</p>
-<ul>
-<li>美国约131亿美元EV补贴产生了约165亿美元全球福利净增益；美国和加拿大获得其中49%，日韩电池供应商获得28%，中国仅获得3%（因为样本期内中国EV和电池与国际市场贸易有限）。</li>
-<li>欧盟约164亿美元补贴产生约116亿美元全球福利增益，欧盟仅获得其中26%（因为欧洲大量进口EV，且采用统一补贴而非有针对性补贴）。</li>
-</ul>
-<p><strong>核心结果四：上游电池供应商仅获得LBD收益的一小部分</strong><br>
-LBD产生的成本降低主要通过价格竞争传递给了EV生产商和最终消费者，而非被电池供应商内部保留——与完全竞争的产业组织逻辑一致。</p>
-<p><strong>政策结果五：中国白名单政策的影响</strong><br>
-中国白名单政策（2016-2019年）将EV补贴限于使用"白名单"国内电池供应商的车辆，为CATL等中国电池企业提供了保护性市场，帮助其积累经验、形成竞争优势。但这一政策具有两面性：</p>
-<ul>
-<li>实际实施时间（2016-2019年）对中国电池产业有正面效果（通过加速中国供应商的LBD积累）。</li>
-<li>若将该政策延迟5年实施（2021-2024年），由于中国电池企业已通过出口积累足够经验，白名单的保护效果将大幅减弱，且因阻碍全球供应链效率，中国国内福利净效果将转为负值。</li>
-</ul>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<p><strong>核心发现</strong>：LBD在EV电池成本下降中发挥了实质性作用（贡献35.5%），但并非唯一因素，行业技术进步同样重要。LBD与消费者补贴之间的强互补性意味着：忽视LBD将大幅低估补贴的长期效益。消费端补贴产生显著的跨国溢出效应，其全球效益往往远超国内效益，这对单国政策评估具有重要启示。中国的产业政策（白名单）在特定历史时机下对国内产业发展有正效果，但若时机不当则可能适得其反。</p>
-<p><strong>对领域的贡献</strong>：</p>
-<ol>
-<li>提出了在无法直接观测上游成本时通过结构性供给模型恢复电池成本的方法论框架；</li>
-<li>构建了全球EV行业的结构性模型，联合识别LBD、需求偏好和政策互动效应；</li>
-<li>量化了EV补贴的动态长期效益，纠正了现有静态评估文献的系统性低估；</li>
-<li>揭示了全球化供应链下单国产业政策的跨境外溢机制。</li>
-</ol>
-<p><strong>政策含义</strong>：</p>
-<ul>
-<li>EV补贴的动态效益远大于静态效益，政策评估应纳入LBD渠道；</li>
-<li>美国IRA的本地含量要求在短期内可能阻碍全球LBD进程，长期效果取决于本土供应链的学习速度；</li>
-<li>政策时机（timing）至关重要：早期的保护性产业政策（如中国白名单）可能在企业尚未具备竞争力时发挥关键作用，但过晚则适得其反。</li>
-</ul>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文中明确提及的方向</strong>：</p>
-<ol>
-<li>评估美国IRA本地含量要求对全球LBD和EV普及的长期影响；</li>
-<li>研究上游供应商如何将LBD收益分配给劳动者和股东（分配效应）；</li>
-<li>将分析拓展到EV以外的绿色技术（如太阳能、储能电池等）。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li>内外部LBD的分解：企业内部的知识积累vs.跨企业的知识溢出各贡献多少？这对政策选择（补贴全行业 vs. 扶持龙头企业）有重大影响；</li>
-<li>动态寡头垄断框架下的战略性LBD——企业是否会为了积累经验而战略性定低价（forward-looking pricing）；</li>
-<li>将模型扩展至2020年后：IRA颁布后（2022年），本地含量要求如何重塑全球电池供应链的LBD路径；</li>
-<li>LBD与研发投入的互动：研发投入（技术进步）与生产经验（LBD）是否互补，影响政策组合的最优设计。</li>
-</ol>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>电池成本恢复的模型依赖性</strong>：电池成本无法直接观测，需通过结构模型推断。不同供给侧假设（同步 vs. 顺序议价）是否会产生实质性不同的学习率估计？作者如何验证这些替代模型的可信度？</p>
-</li>
-<li>
-<p><strong>工具变量的有效性</strong>：利用"供应商对下游不同国家补贴的差异暴露"构造IV，这一策略要求EV补贴变动对电池成本没有直接效应（排他性限制）。若补贴政策同时改变了原材料需求（如锂、镍），可能违反这一假设——如何检验？</p>
-</li>
-<li>
-<p><strong>LBD的溢出结构</strong>：论文将LBD建模为企业层面的内部学习。但实际上，工程师流动、专利公开等机制可能使LBD在企业间溢出。内外部LBD的混淆对学习率估计和政策评估会产生怎样的影响？</p>
-</li>
-<li>
-<p><strong>本地含量要求的动态合理性</strong>：中国白名单实际上是保护主义政策，但本文发现在特定时机下它对国内产业有正面作用。这是否意味着"战略性贸易政策"在绿色技术的早期发展阶段具有动态合理性？如何区分"促进LBD积累"的合理保护与一般意义上的低效保护主义？</p>
-</li>
-<li>
-<p><strong>样本期外推的风险</strong>：研究覆盖2013-2020年，但EV市场在2020年后经历了爆炸式增长（中国BEV渗透率超过30%）。LBD在高渗透率阶段是否会放缓？本文的政策结论对IRA（2022年后）是否仍然适用？</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>"学习率7.5%"是怎么估计出来的？工具变量策略的具体构造方法是什么？</li>
-<li>为什么上游电池供应商只获得了LBD收益的"一小部分"？这是市场结构（竞争激烈）的结果，还是谈判权力（bargaining power）不对等的结果？</li>
-<li>美国IRA的本地含量要求是否会减慢全球LBD进程、推高全球EV价格？本文的框架如何用于评估IRA？</li>
-<li>中国白名单政策在实际实施时间下对全球（非中国）消费者的福利影响是正面还是负面？</li>
-<li>如果未来电池技术路线（如固态电池）发生重大转变，现有的LBD积累是否会"归零"？政策设计如何应对这种技术不确定性？</li>
-<li>论文的供给侧模型（Nash议价）对最终结论的敏感性如何？若改用更简单的加成定价模型，学习率估计会有多大变化？</li>
-<li>为什么中国在美国补贴的全球福利中只获得3%？这是否意味着美国的补贴实际上是在补贴日韩企业而非中国竞争对手？</li>
-</ol>
-<hr>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>深陷险境？基础设施投资与沿海城市的持久性 — 深度阅读笔记 — Balboni</title>
     <url>/posts/balboni2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -2685,6 +2534,157 @@ LBD产生的成本降低主要通过价格竞争传递给了EV生产商和最终
 <p>本文假设国内迁移是自由的，但实际的户口制度、护照限制等是否影响迁移对气候风险的调整速度？如何将政策约束纳入模型？</p>
 <hr>
 <p><em>本分析报告严格遵循精读文献skill规定的八部分结构完成，旨在为初学者提供全面、易懂的论文逻辑梳理与学术要点解读。</em></p>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>压低成本：干中学与全球电动汽车电池产业政府政策 — 深度阅读笔记 — Barwick Et Al.</title>
+    <url>/posts/barwick2025/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Drive Down the Cost: Learning by Doing and Government Policies in the Global EV Battery Industry</li>
+<li><strong>作者</strong>: Panle Jia Barwick (Wisconsin), Hyuk-Soo Kwon (Singapore), Shanjun Li (Cornell), Nahim Zahur (Queens)</li>
+<li><strong>年份</strong>: 2025</li>
+<li><strong>来源</strong>: NBER Working Paper No. 33378</li>
+<li><strong>DOI</strong>: 10.3386/w33378</li>
+</ul>
+<span id="more"></span>
+<hr>
+<hr>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+“干中学”（Learning by Doing, LBD）是产业经济学和增长理论的经典概念：企业在生产过程中积累经验，进而降低单位生产成本。“Wright’s Law”（1936年由航空工程师Theodore Wright提出）将这一规律量化为"累计产量每翻倍，单位成本下降固定比例"。LBD在半导体、太阳能电池等绿色技术行业均有大量记录。在政策设计上，LBD带来正外部性——当前生产提高了整个行业未来的效率，因此存在补贴当前生产的理由（以纠正动态外部性）。</p>
+<p><strong>研究背景</strong><br>
+电动汽车（EV）电池成本在2010-2020年间下降了近90%，是过去十年绿色能源技术中最引人注目的成本下降之一。这一变化对全球气候政策目标至关重要——电池成本是EV相对于内燃机车价格劣势的主要来源。全球各国政府为促进EV普及投入了大量补贴（2022年全球EV消费补贴达430亿美元），并通过产业政策（如中国白名单政策、美国IRA本地含量要求）扶持本土电池产业。然而，LBD在多大程度上驱动了成本下降？政府政策通过哪些渠道影响LBD进程？这些问题此前缺乏可信的量化研究。</p>
+<p><strong>作者的问题意识</strong><br>
+（1）LBD在多大程度上解释了EV电池成本的下降（相对于技术进步、规模经济、原材料成本等其他因素）？（2）LBD如何改变消费者EV补贴的政策效果？（3）中国的"白名单"本地含量要求政策通过LBD对全球EV市场产生了怎样的影响？（4）LBD在全球供应链中产生怎样的跨国溢出效应？</p>
+<p><strong>研究意义</strong><br>
+本文为绿色技术政策设计提供了直接量化依据：若忽视LBD，政策评估将大幅低估补贴的长期效益；同时揭示了消费端补贴与产业政策的相互作用，对评估美国IRA、中国产业政策的全球影响具有直接参考价值。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：提出问题，概述主要发现（LBD学习率7.5%，与补贴互补放大效果，跨国溢出效应）。</li>
+<li><strong>数据</strong>：全球13国EV销售数据（2013-2020），电池供应商信息，各国补贴政策。</li>
+<li><strong>需求模型</strong>：异质消费者离散选择模型（BLP类型），估计消费者对EV特性（价格、续航、充电速度等）的偏好。</li>
+<li><strong>供给模型与电池成本恢复</strong>：通过Nash议价模型（上游电池供应商与下游EV生产商之间）推断上下游加成，从而恢复电池成本。</li>
+<li><strong>LBD估计</strong>：用工具变量方法识别LBD学习率，控制内生性（高效企业多生产更多、积累更多经验）。</li>
+<li><strong>反事实政策分析</strong>：（a）评估消费者EV补贴在有无LBD情况下的效果；（b）评估中国白名单政策及其时间安排的影响。</li>
+<li><strong>结论</strong>：总结核心发现及政策含义。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>EV电池成本是EV普及的关键障碍，而其90%的成本降幅是过去十年绿色技术领域最显著的成就之一。产业界将这一降幅归因于LBD，但缺乏可信的因果估计：LBD究竟贡献了多少？还是技术进步、规模经济、原材料价格下降等因素更重要？政府大规模补贴政策是否加速了这一进程？</p>
+<h3 id="挑战">挑战</h3>
+<p><strong>挑战一：电池成本不可观测</strong><br>
+电池供应协议是商业机密，无法直接观测到每款EV型号的电池成本。解决方法：通过构建EV生产商与电池供应商之间Nash议价模型，结合观测到的车辆价格和估计的需求弹性，反推上下游加成，进而推断电池成本。</p>
+<p><strong>挑战二：LBD识别的内生性</strong><br>
+企业的累计产量（生产经验，experience）与不可观测的成本冲击相关——成本优势大的企业往往产量更大、经验积累更快。若直接用经验变量回归成本，估计结果会有偏差。<br>
+<strong>工具变量策略</strong>：利用各电池供应商对下游不同国家EV补贴的差异暴露（variation）来构造工具变量。若甲国对某款车型提供慷慨补贴，供应该车型电池的供应商将更快积累经验。这一"补贴暴露"外生地推动了部分供应商的经验积累，从而识别LBD的因果效应。此外，还利用了中国白名单政策（2016-2019年）对电池供应商经验的外生冲击。</p>
+<h3 id="方法">方法</h3>
+<p><strong>需求端</strong>：BLP类型的随机系数离散选择模型，用于估计异质消费者对EV特性（价格、续航、充电功率、品牌等）的偏好，从而估计需求弹性。</p>
+<p><strong>供给端</strong>：Nash议价框架（EV生产商与电池供应商之间的纳什讨价还价），考察同步定价（Simultaneous）、顺序定价（Sequential）和线性定价（Linear Pricing）多种供给侧模型，并比较其对成本恢复的稳健性。</p>
+<p><strong>LBD估计方程</strong>（核心）：</p>
+<ul>
+<li>以电池成本（对数）对累计生产经验（对数）做回归，控制行业整体技术进步、EV整车装配经验、原材料投入成本、规模经济等，并用工具变量处理经验的内生性。</li>
+<li>学习率（learning rate）定义为经验每翻倍时成本下降的百分比。</li>
+</ul>
+<p><strong>数据</strong>：</p>
+<ul>
+<li>全球13国（覆盖&gt;95%全球EV销售）2013-2020年逐车型逐年销量数据（含BEV和PHEV）</li>
+<li>电池供应商数据库（植物地点、供应的EV车型列表）</li>
+<li>各国EV购置补贴数据（金额、起止时间）</li>
+<li>社会经济变量（收入分布等，用于校准消费者异质性）</li>
+</ul>
+<h3 id="结果">结果</h3>
+<p><strong>核心结果一：LBD学习率为7.5%</strong><br>
+控制行业技术进步、整车装配经验、原材料成本和规模经济后，LBD学习率估计为<strong>7.5%</strong>——即电池生产经验每翻倍，单位成本下降7.5%。该学习率处于文献估计的较低端，但仍具有重要经济意义。在2013-2020年电池总成本降幅中，LBD贡献了<strong>35.5%</strong>，行业技术进步贡献了<strong>39.9%</strong>，其余由整车装配经验、电池化学材料变化、原材料价格和规模经济共同解释。</p>
+<p><strong>核心结果二：LBD大幅放大EV补贴效果</strong></p>
+<ul>
+<li>无LBD时，各国补贴估计使2013-2020年全球累计EV销量增加<strong>29.9%</strong>。</li>
+<li>同时考虑补贴和LBD时，全球EV销量相比无补贴无LBD基准增加<strong>170%</strong>。</li>
+<li>二者的联合效果比各自独立效果之和高出<strong>60%</strong>——说明补贴与LBD具有强互补性。</li>
+</ul>
+<p><strong>核心结果三：消费端补贴产生跨国溢出效应</strong><br>
+EV电池供应链是全球化的（主要集中在中、日、韩三国），一国补贴可通过LBD降低全球电池成本，产生跨国外溢：</p>
+<ul>
+<li>美国约131亿美元EV补贴产生了约165亿美元全球福利净增益；美国和加拿大获得其中49%，日韩电池供应商获得28%，中国仅获得3%（因为样本期内中国EV和电池与国际市场贸易有限）。</li>
+<li>欧盟约164亿美元补贴产生约116亿美元全球福利增益，欧盟仅获得其中26%（因为欧洲大量进口EV，且采用统一补贴而非有针对性补贴）。</li>
+</ul>
+<p><strong>核心结果四：上游电池供应商仅获得LBD收益的一小部分</strong><br>
+LBD产生的成本降低主要通过价格竞争传递给了EV生产商和最终消费者，而非被电池供应商内部保留——与完全竞争的产业组织逻辑一致。</p>
+<p><strong>政策结果五：中国白名单政策的影响</strong><br>
+中国白名单政策（2016-2019年）将EV补贴限于使用"白名单"国内电池供应商的车辆，为CATL等中国电池企业提供了保护性市场，帮助其积累经验、形成竞争优势。但这一政策具有两面性：</p>
+<ul>
+<li>实际实施时间（2016-2019年）对中国电池产业有正面效果（通过加速中国供应商的LBD积累）。</li>
+<li>若将该政策延迟5年实施（2021-2024年），由于中国电池企业已通过出口积累足够经验，白名单的保护效果将大幅减弱，且因阻碍全球供应链效率，中国国内福利净效果将转为负值。</li>
+</ul>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<p><strong>核心发现</strong>：LBD在EV电池成本下降中发挥了实质性作用（贡献35.5%），但并非唯一因素，行业技术进步同样重要。LBD与消费者补贴之间的强互补性意味着：忽视LBD将大幅低估补贴的长期效益。消费端补贴产生显著的跨国溢出效应，其全球效益往往远超国内效益，这对单国政策评估具有重要启示。中国的产业政策（白名单）在特定历史时机下对国内产业发展有正效果，但若时机不当则可能适得其反。</p>
+<p><strong>对领域的贡献</strong>：</p>
+<ol>
+<li>提出了在无法直接观测上游成本时通过结构性供给模型恢复电池成本的方法论框架；</li>
+<li>构建了全球EV行业的结构性模型，联合识别LBD、需求偏好和政策互动效应；</li>
+<li>量化了EV补贴的动态长期效益，纠正了现有静态评估文献的系统性低估；</li>
+<li>揭示了全球化供应链下单国产业政策的跨境外溢机制。</li>
+</ol>
+<p><strong>政策含义</strong>：</p>
+<ul>
+<li>EV补贴的动态效益远大于静态效益，政策评估应纳入LBD渠道；</li>
+<li>美国IRA的本地含量要求在短期内可能阻碍全球LBD进程，长期效果取决于本土供应链的学习速度；</li>
+<li>政策时机（timing）至关重要：早期的保护性产业政策（如中国白名单）可能在企业尚未具备竞争力时发挥关键作用，但过晚则适得其反。</li>
+</ul>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文中明确提及的方向</strong>：</p>
+<ol>
+<li>评估美国IRA本地含量要求对全球LBD和EV普及的长期影响；</li>
+<li>研究上游供应商如何将LBD收益分配给劳动者和股东（分配效应）；</li>
+<li>将分析拓展到EV以外的绿色技术（如太阳能、储能电池等）。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li>内外部LBD的分解：企业内部的知识积累vs.跨企业的知识溢出各贡献多少？这对政策选择（补贴全行业 vs. 扶持龙头企业）有重大影响；</li>
+<li>动态寡头垄断框架下的战略性LBD——企业是否会为了积累经验而战略性定低价（forward-looking pricing）；</li>
+<li>将模型扩展至2020年后：IRA颁布后（2022年），本地含量要求如何重塑全球电池供应链的LBD路径；</li>
+<li>LBD与研发投入的互动：研发投入（技术进步）与生产经验（LBD）是否互补，影响政策组合的最优设计。</li>
+</ol>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>电池成本恢复的模型依赖性</strong>：电池成本无法直接观测，需通过结构模型推断。不同供给侧假设（同步 vs. 顺序议价）是否会产生实质性不同的学习率估计？作者如何验证这些替代模型的可信度？</p>
+</li>
+<li>
+<p><strong>工具变量的有效性</strong>：利用"供应商对下游不同国家补贴的差异暴露"构造IV，这一策略要求EV补贴变动对电池成本没有直接效应（排他性限制）。若补贴政策同时改变了原材料需求（如锂、镍），可能违反这一假设——如何检验？</p>
+</li>
+<li>
+<p><strong>LBD的溢出结构</strong>：论文将LBD建模为企业层面的内部学习。但实际上，工程师流动、专利公开等机制可能使LBD在企业间溢出。内外部LBD的混淆对学习率估计和政策评估会产生怎样的影响？</p>
+</li>
+<li>
+<p><strong>本地含量要求的动态合理性</strong>：中国白名单实际上是保护主义政策，但本文发现在特定时机下它对国内产业有正面作用。这是否意味着"战略性贸易政策"在绿色技术的早期发展阶段具有动态合理性？如何区分"促进LBD积累"的合理保护与一般意义上的低效保护主义？</p>
+</li>
+<li>
+<p><strong>样本期外推的风险</strong>：研究覆盖2013-2020年，但EV市场在2020年后经历了爆炸式增长（中国BEV渗透率超过30%）。LBD在高渗透率阶段是否会放缓？本文的政策结论对IRA（2022年后）是否仍然适用？</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>"学习率7.5%"是怎么估计出来的？工具变量策略的具体构造方法是什么？</li>
+<li>为什么上游电池供应商只获得了LBD收益的"一小部分"？这是市场结构（竞争激烈）的结果，还是谈判权力（bargaining power）不对等的结果？</li>
+<li>美国IRA的本地含量要求是否会减慢全球LBD进程、推高全球EV价格？本文的框架如何用于评估IRA？</li>
+<li>中国白名单政策在实际实施时间下对全球（非中国）消费者的福利影响是正面还是负面？</li>
+<li>如果未来电池技术路线（如固态电池）发生重大转变，现有的LBD积累是否会"归零"？政策设计如何应对这种技术不确定性？</li>
+<li>论文的供给侧模型（Nash议价）对最终结论的敏感性如何？若改用更简单的加成定价模型，学习率估计会有多大变化？</li>
+<li>为什么中国在美国补贴的全球福利中只获得3%？这是否意味着美国的补贴实际上是在补贴日韩企业而非中国竞争对手？</li>
+</ol>
+<hr>
 ]]></content>
       <categories>
         <category>有趣的文章</category>
@@ -3988,6 +3988,54 @@ TWFE 的问题究竟是什么？是否可以在一个统一框架下同时解决
       </tags>
   </entry>
   <entry>
+    <title>大城市人口增长速度🦚</title>
+    <url>/posts/15523/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
+<center>上图即为最终效果</center>
+<h2 id="下载数据">下载数据</h2>
+<p>将代码中的**<code>~/文档/</code>**更换为要保存的目录.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="加载R包">加载R包</h2>
+<p>需要的R包如下所示.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
+<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<ol>
+<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
+<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon, Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
+<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
+<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
+</ol>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
+<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.<br>
+使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="绘图">绘图</h2>
+<p>代码如下,图见上文.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>绘图</category>
+        <category>map&amp;sf</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Generative AI at Work — 深度分析 — Brynjolfsson Et Al.</title>
     <url>/posts/bryn2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -4846,54 +4894,6 @@ $${y_{it} = \delta_t + \alpha_i + \beta AI_{it} + \gamma X_{it} + \epsilon_{it}}
       </tags>
   </entry>
   <entry>
-    <title>大城市人口增长速度🦚</title>
-    <url>/posts/15523/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
-<center>上图即为最终效果</center>
-<h2 id="下载数据">下载数据</h2>
-<p>将代码中的**<code>~/文档/</code>**更换为要保存的目录.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="加载R包">加载R包</h2>
-<p>需要的R包如下所示.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
-<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<ol>
-<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
-<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon, Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
-<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
-<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
-</ol>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
-<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.<br>
-使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="绘图">绘图</h2>
-<p>代码如下,图见上文.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>绘图</category>
-        <category>map&amp;sf</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>被误认的社会规范：沙特阿拉伯女性外出工作 — 深度阅读笔记 — Bursztyn, González &amp; Yanagizawa-Drott</title>
     <url>/posts/bursztyn2020/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -5613,361 +5613,6 @@ Zotero Item Key:: LDPJ5VUP</p>
       </tags>
   </entry>
   <entry>
-    <title>The Effect of Minimum Wages on Low-Wage Jobs — 深度分析 — Cengiz Et Al.</title>
-    <url>/posts/cengiz2019/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: The Effect of Minimum Wages on Low-Wage Jobs</li>
-<li><strong>作者</strong>: Doruk Cengiz(University of Massachusetts Amherst), Arindrajit Dube(UMass Amherst, NBER), Attila Lindner(UCL, CEP, IFS), Ben Zipperer(Economic Policy Institute)</li>
-<li><strong>类型</strong>: 论文笔记 / 劳动经济学</li>
-<li><strong>出版年份</strong>: 2019</li>
-<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics, Volume 134, Issue 3, Pages 1405-1454</li>
-<li><strong>难度评估</strong>: 中 - 需要劳动经济学和计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言-背景和意义">1. 引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>最低工资政策(Minimum Wage Policy)</strong>:政府规定的劳动力小时工资下限,是劳动经济学中最具争议的政策之一.支持者认为它能提高低收入工人的生活水平,反对者担心它会导致就业下降(“unemployment”).</p>
-<p><strong>"新最低工资研究"的起源</strong>:Card and Krueger (1995)&lt;神话与计量经济学:对最低工资的新研究&gt;对传统观点提出挑战,使用准实验方法发现最低工资提高并未导致就业下降.</p>
-<p><strong>bunching estimator(堆集估计量)</strong>:一种利用政策变化导致的结果分布聚集现象来识别因果效应的方法.</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol>
-<li>
-<p><strong>政策热潮</strong>:加州、伊利诺伊州、麻省、新泽西州、纽约州已通过将最低工资提高至$15/小时的立法;数十个城市也实施了城市级最低工资政策.</p>
-</li>
-<li>
-<p><strong>研究缺漏</strong>:尽管新最低工资研究已逾30年,但关于政策对总体就业影响的研究仍然很少.2014年国会预算办公室(CBO)报告承认相关研究匮乏,被迫使用青少年的弹性来推断对低工资工人的总体影响.</p>
-</li>
-<li>
-<p><strong>方法论挑战</strong>:传统方法使用双向固定效应回归,但存在一些问题,如对工资分布上尾部的影响可能干扰对底部效应的估计.</p>
-</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:最低工资对低工资工作的总体效应是什么?</p>
-<p><strong>具体子问题</strong>:</p>
-<ul>
-<li>最低工资对就业的影响是正还是负?</li>
-<li>影响有多大?</li>
-<li>最低工资带来的工资上涨是否被就业损失所抵消?</li>
-<li>效应的异质性如何?</li>
-</ul>
-<h3 id="研究意义">研究意义</h3>
-<ol>
-<li><strong>方法创新</strong>:提出"事件堆集"(EB-bunching)方法,将总体就业效应分解到各工资区间</li>
-<li><strong>对既有文献的贡献</strong>:澄清了最低工资文献中关于1980年代和1990年代早期样本选择的争议</li>
-<li><strong>政策意义</strong>:为当前$15最低工资运动提供实证依据</li>
-</ol>
-<hr>
-<h2 id="2-内容及结构-论文结构">2. 内容及结构(论文结构)</h2>
-<table>
-<thead>
-<tr>
-<th>章节</th>
-<th>内容</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I. Introduction</td>
-<td>研究背景、问题意识、文献贡献</td>
-</tr>
-<tr>
-<td>II. Methodology and Data</td>
-<td>概念框架、实证策略、数据</td>
-</tr>
-<tr>
-<td>III. Main Empirical Findings</td>
-<td>总体就业效应、工资溢出、异质性分析</td>
-</tr>
-<tr>
-<td>IV. Robustness and Threats to Identification</td>
-<td>对双向固定效应方法问题的解释</td>
-</tr>
-<tr>
-<td>V. Conclusion</td>
-<td>结论</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="3-正文-逻辑梳理">3. 正文(逻辑梳理)</h2>
-<h3 id="背景-最低工资的理论预测">背景:最低工资的理论预测</h3>
-<p><strong>竞争性劳动力市场模型预测</strong>:</p>
-<ul>
-<li>最低工资提高会导致低工资就业下降</li>
-<li>下降幅度取决于劳动力需求弹性</li>
-</ul>
-<p><strong>monopsony模型预测</strong>:</p>
-<ul>
-<li>最低工资提高可能增加就业</li>
-<li>因为雇主的市場力量被削弱</li>
-</ul>
-<p><strong>实际预测的复杂性</strong>:</p>
-<ul>
-<li>工资溢出效应(spillovers):最低工资可能推动高于最低工资的工人工资上涨</li>
-<li>劳动力替代:低技能工人可能被高技能工人替代</li>
-<li>就业损失可能分布在不同工资区间</li>
-</ul>
-<h3 id="挑战">挑战</h3>
-<ol>
-<li>
-<p><strong>识别问题</strong>:如何分离最低工资的因果效应?</p>
-</li>
-<li>
-<p><strong>聚类分配问题</strong>:传统双向固定效应方法可能因早期时期的混杂因素而产生偏误</p>
-</li>
-<li>
-<p><strong>效应的空间异质性</strong>:不同行业的最低工资效应可能不同</p>
-</li>
-<li>
-<p><strong>数据局限性</strong>:CPS调查数据可能存在测量误差</p>
-</li>
-</ol>
-<h3 id="方法-数据集要突出">方法(数据集要突出)</h3>
-<p><strong>数据来源</strong>:</p>
-<ul>
-<li>1979-2016年CPS(当前人口调查)NBER合并出口轮次小组数据</li>
-<li>137,000+观测值</li>
-<li>138个州级最低工资事件(1979-2016年间)</li>
-<li><strong>事件定义</strong>:州最低工资增加至少$0.25,且至少2%工人直接影响</li>
-</ul>
-<p><strong>核心概念</strong>:</p>
-<ul>
-<li><strong>缺失工作(Missing Jobs)</strong>:最低工资提高后,低于新最低工资的工作数量减少</li>
-<li><strong>超额工作(Excess Jobs)</strong>:因最低工资提高而出现在最低工资水平或略高处的工作增加</li>
-</ul>
-<p><strong>实证策略_事件研究设计</strong>:<br>
-$${E_{sjt} \over N_{st}} = \sum_{\tau=-3}^{4} \sum_{k=-4}^{17} \alpha_{\tau k} I_{\tau k}^{sjt} + \mu_{sj} + \rho_{jt} + \Omega_{sjt} + u_{sjt}}$$</p>
-<p>其中:</p>
-<ul>
-<li>$E_{sjt}$:j工资区间在s州的就业</li>
-<li>$N_{st}$:s州当时的劳动力</li>
-<li>$I_{\tau k}^{sjt}$:处理指示变量</li>
-<li>$\mu_{sj}$:州×工资区间固定效应</li>
-<li>$\rho_{jt}$:时间×工资区间固定效应</li>
-<li>标准误按州级聚类</li>
-</ul>
-<p><strong>关键创新</strong>:</p>
-<ul>
-<li>将就业变化按$0.25工资区间分解</li>
-<li>使用事件窗口前后对比</li>
-<li>提供对上尾效应的检验</li>
-</ul>
-<h3 id="结果-Results">结果(Results)</h3>
-<p><strong>核心发现1:总体就业效应接近零</strong></p>
-<table>
-<thead>
-<tr>
-<th>指标</th>
-<th>估计值</th>
-<th>标准误</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>受影响工人就业变化</td>
-<td>+2.8%</td>
-<td>(2.9%)</td>
-</tr>
-<tr>
-<td>就业弹性(相对于自身工资)</td>
-<td>0.41</td>
-<td>(0.43)</td>
-</tr>
-</tbody>
-</table>
-<p>→ 在95%置信水平下,排除低于-0.45的弹性</p>
-<p><strong>核心发现2:工资溢出效应显著</strong></p>
-<ul>
-<li>溢出效应向上延伸至最低工资以上约$3</li>
-<li>总体工资增长中约40%来自溢出效应</li>
-<li><strong>不对称性</strong>:留任工人获得显著工资溢出,但新进入者没有</li>
-</ul>
-<p><strong>核心发现3:行业异质性</strong></p>
-<table>
-<thead>
-<tr>
-<th>行业</th>
-<th>就业弹性</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>可贸易部门(制造业)</td>
-<td>-1.4</td>
-<td>显著负效应</td>
-</tr>
-<tr>
-<td>不可贸易部门(餐饮、零售)</td>
-<td>≈0</td>
-<td>几乎无效应</td>
-</tr>
-</tbody>
-</table>
-<p>→ 行业组成是决定最低工资就业效应的关键因素</p>
-<p><strong>核心发现4:人口群体异质性</strong></p>
-<ul>
-<li>按教育和年龄分组,未发现低技能工人被高技能工人替代的证据</li>
-<li>不同人口群体的就业效应大多接近零且不显著</li>
-<li>表明最低工资政策的好处理广泛共享</li>
-</ul>
-<p><strong>核心发现5:对Meer and West (2016)发现的解释</strong></p>
-<ul>
-<li>该研究使用双向固定效应发现大的负就业估计</li>
-<li>分解分析显示这一负效应由工资分布上尾的不大幅度下降驱动</li>
-<li>问题来源:1980年代和1990年代早期样本中包含的时期混杂因素</li>
-<li>1992年后,各种标准规范几乎没有就业减少的证据</li>
-</ul>
-<hr>
-<h2 id="4-结论-Conclusion">4. 结论(Conclusion)</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol>
-<li>
-<p><strong>最低工资对低工资工作数量的总体影响基本为零</strong>:五年观察期内,低工资工作数量基本保持不变</p>
-</li>
-<li>
-<p><strong>最低工资的直接工资效应被适度工资溢出放大</strong>:溢出效应约占总体工资增长的40%</p>
-</li>
-<li>
-<p><strong>就业效应不能用劳动力替代解释</strong>:不同教育和年龄群体的替代效应证据不成立</p>
-</li>
-<li>
-<p><strong>在更高最低工资水平下也未发现就业减少证据</strong>:但确实发现可贸易部门(制造业)减少的迹象</p>
-</li>
-<li>
-<p><strong>方法论贡献</strong>:EB-bunching方法提供了透明且稳健的估计最低工资就业效应的方法</p>
-</li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol>
-<li><strong>澄清方法论争议</strong>:解释了为什么双向固定效应和事件研究方法产生不同结果</li>
-<li><strong>提供新的实证证据</strong>:使用更全面的数据和更细粒度的分解</li>
-<li><strong>扩展工资溢出分析</strong>:提供了关于溢出机制(相对工资关系 vs 外部选择价值)的证据</li>
-<li><strong>政策意义</strong>:为$15最低工资运动提供实证支持</li>
-</ol>
-<hr>
-<h2 id="5-未来研究方向-Future-work">5. 未来研究方向(Future work)</h2>
-<h3 id="论文提及的拓展方向">论文提及的拓展方向</h3>
-<ol>
-<li>
-<p><strong>更高最低工资水平的研究</strong>:当Kaitz指数超过59%时会发生什么?需要更高最低工资的州的 variation</p>
-</li>
-<li>
-<p><strong>长期效应</strong>:本研究关注5年窗口,更长期效应仍需研究</p>
-</li>
-<li>
-<p><strong>其他国家的证据</strong>:美国结果的国际可比性</p>
-</li>
-</ol>
-<h3 id="思考的下一步研究">思考的下一步研究</h3>
-<ol>
-<li>
-<p><strong>动态一般均衡效应</strong>:行业层面的一般均衡调整如何影响就业?</p>
-</li>
-<li>
-<p><strong>非正规就业</strong>:最低工资对非正规经济(零工经济)的影响</p>
-</li>
-<li>
-<p><strong>非工资效应</strong>:最低工资对工作条件、培训机会等非工资方面的影响</p>
-</li>
-<li>
-<p><strong>家庭效应</strong>:最低工资对家庭收入分配和儿童贫困的影响</p>
-</li>
-<li>
-<p><strong>政治经济学</strong>:最低工资设定的决定因素及其政治经济学含义</p>
-</li>
-</ol>
-<hr>
-<h2 id="6-学术思考">6. 学术思考</h2>
-<h3 id="核心学术问题">核心学术问题</h3>
-<ol>
-<li>
-<p><strong>竞争性 vs monopsony劳动力市场的边界</strong></p>
-<ul>
-<li>本研究发现总体就业效应接近零</li>
-<li>这是否意味着低工资劳动力市场更接近monopsony?</li>
-<li>还是正负效应相互抵消?</li>
-</ul>
-</li>
-<li>
-<p><strong>工资溢出的机制</strong></p>
-<ul>
-<li>研究发现溢出效应在最低工资以上约$3处消失</li>
-<li>且对留任工人和新进入者影响不对称</li>
-<li>这更支持"相对工资关系假设"而非"外部选择价值假设"</li>
-<li>但这是否意味着企业内部存在显著的工资刚性?</li>
-</ul>
-</li>
-<li>
-<p><strong>可贸易 vs 不可贸易部门的差异</strong></p>
-<ul>
-<li>制造业显著负效应 vs 零售餐饮零效应</li>
-<li>这是否意味着全球化压力降低了美国低技能工人的谈价能力?</li>
-<li>还是反映了不同的劳动力市场结构?</li>
-</ul>
-</li>
-<li>
-<p><strong>EB-bunching方法的普适性</strong></p>
-<ul>
-<li>将总体效应分解到各工资区间</li>
-<li>提供了"透明"的估计方式</li>
-<li>是否可以推广到其他政策评估?</li>
-</ul>
-</li>
-<li>
-<p><strong>对CBO政策分析的启示</strong></p>
-<ul>
-<li>CBO使用青少年弹性来推断总体影响</li>
-<li>本研究表明青少年可能是受最低工资影响最深的群体</li>
-<li>这是否意味着CBO的方法实际上低估了不确定性?</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2 id="7-下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
-<ol>
-<li>
-<p><strong>识别策略的有效性</strong>:如何检验平行趋势假设?事件前趋势检验的结果如何?</p>
-</li>
-<li>
-<p><strong>测量误差的影响</strong>:CPS数据中的测量误差如何影响估计?特别是对工资分布尾部的测量?</p>
-</li>
-<li>
-<p><strong>Kaitz指数的具体含义</strong>:Kaitz指数达到59%时会发生什么理论预测?</p>
-</li>
-<li>
-<p><strong>对理论模型的启示</strong>:这些发现如何区分竞争性模型和monopsony模型?</p>
-</li>
-<li>
-<p><strong>政策外部有效性</strong>:基于1979-2016年数据的发现在2020年代是否仍然适用?劳动力市场结构是否发生了根本性变化?</p>
-</li>
-<li>
-<p><strong>对工人流动的动态效应</strong>:最低工资是否影响了低工资工人的职业发展轨迹?</p>
-</li>
-<li>
-<p><strong>雇主反应的非工资渠道</strong>:雇主除了调整就业和工资外,是否在工时、工作条件、培训等方面做出了调整?</p>
-</li>
-<li>
-<p><strong>与Dube et al. (2010) NJ快餐业研究的关系</strong>:为什么NJ快餐业研究发现了正效应,而本研究对所有行业的汇总发现零效应?</p>
-</li>
-<li>
-<p><strong>对州际差异的控制</strong>:如何排除州级经济基本面对结果的混杂影响?各州经济多样性的作用是什么?</p>
-</li>
-<li>
-<p><strong>最低工资的收入分配效应</strong>:最低工资如何与税法、其他转移支付计划相互作用以影响收入不平等?</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>劳动经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Poverty and Economic Decision-Making — 深度阅读笔记 — Carvalho, Meier &amp; Wang</title>
     <url>/posts/carvalho2016/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -6353,6 +5998,361 @@ $${E_{sjt} \over N_{st}} = \sum_{\tau=-3}^{4} \sum_{k=-4}^{17} \alpha_{\tau k} I
         <tag>贫困研究</tag>
         <tag>行为经济学</tag>
         <tag>认知科学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>The Effect of Minimum Wages on Low-Wage Jobs — 深度分析 — Cengiz Et Al.</title>
+    <url>/posts/cengiz2019/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: The Effect of Minimum Wages on Low-Wage Jobs</li>
+<li><strong>作者</strong>: Doruk Cengiz(University of Massachusetts Amherst), Arindrajit Dube(UMass Amherst, NBER), Attila Lindner(UCL, CEP, IFS), Ben Zipperer(Economic Policy Institute)</li>
+<li><strong>类型</strong>: 论文笔记 / 劳动经济学</li>
+<li><strong>出版年份</strong>: 2019</li>
+<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics, Volume 134, Issue 3, Pages 1405-1454</li>
+<li><strong>难度评估</strong>: 中 - 需要劳动经济学和计量经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言-背景和意义">1. 引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>最低工资政策(Minimum Wage Policy)</strong>:政府规定的劳动力小时工资下限,是劳动经济学中最具争议的政策之一.支持者认为它能提高低收入工人的生活水平,反对者担心它会导致就业下降(“unemployment”).</p>
+<p><strong>"新最低工资研究"的起源</strong>:Card and Krueger (1995)&lt;神话与计量经济学:对最低工资的新研究&gt;对传统观点提出挑战,使用准实验方法发现最低工资提高并未导致就业下降.</p>
+<p><strong>bunching estimator(堆集估计量)</strong>:一种利用政策变化导致的结果分布聚集现象来识别因果效应的方法.</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol>
+<li>
+<p><strong>政策热潮</strong>:加州、伊利诺伊州、麻省、新泽西州、纽约州已通过将最低工资提高至$15/小时的立法;数十个城市也实施了城市级最低工资政策.</p>
+</li>
+<li>
+<p><strong>研究缺漏</strong>:尽管新最低工资研究已逾30年,但关于政策对总体就业影响的研究仍然很少.2014年国会预算办公室(CBO)报告承认相关研究匮乏,被迫使用青少年的弹性来推断对低工资工人的总体影响.</p>
+</li>
+<li>
+<p><strong>方法论挑战</strong>:传统方法使用双向固定效应回归,但存在一些问题,如对工资分布上尾部的影响可能干扰对底部效应的估计.</p>
+</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>:最低工资对低工资工作的总体效应是什么?</p>
+<p><strong>具体子问题</strong>:</p>
+<ul>
+<li>最低工资对就业的影响是正还是负?</li>
+<li>影响有多大?</li>
+<li>最低工资带来的工资上涨是否被就业损失所抵消?</li>
+<li>效应的异质性如何?</li>
+</ul>
+<h3 id="研究意义">研究意义</h3>
+<ol>
+<li><strong>方法创新</strong>:提出"事件堆集"(EB-bunching)方法,将总体就业效应分解到各工资区间</li>
+<li><strong>对既有文献的贡献</strong>:澄清了最低工资文献中关于1980年代和1990年代早期样本选择的争议</li>
+<li><strong>政策意义</strong>:为当前$15最低工资运动提供实证依据</li>
+</ol>
+<hr>
+<h2 id="2-内容及结构-论文结构">2. 内容及结构(论文结构)</h2>
+<table>
+<thead>
+<tr>
+<th>章节</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I. Introduction</td>
+<td>研究背景、问题意识、文献贡献</td>
+</tr>
+<tr>
+<td>II. Methodology and Data</td>
+<td>概念框架、实证策略、数据</td>
+</tr>
+<tr>
+<td>III. Main Empirical Findings</td>
+<td>总体就业效应、工资溢出、异质性分析</td>
+</tr>
+<tr>
+<td>IV. Robustness and Threats to Identification</td>
+<td>对双向固定效应方法问题的解释</td>
+</tr>
+<tr>
+<td>V. Conclusion</td>
+<td>结论</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="3-正文-逻辑梳理">3. 正文(逻辑梳理)</h2>
+<h3 id="背景-最低工资的理论预测">背景:最低工资的理论预测</h3>
+<p><strong>竞争性劳动力市场模型预测</strong>:</p>
+<ul>
+<li>最低工资提高会导致低工资就业下降</li>
+<li>下降幅度取决于劳动力需求弹性</li>
+</ul>
+<p><strong>monopsony模型预测</strong>:</p>
+<ul>
+<li>最低工资提高可能增加就业</li>
+<li>因为雇主的市場力量被削弱</li>
+</ul>
+<p><strong>实际预测的复杂性</strong>:</p>
+<ul>
+<li>工资溢出效应(spillovers):最低工资可能推动高于最低工资的工人工资上涨</li>
+<li>劳动力替代:低技能工人可能被高技能工人替代</li>
+<li>就业损失可能分布在不同工资区间</li>
+</ul>
+<h3 id="挑战">挑战</h3>
+<ol>
+<li>
+<p><strong>识别问题</strong>:如何分离最低工资的因果效应?</p>
+</li>
+<li>
+<p><strong>聚类分配问题</strong>:传统双向固定效应方法可能因早期时期的混杂因素而产生偏误</p>
+</li>
+<li>
+<p><strong>效应的空间异质性</strong>:不同行业的最低工资效应可能不同</p>
+</li>
+<li>
+<p><strong>数据局限性</strong>:CPS调查数据可能存在测量误差</p>
+</li>
+</ol>
+<h3 id="方法-数据集要突出">方法(数据集要突出)</h3>
+<p><strong>数据来源</strong>:</p>
+<ul>
+<li>1979-2016年CPS(当前人口调查)NBER合并出口轮次小组数据</li>
+<li>137,000+观测值</li>
+<li>138个州级最低工资事件(1979-2016年间)</li>
+<li><strong>事件定义</strong>:州最低工资增加至少$0.25,且至少2%工人直接影响</li>
+</ul>
+<p><strong>核心概念</strong>:</p>
+<ul>
+<li><strong>缺失工作(Missing Jobs)</strong>:最低工资提高后,低于新最低工资的工作数量减少</li>
+<li><strong>超额工作(Excess Jobs)</strong>:因最低工资提高而出现在最低工资水平或略高处的工作增加</li>
+</ul>
+<p><strong>实证策略_事件研究设计</strong>:<br>
+$${E_{sjt} \over N_{st}} = \sum_{\tau=-3}^{4} \sum_{k=-4}^{17} \alpha_{\tau k} I_{\tau k}^{sjt} + \mu_{sj} + \rho_{jt} + \Omega_{sjt} + u_{sjt}}$$</p>
+<p>其中:</p>
+<ul>
+<li>$E_{sjt}$:j工资区间在s州的就业</li>
+<li>$N_{st}$:s州当时的劳动力</li>
+<li>$I_{\tau k}^{sjt}$:处理指示变量</li>
+<li>$\mu_{sj}$:州×工资区间固定效应</li>
+<li>$\rho_{jt}$:时间×工资区间固定效应</li>
+<li>标准误按州级聚类</li>
+</ul>
+<p><strong>关键创新</strong>:</p>
+<ul>
+<li>将就业变化按$0.25工资区间分解</li>
+<li>使用事件窗口前后对比</li>
+<li>提供对上尾效应的检验</li>
+</ul>
+<h3 id="结果-Results">结果(Results)</h3>
+<p><strong>核心发现1:总体就业效应接近零</strong></p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>估计值</th>
+<th>标准误</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>受影响工人就业变化</td>
+<td>+2.8%</td>
+<td>(2.9%)</td>
+</tr>
+<tr>
+<td>就业弹性(相对于自身工资)</td>
+<td>0.41</td>
+<td>(0.43)</td>
+</tr>
+</tbody>
+</table>
+<p>→ 在95%置信水平下,排除低于-0.45的弹性</p>
+<p><strong>核心发现2:工资溢出效应显著</strong></p>
+<ul>
+<li>溢出效应向上延伸至最低工资以上约$3</li>
+<li>总体工资增长中约40%来自溢出效应</li>
+<li><strong>不对称性</strong>:留任工人获得显著工资溢出,但新进入者没有</li>
+</ul>
+<p><strong>核心发现3:行业异质性</strong></p>
+<table>
+<thead>
+<tr>
+<th>行业</th>
+<th>就业弹性</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>可贸易部门(制造业)</td>
+<td>-1.4</td>
+<td>显著负效应</td>
+</tr>
+<tr>
+<td>不可贸易部门(餐饮、零售)</td>
+<td>≈0</td>
+<td>几乎无效应</td>
+</tr>
+</tbody>
+</table>
+<p>→ 行业组成是决定最低工资就业效应的关键因素</p>
+<p><strong>核心发现4:人口群体异质性</strong></p>
+<ul>
+<li>按教育和年龄分组,未发现低技能工人被高技能工人替代的证据</li>
+<li>不同人口群体的就业效应大多接近零且不显著</li>
+<li>表明最低工资政策的好处理广泛共享</li>
+</ul>
+<p><strong>核心发现5:对Meer and West (2016)发现的解释</strong></p>
+<ul>
+<li>该研究使用双向固定效应发现大的负就业估计</li>
+<li>分解分析显示这一负效应由工资分布上尾的不大幅度下降驱动</li>
+<li>问题来源:1980年代和1990年代早期样本中包含的时期混杂因素</li>
+<li>1992年后,各种标准规范几乎没有就业减少的证据</li>
+</ul>
+<hr>
+<h2 id="4-结论-Conclusion">4. 结论(Conclusion)</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol>
+<li>
+<p><strong>最低工资对低工资工作数量的总体影响基本为零</strong>:五年观察期内,低工资工作数量基本保持不变</p>
+</li>
+<li>
+<p><strong>最低工资的直接工资效应被适度工资溢出放大</strong>:溢出效应约占总体工资增长的40%</p>
+</li>
+<li>
+<p><strong>就业效应不能用劳动力替代解释</strong>:不同教育和年龄群体的替代效应证据不成立</p>
+</li>
+<li>
+<p><strong>在更高最低工资水平下也未发现就业减少证据</strong>:但确实发现可贸易部门(制造业)减少的迹象</p>
+</li>
+<li>
+<p><strong>方法论贡献</strong>:EB-bunching方法提供了透明且稳健的估计最低工资就业效应的方法</p>
+</li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol>
+<li><strong>澄清方法论争议</strong>:解释了为什么双向固定效应和事件研究方法产生不同结果</li>
+<li><strong>提供新的实证证据</strong>:使用更全面的数据和更细粒度的分解</li>
+<li><strong>扩展工资溢出分析</strong>:提供了关于溢出机制(相对工资关系 vs 外部选择价值)的证据</li>
+<li><strong>政策意义</strong>:为$15最低工资运动提供实证支持</li>
+</ol>
+<hr>
+<h2 id="5-未来研究方向-Future-work">5. 未来研究方向(Future work)</h2>
+<h3 id="论文提及的拓展方向">论文提及的拓展方向</h3>
+<ol>
+<li>
+<p><strong>更高最低工资水平的研究</strong>:当Kaitz指数超过59%时会发生什么?需要更高最低工资的州的 variation</p>
+</li>
+<li>
+<p><strong>长期效应</strong>:本研究关注5年窗口,更长期效应仍需研究</p>
+</li>
+<li>
+<p><strong>其他国家的证据</strong>:美国结果的国际可比性</p>
+</li>
+</ol>
+<h3 id="思考的下一步研究">思考的下一步研究</h3>
+<ol>
+<li>
+<p><strong>动态一般均衡效应</strong>:行业层面的一般均衡调整如何影响就业?</p>
+</li>
+<li>
+<p><strong>非正规就业</strong>:最低工资对非正规经济(零工经济)的影响</p>
+</li>
+<li>
+<p><strong>非工资效应</strong>:最低工资对工作条件、培训机会等非工资方面的影响</p>
+</li>
+<li>
+<p><strong>家庭效应</strong>:最低工资对家庭收入分配和儿童贫困的影响</p>
+</li>
+<li>
+<p><strong>政治经济学</strong>:最低工资设定的决定因素及其政治经济学含义</p>
+</li>
+</ol>
+<hr>
+<h2 id="6-学术思考">6. 学术思考</h2>
+<h3 id="核心学术问题">核心学术问题</h3>
+<ol>
+<li>
+<p><strong>竞争性 vs monopsony劳动力市场的边界</strong></p>
+<ul>
+<li>本研究发现总体就业效应接近零</li>
+<li>这是否意味着低工资劳动力市场更接近monopsony?</li>
+<li>还是正负效应相互抵消?</li>
+</ul>
+</li>
+<li>
+<p><strong>工资溢出的机制</strong></p>
+<ul>
+<li>研究发现溢出效应在最低工资以上约$3处消失</li>
+<li>且对留任工人和新进入者影响不对称</li>
+<li>这更支持"相对工资关系假设"而非"外部选择价值假设"</li>
+<li>但这是否意味着企业内部存在显著的工资刚性?</li>
+</ul>
+</li>
+<li>
+<p><strong>可贸易 vs 不可贸易部门的差异</strong></p>
+<ul>
+<li>制造业显著负效应 vs 零售餐饮零效应</li>
+<li>这是否意味着全球化压力降低了美国低技能工人的谈价能力?</li>
+<li>还是反映了不同的劳动力市场结构?</li>
+</ul>
+</li>
+<li>
+<p><strong>EB-bunching方法的普适性</strong></p>
+<ul>
+<li>将总体效应分解到各工资区间</li>
+<li>提供了"透明"的估计方式</li>
+<li>是否可以推广到其他政策评估?</li>
+</ul>
+</li>
+<li>
+<p><strong>对CBO政策分析的启示</strong></p>
+<ul>
+<li>CBO使用青少年弹性来推断总体影响</li>
+<li>本研究表明青少年可能是受最低工资影响最深的群体</li>
+<li>这是否意味着CBO的方法实际上低估了不确定性?</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="7-下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
+<ol>
+<li>
+<p><strong>识别策略的有效性</strong>:如何检验平行趋势假设?事件前趋势检验的结果如何?</p>
+</li>
+<li>
+<p><strong>测量误差的影响</strong>:CPS数据中的测量误差如何影响估计?特别是对工资分布尾部的测量?</p>
+</li>
+<li>
+<p><strong>Kaitz指数的具体含义</strong>:Kaitz指数达到59%时会发生什么理论预测?</p>
+</li>
+<li>
+<p><strong>对理论模型的启示</strong>:这些发现如何区分竞争性模型和monopsony模型?</p>
+</li>
+<li>
+<p><strong>政策外部有效性</strong>:基于1979-2016年数据的发现在2020年代是否仍然适用?劳动力市场结构是否发生了根本性变化?</p>
+</li>
+<li>
+<p><strong>对工人流动的动态效应</strong>:最低工资是否影响了低工资工人的职业发展轨迹?</p>
+</li>
+<li>
+<p><strong>雇主反应的非工资渠道</strong>:雇主除了调整就业和工资外,是否在工时、工作条件、培训等方面做出了调整?</p>
+</li>
+<li>
+<p><strong>与Dube et al. (2010) NJ快餐业研究的关系</strong>:为什么NJ快餐业研究发现了正效应,而本研究对所有行业的汇总发现零效应?</p>
+</li>
+<li>
+<p><strong>对州际差异的控制</strong>:如何排除州级经济基本面对结果的混杂影响?各州经济多样性的作用是什么?</p>
+</li>
+<li>
+<p><strong>最低工资的收入分配效应</strong>:最低工资如何与税法、其他转移支付计划相互作用以影响收入不平等?</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>劳动经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -10255,6 +10255,331 @@ Zotero Item Key:: RB7YBMK5</p>
       </tags>
   </entry>
   <entry>
+    <title>Fiscal Volatility Shocks and Economic Activity — 深度阅读笔记 — AER</title>
+    <url>/posts/fernandez2015/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Fiscal Volatility Shocks and Economic Activity</li>
+<li><strong>作者</strong>: Jesús Fernández-Villaverde (University of Pennsylvania), Pablo Guerrón-Quintana (Federal Reserve Bank of Philadelphia), Keith Kuester (University of Bonn), Juan Rubio-Ramírez (Emory University, Federal Reserve Bank of Atlanta, BBVA Research)</li>
+<li><strong>年份</strong>: 2015</li>
+<li><strong>来源</strong>: American Economic Review, 105(11): 3352-3384</li>
+<li><strong>DOI</strong>: <a href="http://dx.doi.org/10.1257/aer.20121236">http://dx.doi.org/10.1257/aer.20121236</a></li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言-背景和意义">引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>财政政策不确定性</strong>(Fiscal Uncertainty)指公众对未来财政政策路径(如税收、政府支出、债务)的不确定性.这种不确定性不同于财政政策本身的变化_即使平均财政政策立场保持不变,政策不确定性的增加也可能对经济活动产生独立影响.</p>
+<p><strong>时间变异性波动率</strong>(Time-Varying Volatility)是描述经济时间序列波动率随时间变化特征的计量经济学概念.传统的时间序列模型假设误差项的方差是常数,但实际数据中波动率往往呈现聚集现象(volatility clustering)_高波动期后往往跟随高波动期,低波动期后跟随低波动期.</p>
+<p><strong>新凯恩斯主义模型</strong>(New Keynesian Model)是当代宏观经济学的基准框架之一,特点是在总供给侧引入名义刚性(nominal rigidities,如菜单成本或交错定价),使货币政策能够影响实际经济变量.标准的新凯恩斯主义模型包括家庭部门、厂商部门和一个遵循泰勒规则的中央银行.</p>
+<p><strong>向量自回归</strong>(Vector Autoregression, VAR)是由 Sims (1980) 开创的计量经济学方法,用多个经济变量的滞后项来预测各变量的未来值.VAR 不需要事先声明变量间的因果关系结构,而是让数据说话.</p>
+<p><strong>脉冲响应函数</strong>(Impulse Response Functions, IRFs)描述系统对单位冲击的动态响应,是分析经济冲击传导机制的核心工具.</p>
+<p><strong>零利率下限</strong>(Zero Lower Bound, ZLB)指名义利率不能为负的现实约束.在经济衰退期,货币政策可能受到 ZLB 限制,此时财政政策对经济的刺激作用可能更大.</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<p><strong>后金融危机时期的财政不确定性</strong>:2008-2014年间,美国经济面临多种财政政策不确定性来源:2013年10月的联邦政府关门、2010年&lt;税收减免、失业保险再授权和就业创造法案&gt;的短暂通过、2011年围绕联邦债务上限的争议导致美国主权信用评级被下调.费城联储的调查数据显示,52%报告需求下降的企业将"对未来税收或政府监管不确定增加"列为原因之一.</p>
+<p><strong>政策与学术背景</strong>:Baker, Bloom and Davis (2013) 构建的财政不确定性指数显示,2008年后财政政策不确定性显著上升.学术界和政策制定者都在关注:这种不确定性本身是否会对经济活动产生实质性的负面影响?</p>
+<p><strong>现有研究的空白</strong>:虽然关于税收不确定性和政府支出不确定性的研究较多,但明确区分"财政波动性冲击"(fiscal volatility shocks,即波动率本身的变化)与"财政水平冲击"(fiscal level shocks,如税率的永久性变化)<a href="http://xn--cet0b470jjnay9bu0g4v2c.Bi">的研究相对较少.Bi</a>, Leeper and Leith (2013) 等研究表明永久性政策变化的不确定性有重要效应,但临时性财政不确定性对经济的影响尚未被充分研究.</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>:意外增加的财政政策不确定性(财政波动性冲击)是否会对经济活动产生不利影响?如果是,其传导机制是什么?影响有多大?</p>
+<p><strong>为什么区分波动性冲击与水平冲击很重要</strong>:财政政策的不确定性可以来自两个来源:</p>
+<ol>
+<li><strong>水平冲击</strong>:未来财政政策的预期路径本身发生变化,但这个路径是确定的</li>
+<li><strong>波动性冲击</strong>:即使财政政策的预期路径保持不变,政策的不确定性(围绕该路径的分散程度)增加</li>
+</ol>
+<p>这两种不确定性来源可能产生完全不同的经济效应.作者试图隔离第二种效应_即财政波动性冲击的独立影响.</p>
+<p><strong>为什么关注暂时性波动</strong>:永久性财政不确定性(如关于长期债务可持续性的担忧)与暂时性财政不确定性(如围绕年度预算的党派争议)对经济的传导机制不同.前者主要通过影响长期预期和资本成本影响当前投资决策;后者可能通过增加企业面临的宏观风险,影响其雇用和投资决策.</p>
+<h3 id="研究意义">研究意义</h3>
+<p><strong>理论贡献</strong>:本文首次系统研究暂时性财政波动性冲击对经济活动的动态影响,并通过 VAR 和 DSGE 模型的联合估计提供了可信的量化证据.</p>
+<p><strong>方法论贡献</strong>:论文提供了(i)估计允许时间变波动率的财政规则的方法,(ii)将估计的财政波动性冲击引入 VAR 的策略,以及(iii)在 New Keynesian 模型中进行三阶扰动方法(third-order perturbation)计算的非线性解法.</p>
+<p><strong>政策含义</strong>:论文结果对于理解2008年后复苏缓慢的原因以及如何设计更好的财政政策不确定性管理策略具有直接启示.特别是 ZLB 情境下财政波动性冲击的放大效应,揭示了在经济衰退期保持财政政策可预测性的重要性.</p>
+<h2 id="内容及结构-论文结构">内容及结构(论文结构)</h2>
+<p>本文共分为8个部分:</p>
+<p><strong>Section I:具有时间变波动率的财政规则</strong>(Fiscal Rules with Time-Varying Volatility).估计税收和政府支出规则,允许其创新项的波动率随时间变化.</p>
+<p><strong>Section II:VAR 证据</strong>(VAR Evidence).将估计的财政波动性冲击引入 VAR,报告脉冲响应函数.</p>
+<p><strong>Section III:理论模型</strong>(The Model).构建一个包含财政波动性冲击的标准新凯恩斯主义模型.</p>
+<p><strong>Section IV:数值实现</strong>(Numerical Implementation).描述如何求解和估计模型.</p>
+<p><strong>Section V-VII:主要结果</strong>.报告基准模型和 ZLB 情境下的脉冲响应,解释机制,进行福利分析.</p>
+<p><strong>Section VIII:结论</strong>(Conclusion).总结发现并讨论政策含义.</p>
+<h2 id="正文-逻辑梳理">正文(逻辑梳理)</h2>
+<h3 id="估计财政规则与波动性冲击">估计财政规则与波动性冲击</h3>
+<h4 id="数据">数据</h4>
+<p>作者使用美国政府1970年第一季度至2014年第二季度的合并政府(联邦、州和地方)季度数据:</p>
+<ul>
+<li><strong>税收数据</strong>:来自国民收入和产品账户(NIPA),构造平均税率而非边际税率.包括:劳动收入税率 $\tau_l$、资本收入税率 $\tau_k$、消费税率 $\tau_c$</li>
+<li><strong>政府支出</strong>:政府消费和总固定投资(来自 NIPA)</li>
+<li><strong>债务序列</strong>:公众持有的联邦债务(来自圣路易斯联储 FRED 数据库)</li>
+<li><strong>产出</strong>:来自 NIPA</li>
+</ul>
+<p>作者使用去趋势实际产出(Christiano-Fitzgerald 带通滤波器)进行去趋势处理.</p>
+<h4 id="财政规则设定">财政规则设定</h4>
+<p>对四个政策工具设定运动方程:</p>
+<p>$$\tilde{x}<em>t - \bar{x} = \rho_x (\tilde{x}</em>{t-1} - \bar{x}) + \phi_{x,y} \tilde{y}<em>{t-1} + \phi</em>{x,b}\left(\frac{b_{t-1}}{y_{t-1}} - \frac{\bar{b}}{\bar{y}}\right) + \exp(\sigma_{x,t}) \varepsilon_{x,t}$$</p>
+<p>其中 $\varepsilon_{x,t} \sim N(0,1)$.</p>
+<p><strong>关键特征</strong>:波动率 $\sigma_{x,t}$ 是随机的而非常数:</p>
+<p>$$\sigma_{x,t} = (1-\rho_{\sigma x}) \bar{\sigma}<em>x + \rho</em>{\sigma x} \sigma_{x,t-1} + \sqrt{1-\rho_{\sigma x}^2} \eta_x u_{x,t}$$</p>
+<p>其中 $u_{x,t} \sim N(0,1)$.</p>
+<p><strong>两个独立创新</strong>:</p>
+<ul>
+<li>$\varepsilon_{x,t}$:财政冲击对工具 $x$ 的创新</li>
+<li>$u_{x,t}$:工具 $x$ 的财政波动性冲击的创新</li>
+</ul>
+<p>这样设定将财政冲击与财政波动性冲击明确区分开来_前者改变政策水平,后者改变政策的不确定性.</p>
+<h4 id="估计方法">估计方法</h4>
+<p>作者采用<strong>贝叶斯方法</strong>结合似然函数和平flat priors,通过 Markov Chain Monte Carlo (MCMC) 采样从后验分布中抽取样本.</p>
+<p>由于方程中波动率与创新的非线性交互作用,使用<strong>粒子滤波器</strong>(particle filter)来处理.详细过程见 Appendix C.</p>
+<h4 id="主要估计结果">主要估计结果</h4>
+<p><strong>表1报告了后验中位数和95%概率区间</strong>:</p>
+<p><strong>Persistence 参数 $\rho_x$</strong>:所有工具都高度持久(0.98-0.99),表明税收和政府支出政策具有很强的惯性.</p>
+<p><strong>波动率参数 $\sigma_x$</strong>:资本收入税率的平均标准差约为0.75个百分点($100 \times \exp(-4.89) \approx 0.75$).</p>
+<p><strong>$\eta_x$ 的证据</strong>: $\eta_x$ 为正表明时间变波动率是重要的_如果不考虑时间变波动率,会丢失重要的信息.</p>
+<p><strong>$\rho_{\sigma x}$ 的持久性</strong>:除劳动收入税外,波动性冲击偏离其均值的持久性相当高(0.65-0.92).</p>
+<h4 id="财政波动性冲击的历史轨迹">财政波动性冲击的历史轨迹</h4>
+<p><strong>图1显示了资本收入税率波动性冲击的平滑化95%概率区间</strong>.</p>
+<p><strong>历史事件映射</strong>:</p>
+<ol>
+<li>
+<p><strong>1974-1975年高峰</strong>:水门事件导致 Nixon 辞职,财政政策"漂移无定".Ford 政府的税收-支出政策反复摇摆.国会中自由派力量增强,与共和党政府的冲突增加.围绕投资税收抵免和资本收入税的争议是讨论的核心.</p>
+</li>
+<li>
+<p><strong>1985-1987年第二个高峰</strong>:1985年经济报告显示财政赤字严重,一系列提案被提出.国会倾向于增加税收,而总统倾向于削减支出.1986年&lt;税收改革法案&gt;最终达成妥协.</p>
+</li>
+<li>
+<p><strong>2001-2002年第三个高峰</strong>:9/11恐怖袭击及其潜在的巨大财政影响,2001-2002年经济衰退,布什减税.</p>
+</li>
+<li>
+<p><strong>2008-2009年、2011年、2014年的高峰</strong>:金融危机及其后果,空前的选举不稳定(2004-2014年间6次选举产生5种政党控制模式).</p>
+</li>
+</ol>
+<p><strong>图2的Panel A</strong>显示了每季度观察到正的两标准差财政波动性冲击的概率.Panel B 显示在样本中至少观察到2次、3次、4次等此类冲击的后验概率.</p>
+<p><strong>关键发现</strong>:一个正的两标准差冲击是大概率事件_在样本中至少观察到3-4次此类事件.这意味着财政波动性冲击并非极端罕见事件,而是大约每十年就会发生一次的重要冲击.</p>
+<h3 id="VAR-分析">VAR 分析</h3>
+<h4 id="VAR-设定">VAR 设定</h4>
+<p>作者估计了一个 VAR,包含以下变量:</p>
+<ol>
+<li><strong>财政波动性冲击</strong>:来自第一阶段估计的资本收入税率波动性冲击 $u_{\tau k, t}$</li>
+<li><strong>产出缺口</strong>:实际产出与其趋势的偏离</li>
+<li><strong>通货膨胀率</strong>:GDP 平减指数的变化率</li>
+<li><strong>联邦基金利率</strong>:美联储政策利率</li>
+<li><strong>实际工资增长率</strong></li>
+<li><strong>工作时间</strong>:总工时</li>
+<li><strong>投资增长率</strong></li>
+<li><strong>markup</strong>:价格加成</li>
+</ol>
+<p>VAR 滞后阶数由 SIC 准则选择为2阶.</p>
+<h4 id="脉冲响应函数">脉冲响应函数</h4>
+<p><strong>图3显示了资本收入税率财政波动性冲击的脉冲响应</strong>(正的两标准差冲击):</p>
+<p><strong>产出</strong>:产出在冲击后显著下降,在第3-4季度达到最低点(约-0.4%),之后缓慢恢复.</p>
+<p><strong>消费</strong>:消费的下降幅度与产出类似,但恢复速度更慢.</p>
+<p><strong>投资</strong>:投资的下降幅度更大(约-0.8%),且恢复期更长.</p>
+<p><strong>工作时间</strong>:工时显著下降,在第4季度达到最低点(约-0.3%).</p>
+<p><strong>价格水平</strong>:价格水平下降(通货紧缩),这与新凯恩斯主义模型的预测一致.</p>
+<p><strong>关键发现</strong>:正的财政波动性冲击(政策不确定性增加)对经济活动产生显著的负面效应,这一效应在冲击后持续多个季度.</p>
+<h3 id="理论模型">理论模型</h3>
+<h4 id="模型设定">模型设定</h4>
+<p>作者构建了一个<strong>新凯恩斯主义模型</strong>(New Keynesian Model),variant 包括:</p>
+<p><strong>家庭部门</strong>:</p>
+<ul>
+<li>代表性家庭提供劳动并消费最终品</li>
+<li>面临标准的新凯恩斯主义菲利普斯曲线</li>
+</ul>
+<p><strong>厂商部门</strong>:</p>
+<ul>
+<li>垄断竞争厂商面临交错价格调整(Calvo 定价)</li>
+<li>每期有部分厂商调整价格,其余厂商保持价格不变</li>
+</ul>
+<p><strong>政府</strong>:</p>
+<ul>
+<li>遵循估计的财政规则设定税收和政府支出</li>
+<li>财政波动性冲击通过 $\sigma_{\tau k, t}$ 进入模型</li>
+</ul>
+<p><strong>货币当局</strong>:</p>
+<ul>
+<li>遵循泰勒规则设定名义利率</li>
+</ul>
+<p><strong>关键机制</strong>:财政波动性冲击通过两种渠道影响经济:</p>
+<ol>
+<li><strong>直接渠道</strong>:不确定性增加 → 企业延迟投资和雇用决策(option value 效应)</li>
+<li><strong>间接渠道</strong>:不确定性影响 markups → 价格加成变化 → 实际利率变化 → 消费和投资变化</li>
+</ol>
+<h4 id="扩展-ZLB-情境">扩展:ZLB 情境</h4>
+<p>作者还考虑了经济已经处于零利率下限(ZLB)时受到财政波动性冲击的情境.这对于理解2008-2014年美国经济的动态特别相关.</p>
+<p><strong>ZLB 的关键效应</strong>:当经济处于 ZLB 时,货币政策无法通过降低名义利率来缓冲负面冲击.这意味着财政波动性冲击的负面效应会被放大,因为没有货币政策应对工具.</p>
+<h3 id="数值结果">数值结果</h3>
+<h4 id="基准模型-非-ZLB">基准模型(非 ZLB)</h4>
+<p><strong>图5比较了 VAR 和模型的脉冲响应</strong>.两者高度一致,验证了模型正确捕捉了数据中的关键动态.</p>
+<p><strong>量化效应</strong>:一个正的两标准差财政波动性冲击导致:</p>
+<ul>
+<li>产出下降约0.5-0.6%</li>
+<li>投资下降约1.0-1.2%</li>
+<li>消费下降约0.3-0.4%</li>
+<li>持续时间约8-12个季度</li>
+</ul>
+<p><strong>机制分析</strong>:作者进行了机制检验,确认 markup 的内生变化是关键传导渠道.</p>
+<p><strong>通胀</strong>:模型预测通胀上升,但 VAR 显示通胀下降.解决这一小差异的方法是在泰勒规则中加入财政波动性冲击(见 Section VI).</p>
+<h4 id="ZLB-情境">ZLB 情境</h4>
+<p><strong>关键发现</strong>:当经济处于 ZLB 时,效应被显著放大:</p>
+<ul>
+<li>产出下降约1.5%(是非 ZLB 情况的15倍!)</li>
+<li>持续时间显著延长</li>
+</ul>
+<p><strong>原因</strong>:在 ZLB 情境下,名义利率无法下降来缓冲冲击.实际利率上升更多,对消费和投资的抑制作用更强.</p>
+<p>这一发现对于理解2008年后金融危机时期的经济动态具有重要意义.</p>
+<h3 id="福利分析">福利分析</h3>
+<h4 id="福利计算">福利计算</h4>
+<p>作者进行了福利分析,比较存在财政波动性冲击和不存在财政波动性冲击两种情境下的社会福利.</p>
+<p><strong>福利损失度量</strong>:定义为消费和闲暇的等价变化(equivalent variation).</p>
+<p><strong>结果</strong>:</p>
+<ul>
+<li>在基准模型中,财政波动性冲击导致的福利损失相当于永久性降低消费约0.2%</li>
+<li>在 ZLB 情境中,福利损失显著更大</li>
+</ul>
+<h4 id="政策含义">政策含义</h4>
+<p><strong>财政可预测性的价值</strong>:结果强调了保持财政政策可预测性的重要性.即使无法改变财政政策的平均水平或方向,政府也应努力减少政策不确定性.</p>
+<p><strong>ZLB 情境的特殊脆弱性</strong>:当经济处于 ZLB 时,财政不确定性增加的伤害特别大,这意味着在深度衰退期更需要稳定的财政信号.</p>
+<h2 id="结论-Conclusion">结论(Conclusion)</h2>
+<h3 id="核心发现总结">核心发现总结</h3>
+<p><strong>发现一</strong>:美国税收和政府支出过程存在显著的时间变波动率.平滑化的财政波动性冲击与历史叙事事件高度一致(水门事件、1980年代赤字争论、2008年金融危机).</p>
+<p><strong>发现二</strong>:VAR 分析显示,一个正的两标准差资本收入税率财政波动性冲击会导致产出、消费、投资、工作时间和价格水平显著且持久地下降.</p>
+<p><strong>发现三</strong>:新凯恩斯主义模型定性地再现了 VAR 的脉冲响应,option value 效应和 markup 的内生变化是核心传导机制.</p>
+<p><strong>发现四</strong>:当经济处于 ZLB 时,财政波动性冲击的效应被显著放大_产出下降是正常时期的15倍.</p>
+<p><strong>发现五</strong>:财政政策可预测性具有显著的社会福利价值,尤其是在 ZLB 情境中.</p>
+<h3 id="对宏观经济学的贡献">对宏观经济学的贡献</h3>
+<p><strong>对不确定性 literature 的贡献</strong>:本文扩展了 Bloom (2009) 等关于不确定性冲击的研究,将财政不确定性与其他类型的不确定性(如技术不确定性)区分开来,并揭示了其独特的传导机制.</p>
+<p><strong>对财政政策 literature 的贡献</strong>:本文明确区分了财政水平冲击和财政波动性冲击,填补了该 literature 的重要空白.</p>
+<p><strong>对 ZLB 文献的贡献</strong>:本文揭示了 ZLB 情境下财政波动性冲击的放大效应,这对于理解大衰退(Great Recession)和其他 ZLB 情境下的经济动态具有重要意义.</p>
+<h3 id="政策建议">政策建议</h3>
+<p><strong>第一,保持财政政策可预测性</strong>.即使在政治分歧严重的情况下,政府也应努力提供清晰、一致的财政政策信号.</p>
+<p><strong>第二,在 ZLB 情境中特别谨慎</strong>.当经济处于零利率下限时,财政不确定性增加的伤害被显著放大,政策制定者应更加注意沟通策略.</p>
+<p><strong>第三,考虑财政规则的作用</strong>.财政规则(如债务上限、赤字限制)可以降低政策的不确定性,但其自身的可变性也需要管理.</p>
+<h2 id="未来研究方向提及">未来研究方向提及</h2>
+<p><strong>第一,永久性 vs. 暂时性财政不确定性</strong>.本文聚焦暂时性财政不确定性,但永久性财政不确定性(如关于长期财政可持续性的担忧)可能具有不同的效应.</p>
+<p><strong>第二,状态依赖的财政政策</strong>.Mace (1991) 等研究了状态依赖的财政政策,这些政策在不同的经济状态下采取不同的形式.</p>
+<p><strong>第三,国际传播</strong>.财政波动性冲击如何通过国际贸易和金融渠道传播到其他国家?</p>
+<p><strong>第四,异质性代理</strong>.本文使用代表性家庭模型,但异质性代理模型可能揭示不同的传导机制.</p>
+<h2 id="未来研究方向思考">未来研究方向思考</h2>
+<p><strong>第一,发展中国家的财政波动性问题</strong>.发达经济体的财政波动性对发展中经济体可能有完全不同的影响,因为后者的制度能力较弱,财政不稳定可能带来更严重的后果.</p>
+<p><strong>第二,企业层面的财政不确定性暴露</strong>.本文使用宏观经济 VAR 和代表性代理模型,但微观企业数据可能揭示财政不确定性对不同类型企业的差异化影响.</p>
+<p><strong>第三,货币-财政政策交互作用</strong>.在 ZLB 情境下,货币和财政政策的交互作用变得特别重要.两种政策如何协调以最小化不确定性对经济的伤害?</p>
+<p><strong>第四,预期管理策略</strong>.本文揭示了财政不确定性的危害,但如何系统性地管理预期本身是一个值得深入研究的问题.政府的沟通策略、透明度措施和承诺机制如何影响不确定性冲击的强度?</p>
+<p><strong>第五,网络和金融加速器效应</strong>.财政不确定性可能通过企业间的网络关系和金融加速器机制放大.一个企业的投资削减可能通过供应链影响其他企业,这些 second-round 效应值得进一步研究.</p>
+<h2 id="学术思考">学术思考</h2>
+<p><strong>关于识别策略的思考</strong>:本文使用两步估计策略_首先估计财政规则的波动性,然后将估计的波动性序列作为外生变量引入 VAR.这一策略的有效性取决于第一步估计的波动性能否被视为"意外变化"的合理代理.如果经济主体能够预期波动性的变化(而不仅仅是对冲击本身的预期),那么识别假设可能受到挑战.</p>
+<p><strong>关于模型设定的选择</strong>:作者使用代表性代理而非异质性代理.这限制了模型捕捉财政不确定性对不同群体差异化影响的能力.例如,财政不确定性对失业者和中小企业的伤害可能比对就业者和大型企业更大.</p>
+<p><strong>关于 ZLB 分析的启示</strong>:ZLB 情境下的15倍放大效应是一个惊人的结果.但这一结果是否具有普遍性,还是对美国特定情境的高度依赖?不同的初始债务水平、不同的开放程度、不同的汇率制度下,ZLB 放大效应是否相同?</p>
+<p><strong>关于政策含义的谨慎性</strong>:虽然本文强调了财政可预测性的重要性,但"说起来容易做起来难".在民主政治环境下,财政政策的内在不确定性可能是政治过程的自然结果,而非政策失误.如何在保持政策灵活性的同时减少不必要的波动?</p>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>
+<p><strong>为什么内生 markup 变化是财政波动性冲击传导的关键机制?这个机制的具体经济学解释是什么?</strong></p>
+</li>
+<li>
+<p><strong>作者提到在 VAR 中加入财政波动性冲击到泰勒规则可以解决通胀预测的小差异,这在理论上意味着什么?</strong></p>
+</li>
+<li>
+<p><strong>15倍的 ZLB 放大效应是否稳健?如果使用不同的货币规则设定,结果会如何变化?</strong></p>
+</li>
+<li>
+<p><strong>本文使用平均税率而非边际税率进行估计.边际税率的不确定性是否会对经济产生不同的影响?</strong></p>
+</li>
+<li>
+<p><strong>在美国的制度背景下,财政规则(如债务上限)的存在实际上增加了而非减少了财政不确定性.如何调和这一矛盾?</strong></p>
+</li>
+<li>
+<p><strong>本文的发现对于当前的"财政空间"(fiscal space)讨论有什么启示?发展中国家在 ZLB 情境下是否也有类似的放大效应?</strong></p>
+</li>
+<li>
+<p><strong>关于模型中的预期形成</strong>:假设家庭和企业具有理性预期,但实际中他们可能对财政政策的变化有适应性预期或粘性预期.这种预期设定如何影响结果?**</p>
+</li>
+<li>
+<p><strong>本文使用季度数据.更高频率(日度或周度)的财政不确定性数据是否会揭示更多动态细节?</strong></p>
+</li>
+<li>
+<p><strong>作者提到这是"第一个"研究财政波动性冲击的尝试.这个"第一"的贡献有多大?后续研究如何在此基础上扩展?</strong></p>
+</li>
+<li>
+<p><strong>在当前的高通胀环境下(如2022-2024年),财政不确定性对经济的影响是否与低通胀/低利率环境有不同的表现?</strong></p>
+</li>
+</ol>
+<h2 id="学术思考-v2">学术思考</h2>
+<p><strong>关于识别策略的思考</strong>:本文使用两步估计策略_首先估计财政规则的波动性,然后将估计的波动性序列作为外生变量引入 VAR.这一策略的有效性取决于第一步估计的波动性能否被视为"意外变化"的合理代理.如果经济主体能够预期波动性的变化(而不仅仅是对冲击本身的预期),那么识别假设可能受到挑战.</p>
+<p><strong>关于模型设定的选择</strong>:作者使用代表性代理而非异质性代理.这限制了模型捕捉财政不确定性对不同群体差异化影响的能力.例如,财政不确定性对失业者和中小企业的伤害可能比对就业者和大型企业更大.</p>
+<p><strong>关于 ZLB 分析的启示</strong>:ZLB 情境下的15倍放大效应是一个惊人的结果.但这一结果是否具有普遍性,还是对美国特定情境的高度依赖?不同的初始债务水平、不同的开放程度、不同的汇率制度下,ZLB 放大效应是否相同?</p>
+<p><strong>关于政策含义的谨慎性</strong>:虽然本文强调了财政可预测性的重要性,但"说起来容易做起来难".在民主政治环境下,财政政策的内在不确定性可能是政治过程的自然结果,而非政策失误.如何在保持政策灵活性的同时减少不必要的波动?</p>
+<h2 id="下一步用户可能提的问题-v2">下一步用户可能提的问题</h2>
+<ol>
+<li>
+<p><strong>为什么内生 markup 变化是财政波动性冲击传导的关键机制?这个机制的具体经济学解释是什么?</strong></p>
+</li>
+<li>
+<p><strong>作者提到在 VAR 中加入财政波动性冲击到泰勒规则可以解决通胀预测的小差异,这在理论上意味着什么?</strong></p>
+</li>
+<li>
+<p><strong>15倍的 ZLB 放大效应是否稳健?如果使用不同的货币规则设定,结果会如何变化?</strong></p>
+</li>
+<li>
+<p><strong>本文使用平均税率而非边际税率进行估计.边际税率的不确定性是否会对经济产生不同的影响?</strong></p>
+</li>
+<li>
+<p><strong>在美国的制度背景下,财政规则(如债务上限)的存在实际上增加了而非减少了财政不确定性.如何调和这一矛盾?</strong></p>
+</li>
+<li>
+<p><strong>本文的发现对于当前的"财政空间"(fiscal space)讨论有什么启示?发展中国家在 ZLB 情境下是否也有类似的放大效应?</strong></p>
+</li>
+<li>
+<p><strong>关于模型中的预期形成</strong>:假设家庭和企业具有理性预期,但实际中他们可能对财政政策的变化有适应性预期或粘性预期.这种预期设定如何影响结果?**</p>
+</li>
+<li>
+<p><strong>本文使用季度数据.更高频率(日度或周度)的财政不确定性数据是否会揭示更多动态细节?</strong></p>
+</li>
+<li>
+<p><strong>作者提到这是"第一个"研究财政波动性冲击的尝试.这个"第一"的贡献有多大?后续研究如何在此基础上扩展?</strong></p>
+</li>
+<li>
+<p><strong>在当前的高通胀环境下(如2022-2024年),财政不确定性对经济的影响是否与低通胀/低利率环境有不同的表现?</strong></p>
+</li>
+</ol>
+<h2 id="下一步用户可能提的问题-v3">下一步用户可能提的问题</h2>
+<ol>
+<li>
+<p><strong>为什么内生 markup 变化是财政波动性冲击传导的关键机制?这个机制的具体经济学解释是什么?</strong></p>
+</li>
+<li>
+<p><strong>作者提到在 VAR 中加入财政波动性冲击到泰勒规则可以解决通胀预测的小差异,这在理论上意味着什么?</strong></p>
+</li>
+<li>
+<p><strong>15倍的 ZLB 放大效应是否稳健?如果使用不同的货币规则设定,结果会如何变化?</strong></p>
+</li>
+<li>
+<p><strong>本文使用平均税率而非边际税率进行估计.边际税率的不确定性是否会对经济产生不同的影响?</strong></p>
+</li>
+<li>
+<p><strong>在美国的制度背景下,财政规则(如债务上限)的存在实际上增加了而非减少了财政不确定性.如何调和这一矛盾?</strong></p>
+</li>
+<li>
+<p><strong>本文的发现对于当前的"财政空间"(fiscal space)讨论有什么启示?发展中国家在 ZLB 情境下是否也有类似的放大效应?</strong></p>
+</li>
+<li>
+<p><strong>关于模型中的预期形成</strong>:假设家庭和企业具有理性预期,但实际中他们可能对财政政策的变化有适应性预期或粘性预期.这种预期设定如何影响结果?**</p>
+</li>
+<li>
+<p><strong>本文使用季度数据.更高频率(日度或周度)的财政不确定性数据是否会揭示更多动态细节?</strong></p>
+</li>
+<li>
+<p><strong>作者提到这是"第一个"研究财政波动性冲击的尝试.这个"第一"的贡献有多大?后续研究如何在此基础上扩展?</strong></p>
+</li>
+<li>
+<p><strong>在当前的高通胀环境下(如2022-2024年),财政不确定性对经济的影响是否与低通胀/低利率环境有不同的表现?</strong></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>战争的代价 — 深度阅读笔记 — Federle Et Al.</title>
     <url>/posts/federle2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -10772,331 +11097,6 @@ $$Site_{j,t} = \frac{Casualties_{j,t}}{Population_{j, pre-war}}$$</p>
       </tags>
   </entry>
   <entry>
-    <title>Fiscal Volatility Shocks and Economic Activity — 深度阅读笔记 — AER</title>
-    <url>/posts/fernandez2015/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Fiscal Volatility Shocks and Economic Activity</li>
-<li><strong>作者</strong>: Jesús Fernández-Villaverde (University of Pennsylvania), Pablo Guerrón-Quintana (Federal Reserve Bank of Philadelphia), Keith Kuester (University of Bonn), Juan Rubio-Ramírez (Emory University, Federal Reserve Bank of Atlanta, BBVA Research)</li>
-<li><strong>年份</strong>: 2015</li>
-<li><strong>来源</strong>: American Economic Review, 105(11): 3352-3384</li>
-<li><strong>DOI</strong>: <a href="http://dx.doi.org/10.1257/aer.20121236">http://dx.doi.org/10.1257/aer.20121236</a></li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言-背景和意义">引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>财政政策不确定性</strong>(Fiscal Uncertainty)指公众对未来财政政策路径(如税收、政府支出、债务)的不确定性.这种不确定性不同于财政政策本身的变化_即使平均财政政策立场保持不变,政策不确定性的增加也可能对经济活动产生独立影响.</p>
-<p><strong>时间变异性波动率</strong>(Time-Varying Volatility)是描述经济时间序列波动率随时间变化特征的计量经济学概念.传统的时间序列模型假设误差项的方差是常数,但实际数据中波动率往往呈现聚集现象(volatility clustering)_高波动期后往往跟随高波动期,低波动期后跟随低波动期.</p>
-<p><strong>新凯恩斯主义模型</strong>(New Keynesian Model)是当代宏观经济学的基准框架之一,特点是在总供给侧引入名义刚性(nominal rigidities,如菜单成本或交错定价),使货币政策能够影响实际经济变量.标准的新凯恩斯主义模型包括家庭部门、厂商部门和一个遵循泰勒规则的中央银行.</p>
-<p><strong>向量自回归</strong>(Vector Autoregression, VAR)是由 Sims (1980) 开创的计量经济学方法,用多个经济变量的滞后项来预测各变量的未来值.VAR 不需要事先声明变量间的因果关系结构,而是让数据说话.</p>
-<p><strong>脉冲响应函数</strong>(Impulse Response Functions, IRFs)描述系统对单位冲击的动态响应,是分析经济冲击传导机制的核心工具.</p>
-<p><strong>零利率下限</strong>(Zero Lower Bound, ZLB)指名义利率不能为负的现实约束.在经济衰退期,货币政策可能受到 ZLB 限制,此时财政政策对经济的刺激作用可能更大.</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p><strong>后金融危机时期的财政不确定性</strong>:2008-2014年间,美国经济面临多种财政政策不确定性来源:2013年10月的联邦政府关门、2010年&lt;税收减免、失业保险再授权和就业创造法案&gt;的短暂通过、2011年围绕联邦债务上限的争议导致美国主权信用评级被下调.费城联储的调查数据显示,52%报告需求下降的企业将"对未来税收或政府监管不确定增加"列为原因之一.</p>
-<p><strong>政策与学术背景</strong>:Baker, Bloom and Davis (2013) 构建的财政不确定性指数显示,2008年后财政政策不确定性显著上升.学术界和政策制定者都在关注:这种不确定性本身是否会对经济活动产生实质性的负面影响?</p>
-<p><strong>现有研究的空白</strong>:虽然关于税收不确定性和政府支出不确定性的研究较多,但明确区分"财政波动性冲击"(fiscal volatility shocks,即波动率本身的变化)与"财政水平冲击"(fiscal level shocks,如税率的永久性变化)<a href="http://xn--cet0b470jjnay9bu0g4v2c.Bi">的研究相对较少.Bi</a>, Leeper and Leith (2013) 等研究表明永久性政策变化的不确定性有重要效应,但临时性财政不确定性对经济的影响尚未被充分研究.</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:意外增加的财政政策不确定性(财政波动性冲击)是否会对经济活动产生不利影响?如果是,其传导机制是什么?影响有多大?</p>
-<p><strong>为什么区分波动性冲击与水平冲击很重要</strong>:财政政策的不确定性可以来自两个来源:</p>
-<ol>
-<li><strong>水平冲击</strong>:未来财政政策的预期路径本身发生变化,但这个路径是确定的</li>
-<li><strong>波动性冲击</strong>:即使财政政策的预期路径保持不变,政策的不确定性(围绕该路径的分散程度)增加</li>
-</ol>
-<p>这两种不确定性来源可能产生完全不同的经济效应.作者试图隔离第二种效应_即财政波动性冲击的独立影响.</p>
-<p><strong>为什么关注暂时性波动</strong>:永久性财政不确定性(如关于长期债务可持续性的担忧)与暂时性财政不确定性(如围绕年度预算的党派争议)对经济的传导机制不同.前者主要通过影响长期预期和资本成本影响当前投资决策;后者可能通过增加企业面临的宏观风险,影响其雇用和投资决策.</p>
-<h3 id="研究意义">研究意义</h3>
-<p><strong>理论贡献</strong>:本文首次系统研究暂时性财政波动性冲击对经济活动的动态影响,并通过 VAR 和 DSGE 模型的联合估计提供了可信的量化证据.</p>
-<p><strong>方法论贡献</strong>:论文提供了(i)估计允许时间变波动率的财政规则的方法,(ii)将估计的财政波动性冲击引入 VAR 的策略,以及(iii)在 New Keynesian 模型中进行三阶扰动方法(third-order perturbation)计算的非线性解法.</p>
-<p><strong>政策含义</strong>:论文结果对于理解2008年后复苏缓慢的原因以及如何设计更好的财政政策不确定性管理策略具有直接启示.特别是 ZLB 情境下财政波动性冲击的放大效应,揭示了在经济衰退期保持财政政策可预测性的重要性.</p>
-<h2 id="内容及结构-论文结构">内容及结构(论文结构)</h2>
-<p>本文共分为8个部分:</p>
-<p><strong>Section I:具有时间变波动率的财政规则</strong>(Fiscal Rules with Time-Varying Volatility).估计税收和政府支出规则,允许其创新项的波动率随时间变化.</p>
-<p><strong>Section II:VAR 证据</strong>(VAR Evidence).将估计的财政波动性冲击引入 VAR,报告脉冲响应函数.</p>
-<p><strong>Section III:理论模型</strong>(The Model).构建一个包含财政波动性冲击的标准新凯恩斯主义模型.</p>
-<p><strong>Section IV:数值实现</strong>(Numerical Implementation).描述如何求解和估计模型.</p>
-<p><strong>Section V-VII:主要结果</strong>.报告基准模型和 ZLB 情境下的脉冲响应,解释机制,进行福利分析.</p>
-<p><strong>Section VIII:结论</strong>(Conclusion).总结发现并讨论政策含义.</p>
-<h2 id="正文-逻辑梳理">正文(逻辑梳理)</h2>
-<h3 id="估计财政规则与波动性冲击">估计财政规则与波动性冲击</h3>
-<h4 id="数据">数据</h4>
-<p>作者使用美国政府1970年第一季度至2014年第二季度的合并政府(联邦、州和地方)季度数据:</p>
-<ul>
-<li><strong>税收数据</strong>:来自国民收入和产品账户(NIPA),构造平均税率而非边际税率.包括:劳动收入税率 $\tau_l$、资本收入税率 $\tau_k$、消费税率 $\tau_c$</li>
-<li><strong>政府支出</strong>:政府消费和总固定投资(来自 NIPA)</li>
-<li><strong>债务序列</strong>:公众持有的联邦债务(来自圣路易斯联储 FRED 数据库)</li>
-<li><strong>产出</strong>:来自 NIPA</li>
-</ul>
-<p>作者使用去趋势实际产出(Christiano-Fitzgerald 带通滤波器)进行去趋势处理.</p>
-<h4 id="财政规则设定">财政规则设定</h4>
-<p>对四个政策工具设定运动方程:</p>
-<p>$$\tilde{x}<em>t - \bar{x} = \rho_x (\tilde{x}</em>{t-1} - \bar{x}) + \phi_{x,y} \tilde{y}<em>{t-1} + \phi</em>{x,b}\left(\frac{b_{t-1}}{y_{t-1}} - \frac{\bar{b}}{\bar{y}}\right) + \exp(\sigma_{x,t}) \varepsilon_{x,t}$$</p>
-<p>其中 $\varepsilon_{x,t} \sim N(0,1)$.</p>
-<p><strong>关键特征</strong>:波动率 $\sigma_{x,t}$ 是随机的而非常数:</p>
-<p>$$\sigma_{x,t} = (1-\rho_{\sigma x}) \bar{\sigma}<em>x + \rho</em>{\sigma x} \sigma_{x,t-1} + \sqrt{1-\rho_{\sigma x}^2} \eta_x u_{x,t}$$</p>
-<p>其中 $u_{x,t} \sim N(0,1)$.</p>
-<p><strong>两个独立创新</strong>:</p>
-<ul>
-<li>$\varepsilon_{x,t}$:财政冲击对工具 $x$ 的创新</li>
-<li>$u_{x,t}$:工具 $x$ 的财政波动性冲击的创新</li>
-</ul>
-<p>这样设定将财政冲击与财政波动性冲击明确区分开来_前者改变政策水平,后者改变政策的不确定性.</p>
-<h4 id="估计方法">估计方法</h4>
-<p>作者采用<strong>贝叶斯方法</strong>结合似然函数和平flat priors,通过 Markov Chain Monte Carlo (MCMC) 采样从后验分布中抽取样本.</p>
-<p>由于方程中波动率与创新的非线性交互作用,使用<strong>粒子滤波器</strong>(particle filter)来处理.详细过程见 Appendix C.</p>
-<h4 id="主要估计结果">主要估计结果</h4>
-<p><strong>表1报告了后验中位数和95%概率区间</strong>:</p>
-<p><strong>Persistence 参数 $\rho_x$</strong>:所有工具都高度持久(0.98-0.99),表明税收和政府支出政策具有很强的惯性.</p>
-<p><strong>波动率参数 $\sigma_x$</strong>:资本收入税率的平均标准差约为0.75个百分点($100 \times \exp(-4.89) \approx 0.75$).</p>
-<p><strong>$\eta_x$ 的证据</strong>: $\eta_x$ 为正表明时间变波动率是重要的_如果不考虑时间变波动率,会丢失重要的信息.</p>
-<p><strong>$\rho_{\sigma x}$ 的持久性</strong>:除劳动收入税外,波动性冲击偏离其均值的持久性相当高(0.65-0.92).</p>
-<h4 id="财政波动性冲击的历史轨迹">财政波动性冲击的历史轨迹</h4>
-<p><strong>图1显示了资本收入税率波动性冲击的平滑化95%概率区间</strong>.</p>
-<p><strong>历史事件映射</strong>:</p>
-<ol>
-<li>
-<p><strong>1974-1975年高峰</strong>:水门事件导致 Nixon 辞职,财政政策"漂移无定".Ford 政府的税收-支出政策反复摇摆.国会中自由派力量增强,与共和党政府的冲突增加.围绕投资税收抵免和资本收入税的争议是讨论的核心.</p>
-</li>
-<li>
-<p><strong>1985-1987年第二个高峰</strong>:1985年经济报告显示财政赤字严重,一系列提案被提出.国会倾向于增加税收,而总统倾向于削减支出.1986年&lt;税收改革法案&gt;最终达成妥协.</p>
-</li>
-<li>
-<p><strong>2001-2002年第三个高峰</strong>:9/11恐怖袭击及其潜在的巨大财政影响,2001-2002年经济衰退,布什减税.</p>
-</li>
-<li>
-<p><strong>2008-2009年、2011年、2014年的高峰</strong>:金融危机及其后果,空前的选举不稳定(2004-2014年间6次选举产生5种政党控制模式).</p>
-</li>
-</ol>
-<p><strong>图2的Panel A</strong>显示了每季度观察到正的两标准差财政波动性冲击的概率.Panel B 显示在样本中至少观察到2次、3次、4次等此类冲击的后验概率.</p>
-<p><strong>关键发现</strong>:一个正的两标准差冲击是大概率事件_在样本中至少观察到3-4次此类事件.这意味着财政波动性冲击并非极端罕见事件,而是大约每十年就会发生一次的重要冲击.</p>
-<h3 id="VAR-分析">VAR 分析</h3>
-<h4 id="VAR-设定">VAR 设定</h4>
-<p>作者估计了一个 VAR,包含以下变量:</p>
-<ol>
-<li><strong>财政波动性冲击</strong>:来自第一阶段估计的资本收入税率波动性冲击 $u_{\tau k, t}$</li>
-<li><strong>产出缺口</strong>:实际产出与其趋势的偏离</li>
-<li><strong>通货膨胀率</strong>:GDP 平减指数的变化率</li>
-<li><strong>联邦基金利率</strong>:美联储政策利率</li>
-<li><strong>实际工资增长率</strong></li>
-<li><strong>工作时间</strong>:总工时</li>
-<li><strong>投资增长率</strong></li>
-<li><strong>markup</strong>:价格加成</li>
-</ol>
-<p>VAR 滞后阶数由 SIC 准则选择为2阶.</p>
-<h4 id="脉冲响应函数">脉冲响应函数</h4>
-<p><strong>图3显示了资本收入税率财政波动性冲击的脉冲响应</strong>(正的两标准差冲击):</p>
-<p><strong>产出</strong>:产出在冲击后显著下降,在第3-4季度达到最低点(约-0.4%),之后缓慢恢复.</p>
-<p><strong>消费</strong>:消费的下降幅度与产出类似,但恢复速度更慢.</p>
-<p><strong>投资</strong>:投资的下降幅度更大(约-0.8%),且恢复期更长.</p>
-<p><strong>工作时间</strong>:工时显著下降,在第4季度达到最低点(约-0.3%).</p>
-<p><strong>价格水平</strong>:价格水平下降(通货紧缩),这与新凯恩斯主义模型的预测一致.</p>
-<p><strong>关键发现</strong>:正的财政波动性冲击(政策不确定性增加)对经济活动产生显著的负面效应,这一效应在冲击后持续多个季度.</p>
-<h3 id="理论模型">理论模型</h3>
-<h4 id="模型设定">模型设定</h4>
-<p>作者构建了一个<strong>新凯恩斯主义模型</strong>(New Keynesian Model),variant 包括:</p>
-<p><strong>家庭部门</strong>:</p>
-<ul>
-<li>代表性家庭提供劳动并消费最终品</li>
-<li>面临标准的新凯恩斯主义菲利普斯曲线</li>
-</ul>
-<p><strong>厂商部门</strong>:</p>
-<ul>
-<li>垄断竞争厂商面临交错价格调整(Calvo 定价)</li>
-<li>每期有部分厂商调整价格,其余厂商保持价格不变</li>
-</ul>
-<p><strong>政府</strong>:</p>
-<ul>
-<li>遵循估计的财政规则设定税收和政府支出</li>
-<li>财政波动性冲击通过 $\sigma_{\tau k, t}$ 进入模型</li>
-</ul>
-<p><strong>货币当局</strong>:</p>
-<ul>
-<li>遵循泰勒规则设定名义利率</li>
-</ul>
-<p><strong>关键机制</strong>:财政波动性冲击通过两种渠道影响经济:</p>
-<ol>
-<li><strong>直接渠道</strong>:不确定性增加 → 企业延迟投资和雇用决策(option value 效应)</li>
-<li><strong>间接渠道</strong>:不确定性影响 markups → 价格加成变化 → 实际利率变化 → 消费和投资变化</li>
-</ol>
-<h4 id="扩展-ZLB-情境">扩展:ZLB 情境</h4>
-<p>作者还考虑了经济已经处于零利率下限(ZLB)时受到财政波动性冲击的情境.这对于理解2008-2014年美国经济的动态特别相关.</p>
-<p><strong>ZLB 的关键效应</strong>:当经济处于 ZLB 时,货币政策无法通过降低名义利率来缓冲负面冲击.这意味着财政波动性冲击的负面效应会被放大,因为没有货币政策应对工具.</p>
-<h3 id="数值结果">数值结果</h3>
-<h4 id="基准模型-非-ZLB">基准模型(非 ZLB)</h4>
-<p><strong>图5比较了 VAR 和模型的脉冲响应</strong>.两者高度一致,验证了模型正确捕捉了数据中的关键动态.</p>
-<p><strong>量化效应</strong>:一个正的两标准差财政波动性冲击导致:</p>
-<ul>
-<li>产出下降约0.5-0.6%</li>
-<li>投资下降约1.0-1.2%</li>
-<li>消费下降约0.3-0.4%</li>
-<li>持续时间约8-12个季度</li>
-</ul>
-<p><strong>机制分析</strong>:作者进行了机制检验,确认 markup 的内生变化是关键传导渠道.</p>
-<p><strong>通胀</strong>:模型预测通胀上升,但 VAR 显示通胀下降.解决这一小差异的方法是在泰勒规则中加入财政波动性冲击(见 Section VI).</p>
-<h4 id="ZLB-情境">ZLB 情境</h4>
-<p><strong>关键发现</strong>:当经济处于 ZLB 时,效应被显著放大:</p>
-<ul>
-<li>产出下降约1.5%(是非 ZLB 情况的15倍!)</li>
-<li>持续时间显著延长</li>
-</ul>
-<p><strong>原因</strong>:在 ZLB 情境下,名义利率无法下降来缓冲冲击.实际利率上升更多,对消费和投资的抑制作用更强.</p>
-<p>这一发现对于理解2008年后金融危机时期的经济动态具有重要意义.</p>
-<h3 id="福利分析">福利分析</h3>
-<h4 id="福利计算">福利计算</h4>
-<p>作者进行了福利分析,比较存在财政波动性冲击和不存在财政波动性冲击两种情境下的社会福利.</p>
-<p><strong>福利损失度量</strong>:定义为消费和闲暇的等价变化(equivalent variation).</p>
-<p><strong>结果</strong>:</p>
-<ul>
-<li>在基准模型中,财政波动性冲击导致的福利损失相当于永久性降低消费约0.2%</li>
-<li>在 ZLB 情境中,福利损失显著更大</li>
-</ul>
-<h4 id="政策含义">政策含义</h4>
-<p><strong>财政可预测性的价值</strong>:结果强调了保持财政政策可预测性的重要性.即使无法改变财政政策的平均水平或方向,政府也应努力减少政策不确定性.</p>
-<p><strong>ZLB 情境的特殊脆弱性</strong>:当经济处于 ZLB 时,财政不确定性增加的伤害特别大,这意味着在深度衰退期更需要稳定的财政信号.</p>
-<h2 id="结论-Conclusion">结论(Conclusion)</h2>
-<h3 id="核心发现总结">核心发现总结</h3>
-<p><strong>发现一</strong>:美国税收和政府支出过程存在显著的时间变波动率.平滑化的财政波动性冲击与历史叙事事件高度一致(水门事件、1980年代赤字争论、2008年金融危机).</p>
-<p><strong>发现二</strong>:VAR 分析显示,一个正的两标准差资本收入税率财政波动性冲击会导致产出、消费、投资、工作时间和价格水平显著且持久地下降.</p>
-<p><strong>发现三</strong>:新凯恩斯主义模型定性地再现了 VAR 的脉冲响应,option value 效应和 markup 的内生变化是核心传导机制.</p>
-<p><strong>发现四</strong>:当经济处于 ZLB 时,财政波动性冲击的效应被显著放大_产出下降是正常时期的15倍.</p>
-<p><strong>发现五</strong>:财政政策可预测性具有显著的社会福利价值,尤其是在 ZLB 情境中.</p>
-<h3 id="对宏观经济学的贡献">对宏观经济学的贡献</h3>
-<p><strong>对不确定性 literature 的贡献</strong>:本文扩展了 Bloom (2009) 等关于不确定性冲击的研究,将财政不确定性与其他类型的不确定性(如技术不确定性)区分开来,并揭示了其独特的传导机制.</p>
-<p><strong>对财政政策 literature 的贡献</strong>:本文明确区分了财政水平冲击和财政波动性冲击,填补了该 literature 的重要空白.</p>
-<p><strong>对 ZLB 文献的贡献</strong>:本文揭示了 ZLB 情境下财政波动性冲击的放大效应,这对于理解大衰退(Great Recession)和其他 ZLB 情境下的经济动态具有重要意义.</p>
-<h3 id="政策建议">政策建议</h3>
-<p><strong>第一,保持财政政策可预测性</strong>.即使在政治分歧严重的情况下,政府也应努力提供清晰、一致的财政政策信号.</p>
-<p><strong>第二,在 ZLB 情境中特别谨慎</strong>.当经济处于零利率下限时,财政不确定性增加的伤害被显著放大,政策制定者应更加注意沟通策略.</p>
-<p><strong>第三,考虑财政规则的作用</strong>.财政规则(如债务上限、赤字限制)可以降低政策的不确定性,但其自身的可变性也需要管理.</p>
-<h2 id="未来研究方向提及">未来研究方向提及</h2>
-<p><strong>第一,永久性 vs. 暂时性财政不确定性</strong>.本文聚焦暂时性财政不确定性,但永久性财政不确定性(如关于长期财政可持续性的担忧)可能具有不同的效应.</p>
-<p><strong>第二,状态依赖的财政政策</strong>.Mace (1991) 等研究了状态依赖的财政政策,这些政策在不同的经济状态下采取不同的形式.</p>
-<p><strong>第三,国际传播</strong>.财政波动性冲击如何通过国际贸易和金融渠道传播到其他国家?</p>
-<p><strong>第四,异质性代理</strong>.本文使用代表性家庭模型,但异质性代理模型可能揭示不同的传导机制.</p>
-<h2 id="未来研究方向思考">未来研究方向思考</h2>
-<p><strong>第一,发展中国家的财政波动性问题</strong>.发达经济体的财政波动性对发展中经济体可能有完全不同的影响,因为后者的制度能力较弱,财政不稳定可能带来更严重的后果.</p>
-<p><strong>第二,企业层面的财政不确定性暴露</strong>.本文使用宏观经济 VAR 和代表性代理模型,但微观企业数据可能揭示财政不确定性对不同类型企业的差异化影响.</p>
-<p><strong>第三,货币-财政政策交互作用</strong>.在 ZLB 情境下,货币和财政政策的交互作用变得特别重要.两种政策如何协调以最小化不确定性对经济的伤害?</p>
-<p><strong>第四,预期管理策略</strong>.本文揭示了财政不确定性的危害,但如何系统性地管理预期本身是一个值得深入研究的问题.政府的沟通策略、透明度措施和承诺机制如何影响不确定性冲击的强度?</p>
-<p><strong>第五,网络和金融加速器效应</strong>.财政不确定性可能通过企业间的网络关系和金融加速器机制放大.一个企业的投资削减可能通过供应链影响其他企业,这些 second-round 效应值得进一步研究.</p>
-<h2 id="学术思考">学术思考</h2>
-<p><strong>关于识别策略的思考</strong>:本文使用两步估计策略_首先估计财政规则的波动性,然后将估计的波动性序列作为外生变量引入 VAR.这一策略的有效性取决于第一步估计的波动性能否被视为"意外变化"的合理代理.如果经济主体能够预期波动性的变化(而不仅仅是对冲击本身的预期),那么识别假设可能受到挑战.</p>
-<p><strong>关于模型设定的选择</strong>:作者使用代表性代理而非异质性代理.这限制了模型捕捉财政不确定性对不同群体差异化影响的能力.例如,财政不确定性对失业者和中小企业的伤害可能比对就业者和大型企业更大.</p>
-<p><strong>关于 ZLB 分析的启示</strong>:ZLB 情境下的15倍放大效应是一个惊人的结果.但这一结果是否具有普遍性,还是对美国特定情境的高度依赖?不同的初始债务水平、不同的开放程度、不同的汇率制度下,ZLB 放大效应是否相同?</p>
-<p><strong>关于政策含义的谨慎性</strong>:虽然本文强调了财政可预测性的重要性,但"说起来容易做起来难".在民主政治环境下,财政政策的内在不确定性可能是政治过程的自然结果,而非政策失误.如何在保持政策灵活性的同时减少不必要的波动?</p>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>
-<p><strong>为什么内生 markup 变化是财政波动性冲击传导的关键机制?这个机制的具体经济学解释是什么?</strong></p>
-</li>
-<li>
-<p><strong>作者提到在 VAR 中加入财政波动性冲击到泰勒规则可以解决通胀预测的小差异,这在理论上意味着什么?</strong></p>
-</li>
-<li>
-<p><strong>15倍的 ZLB 放大效应是否稳健?如果使用不同的货币规则设定,结果会如何变化?</strong></p>
-</li>
-<li>
-<p><strong>本文使用平均税率而非边际税率进行估计.边际税率的不确定性是否会对经济产生不同的影响?</strong></p>
-</li>
-<li>
-<p><strong>在美国的制度背景下,财政规则(如债务上限)的存在实际上增加了而非减少了财政不确定性.如何调和这一矛盾?</strong></p>
-</li>
-<li>
-<p><strong>本文的发现对于当前的"财政空间"(fiscal space)讨论有什么启示?发展中国家在 ZLB 情境下是否也有类似的放大效应?</strong></p>
-</li>
-<li>
-<p><strong>关于模型中的预期形成</strong>:假设家庭和企业具有理性预期,但实际中他们可能对财政政策的变化有适应性预期或粘性预期.这种预期设定如何影响结果?**</p>
-</li>
-<li>
-<p><strong>本文使用季度数据.更高频率(日度或周度)的财政不确定性数据是否会揭示更多动态细节?</strong></p>
-</li>
-<li>
-<p><strong>作者提到这是"第一个"研究财政波动性冲击的尝试.这个"第一"的贡献有多大?后续研究如何在此基础上扩展?</strong></p>
-</li>
-<li>
-<p><strong>在当前的高通胀环境下(如2022-2024年),财政不确定性对经济的影响是否与低通胀/低利率环境有不同的表现?</strong></p>
-</li>
-</ol>
-<h2 id="学术思考-v2">学术思考</h2>
-<p><strong>关于识别策略的思考</strong>:本文使用两步估计策略_首先估计财政规则的波动性,然后将估计的波动性序列作为外生变量引入 VAR.这一策略的有效性取决于第一步估计的波动性能否被视为"意外变化"的合理代理.如果经济主体能够预期波动性的变化(而不仅仅是对冲击本身的预期),那么识别假设可能受到挑战.</p>
-<p><strong>关于模型设定的选择</strong>:作者使用代表性代理而非异质性代理.这限制了模型捕捉财政不确定性对不同群体差异化影响的能力.例如,财政不确定性对失业者和中小企业的伤害可能比对就业者和大型企业更大.</p>
-<p><strong>关于 ZLB 分析的启示</strong>:ZLB 情境下的15倍放大效应是一个惊人的结果.但这一结果是否具有普遍性,还是对美国特定情境的高度依赖?不同的初始债务水平、不同的开放程度、不同的汇率制度下,ZLB 放大效应是否相同?</p>
-<p><strong>关于政策含义的谨慎性</strong>:虽然本文强调了财政可预测性的重要性,但"说起来容易做起来难".在民主政治环境下,财政政策的内在不确定性可能是政治过程的自然结果,而非政策失误.如何在保持政策灵活性的同时减少不必要的波动?</p>
-<h2 id="下一步用户可能提的问题-v2">下一步用户可能提的问题</h2>
-<ol>
-<li>
-<p><strong>为什么内生 markup 变化是财政波动性冲击传导的关键机制?这个机制的具体经济学解释是什么?</strong></p>
-</li>
-<li>
-<p><strong>作者提到在 VAR 中加入财政波动性冲击到泰勒规则可以解决通胀预测的小差异,这在理论上意味着什么?</strong></p>
-</li>
-<li>
-<p><strong>15倍的 ZLB 放大效应是否稳健?如果使用不同的货币规则设定,结果会如何变化?</strong></p>
-</li>
-<li>
-<p><strong>本文使用平均税率而非边际税率进行估计.边际税率的不确定性是否会对经济产生不同的影响?</strong></p>
-</li>
-<li>
-<p><strong>在美国的制度背景下,财政规则(如债务上限)的存在实际上增加了而非减少了财政不确定性.如何调和这一矛盾?</strong></p>
-</li>
-<li>
-<p><strong>本文的发现对于当前的"财政空间"(fiscal space)讨论有什么启示?发展中国家在 ZLB 情境下是否也有类似的放大效应?</strong></p>
-</li>
-<li>
-<p><strong>关于模型中的预期形成</strong>:假设家庭和企业具有理性预期,但实际中他们可能对财政政策的变化有适应性预期或粘性预期.这种预期设定如何影响结果?**</p>
-</li>
-<li>
-<p><strong>本文使用季度数据.更高频率(日度或周度)的财政不确定性数据是否会揭示更多动态细节?</strong></p>
-</li>
-<li>
-<p><strong>作者提到这是"第一个"研究财政波动性冲击的尝试.这个"第一"的贡献有多大?后续研究如何在此基础上扩展?</strong></p>
-</li>
-<li>
-<p><strong>在当前的高通胀环境下(如2022-2024年),财政不确定性对经济的影响是否与低通胀/低利率环境有不同的表现?</strong></p>
-</li>
-</ol>
-<h2 id="下一步用户可能提的问题-v3">下一步用户可能提的问题</h2>
-<ol>
-<li>
-<p><strong>为什么内生 markup 变化是财政波动性冲击传导的关键机制?这个机制的具体经济学解释是什么?</strong></p>
-</li>
-<li>
-<p><strong>作者提到在 VAR 中加入财政波动性冲击到泰勒规则可以解决通胀预测的小差异,这在理论上意味着什么?</strong></p>
-</li>
-<li>
-<p><strong>15倍的 ZLB 放大效应是否稳健?如果使用不同的货币规则设定,结果会如何变化?</strong></p>
-</li>
-<li>
-<p><strong>本文使用平均税率而非边际税率进行估计.边际税率的不确定性是否会对经济产生不同的影响?</strong></p>
-</li>
-<li>
-<p><strong>在美国的制度背景下,财政规则(如债务上限)的存在实际上增加了而非减少了财政不确定性.如何调和这一矛盾?</strong></p>
-</li>
-<li>
-<p><strong>本文的发现对于当前的"财政空间"(fiscal space)讨论有什么启示?发展中国家在 ZLB 情境下是否也有类似的放大效应?</strong></p>
-</li>
-<li>
-<p><strong>关于模型中的预期形成</strong>:假设家庭和企业具有理性预期,但实际中他们可能对财政政策的变化有适应性预期或粘性预期.这种预期设定如何影响结果?**</p>
-</li>
-<li>
-<p><strong>本文使用季度数据.更高频率(日度或周度)的财政不确定性数据是否会揭示更多动态细节?</strong></p>
-</li>
-<li>
-<p><strong>作者提到这是"第一个"研究财政波动性冲击的尝试.这个"第一"的贡献有多大?后续研究如何在此基础上扩展?</strong></p>
-</li>
-<li>
-<p><strong>在当前的高通胀环境下(如2022-2024年),财政不确定性对经济的影响是否与低通胀/低利率环境有不同的表现?</strong></p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>死亡率的地方性驱动因素：移民的证据 — 深度阅读笔记 — Finkelstein Et Al.</title>
     <url>/posts/finkelstein2021/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Place-Based Drivers of Mortality: Evidence from Migration<br>
@@ -11591,6 +11591,81 @@ $$\kappa_t = \sigma_D - (1-\omega_t)\eta - \sigma\phi_D(\omega_t + \tau y_t(1-\o
       </tags>
   </entry>
   <entry>
+    <title>相似工作的同酬 — 深度阅读笔记 — Gentile Passaro, Kojima &amp; Pakzad-Hurson</title>
+    <url>/posts/gentile-passaro2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Equal Pay for Similar Work</li>
+<li><strong>作者</strong>: Diego Gentile Passaro (Amazon Science), Fuhito Kojima (东京大学), Bobak Pakzad-Hurson (布朗大学)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(3): 977-1013</li>
+<li><strong>DOI</strong>: 10.1257/aer.20230832</li>
+<li><strong>难度评估</strong>: 高 - 需要劳动经济学、搜索理论、计量经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>同工同酬法（EPSW）</strong>：要求对"相似"工作支付同等报酬，比"相同工作"更宽泛。</p>
+<p><strong>性别工资差距（Gender Wage Gap）</strong>：男性和女性工人之间的平均工资差异。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol>
+<li><strong>EPSW政策日益普遍</strong>：美国45.9%的劳动力受EPSW管辖</li>
+<li><strong>执行困难</strong>："相同工作"难以定义</li>
+<li><strong>意外的均衡效应</strong>：EPSW可能产生违背政策初衷的均衡效应</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：EPSW对劳动力市场结果的均衡效应是什么？是否会反而加剧性别工资差距？</p>
+<p><strong>关键发现</strong>：EPSW导致企业按性别隔离劳动力，在男性占多数的劳动力市场中会增加性别工资差距</p>
+<hr>
+<h2 id="2-内容及结构">2. 内容及结构</h2>
+<ol>
+<li><strong>引言</strong>: EPSW政策背景、研究问题、主要发现</li>
+<li><strong>静态模型</strong>: 设定、无EPSW均衡、EPSW均衡、工资差距效应</li>
+<li><strong>动态搜索模型</strong>: 搜索摩擦和再配置摩擦、动态均衡</li>
+<li><strong>实证分析</strong>: 智利2009年EPSW政策、因果识别</li>
+<li><strong>结论</strong></li>
+</ol>
+<hr>
+<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="EPSW-vs-EPEW">EPSW vs EPEW</h4>
+<p><strong>EPEW</strong>：要求"相同工作"获得相同报酬<br>
+<strong>EPSW</strong>：更宽泛，要求对"相似工作"支付同等报酬</p>
+<h3 id="理论模型">理论模型</h3>
+<h4 id="静态模型">静态模型</h4>
+<p><strong>核心机制</strong>：</p>
+<ul>
+<li>EPSW要求雇主对相似工作的所有工人支付相同工资</li>
+<li>企业会调整劳动力组合来降低成本</li>
+<li>导致按性别隔离劳动力</li>
+</ul>
+<p><strong>均衡效应</strong>：</p>
+<ul>
+<li>男性占多数的市场：女性被分配到低工资任务</li>
+<li>女性占多数的市场：结果相反</li>
+<li>总体可能加剧工资差距</li>
+</ul>
+<h4 id="动态搜索模型">动态搜索模型</h4>
+<p><strong>搜索摩擦</strong>：工人寻找工作需要时间和成本<br>
+<strong>再配置摩擦</strong>：企业调整劳动力组合需要成本</p>
+<hr>
+<h2 id="4-结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol>
+<li><strong>EPSW可能反效果</strong>：导致劳动力性别隔离</li>
+<li><strong>男性占多数市场中加剧差距</strong>：实证证实</li>
+<li><strong>政策启示</strong>：同酬法设计需考虑均衡效应</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>临时性裁员与周期性失业动态 — 深度阅读笔记 — Gertler, Huckfeldt &amp; Trigari</title>
     <url>/posts/gertler2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -11691,81 +11766,6 @@ $$\kappa_t = \sigma_D - (1-\omega_t)\eta - \sigma\phi_D(\omega_t + \tau y_t(1-\o
 <li>
 <p><strong>政策启示</strong>：PPP通过减少召回损失产生可观的就业增长</p>
 </li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>相似工作的同酬 — 深度阅读笔记 — Gentile Passaro, Kojima &amp; Pakzad-Hurson</title>
-    <url>/posts/gentile-passaro2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Equal Pay for Similar Work</li>
-<li><strong>作者</strong>: Diego Gentile Passaro (Amazon Science), Fuhito Kojima (东京大学), Bobak Pakzad-Hurson (布朗大学)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3): 977-1013</li>
-<li><strong>DOI</strong>: 10.1257/aer.20230832</li>
-<li><strong>难度评估</strong>: 高 - 需要劳动经济学、搜索理论、计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>同工同酬法（EPSW）</strong>：要求对"相似"工作支付同等报酬，比"相同工作"更宽泛。</p>
-<p><strong>性别工资差距（Gender Wage Gap）</strong>：男性和女性工人之间的平均工资差异。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol>
-<li><strong>EPSW政策日益普遍</strong>：美国45.9%的劳动力受EPSW管辖</li>
-<li><strong>执行困难</strong>："相同工作"难以定义</li>
-<li><strong>意外的均衡效应</strong>：EPSW可能产生违背政策初衷的均衡效应</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：EPSW对劳动力市场结果的均衡效应是什么？是否会反而加剧性别工资差距？</p>
-<p><strong>关键发现</strong>：EPSW导致企业按性别隔离劳动力，在男性占多数的劳动力市场中会增加性别工资差距</p>
-<hr>
-<h2 id="2-内容及结构">2. 内容及结构</h2>
-<ol>
-<li><strong>引言</strong>: EPSW政策背景、研究问题、主要发现</li>
-<li><strong>静态模型</strong>: 设定、无EPSW均衡、EPSW均衡、工资差距效应</li>
-<li><strong>动态搜索模型</strong>: 搜索摩擦和再配置摩擦、动态均衡</li>
-<li><strong>实证分析</strong>: 智利2009年EPSW政策、因果识别</li>
-<li><strong>结论</strong></li>
-</ol>
-<hr>
-<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="EPSW-vs-EPEW">EPSW vs EPEW</h4>
-<p><strong>EPEW</strong>：要求"相同工作"获得相同报酬<br>
-<strong>EPSW</strong>：更宽泛，要求对"相似工作"支付同等报酬</p>
-<h3 id="理论模型">理论模型</h3>
-<h4 id="静态模型">静态模型</h4>
-<p><strong>核心机制</strong>：</p>
-<ul>
-<li>EPSW要求雇主对相似工作的所有工人支付相同工资</li>
-<li>企业会调整劳动力组合来降低成本</li>
-<li>导致按性别隔离劳动力</li>
-</ul>
-<p><strong>均衡效应</strong>：</p>
-<ul>
-<li>男性占多数的市场：女性被分配到低工资任务</li>
-<li>女性占多数的市场：结果相反</li>
-<li>总体可能加剧工资差距</li>
-</ul>
-<h4 id="动态搜索模型">动态搜索模型</h4>
-<p><strong>搜索摩擦</strong>：工人寻找工作需要时间和成本<br>
-<strong>再配置摩擦</strong>：企业调整劳动力组合需要成本</p>
-<hr>
-<h2 id="4-结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol>
-<li><strong>EPSW可能反效果</strong>：导致劳动力性别隔离</li>
-<li><strong>男性占多数市场中加剧差距</strong>：实证证实</li>
-<li><strong>政策启示</strong>：同酬法设计需考虑均衡效应</li>
 </ol>
 ]]></content>
       <categories>
@@ -12243,6 +12243,204 @@ $$Z_j© = \frac{\sum_{i \neq c} R_j(i) - \sum_{i \in c} R_j(i)}{n_j - n_j©}$$</
 ]]></content>
       <categories>
         <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>政府政策的统一福利分析 — 深度阅读笔记 — Hendren &amp; Sprung-Keyser</title>
+    <url>/posts/hendren2020/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: A Unified Welfare Analysis of Government Policies<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/YTDNY3KC/Hendren和Sprung-Keyser - 2020 - A Unified Welfare Analysis of Government Policies.pdf<br>
+Zotero Item Key:: BZPCLS8S</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+政府每年在社会保险、教育、税收减免、实物转移支付等领域花费巨额资金。经济学家长期以来用不同的福利测量指标评估各类政策：健康保险研究报告"每救一条命的成本"，税收政策报告"超额负担（excess burden）“，高等教育研究报告"每增加一个入学名额的成本”，早教项目报告"社会成本-收益比"……这些指标互不兼容，使得不同领域政策之间的横向比较极为困难。</p>
+<p><strong>研究背景</strong></p>
+<ul>
+<li>已有大量高质量的政策因果效应估计文献（过去50年的自然实验研究积累）</li>
+<li>但每篇文章用自己的方式做福利分析，无法统一比较</li>
+<li>Hendren（2016）提出了MVPF（公共资金边际价值）的概念，作为统一测量工具</li>
+</ul>
+<p><strong>作者的问题意识</strong><br>
+能否用同一把尺子——MVPF——衡量133项美国历史政策的福利效率，从而系统性地回答：哪类政府支出最"划算"？儿童政策和成人政策谁的回报更高？现金转移和实物转移有何差异？</p>
+<p><strong>研究意义</strong><br>
+这是迄今为止规模最大的政策福利比较研究，涵盖133项政策4大领域50年历史。建立了可供研究者直接使用的公开框架（GitHub代码 + 数据），为循证政策（evidence-based policy）决策提供工具。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：问题动机 + MVPF概念介绍 + 主要结论预览。</li>
+<li><strong>MVPF框架</strong>：理论推导；与传统指标（MCF、成本-收益比）的关系。</li>
+<li><strong>6个示例政策</strong>：详细展示MVPF的构建方法。</li>
+<li><strong>社会保险</strong>：健康、失业、残障保险。</li>
+<li><strong>教育</strong>：早教、K-12、大学、职业培训。</li>
+<li><strong>税收与现金转移</strong>：边际税率、EITC、福利项目。</li>
+<li><strong>实物转移</strong>：住房、食品券。</li>
+<li><strong>跨领域比较与政策含义</strong>。</li>
+<li><strong>结论</strong>。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景与挑战">背景与挑战</h3>
+<p><strong>核心挑战</strong>：如何跨政策领域进行福利比较？</p>
+<p>传统方法的问题是：不同文献采用不同的福利指标，彼此不可比；而且各指标通常只反映直接效应，忽略了长期的财政外部性（如儿童受教育后成年纳税、减少转移支付）。</p>
+<h3 id="MVPF框架（方法）">MVPF框架（方法）</h3>
+<p>$$\text{MVPF} = \frac{\text{受益者的支付意愿（WTP）}}{\text{政府净成本}}$$</p>
+<p><strong>分子：支付意愿（WTP）</strong></p>
+<ul>
+<li>受益者为获得某政策愿意支付的最大金额</li>
+<li>利用包络定理（envelope theorem）：WTP ≈ 政策的机械性直接成本（behavioral responses are not valued dollar-for-dollar）</li>
+<li>如果政策提供保险，WTP &gt; 资源成本（消费平滑溢价）</li>
+<li>如果政策诱发福利套取行为，WTP &lt; 资源成本</li>
+</ul>
+<p><strong>分母：政府净成本</strong><br>
+= 初始支出 + 财政外部性（fiscal externality）</p>
+<ul>
+<li>财政外部性 = 因政策改变受益者行为而引起的税收/转移支付的长期变化</li>
+<li>例：儿童健康保险 → 儿童更健康、教育程度提高 → 成年后收入更高 → 政府税收增加 → 净成本下降，甚至为负（政策"自我偿还"）</li>
+<li>政策"自我偿还"（MVPF = ∞）= Pareto改进</li>
+</ul>
+<p><strong>MVPF的解读</strong>：</p>
+<ul>
+<li>MVPF = 1：标准的无扭曲转移（$1政府成本带来$1受益者WTP）</li>
+<li>MVPF &gt; 1：每花$1，受益者获得&gt;$1的福利（高效政策）</li>
+<li>MVPF &lt; 1：受益者实际获得的福利&lt;政府花费（低效政策）</li>
+<li>MVPF = ∞：“自我偿还”，Pareto改进</li>
+</ul>
+<p><strong>与其他指标的关系</strong>：MVPF是Okun"漏桶"比喻的形式化——MVPFA=2, MVPFB=1，则从B转移资金到A当且仅当社会偏好给A受益者$2多于给B受益者$1。</p>
+<h3 id="数据来源">数据来源</h3>
+<p><strong>非原始数据</strong>：本文不做新的因果推断，而是系统汇总现有因果研究的估计结果。</p>
+<ul>
+<li>利用现有文献中已估计的政策效应（就业、收入、教育、健康）作为输入</li>
+<li>用标准假设（贴现率、税率等）将这些效应转化为WTP和财政外部性</li>
+<li>覆盖4个领域133项美国政策（1950s-2010s）</li>
+<li>提供GitHub代码，允许研究者修改关键假设进行敏感性分析</li>
+</ul>
+<h3 id="主要结果">主要结果</h3>
+<p><strong>发现一：儿童政策MVPF远高于成人政策</strong></p>
+<table>
+<thead>
+<tr>
+<th>政策类型</th>
+<th>典型MVPF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>儿童健康保险扩展（如Medicaid儿童）</td>
+<td>平均&gt;5，许多"自我偿还"</td>
+</tr>
+<tr>
+<td>早期教育（Perry Preschool）</td>
+<td>~44</td>
+</tr>
+<tr>
+<td>Abecedarian项目</td>
+<td>~12</td>
+</tr>
+<tr>
+<td>K-12教育经费均等化</td>
+<td>高</td>
+</tr>
+<tr>
+<td>大学教育扩展</td>
+<td>高（部分）</td>
+</tr>
+<tr>
+<td>成人健康保险扩展</td>
+<td>0.40–1.63</td>
+</tr>
+<tr>
+<td>实物转移（住房券、食品券）</td>
+<td>0.65–1.04</td>
+</tr>
+<tr>
+<td>税收减免/现金福利（成人）</td>
+<td>负值–1.20</td>
+</tr>
+</tbody>
+</table>
+<p><strong>发现二：儿童政策的高MVPF跨越各年龄段</strong></p>
+<p>与Heckman（2006）"早期投资边际回报递减"的主张相反，本文发现：</p>
+<ul>
+<li>早期儿童教育（0-5岁）确实有高MVPF</li>
+<li><strong>但K-12、大学教育投资也有高MVPF</strong>——儿童期的高回报并不在某个年龄后迅速下降</li>
+<li>"一刀切"式的"越早越好"观点需要修正</li>
+</ul>
+<p><strong>发现三：许多儿童政策"自我偿还"</strong></p>
+<p>儿童健康保险扩展的长期财政外部性为正：平均每$1投入，政府长期回收$1.78（其中3/4项目完全回收成本）。<br>
+原因：受益儿童成年后收入更高→缴纳更多税→减少转移支付需求。</p>
+<p><strong>发现四：成人政策的例外——对儿童产生大溢出效应</strong></p>
+<p>成人政策通常MVPF较低（0.5–2），但若成人政策对其子女产生大的正外部性（spillover to children），MVPF可以超出此范围。说明代际传递渠道在评估成人政策时不可忽略。</p>
+<p><strong>发现五：同类政策内部变异巨大</strong></p>
+<p>即使在高回报类别（如儿童政策）中，也存在低MVPF的政策（如职业培训项目、未增加升学率的大学补贴）。这说明"类别"本身不能代替具体政策的评估——机制很重要。</p>
+<h3 id="政策含义">政策含义</h3>
+<ol>
+<li><strong>儿童健康和教育是最具性价比的公共投资</strong>，且不仅限于早期教育</li>
+<li><strong>成人政策不应简单否定</strong>——若有代际溢出效应，其福利效率可大幅提升</li>
+<li><strong>“研究的边际价值”（value of information）是可以量化的</strong>：在MVPF高度不确定的政策领域，政策制定者应愿意为更好的因果证据支付大量预算</li>
+<li><strong>循证政策设计</strong>：同类政策内部的变异提示我们，了解"为什么有效"（机制）比知道"平均有效"更重要</li>
+</ol>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<ol>
+<li>对低收入儿童健康和教育的直接投资，历史上有最高的MVPF，平均超过5，很多自我偿还（Pareto改进）；</li>
+<li>儿童期高回报政策跨越各年龄段，不仅限于早期教育；</li>
+<li>成人政策MVPF通常在0.5–2之间；若对儿童有大溢出效应则可超越此范围；</li>
+<li>同类政策内MVPF差异显著，了解成功政策的机制比看平均MVPF更重要；</li>
+<li>MVPF框架可应用于犯罪、环境、基础设施等尚未覆盖的领域，未来研究空间巨大。</li>
+</ol>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文明确提及的方向</strong>：</p>
+<ol>
+<li>将MVPF框架扩展至犯罪政策、环境政策、宏观经济稳定政策、基础设施政策；</li>
+<li>量化信息价值——为MVPF不确定的政策领域设计新数据收集方案；</li>
+<li>利用行政数据扩大政策效应的因果估计（更多政策纳入比较）。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li><strong>中国政策的MVPF估计</strong>：中国有大量准实验政策（农村义务教育经费改革、新农合、城镇医保扩展、EITC类转移支付）。能否用中国行政数据和已有因果估计构建中国版的MVPF比较数据集？</li>
+<li><strong>发展中国家的跨代际效应测量</strong>：本文核心发现（儿童政策的财政外部性）依赖于长期追踪数据。在数据基础薄弱的发展中国家，如何合理估计儿童政策的代际收益？</li>
+<li><strong>政策组合的相互作用</strong>：本文对各政策独立评估，忽略了政策之间的互补/替代关系。如果儿童健康保险和早教同时实施，联合MVPF是否大于两个独立MVPF之和？</li>
+<li><strong>MVPF与分配偏好的结合</strong>：本文MVPF只测量效率（“漏桶的泄漏量”），不包含社会对不同群体的分配权重。如何将MVPF与不同的社会福利函数（平等主义、功利主义）结合，形成"分配调整后的MVPF"？</li>
+<li><strong>数字化公共服务的MVPF</strong>：政府数字化转型（如电子政务、在线医疗）的受益者WTP和财政外部性如何测量？这类政策是否也能达到高MVPF？</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>财政外部性的时间折现问题</strong>：本文MVPF的高低在很大程度上取决于如何折现儿童长期收益。贴现率从3%变为5%，那些"自我偿还"的儿童政策的MVPF会大幅下降。作者做了敏感性分析，但核心结论（儿童政策MVPF &gt;&gt; 成人政策）究竟有多依赖于折现率假设？这是本文结论的最重要不确定来源之一。</p>
+</li>
+<li>
+<p><strong>发表偏差与外部有效性</strong>：本文使用的"因果估计"来自学术文献，而学术文献存在著名的发表偏差（positive results are more likely to be published）。作者使用Andrews &amp; Kasy（2019）方法校正发表偏差，但校正方法本身也有假设。若底层因果估计系统性高估政策效果，MVPF也会系统高估，"自我偿还"政策数量会被高估。</p>
+</li>
+<li>
+<p><strong>"政策"的内生性</strong>：Hendren &amp; Sprung-Keyser分析的是<strong>历史上实施的</strong>133项政策。这些政策并非随机选择——政治上可行的政策往往是有基础的、预期效果良好的。这意味着样本可能存在正向选择偏误（high-MVPF policies are more likely to be tried）。对于那些从未被实施的政策，MVPF可能与已实施政策大相径庭。</p>
+</li>
+<li>
+<p><strong>MVPF与分配正义的分离</strong>：本文明确指出MVPF只衡量效率，不包含对不同群体的分配偏好。但政策评估不可能完全回避分配问题——一个MVPF=3的政策若全部受益于富人，是否优于MVPF=1.5的政策让穷人受益？作者的建议是先用MVPF确定效率边界，再叠加分配偏好——但在实践中这两步的分离往往很难维持。</p>
+</li>
+<li>
+<p><strong>从美国到其他国家的可移植性</strong>：本文基于美国过去50年的政策经验。中国、印度等发展中国家在儿童健康保险上的回报率是否也高？发展中国家劳动力市场的特征（非正规就业、低税率）可能使得"财政外部性"（通过税收回收）的机制大打折扣。有限的税收征管能力可能意味着儿童教育投资无法通过增税来"自我偿还"，MVPF结论的普遍性有待检验。</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>MVPF与传统的"成本-收益比（cost-benefit ratio）"或"边际公共资金成本（MCF）"有什么本质区别？</li>
+<li>Perry Preschool的MVPF为什么高达44？核心机制是什么？这是否意味着早期教育项目都有如此高的回报？</li>
+<li>文中提到一些政策"MVPF为负"，这是什么意思？哪些政策出现了负MVPF？</li>
+<li>本文的GitHub代码和数据集（<a href="http://policyanalysis.org/welfare_analysis%EF%BC%89%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E7%94%A8%E6%9D%A5%E4%BC%B0%E8%AE%A1%E4%B8%AD%E5%9B%BD%E6%94%BF%E7%AD%96%E7%9A%84MVPF%EF%BC%9F%E5%93%AA%E4%BA%9B%E6%AD%A5%E9%AA%A4%E9%9C%80%E8%A6%81%E4%BF%AE%E6%94%B9%E4%BB%A5%E9%80%82%E5%BA%94%E4%B8%AD%E5%9B%BD%E6%83%85%E5%A2%83%EF%BC%9F">policyanalysis.org/welfare_analysis）是否可以用来估计中国政策的MVPF？哪些步骤需要修改以适应中国情境？</a></li>
+<li>MVPF框架如何处理"一般均衡效应"（如政策规模扩大后对工资、价格的影响）？目前的估计是局部均衡，扩大政策规模后MVPF是否会下降？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -13146,204 +13344,6 @@ _谢肇淛&lt;五杂俎&gt;(约1610年)</p>
       </tags>
   </entry>
   <entry>
-    <title>政府政策的统一福利分析 — 深度阅读笔记 — Hendren &amp; Sprung-Keyser</title>
-    <url>/posts/hendren2020/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: A Unified Welfare Analysis of Government Policies<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/YTDNY3KC/Hendren和Sprung-Keyser - 2020 - A Unified Welfare Analysis of Government Policies.pdf<br>
-Zotero Item Key:: BZPCLS8S</p>
-<hr>
-<span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-政府每年在社会保险、教育、税收减免、实物转移支付等领域花费巨额资金。经济学家长期以来用不同的福利测量指标评估各类政策：健康保险研究报告"每救一条命的成本"，税收政策报告"超额负担（excess burden）“，高等教育研究报告"每增加一个入学名额的成本”，早教项目报告"社会成本-收益比"……这些指标互不兼容，使得不同领域政策之间的横向比较极为困难。</p>
-<p><strong>研究背景</strong></p>
-<ul>
-<li>已有大量高质量的政策因果效应估计文献（过去50年的自然实验研究积累）</li>
-<li>但每篇文章用自己的方式做福利分析，无法统一比较</li>
-<li>Hendren（2016）提出了MVPF（公共资金边际价值）的概念，作为统一测量工具</li>
-</ul>
-<p><strong>作者的问题意识</strong><br>
-能否用同一把尺子——MVPF——衡量133项美国历史政策的福利效率，从而系统性地回答：哪类政府支出最"划算"？儿童政策和成人政策谁的回报更高？现金转移和实物转移有何差异？</p>
-<p><strong>研究意义</strong><br>
-这是迄今为止规模最大的政策福利比较研究，涵盖133项政策4大领域50年历史。建立了可供研究者直接使用的公开框架（GitHub代码 + 数据），为循证政策（evidence-based policy）决策提供工具。</p>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言</strong>：问题动机 + MVPF概念介绍 + 主要结论预览。</li>
-<li><strong>MVPF框架</strong>：理论推导；与传统指标（MCF、成本-收益比）的关系。</li>
-<li><strong>6个示例政策</strong>：详细展示MVPF的构建方法。</li>
-<li><strong>社会保险</strong>：健康、失业、残障保险。</li>
-<li><strong>教育</strong>：早教、K-12、大学、职业培训。</li>
-<li><strong>税收与现金转移</strong>：边际税率、EITC、福利项目。</li>
-<li><strong>实物转移</strong>：住房、食品券。</li>
-<li><strong>跨领域比较与政策含义</strong>。</li>
-<li><strong>结论</strong>。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景与挑战">背景与挑战</h3>
-<p><strong>核心挑战</strong>：如何跨政策领域进行福利比较？</p>
-<p>传统方法的问题是：不同文献采用不同的福利指标，彼此不可比；而且各指标通常只反映直接效应，忽略了长期的财政外部性（如儿童受教育后成年纳税、减少转移支付）。</p>
-<h3 id="MVPF框架（方法）">MVPF框架（方法）</h3>
-<p>$$\text{MVPF} = \frac{\text{受益者的支付意愿（WTP）}}{\text{政府净成本}}$$</p>
-<p><strong>分子：支付意愿（WTP）</strong></p>
-<ul>
-<li>受益者为获得某政策愿意支付的最大金额</li>
-<li>利用包络定理（envelope theorem）：WTP ≈ 政策的机械性直接成本（behavioral responses are not valued dollar-for-dollar）</li>
-<li>如果政策提供保险，WTP &gt; 资源成本（消费平滑溢价）</li>
-<li>如果政策诱发福利套取行为，WTP &lt; 资源成本</li>
-</ul>
-<p><strong>分母：政府净成本</strong><br>
-= 初始支出 + 财政外部性（fiscal externality）</p>
-<ul>
-<li>财政外部性 = 因政策改变受益者行为而引起的税收/转移支付的长期变化</li>
-<li>例：儿童健康保险 → 儿童更健康、教育程度提高 → 成年后收入更高 → 政府税收增加 → 净成本下降，甚至为负（政策"自我偿还"）</li>
-<li>政策"自我偿还"（MVPF = ∞）= Pareto改进</li>
-</ul>
-<p><strong>MVPF的解读</strong>：</p>
-<ul>
-<li>MVPF = 1：标准的无扭曲转移（$1政府成本带来$1受益者WTP）</li>
-<li>MVPF &gt; 1：每花$1，受益者获得&gt;$1的福利（高效政策）</li>
-<li>MVPF &lt; 1：受益者实际获得的福利&lt;政府花费（低效政策）</li>
-<li>MVPF = ∞：“自我偿还”，Pareto改进</li>
-</ul>
-<p><strong>与其他指标的关系</strong>：MVPF是Okun"漏桶"比喻的形式化——MVPFA=2, MVPFB=1，则从B转移资金到A当且仅当社会偏好给A受益者$2多于给B受益者$1。</p>
-<h3 id="数据来源">数据来源</h3>
-<p><strong>非原始数据</strong>：本文不做新的因果推断，而是系统汇总现有因果研究的估计结果。</p>
-<ul>
-<li>利用现有文献中已估计的政策效应（就业、收入、教育、健康）作为输入</li>
-<li>用标准假设（贴现率、税率等）将这些效应转化为WTP和财政外部性</li>
-<li>覆盖4个领域133项美国政策（1950s-2010s）</li>
-<li>提供GitHub代码，允许研究者修改关键假设进行敏感性分析</li>
-</ul>
-<h3 id="主要结果">主要结果</h3>
-<p><strong>发现一：儿童政策MVPF远高于成人政策</strong></p>
-<table>
-<thead>
-<tr>
-<th>政策类型</th>
-<th>典型MVPF</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>儿童健康保险扩展（如Medicaid儿童）</td>
-<td>平均&gt;5，许多"自我偿还"</td>
-</tr>
-<tr>
-<td>早期教育（Perry Preschool）</td>
-<td>~44</td>
-</tr>
-<tr>
-<td>Abecedarian项目</td>
-<td>~12</td>
-</tr>
-<tr>
-<td>K-12教育经费均等化</td>
-<td>高</td>
-</tr>
-<tr>
-<td>大学教育扩展</td>
-<td>高（部分）</td>
-</tr>
-<tr>
-<td>成人健康保险扩展</td>
-<td>0.40–1.63</td>
-</tr>
-<tr>
-<td>实物转移（住房券、食品券）</td>
-<td>0.65–1.04</td>
-</tr>
-<tr>
-<td>税收减免/现金福利（成人）</td>
-<td>负值–1.20</td>
-</tr>
-</tbody>
-</table>
-<p><strong>发现二：儿童政策的高MVPF跨越各年龄段</strong></p>
-<p>与Heckman（2006）"早期投资边际回报递减"的主张相反，本文发现：</p>
-<ul>
-<li>早期儿童教育（0-5岁）确实有高MVPF</li>
-<li><strong>但K-12、大学教育投资也有高MVPF</strong>——儿童期的高回报并不在某个年龄后迅速下降</li>
-<li>"一刀切"式的"越早越好"观点需要修正</li>
-</ul>
-<p><strong>发现三：许多儿童政策"自我偿还"</strong></p>
-<p>儿童健康保险扩展的长期财政外部性为正：平均每$1投入，政府长期回收$1.78（其中3/4项目完全回收成本）。<br>
-原因：受益儿童成年后收入更高→缴纳更多税→减少转移支付需求。</p>
-<p><strong>发现四：成人政策的例外——对儿童产生大溢出效应</strong></p>
-<p>成人政策通常MVPF较低（0.5–2），但若成人政策对其子女产生大的正外部性（spillover to children），MVPF可以超出此范围。说明代际传递渠道在评估成人政策时不可忽略。</p>
-<p><strong>发现五：同类政策内部变异巨大</strong></p>
-<p>即使在高回报类别（如儿童政策）中，也存在低MVPF的政策（如职业培训项目、未增加升学率的大学补贴）。这说明"类别"本身不能代替具体政策的评估——机制很重要。</p>
-<h3 id="政策含义">政策含义</h3>
-<ol>
-<li><strong>儿童健康和教育是最具性价比的公共投资</strong>，且不仅限于早期教育</li>
-<li><strong>成人政策不应简单否定</strong>——若有代际溢出效应，其福利效率可大幅提升</li>
-<li><strong>“研究的边际价值”（value of information）是可以量化的</strong>：在MVPF高度不确定的政策领域，政策制定者应愿意为更好的因果证据支付大量预算</li>
-<li><strong>循证政策设计</strong>：同类政策内部的变异提示我们，了解"为什么有效"（机制）比知道"平均有效"更重要</li>
-</ol>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<ol>
-<li>对低收入儿童健康和教育的直接投资，历史上有最高的MVPF，平均超过5，很多自我偿还（Pareto改进）；</li>
-<li>儿童期高回报政策跨越各年龄段，不仅限于早期教育；</li>
-<li>成人政策MVPF通常在0.5–2之间；若对儿童有大溢出效应则可超越此范围；</li>
-<li>同类政策内MVPF差异显著，了解成功政策的机制比看平均MVPF更重要；</li>
-<li>MVPF框架可应用于犯罪、环境、基础设施等尚未覆盖的领域，未来研究空间巨大。</li>
-</ol>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文明确提及的方向</strong>：</p>
-<ol>
-<li>将MVPF框架扩展至犯罪政策、环境政策、宏观经济稳定政策、基础设施政策；</li>
-<li>量化信息价值——为MVPF不确定的政策领域设计新数据收集方案；</li>
-<li>利用行政数据扩大政策效应的因果估计（更多政策纳入比较）。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li><strong>中国政策的MVPF估计</strong>：中国有大量准实验政策（农村义务教育经费改革、新农合、城镇医保扩展、EITC类转移支付）。能否用中国行政数据和已有因果估计构建中国版的MVPF比较数据集？</li>
-<li><strong>发展中国家的跨代际效应测量</strong>：本文核心发现（儿童政策的财政外部性）依赖于长期追踪数据。在数据基础薄弱的发展中国家，如何合理估计儿童政策的代际收益？</li>
-<li><strong>政策组合的相互作用</strong>：本文对各政策独立评估，忽略了政策之间的互补/替代关系。如果儿童健康保险和早教同时实施，联合MVPF是否大于两个独立MVPF之和？</li>
-<li><strong>MVPF与分配偏好的结合</strong>：本文MVPF只测量效率（“漏桶的泄漏量”），不包含社会对不同群体的分配权重。如何将MVPF与不同的社会福利函数（平等主义、功利主义）结合，形成"分配调整后的MVPF"？</li>
-<li><strong>数字化公共服务的MVPF</strong>：政府数字化转型（如电子政务、在线医疗）的受益者WTP和财政外部性如何测量？这类政策是否也能达到高MVPF？</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>财政外部性的时间折现问题</strong>：本文MVPF的高低在很大程度上取决于如何折现儿童长期收益。贴现率从3%变为5%，那些"自我偿还"的儿童政策的MVPF会大幅下降。作者做了敏感性分析，但核心结论（儿童政策MVPF &gt;&gt; 成人政策）究竟有多依赖于折现率假设？这是本文结论的最重要不确定来源之一。</p>
-</li>
-<li>
-<p><strong>发表偏差与外部有效性</strong>：本文使用的"因果估计"来自学术文献，而学术文献存在著名的发表偏差（positive results are more likely to be published）。作者使用Andrews &amp; Kasy（2019）方法校正发表偏差，但校正方法本身也有假设。若底层因果估计系统性高估政策效果，MVPF也会系统高估，"自我偿还"政策数量会被高估。</p>
-</li>
-<li>
-<p><strong>"政策"的内生性</strong>：Hendren &amp; Sprung-Keyser分析的是<strong>历史上实施的</strong>133项政策。这些政策并非随机选择——政治上可行的政策往往是有基础的、预期效果良好的。这意味着样本可能存在正向选择偏误（high-MVPF policies are more likely to be tried）。对于那些从未被实施的政策，MVPF可能与已实施政策大相径庭。</p>
-</li>
-<li>
-<p><strong>MVPF与分配正义的分离</strong>：本文明确指出MVPF只衡量效率，不包含对不同群体的分配偏好。但政策评估不可能完全回避分配问题——一个MVPF=3的政策若全部受益于富人，是否优于MVPF=1.5的政策让穷人受益？作者的建议是先用MVPF确定效率边界，再叠加分配偏好——但在实践中这两步的分离往往很难维持。</p>
-</li>
-<li>
-<p><strong>从美国到其他国家的可移植性</strong>：本文基于美国过去50年的政策经验。中国、印度等发展中国家在儿童健康保险上的回报率是否也高？发展中国家劳动力市场的特征（非正规就业、低税率）可能使得"财政外部性"（通过税收回收）的机制大打折扣。有限的税收征管能力可能意味着儿童教育投资无法通过增税来"自我偿还"，MVPF结论的普遍性有待检验。</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>MVPF与传统的"成本-收益比（cost-benefit ratio）"或"边际公共资金成本（MCF）"有什么本质区别？</li>
-<li>Perry Preschool的MVPF为什么高达44？核心机制是什么？这是否意味着早期教育项目都有如此高的回报？</li>
-<li>文中提到一些政策"MVPF为负"，这是什么意思？哪些政策出现了负MVPF？</li>
-<li>本文的GitHub代码和数据集（<a href="http://policyanalysis.org/welfare_analysis%EF%BC%89%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E7%94%A8%E6%9D%A5%E4%BC%B0%E8%AE%A1%E4%B8%AD%E5%9B%BD%E6%94%BF%E7%AD%96%E7%9A%84MVPF%EF%BC%9F%E5%93%AA%E4%BA%9B%E6%AD%A5%E9%AA%A4%E9%9C%80%E8%A6%81%E4%BF%AE%E6%94%B9%E4%BB%A5%E9%80%82%E5%BA%94%E4%B8%AD%E5%9B%BD%E6%83%85%E5%A2%83%EF%BC%9F">policyanalysis.org/welfare_analysis）是否可以用来估计中国政策的MVPF？哪些步骤需要修改以适应中国情境？</a></li>
-<li>MVPF框架如何处理"一般均衡效应"（如政策规模扩大后对工资、价格的影响）？目前的估计是局部均衡，扩大政策规模后MVPF是否会下降？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>你所不知道的可能对你有益 — 深度阅读笔记 — Höner &amp; Samuelson</title>
     <url>/posts/honner2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -14105,51 +14105,6 @@ Zotero Item Key:: FQ76EBZJ</p>
       </tags>
   </entry>
   <entry>
-    <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
-    <url>/posts/48526/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
-<ul>
-<li>因果识别+统计推断</li>
-<li>因果识别(<em><strong>causal identification</strong></em>):如果拥有总体,能否确定总体因果关系</li>
-<li>统计推断(<em><strong>statistical inference</strong></em>):如何从样本数据获取总体因果关系信息,实际是一种相关性事实</li>
-<li>识别假设,实际就是对 $D$ 和 $\varepsilon$ 的关系作出表述,但这种过程是无法从理论上验证的</li>
-</ul>
-<span id="more"></span>
-<h2 id="1"><strong>1</strong></h2>
-<ul>
-<li><strong>1.1</strong> 因果效应的定义:干预与否、处理与否时,潜在结果之间的差值.潜在结果一定是同一个时间点上的结果</li>
-<li><strong>1.2</strong> 潜在结果永远无法完全观测,除非存在平行宇宙</li>
-<li><strong>1.3</strong> 通过识别假设可以进行"插值",可以化"相关关系"识别场景为"因果关系"识别场景</li>
-<li><strong>1.4</strong> 鲁宾因果模型(潜在因果框架),一套描述因果关系的新语言</li>
-</ul>
-<h2 id="2"><strong>2</strong></h2>
-<ul>
-<li><strong>2.1</strong> 第一类识别假设:潜在结果均值独立于处理状态</li>
-<li><strong>2.2</strong> 从干扰项中剥离出控制变量;或者寻找一个与干扰项不相关的工具变量</li>
-<li><strong>2.3</strong> 第二类识别假设:潜在结果条件均值独立于处理状态</li>
-<li><strong>2.4</strong> 好的控制变量:既影响$Y$,又影响$D$.其本身和干扰项是否相关是不重要的,不是研究者关注的中心</li>
-<li><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</li>
-<li><strong>2.6</strong> 无需过渡阐释控制变量的系数</li>
-</ul>
-<h2 id="3"><strong>3</strong></h2>
-<ul>
-<li><strong>3.1</strong> 鲁宾因果模型并未规定具体的函数形式</li>
-<li><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</li>
-</ul>
-<h2 id="4"><strong>4</strong></h2>
-<ul>
-<li><strong>4.1</strong> 选择性又称之为分配机制,每个个体如何接受处理,可以用倾向得分来表示</li>
-<li><strong>4.2</strong> 建议现实使用IV、DID、RDD等识别方法时,称之为准实验</li>
-</ul>
-]]></content>
-      <categories>
-        <category>计量</category>
-      </categories>
-      <tags>
-        <tag>学术讲座</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>新技术的扩散 — 深度阅读笔记 — Kalyani Et Al.</title>
     <url>/posts/kalyani2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: The Diffusion of New Technologies<br>
@@ -14306,6 +14261,133 @@ Zotero Item Key:: HH5K2TY4</p>
 ]]></content>
       <categories>
         <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
+    <url>/posts/48526/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
+<ul>
+<li>因果识别+统计推断</li>
+<li>因果识别(<em><strong>causal identification</strong></em>):如果拥有总体,能否确定总体因果关系</li>
+<li>统计推断(<em><strong>statistical inference</strong></em>):如何从样本数据获取总体因果关系信息,实际是一种相关性事实</li>
+<li>识别假设,实际就是对 $D$ 和 $\varepsilon$ 的关系作出表述,但这种过程是无法从理论上验证的</li>
+</ul>
+<span id="more"></span>
+<h2 id="1"><strong>1</strong></h2>
+<ul>
+<li><strong>1.1</strong> 因果效应的定义:干预与否、处理与否时,潜在结果之间的差值.潜在结果一定是同一个时间点上的结果</li>
+<li><strong>1.2</strong> 潜在结果永远无法完全观测,除非存在平行宇宙</li>
+<li><strong>1.3</strong> 通过识别假设可以进行"插值",可以化"相关关系"识别场景为"因果关系"识别场景</li>
+<li><strong>1.4</strong> 鲁宾因果模型(潜在因果框架),一套描述因果关系的新语言</li>
+</ul>
+<h2 id="2"><strong>2</strong></h2>
+<ul>
+<li><strong>2.1</strong> 第一类识别假设:潜在结果均值独立于处理状态</li>
+<li><strong>2.2</strong> 从干扰项中剥离出控制变量;或者寻找一个与干扰项不相关的工具变量</li>
+<li><strong>2.3</strong> 第二类识别假设:潜在结果条件均值独立于处理状态</li>
+<li><strong>2.4</strong> 好的控制变量:既影响$Y$,又影响$D$.其本身和干扰项是否相关是不重要的,不是研究者关注的中心</li>
+<li><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</li>
+<li><strong>2.6</strong> 无需过渡阐释控制变量的系数</li>
+</ul>
+<h2 id="3"><strong>3</strong></h2>
+<ul>
+<li><strong>3.1</strong> 鲁宾因果模型并未规定具体的函数形式</li>
+<li><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</li>
+</ul>
+<h2 id="4"><strong>4</strong></h2>
+<ul>
+<li><strong>4.1</strong> 选择性又称之为分配机制,每个个体如何接受处理,可以用倾向得分来表示</li>
+<li><strong>4.2</strong> 建议现实使用IV、DID、RDD等识别方法时,称之为准实验</li>
+</ul>
+]]></content>
+      <categories>
+        <category>计量</category>
+      </categories>
+      <tags>
+        <tag>学术讲座</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>海外的丰裕 — 深度阅读笔记 — Khanna Et Al.</title>
+    <url>/posts/khanna2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Abundance from Abroad: Migrant Income and Long-Run Economic Development</li>
+<li><strong>作者</strong>: Gaurav Khanna (UC San Diego), Emir Murathanoglu, Caroline B. Theoharides, Dean Yang</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(4): 1540-1577</li>
+<li><strong>DOI</strong>: 10.1257/aer.20241465</li>
+<li><strong>难度评估</strong>: 高 - 需要发展经济学、国际经济学、计量经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>国际移民与发展</strong>：国际移民是发展中国家重要的经济现象，2019年全球有2.1亿来自发展中国家的国际移民。</p>
+<p><strong>转移份额设计（Shift-Share）</strong>：一种准实验识别策略，将总冲击分解为"份额"和"转移"两部分。</p>
+<p><strong>1997年亚洲金融危机</strong>：从泰国开始迅速蔓延，菲律宾比索贬值约40%。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol>
+<li>
+<p><strong>移民的收入效应</strong>：移民到发达国家工作的收入收益远超任何已知的发展干预项目</p>
+</li>
+<li>
+<p><strong>移民对原籍地区的溢出效应</strong>：缺乏对更广泛原籍地区发展影响的研究</p>
+</li>
+<li>
+<p><strong>识别挑战</strong>：移民收入与原籍地区发展之间存在反向因果问题</p>
+</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：国际移民收入前景如何影响原籍地区的长期经济发展？</p>
+<p><strong>主要发现</strong>：移民收入冲击的长期放大效应约为六倍</p>
+<hr>
+<h2 id="2-内容及结构">2. 内容及结构</h2>
+<ol>
+<li><strong>引言</strong>: 问题陈述和研究背景</li>
+<li><strong>背景</strong>: 国际劳动移民概况、菲律宾的移民体系、亚洲金融危机</li>
+<li><strong>数据</strong>: 移民合同数据、汇率数据、结果数据</li>
+<li><strong>实证方法</strong>: 转移份额变量的构建、因果识别</li>
+<li><strong>主要结果</strong>: 长期放大效应、国内收入vs移民收入</li>
+<li><strong>稳健性检验</strong></li>
+<li><strong>结论</strong></li>
+</ol>
+<hr>
+<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
+<h3 id="实证方法">实证方法</h3>
+<p><strong>转移份额设计</strong>：</p>
+<ul>
+<li>使用1997年亚洲金融危机作为外生冲击</li>
+<li>构建"暴露于移民收入"的工具变量</li>
+<li>外生性假设：危机前各地区移民份额与危机后发展独立</li>
+</ul>
+<p><strong>主要结果</strong>：</p>
+<ul>
+<li>移民收入冲击的长期放大效应约为六倍</li>
+<li>74.9%来自国内收入效应</li>
+<li>19.7%来自教育投资</li>
+</ul>
+<hr>
+<h2 id="4-结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol>
+<li>
+<p><strong>移民促进原籍发展</strong>：长期因果证据支持"良性循环"假说</p>
+</li>
+<li>
+<p><strong>放大机制</strong>：国内收入和教育投资是主要渠道</p>
+</li>
+<li>
+<p><strong>政策启示</strong>：移民政策可以成为全球减贫的重要工具</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -14550,88 +14632,6 @@ Zotero Item Key:: HH5K2TY4</p>
 ]]></content>
       <categories>
         <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>海外的丰裕 — 深度阅读笔记 — Khanna Et Al.</title>
-    <url>/posts/khanna2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Abundance from Abroad: Migrant Income and Long-Run Economic Development</li>
-<li><strong>作者</strong>: Gaurav Khanna (UC San Diego), Emir Murathanoglu, Caroline B. Theoharides, Dean Yang</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(4): 1540-1577</li>
-<li><strong>DOI</strong>: 10.1257/aer.20241465</li>
-<li><strong>难度评估</strong>: 高 - 需要发展经济学、国际经济学、计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>国际移民与发展</strong>：国际移民是发展中国家重要的经济现象，2019年全球有2.1亿来自发展中国家的国际移民。</p>
-<p><strong>转移份额设计（Shift-Share）</strong>：一种准实验识别策略，将总冲击分解为"份额"和"转移"两部分。</p>
-<p><strong>1997年亚洲金融危机</strong>：从泰国开始迅速蔓延，菲律宾比索贬值约40%。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol>
-<li>
-<p><strong>移民的收入效应</strong>：移民到发达国家工作的收入收益远超任何已知的发展干预项目</p>
-</li>
-<li>
-<p><strong>移民对原籍地区的溢出效应</strong>：缺乏对更广泛原籍地区发展影响的研究</p>
-</li>
-<li>
-<p><strong>识别挑战</strong>：移民收入与原籍地区发展之间存在反向因果问题</p>
-</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：国际移民收入前景如何影响原籍地区的长期经济发展？</p>
-<p><strong>主要发现</strong>：移民收入冲击的长期放大效应约为六倍</p>
-<hr>
-<h2 id="2-内容及结构">2. 内容及结构</h2>
-<ol>
-<li><strong>引言</strong>: 问题陈述和研究背景</li>
-<li><strong>背景</strong>: 国际劳动移民概况、菲律宾的移民体系、亚洲金融危机</li>
-<li><strong>数据</strong>: 移民合同数据、汇率数据、结果数据</li>
-<li><strong>实证方法</strong>: 转移份额变量的构建、因果识别</li>
-<li><strong>主要结果</strong>: 长期放大效应、国内收入vs移民收入</li>
-<li><strong>稳健性检验</strong></li>
-<li><strong>结论</strong></li>
-</ol>
-<hr>
-<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
-<h3 id="实证方法">实证方法</h3>
-<p><strong>转移份额设计</strong>：</p>
-<ul>
-<li>使用1997年亚洲金融危机作为外生冲击</li>
-<li>构建"暴露于移民收入"的工具变量</li>
-<li>外生性假设：危机前各地区移民份额与危机后发展独立</li>
-</ul>
-<p><strong>主要结果</strong>：</p>
-<ul>
-<li>移民收入冲击的长期放大效应约为六倍</li>
-<li>74.9%来自国内收入效应</li>
-<li>19.7%来自教育投资</li>
-</ul>
-<hr>
-<h2 id="4-结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol>
-<li>
-<p><strong>移民促进原籍发展</strong>：长期因果证据支持"良性循环"假说</p>
-</li>
-<li>
-<p><strong>放大机制</strong>：国内收入和教育投资是主要渠道</p>
-</li>
-<li>
-<p><strong>政策启示</strong>：移民政策可以成为全球减贫的重要工具</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -15959,143 +15959,6 @@ Zotero Item Key:: 2XKAAMHY</p>
       </tags>
   </entry>
   <entry>
-    <title>预算到期会导致年底浪费性支出吗?_ Liebman &amp; Mahoney (2017) 笔记</title>
-    <url>/posts/liebman2017/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Do Expiring Budgets Lead to Wasteful Year-End Spending? Evidence from Federal Procurement</li>
-<li><strong>作者</strong>: Jeffrey B. Liebman(哈佛大学), Neale Mahoney(芝加哥大学)</li>
-<li><strong>类型</strong>: 论文笔记 / 公共经济学 / 预算制度</li>
-<li><strong>出版年份</strong>: 2017</li>
-<li><strong>出版机构/期刊</strong>: American Economic Review</li>
-<li><strong>DOI</strong>: 10.1257/aer.20131296</li>
-<li><strong>难度评估</strong>: 高 - 需要经济学、计量经济学、公共财政学基础</li>
-</ul>
-<span id="more"></span>
-<h2 id="引言">引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>本文属于公共经济学、行为经济学和管理学的交叉领域,探讨政府支出效率问题.核心概念包括:</p>
-<ul>
-<li><strong>预算约束</strong>: 政府机构在财政年度内可支配的资金总额</li>
-<li><strong>自由裁量支出</strong>: 政府可以自行决定如何分配的预算部分,与法定支出(如社会保障)相对</li>
-<li><strong>公共采购</strong>: 政府购买商品和服务的行为</li>
-<li><strong>信息技术(IT)项目</strong>: 政府对计算机硬件、软件和相关服务的投资</li>
-<li><strong>社会成本</strong>: 指一项经济活动对整个社会造成的成本,包括直接成本和外部成本</li>
-<li><strong>滚动预算(Rollover Budget)</strong>: 允许机构将未使用的预算资金转移到下一个财政年度</li>
-</ul>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p>政府机构通常面临"不使用就失去"的预算规则,即在一个财政年度结束时,任何未使用的预算资金都将返回国库,而不是留给该机构使用.这种规则可能会导致机构在财政年度末 rush 支出,即使这意味着投资于低价值的项目.</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p>作者认为,"不使用就失去"的预算规则可能会导致政府浪费性支出.他们试图通过实证分析来检验这一观点,并探讨解决这一问题的潜在政策,例如允许机构将未使用的资金转入下一个财政年度.</p>
-<h3 id="研究意义">研究意义</h3>
-<ol>
-<li><strong>揭示了政府支出中潜在的浪费现象</strong>: 通过量化财政年度末的支出高峰和质量下降,为政府支出效率问题提供了有力证据</li>
-<li><strong>评估了滚动预算的有效性</strong>: 通过研究美国司法部的滚动预算政策,为解决浪费性支出提供了一个可行的解决方案</li>
-<li><strong>为政府预算管理提供了政策建议</strong>: 研究结果表明,允许机构将未使用的资金转入下一个财政年度可以提高政府支出效率</li>
-</ol>
-<h2 id="论文结构">论文结构</h2>
-<ol>
-<li><strong>引言</strong>: 概述研究背景、问题意识和研究意义</li>
-<li><strong>理论模型</strong>: 建立一个简单的模型来解释"不使用就失去"的预算规则如何导致浪费性支出</li>
-<li><strong>数据描述</strong>: 介绍用于实证分析的数据集,包括联邦采购数据系统(FPDS)和IT仪表板</li>
-<li><strong>实证分析1</strong>: 使用FPDS数据检验财政年度末是否存在支出高峰</li>
-<li><strong>实证分析2</strong>: 使用IT仪表板数据检验财政年度末的支出质量是否下降</li>
-<li><strong>政策分析</strong>: 研究滚动预算政策对支出行为的影响</li>
-<li><strong>福利分析</strong>: 使用校准后的模型评估滚动预算政策的福利效应</li>
-<li><strong>结论</strong>: 总结研究结果,讨论政策含义,并提出未来研究方向</li>
-</ol>
-<h2 id="背景">背景</h2>
-<p>许多组织都有在财政年度末到期的预算,这可能导致在年底匆忙将资源用于低质量的项目.美国联邦政府的自由裁量支出预算也面临类似情况,机构必须在财政年度结束前完成拨款.</p>
-<h3 id="挑战">挑战</h3>
-<ol>
-<li><strong>"不使用就失去"的预算规则</strong>: 如果机构不花完预算,剩余的资金将返回国库,降低了年底花钱的机会成本</li>
-<li><strong>预防性储蓄的动机</strong>: 机构倾向于在预算周期开始时保留资金,以应对未来不确定的支出需求</li>
-<li><strong>缺乏关于年底浪费性支出的硬性证据</strong>: 尽管有传闻证据,但缺乏关于美国联邦政府年底支出激增以及年底支出价值低于其他时间段的证据</li>
-</ol>
-<h2 id="方法">方法</h2>
-<h3 id="理论模型">理论模型</h3>
-<ul>
-<li><strong>模型设定</strong>: 作者建立了一个年度预算模型,包括国会和一个政府机构.国会为该机构选择预算,该机构在一年中的每个时期都会获得一个参数,该参数决定了支出的边际价值,并选择一个支出水平以最大化收益递减的目标</li>
-<li><strong>模型特征</strong>: 具有三个关键特征_预算到期、未来支出价值的不确定性以及每个时期内支出的收益递减</li>
-<li><strong>模型预测</strong>: 由于不确定性和收益递减,该机构将在年初进行预防性储蓄;在年底,资金到期的前景导致该机构花掉所有剩余资源,即使边际价值低于资金的社会成本,导致年底支出量激增和质量下降</li>
-</ul>
-<h3 id="数据集">数据集</h3>
-<p><strong>1. 联邦采购数据系统(FPDS)</strong></p>
-<ul>
-<li>时间范围: 2004年至2009年财政年度</li>
-<li>数据量: 1460万份合同</li>
-<li>总支出: 2.6万亿美元</li>
-<li>主要内容: 合同层面信息,包括金额、产品/服务代码、机构、供应商、合同类型、招标机制等</li>
-<li>用途: 用于分析联邦采购支出的总体模式,特别是年底支出高峰</li>
-</ul>
-<p><strong>2. IT仪表板(IT Dashboard)</strong></p>
-<ul>
-<li>数据时间: 截至2010年3月</li>
-<li>项目数量: 686个主要IT项目</li>
-<li>总计划支出: 1300亿美元</li>
-<li>主要内容: 项目绩效数据,包括总体评级、成本评级、进度评级、CIO评估等</li>
-<li>用途: 用于评估IT项目的质量,特别是年底开始的项目的质量</li>
-</ul>
-<h3 id="实证策略">实证策略</h3>
-<ol>
-<li><strong>支出高峰检验</strong>: 使用FPDS数据,分析财政年度内每周的采购支出模式,确定是否存在年底支出高峰</li>
-<li><strong>质量下降检验</strong>: 使用IT仪表板数据,比较在财政年度最后一周开始的项目与在其他时间开始的项目的质量评级</li>
-<li><strong>政策分析</strong>: 研究美国司法部(DOJ)的滚动预算政策对支出行为的影响.DOJ有权将未使用的IT项目预算转入下一财政年度,作者比较了DOJ的IT和非IT支出,以及DOJ和其他机构之间的支出模式</li>
-<li><strong>福利分析</strong>: 通过校准模型以适应支出高峰和质量下降,分析允许滚动预算的潜在福利收益</li>
-</ol>
-<h3 id="关键术语">关键术语</h3>
-<ul>
-<li><strong>FPDS (Federal Procurement Data System)</strong>: 联邦采购数据系统,跟踪所有联邦合同的数据系统</li>
-<li><strong>IT仪表板 (IT Dashboard)</strong>: 跟踪联邦政府主要IT项目绩效的网站</li>
-<li><strong>CIO (Chief Information Officer)</strong>: 首席信息官,负责机构的信息技术战略和管理</li>
-<li><strong>Ordered Logit Regression</strong>: 有序Logit回归,用于分析有序分类因变量的统计模型</li>
-<li><strong>Difference-in-Differences</strong>: 双重差分法,用于评估政策或干预效果的统计方法</li>
-<li><strong>CRRA (Constant Relative Risk Aversion)</strong>: 恒定相对风险厌恶效用函数</li>
-<li><strong>CARA (Constant Absolute Risk Aversion)</strong>: 恒定绝对风险厌恶效用函数</li>
-</ul>
-<h2 id="结果">结果</h2>
-<ol>
-<li><strong>支出高峰</strong>: 数据显示年底支出大幅增加.在财政年度的最后一周,支出是平时每周平均水平的4.9倍</li>
-<li><strong>质量下降</strong>: 年底开始的IT项目的质量评级明显较低.在财政年度最后一周开始的项目,获得较低质量分数的可能性要高出2.3到5.6倍</li>
-<li><strong>滚动预算的影响</strong>: DOJ的IT支出没有出现支出高峰,最后一周的IT支出仅占3.3%,而非IT支出为9.3%.差异分析表明滚动预算减少了年底支出量</li>
-<li><strong>福利分析</strong>: 允许滚动预算可以带来福利收益.即使是允许机构在短时间内转入资金的中间政策,也可以产生接近全部滚动价值四分之三的福利收益</li>
-</ol>
-<h2 id="结论">结论</h2>
-<p>本文的核心结论是:由于"不使用就失去"的预算规则,美国联邦政府存在年底浪费性支出现象.具体表现为:</p>
-<ul>
-<li><strong>年底支出量激增</strong>: 财政年度末的支出明显高于其他时间段</li>
-<li><strong>年底支出质量下降</strong>: 财政年度末开始的IT项目质量较低</li>
-</ul>
-<p>允许滚动预算可以有效地解决这个问题.DOJ的经验表明滚动预算可以减少年底支出量,并可能提高项目质量.福利分析表明,即使是有限制的滚动预算政策也可以带来显著的福利收益.</p>
-<p>作者建议可以通过允许机构将未使用的资金延期到下个财政年度,用于四个月的宽限期,从而消除因年底浪费性支出造成的大部分效率低下问题.</p>
-<h2 id="未来研究方向">未来研究方向</h2>
-<ol>
-<li><strong>研究国会预算决策对机构支出行为的影响</strong>: 深入研究国会如何应对滚动预算,以及如何设计预算规则以实现最佳效果</li>
-<li><strong>考虑机构内部的异质性</strong>: 研究机构内部不同部门的支出行为差异,以及如何设计更有针对性的预算政策</li>
-<li><strong>探索其他解决浪费性支出问题的政策</strong>: 例如改进预算预测,加强项目管理,或引入竞争性招标</li>
-<li><strong>研究不同类型的资金结转政策</strong>: 比较无限期结转、有条件结转等不同方案对支出效率的影响</li>
-<li><strong>行为因素的影响</strong>: 考虑认知偏差、损失厌恶等行为因素对政府部门年底支出行为的影响</li>
-<li><strong>政治因素</strong>: 研究资金结转政策的政治可行性,以及立法机构对预算控制的考量</li>
-</ol>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li><strong>预算制度与创新</strong>: "使用或失效"的预算规则是否会抑制政府部门的创新活动?如果政府部门知道它们必须在当年用完所有资金,它们是否会更倾向于投资于风险较低、回报较快的项目?</li>
-<li><strong>政治周期与支出行为</strong>: 政府部门的支出行为是否会受到政治周期的影响?</li>
-<li><strong>绩效评估指标的设计</strong>: 如何设计更有效的绩效评估指标,以准确衡量政府部门的支出质量?</li>
-<li><strong>资金结转政策的适用性</strong>: 资金结转政策是否适用于所有类型的政府部门和项目?</li>
-<li><strong>公共部门与私营部门的对比</strong>: 比较公共部门和私营部门在预算管理和支出效率方面的差异</li>
-</ol>
-]]></content>
-      <categories>
-        <category>公共经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>公共经济学</tag>
-        <tag>预算制度</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>财富税的行为响应：哥伦比亚的证据 — 深度阅读笔记 — Londoño-Vélez &amp; Ávila-Mahecha</title>
     <url>/posts/londono-velez2024/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Behavioural Responses to Wealth Taxation: Evidence from Colombia<br>
@@ -16243,6 +16106,367 @@ Zotero Item Key:: LWFR6PLB</p>
       </categories>
       <tags>
         <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>预算到期会导致年底浪费性支出吗?_ Liebman &amp; Mahoney (2017) 笔记</title>
+    <url>/posts/liebman2017/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Do Expiring Budgets Lead to Wasteful Year-End Spending? Evidence from Federal Procurement</li>
+<li><strong>作者</strong>: Jeffrey B. Liebman(哈佛大学), Neale Mahoney(芝加哥大学)</li>
+<li><strong>类型</strong>: 论文笔记 / 公共经济学 / 预算制度</li>
+<li><strong>出版年份</strong>: 2017</li>
+<li><strong>出版机构/期刊</strong>: American Economic Review</li>
+<li><strong>DOI</strong>: 10.1257/aer.20131296</li>
+<li><strong>难度评估</strong>: 高 - 需要经济学、计量经济学、公共财政学基础</li>
+</ul>
+<span id="more"></span>
+<h2 id="引言">引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>本文属于公共经济学、行为经济学和管理学的交叉领域,探讨政府支出效率问题.核心概念包括:</p>
+<ul>
+<li><strong>预算约束</strong>: 政府机构在财政年度内可支配的资金总额</li>
+<li><strong>自由裁量支出</strong>: 政府可以自行决定如何分配的预算部分,与法定支出(如社会保障)相对</li>
+<li><strong>公共采购</strong>: 政府购买商品和服务的行为</li>
+<li><strong>信息技术(IT)项目</strong>: 政府对计算机硬件、软件和相关服务的投资</li>
+<li><strong>社会成本</strong>: 指一项经济活动对整个社会造成的成本,包括直接成本和外部成本</li>
+<li><strong>滚动预算(Rollover Budget)</strong>: 允许机构将未使用的预算资金转移到下一个财政年度</li>
+</ul>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<p>政府机构通常面临"不使用就失去"的预算规则,即在一个财政年度结束时,任何未使用的预算资金都将返回国库,而不是留给该机构使用.这种规则可能会导致机构在财政年度末 rush 支出,即使这意味着投资于低价值的项目.</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p>作者认为,"不使用就失去"的预算规则可能会导致政府浪费性支出.他们试图通过实证分析来检验这一观点,并探讨解决这一问题的潜在政策,例如允许机构将未使用的资金转入下一个财政年度.</p>
+<h3 id="研究意义">研究意义</h3>
+<ol>
+<li><strong>揭示了政府支出中潜在的浪费现象</strong>: 通过量化财政年度末的支出高峰和质量下降,为政府支出效率问题提供了有力证据</li>
+<li><strong>评估了滚动预算的有效性</strong>: 通过研究美国司法部的滚动预算政策,为解决浪费性支出提供了一个可行的解决方案</li>
+<li><strong>为政府预算管理提供了政策建议</strong>: 研究结果表明,允许机构将未使用的资金转入下一个财政年度可以提高政府支出效率</li>
+</ol>
+<h2 id="论文结构">论文结构</h2>
+<ol>
+<li><strong>引言</strong>: 概述研究背景、问题意识和研究意义</li>
+<li><strong>理论模型</strong>: 建立一个简单的模型来解释"不使用就失去"的预算规则如何导致浪费性支出</li>
+<li><strong>数据描述</strong>: 介绍用于实证分析的数据集,包括联邦采购数据系统(FPDS)和IT仪表板</li>
+<li><strong>实证分析1</strong>: 使用FPDS数据检验财政年度末是否存在支出高峰</li>
+<li><strong>实证分析2</strong>: 使用IT仪表板数据检验财政年度末的支出质量是否下降</li>
+<li><strong>政策分析</strong>: 研究滚动预算政策对支出行为的影响</li>
+<li><strong>福利分析</strong>: 使用校准后的模型评估滚动预算政策的福利效应</li>
+<li><strong>结论</strong>: 总结研究结果,讨论政策含义,并提出未来研究方向</li>
+</ol>
+<h2 id="背景">背景</h2>
+<p>许多组织都有在财政年度末到期的预算,这可能导致在年底匆忙将资源用于低质量的项目.美国联邦政府的自由裁量支出预算也面临类似情况,机构必须在财政年度结束前完成拨款.</p>
+<h3 id="挑战">挑战</h3>
+<ol>
+<li><strong>"不使用就失去"的预算规则</strong>: 如果机构不花完预算,剩余的资金将返回国库,降低了年底花钱的机会成本</li>
+<li><strong>预防性储蓄的动机</strong>: 机构倾向于在预算周期开始时保留资金,以应对未来不确定的支出需求</li>
+<li><strong>缺乏关于年底浪费性支出的硬性证据</strong>: 尽管有传闻证据,但缺乏关于美国联邦政府年底支出激增以及年底支出价值低于其他时间段的证据</li>
+</ol>
+<h2 id="方法">方法</h2>
+<h3 id="理论模型">理论模型</h3>
+<ul>
+<li><strong>模型设定</strong>: 作者建立了一个年度预算模型,包括国会和一个政府机构.国会为该机构选择预算,该机构在一年中的每个时期都会获得一个参数,该参数决定了支出的边际价值,并选择一个支出水平以最大化收益递减的目标</li>
+<li><strong>模型特征</strong>: 具有三个关键特征_预算到期、未来支出价值的不确定性以及每个时期内支出的收益递减</li>
+<li><strong>模型预测</strong>: 由于不确定性和收益递减,该机构将在年初进行预防性储蓄;在年底,资金到期的前景导致该机构花掉所有剩余资源,即使边际价值低于资金的社会成本,导致年底支出量激增和质量下降</li>
+</ul>
+<h3 id="数据集">数据集</h3>
+<p><strong>1. 联邦采购数据系统(FPDS)</strong></p>
+<ul>
+<li>时间范围: 2004年至2009年财政年度</li>
+<li>数据量: 1460万份合同</li>
+<li>总支出: 2.6万亿美元</li>
+<li>主要内容: 合同层面信息,包括金额、产品/服务代码、机构、供应商、合同类型、招标机制等</li>
+<li>用途: 用于分析联邦采购支出的总体模式,特别是年底支出高峰</li>
+</ul>
+<p><strong>2. IT仪表板(IT Dashboard)</strong></p>
+<ul>
+<li>数据时间: 截至2010年3月</li>
+<li>项目数量: 686个主要IT项目</li>
+<li>总计划支出: 1300亿美元</li>
+<li>主要内容: 项目绩效数据,包括总体评级、成本评级、进度评级、CIO评估等</li>
+<li>用途: 用于评估IT项目的质量,特别是年底开始的项目的质量</li>
+</ul>
+<h3 id="实证策略">实证策略</h3>
+<ol>
+<li><strong>支出高峰检验</strong>: 使用FPDS数据,分析财政年度内每周的采购支出模式,确定是否存在年底支出高峰</li>
+<li><strong>质量下降检验</strong>: 使用IT仪表板数据,比较在财政年度最后一周开始的项目与在其他时间开始的项目的质量评级</li>
+<li><strong>政策分析</strong>: 研究美国司法部(DOJ)的滚动预算政策对支出行为的影响.DOJ有权将未使用的IT项目预算转入下一财政年度,作者比较了DOJ的IT和非IT支出,以及DOJ和其他机构之间的支出模式</li>
+<li><strong>福利分析</strong>: 通过校准模型以适应支出高峰和质量下降,分析允许滚动预算的潜在福利收益</li>
+</ol>
+<h3 id="关键术语">关键术语</h3>
+<ul>
+<li><strong>FPDS (Federal Procurement Data System)</strong>: 联邦采购数据系统,跟踪所有联邦合同的数据系统</li>
+<li><strong>IT仪表板 (IT Dashboard)</strong>: 跟踪联邦政府主要IT项目绩效的网站</li>
+<li><strong>CIO (Chief Information Officer)</strong>: 首席信息官,负责机构的信息技术战略和管理</li>
+<li><strong>Ordered Logit Regression</strong>: 有序Logit回归,用于分析有序分类因变量的统计模型</li>
+<li><strong>Difference-in-Differences</strong>: 双重差分法,用于评估政策或干预效果的统计方法</li>
+<li><strong>CRRA (Constant Relative Risk Aversion)</strong>: 恒定相对风险厌恶效用函数</li>
+<li><strong>CARA (Constant Absolute Risk Aversion)</strong>: 恒定绝对风险厌恶效用函数</li>
+</ul>
+<h2 id="结果">结果</h2>
+<ol>
+<li><strong>支出高峰</strong>: 数据显示年底支出大幅增加.在财政年度的最后一周,支出是平时每周平均水平的4.9倍</li>
+<li><strong>质量下降</strong>: 年底开始的IT项目的质量评级明显较低.在财政年度最后一周开始的项目,获得较低质量分数的可能性要高出2.3到5.6倍</li>
+<li><strong>滚动预算的影响</strong>: DOJ的IT支出没有出现支出高峰,最后一周的IT支出仅占3.3%,而非IT支出为9.3%.差异分析表明滚动预算减少了年底支出量</li>
+<li><strong>福利分析</strong>: 允许滚动预算可以带来福利收益.即使是允许机构在短时间内转入资金的中间政策,也可以产生接近全部滚动价值四分之三的福利收益</li>
+</ol>
+<h2 id="结论">结论</h2>
+<p>本文的核心结论是:由于"不使用就失去"的预算规则,美国联邦政府存在年底浪费性支出现象.具体表现为:</p>
+<ul>
+<li><strong>年底支出量激增</strong>: 财政年度末的支出明显高于其他时间段</li>
+<li><strong>年底支出质量下降</strong>: 财政年度末开始的IT项目质量较低</li>
+</ul>
+<p>允许滚动预算可以有效地解决这个问题.DOJ的经验表明滚动预算可以减少年底支出量,并可能提高项目质量.福利分析表明,即使是有限制的滚动预算政策也可以带来显著的福利收益.</p>
+<p>作者建议可以通过允许机构将未使用的资金延期到下个财政年度,用于四个月的宽限期,从而消除因年底浪费性支出造成的大部分效率低下问题.</p>
+<h2 id="未来研究方向">未来研究方向</h2>
+<ol>
+<li><strong>研究国会预算决策对机构支出行为的影响</strong>: 深入研究国会如何应对滚动预算,以及如何设计预算规则以实现最佳效果</li>
+<li><strong>考虑机构内部的异质性</strong>: 研究机构内部不同部门的支出行为差异,以及如何设计更有针对性的预算政策</li>
+<li><strong>探索其他解决浪费性支出问题的政策</strong>: 例如改进预算预测,加强项目管理,或引入竞争性招标</li>
+<li><strong>研究不同类型的资金结转政策</strong>: 比较无限期结转、有条件结转等不同方案对支出效率的影响</li>
+<li><strong>行为因素的影响</strong>: 考虑认知偏差、损失厌恶等行为因素对政府部门年底支出行为的影响</li>
+<li><strong>政治因素</strong>: 研究资金结转政策的政治可行性,以及立法机构对预算控制的考量</li>
+</ol>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li><strong>预算制度与创新</strong>: "使用或失效"的预算规则是否会抑制政府部门的创新活动?如果政府部门知道它们必须在当年用完所有资金,它们是否会更倾向于投资于风险较低、回报较快的项目?</li>
+<li><strong>政治周期与支出行为</strong>: 政府部门的支出行为是否会受到政治周期的影响?</li>
+<li><strong>绩效评估指标的设计</strong>: 如何设计更有效的绩效评估指标,以准确衡量政府部门的支出质量?</li>
+<li><strong>资金结转政策的适用性</strong>: 资金结转政策是否适用于所有类型的政府部门和项目?</li>
+<li><strong>公共部门与私营部门的对比</strong>: 比较公共部门和私营部门在预算管理和支出效率方面的差异</li>
+</ol>
+]]></content>
+      <categories>
+        <category>公共经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>公共经济学</tag>
+        <tag>预算制度</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>&lt;马铃薯与人口&gt;深度阅读笔记 — Nunn &amp; Qian</title>
+    <url>/posts/nunn2011/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: The Potato’s Contribution to Population and Urbanization: Evidence From A Historical Experiment</li>
+<li><strong>作者</strong>: Nathan Nunn(哈佛大学), Nancy Qian(耶鲁大学)</li>
+<li><strong>类型</strong>: 论文笔记 / 经济史 / 人口史 / 计量史学</li>
+<li><strong>出版年份</strong>: 2011</li>
+<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics</li>
+<li><strong>DOI</strong>: 10.1093/qje/qjr009</li>
+<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量史学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言-马铃薯-改变世界的作物">引言:马铃薯_改变世界的作物</h2>
+<p>This is a landmark paper by Nathan Nunn and Nancy Qian, published in the Quarterly Journal of Economics in 2011.</p>
+<h3 id="研究背景">研究背景</h3>
+<p>1000-1900年间,世界人口从不到3亿增长到16亿,城市人口比例从2%上升到超过9%,增长四倍多.尤其引人注目的是,这种增长并非匀速的,而是在后半段(特别是18和19世纪)急剧加速.</p>
+<p>许多学者注意到,马铃薯从美洲传入旧大陆后,凭借其卓越的营养价值和单位面积产量优势,可能在推动人口增长和经济发展方面发挥了关键作用.历史学家William Langer(1963)指出:“马铃薯种植的传播与人口的快速增长在各地都相互对应”.William McNeill(1999)甚至认为马铃薯是解释1750至1950年间欧洲少数国家主导全球的"一个必要_尽管绝非唯一的_因素".</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p>尽管大量定性的历史叙述支持马铃薯对旧大陆人口和经济发展具有重要影响的观点,但实证量化马铃薯总体影响的证据却非常匮乏.造成这一知识缺口的主要原因是估计中的内生性问题:</p>
+<ul>
+<li><strong>反向因果(Reverse Causality):</strong> 马铃薯的采纳可能导致了人口增长,但反过来,潜在的人口压力及其对食物的需求也可能驱动了马铃薯的采纳</li>
+<li><strong>联合决定(Joint Determination):</strong> 人口增长和新农业技术的采纳可能同时受到第三个不可观测因素的驱动</li>
+</ul>
+<h2 id="内容及结构">内容及结构</h2>
+<p>这篇论文共分为七个主要部分:</p>
+<ol>
+<li><strong>引言(Introduction):</strong> 概述研究问题、动机、识别策略和主要结论</li>
+<li><strong>背景(Background):</strong> 马铃薯的营养优势,从新大陆到旧大陆的传播,其他新大陆主粮作物</li>
+<li><strong>概念框架(Conceptual Framework):</strong> 构建简单的两部门一般均衡模型</li>
+<li><strong>数据(Data):</strong> 作物适宜度数据(FAO GAEZ数据库)和人口/城市化数据</li>
+<li><strong>实证策略与主要结果(Empirical Strategy and Main Results):</strong> 核心估计方程和基准估计结果</li>
+<li><strong>稳健性检验(Robustness):</strong> 控制额外变量、洲内变异分析、城市人口分析、法国士兵身高分析</li>
+<li><strong>结论(Conclusions):</strong> 总结主要发现和学术贡献</li>
+</ol>
+<h2 id="马铃薯的营养优势">马铃薯的营养优势</h2>
+<h3 id="营养完整性">营养完整性</h3>
+<p>马铃薯是所有主粮中营养最为全面的作物之一:</p>
+<ul>
+<li>一个中等大小的马铃薯(150克)连皮食用,可提供29.55毫克的维生素C(占每日建议摄入量的45%),以及丰富的钾,维生素B6等</li>
+<li>其他旧大陆的主粮_小麦、燕麦,大麦、稻米和玉米_都不含维生素C</li>
+</ul>
+<h3 id="单位面积热量优势">单位面积热量优势</h3>
+<table>
+<thead>
+<tr>
+<th>作物</th>
+<th>每英亩产量(公斤)</th>
+<th>每英亩能量值(兆焦)</th>
+<th>养活一家五口所需英亩数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>小麦</td>
+<td>650</td>
+<td>8,900</td>
+<td>1.70</td>
+</tr>
+<tr>
+<td>大麦</td>
+<td>820</td>
+<td>11,400</td>
+<td>1.40</td>
+</tr>
+<tr>
+<td>燕麦</td>
+<td>690</td>
+<td>9,300</td>
+<td>1.60</td>
+</tr>
+<tr>
+<td>马铃薯</td>
+<td>10,900</td>
+<td>31,900</td>
+<td>0.50</td>
+</tr>
+</tbody>
+</table>
+<p>一英亩种植马铃薯的土地加上一头奶牛的乳制品,就足以养活六到八口人的大家庭.</p>
+<h2 id="马铃薯的传播史">马铃薯的传播史</h2>
+<p><strong>起源与发现:</strong> 考古证据表明,马铃薯最早在七千到一万年前就已在安第斯山脉被驯化种植</p>
+<p><strong>传入欧洲:</strong> 马铃薯在欧洲消费的最早记录是1573年西班牙塞维利亚一家医院购买马铃薯的账目,此后依次传入意大利(1586年)、英国(1596年)和德国(1601年)</p>
+<p><strong>缓慢采纳的原因:</strong></p>
+<ul>
+<li><strong>毒性恐惧:</strong> 马铃薯属于有毒的茄科植物,最初被推测为有毒</li>
+<li><strong>麻风病联想:</strong> 马铃薯变色、凹凸不平的外观与麻风病患者的皮肤相似</li>
+<li><strong>种植方式的陌生:</strong> 马铃薯是欧洲第一种通过块茎而非种子种植的食用植物</li>
+</ul>
+<h2 id="实证策略与估计方程">实证策略与估计方程</h2>
+<h3 id="核心估计方程">核心估计方程</h3>
+<p>$$\begin{array}{l}<br>
+f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=0\right)\right] \<br>
+=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=0\right)\right]<br>
+\end{array}$$</p>
+<p>其中:</p>
+<ul>
+<li>$i$ 索引国家,$t$ 索引时间</li>
+<li>$y_{it}$ 是因变量:国家$i$在时期$t$的总人口自然对数或城市化率</li>
+<li>$\ln(\text{Potato Area}_i)$ 是国家$i$适合种植马铃薯的土地面积的自然对数</li>
+<li>$I^{\text{Post}}_t$ 是指示变量,在1750、1800、1850、1900年取值为1</li>
+</ul>
+<h3 id="主要结果">主要结果</h3>
+<p><strong>人口方面(Table IV):</strong></p>
+<ul>
+<li>基线规格(列3):β = 0.032(标准误 0.012)</li>
+<li>马铃薯解释了旧大陆1700-1900年间**约25-26%**的人口增长</li>
+</ul>
+<p><strong>城市化方面:</strong></p>
+<ul>
+<li>基线规格:β = 0.0036(标准误 0.0012)</li>
+<li>马铃薯解释了城市化增长的<strong>约27-34%</strong></li>
+</ul>
+<h3 id="城市化效应的滞后">城市化效应的滞后</h3>
+<p>马铃薯对城市化的影响相对于对人口的影响<strong>延迟了50-100年</strong>.这一模式与统一增长理论(Galor and Weil 2000)的预测一致:</p>
+<ul>
+<li><strong>马尔萨斯时期:</strong> 生产力提升主要转化为人口增长</li>
+<li><strong>后马尔萨斯时期(约19世纪):</strong> 才观察到明显的人均收入和城市化改善</li>
+</ul>
+<h2 id="稳健性检验">稳健性检验</h2>
+<p>作者进行了大量稳健性检验,结果均保持正、显著且量级稳定:</p>
+<table>
+<thead>
+<tr>
+<th>额外控制变量</th>
+<th>人口系数</th>
+<th>城市化系数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>赤道距离</td>
+<td>0.030</td>
+<td>0.0037</td>
+</tr>
+<tr>
+<td>疟疾指数</td>
+<td>0.025</td>
+<td>0.0034</td>
+</tr>
+<tr>
+<td>法律渊源</td>
+<td>0.029</td>
+<td>0.0035</td>
+</tr>
+<tr>
+<td>殖民者身份</td>
+<td>0.033</td>
+<td>0.0036</td>
+</tr>
+<tr>
+<td><strong>全部同时控制</strong></td>
+<td><strong>0.031</strong></td>
+<td><strong>0.0029</strong></td>
+</tr>
+</tbody>
+</table>
+<p>洲内变异分析、城市人口分析、成人身高分析等进一步支持了主要结论.</p>
+<h2 id="结论">结论</h2>
+<ol>
+<li>
+<p><strong>因果效应估计:</strong> 马铃薯在1700-1900年间解释了旧大陆人口增长的约25-26%,城市化增长的约27-34%</p>
+</li>
+<li>
+<p><strong>学术贡献:</strong> 首次在整个旧大陆范围内、跨越数百年时间尺度,利用双重差分策略来估计马铃薯引入的因果效应</p>
+</li>
+<li>
+<p><strong>理论意义:</strong> 为营养改善在历史人口增长中的关键作用提供因果证据,支持了Fogel的"营养假说"</p>
+</li>
+</ol>
+<h2 id="未来研究方向">未来研究方向</h2>
+<ol>
+<li><strong>不同人口学渠道的分解:</strong> 进一步分解马铃薯对人口的具体人口学效应</li>
+<li><strong>更精细的时间纵深:</strong> 利用更高频的地方档案数据,构建更精细的时间序列</li>
+<li><strong>马铃薯采纳的过程研究:</strong> 收集各国/地区的具体采纳数据</li>
+<li><strong>对其他新大陆作物的深化比较:</strong> 对这些作物的相对效应进行深入探讨</li>
+<li><strong>政治经济分析:</strong> 探讨不同地区的政治、宗教,社会结构等因素影响了马铃薯的采纳速度</li>
+</ol>
+<h2 id="学术思考-启发性问题">学术思考:启发性问题</h2>
+<h3 id="问题一-技术的-不可替代性-与历史路径依赖">问题一:技术的"不可替代性"与历史路径依赖</h3>
+<p>论文证实了马铃薯对人口增长的重大贡献(约占1/4-1/3),但这引发了一个深层的历史反事实问题:<strong>如果欧洲没有获得马铃薯,会有什么替代品来满足不断增长的粮食需求?</strong></p>
+<h3 id="问题二-制度与地理的互动-为什么是爱尔兰">问题二:制度与地理的互动:为什么是爱尔兰?</h3>
+<p>论文表明马铃薯首先在爱尔兰被广泛采纳(17世纪末),然后才是欧洲大陆和其他地区.爱尔兰采纳马铃薯较早,不仅因为其地理条件适合,还因为:</p>
+<ul>
+<li>爱尔兰的土地所有制结构使得小农更需要高产作物</li>
+<li>爱尔兰的传统作物产出长期以地租形式被外流</li>
+<li>英国殖民统治的政治经济结构</li>
+</ul>
+<h3 id="问题三-营养与认知-为什么采纳需要那么久">问题三:营养与认知:为什么采纳需要那么久?</h3>
+<p>如果马铃薯如此优越,为什么从1573年首次出现在塞维利亚到1700年前后才被广泛种植,中间相隔超过一个世纪?</p>
+<p>论文提到了文化恐惧(毒性恐惧,麻风病关联等),但更深层的问题涉及<strong>信息扩散,学习机制和认知障碍</strong>.</p>
+<h3 id="问题四-人口-资源悖论的永久破解">问题四:人口-资源悖论的永久破解?</h3>
+<p>Malthus担忧任何生产力改善最终都会被人口增长所抵消.但论文通过展示马铃薯促进了人口增长,同时也暗示了这一机制的逐步减弱(到19世纪末,人口增长不再完全抵消收入增长).</p>
+<h3 id="问题五-历史因果推断的-局限性与必要性">问题五:历史因果推断的"局限性与必要性"</h3>
+<p>论文采用的"地理×时间"交互识别策略非常精巧,但仍然依赖于一个关键假设:1700年前后没有与马铃薯适宜度相关的其他冲击.</p>
+<hr>
+<h2 id="总结性反思">总结性反思</h2>
+<h3 id="学术启示一-历史因果推断的价值">学术启示一:历史因果推断的价值</h3>
+<p>在当代计量经济学和因果推断日益强调RCT、IV,断点回归等"高精度"方法的背景下,本文通过相对"低端"的双重差分方法,成功回答了一个关系到几亿人生命轨迹的大问题.</p>
+<h3 id="学术启示二-定量与定性的融合">学术启示二:定量与定性的融合</h3>
+<p>虽然论文的标题和结论强调了定量分析,但论文的强度实际上来自于定量与定性证据的紧密融合.</p>
+<h3 id="学术启示三-对-大问题-的执着">学术启示三:对"大问题"的执着</h3>
+<p>这篇论文成功的根本原因,也许不在于其方法学的新颖性(双重差分已是标准方法),而在于作者选择坚持追问一个"大问题"_<strong>技术进步如何改变了人类的物质生活和社会结构?</strong></p>
+<h3 id="学术启示四-全球视野下的历史经济学">学术启示四:全球视野下的历史经济学</h3>
+<p>论文涵盖了130个旧大陆国家、跨越900年的时间尺度,这种宏大的全球视野相对于当代经济史研究中常见的"区域聚焦"而言,是罕见和珍贵的.</p>
+<hr>
+<p><strong>文献信息:</strong></p>
+<ul>
+<li><strong>标题:</strong> The Potato’s Contribution to Population and Urbanization: Evidence From A Historical Experiment</li>
+<li><strong>作者:</strong> Nathan Nunn(哈佛大学)、Nancy Qian(耶鲁大学)</li>
+<li><strong>期刊:</strong> The Quarterly Journal of Economics, 2011, Vol. 126, pp. 593-650</li>
+<li><strong>DOI:</strong> 10.1093/qje/qjr009</li>
+</ul>
+]]></content>
+      <categories>
+        <category>历史</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>经济史</tag>
       </tags>
   </entry>
   <entry>
@@ -16501,230 +16725,6 @@ Zotero Item Key:: LWFR6PLB</p>
         <tag>论文笔记</tag>
         <tag>公共财政</tag>
         <tag>政府采购</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>&lt;马铃薯与人口&gt;深度阅读笔记 — Nunn &amp; Qian</title>
-    <url>/posts/nunn2011/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: The Potato’s Contribution to Population and Urbanization: Evidence From A Historical Experiment</li>
-<li><strong>作者</strong>: Nathan Nunn(哈佛大学), Nancy Qian(耶鲁大学)</li>
-<li><strong>类型</strong>: 论文笔记 / 经济史 / 人口史 / 计量史学</li>
-<li><strong>出版年份</strong>: 2011</li>
-<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics</li>
-<li><strong>DOI</strong>: 10.1093/qje/qjr009</li>
-<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量史学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言-马铃薯-改变世界的作物">引言:马铃薯_改变世界的作物</h2>
-<p>This is a landmark paper by Nathan Nunn and Nancy Qian, published in the Quarterly Journal of Economics in 2011.</p>
-<h3 id="研究背景">研究背景</h3>
-<p>1000-1900年间,世界人口从不到3亿增长到16亿,城市人口比例从2%上升到超过9%,增长四倍多.尤其引人注目的是,这种增长并非匀速的,而是在后半段(特别是18和19世纪)急剧加速.</p>
-<p>许多学者注意到,马铃薯从美洲传入旧大陆后,凭借其卓越的营养价值和单位面积产量优势,可能在推动人口增长和经济发展方面发挥了关键作用.历史学家William Langer(1963)指出:“马铃薯种植的传播与人口的快速增长在各地都相互对应”.William McNeill(1999)甚至认为马铃薯是解释1750至1950年间欧洲少数国家主导全球的"一个必要_尽管绝非唯一的_因素".</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p>尽管大量定性的历史叙述支持马铃薯对旧大陆人口和经济发展具有重要影响的观点,但实证量化马铃薯总体影响的证据却非常匮乏.造成这一知识缺口的主要原因是估计中的内生性问题:</p>
-<ul>
-<li><strong>反向因果(Reverse Causality):</strong> 马铃薯的采纳可能导致了人口增长,但反过来,潜在的人口压力及其对食物的需求也可能驱动了马铃薯的采纳</li>
-<li><strong>联合决定(Joint Determination):</strong> 人口增长和新农业技术的采纳可能同时受到第三个不可观测因素的驱动</li>
-</ul>
-<h2 id="内容及结构">内容及结构</h2>
-<p>这篇论文共分为七个主要部分:</p>
-<ol>
-<li><strong>引言(Introduction):</strong> 概述研究问题、动机、识别策略和主要结论</li>
-<li><strong>背景(Background):</strong> 马铃薯的营养优势,从新大陆到旧大陆的传播,其他新大陆主粮作物</li>
-<li><strong>概念框架(Conceptual Framework):</strong> 构建简单的两部门一般均衡模型</li>
-<li><strong>数据(Data):</strong> 作物适宜度数据(FAO GAEZ数据库)和人口/城市化数据</li>
-<li><strong>实证策略与主要结果(Empirical Strategy and Main Results):</strong> 核心估计方程和基准估计结果</li>
-<li><strong>稳健性检验(Robustness):</strong> 控制额外变量、洲内变异分析、城市人口分析、法国士兵身高分析</li>
-<li><strong>结论(Conclusions):</strong> 总结主要发现和学术贡献</li>
-</ol>
-<h2 id="马铃薯的营养优势">马铃薯的营养优势</h2>
-<h3 id="营养完整性">营养完整性</h3>
-<p>马铃薯是所有主粮中营养最为全面的作物之一:</p>
-<ul>
-<li>一个中等大小的马铃薯(150克)连皮食用,可提供29.55毫克的维生素C(占每日建议摄入量的45%),以及丰富的钾,维生素B6等</li>
-<li>其他旧大陆的主粮_小麦、燕麦,大麦、稻米和玉米_都不含维生素C</li>
-</ul>
-<h3 id="单位面积热量优势">单位面积热量优势</h3>
-<table>
-<thead>
-<tr>
-<th>作物</th>
-<th>每英亩产量(公斤)</th>
-<th>每英亩能量值(兆焦)</th>
-<th>养活一家五口所需英亩数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>小麦</td>
-<td>650</td>
-<td>8,900</td>
-<td>1.70</td>
-</tr>
-<tr>
-<td>大麦</td>
-<td>820</td>
-<td>11,400</td>
-<td>1.40</td>
-</tr>
-<tr>
-<td>燕麦</td>
-<td>690</td>
-<td>9,300</td>
-<td>1.60</td>
-</tr>
-<tr>
-<td>马铃薯</td>
-<td>10,900</td>
-<td>31,900</td>
-<td>0.50</td>
-</tr>
-</tbody>
-</table>
-<p>一英亩种植马铃薯的土地加上一头奶牛的乳制品,就足以养活六到八口人的大家庭.</p>
-<h2 id="马铃薯的传播史">马铃薯的传播史</h2>
-<p><strong>起源与发现:</strong> 考古证据表明,马铃薯最早在七千到一万年前就已在安第斯山脉被驯化种植</p>
-<p><strong>传入欧洲:</strong> 马铃薯在欧洲消费的最早记录是1573年西班牙塞维利亚一家医院购买马铃薯的账目,此后依次传入意大利(1586年)、英国(1596年)和德国(1601年)</p>
-<p><strong>缓慢采纳的原因:</strong></p>
-<ul>
-<li><strong>毒性恐惧:</strong> 马铃薯属于有毒的茄科植物,最初被推测为有毒</li>
-<li><strong>麻风病联想:</strong> 马铃薯变色、凹凸不平的外观与麻风病患者的皮肤相似</li>
-<li><strong>种植方式的陌生:</strong> 马铃薯是欧洲第一种通过块茎而非种子种植的食用植物</li>
-</ul>
-<h2 id="实证策略与估计方程">实证策略与估计方程</h2>
-<h3 id="核心估计方程">核心估计方程</h3>
-<p>$$\begin{array}{l}<br>
-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=0\right)\right] \<br>
-=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=0\right)\right]<br>
-\end{array}$$</p>
-<p>其中:</p>
-<ul>
-<li>$i$ 索引国家,$t$ 索引时间</li>
-<li>$y_{it}$ 是因变量:国家$i$在时期$t$的总人口自然对数或城市化率</li>
-<li>$\ln(\text{Potato Area}_i)$ 是国家$i$适合种植马铃薯的土地面积的自然对数</li>
-<li>$I^{\text{Post}}_t$ 是指示变量,在1750、1800、1850、1900年取值为1</li>
-</ul>
-<h3 id="主要结果">主要结果</h3>
-<p><strong>人口方面(Table IV):</strong></p>
-<ul>
-<li>基线规格(列3):β = 0.032(标准误 0.012)</li>
-<li>马铃薯解释了旧大陆1700-1900年间**约25-26%**的人口增长</li>
-</ul>
-<p><strong>城市化方面:</strong></p>
-<ul>
-<li>基线规格:β = 0.0036(标准误 0.0012)</li>
-<li>马铃薯解释了城市化增长的<strong>约27-34%</strong></li>
-</ul>
-<h3 id="城市化效应的滞后">城市化效应的滞后</h3>
-<p>马铃薯对城市化的影响相对于对人口的影响<strong>延迟了50-100年</strong>.这一模式与统一增长理论(Galor and Weil 2000)的预测一致:</p>
-<ul>
-<li><strong>马尔萨斯时期:</strong> 生产力提升主要转化为人口增长</li>
-<li><strong>后马尔萨斯时期(约19世纪):</strong> 才观察到明显的人均收入和城市化改善</li>
-</ul>
-<h2 id="稳健性检验">稳健性检验</h2>
-<p>作者进行了大量稳健性检验,结果均保持正、显著且量级稳定:</p>
-<table>
-<thead>
-<tr>
-<th>额外控制变量</th>
-<th>人口系数</th>
-<th>城市化系数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>赤道距离</td>
-<td>0.030</td>
-<td>0.0037</td>
-</tr>
-<tr>
-<td>疟疾指数</td>
-<td>0.025</td>
-<td>0.0034</td>
-</tr>
-<tr>
-<td>法律渊源</td>
-<td>0.029</td>
-<td>0.0035</td>
-</tr>
-<tr>
-<td>殖民者身份</td>
-<td>0.033</td>
-<td>0.0036</td>
-</tr>
-<tr>
-<td><strong>全部同时控制</strong></td>
-<td><strong>0.031</strong></td>
-<td><strong>0.0029</strong></td>
-</tr>
-</tbody>
-</table>
-<p>洲内变异分析、城市人口分析、成人身高分析等进一步支持了主要结论.</p>
-<h2 id="结论">结论</h2>
-<ol>
-<li>
-<p><strong>因果效应估计:</strong> 马铃薯在1700-1900年间解释了旧大陆人口增长的约25-26%,城市化增长的约27-34%</p>
-</li>
-<li>
-<p><strong>学术贡献:</strong> 首次在整个旧大陆范围内、跨越数百年时间尺度,利用双重差分策略来估计马铃薯引入的因果效应</p>
-</li>
-<li>
-<p><strong>理论意义:</strong> 为营养改善在历史人口增长中的关键作用提供因果证据,支持了Fogel的"营养假说"</p>
-</li>
-</ol>
-<h2 id="未来研究方向">未来研究方向</h2>
-<ol>
-<li><strong>不同人口学渠道的分解:</strong> 进一步分解马铃薯对人口的具体人口学效应</li>
-<li><strong>更精细的时间纵深:</strong> 利用更高频的地方档案数据,构建更精细的时间序列</li>
-<li><strong>马铃薯采纳的过程研究:</strong> 收集各国/地区的具体采纳数据</li>
-<li><strong>对其他新大陆作物的深化比较:</strong> 对这些作物的相对效应进行深入探讨</li>
-<li><strong>政治经济分析:</strong> 探讨不同地区的政治、宗教,社会结构等因素影响了马铃薯的采纳速度</li>
-</ol>
-<h2 id="学术思考-启发性问题">学术思考:启发性问题</h2>
-<h3 id="问题一-技术的-不可替代性-与历史路径依赖">问题一:技术的"不可替代性"与历史路径依赖</h3>
-<p>论文证实了马铃薯对人口增长的重大贡献(约占1/4-1/3),但这引发了一个深层的历史反事实问题:<strong>如果欧洲没有获得马铃薯,会有什么替代品来满足不断增长的粮食需求?</strong></p>
-<h3 id="问题二-制度与地理的互动-为什么是爱尔兰">问题二:制度与地理的互动:为什么是爱尔兰?</h3>
-<p>论文表明马铃薯首先在爱尔兰被广泛采纳(17世纪末),然后才是欧洲大陆和其他地区.爱尔兰采纳马铃薯较早,不仅因为其地理条件适合,还因为:</p>
-<ul>
-<li>爱尔兰的土地所有制结构使得小农更需要高产作物</li>
-<li>爱尔兰的传统作物产出长期以地租形式被外流</li>
-<li>英国殖民统治的政治经济结构</li>
-</ul>
-<h3 id="问题三-营养与认知-为什么采纳需要那么久">问题三:营养与认知:为什么采纳需要那么久?</h3>
-<p>如果马铃薯如此优越,为什么从1573年首次出现在塞维利亚到1700年前后才被广泛种植,中间相隔超过一个世纪?</p>
-<p>论文提到了文化恐惧(毒性恐惧,麻风病关联等),但更深层的问题涉及<strong>信息扩散,学习机制和认知障碍</strong>.</p>
-<h3 id="问题四-人口-资源悖论的永久破解">问题四:人口-资源悖论的永久破解?</h3>
-<p>Malthus担忧任何生产力改善最终都会被人口增长所抵消.但论文通过展示马铃薯促进了人口增长,同时也暗示了这一机制的逐步减弱(到19世纪末,人口增长不再完全抵消收入增长).</p>
-<h3 id="问题五-历史因果推断的-局限性与必要性">问题五:历史因果推断的"局限性与必要性"</h3>
-<p>论文采用的"地理×时间"交互识别策略非常精巧,但仍然依赖于一个关键假设:1700年前后没有与马铃薯适宜度相关的其他冲击.</p>
-<hr>
-<h2 id="总结性反思">总结性反思</h2>
-<h3 id="学术启示一-历史因果推断的价值">学术启示一:历史因果推断的价值</h3>
-<p>在当代计量经济学和因果推断日益强调RCT、IV,断点回归等"高精度"方法的背景下,本文通过相对"低端"的双重差分方法,成功回答了一个关系到几亿人生命轨迹的大问题.</p>
-<h3 id="学术启示二-定量与定性的融合">学术启示二:定量与定性的融合</h3>
-<p>虽然论文的标题和结论强调了定量分析,但论文的强度实际上来自于定量与定性证据的紧密融合.</p>
-<h3 id="学术启示三-对-大问题-的执着">学术启示三:对"大问题"的执着</h3>
-<p>这篇论文成功的根本原因,也许不在于其方法学的新颖性(双重差分已是标准方法),而在于作者选择坚持追问一个"大问题"_<strong>技术进步如何改变了人类的物质生活和社会结构?</strong></p>
-<h3 id="学术启示四-全球视野下的历史经济学">学术启示四:全球视野下的历史经济学</h3>
-<p>论文涵盖了130个旧大陆国家、跨越900年的时间尺度,这种宏大的全球视野相对于当代经济史研究中常见的"区域聚焦"而言,是罕见和珍贵的.</p>
-<hr>
-<p><strong>文献信息:</strong></p>
-<ul>
-<li><strong>标题:</strong> The Potato’s Contribution to Population and Urbanization: Evidence From A Historical Experiment</li>
-<li><strong>作者:</strong> Nathan Nunn(哈佛大学)、Nancy Qian(耶鲁大学)</li>
-<li><strong>期刊:</strong> The Quarterly Journal of Economics, 2011, Vol. 126, pp. 593-650</li>
-<li><strong>DOI:</strong> 10.1093/qje/qjr009</li>
-</ul>
-]]></content>
-      <categories>
-        <category>历史</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>经济史</tag>
       </tags>
   </entry>
   <entry>
@@ -18506,6 +18506,26 @@ Zotero Item Key:: Y7FT49B5</p>
       </tags>
   </entry>
   <entry>
+    <title>2014到2021年:淘宝村分布散点图😲</title>
+    <url>/posts/18898/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示"><strong>效果展示</strong></h2>
+<img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235354537.svg" width="80%" height="80%" align="middle">
+<center>2014年的淘宝村分布</center>
+<span id="more"></span>
+<img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235404847.svg" width="80%" height="80%" align="middle">
+<center>2021年的淘宝村分布</center>
+<h2 id="从最初3个增长至7023个"><strong>从最初3个增长至7023个</strong></h2>
+<p>从2009年到2021年,中国淘宝村呈现裂变式的扩散增长,从最初3个增长至7023个,无论是数量规模,还是分布广度都经历了飞跃式的发展.从萌芽至发展阶段,“小农户连接大市场"的电商逻辑长期被认为是淘宝村的主要内涵.围绕这一内涵,市场、政策、技术、人才一度不断汇聚,为淘宝村发展创造了十余年的黄金机遇,形成了一场边缘人群连接现代网络、边缘地区接壤现代市场、边缘产品汇聚现代需求的"边缘革命”.然而,在经历十余年的飞速发展后,淘宝村开始面临红利期消失、消费升级、同质化竞争、规范治理等适应性挑战,转型变革已是必然选择.在这一过程中,过往遵循传统电商逻辑的淘宝村正经历蜕变.一方面,垂直电商、内容电商等多元化的销售互联网生态正加速形成;另一方面,由差异化、个性化、碎片化需求所驱动的产业数字化升级不断涌现.可以认为,以"消费互联网+产业互联网"为特征的产销全域数字化逻辑正在为淘宝村注入新的内涵,其核心不再是"连接大市场",而是"洞悉大市场、细分小市场、塑造新市场".这种内涵演进对淘宝村发展提出了更高的要求,即能否充分利用数字技术提高经营主体的市场洞察力,能否通过数据信息整合优化生产流程,能否基于数字供应链实现快速的市场反馈.在此意义上,新时代的淘宝村将不再是"逆边缘化"的地理名词,而是一类凭借数字技术突破分散决策、分散生产、分散经营劣势的组织指称.</p>
+]]></content>
+      <categories>
+        <category>绘图</category>
+        <category>map&amp;sf</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Behavioural Causal Inference — 深度阅读笔记 — Spiegler</title>
     <url>/posts/spiegler2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -18564,26 +18584,6 @@ Zotero Item Key:: Y7FT49B5</p>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2014到2021年:淘宝村分布散点图😲</title>
-    <url>/posts/18898/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示"><strong>效果展示</strong></h2>
-<img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235354537.svg" width="80%" height="80%" align="middle">
-<center>2014年的淘宝村分布</center>
-<span id="more"></span>
-<img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235404847.svg" width="80%" height="80%" align="middle">
-<center>2021年的淘宝村分布</center>
-<h2 id="从最初3个增长至7023个"><strong>从最初3个增长至7023个</strong></h2>
-<p>从2009年到2021年,中国淘宝村呈现裂变式的扩散增长,从最初3个增长至7023个,无论是数量规模,还是分布广度都经历了飞跃式的发展.从萌芽至发展阶段,“小农户连接大市场"的电商逻辑长期被认为是淘宝村的主要内涵.围绕这一内涵,市场、政策、技术、人才一度不断汇聚,为淘宝村发展创造了十余年的黄金机遇,形成了一场边缘人群连接现代网络、边缘地区接壤现代市场、边缘产品汇聚现代需求的"边缘革命”.然而,在经历十余年的飞速发展后,淘宝村开始面临红利期消失、消费升级、同质化竞争、规范治理等适应性挑战,转型变革已是必然选择.在这一过程中,过往遵循传统电商逻辑的淘宝村正经历蜕变.一方面,垂直电商、内容电商等多元化的销售互联网生态正加速形成;另一方面,由差异化、个性化、碎片化需求所驱动的产业数字化升级不断涌现.可以认为,以"消费互联网+产业互联网"为特征的产销全域数字化逻辑正在为淘宝村注入新的内涵,其核心不再是"连接大市场",而是"洞悉大市场、细分小市场、塑造新市场".这种内涵演进对淘宝村发展提出了更高的要求,即能否充分利用数字技术提高经营主体的市场洞察力,能否通过数据信息整合优化生产流程,能否基于数字供应链实现快速的市场反馈.在此意义上,新时代的淘宝村将不再是"逆边缘化"的地理名词,而是一类凭借数字技术突破分散决策、分散生产、分散经营劣势的组织指称.</p>
-]]></content>
-      <categories>
-        <category>绘图</category>
-        <category>map&amp;sf</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
       </tags>
   </entry>
   <entry>
@@ -19074,120 +19074,6 @@ Zotero Item Key:: CIWNLWK2</p>
       </tags>
   </entry>
   <entry>
-    <title>市场力量与资本约束 — 深度阅读笔记 — Wittwer &amp; Allen</title>
-    <url>/posts/wittwer2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Market Power and Capital Constraints</li>
-<li><strong>作者</strong>: Milena Wittwer (Columbia University, NBER), Jason Allen (Bank of Canada, University of Wisconsin)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: NBER Working Paper No. 34645</li>
-<li><strong>DOI</strong>: -</li>
-<li><strong>难度评估</strong>: 高 - 需要金融经济学、拍卖理论、监管经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>市场力量（Market Power）</strong> 指交易者在市场中影响价格的能力。现实中，交易者在多个市场享有市场力量，包括国债、repo、外汇、抵押贷款支持证券等。</p>
-<p><strong>资本约束（Capital Constraints）</strong> 指Basel III标准下，银行必须保持权益资本相对于风险敞口的最低比率。</p>
-<p><strong>价格影响（Price Impact）</strong> 指交易量变化导致价格变化的程度，是衡量市场流动性的关键指标。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol>
-<li>
-<p><strong>理论背景</strong>：中介资产定价文献假设完美竞争，但现实中交易者享有市场力量</p>
-</li>
-<li>
-<p><strong>现实背景</strong>：实证研究表明交易者在多个市场有市场力量</p>
-</li>
-<li>
-<p><strong>监管背景</strong>：Basel III资本要求对银行中介交易产生负面影响</p>
-</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：在允许市场力量存在的框架下，交易者的权益资本如何影响资产价格？</p>
-<p><strong>关键洞察</strong>：放松资本约束不仅提高资产价格，还提高价格影响（降低流动性）——这是反直觉的预测。</p>
-<hr>
-<h2 id="2-内容及结构">2. 内容及结构</h2>
-<ol>
-<li><strong>引言</strong>: 问题陈述、研究背景、主要贡献</li>
-<li><strong>模型</strong>: 包含资本约束和市场力量的基准模型，统一价格拍卖</li>
-<li><strong>模型扩展</strong>: 存货头寸、双边交易、歧视价格拍卖</li>
-<li><strong>实证分析</strong>: 加拿大国债拍卖数据、COVID-19临时政策豁免</li>
-<li><strong>价格和价格影响近似</strong>: 反事实计算</li>
-<li><strong>结论</strong>: 主要发现和政策含义</li>
-</ol>
-<hr>
-<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
-<h3 id="模型设定">模型设定</h3>
-<p><strong>交易者</strong>：</p>
-<ul>
-<li>N个风险厌恶交易者，拥有私人信号εi</li>
-<li>线性二次效用函数：V(a, εi) = (μ + εi)a − ρσ²a²/2</li>
-</ul>
-<p><strong>资本约束</strong>：</p>
-<ul>
-<li>E[θi − κP^c a_i] ≥ 0</li>
-<li>资本约束的影子成本λκ类似于从价税</li>
-</ul>
-<p><strong>关键机制</strong>：交易者的出价意愿被影子成本折减为(1+λκ)P^c</p>
-<h3 id="关键预测">关键预测</h3>
-<p><strong>推论1</strong>：当资本约束放松时，价格和价格影响都提高。</p>
-<p>这与传统观点（约束放松→流动性提高）相反。</p>
-<h3 id="实证策略">实证策略</h3>
-<p><strong>利用COVID-19期间加拿大政府的临时政策变化</strong>：</p>
-<ul>
-<li>2020年4月9日起，政府债券和HQLA暂时豁免于LR约束</li>
-<li>2021年12月31日豁免结束</li>
-</ul>
-<p><strong>识别方法</strong>：</p>
-<ul>
-<li>在豁免期间（λκ=0），从出价意愿曲线的平均斜率识别风险厌恶</li>
-<li>在约束生效期间，从斜率的变化识别影子成本</li>
-</ul>
-<h3 id="主要结果">主要结果</h3>
-<p><strong>风险厌恶</strong>：中位数约为0.005，相对较低</p>
-<p><strong>影子成本</strong>：</p>
-<ul>
-<li>在典型拍卖中约束不绑定（中位数=0）</li>
-<li>但分布有明显尾部，平均影子成本约为53%</li>
-</ul>
-<p><strong>反事实计算</strong>：</p>
-<ul>
-<li>影子成本降低1% → 价格和价格影响增加约0.19%</li>
-<li>完全消除约束 → 平均增加19%（因为尾部事件）</li>
-</ul>
-<hr>
-<h2 id="4-结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol>
-<li>
-<p><strong>反直觉预测</strong>：放松资本约束提高价格和价格影响（降低流动性），与完美竞争下的传统观点相反</p>
-</li>
-<li>
-<p><strong>机制</strong>：影子成本作为折减因子影响出价意愿曲线的斜率</p>
-</li>
-<li>
-<p><strong>实证验证</strong>：加拿大国债拍卖数据证实了理论预测</p>
-</li>
-<li>
-<p><strong>定量意义</strong>：在流动性市场中影响较小，但尾部效应严重</p>
-</li>
-</ol>
-<h3 id="政策含义">政策含义</h3>
-<ul>
-<li>为Basel III资本要求的调整提供定量依据</li>
-<li>政策制定者需要考虑整个分布，而非仅关注平均值</li>
-</ul>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Policy Experimentation in China: The Political Economy of Policy Learning — 深度阅读笔记 — Wang &amp; Yang</title>
     <url>/posts/wang2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -19467,6 +19353,120 @@ Zotero Item Key:: CIWNLWK2</p>
         <tag>政治经济学</tag>
         <tag>政策实验</tag>
         <tag>中国经济</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>市场力量与资本约束 — 深度阅读笔记 — Wittwer &amp; Allen</title>
+    <url>/posts/wittwer2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Market Power and Capital Constraints</li>
+<li><strong>作者</strong>: Milena Wittwer (Columbia University, NBER), Jason Allen (Bank of Canada, University of Wisconsin)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: NBER Working Paper No. 34645</li>
+<li><strong>DOI</strong>: -</li>
+<li><strong>难度评估</strong>: 高 - 需要金融经济学、拍卖理论、监管经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>市场力量（Market Power）</strong> 指交易者在市场中影响价格的能力。现实中，交易者在多个市场享有市场力量，包括国债、repo、外汇、抵押贷款支持证券等。</p>
+<p><strong>资本约束（Capital Constraints）</strong> 指Basel III标准下，银行必须保持权益资本相对于风险敞口的最低比率。</p>
+<p><strong>价格影响（Price Impact）</strong> 指交易量变化导致价格变化的程度，是衡量市场流动性的关键指标。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol>
+<li>
+<p><strong>理论背景</strong>：中介资产定价文献假设完美竞争，但现实中交易者享有市场力量</p>
+</li>
+<li>
+<p><strong>现实背景</strong>：实证研究表明交易者在多个市场有市场力量</p>
+</li>
+<li>
+<p><strong>监管背景</strong>：Basel III资本要求对银行中介交易产生负面影响</p>
+</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：在允许市场力量存在的框架下，交易者的权益资本如何影响资产价格？</p>
+<p><strong>关键洞察</strong>：放松资本约束不仅提高资产价格，还提高价格影响（降低流动性）——这是反直觉的预测。</p>
+<hr>
+<h2 id="2-内容及结构">2. 内容及结构</h2>
+<ol>
+<li><strong>引言</strong>: 问题陈述、研究背景、主要贡献</li>
+<li><strong>模型</strong>: 包含资本约束和市场力量的基准模型，统一价格拍卖</li>
+<li><strong>模型扩展</strong>: 存货头寸、双边交易、歧视价格拍卖</li>
+<li><strong>实证分析</strong>: 加拿大国债拍卖数据、COVID-19临时政策豁免</li>
+<li><strong>价格和价格影响近似</strong>: 反事实计算</li>
+<li><strong>结论</strong>: 主要发现和政策含义</li>
+</ol>
+<hr>
+<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
+<h3 id="模型设定">模型设定</h3>
+<p><strong>交易者</strong>：</p>
+<ul>
+<li>N个风险厌恶交易者，拥有私人信号εi</li>
+<li>线性二次效用函数：V(a, εi) = (μ + εi)a − ρσ²a²/2</li>
+</ul>
+<p><strong>资本约束</strong>：</p>
+<ul>
+<li>E[θi − κP^c a_i] ≥ 0</li>
+<li>资本约束的影子成本λκ类似于从价税</li>
+</ul>
+<p><strong>关键机制</strong>：交易者的出价意愿被影子成本折减为(1+λκ)P^c</p>
+<h3 id="关键预测">关键预测</h3>
+<p><strong>推论1</strong>：当资本约束放松时，价格和价格影响都提高。</p>
+<p>这与传统观点（约束放松→流动性提高）相反。</p>
+<h3 id="实证策略">实证策略</h3>
+<p><strong>利用COVID-19期间加拿大政府的临时政策变化</strong>：</p>
+<ul>
+<li>2020年4月9日起，政府债券和HQLA暂时豁免于LR约束</li>
+<li>2021年12月31日豁免结束</li>
+</ul>
+<p><strong>识别方法</strong>：</p>
+<ul>
+<li>在豁免期间（λκ=0），从出价意愿曲线的平均斜率识别风险厌恶</li>
+<li>在约束生效期间，从斜率的变化识别影子成本</li>
+</ul>
+<h3 id="主要结果">主要结果</h3>
+<p><strong>风险厌恶</strong>：中位数约为0.005，相对较低</p>
+<p><strong>影子成本</strong>：</p>
+<ul>
+<li>在典型拍卖中约束不绑定（中位数=0）</li>
+<li>但分布有明显尾部，平均影子成本约为53%</li>
+</ul>
+<p><strong>反事实计算</strong>：</p>
+<ul>
+<li>影子成本降低1% → 价格和价格影响增加约0.19%</li>
+<li>完全消除约束 → 平均增加19%（因为尾部事件）</li>
+</ul>
+<hr>
+<h2 id="4-结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol>
+<li>
+<p><strong>反直觉预测</strong>：放松资本约束提高价格和价格影响（降低流动性），与完美竞争下的传统观点相反</p>
+</li>
+<li>
+<p><strong>机制</strong>：影子成本作为折减因子影响出价意愿曲线的斜率</p>
+</li>
+<li>
+<p><strong>实证验证</strong>：加拿大国债拍卖数据证实了理论预测</p>
+</li>
+<li>
+<p><strong>定量意义</strong>：在流动性市场中影响较小，但尾部效应严重</p>
+</li>
+</ol>
+<h3 id="政策含义">政策含义</h3>
+<ul>
+<li>为Basel III资本要求的调整提供定量依据</li>
+<li>政策制定者需要考虑整个分布，而非仅关注平均值</li>
+</ul>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
