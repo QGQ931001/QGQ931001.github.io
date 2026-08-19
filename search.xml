@@ -1256,6 +1256,168 @@ Development. <em>American Economic Review</em>, 103(1), 1-46.</li>
       </tags>
   </entry>
   <entry>
+    <title>稳健的错误设定模型 — 深度阅读笔记 — Ba</title>
+    <url>/posts/ba2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Robust Misspecified Models</li>
+<li><strong>作者</strong>: Cuimin Ba (University of Pittsburgh)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, Vol. 116, No. 4,
+pp. 1340-1379</li>
+<li><strong>DOI</strong>: 10.1257/aer.20240246</li>
+<li><strong>难度评估</strong>: 高 -
+需要博弈论、学习理论、贝叶斯推断基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>模型错误设定（Model
+Misspecification）</strong>：指决策者将零概率分配给真实数据生成过程(DGP)的情况。这可能源于简化复杂现实的需要，或认知偏差如过度自信或相关性忽视。</p>
+<p><strong>自我确认均衡（Self-Confirming Equilibrium,
+SCE）</strong>：指代理人在给定一致信念下选择最优行动，但模型预测可能与真实DGP不匹配（仅在均衡路径上匹配）。</p>
+<p><strong>贝叶斯因子（Bayes
+Factor）</strong>：是两种模型相对于观察数据的似然比，用于决定是否切换模型。当贝叶斯因子超过阈值α时，代理人切换模型。</p>
+<p><strong>p-吸收性（P-absorbingness）</strong>：本文提出的新概念，要求使用某模型的教条主义者在正概率下最终只玩均衡行动。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><strong>模型与决策</strong>:
+人们使用模型指导决策，但常用模型往往是错误设定的</li>
+<li><strong>现有研究局限</strong>:
+大多数文献假设决策者是"教条的"——使用特定错误模型且不考虑改变</li>
+<li><strong>现实中的模型切换</strong>:
+科学家转换范式、经济学家采用新模型、个体在认知行为治疗中改变思维模式</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>:
+当决策者愿意切换模型时，哪些错误设定的模型会持续存在？</p>
+<p><strong>关键洞察</strong>:
+作者提出两个核心特征来表征稳健的错误设定模型：(1)模型在预测均衡分布方面的渐近准确性；(2)围绕均衡的先验"紧密度"。错误设定的模型可以是稳健的，即使决策者观察到无限数据，也能持续对抗任何竞争模型。</p>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<p>论文结构如下:</p>
+<ol type="1">
+<li><strong>引言</strong>: 问题陈述、动机、贡献预览</li>
+<li><strong>激励示例</strong>: 艺术家过度/不足自信的例子</li>
+<li><strong>框架</strong>:
+基本设定、模型设定、切换规则、持久性和稳健性定义</li>
+<li><strong>主要结果</strong>: 定理1-3</li>
+<li><strong>应用</strong>: 媒体偏见与极化、过度与不足自信</li>
+<li><strong>扩展</strong>: 替代切换规则、多个竞争模型，前瞻性代理人</li>
+<li><strong>结论</strong></li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="艺术家示例">艺术家示例</h4>
+<p>艺术家选择努力程度，真实能力b*=1，但艺术家可能过度自信(b̂=2)或不足自信(b̂=0)。</p>
+<p><strong>关键发现</strong>: 过度自信更稳健!</p>
+<ul>
+<li><strong>不足自信</strong>:
+导致负反馈循环，努力在1和2之间永远循环，无自我确认均衡</li>
+<li><strong>过度自信</strong>:
+导致正反馈循环，最终稳定在努力=0的均衡</li>
+</ul>
+<h3 id="框架设定">框架设定</h3>
+<p><strong>数据生成过程</strong>: 每个时期代理人生成内生数据 - 行动at →
+结果yt ~ Q*(·|at) - 结果取决于行动（内生数据）</p>
+<p><strong>主观模型</strong>: 每个模型θ是预测DGP的有限集合{ Qθ(·|a,ω)
+}</p>
+<p><strong>切换规则</strong>: - 计算贝叶斯因子λt - 如果λt &gt;
+α，切换到竞争模型 - 如果λt &lt; 1/α，切换回来 - α≥1控制切换粘性</p>
+<h3 id="主要结果">主要结果</h3>
+<h4 id="定理1哪些模型可以稳健">定理1：哪些模型可以稳健</h4>
+<p><strong>条件</strong>: α &gt; 1</p>
+<p><strong>等价命题</strong>: (i) 模型θ在某些先验下全局稳健 (ii)
+模型θ在某些先验下局部稳健 (iii) 模型θ存在p-吸收SCE</p>
+<p><strong>关键洞察</strong>:
+全局和局部稳健性是等价的——如果模型对重大范式转换脆弱，对局部变化也脆弱。</p>
+<h4 id="定理2何时模型是稳健的">定理2：何时模型是稳健的</h4>
+<p><strong>条件</strong>:
+模型θ无陷阱（可识别+所有p-吸收SCE是准严格）</p>
+<p><strong>核心概念</strong>: - <strong>一致参数</strong> Cθ:
+存在p-吸收SCE支持的参数 - <strong>先验紧密度</strong>: πθ0(Cθ) ≥ 1/α</p>
+<p><strong>结论</strong>: - 全局稳健 ⟺ 先验紧密度条件满足 - 局部稳健 ⟺
+Cθ ≠ ∅（对所有全支撑先验）</p>
+<h4 id="定理3非粘性切换-α-1">定理3：非粘性切换 (α = 1)</h4>
+<p><strong>结论</strong>: Cθ = Ωθ（全参数一致）才是稳健的</p>
+<p><strong>洞察</strong>: 粘性帮助更多错误模型持续存在</p>
+<h3 id="应用">应用</h3>
+<h4 id="a.-媒体偏见与极化">A. 媒体偏见与极化</h4>
+<p><strong>设定</strong>: - 代理人选择左翼、中间、右翼媒体 -
+真实状态是ωM（中间） - 媒体可能误导代理人</p>
+<p><strong>命题1</strong>: - θ̂在所有先验和切换阈值下全局稳健 -
+θ只在先验充分集中或切换阈值足够高时全局稳健 - θ̂最终以正概率永久替换θ</p>
+<p><strong>政治极化机制</strong>:
+错误模型θ̂因为简单，在数据拟合上表现更好，最终导致持久的政治极化。</p>
+<h4 id="b.-过度与不足自信">B. 过度与不足自信</h4>
+<p><strong>设定</strong>:
+代理人对能力有偏见(b̂)，学习另一个基本因素(ω)</p>
+<p><strong>命题2</strong>: - 过度自信(b̂ &gt; b<em>): 总是局部稳健 -
+不足自信(b̂ &lt; b</em>): 只在某些不连续区间局部稳健</p>
+<p><strong>机制差异</strong>: - 过度自信 → 正反馈 → 收敛到SCE - 不足自信
+→ 负反馈 → 在非SCE行动间振荡</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<p>本文研究了当决策者比较错误设定模型与竞争模型时，哪些模型会持续存在。主要结论:</p>
+<ol type="1">
+<li><strong>稳健性条件</strong>:
+错误设定模型的稳健性取决于两个特征——渐近准确性和先验紧密度</li>
+<li><strong>全局vs局部稳健</strong>:
+在粘性切换下(α&gt;1)两者等价;在非粘性切换下(α=1)只有全集中先验有效</li>
+<li><strong>反直觉发现</strong>:
+配备根深蒂固先验的简单错误模型可以比正确模型更稳健</li>
+<li><strong>应用广泛</strong>:
+从媒体极化到认知偏差,框架提供了预测哪些偏见更持久的工具</li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="文献提及的方向">文献提及的方向</h3>
+<ol type="1">
+<li><strong>最优切换阈值</strong>: 如何平衡I类和II类错误</li>
+<li><strong>持久性概率</strong>: 量化模型被永久采用的可能性</li>
+<li><strong>前瞻性代理人</strong>: 跨模型的前瞻性而非仅模型内</li>
+<li><strong>连续行动空间</strong>: 扩展框架到连续行动</li>
+</ol>
+<h3 id="未来研究思考">未来研究思考</h3>
+<ol type="1">
+<li><strong>政策设计</strong>:
+如果知道某些错误模型更稳健,如何设计干预来对抗它们?</li>
+<li><strong>模型复杂性</strong>:
+复杂模型vs简单模型的权衡是否与本文发现一致?</li>
+<li><strong>异质性学习</strong>:
+不同决策者是否以不同方式应用切换规则?</li>
+</ol>
+<hr>
+<h2 id="学术思考">7. 学术思考</h2>
+<h3 id="核心学术洞察">核心学术洞察</h3>
+<ol type="1">
+<li><p><strong>为什么简单错误模型更稳健?</strong>:
+本文的核心反直觉发现。直觉上,正确模型应该更受欢迎。但错误模型因为简单,先验更集中,而正确模型在每个参数上都可能不一致。</p></li>
+<li><p><strong>粘性切换的双刃剑效应</strong>:
+粘性(α&gt;1)帮助错误模型持续,但也防止因早期噪声过早放弃正确模型。</p></li>
+<li><p><strong>p-吸收性的概念创新</strong>:
+传统SCE只要求均衡存在,不要求可达到性。p-吸收性要求从正概率初始信念可达。</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li>定理1中"局部和全局稳健等价"的证明思路是什么?</li>
+<li>媒体极化应用中的"策略性误报"是如何设计的?</li>
+<li>p-吸收SCE和普通SCE有什么区别?</li>
+<li>错误模型持久性的概率有多高?</li>
+<li>在离散vs连续行动空间中,结论如何变化?</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Macroeconomic Effects of Debt Relief 深度阅读笔记 — Auclert, Dobbie &amp; Goldsmith-Pinkham</title>
     <url>/posts/auclert2019/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -1437,168 +1599,6 @@ Economic Review.</li>
         <tag>债务减免</tag>
         <tag>大衰退</tag>
         <tag>破产制度</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>稳健的错误设定模型 — 深度阅读笔记 — Ba</title>
-    <url>/posts/ba2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Robust Misspecified Models</li>
-<li><strong>作者</strong>: Cuimin Ba (University of Pittsburgh)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, Vol. 116, No. 4,
-pp. 1340-1379</li>
-<li><strong>DOI</strong>: 10.1257/aer.20240246</li>
-<li><strong>难度评估</strong>: 高 -
-需要博弈论、学习理论、贝叶斯推断基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>模型错误设定（Model
-Misspecification）</strong>：指决策者将零概率分配给真实数据生成过程(DGP)的情况。这可能源于简化复杂现实的需要，或认知偏差如过度自信或相关性忽视。</p>
-<p><strong>自我确认均衡（Self-Confirming Equilibrium,
-SCE）</strong>：指代理人在给定一致信念下选择最优行动，但模型预测可能与真实DGP不匹配（仅在均衡路径上匹配）。</p>
-<p><strong>贝叶斯因子（Bayes
-Factor）</strong>：是两种模型相对于观察数据的似然比，用于决定是否切换模型。当贝叶斯因子超过阈值α时，代理人切换模型。</p>
-<p><strong>p-吸收性（P-absorbingness）</strong>：本文提出的新概念，要求使用某模型的教条主义者在正概率下最终只玩均衡行动。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><strong>模型与决策</strong>:
-人们使用模型指导决策，但常用模型往往是错误设定的</li>
-<li><strong>现有研究局限</strong>:
-大多数文献假设决策者是"教条的"——使用特定错误模型且不考虑改变</li>
-<li><strong>现实中的模型切换</strong>:
-科学家转换范式、经济学家采用新模型、个体在认知行为治疗中改变思维模式</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:
-当决策者愿意切换模型时，哪些错误设定的模型会持续存在？</p>
-<p><strong>关键洞察</strong>:
-作者提出两个核心特征来表征稳健的错误设定模型：(1)模型在预测均衡分布方面的渐近准确性；(2)围绕均衡的先验"紧密度"。错误设定的模型可以是稳健的，即使决策者观察到无限数据，也能持续对抗任何竞争模型。</p>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<p>论文结构如下:</p>
-<ol type="1">
-<li><strong>引言</strong>: 问题陈述、动机、贡献预览</li>
-<li><strong>激励示例</strong>: 艺术家过度/不足自信的例子</li>
-<li><strong>框架</strong>:
-基本设定、模型设定、切换规则、持久性和稳健性定义</li>
-<li><strong>主要结果</strong>: 定理1-3</li>
-<li><strong>应用</strong>: 媒体偏见与极化、过度与不足自信</li>
-<li><strong>扩展</strong>: 替代切换规则、多个竞争模型，前瞻性代理人</li>
-<li><strong>结论</strong></li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="艺术家示例">艺术家示例</h4>
-<p>艺术家选择努力程度，真实能力b*=1，但艺术家可能过度自信(b̂=2)或不足自信(b̂=0)。</p>
-<p><strong>关键发现</strong>: 过度自信更稳健!</p>
-<ul>
-<li><strong>不足自信</strong>:
-导致负反馈循环，努力在1和2之间永远循环，无自我确认均衡</li>
-<li><strong>过度自信</strong>:
-导致正反馈循环，最终稳定在努力=0的均衡</li>
-</ul>
-<h3 id="框架设定">框架设定</h3>
-<p><strong>数据生成过程</strong>: 每个时期代理人生成内生数据 - 行动at →
-结果yt ~ Q*(·|at) - 结果取决于行动（内生数据）</p>
-<p><strong>主观模型</strong>: 每个模型θ是预测DGP的有限集合{ Qθ(·|a,ω)
-}</p>
-<p><strong>切换规则</strong>: - 计算贝叶斯因子λt - 如果λt &gt;
-α，切换到竞争模型 - 如果λt &lt; 1/α，切换回来 - α≥1控制切换粘性</p>
-<h3 id="主要结果">主要结果</h3>
-<h4 id="定理1哪些模型可以稳健">定理1：哪些模型可以稳健</h4>
-<p><strong>条件</strong>: α &gt; 1</p>
-<p><strong>等价命题</strong>: (i) 模型θ在某些先验下全局稳健 (ii)
-模型θ在某些先验下局部稳健 (iii) 模型θ存在p-吸收SCE</p>
-<p><strong>关键洞察</strong>:
-全局和局部稳健性是等价的——如果模型对重大范式转换脆弱，对局部变化也脆弱。</p>
-<h4 id="定理2何时模型是稳健的">定理2：何时模型是稳健的</h4>
-<p><strong>条件</strong>:
-模型θ无陷阱（可识别+所有p-吸收SCE是准严格）</p>
-<p><strong>核心概念</strong>: - <strong>一致参数</strong> Cθ:
-存在p-吸收SCE支持的参数 - <strong>先验紧密度</strong>: πθ0(Cθ) ≥ 1/α</p>
-<p><strong>结论</strong>: - 全局稳健 ⟺ 先验紧密度条件满足 - 局部稳健 ⟺
-Cθ ≠ ∅（对所有全支撑先验）</p>
-<h4 id="定理3非粘性切换-α-1">定理3：非粘性切换 (α = 1)</h4>
-<p><strong>结论</strong>: Cθ = Ωθ（全参数一致）才是稳健的</p>
-<p><strong>洞察</strong>: 粘性帮助更多错误模型持续存在</p>
-<h3 id="应用">应用</h3>
-<h4 id="a.-媒体偏见与极化">A. 媒体偏见与极化</h4>
-<p><strong>设定</strong>: - 代理人选择左翼、中间、右翼媒体 -
-真实状态是ωM（中间） - 媒体可能误导代理人</p>
-<p><strong>命题1</strong>: - θ̂在所有先验和切换阈值下全局稳健 -
-θ只在先验充分集中或切换阈值足够高时全局稳健 - θ̂最终以正概率永久替换θ</p>
-<p><strong>政治极化机制</strong>:
-错误模型θ̂因为简单，在数据拟合上表现更好，最终导致持久的政治极化。</p>
-<h4 id="b.-过度与不足自信">B. 过度与不足自信</h4>
-<p><strong>设定</strong>:
-代理人对能力有偏见(b̂)，学习另一个基本因素(ω)</p>
-<p><strong>命题2</strong>: - 过度自信(b̂ &gt; b<em>): 总是局部稳健 -
-不足自信(b̂ &lt; b</em>): 只在某些不连续区间局部稳健</p>
-<p><strong>机制差异</strong>: - 过度自信 → 正反馈 → 收敛到SCE - 不足自信
-→ 负反馈 → 在非SCE行动间振荡</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<p>本文研究了当决策者比较错误设定模型与竞争模型时，哪些模型会持续存在。主要结论:</p>
-<ol type="1">
-<li><strong>稳健性条件</strong>:
-错误设定模型的稳健性取决于两个特征——渐近准确性和先验紧密度</li>
-<li><strong>全局vs局部稳健</strong>:
-在粘性切换下(α&gt;1)两者等价;在非粘性切换下(α=1)只有全集中先验有效</li>
-<li><strong>反直觉发现</strong>:
-配备根深蒂固先验的简单错误模型可以比正确模型更稳健</li>
-<li><strong>应用广泛</strong>:
-从媒体极化到认知偏差,框架提供了预测哪些偏见更持久的工具</li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="文献提及的方向">文献提及的方向</h3>
-<ol type="1">
-<li><strong>最优切换阈值</strong>: 如何平衡I类和II类错误</li>
-<li><strong>持久性概率</strong>: 量化模型被永久采用的可能性</li>
-<li><strong>前瞻性代理人</strong>: 跨模型的前瞻性而非仅模型内</li>
-<li><strong>连续行动空间</strong>: 扩展框架到连续行动</li>
-</ol>
-<h3 id="未来研究思考">未来研究思考</h3>
-<ol type="1">
-<li><strong>政策设计</strong>:
-如果知道某些错误模型更稳健,如何设计干预来对抗它们?</li>
-<li><strong>模型复杂性</strong>:
-复杂模型vs简单模型的权衡是否与本文发现一致?</li>
-<li><strong>异质性学习</strong>:
-不同决策者是否以不同方式应用切换规则?</li>
-</ol>
-<hr>
-<h2 id="学术思考">7. 学术思考</h2>
-<h3 id="核心学术洞察">核心学术洞察</h3>
-<ol type="1">
-<li><p><strong>为什么简单错误模型更稳健?</strong>:
-本文的核心反直觉发现。直觉上,正确模型应该更受欢迎。但错误模型因为简单,先验更集中,而正确模型在每个参数上都可能不一致。</p></li>
-<li><p><strong>粘性切换的双刃剑效应</strong>:
-粘性(α&gt;1)帮助错误模型持续,但也防止因早期噪声过早放弃正确模型。</p></li>
-<li><p><strong>p-吸收性的概念创新</strong>:
-传统SCE只要求均衡存在,不要求可达到性。p-吸收性要求从正概率初始信念可达。</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li>定理1中"局部和全局稳健等价"的证明思路是什么?</li>
-<li>媒体极化应用中的"策略性误报"是如何设计的?</li>
-<li>p-吸收SCE和普通SCE有什么区别?</li>
-<li>错误模型持久性的概率有多高?</li>
-<li>在离散vs连续行动空间中,结论如何变化?</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -2142,148 +2142,6 @@ Moi改革后)，这是否影响校准的可靠性？</p>
       </tags>
   </entry>
   <entry>
-    <title>压低成本：干中学与全球电动汽车电池产业政府政策 — 深度阅读笔记 — Barwick Et Al.</title>
-    <url>/posts/barwick2025/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Drive Down the Cost: Learning by Doing and
-Government Policies in the Global EV Battery Industry</li>
-<li><strong>作者</strong>: Panle Jia Barwick (Wisconsin), Hyuk-Soo Kwon
-(Singapore), Shanjun Li (Cornell), Nahim Zahur (Queens)</li>
-<li><strong>年份</strong>: 2025</li>
-<li><strong>来源</strong>: NBER Working Paper No. 33378</li>
-<li><strong>DOI</strong>: 10.3386/w33378</li>
-</ul>
-<span id="more"></span>
-<hr>
-<hr>
-<h2 id="引言背景和意义">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong> "干中学"（Learning by Doing,
-LBD）是产业经济学和增长理论的经典概念：企业在生产过程中积累经验，进而降低单位生产成本。"Wright's
-Law"（1936年由航空工程师Theodore
-Wright提出）将这一规律量化为"累计产量每翻倍，单位成本下降固定比例"。LBD在半导体、太阳能电池等绿色技术行业均有大量记录。在政策设计上，LBD带来正外部性——当前生产提高了整个行业未来的效率，因此存在补贴当前生产的理由（以纠正动态外部性）。</p>
-<p><strong>研究背景</strong>
-电动汽车（EV）电池成本在2010-2020年间下降了近90%，是过去十年绿色能源技术中最引人注目的成本下降之一。这一变化对全球气候政策目标至关重要——电池成本是EV相对于内燃机车价格劣势的主要来源。全球各国政府为促进EV普及投入了大量补贴（2022年全球EV消费补贴达430亿美元），并通过产业政策（如中国白名单政策、美国IRA本地含量要求）扶持本土电池产业。然而，LBD在多大程度上驱动了成本下降？政府政策通过哪些渠道影响LBD进程？这些问题此前缺乏可信的量化研究。</p>
-<p><strong>作者的问题意识</strong>
-（1）LBD在多大程度上解释了EV电池成本的下降（相对于技术进步、规模经济、原材料成本等其他因素）？（2）LBD如何改变消费者EV补贴的政策效果？（3）中国的"白名单"本地含量要求政策通过LBD对全球EV市场产生了怎样的影响？（4）LBD在全球供应链中产生怎样的跨国溢出效应？</p>
-<p><strong>研究意义</strong>
-本文为绿色技术政策设计提供了直接量化依据：若忽视LBD，政策评估将大幅低估补贴的长期效益；同时揭示了消费端补贴与产业政策的相互作用，对评估美国IRA、中国产业政策的全球影响具有直接参考价值。</p>
-<hr>
-<h2 id="内容及结构论文结构">内容及结构（论文结构）</h2>
-<ol type="1">
-<li><strong>引言</strong>：提出问题，概述主要发现（LBD学习率7.5%，与补贴互补放大效果，跨国溢出效应）。</li>
-<li><strong>数据</strong>：全球13国EV销售数据（2013-2020），电池供应商信息，各国补贴政策。</li>
-<li><strong>需求模型</strong>：异质消费者离散选择模型（BLP类型），估计消费者对EV特性（价格、续航、充电速度等）的偏好。</li>
-<li><strong>供给模型与电池成本恢复</strong>：通过Nash议价模型（上游电池供应商与下游EV生产商之间）推断上下游加成，从而恢复电池成本。</li>
-<li><strong>LBD估计</strong>：用工具变量方法识别LBD学习率，控制内生性（高效企业多生产更多、积累更多经验）。</li>
-<li><strong>反事实政策分析</strong>：（a）评估消费者EV补贴在有无LBD情况下的效果；（b）评估中国白名单政策及其时间安排的影响。</li>
-<li><strong>结论</strong>：总结核心发现及政策含义。</li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>EV电池成本是EV普及的关键障碍，而其90%的成本降幅是过去十年绿色技术领域最显著的成就之一。产业界将这一降幅归因于LBD，但缺乏可信的因果估计：LBD究竟贡献了多少？还是技术进步、规模经济、原材料价格下降等因素更重要？政府大规模补贴政策是否加速了这一进程？</p>
-<h3 id="挑战">挑战</h3>
-<p><strong>挑战一：电池成本不可观测</strong><br>
-电池供应协议是商业机密，无法直接观测到每款EV型号的电池成本。解决方法：通过构建EV生产商与电池供应商之间Nash议价模型，结合观测到的车辆价格和估计的需求弹性，反推上下游加成，进而推断电池成本。</p>
-<p><strong>挑战二：LBD识别的内生性</strong><br>
-企业的累计产量（生产经验，experience）与不可观测的成本冲击相关——成本优势大的企业往往产量更大、经验积累更快。若直接用经验变量回归成本，估计结果会有偏差。<br>
-<strong>工具变量策略</strong>：利用各电池供应商对下游不同国家EV补贴的差异暴露（variation）来构造工具变量。若甲国对某款车型提供慷慨补贴，供应该车型电池的供应商将更快积累经验。这一"补贴暴露"外生地推动了部分供应商的经验积累，从而识别LBD的因果效应。此外，还利用了中国白名单政策（2016-2019年）对电池供应商经验的外生冲击。</p>
-<h3 id="方法">方法</h3>
-<p><strong>需求端</strong>：BLP类型的随机系数离散选择模型，用于估计异质消费者对EV特性（价格、续航、充电功率、品牌等）的偏好，从而估计需求弹性。</p>
-<p><strong>供给端</strong>：Nash议价框架（EV生产商与电池供应商之间的纳什讨价还价），考察同步定价（Simultaneous）、顺序定价（Sequential）和线性定价（Linear
-Pricing）多种供给侧模型，并比较其对成本恢复的稳健性。</p>
-<p><strong>LBD估计方程</strong>（核心）： -
-以电池成本（对数）对累计生产经验（对数）做回归，控制行业整体技术进步、EV整车装配经验、原材料投入成本、规模经济等，并用工具变量处理经验的内生性。
-- 学习率（learning rate）定义为经验每翻倍时成本下降的百分比。</p>
-<p><strong>数据</strong>： -
-全球13国（覆盖&gt;95%全球EV销售）2013-2020年逐车型逐年销量数据（含BEV和PHEV）
-- 电池供应商数据库（植物地点、供应的EV车型列表） -
-各国EV购置补贴数据（金额、起止时间） -
-社会经济变量（收入分布等，用于校准消费者异质性）</p>
-<h3 id="结果">结果</h3>
-<p><strong>核心结果一：LBD学习率为7.5%</strong><br>
-控制行业技术进步、整车装配经验、原材料成本和规模经济后，LBD学习率估计为<strong>7.5%</strong>——即电池生产经验每翻倍，单位成本下降7.5%。该学习率处于文献估计的较低端，但仍具有重要经济意义。在2013-2020年电池总成本降幅中，LBD贡献了<strong>35.5%</strong>，行业技术进步贡献了<strong>39.9%</strong>，其余由整车装配经验、电池化学材料变化、原材料价格和规模经济共同解释。</p>
-<p><strong>核心结果二：LBD大幅放大EV补贴效果</strong><br>
--
-无LBD时，各国补贴估计使2013-2020年全球累计EV销量增加<strong>29.9%</strong>。
--
-同时考虑补贴和LBD时，全球EV销量相比无补贴无LBD基准增加<strong>170%</strong>。
--
-二者的联合效果比各自独立效果之和高出<strong>60%</strong>——说明补贴与LBD具有强互补性。</p>
-<p><strong>核心结果三：消费端补贴产生跨国溢出效应</strong><br>
-EV电池供应链是全球化的（主要集中在中、日、韩三国），一国补贴可通过LBD降低全球电池成本，产生跨国外溢：
--
-美国约131亿美元EV补贴产生了约165亿美元全球福利净增益；美国和加拿大获得其中49%，日韩电池供应商获得28%，中国仅获得3%（因为样本期内中国EV和电池与国际市场贸易有限）。
--
-欧盟约164亿美元补贴产生约116亿美元全球福利增益，欧盟仅获得其中26%（因为欧洲大量进口EV，且采用统一补贴而非有针对性补贴）。</p>
-<p><strong>核心结果四：上游电池供应商仅获得LBD收益的一小部分</strong><br>
-LBD产生的成本降低主要通过价格竞争传递给了EV生产商和最终消费者，而非被电池供应商内部保留——与完全竞争的产业组织逻辑一致。</p>
-<p><strong>政策结果五：中国白名单政策的影响</strong><br>
-中国白名单政策（2016-2019年）将EV补贴限于使用"白名单"国内电池供应商的车辆，为CATL等中国电池企业提供了保护性市场，帮助其积累经验、形成竞争优势。但这一政策具有两面性：
--
-实际实施时间（2016-2019年）对中国电池产业有正面效果（通过加速中国供应商的LBD积累）。
--
-若将该政策延迟5年实施（2021-2024年），由于中国电池企业已通过出口积累足够经验，白名单的保护效果将大幅减弱，且因阻碍全球供应链效率，中国国内福利净效果将转为负值。</p>
-<hr>
-<h2 id="结论conclusion">结论（Conclusion）</h2>
-<p><strong>核心发现</strong>：LBD在EV电池成本下降中发挥了实质性作用（贡献35.5%），但并非唯一因素，行业技术进步同样重要。LBD与消费者补贴之间的强互补性意味着：忽视LBD将大幅低估补贴的长期效益。消费端补贴产生显著的跨国溢出效应，其全球效益往往远超国内效益，这对单国政策评估具有重要启示。中国的产业政策（白名单）在特定历史时机下对国内产业发展有正效果，但若时机不当则可能适得其反。</p>
-<p><strong>对领域的贡献</strong>： 1.
-提出了在无法直接观测上游成本时通过结构性供给模型恢复电池成本的方法论框架；
-2. 构建了全球EV行业的结构性模型，联合识别LBD、需求偏好和政策互动效应；
-3. 量化了EV补贴的动态长期效益，纠正了现有静态评估文献的系统性低估； 4.
-揭示了全球化供应链下单国产业政策的跨境外溢机制。</p>
-<p><strong>政策含义</strong>： -
-EV补贴的动态效益远大于静态效益，政策评估应纳入LBD渠道； -
-美国IRA的本地含量要求在短期内可能阻碍全球LBD进程，长期效果取决于本土供应链的学习速度；
--
-政策时机（timing）至关重要：早期的保护性产业政策（如中国白名单）可能在企业尚未具备竞争力时发挥关键作用，但过晚则适得其反。</p>
-<hr>
-<h2 id="未来研究方向future-work">未来研究方向（Future work）</h2>
-<p><strong>论文中明确提及的方向</strong>： 1.
-评估美国IRA本地含量要求对全球LBD和EV普及的长期影响； 2.
-研究上游供应商如何将LBD收益分配给劳动者和股东（分配效应）； 3.
-将分析拓展到EV以外的绿色技术（如太阳能、储能电池等）。</p>
-<p><strong>从论文引申的研究方向</strong>： 1.
-内外部LBD的分解：企业内部的知识积累vs.跨企业的知识溢出各贡献多少？这对政策选择（补贴全行业
-vs. 扶持龙头企业）有重大影响； 2.
-动态寡头垄断框架下的战略性LBD——企业是否会为了积累经验而战略性定低价（forward-looking
-pricing）； 3.
-将模型扩展至2020年后：IRA颁布后（2022年），本地含量要求如何重塑全球电池供应链的LBD路径；
-4.
-LBD与研发投入的互动：研发投入（技术进步）与生产经验（LBD）是否互补，影响政策组合的最优设计。</p>
-<h2 id="学术思考">学术思考</h2>
-<ol type="1">
-<li><p><strong>电池成本恢复的模型依赖性</strong>：电池成本无法直接观测，需通过结构模型推断。不同供给侧假设（同步
-vs.
-顺序议价）是否会产生实质性不同的学习率估计？作者如何验证这些替代模型的可信度？</p></li>
-<li><p><strong>工具变量的有效性</strong>：利用"供应商对下游不同国家补贴的差异暴露"构造IV，这一策略要求EV补贴变动对电池成本没有直接效应（排他性限制）。若补贴政策同时改变了原材料需求（如锂、镍），可能违反这一假设——如何检验？</p></li>
-<li><p><strong>LBD的溢出结构</strong>：论文将LBD建模为企业层面的内部学习。但实际上，工程师流动、专利公开等机制可能使LBD在企业间溢出。内外部LBD的混淆对学习率估计和政策评估会产生怎样的影响？</p></li>
-<li><p><strong>本地含量要求的动态合理性</strong>：中国白名单实际上是保护主义政策，但本文发现在特定时机下它对国内产业有正面作用。这是否意味着"战略性贸易政策"在绿色技术的早期发展阶段具有动态合理性？如何区分"促进LBD积累"的合理保护与一般意义上的低效保护主义？</p></li>
-<li><p><strong>样本期外推的风险</strong>：研究覆盖2013-2020年，但EV市场在2020年后经历了爆炸式增长（中国BEV渗透率超过30%）。LBD在高渗透率阶段是否会放缓？本文的政策结论对IRA（2022年后）是否仍然适用？</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol type="1">
-<li>"学习率7.5%"是怎么估计出来的？工具变量策略的具体构造方法是什么？</li>
-<li>为什么上游电池供应商只获得了LBD收益的"一小部分"？这是市场结构（竞争激烈）的结果，还是谈判权力（bargaining
-power）不对等的结果？</li>
-<li>美国IRA的本地含量要求是否会减慢全球LBD进程、推高全球EV价格？本文的框架如何用于评估IRA？</li>
-<li>中国白名单政策在实际实施时间下对全球（非中国）消费者的福利影响是正面还是负面？</li>
-<li>如果未来电池技术路线（如固态电池）发生重大转变，现有的LBD积累是否会"归零"？政策设计如何应对这种技术不确定性？</li>
-<li>论文的供给侧模型（Nash议价）对最终结论的敏感性如何？若改用更简单的加成定价模型，学习率估计会有多大变化？</li>
-<li>为什么中国在美国补贴的全球福利中只获得3%？这是否意味着美国的补贴实际上是在补贴日韩企业而非中国竞争对手？</li>
-</ol>
-<hr>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>深陷险境？基础设施投资与沿海城市的持久性 — 深度阅读笔记 — Balboni</title>
     <url>/posts/balboni2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -2632,6 +2490,148 @@ power）不对等的结果？</li>
 <p>本文假设国内迁移是自由的，但实际的户口制度、护照限制等是否影响迁移对气候风险的调整速度？如何将政策约束纳入模型？</p>
 <hr>
 <p><em>本分析报告严格遵循精读文献skill规定的八部分结构完成，旨在为初学者提供全面、易懂的论文逻辑梳理与学术要点解读。</em></p>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>压低成本：干中学与全球电动汽车电池产业政府政策 — 深度阅读笔记 — Barwick Et Al.</title>
+    <url>/posts/barwick2025/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Drive Down the Cost: Learning by Doing and
+Government Policies in the Global EV Battery Industry</li>
+<li><strong>作者</strong>: Panle Jia Barwick (Wisconsin), Hyuk-Soo Kwon
+(Singapore), Shanjun Li (Cornell), Nahim Zahur (Queens)</li>
+<li><strong>年份</strong>: 2025</li>
+<li><strong>来源</strong>: NBER Working Paper No. 33378</li>
+<li><strong>DOI</strong>: 10.3386/w33378</li>
+</ul>
+<span id="more"></span>
+<hr>
+<hr>
+<h2 id="引言背景和意义">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong> "干中学"（Learning by Doing,
+LBD）是产业经济学和增长理论的经典概念：企业在生产过程中积累经验，进而降低单位生产成本。"Wright's
+Law"（1936年由航空工程师Theodore
+Wright提出）将这一规律量化为"累计产量每翻倍，单位成本下降固定比例"。LBD在半导体、太阳能电池等绿色技术行业均有大量记录。在政策设计上，LBD带来正外部性——当前生产提高了整个行业未来的效率，因此存在补贴当前生产的理由（以纠正动态外部性）。</p>
+<p><strong>研究背景</strong>
+电动汽车（EV）电池成本在2010-2020年间下降了近90%，是过去十年绿色能源技术中最引人注目的成本下降之一。这一变化对全球气候政策目标至关重要——电池成本是EV相对于内燃机车价格劣势的主要来源。全球各国政府为促进EV普及投入了大量补贴（2022年全球EV消费补贴达430亿美元），并通过产业政策（如中国白名单政策、美国IRA本地含量要求）扶持本土电池产业。然而，LBD在多大程度上驱动了成本下降？政府政策通过哪些渠道影响LBD进程？这些问题此前缺乏可信的量化研究。</p>
+<p><strong>作者的问题意识</strong>
+（1）LBD在多大程度上解释了EV电池成本的下降（相对于技术进步、规模经济、原材料成本等其他因素）？（2）LBD如何改变消费者EV补贴的政策效果？（3）中国的"白名单"本地含量要求政策通过LBD对全球EV市场产生了怎样的影响？（4）LBD在全球供应链中产生怎样的跨国溢出效应？</p>
+<p><strong>研究意义</strong>
+本文为绿色技术政策设计提供了直接量化依据：若忽视LBD，政策评估将大幅低估补贴的长期效益；同时揭示了消费端补贴与产业政策的相互作用，对评估美国IRA、中国产业政策的全球影响具有直接参考价值。</p>
+<hr>
+<h2 id="内容及结构论文结构">内容及结构（论文结构）</h2>
+<ol type="1">
+<li><strong>引言</strong>：提出问题，概述主要发现（LBD学习率7.5%，与补贴互补放大效果，跨国溢出效应）。</li>
+<li><strong>数据</strong>：全球13国EV销售数据（2013-2020），电池供应商信息，各国补贴政策。</li>
+<li><strong>需求模型</strong>：异质消费者离散选择模型（BLP类型），估计消费者对EV特性（价格、续航、充电速度等）的偏好。</li>
+<li><strong>供给模型与电池成本恢复</strong>：通过Nash议价模型（上游电池供应商与下游EV生产商之间）推断上下游加成，从而恢复电池成本。</li>
+<li><strong>LBD估计</strong>：用工具变量方法识别LBD学习率，控制内生性（高效企业多生产更多、积累更多经验）。</li>
+<li><strong>反事实政策分析</strong>：（a）评估消费者EV补贴在有无LBD情况下的效果；（b）评估中国白名单政策及其时间安排的影响。</li>
+<li><strong>结论</strong>：总结核心发现及政策含义。</li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>EV电池成本是EV普及的关键障碍，而其90%的成本降幅是过去十年绿色技术领域最显著的成就之一。产业界将这一降幅归因于LBD，但缺乏可信的因果估计：LBD究竟贡献了多少？还是技术进步、规模经济、原材料价格下降等因素更重要？政府大规模补贴政策是否加速了这一进程？</p>
+<h3 id="挑战">挑战</h3>
+<p><strong>挑战一：电池成本不可观测</strong><br>
+电池供应协议是商业机密，无法直接观测到每款EV型号的电池成本。解决方法：通过构建EV生产商与电池供应商之间Nash议价模型，结合观测到的车辆价格和估计的需求弹性，反推上下游加成，进而推断电池成本。</p>
+<p><strong>挑战二：LBD识别的内生性</strong><br>
+企业的累计产量（生产经验，experience）与不可观测的成本冲击相关——成本优势大的企业往往产量更大、经验积累更快。若直接用经验变量回归成本，估计结果会有偏差。<br>
+<strong>工具变量策略</strong>：利用各电池供应商对下游不同国家EV补贴的差异暴露（variation）来构造工具变量。若甲国对某款车型提供慷慨补贴，供应该车型电池的供应商将更快积累经验。这一"补贴暴露"外生地推动了部分供应商的经验积累，从而识别LBD的因果效应。此外，还利用了中国白名单政策（2016-2019年）对电池供应商经验的外生冲击。</p>
+<h3 id="方法">方法</h3>
+<p><strong>需求端</strong>：BLP类型的随机系数离散选择模型，用于估计异质消费者对EV特性（价格、续航、充电功率、品牌等）的偏好，从而估计需求弹性。</p>
+<p><strong>供给端</strong>：Nash议价框架（EV生产商与电池供应商之间的纳什讨价还价），考察同步定价（Simultaneous）、顺序定价（Sequential）和线性定价（Linear
+Pricing）多种供给侧模型，并比较其对成本恢复的稳健性。</p>
+<p><strong>LBD估计方程</strong>（核心）： -
+以电池成本（对数）对累计生产经验（对数）做回归，控制行业整体技术进步、EV整车装配经验、原材料投入成本、规模经济等，并用工具变量处理经验的内生性。
+- 学习率（learning rate）定义为经验每翻倍时成本下降的百分比。</p>
+<p><strong>数据</strong>： -
+全球13国（覆盖&gt;95%全球EV销售）2013-2020年逐车型逐年销量数据（含BEV和PHEV）
+- 电池供应商数据库（植物地点、供应的EV车型列表） -
+各国EV购置补贴数据（金额、起止时间） -
+社会经济变量（收入分布等，用于校准消费者异质性）</p>
+<h3 id="结果">结果</h3>
+<p><strong>核心结果一：LBD学习率为7.5%</strong><br>
+控制行业技术进步、整车装配经验、原材料成本和规模经济后，LBD学习率估计为<strong>7.5%</strong>——即电池生产经验每翻倍，单位成本下降7.5%。该学习率处于文献估计的较低端，但仍具有重要经济意义。在2013-2020年电池总成本降幅中，LBD贡献了<strong>35.5%</strong>，行业技术进步贡献了<strong>39.9%</strong>，其余由整车装配经验、电池化学材料变化、原材料价格和规模经济共同解释。</p>
+<p><strong>核心结果二：LBD大幅放大EV补贴效果</strong><br>
+-
+无LBD时，各国补贴估计使2013-2020年全球累计EV销量增加<strong>29.9%</strong>。
+-
+同时考虑补贴和LBD时，全球EV销量相比无补贴无LBD基准增加<strong>170%</strong>。
+-
+二者的联合效果比各自独立效果之和高出<strong>60%</strong>——说明补贴与LBD具有强互补性。</p>
+<p><strong>核心结果三：消费端补贴产生跨国溢出效应</strong><br>
+EV电池供应链是全球化的（主要集中在中、日、韩三国），一国补贴可通过LBD降低全球电池成本，产生跨国外溢：
+-
+美国约131亿美元EV补贴产生了约165亿美元全球福利净增益；美国和加拿大获得其中49%，日韩电池供应商获得28%，中国仅获得3%（因为样本期内中国EV和电池与国际市场贸易有限）。
+-
+欧盟约164亿美元补贴产生约116亿美元全球福利增益，欧盟仅获得其中26%（因为欧洲大量进口EV，且采用统一补贴而非有针对性补贴）。</p>
+<p><strong>核心结果四：上游电池供应商仅获得LBD收益的一小部分</strong><br>
+LBD产生的成本降低主要通过价格竞争传递给了EV生产商和最终消费者，而非被电池供应商内部保留——与完全竞争的产业组织逻辑一致。</p>
+<p><strong>政策结果五：中国白名单政策的影响</strong><br>
+中国白名单政策（2016-2019年）将EV补贴限于使用"白名单"国内电池供应商的车辆，为CATL等中国电池企业提供了保护性市场，帮助其积累经验、形成竞争优势。但这一政策具有两面性：
+-
+实际实施时间（2016-2019年）对中国电池产业有正面效果（通过加速中国供应商的LBD积累）。
+-
+若将该政策延迟5年实施（2021-2024年），由于中国电池企业已通过出口积累足够经验，白名单的保护效果将大幅减弱，且因阻碍全球供应链效率，中国国内福利净效果将转为负值。</p>
+<hr>
+<h2 id="结论conclusion">结论（Conclusion）</h2>
+<p><strong>核心发现</strong>：LBD在EV电池成本下降中发挥了实质性作用（贡献35.5%），但并非唯一因素，行业技术进步同样重要。LBD与消费者补贴之间的强互补性意味着：忽视LBD将大幅低估补贴的长期效益。消费端补贴产生显著的跨国溢出效应，其全球效益往往远超国内效益，这对单国政策评估具有重要启示。中国的产业政策（白名单）在特定历史时机下对国内产业发展有正效果，但若时机不当则可能适得其反。</p>
+<p><strong>对领域的贡献</strong>： 1.
+提出了在无法直接观测上游成本时通过结构性供给模型恢复电池成本的方法论框架；
+2. 构建了全球EV行业的结构性模型，联合识别LBD、需求偏好和政策互动效应；
+3. 量化了EV补贴的动态长期效益，纠正了现有静态评估文献的系统性低估； 4.
+揭示了全球化供应链下单国产业政策的跨境外溢机制。</p>
+<p><strong>政策含义</strong>： -
+EV补贴的动态效益远大于静态效益，政策评估应纳入LBD渠道； -
+美国IRA的本地含量要求在短期内可能阻碍全球LBD进程，长期效果取决于本土供应链的学习速度；
+-
+政策时机（timing）至关重要：早期的保护性产业政策（如中国白名单）可能在企业尚未具备竞争力时发挥关键作用，但过晚则适得其反。</p>
+<hr>
+<h2 id="未来研究方向future-work">未来研究方向（Future work）</h2>
+<p><strong>论文中明确提及的方向</strong>： 1.
+评估美国IRA本地含量要求对全球LBD和EV普及的长期影响； 2.
+研究上游供应商如何将LBD收益分配给劳动者和股东（分配效应）； 3.
+将分析拓展到EV以外的绿色技术（如太阳能、储能电池等）。</p>
+<p><strong>从论文引申的研究方向</strong>： 1.
+内外部LBD的分解：企业内部的知识积累vs.跨企业的知识溢出各贡献多少？这对政策选择（补贴全行业
+vs. 扶持龙头企业）有重大影响； 2.
+动态寡头垄断框架下的战略性LBD——企业是否会为了积累经验而战略性定低价（forward-looking
+pricing）； 3.
+将模型扩展至2020年后：IRA颁布后（2022年），本地含量要求如何重塑全球电池供应链的LBD路径；
+4.
+LBD与研发投入的互动：研发投入（技术进步）与生产经验（LBD）是否互补，影响政策组合的最优设计。</p>
+<h2 id="学术思考">学术思考</h2>
+<ol type="1">
+<li><p><strong>电池成本恢复的模型依赖性</strong>：电池成本无法直接观测，需通过结构模型推断。不同供给侧假设（同步
+vs.
+顺序议价）是否会产生实质性不同的学习率估计？作者如何验证这些替代模型的可信度？</p></li>
+<li><p><strong>工具变量的有效性</strong>：利用"供应商对下游不同国家补贴的差异暴露"构造IV，这一策略要求EV补贴变动对电池成本没有直接效应（排他性限制）。若补贴政策同时改变了原材料需求（如锂、镍），可能违反这一假设——如何检验？</p></li>
+<li><p><strong>LBD的溢出结构</strong>：论文将LBD建模为企业层面的内部学习。但实际上，工程师流动、专利公开等机制可能使LBD在企业间溢出。内外部LBD的混淆对学习率估计和政策评估会产生怎样的影响？</p></li>
+<li><p><strong>本地含量要求的动态合理性</strong>：中国白名单实际上是保护主义政策，但本文发现在特定时机下它对国内产业有正面作用。这是否意味着"战略性贸易政策"在绿色技术的早期发展阶段具有动态合理性？如何区分"促进LBD积累"的合理保护与一般意义上的低效保护主义？</p></li>
+<li><p><strong>样本期外推的风险</strong>：研究覆盖2013-2020年，但EV市场在2020年后经历了爆炸式增长（中国BEV渗透率超过30%）。LBD在高渗透率阶段是否会放缓？本文的政策结论对IRA（2022年后）是否仍然适用？</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol type="1">
+<li>"学习率7.5%"是怎么估计出来的？工具变量策略的具体构造方法是什么？</li>
+<li>为什么上游电池供应商只获得了LBD收益的"一小部分"？这是市场结构（竞争激烈）的结果，还是谈判权力（bargaining
+power）不对等的结果？</li>
+<li>美国IRA的本地含量要求是否会减慢全球LBD进程、推高全球EV价格？本文的框架如何用于评估IRA？</li>
+<li>中国白名单政策在实际实施时间下对全球（非中国）消费者的福利影响是正面还是负面？</li>
+<li>如果未来电池技术路线（如固态电池）发生重大转变，现有的LBD积累是否会"归零"？政策设计如何应对这种技术不确定性？</li>
+<li>论文的供给侧模型（Nash议价）对最终结论的敏感性如何？若改用更简单的加成定价模型，学习率估计会有多大变化？</li>
+<li>为什么中国在美国补贴的全球福利中只获得3%？这是否意味着美国的补贴实际上是在补贴日韩企业而非中国竞争对手？</li>
+</ol>
+<hr>
 ]]></content>
       <categories>
         <category>有趣的文章</category>
@@ -3930,6 +3930,56 @@ Instruments论文的深度笔记,由Claude AI辅助生成.</em></p>
       </tags>
   </entry>
   <entry>
+    <title>大城市人口增长速度🦚</title>
+    <url>/posts/15523/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
+<center>
+上图即为最终效果
+</center>
+<h2 id="下载数据">下载数据</h2>
+<p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录.
+</p><figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="加载r包">加载R包</h2>
+<p>需要的R包如下所示.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
+<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<ol type="1">
+<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
+<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon,
+Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
+<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
+<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
+</ol>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
+<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.
+使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="绘图">绘图</h2>
+<p>代码如下,图见上文.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>绘图</category>
+        <category>map&amp;sf</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Generative AI at Work — 深度分析 — Brynjolfsson Et Al.</title>
     <url>/posts/bryn2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -4201,56 +4251,6 @@ rot)的风险?</p></li>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大城市人口增长速度🦚</title>
-    <url>/posts/15523/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
-<center>
-上图即为最终效果
-</center>
-<h2 id="下载数据">下载数据</h2>
-<p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录.
-</p><figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<h2 id="加载r包">加载R包</h2>
-<p>需要的R包如下所示.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
-<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<ol type="1">
-<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
-<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon,
-Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
-<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
-<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
-</ol>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
-<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.
-使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="绘图">绘图</h2>
-<p>代码如下,图见上文.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>绘图</category>
-        <category>map&amp;sf</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
       </tags>
   </entry>
   <entry>
@@ -5939,6 +5939,188 @@ NJ快餐业研究的关系</strong>:为什么NJ快餐业研究发现了正效应
       </tags>
   </entry>
   <entry>
+    <title>地方政府竞争压力、行业同质性与商会的政策参与空间 — 深度阅读笔记 — 陈超 Et Al.</title>
+    <url>/posts/chen2021chamber/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: 地方政府竞争压力、行业同质性与商会的政策参与空间——基于昆山与厦门的比较分析<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/5V3F3QCY/陈超 等 - 2021 - 地方政府竞争压力、行业同质性与商会的政策参与空间——基于昆山与厦门的比较分析.pdf<br>
+Zotero Item Key:: P56CV7CK</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+政商关系是政治经济学的核心议题。在中国政治体制下，商会（业界协会）作为政府与市场之间的中间组织，既是企业利益的代表，也是国家管理社会的工具。已有研究从三个视角分析商会政策参与：（1）国家主义视角——国家的制度结构与政策目标决定参与空间；（2）组织视角——商会内部的规模差异、专业化程度影响集体行动能力；（3）文化视角——官商之间的"关系"网络影响参与渠道。商会影响政策的渠道分两类：制度化渠道（如政协、政府咨询委员会）和非制度化渠道（如商会沙龙、茶话会、政策宣讲会）。</p>
+<p><strong>研究背景</strong><br>
+改革开放以来，台资、港资等外资商会（特别是台资企业协会）是中国地方外资引进的重要组织载体。然而，同样是台资商会，在不同地方（如昆山 vs. 厦门）的政策参与情况差异显著；而同一地方的商会在不同时期（如昆山台协1990年代 vs. 2000年代中后期）也存在明显的历时性变化。这种差异既不能完全用国家结构，也不能仅用商会组织特性来解释。</p>
+<p><strong>作者的问题意识</strong><br>
+为什么不同地方相同类型的外资商会政策参与会有重大差异？为什么外资商会在相同地方不同时期的政策参与也存在显著区别？作者认为"地方政府竞争压力"与"商会内中小企业行业同质性"是两个被既有文献忽视的关键解释变量。</p>
+<p><strong>研究意义</strong><br>
+提供了一个整合地域特征（政府行为）与行业特征（商会能力）的分析框架；填补了外资商会政治参与研究的空白；展示了控制性比较+案例内历时比较相结合的研究设计价值；对理解中国地方政商关系的形成机制和营商环境建设具有重要启示。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：提出研究问题，概述论文框架。</li>
+<li><strong>文献回顾</strong>：国家主义、组织、文化三视角的既有研究及其局限。</li>
+<li><strong>理论框架</strong>：提出"政策参与空间"概念，构建二维分析框架（竞争压力×行业同质性），推导四种参与空间类型。</li>
+<li><strong>研究方法</strong>：变量测量、案例选取与控制性比较设计。</li>
+<li><strong>昆山台协会</strong>：从开放型（台协I）到商会主导有限开放型（台协II）的历时性变化。</li>
+<li><strong>厦门台协会</strong>：从封闭型（台协I）到政府主导有限开放型（台协II）的历时性变化。</li>
+<li><strong>结论</strong>：比较研究发现的综合与政策启示。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>1990年代以来，昆山和厦门都是台资聚集的重要城市，但两地台协会的政策参与空间截然不同，且各自内部都经历了历时性变化。对这一现象的解释，需要一个能够同时处理"跨地区差异"和"同一地区历时差异"的分析框架。</p>
+<h3 id="挑战">挑战</h3>
+<p>既有三大视角的共同局限：国家主义擅长解释共时性差异，但无法解释历时性变化；组织视角和文化视角可解释共时差异，但同样对历时变化解释乏力。此外，现有研究极少以外资商会（而非民营商会）为研究对象。</p>
+<h3 id="理论框架">理论框架</h3>
+<p><strong>核心概念：政策参与空间</strong><br>
+商会政策参与渠道分两类：</p>
+<ul>
+<li><strong>制度化渠道</strong>：政府主动开放（如政府工作会议、台商座谈会、政协参与）</li>
+<li><strong>非制度化渠道</strong>：商会自行拓展（如商会沙龙、联谊活动、慈善会结网）</li>
+</ul>
+<p>四种政策参与空间类型（依据两个自变量的高低组合）：</p>
+<table>
+<thead>
+<tr>
+<th>地方竞争压力</th>
+<th>行业同质性</th>
+<th>政策参与空间</th>
+<th>代表案例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>大</td>
+<td>高</td>
+<td><strong>开放型</strong></td>
+<td>昆山台协I</td>
+</tr>
+<tr>
+<td>小</td>
+<td>高</td>
+<td><strong>商会主导有限开放型</strong></td>
+<td>昆山台协II</td>
+</tr>
+<tr>
+<td>大</td>
+<td>低</td>
+<td><strong>政府主导有限开放型</strong></td>
+<td>厦门台协II</td>
+</tr>
+<tr>
+<td>小</td>
+<td>低</td>
+<td><strong>封闭型</strong></td>
+<td>厦门台协I</td>
+</tr>
+</tbody>
+</table>
+<p><strong>机制一：地方竞争压力 → 制度化参与渠道</strong><br>
+当地方政府面临招商引资竞争压力时（晋升锦标赛逻辑下的激励），为解决政府与企业间的信息不对称、留住外资，政府有意愿主动开放制度化的参与渠道（政策咨询、听证、定期座谈）。竞争压力越大，渠道越多。</p>
+<p><strong>机制二：中小企业行业同质性 → 非制度化参与渠道</strong><br>
+商会中小企业是主体，行业分布越同质（同一行业集中），利益协调越容易，集体行动能力越强，商会越能够自主创造非制度化渠道（活动策划、关系网络建设）。行业异质性越高，集体行动困境越难克服，非制度化渠道越稀缺。</p>
+<p><strong>变量测量</strong>：</p>
+<ul>
+<li>地方政府竞争压力：三个指标——GDP增速相对位置、实际利用外资相对位置、招商引资相对优势（各赋值0/0.5/1）</li>
+<li>行业同质性：基于1998/2008/2013年中国工业企业数据库计算各地区台资企业行业集中度</li>
+</ul>
+<h3 id="案例分析">案例分析</h3>
+<p><strong>昆山台协I（1990年代至2000年代初）：开放型</strong></p>
+<ul>
+<li>背景：1980年代昆山经济落后，被称为苏州"小八子"/“小六子”，发展压力极大</li>
+<li>地方政府采取"以软补硬"战略：向台协开放政府工作会议、政协讨论会、外商听证会；建立服务受理中心，邀请台协代表担任行风监督员</li>
+<li>昆山台资企业以轻工业（44%）+装备制造业（25%）为主，行业集中度高</li>
+<li>台协自主创造大量非制度化渠道（圣诞/中秋联谊、慈善游园、妇幼慈善会活动），结成政府部门关系网络</li>
+</ul>
+<p><strong>昆山台协II（2000年代中至2017年）：商会主导有限开放型</strong></p>
+<ul>
+<li>背景：2004年后昆山长期占据全国百强县第一，招商引资遥遥领先，竞争压力大幅下降</li>
+<li>政府角色从"服务配合型"转向"发展引领型"——关闭了多数制度化渠道，与台协直接接触的官员从书记/市长降格为台办人员</li>
+<li>台资企业产业结构调整（电子+装备制造业，合计&gt;60%），行业同质性仍高</li>
+<li>台协主动拓展新非制度化渠道：与本地商会建立组织联结（昆台工商协青会）、吸纳退休党政干部加入协会</li>
+</ul>
+<p><strong>厦门台协I（1990年代至2000年代初）：封闭型</strong></p>
+<ul>
+<li>背景：厦门坐享经济特区政策优势，GDP增速和外资利用长期领先泉州/漳州，政府无竞争压力</li>
+<li>政府不主动开放制度化渠道，与台商互动停留在礼仪性层面</li>
+<li>厦门台资企业行业分布高度异质（涵盖电子、化工、纺织、食品等多行业），集体行动能力弱</li>
+<li>结果：两类渠道均稀缺，政策参与空间封闭</li>
+</ul>
+<p><strong>厦门台协II（2000年代中至2017年）：政府主导有限开放型</strong></p>
+<ul>
+<li>背景：2007年后漳州/泉州GDP增速超过厦门；2009年厦门实际利用外资甚至被泉州反超，当地官员产生危机感（“以往说’厦漳泉’，现在是不是要改成’漳泉厦’了”）</li>
+<li>竞争压力上升，政府开始主动开放制度化参与渠道（各类台商座谈会）</li>
+<li>厦门台资企业行业同质性仍低（多行业分布格局未根本改变），商会集体行动能力依然弱</li>
+<li>结果：制度化渠道增多，但非制度化渠道仍稀缺→政府主导的有限开放型</li>
+</ul>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<p><strong>核心发现</strong>：地方政府竞争压力与商会内中小企业行业同质性是塑造外资商会政策参与空间的两个关键变量。二者的不同取值组合产生了四种政策参与空间类型，并能够同时解释跨地区共时差异和同一地区历时差异。四个案例（昆山/厦门×两个时期）的比较分析均与理论预期一致。</p>
+<p><strong>对领域的贡献</strong>：</p>
+<ol>
+<li>提供了一个整合地域特征与行业特征的新分析视角，弥补了既有国家主义、组织、文化三视角的解释不足；</li>
+<li>以外资商会（台资企业协会）为研究对象，拓展了商会政治参与研究的边界；</li>
+<li>将跨案例比较与案例内历时比较相结合的研究设计，为研究同类问题提供了方法论参考。</li>
+</ol>
+<p><strong>政策含义</strong>：</p>
+<ul>
+<li>营商环境改善的关键在于培育地方政府的竞争意识——地方政府只有在竞争压力下才会主动开放政策参与渠道；</li>
+<li>对中国来说，减少行政垄断、打破地方保护，对于维持地方之间的良性竞争至关重要；</li>
+<li>外资商会应注重培育行业内部的同质性集体行动能力，而非单纯依赖个别大企业的政治关联。</li>
+</ul>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文中提及的方向</strong>：</p>
+<ol>
+<li>本文聚焦外资商会，未来可扩展至民营商会，检验理论框架的适用性；</li>
+<li>需要更多案例或大样本数据验证理论框架的普遍性。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li>竞争压力的"动态"问题：当一个地区从竞争劣势转为优势（如昆山），政府对商会的态度从开放转向封闭是否存在路径依赖？已建立的制度化渠道是否更难关闭（沉没成本）？</li>
+<li>行业同质性的内生性：行业结构是否本身受到地方政府政策的影响？如果竞争压力高的地方吸引了更多同质行业的企业（比如昆山专注电子制造），那么行业同质性可能部分是地方竞争压力的结果，而非独立自变量；</li>
+<li>国家层面的制度变化：本文暗示了地方政府竞争是商会政策参与的关键动力，但随着2013年以来"放管服"改革深化，国家层面主动推进政务公开，制度化参与渠道的形成是否越来越受中央政策驱动，而非地方竞争？</li>
+<li>比较政治学视野：中国外资商会参与政策制定的模式与东南亚、中东欧等转型经济体有何异同？竞争压力和行业同质性的逻辑是否在这些地区也成立？</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>两个自变量的交互效应</strong>：理论框架处理的是两个自变量的组合效应，但文中隐含的是线性的"各自独立作用"逻辑。竞争压力高的地方，是否也会因为吸引了更多同质企业而产生更高的行业同质性？如果两个自变量之间存在正相关（内生性），四种类型的组合在现实中可能不均等分布，也会影响理论的可推广性。</p>
+</li>
+<li>
+<p><strong>因果方向的识别</strong>：文章主要用过程追踪进行机制验证。但"昆山的高竞争→开放渠道"究竟是政府主动"开放"还是台商的"推动"引发的？如果台商本来就具有很强的集体行动能力（来自行业同质性），那他们是否也在主动"推"政府开放渠道？机制的方向可能是双向的。</p>
+</li>
+<li>
+<p><strong>地方政府的策略性</strong>：文章假设地方官员在竞争压力下会"合理地"选择开放政策渠道以吸引外资。但官员也有保持政策主导权、维护寻租空间的激励——对某些腐败官员而言，制度不透明、渠道封闭可能是有利的。为什么竞争压力总能胜过这种"封闭激励"？</p>
+</li>
+<li>
+<p><strong>外资商会的特殊性</strong>：本文聚焦台资企业协会，这一群体具有特殊性——台商与大陆政府之间有地缘政治背景下的特殊关系，台办这一专门机构的存在也使台资商会与普通民营商会有根本不同。理论框架推广到一般民营商会时，需要验证国家是否会对普通民营企业开放同样的制度化渠道。</p>
+</li>
+<li>
+<p><strong>测量问题</strong>：竞争压力的测量用GDP增速相对位置和外资利用绝对量的相对位置，这些指标容易获取但较为粗糙。如何控制经济周期（金融危机）对增速的影响，以及绝对量vs.相对量的混淆，是值得关注的测量效度问题。</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>晋升锦标赛理论（周黎安）有哪些最新的实证挑战（如近年文献质疑了GDP绩效与晋升的相关性）？这是否削弱了本文的理论基础？</li>
+<li>商会的制度化参与渠道和非制度化参与渠道各自在实践中如何运作？哪种渠道对政策结果的影响更大？</li>
+<li>如果将同样的分析框架用于民营商会（如浙商总会、广东工商联），两个自变量的效应是否稳健？</li>
+<li>本文使用的中国工业企业数据库（1998/2008/2013年）来测量行业同质性，这一数据的代表性和覆盖范围有什么局限？</li>
+<li>文章提到厦门坐享政策优势却出现封闭型参与空间，这是否意味着"过度"的政策优惠反而抑制了地方政府提升营商环境的动力——这一"惰化效应"在中国政策实践中有多普遍？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>&lt;玉米与人口&gt;深度阅读笔记 — Chen &amp; Kung</title>
     <url>/posts/chen2016/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -6259,182 +6441,212 @@ Issue 1, pp. 71-99</li>
       </tags>
   </entry>
   <entry>
-    <title>地方政府竞争压力、行业同质性与商会的政策参与空间 — 深度阅读笔记 — 陈超 Et Al.</title>
-    <url>/posts/chen2021chamber/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: 地方政府竞争压力、行业同质性与商会的政策参与空间——基于昆山与厦门的比较分析<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/5V3F3QCY/陈超 等 - 2021 - 地方政府竞争压力、行业同质性与商会的政策参与空间——基于昆山与厦门的比较分析.pdf<br>
-Zotero Item Key:: P56CV7CK</p>
-<hr>
+    <title>零和思维与美国政治分歧的根源 — 深度阅读笔记 — Chinoy, Nunn, Sequeira &amp; Stantcheva</title>
+    <url>/posts/chinoy2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Zero-Sum Thinking and the Roots of U.S.
+Political Differences</li>
+<li><strong>作者</strong>: Sahil Chinoy (Harvard), Nathan Nunn (UBC
+&amp; CIFAR), Sandra Sequeira (LSE), Stefanie Stantcheva (Harvard)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review</li>
+<li><strong>DOI</strong>: 10.1257/aer.20240692</li>
+<li><strong>难度评估</strong>: 高 -
+需要文化经济学、政治经济学、计量经济学基础</li>
+</ul>
 <span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-政商关系是政治经济学的核心议题。在中国政治体制下，商会（业界协会）作为政府与市场之间的中间组织，既是企业利益的代表，也是国家管理社会的工具。已有研究从三个视角分析商会政策参与：（1）国家主义视角——国家的制度结构与政策目标决定参与空间；（2）组织视角——商会内部的规模差异、专业化程度影响集体行动能力；（3）文化视角——官商之间的"关系"网络影响参与渠道。商会影响政策的渠道分两类：制度化渠道（如政协、政府咨询委员会）和非制度化渠道（如商会沙龙、茶话会、政策宣讲会）。</p>
-<p><strong>研究背景</strong><br>
-改革开放以来，台资、港资等外资商会（特别是台资企业协会）是中国地方外资引进的重要组织载体。然而，同样是台资商会，在不同地方（如昆山 vs. 厦门）的政策参与情况差异显著；而同一地方的商会在不同时期（如昆山台协1990年代 vs. 2000年代中后期）也存在明显的历时性变化。这种差异既不能完全用国家结构，也不能仅用商会组织特性来解释。</p>
-<p><strong>作者的问题意识</strong><br>
-为什么不同地方相同类型的外资商会政策参与会有重大差异？为什么外资商会在相同地方不同时期的政策参与也存在显著区别？作者认为"地方政府竞争压力"与"商会内中小企业行业同质性"是两个被既有文献忽视的关键解释变量。</p>
-<p><strong>研究意义</strong><br>
-提供了一个整合地域特征（政府行为）与行业特征（商会能力）的分析框架；填补了外资商会政治参与研究的空白；展示了控制性比较+案例内历时比较相结合的研究设计价值；对理解中国地方政商关系的形成机制和营商环境建设具有重要启示。</p>
 <hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言</strong>：提出研究问题，概述论文框架。</li>
-<li><strong>文献回顾</strong>：国家主义、组织、文化三视角的既有研究及其局限。</li>
-<li><strong>理论框架</strong>：提出"政策参与空间"概念，构建二维分析框架（竞争压力×行业同质性），推导四种参与空间类型。</li>
-<li><strong>研究方法</strong>：变量测量、案例选取与控制性比较设计。</li>
-<li><strong>昆山台协会</strong>：从开放型（台协I）到商会主导有限开放型（台协II）的历时性变化。</li>
-<li><strong>厦门台协会</strong>：从封闭型（台协I）到政府主导有限开放型（台协II）的历时性变化。</li>
-<li><strong>结论</strong>：比较研究发现的综合与政策启示。</li>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>零和思维（Zero-Sum
+Thinking）</strong>：一种世界观，认为一个人的收益必然导致另一个人的损失，社会产出是有限的而非可以创造新价值的。该概念最早由人类学家George
+Foster（1965, 1967）提出，称为"有限美好形象"（Image of Limited
+Good）。</p>
+<p><strong>文化演化模型（Cultural Evolution
+Models）</strong>：经济学中研究文化特质如何在代际间垂直传播的模型，通常假设文化特质从父母传递给子女（Bisin
+&amp; Verdier, 2000, 2011, 2017）。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>历史视角下的零和思维</strong>：零和思维在历史上普遍存在，从欧洲重商主义到现代贸易和移民政策。在资源稀缺、技术进步缓慢的前工业社会尤为常见。</p></li>
+<li><p><strong>美国独特的历史因素</strong>：美国历史上有三个关键因素影响零和思维的形成：代际经济流动性、移民和奴役。</p></li>
+<li><p><strong>现有研究的局限</strong>：先前研究使用种族或地理位置作为祖先经历的代理变量，但无法干净地隔离垂直传播渠道。</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>： - 零和思维如何影响政治和政策偏好？ -
+零和思维的祖先根源是什么？ -
+流动性、移民、奴役经历如何代际传递并影响当代人的零和思维？</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><p><strong>理论贡献</strong>：首次利用四代人的调查数据，直接测量祖先经历对零和思维的影响，推进了文化演化理论的检验。</p></li>
+<li><p><strong>实证贡献</strong>：收集了约20,400名美国居民的调查数据，将零和思维测量、政治偏好与丰富的祖先信息相结合。</p></li>
+<li><p><strong>政策意义</strong>：揭示了零和思维与再分配政策、种族/性别平等政策、移民政策的系统性关联。</p></li>
 </ol>
 <hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
+<ul>
+<li>Foster的零和思维假说介绍</li>
+<li>研究动机和数据概述</li>
+<li>三大贡献预告</li>
+</ul>
+<h3 id="第二节调查设计数据收集和零和思维测量">第二节：调查设计、数据收集和零和思维测量</h3>
+<ul>
+<li>调查方法和样本描述</li>
+<li>零和思维的四题项测量（民族、公民身份、贸易、收入）</li>
+<li>主成分分析构建综合指数</li>
+<li>数据质量检验</li>
+</ul>
+<h3 id="第三节零和思维的政治关联">第三节：零和思维的政治关联</h3>
+<ul>
+<li>零和思维与政党偏好的关系</li>
+<li>零和思维与四项政策态度（再分配、种族、性别、移民）</li>
+<li>零和思维与自身利益的交互分析</li>
+<li>零和思维与其他核心信念的比较</li>
+<li>跨国家的一般性检验（WVS数据）</li>
+</ul>
+<h3 id="第四节零和思维的历史预测因子">第四节：零和思维的历史预测因子</h3>
+<ul>
+<li>代际经济流动性的影响</li>
+<li>移民经历的直接和间接效应</li>
+<li>奴役经历的直接和间接效应</li>
+<li>奴隶制的溢出效应</li>
+</ul>
+<h3 id="第五节结论conclusion">第五节：结论（Conclusion）</h3>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
 <h3 id="背景">背景</h3>
-<p>1990年代以来，昆山和厦门都是台资聚集的重要城市，但两地台协会的政策参与空间截然不同，且各自内部都经历了历时性变化。对这一现象的解释，需要一个能够同时处理"跨地区差异"和"同一地区历时差异"的分析框架。</p>
-<h3 id="挑战">挑战</h3>
-<p>既有三大视角的共同局限：国家主义擅长解释共时性差异，但无法解释历时性变化；组织视角和文化视角可解释共时差异，但同样对历时变化解释乏力。此外，现有研究极少以外资商会（而非民营商会）为研究对象。</p>
-<h3 id="理论框架">理论框架</h3>
-<p><strong>核心概念：政策参与空间</strong><br>
-商会政策参与渠道分两类：</p>
-<ul>
-<li><strong>制度化渠道</strong>：政府主动开放（如政府工作会议、台商座谈会、政协参与）</li>
-<li><strong>非制度化渠道</strong>：商会自行拓展（如商会沙龙、联谊活动、慈善会结网）</li>
-</ul>
-<p>四种政策参与空间类型（依据两个自变量的高低组合）：</p>
-<table>
-<thead>
-<tr>
-<th>地方竞争压力</th>
-<th>行业同质性</th>
-<th>政策参与空间</th>
-<th>代表案例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>大</td>
-<td>高</td>
-<td><strong>开放型</strong></td>
-<td>昆山台协I</td>
-</tr>
-<tr>
-<td>小</td>
-<td>高</td>
-<td><strong>商会主导有限开放型</strong></td>
-<td>昆山台协II</td>
-</tr>
-<tr>
-<td>大</td>
-<td>低</td>
-<td><strong>政府主导有限开放型</strong></td>
-<td>厦门台协II</td>
-</tr>
-<tr>
-<td>小</td>
-<td>低</td>
-<td><strong>封闭型</strong></td>
-<td>厦门台协I</td>
-</tr>
-</tbody>
-</table>
-<p><strong>机制一：地方竞争压力 → 制度化参与渠道</strong><br>
-当地方政府面临招商引资竞争压力时（晋升锦标赛逻辑下的激励），为解决政府与企业间的信息不对称、留住外资，政府有意愿主动开放制度化的参与渠道（政策咨询、听证、定期座谈）。竞争压力越大，渠道越多。</p>
-<p><strong>机制二：中小企业行业同质性 → 非制度化参与渠道</strong><br>
-商会中小企业是主体，行业分布越同质（同一行业集中），利益协调越容易，集体行动能力越强，商会越能够自主创造非制度化渠道（活动策划、关系网络建设）。行业异质性越高，集体行动困境越难克服，非制度化渠道越稀缺。</p>
-<p><strong>变量测量</strong>：</p>
-<ul>
-<li>地方政府竞争压力：三个指标——GDP增速相对位置、实际利用外资相对位置、招商引资相对优势（各赋值0/0.5/1）</li>
-<li>行业同质性：基于1998/2008/2013年中国工业企业数据库计算各地区台资企业行业集中度</li>
-</ul>
-<h3 id="案例分析">案例分析</h3>
-<p><strong>昆山台协I（1990年代至2000年代初）：开放型</strong></p>
-<ul>
-<li>背景：1980年代昆山经济落后，被称为苏州"小八子"/“小六子”，发展压力极大</li>
-<li>地方政府采取"以软补硬"战略：向台协开放政府工作会议、政协讨论会、外商听证会；建立服务受理中心，邀请台协代表担任行风监督员</li>
-<li>昆山台资企业以轻工业（44%）+装备制造业（25%）为主，行业集中度高</li>
-<li>台协自主创造大量非制度化渠道（圣诞/中秋联谊、慈善游园、妇幼慈善会活动），结成政府部门关系网络</li>
-</ul>
-<p><strong>昆山台协II（2000年代中至2017年）：商会主导有限开放型</strong></p>
-<ul>
-<li>背景：2004年后昆山长期占据全国百强县第一，招商引资遥遥领先，竞争压力大幅下降</li>
-<li>政府角色从"服务配合型"转向"发展引领型"——关闭了多数制度化渠道，与台协直接接触的官员从书记/市长降格为台办人员</li>
-<li>台资企业产业结构调整（电子+装备制造业，合计&gt;60%），行业同质性仍高</li>
-<li>台协主动拓展新非制度化渠道：与本地商会建立组织联结（昆台工商协青会）、吸纳退休党政干部加入协会</li>
-</ul>
-<p><strong>厦门台协I（1990年代至2000年代初）：封闭型</strong></p>
-<ul>
-<li>背景：厦门坐享经济特区政策优势，GDP增速和外资利用长期领先泉州/漳州，政府无竞争压力</li>
-<li>政府不主动开放制度化渠道，与台商互动停留在礼仪性层面</li>
-<li>厦门台资企业行业分布高度异质（涵盖电子、化工、纺织、食品等多行业），集体行动能力弱</li>
-<li>结果：两类渠道均稀缺，政策参与空间封闭</li>
-</ul>
-<p><strong>厦门台协II（2000年代中至2017年）：政府主导有限开放型</strong></p>
-<ul>
-<li>背景：2007年后漳州/泉州GDP增速超过厦门；2009年厦门实际利用外资甚至被泉州反超，当地官员产生危机感（“以往说’厦漳泉’，现在是不是要改成’漳泉厦’了”）</li>
-<li>竞争压力上升，政府开始主动开放制度化参与渠道（各类台商座谈会）</li>
-<li>厦门台资企业行业同质性仍低（多行业分布格局未根本改变），商会集体行动能力依然弱</li>
-<li>结果：制度化渠道增多，但非制度化渠道仍稀缺→政府主导的有限开放型</li>
-</ul>
+<h4 id="零和思维的理论基础">零和思维的理论基础</h4>
+<p>George
+Foster（1965）在研究墨西哥农村时提出"有限美好"假说：许多社会存在零和世界观，认为资源是有限的，一方的收益必然是另一方的损失。这种观点在资源稀缺、市场不发达、技术进步有限的前工业社会中尤为普遍。</p>
+<h4 id="美国历史背景的特殊性">美国历史背景的特殊性</h4>
+<p>美国历史上有三个关键因素塑造零和思维： 1.
+<strong>代际流动性</strong>：美国曾是"机会之地"，向上流动性高于其他工业化国家
+2.
+<strong>移民潮</strong>：大规模移民塑造了美国社会，移民通常在美国获得经济成功而不损害他人
+3. <strong>奴役制度</strong>：奴隶制是一种彻底的零和（或负和）制度</p>
+<h3 id="方法">方法</h3>
+<h4 id="数据集">数据集</h4>
+<p><strong>调查设计</strong>： -
+约20,400名美国居民，七轮调查（2020年10月至2023年7月） -
+通过在线调查公司Respondi/Bilendi招募 - 调查时长约20-30分钟</p>
+<p><strong>调查内容模块</strong>： 1.
+<strong>受访者背景</strong>：年龄、性别、政治倾向 2.
+<strong>祖先信息</strong>：父母、祖父母的信息（出生地、居住历史、教育、职业、经济地位）
+3. <strong>政策观点</strong>：再分配、种族、性别、移民等政策态度 4.
+<strong>零和思维测量</strong>：四个领域的零和思维问题</p>
+<p><strong>四题项零和思维测量</strong>： 1.
+<strong>民族维度</strong>："如果一个种族群体变富裕，这通常是以其他群体为代价的"
+2.
+<strong>公民身份维度</strong>："如果没有美国公民身份的人经济上做得更好，这通常是以美国公民为代价的"
+3.
+<strong>贸易维度</strong>："在国际贸易中，如果一个国家赚更多钱，另一个国家通常会赚得更少"
+4.
+<strong>收入维度</strong>："如果一个收入群体变得更富有，这通常是以其他群体为代价的"</p>
+<p><strong>指数构建</strong>：使用主成分分析（PCA）提取第一主成分，标准化为0-1区间的综合指数。</p>
+<h4 id="估计方程">估计方程</h4>
+<p><strong>政治关联分析</strong>： <span class="math display">\[Y_i =
+\alpha_{s(i)} + \beta \cdot ZeroSum_i + X_i\Gamma +
+\varepsilon_i\]</span></p>
+<p><strong>历史预测因子分析</strong>： <span class="math display">\[ZeroSum_i = \beta_{resp} \cdot
+RespondentExperience_i + \beta_p \cdot ParentsExperience_i + \beta_{gp}
+\cdot GrandparentsExperience_i + X_i\Gamma + \alpha_{s(i)} +
+\varepsilon_i\]</span></p>
+<h3 id="结果">结果</h3>
+<h4 id="发现一零和思维测量">发现一：零和思维测量</h4>
+<p><strong>因子结构</strong>：第一主成分的特征值为2.30，所有题项的因子载荷相似（0.40-0.55），表明存在一个潜在的零和思维因子。</p>
+<p><strong>人口学差异</strong>： - 年龄：较年长者零和思维较低 -
+种族：黑人和西班牙裔美国人零和思维最高，亚裔最低 -
+收入：最低收入群体（&lt;${<span class="math inline">\(25,000}\)</span>）零和思维最高 -
+党派：共和党人零和思维较低 - 教育：受教育程度较高者零和思维较低</p>
+<h4 id="发现二零和思维与政策偏好">发现二：零和思维与政策偏好</h4>
+<p><strong>核心结果</strong>：零和思维与四项政策态度显著正相关： -
+<strong>再分配指数</strong>：支持更多政府再分配 -
+<strong>种族态度指数</strong>：支持减少种族歧视的政策 -
+<strong>性别态度指数</strong>：支持促进性别平等的政策 -
+<strong>反移民指数</strong>：支持更严格的移民限制</p>
+<p><strong>效应大小</strong>：一标准差增加的零和思维，对再分配的支持相当于20%的标准差变化，与民主党倾向性相当。</p>
+<p><strong>与自身利益的交互</strong>： -
+零和思维与再分配的支持在所有收入群体中都显著为正，且在高收入群体中更强 -
+男性零和思维对性别平等的支持更强 -
+白人受访者零和思维对种族平等政策的支持更强</p>
+<p><strong>党内差异</strong>：零和思维可解释党内政策分歧： -
+民主党中零和思维更强的人更支持限制移民 -
+共和党中零和思维更强的人更支持再分配</p>
+<h4 id="发现三跨国家一般性wvs数据">发现三：跨国家一般性（WVS数据）</h4>
+<p>使用世界价值观调查（WVS）72个国家192,000名受访者数据验证： -
+零和思维与右翼政治立场显著负相关 -
+零和思维与支持再分配和反移民态度正相关</p>
+<p><strong>早期生活经济增长</strong>：使用WVS数据，控制出生年份和国家固定效应，发现早期生活暴露于更高的GDP增长与更低的零和思维相关。</p>
+<h4 id="发现四历史预测因子">发现四：历史预测因子</h4>
+<p><strong>代际流动性</strong>： -
+更大的代际向上流动性与更低的零和思维相关 -
+这种关系在所有代际（1代、2代、3代）中都显著 -
+主要由向上流动驱动，向下流动影响较小</p>
+<p><strong>移民</strong>： -
+直接效应：第一代移民零和思维最低，移民主裔子孙次之 -
+间接效应：祖父母在移民比例较高县市长大的受访者零和思维较低 -
+时间效应：近期移民效应更强</p>
+<p><strong>奴役</strong>： - 直接效应：有奴隶祖先的受访者零和思维更高 -
+所有形式的奴役（奴隶贸易、Holocaust、契约仆役、日裔美国人拘留、印第安人保留地）都与更高零和思维相关
+- 间接效应：在1860年奴隶比例较高的县市长大的受访者零和思维更高 -
+奴隶制溢出：南方白人移民到非南方县带来了更高的零和思维</p>
 <hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<p><strong>核心发现</strong>：地方政府竞争压力与商会内中小企业行业同质性是塑造外资商会政策参与空间的两个关键变量。二者的不同取值组合产生了四种政策参与空间类型，并能够同时解释跨地区共时差异和同一地区历时差异。四个案例（昆山/厦门×两个时期）的比较分析均与理论预期一致。</p>
-<p><strong>对领域的贡献</strong>：</p>
-<ol>
-<li>提供了一个整合地域特征与行业特征的新分析视角，弥补了既有国家主义、组织、文化三视角的解释不足；</li>
-<li>以外资商会（台资企业协会）为研究对象，拓展了商会政治参与研究的边界；</li>
-<li>将跨案例比较与案例内历时比较相结合的研究设计，为研究同类问题提供了方法论参考。</li>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>零和思维是重要且独立的政策预测因子</strong>：零和思维与再分配、种族/性别平等、移民政策的态度有显著关联，且独立于其他核心信念。</p></li>
+<li><p><strong>零和思维不是简单的党派问题</strong>：它可以解释党内政策分歧——为什么部分民主党人支持限制移民，部分共和党人支持再分配。</p></li>
+<li><p><strong>零和思维有深厚的历史根源</strong>：三个关键历史因素——代际流动性、移民、奴役——通过直接和间接渠道影响当代人的零和思维。</p></li>
+<li><p><strong>零和思维的跨国一般性</strong>：WVS数据证实，零和思维与政治态度的关系在72个国家都成立。</p></li>
 </ol>
-<p><strong>政策含义</strong>：</p>
-<ul>
-<li>营商环境改善的关键在于培育地方政府的竞争意识——地方政府只有在竞争压力下才会主动开放政策参与渠道；</li>
-<li>对中国来说，减少行政垄断、打破地方保护，对于维持地方之间的良性竞争至关重要；</li>
-<li>外资商会应注重培育行业内部的同质性集体行动能力，而非单纯依赖个别大企业的政治关联。</li>
-</ul>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文中提及的方向</strong>：</p>
-<ol>
-<li>本文聚焦外资商会，未来可扩展至民营商会，检验理论框架的适用性；</li>
-<li>需要更多案例或大样本数据验证理论框架的普遍性。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li>竞争压力的"动态"问题：当一个地区从竞争劣势转为优势（如昆山），政府对商会的态度从开放转向封闭是否存在路径依赖？已建立的制度化渠道是否更难关闭（沉没成本）？</li>
-<li>行业同质性的内生性：行业结构是否本身受到地方政府政策的影响？如果竞争压力高的地方吸引了更多同质行业的企业（比如昆山专注电子制造），那么行业同质性可能部分是地方竞争压力的结果，而非独立自变量；</li>
-<li>国家层面的制度变化：本文暗示了地方政府竞争是商会政策参与的关键动力，但随着2013年以来"放管服"改革深化，国家层面主动推进政务公开，制度化参与渠道的形成是否越来越受中央政策驱动，而非地方竞争？</li>
-<li>比较政治学视野：中国外资商会参与政策制定的模式与东南亚、中东欧等转型经济体有何异同？竞争压力和行业同质性的逻辑是否在这些地区也成立？</li>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><p><strong>测量贡献</strong>：开发了综合的跨情境零和思维测量方法，优于单一情境测量。</p></li>
+<li><p><strong>数据贡献</strong>：首次收集了四代人信息的调查数据，直接测量祖先经历。</p></li>
+<li><p><strong>理论贡献</strong>：推进了对文化演化模型的理解，证明垂直传播的重要性。</p></li>
 </ol>
 <hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>两个自变量的交互效应</strong>：理论框架处理的是两个自变量的组合效应，但文中隐含的是线性的"各自独立作用"逻辑。竞争压力高的地方，是否也会因为吸引了更多同质企业而产生更高的行业同质性？如果两个自变量之间存在正相关（内生性），四种类型的组合在现实中可能不均等分布，也会影响理论的可推广性。</p>
-</li>
-<li>
-<p><strong>因果方向的识别</strong>：文章主要用过程追踪进行机制验证。但"昆山的高竞争→开放渠道"究竟是政府主动"开放"还是台商的"推动"引发的？如果台商本来就具有很强的集体行动能力（来自行业同质性），那他们是否也在主动"推"政府开放渠道？机制的方向可能是双向的。</p>
-</li>
-<li>
-<p><strong>地方政府的策略性</strong>：文章假设地方官员在竞争压力下会"合理地"选择开放政策渠道以吸引外资。但官员也有保持政策主导权、维护寻租空间的激励——对某些腐败官员而言，制度不透明、渠道封闭可能是有利的。为什么竞争压力总能胜过这种"封闭激励"？</p>
-</li>
-<li>
-<p><strong>外资商会的特殊性</strong>：本文聚焦台资企业协会，这一群体具有特殊性——台商与大陆政府之间有地缘政治背景下的特殊关系，台办这一专门机构的存在也使台资商会与普通民营商会有根本不同。理论框架推广到一般民营商会时，需要验证国家是否会对普通民营企业开放同样的制度化渠道。</p>
-</li>
-<li>
-<p><strong>测量问题</strong>：竞争压力的测量用GDP增速相对位置和外资利用绝对量的相对位置，这些指标容易获取但较为粗糙。如何控制经济周期（金融危机）对增速的影响，以及绝对量vs.相对量的混淆，是值得关注的测量效度问题。</p>
-</li>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
+<ol type="1">
+<li><p><strong>党内分歧研究</strong>：探索零和思维对新党形成、联盟和竞选平台的影响</p></li>
+<li><p><strong>政治现象研究</strong>：零和思维是否能解释民粹主义、阴谋论、排外主义的起源？</p></li>
+<li><p><strong>气候与不平等</strong>：零和思维如何与气候变化和全球不平等的态度相关联？</p></li>
+</ol>
+<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
+<ol type="1">
+<li><p><strong>识别策略改进</strong>：使用工具变量或自然实验进一步验证因果关系</p></li>
+<li><p><strong>机制检验</strong>：代际传递的具体渠道——是通过语言、家庭互动还是行为？</p></li>
+<li><p><strong>干预研究</strong>：是否可以设计干预措施减少零和思维？</p></li>
 </ol>
 <hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>晋升锦标赛理论（周黎安）有哪些最新的实证挑战（如近年文献质疑了GDP绩效与晋升的相关性）？这是否削弱了本文的理论基础？</li>
-<li>商会的制度化参与渠道和非制度化参与渠道各自在实践中如何运作？哪种渠道对政策结果的影响更大？</li>
-<li>如果将同样的分析框架用于民营商会（如浙商总会、广东工商联），两个自变量的效应是否稳健？</li>
-<li>本文使用的中国工业企业数据库（1998/2008/2013年）来测量行业同质性，这一数据的代表性和覆盖范围有什么局限？</li>
-<li>文章提到厦门坐享政策优势却出现封闭型参与空间，这是否意味着"过度"的政策优惠反而抑制了地方政府提升营商环境的动力——这一"惰化效应"在中国政策实践中有多普遍？</li>
+<h2 id="学术思考">7. 学术思考</h2>
+<h3 id="核心学术洞察">核心学术洞察</h3>
+<ol type="1">
+<li><p><strong>"有限美好"的现代延续</strong>：Foster的零和思维假说虽提出于1960年代研究墨西哥农村，但本文证明其在现代美国社会仍具有重要解释力。</p></li>
+<li><p><strong>政策态度的认知根源</strong>：传统研究将政策态度归因于自身利益或价值观，但本文揭示了零和思维作为一种独立的中介机制。</p></li>
+<li><p><strong>历史创伤的代际传递</strong>：奴役制度不仅影响直接受害者，还通过环境暴露和文化传递影响后代。</p></li>
+</ol>
+<h3 id="深层学术问题">深层学术问题</h3>
+<ol type="1">
+<li><p><strong>为什么向上流动而非向下流动影响零和思维？</strong>
+这种不对称性暗示什么心理或文化机制？</p></li>
+<li><p><strong>移民的"正能量"效应</strong>：移民如何降低零和思维？是通过榜样效应、接触效应还是家庭叙述传递？</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p><strong>零和思维的测量是否可信？</strong>
+四题项测量能否捕捉零和思维的全部维度？</p></li>
+<li><p><strong>祖先经历的因果识别</strong>：如何解决内生性问题？</p></li>
+<li><p><strong>黑人受访者零和思维最高但奴役边际效应最小</strong>：如何解释这个悖论？</p></li>
+<li><p><strong>零和思维与特朗普现象</strong>：数据显示零和思维预测了民主党人投票给特朗普？</p></li>
+<li><p><strong>政策含义</strong>：如果零和思维是可塑的，什么干预可以减少零和思维？</p></li>
 </ol>
 ]]></content>
       <categories>
-        <category>有趣的文章</category>
+        <category>AER</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -6737,218 +6949,6 @@ horizon 是多久?</strong></p></li>
 <li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD
 数据的质量和覆盖范围如何保证?</strong></p></li>
 <li><p><strong>在中国"双碳"目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>零和思维与美国政治分歧的根源 — 深度阅读笔记 — Chinoy, Nunn, Sequeira &amp; Stantcheva</title>
-    <url>/posts/chinoy2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Zero-Sum Thinking and the Roots of U.S.
-Political Differences</li>
-<li><strong>作者</strong>: Sahil Chinoy (Harvard), Nathan Nunn (UBC
-&amp; CIFAR), Sandra Sequeira (LSE), Stefanie Stantcheva (Harvard)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review</li>
-<li><strong>DOI</strong>: 10.1257/aer.20240692</li>
-<li><strong>难度评估</strong>: 高 -
-需要文化经济学、政治经济学、计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>零和思维（Zero-Sum
-Thinking）</strong>：一种世界观，认为一个人的收益必然导致另一个人的损失，社会产出是有限的而非可以创造新价值的。该概念最早由人类学家George
-Foster（1965, 1967）提出，称为"有限美好形象"（Image of Limited
-Good）。</p>
-<p><strong>文化演化模型（Cultural Evolution
-Models）</strong>：经济学中研究文化特质如何在代际间垂直传播的模型，通常假设文化特质从父母传递给子女（Bisin
-&amp; Verdier, 2000, 2011, 2017）。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>历史视角下的零和思维</strong>：零和思维在历史上普遍存在，从欧洲重商主义到现代贸易和移民政策。在资源稀缺、技术进步缓慢的前工业社会尤为常见。</p></li>
-<li><p><strong>美国独特的历史因素</strong>：美国历史上有三个关键因素影响零和思维的形成：代际经济流动性、移民和奴役。</p></li>
-<li><p><strong>现有研究的局限</strong>：先前研究使用种族或地理位置作为祖先经历的代理变量，但无法干净地隔离垂直传播渠道。</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>： - 零和思维如何影响政治和政策偏好？ -
-零和思维的祖先根源是什么？ -
-流动性、移民、奴役经历如何代际传递并影响当代人的零和思维？</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><p><strong>理论贡献</strong>：首次利用四代人的调查数据，直接测量祖先经历对零和思维的影响，推进了文化演化理论的检验。</p></li>
-<li><p><strong>实证贡献</strong>：收集了约20,400名美国居民的调查数据，将零和思维测量、政治偏好与丰富的祖先信息相结合。</p></li>
-<li><p><strong>政策意义</strong>：揭示了零和思维与再分配政策、种族/性别平等政策、移民政策的系统性关联。</p></li>
-</ol>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
-<ul>
-<li>Foster的零和思维假说介绍</li>
-<li>研究动机和数据概述</li>
-<li>三大贡献预告</li>
-</ul>
-<h3 id="第二节调查设计数据收集和零和思维测量">第二节：调查设计、数据收集和零和思维测量</h3>
-<ul>
-<li>调查方法和样本描述</li>
-<li>零和思维的四题项测量（民族、公民身份、贸易、收入）</li>
-<li>主成分分析构建综合指数</li>
-<li>数据质量检验</li>
-</ul>
-<h3 id="第三节零和思维的政治关联">第三节：零和思维的政治关联</h3>
-<ul>
-<li>零和思维与政党偏好的关系</li>
-<li>零和思维与四项政策态度（再分配、种族、性别、移民）</li>
-<li>零和思维与自身利益的交互分析</li>
-<li>零和思维与其他核心信念的比较</li>
-<li>跨国家的一般性检验（WVS数据）</li>
-</ul>
-<h3 id="第四节零和思维的历史预测因子">第四节：零和思维的历史预测因子</h3>
-<ul>
-<li>代际经济流动性的影响</li>
-<li>移民经历的直接和间接效应</li>
-<li>奴役经历的直接和间接效应</li>
-<li>奴隶制的溢出效应</li>
-</ul>
-<h3 id="第五节结论conclusion">第五节：结论（Conclusion）</h3>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="零和思维的理论基础">零和思维的理论基础</h4>
-<p>George
-Foster（1965）在研究墨西哥农村时提出"有限美好"假说：许多社会存在零和世界观，认为资源是有限的，一方的收益必然是另一方的损失。这种观点在资源稀缺、市场不发达、技术进步有限的前工业社会中尤为普遍。</p>
-<h4 id="美国历史背景的特殊性">美国历史背景的特殊性</h4>
-<p>美国历史上有三个关键因素塑造零和思维： 1.
-<strong>代际流动性</strong>：美国曾是"机会之地"，向上流动性高于其他工业化国家
-2.
-<strong>移民潮</strong>：大规模移民塑造了美国社会，移民通常在美国获得经济成功而不损害他人
-3. <strong>奴役制度</strong>：奴隶制是一种彻底的零和（或负和）制度</p>
-<h3 id="方法">方法</h3>
-<h4 id="数据集">数据集</h4>
-<p><strong>调查设计</strong>： -
-约20,400名美国居民，七轮调查（2020年10月至2023年7月） -
-通过在线调查公司Respondi/Bilendi招募 - 调查时长约20-30分钟</p>
-<p><strong>调查内容模块</strong>： 1.
-<strong>受访者背景</strong>：年龄、性别、政治倾向 2.
-<strong>祖先信息</strong>：父母、祖父母的信息（出生地、居住历史、教育、职业、经济地位）
-3. <strong>政策观点</strong>：再分配、种族、性别、移民等政策态度 4.
-<strong>零和思维测量</strong>：四个领域的零和思维问题</p>
-<p><strong>四题项零和思维测量</strong>： 1.
-<strong>民族维度</strong>："如果一个种族群体变富裕，这通常是以其他群体为代价的"
-2.
-<strong>公民身份维度</strong>："如果没有美国公民身份的人经济上做得更好，这通常是以美国公民为代价的"
-3.
-<strong>贸易维度</strong>："在国际贸易中，如果一个国家赚更多钱，另一个国家通常会赚得更少"
-4.
-<strong>收入维度</strong>："如果一个收入群体变得更富有，这通常是以其他群体为代价的"</p>
-<p><strong>指数构建</strong>：使用主成分分析（PCA）提取第一主成分，标准化为0-1区间的综合指数。</p>
-<h4 id="估计方程">估计方程</h4>
-<p><strong>政治关联分析</strong>： <span class="math display">\[Y_i =
-\alpha_{s(i)} + \beta \cdot ZeroSum_i + X_i\Gamma +
-\varepsilon_i\]</span></p>
-<p><strong>历史预测因子分析</strong>： <span class="math display">\[ZeroSum_i = \beta_{resp} \cdot
-RespondentExperience_i + \beta_p \cdot ParentsExperience_i + \beta_{gp}
-\cdot GrandparentsExperience_i + X_i\Gamma + \alpha_{s(i)} +
-\varepsilon_i\]</span></p>
-<h3 id="结果">结果</h3>
-<h4 id="发现一零和思维测量">发现一：零和思维测量</h4>
-<p><strong>因子结构</strong>：第一主成分的特征值为2.30，所有题项的因子载荷相似（0.40-0.55），表明存在一个潜在的零和思维因子。</p>
-<p><strong>人口学差异</strong>： - 年龄：较年长者零和思维较低 -
-种族：黑人和西班牙裔美国人零和思维最高，亚裔最低 -
-收入：最低收入群体（&lt;${<span class="math inline">\(25,000}\)</span>）零和思维最高 -
-党派：共和党人零和思维较低 - 教育：受教育程度较高者零和思维较低</p>
-<h4 id="发现二零和思维与政策偏好">发现二：零和思维与政策偏好</h4>
-<p><strong>核心结果</strong>：零和思维与四项政策态度显著正相关： -
-<strong>再分配指数</strong>：支持更多政府再分配 -
-<strong>种族态度指数</strong>：支持减少种族歧视的政策 -
-<strong>性别态度指数</strong>：支持促进性别平等的政策 -
-<strong>反移民指数</strong>：支持更严格的移民限制</p>
-<p><strong>效应大小</strong>：一标准差增加的零和思维，对再分配的支持相当于20%的标准差变化，与民主党倾向性相当。</p>
-<p><strong>与自身利益的交互</strong>： -
-零和思维与再分配的支持在所有收入群体中都显著为正，且在高收入群体中更强 -
-男性零和思维对性别平等的支持更强 -
-白人受访者零和思维对种族平等政策的支持更强</p>
-<p><strong>党内差异</strong>：零和思维可解释党内政策分歧： -
-民主党中零和思维更强的人更支持限制移民 -
-共和党中零和思维更强的人更支持再分配</p>
-<h4 id="发现三跨国家一般性wvs数据">发现三：跨国家一般性（WVS数据）</h4>
-<p>使用世界价值观调查（WVS）72个国家192,000名受访者数据验证： -
-零和思维与右翼政治立场显著负相关 -
-零和思维与支持再分配和反移民态度正相关</p>
-<p><strong>早期生活经济增长</strong>：使用WVS数据，控制出生年份和国家固定效应，发现早期生活暴露于更高的GDP增长与更低的零和思维相关。</p>
-<h4 id="发现四历史预测因子">发现四：历史预测因子</h4>
-<p><strong>代际流动性</strong>： -
-更大的代际向上流动性与更低的零和思维相关 -
-这种关系在所有代际（1代、2代、3代）中都显著 -
-主要由向上流动驱动，向下流动影响较小</p>
-<p><strong>移民</strong>： -
-直接效应：第一代移民零和思维最低，移民主裔子孙次之 -
-间接效应：祖父母在移民比例较高县市长大的受访者零和思维较低 -
-时间效应：近期移民效应更强</p>
-<p><strong>奴役</strong>： - 直接效应：有奴隶祖先的受访者零和思维更高 -
-所有形式的奴役（奴隶贸易、Holocaust、契约仆役、日裔美国人拘留、印第安人保留地）都与更高零和思维相关
-- 间接效应：在1860年奴隶比例较高的县市长大的受访者零和思维更高 -
-奴隶制溢出：南方白人移民到非南方县带来了更高的零和思维</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>零和思维是重要且独立的政策预测因子</strong>：零和思维与再分配、种族/性别平等、移民政策的态度有显著关联，且独立于其他核心信念。</p></li>
-<li><p><strong>零和思维不是简单的党派问题</strong>：它可以解释党内政策分歧——为什么部分民主党人支持限制移民，部分共和党人支持再分配。</p></li>
-<li><p><strong>零和思维有深厚的历史根源</strong>：三个关键历史因素——代际流动性、移民、奴役——通过直接和间接渠道影响当代人的零和思维。</p></li>
-<li><p><strong>零和思维的跨国一般性</strong>：WVS数据证实，零和思维与政治态度的关系在72个国家都成立。</p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><p><strong>测量贡献</strong>：开发了综合的跨情境零和思维测量方法，优于单一情境测量。</p></li>
-<li><p><strong>数据贡献</strong>：首次收集了四代人信息的调查数据，直接测量祖先经历。</p></li>
-<li><p><strong>理论贡献</strong>：推进了对文化演化模型的理解，证明垂直传播的重要性。</p></li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
-<ol type="1">
-<li><p><strong>党内分歧研究</strong>：探索零和思维对新党形成、联盟和竞选平台的影响</p></li>
-<li><p><strong>政治现象研究</strong>：零和思维是否能解释民粹主义、阴谋论、排外主义的起源？</p></li>
-<li><p><strong>气候与不平等</strong>：零和思维如何与气候变化和全球不平等的态度相关联？</p></li>
-</ol>
-<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
-<ol type="1">
-<li><p><strong>识别策略改进</strong>：使用工具变量或自然实验进一步验证因果关系</p></li>
-<li><p><strong>机制检验</strong>：代际传递的具体渠道——是通过语言、家庭互动还是行为？</p></li>
-<li><p><strong>干预研究</strong>：是否可以设计干预措施减少零和思维？</p></li>
-</ol>
-<hr>
-<h2 id="学术思考">7. 学术思考</h2>
-<h3 id="核心学术洞察">核心学术洞察</h3>
-<ol type="1">
-<li><p><strong>"有限美好"的现代延续</strong>：Foster的零和思维假说虽提出于1960年代研究墨西哥农村，但本文证明其在现代美国社会仍具有重要解释力。</p></li>
-<li><p><strong>政策态度的认知根源</strong>：传统研究将政策态度归因于自身利益或价值观，但本文揭示了零和思维作为一种独立的中介机制。</p></li>
-<li><p><strong>历史创伤的代际传递</strong>：奴役制度不仅影响直接受害者，还通过环境暴露和文化传递影响后代。</p></li>
-</ol>
-<h3 id="深层学术问题">深层学术问题</h3>
-<ol type="1">
-<li><p><strong>为什么向上流动而非向下流动影响零和思维？</strong>
-这种不对称性暗示什么心理或文化机制？</p></li>
-<li><p><strong>移民的"正能量"效应</strong>：移民如何降低零和思维？是通过榜样效应、接触效应还是家庭叙述传递？</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p><strong>零和思维的测量是否可信？</strong>
-四题项测量能否捕捉零和思维的全部维度？</p></li>
-<li><p><strong>祖先经历的因果识别</strong>：如何解决内生性问题？</p></li>
-<li><p><strong>黑人受访者零和思维最高但奴役边际效应最小</strong>：如何解释这个悖论？</p></li>
-<li><p><strong>零和思维与特朗普现象</strong>：数据显示零和思维预测了民主党人投票给特朗普？</p></li>
-<li><p><strong>政策含义</strong>：如果零和思维是可塑的，什么干预可以减少零和思维？</p></li>
 </ol>
 ]]></content>
       <categories>
@@ -7532,6 +7532,245 @@ NCI测试检验"正确指定的约简形式"假设</p>
       </tags>
   </entry>
   <entry>
+    <title>The Economic Consequences of Hospital Admissions — 深度阅读笔记 — Dobkin Et Al.</title>
+    <url>/posts/dobkin2018/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: The Economic Consequences of Hospital
+Admissions</li>
+<li><strong>作者</strong>: Carlos Dobkin, Amy Finkelstein, Raymond
+Kluender, Matthew J. Notowidigdo</li>
+<li><strong>年份</strong>: 2018</li>
+<li><strong>来源</strong>: American Economic Review, Vol. 108, No. 2,
+pp. 308-352 <span id="more"></span></li>
+</ul>
+<h2 id="引言背景和意义">引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>健康风险是美国家庭面临的重要经济风险.美国的医疗保障体系以私人保险为主、政府保险(如Medicare、Medicaid)为辅.ACA(Affordable
+Care
+Act)改革大幅扩展了保险覆盖面,但家庭仍然面临自付医疗费用、劳动收入损失和医疗债务等经济风险.</p>
+<p>健康冲击(health shock)对家庭经济的影响渠道包括: 1.
+<strong>直接渠道</strong>:自付医疗费用增加 2.
+<strong>间接渠道</strong>:劳动能力下降→收入减少 3.
+<strong>财务渠道</strong>:医疗债务→信用受损→借贷能力下降</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>政策关切</strong>:美国医疗保险政策的目标是保护家庭免受健康风险的经济后果.从林登·约翰逊签署Medicare时的宣言,到ACA的推出,政策制定者一直将健康保险作为经济安全网的核心组成部分.</p></li>
+<li><p><strong>知识缺口</strong>:尽管政策高度重视,但关于美国家庭面临的经济风险程度的系统证据仍然不足.已有研究存在样本局限或方法论问题,难以提供可靠的因果估计.</p></li>
+<li><p><strong>数据机会</strong>:本研究利用两个独特的数据集:</p>
+<ul>
+<li>健康与退休研究(HRS)的20年面板调查数据</li>
+<li>加州医院出院数据与信用报告的关联数据</li>
+</ul></li>
+<li><p><strong>方法论创新</strong>:使用事件研究方法,在入院这一相对外生的健康事件发生时点前后观察经济结果的动态变化.</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p>本研究试图回答: - 住院对有保险的非老年人会产生哪些经济后果? -
+这些后果在多大程度上被健康保险覆盖? -
+无保险人群面临的风险与有保险人群有何不同? -
+住院引发的破产在所有破产中占比几何?</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><strong>政策评估</strong>:为评估美国健康保险政策的保护效果提供实证依据</li>
+<li><strong>机制理解</strong>:揭示健康冲击通过哪些渠道影响家庭经济状况</li>
+<li><strong>社会成本核算</strong>:量化住院的经济后果,为医疗改革提供成本效益分析基础</li>
+</ol>
+<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
+<p><strong>I.
+经济框架</strong>:建立两期跨期模型,分析健康冲击如何产生医疗费用和工资损失</p>
+<p><strong>II.
+数据与经验框架</strong>:描述HRS和信用报告数据,阐述事件研究方法论</p>
+<p><strong>III.
+医疗费用与收入结果</strong>:报告HRS中住院对自付费用和劳动收入的影响</p>
+<p><strong>IV.
+信用报告结果</strong>:报告住院对未付账单、破产和信贷可及性的影响</p>
+<p><strong>V. 政策含义</strong>:讨论研究发现的福利含义</p>
+<p><strong>VI. 结论</strong></p>
+<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
+<h3 id="一理论框架">一、理论框架</h3>
+<p>作者建立了一个简洁的两期跨期选择模型:</p>
+<p><strong>模型设定</strong>: - 个人存活两期,期初面临健康冲击(概率p) -
+健康冲击产生外生医疗费用m,并降低工资率 -
+健康保险覆盖λ_m比例的医疗费用和λ_α比例的工资损失 -
+个人在预算约束下最大化状态特定效用</p>
+<p><strong>核心命题(Proposition 1)</strong>: 未完全覆盖的健康冲击会导致:
+- 消费下降(Δc₁&lt;0, Δc₂&lt;0) - 效用下降(ΔU&lt;0) -
+未付账单增加(Δu&gt;0) - 但对借款和收入的影响方向不确定</p>
+<p><strong>政策含义</strong>: -
+通过观察健康冲击后经济结果的变化,可以reject完全保险假设 -
+任何经济结果的变化(收入、信贷限制、借款等)都是保险不足的证据</p>
+<h3 id="二数据与样本">二、数据与样本</h3>
+<h4 id="hrs数据">2.1 HRS数据</h4>
+<ul>
+<li>1992-2012年20年的健康与退休研究面板数据</li>
+<li>追踪50岁以上人群的健康和经济状况</li>
+<li>重点样本:约2,700名50-59岁有保险的住院成年人</li>
+</ul>
+<h4 id="加州信用报告数据">2.2 加州信用报告数据</h4>
+<ul>
+<li>2002-2011年的信用报告面板</li>
+<li>与2003-2007年加州医院出院数据关联</li>
+<li>重点样本:约38万名25-64岁有保险的住院成年人</li>
+</ul>
+<p><strong>样本构建原则</strong>: - 排除妊娠相关入院 -
+要求入院前至少3年无住院记录(确保"冲击"性质) -
+有保险定义为私人保险或Medicaid</p>
+<p><strong>表1关键特征</strong>: | 指标 | HRS (50-59岁) | 信用报告
+(25-64岁) | |------|---------------|-------------------| | 入院年龄 |
+55.6岁 | 48.5岁 | | 男性比例 | 47.6% | 45.1% | | 私人保险 | 94.1% |
+86.3% | | 平均住院天数 | n/a | 4.1天 | | 医院列表费用 | n/a | ${45,580
+|</p>
+<h3 id="三主要结果">三、主要结果</h3>
+<h4 id="hrs结果自付费用与收入">3.1 HRS结果:自付费用与收入</h4>
+<p><strong>表2核心数据(50-59岁有保险成年人)</strong>:</p>
+<p><strong>自付医疗费用</strong>: - 入院后12个月:增加}<span class="math inline">\(3,275
+- 入院后36个月:增加\)</span>{1,011 - 3年平均年增加:}$1,429</p>
+<p><strong>就业与劳动收入</strong>: -
+就业概率下降:12个月后下降8.9个百分点,36个月后下降11.1个百分点 -
+年劳动收入下降:12个月后下降${6,445,36个月后下降}<span class="math inline">\(11,071
+- **3年平均年收入下降\)</span>{8,753,相当于入院前收入的20%**</p>
+<p><strong>关键发现</strong>: 1.
+<strong>收入下降远超自付费用增加</strong>:自付费用3年平均每年增加}<span class="math inline">\(1,429,但收入下降\)</span>{8,753 2.
+<strong>收入损失几乎无保险</strong>:仅约10%的收入损失通过社会保险项目得到补偿
+3. ** spousal劳动供给无响应<strong>:配偶没有增加劳动供给来弥补收入损失
+4.
+</strong>效果持久**:收入下降似乎持久甚至加剧,反映健康冲击的持续影响</p>
+<h4 id="信用报告结果">3.2 信用报告结果</h4>
+<p><strong>表5-7核心数据(25-64岁有保险成年人)</strong>:</p>
+<p><strong>未付医疗账单</strong>: - 入院4年后,未付账单增加约}<span class="math inline">\(300(较小)
+- 但信用卡余额下降约\)</span>{1,700</p>
+<p><strong>破产</strong>: - 有保险的非老年人:入院增加破产概率0.4个百分点
+- 无保险的非老年人:入院增加破产概率1.4个百分点 -
+<strong>住院引发的破产:有保险者中占4%,无保险者中占6%</strong></p>
+<p><strong>借贷与信用</strong>: - 信用卡余额下降约10%(4年内) -
+信用额度下降约5%</p>
+<h4 id="关键对比50-59岁-vs-60-64岁">3.3 关键对比:50-59岁 vs 60-64岁</h4>
+<p><strong>60-64岁年龄组发现</strong>: - 收入下降幅度相似 -
+但超过60%的收入下降通过社会保障退休收入得到保险 -
+与50-59岁组仅10%的保险率形成鲜明对比</p>
+<p><strong>政策含义</strong>: -
+在美国,法定社会保障退休年龄(62岁)是重要的收入保险分水岭 -
+62岁之前的成年人几乎没有正式的 earnings insurance</p>
+<h3 id="四机制分析">四、机制分析</h3>
+<h4 id="为什么收入下降幅度这么大">4.1 为什么收入下降幅度这么大?</h4>
+<p>** Extensive margin(就业边际)**: - 入院后3年,就业概率下降11个百分点 -
+约60-85%的收入下降可由就业下降解释 -
+主要表现为从全职工作退出,部分进入退休状态</p>
+<p>** Intensive margin(工时边际)**: - 年工时下降约228小时(14%) -
+工资率本身(conditional on working)无显著变化</p>
+<p><strong>健康限制</strong>: -
+自报"健康原因限制工作能力"的比例上升9.5个百分点</p>
+<h4 id="为什么社会保险覆盖这么少">4.2 为什么社会保险覆盖这么少?</h4>
+<p><strong>失业保险(UI)不适用</strong>: - 住院不等于失业 -
+UI不覆盖因健康原因减少工时的情况</p>
+<p><strong>残疾保险(SSDI)</strong>: - 申请过程漫长且结果不确定 -
+50-59岁人群难以获得SSDI</p>
+<p><strong>社会保障退休收入(SSRI)</strong>: - 需要年满62岁才能领取 -
+60-64岁人群才开始有资格</p>
+<h3 id="五福利含义">五、福利含义</h3>
+<h4 id="总体经济后果的保险覆盖">5.1 总体经济后果的保险覆盖</h4>
+<p>作者估算(50-59岁有保险者): -
+<strong>第1年</strong>:超过90%的医疗费用被覆盖,但仅约80%的"总经济后果"(医疗费用+收入损失)被覆盖
+- <strong>第3年</strong>:仅约50%的总经济后果被覆盖</p>
+<p>随时间推移,收入损失在总经济后果中的比重越来越大,而社会保险对收入损失的保险几乎不存在.</p>
+<h4 id="医疗支出-vs-收入损失的福利权重">5.2 医疗支出 vs
+收入损失的福利权重</h4>
+<p><strong>重要区分</strong>: - 外生医疗支出(给定健康状态)→
+与同等金额的消费减少 welfare impact 相同 -
+收入变化可能反映劳动供给对健康状态的调整→ welfare impact 不同</p>
+<p><strong>福利计算</strong>: -
+一个简单模型显示:对于有健康保险的成年人,收入损失的 welfare consequences
+至少是自付医疗费用增加的3倍</p>
+<h4 id="无保险者的处境">5.3 无保险者的处境</h4>
+<p><strong>无保险者面临的更大风险</strong>: - 未付医疗账单增加}<span class="math inline">\(6,000(有保险者仅\)</span>{300) -
+破产率增幅是无保险者的3.5倍 - 但借贷反应的幅度相似</p>
+<p><strong>"隐性保险"现象</strong>: -
+所谓"无保险者"实际上通过其他渠道获得部分隐性保险 -
+例如,医院不能拒绝急诊患者,这形成了某种隐性公共保险 -
+外部各方(医院、纳税人)承担了部分医疗债务的 incidence</p>
+<h3 id="六医疗破产文献的贡献">六、"医疗破产"文献的贡献</h3>
+<p>本文对"医疗破产"文献提供了重要的校准证据:</p>
+<p><strong>先前研究的过高估计</strong>: -
+某些研究声称医疗事件可解释20-60%的所有破产 -
+这些研究通常基于自我报告的破产原因</p>
+<p><strong>本文的修正估计</strong>: -
+住院引发的破产:有保险者中约4%,无保险者中约6% -
+远低于先前研究声称的比例</p>
+<p><strong>原因分析</strong>: - 破产是多重因素共同作用的结果 -
+医疗事件可能是"最后一根稻草",而非根本原因 -
+破产申请人可能将医疗事件列为破产原因之一</p>
+<h2 id="结论conclusion">结论(Conclusion)</h2>
+<h3 id="研究核心结论">研究核心结论</h3>
+<ol type="1">
+<li><strong>住院对有保险的非老年人产生重大经济后果</strong>
+<ul>
+<li>就业概率下降11个百分点</li>
+<li>年收入下降约}$9,000(20%的入院前年收入)</li>
+<li>自付医疗费用增加,破产风险上升</li>
+</ul></li>
+<li><strong>收入损失几乎完全无保险</strong>
+<ul>
+<li>仅约10%的收入损失通过社会保险得到补偿</li>
+<li>这一发现挑战了美国医疗保险体系的"完整性"叙事</li>
+</ul></li>
+<li><strong>62岁是重要分水岭</strong>
+<ul>
+<li>60-64岁人群的收入损失保险率超过60%</li>
+<li>主要通过社会保障退休收入实现</li>
+</ul></li>
+<li><strong>无保险者的风险更大但幅度有限</strong>
+<ul>
+<li>未付账单和破产率增幅更大</li>
+<li>但借贷反应的幅度相似</li>
+</ul></li>
+<li><strong>住院引发的破产只是破产的一小部分</strong>
+<ul>
+<li>有保险者中约4%,无保险者中约6%</li>
+<li>远低于先前文献声称的比例</li>
+</ul></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><p><strong>数据贡献</strong>:首次将医院出院数据与信用报告数据关联,创建大规模住院经济后果数据集</p></li>
+<li><p><strong>方法论贡献</strong>:清晰的事件研究框架,结合非参数和参数估计,提供了可复制的模板</p></li>
+<li><p><strong>政策贡献</strong>:为评估ACA等健康保险改革的保护效果提供了实证依据</p></li>
+<li><p><strong>理论贡献</strong>:对"医疗破产"文献的校准提出了重要修正</p></li>
+</ol>
+<h3 id="未来研究方向">未来研究方向</h3>
+<ol type="1">
+<li>更长期的跟踪研究,评估收入下降的持久性</li>
+<li>探索不同类型入院(如心脏病 vs 骨折)的差异化影响</li>
+<li>跨国家比较:美国 vs 北欧国家的 earnings insurance 差异</li>
+<li>评估ACA改革后的效应变化</li>
+</ol>
+<h2 id="学术思考">学术思考</h2>
+<ol type="1">
+<li><p><strong>"完全保险"的定义问题</strong>:本文中"完全保险"的定义是消费在健康和健康状态间不变.但这是否等同于
+welfare 最优?考虑到健康状态本身影响效用函数(Viscusi &amp; Evans
+1990),消费平滑可能并非唯一目标.</p></li>
+<li><p><strong>内生性健康问题</strong>:住院可能反映潜在的健康恶化,而不仅仅是"外生冲击".如果健康和生产力之间存在反向因果,那么部分"收入效应"实际上可能是"生产力下降"而非"保险不足".</p></li>
+<li><p><strong>一般均衡效应</strong>:本文关注受影响个体的直接效应,但忽视了劳动力市场的
+general equilibrium_大量工人因健康原因退出劳动市场可能影响 wages
+和其他人就业机会.</p></li>
+<li><p><strong>动态视角的缺失</strong>:两期模型是否足以捕捉健康冲击的动态复杂性?实际中,健康冲击可能引发健康-收入恶化的"螺旋",需要更复杂的动态模型来刻画.</p></li>
+<li><p><strong>社会安全网的比较制度分析</strong>:美国和丹麦的对比(本文提及)揭示了制度设计的巨大差异.美国的
+disability insurance 和 paid sick leave
+系统是否应该向北欧模式转型?</p></li>
+<li><p><strong>医疗费用膨胀的外部性</strong>:本文揭示的经济后果部分源于医疗费用的高涨.如果医院收费改革(降低list
+charges)能否同时改善家庭经济状况和医疗系统效率?</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>AER</tag>
+        <tag>健康经济学</tag>
+        <tag>医疗保障</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Child Protection and Adult Crime: Using Investigator Assignment to Estimate Causal Effects of Foster Care -- 深度阅读笔记 -- Doyle</title>
     <url>/posts/doyle2008/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -7987,245 +8226,6 @@ Doyle
         <tag>儿童福利</tag>
         <tag>犯罪经济学</tag>
         <tag>因果推断</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>The Economic Consequences of Hospital Admissions — 深度阅读笔记 — Dobkin Et Al.</title>
-    <url>/posts/dobkin2018/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: The Economic Consequences of Hospital
-Admissions</li>
-<li><strong>作者</strong>: Carlos Dobkin, Amy Finkelstein, Raymond
-Kluender, Matthew J. Notowidigdo</li>
-<li><strong>年份</strong>: 2018</li>
-<li><strong>来源</strong>: American Economic Review, Vol. 108, No. 2,
-pp. 308-352 <span id="more"></span></li>
-</ul>
-<h2 id="引言背景和意义">引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>健康风险是美国家庭面临的重要经济风险.美国的医疗保障体系以私人保险为主、政府保险(如Medicare、Medicaid)为辅.ACA(Affordable
-Care
-Act)改革大幅扩展了保险覆盖面,但家庭仍然面临自付医疗费用、劳动收入损失和医疗债务等经济风险.</p>
-<p>健康冲击(health shock)对家庭经济的影响渠道包括: 1.
-<strong>直接渠道</strong>:自付医疗费用增加 2.
-<strong>间接渠道</strong>:劳动能力下降→收入减少 3.
-<strong>财务渠道</strong>:医疗债务→信用受损→借贷能力下降</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>政策关切</strong>:美国医疗保险政策的目标是保护家庭免受健康风险的经济后果.从林登·约翰逊签署Medicare时的宣言,到ACA的推出,政策制定者一直将健康保险作为经济安全网的核心组成部分.</p></li>
-<li><p><strong>知识缺口</strong>:尽管政策高度重视,但关于美国家庭面临的经济风险程度的系统证据仍然不足.已有研究存在样本局限或方法论问题,难以提供可靠的因果估计.</p></li>
-<li><p><strong>数据机会</strong>:本研究利用两个独特的数据集:</p>
-<ul>
-<li>健康与退休研究(HRS)的20年面板调查数据</li>
-<li>加州医院出院数据与信用报告的关联数据</li>
-</ul></li>
-<li><p><strong>方法论创新</strong>:使用事件研究方法,在入院这一相对外生的健康事件发生时点前后观察经济结果的动态变化.</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p>本研究试图回答: - 住院对有保险的非老年人会产生哪些经济后果? -
-这些后果在多大程度上被健康保险覆盖? -
-无保险人群面临的风险与有保险人群有何不同? -
-住院引发的破产在所有破产中占比几何?</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><strong>政策评估</strong>:为评估美国健康保险政策的保护效果提供实证依据</li>
-<li><strong>机制理解</strong>:揭示健康冲击通过哪些渠道影响家庭经济状况</li>
-<li><strong>社会成本核算</strong>:量化住院的经济后果,为医疗改革提供成本效益分析基础</li>
-</ol>
-<h2 id="内容及结构论文结构">内容及结构(论文结构)</h2>
-<p><strong>I.
-经济框架</strong>:建立两期跨期模型,分析健康冲击如何产生医疗费用和工资损失</p>
-<p><strong>II.
-数据与经验框架</strong>:描述HRS和信用报告数据,阐述事件研究方法论</p>
-<p><strong>III.
-医疗费用与收入结果</strong>:报告HRS中住院对自付费用和劳动收入的影响</p>
-<p><strong>IV.
-信用报告结果</strong>:报告住院对未付账单、破产和信贷可及性的影响</p>
-<p><strong>V. 政策含义</strong>:讨论研究发现的福利含义</p>
-<p><strong>VI. 结论</strong></p>
-<h2 id="正文逻辑梳理">正文(逻辑梳理)</h2>
-<h3 id="一理论框架">一、理论框架</h3>
-<p>作者建立了一个简洁的两期跨期选择模型:</p>
-<p><strong>模型设定</strong>: - 个人存活两期,期初面临健康冲击(概率p) -
-健康冲击产生外生医疗费用m,并降低工资率 -
-健康保险覆盖λ_m比例的医疗费用和λ_α比例的工资损失 -
-个人在预算约束下最大化状态特定效用</p>
-<p><strong>核心命题(Proposition 1)</strong>: 未完全覆盖的健康冲击会导致:
-- 消费下降(Δc₁&lt;0, Δc₂&lt;0) - 效用下降(ΔU&lt;0) -
-未付账单增加(Δu&gt;0) - 但对借款和收入的影响方向不确定</p>
-<p><strong>政策含义</strong>: -
-通过观察健康冲击后经济结果的变化,可以reject完全保险假设 -
-任何经济结果的变化(收入、信贷限制、借款等)都是保险不足的证据</p>
-<h3 id="二数据与样本">二、数据与样本</h3>
-<h4 id="hrs数据">2.1 HRS数据</h4>
-<ul>
-<li>1992-2012年20年的健康与退休研究面板数据</li>
-<li>追踪50岁以上人群的健康和经济状况</li>
-<li>重点样本:约2,700名50-59岁有保险的住院成年人</li>
-</ul>
-<h4 id="加州信用报告数据">2.2 加州信用报告数据</h4>
-<ul>
-<li>2002-2011年的信用报告面板</li>
-<li>与2003-2007年加州医院出院数据关联</li>
-<li>重点样本:约38万名25-64岁有保险的住院成年人</li>
-</ul>
-<p><strong>样本构建原则</strong>: - 排除妊娠相关入院 -
-要求入院前至少3年无住院记录(确保"冲击"性质) -
-有保险定义为私人保险或Medicaid</p>
-<p><strong>表1关键特征</strong>: | 指标 | HRS (50-59岁) | 信用报告
-(25-64岁) | |------|---------------|-------------------| | 入院年龄 |
-55.6岁 | 48.5岁 | | 男性比例 | 47.6% | 45.1% | | 私人保险 | 94.1% |
-86.3% | | 平均住院天数 | n/a | 4.1天 | | 医院列表费用 | n/a | ${45,580
-|</p>
-<h3 id="三主要结果">三、主要结果</h3>
-<h4 id="hrs结果自付费用与收入">3.1 HRS结果:自付费用与收入</h4>
-<p><strong>表2核心数据(50-59岁有保险成年人)</strong>:</p>
-<p><strong>自付医疗费用</strong>: - 入院后12个月:增加}<span class="math inline">\(3,275
-- 入院后36个月:增加\)</span>{1,011 - 3年平均年增加:}$1,429</p>
-<p><strong>就业与劳动收入</strong>: -
-就业概率下降:12个月后下降8.9个百分点,36个月后下降11.1个百分点 -
-年劳动收入下降:12个月后下降${6,445,36个月后下降}<span class="math inline">\(11,071
-- **3年平均年收入下降\)</span>{8,753,相当于入院前收入的20%**</p>
-<p><strong>关键发现</strong>: 1.
-<strong>收入下降远超自付费用增加</strong>:自付费用3年平均每年增加}<span class="math inline">\(1,429,但收入下降\)</span>{8,753 2.
-<strong>收入损失几乎无保险</strong>:仅约10%的收入损失通过社会保险项目得到补偿
-3. ** spousal劳动供给无响应<strong>:配偶没有增加劳动供给来弥补收入损失
-4.
-</strong>效果持久**:收入下降似乎持久甚至加剧,反映健康冲击的持续影响</p>
-<h4 id="信用报告结果">3.2 信用报告结果</h4>
-<p><strong>表5-7核心数据(25-64岁有保险成年人)</strong>:</p>
-<p><strong>未付医疗账单</strong>: - 入院4年后,未付账单增加约}<span class="math inline">\(300(较小)
-- 但信用卡余额下降约\)</span>{1,700</p>
-<p><strong>破产</strong>: - 有保险的非老年人:入院增加破产概率0.4个百分点
-- 无保险的非老年人:入院增加破产概率1.4个百分点 -
-<strong>住院引发的破产:有保险者中占4%,无保险者中占6%</strong></p>
-<p><strong>借贷与信用</strong>: - 信用卡余额下降约10%(4年内) -
-信用额度下降约5%</p>
-<h4 id="关键对比50-59岁-vs-60-64岁">3.3 关键对比:50-59岁 vs 60-64岁</h4>
-<p><strong>60-64岁年龄组发现</strong>: - 收入下降幅度相似 -
-但超过60%的收入下降通过社会保障退休收入得到保险 -
-与50-59岁组仅10%的保险率形成鲜明对比</p>
-<p><strong>政策含义</strong>: -
-在美国,法定社会保障退休年龄(62岁)是重要的收入保险分水岭 -
-62岁之前的成年人几乎没有正式的 earnings insurance</p>
-<h3 id="四机制分析">四、机制分析</h3>
-<h4 id="为什么收入下降幅度这么大">4.1 为什么收入下降幅度这么大?</h4>
-<p>** Extensive margin(就业边际)**: - 入院后3年,就业概率下降11个百分点 -
-约60-85%的收入下降可由就业下降解释 -
-主要表现为从全职工作退出,部分进入退休状态</p>
-<p>** Intensive margin(工时边际)**: - 年工时下降约228小时(14%) -
-工资率本身(conditional on working)无显著变化</p>
-<p><strong>健康限制</strong>: -
-自报"健康原因限制工作能力"的比例上升9.5个百分点</p>
-<h4 id="为什么社会保险覆盖这么少">4.2 为什么社会保险覆盖这么少?</h4>
-<p><strong>失业保险(UI)不适用</strong>: - 住院不等于失业 -
-UI不覆盖因健康原因减少工时的情况</p>
-<p><strong>残疾保险(SSDI)</strong>: - 申请过程漫长且结果不确定 -
-50-59岁人群难以获得SSDI</p>
-<p><strong>社会保障退休收入(SSRI)</strong>: - 需要年满62岁才能领取 -
-60-64岁人群才开始有资格</p>
-<h3 id="五福利含义">五、福利含义</h3>
-<h4 id="总体经济后果的保险覆盖">5.1 总体经济后果的保险覆盖</h4>
-<p>作者估算(50-59岁有保险者): -
-<strong>第1年</strong>:超过90%的医疗费用被覆盖,但仅约80%的"总经济后果"(医疗费用+收入损失)被覆盖
-- <strong>第3年</strong>:仅约50%的总经济后果被覆盖</p>
-<p>随时间推移,收入损失在总经济后果中的比重越来越大,而社会保险对收入损失的保险几乎不存在.</p>
-<h4 id="医疗支出-vs-收入损失的福利权重">5.2 医疗支出 vs
-收入损失的福利权重</h4>
-<p><strong>重要区分</strong>: - 外生医疗支出(给定健康状态)→
-与同等金额的消费减少 welfare impact 相同 -
-收入变化可能反映劳动供给对健康状态的调整→ welfare impact 不同</p>
-<p><strong>福利计算</strong>: -
-一个简单模型显示:对于有健康保险的成年人,收入损失的 welfare consequences
-至少是自付医疗费用增加的3倍</p>
-<h4 id="无保险者的处境">5.3 无保险者的处境</h4>
-<p><strong>无保险者面临的更大风险</strong>: - 未付医疗账单增加}<span class="math inline">\(6,000(有保险者仅\)</span>{300) -
-破产率增幅是无保险者的3.5倍 - 但借贷反应的幅度相似</p>
-<p><strong>"隐性保险"现象</strong>: -
-所谓"无保险者"实际上通过其他渠道获得部分隐性保险 -
-例如,医院不能拒绝急诊患者,这形成了某种隐性公共保险 -
-外部各方(医院、纳税人)承担了部分医疗债务的 incidence</p>
-<h3 id="六医疗破产文献的贡献">六、"医疗破产"文献的贡献</h3>
-<p>本文对"医疗破产"文献提供了重要的校准证据:</p>
-<p><strong>先前研究的过高估计</strong>: -
-某些研究声称医疗事件可解释20-60%的所有破产 -
-这些研究通常基于自我报告的破产原因</p>
-<p><strong>本文的修正估计</strong>: -
-住院引发的破产:有保险者中约4%,无保险者中约6% -
-远低于先前研究声称的比例</p>
-<p><strong>原因分析</strong>: - 破产是多重因素共同作用的结果 -
-医疗事件可能是"最后一根稻草",而非根本原因 -
-破产申请人可能将医疗事件列为破产原因之一</p>
-<h2 id="结论conclusion">结论(Conclusion)</h2>
-<h3 id="研究核心结论">研究核心结论</h3>
-<ol type="1">
-<li><strong>住院对有保险的非老年人产生重大经济后果</strong>
-<ul>
-<li>就业概率下降11个百分点</li>
-<li>年收入下降约}$9,000(20%的入院前年收入)</li>
-<li>自付医疗费用增加,破产风险上升</li>
-</ul></li>
-<li><strong>收入损失几乎完全无保险</strong>
-<ul>
-<li>仅约10%的收入损失通过社会保险得到补偿</li>
-<li>这一发现挑战了美国医疗保险体系的"完整性"叙事</li>
-</ul></li>
-<li><strong>62岁是重要分水岭</strong>
-<ul>
-<li>60-64岁人群的收入损失保险率超过60%</li>
-<li>主要通过社会保障退休收入实现</li>
-</ul></li>
-<li><strong>无保险者的风险更大但幅度有限</strong>
-<ul>
-<li>未付账单和破产率增幅更大</li>
-<li>但借贷反应的幅度相似</li>
-</ul></li>
-<li><strong>住院引发的破产只是破产的一小部分</strong>
-<ul>
-<li>有保险者中约4%,无保险者中约6%</li>
-<li>远低于先前文献声称的比例</li>
-</ul></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><p><strong>数据贡献</strong>:首次将医院出院数据与信用报告数据关联,创建大规模住院经济后果数据集</p></li>
-<li><p><strong>方法论贡献</strong>:清晰的事件研究框架,结合非参数和参数估计,提供了可复制的模板</p></li>
-<li><p><strong>政策贡献</strong>:为评估ACA等健康保险改革的保护效果提供了实证依据</p></li>
-<li><p><strong>理论贡献</strong>:对"医疗破产"文献的校准提出了重要修正</p></li>
-</ol>
-<h3 id="未来研究方向">未来研究方向</h3>
-<ol type="1">
-<li>更长期的跟踪研究,评估收入下降的持久性</li>
-<li>探索不同类型入院(如心脏病 vs 骨折)的差异化影响</li>
-<li>跨国家比较:美国 vs 北欧国家的 earnings insurance 差异</li>
-<li>评估ACA改革后的效应变化</li>
-</ol>
-<h2 id="学术思考">学术思考</h2>
-<ol type="1">
-<li><p><strong>"完全保险"的定义问题</strong>:本文中"完全保险"的定义是消费在健康和健康状态间不变.但这是否等同于
-welfare 最优?考虑到健康状态本身影响效用函数(Viscusi &amp; Evans
-1990),消费平滑可能并非唯一目标.</p></li>
-<li><p><strong>内生性健康问题</strong>:住院可能反映潜在的健康恶化,而不仅仅是"外生冲击".如果健康和生产力之间存在反向因果,那么部分"收入效应"实际上可能是"生产力下降"而非"保险不足".</p></li>
-<li><p><strong>一般均衡效应</strong>:本文关注受影响个体的直接效应,但忽视了劳动力市场的
-general equilibrium_大量工人因健康原因退出劳动市场可能影响 wages
-和其他人就业机会.</p></li>
-<li><p><strong>动态视角的缺失</strong>:两期模型是否足以捕捉健康冲击的动态复杂性?实际中,健康冲击可能引发健康-收入恶化的"螺旋",需要更复杂的动态模型来刻画.</p></li>
-<li><p><strong>社会安全网的比较制度分析</strong>:美国和丹麦的对比(本文提及)揭示了制度设计的巨大差异.美国的
-disability insurance 和 paid sick leave
-系统是否应该向北欧模式转型?</p></li>
-<li><p><strong>医疗费用膨胀的外部性</strong>:本文揭示的经济后果部分源于医疗费用的高涨.如果医院收费改革(降低list
-charges)能否同时改善家庭经济状况和医疗系统效率?</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>AER</tag>
-        <tag>健康经济学</tag>
-        <tag>医疗保障</tag>
       </tags>
   </entry>
   <entry>
@@ -11011,80 +11011,6 @@ calls）如何与模型中的反馈机制互动？</li>
       </tags>
   </entry>
   <entry>
-    <title>相似工作的同酬 — 深度阅读笔记 — Gentile Passaro, Kojima &amp; Pakzad-Hurson</title>
-    <url>/posts/gentile-passaro2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Equal Pay for Similar Work</li>
-<li><strong>作者</strong>: Diego Gentile Passaro (Amazon Science),
-Fuhito Kojima (东京大学), Bobak Pakzad-Hurson (布朗大学)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3):
-977-1013</li>
-<li><strong>DOI</strong>: 10.1257/aer.20230832</li>
-<li><strong>难度评估</strong>: 高 -
-需要劳动经济学、搜索理论、计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>同工同酬法（EPSW）</strong>：要求对"相似"工作支付同等报酬，比"相同工作"更宽泛。</p>
-<p><strong>性别工资差距（Gender Wage
-Gap）</strong>：男性和女性工人之间的平均工资差异。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><strong>EPSW政策日益普遍</strong>：美国45.9%的劳动力受EPSW管辖</li>
-<li><strong>执行困难</strong>："相同工作"难以定义</li>
-<li><strong>意外的均衡效应</strong>：EPSW可能产生违背政策初衷的均衡效应</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：EPSW对劳动力市场结果的均衡效应是什么？是否会反而加剧性别工资差距？</p>
-<p><strong>关键发现</strong>：EPSW导致企业按性别隔离劳动力，在男性占多数的劳动力市场中会增加性别工资差距</p>
-<hr>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ol type="1">
-<li><strong>引言</strong>: EPSW政策背景、研究问题、主要发现</li>
-<li><strong>静态模型</strong>:
-设定、无EPSW均衡、EPSW均衡、工资差距效应</li>
-<li><strong>动态搜索模型</strong>: 搜索摩擦和再配置摩擦、动态均衡</li>
-<li><strong>实证分析</strong>: 智利2009年EPSW政策、因果识别</li>
-<li><strong>结论</strong></li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="epsw-vs-epew">EPSW vs EPEW</h4>
-<p><strong>EPEW</strong>：要求"相同工作"获得相同报酬
-<strong>EPSW</strong>：更宽泛，要求对"相似工作"支付同等报酬</p>
-<h3 id="理论模型">理论模型</h3>
-<h4 id="静态模型">静态模型</h4>
-<p><strong>核心机制</strong>： -
-EPSW要求雇主对相似工作的所有工人支付相同工资 -
-企业会调整劳动力组合来降低成本 - 导致按性别隔离劳动力</p>
-<p><strong>均衡效应</strong>： -
-男性占多数的市场：女性被分配到低工资任务 - 女性占多数的市场：结果相反 -
-总体可能加剧工资差距</p>
-<h4 id="动态搜索模型">动态搜索模型</h4>
-<p><strong>搜索摩擦</strong>：工人寻找工作需要时间和成本
-<strong>再配置摩擦</strong>：企业调整劳动力组合需要成本</p>
-<hr>
-<h2 id="结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><strong>EPSW可能反效果</strong>：导致劳动力性别隔离</li>
-<li><strong>男性占多数市场中加剧差距</strong>：实证证实</li>
-<li><strong>政策启示</strong>：同酬法设计需考虑均衡效应</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>临时性裁员与周期性失业动态 — 深度阅读笔记 — Gertler, Huckfeldt &amp; Trigari</title>
     <url>/posts/gertler2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -11162,6 +11088,80 @@ Model）</strong>：Diamond-DMortensen-Pissarides框架，标准的大规模失�
 <li><p><strong>召回损失重要</strong>：临时裁员工人可能永久失去与原雇主联系</p></li>
 <li><p><strong>反稳定效应</strong>：召回损失增加失业的周期性波动</p></li>
 <li><p><strong>政策启示</strong>：PPP通过减少召回损失产生可观的就业增长</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>相似工作的同酬 — 深度阅读笔记 — Gentile Passaro, Kojima &amp; Pakzad-Hurson</title>
+    <url>/posts/gentile-passaro2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Equal Pay for Similar Work</li>
+<li><strong>作者</strong>: Diego Gentile Passaro (Amazon Science),
+Fuhito Kojima (东京大学), Bobak Pakzad-Hurson (布朗大学)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(3):
+977-1013</li>
+<li><strong>DOI</strong>: 10.1257/aer.20230832</li>
+<li><strong>难度评估</strong>: 高 -
+需要劳动经济学、搜索理论、计量经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>同工同酬法（EPSW）</strong>：要求对"相似"工作支付同等报酬，比"相同工作"更宽泛。</p>
+<p><strong>性别工资差距（Gender Wage
+Gap）</strong>：男性和女性工人之间的平均工资差异。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><strong>EPSW政策日益普遍</strong>：美国45.9%的劳动力受EPSW管辖</li>
+<li><strong>执行困难</strong>："相同工作"难以定义</li>
+<li><strong>意外的均衡效应</strong>：EPSW可能产生违背政策初衷的均衡效应</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：EPSW对劳动力市场结果的均衡效应是什么？是否会反而加剧性别工资差距？</p>
+<p><strong>关键发现</strong>：EPSW导致企业按性别隔离劳动力，在男性占多数的劳动力市场中会增加性别工资差距</p>
+<hr>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ol type="1">
+<li><strong>引言</strong>: EPSW政策背景、研究问题、主要发现</li>
+<li><strong>静态模型</strong>:
+设定、无EPSW均衡、EPSW均衡、工资差距效应</li>
+<li><strong>动态搜索模型</strong>: 搜索摩擦和再配置摩擦、动态均衡</li>
+<li><strong>实证分析</strong>: 智利2009年EPSW政策、因果识别</li>
+<li><strong>结论</strong></li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="epsw-vs-epew">EPSW vs EPEW</h4>
+<p><strong>EPEW</strong>：要求"相同工作"获得相同报酬
+<strong>EPSW</strong>：更宽泛，要求对"相似工作"支付同等报酬</p>
+<h3 id="理论模型">理论模型</h3>
+<h4 id="静态模型">静态模型</h4>
+<p><strong>核心机制</strong>： -
+EPSW要求雇主对相似工作的所有工人支付相同工资 -
+企业会调整劳动力组合来降低成本 - 导致按性别隔离劳动力</p>
+<p><strong>均衡效应</strong>： -
+男性占多数的市场：女性被分配到低工资任务 - 女性占多数的市场：结果相反 -
+总体可能加剧工资差距</p>
+<h4 id="动态搜索模型">动态搜索模型</h4>
+<p><strong>搜索摩擦</strong>：工人寻找工作需要时间和成本
+<strong>再配置摩擦</strong>：企业调整劳动力组合需要成本</p>
+<hr>
+<h2 id="结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><strong>EPSW可能反效果</strong>：导致劳动力性别隔离</li>
+<li><strong>男性占多数市场中加剧差距</strong>：实证证实</li>
+<li><strong>政策启示</strong>：同酬法设计需考虑均衡效应</li>
 </ol>
 ]]></content>
       <categories>
@@ -13381,58 +13381,6 @@ Inequality - <strong>作者</strong>:Yannis M. Ioannides, L. Rachel Ngai -
       </tags>
   </entry>
   <entry>
-    <title>Endogenous Clustering and Analogy-Based Expectation Equilibrium — 深度阅读笔记 — Jehiel &amp; Weber</title>
-    <url>/posts/jehiel2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Endogenous Clustering and Analogy-Based
-Expectation Equilibrium</li>
-<li><strong>作者</strong>: Philippe Jehiel (PSE &amp; UCL), Giacomo
-Weber (PSE &amp; Bologna)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies
-(RES)</li>
-<li><strong>难度评估</strong>: 高 - 需要博弈论、行为经济学、机器学习基础
-<span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言">1. 引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>ABEE类比预期均衡、K-means聚类、原型理论。</p>
-<h3 id="研究背景">研究背景</h3>
-<p>理性预期假设要求过高；外生类比分割的局限性。</p>
-<h3 id="核心问题">核心问题</h3>
-<p>类比分割如何内生决定？玩家如何在记忆约束下最优分类情况？</p>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：理论框架</li>
-<li>第三节：应用</li>
-<li>第四节：结论</li>
-</ul>
-<h2 id="正文">3. 正文</h2>
-<h3 id="核心机制">核心机制</h3>
-<p>将类比分割内生化为聚类问题的解</p>
-<h3 id="关键发现">关键发现</h3>
-<ol type="1">
-<li>区分自排斥（需混合分区）vs自吸引（多重均衡）环境</li>
-<li>有限环境总存在聚类分布ABEE</li>
-<li>应用：美人竞赛（自吸引）、监控游戏（自排斥）</li>
-</ol>
-<h2 id="结论">4. 结论</h2>
-<p>内生类比分割框架提供了均衡多重性的新渠道。</p>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<p>实证检验、福利含义、规范分析。</p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
     <url>/posts/48526/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
@@ -13485,6 +13433,58 @@ inference</em></strong>):如何从样本数据获取总体因果关系信息,实
       </categories>
       <tags>
         <tag>学术讲座</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Endogenous Clustering and Analogy-Based Expectation Equilibrium — 深度阅读笔记 — Jehiel &amp; Weber</title>
+    <url>/posts/jehiel2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Endogenous Clustering and Analogy-Based
+Expectation Equilibrium</li>
+<li><strong>作者</strong>: Philippe Jehiel (PSE &amp; UCL), Giacomo
+Weber (PSE &amp; Bologna)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies
+(RES)</li>
+<li><strong>难度评估</strong>: 高 - 需要博弈论、行为经济学、机器学习基础
+<span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言">1. 引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>ABEE类比预期均衡、K-means聚类、原型理论。</p>
+<h3 id="研究背景">研究背景</h3>
+<p>理性预期假设要求过高；外生类比分割的局限性。</p>
+<h3 id="核心问题">核心问题</h3>
+<p>类比分割如何内生决定？玩家如何在记忆约束下最优分类情况？</p>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：理论框架</li>
+<li>第三节：应用</li>
+<li>第四节：结论</li>
+</ul>
+<h2 id="正文">3. 正文</h2>
+<h3 id="核心机制">核心机制</h3>
+<p>将类比分割内生化为聚类问题的解</p>
+<h3 id="关键发现">关键发现</h3>
+<ol type="1">
+<li>区分自排斥（需混合分区）vs自吸引（多重均衡）环境</li>
+<li>有限环境总存在聚类分布ABEE</li>
+<li>应用：美人竞赛（自吸引）、监控游戏（自排斥）</li>
+</ol>
+<h2 id="结论">4. 结论</h2>
+<p>内生类比分割框架提供了均衡多重性的新渠道。</p>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<p>实证检验、福利含义、规范分析。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -14535,150 +14535,6 @@ Equivalence失效</strong>：当参与不可观察时，FPA和SPA不再等价</p
       </tags>
   </entry>
   <entry>
-    <title>自下而上的制度变迁与中国经济增长 — 深度阅读笔记 — Li Et Al.</title>
-    <url>/posts/li2024bottomup/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Bottom-Up Institutional Change and Growth in China<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/GWVNMPJA/Li 等 - 2024 - Bottom-Up Institutional Change and Growth in China .pdf<br>
-Zotero Item Key:: 2XKAAMHY</p>
-<hr>
-<span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-已有研究在解释中国1978-2007年TFP增长时，发现要素再配置、贸易自由化等因素只能解释其中较小部分，大量"残差"仍未解释。与此同时，关于中国改革模式，主流叙事聚焦于"中央主导的政策试验"（先试点后推广），即中央政府在晋升激励下激励地方政府实施试验性政策。制度经济学理论（Acemoglu et al. 2001; Rodrik et al. 2004）也强调制度变迁对经济发展的重要性，但系统研究实际制度变迁过程及其增长效应的实证研究仍然缺乏。</p>
-<p><strong>研究背景</strong><br>
-1978-2005年中国改革期间，大量重要的经济和社会制度改革（如农村土地联产承包责任制、国有企业私有化）实际上是由基层地方政府在未获中央明确授权、甚至在被明确禁止的情况下自发推行的。中央政府在这一时期对地方自发创新保持了相对的容忍（胡耀邦1980年曾明确表达此立场）。这种"自下而上"的制度变迁与"自上而下的中央主导试验"并存，但其相对重要性及增长效应从未得到系统实证研究。</p>
-<p><strong>作者的问题意识</strong><br>
-改革时期，不同改革政策中"自下而上"力量与"自上而下"指令的相对重要性如何？哪类地区更有可能成为自下而上的改革先行者？改革政策如何在空间上扩散，自下而上与自上而下的扩散模式有何不同？最重要的是，两类改革对经济增长和TFP的贡献有何差异？</p>
-<p><strong>研究意义</strong><br>
-首次系统实证研究自下而上制度变迁对中国增长的独立贡献；提供了一套基于地方志文本分析的"自下而上指数"测量框架；揭示了两类改革在增长来源（TFP vs 资本投资）上的根本差异；对理解当前中国增长减速的制度原因具有重要政策含义。</p>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言</strong>：问题提出、数据概述、主要发现。</li>
-<li><strong>数据</strong>：1.8百万条县级重大事件，4,800余册地方志，25项关键经济改革，1976-2005年。</li>
-<li><strong>改革分类方法</strong>：文本分析识别县级政策创新；构建自下而上指数。</li>
-<li><strong>改革先行者特征（Section 3）</strong>：谁成为改革创新者，两类改革先行者有何系统差异。</li>
-<li><strong>空间扩散模式（Section 4）</strong>：学习与适宜性渠道的作用，两类改革扩散机制差异。</li>
-<li><strong>增长效应（Section 5）</strong>：自下而上改革 vs 中央主导改革对GDP和TFP的影响差异。</li>
-<li><strong>结论</strong>：含对当前中国增长减速的政策含义讨论。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>中国1978-2005年经历了深刻的市场化制度转型，TFP是增长的核心驱动力，但其机制来源仍不明确。作者提出"自下而上的制度变迁"是一个被忽视的重要来源。</p>
-<h3 id="挑战">挑战</h3>
-<p>如何系统识别哪些改革是"自下而上"、哪些是"自上而下"？如何测量其对增长的独立因果效应？</p>
-<h3 id="数据构建">数据构建</h3>
-<p><strong>县级重大事件数据库</strong>：</p>
-<ul>
-<li>来源：4,800余册地方志（local gazetteers），这是中国各县的官方历史年鉴</li>
-<li>规模：超过<strong>180万条</strong>县级重大事件，覆盖1976-2005年，25项关键经济改革</li>
-<li>文本分析：利用机器学习方法识别与各项改革相关的事件，捕捉改革的实际发生时间（de facto policy innovation）而非正式法规颁布时间</li>
-</ul>
-<p><strong>两类改革的识别特征</strong>：</p>
-<ol>
-<li><strong>自下而上型</strong>：县域先于中央批准自发启动改革；扩散曲线平滑连续（各县自发跟进）</li>
-<li><strong>中央主导型</strong>：中央指令发布后出现采纳跳跃（abrupt jumps）；各地同步跟进</li>
-</ol>
-<p><strong>自下而上指数</strong>：基于两类改革的识别特征，为25项改革中每一项构建一个连续的"自下而上程度"指数，实现了两种改革类型在同一框架内的比较。</p>
-<h3 id="发现一：改革先行者特征">发现一：改革先行者特征</h3>
-<p><strong>共同特征</strong>（两类改革创新者都具备）：</p>
-<ul>
-<li>人口规模更大、教育水平更高的县域</li>
-<li>农业和工业人均产出更高</li>
-</ul>
-<p><strong>自下而上特有特征</strong>：</p>
-<ul>
-<li>与铁路网络的<strong>距离更远</strong>（更偏远）→ 政治影响力弱但政治风险反而更低（“地处偏远，天高皇帝远”）</li>
-<li><strong>财政能力弱</strong>：地方政府财政资源少的县域反而更多发起自下而上改革</li>
-<li>改革发生前<strong>政治局常委（PSC）视察次数更少</strong>——意味着中央关注度低，自下而上创新者面临更少的政治监督</li>
-</ul>
-<p><strong>中央主导特有特征</strong>：</p>
-<ul>
-<li>PSC成员在改革前后访问频次显著更高（中央积极背书）</li>
-</ul>
-<p><strong>关键解读</strong>：自下而上改革是由那些有能力但政治上更为边缘（更远离中央、更少被观察）的县发起的——符合"政治庇护所"（political shelter）逻辑。</p>
-<h3 id="发现二：空间扩散模式">发现二：空间扩散模式</h3>
-<p><strong>学习渠道</strong>：与早期采纳者在地理上更近、经济联系更强的县域，更容易了解改革效益和政治风险，从而更早跟进。</p>
-<p><strong>适宜性渠道</strong>：一项改革对一个县是否"适合"，取决于该县在人口构成、行业结构、人力资本方面与早期采纳者的相似程度。</p>
-<p><strong>关键差异</strong>：适宜性对自下而上改革的扩散影响<strong>更强</strong>——中央主导改革由上而下强制推广，地方无权选择；自下而上改革扩散时地方有更大裁量权，倾向于向条件相似的地区扩散。</p>
-<h3 id="发现三：增长效应">发现三：增长效应</h3>
-<p><strong>GDP增长</strong>（省级面板，DiD策略）：</p>
-<ul>
-<li>改革政策创新和扩散均与GDP增长显著正相关</li>
-<li>效应随扩散深度递减（初始创新者效应大于后继跟进者）</li>
-</ul>
-<p><strong>关键结论——两类改革的增长来源不同</strong>：</p>
-<ul>
-<li><strong>自下而上改革 → TFP增长</strong>：1省内10%人口暴露于改革 × 自下而上指数提高1个标准差 → 3年GDP per worker增长+1.1个百分点，TFP增长+0.74个百分点</li>
-<li><strong>中央主导型改革 → 固定资本投资增加</strong>：这类改革主要拉动资本投入，而非效率提升</li>
-</ul>
-<p><strong>替代结果指标（稳健性）</strong>：</p>
-<ul>
-<li>自下而上改革与农业→非农业的结构转型加速相关</li>
-<li>自下而上改革与私营企业进入数量增加相关</li>
-<li>以上效应在自下而上程度更高的改革中均更显著</li>
-</ul>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<p>1978-2005年中国改革中，自下而上的制度变迁（地方政治企业家在未获中央授权时自发推行改革）扮演了一个比既有文献所承认的更为重要的角色。这类改革具有独特特征：由偏远、财政弱但人力资本充裕的县域发起，扩散时遵循适宜性原则，生长周期更长。关键在于：自下而上改革是TFP增长（而非资本积累）的来源，这与中国经济增长的"效率"叙事高度匹配。</p>
-<p>作者指出了两个悬而未决的重要问题：</p>
-<ol>
-<li>如果当时中央政府拒绝了自下而上的创新，中国会损失多少经济增长？</li>
-<li>2010年代以来，权力日益向中央集中、自上而下产业政策盛行、地方政府发起制度创新的激励减弱，这种"自下而上供给的下降"是否是近年增长减速的制度原因？</li>
-</ol>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文明确提及的方向</strong>：</p>
-<ol>
-<li>反事实估算：如果没有自下而上创新，改革时期会有多少增长损失？</li>
-<li>权力再集中化的代价：2010年代以来自下而上改革减少与中国经济减速的定量关联。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li><strong>政策含义</strong>：如何在保持政治集权的同时，重新激活地方政治企业家的改革创新激励？设计什么样的制度环境可以同时实现中央控制和地方创新？</li>
-<li><strong>技术进步与制度变迁的比较</strong>：本文将改革政策类比为技术创新/扩散，下一步可以实证比较"政策创新"和"技术创新"在扩散模式和增长效应上的异同；</li>
-<li><strong>其他发展中国家的适用性</strong>：自下而上制度变迁的驱动逻辑（偏远+有能力+政治庇护）是否在越南、印度等多级政府体制国家中也能找到对应？</li>
-<li><strong>地方志数据的潜力</strong>：本文证明地方志是中国历史微观数据的宝贵来源，对其他研究（如政策执行、社会运动、地方官员行为）也有启示。</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>因果识别的挑战</strong>：论文发现"自下而上改革与TFP增长正相关"，但识别仍面临挑战：哪些省份率先出现自下而上改革，可能本来就是那些有更好潜在TFP增长条件的省份。文中使用的工具变量或自然实验策略的强度和可信度值得仔细审视。</p>
-</li>
-<li>
-<p><strong>自下而上指数的测量效度</strong>：指数基于"地方政府先于中央发起改革"的程度，但地方志记录的准确性和完整性可能存在系统偏差——受到中央重视的改革可能有更完整的地方志记录，而真正"冒险"的底层创新反而记录不全，这会导致"自下而上指数"被低估，测量误差可能带来衰减偏误。</p>
-</li>
-<li>
-<p><strong>与Wang &amp; Yang (2024) 的张力</strong>：Wang &amp; Yang发现中央主导政策试验存在三重偏误（样本偏误、官员额外努力、非成熟解读）。本文则发现自下而上改革带来更强TFP增长。二者并不矛盾——Wang &amp; Yang研究的是中央主导试验的"内在失真"，本文研究的是"自下而上"的增量贡献。但这两篇论文合在一起，表明中国改革中信息和激励扭曲无处不在，需要对"中国政策学习"保持更深的审慎。</p>
-</li>
-<li>
-<p><strong>自下而上创新的供给为何减少</strong>：论文指出近年来自下而上改革减少，但未深入分析机制。是因为"低垂的果子"（容易改的已经改完）还是"制度结构变化"（习近平时代的权力集中）？这两种解释的政策含义截然不同：前者意味着增长减速是结构性的，后者意味着可以通过制度改革缓解。</p>
-</li>
-<li>
-<p><strong>地方志的历史偏见</strong>：地方志由地方政府官员编撰，倾向于记录"成功的"改革创新而淡化失败案例。这意味着本文的样本可能系统性地只包含了"最终成功的改革"，而那些被记录为失败或被扼杀的自下而上创新无从观察，造成幸存者偏误（survivorship bias）。</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>本文关注的"自下而上改革"样例包括哪些？家庭联产承包责任制、国企私有化——这些改革在地方志中是如何被记录的？</li>
-<li>本文的增长回归如何解决省份层面的时序内生性？用了哪些工具变量或识别策略？</li>
-<li>2010年后习近平执政以来，权力再集中化是否确实导致了"自下而上改革供给"的显著下降？有没有定量证据支持这一判断？</li>
-<li>"自下而上改革 → TFP增长 vs 中央主导改革 → 资本投入"这一发现的直觉是什么？为什么中央主导改革倾向于拉动投资而非效率？</li>
-<li>本文的地方志数据库（1.8百万条事件）是否开放共享？其他学者如何可以利用这一数据？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>One Quarter of Humanity 深度阅读笔记 — James Z. Lee &amp; Wang Feng</title>
     <url>/posts/lee2001/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="书籍信息">书籍信息</h2>
@@ -15041,6 +14897,150 @@ Studies</li>
       </tags>
   </entry>
   <entry>
+    <title>自下而上的制度变迁与中国经济增长 — 深度阅读笔记 — Li Et Al.</title>
+    <url>/posts/li2024bottomup/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Bottom-Up Institutional Change and Growth in China<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/GWVNMPJA/Li 等 - 2024 - Bottom-Up Institutional Change and Growth in China .pdf<br>
+Zotero Item Key:: 2XKAAMHY</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+已有研究在解释中国1978-2007年TFP增长时，发现要素再配置、贸易自由化等因素只能解释其中较小部分，大量"残差"仍未解释。与此同时，关于中国改革模式，主流叙事聚焦于"中央主导的政策试验"（先试点后推广），即中央政府在晋升激励下激励地方政府实施试验性政策。制度经济学理论（Acemoglu et al. 2001; Rodrik et al. 2004）也强调制度变迁对经济发展的重要性，但系统研究实际制度变迁过程及其增长效应的实证研究仍然缺乏。</p>
+<p><strong>研究背景</strong><br>
+1978-2005年中国改革期间，大量重要的经济和社会制度改革（如农村土地联产承包责任制、国有企业私有化）实际上是由基层地方政府在未获中央明确授权、甚至在被明确禁止的情况下自发推行的。中央政府在这一时期对地方自发创新保持了相对的容忍（胡耀邦1980年曾明确表达此立场）。这种"自下而上"的制度变迁与"自上而下的中央主导试验"并存，但其相对重要性及增长效应从未得到系统实证研究。</p>
+<p><strong>作者的问题意识</strong><br>
+改革时期，不同改革政策中"自下而上"力量与"自上而下"指令的相对重要性如何？哪类地区更有可能成为自下而上的改革先行者？改革政策如何在空间上扩散，自下而上与自上而下的扩散模式有何不同？最重要的是，两类改革对经济增长和TFP的贡献有何差异？</p>
+<p><strong>研究意义</strong><br>
+首次系统实证研究自下而上制度变迁对中国增长的独立贡献；提供了一套基于地方志文本分析的"自下而上指数"测量框架；揭示了两类改革在增长来源（TFP vs 资本投资）上的根本差异；对理解当前中国增长减速的制度原因具有重要政策含义。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：问题提出、数据概述、主要发现。</li>
+<li><strong>数据</strong>：1.8百万条县级重大事件，4,800余册地方志，25项关键经济改革，1976-2005年。</li>
+<li><strong>改革分类方法</strong>：文本分析识别县级政策创新；构建自下而上指数。</li>
+<li><strong>改革先行者特征（Section 3）</strong>：谁成为改革创新者，两类改革先行者有何系统差异。</li>
+<li><strong>空间扩散模式（Section 4）</strong>：学习与适宜性渠道的作用，两类改革扩散机制差异。</li>
+<li><strong>增长效应（Section 5）</strong>：自下而上改革 vs 中央主导改革对GDP和TFP的影响差异。</li>
+<li><strong>结论</strong>：含对当前中国增长减速的政策含义讨论。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>中国1978-2005年经历了深刻的市场化制度转型，TFP是增长的核心驱动力，但其机制来源仍不明确。作者提出"自下而上的制度变迁"是一个被忽视的重要来源。</p>
+<h3 id="挑战">挑战</h3>
+<p>如何系统识别哪些改革是"自下而上"、哪些是"自上而下"？如何测量其对增长的独立因果效应？</p>
+<h3 id="数据构建">数据构建</h3>
+<p><strong>县级重大事件数据库</strong>：</p>
+<ul>
+<li>来源：4,800余册地方志（local gazetteers），这是中国各县的官方历史年鉴</li>
+<li>规模：超过<strong>180万条</strong>县级重大事件，覆盖1976-2005年，25项关键经济改革</li>
+<li>文本分析：利用机器学习方法识别与各项改革相关的事件，捕捉改革的实际发生时间（de facto policy innovation）而非正式法规颁布时间</li>
+</ul>
+<p><strong>两类改革的识别特征</strong>：</p>
+<ol>
+<li><strong>自下而上型</strong>：县域先于中央批准自发启动改革；扩散曲线平滑连续（各县自发跟进）</li>
+<li><strong>中央主导型</strong>：中央指令发布后出现采纳跳跃（abrupt jumps）；各地同步跟进</li>
+</ol>
+<p><strong>自下而上指数</strong>：基于两类改革的识别特征，为25项改革中每一项构建一个连续的"自下而上程度"指数，实现了两种改革类型在同一框架内的比较。</p>
+<h3 id="发现一：改革先行者特征">发现一：改革先行者特征</h3>
+<p><strong>共同特征</strong>（两类改革创新者都具备）：</p>
+<ul>
+<li>人口规模更大、教育水平更高的县域</li>
+<li>农业和工业人均产出更高</li>
+</ul>
+<p><strong>自下而上特有特征</strong>：</p>
+<ul>
+<li>与铁路网络的<strong>距离更远</strong>（更偏远）→ 政治影响力弱但政治风险反而更低（“地处偏远，天高皇帝远”）</li>
+<li><strong>财政能力弱</strong>：地方政府财政资源少的县域反而更多发起自下而上改革</li>
+<li>改革发生前<strong>政治局常委（PSC）视察次数更少</strong>——意味着中央关注度低，自下而上创新者面临更少的政治监督</li>
+</ul>
+<p><strong>中央主导特有特征</strong>：</p>
+<ul>
+<li>PSC成员在改革前后访问频次显著更高（中央积极背书）</li>
+</ul>
+<p><strong>关键解读</strong>：自下而上改革是由那些有能力但政治上更为边缘（更远离中央、更少被观察）的县发起的——符合"政治庇护所"（political shelter）逻辑。</p>
+<h3 id="发现二：空间扩散模式">发现二：空间扩散模式</h3>
+<p><strong>学习渠道</strong>：与早期采纳者在地理上更近、经济联系更强的县域，更容易了解改革效益和政治风险，从而更早跟进。</p>
+<p><strong>适宜性渠道</strong>：一项改革对一个县是否"适合"，取决于该县在人口构成、行业结构、人力资本方面与早期采纳者的相似程度。</p>
+<p><strong>关键差异</strong>：适宜性对自下而上改革的扩散影响<strong>更强</strong>——中央主导改革由上而下强制推广，地方无权选择；自下而上改革扩散时地方有更大裁量权，倾向于向条件相似的地区扩散。</p>
+<h3 id="发现三：增长效应">发现三：增长效应</h3>
+<p><strong>GDP增长</strong>（省级面板，DiD策略）：</p>
+<ul>
+<li>改革政策创新和扩散均与GDP增长显著正相关</li>
+<li>效应随扩散深度递减（初始创新者效应大于后继跟进者）</li>
+</ul>
+<p><strong>关键结论——两类改革的增长来源不同</strong>：</p>
+<ul>
+<li><strong>自下而上改革 → TFP增长</strong>：1省内10%人口暴露于改革 × 自下而上指数提高1个标准差 → 3年GDP per worker增长+1.1个百分点，TFP增长+0.74个百分点</li>
+<li><strong>中央主导型改革 → 固定资本投资增加</strong>：这类改革主要拉动资本投入，而非效率提升</li>
+</ul>
+<p><strong>替代结果指标（稳健性）</strong>：</p>
+<ul>
+<li>自下而上改革与农业→非农业的结构转型加速相关</li>
+<li>自下而上改革与私营企业进入数量增加相关</li>
+<li>以上效应在自下而上程度更高的改革中均更显著</li>
+</ul>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<p>1978-2005年中国改革中，自下而上的制度变迁（地方政治企业家在未获中央授权时自发推行改革）扮演了一个比既有文献所承认的更为重要的角色。这类改革具有独特特征：由偏远、财政弱但人力资本充裕的县域发起，扩散时遵循适宜性原则，生长周期更长。关键在于：自下而上改革是TFP增长（而非资本积累）的来源，这与中国经济增长的"效率"叙事高度匹配。</p>
+<p>作者指出了两个悬而未决的重要问题：</p>
+<ol>
+<li>如果当时中央政府拒绝了自下而上的创新，中国会损失多少经济增长？</li>
+<li>2010年代以来，权力日益向中央集中、自上而下产业政策盛行、地方政府发起制度创新的激励减弱，这种"自下而上供给的下降"是否是近年增长减速的制度原因？</li>
+</ol>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文明确提及的方向</strong>：</p>
+<ol>
+<li>反事实估算：如果没有自下而上创新，改革时期会有多少增长损失？</li>
+<li>权力再集中化的代价：2010年代以来自下而上改革减少与中国经济减速的定量关联。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li><strong>政策含义</strong>：如何在保持政治集权的同时，重新激活地方政治企业家的改革创新激励？设计什么样的制度环境可以同时实现中央控制和地方创新？</li>
+<li><strong>技术进步与制度变迁的比较</strong>：本文将改革政策类比为技术创新/扩散，下一步可以实证比较"政策创新"和"技术创新"在扩散模式和增长效应上的异同；</li>
+<li><strong>其他发展中国家的适用性</strong>：自下而上制度变迁的驱动逻辑（偏远+有能力+政治庇护）是否在越南、印度等多级政府体制国家中也能找到对应？</li>
+<li><strong>地方志数据的潜力</strong>：本文证明地方志是中国历史微观数据的宝贵来源，对其他研究（如政策执行、社会运动、地方官员行为）也有启示。</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>因果识别的挑战</strong>：论文发现"自下而上改革与TFP增长正相关"，但识别仍面临挑战：哪些省份率先出现自下而上改革，可能本来就是那些有更好潜在TFP增长条件的省份。文中使用的工具变量或自然实验策略的强度和可信度值得仔细审视。</p>
+</li>
+<li>
+<p><strong>自下而上指数的测量效度</strong>：指数基于"地方政府先于中央发起改革"的程度，但地方志记录的准确性和完整性可能存在系统偏差——受到中央重视的改革可能有更完整的地方志记录，而真正"冒险"的底层创新反而记录不全，这会导致"自下而上指数"被低估，测量误差可能带来衰减偏误。</p>
+</li>
+<li>
+<p><strong>与Wang &amp; Yang (2024) 的张力</strong>：Wang &amp; Yang发现中央主导政策试验存在三重偏误（样本偏误、官员额外努力、非成熟解读）。本文则发现自下而上改革带来更强TFP增长。二者并不矛盾——Wang &amp; Yang研究的是中央主导试验的"内在失真"，本文研究的是"自下而上"的增量贡献。但这两篇论文合在一起，表明中国改革中信息和激励扭曲无处不在，需要对"中国政策学习"保持更深的审慎。</p>
+</li>
+<li>
+<p><strong>自下而上创新的供给为何减少</strong>：论文指出近年来自下而上改革减少，但未深入分析机制。是因为"低垂的果子"（容易改的已经改完）还是"制度结构变化"（习近平时代的权力集中）？这两种解释的政策含义截然不同：前者意味着增长减速是结构性的，后者意味着可以通过制度改革缓解。</p>
+</li>
+<li>
+<p><strong>地方志的历史偏见</strong>：地方志由地方政府官员编撰，倾向于记录"成功的"改革创新而淡化失败案例。这意味着本文的样本可能系统性地只包含了"最终成功的改革"，而那些被记录为失败或被扼杀的自下而上创新无从观察，造成幸存者偏误（survivorship bias）。</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>本文关注的"自下而上改革"样例包括哪些？家庭联产承包责任制、国企私有化——这些改革在地方志中是如何被记录的？</li>
+<li>本文的增长回归如何解决省份层面的时序内生性？用了哪些工具变量或识别策略？</li>
+<li>2010年后习近平执政以来，权力再集中化是否确实导致了"自下而上改革供给"的显著下降？有没有定量证据支持这一判断？</li>
+<li>"自下而上改革 → TFP增长 vs 中央主导改革 → 资本投入"这一发现的直觉是什么？为什么中央主导改革倾向于拉动投资而非效率？</li>
+<li>本文的地方志数据库（1.8百万条事件）是否开放共享？其他学者如何可以利用这一数据？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hiring as Exploration — 深度阅读笔记 — Li, Raymond &amp; Bergman</title>
     <url>/posts/li2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -15094,6 +15094,156 @@ Studies</li>
 ]]></content>
       <categories>
         <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>财富税的行为响应：哥伦比亚的证据 — 深度阅读笔记 — Londoño-Vélez &amp; Ávila-Mahecha</title>
+    <url>/posts/londono-velez2024/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Behavioural Responses to Wealth Taxation: Evidence from Colombia<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/D72FU22M/Londoño-Vélez和Ávila-Mahecha - 2024 - Behavioural Responses to Wealth Taxation Evidence from Colombia.pdf<br>
+Zotero Item Key:: LWFR6PLB</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+财富税（wealth tax）是对个人净资产（资产减负债）征收的税，与所得税不同。近年来围绕是否应推行财富税的政策讨论非常热烈（如美国Warren和Sanders的财富税提案，疫情后多国临时财富税）。核心问题是：富人会如何回应财富税？会真的减少财富积累，还是通过逃税/避税将财富藏匿起来？现有欧洲文献给出的弹性估计差异巨大（从几乎为0到极高），且机制不清晰。</p>
+<p><strong>研究背景</strong><br>
+哥伦比亚自1993年至2016年持续对高净值个人征收财富税，历经四次重大改革（2003、2006、2010、2014年），税率从0到6%不等，豁免阈值和征税期限多次变化，且在阈值处存在"缺口"（notch）——略高于门槛的财富会触发大幅跳跃的税收负担。这为识别行为反应提供了近乎理想的实验条件。</p>
+<p><strong>作者的问题意识</strong><br>
+四个关键问题：</p>
+<ol>
+<li>面对财富税，纳税人是否立即减少申报财富？</li>
+<li>这一效应在税收废止后是否持续（滞后效应/hysteresis）？</li>
+<li>反应通过什么机制实现（真实行为变化 vs. 逃税/漏报）？</li>
+<li>最富有的人是否通过离岸转移将财富藏入避税天堂？</li>
+</ol>
+<p><strong>研究意义</strong><br>
+本文提供了发展中国家财富税行为反应的首个严格因果证据，发现了<strong>财富税的滞后效应（hysteresis）</strong>——临时财富税对申报财富的影响可以在税收废止后数年持续，这对临时财富税的政策评估具有根本性影响。同时，利用泄露的巴拿马文件（Panama Papers），首次将财富税改革与离岸避税行为直接链接。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：财富税政策背景；三大贡献（滞后效应、离岸避税机制、发展中国家证据）。</li>
+<li><strong>哥伦比亚财富税制度介绍（Section 2）</strong>。</li>
+<li><strong>数据（Section 3）</strong>：税收行政记录 + 巴拿马文件链接。</li>
+<li><strong>行为反应：立即效应与滞后效应（Section 4）</strong>。</li>
+<li><strong>反应机制分解（Section 5）</strong>：漏报资产；离岸转移。</li>
+<li><strong>结论与政策含义（Section 6）</strong>。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p><strong>为什么财富税行为反应难以研究</strong>：</p>
+<ul>
+<li>理想的识别需要来自税率变化的外生变异，但大多数国家的税制改革是多维度、难以分离的</li>
+<li>欧洲研究（瑞典、挪威、法国、瑞士等）发现的弹性估计分布极广（0.054到43.2，800倍差异），部分原因是识别方法不同（bunching vs DiD）且测量的行为不同（真实行为vs申报行为）</li>
+<li>发展中国家高净值人群的数据极难获取</li>
+</ul>
+<p><strong>哥伦比亚的独特优势</strong>：</p>
+<ul>
+<li>历史最长的财富税制度（1993—2016年）</li>
+<li>四次重大改革，产生大量识别变异</li>
+<li>在财富阈值处存在"缺口"（notch），产生大幅税收跳跃，适合bunching估计</li>
+<li>覆盖全部高净值个人的税收行政微观数据（资产分项：银行存款、股权、企业资产、房产、车辆等）</li>
+<li>与巴拿马文件链接，追踪离岸行为</li>
+</ul>
+<h3 id="识别策略">识别策略</h3>
+<p><strong>双重识别</strong>：</p>
+<ol>
+<li><strong>Bunching估计</strong>：在财富阈值（notch）处，纳税人将申报财富压低到门槛以下以规避税收。比较实际财富分布与反事实分布（如果没有税收缺口的分布），可以估计弹性。创新之处：作者不依赖反事实分布假设，而是直接用改革前后的<strong>真实面板数据</strong>对比同一纳税人的财富。</li>
+<li><strong>DiD估计</strong>：利用四次改革，比较处于阈值附近的纳税人（受税率变化影响更大）与远离阈值的纳税人（影响较小），在改革前后进行差分。事件研究设计，检验改革前无预趋势。</li>
+</ol>
+<h3 id="数据与主要结果">数据与主要结果</h3>
+<p><strong>数据</strong>：</p>
+<ul>
+<li>哥伦比亚税务总局（DIAN）行政税收数据，1993—2016年，覆盖所有申报财富税的个人（年均约5万人）</li>
+<li>资产分项数据：金融资产（第三方报告）、企业资产（非第三方报告）、房产、车辆、债务</li>
+<li>巴拿马文件：Mossack Fonseca客户数据，与哥伦比亚税收记录链接，识别在巴拿马设立实体的哥伦比亚人</li>
+</ul>
+<p><strong>发现一：立即反应</strong></p>
+<ul>
+<li>财富税增加后，纳税人<strong>立即减少申报财富</strong>以跌落更低税率档次（bunching集中在阈值以下）</li>
+<li>净财富税率提高1%（即"一减税率"提高1%）导致申报财富<strong>立即增加约2%</strong>（弹性≈2）</li>
+<li>Bunching和DiD两种方法给出数量上相近的结果（这不同于欧洲研究中两种方法结果差异很大的情况）</li>
+<li>即时反应损失高达<strong>五分之一的潜在税收收入</strong></li>
+</ul>
+<p><strong>发现二：滞后效应（Hysteresis）——首次证据</strong></p>
+<ul>
+<li><strong>关键发现</strong>：在哥伦比亚临时财富税废止后，纳税人仍然<strong>持续低报财富数年</strong>，即使已经没有税收缺口的经济激励</li>
+<li>具体表现：（a）原先因财富税而把财富压低到阈值以下的人，在税收废止后继续保持低申报水平；（b）原先就低于阈值的人，也预防性地避免跨越已废止的阈值（以防未来财富税重新出台）</li>
+<li>这一效应<strong>不能用税收激励、固定调整成本或收入测量误差</strong>来解释——它反映的是纳税人<strong>战略性地维持低申报</strong>以掩盖资产、规避未来税收</li>
+<li>政策含义：临时财富税（如COVID-19后的应急财富税）可能对财富分布和政府税收产生长期持续影响</li>
+</ul>
+<p><strong>发现三：反应机制——漏报而非真实减少财富</strong></p>
+<ul>
+<li>通过IV方法识别应对财富税的"buncher"（即因税收而调整申报的纳税人）</li>
+<li>特征：buncher拥有更多<strong>非第三方报告资产</strong>（企业股权等当局无法交叉验证的资产）；持有的固定资产（房产）更少（难以随意调整的）</li>
+<li>具体逃税手段：（a）<strong>低报企业资产</strong>（尤其是非上市私有企业股权）；（b）<strong>虚报债务</strong>（夸大负债以降低净资产）</li>
+<li>这与欧洲研究发现一致（Brülhart等2022；Seim 2017）——纳税人利用"第三方信息覆盖率"的差异来逃税</li>
+</ul>
+<p><strong>发现四：离岸转移——与巴拿马文件的证据</strong></p>
+<ul>
+<li>哥伦比亚重新征收财富税后，<strong>每年新增哥伦比亚人在巴拿马注册离岸实体的数量显著增加</strong>（与其他国家相比，控制全球趋势后仍显著）</li>
+<li>财富税税率提高后，<strong>富裕纳税人将更多资产转移到避税天堂</strong>（事件研究证实因果性）</li>
+<li>这些在税收高的年份注册离岸实体的人，随后向哥伦比亚当局申报的资产明显减少</li>
+</ul>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<p><strong>政策含义</strong>：</p>
+<ol>
+<li><strong>信息建设</strong>：扩大第三方报告覆盖范围（尤其是企业股权等目前无需第三方报告的资产），是遏制逃税的关键</li>
+<li><strong>离岸合作</strong>：建立受益所有权登记制度；要求申报境外资产；与其他国家签订自动税收信息交换协议（TIEAs）</li>
+<li><strong>临时财富税的慎用</strong>：滞后效应意味着临时财富税的长期成本可能被低估——即使废止，申报财富长期下降仍会影响税基</li>
+</ol>
+<p><strong>两个未来研究方向（论文明确提及）</strong>：</p>
+<ol>
+<li>哥伦比亚逐步废除<strong>企业财富税</strong>（2018年完全废止）期间，是否存在资产从个人向企业的转移？</li>
+<li>2016年后的自动税收信息交换协议（FATCA等）如何影响离岸逃税行为？当逃税机会受限时，是否会引发真实行为反应（如减少储蓄/投资）？</li>
+</ol>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文明确提及的方向</strong>（见上）</p>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li><strong>中国语境</strong>：中国目前没有财富税，但正在讨论房产税改革（一种形式的财富税）。哥伦比亚的滞后效应结果对中国房产税的政策设计有何启示？如果房产税只是临时征收（如试点城市），是否也会产生持久的价格/申报抑制效应？</li>
+<li><strong>与所得税逃税的比较</strong>：本文的逃税机制（低报非第三方报告资产）与所得税逃税（低报收入）有何共同点和差异？两者在信息环境和审计威慑下的行为反应是否相似？</li>
+<li><strong>贫困国家的信息环境</strong>：哥伦比亚已有金融资产第三方报告，但企业资产没有。对于信息环境更差的最贫困国家，财富税是否根本上不可行（全部税基都无法核验）？</li>
+<li><strong>财富税 vs. 财富增值税</strong>：本文研究的是对存量财富的税收；而卡皮塔尔利得税（capital gains tax）是对流量（增值）征税。两者的逃税弹性有多不同？</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>滞后效应的经济学解释</strong>：本文发现hysteresis不能用固定调整成本（如因调整申报需要会计费用）来解释，而归因于"掩盖资产以避免未来税收"的战略预期。但这一解释隐含纳税人对未来政策的理性预期——他们预见财富税可能回来，因此提前维持低申报。这是一种相当复杂的理性行为。一个替代解释是：低申报可能形成"惯性"（纳税人懒得恢复原来的高申报水平），而非纯粹的战略行为。能否设计实验或利用异质性来区分这两种解释？</p>
+</li>
+<li>
+<p><strong>巴拿马文件的代表性</strong>：巴拿马文件来自Mossack Fonseca这一特定律师事务所，可能无法代表所有离岸逃税行为（只是一家中介商的客户）。如果使用其他来源的离岸数据，结论是否会改变？本文的离岸效应估计可能是低估的（如果还有其他途径逃税）。</p>
+</li>
+<li>
+<p><strong>哥伦比亚结果的外推性</strong>：哥伦比亚是上中等收入国家，有相对成熟的税务系统（DIAN）。对于税务系统更弱、腐败更严重的低收入国家，财富税的逃税行为可能更严重（弹性更高）。对于欧洲这类第三方报告更全面的高收入国家，弹性可能更低。本文的结果处于"中间地带"，为不同制度环境提供参考基准。</p>
+</li>
+<li>
+<p><strong>政策设计含义的层次</strong>：作者建议扩大第三方报告覆盖范围以遏制逃税。但在哥伦比亚（及类似发展中国家），私有企业估值本身就是核心挑战——即使要求第三方报告，如何对非上市企业进行可核验的估值？这是一个数据可用性之外的根本性产权问题。</p>
+</li>
+<li>
+<p><strong>与在逃税文献中的定位</strong>：本文的机制分解结果（第三方报告vs非第三方报告资产）与Kleven等人在所得税中的发现高度一致：第三方信息覆盖率是决定税收合规的最重要因素。这说明"第三方报告"可能是比税率本身更关键的政策杠杆，无论是所得税还是财富税。</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>本文的弹性估计（≈2）与欧洲财富税文献相比处于什么水平？为什么哥伦比亚的弹性比许多欧洲国家更高？是因为第三方报告覆盖率低，还是有其他因素？</li>
+<li>Hysteresis效应的机制——“战略维持低申报以避免未来税收”——是否有理论模型支持？与标准的"一次性调整成本"模型有何不同？</li>
+<li>如果中国推行房产税（如上海、重庆的试点扩大），基于本文的结果，中国纳税人可能会通过什么渠道来应对（房产申报价值低报？转移到企业名下？）？</li>
+<li>Panama Papers作为研究数据的可靠性如何？其他研究（如Alstadsæter等2019用挪威数据）也用到了类似数据，发现了什么可比较的结论？</li>
+<li>本文是否估计了财富税对真实行为（储蓄、投资、消费）的影响？还是只关注申报行为？如果税收主要导致逃税而非真实行为改变，对效率损失（deadweight loss）的评估有何影响？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -15278,156 +15428,6 @@ DOJ的IT支出没有出现支出高峰,最后一周的IT支出仅占3.3%,而非I
         <tag>论文笔记</tag>
         <tag>公共经济学</tag>
         <tag>预算制度</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>财富税的行为响应：哥伦比亚的证据 — 深度阅读笔记 — Londoño-Vélez &amp; Ávila-Mahecha</title>
-    <url>/posts/londono-velez2024/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Behavioural Responses to Wealth Taxation: Evidence from Colombia<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/D72FU22M/Londoño-Vélez和Ávila-Mahecha - 2024 - Behavioural Responses to Wealth Taxation Evidence from Colombia.pdf<br>
-Zotero Item Key:: LWFR6PLB</p>
-<hr>
-<span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-财富税（wealth tax）是对个人净资产（资产减负债）征收的税，与所得税不同。近年来围绕是否应推行财富税的政策讨论非常热烈（如美国Warren和Sanders的财富税提案，疫情后多国临时财富税）。核心问题是：富人会如何回应财富税？会真的减少财富积累，还是通过逃税/避税将财富藏匿起来？现有欧洲文献给出的弹性估计差异巨大（从几乎为0到极高），且机制不清晰。</p>
-<p><strong>研究背景</strong><br>
-哥伦比亚自1993年至2016年持续对高净值个人征收财富税，历经四次重大改革（2003、2006、2010、2014年），税率从0到6%不等，豁免阈值和征税期限多次变化，且在阈值处存在"缺口"（notch）——略高于门槛的财富会触发大幅跳跃的税收负担。这为识别行为反应提供了近乎理想的实验条件。</p>
-<p><strong>作者的问题意识</strong><br>
-四个关键问题：</p>
-<ol>
-<li>面对财富税，纳税人是否立即减少申报财富？</li>
-<li>这一效应在税收废止后是否持续（滞后效应/hysteresis）？</li>
-<li>反应通过什么机制实现（真实行为变化 vs. 逃税/漏报）？</li>
-<li>最富有的人是否通过离岸转移将财富藏入避税天堂？</li>
-</ol>
-<p><strong>研究意义</strong><br>
-本文提供了发展中国家财富税行为反应的首个严格因果证据，发现了<strong>财富税的滞后效应（hysteresis）</strong>——临时财富税对申报财富的影响可以在税收废止后数年持续，这对临时财富税的政策评估具有根本性影响。同时，利用泄露的巴拿马文件（Panama Papers），首次将财富税改革与离岸避税行为直接链接。</p>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言</strong>：财富税政策背景；三大贡献（滞后效应、离岸避税机制、发展中国家证据）。</li>
-<li><strong>哥伦比亚财富税制度介绍（Section 2）</strong>。</li>
-<li><strong>数据（Section 3）</strong>：税收行政记录 + 巴拿马文件链接。</li>
-<li><strong>行为反应：立即效应与滞后效应（Section 4）</strong>。</li>
-<li><strong>反应机制分解（Section 5）</strong>：漏报资产；离岸转移。</li>
-<li><strong>结论与政策含义（Section 6）</strong>。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p><strong>为什么财富税行为反应难以研究</strong>：</p>
-<ul>
-<li>理想的识别需要来自税率变化的外生变异，但大多数国家的税制改革是多维度、难以分离的</li>
-<li>欧洲研究（瑞典、挪威、法国、瑞士等）发现的弹性估计分布极广（0.054到43.2，800倍差异），部分原因是识别方法不同（bunching vs DiD）且测量的行为不同（真实行为vs申报行为）</li>
-<li>发展中国家高净值人群的数据极难获取</li>
-</ul>
-<p><strong>哥伦比亚的独特优势</strong>：</p>
-<ul>
-<li>历史最长的财富税制度（1993—2016年）</li>
-<li>四次重大改革，产生大量识别变异</li>
-<li>在财富阈值处存在"缺口"（notch），产生大幅税收跳跃，适合bunching估计</li>
-<li>覆盖全部高净值个人的税收行政微观数据（资产分项：银行存款、股权、企业资产、房产、车辆等）</li>
-<li>与巴拿马文件链接，追踪离岸行为</li>
-</ul>
-<h3 id="识别策略">识别策略</h3>
-<p><strong>双重识别</strong>：</p>
-<ol>
-<li><strong>Bunching估计</strong>：在财富阈值（notch）处，纳税人将申报财富压低到门槛以下以规避税收。比较实际财富分布与反事实分布（如果没有税收缺口的分布），可以估计弹性。创新之处：作者不依赖反事实分布假设，而是直接用改革前后的<strong>真实面板数据</strong>对比同一纳税人的财富。</li>
-<li><strong>DiD估计</strong>：利用四次改革，比较处于阈值附近的纳税人（受税率变化影响更大）与远离阈值的纳税人（影响较小），在改革前后进行差分。事件研究设计，检验改革前无预趋势。</li>
-</ol>
-<h3 id="数据与主要结果">数据与主要结果</h3>
-<p><strong>数据</strong>：</p>
-<ul>
-<li>哥伦比亚税务总局（DIAN）行政税收数据，1993—2016年，覆盖所有申报财富税的个人（年均约5万人）</li>
-<li>资产分项数据：金融资产（第三方报告）、企业资产（非第三方报告）、房产、车辆、债务</li>
-<li>巴拿马文件：Mossack Fonseca客户数据，与哥伦比亚税收记录链接，识别在巴拿马设立实体的哥伦比亚人</li>
-</ul>
-<p><strong>发现一：立即反应</strong></p>
-<ul>
-<li>财富税增加后，纳税人<strong>立即减少申报财富</strong>以跌落更低税率档次（bunching集中在阈值以下）</li>
-<li>净财富税率提高1%（即"一减税率"提高1%）导致申报财富<strong>立即增加约2%</strong>（弹性≈2）</li>
-<li>Bunching和DiD两种方法给出数量上相近的结果（这不同于欧洲研究中两种方法结果差异很大的情况）</li>
-<li>即时反应损失高达<strong>五分之一的潜在税收收入</strong></li>
-</ul>
-<p><strong>发现二：滞后效应（Hysteresis）——首次证据</strong></p>
-<ul>
-<li><strong>关键发现</strong>：在哥伦比亚临时财富税废止后，纳税人仍然<strong>持续低报财富数年</strong>，即使已经没有税收缺口的经济激励</li>
-<li>具体表现：（a）原先因财富税而把财富压低到阈值以下的人，在税收废止后继续保持低申报水平；（b）原先就低于阈值的人，也预防性地避免跨越已废止的阈值（以防未来财富税重新出台）</li>
-<li>这一效应<strong>不能用税收激励、固定调整成本或收入测量误差</strong>来解释——它反映的是纳税人<strong>战略性地维持低申报</strong>以掩盖资产、规避未来税收</li>
-<li>政策含义：临时财富税（如COVID-19后的应急财富税）可能对财富分布和政府税收产生长期持续影响</li>
-</ul>
-<p><strong>发现三：反应机制——漏报而非真实减少财富</strong></p>
-<ul>
-<li>通过IV方法识别应对财富税的"buncher"（即因税收而调整申报的纳税人）</li>
-<li>特征：buncher拥有更多<strong>非第三方报告资产</strong>（企业股权等当局无法交叉验证的资产）；持有的固定资产（房产）更少（难以随意调整的）</li>
-<li>具体逃税手段：（a）<strong>低报企业资产</strong>（尤其是非上市私有企业股权）；（b）<strong>虚报债务</strong>（夸大负债以降低净资产）</li>
-<li>这与欧洲研究发现一致（Brülhart等2022；Seim 2017）——纳税人利用"第三方信息覆盖率"的差异来逃税</li>
-</ul>
-<p><strong>发现四：离岸转移——与巴拿马文件的证据</strong></p>
-<ul>
-<li>哥伦比亚重新征收财富税后，<strong>每年新增哥伦比亚人在巴拿马注册离岸实体的数量显著增加</strong>（与其他国家相比，控制全球趋势后仍显著）</li>
-<li>财富税税率提高后，<strong>富裕纳税人将更多资产转移到避税天堂</strong>（事件研究证实因果性）</li>
-<li>这些在税收高的年份注册离岸实体的人，随后向哥伦比亚当局申报的资产明显减少</li>
-</ul>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<p><strong>政策含义</strong>：</p>
-<ol>
-<li><strong>信息建设</strong>：扩大第三方报告覆盖范围（尤其是企业股权等目前无需第三方报告的资产），是遏制逃税的关键</li>
-<li><strong>离岸合作</strong>：建立受益所有权登记制度；要求申报境外资产；与其他国家签订自动税收信息交换协议（TIEAs）</li>
-<li><strong>临时财富税的慎用</strong>：滞后效应意味着临时财富税的长期成本可能被低估——即使废止，申报财富长期下降仍会影响税基</li>
-</ol>
-<p><strong>两个未来研究方向（论文明确提及）</strong>：</p>
-<ol>
-<li>哥伦比亚逐步废除<strong>企业财富税</strong>（2018年完全废止）期间，是否存在资产从个人向企业的转移？</li>
-<li>2016年后的自动税收信息交换协议（FATCA等）如何影响离岸逃税行为？当逃税机会受限时，是否会引发真实行为反应（如减少储蓄/投资）？</li>
-</ol>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文明确提及的方向</strong>（见上）</p>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li><strong>中国语境</strong>：中国目前没有财富税，但正在讨论房产税改革（一种形式的财富税）。哥伦比亚的滞后效应结果对中国房产税的政策设计有何启示？如果房产税只是临时征收（如试点城市），是否也会产生持久的价格/申报抑制效应？</li>
-<li><strong>与所得税逃税的比较</strong>：本文的逃税机制（低报非第三方报告资产）与所得税逃税（低报收入）有何共同点和差异？两者在信息环境和审计威慑下的行为反应是否相似？</li>
-<li><strong>贫困国家的信息环境</strong>：哥伦比亚已有金融资产第三方报告，但企业资产没有。对于信息环境更差的最贫困国家，财富税是否根本上不可行（全部税基都无法核验）？</li>
-<li><strong>财富税 vs. 财富增值税</strong>：本文研究的是对存量财富的税收；而卡皮塔尔利得税（capital gains tax）是对流量（增值）征税。两者的逃税弹性有多不同？</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>滞后效应的经济学解释</strong>：本文发现hysteresis不能用固定调整成本（如因调整申报需要会计费用）来解释，而归因于"掩盖资产以避免未来税收"的战略预期。但这一解释隐含纳税人对未来政策的理性预期——他们预见财富税可能回来，因此提前维持低申报。这是一种相当复杂的理性行为。一个替代解释是：低申报可能形成"惯性"（纳税人懒得恢复原来的高申报水平），而非纯粹的战略行为。能否设计实验或利用异质性来区分这两种解释？</p>
-</li>
-<li>
-<p><strong>巴拿马文件的代表性</strong>：巴拿马文件来自Mossack Fonseca这一特定律师事务所，可能无法代表所有离岸逃税行为（只是一家中介商的客户）。如果使用其他来源的离岸数据，结论是否会改变？本文的离岸效应估计可能是低估的（如果还有其他途径逃税）。</p>
-</li>
-<li>
-<p><strong>哥伦比亚结果的外推性</strong>：哥伦比亚是上中等收入国家，有相对成熟的税务系统（DIAN）。对于税务系统更弱、腐败更严重的低收入国家，财富税的逃税行为可能更严重（弹性更高）。对于欧洲这类第三方报告更全面的高收入国家，弹性可能更低。本文的结果处于"中间地带"，为不同制度环境提供参考基准。</p>
-</li>
-<li>
-<p><strong>政策设计含义的层次</strong>：作者建议扩大第三方报告覆盖范围以遏制逃税。但在哥伦比亚（及类似发展中国家），私有企业估值本身就是核心挑战——即使要求第三方报告，如何对非上市企业进行可核验的估值？这是一个数据可用性之外的根本性产权问题。</p>
-</li>
-<li>
-<p><strong>与在逃税文献中的定位</strong>：本文的机制分解结果（第三方报告vs非第三方报告资产）与Kleven等人在所得税中的发现高度一致：第三方信息覆盖率是决定税收合规的最重要因素。这说明"第三方报告"可能是比税率本身更关键的政策杠杆，无论是所得税还是财富税。</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>本文的弹性估计（≈2）与欧洲财富税文献相比处于什么水平？为什么哥伦比亚的弹性比许多欧洲国家更高？是因为第三方报告覆盖率低，还是有其他因素？</li>
-<li>Hysteresis效应的机制——“战略维持低申报以避免未来税收”——是否有理论模型支持？与标准的"一次性调整成本"模型有何不同？</li>
-<li>如果中国推行房产税（如上海、重庆的试点扩大），基于本文的结果，中国纳税人可能会通过什么渠道来应对（房产申报价值低报？转移到企业名下？）？</li>
-<li>Panama Papers作为研究数据的可靠性如何？其他研究（如Alstadsæter等2019用挪威数据）也用到了类似数据，发现了什么可比较的结论？</li>
-<li>本文是否估计了财富税对真实行为（储蓄、投资、消费）的影响？还是只关注申报行为？如果税收主要导致逃税而非真实行为改变，对效率损失（deadweight loss）的评估有何影响？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -16161,68 +16161,6 @@ Ragin)于<code>1987</code>年提出,适用于案例数量大于10小于60的研�
       </tags>
   </entry>
   <entry>
-    <title>Community Enforcement With Endogenous Records — 深度阅读笔记 — Pei</title>
-    <url>/posts/pei2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Community Enforcement with Endogenous
-Records</li>
-<li><strong>作者</strong>: Harry Pei (Northwestern University)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies
-(RES)</li>
-<li><strong>DOI</strong>: 10.1093/restud/rdaf049</li>
-<li><strong>难度评估</strong>: 高 - 需要重复博弈理论、社区执行理论基础
-<span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言">1. 引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>社区执行、内生记录、重复博弈、匿名随机匹配。</p>
-<h3 id="研究背景">研究背景</h3>
-<p>小型社区可无需历史信息合作；大社区需要关于伙伴历史的信息；在线评价等场景存在记录操纵问题。</p>
-<h3 id="核心问题">核心问题</h3>
-<p>当玩家可以操纵自己的记录（添加或删除信号）时，合作如何可能？</p>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：基准模型</li>
-<li>第三节：反民间定理</li>
-<li>第四节：中等寿命下的合作</li>
-<li>第五节：不可能合作的情况</li>
-<li>第六节：扩展</li>
-<li>第七节：结论</li>
-</ul>
-<h2 id="正文">3. 正文</h2>
-<h3 id="核心机制">核心机制</h3>
-<ul>
-<li><strong>擦除信号</strong>：玩家可选择任意子序列作为下期记录 →
-延续价值非递减</li>
-<li><strong>添加信号</strong>：玩家可向记录添加信号 →
-延续价值非递增</li>
-</ul>
-<h3 id="主要结果">主要结果</h3>
-<ol type="1">
-<li><strong>Theorem
-1</strong>：足够长寿玩家几乎从不合作（无论擦除还是添加）</li>
-<li><strong>Theorem
-2</strong>：中等寿命下可维持部分合作（取决于互补性/替代性）</li>
-<li><strong>Theorem 3</strong>：某些条件下无论寿命如何都必不合作</li>
-</ol>
-<h2 id="结论">4. 结论</h2>
-<p>合作与玩家预期寿命非单调相关；记录操纵形式和行动互补性决定合作可能性。</p>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<p>有限社区推广、异质性寿命分析、实验验证、机制设计。</p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>中国农业发展之路 — 深度阅读笔记 — Perkins</title>
     <url>/posts/perkins1969/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="书籍信息">书籍信息</h2>
@@ -16767,6 +16705,68 @@ University Press.</li>
         <tag>书籍</tag>
         <tag>农业史</tag>
         <tag>中国历史</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Community Enforcement With Endogenous Records — 深度阅读笔记 — Pei</title>
+    <url>/posts/pei2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Community Enforcement with Endogenous
+Records</li>
+<li><strong>作者</strong>: Harry Pei (Northwestern University)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies
+(RES)</li>
+<li><strong>DOI</strong>: 10.1093/restud/rdaf049</li>
+<li><strong>难度评估</strong>: 高 - 需要重复博弈理论、社区执行理论基础
+<span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言">1. 引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>社区执行、内生记录、重复博弈、匿名随机匹配。</p>
+<h3 id="研究背景">研究背景</h3>
+<p>小型社区可无需历史信息合作；大社区需要关于伙伴历史的信息；在线评价等场景存在记录操纵问题。</p>
+<h3 id="核心问题">核心问题</h3>
+<p>当玩家可以操纵自己的记录（添加或删除信号）时，合作如何可能？</p>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：基准模型</li>
+<li>第三节：反民间定理</li>
+<li>第四节：中等寿命下的合作</li>
+<li>第五节：不可能合作的情况</li>
+<li>第六节：扩展</li>
+<li>第七节：结论</li>
+</ul>
+<h2 id="正文">3. 正文</h2>
+<h3 id="核心机制">核心机制</h3>
+<ul>
+<li><strong>擦除信号</strong>：玩家可选择任意子序列作为下期记录 →
+延续价值非递减</li>
+<li><strong>添加信号</strong>：玩家可向记录添加信号 →
+延续价值非递增</li>
+</ul>
+<h3 id="主要结果">主要结果</h3>
+<ol type="1">
+<li><strong>Theorem
+1</strong>：足够长寿玩家几乎从不合作（无论擦除还是添加）</li>
+<li><strong>Theorem
+2</strong>：中等寿命下可维持部分合作（取决于互补性/替代性）</li>
+<li><strong>Theorem 3</strong>：某些条件下无论寿命如何都必不合作</li>
+</ol>
+<h2 id="结论">4. 结论</h2>
+<p>合作与玩家预期寿命非单调相关；记录操纵形式和行动互补性决定合作可能性。</p>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<p>有限社区推广、异质性寿命分析、实验验证、机制设计。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -17510,30 +17510,6 @@ Zotero Item Key:: Y7FT49B5</p>
       </tags>
   </entry>
   <entry>
-    <title>Shell脚本笔记(1)</title>
-    <url>/posts/2510/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<h1 id="引言">引言</h1>
-<p>shell是用C语言编写的程序,但它自身同时也是一种程序设计语言.你可能经常听说"shell脚本",但实际上shell编程并非等同于"shell脚本"编程,前者指shell程序本身的开发,后者则是利用shell程序进行开发.都说java和javascript的区别是周杰和周杰伦的区别,shell和shell
-script或许也有那么点意思.</p>
-<h1 id="shell脚本">shell脚本</h1>
-<p>似乎任何程序学习都是从"Hello
-World!"开始的,对于<strong>shell</strong>而言:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Hello World !"</span></span><br></pre></td></tr></tbody></table></figure>
-<p><strong>#!</strong>是个标记,告知这段命令将用bash执行.echo则是一个向窗口展示文本的命令.
-你可以将以上代码框的内容存为一个以.sh为后缀的文件,比如<strong>hw.sh</strong>,并赋予文件执行权限:</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">chmod +x ./hw.sh         #赋予执行权限</span><br><span class="line">bash hw.sh               #执行脚本</span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<p>未完待续</p>
-]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>shell</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Complexity and Satisficing — 深度阅读笔记 — Salant &amp; Spenkuch</title>
     <url>/posts/salant2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -17585,6 +17561,30 @@ Evidence from Chess</li>
       </categories>
       <tags>
         <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Shell脚本笔记(1)</title>
+    <url>/posts/2510/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<h1 id="引言">引言</h1>
+<p>shell是用C语言编写的程序,但它自身同时也是一种程序设计语言.你可能经常听说"shell脚本",但实际上shell编程并非等同于"shell脚本"编程,前者指shell程序本身的开发,后者则是利用shell程序进行开发.都说java和javascript的区别是周杰和周杰伦的区别,shell和shell
+script或许也有那么点意思.</p>
+<h1 id="shell脚本">shell脚本</h1>
+<p>似乎任何程序学习都是从"Hello
+World!"开始的,对于<strong>shell</strong>而言:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Hello World !"</span></span><br></pre></td></tr></tbody></table></figure>
+<p><strong>#!</strong>是个标记,告知这段命令将用bash执行.echo则是一个向窗口展示文本的命令.
+你可以将以上代码框的内容存为一个以.sh为后缀的文件,比如<strong>hw.sh</strong>,并赋予文件执行权限:</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">chmod +x ./hw.sh         #赋予执行权限</span><br><span class="line">bash hw.sh               #执行脚本</span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<p>未完待续</p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
       </tags>
   </entry>
   <entry>
@@ -17724,6 +17724,30 @@ Selection数据存在哪些已知的测量误差或选择性偏差？</li>
       </tags>
   </entry>
   <entry>
+    <title>2014到2021年:淘宝村分布散点图😲</title>
+    <url>/posts/18898/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示"><strong>效果展示</strong></h2>
+<img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235354537.svg" width="80%" height="80%" align="middle">
+<center>
+2014年的淘宝村分布
+</center>
+<span id="more"></span>
+<p><img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235404847.svg" width="80%" height="80%" align="middle"></p>
+<center>
+2021年的淘宝村分布
+</center>
+<h2 id="从最初3个增长至7023个"><strong>从最初3个增长至7023个</strong></h2>
+<p>从2009年到2021年,中国淘宝村呈现裂变式的扩散增长,从最初3个增长至7023个,无论是数量规模,还是分布广度都经历了飞跃式的发展.从萌芽至发展阶段,"小农户连接大市场"的电商逻辑长期被认为是淘宝村的主要内涵.围绕这一内涵,市场、政策、技术、人才一度不断汇聚,为淘宝村发展创造了十余年的黄金机遇,形成了一场边缘人群连接现代网络、边缘地区接壤现代市场、边缘产品汇聚现代需求的"边缘革命".然而,在经历十余年的飞速发展后,淘宝村开始面临红利期消失、消费升级、同质化竞争、规范治理等适应性挑战,转型变革已是必然选择.在这一过程中,过往遵循传统电商逻辑的淘宝村正经历蜕变.一方面,垂直电商、内容电商等多元化的销售互联网生态正加速形成;另一方面,由差异化、个性化、碎片化需求所驱动的产业数字化升级不断涌现.可以认为,以"消费互联网+产业互联网"为特征的产销全域数字化逻辑正在为淘宝村注入新的内涵,其核心不再是"连接大市场",而是"洞悉大市场、细分小市场、塑造新市场".这种内涵演进对淘宝村发展提出了更高的要求,即能否充分利用数字技术提高经营主体的市场洞察力,能否通过数据信息整合优化生产流程,能否基于数字供应链实现快速的市场反馈.在此意义上,新时代的淘宝村将不再是"逆边缘化"的地理名词,而是一类凭借数字技术突破分散决策、分散生产、分散经营劣势的组织指称.</p>
+]]></content>
+      <categories>
+        <category>绘图</category>
+        <category>map&amp;sf</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Behavioural Causal Inference — 深度阅读笔记 — Spiegler</title>
     <url>/posts/spiegler2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -17845,30 +17869,6 @@ an Endogenous Production Network</li>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2014到2021年:淘宝村分布散点图😲</title>
-    <url>/posts/18898/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示"><strong>效果展示</strong></h2>
-<img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235354537.svg" width="80%" height="80%" align="middle">
-<center>
-2014年的淘宝村分布
-</center>
-<span id="more"></span>
-<p><img data-src="https://qgq931001.oss-cn-beijing.aliyuncs.com/img/20250110235404847.svg" width="80%" height="80%" align="middle"></p>
-<center>
-2021年的淘宝村分布
-</center>
-<h2 id="从最初3个增长至7023个"><strong>从最初3个增长至7023个</strong></h2>
-<p>从2009年到2021年,中国淘宝村呈现裂变式的扩散增长,从最初3个增长至7023个,无论是数量规模,还是分布广度都经历了飞跃式的发展.从萌芽至发展阶段,"小农户连接大市场"的电商逻辑长期被认为是淘宝村的主要内涵.围绕这一内涵,市场、政策、技术、人才一度不断汇聚,为淘宝村发展创造了十余年的黄金机遇,形成了一场边缘人群连接现代网络、边缘地区接壤现代市场、边缘产品汇聚现代需求的"边缘革命".然而,在经历十余年的飞速发展后,淘宝村开始面临红利期消失、消费升级、同质化竞争、规范治理等适应性挑战,转型变革已是必然选择.在这一过程中,过往遵循传统电商逻辑的淘宝村正经历蜕变.一方面,垂直电商、内容电商等多元化的销售互联网生态正加速形成;另一方面,由差异化、个性化、碎片化需求所驱动的产业数字化升级不断涌现.可以认为,以"消费互联网+产业互联网"为特征的产销全域数字化逻辑正在为淘宝村注入新的内涵,其核心不再是"连接大市场",而是"洞悉大市场、细分小市场、塑造新市场".这种内涵演进对淘宝村发展提出了更高的要求,即能否充分利用数字技术提高经营主体的市场洞察力,能否通过数据信息整合优化生产流程,能否基于数字供应链实现快速的市场反馈.在此意义上,新时代的淘宝村将不再是"逆边缘化"的地理名词,而是一类凭借数字技术突破分散决策、分散生产、分散经营劣势的组织指称.</p>
-]]></content>
-      <categories>
-        <category>绘图</category>
-        <category>map&amp;sf</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
       </tags>
   </entry>
   <entry>
