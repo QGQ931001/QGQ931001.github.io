@@ -1,72 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>学术讲座# 中国人民大学经济学院江艇:渐进DID的最新进展</title>
-    <url>/posts/836/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="关于did因果识别"><strong>关于DID因果识别</strong></h2>
-<ul>
-<li>Imbens:
-任何的因果识别归根结底都是做<strong>插值</strong>与<strong>差值</strong></li>
-<li>传统<span class="math inline">\(DID\)</span>最大的两类威胁是:①平行趋势不成立;②存在混淆政策</li>
-<li><span class="math inline">\(DID\)</span>的重要前提是平行趋势,但这种前提实际并不能完全验证:事前平行并不意味着事后平行趋势,但事前不平行一定能验证平行趋势不成立</li>
-<li>最经典的例子就是经济特区,深圳在改革开放前可能和中原地区的一个小村庄没有什么不同,但是即使深圳没有被划为经济特区,改革开放后其经济增长趋势也有可能因为地缘优势而呈现较快的增长趋势</li>
-<li>两期的数据做<span class="math inline">\(DID\)</span>会退化为<span class="math inline">\(FD\)</span>,此时的截距项代表时间变化趋势</li>
-<li>Good control: 既影响<span class="math inline">\(y\)</span>,又影响<span class="math inline">\(D\cdot T\)</span></li>
-<li>Bad control: 既影响y,又被<span class="math inline">\(D\cdot
-T\)</span>影响</li>
-<li>无法判断影响样本进入处理组的因素是否还影响其变化趋势</li>
-<li>潜在结果:使用上标表示,想象中的结果</li>
-<li><span class="math inline">\(ATT\)</span>:处理组接受处理后的平均处理效应</li>
-<li><span class="math inline">\(D\)</span>实际可以理解为处理组的固定效应</li>
-</ul>
-<span id="more"></span>
-<h2 id="交错型didstaggered-did"><strong>1. 交错型DID(staggered
-DID)</strong></h2>
-<ul>
-<li>没有办法构造<span class="math inline">\(D\cdot
-T\)</span>,可以直接定义<span class="math inline">\(D\cdot
-T\)</span>,表示接受处理的虚拟变量</li>
-<li>干预事件的发生时间不一致,极可能意味着,事后趋势不一致.为此,应尽量控制影响<span class="math inline">\(X_i\)</span>,避免控制既影响<span class="math inline">\(y\)</span>,又被<span class="math inline">\(D⋅T\)</span>影响的<span class="math inline">\(X_{it}\)</span></li>
-<li>Goodman-Bacon定理:任何一个交错<span class="math inline">\(DID\)</span>的双向固定效应模型都可以分解为<span class="math inline">\(K^2\)</span>个传统双重差分估计结果的加权平均</li>
-<li>导致偏误的原因在于:以晚处理组为处理组,以早处理组为对照组,此时双重差分估计中包含了一项<span class="math inline">\(\Delta
-ATT\)</span>,即早处理组的政策效应存在明显的动态变化</li>
-<li>交错<span class="math inline">\(DID\)</span>估计出的<span class="math inline">\(\beta\)</span>究竟意味着什么?由三部分构成:①方差加权的<span class="math inline">\(ATT\)</span>;②方差加权的趋势差异;③<span class="math inline">\(\Delta ATT\)</span></li>
-</ul>
-<h2 id="改进策略_基于事件研究法"><strong>2.
-改进策略_基于事件研究法</strong></h2>
-<ul>
-<li><strong>2.1</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解,观察以早处理组为控制组的系数和权重,判断其是否影响了最终系数的估计</li>
-<li><strong>2.2</strong> 进行协变量的平衡性检验.在交错<span class="math inline">\(DID\)</span>的情形下,平行趋势检验没办法做.干预时间的不一致,平衡性检验可作为一种替代手段.此做法的目的在于判断事前变量与干预处理进度之间的关系.进行匹配时,都可以以政策执行前某一期为准</li>
-<li><strong>2.3</strong>
-进一步,可以按照各组作为控制组的贡献作为权重,对事前变量与干预处理进度进行加权<span class="math inline">\(OLS\)</span></li>
-<li><strong>2.4</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解,必须是平衡面板数据,所以要删除一些样本</li>
-<li><strong>2.5</strong>
-事件研究法:变日历时间为相对时间.按照相对时间进行校准,如果存在非常明显的趋势,则<span class="math inline">\(\Delta
-ATT\)</span>一定会比较大,基准模型会存在低估偏误</li>
-<li><strong>2.6</strong>
-可以根据事件研究法的结果,将核心解释变量乘以一个<span class="math inline">\((t-T^*)\)</span></li>
-</ul>
-<h2 id="改进策略_堆叠didstacked-did"><strong>3.改进策略_堆叠<span class="math inline">\(DID\)</span>(Stacked <span class="math inline">\(DID\)</span>)</strong></h2>
-<ul>
-<li><strong>3.1</strong>
-假定存在K个处理时点,构造K个数据集.每个数据集中只保留可以为处理组服务的控制组,比如晚处理组和一直未处理的组.标准误需要聚类到数据集上面</li>
-<li><strong>3.2</strong> 从构造上保证了早处理组不能作为控制组</li>
-</ul>
-<h2 id="改进策略_对事件研究法的反思寻找干净的控制组"><strong>4.改进策略_对事件研究法的反思,寻找干净的控制组</strong></h2>
-<ul>
-<li><strong>4.1</strong>
-仅不同时间队列样本的动态处理效应变化方式是一样的,事件研究法的估计才是有效的</li>
-</ul>
-]]></content>
-      <categories>
-        <category>计量</category>
-        <category>DID</category>
-      </categories>
-      <tags>
-        <tag>学术讲座</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>When Should You Adjust Standard Errors for Clustering — 深度分析 — Abadie Et Al.</title>
     <url>/posts/abadie2023/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -346,6 +280,72 @@ Bootstrap是否是更好的选择?它与本文的TSCB有何关系?</p></li>
       </categories>
       <tags>
         <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学术讲座# 中国人民大学经济学院江艇:渐进DID的最新进展</title>
+    <url>/posts/836/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="关于did因果识别"><strong>关于DID因果识别</strong></h2>
+<ul>
+<li>Imbens:
+任何的因果识别归根结底都是做<strong>插值</strong>与<strong>差值</strong></li>
+<li>传统<span class="math inline">\(DID\)</span>最大的两类威胁是:①平行趋势不成立;②存在混淆政策</li>
+<li><span class="math inline">\(DID\)</span>的重要前提是平行趋势,但这种前提实际并不能完全验证:事前平行并不意味着事后平行趋势,但事前不平行一定能验证平行趋势不成立</li>
+<li>最经典的例子就是经济特区,深圳在改革开放前可能和中原地区的一个小村庄没有什么不同,但是即使深圳没有被划为经济特区,改革开放后其经济增长趋势也有可能因为地缘优势而呈现较快的增长趋势</li>
+<li>两期的数据做<span class="math inline">\(DID\)</span>会退化为<span class="math inline">\(FD\)</span>,此时的截距项代表时间变化趋势</li>
+<li>Good control: 既影响<span class="math inline">\(y\)</span>,又影响<span class="math inline">\(D\cdot T\)</span></li>
+<li>Bad control: 既影响y,又被<span class="math inline">\(D\cdot
+T\)</span>影响</li>
+<li>无法判断影响样本进入处理组的因素是否还影响其变化趋势</li>
+<li>潜在结果:使用上标表示,想象中的结果</li>
+<li><span class="math inline">\(ATT\)</span>:处理组接受处理后的平均处理效应</li>
+<li><span class="math inline">\(D\)</span>实际可以理解为处理组的固定效应</li>
+</ul>
+<span id="more"></span>
+<h2 id="交错型didstaggered-did"><strong>1. 交错型DID(staggered
+DID)</strong></h2>
+<ul>
+<li>没有办法构造<span class="math inline">\(D\cdot
+T\)</span>,可以直接定义<span class="math inline">\(D\cdot
+T\)</span>,表示接受处理的虚拟变量</li>
+<li>干预事件的发生时间不一致,极可能意味着,事后趋势不一致.为此,应尽量控制影响<span class="math inline">\(X_i\)</span>,避免控制既影响<span class="math inline">\(y\)</span>,又被<span class="math inline">\(D⋅T\)</span>影响的<span class="math inline">\(X_{it}\)</span></li>
+<li>Goodman-Bacon定理:任何一个交错<span class="math inline">\(DID\)</span>的双向固定效应模型都可以分解为<span class="math inline">\(K^2\)</span>个传统双重差分估计结果的加权平均</li>
+<li>导致偏误的原因在于:以晚处理组为处理组,以早处理组为对照组,此时双重差分估计中包含了一项<span class="math inline">\(\Delta
+ATT\)</span>,即早处理组的政策效应存在明显的动态变化</li>
+<li>交错<span class="math inline">\(DID\)</span>估计出的<span class="math inline">\(\beta\)</span>究竟意味着什么?由三部分构成:①方差加权的<span class="math inline">\(ATT\)</span>;②方差加权的趋势差异;③<span class="math inline">\(\Delta ATT\)</span></li>
+</ul>
+<h2 id="改进策略_基于事件研究法"><strong>2.
+改进策略_基于事件研究法</strong></h2>
+<ul>
+<li><strong>2.1</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解,观察以早处理组为控制组的系数和权重,判断其是否影响了最终系数的估计</li>
+<li><strong>2.2</strong> 进行协变量的平衡性检验.在交错<span class="math inline">\(DID\)</span>的情形下,平行趋势检验没办法做.干预时间的不一致,平衡性检验可作为一种替代手段.此做法的目的在于判断事前变量与干预处理进度之间的关系.进行匹配时,都可以以政策执行前某一期为准</li>
+<li><strong>2.3</strong>
+进一步,可以按照各组作为控制组的贡献作为权重,对事前变量与干预处理进度进行加权<span class="math inline">\(OLS\)</span></li>
+<li><strong>2.4</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解,必须是平衡面板数据,所以要删除一些样本</li>
+<li><strong>2.5</strong>
+事件研究法:变日历时间为相对时间.按照相对时间进行校准,如果存在非常明显的趋势,则<span class="math inline">\(\Delta
+ATT\)</span>一定会比较大,基准模型会存在低估偏误</li>
+<li><strong>2.6</strong>
+可以根据事件研究法的结果,将核心解释变量乘以一个<span class="math inline">\((t-T^*)\)</span></li>
+</ul>
+<h2 id="改进策略_堆叠didstacked-did"><strong>3.改进策略_堆叠<span class="math inline">\(DID\)</span>(Stacked <span class="math inline">\(DID\)</span>)</strong></h2>
+<ul>
+<li><strong>3.1</strong>
+假定存在K个处理时点,构造K个数据集.每个数据集中只保留可以为处理组服务的控制组,比如晚处理组和一直未处理的组.标准误需要聚类到数据集上面</li>
+<li><strong>3.2</strong> 从构造上保证了早处理组不能作为控制组</li>
+</ul>
+<h2 id="改进策略_对事件研究法的反思寻找干净的控制组"><strong>4.改进策略_对事件研究法的反思,寻找干净的控制组</strong></h2>
+<ul>
+<li><strong>4.1</strong>
+仅不同时间队列样本的动态处理效应变化方式是一样的,事件研究法的估计才是有效的</li>
+</ul>
+]]></content>
+      <categories>
+        <category>计量</category>
+        <category>DID</category>
+      </categories>
+      <tags>
+        <tag>学术讲座</tag>
       </tags>
   </entry>
   <entry>
@@ -2142,148 +2142,6 @@ Moi改革后)，这是否影响校准的可靠性？</p>
       </tags>
   </entry>
   <entry>
-    <title>压低成本：干中学与全球电动汽车电池产业政府政策 — 深度阅读笔记 — Barwick Et Al.</title>
-    <url>/posts/barwick2025/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Drive Down the Cost: Learning by Doing and
-Government Policies in the Global EV Battery Industry</li>
-<li><strong>作者</strong>: Panle Jia Barwick (Wisconsin), Hyuk-Soo Kwon
-(Singapore), Shanjun Li (Cornell), Nahim Zahur (Queens)</li>
-<li><strong>年份</strong>: 2025</li>
-<li><strong>来源</strong>: NBER Working Paper No. 33378</li>
-<li><strong>DOI</strong>: 10.3386/w33378</li>
-</ul>
-<span id="more"></span>
-<hr>
-<hr>
-<h2 id="引言背景和意义">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong> "干中学"（Learning by Doing,
-LBD）是产业经济学和增长理论的经典概念：企业在生产过程中积累经验，进而降低单位生产成本。"Wright's
-Law"（1936年由航空工程师Theodore
-Wright提出）将这一规律量化为"累计产量每翻倍，单位成本下降固定比例"。LBD在半导体、太阳能电池等绿色技术行业均有大量记录。在政策设计上，LBD带来正外部性——当前生产提高了整个行业未来的效率，因此存在补贴当前生产的理由（以纠正动态外部性）。</p>
-<p><strong>研究背景</strong>
-电动汽车（EV）电池成本在2010-2020年间下降了近90%，是过去十年绿色能源技术中最引人注目的成本下降之一。这一变化对全球气候政策目标至关重要——电池成本是EV相对于内燃机车价格劣势的主要来源。全球各国政府为促进EV普及投入了大量补贴（2022年全球EV消费补贴达430亿美元），并通过产业政策（如中国白名单政策、美国IRA本地含量要求）扶持本土电池产业。然而，LBD在多大程度上驱动了成本下降？政府政策通过哪些渠道影响LBD进程？这些问题此前缺乏可信的量化研究。</p>
-<p><strong>作者的问题意识</strong>
-（1）LBD在多大程度上解释了EV电池成本的下降（相对于技术进步、规模经济、原材料成本等其他因素）？（2）LBD如何改变消费者EV补贴的政策效果？（3）中国的"白名单"本地含量要求政策通过LBD对全球EV市场产生了怎样的影响？（4）LBD在全球供应链中产生怎样的跨国溢出效应？</p>
-<p><strong>研究意义</strong>
-本文为绿色技术政策设计提供了直接量化依据：若忽视LBD，政策评估将大幅低估补贴的长期效益；同时揭示了消费端补贴与产业政策的相互作用，对评估美国IRA、中国产业政策的全球影响具有直接参考价值。</p>
-<hr>
-<h2 id="内容及结构论文结构">内容及结构（论文结构）</h2>
-<ol type="1">
-<li><strong>引言</strong>：提出问题，概述主要发现（LBD学习率7.5%，与补贴互补放大效果，跨国溢出效应）。</li>
-<li><strong>数据</strong>：全球13国EV销售数据（2013-2020），电池供应商信息，各国补贴政策。</li>
-<li><strong>需求模型</strong>：异质消费者离散选择模型（BLP类型），估计消费者对EV特性（价格、续航、充电速度等）的偏好。</li>
-<li><strong>供给模型与电池成本恢复</strong>：通过Nash议价模型（上游电池供应商与下游EV生产商之间）推断上下游加成，从而恢复电池成本。</li>
-<li><strong>LBD估计</strong>：用工具变量方法识别LBD学习率，控制内生性（高效企业多生产更多、积累更多经验）。</li>
-<li><strong>反事实政策分析</strong>：（a）评估消费者EV补贴在有无LBD情况下的效果；（b）评估中国白名单政策及其时间安排的影响。</li>
-<li><strong>结论</strong>：总结核心发现及政策含义。</li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>EV电池成本是EV普及的关键障碍，而其90%的成本降幅是过去十年绿色技术领域最显著的成就之一。产业界将这一降幅归因于LBD，但缺乏可信的因果估计：LBD究竟贡献了多少？还是技术进步、规模经济、原材料价格下降等因素更重要？政府大规模补贴政策是否加速了这一进程？</p>
-<h3 id="挑战">挑战</h3>
-<p><strong>挑战一：电池成本不可观测</strong><br>
-电池供应协议是商业机密，无法直接观测到每款EV型号的电池成本。解决方法：通过构建EV生产商与电池供应商之间Nash议价模型，结合观测到的车辆价格和估计的需求弹性，反推上下游加成，进而推断电池成本。</p>
-<p><strong>挑战二：LBD识别的内生性</strong><br>
-企业的累计产量（生产经验，experience）与不可观测的成本冲击相关——成本优势大的企业往往产量更大、经验积累更快。若直接用经验变量回归成本，估计结果会有偏差。<br>
-<strong>工具变量策略</strong>：利用各电池供应商对下游不同国家EV补贴的差异暴露（variation）来构造工具变量。若甲国对某款车型提供慷慨补贴，供应该车型电池的供应商将更快积累经验。这一"补贴暴露"外生地推动了部分供应商的经验积累，从而识别LBD的因果效应。此外，还利用了中国白名单政策（2016-2019年）对电池供应商经验的外生冲击。</p>
-<h3 id="方法">方法</h3>
-<p><strong>需求端</strong>：BLP类型的随机系数离散选择模型，用于估计异质消费者对EV特性（价格、续航、充电功率、品牌等）的偏好，从而估计需求弹性。</p>
-<p><strong>供给端</strong>：Nash议价框架（EV生产商与电池供应商之间的纳什讨价还价），考察同步定价（Simultaneous）、顺序定价（Sequential）和线性定价（Linear
-Pricing）多种供给侧模型，并比较其对成本恢复的稳健性。</p>
-<p><strong>LBD估计方程</strong>（核心）： -
-以电池成本（对数）对累计生产经验（对数）做回归，控制行业整体技术进步、EV整车装配经验、原材料投入成本、规模经济等，并用工具变量处理经验的内生性。
-- 学习率（learning rate）定义为经验每翻倍时成本下降的百分比。</p>
-<p><strong>数据</strong>： -
-全球13国（覆盖&gt;95%全球EV销售）2013-2020年逐车型逐年销量数据（含BEV和PHEV）
-- 电池供应商数据库（植物地点、供应的EV车型列表） -
-各国EV购置补贴数据（金额、起止时间） -
-社会经济变量（收入分布等，用于校准消费者异质性）</p>
-<h3 id="结果">结果</h3>
-<p><strong>核心结果一：LBD学习率为7.5%</strong><br>
-控制行业技术进步、整车装配经验、原材料成本和规模经济后，LBD学习率估计为<strong>7.5%</strong>——即电池生产经验每翻倍，单位成本下降7.5%。该学习率处于文献估计的较低端，但仍具有重要经济意义。在2013-2020年电池总成本降幅中，LBD贡献了<strong>35.5%</strong>，行业技术进步贡献了<strong>39.9%</strong>，其余由整车装配经验、电池化学材料变化、原材料价格和规模经济共同解释。</p>
-<p><strong>核心结果二：LBD大幅放大EV补贴效果</strong><br>
--
-无LBD时，各国补贴估计使2013-2020年全球累计EV销量增加<strong>29.9%</strong>。
--
-同时考虑补贴和LBD时，全球EV销量相比无补贴无LBD基准增加<strong>170%</strong>。
--
-二者的联合效果比各自独立效果之和高出<strong>60%</strong>——说明补贴与LBD具有强互补性。</p>
-<p><strong>核心结果三：消费端补贴产生跨国溢出效应</strong><br>
-EV电池供应链是全球化的（主要集中在中、日、韩三国），一国补贴可通过LBD降低全球电池成本，产生跨国外溢：
--
-美国约131亿美元EV补贴产生了约165亿美元全球福利净增益；美国和加拿大获得其中49%，日韩电池供应商获得28%，中国仅获得3%（因为样本期内中国EV和电池与国际市场贸易有限）。
--
-欧盟约164亿美元补贴产生约116亿美元全球福利增益，欧盟仅获得其中26%（因为欧洲大量进口EV，且采用统一补贴而非有针对性补贴）。</p>
-<p><strong>核心结果四：上游电池供应商仅获得LBD收益的一小部分</strong><br>
-LBD产生的成本降低主要通过价格竞争传递给了EV生产商和最终消费者，而非被电池供应商内部保留——与完全竞争的产业组织逻辑一致。</p>
-<p><strong>政策结果五：中国白名单政策的影响</strong><br>
-中国白名单政策（2016-2019年）将EV补贴限于使用"白名单"国内电池供应商的车辆，为CATL等中国电池企业提供了保护性市场，帮助其积累经验、形成竞争优势。但这一政策具有两面性：
--
-实际实施时间（2016-2019年）对中国电池产业有正面效果（通过加速中国供应商的LBD积累）。
--
-若将该政策延迟5年实施（2021-2024年），由于中国电池企业已通过出口积累足够经验，白名单的保护效果将大幅减弱，且因阻碍全球供应链效率，中国国内福利净效果将转为负值。</p>
-<hr>
-<h2 id="结论conclusion">结论（Conclusion）</h2>
-<p><strong>核心发现</strong>：LBD在EV电池成本下降中发挥了实质性作用（贡献35.5%），但并非唯一因素，行业技术进步同样重要。LBD与消费者补贴之间的强互补性意味着：忽视LBD将大幅低估补贴的长期效益。消费端补贴产生显著的跨国溢出效应，其全球效益往往远超国内效益，这对单国政策评估具有重要启示。中国的产业政策（白名单）在特定历史时机下对国内产业发展有正效果，但若时机不当则可能适得其反。</p>
-<p><strong>对领域的贡献</strong>： 1.
-提出了在无法直接观测上游成本时通过结构性供给模型恢复电池成本的方法论框架；
-2. 构建了全球EV行业的结构性模型，联合识别LBD、需求偏好和政策互动效应；
-3. 量化了EV补贴的动态长期效益，纠正了现有静态评估文献的系统性低估； 4.
-揭示了全球化供应链下单国产业政策的跨境外溢机制。</p>
-<p><strong>政策含义</strong>： -
-EV补贴的动态效益远大于静态效益，政策评估应纳入LBD渠道； -
-美国IRA的本地含量要求在短期内可能阻碍全球LBD进程，长期效果取决于本土供应链的学习速度；
--
-政策时机（timing）至关重要：早期的保护性产业政策（如中国白名单）可能在企业尚未具备竞争力时发挥关键作用，但过晚则适得其反。</p>
-<hr>
-<h2 id="未来研究方向future-work">未来研究方向（Future work）</h2>
-<p><strong>论文中明确提及的方向</strong>： 1.
-评估美国IRA本地含量要求对全球LBD和EV普及的长期影响； 2.
-研究上游供应商如何将LBD收益分配给劳动者和股东（分配效应）； 3.
-将分析拓展到EV以外的绿色技术（如太阳能、储能电池等）。</p>
-<p><strong>从论文引申的研究方向</strong>： 1.
-内外部LBD的分解：企业内部的知识积累vs.跨企业的知识溢出各贡献多少？这对政策选择（补贴全行业
-vs. 扶持龙头企业）有重大影响； 2.
-动态寡头垄断框架下的战略性LBD——企业是否会为了积累经验而战略性定低价（forward-looking
-pricing）； 3.
-将模型扩展至2020年后：IRA颁布后（2022年），本地含量要求如何重塑全球电池供应链的LBD路径；
-4.
-LBD与研发投入的互动：研发投入（技术进步）与生产经验（LBD）是否互补，影响政策组合的最优设计。</p>
-<h2 id="学术思考">学术思考</h2>
-<ol type="1">
-<li><p><strong>电池成本恢复的模型依赖性</strong>：电池成本无法直接观测，需通过结构模型推断。不同供给侧假设（同步
-vs.
-顺序议价）是否会产生实质性不同的学习率估计？作者如何验证这些替代模型的可信度？</p></li>
-<li><p><strong>工具变量的有效性</strong>：利用"供应商对下游不同国家补贴的差异暴露"构造IV，这一策略要求EV补贴变动对电池成本没有直接效应（排他性限制）。若补贴政策同时改变了原材料需求（如锂、镍），可能违反这一假设——如何检验？</p></li>
-<li><p><strong>LBD的溢出结构</strong>：论文将LBD建模为企业层面的内部学习。但实际上，工程师流动、专利公开等机制可能使LBD在企业间溢出。内外部LBD的混淆对学习率估计和政策评估会产生怎样的影响？</p></li>
-<li><p><strong>本地含量要求的动态合理性</strong>：中国白名单实际上是保护主义政策，但本文发现在特定时机下它对国内产业有正面作用。这是否意味着"战略性贸易政策"在绿色技术的早期发展阶段具有动态合理性？如何区分"促进LBD积累"的合理保护与一般意义上的低效保护主义？</p></li>
-<li><p><strong>样本期外推的风险</strong>：研究覆盖2013-2020年，但EV市场在2020年后经历了爆炸式增长（中国BEV渗透率超过30%）。LBD在高渗透率阶段是否会放缓？本文的政策结论对IRA（2022年后）是否仍然适用？</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol type="1">
-<li>"学习率7.5%"是怎么估计出来的？工具变量策略的具体构造方法是什么？</li>
-<li>为什么上游电池供应商只获得了LBD收益的"一小部分"？这是市场结构（竞争激烈）的结果，还是谈判权力（bargaining
-power）不对等的结果？</li>
-<li>美国IRA的本地含量要求是否会减慢全球LBD进程、推高全球EV价格？本文的框架如何用于评估IRA？</li>
-<li>中国白名单政策在实际实施时间下对全球（非中国）消费者的福利影响是正面还是负面？</li>
-<li>如果未来电池技术路线（如固态电池）发生重大转变，现有的LBD积累是否会"归零"？政策设计如何应对这种技术不确定性？</li>
-<li>论文的供给侧模型（Nash议价）对最终结论的敏感性如何？若改用更简单的加成定价模型，学习率估计会有多大变化？</li>
-<li>为什么中国在美国补贴的全球福利中只获得3%？这是否意味着美国的补贴实际上是在补贴日韩企业而非中国竞争对手？</li>
-</ol>
-<hr>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>深陷险境？基础设施投资与沿海城市的持久性 — 深度阅读笔记 — Balboni</title>
     <url>/posts/balboni2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -2632,6 +2490,148 @@ power）不对等的结果？</li>
 <p>本文假设国内迁移是自由的，但实际的户口制度、护照限制等是否影响迁移对气候风险的调整速度？如何将政策约束纳入模型？</p>
 <hr>
 <p><em>本分析报告严格遵循精读文献skill规定的八部分结构完成，旨在为初学者提供全面、易懂的论文逻辑梳理与学术要点解读。</em></p>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>压低成本：干中学与全球电动汽车电池产业政府政策 — 深度阅读笔记 — Barwick Et Al.</title>
+    <url>/posts/barwick2025/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Drive Down the Cost: Learning by Doing and
+Government Policies in the Global EV Battery Industry</li>
+<li><strong>作者</strong>: Panle Jia Barwick (Wisconsin), Hyuk-Soo Kwon
+(Singapore), Shanjun Li (Cornell), Nahim Zahur (Queens)</li>
+<li><strong>年份</strong>: 2025</li>
+<li><strong>来源</strong>: NBER Working Paper No. 33378</li>
+<li><strong>DOI</strong>: 10.3386/w33378</li>
+</ul>
+<span id="more"></span>
+<hr>
+<hr>
+<h2 id="引言背景和意义">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong> "干中学"（Learning by Doing,
+LBD）是产业经济学和增长理论的经典概念：企业在生产过程中积累经验，进而降低单位生产成本。"Wright's
+Law"（1936年由航空工程师Theodore
+Wright提出）将这一规律量化为"累计产量每翻倍，单位成本下降固定比例"。LBD在半导体、太阳能电池等绿色技术行业均有大量记录。在政策设计上，LBD带来正外部性——当前生产提高了整个行业未来的效率，因此存在补贴当前生产的理由（以纠正动态外部性）。</p>
+<p><strong>研究背景</strong>
+电动汽车（EV）电池成本在2010-2020年间下降了近90%，是过去十年绿色能源技术中最引人注目的成本下降之一。这一变化对全球气候政策目标至关重要——电池成本是EV相对于内燃机车价格劣势的主要来源。全球各国政府为促进EV普及投入了大量补贴（2022年全球EV消费补贴达430亿美元），并通过产业政策（如中国白名单政策、美国IRA本地含量要求）扶持本土电池产业。然而，LBD在多大程度上驱动了成本下降？政府政策通过哪些渠道影响LBD进程？这些问题此前缺乏可信的量化研究。</p>
+<p><strong>作者的问题意识</strong>
+（1）LBD在多大程度上解释了EV电池成本的下降（相对于技术进步、规模经济、原材料成本等其他因素）？（2）LBD如何改变消费者EV补贴的政策效果？（3）中国的"白名单"本地含量要求政策通过LBD对全球EV市场产生了怎样的影响？（4）LBD在全球供应链中产生怎样的跨国溢出效应？</p>
+<p><strong>研究意义</strong>
+本文为绿色技术政策设计提供了直接量化依据：若忽视LBD，政策评估将大幅低估补贴的长期效益；同时揭示了消费端补贴与产业政策的相互作用，对评估美国IRA、中国产业政策的全球影响具有直接参考价值。</p>
+<hr>
+<h2 id="内容及结构论文结构">内容及结构（论文结构）</h2>
+<ol type="1">
+<li><strong>引言</strong>：提出问题，概述主要发现（LBD学习率7.5%，与补贴互补放大效果，跨国溢出效应）。</li>
+<li><strong>数据</strong>：全球13国EV销售数据（2013-2020），电池供应商信息，各国补贴政策。</li>
+<li><strong>需求模型</strong>：异质消费者离散选择模型（BLP类型），估计消费者对EV特性（价格、续航、充电速度等）的偏好。</li>
+<li><strong>供给模型与电池成本恢复</strong>：通过Nash议价模型（上游电池供应商与下游EV生产商之间）推断上下游加成，从而恢复电池成本。</li>
+<li><strong>LBD估计</strong>：用工具变量方法识别LBD学习率，控制内生性（高效企业多生产更多、积累更多经验）。</li>
+<li><strong>反事实政策分析</strong>：（a）评估消费者EV补贴在有无LBD情况下的效果；（b）评估中国白名单政策及其时间安排的影响。</li>
+<li><strong>结论</strong>：总结核心发现及政策含义。</li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>EV电池成本是EV普及的关键障碍，而其90%的成本降幅是过去十年绿色技术领域最显著的成就之一。产业界将这一降幅归因于LBD，但缺乏可信的因果估计：LBD究竟贡献了多少？还是技术进步、规模经济、原材料价格下降等因素更重要？政府大规模补贴政策是否加速了这一进程？</p>
+<h3 id="挑战">挑战</h3>
+<p><strong>挑战一：电池成本不可观测</strong><br>
+电池供应协议是商业机密，无法直接观测到每款EV型号的电池成本。解决方法：通过构建EV生产商与电池供应商之间Nash议价模型，结合观测到的车辆价格和估计的需求弹性，反推上下游加成，进而推断电池成本。</p>
+<p><strong>挑战二：LBD识别的内生性</strong><br>
+企业的累计产量（生产经验，experience）与不可观测的成本冲击相关——成本优势大的企业往往产量更大、经验积累更快。若直接用经验变量回归成本，估计结果会有偏差。<br>
+<strong>工具变量策略</strong>：利用各电池供应商对下游不同国家EV补贴的差异暴露（variation）来构造工具变量。若甲国对某款车型提供慷慨补贴，供应该车型电池的供应商将更快积累经验。这一"补贴暴露"外生地推动了部分供应商的经验积累，从而识别LBD的因果效应。此外，还利用了中国白名单政策（2016-2019年）对电池供应商经验的外生冲击。</p>
+<h3 id="方法">方法</h3>
+<p><strong>需求端</strong>：BLP类型的随机系数离散选择模型，用于估计异质消费者对EV特性（价格、续航、充电功率、品牌等）的偏好，从而估计需求弹性。</p>
+<p><strong>供给端</strong>：Nash议价框架（EV生产商与电池供应商之间的纳什讨价还价），考察同步定价（Simultaneous）、顺序定价（Sequential）和线性定价（Linear
+Pricing）多种供给侧模型，并比较其对成本恢复的稳健性。</p>
+<p><strong>LBD估计方程</strong>（核心）： -
+以电池成本（对数）对累计生产经验（对数）做回归，控制行业整体技术进步、EV整车装配经验、原材料投入成本、规模经济等，并用工具变量处理经验的内生性。
+- 学习率（learning rate）定义为经验每翻倍时成本下降的百分比。</p>
+<p><strong>数据</strong>： -
+全球13国（覆盖&gt;95%全球EV销售）2013-2020年逐车型逐年销量数据（含BEV和PHEV）
+- 电池供应商数据库（植物地点、供应的EV车型列表） -
+各国EV购置补贴数据（金额、起止时间） -
+社会经济变量（收入分布等，用于校准消费者异质性）</p>
+<h3 id="结果">结果</h3>
+<p><strong>核心结果一：LBD学习率为7.5%</strong><br>
+控制行业技术进步、整车装配经验、原材料成本和规模经济后，LBD学习率估计为<strong>7.5%</strong>——即电池生产经验每翻倍，单位成本下降7.5%。该学习率处于文献估计的较低端，但仍具有重要经济意义。在2013-2020年电池总成本降幅中，LBD贡献了<strong>35.5%</strong>，行业技术进步贡献了<strong>39.9%</strong>，其余由整车装配经验、电池化学材料变化、原材料价格和规模经济共同解释。</p>
+<p><strong>核心结果二：LBD大幅放大EV补贴效果</strong><br>
+-
+无LBD时，各国补贴估计使2013-2020年全球累计EV销量增加<strong>29.9%</strong>。
+-
+同时考虑补贴和LBD时，全球EV销量相比无补贴无LBD基准增加<strong>170%</strong>。
+-
+二者的联合效果比各自独立效果之和高出<strong>60%</strong>——说明补贴与LBD具有强互补性。</p>
+<p><strong>核心结果三：消费端补贴产生跨国溢出效应</strong><br>
+EV电池供应链是全球化的（主要集中在中、日、韩三国），一国补贴可通过LBD降低全球电池成本，产生跨国外溢：
+-
+美国约131亿美元EV补贴产生了约165亿美元全球福利净增益；美国和加拿大获得其中49%，日韩电池供应商获得28%，中国仅获得3%（因为样本期内中国EV和电池与国际市场贸易有限）。
+-
+欧盟约164亿美元补贴产生约116亿美元全球福利增益，欧盟仅获得其中26%（因为欧洲大量进口EV，且采用统一补贴而非有针对性补贴）。</p>
+<p><strong>核心结果四：上游电池供应商仅获得LBD收益的一小部分</strong><br>
+LBD产生的成本降低主要通过价格竞争传递给了EV生产商和最终消费者，而非被电池供应商内部保留——与完全竞争的产业组织逻辑一致。</p>
+<p><strong>政策结果五：中国白名单政策的影响</strong><br>
+中国白名单政策（2016-2019年）将EV补贴限于使用"白名单"国内电池供应商的车辆，为CATL等中国电池企业提供了保护性市场，帮助其积累经验、形成竞争优势。但这一政策具有两面性：
+-
+实际实施时间（2016-2019年）对中国电池产业有正面效果（通过加速中国供应商的LBD积累）。
+-
+若将该政策延迟5年实施（2021-2024年），由于中国电池企业已通过出口积累足够经验，白名单的保护效果将大幅减弱，且因阻碍全球供应链效率，中国国内福利净效果将转为负值。</p>
+<hr>
+<h2 id="结论conclusion">结论（Conclusion）</h2>
+<p><strong>核心发现</strong>：LBD在EV电池成本下降中发挥了实质性作用（贡献35.5%），但并非唯一因素，行业技术进步同样重要。LBD与消费者补贴之间的强互补性意味着：忽视LBD将大幅低估补贴的长期效益。消费端补贴产生显著的跨国溢出效应，其全球效益往往远超国内效益，这对单国政策评估具有重要启示。中国的产业政策（白名单）在特定历史时机下对国内产业发展有正效果，但若时机不当则可能适得其反。</p>
+<p><strong>对领域的贡献</strong>： 1.
+提出了在无法直接观测上游成本时通过结构性供给模型恢复电池成本的方法论框架；
+2. 构建了全球EV行业的结构性模型，联合识别LBD、需求偏好和政策互动效应；
+3. 量化了EV补贴的动态长期效益，纠正了现有静态评估文献的系统性低估； 4.
+揭示了全球化供应链下单国产业政策的跨境外溢机制。</p>
+<p><strong>政策含义</strong>： -
+EV补贴的动态效益远大于静态效益，政策评估应纳入LBD渠道； -
+美国IRA的本地含量要求在短期内可能阻碍全球LBD进程，长期效果取决于本土供应链的学习速度；
+-
+政策时机（timing）至关重要：早期的保护性产业政策（如中国白名单）可能在企业尚未具备竞争力时发挥关键作用，但过晚则适得其反。</p>
+<hr>
+<h2 id="未来研究方向future-work">未来研究方向（Future work）</h2>
+<p><strong>论文中明确提及的方向</strong>： 1.
+评估美国IRA本地含量要求对全球LBD和EV普及的长期影响； 2.
+研究上游供应商如何将LBD收益分配给劳动者和股东（分配效应）； 3.
+将分析拓展到EV以外的绿色技术（如太阳能、储能电池等）。</p>
+<p><strong>从论文引申的研究方向</strong>： 1.
+内外部LBD的分解：企业内部的知识积累vs.跨企业的知识溢出各贡献多少？这对政策选择（补贴全行业
+vs. 扶持龙头企业）有重大影响； 2.
+动态寡头垄断框架下的战略性LBD——企业是否会为了积累经验而战略性定低价（forward-looking
+pricing）； 3.
+将模型扩展至2020年后：IRA颁布后（2022年），本地含量要求如何重塑全球电池供应链的LBD路径；
+4.
+LBD与研发投入的互动：研发投入（技术进步）与生产经验（LBD）是否互补，影响政策组合的最优设计。</p>
+<h2 id="学术思考">学术思考</h2>
+<ol type="1">
+<li><p><strong>电池成本恢复的模型依赖性</strong>：电池成本无法直接观测，需通过结构模型推断。不同供给侧假设（同步
+vs.
+顺序议价）是否会产生实质性不同的学习率估计？作者如何验证这些替代模型的可信度？</p></li>
+<li><p><strong>工具变量的有效性</strong>：利用"供应商对下游不同国家补贴的差异暴露"构造IV，这一策略要求EV补贴变动对电池成本没有直接效应（排他性限制）。若补贴政策同时改变了原材料需求（如锂、镍），可能违反这一假设——如何检验？</p></li>
+<li><p><strong>LBD的溢出结构</strong>：论文将LBD建模为企业层面的内部学习。但实际上，工程师流动、专利公开等机制可能使LBD在企业间溢出。内外部LBD的混淆对学习率估计和政策评估会产生怎样的影响？</p></li>
+<li><p><strong>本地含量要求的动态合理性</strong>：中国白名单实际上是保护主义政策，但本文发现在特定时机下它对国内产业有正面作用。这是否意味着"战略性贸易政策"在绿色技术的早期发展阶段具有动态合理性？如何区分"促进LBD积累"的合理保护与一般意义上的低效保护主义？</p></li>
+<li><p><strong>样本期外推的风险</strong>：研究覆盖2013-2020年，但EV市场在2020年后经历了爆炸式增长（中国BEV渗透率超过30%）。LBD在高渗透率阶段是否会放缓？本文的政策结论对IRA（2022年后）是否仍然适用？</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol type="1">
+<li>"学习率7.5%"是怎么估计出来的？工具变量策略的具体构造方法是什么？</li>
+<li>为什么上游电池供应商只获得了LBD收益的"一小部分"？这是市场结构（竞争激烈）的结果，还是谈判权力（bargaining
+power）不对等的结果？</li>
+<li>美国IRA的本地含量要求是否会减慢全球LBD进程、推高全球EV价格？本文的框架如何用于评估IRA？</li>
+<li>中国白名单政策在实际实施时间下对全球（非中国）消费者的福利影响是正面还是负面？</li>
+<li>如果未来电池技术路线（如固态电池）发生重大转变，现有的LBD积累是否会"归零"？政策设计如何应对这种技术不确定性？</li>
+<li>论文的供给侧模型（Nash议价）对最终结论的敏感性如何？若改用更简单的加成定价模型，学习率估计会有多大变化？</li>
+<li>为什么中国在美国补贴的全球福利中只获得3%？这是否意味着美国的补贴实际上是在补贴日韩企业而非中国竞争对手？</li>
+</ol>
+<hr>
 ]]></content>
       <categories>
         <category>有趣的文章</category>
@@ -2998,27 +2998,6 @@ design）文献的联系值得深入。</p></li>
       </tags>
   </entry>
   <entry>
-    <title>致Berry</title>
-    <url>/posts/51392/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<center>
-<strong>Love You.</strong>
-</center>
-<center>
-<strong>Berry!</strong>
-</center>
-<center>
-<img data-src="/image/berry.jpg" width="66%" height="66%" title="妳" alt="妳">
-</center>
-]]></content>
-      <categories>
-        <category>领导</category>
-      </categories>
-      <tags>
-        <tag>妳</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Do Governments Crowd Out Governments? — 深度阅读笔记 — Baumann &amp; Klymak</title>
     <url>/posts/baumann2024/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -3161,6 +3140,27 @@ governments?&gt;一文的核心内容、理论框架、实证发现和学术贡�
         <tag>政府支出</tag>
         <tag>挤出效应</tag>
         <tag>自然实验</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>致Berry</title>
+    <url>/posts/51392/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<center>
+<strong>Love You.</strong>
+</center>
+<center>
+<strong>Berry!</strong>
+</center>
+<center>
+<img data-src="/image/berry.jpg" width="66%" height="66%" title="妳" alt="妳">
+</center>
+]]></content>
+      <categories>
+        <category>领导</category>
+      </categories>
+      <tags>
+        <tag>妳</tag>
       </tags>
   </entry>
   <entry>
@@ -5285,6 +5285,279 @@ Zotero Item Key:: LDPJ5VUP</p>
       </tags>
   </entry>
   <entry>
+    <title>The Effect of Minimum Wages on Low-Wage Jobs — 深度分析 — Cengiz Et Al.</title>
+    <url>/posts/cengiz2019/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: The Effect of Minimum Wages on Low-Wage
+Jobs</li>
+<li><strong>作者</strong>: Doruk Cengiz(University of Massachusetts
+Amherst), Arindrajit Dube(UMass Amherst, NBER), Attila Lindner(UCL, CEP,
+IFS), Ben Zipperer(Economic Policy Institute)</li>
+<li><strong>类型</strong>: 论文笔记 / 劳动经济学</li>
+<li><strong>出版年份</strong>: 2019</li>
+<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics,
+Volume 134, Issue 3, Pages 1405-1454</li>
+<li><strong>难度评估</strong>: 中 - 需要劳动经济学和计量经济学基础
+<span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言背景和意义">1. 引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>最低工资政策(Minimum Wage
+Policy)</strong>:政府规定的劳动力小时工资下限,是劳动经济学中最具争议的政策之一.支持者认为它能提高低收入工人的生活水平,反对者担心它会导致就业下降("unemployment").</p>
+<p><strong>"新最低工资研究"的起源</strong>:Card and Krueger
+(1995)&lt;神话与计量经济学:对最低工资的新研究&gt;对传统观点提出挑战,使用准实验方法发现最低工资提高并未导致就业下降.</p>
+<p><strong>bunching
+estimator(堆集估计量)</strong>:一种利用政策变化导致的结果分布聚集现象来识别因果效应的方法.</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>政策热潮</strong>:加州、伊利诺伊州、麻省、新泽西州、纽约州已通过将最低工资提高至$15/小时的立法;数十个城市也实施了城市级最低工资政策.</p></li>
+<li><p><strong>研究缺漏</strong>:尽管新最低工资研究已逾30年,但关于政策对总体就业影响的研究仍然很少.2014年国会预算办公室(CBO)报告承认相关研究匮乏,被迫使用青少年的弹性来推断对低工资工人的总体影响.</p></li>
+<li><p><strong>方法论挑战</strong>:传统方法使用双向固定效应回归,但存在一些问题,如对工资分布上尾部的影响可能干扰对底部效应的估计.</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>:最低工资对低工资工作的总体效应是什么?</p>
+<p><strong>具体子问题</strong>: - 最低工资对就业的影响是正还是负? -
+影响有多大? - 最低工资带来的工资上涨是否被就业损失所抵消? -
+效应的异质性如何?</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><strong>方法创新</strong>:提出"事件堆集"(EB-bunching)方法,将总体就业效应分解到各工资区间</li>
+<li><strong>对既有文献的贡献</strong>:澄清了最低工资文献中关于1980年代和1990年代早期样本选择的争议</li>
+<li><strong>政策意义</strong>:为当前$15最低工资运动提供实证依据</li>
+</ol>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构(论文结构)</h2>
+<table>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr>
+<th>章节</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I. Introduction</td>
+<td>研究背景、问题意识、文献贡献</td>
+</tr>
+<tr>
+<td>II. Methodology and Data</td>
+<td>概念框架、实证策略、数据</td>
+</tr>
+<tr>
+<td>III. Main Empirical Findings</td>
+<td>总体就业效应、工资溢出、异质性分析</td>
+</tr>
+<tr>
+<td>IV. Robustness and Threats to Identification</td>
+<td>对双向固定效应方法问题的解释</td>
+</tr>
+<tr>
+<td>V. Conclusion</td>
+<td>结论</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文(逻辑梳理)</h2>
+<h3 id="背景最低工资的理论预测">背景:最低工资的理论预测</h3>
+<p><strong>竞争性劳动力市场模型预测</strong>: -
+最低工资提高会导致低工资就业下降 - 下降幅度取决于劳动力需求弹性</p>
+<p><strong>monopsony模型预测</strong>: - 最低工资提高可能增加就业 -
+因为雇主的市場力量被削弱</p>
+<p><strong>实际预测的复杂性</strong>: -
+工资溢出效应(spillovers):最低工资可能推动高于最低工资的工人工资上涨 -
+劳动力替代:低技能工人可能被高技能工人替代 -
+就业损失可能分布在不同工资区间</p>
+<h3 id="挑战">挑战</h3>
+<ol type="1">
+<li><p><strong>识别问题</strong>:如何分离最低工资的因果效应?</p></li>
+<li><p><strong>聚类分配问题</strong>:传统双向固定效应方法可能因早期时期的混杂因素而产生偏误</p></li>
+<li><p><strong>效应的空间异质性</strong>:不同行业的最低工资效应可能不同</p></li>
+<li><p><strong>数据局限性</strong>:CPS调查数据可能存在测量误差</p></li>
+</ol>
+<h3 id="方法数据集要突出">方法(数据集要突出)</h3>
+<p><strong>数据来源</strong>: -
+1979-2016年CPS(当前人口调查)NBER合并出口轮次小组数据 - 137,000+观测值 -
+138个州级最低工资事件(1979-2016年间) -
+<strong>事件定义</strong>:州最低工资增加至少$0.25,且至少2%工人直接影响</p>
+<p><strong>核心概念</strong>: - <strong>缺失工作(Missing
+Jobs)</strong>:最低工资提高后,低于新最低工资的工作数量减少 -
+<strong>超额工作(Excess
+Jobs)</strong>:因最低工资提高而出现在最低工资水平或略高处的工作增加</p>
+<p><strong>实证策略_事件研究设计</strong>: <span class="math display">\[{E_{sjt} \over N_{st}} = \sum_{\tau=-3}^{4}
+\sum_{k=-4}^{17} \alpha_{\tau k} I_{\tau k}^{sjt} + \mu_{sj} + \rho_{jt}
++ \Omega_{sjt} + u_{sjt}}\]</span></p>
+<p>其中: - <span class="math inline">\(E_{sjt}\)</span>:j工资区间在s州的就业 - <span class="math inline">\(N_{st}\)</span>:s州当时的劳动力 - <span class="math inline">\(I_{\tau k}^{sjt}\)</span>:处理指示变量 - <span class="math inline">\(\mu_{sj}\)</span>:州×工资区间固定效应 - <span class="math inline">\(\rho_{jt}\)</span>:时间×工资区间固定效应 -
+标准误按州级聚类</p>
+<p><strong>关键创新</strong>: - 将就业变化按$0.25工资区间分解 -
+使用事件窗口前后对比 - 提供对上尾效应的检验</p>
+<h3 id="结果results">结果(Results)</h3>
+<p><strong>核心发现1:总体就业效应接近零</strong></p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>估计值</th>
+<th>标准误</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>受影响工人就业变化</td>
+<td>+2.8%</td>
+<td>(2.9%)</td>
+</tr>
+<tr>
+<td>就业弹性(相对于自身工资)</td>
+<td>0.41</td>
+<td>(0.43)</td>
+</tr>
+</tbody>
+</table>
+<p>→ 在95%置信水平下,排除低于-0.45的弹性</p>
+<p><strong>核心发现2:工资溢出效应显著</strong></p>
+<ul>
+<li>溢出效应向上延伸至最低工资以上约$3</li>
+<li>总体工资增长中约40%来自溢出效应</li>
+<li><strong>不对称性</strong>:留任工人获得显著工资溢出,但新进入者没有</li>
+</ul>
+<p><strong>核心发现3:行业异质性</strong></p>
+<table>
+<thead>
+<tr>
+<th>行业</th>
+<th>就业弹性</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>可贸易部门(制造业)</td>
+<td>-1.4</td>
+<td>显著负效应</td>
+</tr>
+<tr>
+<td>不可贸易部门(餐饮、零售)</td>
+<td>≈0</td>
+<td>几乎无效应</td>
+</tr>
+</tbody>
+</table>
+<p>→ 行业组成是决定最低工资就业效应的关键因素</p>
+<p><strong>核心发现4:人口群体异质性</strong></p>
+<ul>
+<li>按教育和年龄分组,未发现低技能工人被高技能工人替代的证据</li>
+<li>不同人口群体的就业效应大多接近零且不显著</li>
+<li>表明最低工资政策的好处理广泛共享</li>
+</ul>
+<p><strong>核心发现5:对Meer and West (2016)发现的解释</strong></p>
+<ul>
+<li>该研究使用双向固定效应发现大的负就业估计</li>
+<li>分解分析显示这一负效应由工资分布上尾的不大幅度下降驱动</li>
+<li>问题来源:1980年代和1990年代早期样本中包含的时期混杂因素</li>
+<li>1992年后,各种标准规范几乎没有就业减少的证据</li>
+</ul>
+<hr>
+<h2 id="结论conclusion">4. 结论(Conclusion)</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>最低工资对低工资工作数量的总体影响基本为零</strong>:五年观察期内,低工资工作数量基本保持不变</p></li>
+<li><p><strong>最低工资的直接工资效应被适度工资溢出放大</strong>:溢出效应约占总体工资增长的40%</p></li>
+<li><p><strong>就业效应不能用劳动力替代解释</strong>:不同教育和年龄群体的替代效应证据不成立</p></li>
+<li><p><strong>在更高最低工资水平下也未发现就业减少证据</strong>:但确实发现可贸易部门(制造业)减少的迹象</p></li>
+<li><p><strong>方法论贡献</strong>:EB-bunching方法提供了透明且稳健的估计最低工资就业效应的方法</p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><strong>澄清方法论争议</strong>:解释了为什么双向固定效应和事件研究方法产生不同结果</li>
+<li><strong>提供新的实证证据</strong>:使用更全面的数据和更细粒度的分解</li>
+<li><strong>扩展工资溢出分析</strong>:提供了关于溢出机制(相对工资关系 vs
+外部选择价值)的证据</li>
+<li><strong>政策意义</strong>:为$15最低工资运动提供实证支持</li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向(Future work)</h2>
+<h3 id="论文提及的拓展方向">论文提及的拓展方向</h3>
+<ol type="1">
+<li><p><strong>更高最低工资水平的研究</strong>:当Kaitz指数超过59%时会发生什么?需要更高最低工资的州的
+variation</p></li>
+<li><p><strong>长期效应</strong>:本研究关注5年窗口,更长期效应仍需研究</p></li>
+<li><p><strong>其他国家的证据</strong>:美国结果的国际可比性</p></li>
+</ol>
+<h3 id="思考的下一步研究">思考的下一步研究</h3>
+<ol type="1">
+<li><p><strong>动态一般均衡效应</strong>:行业层面的一般均衡调整如何影响就业?</p></li>
+<li><p><strong>非正规就业</strong>:最低工资对非正规经济(零工经济)的影响</p></li>
+<li><p><strong>非工资效应</strong>:最低工资对工作条件、培训机会等非工资方面的影响</p></li>
+<li><p><strong>家庭效应</strong>:最低工资对家庭收入分配和儿童贫困的影响</p></li>
+<li><p><strong>政治经济学</strong>:最低工资设定的决定因素及其政治经济学含义</p></li>
+</ol>
+<hr>
+<h2 id="学术思考">6. 学术思考</h2>
+<h3 id="核心学术问题">核心学术问题</h3>
+<ol type="1">
+<li><strong>竞争性 vs monopsony劳动力市场的边界</strong>
+<ul>
+<li>本研究发现总体就业效应接近零</li>
+<li>这是否意味着低工资劳动力市场更接近monopsony?</li>
+<li>还是正负效应相互抵消?</li>
+</ul></li>
+<li><strong>工资溢出的机制</strong>
+<ul>
+<li>研究发现溢出效应在最低工资以上约$3处消失</li>
+<li>且对留任工人和新进入者影响不对称</li>
+<li>这更支持"相对工资关系假设"而非"外部选择价值假设"</li>
+<li>但这是否意味着企业内部存在显著的工资刚性?</li>
+</ul></li>
+<li><strong>可贸易 vs 不可贸易部门的差异</strong>
+<ul>
+<li>制造业显著负效应 vs 零售餐饮零效应</li>
+<li>这是否意味着全球化压力降低了美国低技能工人的谈价能力?</li>
+<li>还是反映了不同的劳动力市场结构?</li>
+</ul></li>
+<li><strong>EB-bunching方法的普适性</strong>
+<ul>
+<li>将总体效应分解到各工资区间</li>
+<li>提供了"透明"的估计方式</li>
+<li>是否可以推广到其他政策评估?</li>
+</ul></li>
+<li><strong>对CBO政策分析的启示</strong>
+<ul>
+<li>CBO使用青少年弹性来推断总体影响</li>
+<li>本研究表明青少年可能是受最低工资影响最深的群体</li>
+<li>这是否意味着CBO的方法实际上低估了不确定性?</li>
+</ul></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p><strong>识别策略的有效性</strong>:如何检验平行趋势假设?事件前趋势检验的结果如何?</p></li>
+<li><p><strong>测量误差的影响</strong>:CPS数据中的测量误差如何影响估计?特别是对工资分布尾部的测量?</p></li>
+<li><p><strong>Kaitz指数的具体含义</strong>:Kaitz指数达到59%时会发生什么理论预测?</p></li>
+<li><p><strong>对理论模型的启示</strong>:这些发现如何区分竞争性模型和monopsony模型?</p></li>
+<li><p><strong>政策外部有效性</strong>:基于1979-2016年数据的发现在2020年代是否仍然适用?劳动力市场结构是否发生了根本性变化?</p></li>
+<li><p><strong>对工人流动的动态效应</strong>:最低工资是否影响了低工资工人的职业发展轨迹?</p></li>
+<li><p><strong>雇主反应的非工资渠道</strong>:雇主除了调整就业和工资外,是否在工时、工作条件、培训等方面做出了调整?</p></li>
+<li><p><strong>与Dube et al. (2010)
+NJ快餐业研究的关系</strong>:为什么NJ快餐业研究发现了正效应,而本研究对所有行业的汇总发现零效应?</p></li>
+<li><p><strong>对州际差异的控制</strong>:如何排除州级经济基本面对结果的混杂影响?各州经济多样性的作用是什么?</p></li>
+<li><p><strong>最低工资的收入分配效应</strong>:最低工资如何与税法、其他转移支付计划相互作用以影响收入不平等?</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>劳动经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Poverty and Economic Decision-Making — 深度阅读笔记 — Carvalho, Meier &amp; Wang</title>
     <url>/posts/carvalho2016/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -5663,279 +5936,6 @@ Mani et al. (2013)
         <tag>贫困研究</tag>
         <tag>行为经济学</tag>
         <tag>认知科学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>The Effect of Minimum Wages on Low-Wage Jobs — 深度分析 — Cengiz Et Al.</title>
-    <url>/posts/cengiz2019/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: The Effect of Minimum Wages on Low-Wage
-Jobs</li>
-<li><strong>作者</strong>: Doruk Cengiz(University of Massachusetts
-Amherst), Arindrajit Dube(UMass Amherst, NBER), Attila Lindner(UCL, CEP,
-IFS), Ben Zipperer(Economic Policy Institute)</li>
-<li><strong>类型</strong>: 论文笔记 / 劳动经济学</li>
-<li><strong>出版年份</strong>: 2019</li>
-<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics,
-Volume 134, Issue 3, Pages 1405-1454</li>
-<li><strong>难度评估</strong>: 中 - 需要劳动经济学和计量经济学基础
-<span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言背景和意义">1. 引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>最低工资政策(Minimum Wage
-Policy)</strong>:政府规定的劳动力小时工资下限,是劳动经济学中最具争议的政策之一.支持者认为它能提高低收入工人的生活水平,反对者担心它会导致就业下降("unemployment").</p>
-<p><strong>"新最低工资研究"的起源</strong>:Card and Krueger
-(1995)&lt;神话与计量经济学:对最低工资的新研究&gt;对传统观点提出挑战,使用准实验方法发现最低工资提高并未导致就业下降.</p>
-<p><strong>bunching
-estimator(堆集估计量)</strong>:一种利用政策变化导致的结果分布聚集现象来识别因果效应的方法.</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>政策热潮</strong>:加州、伊利诺伊州、麻省、新泽西州、纽约州已通过将最低工资提高至$15/小时的立法;数十个城市也实施了城市级最低工资政策.</p></li>
-<li><p><strong>研究缺漏</strong>:尽管新最低工资研究已逾30年,但关于政策对总体就业影响的研究仍然很少.2014年国会预算办公室(CBO)报告承认相关研究匮乏,被迫使用青少年的弹性来推断对低工资工人的总体影响.</p></li>
-<li><p><strong>方法论挑战</strong>:传统方法使用双向固定效应回归,但存在一些问题,如对工资分布上尾部的影响可能干扰对底部效应的估计.</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:最低工资对低工资工作的总体效应是什么?</p>
-<p><strong>具体子问题</strong>: - 最低工资对就业的影响是正还是负? -
-影响有多大? - 最低工资带来的工资上涨是否被就业损失所抵消? -
-效应的异质性如何?</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><strong>方法创新</strong>:提出"事件堆集"(EB-bunching)方法,将总体就业效应分解到各工资区间</li>
-<li><strong>对既有文献的贡献</strong>:澄清了最低工资文献中关于1980年代和1990年代早期样本选择的争议</li>
-<li><strong>政策意义</strong>:为当前$15最低工资运动提供实证依据</li>
-</ol>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构(论文结构)</h2>
-<table>
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr>
-<th>章节</th>
-<th>内容</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I. Introduction</td>
-<td>研究背景、问题意识、文献贡献</td>
-</tr>
-<tr>
-<td>II. Methodology and Data</td>
-<td>概念框架、实证策略、数据</td>
-</tr>
-<tr>
-<td>III. Main Empirical Findings</td>
-<td>总体就业效应、工资溢出、异质性分析</td>
-</tr>
-<tr>
-<td>IV. Robustness and Threats to Identification</td>
-<td>对双向固定效应方法问题的解释</td>
-</tr>
-<tr>
-<td>V. Conclusion</td>
-<td>结论</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文(逻辑梳理)</h2>
-<h3 id="背景最低工资的理论预测">背景:最低工资的理论预测</h3>
-<p><strong>竞争性劳动力市场模型预测</strong>: -
-最低工资提高会导致低工资就业下降 - 下降幅度取决于劳动力需求弹性</p>
-<p><strong>monopsony模型预测</strong>: - 最低工资提高可能增加就业 -
-因为雇主的市場力量被削弱</p>
-<p><strong>实际预测的复杂性</strong>: -
-工资溢出效应(spillovers):最低工资可能推动高于最低工资的工人工资上涨 -
-劳动力替代:低技能工人可能被高技能工人替代 -
-就业损失可能分布在不同工资区间</p>
-<h3 id="挑战">挑战</h3>
-<ol type="1">
-<li><p><strong>识别问题</strong>:如何分离最低工资的因果效应?</p></li>
-<li><p><strong>聚类分配问题</strong>:传统双向固定效应方法可能因早期时期的混杂因素而产生偏误</p></li>
-<li><p><strong>效应的空间异质性</strong>:不同行业的最低工资效应可能不同</p></li>
-<li><p><strong>数据局限性</strong>:CPS调查数据可能存在测量误差</p></li>
-</ol>
-<h3 id="方法数据集要突出">方法(数据集要突出)</h3>
-<p><strong>数据来源</strong>: -
-1979-2016年CPS(当前人口调查)NBER合并出口轮次小组数据 - 137,000+观测值 -
-138个州级最低工资事件(1979-2016年间) -
-<strong>事件定义</strong>:州最低工资增加至少$0.25,且至少2%工人直接影响</p>
-<p><strong>核心概念</strong>: - <strong>缺失工作(Missing
-Jobs)</strong>:最低工资提高后,低于新最低工资的工作数量减少 -
-<strong>超额工作(Excess
-Jobs)</strong>:因最低工资提高而出现在最低工资水平或略高处的工作增加</p>
-<p><strong>实证策略_事件研究设计</strong>: <span class="math display">\[{E_{sjt} \over N_{st}} = \sum_{\tau=-3}^{4}
-\sum_{k=-4}^{17} \alpha_{\tau k} I_{\tau k}^{sjt} + \mu_{sj} + \rho_{jt}
-+ \Omega_{sjt} + u_{sjt}}\]</span></p>
-<p>其中: - <span class="math inline">\(E_{sjt}\)</span>:j工资区间在s州的就业 - <span class="math inline">\(N_{st}\)</span>:s州当时的劳动力 - <span class="math inline">\(I_{\tau k}^{sjt}\)</span>:处理指示变量 - <span class="math inline">\(\mu_{sj}\)</span>:州×工资区间固定效应 - <span class="math inline">\(\rho_{jt}\)</span>:时间×工资区间固定效应 -
-标准误按州级聚类</p>
-<p><strong>关键创新</strong>: - 将就业变化按$0.25工资区间分解 -
-使用事件窗口前后对比 - 提供对上尾效应的检验</p>
-<h3 id="结果results">结果(Results)</h3>
-<p><strong>核心发现1:总体就业效应接近零</strong></p>
-<table>
-<thead>
-<tr>
-<th>指标</th>
-<th>估计值</th>
-<th>标准误</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>受影响工人就业变化</td>
-<td>+2.8%</td>
-<td>(2.9%)</td>
-</tr>
-<tr>
-<td>就业弹性(相对于自身工资)</td>
-<td>0.41</td>
-<td>(0.43)</td>
-</tr>
-</tbody>
-</table>
-<p>→ 在95%置信水平下,排除低于-0.45的弹性</p>
-<p><strong>核心发现2:工资溢出效应显著</strong></p>
-<ul>
-<li>溢出效应向上延伸至最低工资以上约$3</li>
-<li>总体工资增长中约40%来自溢出效应</li>
-<li><strong>不对称性</strong>:留任工人获得显著工资溢出,但新进入者没有</li>
-</ul>
-<p><strong>核心发现3:行业异质性</strong></p>
-<table>
-<thead>
-<tr>
-<th>行业</th>
-<th>就业弹性</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>可贸易部门(制造业)</td>
-<td>-1.4</td>
-<td>显著负效应</td>
-</tr>
-<tr>
-<td>不可贸易部门(餐饮、零售)</td>
-<td>≈0</td>
-<td>几乎无效应</td>
-</tr>
-</tbody>
-</table>
-<p>→ 行业组成是决定最低工资就业效应的关键因素</p>
-<p><strong>核心发现4:人口群体异质性</strong></p>
-<ul>
-<li>按教育和年龄分组,未发现低技能工人被高技能工人替代的证据</li>
-<li>不同人口群体的就业效应大多接近零且不显著</li>
-<li>表明最低工资政策的好处理广泛共享</li>
-</ul>
-<p><strong>核心发现5:对Meer and West (2016)发现的解释</strong></p>
-<ul>
-<li>该研究使用双向固定效应发现大的负就业估计</li>
-<li>分解分析显示这一负效应由工资分布上尾的不大幅度下降驱动</li>
-<li>问题来源:1980年代和1990年代早期样本中包含的时期混杂因素</li>
-<li>1992年后,各种标准规范几乎没有就业减少的证据</li>
-</ul>
-<hr>
-<h2 id="结论conclusion">4. 结论(Conclusion)</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>最低工资对低工资工作数量的总体影响基本为零</strong>:五年观察期内,低工资工作数量基本保持不变</p></li>
-<li><p><strong>最低工资的直接工资效应被适度工资溢出放大</strong>:溢出效应约占总体工资增长的40%</p></li>
-<li><p><strong>就业效应不能用劳动力替代解释</strong>:不同教育和年龄群体的替代效应证据不成立</p></li>
-<li><p><strong>在更高最低工资水平下也未发现就业减少证据</strong>:但确实发现可贸易部门(制造业)减少的迹象</p></li>
-<li><p><strong>方法论贡献</strong>:EB-bunching方法提供了透明且稳健的估计最低工资就业效应的方法</p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><strong>澄清方法论争议</strong>:解释了为什么双向固定效应和事件研究方法产生不同结果</li>
-<li><strong>提供新的实证证据</strong>:使用更全面的数据和更细粒度的分解</li>
-<li><strong>扩展工资溢出分析</strong>:提供了关于溢出机制(相对工资关系 vs
-外部选择价值)的证据</li>
-<li><strong>政策意义</strong>:为$15最低工资运动提供实证支持</li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向(Future work)</h2>
-<h3 id="论文提及的拓展方向">论文提及的拓展方向</h3>
-<ol type="1">
-<li><p><strong>更高最低工资水平的研究</strong>:当Kaitz指数超过59%时会发生什么?需要更高最低工资的州的
-variation</p></li>
-<li><p><strong>长期效应</strong>:本研究关注5年窗口,更长期效应仍需研究</p></li>
-<li><p><strong>其他国家的证据</strong>:美国结果的国际可比性</p></li>
-</ol>
-<h3 id="思考的下一步研究">思考的下一步研究</h3>
-<ol type="1">
-<li><p><strong>动态一般均衡效应</strong>:行业层面的一般均衡调整如何影响就业?</p></li>
-<li><p><strong>非正规就业</strong>:最低工资对非正规经济(零工经济)的影响</p></li>
-<li><p><strong>非工资效应</strong>:最低工资对工作条件、培训机会等非工资方面的影响</p></li>
-<li><p><strong>家庭效应</strong>:最低工资对家庭收入分配和儿童贫困的影响</p></li>
-<li><p><strong>政治经济学</strong>:最低工资设定的决定因素及其政治经济学含义</p></li>
-</ol>
-<hr>
-<h2 id="学术思考">6. 学术思考</h2>
-<h3 id="核心学术问题">核心学术问题</h3>
-<ol type="1">
-<li><strong>竞争性 vs monopsony劳动力市场的边界</strong>
-<ul>
-<li>本研究发现总体就业效应接近零</li>
-<li>这是否意味着低工资劳动力市场更接近monopsony?</li>
-<li>还是正负效应相互抵消?</li>
-</ul></li>
-<li><strong>工资溢出的机制</strong>
-<ul>
-<li>研究发现溢出效应在最低工资以上约$3处消失</li>
-<li>且对留任工人和新进入者影响不对称</li>
-<li>这更支持"相对工资关系假设"而非"外部选择价值假设"</li>
-<li>但这是否意味着企业内部存在显著的工资刚性?</li>
-</ul></li>
-<li><strong>可贸易 vs 不可贸易部门的差异</strong>
-<ul>
-<li>制造业显著负效应 vs 零售餐饮零效应</li>
-<li>这是否意味着全球化压力降低了美国低技能工人的谈价能力?</li>
-<li>还是反映了不同的劳动力市场结构?</li>
-</ul></li>
-<li><strong>EB-bunching方法的普适性</strong>
-<ul>
-<li>将总体效应分解到各工资区间</li>
-<li>提供了"透明"的估计方式</li>
-<li>是否可以推广到其他政策评估?</li>
-</ul></li>
-<li><strong>对CBO政策分析的启示</strong>
-<ul>
-<li>CBO使用青少年弹性来推断总体影响</li>
-<li>本研究表明青少年可能是受最低工资影响最深的群体</li>
-<li>这是否意味着CBO的方法实际上低估了不确定性?</li>
-</ul></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p><strong>识别策略的有效性</strong>:如何检验平行趋势假设?事件前趋势检验的结果如何?</p></li>
-<li><p><strong>测量误差的影响</strong>:CPS数据中的测量误差如何影响估计?特别是对工资分布尾部的测量?</p></li>
-<li><p><strong>Kaitz指数的具体含义</strong>:Kaitz指数达到59%时会发生什么理论预测?</p></li>
-<li><p><strong>对理论模型的启示</strong>:这些发现如何区分竞争性模型和monopsony模型?</p></li>
-<li><p><strong>政策外部有效性</strong>:基于1979-2016年数据的发现在2020年代是否仍然适用?劳动力市场结构是否发生了根本性变化?</p></li>
-<li><p><strong>对工人流动的动态效应</strong>:最低工资是否影响了低工资工人的职业发展轨迹?</p></li>
-<li><p><strong>雇主反应的非工资渠道</strong>:雇主除了调整就业和工资外,是否在工时、工作条件、培训等方面做出了调整?</p></li>
-<li><p><strong>与Dube et al. (2010)
-NJ快餐业研究的关系</strong>:为什么NJ快餐业研究发现了正效应,而本研究对所有行业的汇总发现零效应?</p></li>
-<li><p><strong>对州际差异的控制</strong>:如何排除州级经济基本面对结果的混杂影响?各州经济多样性的作用是什么?</p></li>
-<li><p><strong>最低工资的收入分配效应</strong>:最低工资如何与税法、其他转移支付计划相互作用以影响收入不平等?</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>劳动经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -8229,6 +8229,164 @@ Doyle
       </tags>
   </entry>
   <entry>
+    <title>被相信的性别社会偏好差异 — 深度阅读笔记 — Exley, Hauser, Moore &amp; Pezzuto</title>
+    <url>/posts/exley2025/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Believed Gender Differences in Social
+Preferences</li>
+<li><strong>作者</strong>: Christine L. Exley (Harvard), Oliver P.
+Hauser (Exeter), Molly Moore (Harvard), John-Henry Pezzuto
+(Harvard)</li>
+<li><strong>年份</strong>: 2025</li>
+<li><strong>来源</strong>: The Quarterly Journal of Economics, 140(1):
+403-458</li>
+<li><strong>DOI</strong>: 10.1093/qje/qjae030</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">引言（背景和意义）</h2>
+<ul>
+<li><strong>领域基础知识</strong>：这篇论文属于行为经济学、实验经济学和性别经济学的交叉领域。这里的核心概念是“社会偏好”（social
+preferences），大致指一个人做决定时，不只关心自己的收益，也关心他人的收益、平等、公平、合作等。传统文献常问“男女在社会偏好上是否真的不同”，而这篇论文把问题往前推进一步：<strong>即便真实差异不大，人们是否相信男女有差异？</strong></li>
+<li><strong>研究背景</strong>：现实中，女性在工资、晋升、领导职位上仍然存在系统性劣势。已有大量研究讨论真实的性别行为差异，比如谈判、竞争、合作、分配，但关于“人们相信女性和男性在社会偏好上有何不同”的研究相对少得多。</li>
+<li><strong>作者的问题意识</strong>：作者关心的不是“女性是否真的更慷慨、更平等主义”，而是“人们是否认为女性更慷慨、更平等主义”，以及这种信念从哪里来、会带来什么后果。这个问题很重要，因为很多现实决策——招聘、分工、投票、选择合作者——受信念影响，不一定受真实行为本身影响。</li>
+<li><strong>研究意义</strong>：如果社会普遍相信女性“更有社会性导向”，那么这种信念可能一方面让女性在某些合作型场景中受欢迎，另一方面也可能让女性在竞争性、绩效导向的场景中吃亏。换言之，<strong>错误或夸大的性别信念本身，就可能塑造劳动市场和社会评价结果</strong>。</li>
+</ul>
+<h2 id="内容及结构论文结构">内容及结构（论文结构）</h2>
+<p>这篇论文大致分成五部分。</p>
+<p>第一部分是引言，提出核心问题：关于社会偏好的真实性别差异，文献结论并不一致；但关于“被相信的性别差异”几乎没被系统研究。</p>
+<p>第二部分用一系列经济学实验游戏，系统记录人们是否相信女性比男性更慷慨、更平等、更合作。这一部分是全文的经验基础。</p>
+<p>第三部分研究这种信念可能从哪里来。作者重点借用“联想记忆/associative
+memory”的思路，考察<strong>相似性</strong>和<strong>干扰</strong>两种机制。</p>
+<p>第四部分把这种信念放到更接近现实的场景里，讨论它如何延伸到家庭、工作场所和政策态度，并通过
+worker-employer 实验看这种信念如何影响对男女雇主的选择。</p>
+<p>第五部分总结全文，并讨论未来研究方向，尤其是如何纠正这种信念、它如何影响劳动力市场结果、以及不同场景下这种信念是否会增强或反转。</p>
+<h2 id="正文逻辑梳理">正文（逻辑梳理）</h2>
+<p><strong>背景 -&gt; 挑战 -&gt; 方法 -&gt; 数据 -&gt; 结果</strong></p>
+<h3 id="背景">背景</h3>
+<p>已有文献长期在问：女性和男性在慷慨、平等、公平、合作等“社会偏好”上是否不同。但这个问题本身并不足够。现实中的很多决策，先发生的是“别人怎么看你”，而不是“你真实如何”。如果雇主、同事、选民、家庭成员普遍认为女性更在意平等、更愿意照顾别人，那么这种看法本身就会影响资源配置与角色分工。</p>
+<h3 id="挑战">挑战</h3>
+<p>这类研究有三个难点。</p>
+<p>第一，社会偏好不是单一概念，里面混合了慷慨、平等、合作、信任等多个维度。如果只看一种游戏，很容易把结论局限在某个特殊场景。</p>
+<p>第二，要区分“真实行为差异”和“被相信的差异”。如果研究者只观察到信念差异，而不观察真实决策，就不知道这种信念到底是准确判断还是刻板印象。</p>
+<p>第三，若发现人们确实相信女性更有社会性导向，还要解释这种信念是怎么形成的。作者认为，标准的“理性更新”框架不够，记忆提取过程本身可能会塑造信念。</p>
+<h3 id="方法">方法</h3>
+<p>作者的方法可以分成三层。</p>
+<p>第一层是<strong>记录信念</strong>。作者设计了一系列经济学实验游戏，让受试者分别判断：有多少比例的女性会选择更“社会性导向”的选项？有多少比例的男性会这样做？这里的“社会性导向”大致对应更慷慨、更平等或更合作的选项。</p>
+<p>第二层是<strong>对照真实行为</strong>。同一套研究中，作者也观察男女在这些场景里的真实选择，从而判断“被相信的性别差异”是否准确。</p>
+<p>第三层是<strong>识别信念形成机制</strong>。作者借用 associative
+memory 模型，提出两条假说： 1.
+<strong>相似性（similarity）</strong>：人们会调用与当前判断情境相似的既有经验。如果一个人生活中更容易想起“更慷慨的女性”，那么他更可能相信女性在实验情境中也更慷慨。
+2.
+<strong>干扰（interference）</strong>：记忆提取不是完美的。一个额外经历即使按完全理性的贝叶斯更新不该改变信念，也可能因为干扰了旧记忆的回忆顺序，改变人们的判断。</p>
+<p>这里的识别直觉很重要：作者不是简单说“经历影响信念”，而是进一步说<strong>记忆怎样被提取出来</strong>会影响信念，因此信念未必符合“完美记忆的理性人”模型。</p>
+<h3 id="数据">数据</h3>
+<p>论文总共使用 <strong>15 个研究、8,979 名受试者</strong>。</p>
+<p>最核心的是主实验中的经济学游戏研究，共 <strong>3,382
+名参与者</strong>。作者在两类主样本中实施： - 382 名本科生 - 400
+名线上参与者</p>
+<p>在这些主研究里，作者设计了 <strong>14 个场景</strong>，覆盖： -
+独裁者博弈（dictator game） - 带效率权衡的独裁者博弈 -
+带应得权利（entitlement）权衡的独裁者博弈 - 最后通牒博弈（ultimatum
+game） - 信任博弈（trust game） - 囚徒困境（prisoner’s dilemma） -
+公共品博弈（public goods game）</p>
+<p>这些场景又区分为： -
+<strong>第一方场景</strong>：选择会影响自己收益，因此“自利动机”存在。 -
+<strong>第三方场景</strong>：选择只影响别人收益，因此更能看出人们是否把“社会性导向”理解为平等/合作，而不只是“少为自己争”。</p>
+<p>此外，作者还做了： - 相似性相关研究：799 人 - 干扰实验：3,198 人 -
+应用与后果研究：1,600 人 - 以及专业人士样本、代表性样本、不同
+stakes、不同问法等稳健性研究</p>
+<h3 id="结果">结果</h3>
+<h4 id="主结果人们稳定地相信女性比男性更有社会性导向">1.
+主结果：人们稳定地相信女性比男性更有社会性导向</h4>
+<p>这是全文最核心的发现。</p>
+<p>在主实验的 28
+个情境中，受试者都显著认为女性比男性更可能选择“社会性导向”的选项。这个被相信的性别差距大约在
+<strong>8 到 13 个百分点</strong>之间，而且在很多不同情境下都存在： -
+有无自利动机时都存在 - 有无战略考虑时都存在 - 公平概念不同的场景里都存在
+- 第一方与第三方场景里都存在</p>
+<p>换句话说，这不是某一种博弈的偶然结果，而是一个<strong>跨情境、跨样本、跨问法都很稳的信念模式</strong>。</p>
+<h4 id="与真实行为对比这种信念大体上是不准确的">2.
+与真实行为对比：这种信念大体上是不准确的</h4>
+<p>论文最有意思的地方在这里：作者不是只发现“人们有这种想法”，而是进一步发现这种想法<strong>多数时候夸大了真实差异</strong>。</p>
+<p>在真实决策数据里，作者发现：在 28 个情境中的 24
+个里，无法拒绝“男女无差异”。也就是说，真实行为上并没有稳定、普遍的性别差异。</p>
+<p>但在信念数据里，受试者几乎系统性地低估男性会做出社会性导向选择的比例，于是导致“女性更有社会性导向”的信念差距被显著放大。作者指出，在
+28 个情境中的 <strong>26
+个</strong>，这种被相信的性别差距被显著高估。</p>
+<p>所以这篇论文的核心不是“女性确实更慷慨”，而是：<strong>社会普遍相信女性更慷慨、更平等主义，但这种信念大多并不准确。</strong></p>
+<h4 id="机制结果记忆中的相似经验与这种信念相关">3.
+机制结果：记忆中的“相似经验”与这种信念相关</h4>
+<p>作者发现，若参与者在回忆“慷慨的人”时更容易想到女性，那么他们更可能相信女性在实验中的社会性导向更强。</p>
+<p>另外，如果参与者报告自己童年更多由女性照料，或者人生经历中接触到更多“慷慨、平等主义的女性”，那么他们所持有的
+believed gender gap 也更大。</p>
+<p>这部分是<strong>相关性证据</strong>。它支持作者的解释：人们不是在一个真空里形成信念，而是把现实生活中容易被提取出来的相似经验，投射到新的判断场景里。</p>
+<h4 id="机制结果干扰经验可以因果性地改变信念">4.
+机制结果：干扰经验可以因果性地改变信念</h4>
+<p>作者进一步做了更强的识别：设计“干扰性经历”来影响记忆提取。</p>
+<p>结果显示，在两项总计 <strong>3,198
+人</strong>的研究中，这种干扰经验会显著改变人们对男女社会偏好差异的判断。更关键的是，即使研究者已经提供了关于男女在相似情境中行为分布的信息，并要求受试者准确复述，这种干扰效应仍然存在。</p>
+<p>这说明什么？说明问题不只是“信息有没有给到”，而是<strong>人们在形成判断时，哪些信息和记忆被真正调出来了</strong>。这正是作者想强调的
+associative memory 机制，也是在挑战“完美记忆贝叶斯人”的基准模型。</p>
+<h4 id="应用结果这种信念延伸到家庭职场与政策态度">5.
+应用结果：这种信念延伸到家庭、职场与政策态度</h4>
+<p>作者发现，这种 believed gender gap
+不只存在于抽象实验游戏里，也进入更现实的判断： -
+在家庭中，人们更相信女性会更重视家庭分工、家庭贡献与子女养育中的平等。 -
+在职场中，人们更相信女性偏好 equal pay，而男性更能接受 performance pay。
+-
+在政策态度上，人们更相信女性支持再分配，以及教育、医疗、住房的平等可及。</p>
+<h4 id="劳动市场含义这种信念会影响人们如何选择雇主">6.
+劳动市场含义：这种信念会影响人们如何选择雇主</h4>
+<p>在 worker-employer 实验中，作者发现：当工人是低绩效者、因而会从 equal
+pay 中受益时，他们更偏好女性雇主；当工人是高绩效者、因而更能从
+performance pay 中受益时，他们对女性雇主的偏好下降。</p>
+<p>这说明 believed gender gap
+并不只是“想法”，而可能进入真实匹配行为：人们会根据自己利益，利用这些关于男女的信念来做选择。</p>
+<h4 id="异质性与稳健性">7. 异质性与稳健性</h4>
+<p>论文的稳健性做得很强。作者表明这一信念模式对以下变化都相当稳健： -
+样本换成本科生、线上样本、专业管理/招聘人士、代表性样本 - belief
+questions 的数量、措辞、顺序变化 - 是否只看先做决策还是先做信念题 -
+是否控制人口学变量 - 是否看 full distribution 而非均值 -
+是否改变给与情境中的 stakes 和乘数 -
+是否把研究包装成不那么显眼的“性别研究”</p>
+<p>作者还指出，这个 believed gender gap
+的大小，甚至大于某些年龄组差异和收入组差异在人们心中的印象差距。</p>
+<h2 id="结论conclusion">结论（Conclusion）</h2>
+<ul>
+<li><strong>核心发现</strong>：这篇论文最重要的发现是，社会普遍相信女性比男性更慷慨、更平等、更合作，但这种“被相信的性别差异”在很大程度上并不对应稳定的真实行为差异。</li>
+<li><strong>对领域的贡献</strong>：论文把研究重心从“真实性别差异”推进到了“被相信的性别差异”，并把性别经济学、社会偏好实验和记忆驱动的信念形成文献连接起来。</li>
+<li><strong>实践含义</strong>：这类信念可能在合作型环境中对女性有利，在竞争型环境中对女性不利；它也可能影响雇佣、晋升、薪酬制度偏好、家庭分工以及政策判断。</li>
+</ul>
+<h2 id="未来研究方向future-work">未来研究方向（Future work）</h2>
+<h3 id="论文明确提到的未来方向">1. 论文明确提到的未来方向</h3>
+<ol type="1">
+<li>研究如何提供准确而有效的信息来纠正这种 believed gender
+gap，以及干扰性经历为何会削弱信息纠偏。</li>
+<li>进一步研究这种信念如何影响劳动市场结果，例如男女雇主、不同岗位和行业中的成功概率。</li>
+<li>研究在不同 domain 中，这种 believed gender gap
+是否更强、变弱，甚至反转。</li>
+<li>研究女性是否会因为“没有达到别人期待的社会性导向”而受到更强惩罚，或者在表现出社会性导向时获得更少额外回报。</li>
+</ol>
+<h3 id="从论文可推导出的进一步研究方向">2.
+从论文可推导出的进一步研究方向</h3>
+<ol type="1">
+<li>把这种信念放进真实组织环境中，研究它如何影响招聘、晋升、任务分配和绩效评价。</li>
+<li>比较不同文化、制度与性别规范背景下，这种信念是否同样稳定。</li>
+<li>研究这种信念与“女性适合照顾型角色、男性适合竞争型角色”的职业刻板印象如何交互。</li>
+<li>研究长期信息干预、教育训练、组织制度设计能否系统性降低这种误判。</li>
+<li>研究更包容的性别测量，而不只停留在二元性别框架。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>QJE</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>&lt;中国的历史之路&gt;深度阅读笔记 — 伊懋可 Mark Elvin</title>
     <url>/posts/elvin1973/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="书籍信息">书籍信息</h2>
@@ -8827,164 +8985,6 @@ Fragments of Curious and Useful Knowledge from the Chinese Past</em>
         <tag>经济史</tag>
         <tag>读书笔记</tag>
         <tag>中国研究</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>被相信的性别社会偏好差异 — 深度阅读笔记 — Exley, Hauser, Moore &amp; Pezzuto</title>
-    <url>/posts/exley2025/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Believed Gender Differences in Social
-Preferences</li>
-<li><strong>作者</strong>: Christine L. Exley (Harvard), Oliver P.
-Hauser (Exeter), Molly Moore (Harvard), John-Henry Pezzuto
-(Harvard)</li>
-<li><strong>年份</strong>: 2025</li>
-<li><strong>来源</strong>: The Quarterly Journal of Economics, 140(1):
-403-458</li>
-<li><strong>DOI</strong>: 10.1093/qje/qjae030</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">引言（背景和意义）</h2>
-<ul>
-<li><strong>领域基础知识</strong>：这篇论文属于行为经济学、实验经济学和性别经济学的交叉领域。这里的核心概念是“社会偏好”（social
-preferences），大致指一个人做决定时，不只关心自己的收益，也关心他人的收益、平等、公平、合作等。传统文献常问“男女在社会偏好上是否真的不同”，而这篇论文把问题往前推进一步：<strong>即便真实差异不大，人们是否相信男女有差异？</strong></li>
-<li><strong>研究背景</strong>：现实中，女性在工资、晋升、领导职位上仍然存在系统性劣势。已有大量研究讨论真实的性别行为差异，比如谈判、竞争、合作、分配，但关于“人们相信女性和男性在社会偏好上有何不同”的研究相对少得多。</li>
-<li><strong>作者的问题意识</strong>：作者关心的不是“女性是否真的更慷慨、更平等主义”，而是“人们是否认为女性更慷慨、更平等主义”，以及这种信念从哪里来、会带来什么后果。这个问题很重要，因为很多现实决策——招聘、分工、投票、选择合作者——受信念影响，不一定受真实行为本身影响。</li>
-<li><strong>研究意义</strong>：如果社会普遍相信女性“更有社会性导向”，那么这种信念可能一方面让女性在某些合作型场景中受欢迎，另一方面也可能让女性在竞争性、绩效导向的场景中吃亏。换言之，<strong>错误或夸大的性别信念本身，就可能塑造劳动市场和社会评价结果</strong>。</li>
-</ul>
-<h2 id="内容及结构论文结构">内容及结构（论文结构）</h2>
-<p>这篇论文大致分成五部分。</p>
-<p>第一部分是引言，提出核心问题：关于社会偏好的真实性别差异，文献结论并不一致；但关于“被相信的性别差异”几乎没被系统研究。</p>
-<p>第二部分用一系列经济学实验游戏，系统记录人们是否相信女性比男性更慷慨、更平等、更合作。这一部分是全文的经验基础。</p>
-<p>第三部分研究这种信念可能从哪里来。作者重点借用“联想记忆/associative
-memory”的思路，考察<strong>相似性</strong>和<strong>干扰</strong>两种机制。</p>
-<p>第四部分把这种信念放到更接近现实的场景里，讨论它如何延伸到家庭、工作场所和政策态度，并通过
-worker-employer 实验看这种信念如何影响对男女雇主的选择。</p>
-<p>第五部分总结全文，并讨论未来研究方向，尤其是如何纠正这种信念、它如何影响劳动力市场结果、以及不同场景下这种信念是否会增强或反转。</p>
-<h2 id="正文逻辑梳理">正文（逻辑梳理）</h2>
-<p><strong>背景 -&gt; 挑战 -&gt; 方法 -&gt; 数据 -&gt; 结果</strong></p>
-<h3 id="背景">背景</h3>
-<p>已有文献长期在问：女性和男性在慷慨、平等、公平、合作等“社会偏好”上是否不同。但这个问题本身并不足够。现实中的很多决策，先发生的是“别人怎么看你”，而不是“你真实如何”。如果雇主、同事、选民、家庭成员普遍认为女性更在意平等、更愿意照顾别人，那么这种看法本身就会影响资源配置与角色分工。</p>
-<h3 id="挑战">挑战</h3>
-<p>这类研究有三个难点。</p>
-<p>第一，社会偏好不是单一概念，里面混合了慷慨、平等、合作、信任等多个维度。如果只看一种游戏，很容易把结论局限在某个特殊场景。</p>
-<p>第二，要区分“真实行为差异”和“被相信的差异”。如果研究者只观察到信念差异，而不观察真实决策，就不知道这种信念到底是准确判断还是刻板印象。</p>
-<p>第三，若发现人们确实相信女性更有社会性导向，还要解释这种信念是怎么形成的。作者认为，标准的“理性更新”框架不够，记忆提取过程本身可能会塑造信念。</p>
-<h3 id="方法">方法</h3>
-<p>作者的方法可以分成三层。</p>
-<p>第一层是<strong>记录信念</strong>。作者设计了一系列经济学实验游戏，让受试者分别判断：有多少比例的女性会选择更“社会性导向”的选项？有多少比例的男性会这样做？这里的“社会性导向”大致对应更慷慨、更平等或更合作的选项。</p>
-<p>第二层是<strong>对照真实行为</strong>。同一套研究中，作者也观察男女在这些场景里的真实选择，从而判断“被相信的性别差异”是否准确。</p>
-<p>第三层是<strong>识别信念形成机制</strong>。作者借用 associative
-memory 模型，提出两条假说： 1.
-<strong>相似性（similarity）</strong>：人们会调用与当前判断情境相似的既有经验。如果一个人生活中更容易想起“更慷慨的女性”，那么他更可能相信女性在实验情境中也更慷慨。
-2.
-<strong>干扰（interference）</strong>：记忆提取不是完美的。一个额外经历即使按完全理性的贝叶斯更新不该改变信念，也可能因为干扰了旧记忆的回忆顺序，改变人们的判断。</p>
-<p>这里的识别直觉很重要：作者不是简单说“经历影响信念”，而是进一步说<strong>记忆怎样被提取出来</strong>会影响信念，因此信念未必符合“完美记忆的理性人”模型。</p>
-<h3 id="数据">数据</h3>
-<p>论文总共使用 <strong>15 个研究、8,979 名受试者</strong>。</p>
-<p>最核心的是主实验中的经济学游戏研究，共 <strong>3,382
-名参与者</strong>。作者在两类主样本中实施： - 382 名本科生 - 400
-名线上参与者</p>
-<p>在这些主研究里，作者设计了 <strong>14 个场景</strong>，覆盖： -
-独裁者博弈（dictator game） - 带效率权衡的独裁者博弈 -
-带应得权利（entitlement）权衡的独裁者博弈 - 最后通牒博弈（ultimatum
-game） - 信任博弈（trust game） - 囚徒困境（prisoner’s dilemma） -
-公共品博弈（public goods game）</p>
-<p>这些场景又区分为： -
-<strong>第一方场景</strong>：选择会影响自己收益，因此“自利动机”存在。 -
-<strong>第三方场景</strong>：选择只影响别人收益，因此更能看出人们是否把“社会性导向”理解为平等/合作，而不只是“少为自己争”。</p>
-<p>此外，作者还做了： - 相似性相关研究：799 人 - 干扰实验：3,198 人 -
-应用与后果研究：1,600 人 - 以及专业人士样本、代表性样本、不同
-stakes、不同问法等稳健性研究</p>
-<h3 id="结果">结果</h3>
-<h4 id="主结果人们稳定地相信女性比男性更有社会性导向">1.
-主结果：人们稳定地相信女性比男性更有社会性导向</h4>
-<p>这是全文最核心的发现。</p>
-<p>在主实验的 28
-个情境中，受试者都显著认为女性比男性更可能选择“社会性导向”的选项。这个被相信的性别差距大约在
-<strong>8 到 13 个百分点</strong>之间，而且在很多不同情境下都存在： -
-有无自利动机时都存在 - 有无战略考虑时都存在 - 公平概念不同的场景里都存在
-- 第一方与第三方场景里都存在</p>
-<p>换句话说，这不是某一种博弈的偶然结果，而是一个<strong>跨情境、跨样本、跨问法都很稳的信念模式</strong>。</p>
-<h4 id="与真实行为对比这种信念大体上是不准确的">2.
-与真实行为对比：这种信念大体上是不准确的</h4>
-<p>论文最有意思的地方在这里：作者不是只发现“人们有这种想法”，而是进一步发现这种想法<strong>多数时候夸大了真实差异</strong>。</p>
-<p>在真实决策数据里，作者发现：在 28 个情境中的 24
-个里，无法拒绝“男女无差异”。也就是说，真实行为上并没有稳定、普遍的性别差异。</p>
-<p>但在信念数据里，受试者几乎系统性地低估男性会做出社会性导向选择的比例，于是导致“女性更有社会性导向”的信念差距被显著放大。作者指出，在
-28 个情境中的 <strong>26
-个</strong>，这种被相信的性别差距被显著高估。</p>
-<p>所以这篇论文的核心不是“女性确实更慷慨”，而是：<strong>社会普遍相信女性更慷慨、更平等主义，但这种信念大多并不准确。</strong></p>
-<h4 id="机制结果记忆中的相似经验与这种信念相关">3.
-机制结果：记忆中的“相似经验”与这种信念相关</h4>
-<p>作者发现，若参与者在回忆“慷慨的人”时更容易想到女性，那么他们更可能相信女性在实验中的社会性导向更强。</p>
-<p>另外，如果参与者报告自己童年更多由女性照料，或者人生经历中接触到更多“慷慨、平等主义的女性”，那么他们所持有的
-believed gender gap 也更大。</p>
-<p>这部分是<strong>相关性证据</strong>。它支持作者的解释：人们不是在一个真空里形成信念，而是把现实生活中容易被提取出来的相似经验，投射到新的判断场景里。</p>
-<h4 id="机制结果干扰经验可以因果性地改变信念">4.
-机制结果：干扰经验可以因果性地改变信念</h4>
-<p>作者进一步做了更强的识别：设计“干扰性经历”来影响记忆提取。</p>
-<p>结果显示，在两项总计 <strong>3,198
-人</strong>的研究中，这种干扰经验会显著改变人们对男女社会偏好差异的判断。更关键的是，即使研究者已经提供了关于男女在相似情境中行为分布的信息，并要求受试者准确复述，这种干扰效应仍然存在。</p>
-<p>这说明什么？说明问题不只是“信息有没有给到”，而是<strong>人们在形成判断时，哪些信息和记忆被真正调出来了</strong>。这正是作者想强调的
-associative memory 机制，也是在挑战“完美记忆贝叶斯人”的基准模型。</p>
-<h4 id="应用结果这种信念延伸到家庭职场与政策态度">5.
-应用结果：这种信念延伸到家庭、职场与政策态度</h4>
-<p>作者发现，这种 believed gender gap
-不只存在于抽象实验游戏里，也进入更现实的判断： -
-在家庭中，人们更相信女性会更重视家庭分工、家庭贡献与子女养育中的平等。 -
-在职场中，人们更相信女性偏好 equal pay，而男性更能接受 performance pay。
--
-在政策态度上，人们更相信女性支持再分配，以及教育、医疗、住房的平等可及。</p>
-<h4 id="劳动市场含义这种信念会影响人们如何选择雇主">6.
-劳动市场含义：这种信念会影响人们如何选择雇主</h4>
-<p>在 worker-employer 实验中，作者发现：当工人是低绩效者、因而会从 equal
-pay 中受益时，他们更偏好女性雇主；当工人是高绩效者、因而更能从
-performance pay 中受益时，他们对女性雇主的偏好下降。</p>
-<p>这说明 believed gender gap
-并不只是“想法”，而可能进入真实匹配行为：人们会根据自己利益，利用这些关于男女的信念来做选择。</p>
-<h4 id="异质性与稳健性">7. 异质性与稳健性</h4>
-<p>论文的稳健性做得很强。作者表明这一信念模式对以下变化都相当稳健： -
-样本换成本科生、线上样本、专业管理/招聘人士、代表性样本 - belief
-questions 的数量、措辞、顺序变化 - 是否只看先做决策还是先做信念题 -
-是否控制人口学变量 - 是否看 full distribution 而非均值 -
-是否改变给与情境中的 stakes 和乘数 -
-是否把研究包装成不那么显眼的“性别研究”</p>
-<p>作者还指出，这个 believed gender gap
-的大小，甚至大于某些年龄组差异和收入组差异在人们心中的印象差距。</p>
-<h2 id="结论conclusion">结论（Conclusion）</h2>
-<ul>
-<li><strong>核心发现</strong>：这篇论文最重要的发现是，社会普遍相信女性比男性更慷慨、更平等、更合作，但这种“被相信的性别差异”在很大程度上并不对应稳定的真实行为差异。</li>
-<li><strong>对领域的贡献</strong>：论文把研究重心从“真实性别差异”推进到了“被相信的性别差异”，并把性别经济学、社会偏好实验和记忆驱动的信念形成文献连接起来。</li>
-<li><strong>实践含义</strong>：这类信念可能在合作型环境中对女性有利，在竞争型环境中对女性不利；它也可能影响雇佣、晋升、薪酬制度偏好、家庭分工以及政策判断。</li>
-</ul>
-<h2 id="未来研究方向future-work">未来研究方向（Future work）</h2>
-<h3 id="论文明确提到的未来方向">1. 论文明确提到的未来方向</h3>
-<ol type="1">
-<li>研究如何提供准确而有效的信息来纠正这种 believed gender
-gap，以及干扰性经历为何会削弱信息纠偏。</li>
-<li>进一步研究这种信念如何影响劳动市场结果，例如男女雇主、不同岗位和行业中的成功概率。</li>
-<li>研究在不同 domain 中，这种 believed gender gap
-是否更强、变弱，甚至反转。</li>
-<li>研究女性是否会因为“没有达到别人期待的社会性导向”而受到更强惩罚，或者在表现出社会性导向时获得更少额外回报。</li>
-</ol>
-<h3 id="从论文可推导出的进一步研究方向">2.
-从论文可推导出的进一步研究方向</h3>
-<ol type="1">
-<li>把这种信念放进真实组织环境中，研究它如何影响招聘、晋升、任务分配和绩效评价。</li>
-<li>比较不同文化、制度与性别规范背景下，这种信念是否同样稳定。</li>
-<li>研究这种信念与“女性适合照顾型角色、男性适合竞争型角色”的职业刻板印象如何交互。</li>
-<li>研究长期信息干预、教育训练、组织制度设计能否系统性降低这种误判。</li>
-<li>研究更包容的性别测量，而不只停留在二元性别框架。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>QJE</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -10504,152 +10504,6 @@ space)讨论有什么启示?发展中国家在 ZLB
       </tags>
   </entry>
   <entry>
-    <title>死亡率的地方效应：来自人口迁移的证据 — 深度阅读笔记 — Finkelstein, Gentzkow &amp; Williams</title>
-    <url>/posts/finkelstein2021/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Place-Based Drivers of Mortality: Evidence
-from Migration</li>
-<li><strong>作者</strong>: Amy Finkelstein (MIT), Matthew Gentzkow
-(Stanford), Heidi Williams (Dartmouth)</li>
-<li><strong>年份</strong>: 2021</li>
-<li><strong>来源</strong>: American Economic Review, 111(8):
-2697-2735</li>
-<li><strong>DOI</strong>: 10.1257/aer.20190825</li>
-</ul>
-<span id="more"></span>
-<hr>
-<hr>
-<h2 id="引言背景和意义">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong>
-死亡率的地理差异是健康经济学的核心研究议题。传统文献将死亡率的决定因素分为两大类：（1）居民的健康资本（health
-capital），包括基因禀赋、历史健康行为（吸烟、饮食、运动）、过往医疗经历等；（2）当前居住地的环境因素（place
-effects），包括医疗质量与可及性、气候、污染、犯罪等。但如何识别"地方"的因果效应，一直是方法论上的难题，因为人们对居住地的选择本身是内生的——健康状况好的人可能倾向于搬到生活质量更高的地方。</p>
-<p><strong>研究背景</strong>
-美国各地区之间的预期寿命差异非常显著。Chetty et
-al.（2016）发现，美国100个最大通勤区的40岁预期寿命从圣何塞的85岁到拉斯维加斯的81岁不等。现有研究（如Dartmouth
-Atlas）强调医疗支出与健康结果之间的弱相关性，而Chetty et
-al.（2016）发现截面数据中死亡率的主要相关因素是吸烟、肥胖等健康资本变量，地方因素（如医疗支出）的相关性反而很弱。但这些研究均未识别地方效应的因果影响。</p>
-<p><strong>作者的问题意识</strong>
-当前地点对老年人死亡率的因果效应有多大？不同地区之间预期寿命差异中，有多少比例来自"地方本身"（医疗质量、气候、社会环境），有多少来自居民自身带来的"健康资本"？如何在人口迁移数据中可信地分离这两类效应？</p>
-<p><strong>研究意义</strong> 该研究为以下政策问题提供了量化基础： -
-改善低质量地区的医疗资源配置能带来多大的生存收益？ -
-"移居计划"（如Moving to Opportunity）的健康效果有多大？ -
-地理健康不平等在多大程度上可以通过改变环境而非改变居民行为来解决？</p>
-<hr>
-<h2 id="内容及结构论文结构">内容及结构（论文结构）</h2>
-<ol type="1">
-<li><strong>引言</strong>：提出问题、概述方法和主要发现。</li>
-<li><strong>方法框架</strong>：（a）基准方法——用老年Medicare迁移者比较不同目的地的死亡率结果；（b）不可观测变量修正策略——利用起源地残差死亡率来校正目的地选择的潜在选择性偏差。</li>
-<li><strong>数据</strong>：Medicare
-1999-2014年全体受益人，约6900万人，其中约200万迁移者，地理单元为通勤区（CZ）。</li>
-<li><strong>主要结果</strong>：地方效应规模估计、与健康资本效应的分解。</li>
-<li><strong>异质性分析</strong>：按医疗保险补贴资格（Medicaid）、种族分层分析。</li>
-<li><strong>稳健性检验</strong>：替代模型规格（Logistic模型）等。</li>
-<li><strong>地方效应的可观测相关因素</strong>：揭示医疗质量、气候、犯罪、SES等与地方效应的相关性。</li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>美国各地预期寿命差异显著（跨通勤区标准差约0.84年）。现有研究主要描述截面相关性，难以回答"换一个地方住，你会活得更久吗"这样的因果问题。</p>
-<h3 id="挑战">挑战</h3>
-<p><strong>选择性偏误（selection
-bias）</strong>：迁移者的目的地选择与其健康状况内生相关——身体好的人可能更愿意搬到气候温和、生活便利的地方；而身体差的人可能搬到有更好医疗设施的地方。单纯比较搬到不同地点的人的死亡率，会混淆地方效应和个体健康资本差异。</p>
-<p><strong>方法难点</strong>：如何控制不可观测的健康资本（unobserved
-health
-capital）？即使控制了大量可观测健康指标，仍可能存在遗漏变量偏差。</p>
-<h3 id="方法">方法</h3>
-<p><strong>第一步：基准比较</strong>
-比较从同一起源地（如波士顿）搬到不同目的地（如明尼阿波利斯 vs.
-休斯顿）的老年人死亡率，同时控制： - 起源地固定效应 -
-丰富的搬家前健康指标（来自Medicare理赔数据的慢性病诊断、医疗利用率等）</p>
-<p>直觉：若两个人从同一起点出发，搬家前健康状况相同，搬家后死亡率差异就反映了目的地的因果效应。</p>
-<p><strong>第二步：不可观测变量修正（核心创新）</strong>
-基本思路来自Altonji et
-al.（2005）和Oster（2016）：用可观测变量的重要性来推断不可观测变量的重要性。</p>
-<p>关键假设：<strong>可观测变量与不可观测变量相对于起源地的重要性之比，等于它们相对于目的地的重要性之比</strong>。换言之，选择起源地和选择目的地的选择过程具有对称性。</p>
-<p>操作上：如果控制了起源地固定效应后，迁移者的残差死亡率仍与起源地相关，说明起源地还捕捉到了部分未被控制的健康资本。利用这一"起源地残差相关性"的大小来校正目的地选择可能带来的偏差。</p>
-<p>这一策略的优势在于：不需要研究者事先指定不可观测变量的总重要性（即不需要指定"假想完整回归"的R²上界），只需一个对称性假设，并用数据自身提供信息。</p>
-<p><strong>数据</strong>： - Medicare受益人（65岁及以上），1999-2014年 -
-约6900万受益人：4300万非迁移者（取10%随机抽样），约200万迁移者 -
-地理单元：通勤区（Commuting Zone, CZ），全美共563个 -
-关键变量：居住地邮编、死亡日期、人口特征、医疗利用率、慢性病诊断 -
-主要结果指标：65岁预期寿命（用Gompertz死亡率模型估计）</p>
-<h3 id="结果">结果</h3>
-<p><strong>主要结果：地方效应显著且重要</strong> -
-从第10百分位的通勤区迁移到第90百分位的通勤区，65岁预期寿命增加约<strong>1.1年</strong>，约为截面差异的一半。
-- 若将全国地方效应均等化，截面预期寿命差异将降低约<strong>15%</strong>。
--
-相比之下，若将健康资本均等化，截面差异将降低约<strong>75%</strong>——说明健康资本仍是地区差异的主导因素，但地方效应也不可忽视。
--
-地方效应与健康资本效应的相关性适中（并不完全正相关）：一些地区（如圣菲、丹佛、埃尔帕索）截面死亡率较低但地方因果效应为负；另一些地区（如西弗吉尼亚查尔斯顿）截面死亡率高但地方效应为正。</p>
-<p><strong>异质性结果</strong> -
-Medicaid受益人（低收入群体）和非白人群体的预期寿命差异更大，地方效应的标准差也更大——地理健康不平等在弱势群体中更为突出。</p>
-<p><strong>地方效应的可观测相关因素</strong>
-地方效应较好（使人活得更长）的地区往往具有： 1.
-<strong>医疗质量和数量</strong>：更多人均初级保健医生和专科医生、更高质量的医院、更高的医疗利用率（注意：这与Dartmouth
-Atlas文献中医疗利用率与截面健康结果无关的结论形成对比——这里用的是因果地方效应而非截面结果）
-2. <strong>气候环境</strong>：气候较温和、污染较少 3.
-<strong>安全</strong>：凶杀案和交通事故死亡率更低 4.
-<strong>社会经济状况</strong>：更高的收入和教育水平</p>
-<hr>
-<h2 id="结论conclusion">结论（Conclusion）</h2>
-<p><strong>核心发现</strong>：当前居住地对老年人死亡率具有实质性因果效应。从第10到第90百分位的地区迁移可使预期寿命增加1.1年，均等化地方效应可降低截面差异的15%。地方效应主要通过医疗质量、气候、社会安全和SES等渠道发挥作用。</p>
-<p><strong>对领域的贡献</strong>： 1.
-首次在全国规模上可信地分离老年人死亡率的地方因果效应与健康资本效应； 2.
-提出了一种不需要指定不可观测变量总重要性的新选择修正策略； 3.
-揭示了"医疗利用率与健康结果截面相关性弱"和"医疗质量与死亡率因果效应强"之间的矛盾——暗示截面数据中的Dartmouth
-Atlas悖论可能是选择性偏差造成的。</p>
-<p><strong>政策含义</strong>： -
-改善弱势地区的医疗资源配置（数量和质量）有望产生显著且即时的生存效益； -
-针对老年人的迁移计划（移居到更有利环境）有实质意义； -
-但地方效应只解释了15%的截面差异，健康资本（行为习惯、历史经历）仍是主要因素，不可忽视。</p>
-<hr>
-<h2 id="未来研究方向future-work">未来研究方向（Future work）</h2>
-<p><strong>论文中明确提及的方向</strong>： 1.
-深入研究地方效应的具体渠道（医疗质量的哪个维度最重要？气候影响的机制是什么？）；
-2.
-研究地方效应对更年轻人群的影响——本文聚焦老年人，年轻人可能面临不同的渠道；
-3. 拓展到死亡率以外的健康结果（住院率、功能状态等）。</p>
-<p><strong>从论文引申的研究方向</strong>： 1. 利用"Moving to
-Opportunity"等随机分配迁移实验验证本文的识别假设； 2.
-研究地方效应随时间的动态演变——当地医疗政策改革是否改变了地方效应； 3.
-将地方效应分解为可干预的政策变量（医院质量、环境监管等），直接评估政策效果；
-4.
-研究地方效应在工作年龄人群（20-64岁）的大小和渠道，以便将健康政策与劳动力市场政策联系起来。</p>
-<h2 id="学术思考">学术思考</h2>
-<ol type="1">
-<li><p><strong>识别假设的可信度</strong>：核心假设是"选择起源地和目的地的不可观测选择过程具有对称性"。但若健康较差的人为了获得特定医疗而搬迁（如搬到医疗中心附近），而健康较好的人因为退休才搬迁，两类迁移的选择机制可能非常不同，对称性假设可能存在问题。</p></li>
-<li><p><strong>Dartmouth
-Atlas悖论的解释</strong>：本文发现医疗利用率与地方效应正相关，但Dartmouth
-Atlas发现截面上医疗利用率与健康结果不相关。本文将此归因于截面数据的选择性偏差，但能否用工具变量或其他方法直接检验这一解释？</p></li>
-<li><p><strong>地方效应的即时性</strong>：作者假设老年人的健康资本是固定的，地方效应立即出现。但医疗质量的影响（如定期体检发现疾病）可能有时滞，如何区分"习惯带来的即时效应"和"医疗诊断的滞后效应"？</p></li>
-<li><p><strong>样本选择性</strong>：Medicare迁移者约占所有受益人的0.5%/年，是高度选择性的群体（经济条件较好、身体较好）。这是否限制了结论对无法迁移的老年人（如贫困老人）的适用性？</p></li>
-<li><p><strong>政策内生性</strong>：若政府根据本文研究结果改善落后地区的医疗资源，是否会改变人口选择性迁移的均衡，从而影响未来的地方效应估计？</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol type="1">
-<li>不可观测变量修正策略（利用起源地残差）的具体操作步骤是什么？如何用数据估计"起源地残差相关性"？</li>
-<li>为什么选择通勤区（CZ）作为地理单元？城市内部（如街区级别）的地方效应是否会更大？</li>
-<li>研究发现医疗利用率与因果效应正相关，但Dartmouth
-Atlas发现截面相关性弱——这两个结论是否真的矛盾？能用这篇论文的框架来检验吗？</li>
-<li>本文聚焦65岁以上老年人，对于工作年龄人群（如35-64岁）是否有类似的地方效应估计，其渠道机制是否不同？</li>
-<li>哪些具体的通勤区被识别为有显著正向地方效应？作者如何解释圣菲、丹佛等地截面寿命较高但地方因果效应为负的"反常"现象？</li>
-<li>本文方法能否应用于研究地方效应对非老年医疗保障（Medicaid、ACA）人群的影响？</li>
-<li>"Moving to Opportunity"项目的随机实验结果（Chetty et al.
-2016a）与本文的观察性估计是否一致？如何相互印证？</li>
-</ol>
-<hr>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>死亡率的地方性驱动因素：移民的证据 — 深度阅读笔记 — Finkelstein Et Al.</title>
     <url>/posts/finkelstein2021/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Place-Based Drivers of Mortality: Evidence from Migration<br>
@@ -10794,6 +10648,152 @@ Zotero Item Key:: XDGPRRM8</p>
 ]]></content>
       <categories>
         <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>死亡率的地方效应：来自人口迁移的证据 — 深度阅读笔记 — Finkelstein, Gentzkow &amp; Williams</title>
+    <url>/posts/finkelstein2021/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Place-Based Drivers of Mortality: Evidence
+from Migration</li>
+<li><strong>作者</strong>: Amy Finkelstein (MIT), Matthew Gentzkow
+(Stanford), Heidi Williams (Dartmouth)</li>
+<li><strong>年份</strong>: 2021</li>
+<li><strong>来源</strong>: American Economic Review, 111(8):
+2697-2735</li>
+<li><strong>DOI</strong>: 10.1257/aer.20190825</li>
+</ul>
+<span id="more"></span>
+<hr>
+<hr>
+<h2 id="引言背景和意义">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong>
+死亡率的地理差异是健康经济学的核心研究议题。传统文献将死亡率的决定因素分为两大类：（1）居民的健康资本（health
+capital），包括基因禀赋、历史健康行为（吸烟、饮食、运动）、过往医疗经历等；（2）当前居住地的环境因素（place
+effects），包括医疗质量与可及性、气候、污染、犯罪等。但如何识别"地方"的因果效应，一直是方法论上的难题，因为人们对居住地的选择本身是内生的——健康状况好的人可能倾向于搬到生活质量更高的地方。</p>
+<p><strong>研究背景</strong>
+美国各地区之间的预期寿命差异非常显著。Chetty et
+al.（2016）发现，美国100个最大通勤区的40岁预期寿命从圣何塞的85岁到拉斯维加斯的81岁不等。现有研究（如Dartmouth
+Atlas）强调医疗支出与健康结果之间的弱相关性，而Chetty et
+al.（2016）发现截面数据中死亡率的主要相关因素是吸烟、肥胖等健康资本变量，地方因素（如医疗支出）的相关性反而很弱。但这些研究均未识别地方效应的因果影响。</p>
+<p><strong>作者的问题意识</strong>
+当前地点对老年人死亡率的因果效应有多大？不同地区之间预期寿命差异中，有多少比例来自"地方本身"（医疗质量、气候、社会环境），有多少来自居民自身带来的"健康资本"？如何在人口迁移数据中可信地分离这两类效应？</p>
+<p><strong>研究意义</strong> 该研究为以下政策问题提供了量化基础： -
+改善低质量地区的医疗资源配置能带来多大的生存收益？ -
+"移居计划"（如Moving to Opportunity）的健康效果有多大？ -
+地理健康不平等在多大程度上可以通过改变环境而非改变居民行为来解决？</p>
+<hr>
+<h2 id="内容及结构论文结构">内容及结构（论文结构）</h2>
+<ol type="1">
+<li><strong>引言</strong>：提出问题、概述方法和主要发现。</li>
+<li><strong>方法框架</strong>：（a）基准方法——用老年Medicare迁移者比较不同目的地的死亡率结果；（b）不可观测变量修正策略——利用起源地残差死亡率来校正目的地选择的潜在选择性偏差。</li>
+<li><strong>数据</strong>：Medicare
+1999-2014年全体受益人，约6900万人，其中约200万迁移者，地理单元为通勤区（CZ）。</li>
+<li><strong>主要结果</strong>：地方效应规模估计、与健康资本效应的分解。</li>
+<li><strong>异质性分析</strong>：按医疗保险补贴资格（Medicaid）、种族分层分析。</li>
+<li><strong>稳健性检验</strong>：替代模型规格（Logistic模型）等。</li>
+<li><strong>地方效应的可观测相关因素</strong>：揭示医疗质量、气候、犯罪、SES等与地方效应的相关性。</li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>美国各地预期寿命差异显著（跨通勤区标准差约0.84年）。现有研究主要描述截面相关性，难以回答"换一个地方住，你会活得更久吗"这样的因果问题。</p>
+<h3 id="挑战">挑战</h3>
+<p><strong>选择性偏误（selection
+bias）</strong>：迁移者的目的地选择与其健康状况内生相关——身体好的人可能更愿意搬到气候温和、生活便利的地方；而身体差的人可能搬到有更好医疗设施的地方。单纯比较搬到不同地点的人的死亡率，会混淆地方效应和个体健康资本差异。</p>
+<p><strong>方法难点</strong>：如何控制不可观测的健康资本（unobserved
+health
+capital）？即使控制了大量可观测健康指标，仍可能存在遗漏变量偏差。</p>
+<h3 id="方法">方法</h3>
+<p><strong>第一步：基准比较</strong>
+比较从同一起源地（如波士顿）搬到不同目的地（如明尼阿波利斯 vs.
+休斯顿）的老年人死亡率，同时控制： - 起源地固定效应 -
+丰富的搬家前健康指标（来自Medicare理赔数据的慢性病诊断、医疗利用率等）</p>
+<p>直觉：若两个人从同一起点出发，搬家前健康状况相同，搬家后死亡率差异就反映了目的地的因果效应。</p>
+<p><strong>第二步：不可观测变量修正（核心创新）</strong>
+基本思路来自Altonji et
+al.（2005）和Oster（2016）：用可观测变量的重要性来推断不可观测变量的重要性。</p>
+<p>关键假设：<strong>可观测变量与不可观测变量相对于起源地的重要性之比，等于它们相对于目的地的重要性之比</strong>。换言之，选择起源地和选择目的地的选择过程具有对称性。</p>
+<p>操作上：如果控制了起源地固定效应后，迁移者的残差死亡率仍与起源地相关，说明起源地还捕捉到了部分未被控制的健康资本。利用这一"起源地残差相关性"的大小来校正目的地选择可能带来的偏差。</p>
+<p>这一策略的优势在于：不需要研究者事先指定不可观测变量的总重要性（即不需要指定"假想完整回归"的R²上界），只需一个对称性假设，并用数据自身提供信息。</p>
+<p><strong>数据</strong>： - Medicare受益人（65岁及以上），1999-2014年 -
+约6900万受益人：4300万非迁移者（取10%随机抽样），约200万迁移者 -
+地理单元：通勤区（Commuting Zone, CZ），全美共563个 -
+关键变量：居住地邮编、死亡日期、人口特征、医疗利用率、慢性病诊断 -
+主要结果指标：65岁预期寿命（用Gompertz死亡率模型估计）</p>
+<h3 id="结果">结果</h3>
+<p><strong>主要结果：地方效应显著且重要</strong> -
+从第10百分位的通勤区迁移到第90百分位的通勤区，65岁预期寿命增加约<strong>1.1年</strong>，约为截面差异的一半。
+- 若将全国地方效应均等化，截面预期寿命差异将降低约<strong>15%</strong>。
+-
+相比之下，若将健康资本均等化，截面差异将降低约<strong>75%</strong>——说明健康资本仍是地区差异的主导因素，但地方效应也不可忽视。
+-
+地方效应与健康资本效应的相关性适中（并不完全正相关）：一些地区（如圣菲、丹佛、埃尔帕索）截面死亡率较低但地方因果效应为负；另一些地区（如西弗吉尼亚查尔斯顿）截面死亡率高但地方效应为正。</p>
+<p><strong>异质性结果</strong> -
+Medicaid受益人（低收入群体）和非白人群体的预期寿命差异更大，地方效应的标准差也更大——地理健康不平等在弱势群体中更为突出。</p>
+<p><strong>地方效应的可观测相关因素</strong>
+地方效应较好（使人活得更长）的地区往往具有： 1.
+<strong>医疗质量和数量</strong>：更多人均初级保健医生和专科医生、更高质量的医院、更高的医疗利用率（注意：这与Dartmouth
+Atlas文献中医疗利用率与截面健康结果无关的结论形成对比——这里用的是因果地方效应而非截面结果）
+2. <strong>气候环境</strong>：气候较温和、污染较少 3.
+<strong>安全</strong>：凶杀案和交通事故死亡率更低 4.
+<strong>社会经济状况</strong>：更高的收入和教育水平</p>
+<hr>
+<h2 id="结论conclusion">结论（Conclusion）</h2>
+<p><strong>核心发现</strong>：当前居住地对老年人死亡率具有实质性因果效应。从第10到第90百分位的地区迁移可使预期寿命增加1.1年，均等化地方效应可降低截面差异的15%。地方效应主要通过医疗质量、气候、社会安全和SES等渠道发挥作用。</p>
+<p><strong>对领域的贡献</strong>： 1.
+首次在全国规模上可信地分离老年人死亡率的地方因果效应与健康资本效应； 2.
+提出了一种不需要指定不可观测变量总重要性的新选择修正策略； 3.
+揭示了"医疗利用率与健康结果截面相关性弱"和"医疗质量与死亡率因果效应强"之间的矛盾——暗示截面数据中的Dartmouth
+Atlas悖论可能是选择性偏差造成的。</p>
+<p><strong>政策含义</strong>： -
+改善弱势地区的医疗资源配置（数量和质量）有望产生显著且即时的生存效益； -
+针对老年人的迁移计划（移居到更有利环境）有实质意义； -
+但地方效应只解释了15%的截面差异，健康资本（行为习惯、历史经历）仍是主要因素，不可忽视。</p>
+<hr>
+<h2 id="未来研究方向future-work">未来研究方向（Future work）</h2>
+<p><strong>论文中明确提及的方向</strong>： 1.
+深入研究地方效应的具体渠道（医疗质量的哪个维度最重要？气候影响的机制是什么？）；
+2.
+研究地方效应对更年轻人群的影响——本文聚焦老年人，年轻人可能面临不同的渠道；
+3. 拓展到死亡率以外的健康结果（住院率、功能状态等）。</p>
+<p><strong>从论文引申的研究方向</strong>： 1. 利用"Moving to
+Opportunity"等随机分配迁移实验验证本文的识别假设； 2.
+研究地方效应随时间的动态演变——当地医疗政策改革是否改变了地方效应； 3.
+将地方效应分解为可干预的政策变量（医院质量、环境监管等），直接评估政策效果；
+4.
+研究地方效应在工作年龄人群（20-64岁）的大小和渠道，以便将健康政策与劳动力市场政策联系起来。</p>
+<h2 id="学术思考">学术思考</h2>
+<ol type="1">
+<li><p><strong>识别假设的可信度</strong>：核心假设是"选择起源地和目的地的不可观测选择过程具有对称性"。但若健康较差的人为了获得特定医疗而搬迁（如搬到医疗中心附近），而健康较好的人因为退休才搬迁，两类迁移的选择机制可能非常不同，对称性假设可能存在问题。</p></li>
+<li><p><strong>Dartmouth
+Atlas悖论的解释</strong>：本文发现医疗利用率与地方效应正相关，但Dartmouth
+Atlas发现截面上医疗利用率与健康结果不相关。本文将此归因于截面数据的选择性偏差，但能否用工具变量或其他方法直接检验这一解释？</p></li>
+<li><p><strong>地方效应的即时性</strong>：作者假设老年人的健康资本是固定的，地方效应立即出现。但医疗质量的影响（如定期体检发现疾病）可能有时滞，如何区分"习惯带来的即时效应"和"医疗诊断的滞后效应"？</p></li>
+<li><p><strong>样本选择性</strong>：Medicare迁移者约占所有受益人的0.5%/年，是高度选择性的群体（经济条件较好、身体较好）。这是否限制了结论对无法迁移的老年人（如贫困老人）的适用性？</p></li>
+<li><p><strong>政策内生性</strong>：若政府根据本文研究结果改善落后地区的医疗资源，是否会改变人口选择性迁移的均衡，从而影响未来的地方效应估计？</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol type="1">
+<li>不可观测变量修正策略（利用起源地残差）的具体操作步骤是什么？如何用数据估计"起源地残差相关性"？</li>
+<li>为什么选择通勤区（CZ）作为地理单元？城市内部（如街区级别）的地方效应是否会更大？</li>
+<li>研究发现医疗利用率与因果效应正相关，但Dartmouth
+Atlas发现截面相关性弱——这两个结论是否真的矛盾？能用这篇论文的框架来检验吗？</li>
+<li>本文聚焦65岁以上老年人，对于工作年龄人群（如35-64岁）是否有类似的地方效应估计，其渠道机制是否不同？</li>
+<li>哪些具体的通勤区被识别为有显著正向地方效应？作者如何解释圣菲、丹佛等地截面寿命较高但地方因果效应为负的"反常"现象？</li>
+<li>本文方法能否应用于研究地方效应对非老年医疗保障（Medicaid、ACA）人群的影响？</li>
+<li>"Moving to Opportunity"项目的随机实验结果（Chetty et al.
+2016a）与本文的观察性估计是否一致？如何相互印证？</li>
+</ol>
+<hr>
+]]></content>
+      <categories>
+        <category>AER</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -13650,74 +13650,6 @@ Zotero Item Key:: HH5K2TY4</p>
       </tags>
   </entry>
   <entry>
-    <title>海外的丰裕 — 深度阅读笔记 — Khanna Et Al.</title>
-    <url>/posts/khanna2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Abundance from Abroad: Migrant Income and
-Long-Run Economic Development</li>
-<li><strong>作者</strong>: Gaurav Khanna (UC San Diego), Emir
-Murathanoglu, Caroline B. Theoharides, Dean Yang</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(4):
-1540-1577</li>
-<li><strong>DOI</strong>: 10.1257/aer.20241465</li>
-<li><strong>难度评估</strong>: 高 -
-需要发展经济学、国际经济学、计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>国际移民与发展</strong>：国际移民是发展中国家重要的经济现象，2019年全球有2.1亿来自发展中国家的国际移民。</p>
-<p><strong>转移份额设计（Shift-Share）</strong>：一种准实验识别策略，将总冲击分解为"份额"和"转移"两部分。</p>
-<p><strong>1997年亚洲金融危机</strong>：从泰国开始迅速蔓延，菲律宾比索贬值约40%。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>移民的收入效应</strong>：移民到发达国家工作的收入收益远超任何已知的发展干预项目</p></li>
-<li><p><strong>移民对原籍地区的溢出效应</strong>：缺乏对更广泛原籍地区发展影响的研究</p></li>
-<li><p><strong>识别挑战</strong>：移民收入与原籍地区发展之间存在反向因果问题</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：国际移民收入前景如何影响原籍地区的长期经济发展？</p>
-<p><strong>主要发现</strong>：移民收入冲击的长期放大效应约为六倍</p>
-<hr>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ol type="1">
-<li><strong>引言</strong>: 问题陈述和研究背景</li>
-<li><strong>背景</strong>:
-国际劳动移民概况、菲律宾的移民体系、亚洲金融危机</li>
-<li><strong>数据</strong>: 移民合同数据、汇率数据、结果数据</li>
-<li><strong>实证方法</strong>: 转移份额变量的构建、因果识别</li>
-<li><strong>主要结果</strong>: 长期放大效应、国内收入vs移民收入</li>
-<li><strong>稳健性检验</strong></li>
-<li><strong>结论</strong></li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="实证方法">实证方法</h3>
-<p><strong>转移份额设计</strong>： - 使用1997年亚洲金融危机作为外生冲击
-- 构建"暴露于移民收入"的工具变量 -
-外生性假设：危机前各地区移民份额与危机后发展独立</p>
-<p><strong>主要结果</strong>： - 移民收入冲击的长期放大效应约为六倍 -
-74.9%来自国内收入效应 - 19.7%来自教育投资</p>
-<hr>
-<h2 id="结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>移民促进原籍发展</strong>：长期因果证据支持"良性循环"假说</p></li>
-<li><p><strong>放大机制</strong>：国内收入和教育投资是主要渠道</p></li>
-<li><p><strong>政策启示</strong>：移民政策可以成为全球减贫的重要工具</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Good Dispersion, Bad Dispersion — 深度阅读笔记 — Kehrig &amp; Vincent</title>
     <url>/posts/kehrig2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -13899,146 +13831,68 @@ vs 10分位：8.3倍的价值产出差异</p>
       </tags>
   </entry>
   <entry>
-    <title>动态研发网络中的内生技术周期 — 深度阅读笔记 — König &amp; Rogers</title>
-    <url>/posts/konig2023/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Endogenous technology cycles in dynamic R&amp;D networks<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/2VH5NS6L/König和Rogers - 2023 - Endogenous technology cycles in dynamic R&amp;D networks.pdf<br>
-Zotero Item Key:: BY7Y7TDL</p>
-<hr>
+    <title>海外的丰裕 — 深度阅读笔记 — Khanna Et Al.</title>
+    <url>/posts/khanna2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Abundance from Abroad: Migrant Income and
+Long-Run Economic Development</li>
+<li><strong>作者</strong>: Gaurav Khanna (UC San Diego), Emir
+Murathanoglu, Caroline B. Theoharides, Dean Yang</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(4):
+1540-1577</li>
+<li><strong>DOI</strong>: 10.1257/aer.20241465</li>
+<li><strong>难度评估</strong>: 高 -
+需要发展经济学、国际经济学、计量经济学基础</li>
+</ul>
 <span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-创新是经济增长的驱动力，但创新很少单独发生——企业之间通过研发合作（R&amp;D collaborations）共享知识、获取互补技术。R&amp;D合作形成的网络结构本身会影响知识传播的效率和范围。已有文献分别研究了网络结构（静态）对创新的影响，以及创新对网络演化的影响，但二者的<strong>共同内生性</strong>（coevolution）迄今研究甚少。</p>
-<p><strong>研究背景</strong><br>
-已有R&amp;D网络模型将企业知识简化为抽象的标量（一维知识水平），且通常假设网络是外生给定的，或忽略技术组合变化对合作激励的反馈。本文发现现实中R&amp;D合作强度存在<strong>显著振荡（周期性）模式</strong>（来自Thomson SDC Alliance数据库的多十年R&amp;D联盟数据），但这一现象无法被现有模型解释。</p>
-<p><strong>作者的问题意识</strong><br>
-如何建立一个模型，能够内生地同时解释：（1）R&amp;D合作网络的形成；（2）技术组合的演化（创新+知识溢出+技术淘汰）；（3）观察到的R&amp;D合作强度周期性振荡？这种振荡对政策有什么含义？</p>
-<p><strong>研究意义</strong><br>
-首次将企业知识表示为<strong>多维技术组合（technology portfolio）</strong>，并将网络形成和知识创造建模为<strong>共同内生过程</strong>。发现了两个新结论：溢出效应存在<strong>临界阈值</strong>，以及R&amp;D网络存在<strong>内生周期性波动</strong>。为创新政策提供新的理论基础。</p>
 <hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言</strong>：研究动机、两大发现（阈值 + 周期性）。</li>
-<li><strong>模型设定</strong>：技术组合模型 + 网络形成规则 + 知识动态（创新/溢出/淘汰）。</li>
-<li><strong>静态分析</strong>：稳态特征；溢出阈值的推导。</li>
-<li><strong>动态分析</strong>：稳态的稳定性分析；振荡（阻尼振荡）的理论来源。</li>
-<li><strong>实证验证</strong>：R&amp;D联盟数据的周期性证据（Fourier回归；网络结构图）。</li>
-<li><strong>政策含义</strong>：阈值对研发政策的含义；竞争政策与网络稳定性的权衡。</li>
-<li><strong>结论</strong>。</li>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>国际移民与发展</strong>：国际移民是发展中国家重要的经济现象，2019年全球有2.1亿来自发展中国家的国际移民。</p>
+<p><strong>转移份额设计（Shift-Share）</strong>：一种准实验识别策略，将总冲击分解为"份额"和"转移"两部分。</p>
+<p><strong>1997年亚洲金融危机</strong>：从泰国开始迅速蔓延，菲律宾比索贬值约40%。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>移民的收入效应</strong>：移民到发达国家工作的收入收益远超任何已知的发展干预项目</p></li>
+<li><p><strong>移民对原籍地区的溢出效应</strong>：缺乏对更广泛原籍地区发展影响的研究</p></li>
+<li><p><strong>识别挑战</strong>：移民收入与原籍地区发展之间存在反向因果问题</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：国际移民收入前景如何影响原籍地区的长期经济发展？</p>
+<p><strong>主要发现</strong>：移民收入冲击的长期放大效应约为六倍</p>
+<hr>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ol type="1">
+<li><strong>引言</strong>: 问题陈述和研究背景</li>
+<li><strong>背景</strong>:
+国际劳动移民概况、菲律宾的移民体系、亚洲金融危机</li>
+<li><strong>数据</strong>: 移民合同数据、汇率数据、结果数据</li>
+<li><strong>实证方法</strong>: 转移份额变量的构建、因果识别</li>
+<li><strong>主要结果</strong>: 长期放大效应、国内收入vs移民收入</li>
+<li><strong>稳健性检验</strong></li>
+<li><strong>结论</strong></li>
 </ol>
 <hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景与模型动机">背景与模型动机</h3>
-<p>传统R&amp;D网络模型中，企业的"知识"是一个抽象标量（例如一个代表技术水平的单一数字）。但现实中，企业拥有的是<strong>多项技术的组合</strong>（如一家生物科技公司掌握基因编辑、蛋白质合成、化学合成等多项技术）。</p>
-<p>关键洞察（来自Jovanovic &amp; Rob, 1989）：</p>
-<blockquote>
-<p>“如果大家都知道同一件事，彼此就无法互相学习。”<br>
-知识的互补性才是R&amp;D合作的真正动机——企业只有在对方的技术组合与自己互补时，才有激励合作。</p>
-</blockquote>
-<p>因此本文的技术互补性驱动合作，而合作带来的知识溢出又改变了企业的技术组合，进而影响下一期的合作激励——<strong>网络形成与知识演化形成相互反馈的内生循环</strong>。</p>
-<h3 id="模型">模型</h3>
-<p><strong>企业</strong>：每家企业拥有一个多维技术组合向量（持有/不持有某项技术）。<br>
-<strong>合作规则</strong>：企业i与企业j在以下条件下形成合作（边）：</p>
-<ul>
-<li>j拥有i尚未持有的技术（互补性）</li>
-<li>合作成本低于预期学习收益（有利可图）</li>
-<li>网络中每条边有固定持续时间（合作有寿命）</li>
-</ul>
-<p><strong>知识动态</strong>：</p>
-<ul>
-<li><strong>创新（Innovation）</strong>：企业以一定概率发明新技术</li>
-<li><strong>溢出（Spillover）</strong>：通过合作，企业以概率β从合作伙伴那里学习新技术</li>
-<li><strong>淘汰（Obsolescence）</strong>：技术以一定速率过时消亡</li>
-</ul>
-<p>这三个过程共同决定了企业技术组合随时间的演化，进而影响合作激励和网络结构。</p>
-<h3 id="主要结果一：溢出阈值">主要结果一：溢出阈值</h3>
-<p><strong>核心发现</strong>：存在一个关键的溢出概率阈值β_c，使得：</p>
-<ul>
-<li>β &gt; β_c：技术扩散过程超过技术淘汰过程 → 经济中知识存量持续增长 → R&amp;D合作有实质意义</li>
-<li>β &lt; β_c：技术淘汰速度超过扩散速度 → 即使有R&amp;D合作，经济中知识存量无法积累</li>
-</ul>
-<p><strong>直觉</strong>：如果企业从合作伙伴处学到技术的概率太低（溢出太弱），合作就变成"摆样子"——网络连接存在，但没有真实的技术转移；知识不断被淘汰，无法积累。</p>
-<p><strong>β_c的影响因素</strong>：</p>
-<ul>
-<li>竞争<strong>降低</strong>阈值：更激烈的产品市场竞争使得更高效（技术更丰富）的企业主导市场，吸引更多合作，形成更集中的网络结构，有助于技术传播</li>
-<li>知识淘汰率升高 → β_c升高（需要更强的溢出才能赶上淘汰速度）</li>
-<li>合作成本升高 → β_c升高</li>
-<li>企业生产率升高 → β_c降低</li>
-<li>联盟持续时间延长 → β_c降低</li>
-</ul>
-<p><strong>政策含义</strong>：支持R&amp;D合作的政策（如补贴、减税）只有当溢出效应超过阈值才有效——“不够强的政策没有用”。这可以解释为什么硅谷成功（低合作成本让溢出超过阈值），而Boston Route 128失败（合作文化更封闭，溢出可能低于阈值）。</p>
-<h3 id="主要结果二：内生技术周期（振荡）">主要结果二：内生技术周期（振荡）</h3>
-<p><strong>核心发现</strong>：稳态的稳定性分析表明，R&amp;D合作强度（网络密度）会呈现<strong>阻尼振荡（damped oscillation）</strong>——即随时间周期性上升和下降，振幅逐渐减小。</p>
-<p><strong>周期机制（类Schumpeter创造性破坏）</strong>：</p>
-<ol>
-<li>当前技术组合广泛共享 → 互补性低 → 合作动机减弱 → 网络密度下降（d̄ ↓）</li>
-<li>知识淘汰 + 企业退出 → 平均知识存量下降（h̄ ↓）</li>
-<li>知识存量低 → 新企业进入寻找新技术 → 某企业创新出新技术</li>
-<li>新技术出现 → 互补性高 → 合作激励上升 → 网络密度上升（d̄ ↑）</li>
-<li>新技术扩散 → 知识趋于同质 → 回到第1步</li>
-</ol>
-<p>这个循环类似于熊彼特的"创造性破坏"：旧技术普及后互补性耗尽 → 网络衰退 → 新技术创新 → 新一轮合作繁荣。</p>
-<p><strong>实证支持</strong>：Thompson SDC Alliance数据库中的R&amp;D联盟数据显示，全样本的平均合作度数（average degree）在数十年内确实呈现出周期性振荡模式（Fourier回归）。这与互联网技术扩散周期（dot-com兴衰）以及技术生命周期理论一致。</p>
-<p><strong>政策含义</strong>：加强竞争（如市场开放、反垄断）虽然能降低溢出阈值（有利于创新），但也会<strong>加剧网络的振荡</strong>——让创新繁荣-衰退周期更剧烈，可能导致经济不稳定。这提示了创新政策中竞争促进（competition enhancement）和稳定性之间的<strong>权衡（trade-off）</strong>。</p>
-<h3 id="数据">数据</h3>
-<p><strong>Thomson SDC Alliance数据库</strong>：全球大规模R&amp;D联盟数据，覆盖多个十年，包含联盟的形成/解散日期、参与企业、技术领域等信息。因为是付费数据库，作者无法公开。分析中使用了Fourier回归来捕捉振荡模式，并通过行业分解和反事实检验证实周期性并非商业周期的反映。</p>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="实证方法">实证方法</h3>
+<p><strong>转移份额设计</strong>： - 使用1997年亚洲金融危机作为外生冲击
+- 构建"暴露于移民收入"的工具变量 -
+外生性假设：危机前各地区移民份额与危机后发展独立</p>
+<p><strong>主要结果</strong>： - 移民收入冲击的长期放大效应约为六倍 -
+74.9%来自国内收入效应 - 19.7%来自教育投资</p>
 <hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<ol>
-<li>企业技术组合多维化建模是解释R&amp;D合作格局（互补驱动）的关键；</li>
-<li>技术溢出存在<strong>临界阈值β_c</strong>：低于此阈值，R&amp;D合作无助于知识积累，促进合作的政策形同虚设；</li>
-<li>竞争可以<strong>降低</strong>阈值，因此竞争促进政策与R&amp;D支持政策组合比单一政策更有效；</li>
-<li>R&amp;D合作强度呈现<strong>内生周期性振荡</strong>（阻尼振荡），与R&amp;D联盟数据相符；</li>
-<li>竞争促进政策的副作用是加剧振荡幅度，可能不利于网络稳定性——政策需要权衡创新促进与稳定性。</li>
-</ol>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文明确提及的方向</strong>：</p>
-<ol>
-<li>将模型扩展到多产品竞争情形（已在附录中实现单产品vs多产品的对比）；</li>
-<li>利用非付费数据（如欧盟R&amp;D合作数据）复验振荡结论；</li>
-<li>将阈值理论用于预测特定创新集群成败的分析。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li><strong>中国R&amp;D网络的振荡模式</strong>：中国企业间、高校-企业间的研发合作网络（如国家科技支撑计划、产学研联盟）是否也呈现类似的周期性振荡？中国政府大规模的合作补贴能否突破溢出阈值？</li>
-<li><strong>政府参与的外生冲击</strong>：政府专项资金往往是对R&amp;D网络的外生冲击（非内生形成），如何修改模型以纳入国家主导R&amp;D？这对周期性动态有何影响？</li>
-<li><strong>技术生命周期的预测</strong>：本模型预测特定技术扩散完成后网络密度会下降。能否用实时R&amp;D联盟数据对AI、量子计算等技术的网络密度变化进行实时追踪，提前预警"技术周期顶部"？</li>
-<li><strong>知识淘汰率的估计</strong>：β_c对知识淘汰率敏感，但淘汰率本身很难实证测量。结合专利引用衰减、技术词汇老化（类似前文Kalyani et al.的方法）等数据，能否构建技术淘汰率的经验测量？</li>
-<li><strong>中小企业 vs 大企业的不对称</strong>：本文表明大企业可能愿意与拥有关键技术的小企业合作。这对中国政府推进"专精特新"小企业的政策是否提供了理论支撑？</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>多维技术组合假设的实证可操作性</strong>：本文将企业知识表示为多维技术组合向量，这在理论上更真实，但在实证中如何测量企业的"技术组合"？一种可能是用专利分类（IPC）来刻画企业的技术维度分布，但专利并不覆盖所有知识，且专利策略本身是内生的。如何构建一个外生且可信的技术组合度量？</p>
-</li>
-<li>
-<p><strong>阻尼振荡的稳健性</strong>：论文用Thompson SDC Alliance数据展示了振荡模式，并用Fourier回归拟合。但Fourier回归的灵活性很高，几乎可以拟合任意时间序列形状。如何更严格地检验振荡的存在性（而不仅仅是"可以被Fourier拟合"）？有没有自然实验可以识别振荡的来源？</p>
-</li>
-<li>
-<p><strong>竞争-稳定性权衡的政策含义</strong>：论文发现竞争促进政策（如降低市场准入壁垒）在降低溢出阈值的同时，也会加剧R&amp;D网络的振荡。这意味着"创新政策+竞争政策"的组合可能存在根本性矛盾。现实中，中国同时推进产业集中（强化大企业垄断地位）和R&amp;D合作补贴的政策，是否可以理解为一种有意识的"以稳定换创新"的选择？</p>
-</li>
-<li>
-<p><strong>溢出阈值在不同产业的异质性</strong>：β_c依赖于合作成本、淘汰率、企业生产率等参数，这些参数在不同行业差异巨大（生物技术 vs 汽车制造 vs 软件）。阈值是否也因行业而大相径庭？政府在制定行业R&amp;D支持政策时是否应该针对不同行业设定不同的"最低有效补贴剂量"？</p>
-</li>
-<li>
-<p><strong>"先驱位置优势"与本文的连接</strong>：本文发现竞争可以降低阈值，使得即便溢出较弱的集群也能维持创新；而前文（Kalyani et al.）发现先驱位置保持长期优势。两文的机制联系值得深思：是否先驱位置的合作文化（低成本）+规模化溢出让它们长期高于阈值，而后发地区即使获得技术也因为低于阈值而无法形成持续的R&amp;D合作生态？</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>文中的"技术溢出阈值"β_c具体是怎么推导的？主要的数学工具是什么（分岔分析、图谱方法等）？</li>
-<li>论文如何处理R&amp;D网络的幂律分布（部分企业拥有非常多的合作伙伴）？与现实中的明星企业/枢纽节点（hub）如何对应？</li>
-<li>知识淘汰（obsolescence）在模型中如何参数化？现实中，技术淘汰率如何估计？</li>
-<li>该模型是否可以应用于中国大学-企业产学研联盟网络的研究？有没有类似Thompson SDC的中国R&amp;D合作数据？</li>
-<li>本文与创新经济学中的"竞争 vs 合作"（competition vs. cooperation）讨论有何关系？Aghion等人关于"倒U形竞争-创新关系"的发现如何与本文的阈值和振荡结论相联系？</li>
+<h2 id="结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>移民促进原籍发展</strong>：长期因果证据支持"良性循环"假说</p></li>
+<li><p><strong>放大机制</strong>：国内收入和教育投资是主要渠道</p></li>
+<li><p><strong>政策启示</strong>：移民政策可以成为全球减贫的重要工具</p></li>
 </ol>
 ]]></content>
       <categories>
-        <category>有趣的文章</category>
+        <category>AER</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -14182,6 +14036,152 @@ Zotero Item Key:: MJSN77J6</p>
 <li>网络中心性（centrality）在这篇文章中是如何测量的？本文用的是哪种中心性指标（度中心性、接近中心性、中介中心性）？是否对结果稳健？</li>
 <li>供应链传播 vs 劳动力网络传播的差异如何与中国农村的情形对应？中国农村劳动力市场的本地性程度（vs 城市化、外出务工）是否比泰国农村更低？</li>
 <li>Townsend Thai Dataset是公开数据吗？如何获取？是否有类似质量的中国农村家庭月度面板数据？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>动态研发网络中的内生技术周期 — 深度阅读笔记 — König &amp; Rogers</title>
+    <url>/posts/konig2023/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Endogenous technology cycles in dynamic R&amp;D networks<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/2VH5NS6L/König和Rogers - 2023 - Endogenous technology cycles in dynamic R&amp;D networks.pdf<br>
+Zotero Item Key:: BY7Y7TDL</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+创新是经济增长的驱动力，但创新很少单独发生——企业之间通过研发合作（R&amp;D collaborations）共享知识、获取互补技术。R&amp;D合作形成的网络结构本身会影响知识传播的效率和范围。已有文献分别研究了网络结构（静态）对创新的影响，以及创新对网络演化的影响，但二者的<strong>共同内生性</strong>（coevolution）迄今研究甚少。</p>
+<p><strong>研究背景</strong><br>
+已有R&amp;D网络模型将企业知识简化为抽象的标量（一维知识水平），且通常假设网络是外生给定的，或忽略技术组合变化对合作激励的反馈。本文发现现实中R&amp;D合作强度存在<strong>显著振荡（周期性）模式</strong>（来自Thomson SDC Alliance数据库的多十年R&amp;D联盟数据），但这一现象无法被现有模型解释。</p>
+<p><strong>作者的问题意识</strong><br>
+如何建立一个模型，能够内生地同时解释：（1）R&amp;D合作网络的形成；（2）技术组合的演化（创新+知识溢出+技术淘汰）；（3）观察到的R&amp;D合作强度周期性振荡？这种振荡对政策有什么含义？</p>
+<p><strong>研究意义</strong><br>
+首次将企业知识表示为<strong>多维技术组合（technology portfolio）</strong>，并将网络形成和知识创造建模为<strong>共同内生过程</strong>。发现了两个新结论：溢出效应存在<strong>临界阈值</strong>，以及R&amp;D网络存在<strong>内生周期性波动</strong>。为创新政策提供新的理论基础。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：研究动机、两大发现（阈值 + 周期性）。</li>
+<li><strong>模型设定</strong>：技术组合模型 + 网络形成规则 + 知识动态（创新/溢出/淘汰）。</li>
+<li><strong>静态分析</strong>：稳态特征；溢出阈值的推导。</li>
+<li><strong>动态分析</strong>：稳态的稳定性分析；振荡（阻尼振荡）的理论来源。</li>
+<li><strong>实证验证</strong>：R&amp;D联盟数据的周期性证据（Fourier回归；网络结构图）。</li>
+<li><strong>政策含义</strong>：阈值对研发政策的含义；竞争政策与网络稳定性的权衡。</li>
+<li><strong>结论</strong>。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景与模型动机">背景与模型动机</h3>
+<p>传统R&amp;D网络模型中，企业的"知识"是一个抽象标量（例如一个代表技术水平的单一数字）。但现实中，企业拥有的是<strong>多项技术的组合</strong>（如一家生物科技公司掌握基因编辑、蛋白质合成、化学合成等多项技术）。</p>
+<p>关键洞察（来自Jovanovic &amp; Rob, 1989）：</p>
+<blockquote>
+<p>“如果大家都知道同一件事，彼此就无法互相学习。”<br>
+知识的互补性才是R&amp;D合作的真正动机——企业只有在对方的技术组合与自己互补时，才有激励合作。</p>
+</blockquote>
+<p>因此本文的技术互补性驱动合作，而合作带来的知识溢出又改变了企业的技术组合，进而影响下一期的合作激励——<strong>网络形成与知识演化形成相互反馈的内生循环</strong>。</p>
+<h3 id="模型">模型</h3>
+<p><strong>企业</strong>：每家企业拥有一个多维技术组合向量（持有/不持有某项技术）。<br>
+<strong>合作规则</strong>：企业i与企业j在以下条件下形成合作（边）：</p>
+<ul>
+<li>j拥有i尚未持有的技术（互补性）</li>
+<li>合作成本低于预期学习收益（有利可图）</li>
+<li>网络中每条边有固定持续时间（合作有寿命）</li>
+</ul>
+<p><strong>知识动态</strong>：</p>
+<ul>
+<li><strong>创新（Innovation）</strong>：企业以一定概率发明新技术</li>
+<li><strong>溢出（Spillover）</strong>：通过合作，企业以概率β从合作伙伴那里学习新技术</li>
+<li><strong>淘汰（Obsolescence）</strong>：技术以一定速率过时消亡</li>
+</ul>
+<p>这三个过程共同决定了企业技术组合随时间的演化，进而影响合作激励和网络结构。</p>
+<h3 id="主要结果一：溢出阈值">主要结果一：溢出阈值</h3>
+<p><strong>核心发现</strong>：存在一个关键的溢出概率阈值β_c，使得：</p>
+<ul>
+<li>β &gt; β_c：技术扩散过程超过技术淘汰过程 → 经济中知识存量持续增长 → R&amp;D合作有实质意义</li>
+<li>β &lt; β_c：技术淘汰速度超过扩散速度 → 即使有R&amp;D合作，经济中知识存量无法积累</li>
+</ul>
+<p><strong>直觉</strong>：如果企业从合作伙伴处学到技术的概率太低（溢出太弱），合作就变成"摆样子"——网络连接存在，但没有真实的技术转移；知识不断被淘汰，无法积累。</p>
+<p><strong>β_c的影响因素</strong>：</p>
+<ul>
+<li>竞争<strong>降低</strong>阈值：更激烈的产品市场竞争使得更高效（技术更丰富）的企业主导市场，吸引更多合作，形成更集中的网络结构，有助于技术传播</li>
+<li>知识淘汰率升高 → β_c升高（需要更强的溢出才能赶上淘汰速度）</li>
+<li>合作成本升高 → β_c升高</li>
+<li>企业生产率升高 → β_c降低</li>
+<li>联盟持续时间延长 → β_c降低</li>
+</ul>
+<p><strong>政策含义</strong>：支持R&amp;D合作的政策（如补贴、减税）只有当溢出效应超过阈值才有效——“不够强的政策没有用”。这可以解释为什么硅谷成功（低合作成本让溢出超过阈值），而Boston Route 128失败（合作文化更封闭，溢出可能低于阈值）。</p>
+<h3 id="主要结果二：内生技术周期（振荡）">主要结果二：内生技术周期（振荡）</h3>
+<p><strong>核心发现</strong>：稳态的稳定性分析表明，R&amp;D合作强度（网络密度）会呈现<strong>阻尼振荡（damped oscillation）</strong>——即随时间周期性上升和下降，振幅逐渐减小。</p>
+<p><strong>周期机制（类Schumpeter创造性破坏）</strong>：</p>
+<ol>
+<li>当前技术组合广泛共享 → 互补性低 → 合作动机减弱 → 网络密度下降（d̄ ↓）</li>
+<li>知识淘汰 + 企业退出 → 平均知识存量下降（h̄ ↓）</li>
+<li>知识存量低 → 新企业进入寻找新技术 → 某企业创新出新技术</li>
+<li>新技术出现 → 互补性高 → 合作激励上升 → 网络密度上升（d̄ ↑）</li>
+<li>新技术扩散 → 知识趋于同质 → 回到第1步</li>
+</ol>
+<p>这个循环类似于熊彼特的"创造性破坏"：旧技术普及后互补性耗尽 → 网络衰退 → 新技术创新 → 新一轮合作繁荣。</p>
+<p><strong>实证支持</strong>：Thompson SDC Alliance数据库中的R&amp;D联盟数据显示，全样本的平均合作度数（average degree）在数十年内确实呈现出周期性振荡模式（Fourier回归）。这与互联网技术扩散周期（dot-com兴衰）以及技术生命周期理论一致。</p>
+<p><strong>政策含义</strong>：加强竞争（如市场开放、反垄断）虽然能降低溢出阈值（有利于创新），但也会<strong>加剧网络的振荡</strong>——让创新繁荣-衰退周期更剧烈，可能导致经济不稳定。这提示了创新政策中竞争促进（competition enhancement）和稳定性之间的<strong>权衡（trade-off）</strong>。</p>
+<h3 id="数据">数据</h3>
+<p><strong>Thomson SDC Alliance数据库</strong>：全球大规模R&amp;D联盟数据，覆盖多个十年，包含联盟的形成/解散日期、参与企业、技术领域等信息。因为是付费数据库，作者无法公开。分析中使用了Fourier回归来捕捉振荡模式，并通过行业分解和反事实检验证实周期性并非商业周期的反映。</p>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<ol>
+<li>企业技术组合多维化建模是解释R&amp;D合作格局（互补驱动）的关键；</li>
+<li>技术溢出存在<strong>临界阈值β_c</strong>：低于此阈值，R&amp;D合作无助于知识积累，促进合作的政策形同虚设；</li>
+<li>竞争可以<strong>降低</strong>阈值，因此竞争促进政策与R&amp;D支持政策组合比单一政策更有效；</li>
+<li>R&amp;D合作强度呈现<strong>内生周期性振荡</strong>（阻尼振荡），与R&amp;D联盟数据相符；</li>
+<li>竞争促进政策的副作用是加剧振荡幅度，可能不利于网络稳定性——政策需要权衡创新促进与稳定性。</li>
+</ol>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文明确提及的方向</strong>：</p>
+<ol>
+<li>将模型扩展到多产品竞争情形（已在附录中实现单产品vs多产品的对比）；</li>
+<li>利用非付费数据（如欧盟R&amp;D合作数据）复验振荡结论；</li>
+<li>将阈值理论用于预测特定创新集群成败的分析。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li><strong>中国R&amp;D网络的振荡模式</strong>：中国企业间、高校-企业间的研发合作网络（如国家科技支撑计划、产学研联盟）是否也呈现类似的周期性振荡？中国政府大规模的合作补贴能否突破溢出阈值？</li>
+<li><strong>政府参与的外生冲击</strong>：政府专项资金往往是对R&amp;D网络的外生冲击（非内生形成），如何修改模型以纳入国家主导R&amp;D？这对周期性动态有何影响？</li>
+<li><strong>技术生命周期的预测</strong>：本模型预测特定技术扩散完成后网络密度会下降。能否用实时R&amp;D联盟数据对AI、量子计算等技术的网络密度变化进行实时追踪，提前预警"技术周期顶部"？</li>
+<li><strong>知识淘汰率的估计</strong>：β_c对知识淘汰率敏感，但淘汰率本身很难实证测量。结合专利引用衰减、技术词汇老化（类似前文Kalyani et al.的方法）等数据，能否构建技术淘汰率的经验测量？</li>
+<li><strong>中小企业 vs 大企业的不对称</strong>：本文表明大企业可能愿意与拥有关键技术的小企业合作。这对中国政府推进"专精特新"小企业的政策是否提供了理论支撑？</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>多维技术组合假设的实证可操作性</strong>：本文将企业知识表示为多维技术组合向量，这在理论上更真实，但在实证中如何测量企业的"技术组合"？一种可能是用专利分类（IPC）来刻画企业的技术维度分布，但专利并不覆盖所有知识，且专利策略本身是内生的。如何构建一个外生且可信的技术组合度量？</p>
+</li>
+<li>
+<p><strong>阻尼振荡的稳健性</strong>：论文用Thompson SDC Alliance数据展示了振荡模式，并用Fourier回归拟合。但Fourier回归的灵活性很高，几乎可以拟合任意时间序列形状。如何更严格地检验振荡的存在性（而不仅仅是"可以被Fourier拟合"）？有没有自然实验可以识别振荡的来源？</p>
+</li>
+<li>
+<p><strong>竞争-稳定性权衡的政策含义</strong>：论文发现竞争促进政策（如降低市场准入壁垒）在降低溢出阈值的同时，也会加剧R&amp;D网络的振荡。这意味着"创新政策+竞争政策"的组合可能存在根本性矛盾。现实中，中国同时推进产业集中（强化大企业垄断地位）和R&amp;D合作补贴的政策，是否可以理解为一种有意识的"以稳定换创新"的选择？</p>
+</li>
+<li>
+<p><strong>溢出阈值在不同产业的异质性</strong>：β_c依赖于合作成本、淘汰率、企业生产率等参数，这些参数在不同行业差异巨大（生物技术 vs 汽车制造 vs 软件）。阈值是否也因行业而大相径庭？政府在制定行业R&amp;D支持政策时是否应该针对不同行业设定不同的"最低有效补贴剂量"？</p>
+</li>
+<li>
+<p><strong>"先驱位置优势"与本文的连接</strong>：本文发现竞争可以降低阈值，使得即便溢出较弱的集群也能维持创新；而前文（Kalyani et al.）发现先驱位置保持长期优势。两文的机制联系值得深思：是否先驱位置的合作文化（低成本）+规模化溢出让它们长期高于阈值，而后发地区即使获得技术也因为低于阈值而无法形成持续的R&amp;D合作生态？</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>文中的"技术溢出阈值"β_c具体是怎么推导的？主要的数学工具是什么（分岔分析、图谱方法等）？</li>
+<li>论文如何处理R&amp;D网络的幂律分布（部分企业拥有非常多的合作伙伴）？与现实中的明星企业/枢纽节点（hub）如何对应？</li>
+<li>知识淘汰（obsolescence）在模型中如何参数化？现实中，技术淘汰率如何估计？</li>
+<li>该模型是否可以应用于中国大学-企业产学研联盟网络的研究？有没有类似Thompson SDC的中国R&amp;D合作数据？</li>
+<li>本文与创新经济学中的"竞争 vs 合作"（competition vs. cooperation）讨论有何关系？Aghion等人关于"倒U形竞争-创新关系"的发现如何与本文的阈值和振荡结论相联系？</li>
 </ol>
 ]]></content>
       <categories>
@@ -14360,169 +14360,6 @@ in extreme news categories</h3>
 极端程度与这些替代变量相比有何优势？</p></li>
 <li><p><strong>对投资者和资产管理人有何实践启示？</strong>
 如何利用这些发现来改进投资决策？</p></li>
-</ol>
-<hr>
-<p><em>本分析报告严格遵循精读文献skill规定的八部分结构完成，旨在为初学者提供全面、易懂的论文逻辑梳理与学术要点解读。</em></p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Auctions With Frictions — 深度阅读笔记 — Lauermann &amp; Wolinsky</title>
-    <url>/posts/lauermann2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Auctions with Frictions: Recruitment, Entry,
-and Limited Commitment</li>
-<li><strong>作者</strong>: Stephan Lauermann (University of Bonn), Asher
-Wolinsky (Northwestern University)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: Review of Economic Studies (RES), 93(2):
-1167-1199</li>
-<li><strong>DOI</strong>: https://doi.org/10.1093/restud/rdaf052</li>
-<li><strong>难度评估</strong>: 高 - 需要拍卖理论、博弈论基础
-<span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>拍卖（Frictionless
-Auction）</strong>：标准拍卖理论假设卖家可以招募竞拍者、竞拍者无成本参与、卖家可承诺于保留价格和参与水平。</p>
-<p><strong>招募成本（Recruitment
-Cost）</strong>：卖家吸引竞拍者的成本。</p>
-<p><strong>参与成本（Entry
-Cost）</strong>：竞拍者评估拍品、获取融资、准备报价的成本。</p>
-<p><strong>有限承诺（Limited
-Commitment）</strong>：卖家无法可信地承诺参与水平或其披露程度。</p>
-<p><strong>PO vs PU场景</strong>：PO=参与可观察；PU=参与不可观察。</p>
-<h3 id="研究背景">研究背景</h3>
-<ol type="1">
-<li><p><strong>实际拍卖的复杂性</strong>：招募和激励竞拍者是拍卖成功的关键。</p></li>
-<li><p><strong>摩擦的普遍性</strong>：在独特资产的出售中，招募成本和参与成本特别显著。</p></li>
-<li><p><strong>传统模型局限性</strong>：现有文献分别研究招募或参与摩擦。</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：当卖家承诺能力受限时，招募努力和竞拍者进入决策如何共同决定拍卖参与和结果？</p>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<ul>
-<li>第一节：Introduction</li>
-<li>第二节：The PO Auction</li>
-<li>第三节：Equilibrium Analysis for PO Scenario</li>
-<li>第四节：The PU Auction</li>
-<li>第五节：Comparison of PO and PU Scenarios</li>
-<li>第六节：Discussion and Extensions</li>
-<li>第七节：Conclusion</li>
-</ul>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="模型设定">模型设定</h3>
-<p><strong>核心要素</strong>： 1.
-<strong>卖家</strong>：选择招募努力γ（成本为γs），结果是泊松分布的潜在竞拍者
-2. <strong>竞拍者</strong>：支付成本c后观察到私人价值vi，决策是否进入 3.
-<strong>Bidding阶段</strong>：第一价格拍卖(FPA)</p>
-<p><strong>两种场景</strong>：PO（参与可观察）vs PU（参与不可观察）</p>
-<h3 id="po均衡分析">PO均衡分析</h3>
-<p><strong>逆向求解</strong>： 1. Stage 3 (Bidding)：标准对称FPA均衡 2.
-Stage 2 (Entry)：竞拍者基于期望收益决定是否进入 3. Stage 1
-(Recruitment)：卖家选择λ = qγ最大化利润</p>
-<p><strong>关键发现</strong>： - 存在均衡贸易的唯一条件：λc ≥ λo 且 s ≤
-s̄o - 当λc &lt; λo时：即使潜在贸易收益为正，市场也会崩溃</p>
-<h3 id="pu均衡分析">PU均衡分析</h3>
-<p><strong>关键差异</strong>：卖家无法可信地披露参与水平</p>
-<p><strong>均衡特征</strong>： - 对于所有(c,s)，存在λ*=0的无贸易均衡 -
-当s &lt; ξ(λpeak)且λc &gt; λu(s)时，存在两个贸易均衡</p>
-<h3 id="po-vs-pu比较">PO vs PU比较</h3>
-<p><strong>关键比较结果</strong>：</p>
-<table>
-<thead>
-<tr>
-<th>区域</th>
-<th>条件</th>
-<th>结果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I</td>
-<td>仅PO有贸易</td>
-<td>PO严格更优</td>
-</tr>
-<tr>
-<td>II</td>
-<td>两者都有贸易</td>
-<td>PO严格更优</td>
-</tr>
-<tr>
-<td>III</td>
-<td>两者都有贸易</td>
-<td>PU严格更优</td>
-</tr>
-<tr>
-<td>IV</td>
-<td>仅PU有贸易</td>
-<td>PU更优</td>
-</tr>
-</tbody>
-</table>
-<p><strong>直觉</strong>： -
-当c很小（竞拍者愿意进入）时：PO的更强招募激励→更高利润 -
-当s很小（招募便宜）时：PU的更弱招募激励作为部分承诺机制</p>
-<h3 id="fpa-vs-spa比较">FPA vs SPA比较</h3>
-<p><strong>Revenue
-Equivalence失效</strong>：当参与不可观察时，FPA和SPA不再等价</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>整合三种摩擦的必要性</strong>：招募成本、参与成本和有限承诺必须联合建模</p></li>
-<li><p><strong>可见性的关键作用</strong>：参与的可观察性对贸易量和利润有重大影响</p></li>
-<li><p><strong>标准等价失效</strong>：在存在摩擦时，FPA和SPA不再等价</p></li>
-<li><p><strong>市场崩溃的可能</strong>：即使潜在收益为正，市场也可能因承诺问题而崩溃</p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><p><strong>理论框架</strong>：整合了之前分开研究的各种摩擦</p></li>
-<li><p><strong>比较静态</strong>：完整描述了所有(c,s)组合下的均衡</p></li>
-<li><p><strong>实践意义</strong>：解释了拍卖行服务的价值</p></li>
-</ol>
-<hr>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<h3 id="文献提及的方向">文献提及的方向</h3>
-<ol type="1">
-<li>竞拍者进入前了解其价值的版本</li>
-<li>卖家可设置进入费/补贴或保留价格的版本</li>
-</ol>
-<h3 id="未来研究思考">未来研究思考</h3>
-<ol type="1">
-<li><strong>信息摩擦</strong>：信息不对称如何与招募/参与成本交互？</li>
-<li><strong>动态招募</strong>：多时期招募决策会如何改变结果？</li>
-</ol>
-<hr>
-<h2 id="学术思考">7. 学术思考</h2>
-<h3 id="核心理论洞察">核心理论洞察</h3>
-<ol type="1">
-<li><p><strong>"承诺作为市场结果的关键"</strong>：卖家有限承诺能力是市场摩擦的核心。</p></li>
-<li><p><strong>"可见性改变激励结构"</strong>：参与的可观察性改变了卖家的招募激励。</p></li>
-<li><p><strong>"价格等价不意味着激励等价"</strong>：在存在摩擦时，不同格式产生不同激励。</p></li>
-</ol>
-<h3 id="深层学术问题">深层学术问题</h3>
-<ol type="1">
-<li><strong>承诺的外生性</strong>：内生化承诺能力会如何改变结论？</li>
-<li><strong>信息获取时机</strong>：竞拍者进入前vs进入后了解价值会如何影响均衡？</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li><strong>PO和PU场景下的均衡具体是什么？</strong></li>
-<li><strong>过度招募的无效率具体是多少？</strong></li>
-<li><strong>Proposition 3中边界曲线ŝ(c)的形状是什么？</strong></li>
-<li><strong>SPA的"信念独立"出价具体是什么？</strong></li>
-<li><strong>拍卖行如何具体缓解这些摩擦？</strong></li>
 </ol>
 <hr>
 <p><em>本分析报告严格遵循精读文献skill规定的八部分结构完成，旨在为初学者提供全面、易懂的论文逻辑梳理与学术要点解读。</em></p>
@@ -14897,6 +14734,228 @@ Studies</li>
       </tags>
   </entry>
   <entry>
+    <title>Auctions With Frictions — 深度阅读笔记 — Lauermann &amp; Wolinsky</title>
+    <url>/posts/lauermann2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Auctions with Frictions: Recruitment, Entry,
+and Limited Commitment</li>
+<li><strong>作者</strong>: Stephan Lauermann (University of Bonn), Asher
+Wolinsky (Northwestern University)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: Review of Economic Studies (RES), 93(2):
+1167-1199</li>
+<li><strong>DOI</strong>: https://doi.org/10.1093/restud/rdaf052</li>
+<li><strong>难度评估</strong>: 高 - 需要拍卖理论、博弈论基础
+<span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>拍卖（Frictionless
+Auction）</strong>：标准拍卖理论假设卖家可以招募竞拍者、竞拍者无成本参与、卖家可承诺于保留价格和参与水平。</p>
+<p><strong>招募成本（Recruitment
+Cost）</strong>：卖家吸引竞拍者的成本。</p>
+<p><strong>参与成本（Entry
+Cost）</strong>：竞拍者评估拍品、获取融资、准备报价的成本。</p>
+<p><strong>有限承诺（Limited
+Commitment）</strong>：卖家无法可信地承诺参与水平或其披露程度。</p>
+<p><strong>PO vs PU场景</strong>：PO=参与可观察；PU=参与不可观察。</p>
+<h3 id="研究背景">研究背景</h3>
+<ol type="1">
+<li><p><strong>实际拍卖的复杂性</strong>：招募和激励竞拍者是拍卖成功的关键。</p></li>
+<li><p><strong>摩擦的普遍性</strong>：在独特资产的出售中，招募成本和参与成本特别显著。</p></li>
+<li><p><strong>传统模型局限性</strong>：现有文献分别研究招募或参与摩擦。</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：当卖家承诺能力受限时，招募努力和竞拍者进入决策如何共同决定拍卖参与和结果？</p>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<ul>
+<li>第一节：Introduction</li>
+<li>第二节：The PO Auction</li>
+<li>第三节：Equilibrium Analysis for PO Scenario</li>
+<li>第四节：The PU Auction</li>
+<li>第五节：Comparison of PO and PU Scenarios</li>
+<li>第六节：Discussion and Extensions</li>
+<li>第七节：Conclusion</li>
+</ul>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="模型设定">模型设定</h3>
+<p><strong>核心要素</strong>： 1.
+<strong>卖家</strong>：选择招募努力γ（成本为γs），结果是泊松分布的潜在竞拍者
+2. <strong>竞拍者</strong>：支付成本c后观察到私人价值vi，决策是否进入 3.
+<strong>Bidding阶段</strong>：第一价格拍卖(FPA)</p>
+<p><strong>两种场景</strong>：PO（参与可观察）vs PU（参与不可观察）</p>
+<h3 id="po均衡分析">PO均衡分析</h3>
+<p><strong>逆向求解</strong>： 1. Stage 3 (Bidding)：标准对称FPA均衡 2.
+Stage 2 (Entry)：竞拍者基于期望收益决定是否进入 3. Stage 1
+(Recruitment)：卖家选择λ = qγ最大化利润</p>
+<p><strong>关键发现</strong>： - 存在均衡贸易的唯一条件：λc ≥ λo 且 s ≤
+s̄o - 当λc &lt; λo时：即使潜在贸易收益为正，市场也会崩溃</p>
+<h3 id="pu均衡分析">PU均衡分析</h3>
+<p><strong>关键差异</strong>：卖家无法可信地披露参与水平</p>
+<p><strong>均衡特征</strong>： - 对于所有(c,s)，存在λ*=0的无贸易均衡 -
+当s &lt; ξ(λpeak)且λc &gt; λu(s)时，存在两个贸易均衡</p>
+<h3 id="po-vs-pu比较">PO vs PU比较</h3>
+<p><strong>关键比较结果</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>区域</th>
+<th>条件</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I</td>
+<td>仅PO有贸易</td>
+<td>PO严格更优</td>
+</tr>
+<tr>
+<td>II</td>
+<td>两者都有贸易</td>
+<td>PO严格更优</td>
+</tr>
+<tr>
+<td>III</td>
+<td>两者都有贸易</td>
+<td>PU严格更优</td>
+</tr>
+<tr>
+<td>IV</td>
+<td>仅PU有贸易</td>
+<td>PU更优</td>
+</tr>
+</tbody>
+</table>
+<p><strong>直觉</strong>： -
+当c很小（竞拍者愿意进入）时：PO的更强招募激励→更高利润 -
+当s很小（招募便宜）时：PU的更弱招募激励作为部分承诺机制</p>
+<h3 id="fpa-vs-spa比较">FPA vs SPA比较</h3>
+<p><strong>Revenue
+Equivalence失效</strong>：当参与不可观察时，FPA和SPA不再等价</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>整合三种摩擦的必要性</strong>：招募成本、参与成本和有限承诺必须联合建模</p></li>
+<li><p><strong>可见性的关键作用</strong>：参与的可观察性对贸易量和利润有重大影响</p></li>
+<li><p><strong>标准等价失效</strong>：在存在摩擦时，FPA和SPA不再等价</p></li>
+<li><p><strong>市场崩溃的可能</strong>：即使潜在收益为正，市场也可能因承诺问题而崩溃</p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><p><strong>理论框架</strong>：整合了之前分开研究的各种摩擦</p></li>
+<li><p><strong>比较静态</strong>：完整描述了所有(c,s)组合下的均衡</p></li>
+<li><p><strong>实践意义</strong>：解释了拍卖行服务的价值</p></li>
+</ol>
+<hr>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<h3 id="文献提及的方向">文献提及的方向</h3>
+<ol type="1">
+<li>竞拍者进入前了解其价值的版本</li>
+<li>卖家可设置进入费/补贴或保留价格的版本</li>
+</ol>
+<h3 id="未来研究思考">未来研究思考</h3>
+<ol type="1">
+<li><strong>信息摩擦</strong>：信息不对称如何与招募/参与成本交互？</li>
+<li><strong>动态招募</strong>：多时期招募决策会如何改变结果？</li>
+</ol>
+<hr>
+<h2 id="学术思考">7. 学术思考</h2>
+<h3 id="核心理论洞察">核心理论洞察</h3>
+<ol type="1">
+<li><p><strong>"承诺作为市场结果的关键"</strong>：卖家有限承诺能力是市场摩擦的核心。</p></li>
+<li><p><strong>"可见性改变激励结构"</strong>：参与的可观察性改变了卖家的招募激励。</p></li>
+<li><p><strong>"价格等价不意味着激励等价"</strong>：在存在摩擦时，不同格式产生不同激励。</p></li>
+</ol>
+<h3 id="深层学术问题">深层学术问题</h3>
+<ol type="1">
+<li><strong>承诺的外生性</strong>：内生化承诺能力会如何改变结论？</li>
+<li><strong>信息获取时机</strong>：竞拍者进入前vs进入后了解价值会如何影响均衡？</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li><strong>PO和PU场景下的均衡具体是什么？</strong></li>
+<li><strong>过度招募的无效率具体是多少？</strong></li>
+<li><strong>Proposition 3中边界曲线ŝ(c)的形状是什么？</strong></li>
+<li><strong>SPA的"信念独立"出价具体是什么？</strong></li>
+<li><strong>拍卖行如何具体缓解这些摩擦？</strong></li>
+</ol>
+<hr>
+<p><em>本分析报告严格遵循精读文献skill规定的八部分结构完成，旨在为初学者提供全面、易懂的论文逻辑梳理与学术要点解读。</em></p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hiring as Exploration — 深度阅读笔记 — Li, Raymond &amp; Bergman</title>
+    <url>/posts/li2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Hiring as Exploration</li>
+<li><strong>作者</strong>: Danielle Li (MIT &amp; NBER), Lindsey Raymond
+(MIT), Peter Bergman (UT Austin &amp; NBER)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies
+(RES)</li>
+<li><strong>DOI</strong>: 10.1093/restud/rdaf040</li>
+<li><strong>难度评估</strong>: 高 -
+需要机器学习、计量经济学、招聘经济学基础 <span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言">1. 引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>情境强盗问题、探索与利用的权衡、监督学习算法、UCB（上置信界）算法。</p>
+<h3 id="研究背景">研究背景</h3>
+<p>算法招聘日益普及；传统监督学习算法可能复制历史偏见；人类面试官预测能力有限。</p>
+<h3 id="核心问题">核心问题</h3>
+<p>将招聘视为情境强盗问题——如何平衡"利用"（选择已知最佳）与"探索"（学习新候选人质量）。探索式算法能否在提高招聘质量的同时增加人口多样性？</p>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：招聘偏见</li>
+<li>第三节：数据环境</li>
+<li>第四节：实证策略</li>
+<li>第五节：算法设计（SL vs UCB）</li>
+<li>第六节：主要结果</li>
+<li>第七节：扩展</li>
+<li>第八节：结论</li>
+</ul>
+<h2 id="正文">3. 正文</h2>
+<h3 id="核心机制">核心机制</h3>
+<ul>
+<li><strong>SL模型</strong>：仅利用——选择预期质量最高的候选人</li>
+<li><strong>UCB模型</strong>：利用+探索——对特征偏离训练数据均值的候选人给予探索溢价</li>
+</ul>
+<h3 id="关键发现">关键发现</h3>
+<ol type="1">
+<li><strong>多样性</strong>：UCB使黑人/西班牙裔代表从9.4%增至24.3%；SL降至5%以下</li>
+<li><strong>质量</strong>：SL录用率32%，UCB 27%，人类仅10%</li>
+<li><strong>帕累托改进</strong>：可能同时提升质量与多样性</li>
+</ol>
+<h2 id="结论">4. 结论</h2>
+<p>探索式算法可实现帕累托改进，挑战了效率-公平权衡的传统观点。</p>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<p>跨行业推广、长期动态效应、法律伦理风险、因果机制检验。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>自下而上的制度变迁与中国经济增长 — 深度阅读笔记 — Li Et Al.</title>
     <url>/posts/li2024bottomup/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Bottom-Up Institutional Change and Growth in China<br>
@@ -15031,215 +15090,6 @@ Zotero Item Key:: 2XKAAMHY</p>
 <li>2010年后习近平执政以来，权力再集中化是否确实导致了"自下而上改革供给"的显著下降？有没有定量证据支持这一判断？</li>
 <li>"自下而上改革 → TFP增长 vs 中央主导改革 → 资本投入"这一发现的直觉是什么？为什么中央主导改革倾向于拉动投资而非效率？</li>
 <li>本文的地方志数据库（1.8百万条事件）是否开放共享？其他学者如何可以利用这一数据？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hiring as Exploration — 深度阅读笔记 — Li, Raymond &amp; Bergman</title>
-    <url>/posts/li2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Hiring as Exploration</li>
-<li><strong>作者</strong>: Danielle Li (MIT &amp; NBER), Lindsey Raymond
-(MIT), Peter Bergman (UT Austin &amp; NBER)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies
-(RES)</li>
-<li><strong>DOI</strong>: 10.1093/restud/rdaf040</li>
-<li><strong>难度评估</strong>: 高 -
-需要机器学习、计量经济学、招聘经济学基础 <span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言">1. 引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>情境强盗问题、探索与利用的权衡、监督学习算法、UCB（上置信界）算法。</p>
-<h3 id="研究背景">研究背景</h3>
-<p>算法招聘日益普及；传统监督学习算法可能复制历史偏见；人类面试官预测能力有限。</p>
-<h3 id="核心问题">核心问题</h3>
-<p>将招聘视为情境强盗问题——如何平衡"利用"（选择已知最佳）与"探索"（学习新候选人质量）。探索式算法能否在提高招聘质量的同时增加人口多样性？</p>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：招聘偏见</li>
-<li>第三节：数据环境</li>
-<li>第四节：实证策略</li>
-<li>第五节：算法设计（SL vs UCB）</li>
-<li>第六节：主要结果</li>
-<li>第七节：扩展</li>
-<li>第八节：结论</li>
-</ul>
-<h2 id="正文">3. 正文</h2>
-<h3 id="核心机制">核心机制</h3>
-<ul>
-<li><strong>SL模型</strong>：仅利用——选择预期质量最高的候选人</li>
-<li><strong>UCB模型</strong>：利用+探索——对特征偏离训练数据均值的候选人给予探索溢价</li>
-</ul>
-<h3 id="关键发现">关键发现</h3>
-<ol type="1">
-<li><strong>多样性</strong>：UCB使黑人/西班牙裔代表从9.4%增至24.3%；SL降至5%以下</li>
-<li><strong>质量</strong>：SL录用率32%，UCB 27%，人类仅10%</li>
-<li><strong>帕累托改进</strong>：可能同时提升质量与多样性</li>
-</ol>
-<h2 id="结论">4. 结论</h2>
-<p>探索式算法可实现帕累托改进，挑战了效率-公平权衡的传统观点。</p>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<p>跨行业推广、长期动态效应、法律伦理风险、因果机制检验。</p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>财富税的行为响应：哥伦比亚的证据 — 深度阅读笔记 — Londoño-Vélez &amp; Ávila-Mahecha</title>
-    <url>/posts/londono-velez2024/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Behavioural Responses to Wealth Taxation: Evidence from Colombia<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/D72FU22M/Londoño-Vélez和Ávila-Mahecha - 2024 - Behavioural Responses to Wealth Taxation Evidence from Colombia.pdf<br>
-Zotero Item Key:: LWFR6PLB</p>
-<hr>
-<span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-财富税（wealth tax）是对个人净资产（资产减负债）征收的税，与所得税不同。近年来围绕是否应推行财富税的政策讨论非常热烈（如美国Warren和Sanders的财富税提案，疫情后多国临时财富税）。核心问题是：富人会如何回应财富税？会真的减少财富积累，还是通过逃税/避税将财富藏匿起来？现有欧洲文献给出的弹性估计差异巨大（从几乎为0到极高），且机制不清晰。</p>
-<p><strong>研究背景</strong><br>
-哥伦比亚自1993年至2016年持续对高净值个人征收财富税，历经四次重大改革（2003、2006、2010、2014年），税率从0到6%不等，豁免阈值和征税期限多次变化，且在阈值处存在"缺口"（notch）——略高于门槛的财富会触发大幅跳跃的税收负担。这为识别行为反应提供了近乎理想的实验条件。</p>
-<p><strong>作者的问题意识</strong><br>
-四个关键问题：</p>
-<ol>
-<li>面对财富税，纳税人是否立即减少申报财富？</li>
-<li>这一效应在税收废止后是否持续（滞后效应/hysteresis）？</li>
-<li>反应通过什么机制实现（真实行为变化 vs. 逃税/漏报）？</li>
-<li>最富有的人是否通过离岸转移将财富藏入避税天堂？</li>
-</ol>
-<p><strong>研究意义</strong><br>
-本文提供了发展中国家财富税行为反应的首个严格因果证据，发现了<strong>财富税的滞后效应（hysteresis）</strong>——临时财富税对申报财富的影响可以在税收废止后数年持续，这对临时财富税的政策评估具有根本性影响。同时，利用泄露的巴拿马文件（Panama Papers），首次将财富税改革与离岸避税行为直接链接。</p>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言</strong>：财富税政策背景；三大贡献（滞后效应、离岸避税机制、发展中国家证据）。</li>
-<li><strong>哥伦比亚财富税制度介绍（Section 2）</strong>。</li>
-<li><strong>数据（Section 3）</strong>：税收行政记录 + 巴拿马文件链接。</li>
-<li><strong>行为反应：立即效应与滞后效应（Section 4）</strong>。</li>
-<li><strong>反应机制分解（Section 5）</strong>：漏报资产；离岸转移。</li>
-<li><strong>结论与政策含义（Section 6）</strong>。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p><strong>为什么财富税行为反应难以研究</strong>：</p>
-<ul>
-<li>理想的识别需要来自税率变化的外生变异，但大多数国家的税制改革是多维度、难以分离的</li>
-<li>欧洲研究（瑞典、挪威、法国、瑞士等）发现的弹性估计分布极广（0.054到43.2，800倍差异），部分原因是识别方法不同（bunching vs DiD）且测量的行为不同（真实行为vs申报行为）</li>
-<li>发展中国家高净值人群的数据极难获取</li>
-</ul>
-<p><strong>哥伦比亚的独特优势</strong>：</p>
-<ul>
-<li>历史最长的财富税制度（1993—2016年）</li>
-<li>四次重大改革，产生大量识别变异</li>
-<li>在财富阈值处存在"缺口"（notch），产生大幅税收跳跃，适合bunching估计</li>
-<li>覆盖全部高净值个人的税收行政微观数据（资产分项：银行存款、股权、企业资产、房产、车辆等）</li>
-<li>与巴拿马文件链接，追踪离岸行为</li>
-</ul>
-<h3 id="识别策略">识别策略</h3>
-<p><strong>双重识别</strong>：</p>
-<ol>
-<li><strong>Bunching估计</strong>：在财富阈值（notch）处，纳税人将申报财富压低到门槛以下以规避税收。比较实际财富分布与反事实分布（如果没有税收缺口的分布），可以估计弹性。创新之处：作者不依赖反事实分布假设，而是直接用改革前后的<strong>真实面板数据</strong>对比同一纳税人的财富。</li>
-<li><strong>DiD估计</strong>：利用四次改革，比较处于阈值附近的纳税人（受税率变化影响更大）与远离阈值的纳税人（影响较小），在改革前后进行差分。事件研究设计，检验改革前无预趋势。</li>
-</ol>
-<h3 id="数据与主要结果">数据与主要结果</h3>
-<p><strong>数据</strong>：</p>
-<ul>
-<li>哥伦比亚税务总局（DIAN）行政税收数据，1993—2016年，覆盖所有申报财富税的个人（年均约5万人）</li>
-<li>资产分项数据：金融资产（第三方报告）、企业资产（非第三方报告）、房产、车辆、债务</li>
-<li>巴拿马文件：Mossack Fonseca客户数据，与哥伦比亚税收记录链接，识别在巴拿马设立实体的哥伦比亚人</li>
-</ul>
-<p><strong>发现一：立即反应</strong></p>
-<ul>
-<li>财富税增加后，纳税人<strong>立即减少申报财富</strong>以跌落更低税率档次（bunching集中在阈值以下）</li>
-<li>净财富税率提高1%（即"一减税率"提高1%）导致申报财富<strong>立即增加约2%</strong>（弹性≈2）</li>
-<li>Bunching和DiD两种方法给出数量上相近的结果（这不同于欧洲研究中两种方法结果差异很大的情况）</li>
-<li>即时反应损失高达<strong>五分之一的潜在税收收入</strong></li>
-</ul>
-<p><strong>发现二：滞后效应（Hysteresis）——首次证据</strong></p>
-<ul>
-<li><strong>关键发现</strong>：在哥伦比亚临时财富税废止后，纳税人仍然<strong>持续低报财富数年</strong>，即使已经没有税收缺口的经济激励</li>
-<li>具体表现：（a）原先因财富税而把财富压低到阈值以下的人，在税收废止后继续保持低申报水平；（b）原先就低于阈值的人，也预防性地避免跨越已废止的阈值（以防未来财富税重新出台）</li>
-<li>这一效应<strong>不能用税收激励、固定调整成本或收入测量误差</strong>来解释——它反映的是纳税人<strong>战略性地维持低申报</strong>以掩盖资产、规避未来税收</li>
-<li>政策含义：临时财富税（如COVID-19后的应急财富税）可能对财富分布和政府税收产生长期持续影响</li>
-</ul>
-<p><strong>发现三：反应机制——漏报而非真实减少财富</strong></p>
-<ul>
-<li>通过IV方法识别应对财富税的"buncher"（即因税收而调整申报的纳税人）</li>
-<li>特征：buncher拥有更多<strong>非第三方报告资产</strong>（企业股权等当局无法交叉验证的资产）；持有的固定资产（房产）更少（难以随意调整的）</li>
-<li>具体逃税手段：（a）<strong>低报企业资产</strong>（尤其是非上市私有企业股权）；（b）<strong>虚报债务</strong>（夸大负债以降低净资产）</li>
-<li>这与欧洲研究发现一致（Brülhart等2022；Seim 2017）——纳税人利用"第三方信息覆盖率"的差异来逃税</li>
-</ul>
-<p><strong>发现四：离岸转移——与巴拿马文件的证据</strong></p>
-<ul>
-<li>哥伦比亚重新征收财富税后，<strong>每年新增哥伦比亚人在巴拿马注册离岸实体的数量显著增加</strong>（与其他国家相比，控制全球趋势后仍显著）</li>
-<li>财富税税率提高后，<strong>富裕纳税人将更多资产转移到避税天堂</strong>（事件研究证实因果性）</li>
-<li>这些在税收高的年份注册离岸实体的人，随后向哥伦比亚当局申报的资产明显减少</li>
-</ul>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<p><strong>政策含义</strong>：</p>
-<ol>
-<li><strong>信息建设</strong>：扩大第三方报告覆盖范围（尤其是企业股权等目前无需第三方报告的资产），是遏制逃税的关键</li>
-<li><strong>离岸合作</strong>：建立受益所有权登记制度；要求申报境外资产；与其他国家签订自动税收信息交换协议（TIEAs）</li>
-<li><strong>临时财富税的慎用</strong>：滞后效应意味着临时财富税的长期成本可能被低估——即使废止，申报财富长期下降仍会影响税基</li>
-</ol>
-<p><strong>两个未来研究方向（论文明确提及）</strong>：</p>
-<ol>
-<li>哥伦比亚逐步废除<strong>企业财富税</strong>（2018年完全废止）期间，是否存在资产从个人向企业的转移？</li>
-<li>2016年后的自动税收信息交换协议（FATCA等）如何影响离岸逃税行为？当逃税机会受限时，是否会引发真实行为反应（如减少储蓄/投资）？</li>
-</ol>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文明确提及的方向</strong>（见上）</p>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li><strong>中国语境</strong>：中国目前没有财富税，但正在讨论房产税改革（一种形式的财富税）。哥伦比亚的滞后效应结果对中国房产税的政策设计有何启示？如果房产税只是临时征收（如试点城市），是否也会产生持久的价格/申报抑制效应？</li>
-<li><strong>与所得税逃税的比较</strong>：本文的逃税机制（低报非第三方报告资产）与所得税逃税（低报收入）有何共同点和差异？两者在信息环境和审计威慑下的行为反应是否相似？</li>
-<li><strong>贫困国家的信息环境</strong>：哥伦比亚已有金融资产第三方报告，但企业资产没有。对于信息环境更差的最贫困国家，财富税是否根本上不可行（全部税基都无法核验）？</li>
-<li><strong>财富税 vs. 财富增值税</strong>：本文研究的是对存量财富的税收；而卡皮塔尔利得税（capital gains tax）是对流量（增值）征税。两者的逃税弹性有多不同？</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>滞后效应的经济学解释</strong>：本文发现hysteresis不能用固定调整成本（如因调整申报需要会计费用）来解释，而归因于"掩盖资产以避免未来税收"的战略预期。但这一解释隐含纳税人对未来政策的理性预期——他们预见财富税可能回来，因此提前维持低申报。这是一种相当复杂的理性行为。一个替代解释是：低申报可能形成"惯性"（纳税人懒得恢复原来的高申报水平），而非纯粹的战略行为。能否设计实验或利用异质性来区分这两种解释？</p>
-</li>
-<li>
-<p><strong>巴拿马文件的代表性</strong>：巴拿马文件来自Mossack Fonseca这一特定律师事务所，可能无法代表所有离岸逃税行为（只是一家中介商的客户）。如果使用其他来源的离岸数据，结论是否会改变？本文的离岸效应估计可能是低估的（如果还有其他途径逃税）。</p>
-</li>
-<li>
-<p><strong>哥伦比亚结果的外推性</strong>：哥伦比亚是上中等收入国家，有相对成熟的税务系统（DIAN）。对于税务系统更弱、腐败更严重的低收入国家，财富税的逃税行为可能更严重（弹性更高）。对于欧洲这类第三方报告更全面的高收入国家，弹性可能更低。本文的结果处于"中间地带"，为不同制度环境提供参考基准。</p>
-</li>
-<li>
-<p><strong>政策设计含义的层次</strong>：作者建议扩大第三方报告覆盖范围以遏制逃税。但在哥伦比亚（及类似发展中国家），私有企业估值本身就是核心挑战——即使要求第三方报告，如何对非上市企业进行可核验的估值？这是一个数据可用性之外的根本性产权问题。</p>
-</li>
-<li>
-<p><strong>与在逃税文献中的定位</strong>：本文的机制分解结果（第三方报告vs非第三方报告资产）与Kleven等人在所得税中的发现高度一致：第三方信息覆盖率是决定税收合规的最重要因素。这说明"第三方报告"可能是比税率本身更关键的政策杠杆，无论是所得税还是财富税。</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>本文的弹性估计（≈2）与欧洲财富税文献相比处于什么水平？为什么哥伦比亚的弹性比许多欧洲国家更高？是因为第三方报告覆盖率低，还是有其他因素？</li>
-<li>Hysteresis效应的机制——“战略维持低申报以避免未来税收”——是否有理论模型支持？与标准的"一次性调整成本"模型有何不同？</li>
-<li>如果中国推行房产税（如上海、重庆的试点扩大），基于本文的结果，中国纳税人可能会通过什么渠道来应对（房产申报价值低报？转移到企业名下？）？</li>
-<li>Panama Papers作为研究数据的可靠性如何？其他研究（如Alstadsæter等2019用挪威数据）也用到了类似数据，发现了什么可比较的结论？</li>
-<li>本文是否估计了财富税对真实行为（储蓄、投资、消费）的影响？还是只关注申报行为？如果税收主要导致逃税而非真实行为改变，对效率损失（deadweight loss）的评估有何影响？</li>
 </ol>
 ]]></content>
       <categories>
@@ -15428,6 +15278,156 @@ DOJ的IT支出没有出现支出高峰,最后一周的IT支出仅占3.3%,而非I
         <tag>论文笔记</tag>
         <tag>公共经济学</tag>
         <tag>预算制度</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>财富税的行为响应：哥伦比亚的证据 — 深度阅读笔记 — Londoño-Vélez &amp; Ávila-Mahecha</title>
+    <url>/posts/londono-velez2024/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Behavioural Responses to Wealth Taxation: Evidence from Colombia<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/D72FU22M/Londoño-Vélez和Ávila-Mahecha - 2024 - Behavioural Responses to Wealth Taxation Evidence from Colombia.pdf<br>
+Zotero Item Key:: LWFR6PLB</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+财富税（wealth tax）是对个人净资产（资产减负债）征收的税，与所得税不同。近年来围绕是否应推行财富税的政策讨论非常热烈（如美国Warren和Sanders的财富税提案，疫情后多国临时财富税）。核心问题是：富人会如何回应财富税？会真的减少财富积累，还是通过逃税/避税将财富藏匿起来？现有欧洲文献给出的弹性估计差异巨大（从几乎为0到极高），且机制不清晰。</p>
+<p><strong>研究背景</strong><br>
+哥伦比亚自1993年至2016年持续对高净值个人征收财富税，历经四次重大改革（2003、2006、2010、2014年），税率从0到6%不等，豁免阈值和征税期限多次变化，且在阈值处存在"缺口"（notch）——略高于门槛的财富会触发大幅跳跃的税收负担。这为识别行为反应提供了近乎理想的实验条件。</p>
+<p><strong>作者的问题意识</strong><br>
+四个关键问题：</p>
+<ol>
+<li>面对财富税，纳税人是否立即减少申报财富？</li>
+<li>这一效应在税收废止后是否持续（滞后效应/hysteresis）？</li>
+<li>反应通过什么机制实现（真实行为变化 vs. 逃税/漏报）？</li>
+<li>最富有的人是否通过离岸转移将财富藏入避税天堂？</li>
+</ol>
+<p><strong>研究意义</strong><br>
+本文提供了发展中国家财富税行为反应的首个严格因果证据，发现了<strong>财富税的滞后效应（hysteresis）</strong>——临时财富税对申报财富的影响可以在税收废止后数年持续，这对临时财富税的政策评估具有根本性影响。同时，利用泄露的巴拿马文件（Panama Papers），首次将财富税改革与离岸避税行为直接链接。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：财富税政策背景；三大贡献（滞后效应、离岸避税机制、发展中国家证据）。</li>
+<li><strong>哥伦比亚财富税制度介绍（Section 2）</strong>。</li>
+<li><strong>数据（Section 3）</strong>：税收行政记录 + 巴拿马文件链接。</li>
+<li><strong>行为反应：立即效应与滞后效应（Section 4）</strong>。</li>
+<li><strong>反应机制分解（Section 5）</strong>：漏报资产；离岸转移。</li>
+<li><strong>结论与政策含义（Section 6）</strong>。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p><strong>为什么财富税行为反应难以研究</strong>：</p>
+<ul>
+<li>理想的识别需要来自税率变化的外生变异，但大多数国家的税制改革是多维度、难以分离的</li>
+<li>欧洲研究（瑞典、挪威、法国、瑞士等）发现的弹性估计分布极广（0.054到43.2，800倍差异），部分原因是识别方法不同（bunching vs DiD）且测量的行为不同（真实行为vs申报行为）</li>
+<li>发展中国家高净值人群的数据极难获取</li>
+</ul>
+<p><strong>哥伦比亚的独特优势</strong>：</p>
+<ul>
+<li>历史最长的财富税制度（1993—2016年）</li>
+<li>四次重大改革，产生大量识别变异</li>
+<li>在财富阈值处存在"缺口"（notch），产生大幅税收跳跃，适合bunching估计</li>
+<li>覆盖全部高净值个人的税收行政微观数据（资产分项：银行存款、股权、企业资产、房产、车辆等）</li>
+<li>与巴拿马文件链接，追踪离岸行为</li>
+</ul>
+<h3 id="识别策略">识别策略</h3>
+<p><strong>双重识别</strong>：</p>
+<ol>
+<li><strong>Bunching估计</strong>：在财富阈值（notch）处，纳税人将申报财富压低到门槛以下以规避税收。比较实际财富分布与反事实分布（如果没有税收缺口的分布），可以估计弹性。创新之处：作者不依赖反事实分布假设，而是直接用改革前后的<strong>真实面板数据</strong>对比同一纳税人的财富。</li>
+<li><strong>DiD估计</strong>：利用四次改革，比较处于阈值附近的纳税人（受税率变化影响更大）与远离阈值的纳税人（影响较小），在改革前后进行差分。事件研究设计，检验改革前无预趋势。</li>
+</ol>
+<h3 id="数据与主要结果">数据与主要结果</h3>
+<p><strong>数据</strong>：</p>
+<ul>
+<li>哥伦比亚税务总局（DIAN）行政税收数据，1993—2016年，覆盖所有申报财富税的个人（年均约5万人）</li>
+<li>资产分项数据：金融资产（第三方报告）、企业资产（非第三方报告）、房产、车辆、债务</li>
+<li>巴拿马文件：Mossack Fonseca客户数据，与哥伦比亚税收记录链接，识别在巴拿马设立实体的哥伦比亚人</li>
+</ul>
+<p><strong>发现一：立即反应</strong></p>
+<ul>
+<li>财富税增加后，纳税人<strong>立即减少申报财富</strong>以跌落更低税率档次（bunching集中在阈值以下）</li>
+<li>净财富税率提高1%（即"一减税率"提高1%）导致申报财富<strong>立即增加约2%</strong>（弹性≈2）</li>
+<li>Bunching和DiD两种方法给出数量上相近的结果（这不同于欧洲研究中两种方法结果差异很大的情况）</li>
+<li>即时反应损失高达<strong>五分之一的潜在税收收入</strong></li>
+</ul>
+<p><strong>发现二：滞后效应（Hysteresis）——首次证据</strong></p>
+<ul>
+<li><strong>关键发现</strong>：在哥伦比亚临时财富税废止后，纳税人仍然<strong>持续低报财富数年</strong>，即使已经没有税收缺口的经济激励</li>
+<li>具体表现：（a）原先因财富税而把财富压低到阈值以下的人，在税收废止后继续保持低申报水平；（b）原先就低于阈值的人，也预防性地避免跨越已废止的阈值（以防未来财富税重新出台）</li>
+<li>这一效应<strong>不能用税收激励、固定调整成本或收入测量误差</strong>来解释——它反映的是纳税人<strong>战略性地维持低申报</strong>以掩盖资产、规避未来税收</li>
+<li>政策含义：临时财富税（如COVID-19后的应急财富税）可能对财富分布和政府税收产生长期持续影响</li>
+</ul>
+<p><strong>发现三：反应机制——漏报而非真实减少财富</strong></p>
+<ul>
+<li>通过IV方法识别应对财富税的"buncher"（即因税收而调整申报的纳税人）</li>
+<li>特征：buncher拥有更多<strong>非第三方报告资产</strong>（企业股权等当局无法交叉验证的资产）；持有的固定资产（房产）更少（难以随意调整的）</li>
+<li>具体逃税手段：（a）<strong>低报企业资产</strong>（尤其是非上市私有企业股权）；（b）<strong>虚报债务</strong>（夸大负债以降低净资产）</li>
+<li>这与欧洲研究发现一致（Brülhart等2022；Seim 2017）——纳税人利用"第三方信息覆盖率"的差异来逃税</li>
+</ul>
+<p><strong>发现四：离岸转移——与巴拿马文件的证据</strong></p>
+<ul>
+<li>哥伦比亚重新征收财富税后，<strong>每年新增哥伦比亚人在巴拿马注册离岸实体的数量显著增加</strong>（与其他国家相比，控制全球趋势后仍显著）</li>
+<li>财富税税率提高后，<strong>富裕纳税人将更多资产转移到避税天堂</strong>（事件研究证实因果性）</li>
+<li>这些在税收高的年份注册离岸实体的人，随后向哥伦比亚当局申报的资产明显减少</li>
+</ul>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<p><strong>政策含义</strong>：</p>
+<ol>
+<li><strong>信息建设</strong>：扩大第三方报告覆盖范围（尤其是企业股权等目前无需第三方报告的资产），是遏制逃税的关键</li>
+<li><strong>离岸合作</strong>：建立受益所有权登记制度；要求申报境外资产；与其他国家签订自动税收信息交换协议（TIEAs）</li>
+<li><strong>临时财富税的慎用</strong>：滞后效应意味着临时财富税的长期成本可能被低估——即使废止，申报财富长期下降仍会影响税基</li>
+</ol>
+<p><strong>两个未来研究方向（论文明确提及）</strong>：</p>
+<ol>
+<li>哥伦比亚逐步废除<strong>企业财富税</strong>（2018年完全废止）期间，是否存在资产从个人向企业的转移？</li>
+<li>2016年后的自动税收信息交换协议（FATCA等）如何影响离岸逃税行为？当逃税机会受限时，是否会引发真实行为反应（如减少储蓄/投资）？</li>
+</ol>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文明确提及的方向</strong>（见上）</p>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li><strong>中国语境</strong>：中国目前没有财富税，但正在讨论房产税改革（一种形式的财富税）。哥伦比亚的滞后效应结果对中国房产税的政策设计有何启示？如果房产税只是临时征收（如试点城市），是否也会产生持久的价格/申报抑制效应？</li>
+<li><strong>与所得税逃税的比较</strong>：本文的逃税机制（低报非第三方报告资产）与所得税逃税（低报收入）有何共同点和差异？两者在信息环境和审计威慑下的行为反应是否相似？</li>
+<li><strong>贫困国家的信息环境</strong>：哥伦比亚已有金融资产第三方报告，但企业资产没有。对于信息环境更差的最贫困国家，财富税是否根本上不可行（全部税基都无法核验）？</li>
+<li><strong>财富税 vs. 财富增值税</strong>：本文研究的是对存量财富的税收；而卡皮塔尔利得税（capital gains tax）是对流量（增值）征税。两者的逃税弹性有多不同？</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>滞后效应的经济学解释</strong>：本文发现hysteresis不能用固定调整成本（如因调整申报需要会计费用）来解释，而归因于"掩盖资产以避免未来税收"的战略预期。但这一解释隐含纳税人对未来政策的理性预期——他们预见财富税可能回来，因此提前维持低申报。这是一种相当复杂的理性行为。一个替代解释是：低申报可能形成"惯性"（纳税人懒得恢复原来的高申报水平），而非纯粹的战略行为。能否设计实验或利用异质性来区分这两种解释？</p>
+</li>
+<li>
+<p><strong>巴拿马文件的代表性</strong>：巴拿马文件来自Mossack Fonseca这一特定律师事务所，可能无法代表所有离岸逃税行为（只是一家中介商的客户）。如果使用其他来源的离岸数据，结论是否会改变？本文的离岸效应估计可能是低估的（如果还有其他途径逃税）。</p>
+</li>
+<li>
+<p><strong>哥伦比亚结果的外推性</strong>：哥伦比亚是上中等收入国家，有相对成熟的税务系统（DIAN）。对于税务系统更弱、腐败更严重的低收入国家，财富税的逃税行为可能更严重（弹性更高）。对于欧洲这类第三方报告更全面的高收入国家，弹性可能更低。本文的结果处于"中间地带"，为不同制度环境提供参考基准。</p>
+</li>
+<li>
+<p><strong>政策设计含义的层次</strong>：作者建议扩大第三方报告覆盖范围以遏制逃税。但在哥伦比亚（及类似发展中国家），私有企业估值本身就是核心挑战——即使要求第三方报告，如何对非上市企业进行可核验的估值？这是一个数据可用性之外的根本性产权问题。</p>
+</li>
+<li>
+<p><strong>与在逃税文献中的定位</strong>：本文的机制分解结果（第三方报告vs非第三方报告资产）与Kleven等人在所得税中的发现高度一致：第三方信息覆盖率是决定税收合规的最重要因素。这说明"第三方报告"可能是比税率本身更关键的政策杠杆，无论是所得税还是财富税。</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>本文的弹性估计（≈2）与欧洲财富税文献相比处于什么水平？为什么哥伦比亚的弹性比许多欧洲国家更高？是因为第三方报告覆盖率低，还是有其他因素？</li>
+<li>Hysteresis效应的机制——“战略维持低申报以避免未来税收”——是否有理论模型支持？与标准的"一次性调整成本"模型有何不同？</li>
+<li>如果中国推行房产税（如上海、重庆的试点扩大），基于本文的结果，中国纳税人可能会通过什么渠道来应对（房产申报价值低报？转移到企业名下？）？</li>
+<li>Panama Papers作为研究数据的可靠性如何？其他研究（如Alstadsæter等2019用挪威数据）也用到了类似数据，发现了什么可比较的结论？</li>
+<li>本文是否估计了财富税对真实行为（储蓄、投资、消费）的影响？还是只关注申报行为？如果税收主要导致逃税而非真实行为改变，对效率损失（deadweight loss）的评估有何影响？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -15963,6 +15963,46 @@ study of procurement contracts》深度分析撰写。</em></p>
       </tags>
   </entry>
   <entry>
+    <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
+    <url>/posts/32262/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
+<h2 id="研究问题"><strong>1. 研究问题</strong></h2>
+<p>本文以江苏省12个地级市"河长制"政策转移案例(2006 —
+2016)为研究对象,在识别政策转移案例中"复制"和"再生产"两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对"河长制"转移程度的影响.研究发现"河长制"政策转移中的"政策再生产"的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局.通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产.</p>
+<p>&nbsp;</p>
+<span id="more"></span>
+<h2 id="问题的提出"><strong>2. 问题的提出</strong></h2>
+<p><strong>2.1 政策转移的必要性</strong></p>
+<p>现实状况:政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有"后发优势"的意味、地区间的合作与竞争</p>
+<p>转移情形:政策转移并不意味着全盘复制,可分为"复制"和"再生产"两种形式</p>
+<p>核心问题:什么因素能够促成政策"再生产",政策"再生产"又体现出那些维度特征</p>
+<p><strong>2.2 河长制的背景介绍</strong></p>
+<p>河湖治理是跨界特性最典型的领域之一,涉及上下游、左右岸、不同行政区域和行业,呈现出高度的复杂性.河长制最早发轫于太湖蓝藻危机,2016年之前是一项地方政策,经政策扩散至多地.</p>
+<p>现实调查显示河长制在江苏省内的扩散过程中呈现出"复制"和"再生产"的典型差异.</p>
+<p>&nbsp;</p>
+<h2 id="研究思路和方法"><strong>3. 研究思路和方法</strong></h2>
+<p><strong>3.1 QCA</strong></p>
+<p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles
+Ragin)于<code>1987</code>年提出,适用于案例数量大于10小于60的研究.</p>
+<p>其使用布尔代数和集合论的思想来进行中小数量的跨案例比较,从而处理多个原因和一个结果之间的因果关系.</p>
+<p><strong>3.2 转移程度的刻画</strong></p>
+<p>道洛维茨和马什最早借鉴rose(1993)的连续统来划分政策转移程度:复制、模仿、混合、启发.</p>
+<p>本文简单划分为:"复制"和"再生产"</p>
+<p><strong>3.3 解释变量的选择</strong></p>
+<p>行政压力、资源禀赋、政策需求、外部力量</p>
+<p>&nbsp;</p>
+<h2 id="结论"><strong>4. 结论</strong></h2>
+<p>政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素.</p>
+]]></content>
+      <categories>
+        <category>公共管理</category>
+        <category>政策转移</category>
+      </categories>
+      <tags>
+        <tag>文献阅读</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>用稻草做砖 — 深度阅读笔记 — Okeke</title>
     <url>/posts/okeke2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -16054,46 +16094,6 @@ rollout数据、设施调查、服务提供调查、患者调查、家庭调查<
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
-    <url>/posts/32262/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
-<h2 id="研究问题"><strong>1. 研究问题</strong></h2>
-<p>本文以江苏省12个地级市"河长制"政策转移案例(2006 —
-2016)为研究对象,在识别政策转移案例中"复制"和"再生产"两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对"河长制"转移程度的影响.研究发现"河长制"政策转移中的"政策再生产"的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局.通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产.</p>
-<p>&nbsp;</p>
-<span id="more"></span>
-<h2 id="问题的提出"><strong>2. 问题的提出</strong></h2>
-<p><strong>2.1 政策转移的必要性</strong></p>
-<p>现实状况:政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有"后发优势"的意味、地区间的合作与竞争</p>
-<p>转移情形:政策转移并不意味着全盘复制,可分为"复制"和"再生产"两种形式</p>
-<p>核心问题:什么因素能够促成政策"再生产",政策"再生产"又体现出那些维度特征</p>
-<p><strong>2.2 河长制的背景介绍</strong></p>
-<p>河湖治理是跨界特性最典型的领域之一,涉及上下游、左右岸、不同行政区域和行业,呈现出高度的复杂性.河长制最早发轫于太湖蓝藻危机,2016年之前是一项地方政策,经政策扩散至多地.</p>
-<p>现实调查显示河长制在江苏省内的扩散过程中呈现出"复制"和"再生产"的典型差异.</p>
-<p>&nbsp;</p>
-<h2 id="研究思路和方法"><strong>3. 研究思路和方法</strong></h2>
-<p><strong>3.1 QCA</strong></p>
-<p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles
-Ragin)于<code>1987</code>年提出,适用于案例数量大于10小于60的研究.</p>
-<p>其使用布尔代数和集合论的思想来进行中小数量的跨案例比较,从而处理多个原因和一个结果之间的因果关系.</p>
-<p><strong>3.2 转移程度的刻画</strong></p>
-<p>道洛维茨和马什最早借鉴rose(1993)的连续统来划分政策转移程度:复制、模仿、混合、启发.</p>
-<p>本文简单划分为:"复制"和"再生产"</p>
-<p><strong>3.3 解释变量的选择</strong></p>
-<p>行政压力、资源禀赋、政策需求、外部力量</p>
-<p>&nbsp;</p>
-<h2 id="结论"><strong>4. 结论</strong></h2>
-<p>政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素.</p>
-]]></content>
-      <categories>
-        <category>公共管理</category>
-        <category>政策转移</category>
-      </categories>
-      <tags>
-        <tag>文献阅读</tag>
       </tags>
   </entry>
   <entry>
@@ -18150,6 +18150,136 @@ Zotero Item Key:: GQKZ35CQ</p>
       </tags>
   </entry>
   <entry>
+    <title>中国的政策试验：政策学习的政治经济学 — 深度阅读笔记 — Wang &amp; Yang</title>
+    <url>/posts/wang2022policy/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Policy Experimentation in China: The Political Economy of Policy Learning<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/4V9L54XQ/Wang和Yang - 2022 - Policy Experimentation in China The Political Economy of Policy Learning.pdf<br>
+Zotero Item Key:: CIWNLWK2</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+政策学习（policy learning）是政府决策的核心难题：政策效果受多重因素影响（政策本身性质、实施方式、地方条件、官员激励），信息环境极为复杂。许多国家的政府采取政策试验（policy experimentation）——在局部地区先行试点，观察效果后再决定是否全面推行——作为解决政策不确定性的手段。理论文献（Roland 2000; Mukand &amp; Rodrik 2005; Callander 2011 等）探讨了在不同政治结构下，政策实验如何促进信息获取与政策学习。</p>
+<p><strong>研究背景</strong><br>
+1980年代以来，中国政府形成了高度系统化的政策试验制度（“先试点、后推广”）：由中央各部委发起，指定若干地方试点，积累经验后决定是否转变为全国性政策。这一制度覆盖财税、环保、土地、社会保障等几乎所有政策领域，规模之大、持续时间之长，在近现代各国政府中罕见。不少学者认为，这一机制是中国改革开放成功的关键制度基础之一。然而，关于这一制度的具体特征、运作机制，以及它是否能实现有效政策学习，系统性实证证据极为缺乏。</p>
+<p><strong>作者的问题意识</strong><br>
+中国政策试验的基本特征是什么？试验的样本是否有代表性？试验过程中的制度环境（特别是官员晋升激励）是否系统性地扭曲了试验本身？中央政府在解读试验结果时是否"足够理性"？这些因素综合起来，对政策学习和全国政策效果意味着什么？</p>
+<p><strong>研究意义</strong><br>
+本文是首次基于中国四十年政策试验综合数据库开展的系统实证研究。揭示了政策试验中"样本偏误"和"情境偏误"的结构性来源，对既有"中国经验"的解读提出重要修正：政策试验的制度条件既是中国改革的发动机，也是其政策学习的制约因素。对理解政治集权与政策有效性的关系、"政府学习"的边界，以及如何设计更好的政策试验机制，具有重要理论和现实意义。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：提出问题，预告三大发现及其含义。</li>
+<li><strong>制度背景</strong>：中国政策试验的运作机制——中央发起、地方试点、全国推广。</li>
+<li><strong>数据</strong>：652项政策试验数据库（19,812份政府文件，1980–2020年）。</li>
+<li><strong>分析框架</strong>：政策学习可能出现偏误的三条路径。</li>
+<li><strong>事实一（第5节）</strong>：试验地点的正向选择（positive site selection）。</li>
+<li><strong>事实二（第6节）</strong>：试验期间官员的策略性努力（strategic effort）。</li>
+<li><strong>事实三（第7节）</strong>：中央政府对试验结果的非成熟解读（non-sophisticated interpretation）。</li>
+<li><strong>综合分析（第8节）</strong>：三大事实对政策学习和国家政策效果的含义。</li>
+<li><strong>结论</strong>。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>中国通过"先试点后推广"制度化地实践政策学习。中央各部委发起652项政策试验（1980-2020年），覆盖地方政府文件达19,812份，其中42%的试点政策最终推向全国。问题是：这一大规模的政策试验是否真的有助于中央有效学习？</p>
+<h3 id="挑战（三大偏误）">挑战（三大偏误）</h3>
+<p><strong>事实一：试验地点的正向选择（Sample Selection Bias）</strong></p>
+<ul>
+<li>在652项政策试验中，<strong>87.7%的试验地点在经济发展水平上存在正向选择</strong>——被选为试点的地方平均财政收入比未被选中的地方高出<strong>44.2%</strong>。</li>
+<li>这一规律在不同政策领域、不同控制变量设定下均稳健。</li>
+<li>富裕地区被选中更可能是因为"政策更容易成功"，而非代表全国平均情况。</li>
+</ul>
+<p><strong>事实二：试验期间的策略性努力（Non-Representative Experimental Situation）</strong></p>
+<ul>
+<li>晋升激励机制下，参与成功试验（即最终推向全国的试验）的地方官员明显有<strong>更高的晋升概率</strong>。</li>
+<li>利用三重差分策略（triple-differences）：在试验期间（而非试验前），试点地区对该试点政策相关领域的财政拨款<strong>增加约1.3%</strong>；</li>
+<li>当政策全面推广至全国时，这种额外的财政支持消失——意味着试验期间官员创造的努力<strong>无法在全国推广时复制</strong>。</li>
+<li>晋升压力越大的官员，额外努力越明显。</li>
+</ul>
+<p><strong>事实三：中央政府的非成熟解读（Non-Sophisticated Interpretation）</strong></p>
+<ul>
+<li>理想情境下，只有与政策内在有效性相关的信息应影响全国推广决策。</li>
+<li>实证发现：（1）试验期间土地出让金意外增加（<strong>外生财政冲击</strong>，与政策本身无关）→ 中央更可能推广该政策；（2）试验期间官员的<strong>常规政治人事更迭</strong>（改变激励但与政策质量无关）→ 也影响全国推广决策。</li>
+<li>这说明中央政府无法完全将"政策本身效果"与"外生噪音"分离——也就是说，政府并未"完全理性"地处理试验信息。</li>
+</ul>
+<h3 id="数据">数据</h3>
+<ul>
+<li><strong>政策试验数据库</strong>：19,812份政府文件 → 652项政策试验，来自92个中央部委和委员会，1980–2020年；记录了每项试验的地点、时间、推广情况。</li>
+<li><strong>官员晋升数据</strong>：追踪参与试验的地方官员的职业轨迹。</li>
+<li><strong>地方财政数据</strong>：年度财政分项拨款，用于测量官员的策略性努力。</li>
+<li><strong>土地出让金数据</strong>：作为外生财政冲击工具变量。</li>
+</ul>
+<h3 id="结果：政策学习的含义">结果：政策学习的含义</h3>
+<p><strong>71.1%的全面推广政策出现效果"收缩"（shrinkage）</strong>——即政策在全国推广后，效果相比试点期间下降。</p>
+<p><strong>机制分解</strong>：</p>
+<ul>
+<li>与试验地点经济条件相似的地区，从推广政策中获益更多；</li>
+<li>与试验官员有类似晋升激励的地方，从推广政策中获益更多；</li>
+<li>这意味着"谁更像试点地"决定了"谁更受益"，产生了区域间的系统性分配不平等。</li>
+</ul>
+<p><strong>致命逻辑</strong>：</p>
+<ul>
+<li>中央政府依赖的是"简单事前-事后比较"（pre-post comparison at experimentation sites）作为推广决策依据——这种方法强烈预测了全国推广；</li>
+<li>但用<strong>合成控制（synthetic control）等更精细的估计方法</strong>，则不能预测推广决策——说明中央实际上没有使用更精确的信息来判断政策效果。</li>
+</ul>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<p>中国四十年政策试验存在三重系统性偏误：（1）试点地点非代表性（较富裕）；（2）试点期间官员投入的额外努力不可复制；（3）中央政府在解读试验结果时被外生噪音干扰。这三点共同导致：来自试验的政策学习可能是有偏的，全面推广后政策效果系统性收缩，且不平等地惠及与试点条件相近的（通常是更富裕的）地区。</p>
+<p>作者指出：造成以上问题的，恰恰是使中国政策试验规模如此之大的同一制度条件——政治集权与晋升锦标赛。这一制度作为克服"地方不合作"的引擎，同时也内嵌了系统性信息扭曲。这是政治集权在"不完全契约"下的经典代价。</p>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文明确提及的方向</strong>：</p>
+<ol>
+<li>如何设计动态政策试验（dynamic experimentation）以纠偏；</li>
+<li>研究哪些政策最初被纳入试验、哪些重大政策失败被试验所避免——完整评估试验制度的整体收益/成本；</li>
+<li>评价完整政策制定周期（包括"不试验"的反事实）。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li><strong>纠偏机制设计</strong>：如何在保留晋升激励的同时，通过改变试点选择规则（如随机分配试点、跨地区比较）来减少选择偏误？</li>
+<li><strong>比较制度研究</strong>：美国各州的政策扩散（policy diffusion）研究发现正向选择偏误相对有限（DellaVigna &amp; Kim 2022），与中国形成对比——什么制度特征导致了这一差异？</li>
+<li><strong>信息处理能力</strong>：中央政府的"非成熟解读"是否随时间改善？与行政技术能力（如数据分析部门的建立）有什么关系？</li>
+<li><strong>政策内容的调适</strong>：政策在推广时是否经过了修改（truncation/adaptation）？这是否部分解释了效果收缩？</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>晋升激励的双刃剑</strong>：本文核心发现是，晋升激励使官员在试点期间额外努力，但这种努力不可复制。然而，这种额外努力在试点期间是否确实提高了试点政策的效果？如果是，那么对于那些只在特定条件下有效的政策，试验依然能够发现它们在理想条件下的潜力——这对政策学习也有价值，只是需要更谨慎地外推。</p>
+</li>
+<li>
+<p><strong>代表性选择 vs. 有效试验的悖论</strong>：如果随机选择试点（代表性更高），但落后地区官员可能缺乏执行能力，导致试验本身失败——无法区分"政策本身不好"和"执行能力不足"。因此，选择"有能力执行"的较好地区可能是中央政府在有限执行能力下的理性选择，而非单纯的偏误。</p>
+</li>
+<li>
+<p><strong>外部有效性的条件性</strong>：作者发现推广效果与试点条件的相似程度正相关，这说明中国政策效果的外推性（external validity）高度依赖于地方条件匹配。这提示政策推广不应该是简单的"全国统一实施"，而是应该根据地方条件分类推广——但这又与中国"中央统一部署"的政治逻辑相悖。</p>
+</li>
+<li>
+<p><strong>中央政府是否真的"非成熟"</strong>：论文证明外生财政冲击影响推广决策，这被解读为"非成熟"。但也存在另一种解读：中央政府可能有意识地将"试验期间地方经济活跃"作为"政策可以激励地方动力"的代理指标，从而有意使用这一信号。辨别"主动误判"与"被动愚弄"需要更精细的机制识别。</p>
+</li>
+<li>
+<p><strong>中央-地方信息不对称的长期趋势</strong>：随着大数据和数字政府建设（"数字威权主义"研究，如 Beraja et al. 2023），中央政府处理试验信息的能力是否在增强？本文基于1980-2020年的数据，但2015年后政府数字化治理能力的提升是否改变了"非成熟解读"的程度？</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>中国政策试验的"三步走"制度（试点→评估→全国推广）与国际通行的随机对照试验（RCT）相比，有哪些根本性的制度差异？</li>
+<li>是否有证据表明某些政策领域（如财税改革 vs. 社会保障）的试验效果收缩程度更大？领域差异背后的机制是什么？</li>
+<li>晋升激励是中国政策试验偏误的核心——在近年来习近平时代对地方官员晋升标准的调整（减少GDP权重、增加质量指标）下，本文的结论是否仍然成立？</li>
+<li>合成控制法（synthetic control）和普通事前-事后比较在预测政策推广结果上表现差异极大，这是否意味着中央政府事实上依赖信息较差的评估方法——如何从行政信息处理的角度解释这一现象？</li>
+<li>有没有政策试验制度设计上的"最佳实践"——哪些国家或地区的政策实验在控制上述三类偏误方面做得更好，可以为中国提供借鉴？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Policy Experimentation in China: The Political Economy of Policy Learning — 深度阅读笔记 — Wang &amp; Yang</title>
     <url>/posts/wang2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -18380,130 +18510,93 @@ Economy</em>, 133(7), 2180-2228. https://doi.org/10.1086/734873</p>
       </tags>
   </entry>
   <entry>
-    <title>中国的政策试验：政策学习的政治经济学 — 深度阅读笔记 — Wang &amp; Yang</title>
-    <url>/posts/wang2022policy/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Policy Experimentation in China: The Political Economy of Policy Learning<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/4V9L54XQ/Wang和Yang - 2022 - Policy Experimentation in China The Political Economy of Policy Learning.pdf<br>
-Zotero Item Key:: CIWNLWK2</p>
-<hr>
+    <title>市场力量与资本约束 — 深度阅读笔记 — Wittwer &amp; Allen</title>
+    <url>/posts/wittwer2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Market Power and Capital Constraints</li>
+<li><strong>作者</strong>: Milena Wittwer (Columbia University, NBER),
+Jason Allen (Bank of Canada, University of Wisconsin)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: NBER Working Paper No. 34645</li>
+<li><strong>DOI</strong>: -</li>
+<li><strong>难度评估</strong>: 高 -
+需要金融经济学、拍卖理论、监管经济学基础</li>
+</ul>
 <span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-政策学习（policy learning）是政府决策的核心难题：政策效果受多重因素影响（政策本身性质、实施方式、地方条件、官员激励），信息环境极为复杂。许多国家的政府采取政策试验（policy experimentation）——在局部地区先行试点，观察效果后再决定是否全面推行——作为解决政策不确定性的手段。理论文献（Roland 2000; Mukand &amp; Rodrik 2005; Callander 2011 等）探讨了在不同政治结构下，政策实验如何促进信息获取与政策学习。</p>
-<p><strong>研究背景</strong><br>
-1980年代以来，中国政府形成了高度系统化的政策试验制度（“先试点、后推广”）：由中央各部委发起，指定若干地方试点，积累经验后决定是否转变为全国性政策。这一制度覆盖财税、环保、土地、社会保障等几乎所有政策领域，规模之大、持续时间之长，在近现代各国政府中罕见。不少学者认为，这一机制是中国改革开放成功的关键制度基础之一。然而，关于这一制度的具体特征、运作机制，以及它是否能实现有效政策学习，系统性实证证据极为缺乏。</p>
-<p><strong>作者的问题意识</strong><br>
-中国政策试验的基本特征是什么？试验的样本是否有代表性？试验过程中的制度环境（特别是官员晋升激励）是否系统性地扭曲了试验本身？中央政府在解读试验结果时是否"足够理性"？这些因素综合起来，对政策学习和全国政策效果意味着什么？</p>
-<p><strong>研究意义</strong><br>
-本文是首次基于中国四十年政策试验综合数据库开展的系统实证研究。揭示了政策试验中"样本偏误"和"情境偏误"的结构性来源，对既有"中国经验"的解读提出重要修正：政策试验的制度条件既是中国改革的发动机，也是其政策学习的制约因素。对理解政治集权与政策有效性的关系、"政府学习"的边界，以及如何设计更好的政策试验机制，具有重要理论和现实意义。</p>
 <hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言</strong>：提出问题，预告三大发现及其含义。</li>
-<li><strong>制度背景</strong>：中国政策试验的运作机制——中央发起、地方试点、全国推广。</li>
-<li><strong>数据</strong>：652项政策试验数据库（19,812份政府文件，1980–2020年）。</li>
-<li><strong>分析框架</strong>：政策学习可能出现偏误的三条路径。</li>
-<li><strong>事实一（第5节）</strong>：试验地点的正向选择（positive site selection）。</li>
-<li><strong>事实二（第6节）</strong>：试验期间官员的策略性努力（strategic effort）。</li>
-<li><strong>事实三（第7节）</strong>：中央政府对试验结果的非成熟解读（non-sophisticated interpretation）。</li>
-<li><strong>综合分析（第8节）</strong>：三大事实对政策学习和国家政策效果的含义。</li>
-<li><strong>结论</strong>。</li>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>市场力量（Market Power）</strong>
+指交易者在市场中影响价格的能力。现实中，交易者在多个市场享有市场力量，包括国债、repo、外汇、抵押贷款支持证券等。</p>
+<p><strong>资本约束（Capital Constraints）</strong> 指Basel
+III标准下，银行必须保持权益资本相对于风险敞口的最低比率。</p>
+<p><strong>价格影响（Price Impact）</strong>
+指交易量变化导致价格变化的程度，是衡量市场流动性的关键指标。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>理论背景</strong>：中介资产定价文献假设完美竞争，但现实中交易者享有市场力量</p></li>
+<li><p><strong>现实背景</strong>：实证研究表明交易者在多个市场有市场力量</p></li>
+<li><p><strong>监管背景</strong>：Basel
+III资本要求对银行中介交易产生负面影响</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：在允许市场力量存在的框架下，交易者的权益资本如何影响资产价格？</p>
+<p><strong>关键洞察</strong>：放松资本约束不仅提高资产价格，还提高价格影响（降低流动性）——这是反直觉的预测。</p>
+<hr>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ol type="1">
+<li><strong>引言</strong>: 问题陈述、研究背景、主要贡献</li>
+<li><strong>模型</strong>:
+包含资本约束和市场力量的基准模型，统一价格拍卖</li>
+<li><strong>模型扩展</strong>: 存货头寸、双边交易、歧视价格拍卖</li>
+<li><strong>实证分析</strong>:
+加拿大国债拍卖数据、COVID-19临时政策豁免</li>
+<li><strong>价格和价格影响近似</strong>: 反事实计算</li>
+<li><strong>结论</strong>: 主要发现和政策含义</li>
 </ol>
 <hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>中国通过"先试点后推广"制度化地实践政策学习。中央各部委发起652项政策试验（1980-2020年），覆盖地方政府文件达19,812份，其中42%的试点政策最终推向全国。问题是：这一大规模的政策试验是否真的有助于中央有效学习？</p>
-<h3 id="挑战（三大偏误）">挑战（三大偏误）</h3>
-<p><strong>事实一：试验地点的正向选择（Sample Selection Bias）</strong></p>
-<ul>
-<li>在652项政策试验中，<strong>87.7%的试验地点在经济发展水平上存在正向选择</strong>——被选为试点的地方平均财政收入比未被选中的地方高出<strong>44.2%</strong>。</li>
-<li>这一规律在不同政策领域、不同控制变量设定下均稳健。</li>
-<li>富裕地区被选中更可能是因为"政策更容易成功"，而非代表全国平均情况。</li>
-</ul>
-<p><strong>事实二：试验期间的策略性努力（Non-Representative Experimental Situation）</strong></p>
-<ul>
-<li>晋升激励机制下，参与成功试验（即最终推向全国的试验）的地方官员明显有<strong>更高的晋升概率</strong>。</li>
-<li>利用三重差分策略（triple-differences）：在试验期间（而非试验前），试点地区对该试点政策相关领域的财政拨款<strong>增加约1.3%</strong>；</li>
-<li>当政策全面推广至全国时，这种额外的财政支持消失——意味着试验期间官员创造的努力<strong>无法在全国推广时复制</strong>。</li>
-<li>晋升压力越大的官员，额外努力越明显。</li>
-</ul>
-<p><strong>事实三：中央政府的非成熟解读（Non-Sophisticated Interpretation）</strong></p>
-<ul>
-<li>理想情境下，只有与政策内在有效性相关的信息应影响全国推广决策。</li>
-<li>实证发现：（1）试验期间土地出让金意外增加（<strong>外生财政冲击</strong>，与政策本身无关）→ 中央更可能推广该政策；（2）试验期间官员的<strong>常规政治人事更迭</strong>（改变激励但与政策质量无关）→ 也影响全国推广决策。</li>
-<li>这说明中央政府无法完全将"政策本身效果"与"外生噪音"分离——也就是说，政府并未"完全理性"地处理试验信息。</li>
-</ul>
-<h3 id="数据">数据</h3>
-<ul>
-<li><strong>政策试验数据库</strong>：19,812份政府文件 → 652项政策试验，来自92个中央部委和委员会，1980–2020年；记录了每项试验的地点、时间、推广情况。</li>
-<li><strong>官员晋升数据</strong>：追踪参与试验的地方官员的职业轨迹。</li>
-<li><strong>地方财政数据</strong>：年度财政分项拨款，用于测量官员的策略性努力。</li>
-<li><strong>土地出让金数据</strong>：作为外生财政冲击工具变量。</li>
-</ul>
-<h3 id="结果：政策学习的含义">结果：政策学习的含义</h3>
-<p><strong>71.1%的全面推广政策出现效果"收缩"（shrinkage）</strong>——即政策在全国推广后，效果相比试点期间下降。</p>
-<p><strong>机制分解</strong>：</p>
-<ul>
-<li>与试验地点经济条件相似的地区，从推广政策中获益更多；</li>
-<li>与试验官员有类似晋升激励的地方，从推广政策中获益更多；</li>
-<li>这意味着"谁更像试点地"决定了"谁更受益"，产生了区域间的系统性分配不平等。</li>
-</ul>
-<p><strong>致命逻辑</strong>：</p>
-<ul>
-<li>中央政府依赖的是"简单事前-事后比较"（pre-post comparison at experimentation sites）作为推广决策依据——这种方法强烈预测了全国推广；</li>
-<li>但用<strong>合成控制（synthetic control）等更精细的估计方法</strong>，则不能预测推广决策——说明中央实际上没有使用更精确的信息来判断政策效果。</li>
-</ul>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="模型设定">模型设定</h3>
+<p><strong>交易者</strong>： - N个风险厌恶交易者，拥有私人信号εi -
+线性二次效用函数：V(a, εi) = (μ + εi)a − ρσ²a²/2</p>
+<p><strong>资本约束</strong>： - E[θi − κP^c a_i] ≥ 0 -
+资本约束的影子成本λκ类似于从价税</p>
+<p><strong>关键机制</strong>：交易者的出价意愿被影子成本折减为(1+λκ)P^c</p>
+<h3 id="关键预测">关键预测</h3>
+<p><strong>推论1</strong>：当资本约束放松时，价格和价格影响都提高。</p>
+<p>这与传统观点（约束放松→流动性提高）相反。</p>
+<h3 id="实证策略">实证策略</h3>
+<p><strong>利用COVID-19期间加拿大政府的临时政策变化</strong>： -
+2020年4月9日起，政府债券和HQLA暂时豁免于LR约束 -
+2021年12月31日豁免结束</p>
+<p><strong>识别方法</strong>： -
+在豁免期间（λκ=0），从出价意愿曲线的平均斜率识别风险厌恶 -
+在约束生效期间，从斜率的变化识别影子成本</p>
+<h3 id="主要结果">主要结果</h3>
+<p><strong>风险厌恶</strong>：中位数约为0.005，相对较低</p>
+<p><strong>影子成本</strong>： - 在典型拍卖中约束不绑定（中位数=0） -
+但分布有明显尾部，平均影子成本约为53%</p>
+<p><strong>反事实计算</strong>： - 影子成本降低1% →
+价格和价格影响增加约0.19% - 完全消除约束 →
+平均增加19%（因为尾部事件）</p>
 <hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<p>中国四十年政策试验存在三重系统性偏误：（1）试点地点非代表性（较富裕）；（2）试点期间官员投入的额外努力不可复制；（3）中央政府在解读试验结果时被外生噪音干扰。这三点共同导致：来自试验的政策学习可能是有偏的，全面推广后政策效果系统性收缩，且不平等地惠及与试点条件相近的（通常是更富裕的）地区。</p>
-<p>作者指出：造成以上问题的，恰恰是使中国政策试验规模如此之大的同一制度条件——政治集权与晋升锦标赛。这一制度作为克服"地方不合作"的引擎，同时也内嵌了系统性信息扭曲。这是政治集权在"不完全契约"下的经典代价。</p>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文明确提及的方向</strong>：</p>
-<ol>
-<li>如何设计动态政策试验（dynamic experimentation）以纠偏；</li>
-<li>研究哪些政策最初被纳入试验、哪些重大政策失败被试验所避免——完整评估试验制度的整体收益/成本；</li>
-<li>评价完整政策制定周期（包括"不试验"的反事实）。</li>
+<h2 id="结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>反直觉预测</strong>：放松资本约束提高价格和价格影响（降低流动性），与完美竞争下的传统观点相反</p></li>
+<li><p><strong>机制</strong>：影子成本作为折减因子影响出价意愿曲线的斜率</p></li>
+<li><p><strong>实证验证</strong>：加拿大国债拍卖数据证实了理论预测</p></li>
+<li><p><strong>定量意义</strong>：在流动性市场中影响较小，但尾部效应严重</p></li>
 </ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li><strong>纠偏机制设计</strong>：如何在保留晋升激励的同时，通过改变试点选择规则（如随机分配试点、跨地区比较）来减少选择偏误？</li>
-<li><strong>比较制度研究</strong>：美国各州的政策扩散（policy diffusion）研究发现正向选择偏误相对有限（DellaVigna &amp; Kim 2022），与中国形成对比——什么制度特征导致了这一差异？</li>
-<li><strong>信息处理能力</strong>：中央政府的"非成熟解读"是否随时间改善？与行政技术能力（如数据分析部门的建立）有什么关系？</li>
-<li><strong>政策内容的调适</strong>：政策在推广时是否经过了修改（truncation/adaptation）？这是否部分解释了效果收缩？</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>晋升激励的双刃剑</strong>：本文核心发现是，晋升激励使官员在试点期间额外努力，但这种努力不可复制。然而，这种额外努力在试点期间是否确实提高了试点政策的效果？如果是，那么对于那些只在特定条件下有效的政策，试验依然能够发现它们在理想条件下的潜力——这对政策学习也有价值，只是需要更谨慎地外推。</p>
-</li>
-<li>
-<p><strong>代表性选择 vs. 有效试验的悖论</strong>：如果随机选择试点（代表性更高），但落后地区官员可能缺乏执行能力，导致试验本身失败——无法区分"政策本身不好"和"执行能力不足"。因此，选择"有能力执行"的较好地区可能是中央政府在有限执行能力下的理性选择，而非单纯的偏误。</p>
-</li>
-<li>
-<p><strong>外部有效性的条件性</strong>：作者发现推广效果与试点条件的相似程度正相关，这说明中国政策效果的外推性（external validity）高度依赖于地方条件匹配。这提示政策推广不应该是简单的"全国统一实施"，而是应该根据地方条件分类推广——但这又与中国"中央统一部署"的政治逻辑相悖。</p>
-</li>
-<li>
-<p><strong>中央政府是否真的"非成熟"</strong>：论文证明外生财政冲击影响推广决策，这被解读为"非成熟"。但也存在另一种解读：中央政府可能有意识地将"试验期间地方经济活跃"作为"政策可以激励地方动力"的代理指标，从而有意使用这一信号。辨别"主动误判"与"被动愚弄"需要更精细的机制识别。</p>
-</li>
-<li>
-<p><strong>中央-地方信息不对称的长期趋势</strong>：随着大数据和数字政府建设（"数字威权主义"研究，如 Beraja et al. 2023），中央政府处理试验信息的能力是否在增强？本文基于1980-2020年的数据，但2015年后政府数字化治理能力的提升是否改变了"非成熟解读"的程度？</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>中国政策试验的"三步走"制度（试点→评估→全国推广）与国际通行的随机对照试验（RCT）相比，有哪些根本性的制度差异？</li>
-<li>是否有证据表明某些政策领域（如财税改革 vs. 社会保障）的试验效果收缩程度更大？领域差异背后的机制是什么？</li>
-<li>晋升激励是中国政策试验偏误的核心——在近年来习近平时代对地方官员晋升标准的调整（减少GDP权重、增加质量指标）下，本文的结论是否仍然成立？</li>
-<li>合成控制法（synthetic control）和普通事前-事后比较在预测政策推广结果上表现差异极大，这是否意味着中央政府事实上依赖信息较差的评估方法——如何从行政信息处理的角度解释这一现象？</li>
-<li>有没有政策试验制度设计上的"最佳实践"——哪些国家或地区的政策实验在控制上述三类偏误方面做得更好，可以为中国提供借鉴？</li>
-</ol>
+<h3 id="政策含义">政策含义</h3>
+<ul>
+<li>为Basel III资本要求的调整提供定量依据</li>
+<li>政策制定者需要考虑整个分布，而非仅关注平均值</li>
+</ul>
 ]]></content>
       <categories>
-        <category>有趣的文章</category>
+        <category>AER</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -18634,99 +18727,6 @@ Zotero Item Key:: PPNBQ8SY</p>
 ]]></content>
       <categories>
         <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>市场力量与资本约束 — 深度阅读笔记 — Wittwer &amp; Allen</title>
-    <url>/posts/wittwer2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Market Power and Capital Constraints</li>
-<li><strong>作者</strong>: Milena Wittwer (Columbia University, NBER),
-Jason Allen (Bank of Canada, University of Wisconsin)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: NBER Working Paper No. 34645</li>
-<li><strong>DOI</strong>: -</li>
-<li><strong>难度评估</strong>: 高 -
-需要金融经济学、拍卖理论、监管经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>市场力量（Market Power）</strong>
-指交易者在市场中影响价格的能力。现实中，交易者在多个市场享有市场力量，包括国债、repo、外汇、抵押贷款支持证券等。</p>
-<p><strong>资本约束（Capital Constraints）</strong> 指Basel
-III标准下，银行必须保持权益资本相对于风险敞口的最低比率。</p>
-<p><strong>价格影响（Price Impact）</strong>
-指交易量变化导致价格变化的程度，是衡量市场流动性的关键指标。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>理论背景</strong>：中介资产定价文献假设完美竞争，但现实中交易者享有市场力量</p></li>
-<li><p><strong>现实背景</strong>：实证研究表明交易者在多个市场有市场力量</p></li>
-<li><p><strong>监管背景</strong>：Basel
-III资本要求对银行中介交易产生负面影响</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：在允许市场力量存在的框架下，交易者的权益资本如何影响资产价格？</p>
-<p><strong>关键洞察</strong>：放松资本约束不仅提高资产价格，还提高价格影响（降低流动性）——这是反直觉的预测。</p>
-<hr>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ol type="1">
-<li><strong>引言</strong>: 问题陈述、研究背景、主要贡献</li>
-<li><strong>模型</strong>:
-包含资本约束和市场力量的基准模型，统一价格拍卖</li>
-<li><strong>模型扩展</strong>: 存货头寸、双边交易、歧视价格拍卖</li>
-<li><strong>实证分析</strong>:
-加拿大国债拍卖数据、COVID-19临时政策豁免</li>
-<li><strong>价格和价格影响近似</strong>: 反事实计算</li>
-<li><strong>结论</strong>: 主要发现和政策含义</li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="模型设定">模型设定</h3>
-<p><strong>交易者</strong>： - N个风险厌恶交易者，拥有私人信号εi -
-线性二次效用函数：V(a, εi) = (μ + εi)a − ρσ²a²/2</p>
-<p><strong>资本约束</strong>： - E[θi − κP^c a_i] ≥ 0 -
-资本约束的影子成本λκ类似于从价税</p>
-<p><strong>关键机制</strong>：交易者的出价意愿被影子成本折减为(1+λκ)P^c</p>
-<h3 id="关键预测">关键预测</h3>
-<p><strong>推论1</strong>：当资本约束放松时，价格和价格影响都提高。</p>
-<p>这与传统观点（约束放松→流动性提高）相反。</p>
-<h3 id="实证策略">实证策略</h3>
-<p><strong>利用COVID-19期间加拿大政府的临时政策变化</strong>： -
-2020年4月9日起，政府债券和HQLA暂时豁免于LR约束 -
-2021年12月31日豁免结束</p>
-<p><strong>识别方法</strong>： -
-在豁免期间（λκ=0），从出价意愿曲线的平均斜率识别风险厌恶 -
-在约束生效期间，从斜率的变化识别影子成本</p>
-<h3 id="主要结果">主要结果</h3>
-<p><strong>风险厌恶</strong>：中位数约为0.005，相对较低</p>
-<p><strong>影子成本</strong>： - 在典型拍卖中约束不绑定（中位数=0） -
-但分布有明显尾部，平均影子成本约为53%</p>
-<p><strong>反事实计算</strong>： - 影子成本降低1% →
-价格和价格影响增加约0.19% - 完全消除约束 →
-平均增加19%（因为尾部事件）</p>
-<hr>
-<h2 id="结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>反直觉预测</strong>：放松资本约束提高价格和价格影响（降低流动性），与完美竞争下的传统观点相反</p></li>
-<li><p><strong>机制</strong>：影子成本作为折减因子影响出价意愿曲线的斜率</p></li>
-<li><p><strong>实证验证</strong>：加拿大国债拍卖数据证实了理论预测</p></li>
-<li><p><strong>定量意义</strong>：在流动性市场中影响较小，但尾部效应严重</p></li>
-</ol>
-<h3 id="政策含义">政策含义</h3>
-<ul>
-<li>为Basel III资本要求的调整提供定量依据</li>
-<li>政策制定者需要考虑整个分布，而非仅关注平均值</li>
-</ul>
-]]></content>
-      <categories>
-        <category>AER</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
