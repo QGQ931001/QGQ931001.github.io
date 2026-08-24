@@ -1602,6 +1602,184 @@ Cθ ≠ ∅（对所有全支撑先验）</p>
       </tags>
   </entry>
   <entry>
+    <title>长期住房收益率动态 — 深度阅读笔记 — Bäcker-Peral, Hazell &amp; Mian</title>
+    <url>/posts/backer-peral2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Dynamics of the Long-Term Housing Yield:
+Evidence from Natural Experiments</li>
+<li><strong>作者</strong>: Verónica Bäcker-Peral (普林斯顿), Jonathon
+Hazell (LSE), Atif Mian (普林斯顿 &amp; NBER)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(3):
+1014-1051</li>
+<li><strong>DOI</strong>: 10.1257/aer.20240513</li>
+<li><strong>难度评估</strong>: 高 -
+需要房地产金融、计量经济学、自然实验方法基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>长期住房收益率（Long-Term Housing
+Yield）</strong>：预期长期均衡时的租金价格比率，反映市场对长期住房回报率的预期。</p>
+<p><strong>租约延长（Lease
+Extension）</strong>：英国房产的租约可以被延长90年或更长时间，形成自然实验。</p>
+<p><strong>自然实验方法（Natural Experiment
+Approach）</strong>：利用租约延长前后同一房产的价格变化来识别长期收益率。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>长期收益率的重要性</strong>：揭示市场对长期均衡的预期，帮助理解中期冲击消散后的经济状态</p></li>
+<li><p><strong>测量困难</strong>：长期收益率难以测量，需要能区分长期和中期价格行为的数据</p></li>
+<li><p><strong>英国独特制度</strong>：大多数公寓以长期租约（leasehold）形式买卖，可定期延长</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：如何利用英国租约延长的自然实验来估计预期的长期住房收益率y*？</p>
+<p><strong>主要发现</strong>： -
+y<em>从2000-2006年的约5.2%下降到2024年的2.7% - 非弹性市场下降更陡峭 -
+气候风险暴露较高的地区y</em>仍然较高</p>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
+<ul>
+<li>问题陈述和研究动机</li>
+<li>数据和方法概述</li>
+<li>主要发现预览</li>
+</ul>
+<h3 id="第二节预期长期住房收益率的定义">第二节：预期长期住房收益率的定义</h3>
+<ul>
+<li>收益率的定义</li>
+<li>y*的分解</li>
+</ul>
+<h3 id="第三节数据和租约延长详情">第三节：数据和租约延长详情</h3>
+<ul>
+<li><strong>3.1 数据构建</strong></li>
+<li><strong>3.2 租约延长制度详情</strong></li>
+<li><strong>3.3 交易滞后</strong></li>
+</ul>
+<h3 id="第四节实证方法">第四节：实证方法</h3>
+<ul>
+<li>双重差分估计</li>
+<li>非线性最小二乘估计y*</li>
+</ul>
+<h3 id="第五节主要结果">第五节：主要结果</h3>
+<ul>
+<li>y*的时间序列动态</li>
+<li>横截面异质性</li>
+</ul>
+<h3 id="第六节宏观经济含义">第六节：宏观经济含义</h3>
+<ul>
+<li>与其他市场的比较</li>
+<li>当前价格的持久性指标</li>
+<li>供给弹性和气候风险的影响</li>
+</ul>
+<h3 id="第七节结论">第七节：结论</h3>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="英国房产制度">英国房产制度</h4>
+<p><strong>两种产权形式</strong>： -
+Freehold（永久产权）：对房产的永久所有权 -
+Leasehold（租约）：长期租约，可买卖，通常在起源时长达100年以上</p>
+<p><strong>租约延长机制</strong>： -
+1993年《租约改革法》授予公寓租约持有人权利： -
+获得比原始租约长90年的新租约 - 需向永久产权持有人支付一次性协商费用</p>
+<p><strong>关键事实</strong>： - 英国有5百万租约房产 -
+70%的租约是剩余期限≤250年的"短租约" - 30%是剩余期限≥700年的"长租约" -
+几乎不存在250-700年之间的租约</p>
+<h3 id="实证方法">实证方法</h3>
+<h4 id="自然实验">自然实验</h4>
+<p><strong>核心洞察</strong>： -
+同一房产在延长前后的价格差异反映了长期收益率 - 延长前价格反映短期价值 -
+延长后价格反映短期和长期价值 - 价格差异几乎完全取决于长期收益率</p>
+<p><strong>识别策略</strong>： - 处理组：在t-u时刻延长租约的房产 -
+对照组：类似的未延长租约的房产 - 比较两组在延长前后的价格增长</p>
+<h4 id="估计方程">估计方程</h4>
+<p><strong>双重差分</strong>： <span class="math display">\[\Delta \log
+P_{it} = \alpha + \beta \cdot Extension_{i} + \gamma_t + \delta X_i +
+\varepsilon_{it}\]</span></p>
+<p><strong>非线最小二乘</strong>： 使用贴现现金流定价方程： <span class="math display">\[P_{extended} = P_{short} \cdot e^{y^* \cdot
+\Delta T}\]</span></p>
+<p>其中ΔT是延长的年数</p>
+<h3 id="主要结果">主要结果</h3>
+<h4 id="时间序列动态">时间序列动态</h4>
+<p><strong>核心发现</strong>： - 2000-2006年：y<em>稳定在约5.2% -
+2008年大衰退开始：y</em>开始下降 - 2024年：达到2.7%的低点 -
+大衰退导致的下降幅度大，相当于长期价格-租金比近翻倍</p>
+<p><strong>关键特征</strong>： - y*在疫情期间及之后保持相对稳定 -
+2024年的月度估计显示更精确</p>
+<h4 id="横截面异质性">横截面异质性</h4>
+<p><strong>供给弹性效应</strong>： -
+非弹性市场（供给受限地区）y*下降更陡峭 - 因为需求增加导致估值上升</p>
+<p><strong>气候风险效应</strong>： -
+长期气候风险较高的地区（洪水、沉降暴露） - y<em>水平较高 -
+说明y</em>包含住房风险溢价</p>
+<h3 id="宏观经济含义">宏观经济含义</h3>
+<h4 id="与其他市场的比较">与其他市场的比较</h4>
+<p><strong>长期债券收益率</strong>： - 长期债券收益率与y*密切追踪 -
+表明下降是广泛而非住房特有的</p>
+<p><strong>全球住房和其他资产</strong>： -
+全球住房和其他资产的长期收益率趋势类似 -
+表明下降可能与预期长期安全资产收益率r*的下降有关</p>
+<h4 id="当前vs长期收益率">当前vs长期收益率</h4>
+<p><strong>实时指标</strong>： - 当前租金价格比与y*的比较 -
+表明市场对未来住房估值的预期持久性</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p>**长期住房收益率y*显著下降**：从约5%下降到2.7%，与大衰退相关</p></li>
+<li><p><strong>方法论创新</strong>：利用租约延长的自然实验，"差掉"收益率曲线的短端</p></li>
+<li><p><strong>横截面异质性</strong>：供给弹性和气候风险影响y*的水平和动态</p></li>
+<li><p><strong>实时估计可用</strong>：数据和代码公开，实时更新</p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><p><strong>方法论</strong>：首个利用租约延长自然实验估计长期住房收益率</p></li>
+<li><p><strong>数据</strong>：构建并公开租约延长行政数据集</p></li>
+<li><p><strong>宏观经济</strong>：提供关于r*等重要宏观经济参数的见解</p></li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
+<ol type="1">
+<li><p>利用新方法研究其他资产类别的长期收益率</p></li>
+<li><p>扩展到其他国家的住房市场</p></li>
+</ol>
+<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
+<ol type="1">
+<li><p><strong>与结构模型的比较</strong>：自然实验方法与结构模型方法的优劣比较</p></li>
+<li><p><strong>政策应用</strong>：y*的实时估计如何用于货币政策和宏观审慎政策</p></li>
+</ol>
+<hr>
+<h2 id="学术思考">7. 学术思考</h2>
+<h3 id="核心学术洞察">核心学术洞察</h3>
+<ol type="1">
+<li><p><strong>"差掉短端"的识别策略</strong>：自然实验方法的核心洞察是，租约延长前的价格测量短期价值，延长后的价格测量短期和长期价值。因此，价格差异"差掉"了收益率曲线的短端，只反映长期收益率。</p></li>
+<li><p><strong>长期vs中期信息的权衡</strong>：金融资产的典型远期收益率最多提供10-30年的信息，而租约延长提供接近一个世纪的信息。</p></li>
+<li><p><strong>实时估计的优势</strong>：大多数宏观金融方法依赖于结构性假设，自然实验方法不依赖这些假设，因此可以提供更稳健的实时估计。</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p>**为什么长期住房收益率y*下降这么多？**
+与预期长期安全资产收益率r*的下降有何关系？</p></li>
+<li><p><strong>自然实验方法的识别假设是什么？</strong>
+平行趋势假设是否可靠？</p></li>
+<li><p><strong>租约延长数据如何构建？</strong>
+匹配关闭租约和开放租约的技术细节是什么？</p></li>
+<li><p>**y*与长期债券收益率的追踪关系有何含义？**
+这表明什么共同驱动因素？</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>In Harm&#39;s Way? Infrastructure Investments and the Persistence of Coastal Cities — 深度阅读笔记 — Balboni</title>
     <url>/posts/balboni2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -1961,184 +2139,6 @@ Moi改革后)，这是否影响校准的可靠性？</p>
         <tag>基础设施经济学</tag>
         <tag>空间经济学</tag>
         <tag>气候经济学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>长期住房收益率动态 — 深度阅读笔记 — Bäcker-Peral, Hazell &amp; Mian</title>
-    <url>/posts/backer-peral2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Dynamics of the Long-Term Housing Yield:
-Evidence from Natural Experiments</li>
-<li><strong>作者</strong>: Verónica Bäcker-Peral (普林斯顿), Jonathon
-Hazell (LSE), Atif Mian (普林斯顿 &amp; NBER)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3):
-1014-1051</li>
-<li><strong>DOI</strong>: 10.1257/aer.20240513</li>
-<li><strong>难度评估</strong>: 高 -
-需要房地产金融、计量经济学、自然实验方法基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>长期住房收益率（Long-Term Housing
-Yield）</strong>：预期长期均衡时的租金价格比率，反映市场对长期住房回报率的预期。</p>
-<p><strong>租约延长（Lease
-Extension）</strong>：英国房产的租约可以被延长90年或更长时间，形成自然实验。</p>
-<p><strong>自然实验方法（Natural Experiment
-Approach）</strong>：利用租约延长前后同一房产的价格变化来识别长期收益率。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>长期收益率的重要性</strong>：揭示市场对长期均衡的预期，帮助理解中期冲击消散后的经济状态</p></li>
-<li><p><strong>测量困难</strong>：长期收益率难以测量，需要能区分长期和中期价格行为的数据</p></li>
-<li><p><strong>英国独特制度</strong>：大多数公寓以长期租约（leasehold）形式买卖，可定期延长</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：如何利用英国租约延长的自然实验来估计预期的长期住房收益率y*？</p>
-<p><strong>主要发现</strong>： -
-y<em>从2000-2006年的约5.2%下降到2024年的2.7% - 非弹性市场下降更陡峭 -
-气候风险暴露较高的地区y</em>仍然较高</p>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
-<ul>
-<li>问题陈述和研究动机</li>
-<li>数据和方法概述</li>
-<li>主要发现预览</li>
-</ul>
-<h3 id="第二节预期长期住房收益率的定义">第二节：预期长期住房收益率的定义</h3>
-<ul>
-<li>收益率的定义</li>
-<li>y*的分解</li>
-</ul>
-<h3 id="第三节数据和租约延长详情">第三节：数据和租约延长详情</h3>
-<ul>
-<li><strong>3.1 数据构建</strong></li>
-<li><strong>3.2 租约延长制度详情</strong></li>
-<li><strong>3.3 交易滞后</strong></li>
-</ul>
-<h3 id="第四节实证方法">第四节：实证方法</h3>
-<ul>
-<li>双重差分估计</li>
-<li>非线性最小二乘估计y*</li>
-</ul>
-<h3 id="第五节主要结果">第五节：主要结果</h3>
-<ul>
-<li>y*的时间序列动态</li>
-<li>横截面异质性</li>
-</ul>
-<h3 id="第六节宏观经济含义">第六节：宏观经济含义</h3>
-<ul>
-<li>与其他市场的比较</li>
-<li>当前价格的持久性指标</li>
-<li>供给弹性和气候风险的影响</li>
-</ul>
-<h3 id="第七节结论">第七节：结论</h3>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="英国房产制度">英国房产制度</h4>
-<p><strong>两种产权形式</strong>： -
-Freehold（永久产权）：对房产的永久所有权 -
-Leasehold（租约）：长期租约，可买卖，通常在起源时长达100年以上</p>
-<p><strong>租约延长机制</strong>： -
-1993年《租约改革法》授予公寓租约持有人权利： -
-获得比原始租约长90年的新租约 - 需向永久产权持有人支付一次性协商费用</p>
-<p><strong>关键事实</strong>： - 英国有5百万租约房产 -
-70%的租约是剩余期限≤250年的"短租约" - 30%是剩余期限≥700年的"长租约" -
-几乎不存在250-700年之间的租约</p>
-<h3 id="实证方法">实证方法</h3>
-<h4 id="自然实验">自然实验</h4>
-<p><strong>核心洞察</strong>： -
-同一房产在延长前后的价格差异反映了长期收益率 - 延长前价格反映短期价值 -
-延长后价格反映短期和长期价值 - 价格差异几乎完全取决于长期收益率</p>
-<p><strong>识别策略</strong>： - 处理组：在t-u时刻延长租约的房产 -
-对照组：类似的未延长租约的房产 - 比较两组在延长前后的价格增长</p>
-<h4 id="估计方程">估计方程</h4>
-<p><strong>双重差分</strong>： <span class="math display">\[\Delta \log
-P_{it} = \alpha + \beta \cdot Extension_{i} + \gamma_t + \delta X_i +
-\varepsilon_{it}\]</span></p>
-<p><strong>非线最小二乘</strong>： 使用贴现现金流定价方程： <span class="math display">\[P_{extended} = P_{short} \cdot e^{y^* \cdot
-\Delta T}\]</span></p>
-<p>其中ΔT是延长的年数</p>
-<h3 id="主要结果">主要结果</h3>
-<h4 id="时间序列动态">时间序列动态</h4>
-<p><strong>核心发现</strong>： - 2000-2006年：y<em>稳定在约5.2% -
-2008年大衰退开始：y</em>开始下降 - 2024年：达到2.7%的低点 -
-大衰退导致的下降幅度大，相当于长期价格-租金比近翻倍</p>
-<p><strong>关键特征</strong>： - y*在疫情期间及之后保持相对稳定 -
-2024年的月度估计显示更精确</p>
-<h4 id="横截面异质性">横截面异质性</h4>
-<p><strong>供给弹性效应</strong>： -
-非弹性市场（供给受限地区）y*下降更陡峭 - 因为需求增加导致估值上升</p>
-<p><strong>气候风险效应</strong>： -
-长期气候风险较高的地区（洪水、沉降暴露） - y<em>水平较高 -
-说明y</em>包含住房风险溢价</p>
-<h3 id="宏观经济含义">宏观经济含义</h3>
-<h4 id="与其他市场的比较">与其他市场的比较</h4>
-<p><strong>长期债券收益率</strong>： - 长期债券收益率与y*密切追踪 -
-表明下降是广泛而非住房特有的</p>
-<p><strong>全球住房和其他资产</strong>： -
-全球住房和其他资产的长期收益率趋势类似 -
-表明下降可能与预期长期安全资产收益率r*的下降有关</p>
-<h4 id="当前vs长期收益率">当前vs长期收益率</h4>
-<p><strong>实时指标</strong>： - 当前租金价格比与y*的比较 -
-表明市场对未来住房估值的预期持久性</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p>**长期住房收益率y*显著下降**：从约5%下降到2.7%，与大衰退相关</p></li>
-<li><p><strong>方法论创新</strong>：利用租约延长的自然实验，"差掉"收益率曲线的短端</p></li>
-<li><p><strong>横截面异质性</strong>：供给弹性和气候风险影响y*的水平和动态</p></li>
-<li><p><strong>实时估计可用</strong>：数据和代码公开，实时更新</p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><p><strong>方法论</strong>：首个利用租约延长自然实验估计长期住房收益率</p></li>
-<li><p><strong>数据</strong>：构建并公开租约延长行政数据集</p></li>
-<li><p><strong>宏观经济</strong>：提供关于r*等重要宏观经济参数的见解</p></li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
-<ol type="1">
-<li><p>利用新方法研究其他资产类别的长期收益率</p></li>
-<li><p>扩展到其他国家的住房市场</p></li>
-</ol>
-<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
-<ol type="1">
-<li><p><strong>与结构模型的比较</strong>：自然实验方法与结构模型方法的优劣比较</p></li>
-<li><p><strong>政策应用</strong>：y*的实时估计如何用于货币政策和宏观审慎政策</p></li>
-</ol>
-<hr>
-<h2 id="学术思考">7. 学术思考</h2>
-<h3 id="核心学术洞察">核心学术洞察</h3>
-<ol type="1">
-<li><p><strong>"差掉短端"的识别策略</strong>：自然实验方法的核心洞察是，租约延长前的价格测量短期价值，延长后的价格测量短期和长期价值。因此，价格差异"差掉"了收益率曲线的短端，只反映长期收益率。</p></li>
-<li><p><strong>长期vs中期信息的权衡</strong>：金融资产的典型远期收益率最多提供10-30年的信息，而租约延长提供接近一个世纪的信息。</p></li>
-<li><p><strong>实时估计的优势</strong>：大多数宏观金融方法依赖于结构性假设，自然实验方法不依赖这些假设，因此可以提供更稳健的实时估计。</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p>**为什么长期住房收益率y*下降这么多？**
-与预期长期安全资产收益率r*的下降有何关系？</p></li>
-<li><p><strong>自然实验方法的识别假设是什么？</strong>
-平行趋势假设是否可靠？</p></li>
-<li><p><strong>租约延长数据如何构建？</strong>
-匹配关闭租约和开放租约的技术细节是什么？</p></li>
-<li><p>**y*与长期债券收益率的追踪关系有何含义？**
-这表明什么共同驱动因素？</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -2641,6 +2641,152 @@ power）不对等的结果？</li>
       </tags>
   </entry>
   <entry>
+    <title>降低成本：电动车电池产业的干中学与政府政策 — 深度阅读笔记 — Barwick Et Al.</title>
+    <url>/posts/barwick2025/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Drive Down the Cost: Learning by Doing and Government Policies in the Global EV Battery Industry<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/2D6PP6VF/Barwick 等 - 2025 - Drive Down the Cost Learning by Doing and Government Policies in the Global EV Battery Industry.pdf<br>
+Zotero Item Key:: T9V46SIC</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+“干中学”（Learning by Doing, LBD）是产业经济学和增长理论的经典概念：企业在生产过程中积累经验，进而降低单位生产成本。“Wright’s Law”（1936年由航空工程师Theodore Wright提出）将这一规律量化为"累计产量每翻倍，单位成本下降固定比例"。LBD在半导体、太阳能电池等绿色技术行业均有大量记录。在政策设计上，LBD带来正外部性——当前生产提高了整个行业未来的效率，因此存在补贴当前生产的理由（以纠正动态外部性）。</p>
+<p><strong>研究背景</strong><br>
+电动汽车（EV）电池成本在2010-2020年间下降了近90%，是过去十年绿色能源技术中最引人注目的成本下降之一。这一变化对全球气候政策目标至关重要——电池成本是EV相对于内燃机车价格劣势的主要来源。全球各国政府为促进EV普及投入了大量补贴（2022年全球EV消费补贴达430亿美元），并通过产业政策（如中国白名单政策、美国IRA本地含量要求）扶持本土电池产业。然而，LBD在多大程度上驱动了成本下降？政府政策通过哪些渠道影响LBD进程？这些问题此前缺乏可信的量化研究。</p>
+<p><strong>作者的问题意识</strong><br>
+（1）LBD在多大程度上解释了EV电池成本的下降（相对于技术进步、规模经济、原材料成本等其他因素）？（2）LBD如何改变消费者EV补贴的政策效果？（3）中国的"白名单"本地含量要求政策通过LBD对全球EV市场产生了怎样的影响？（4）LBD在全球供应链中产生怎样的跨国溢出效应？</p>
+<p><strong>研究意义</strong><br>
+本文为绿色技术政策设计提供了直接量化依据：若忽视LBD，政策评估将大幅低估补贴的长期效益；同时揭示了消费端补贴与产业政策的相互作用，对评估美国IRA、中国产业政策的全球影响具有直接参考价值。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：提出问题，概述主要发现（LBD学习率7.5%，与补贴互补放大效果，跨国溢出效应）。</li>
+<li><strong>数据</strong>：全球13国EV销售数据（2013-2020），电池供应商信息，各国补贴政策。</li>
+<li><strong>需求模型</strong>：异质消费者离散选择模型（BLP类型），估计消费者对EV特性（价格、续航、充电速度等）的偏好。</li>
+<li><strong>供给模型与电池成本恢复</strong>：通过Nash议价模型（上游电池供应商与下游EV生产商之间）推断上下游加成，从而恢复电池成本。</li>
+<li><strong>LBD估计</strong>：用工具变量方法识别LBD学习率，控制内生性（高效企业多生产更多、积累更多经验）。</li>
+<li><strong>反事实政策分析</strong>：（a）评估消费者EV补贴在有无LBD情况下的效果；（b）评估中国白名单政策及其时间安排的影响。</li>
+<li><strong>结论</strong>：总结核心发现及政策含义。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>EV电池成本是EV普及的关键障碍，而其90%的成本降幅是过去十年绿色技术领域最显著的成就之一。产业界将这一降幅归因于LBD，但缺乏可信的因果估计：LBD究竟贡献了多少？还是技术进步、规模经济、原材料价格下降等因素更重要？政府大规模补贴政策是否加速了这一进程？</p>
+<h3 id="挑战">挑战</h3>
+<p><strong>挑战一：电池成本不可观测</strong><br>
+电池供应协议是商业机密，无法直接观测到每款EV型号的电池成本。解决方法：通过构建EV生产商与电池供应商之间Nash议价模型，结合观测到的车辆价格和估计的需求弹性，反推上下游加成，进而推断电池成本。</p>
+<p><strong>挑战二：LBD识别的内生性</strong><br>
+企业的累计产量（生产经验，experience）与不可观测的成本冲击相关——成本优势大的企业往往产量更大、经验积累更快。若直接用经验变量回归成本，估计结果会有偏差。<br>
+<strong>工具变量策略</strong>：利用各电池供应商对下游不同国家EV补贴的差异暴露（variation）来构造工具变量。若甲国对某款车型提供慷慨补贴，供应该车型电池的供应商将更快积累经验。这一"补贴暴露"外生地推动了部分供应商的经验积累，从而识别LBD的因果效应。此外，还利用了中国白名单政策（2016-2019年）对电池供应商经验的外生冲击。</p>
+<h3 id="方法">方法</h3>
+<p><strong>需求端</strong>：BLP类型的随机系数离散选择模型，用于估计异质消费者对EV特性（价格、续航、充电功率、品牌等）的偏好，从而估计需求弹性。</p>
+<p><strong>供给端</strong>：Nash议价框架（EV生产商与电池供应商之间的纳什讨价还价），考察同步定价（Simultaneous）、顺序定价（Sequential）和线性定价（Linear Pricing）多种供给侧模型，并比较其对成本恢复的稳健性。</p>
+<p><strong>LBD估计方程</strong>（核心）：</p>
+<ul>
+<li>以电池成本（对数）对累计生产经验（对数）做回归，控制行业整体技术进步、EV整车装配经验、原材料投入成本、规模经济等，并用工具变量处理经验的内生性。</li>
+<li>学习率（learning rate）定义为经验每翻倍时成本下降的百分比。</li>
+</ul>
+<p><strong>数据</strong>：</p>
+<ul>
+<li>全球13国（覆盖&gt;95%全球EV销售）2013-2020年逐车型逐年销量数据（含BEV和PHEV）</li>
+<li>电池供应商数据库（植物地点、供应的EV车型列表）</li>
+<li>各国EV购置补贴数据（金额、起止时间）</li>
+<li>社会经济变量（收入分布等，用于校准消费者异质性）</li>
+</ul>
+<h3 id="结果">结果</h3>
+<p><strong>核心结果一：LBD学习率为7.5%</strong><br>
+控制行业技术进步、整车装配经验、原材料成本和规模经济后，LBD学习率估计为<strong>7.5%</strong>——即电池生产经验每翻倍，单位成本下降7.5%。该学习率处于文献估计的较低端，但仍具有重要经济意义。在2013-2020年电池总成本降幅中，LBD贡献了<strong>35.5%</strong>，行业技术进步贡献了<strong>39.9%</strong>，其余由整车装配经验、电池化学材料变化、原材料价格和规模经济共同解释。</p>
+<p><strong>核心结果二：LBD大幅放大EV补贴效果</strong></p>
+<ul>
+<li>无LBD时，各国补贴估计使2013-2020年全球累计EV销量增加<strong>29.9%</strong>。</li>
+<li>同时考虑补贴和LBD时，全球EV销量相比无补贴无LBD基准增加<strong>170%</strong>。</li>
+<li>二者的联合效果比各自独立效果之和高出<strong>60%</strong>——说明补贴与LBD具有强互补性。</li>
+</ul>
+<p><strong>核心结果三：消费端补贴产生跨国溢出效应</strong><br>
+EV电池供应链是全球化的（主要集中在中、日、韩三国），一国补贴可通过LBD降低全球电池成本，产生跨国外溢：</p>
+<ul>
+<li>美国约131亿美元EV补贴产生了约165亿美元全球福利净增益；美国和加拿大获得其中49%，日韩电池供应商获得28%，中国仅获得3%（因为样本期内中国EV和电池与国际市场贸易有限）。</li>
+<li>欧盟约164亿美元补贴产生约116亿美元全球福利增益，欧盟仅获得其中26%（因为欧洲大量进口EV，且采用统一补贴而非有针对性补贴）。</li>
+</ul>
+<p><strong>核心结果四：上游电池供应商仅获得LBD收益的一小部分</strong><br>
+LBD产生的成本降低主要通过价格竞争传递给了EV生产商和最终消费者，而非被电池供应商内部保留——与完全竞争的产业组织逻辑一致。</p>
+<p><strong>政策结果五：中国白名单政策的影响</strong><br>
+中国白名单政策（2016-2019年）将EV补贴限于使用"白名单"国内电池供应商的车辆，为CATL等中国电池企业提供了保护性市场，帮助其积累经验、形成竞争优势。但这一政策具有两面性：</p>
+<ul>
+<li>实际实施时间（2016-2019年）对中国电池产业有正面效果（通过加速中国供应商的LBD积累）。</li>
+<li>若将该政策延迟5年实施（2021-2024年），由于中国电池企业已通过出口积累足够经验，白名单的保护效果将大幅减弱，且因阻碍全球供应链效率，中国国内福利净效果将转为负值。</li>
+</ul>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<p><strong>核心发现</strong>：LBD在EV电池成本下降中发挥了实质性作用（贡献35.5%），但并非唯一因素，行业技术进步同样重要。LBD与消费者补贴之间的强互补性意味着：忽视LBD将大幅低估补贴的长期效益。消费端补贴产生显著的跨国溢出效应，其全球效益往往远超国内效益，这对单国政策评估具有重要启示。中国的产业政策（白名单）在特定历史时机下对国内产业发展有正效果，但若时机不当则可能适得其反。</p>
+<p><strong>对领域的贡献</strong>：</p>
+<ol>
+<li>提出了在无法直接观测上游成本时通过结构性供给模型恢复电池成本的方法论框架；</li>
+<li>构建了全球EV行业的结构性模型，联合识别LBD、需求偏好和政策互动效应；</li>
+<li>量化了EV补贴的动态长期效益，纠正了现有静态评估文献的系统性低估；</li>
+<li>揭示了全球化供应链下单国产业政策的跨境外溢机制。</li>
+</ol>
+<p><strong>政策含义</strong>：</p>
+<ul>
+<li>EV补贴的动态效益远大于静态效益，政策评估应纳入LBD渠道；</li>
+<li>美国IRA的本地含量要求在短期内可能阻碍全球LBD进程，长期效果取决于本土供应链的学习速度；</li>
+<li>政策时机（timing）至关重要：早期的保护性产业政策（如中国白名单）可能在企业尚未具备竞争力时发挥关键作用，但过晚则适得其反。</li>
+</ul>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文中明确提及的方向</strong>：</p>
+<ol>
+<li>评估美国IRA本地含量要求对全球LBD和EV普及的长期影响；</li>
+<li>研究上游供应商如何将LBD收益分配给劳动者和股东（分配效应）；</li>
+<li>将分析拓展到EV以外的绿色技术（如太阳能、储能电池等）。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li>内外部LBD的分解：企业内部的知识积累vs.跨企业的知识溢出各贡献多少？这对政策选择（补贴全行业 vs. 扶持龙头企业）有重大影响；</li>
+<li>动态寡头垄断框架下的战略性LBD——企业是否会为了积累经验而战略性定低价（forward-looking pricing）；</li>
+<li>将模型扩展至2020年后：IRA颁布后（2022年），本地含量要求如何重塑全球电池供应链的LBD路径；</li>
+<li>LBD与研发投入的互动：研发投入（技术进步）与生产经验（LBD）是否互补，影响政策组合的最优设计。</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>电池成本恢复的模型依赖性</strong>：电池成本无法直接观测，需通过结构模型推断。不同供给侧假设（同步 vs. 顺序议价）是否会产生实质性不同的学习率估计？作者如何验证这些替代模型的可信度？</p>
+</li>
+<li>
+<p><strong>工具变量的有效性</strong>：利用"供应商对下游不同国家补贴的差异暴露"构造IV，这一策略要求EV补贴变动对电池成本没有直接效应（排他性限制）。若补贴政策同时改变了原材料需求（如锂、镍），可能违反这一假设——如何检验？</p>
+</li>
+<li>
+<p><strong>LBD的溢出结构</strong>：论文将LBD建模为企业层面的内部学习。但实际上，工程师流动、专利公开等机制可能使LBD在企业间溢出。内外部LBD的混淆对学习率估计和政策评估会产生怎样的影响？</p>
+</li>
+<li>
+<p><strong>本地含量要求的动态合理性</strong>：中国白名单实际上是保护主义政策，但本文发现在特定时机下它对国内产业有正面作用。这是否意味着"战略性贸易政策"在绿色技术的早期发展阶段具有动态合理性？如何区分"促进LBD积累"的合理保护与一般意义上的低效保护主义？</p>
+</li>
+<li>
+<p><strong>样本期外推的风险</strong>：研究覆盖2013-2020年，但EV市场在2020年后经历了爆炸式增长（中国BEV渗透率超过30%）。LBD在高渗透率阶段是否会放缓？本文的政策结论对IRA（2022年后）是否仍然适用？</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>"学习率7.5%"是怎么估计出来的？工具变量策略的具体构造方法是什么？</li>
+<li>为什么上游电池供应商只获得了LBD收益的"一小部分"？这是市场结构（竞争激烈）的结果，还是谈判权力（bargaining power）不对等的结果？</li>
+<li>美国IRA的本地含量要求是否会减慢全球LBD进程、推高全球EV价格？本文的框架如何用于评估IRA？</li>
+<li>中国白名单政策在实际实施时间下对全球（非中国）消费者的福利影响是正面还是负面？</li>
+<li>如果未来电池技术路线（如固态电池）发生重大转变，现有的LBD积累是否会"归零"？政策设计如何应对这种技术不确定性？</li>
+<li>论文的供给侧模型（Nash议价）对最终结论的敏感性如何？若改用更简单的加成定价模型，学习率估计会有多大变化？</li>
+<li>为什么中国在美国补贴的全球福利中只获得3%？这是否意味着美国的补贴实际上是在补贴日韩企业而非中国竞争对手？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Similarity of Information and Collective Action — 深度阅读笔记 — Basak, Deb &amp; Kuvalekar</title>
     <url>/posts/basak2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -2852,152 +2998,6 @@ design）文献的联系值得深入。</p></li>
       </tags>
   </entry>
   <entry>
-    <title>降低成本：电动车电池产业的干中学与政府政策 — 深度阅读笔记 — Barwick Et Al.</title>
-    <url>/posts/barwick2025/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Drive Down the Cost: Learning by Doing and Government Policies in the Global EV Battery Industry<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/2D6PP6VF/Barwick 等 - 2025 - Drive Down the Cost Learning by Doing and Government Policies in the Global EV Battery Industry.pdf<br>
-Zotero Item Key:: T9V46SIC</p>
-<hr>
-<span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-“干中学”（Learning by Doing, LBD）是产业经济学和增长理论的经典概念：企业在生产过程中积累经验，进而降低单位生产成本。“Wright’s Law”（1936年由航空工程师Theodore Wright提出）将这一规律量化为"累计产量每翻倍，单位成本下降固定比例"。LBD在半导体、太阳能电池等绿色技术行业均有大量记录。在政策设计上，LBD带来正外部性——当前生产提高了整个行业未来的效率，因此存在补贴当前生产的理由（以纠正动态外部性）。</p>
-<p><strong>研究背景</strong><br>
-电动汽车（EV）电池成本在2010-2020年间下降了近90%，是过去十年绿色能源技术中最引人注目的成本下降之一。这一变化对全球气候政策目标至关重要——电池成本是EV相对于内燃机车价格劣势的主要来源。全球各国政府为促进EV普及投入了大量补贴（2022年全球EV消费补贴达430亿美元），并通过产业政策（如中国白名单政策、美国IRA本地含量要求）扶持本土电池产业。然而，LBD在多大程度上驱动了成本下降？政府政策通过哪些渠道影响LBD进程？这些问题此前缺乏可信的量化研究。</p>
-<p><strong>作者的问题意识</strong><br>
-（1）LBD在多大程度上解释了EV电池成本的下降（相对于技术进步、规模经济、原材料成本等其他因素）？（2）LBD如何改变消费者EV补贴的政策效果？（3）中国的"白名单"本地含量要求政策通过LBD对全球EV市场产生了怎样的影响？（4）LBD在全球供应链中产生怎样的跨国溢出效应？</p>
-<p><strong>研究意义</strong><br>
-本文为绿色技术政策设计提供了直接量化依据：若忽视LBD，政策评估将大幅低估补贴的长期效益；同时揭示了消费端补贴与产业政策的相互作用，对评估美国IRA、中国产业政策的全球影响具有直接参考价值。</p>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言</strong>：提出问题，概述主要发现（LBD学习率7.5%，与补贴互补放大效果，跨国溢出效应）。</li>
-<li><strong>数据</strong>：全球13国EV销售数据（2013-2020），电池供应商信息，各国补贴政策。</li>
-<li><strong>需求模型</strong>：异质消费者离散选择模型（BLP类型），估计消费者对EV特性（价格、续航、充电速度等）的偏好。</li>
-<li><strong>供给模型与电池成本恢复</strong>：通过Nash议价模型（上游电池供应商与下游EV生产商之间）推断上下游加成，从而恢复电池成本。</li>
-<li><strong>LBD估计</strong>：用工具变量方法识别LBD学习率，控制内生性（高效企业多生产更多、积累更多经验）。</li>
-<li><strong>反事实政策分析</strong>：（a）评估消费者EV补贴在有无LBD情况下的效果；（b）评估中国白名单政策及其时间安排的影响。</li>
-<li><strong>结论</strong>：总结核心发现及政策含义。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>EV电池成本是EV普及的关键障碍，而其90%的成本降幅是过去十年绿色技术领域最显著的成就之一。产业界将这一降幅归因于LBD，但缺乏可信的因果估计：LBD究竟贡献了多少？还是技术进步、规模经济、原材料价格下降等因素更重要？政府大规模补贴政策是否加速了这一进程？</p>
-<h3 id="挑战">挑战</h3>
-<p><strong>挑战一：电池成本不可观测</strong><br>
-电池供应协议是商业机密，无法直接观测到每款EV型号的电池成本。解决方法：通过构建EV生产商与电池供应商之间Nash议价模型，结合观测到的车辆价格和估计的需求弹性，反推上下游加成，进而推断电池成本。</p>
-<p><strong>挑战二：LBD识别的内生性</strong><br>
-企业的累计产量（生产经验，experience）与不可观测的成本冲击相关——成本优势大的企业往往产量更大、经验积累更快。若直接用经验变量回归成本，估计结果会有偏差。<br>
-<strong>工具变量策略</strong>：利用各电池供应商对下游不同国家EV补贴的差异暴露（variation）来构造工具变量。若甲国对某款车型提供慷慨补贴，供应该车型电池的供应商将更快积累经验。这一"补贴暴露"外生地推动了部分供应商的经验积累，从而识别LBD的因果效应。此外，还利用了中国白名单政策（2016-2019年）对电池供应商经验的外生冲击。</p>
-<h3 id="方法">方法</h3>
-<p><strong>需求端</strong>：BLP类型的随机系数离散选择模型，用于估计异质消费者对EV特性（价格、续航、充电功率、品牌等）的偏好，从而估计需求弹性。</p>
-<p><strong>供给端</strong>：Nash议价框架（EV生产商与电池供应商之间的纳什讨价还价），考察同步定价（Simultaneous）、顺序定价（Sequential）和线性定价（Linear Pricing）多种供给侧模型，并比较其对成本恢复的稳健性。</p>
-<p><strong>LBD估计方程</strong>（核心）：</p>
-<ul>
-<li>以电池成本（对数）对累计生产经验（对数）做回归，控制行业整体技术进步、EV整车装配经验、原材料投入成本、规模经济等，并用工具变量处理经验的内生性。</li>
-<li>学习率（learning rate）定义为经验每翻倍时成本下降的百分比。</li>
-</ul>
-<p><strong>数据</strong>：</p>
-<ul>
-<li>全球13国（覆盖&gt;95%全球EV销售）2013-2020年逐车型逐年销量数据（含BEV和PHEV）</li>
-<li>电池供应商数据库（植物地点、供应的EV车型列表）</li>
-<li>各国EV购置补贴数据（金额、起止时间）</li>
-<li>社会经济变量（收入分布等，用于校准消费者异质性）</li>
-</ul>
-<h3 id="结果">结果</h3>
-<p><strong>核心结果一：LBD学习率为7.5%</strong><br>
-控制行业技术进步、整车装配经验、原材料成本和规模经济后，LBD学习率估计为<strong>7.5%</strong>——即电池生产经验每翻倍，单位成本下降7.5%。该学习率处于文献估计的较低端，但仍具有重要经济意义。在2013-2020年电池总成本降幅中，LBD贡献了<strong>35.5%</strong>，行业技术进步贡献了<strong>39.9%</strong>，其余由整车装配经验、电池化学材料变化、原材料价格和规模经济共同解释。</p>
-<p><strong>核心结果二：LBD大幅放大EV补贴效果</strong></p>
-<ul>
-<li>无LBD时，各国补贴估计使2013-2020年全球累计EV销量增加<strong>29.9%</strong>。</li>
-<li>同时考虑补贴和LBD时，全球EV销量相比无补贴无LBD基准增加<strong>170%</strong>。</li>
-<li>二者的联合效果比各自独立效果之和高出<strong>60%</strong>——说明补贴与LBD具有强互补性。</li>
-</ul>
-<p><strong>核心结果三：消费端补贴产生跨国溢出效应</strong><br>
-EV电池供应链是全球化的（主要集中在中、日、韩三国），一国补贴可通过LBD降低全球电池成本，产生跨国外溢：</p>
-<ul>
-<li>美国约131亿美元EV补贴产生了约165亿美元全球福利净增益；美国和加拿大获得其中49%，日韩电池供应商获得28%，中国仅获得3%（因为样本期内中国EV和电池与国际市场贸易有限）。</li>
-<li>欧盟约164亿美元补贴产生约116亿美元全球福利增益，欧盟仅获得其中26%（因为欧洲大量进口EV，且采用统一补贴而非有针对性补贴）。</li>
-</ul>
-<p><strong>核心结果四：上游电池供应商仅获得LBD收益的一小部分</strong><br>
-LBD产生的成本降低主要通过价格竞争传递给了EV生产商和最终消费者，而非被电池供应商内部保留——与完全竞争的产业组织逻辑一致。</p>
-<p><strong>政策结果五：中国白名单政策的影响</strong><br>
-中国白名单政策（2016-2019年）将EV补贴限于使用"白名单"国内电池供应商的车辆，为CATL等中国电池企业提供了保护性市场，帮助其积累经验、形成竞争优势。但这一政策具有两面性：</p>
-<ul>
-<li>实际实施时间（2016-2019年）对中国电池产业有正面效果（通过加速中国供应商的LBD积累）。</li>
-<li>若将该政策延迟5年实施（2021-2024年），由于中国电池企业已通过出口积累足够经验，白名单的保护效果将大幅减弱，且因阻碍全球供应链效率，中国国内福利净效果将转为负值。</li>
-</ul>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<p><strong>核心发现</strong>：LBD在EV电池成本下降中发挥了实质性作用（贡献35.5%），但并非唯一因素，行业技术进步同样重要。LBD与消费者补贴之间的强互补性意味着：忽视LBD将大幅低估补贴的长期效益。消费端补贴产生显著的跨国溢出效应，其全球效益往往远超国内效益，这对单国政策评估具有重要启示。中国的产业政策（白名单）在特定历史时机下对国内产业发展有正效果，但若时机不当则可能适得其反。</p>
-<p><strong>对领域的贡献</strong>：</p>
-<ol>
-<li>提出了在无法直接观测上游成本时通过结构性供给模型恢复电池成本的方法论框架；</li>
-<li>构建了全球EV行业的结构性模型，联合识别LBD、需求偏好和政策互动效应；</li>
-<li>量化了EV补贴的动态长期效益，纠正了现有静态评估文献的系统性低估；</li>
-<li>揭示了全球化供应链下单国产业政策的跨境外溢机制。</li>
-</ol>
-<p><strong>政策含义</strong>：</p>
-<ul>
-<li>EV补贴的动态效益远大于静态效益，政策评估应纳入LBD渠道；</li>
-<li>美国IRA的本地含量要求在短期内可能阻碍全球LBD进程，长期效果取决于本土供应链的学习速度；</li>
-<li>政策时机（timing）至关重要：早期的保护性产业政策（如中国白名单）可能在企业尚未具备竞争力时发挥关键作用，但过晚则适得其反。</li>
-</ul>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文中明确提及的方向</strong>：</p>
-<ol>
-<li>评估美国IRA本地含量要求对全球LBD和EV普及的长期影响；</li>
-<li>研究上游供应商如何将LBD收益分配给劳动者和股东（分配效应）；</li>
-<li>将分析拓展到EV以外的绿色技术（如太阳能、储能电池等）。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li>内外部LBD的分解：企业内部的知识积累vs.跨企业的知识溢出各贡献多少？这对政策选择（补贴全行业 vs. 扶持龙头企业）有重大影响；</li>
-<li>动态寡头垄断框架下的战略性LBD——企业是否会为了积累经验而战略性定低价（forward-looking pricing）；</li>
-<li>将模型扩展至2020年后：IRA颁布后（2022年），本地含量要求如何重塑全球电池供应链的LBD路径；</li>
-<li>LBD与研发投入的互动：研发投入（技术进步）与生产经验（LBD）是否互补，影响政策组合的最优设计。</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>电池成本恢复的模型依赖性</strong>：电池成本无法直接观测，需通过结构模型推断。不同供给侧假设（同步 vs. 顺序议价）是否会产生实质性不同的学习率估计？作者如何验证这些替代模型的可信度？</p>
-</li>
-<li>
-<p><strong>工具变量的有效性</strong>：利用"供应商对下游不同国家补贴的差异暴露"构造IV，这一策略要求EV补贴变动对电池成本没有直接效应（排他性限制）。若补贴政策同时改变了原材料需求（如锂、镍），可能违反这一假设——如何检验？</p>
-</li>
-<li>
-<p><strong>LBD的溢出结构</strong>：论文将LBD建模为企业层面的内部学习。但实际上，工程师流动、专利公开等机制可能使LBD在企业间溢出。内外部LBD的混淆对学习率估计和政策评估会产生怎样的影响？</p>
-</li>
-<li>
-<p><strong>本地含量要求的动态合理性</strong>：中国白名单实际上是保护主义政策，但本文发现在特定时机下它对国内产业有正面作用。这是否意味着"战略性贸易政策"在绿色技术的早期发展阶段具有动态合理性？如何区分"促进LBD积累"的合理保护与一般意义上的低效保护主义？</p>
-</li>
-<li>
-<p><strong>样本期外推的风险</strong>：研究覆盖2013-2020年，但EV市场在2020年后经历了爆炸式增长（中国BEV渗透率超过30%）。LBD在高渗透率阶段是否会放缓？本文的政策结论对IRA（2022年后）是否仍然适用？</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>"学习率7.5%"是怎么估计出来的？工具变量策略的具体构造方法是什么？</li>
-<li>为什么上游电池供应商只获得了LBD收益的"一小部分"？这是市场结构（竞争激烈）的结果，还是谈判权力（bargaining power）不对等的结果？</li>
-<li>美国IRA的本地含量要求是否会减慢全球LBD进程、推高全球EV价格？本文的框架如何用于评估IRA？</li>
-<li>中国白名单政策在实际实施时间下对全球（非中国）消费者的福利影响是正面还是负面？</li>
-<li>如果未来电池技术路线（如固态电池）发生重大转变，现有的LBD积累是否会"归零"？政策设计如何应对这种技术不确定性？</li>
-<li>论文的供给侧模型（Nash议价）对最终结论的敏感性如何？若改用更简单的加成定价模型，学习率估计会有多大变化？</li>
-<li>为什么中国在美国补贴的全球福利中只获得3%？这是否意味着美国的补贴实际上是在补贴日韩企业而非中国竞争对手？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Do Governments Crowd Out Governments? — 深度阅读笔记 — Baumann &amp; Klymak</title>
     <url>/posts/baumann2024/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -3161,6 +3161,24 @@ governments?&gt;一文的核心内容、理论框架、实证发现和学术贡�
       </categories>
       <tags>
         <tag>妳</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何在双变量Probit中使用工具变量法IV估计</title>
+    <url>/posts/60676/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<h1 id="ml两步法">ML两步法</h1>
+<p>可以采用二步法进行ML估计,以下将会以一段样例代码展示:</p>
+<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">webuse</span> school, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">set</span> seed 1</span><br><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobit</span><br><span class="line"><span class="keyword">program</span> mybiprobit</span><br><span class="line"><span class="keyword">args</span> lnf m1   m2  athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"><span class="comment">**Here I am creating an artificial IV</span></span><br><span class="line"><span class="keyword">gen</span> z=logptax-rnormal()</span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobit (private:private=logptax loginc years)   (vote:vote=logptax loginc years)   /athrho (zb1:logptax=loginc  years z) /lns1</span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> maximize,</span><br><span class="line"><span class="keyword">matrix</span> b=<span class="built_in">e</span>(b)</span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobitiv</span><br><span class="line"><span class="keyword">program</span> mybiprobitiv</span><br><span class="line"><span class="keyword">args</span> lnf mm1 g1  mm2  g2 athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">tempvar</span> m1 m2</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m1'</span>=<span class="symbol">`mm1'</span>+<span class="symbol">`g1'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m2'</span>=<span class="symbol">`mm2'</span>+<span class="symbol">`g2'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobitiv (private:private=logptax loginc years) (g1:)  (vote:vote=logptax loginc years)  (g2:) /athrho (zb1:logptax=loginc  years z  ) /lns1, init(b)</span><br><span class="line"><span class="keyword">ml</span> maximize</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>计量</category>
+        <category>内生性问题</category>
+      </categories>
+      <tags>
+        <tag>stata</tag>
       </tags>
   </entry>
   <entry>
@@ -3353,24 +3371,6 @@ persistence）有何具体区别？</li>
         <tag>信贷周期</tag>
         <tag>诊断预期</tag>
         <tag>行为宏观经济学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何在双变量Probit中使用工具变量法IV估计</title>
-    <url>/posts/60676/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<h1 id="ml两步法">ML两步法</h1>
-<p>可以采用二步法进行ML估计,以下将会以一段样例代码展示:</p>
-<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">webuse</span> school, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">set</span> seed 1</span><br><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobit</span><br><span class="line"><span class="keyword">program</span> mybiprobit</span><br><span class="line"><span class="keyword">args</span> lnf m1   m2  athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"><span class="comment">**Here I am creating an artificial IV</span></span><br><span class="line"><span class="keyword">gen</span> z=logptax-rnormal()</span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobit (private:private=logptax loginc years)   (vote:vote=logptax loginc years)   /athrho (zb1:logptax=loginc  years z) /lns1</span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> maximize,</span><br><span class="line"><span class="keyword">matrix</span> b=<span class="built_in">e</span>(b)</span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">capture</span> <span class="keyword">program</span> <span class="keyword">drop</span> mybiprobitiv</span><br><span class="line"><span class="keyword">program</span> mybiprobitiv</span><br><span class="line"><span class="keyword">args</span> lnf mm1 g1  mm2  g2 athrho  zb1 lns1</span><br><span class="line"><span class="keyword">tempvar</span> rho</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`rho'</span>=<span class="built_in">tanh</span>(<span class="symbol">`athrho'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="built_in">ln</span>(<span class="built_in">normalden</span>(<span class="variable">$ML_y3</span>,<span class="symbol">`zb1'</span>,<span class="built_in">exp</span>(<span class="symbol">`lns1'</span>)))</span><br><span class="line"><span class="keyword">tempvar</span> m1 m2</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m1'</span>=<span class="symbol">`mm1'</span>+<span class="symbol">`g1'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">gen</span> double <span class="symbol">`m2'</span>=<span class="symbol">`mm2'</span>+<span class="symbol">`g2'</span>*(<span class="variable">$ML_y3</span>-<span class="symbol">`zb1'</span>)</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==1 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,<span class="symbol">`m2'</span>,-<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==1</span><br><span class="line"><span class="keyword">qui</span>:<span class="keyword">replace</span> <span class="symbol">`lnf'</span>=<span class="symbol">`lnf'</span>+<span class="built_in">ln</span>(<span class="built_in">binormal</span>(-<span class="symbol">`m1'</span>,-<span class="symbol">`m2'</span>,<span class="symbol">`rho'</span>)) <span class="keyword">if</span> <span class="variable">$ML_y1</span>==0 &amp; <span class="variable">$ML_y2</span>==0</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">ml</span> model lf mybiprobitiv (private:private=logptax loginc years) (g1:)  (vote:vote=logptax loginc years)  (g2:) /athrho (zb1:logptax=loginc  years z  ) /lns1, init(b)</span><br><span class="line"><span class="keyword">ml</span> maximize</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>计量</category>
-        <category>内生性问题</category>
-      </categories>
-      <tags>
-        <tag>stata</tag>
       </tags>
   </entry>
   <entry>
@@ -5285,6 +5285,326 @@ Zotero Item Key:: LDPJ5VUP</p>
       </tags>
   </entry>
   <entry>
+    <title>&lt;玉米与人口&gt;深度阅读笔记 — Chen &amp; Kung</title>
+    <url>/posts/chen2016/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Of maize and men: the effect of a New World
+crop on population and economic growth in China</li>
+<li><strong>作者</strong>: Shuo Chen, James Kai-sing Kung</li>
+<li><strong>类型</strong>: 论文笔记 / 经济史 / 人口史 / 计量史学</li>
+<li><strong>出版年份</strong>: 2016</li>
+<li><strong>出版机构/期刊</strong>: Journal of Economic Growth</li>
+<li><strong>DOI</strong>: 10.1007/s10887-016-9125-8</li>
+<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量史学基础
+<span id="more"></span> ---</li>
+</ul>
+<h2 id="引言马尔萨斯陷阱与中国">引言:马尔萨斯陷阱与中国</h2>
+<p>本研究聚焦于17世纪至20世纪初的中国,探讨在新大陆作物_特别是玉米_引入后,中国是否仍然深陷"马尔萨斯陷阱",以及这种新的农业技术对人口和经济增长产生了何种影响.</p>
+<h3 id="领域基础知识">领域基础知识</h3>
+<ol type="1">
+<li><p><strong>马尔萨斯陷阱 (Malthusian Trap):</strong>
+人口总是倾向于以几何级数增长,而食物生产却只能以算术级数增长.任何技术进步或土地扩张带来的食物增加,最终都会被更快增长的人口所消耗殆尽.</p>
+<ul>
+<li><strong>积极抑制 (Positive Checks):</strong>
+增加死亡率的因素,如饥荒、瘟疫和战争.</li>
+<li><strong>预防性抑制 (Preventive Checks):</strong>
+降低出生率的因素,如晚婚、禁欲或生育控制.</li>
+</ul></li>
+<li><p><strong>现代经济增长 (Modern Economic Growth):</strong>
+人均收入能够持续、快速增长的经济发展阶段.通常伴随着工业化、技术创新、教育水平提升、人口结构转变以及城市化进程.</p></li>
+<li><p><strong>哥伦布大交换 (Columbian Exchange):</strong>
+15世纪末哥伦布发现新大陆后,欧洲、非洲和美洲之间动植物、病菌、思想和人口的大规模交流.</p></li>
+<li><p><strong>大分流 (Great Divergence):</strong>
+18世纪以来,西方欧洲(特别是英国)与东亚(特别是中国)在经济发展道路上出现的分岔.</p></li>
+</ol>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><strong>中国的人口爆炸性增长与人均收入停滞:</strong>
+<ul>
+<li>从1500年的1.3亿人口到1900年的4亿人口,中国人口在400年间几乎增长了两倍.然而,根据Maddison
+(2001)
+的数据,中国的人均GDP却长期停滞在约600美元(经调整),处于温饱水平.</li>
+<li>当时中国处于一种"高压人口体制",生产力的任何增长都极有可能被人口增长以远高于欧洲的速度所转化和消耗.</li>
+</ul></li>
+<li><strong>新大陆作物在旧世界的影响_以马铃薯为例:</strong>
+<ul>
+<li>Nunn 和 Qian (2011)
+的研究发现,马铃薯的引入在1700-1900年间使旧世界人口增长了25-26%,城市化率提高了27-34%.</li>
+<li>中国也引入了三种主要的新大陆作物_玉米、甘薯和马铃薯.其中玉米因其对中国地理条件的适应性(抗旱、耐寒,适合山地和丘陵种植),以及数据可得性,成为本研究的重点.</li>
+</ul></li>
+<li><strong>中国未能工业化之谜:</strong>
+<ul>
+<li>传统观点认为是中国农业剩余不足以支撑工业化.</li>
+<li>本研究观点认为,人口增长是农业生产力提高(部分归因于玉米的引入)的内生结果,而非导致农业剩余不足的根本原因.</li>
+</ul></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<ul>
+<li><strong>新大陆作物(特别是玉米)的引入,是否帮助中国摆脱了马尔萨斯陷阱,实现了人口和经济增长?</strong></li>
+<li><strong>或者,玉米的引入是否仅仅导致了人口增长,而人均收入和城市化水平仍然停滞不前?</strong></li>
+<li><strong>与欧洲马铃薯的经验相比,中国玉米的引入为何产生了不同的经济增长轨迹?</strong></li>
+</ul>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li>为马尔萨斯理论提供了丰富的经验支持</li>
+<li>对"统一增长理论"的重要贡献</li>
+<li>深化了对中欧"大分流"原因的理解</li>
+<li>构建了独特的历史数据集</li>
+<li>方法论上的严谨性</li>
+</ol>
+<h2 id="内容及结构">内容及结构</h2>
+<ol type="1">
+<li>引言 (Introduction)</li>
+<li>玉米在中国的传播,1600-1910年 (The diffusion of Maize in China)</li>
+<li>数据和测量 (Data and measurement)</li>
+<li>估计策略和实证结果 (Estimation strategy and empirical results)</li>
+<li>有效性和稳健性检验 (Validity and robustness checks)</li>
+<li>人口增长而无经济发展 (Population growth without economics
+development)</li>
+<li>结论 (Conclusion)</li>
+</ol>
+<h2 id="数据集">数据集</h2>
+<ul>
+<li><strong>地理单位:</strong>
+267个"府"(相当于今天的地级市),涵盖中国18个省</li>
+<li><strong>时间跨度:</strong> 1600年至1910年</li>
+</ul>
+<p><strong>主要数据来源:</strong></p>
+<ol type="1">
+<li>玉米种植(核心自变量):查阅了1119卷府级地方志</li>
+<li>人口密度(核心因变量):来源于梁方仲 (1980) 和曹树基 (2000)
+的历史人口数据</li>
+<li>内战和瘟疫:来源于&lt;中国历代战争年表&gt;和宋正海 (1992) 的灾害记录</li>
+<li>粮食价格:来源于清代粮食价格数据库</li>
+<li>城市化率:来源于曹树基 (2000) 和Stauffer (1922) 的数据</li>
+<li>实际工资:来源于清代借贷纠纷案件的判例</li>
+</ol>
+<h2 id="核心方法差分中差分-difference-in-differences-did">核心方法:差分中差分
+(Difference-in-Differences, DID)</h2>
+<p><strong>基本思想:</strong></p>
+<ol type="1">
+<li><strong>"处理":</strong> 玉米在某个府开始种植</li>
+<li><strong>"处理组":</strong> 玉米开始种植的府</li>
+<li><strong>"对照组":</strong> 尚未开始种植玉米的府</li>
+<li><strong>"处理前"与"处理后":</strong>
+基于玉米采用年份划分的时间段</li>
+</ol>
+<p><strong>计量模型:</strong></p>
+<p><span class="math display">\[\text{popden}_{it} = \alpha
+\text{Maize}_{it} + \beta X_{it} + f_i + p_t +
+\epsilon_{it}\]</span></p>
+<ul>
+<li><span class="math inline">\(\text{popden}_{it}\)</span>:府 <span class="math inline">\(i\)</span> 在时期 <span class="math inline">\(t\)</span> 的人口密度(取自然对数)</li>
+<li><span class="math inline">\(\text{Maize}_{it}\)</span>:核心解释变量,如果府
+<span class="math inline">\(i\)</span> 在时期 <span class="math inline">\(t\)</span> 已经采用了玉米则为1,否则为0.其系数
+<span class="math inline">\(\alpha\)</span> 是本研究关注的核心参数</li>
+<li><span class="math inline">\(X_{it}\)</span>:一系列控制变量,包括战争和瘟疫的发生频率</li>
+<li><span class="math inline">\(f_i\)</span>:<strong>府固定效应</strong></li>
+<li><span class="math inline">\(p_t\)</span>:<strong>时期固定效应</strong></li>
+<li><span class="math inline">\(\epsilon_{it}\)</span>:误差项</li>
+</ul>
+<p><strong>DID方法的关键假设:平行趋势假设 (Parallel Trend
+Assumption).</strong>
+即在没有玉米种植的情况下,玉米采用区和非采用区的人口密度变化趋势应该是平行的.</p>
+<h2 id="玉米扩散机制">玉米扩散机制</h2>
+<ul>
+<li><strong>引入路线:</strong>
+16世纪中叶,玉米经由三条路线传入中国:丝绸之路(进入甘肃)、印度/缅甸(进入云南)、葡萄牙海路(进入福建)</li>
+<li><strong>地理适宜性:</strong>
+中国超过55%的土地适宜种植玉米(相比甘薯20%,马铃薯10%)</li>
+<li><strong>扩散模式:</strong>
+早期(前200年)扩散缓慢,1750年后扩散速度显著加快,到20世纪初几乎遍布全国</li>
+<li><strong>影响:</strong>
+玉米种植面积和产量大幅增加,被誉为继占城稻引入后的"第二次农业革命"</li>
+</ul>
+<h2 id="稳健性检验">稳健性检验</h2>
+<ol type="1">
+<li>府特异性时间趋势</li>
+<li>标准误聚类:使用Conley标准误</li>
+<li>空间计量方法:广义空间二阶段最小二乘法(GS2SLS)</li>
+<li>子样本分析:限制样本到华北地区(北纬33度以北)</li>
+<li>离群值和数据敏感性</li>
+<li>粮食价格验证</li>
+</ol>
+<h2 id="主要结果">主要结果</h2>
+<h3 id="玉米显著促进了中国人口增长">1. 玉米显著促进了中国人口增长</h3>
+<ul>
+<li><strong>基线回归 (表3):</strong> 玉米种植使府级人口密度增加了约
+<strong>9.9%</strong></li>
+<li><strong>量化贡献:</strong>
+在1776-1910年间,玉米种植导致中国人口增长了约
+<strong>18.77%</strong></li>
+<li><strong>机制:</strong>
+玉米引入确实增加了粮食供给,导致粮食价格下降(玉米种植后粮食价格下降3.7%)</li>
+</ul>
+<h3 id="玉米未能带来显著的经济发展">2. 玉米未能带来显著的经济发展</h3>
+<ul>
+<li><strong>城市化率:</strong>
+玉米种植对府级城市化率没有统计学上的显著影响</li>
+<li><strong>实际工资:</strong>
+玉米种植对府级农业长期雇工的实际工资也没有统计学上的显著影响</li>
+<li><strong>长期效应:</strong>
+即使考虑滞后一期的玉米种植效应,对城市化率和实际工资的影响仍然不显著</li>
+</ul>
+<h3 id="与欧洲马铃薯的对比">3. 与欧洲马铃薯的对比</h3>
+<p>Nunn和Qian (2011)
+发现马铃薯在旧世界不仅促进了人口增长,也推动了城市化和经济增长.本研究的发现为这一论断提供了"反例":在中国,玉米带来的大规模人口增长并非工业革命的充分条件.</p>
+<h2 id="核心发现图示">核心发现图示</h2>
+<ul>
+<li><strong>图5:</strong>
+玉米采用前后人口密度变化趋势,验证了平行趋势假设,并显示采用后人口密度显著上升</li>
+<li><strong>图6:</strong> 玉米采用前后战乱发生频率变化趋势</li>
+<li><strong>图8:</strong> 玉米采用前后粮食价格变化趋势</li>
+<li><strong>图9:</strong>
+玉米采用前后城市化率变化趋势,显示没有显著变化</li>
+<li><strong>图11:</strong>
+玉米采用前后实际工资变化趋势,显示没有显著变化</li>
+</ul>
+<h2 id="结论">结论</h2>
+<ol type="1">
+<li><p><strong>玉米显著促进了中国人口增长,但未能提升人均收入:</strong>
+玉米的广泛种植在1776-1910年间使中国人口增加了近19%.然而,这一农业生产力的提升并未转化为人均收入的显著增加,也未能推动城市化进程或提高实际工资水平.</p></li>
+<li><p><strong>中国在18-19世纪仍深陷马尔萨斯陷阱:</strong>
+尽管引入了具有革命性潜力的新农业技术,中国经济仍然未能摆脱马尔萨斯力量的束缚.</p></li>
+<li><p><strong>与欧洲经验形成对比,为"大分流"提供反例:</strong>
+这强调了大规模人口增长并非工业革命或经济现代化的充分条件.</p></li>
+</ol>
+<p><strong>对领域的贡献:</strong>
+强化了马尔萨斯理论的实证基础、深化了对统一增长理论的理解、为历史经济学研究提供了宝贵的数据和方法、拓宽了对"哥伦布大交换"影响的认知</p>
+<h2 id="未来研究方向">未来研究方向</h2>
+<h3 id="文献中提及的方向">文献中提及的方向</h3>
+<ol type="1">
+<li>其他新大陆作物的影响:由于数据限制,本文只研究了玉米</li>
+<li>更细致的区域异质性分析:不同区域的社会经济结构和制度环境差异巨大</li>
+</ol>
+<h3 id="进一步思考">进一步思考</h3>
+<ol type="1">
+<li>玉米引入对中国社会结构和制度变迁的深层影响</li>
+<li>中欧"大分流"中技术扩散与制度环境的比较研究</li>
+<li>长期环境变化对新大陆作物效应的调节</li>
+<li>玉米与地方经济专业化和市场整合</li>
+<li>马尔萨斯陷阱中的"质量-数量权衡"</li>
+</ol>
+<h2 id="学术思考">学术思考</h2>
+<ol type="1">
+<li>**"马尔萨斯陷阱"的衡量边界与逃逸机制的复杂性问题</li>
+<li>**新大陆作物的异质性与"次级农业革命"的可能性</li>
+<li>**微观层面的农民采纳行为与宏观效应的联系</li>
+<li>**"经济增长"代理变量的局限性与替代指标的探索</li>
+<li>**中国内部区域异质性的深层机制</li>
+</ol>
+<hr>
+<h2 id="深度评析玉米与人_新大陆作物对中国人口与经济增长的影响">深度评析:玉米与人_新大陆作物对中国人口与经济增长的影响</h2>
+<h3 id="领域基础知识什么是马尔萨斯陷阱">领域基础知识:什么是"马尔萨斯陷阱"?</h3>
+<p>在18世纪工业革命之前,人类社会普遍处于"马尔萨斯陷阱"(Malthusian
+Trap)中.简单来说,这个理论认为:<strong>技术进步带来的产出增加,最终会被人口增长所抵消.</strong></p>
+<ul>
+<li>如果农民发明了更好的耕作方法(比如引入了高产作物),短期内粮食多了,人均收入会提高</li>
+<li>但随后,人们会生更多的孩子,或者因为营养改善导致死亡率下降</li>
+<li>最终,新增的粮食养活了更多的人,但平均到每个人头上的粮食和收入又回到了"勉强维持生存"的水平(Subsistence
+Level)</li>
+</ul>
+<h3 id="研究背景新大陆作物的哥伦布大交换">研究背景:新大陆作物的"哥伦布大交换"</h3>
+<p>1492年哥伦布发现新大陆后,玉米、番薯、马铃薯等高产作物传向全世界.学术界(如
+Nunn 和
+Qian)曾发现,马铃薯在欧洲不仅促进了人口增长,还通过提高农业效率促进了城市化,从而助力欧洲开启了现代经济增长(工业革命).</p>
+<h3 id="作者的问题意识中国为什么是个例外">作者的问题意识:中国为什么是个例外?</h3>
+<p>中国在 1500 年到 1900 年间,人口从 1.3 亿激增到 4
+亿,约占全球增长的三分之一,但人均 GDP 却长期停滞在 600
+美元左右.作者想探究:<strong>玉米这种新技术的引入,在中国究竟是开启了"现代经济增长之门",还是仅仅让中国在马尔萨斯陷阱里越陷越深?</strong></p>
+<h2 id="内容及结构-1">内容及结构</h2>
+<p>论文共分为七个核心部分:</p>
+<ol type="1">
+<li>引言:提出核心议题</li>
+<li>玉米在中国的传播:梳理 1600-1910
+年玉米进入中国的路径及生态适应性</li>
+<li>数据与度量:利用历史地方志、粮价、人口密度等构建 267
+个府的面板数据</li>
+<li>实证策略与结果:使用"双重差分法"(DID)测算玉米对人口的影响</li>
+<li>稳健性检验:排除战乱、瘟疫及水稻改良等干扰因素</li>
+<li>经济增长分析:考察玉米对城市化率和实际工资的影响</li>
+<li>结论:总结发现</li>
+</ol>
+<h2 id="正文">正文</h2>
+<h3 id="背景与挑战如何证明是玉米导致了人口增长">1.
+背景与挑战:如何证明是"玉米"导致了人口增长?</h3>
+<p><strong>挑战:</strong> 18
+世纪中国人口在增长,农业技术也在进步,但我们怎么知道人口增长是因为种了玉米?</p>
+<p><strong>解决方法:</strong> 作者利用了玉米传播的"时空差异".</p>
+<ul>
+<li><strong>空间差异:</strong>
+有些府(地级市)适合种玉米,有些不适合(土地干旱程度、坡度不同)</li>
+<li><strong>时间差异:</strong> 玉米在不同府落户的时间有早有晚</li>
+</ul>
+<h3 id="方法地方志里的密码">2. 方法:地方志里的密码</h3>
+<ul>
+<li><strong>核心数据集:</strong> 作者查阅了 <strong>1119
+部地方志</strong>.地方志就像古代的"百科全书",如果某地的"物产"章节第一次出现了"玉蜀黍"或"包谷",作者就将其记录为该府开始采用玉米的时间</li>
+<li><strong>地理范围:</strong> 涵盖中国 18 个省的 267 个府,时间跨度 1600
+年到 1910 年</li>
+</ul>
+<h3 id="结果一人口19-的贡献率">3. 结果一(人口):19% 的贡献率</h3>
+<ul>
+<li><strong>发现:</strong>
+在控制了所有其他变量后,作者发现玉米的种植使得中国 1776 年至 1910
+年间的人口增长了近 <strong>19%</strong></li>
+<li><strong>逻辑:</strong>
+玉米耐旱、耐寒,且能在山坡地生长.它不与水稻抢夺肥沃的平原地,而是开辟了原本无法耕种的边际土地</li>
+<li><strong>粮价验证:</strong> 引入玉米后,粮价显著下降(约
+3.7%),这证明了玉米确实增加了食物供应</li>
+</ul>
+<h3 id="结果二经济人口多了钱没变多">4.
+结果二(经济):人口多了,钱没变多</h3>
+<p>这是本文最核心的发现.在欧洲,高产作物促进了城市化;但在中国:</p>
+<ul>
+<li><strong>城市化率:</strong>
+玉米种植对城市化率没有任何显著的正向推动.人们依然留在农村,只是人更多了</li>
+<li><strong>实际工资:</strong>
+玉米种植不仅没能提高实际工资,甚至因为人口过多导致劳动力边际报酬递减</li>
+<li><strong>边际报酬递减:</strong> 就像一亩地本来 2
+个人种,粮食够吃;现在种了玉米产出多了点,但也挤进来了 4
+个人种,虽然总粮食多了,但平分到每个人手里的粮食并没变多</li>
+</ul>
+<h2 id="结论-1">结论</h2>
+<ol type="1">
+<li><strong>实证结论</strong>:玉米在中国成功引发了"人口爆炸",贡献了约五分之一的人口增长</li>
+<li><strong>理论意义</strong>:玉米作为一项"新技术",在中国遭遇了典型的<strong>马尔萨斯结局</strong>_它只创造了"更多的中国人",而没有创造"更富裕的中国人"</li>
+<li><strong>大分流解释</strong>:中国的人口密度过高,将技术红利迅速吞噬,形成了"内卷化"(Involution)的自我循环</li>
+</ol>
+<h2 id="未来研究方向-1">未来研究方向</h2>
+<h3 id="文献中提及的方向-1">文献中提及的方向</h3>
+<ul>
+<li>其他新大陆作物:番薯(地瓜)为中国的推广作用</li>
+<li>质量-数量权衡:探究当时中国父母为何选择生更多孩子</li>
+</ul>
+<h3 id="学术思考-1">学术思考</h3>
+<ol type="1">
+<li>作物特性与工业化:作物的"生态属性"是否决定了一个国家的工业化命运?</li>
+<li>制度的调节作用:如果晚清政府拥有更强的产权保护或不同的土地税制,玉米产生的粮食盈余是否有可能转化为工业资本?</li>
+<li>内卷化的现代启示:如果高科技(如
+AI)的产出被某些社会因素抵消,我们会面临"数字化的马尔萨斯陷阱"吗?</li>
+</ol>
+<hr>
+<p><strong>文献信息:</strong></p>
+<ul>
+<li><strong>标题:</strong> Of maize and men: the effect of a New World
+crop on population and economic growth in China</li>
+<li><strong>作者:</strong> Shuo Chen, James Kai-sing Kung</li>
+<li><strong>期刊:</strong> Journal of Economic Growth, 2016, Vol. 21,
+Issue 1, pp. 71-99</li>
+<li><strong>DOI:</strong> 10.1007/s10887-016-9125-8</li>
+</ul>
+]]></content>
+      <categories>
+        <category>历史</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>经济史</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Poverty and Economic Decision-Making — 深度阅读笔记 — Carvalho, Meier &amp; Wang</title>
     <url>/posts/carvalho2016/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -5939,326 +6259,6 @@ NJ快餐业研究的关系</strong>:为什么NJ快餐业研究发现了正效应
       </tags>
   </entry>
   <entry>
-    <title>&lt;玉米与人口&gt;深度阅读笔记 — Chen &amp; Kung</title>
-    <url>/posts/chen2016/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Of maize and men: the effect of a New World
-crop on population and economic growth in China</li>
-<li><strong>作者</strong>: Shuo Chen, James Kai-sing Kung</li>
-<li><strong>类型</strong>: 论文笔记 / 经济史 / 人口史 / 计量史学</li>
-<li><strong>出版年份</strong>: 2016</li>
-<li><strong>出版机构/期刊</strong>: Journal of Economic Growth</li>
-<li><strong>DOI</strong>: 10.1007/s10887-016-9125-8</li>
-<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量史学基础
-<span id="more"></span> ---</li>
-</ul>
-<h2 id="引言马尔萨斯陷阱与中国">引言:马尔萨斯陷阱与中国</h2>
-<p>本研究聚焦于17世纪至20世纪初的中国,探讨在新大陆作物_特别是玉米_引入后,中国是否仍然深陷"马尔萨斯陷阱",以及这种新的农业技术对人口和经济增长产生了何种影响.</p>
-<h3 id="领域基础知识">领域基础知识</h3>
-<ol type="1">
-<li><p><strong>马尔萨斯陷阱 (Malthusian Trap):</strong>
-人口总是倾向于以几何级数增长,而食物生产却只能以算术级数增长.任何技术进步或土地扩张带来的食物增加,最终都会被更快增长的人口所消耗殆尽.</p>
-<ul>
-<li><strong>积极抑制 (Positive Checks):</strong>
-增加死亡率的因素,如饥荒、瘟疫和战争.</li>
-<li><strong>预防性抑制 (Preventive Checks):</strong>
-降低出生率的因素,如晚婚、禁欲或生育控制.</li>
-</ul></li>
-<li><p><strong>现代经济增长 (Modern Economic Growth):</strong>
-人均收入能够持续、快速增长的经济发展阶段.通常伴随着工业化、技术创新、教育水平提升、人口结构转变以及城市化进程.</p></li>
-<li><p><strong>哥伦布大交换 (Columbian Exchange):</strong>
-15世纪末哥伦布发现新大陆后,欧洲、非洲和美洲之间动植物、病菌、思想和人口的大规模交流.</p></li>
-<li><p><strong>大分流 (Great Divergence):</strong>
-18世纪以来,西方欧洲(特别是英国)与东亚(特别是中国)在经济发展道路上出现的分岔.</p></li>
-</ol>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><strong>中国的人口爆炸性增长与人均收入停滞:</strong>
-<ul>
-<li>从1500年的1.3亿人口到1900年的4亿人口,中国人口在400年间几乎增长了两倍.然而,根据Maddison
-(2001)
-的数据,中国的人均GDP却长期停滞在约600美元(经调整),处于温饱水平.</li>
-<li>当时中国处于一种"高压人口体制",生产力的任何增长都极有可能被人口增长以远高于欧洲的速度所转化和消耗.</li>
-</ul></li>
-<li><strong>新大陆作物在旧世界的影响_以马铃薯为例:</strong>
-<ul>
-<li>Nunn 和 Qian (2011)
-的研究发现,马铃薯的引入在1700-1900年间使旧世界人口增长了25-26%,城市化率提高了27-34%.</li>
-<li>中国也引入了三种主要的新大陆作物_玉米、甘薯和马铃薯.其中玉米因其对中国地理条件的适应性(抗旱、耐寒,适合山地和丘陵种植),以及数据可得性,成为本研究的重点.</li>
-</ul></li>
-<li><strong>中国未能工业化之谜:</strong>
-<ul>
-<li>传统观点认为是中国农业剩余不足以支撑工业化.</li>
-<li>本研究观点认为,人口增长是农业生产力提高(部分归因于玉米的引入)的内生结果,而非导致农业剩余不足的根本原因.</li>
-</ul></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<ul>
-<li><strong>新大陆作物(特别是玉米)的引入,是否帮助中国摆脱了马尔萨斯陷阱,实现了人口和经济增长?</strong></li>
-<li><strong>或者,玉米的引入是否仅仅导致了人口增长,而人均收入和城市化水平仍然停滞不前?</strong></li>
-<li><strong>与欧洲马铃薯的经验相比,中国玉米的引入为何产生了不同的经济增长轨迹?</strong></li>
-</ul>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li>为马尔萨斯理论提供了丰富的经验支持</li>
-<li>对"统一增长理论"的重要贡献</li>
-<li>深化了对中欧"大分流"原因的理解</li>
-<li>构建了独特的历史数据集</li>
-<li>方法论上的严谨性</li>
-</ol>
-<h2 id="内容及结构">内容及结构</h2>
-<ol type="1">
-<li>引言 (Introduction)</li>
-<li>玉米在中国的传播,1600-1910年 (The diffusion of Maize in China)</li>
-<li>数据和测量 (Data and measurement)</li>
-<li>估计策略和实证结果 (Estimation strategy and empirical results)</li>
-<li>有效性和稳健性检验 (Validity and robustness checks)</li>
-<li>人口增长而无经济发展 (Population growth without economics
-development)</li>
-<li>结论 (Conclusion)</li>
-</ol>
-<h2 id="数据集">数据集</h2>
-<ul>
-<li><strong>地理单位:</strong>
-267个"府"(相当于今天的地级市),涵盖中国18个省</li>
-<li><strong>时间跨度:</strong> 1600年至1910年</li>
-</ul>
-<p><strong>主要数据来源:</strong></p>
-<ol type="1">
-<li>玉米种植(核心自变量):查阅了1119卷府级地方志</li>
-<li>人口密度(核心因变量):来源于梁方仲 (1980) 和曹树基 (2000)
-的历史人口数据</li>
-<li>内战和瘟疫:来源于&lt;中国历代战争年表&gt;和宋正海 (1992) 的灾害记录</li>
-<li>粮食价格:来源于清代粮食价格数据库</li>
-<li>城市化率:来源于曹树基 (2000) 和Stauffer (1922) 的数据</li>
-<li>实际工资:来源于清代借贷纠纷案件的判例</li>
-</ol>
-<h2 id="核心方法差分中差分-difference-in-differences-did">核心方法:差分中差分
-(Difference-in-Differences, DID)</h2>
-<p><strong>基本思想:</strong></p>
-<ol type="1">
-<li><strong>"处理":</strong> 玉米在某个府开始种植</li>
-<li><strong>"处理组":</strong> 玉米开始种植的府</li>
-<li><strong>"对照组":</strong> 尚未开始种植玉米的府</li>
-<li><strong>"处理前"与"处理后":</strong>
-基于玉米采用年份划分的时间段</li>
-</ol>
-<p><strong>计量模型:</strong></p>
-<p><span class="math display">\[\text{popden}_{it} = \alpha
-\text{Maize}_{it} + \beta X_{it} + f_i + p_t +
-\epsilon_{it}\]</span></p>
-<ul>
-<li><span class="math inline">\(\text{popden}_{it}\)</span>:府 <span class="math inline">\(i\)</span> 在时期 <span class="math inline">\(t\)</span> 的人口密度(取自然对数)</li>
-<li><span class="math inline">\(\text{Maize}_{it}\)</span>:核心解释变量,如果府
-<span class="math inline">\(i\)</span> 在时期 <span class="math inline">\(t\)</span> 已经采用了玉米则为1,否则为0.其系数
-<span class="math inline">\(\alpha\)</span> 是本研究关注的核心参数</li>
-<li><span class="math inline">\(X_{it}\)</span>:一系列控制变量,包括战争和瘟疫的发生频率</li>
-<li><span class="math inline">\(f_i\)</span>:<strong>府固定效应</strong></li>
-<li><span class="math inline">\(p_t\)</span>:<strong>时期固定效应</strong></li>
-<li><span class="math inline">\(\epsilon_{it}\)</span>:误差项</li>
-</ul>
-<p><strong>DID方法的关键假设:平行趋势假设 (Parallel Trend
-Assumption).</strong>
-即在没有玉米种植的情况下,玉米采用区和非采用区的人口密度变化趋势应该是平行的.</p>
-<h2 id="玉米扩散机制">玉米扩散机制</h2>
-<ul>
-<li><strong>引入路线:</strong>
-16世纪中叶,玉米经由三条路线传入中国:丝绸之路(进入甘肃)、印度/缅甸(进入云南)、葡萄牙海路(进入福建)</li>
-<li><strong>地理适宜性:</strong>
-中国超过55%的土地适宜种植玉米(相比甘薯20%,马铃薯10%)</li>
-<li><strong>扩散模式:</strong>
-早期(前200年)扩散缓慢,1750年后扩散速度显著加快,到20世纪初几乎遍布全国</li>
-<li><strong>影响:</strong>
-玉米种植面积和产量大幅增加,被誉为继占城稻引入后的"第二次农业革命"</li>
-</ul>
-<h2 id="稳健性检验">稳健性检验</h2>
-<ol type="1">
-<li>府特异性时间趋势</li>
-<li>标准误聚类:使用Conley标准误</li>
-<li>空间计量方法:广义空间二阶段最小二乘法(GS2SLS)</li>
-<li>子样本分析:限制样本到华北地区(北纬33度以北)</li>
-<li>离群值和数据敏感性</li>
-<li>粮食价格验证</li>
-</ol>
-<h2 id="主要结果">主要结果</h2>
-<h3 id="玉米显著促进了中国人口增长">1. 玉米显著促进了中国人口增长</h3>
-<ul>
-<li><strong>基线回归 (表3):</strong> 玉米种植使府级人口密度增加了约
-<strong>9.9%</strong></li>
-<li><strong>量化贡献:</strong>
-在1776-1910年间,玉米种植导致中国人口增长了约
-<strong>18.77%</strong></li>
-<li><strong>机制:</strong>
-玉米引入确实增加了粮食供给,导致粮食价格下降(玉米种植后粮食价格下降3.7%)</li>
-</ul>
-<h3 id="玉米未能带来显著的经济发展">2. 玉米未能带来显著的经济发展</h3>
-<ul>
-<li><strong>城市化率:</strong>
-玉米种植对府级城市化率没有统计学上的显著影响</li>
-<li><strong>实际工资:</strong>
-玉米种植对府级农业长期雇工的实际工资也没有统计学上的显著影响</li>
-<li><strong>长期效应:</strong>
-即使考虑滞后一期的玉米种植效应,对城市化率和实际工资的影响仍然不显著</li>
-</ul>
-<h3 id="与欧洲马铃薯的对比">3. 与欧洲马铃薯的对比</h3>
-<p>Nunn和Qian (2011)
-发现马铃薯在旧世界不仅促进了人口增长,也推动了城市化和经济增长.本研究的发现为这一论断提供了"反例":在中国,玉米带来的大规模人口增长并非工业革命的充分条件.</p>
-<h2 id="核心发现图示">核心发现图示</h2>
-<ul>
-<li><strong>图5:</strong>
-玉米采用前后人口密度变化趋势,验证了平行趋势假设,并显示采用后人口密度显著上升</li>
-<li><strong>图6:</strong> 玉米采用前后战乱发生频率变化趋势</li>
-<li><strong>图8:</strong> 玉米采用前后粮食价格变化趋势</li>
-<li><strong>图9:</strong>
-玉米采用前后城市化率变化趋势,显示没有显著变化</li>
-<li><strong>图11:</strong>
-玉米采用前后实际工资变化趋势,显示没有显著变化</li>
-</ul>
-<h2 id="结论">结论</h2>
-<ol type="1">
-<li><p><strong>玉米显著促进了中国人口增长,但未能提升人均收入:</strong>
-玉米的广泛种植在1776-1910年间使中国人口增加了近19%.然而,这一农业生产力的提升并未转化为人均收入的显著增加,也未能推动城市化进程或提高实际工资水平.</p></li>
-<li><p><strong>中国在18-19世纪仍深陷马尔萨斯陷阱:</strong>
-尽管引入了具有革命性潜力的新农业技术,中国经济仍然未能摆脱马尔萨斯力量的束缚.</p></li>
-<li><p><strong>与欧洲经验形成对比,为"大分流"提供反例:</strong>
-这强调了大规模人口增长并非工业革命或经济现代化的充分条件.</p></li>
-</ol>
-<p><strong>对领域的贡献:</strong>
-强化了马尔萨斯理论的实证基础、深化了对统一增长理论的理解、为历史经济学研究提供了宝贵的数据和方法、拓宽了对"哥伦布大交换"影响的认知</p>
-<h2 id="未来研究方向">未来研究方向</h2>
-<h3 id="文献中提及的方向">文献中提及的方向</h3>
-<ol type="1">
-<li>其他新大陆作物的影响:由于数据限制,本文只研究了玉米</li>
-<li>更细致的区域异质性分析:不同区域的社会经济结构和制度环境差异巨大</li>
-</ol>
-<h3 id="进一步思考">进一步思考</h3>
-<ol type="1">
-<li>玉米引入对中国社会结构和制度变迁的深层影响</li>
-<li>中欧"大分流"中技术扩散与制度环境的比较研究</li>
-<li>长期环境变化对新大陆作物效应的调节</li>
-<li>玉米与地方经济专业化和市场整合</li>
-<li>马尔萨斯陷阱中的"质量-数量权衡"</li>
-</ol>
-<h2 id="学术思考">学术思考</h2>
-<ol type="1">
-<li>**"马尔萨斯陷阱"的衡量边界与逃逸机制的复杂性问题</li>
-<li>**新大陆作物的异质性与"次级农业革命"的可能性</li>
-<li>**微观层面的农民采纳行为与宏观效应的联系</li>
-<li>**"经济增长"代理变量的局限性与替代指标的探索</li>
-<li>**中国内部区域异质性的深层机制</li>
-</ol>
-<hr>
-<h2 id="深度评析玉米与人_新大陆作物对中国人口与经济增长的影响">深度评析:玉米与人_新大陆作物对中国人口与经济增长的影响</h2>
-<h3 id="领域基础知识什么是马尔萨斯陷阱">领域基础知识:什么是"马尔萨斯陷阱"?</h3>
-<p>在18世纪工业革命之前,人类社会普遍处于"马尔萨斯陷阱"(Malthusian
-Trap)中.简单来说,这个理论认为:<strong>技术进步带来的产出增加,最终会被人口增长所抵消.</strong></p>
-<ul>
-<li>如果农民发明了更好的耕作方法(比如引入了高产作物),短期内粮食多了,人均收入会提高</li>
-<li>但随后,人们会生更多的孩子,或者因为营养改善导致死亡率下降</li>
-<li>最终,新增的粮食养活了更多的人,但平均到每个人头上的粮食和收入又回到了"勉强维持生存"的水平(Subsistence
-Level)</li>
-</ul>
-<h3 id="研究背景新大陆作物的哥伦布大交换">研究背景:新大陆作物的"哥伦布大交换"</h3>
-<p>1492年哥伦布发现新大陆后,玉米、番薯、马铃薯等高产作物传向全世界.学术界(如
-Nunn 和
-Qian)曾发现,马铃薯在欧洲不仅促进了人口增长,还通过提高农业效率促进了城市化,从而助力欧洲开启了现代经济增长(工业革命).</p>
-<h3 id="作者的问题意识中国为什么是个例外">作者的问题意识:中国为什么是个例外?</h3>
-<p>中国在 1500 年到 1900 年间,人口从 1.3 亿激增到 4
-亿,约占全球增长的三分之一,但人均 GDP 却长期停滞在 600
-美元左右.作者想探究:<strong>玉米这种新技术的引入,在中国究竟是开启了"现代经济增长之门",还是仅仅让中国在马尔萨斯陷阱里越陷越深?</strong></p>
-<h2 id="内容及结构-1">内容及结构</h2>
-<p>论文共分为七个核心部分:</p>
-<ol type="1">
-<li>引言:提出核心议题</li>
-<li>玉米在中国的传播:梳理 1600-1910
-年玉米进入中国的路径及生态适应性</li>
-<li>数据与度量:利用历史地方志、粮价、人口密度等构建 267
-个府的面板数据</li>
-<li>实证策略与结果:使用"双重差分法"(DID)测算玉米对人口的影响</li>
-<li>稳健性检验:排除战乱、瘟疫及水稻改良等干扰因素</li>
-<li>经济增长分析:考察玉米对城市化率和实际工资的影响</li>
-<li>结论:总结发现</li>
-</ol>
-<h2 id="正文">正文</h2>
-<h3 id="背景与挑战如何证明是玉米导致了人口增长">1.
-背景与挑战:如何证明是"玉米"导致了人口增长?</h3>
-<p><strong>挑战:</strong> 18
-世纪中国人口在增长,农业技术也在进步,但我们怎么知道人口增长是因为种了玉米?</p>
-<p><strong>解决方法:</strong> 作者利用了玉米传播的"时空差异".</p>
-<ul>
-<li><strong>空间差异:</strong>
-有些府(地级市)适合种玉米,有些不适合(土地干旱程度、坡度不同)</li>
-<li><strong>时间差异:</strong> 玉米在不同府落户的时间有早有晚</li>
-</ul>
-<h3 id="方法地方志里的密码">2. 方法:地方志里的密码</h3>
-<ul>
-<li><strong>核心数据集:</strong> 作者查阅了 <strong>1119
-部地方志</strong>.地方志就像古代的"百科全书",如果某地的"物产"章节第一次出现了"玉蜀黍"或"包谷",作者就将其记录为该府开始采用玉米的时间</li>
-<li><strong>地理范围:</strong> 涵盖中国 18 个省的 267 个府,时间跨度 1600
-年到 1910 年</li>
-</ul>
-<h3 id="结果一人口19-的贡献率">3. 结果一(人口):19% 的贡献率</h3>
-<ul>
-<li><strong>发现:</strong>
-在控制了所有其他变量后,作者发现玉米的种植使得中国 1776 年至 1910
-年间的人口增长了近 <strong>19%</strong></li>
-<li><strong>逻辑:</strong>
-玉米耐旱、耐寒,且能在山坡地生长.它不与水稻抢夺肥沃的平原地,而是开辟了原本无法耕种的边际土地</li>
-<li><strong>粮价验证:</strong> 引入玉米后,粮价显著下降(约
-3.7%),这证明了玉米确实增加了食物供应</li>
-</ul>
-<h3 id="结果二经济人口多了钱没变多">4.
-结果二(经济):人口多了,钱没变多</h3>
-<p>这是本文最核心的发现.在欧洲,高产作物促进了城市化;但在中国:</p>
-<ul>
-<li><strong>城市化率:</strong>
-玉米种植对城市化率没有任何显著的正向推动.人们依然留在农村,只是人更多了</li>
-<li><strong>实际工资:</strong>
-玉米种植不仅没能提高实际工资,甚至因为人口过多导致劳动力边际报酬递减</li>
-<li><strong>边际报酬递减:</strong> 就像一亩地本来 2
-个人种,粮食够吃;现在种了玉米产出多了点,但也挤进来了 4
-个人种,虽然总粮食多了,但平分到每个人手里的粮食并没变多</li>
-</ul>
-<h2 id="结论-1">结论</h2>
-<ol type="1">
-<li><strong>实证结论</strong>:玉米在中国成功引发了"人口爆炸",贡献了约五分之一的人口增长</li>
-<li><strong>理论意义</strong>:玉米作为一项"新技术",在中国遭遇了典型的<strong>马尔萨斯结局</strong>_它只创造了"更多的中国人",而没有创造"更富裕的中国人"</li>
-<li><strong>大分流解释</strong>:中国的人口密度过高,将技术红利迅速吞噬,形成了"内卷化"(Involution)的自我循环</li>
-</ol>
-<h2 id="未来研究方向-1">未来研究方向</h2>
-<h3 id="文献中提及的方向-1">文献中提及的方向</h3>
-<ul>
-<li>其他新大陆作物:番薯(地瓜)为中国的推广作用</li>
-<li>质量-数量权衡:探究当时中国父母为何选择生更多孩子</li>
-</ul>
-<h3 id="学术思考-1">学术思考</h3>
-<ol type="1">
-<li>作物特性与工业化:作物的"生态属性"是否决定了一个国家的工业化命运?</li>
-<li>制度的调节作用:如果晚清政府拥有更强的产权保护或不同的土地税制,玉米产生的粮食盈余是否有可能转化为工业资本?</li>
-<li>内卷化的现代启示:如果高科技(如
-AI)的产出被某些社会因素抵消,我们会面临"数字化的马尔萨斯陷阱"吗?</li>
-</ol>
-<hr>
-<p><strong>文献信息:</strong></p>
-<ul>
-<li><strong>标题:</strong> Of maize and men: the effect of a New World
-crop on population and economic growth in China</li>
-<li><strong>作者:</strong> Shuo Chen, James Kai-sing Kung</li>
-<li><strong>期刊:</strong> Journal of Economic Growth, 2016, Vol. 21,
-Issue 1, pp. 71-99</li>
-<li><strong>DOI:</strong> 10.1007/s10887-016-9125-8</li>
-</ul>
-]]></content>
-      <categories>
-        <category>历史</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>经济史</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>地方政府竞争压力、行业同质性与商会的政策参与空间 — 深度阅读笔记 — 陈超 Et Al.</title>
     <url>/posts/chen2021chamber/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: 地方政府竞争压力、行业同质性与商会的政策参与空间——基于昆山与厦门的比较分析<br>
@@ -6435,6 +6435,218 @@ Zotero Item Key:: P56CV7CK</p>
 ]]></content>
       <categories>
         <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>零和思维与美国政治分歧的根源 — 深度阅读笔记 — Chinoy, Nunn, Sequeira &amp; Stantcheva</title>
+    <url>/posts/chinoy2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Zero-Sum Thinking and the Roots of U.S.
+Political Differences</li>
+<li><strong>作者</strong>: Sahil Chinoy (Harvard), Nathan Nunn (UBC
+&amp; CIFAR), Sandra Sequeira (LSE), Stefanie Stantcheva (Harvard)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review</li>
+<li><strong>DOI</strong>: 10.1257/aer.20240692</li>
+<li><strong>难度评估</strong>: 高 -
+需要文化经济学、政治经济学、计量经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>零和思维（Zero-Sum
+Thinking）</strong>：一种世界观，认为一个人的收益必然导致另一个人的损失，社会产出是有限的而非可以创造新价值的。该概念最早由人类学家George
+Foster（1965, 1967）提出，称为"有限美好形象"（Image of Limited
+Good）。</p>
+<p><strong>文化演化模型（Cultural Evolution
+Models）</strong>：经济学中研究文化特质如何在代际间垂直传播的模型，通常假设文化特质从父母传递给子女（Bisin
+&amp; Verdier, 2000, 2011, 2017）。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>历史视角下的零和思维</strong>：零和思维在历史上普遍存在，从欧洲重商主义到现代贸易和移民政策。在资源稀缺、技术进步缓慢的前工业社会尤为常见。</p></li>
+<li><p><strong>美国独特的历史因素</strong>：美国历史上有三个关键因素影响零和思维的形成：代际经济流动性、移民和奴役。</p></li>
+<li><p><strong>现有研究的局限</strong>：先前研究使用种族或地理位置作为祖先经历的代理变量，但无法干净地隔离垂直传播渠道。</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>： - 零和思维如何影响政治和政策偏好？ -
+零和思维的祖先根源是什么？ -
+流动性、移民、奴役经历如何代际传递并影响当代人的零和思维？</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><p><strong>理论贡献</strong>：首次利用四代人的调查数据，直接测量祖先经历对零和思维的影响，推进了文化演化理论的检验。</p></li>
+<li><p><strong>实证贡献</strong>：收集了约20,400名美国居民的调查数据，将零和思维测量、政治偏好与丰富的祖先信息相结合。</p></li>
+<li><p><strong>政策意义</strong>：揭示了零和思维与再分配政策、种族/性别平等政策、移民政策的系统性关联。</p></li>
+</ol>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
+<ul>
+<li>Foster的零和思维假说介绍</li>
+<li>研究动机和数据概述</li>
+<li>三大贡献预告</li>
+</ul>
+<h3 id="第二节调查设计数据收集和零和思维测量">第二节：调查设计、数据收集和零和思维测量</h3>
+<ul>
+<li>调查方法和样本描述</li>
+<li>零和思维的四题项测量（民族、公民身份、贸易、收入）</li>
+<li>主成分分析构建综合指数</li>
+<li>数据质量检验</li>
+</ul>
+<h3 id="第三节零和思维的政治关联">第三节：零和思维的政治关联</h3>
+<ul>
+<li>零和思维与政党偏好的关系</li>
+<li>零和思维与四项政策态度（再分配、种族、性别、移民）</li>
+<li>零和思维与自身利益的交互分析</li>
+<li>零和思维与其他核心信念的比较</li>
+<li>跨国家的一般性检验（WVS数据）</li>
+</ul>
+<h3 id="第四节零和思维的历史预测因子">第四节：零和思维的历史预测因子</h3>
+<ul>
+<li>代际经济流动性的影响</li>
+<li>移民经历的直接和间接效应</li>
+<li>奴役经历的直接和间接效应</li>
+<li>奴隶制的溢出效应</li>
+</ul>
+<h3 id="第五节结论conclusion">第五节：结论（Conclusion）</h3>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="零和思维的理论基础">零和思维的理论基础</h4>
+<p>George
+Foster（1965）在研究墨西哥农村时提出"有限美好"假说：许多社会存在零和世界观，认为资源是有限的，一方的收益必然是另一方的损失。这种观点在资源稀缺、市场不发达、技术进步有限的前工业社会中尤为普遍。</p>
+<h4 id="美国历史背景的特殊性">美国历史背景的特殊性</h4>
+<p>美国历史上有三个关键因素塑造零和思维： 1.
+<strong>代际流动性</strong>：美国曾是"机会之地"，向上流动性高于其他工业化国家
+2.
+<strong>移民潮</strong>：大规模移民塑造了美国社会，移民通常在美国获得经济成功而不损害他人
+3. <strong>奴役制度</strong>：奴隶制是一种彻底的零和（或负和）制度</p>
+<h3 id="方法">方法</h3>
+<h4 id="数据集">数据集</h4>
+<p><strong>调查设计</strong>： -
+约20,400名美国居民，七轮调查（2020年10月至2023年7月） -
+通过在线调查公司Respondi/Bilendi招募 - 调查时长约20-30分钟</p>
+<p><strong>调查内容模块</strong>： 1.
+<strong>受访者背景</strong>：年龄、性别、政治倾向 2.
+<strong>祖先信息</strong>：父母、祖父母的信息（出生地、居住历史、教育、职业、经济地位）
+3. <strong>政策观点</strong>：再分配、种族、性别、移民等政策态度 4.
+<strong>零和思维测量</strong>：四个领域的零和思维问题</p>
+<p><strong>四题项零和思维测量</strong>： 1.
+<strong>民族维度</strong>："如果一个种族群体变富裕，这通常是以其他群体为代价的"
+2.
+<strong>公民身份维度</strong>："如果没有美国公民身份的人经济上做得更好，这通常是以美国公民为代价的"
+3.
+<strong>贸易维度</strong>："在国际贸易中，如果一个国家赚更多钱，另一个国家通常会赚得更少"
+4.
+<strong>收入维度</strong>："如果一个收入群体变得更富有，这通常是以其他群体为代价的"</p>
+<p><strong>指数构建</strong>：使用主成分分析（PCA）提取第一主成分，标准化为0-1区间的综合指数。</p>
+<h4 id="估计方程">估计方程</h4>
+<p><strong>政治关联分析</strong>： <span class="math display">\[Y_i =
+\alpha_{s(i)} + \beta \cdot ZeroSum_i + X_i\Gamma +
+\varepsilon_i\]</span></p>
+<p><strong>历史预测因子分析</strong>： <span class="math display">\[ZeroSum_i = \beta_{resp} \cdot
+RespondentExperience_i + \beta_p \cdot ParentsExperience_i + \beta_{gp}
+\cdot GrandparentsExperience_i + X_i\Gamma + \alpha_{s(i)} +
+\varepsilon_i\]</span></p>
+<h3 id="结果">结果</h3>
+<h4 id="发现一零和思维测量">发现一：零和思维测量</h4>
+<p><strong>因子结构</strong>：第一主成分的特征值为2.30，所有题项的因子载荷相似（0.40-0.55），表明存在一个潜在的零和思维因子。</p>
+<p><strong>人口学差异</strong>： - 年龄：较年长者零和思维较低 -
+种族：黑人和西班牙裔美国人零和思维最高，亚裔最低 -
+收入：最低收入群体（&lt;${<span class="math inline">\(25,000}\)</span>）零和思维最高 -
+党派：共和党人零和思维较低 - 教育：受教育程度较高者零和思维较低</p>
+<h4 id="发现二零和思维与政策偏好">发现二：零和思维与政策偏好</h4>
+<p><strong>核心结果</strong>：零和思维与四项政策态度显著正相关： -
+<strong>再分配指数</strong>：支持更多政府再分配 -
+<strong>种族态度指数</strong>：支持减少种族歧视的政策 -
+<strong>性别态度指数</strong>：支持促进性别平等的政策 -
+<strong>反移民指数</strong>：支持更严格的移民限制</p>
+<p><strong>效应大小</strong>：一标准差增加的零和思维，对再分配的支持相当于20%的标准差变化，与民主党倾向性相当。</p>
+<p><strong>与自身利益的交互</strong>： -
+零和思维与再分配的支持在所有收入群体中都显著为正，且在高收入群体中更强 -
+男性零和思维对性别平等的支持更强 -
+白人受访者零和思维对种族平等政策的支持更强</p>
+<p><strong>党内差异</strong>：零和思维可解释党内政策分歧： -
+民主党中零和思维更强的人更支持限制移民 -
+共和党中零和思维更强的人更支持再分配</p>
+<h4 id="发现三跨国家一般性wvs数据">发现三：跨国家一般性（WVS数据）</h4>
+<p>使用世界价值观调查（WVS）72个国家192,000名受访者数据验证： -
+零和思维与右翼政治立场显著负相关 -
+零和思维与支持再分配和反移民态度正相关</p>
+<p><strong>早期生活经济增长</strong>：使用WVS数据，控制出生年份和国家固定效应，发现早期生活暴露于更高的GDP增长与更低的零和思维相关。</p>
+<h4 id="发现四历史预测因子">发现四：历史预测因子</h4>
+<p><strong>代际流动性</strong>： -
+更大的代际向上流动性与更低的零和思维相关 -
+这种关系在所有代际（1代、2代、3代）中都显著 -
+主要由向上流动驱动，向下流动影响较小</p>
+<p><strong>移民</strong>： -
+直接效应：第一代移民零和思维最低，移民主裔子孙次之 -
+间接效应：祖父母在移民比例较高县市长大的受访者零和思维较低 -
+时间效应：近期移民效应更强</p>
+<p><strong>奴役</strong>： - 直接效应：有奴隶祖先的受访者零和思维更高 -
+所有形式的奴役（奴隶贸易、Holocaust、契约仆役、日裔美国人拘留、印第安人保留地）都与更高零和思维相关
+- 间接效应：在1860年奴隶比例较高的县市长大的受访者零和思维更高 -
+奴隶制溢出：南方白人移民到非南方县带来了更高的零和思维</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>零和思维是重要且独立的政策预测因子</strong>：零和思维与再分配、种族/性别平等、移民政策的态度有显著关联，且独立于其他核心信念。</p></li>
+<li><p><strong>零和思维不是简单的党派问题</strong>：它可以解释党内政策分歧——为什么部分民主党人支持限制移民，部分共和党人支持再分配。</p></li>
+<li><p><strong>零和思维有深厚的历史根源</strong>：三个关键历史因素——代际流动性、移民、奴役——通过直接和间接渠道影响当代人的零和思维。</p></li>
+<li><p><strong>零和思维的跨国一般性</strong>：WVS数据证实，零和思维与政治态度的关系在72个国家都成立。</p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><p><strong>测量贡献</strong>：开发了综合的跨情境零和思维测量方法，优于单一情境测量。</p></li>
+<li><p><strong>数据贡献</strong>：首次收集了四代人信息的调查数据，直接测量祖先经历。</p></li>
+<li><p><strong>理论贡献</strong>：推进了对文化演化模型的理解，证明垂直传播的重要性。</p></li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
+<ol type="1">
+<li><p><strong>党内分歧研究</strong>：探索零和思维对新党形成、联盟和竞选平台的影响</p></li>
+<li><p><strong>政治现象研究</strong>：零和思维是否能解释民粹主义、阴谋论、排外主义的起源？</p></li>
+<li><p><strong>气候与不平等</strong>：零和思维如何与气候变化和全球不平等的态度相关联？</p></li>
+</ol>
+<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
+<ol type="1">
+<li><p><strong>识别策略改进</strong>：使用工具变量或自然实验进一步验证因果关系</p></li>
+<li><p><strong>机制检验</strong>：代际传递的具体渠道——是通过语言、家庭互动还是行为？</p></li>
+<li><p><strong>干预研究</strong>：是否可以设计干预措施减少零和思维？</p></li>
+</ol>
+<hr>
+<h2 id="学术思考">7. 学术思考</h2>
+<h3 id="核心学术洞察">核心学术洞察</h3>
+<ol type="1">
+<li><p><strong>"有限美好"的现代延续</strong>：Foster的零和思维假说虽提出于1960年代研究墨西哥农村，但本文证明其在现代美国社会仍具有重要解释力。</p></li>
+<li><p><strong>政策态度的认知根源</strong>：传统研究将政策态度归因于自身利益或价值观，但本文揭示了零和思维作为一种独立的中介机制。</p></li>
+<li><p><strong>历史创伤的代际传递</strong>：奴役制度不仅影响直接受害者，还通过环境暴露和文化传递影响后代。</p></li>
+</ol>
+<h3 id="深层学术问题">深层学术问题</h3>
+<ol type="1">
+<li><p><strong>为什么向上流动而非向下流动影响零和思维？</strong>
+这种不对称性暗示什么心理或文化机制？</p></li>
+<li><p><strong>移民的"正能量"效应</strong>：移民如何降低零和思维？是通过榜样效应、接触效应还是家庭叙述传递？</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p><strong>零和思维的测量是否可信？</strong>
+四题项测量能否捕捉零和思维的全部维度？</p></li>
+<li><p><strong>祖先经历的因果识别</strong>：如何解决内生性问题？</p></li>
+<li><p><strong>黑人受访者零和思维最高但奴役边际效应最小</strong>：如何解释这个悖论？</p></li>
+<li><p><strong>零和思维与特朗普现象</strong>：数据显示零和思维预测了民主党人投票给特朗普？</p></li>
+<li><p><strong>政策含义</strong>：如果零和思维是可塑的，什么干预可以减少零和思维？</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -6737,218 +6949,6 @@ horizon 是多久?</strong></p></li>
 <li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD
 数据的质量和覆盖范围如何保证?</strong></p></li>
 <li><p><strong>在中国"双碳"目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>零和思维与美国政治分歧的根源 — 深度阅读笔记 — Chinoy, Nunn, Sequeira &amp; Stantcheva</title>
-    <url>/posts/chinoy2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Zero-Sum Thinking and the Roots of U.S.
-Political Differences</li>
-<li><strong>作者</strong>: Sahil Chinoy (Harvard), Nathan Nunn (UBC
-&amp; CIFAR), Sandra Sequeira (LSE), Stefanie Stantcheva (Harvard)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review</li>
-<li><strong>DOI</strong>: 10.1257/aer.20240692</li>
-<li><strong>难度评估</strong>: 高 -
-需要文化经济学、政治经济学、计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>零和思维（Zero-Sum
-Thinking）</strong>：一种世界观，认为一个人的收益必然导致另一个人的损失，社会产出是有限的而非可以创造新价值的。该概念最早由人类学家George
-Foster（1965, 1967）提出，称为"有限美好形象"（Image of Limited
-Good）。</p>
-<p><strong>文化演化模型（Cultural Evolution
-Models）</strong>：经济学中研究文化特质如何在代际间垂直传播的模型，通常假设文化特质从父母传递给子女（Bisin
-&amp; Verdier, 2000, 2011, 2017）。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>历史视角下的零和思维</strong>：零和思维在历史上普遍存在，从欧洲重商主义到现代贸易和移民政策。在资源稀缺、技术进步缓慢的前工业社会尤为常见。</p></li>
-<li><p><strong>美国独特的历史因素</strong>：美国历史上有三个关键因素影响零和思维的形成：代际经济流动性、移民和奴役。</p></li>
-<li><p><strong>现有研究的局限</strong>：先前研究使用种族或地理位置作为祖先经历的代理变量，但无法干净地隔离垂直传播渠道。</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>： - 零和思维如何影响政治和政策偏好？ -
-零和思维的祖先根源是什么？ -
-流动性、移民、奴役经历如何代际传递并影响当代人的零和思维？</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><p><strong>理论贡献</strong>：首次利用四代人的调查数据，直接测量祖先经历对零和思维的影响，推进了文化演化理论的检验。</p></li>
-<li><p><strong>实证贡献</strong>：收集了约20,400名美国居民的调查数据，将零和思维测量、政治偏好与丰富的祖先信息相结合。</p></li>
-<li><p><strong>政策意义</strong>：揭示了零和思维与再分配政策、种族/性别平等政策、移民政策的系统性关联。</p></li>
-</ol>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<h3 id="第一节引言introduction">第一节：引言（Introduction）</h3>
-<ul>
-<li>Foster的零和思维假说介绍</li>
-<li>研究动机和数据概述</li>
-<li>三大贡献预告</li>
-</ul>
-<h3 id="第二节调查设计数据收集和零和思维测量">第二节：调查设计、数据收集和零和思维测量</h3>
-<ul>
-<li>调查方法和样本描述</li>
-<li>零和思维的四题项测量（民族、公民身份、贸易、收入）</li>
-<li>主成分分析构建综合指数</li>
-<li>数据质量检验</li>
-</ul>
-<h3 id="第三节零和思维的政治关联">第三节：零和思维的政治关联</h3>
-<ul>
-<li>零和思维与政党偏好的关系</li>
-<li>零和思维与四项政策态度（再分配、种族、性别、移民）</li>
-<li>零和思维与自身利益的交互分析</li>
-<li>零和思维与其他核心信念的比较</li>
-<li>跨国家的一般性检验（WVS数据）</li>
-</ul>
-<h3 id="第四节零和思维的历史预测因子">第四节：零和思维的历史预测因子</h3>
-<ul>
-<li>代际经济流动性的影响</li>
-<li>移民经历的直接和间接效应</li>
-<li>奴役经历的直接和间接效应</li>
-<li>奴隶制的溢出效应</li>
-</ul>
-<h3 id="第五节结论conclusion">第五节：结论（Conclusion）</h3>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="零和思维的理论基础">零和思维的理论基础</h4>
-<p>George
-Foster（1965）在研究墨西哥农村时提出"有限美好"假说：许多社会存在零和世界观，认为资源是有限的，一方的收益必然是另一方的损失。这种观点在资源稀缺、市场不发达、技术进步有限的前工业社会中尤为普遍。</p>
-<h4 id="美国历史背景的特殊性">美国历史背景的特殊性</h4>
-<p>美国历史上有三个关键因素塑造零和思维： 1.
-<strong>代际流动性</strong>：美国曾是"机会之地"，向上流动性高于其他工业化国家
-2.
-<strong>移民潮</strong>：大规模移民塑造了美国社会，移民通常在美国获得经济成功而不损害他人
-3. <strong>奴役制度</strong>：奴隶制是一种彻底的零和（或负和）制度</p>
-<h3 id="方法">方法</h3>
-<h4 id="数据集">数据集</h4>
-<p><strong>调查设计</strong>： -
-约20,400名美国居民，七轮调查（2020年10月至2023年7月） -
-通过在线调查公司Respondi/Bilendi招募 - 调查时长约20-30分钟</p>
-<p><strong>调查内容模块</strong>： 1.
-<strong>受访者背景</strong>：年龄、性别、政治倾向 2.
-<strong>祖先信息</strong>：父母、祖父母的信息（出生地、居住历史、教育、职业、经济地位）
-3. <strong>政策观点</strong>：再分配、种族、性别、移民等政策态度 4.
-<strong>零和思维测量</strong>：四个领域的零和思维问题</p>
-<p><strong>四题项零和思维测量</strong>： 1.
-<strong>民族维度</strong>："如果一个种族群体变富裕，这通常是以其他群体为代价的"
-2.
-<strong>公民身份维度</strong>："如果没有美国公民身份的人经济上做得更好，这通常是以美国公民为代价的"
-3.
-<strong>贸易维度</strong>："在国际贸易中，如果一个国家赚更多钱，另一个国家通常会赚得更少"
-4.
-<strong>收入维度</strong>："如果一个收入群体变得更富有，这通常是以其他群体为代价的"</p>
-<p><strong>指数构建</strong>：使用主成分分析（PCA）提取第一主成分，标准化为0-1区间的综合指数。</p>
-<h4 id="估计方程">估计方程</h4>
-<p><strong>政治关联分析</strong>： <span class="math display">\[Y_i =
-\alpha_{s(i)} + \beta \cdot ZeroSum_i + X_i\Gamma +
-\varepsilon_i\]</span></p>
-<p><strong>历史预测因子分析</strong>： <span class="math display">\[ZeroSum_i = \beta_{resp} \cdot
-RespondentExperience_i + \beta_p \cdot ParentsExperience_i + \beta_{gp}
-\cdot GrandparentsExperience_i + X_i\Gamma + \alpha_{s(i)} +
-\varepsilon_i\]</span></p>
-<h3 id="结果">结果</h3>
-<h4 id="发现一零和思维测量">发现一：零和思维测量</h4>
-<p><strong>因子结构</strong>：第一主成分的特征值为2.30，所有题项的因子载荷相似（0.40-0.55），表明存在一个潜在的零和思维因子。</p>
-<p><strong>人口学差异</strong>： - 年龄：较年长者零和思维较低 -
-种族：黑人和西班牙裔美国人零和思维最高，亚裔最低 -
-收入：最低收入群体（&lt;${<span class="math inline">\(25,000}\)</span>）零和思维最高 -
-党派：共和党人零和思维较低 - 教育：受教育程度较高者零和思维较低</p>
-<h4 id="发现二零和思维与政策偏好">发现二：零和思维与政策偏好</h4>
-<p><strong>核心结果</strong>：零和思维与四项政策态度显著正相关： -
-<strong>再分配指数</strong>：支持更多政府再分配 -
-<strong>种族态度指数</strong>：支持减少种族歧视的政策 -
-<strong>性别态度指数</strong>：支持促进性别平等的政策 -
-<strong>反移民指数</strong>：支持更严格的移民限制</p>
-<p><strong>效应大小</strong>：一标准差增加的零和思维，对再分配的支持相当于20%的标准差变化，与民主党倾向性相当。</p>
-<p><strong>与自身利益的交互</strong>： -
-零和思维与再分配的支持在所有收入群体中都显著为正，且在高收入群体中更强 -
-男性零和思维对性别平等的支持更强 -
-白人受访者零和思维对种族平等政策的支持更强</p>
-<p><strong>党内差异</strong>：零和思维可解释党内政策分歧： -
-民主党中零和思维更强的人更支持限制移民 -
-共和党中零和思维更强的人更支持再分配</p>
-<h4 id="发现三跨国家一般性wvs数据">发现三：跨国家一般性（WVS数据）</h4>
-<p>使用世界价值观调查（WVS）72个国家192,000名受访者数据验证： -
-零和思维与右翼政治立场显著负相关 -
-零和思维与支持再分配和反移民态度正相关</p>
-<p><strong>早期生活经济增长</strong>：使用WVS数据，控制出生年份和国家固定效应，发现早期生活暴露于更高的GDP增长与更低的零和思维相关。</p>
-<h4 id="发现四历史预测因子">发现四：历史预测因子</h4>
-<p><strong>代际流动性</strong>： -
-更大的代际向上流动性与更低的零和思维相关 -
-这种关系在所有代际（1代、2代、3代）中都显著 -
-主要由向上流动驱动，向下流动影响较小</p>
-<p><strong>移民</strong>： -
-直接效应：第一代移民零和思维最低，移民主裔子孙次之 -
-间接效应：祖父母在移民比例较高县市长大的受访者零和思维较低 -
-时间效应：近期移民效应更强</p>
-<p><strong>奴役</strong>： - 直接效应：有奴隶祖先的受访者零和思维更高 -
-所有形式的奴役（奴隶贸易、Holocaust、契约仆役、日裔美国人拘留、印第安人保留地）都与更高零和思维相关
-- 间接效应：在1860年奴隶比例较高的县市长大的受访者零和思维更高 -
-奴隶制溢出：南方白人移民到非南方县带来了更高的零和思维</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>零和思维是重要且独立的政策预测因子</strong>：零和思维与再分配、种族/性别平等、移民政策的态度有显著关联，且独立于其他核心信念。</p></li>
-<li><p><strong>零和思维不是简单的党派问题</strong>：它可以解释党内政策分歧——为什么部分民主党人支持限制移民，部分共和党人支持再分配。</p></li>
-<li><p><strong>零和思维有深厚的历史根源</strong>：三个关键历史因素——代际流动性、移民、奴役——通过直接和间接渠道影响当代人的零和思维。</p></li>
-<li><p><strong>零和思维的跨国一般性</strong>：WVS数据证实，零和思维与政治态度的关系在72个国家都成立。</p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><p><strong>测量贡献</strong>：开发了综合的跨情境零和思维测量方法，优于单一情境测量。</p></li>
-<li><p><strong>数据贡献</strong>：首次收集了四代人信息的调查数据，直接测量祖先经历。</p></li>
-<li><p><strong>理论贡献</strong>：推进了对文化演化模型的理解，证明垂直传播的重要性。</p></li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
-<ol type="1">
-<li><p><strong>党内分歧研究</strong>：探索零和思维对新党形成、联盟和竞选平台的影响</p></li>
-<li><p><strong>政治现象研究</strong>：零和思维是否能解释民粹主义、阴谋论、排外主义的起源？</p></li>
-<li><p><strong>气候与不平等</strong>：零和思维如何与气候变化和全球不平等的态度相关联？</p></li>
-</ol>
-<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
-<ol type="1">
-<li><p><strong>识别策略改进</strong>：使用工具变量或自然实验进一步验证因果关系</p></li>
-<li><p><strong>机制检验</strong>：代际传递的具体渠道——是通过语言、家庭互动还是行为？</p></li>
-<li><p><strong>干预研究</strong>：是否可以设计干预措施减少零和思维？</p></li>
-</ol>
-<hr>
-<h2 id="学术思考">7. 学术思考</h2>
-<h3 id="核心学术洞察">核心学术洞察</h3>
-<ol type="1">
-<li><p><strong>"有限美好"的现代延续</strong>：Foster的零和思维假说虽提出于1960年代研究墨西哥农村，但本文证明其在现代美国社会仍具有重要解释力。</p></li>
-<li><p><strong>政策态度的认知根源</strong>：传统研究将政策态度归因于自身利益或价值观，但本文揭示了零和思维作为一种独立的中介机制。</p></li>
-<li><p><strong>历史创伤的代际传递</strong>：奴役制度不仅影响直接受害者，还通过环境暴露和文化传递影响后代。</p></li>
-</ol>
-<h3 id="深层学术问题">深层学术问题</h3>
-<ol type="1">
-<li><p><strong>为什么向上流动而非向下流动影响零和思维？</strong>
-这种不对称性暗示什么心理或文化机制？</p></li>
-<li><p><strong>移民的"正能量"效应</strong>：移民如何降低零和思维？是通过榜样效应、接触效应还是家庭叙述传递？</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p><strong>零和思维的测量是否可信？</strong>
-四题项测量能否捕捉零和思维的全部维度？</p></li>
-<li><p><strong>祖先经历的因果识别</strong>：如何解决内生性问题？</p></li>
-<li><p><strong>黑人受访者零和思维最高但奴役边际效应最小</strong>：如何解释这个悖论？</p></li>
-<li><p><strong>零和思维与特朗普现象</strong>：数据显示零和思维预测了民主党人投票给特朗普？</p></li>
-<li><p><strong>政策含义</strong>：如果零和思维是可塑的，什么干预可以减少零和思维？</p></li>
 </ol>
 ]]></content>
       <categories>
@@ -8988,6 +8988,184 @@ gap，以及干扰性经历为何会削弱信息纠偏。</li>
       </tags>
   </entry>
   <entry>
+    <title>对社会偏好中性别差异的信念 — 深度阅读笔记 — Exley Et Al.</title>
+    <url>/posts/exley2025/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Believed Gender Differences in Social Preferences Zotero
+Collection:: 有趣的文章 PDF Path::
+/Users/double/Zotero/storage/NE7DY34F/Exley 等 - 2025 - Believed Gender
+Differences in Social Preferences.pdf Zotero Item Key:: RB7YBMK5</p>
+<span id="more"></span>
+<h2 id="引言背景和意义">引言（背景和意义）</h2>
+<ul>
+<li><strong>领域基础知识</strong>：这篇论文属于行为经济学、实验经济学和性别经济学的交叉领域。这里的核心概念是“社会偏好”（social
+preferences），大致指一个人做决定时，不只关心自己的收益，也关心他人的收益、平等、公平、合作等。传统文献常问“男女在社会偏好上是否真的不同”，而这篇论文把问题往前推进一步：<strong>即便真实差异不大，人们是否相信男女有差异？</strong></li>
+<li><strong>研究背景</strong>：现实中，女性在工资、晋升、领导职位上仍然存在系统性劣势。已有大量研究讨论真实的性别行为差异，比如谈判、竞争、合作、分配，但关于“人们相信女性和男性在社会偏好上有何不同”的研究相对少得多。</li>
+<li><strong>作者的问题意识</strong>：作者关心的不是“女性是否真的更慷慨、更平等主义”，而是“人们是否认为女性更慷慨、更平等主义”，以及这种信念从哪里来、会带来什么后果。这个问题很重要，因为很多现实决策——招聘、分工、投票、选择合作者——受信念影响，不一定受真实行为本身影响。</li>
+<li><strong>研究意义</strong>：如果社会普遍相信女性“更有社会性导向”，那么这种信念可能一方面让女性在某些合作型场景中受欢迎，另一方面也可能让女性在竞争性、绩效导向的场景中吃亏。换言之，<strong>错误或夸大的性别信念本身，就可能塑造劳动市场和社会评价结果</strong>。</li>
+</ul>
+<h2 id="内容及结构论文结构">内容及结构（论文结构）</h2>
+<p>这篇论文大致分成五部分。</p>
+<p>第一部分是引言，提出核心问题：关于社会偏好的真实性别差异，文献结论并不一致；但关于“被相信的性别差异”几乎没被系统研究。</p>
+<p>第二部分用一系列经济学实验游戏，系统记录人们是否相信女性比男性更慷慨、更平等、更合作。这一部分是全文的经验基础。</p>
+<p>第三部分研究这种信念可能从哪里来。作者重点借用“联想记忆/associative
+memory”的思路，考察<strong>相似性</strong>和<strong>干扰</strong>两种机制。</p>
+<p>第四部分把这种信念放到更接近现实的场景里，讨论它如何延伸到家庭、工作场所和政策态度，并通过
+worker-employer 实验看这种信念如何影响对男女雇主的选择。</p>
+<p>第五部分总结全文，并讨论未来研究方向，尤其是如何纠正这种信念、它如何影响劳动力市场结果、以及不同场景下这种信念是否会增强或反转。</p>
+<h2 id="正文逻辑梳理">正文（逻辑梳理）</h2>
+<p><strong>背景 -&gt; 挑战 -&gt; 方法 -&gt; 数据 -&gt; 结果</strong></p>
+<h3 id="背景">背景</h3>
+<p>已有文献长期在问：女性和男性在慷慨、平等、公平、合作等“社会偏好”上是否不同。但这个问题本身并不足够。现实中的很多决策，先发生的是“别人怎么看你”，而不是“你真实如何”。如果雇主、同事、选民、家庭成员普遍认为女性更在意平等、更愿意照顾别人，那么这种看法本身就会影响资源配置与角色分工。</p>
+<h3 id="挑战">挑战</h3>
+<p>这类研究有三个难点。</p>
+<p>第一，社会偏好不是单一概念，里面混合了慷慨、平等、合作、信任等多个维度。如果只看一种游戏，很容易把结论局限在某个特殊场景。</p>
+<p>第二，要区分“真实行为差异”和“被相信的差异”。如果研究者只观察到信念差异，而不观察真实决策，就不知道这种信念到底是准确判断还是刻板印象。</p>
+<p>第三，若发现人们确实相信女性更有社会性导向，还要解释这种信念是怎么形成的。作者认为，标准的“理性更新”框架不够，记忆提取过程本身可能会塑造信念。</p>
+<h3 id="方法">方法</h3>
+<p>作者的方法可以分成三层。</p>
+<p>第一层是<strong>记录信念</strong>。作者设计了一系列经济学实验游戏，让受试者分别判断：有多少比例的女性会选择更“社会性导向”的选项？有多少比例的男性会这样做？这里的“社会性导向”大致对应更慷慨、更平等或更合作的选项。</p>
+<p>第二层是<strong>对照真实行为</strong>。同一套研究中，作者也观察男女在这些场景里的真实选择，从而判断“被相信的性别差异”是否准确。</p>
+<p>第三层是<strong>识别信念形成机制</strong>。作者借用 associative
+memory 模型，提出两条假说： 1.
+<strong>相似性（similarity）</strong>：人们会调用与当前判断情境相似的既有经验。如果一个人生活中更容易想起“更慷慨的女性”，那么他更可能相信女性在实验情境中也更慷慨。
+2.
+<strong>干扰（interference）</strong>：记忆提取不是完美的。一个额外经历即使按完全理性的贝叶斯更新不该改变信念，也可能因为干扰了旧记忆的回忆顺序，改变人们的判断。</p>
+<p>这里的识别直觉很重要：作者不是简单说“经历影响信念”，而是进一步说<strong>记忆怎样被提取出来</strong>会影响信念，因此信念未必符合“完美记忆的理性人”模型。</p>
+<h3 id="数据">数据</h3>
+<p>论文总共使用 <strong>15 个研究、8,979 名受试者</strong>。</p>
+<p>最核心的是主实验中的经济学游戏研究，共 <strong>3,382
+名参与者</strong>。作者在两类主样本中实施： - 382 名本科生 - 400
+名线上参与者</p>
+<p>在这些主研究里，作者设计了 <strong>14 个场景</strong>，覆盖： -
+独裁者博弈（dictator game） - 带效率权衡的独裁者博弈 -
+带应得权利（entitlement）权衡的独裁者博弈 - 最后通牒博弈（ultimatum
+game） - 信任博弈（trust game） - 囚徒困境（prisoner’s dilemma） -
+公共品博弈（public goods game）</p>
+<p>这些场景又区分为： -
+<strong>第一方场景</strong>：选择会影响自己收益，因此“自利动机”存在。 -
+<strong>第三方场景</strong>：选择只影响别人收益，因此更能看出人们是否把“社会性导向”理解为平等/合作，而不只是“少为自己争”。</p>
+<p>此外，作者还做了： - 相似性相关研究：799 人 - 干扰实验：3,198 人 -
+应用与后果研究：1,600 人 - 以及专业人士样本、代表性样本、不同
+stakes、不同问法等稳健性研究</p>
+<h3 id="结果">结果</h3>
+<h4 id="主结果人们稳定地相信女性比男性更有社会性导向">1.
+主结果：人们稳定地相信女性比男性更有社会性导向</h4>
+<p>这是全文最核心的发现。</p>
+<p>在主实验的 28
+个情境中，受试者都显著认为女性比男性更可能选择“社会性导向”的选项。这个被相信的性别差距大约在
+<strong>8 到 13 个百分点</strong>之间，而且在很多不同情境下都存在： -
+有无自利动机时都存在 - 有无战略考虑时都存在 - 公平概念不同的场景里都存在
+- 第一方与第三方场景里都存在</p>
+<p>换句话说，这不是某一种博弈的偶然结果，而是一个<strong>跨情境、跨样本、跨问法都很稳的信念模式</strong>。</p>
+<h4 id="与真实行为对比这种信念大体上是不准确的">2.
+与真实行为对比：这种信念大体上是不准确的</h4>
+<p>论文最有意思的地方在这里：作者不是只发现“人们有这种想法”，而是进一步发现这种想法<strong>多数时候夸大了真实差异</strong>。</p>
+<p>在真实决策数据里，作者发现：在 28 个情境中的 24
+个里，无法拒绝“男女无差异”。也就是说，真实行为上并没有稳定、普遍的性别差异。</p>
+<p>但在信念数据里，受试者几乎系统性地低估男性会做出社会性导向选择的比例，于是导致“女性更有社会性导向”的信念差距被显著放大。作者指出，在
+28 个情境中的 <strong>26
+个</strong>，这种被相信的性别差距被显著高估。</p>
+<p>所以这篇论文的核心不是“女性确实更慷慨”，而是：<strong>社会普遍相信女性更慷慨、更平等主义，但这种信念大多并不准确。</strong></p>
+<h4 id="机制结果记忆中的相似经验与这种信念相关">3.
+机制结果：记忆中的“相似经验”与这种信念相关</h4>
+<p>作者发现，若参与者在回忆“慷慨的人”时更容易想到女性，那么他们更可能相信女性在实验中的社会性导向更强。</p>
+<p>另外，如果参与者报告自己童年更多由女性照料，或者人生经历中接触到更多“慷慨、平等主义的女性”，那么他们所持有的
+believed gender gap 也更大。</p>
+<p>这部分是<strong>相关性证据</strong>。它支持作者的解释：人们不是在一个真空里形成信念，而是把现实生活中容易被提取出来的相似经验，投射到新的判断场景里。</p>
+<h4 id="机制结果干扰经验可以因果性地改变信念">4.
+机制结果：干扰经验可以因果性地改变信念</h4>
+<p>作者进一步做了更强的识别：设计“干扰性经历”来影响记忆提取。</p>
+<p>结果显示，在两项总计 <strong>3,198
+人</strong>的研究中，这种干扰经验会显著改变人们对男女社会偏好差异的判断。更关键的是，即使研究者已经提供了关于男女在相似情境中行为分布的信息，并要求受试者准确复述，这种干扰效应仍然存在。</p>
+<p>这说明什么？说明问题不只是“信息有没有给到”，而是<strong>人们在形成判断时，哪些信息和记忆被真正调出来了</strong>。这正是作者想强调的
+associative memory 机制，也是在挑战“完美记忆贝叶斯人”的基准模型。</p>
+<h4 id="应用结果这种信念延伸到家庭职场与政策态度">5.
+应用结果：这种信念延伸到家庭、职场与政策态度</h4>
+<p>作者发现，这种 believed gender gap
+不只存在于抽象实验游戏里，也进入更现实的判断： -
+在家庭中，人们更相信女性会更重视家庭分工、家庭贡献与子女养育中的平等。 -
+在职场中，人们更相信女性偏好 equal pay，而男性更能接受 performance pay。
+-
+在政策态度上，人们更相信女性支持再分配，以及教育、医疗、住房的平等可及。</p>
+<h4 id="劳动市场含义这种信念会影响人们如何选择雇主">6.
+劳动市场含义：这种信念会影响人们如何选择雇主</h4>
+<p>在 worker-employer 实验中，作者发现：当工人是低绩效者、因而会从 equal
+pay 中受益时，他们更偏好女性雇主；当工人是高绩效者、因而更能从
+performance pay 中受益时，他们对女性雇主的偏好下降。</p>
+<p>这说明 believed gender gap
+并不只是“想法”，而可能进入真实匹配行为：人们会根据自己利益，利用这些关于男女的信念来做选择。</p>
+<h4 id="异质性与稳健性">7. 异质性与稳健性</h4>
+<p>论文的稳健性做得很强。作者表明这一信念模式对以下变化都相当稳健： -
+样本换成本科生、线上样本、专业管理/招聘人士、代表性样本 - belief
+questions 的数量、措辞、顺序变化 - 是否只看先做决策还是先做信念题 -
+是否控制人口学变量 - 是否看 full distribution 而非均值 -
+是否改变给与情境中的 stakes 和乘数 -
+是否把研究包装成不那么显眼的“性别研究”</p>
+<p>作者还指出，这个 believed gender gap
+的大小，甚至大于某些年龄组差异和收入组差异在人们心中的印象差距。</p>
+<h2 id="结论conclusion">结论（Conclusion）</h2>
+<ul>
+<li><strong>核心发现</strong>：这篇论文最重要的发现是，社会普遍相信女性比男性更慷慨、更平等、更合作，但这种“被相信的性别差异”在很大程度上并不对应稳定的真实行为差异。</li>
+<li><strong>对领域的贡献</strong>：论文把研究重心从“真实性别差异”推进到了“被相信的性别差异”，并把性别经济学、社会偏好实验和记忆驱动的信念形成文献连接起来。</li>
+<li><strong>实践含义</strong>：这类信念可能在合作型环境中对女性有利，在竞争型环境中对女性不利；它也可能影响雇佣、晋升、薪酬制度偏好、家庭分工以及政策判断。</li>
+</ul>
+<h2 id="未来研究方向future-work">未来研究方向（Future work）</h2>
+<h3 id="论文明确提到的未来方向">1. 论文明确提到的未来方向</h3>
+<ol type="1">
+<li>研究如何提供准确而有效的信息来纠正这种 believed gender
+gap，以及干扰性经历为何会削弱信息纠偏。</li>
+<li>进一步研究这种信念如何影响劳动市场结果，例如男女雇主、不同岗位和行业中的成功概率。</li>
+<li>研究在不同 domain 中，这种 believed gender gap
+是否更强、变弱，甚至反转。</li>
+<li>研究女性是否会因为“没有达到别人期待的社会性导向”而受到更强惩罚，或者在表现出社会性导向时获得更少额外回报。</li>
+</ol>
+<h3 id="从论文可推导出的进一步研究方向">2.
+从论文可推导出的进一步研究方向</h3>
+<ol type="1">
+<li>把这种信念放进真实组织环境中，研究它如何影响招聘、晋升、任务分配和绩效评价。</li>
+<li>比较不同文化、制度与性别规范背景下，这种信念是否同样稳定。</li>
+<li>研究这种信念与“女性适合照顾型角色、男性适合竞争型角色”的职业刻板印象如何交互。</li>
+<li>研究长期信息干预、教育训练、组织制度设计能否系统性降低这种误判。</li>
+<li>研究更包容的性别测量，而不只停留在二元性别框架。</li>
+</ol>
+<h2 id="学术思考">学术思考</h2>
+<ol type="1">
+<li>这篇论文最大的识别亮点在于把“信念形成”从单纯的信息更新问题，推进到“记忆提取过程”问题。但机制证据里，相似性部分更多是相关性证据，真正的因果识别主要来自干扰实验。未来如果能在自然情境中识别长期记忆暴露对信念的影响，会更有说服力。</li>
+<li>作者发现真实行为差异很弱、信念差异很强，这提示我们：很多性别刻板印象不一定来自稳定的平均行为差异，而可能来自少量高可得性经验被过度投射。</li>
+<li>论文的外部效度很值得继续追问。实验博弈中的“社会性导向”与真实组织中的合作、关怀、薪酬偏好并不完全等同，但作者通过
+household/workplace/policy 的应用研究在努力往外推。</li>
+<li>这篇论文也提醒我们，性别平等政策不能只处理“真实能力或偏好差异”，还要处理“别人怎么想象这些差异”。</li>
+<li>规范含义上，这种 believed gender gap
+既可能给女性带来某些合作型场景中的优势，也可能形成新的约束：女性若不够“社会性导向”，可能更容易遭遇惩罚。</li>
+</ol>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol type="1">
+<li>这篇论文里的 associative memory
+机制，和传统贝叶斯更新到底差在哪里？</li>
+<li>作者为什么要同时设计 first-party 和 third-party 两类场景？</li>
+<li>文中说 believed gender gap
+大多不准确，具体是怎么比较“信念”和“真实行为”的？</li>
+<li>这篇论文和性别刻板印象、统计性歧视文献有什么关系？</li>
+<li>这篇论文对现实中的招聘、晋升和绩效考核有什么启发？</li>
+<li>干扰实验为什么能被看作机制识别，而不只是又一个相关性发现？</li>
+<li>这篇论文有哪些局限，特别是外部效度和性别测量上的局限？</li>
+<li>如果要把这篇论文写进文献综述，应该怎么定位它的贡献？</li>
+</ol>
+<h2 id="说明">说明</h2>
+<ul>
+<li>上述解读以 Zotero 中该条目的 PDF
+正文与元数据为基础，核心论断来自可见正文内容而非仅摘要。</li>
+<li>我没有逐页展开附录和所有在线附录表格，因此对某些稳健性细节采用“作者报告/正文概述”的表述，避免超出可见证据。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>The Price of War — 深度阅读笔记 — Federle Et Al.</title>
     <url>/posts/federle2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -9470,184 +9648,6 @@ Effects），永久降低增长路径？</li>
         <tag>战争经济学</tag>
         <tag>经济史学</tag>
         <tag>地缘政治</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>对社会偏好中性别差异的信念 — 深度阅读笔记 — Exley Et Al.</title>
-    <url>/posts/exley2025/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Believed Gender Differences in Social Preferences Zotero
-Collection:: 有趣的文章 PDF Path::
-/Users/double/Zotero/storage/NE7DY34F/Exley 等 - 2025 - Believed Gender
-Differences in Social Preferences.pdf Zotero Item Key:: RB7YBMK5</p>
-<span id="more"></span>
-<h2 id="引言背景和意义">引言（背景和意义）</h2>
-<ul>
-<li><strong>领域基础知识</strong>：这篇论文属于行为经济学、实验经济学和性别经济学的交叉领域。这里的核心概念是“社会偏好”（social
-preferences），大致指一个人做决定时，不只关心自己的收益，也关心他人的收益、平等、公平、合作等。传统文献常问“男女在社会偏好上是否真的不同”，而这篇论文把问题往前推进一步：<strong>即便真实差异不大，人们是否相信男女有差异？</strong></li>
-<li><strong>研究背景</strong>：现实中，女性在工资、晋升、领导职位上仍然存在系统性劣势。已有大量研究讨论真实的性别行为差异，比如谈判、竞争、合作、分配，但关于“人们相信女性和男性在社会偏好上有何不同”的研究相对少得多。</li>
-<li><strong>作者的问题意识</strong>：作者关心的不是“女性是否真的更慷慨、更平等主义”，而是“人们是否认为女性更慷慨、更平等主义”，以及这种信念从哪里来、会带来什么后果。这个问题很重要，因为很多现实决策——招聘、分工、投票、选择合作者——受信念影响，不一定受真实行为本身影响。</li>
-<li><strong>研究意义</strong>：如果社会普遍相信女性“更有社会性导向”，那么这种信念可能一方面让女性在某些合作型场景中受欢迎，另一方面也可能让女性在竞争性、绩效导向的场景中吃亏。换言之，<strong>错误或夸大的性别信念本身，就可能塑造劳动市场和社会评价结果</strong>。</li>
-</ul>
-<h2 id="内容及结构论文结构">内容及结构（论文结构）</h2>
-<p>这篇论文大致分成五部分。</p>
-<p>第一部分是引言，提出核心问题：关于社会偏好的真实性别差异，文献结论并不一致；但关于“被相信的性别差异”几乎没被系统研究。</p>
-<p>第二部分用一系列经济学实验游戏，系统记录人们是否相信女性比男性更慷慨、更平等、更合作。这一部分是全文的经验基础。</p>
-<p>第三部分研究这种信念可能从哪里来。作者重点借用“联想记忆/associative
-memory”的思路，考察<strong>相似性</strong>和<strong>干扰</strong>两种机制。</p>
-<p>第四部分把这种信念放到更接近现实的场景里，讨论它如何延伸到家庭、工作场所和政策态度，并通过
-worker-employer 实验看这种信念如何影响对男女雇主的选择。</p>
-<p>第五部分总结全文，并讨论未来研究方向，尤其是如何纠正这种信念、它如何影响劳动力市场结果、以及不同场景下这种信念是否会增强或反转。</p>
-<h2 id="正文逻辑梳理">正文（逻辑梳理）</h2>
-<p><strong>背景 -&gt; 挑战 -&gt; 方法 -&gt; 数据 -&gt; 结果</strong></p>
-<h3 id="背景">背景</h3>
-<p>已有文献长期在问：女性和男性在慷慨、平等、公平、合作等“社会偏好”上是否不同。但这个问题本身并不足够。现实中的很多决策，先发生的是“别人怎么看你”，而不是“你真实如何”。如果雇主、同事、选民、家庭成员普遍认为女性更在意平等、更愿意照顾别人，那么这种看法本身就会影响资源配置与角色分工。</p>
-<h3 id="挑战">挑战</h3>
-<p>这类研究有三个难点。</p>
-<p>第一，社会偏好不是单一概念，里面混合了慷慨、平等、合作、信任等多个维度。如果只看一种游戏，很容易把结论局限在某个特殊场景。</p>
-<p>第二，要区分“真实行为差异”和“被相信的差异”。如果研究者只观察到信念差异，而不观察真实决策，就不知道这种信念到底是准确判断还是刻板印象。</p>
-<p>第三，若发现人们确实相信女性更有社会性导向，还要解释这种信念是怎么形成的。作者认为，标准的“理性更新”框架不够，记忆提取过程本身可能会塑造信念。</p>
-<h3 id="方法">方法</h3>
-<p>作者的方法可以分成三层。</p>
-<p>第一层是<strong>记录信念</strong>。作者设计了一系列经济学实验游戏，让受试者分别判断：有多少比例的女性会选择更“社会性导向”的选项？有多少比例的男性会这样做？这里的“社会性导向”大致对应更慷慨、更平等或更合作的选项。</p>
-<p>第二层是<strong>对照真实行为</strong>。同一套研究中，作者也观察男女在这些场景里的真实选择，从而判断“被相信的性别差异”是否准确。</p>
-<p>第三层是<strong>识别信念形成机制</strong>。作者借用 associative
-memory 模型，提出两条假说： 1.
-<strong>相似性（similarity）</strong>：人们会调用与当前判断情境相似的既有经验。如果一个人生活中更容易想起“更慷慨的女性”，那么他更可能相信女性在实验情境中也更慷慨。
-2.
-<strong>干扰（interference）</strong>：记忆提取不是完美的。一个额外经历即使按完全理性的贝叶斯更新不该改变信念，也可能因为干扰了旧记忆的回忆顺序，改变人们的判断。</p>
-<p>这里的识别直觉很重要：作者不是简单说“经历影响信念”，而是进一步说<strong>记忆怎样被提取出来</strong>会影响信念，因此信念未必符合“完美记忆的理性人”模型。</p>
-<h3 id="数据">数据</h3>
-<p>论文总共使用 <strong>15 个研究、8,979 名受试者</strong>。</p>
-<p>最核心的是主实验中的经济学游戏研究，共 <strong>3,382
-名参与者</strong>。作者在两类主样本中实施： - 382 名本科生 - 400
-名线上参与者</p>
-<p>在这些主研究里，作者设计了 <strong>14 个场景</strong>，覆盖： -
-独裁者博弈（dictator game） - 带效率权衡的独裁者博弈 -
-带应得权利（entitlement）权衡的独裁者博弈 - 最后通牒博弈（ultimatum
-game） - 信任博弈（trust game） - 囚徒困境（prisoner’s dilemma） -
-公共品博弈（public goods game）</p>
-<p>这些场景又区分为： -
-<strong>第一方场景</strong>：选择会影响自己收益，因此“自利动机”存在。 -
-<strong>第三方场景</strong>：选择只影响别人收益，因此更能看出人们是否把“社会性导向”理解为平等/合作，而不只是“少为自己争”。</p>
-<p>此外，作者还做了： - 相似性相关研究：799 人 - 干扰实验：3,198 人 -
-应用与后果研究：1,600 人 - 以及专业人士样本、代表性样本、不同
-stakes、不同问法等稳健性研究</p>
-<h3 id="结果">结果</h3>
-<h4 id="主结果人们稳定地相信女性比男性更有社会性导向">1.
-主结果：人们稳定地相信女性比男性更有社会性导向</h4>
-<p>这是全文最核心的发现。</p>
-<p>在主实验的 28
-个情境中，受试者都显著认为女性比男性更可能选择“社会性导向”的选项。这个被相信的性别差距大约在
-<strong>8 到 13 个百分点</strong>之间，而且在很多不同情境下都存在： -
-有无自利动机时都存在 - 有无战略考虑时都存在 - 公平概念不同的场景里都存在
-- 第一方与第三方场景里都存在</p>
-<p>换句话说，这不是某一种博弈的偶然结果，而是一个<strong>跨情境、跨样本、跨问法都很稳的信念模式</strong>。</p>
-<h4 id="与真实行为对比这种信念大体上是不准确的">2.
-与真实行为对比：这种信念大体上是不准确的</h4>
-<p>论文最有意思的地方在这里：作者不是只发现“人们有这种想法”，而是进一步发现这种想法<strong>多数时候夸大了真实差异</strong>。</p>
-<p>在真实决策数据里，作者发现：在 28 个情境中的 24
-个里，无法拒绝“男女无差异”。也就是说，真实行为上并没有稳定、普遍的性别差异。</p>
-<p>但在信念数据里，受试者几乎系统性地低估男性会做出社会性导向选择的比例，于是导致“女性更有社会性导向”的信念差距被显著放大。作者指出，在
-28 个情境中的 <strong>26
-个</strong>，这种被相信的性别差距被显著高估。</p>
-<p>所以这篇论文的核心不是“女性确实更慷慨”，而是：<strong>社会普遍相信女性更慷慨、更平等主义，但这种信念大多并不准确。</strong></p>
-<h4 id="机制结果记忆中的相似经验与这种信念相关">3.
-机制结果：记忆中的“相似经验”与这种信念相关</h4>
-<p>作者发现，若参与者在回忆“慷慨的人”时更容易想到女性，那么他们更可能相信女性在实验中的社会性导向更强。</p>
-<p>另外，如果参与者报告自己童年更多由女性照料，或者人生经历中接触到更多“慷慨、平等主义的女性”，那么他们所持有的
-believed gender gap 也更大。</p>
-<p>这部分是<strong>相关性证据</strong>。它支持作者的解释：人们不是在一个真空里形成信念，而是把现实生活中容易被提取出来的相似经验，投射到新的判断场景里。</p>
-<h4 id="机制结果干扰经验可以因果性地改变信念">4.
-机制结果：干扰经验可以因果性地改变信念</h4>
-<p>作者进一步做了更强的识别：设计“干扰性经历”来影响记忆提取。</p>
-<p>结果显示，在两项总计 <strong>3,198
-人</strong>的研究中，这种干扰经验会显著改变人们对男女社会偏好差异的判断。更关键的是，即使研究者已经提供了关于男女在相似情境中行为分布的信息，并要求受试者准确复述，这种干扰效应仍然存在。</p>
-<p>这说明什么？说明问题不只是“信息有没有给到”，而是<strong>人们在形成判断时，哪些信息和记忆被真正调出来了</strong>。这正是作者想强调的
-associative memory 机制，也是在挑战“完美记忆贝叶斯人”的基准模型。</p>
-<h4 id="应用结果这种信念延伸到家庭职场与政策态度">5.
-应用结果：这种信念延伸到家庭、职场与政策态度</h4>
-<p>作者发现，这种 believed gender gap
-不只存在于抽象实验游戏里，也进入更现实的判断： -
-在家庭中，人们更相信女性会更重视家庭分工、家庭贡献与子女养育中的平等。 -
-在职场中，人们更相信女性偏好 equal pay，而男性更能接受 performance pay。
--
-在政策态度上，人们更相信女性支持再分配，以及教育、医疗、住房的平等可及。</p>
-<h4 id="劳动市场含义这种信念会影响人们如何选择雇主">6.
-劳动市场含义：这种信念会影响人们如何选择雇主</h4>
-<p>在 worker-employer 实验中，作者发现：当工人是低绩效者、因而会从 equal
-pay 中受益时，他们更偏好女性雇主；当工人是高绩效者、因而更能从
-performance pay 中受益时，他们对女性雇主的偏好下降。</p>
-<p>这说明 believed gender gap
-并不只是“想法”，而可能进入真实匹配行为：人们会根据自己利益，利用这些关于男女的信念来做选择。</p>
-<h4 id="异质性与稳健性">7. 异质性与稳健性</h4>
-<p>论文的稳健性做得很强。作者表明这一信念模式对以下变化都相当稳健： -
-样本换成本科生、线上样本、专业管理/招聘人士、代表性样本 - belief
-questions 的数量、措辞、顺序变化 - 是否只看先做决策还是先做信念题 -
-是否控制人口学变量 - 是否看 full distribution 而非均值 -
-是否改变给与情境中的 stakes 和乘数 -
-是否把研究包装成不那么显眼的“性别研究”</p>
-<p>作者还指出，这个 believed gender gap
-的大小，甚至大于某些年龄组差异和收入组差异在人们心中的印象差距。</p>
-<h2 id="结论conclusion">结论（Conclusion）</h2>
-<ul>
-<li><strong>核心发现</strong>：这篇论文最重要的发现是，社会普遍相信女性比男性更慷慨、更平等、更合作，但这种“被相信的性别差异”在很大程度上并不对应稳定的真实行为差异。</li>
-<li><strong>对领域的贡献</strong>：论文把研究重心从“真实性别差异”推进到了“被相信的性别差异”，并把性别经济学、社会偏好实验和记忆驱动的信念形成文献连接起来。</li>
-<li><strong>实践含义</strong>：这类信念可能在合作型环境中对女性有利，在竞争型环境中对女性不利；它也可能影响雇佣、晋升、薪酬制度偏好、家庭分工以及政策判断。</li>
-</ul>
-<h2 id="未来研究方向future-work">未来研究方向（Future work）</h2>
-<h3 id="论文明确提到的未来方向">1. 论文明确提到的未来方向</h3>
-<ol type="1">
-<li>研究如何提供准确而有效的信息来纠正这种 believed gender
-gap，以及干扰性经历为何会削弱信息纠偏。</li>
-<li>进一步研究这种信念如何影响劳动市场结果，例如男女雇主、不同岗位和行业中的成功概率。</li>
-<li>研究在不同 domain 中，这种 believed gender gap
-是否更强、变弱，甚至反转。</li>
-<li>研究女性是否会因为“没有达到别人期待的社会性导向”而受到更强惩罚，或者在表现出社会性导向时获得更少额外回报。</li>
-</ol>
-<h3 id="从论文可推导出的进一步研究方向">2.
-从论文可推导出的进一步研究方向</h3>
-<ol type="1">
-<li>把这种信念放进真实组织环境中，研究它如何影响招聘、晋升、任务分配和绩效评价。</li>
-<li>比较不同文化、制度与性别规范背景下，这种信念是否同样稳定。</li>
-<li>研究这种信念与“女性适合照顾型角色、男性适合竞争型角色”的职业刻板印象如何交互。</li>
-<li>研究长期信息干预、教育训练、组织制度设计能否系统性降低这种误判。</li>
-<li>研究更包容的性别测量，而不只停留在二元性别框架。</li>
-</ol>
-<h2 id="学术思考">学术思考</h2>
-<ol type="1">
-<li>这篇论文最大的识别亮点在于把“信念形成”从单纯的信息更新问题，推进到“记忆提取过程”问题。但机制证据里，相似性部分更多是相关性证据，真正的因果识别主要来自干扰实验。未来如果能在自然情境中识别长期记忆暴露对信念的影响，会更有说服力。</li>
-<li>作者发现真实行为差异很弱、信念差异很强，这提示我们：很多性别刻板印象不一定来自稳定的平均行为差异，而可能来自少量高可得性经验被过度投射。</li>
-<li>论文的外部效度很值得继续追问。实验博弈中的“社会性导向”与真实组织中的合作、关怀、薪酬偏好并不完全等同，但作者通过
-household/workplace/policy 的应用研究在努力往外推。</li>
-<li>这篇论文也提醒我们，性别平等政策不能只处理“真实能力或偏好差异”，还要处理“别人怎么想象这些差异”。</li>
-<li>规范含义上，这种 believed gender gap
-既可能给女性带来某些合作型场景中的优势，也可能形成新的约束：女性若不够“社会性导向”，可能更容易遭遇惩罚。</li>
-</ol>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol type="1">
-<li>这篇论文里的 associative memory
-机制，和传统贝叶斯更新到底差在哪里？</li>
-<li>作者为什么要同时设计 first-party 和 third-party 两类场景？</li>
-<li>文中说 believed gender gap
-大多不准确，具体是怎么比较“信念”和“真实行为”的？</li>
-<li>这篇论文和性别刻板印象、统计性歧视文献有什么关系？</li>
-<li>这篇论文对现实中的招聘、晋升和绩效考核有什么启发？</li>
-<li>干扰实验为什么能被看作机制识别，而不只是又一个相关性发现？</li>
-<li>这篇论文有哪些局限，特别是外部效度和性别测量上的局限？</li>
-<li>如果要把这篇论文写进文献综述，应该怎么定位它的贡献？</li>
-</ol>
-<h2 id="说明">说明</h2>
-<ul>
-<li>上述解读以 Zotero 中该条目的 PDF
-正文与元数据为基础，核心论断来自可见正文内容而非仅摘要。</li>
-<li>我没有逐页展开附录和所有在线附录表格，因此对某些稳健性细节采用“作者报告/正文概述”的表述，避免超出可见证据。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -10168,6 +10168,156 @@ $$Site_{j,t} = \frac{Casualties_{j,t}}{Population_{j, pre-war}}$$</p>
       </tags>
   </entry>
   <entry>
+    <title>死亡率的地方性驱动因素：移民的证据 — 深度阅读笔记 — Finkelstein Et Al.</title>
+    <url>/posts/finkelstein2021/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Place-Based Drivers of Mortality: Evidence from Migration<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/5NLU7CQ5/Finkelstein 等 - 2021 - Place-Based Drivers of Mortality Evidence from Migration.pdf<br>
+Zotero Item Key:: XDGPRRM8</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+死亡率的地理差异是健康经济学的核心研究议题。传统文献将死亡率的决定因素分为两大类：（1）居民的健康资本（health capital），包括基因禀赋、历史健康行为（吸烟、饮食、运动）、过往医疗经历等；（2）当前居住地的环境因素（place effects），包括医疗质量与可及性、气候、污染、犯罪等。但如何识别"地方"的因果效应，一直是方法论上的难题，因为人们对居住地的选择本身是内生的——健康状况好的人可能倾向于搬到生活质量更高的地方。</p>
+<p><strong>研究背景</strong><br>
+美国各地区之间的预期寿命差异非常显著。Chetty et al.（2016）发现，美国100个最大通勤区的40岁预期寿命从圣何塞的85岁到拉斯维加斯的81岁不等。现有研究（如Dartmouth Atlas）强调医疗支出与健康结果之间的弱相关性，而Chetty et al.（2016）发现截面数据中死亡率的主要相关因素是吸烟、肥胖等健康资本变量，地方因素（如医疗支出）的相关性反而很弱。但这些研究均未识别地方效应的因果影响。</p>
+<p><strong>作者的问题意识</strong><br>
+当前地点对老年人死亡率的因果效应有多大？不同地区之间预期寿命差异中，有多少比例来自"地方本身"（医疗质量、气候、社会环境），有多少来自居民自身带来的"健康资本"？如何在人口迁移数据中可信地分离这两类效应？</p>
+<p><strong>研究意义</strong><br>
+该研究为以下政策问题提供了量化基础：</p>
+<ul>
+<li>改善低质量地区的医疗资源配置能带来多大的生存收益？</li>
+<li>“移居计划”（如Moving to Opportunity）的健康效果有多大？</li>
+<li>地理健康不平等在多大程度上可以通过改变环境而非改变居民行为来解决？</li>
+</ul>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：提出问题、概述方法和主要发现。</li>
+<li><strong>方法框架</strong>：（a）基准方法——用老年Medicare迁移者比较不同目的地的死亡率结果；（b）不可观测变量修正策略——利用起源地残差死亡率来校正目的地选择的潜在选择性偏差。</li>
+<li><strong>数据</strong>：Medicare 1999-2014年全体受益人，约6900万人，其中约200万迁移者，地理单元为通勤区（CZ）。</li>
+<li><strong>主要结果</strong>：地方效应规模估计、与健康资本效应的分解。</li>
+<li><strong>异质性分析</strong>：按医疗保险补贴资格（Medicaid）、种族分层分析。</li>
+<li><strong>稳健性检验</strong>：替代模型规格（Logistic模型）等。</li>
+<li><strong>地方效应的可观测相关因素</strong>：揭示医疗质量、气候、犯罪、SES等与地方效应的相关性。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>美国各地预期寿命差异显著（跨通勤区标准差约0.84年）。现有研究主要描述截面相关性，难以回答"换一个地方住，你会活得更久吗"这样的因果问题。</p>
+<h3 id="挑战">挑战</h3>
+<p><strong>选择性偏误（selection bias）</strong>：迁移者的目的地选择与其健康状况内生相关——身体好的人可能更愿意搬到气候温和、生活便利的地方；而身体差的人可能搬到有更好医疗设施的地方。单纯比较搬到不同地点的人的死亡率，会混淆地方效应和个体健康资本差异。</p>
+<p><strong>方法难点</strong>：如何控制不可观测的健康资本（unobserved health capital）？即使控制了大量可观测健康指标，仍可能存在遗漏变量偏差。</p>
+<h3 id="方法">方法</h3>
+<p><strong>第一步：基准比较</strong><br>
+比较从同一起源地（如波士顿）搬到不同目的地（如明尼阿波利斯 vs. 休斯顿）的老年人死亡率，同时控制：</p>
+<ul>
+<li>起源地固定效应</li>
+<li>丰富的搬家前健康指标（来自Medicare理赔数据的慢性病诊断、医疗利用率等）</li>
+</ul>
+<p>直觉：若两个人从同一起点出发，搬家前健康状况相同，搬家后死亡率差异就反映了目的地的因果效应。</p>
+<p><strong>第二步：不可观测变量修正（核心创新）</strong><br>
+基本思路来自Altonji et al.（2005）和Oster（2016）：用可观测变量的重要性来推断不可观测变量的重要性。</p>
+<p>关键假设：<strong>可观测变量与不可观测变量相对于起源地的重要性之比，等于它们相对于目的地的重要性之比</strong>。换言之，选择起源地和选择目的地的选择过程具有对称性。</p>
+<p>操作上：如果控制了起源地固定效应后，迁移者的残差死亡率仍与起源地相关，说明起源地还捕捉到了部分未被控制的健康资本。利用这一"起源地残差相关性"的大小来校正目的地选择可能带来的偏差。</p>
+<p>这一策略的优势在于：不需要研究者事先指定不可观测变量的总重要性（即不需要指定"假想完整回归"的R²上界），只需一个对称性假设，并用数据自身提供信息。</p>
+<p><strong>数据</strong>：</p>
+<ul>
+<li>Medicare受益人（65岁及以上），1999-2014年</li>
+<li>约6900万受益人：4300万非迁移者（取10%随机抽样），约200万迁移者</li>
+<li>地理单元：通勤区（Commuting Zone, CZ），全美共563个</li>
+<li>关键变量：居住地邮编、死亡日期、人口特征、医疗利用率、慢性病诊断</li>
+<li>主要结果指标：65岁预期寿命（用Gompertz死亡率模型估计）</li>
+</ul>
+<h3 id="结果">结果</h3>
+<p><strong>主要结果：地方效应显著且重要</strong></p>
+<ul>
+<li>从第10百分位的通勤区迁移到第90百分位的通勤区，65岁预期寿命增加约<strong>1.1年</strong>，约为截面差异的一半。</li>
+<li>若将全国地方效应均等化，截面预期寿命差异将降低约<strong>15%</strong>。</li>
+<li>相比之下，若将健康资本均等化，截面差异将降低约<strong>75%</strong>——说明健康资本仍是地区差异的主导因素，但地方效应也不可忽视。</li>
+<li>地方效应与健康资本效应的相关性适中（并不完全正相关）：一些地区（如圣菲、丹佛、埃尔帕索）截面死亡率较低但地方因果效应为负；另一些地区（如西弗吉尼亚查尔斯顿）截面死亡率高但地方效应为正。</li>
+</ul>
+<p><strong>异质性结果</strong></p>
+<ul>
+<li>Medicaid受益人（低收入群体）和非白人群体的预期寿命差异更大，地方效应的标准差也更大——地理健康不平等在弱势群体中更为突出。</li>
+</ul>
+<p><strong>地方效应的可观测相关因素</strong><br>
+地方效应较好（使人活得更长）的地区往往具有：</p>
+<ol>
+<li><strong>医疗质量和数量</strong>：更多人均初级保健医生和专科医生、更高质量的医院、更高的医疗利用率（注意：这与Dartmouth Atlas文献中医疗利用率与截面健康结果无关的结论形成对比——这里用的是因果地方效应而非截面结果）</li>
+<li><strong>气候环境</strong>：气候较温和、污染较少</li>
+<li><strong>安全</strong>：凶杀案和交通事故死亡率更低</li>
+<li><strong>社会经济状况</strong>：更高的收入和教育水平</li>
+</ol>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<p><strong>核心发现</strong>：当前居住地对老年人死亡率具有实质性因果效应。从第10到第90百分位的地区迁移可使预期寿命增加1.1年，均等化地方效应可降低截面差异的15%。地方效应主要通过医疗质量、气候、社会安全和SES等渠道发挥作用。</p>
+<p><strong>对领域的贡献</strong>：</p>
+<ol>
+<li>首次在全国规模上可信地分离老年人死亡率的地方因果效应与健康资本效应；</li>
+<li>提出了一种不需要指定不可观测变量总重要性的新选择修正策略；</li>
+<li>揭示了"医疗利用率与健康结果截面相关性弱"和"医疗质量与死亡率因果效应强"之间的矛盾——暗示截面数据中的Dartmouth Atlas悖论可能是选择性偏差造成的。</li>
+</ol>
+<p><strong>政策含义</strong>：</p>
+<ul>
+<li>改善弱势地区的医疗资源配置（数量和质量）有望产生显著且即时的生存效益；</li>
+<li>针对老年人的迁移计划（移居到更有利环境）有实质意义；</li>
+<li>但地方效应只解释了15%的截面差异，健康资本（行为习惯、历史经历）仍是主要因素，不可忽视。</li>
+</ul>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文中明确提及的方向</strong>：</p>
+<ol>
+<li>深入研究地方效应的具体渠道（医疗质量的哪个维度最重要？气候影响的机制是什么？）；</li>
+<li>研究地方效应对更年轻人群的影响——本文聚焦老年人，年轻人可能面临不同的渠道；</li>
+<li>拓展到死亡率以外的健康结果（住院率、功能状态等）。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li>利用"Moving to Opportunity"等随机分配迁移实验验证本文的识别假设；</li>
+<li>研究地方效应随时间的动态演变——当地医疗政策改革是否改变了地方效应；</li>
+<li>将地方效应分解为可干预的政策变量（医院质量、环境监管等），直接评估政策效果；</li>
+<li>研究地方效应在工作年龄人群（20-64岁）的大小和渠道，以便将健康政策与劳动力市场政策联系起来。</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>识别假设的可信度</strong>：核心假设是"选择起源地和目的地的不可观测选择过程具有对称性"。但若健康较差的人为了获得特定医疗而搬迁（如搬到医疗中心附近），而健康较好的人因为退休才搬迁，两类迁移的选择机制可能非常不同，对称性假设可能存在问题。</p>
+</li>
+<li>
+<p><strong>Dartmouth Atlas悖论的解释</strong>：本文发现医疗利用率与地方效应正相关，但Dartmouth Atlas发现截面上医疗利用率与健康结果不相关。本文将此归因于截面数据的选择性偏差，但能否用工具变量或其他方法直接检验这一解释？</p>
+</li>
+<li>
+<p><strong>地方效应的即时性</strong>：作者假设老年人的健康资本是固定的，地方效应立即出现。但医疗质量的影响（如定期体检发现疾病）可能有时滞，如何区分"习惯带来的即时效应"和"医疗诊断的滞后效应"？</p>
+</li>
+<li>
+<p><strong>样本选择性</strong>：Medicare迁移者约占所有受益人的0.5%/年，是高度选择性的群体（经济条件较好、身体较好）。这是否限制了结论对无法迁移的老年人（如贫困老人）的适用性？</p>
+</li>
+<li>
+<p><strong>政策内生性</strong>：若政府根据本文研究结果改善落后地区的医疗资源，是否会改变人口选择性迁移的均衡，从而影响未来的地方效应估计？</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>不可观测变量修正策略（利用起源地残差）的具体操作步骤是什么？如何用数据估计"起源地残差相关性"？</li>
+<li>为什么选择通勤区（CZ）作为地理单元？城市内部（如街区级别）的地方效应是否会更大？</li>
+<li>研究发现医疗利用率与因果效应正相关，但Dartmouth Atlas发现截面相关性弱——这两个结论是否真的矛盾？能用这篇论文的框架来检验吗？</li>
+<li>本文聚焦65岁以上老年人，对于工作年龄人群（如35-64岁）是否有类似的地方效应估计，其渠道机制是否不同？</li>
+<li>哪些具体的通勤区被识别为有显著正向地方效应？作者如何解释圣菲、丹佛等地截面寿命较高但地方因果效应为负的"反常"现象？</li>
+<li>本文方法能否应用于研究地方效应对非老年医疗保障（Medicaid、ACA）人群的影响？</li>
+<li>"Moving to Opportunity"项目的随机实验结果（Chetty et al. 2016a）与本文的观察性估计是否一致？如何相互印证？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Fiscal Volatility Shocks and Economic Activity — 深度阅读笔记 — AER</title>
     <url>/posts/fernandez2015/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -10498,156 +10648,6 @@ space)讨论有什么启示?发展中国家在 ZLB
 ]]></content>
       <categories>
         <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>死亡率的地方性驱动因素：移民的证据 — 深度阅读笔记 — Finkelstein Et Al.</title>
-    <url>/posts/finkelstein2021/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Place-Based Drivers of Mortality: Evidence from Migration<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/5NLU7CQ5/Finkelstein 等 - 2021 - Place-Based Drivers of Mortality Evidence from Migration.pdf<br>
-Zotero Item Key:: XDGPRRM8</p>
-<hr>
-<span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-死亡率的地理差异是健康经济学的核心研究议题。传统文献将死亡率的决定因素分为两大类：（1）居民的健康资本（health capital），包括基因禀赋、历史健康行为（吸烟、饮食、运动）、过往医疗经历等；（2）当前居住地的环境因素（place effects），包括医疗质量与可及性、气候、污染、犯罪等。但如何识别"地方"的因果效应，一直是方法论上的难题，因为人们对居住地的选择本身是内生的——健康状况好的人可能倾向于搬到生活质量更高的地方。</p>
-<p><strong>研究背景</strong><br>
-美国各地区之间的预期寿命差异非常显著。Chetty et al.（2016）发现，美国100个最大通勤区的40岁预期寿命从圣何塞的85岁到拉斯维加斯的81岁不等。现有研究（如Dartmouth Atlas）强调医疗支出与健康结果之间的弱相关性，而Chetty et al.（2016）发现截面数据中死亡率的主要相关因素是吸烟、肥胖等健康资本变量，地方因素（如医疗支出）的相关性反而很弱。但这些研究均未识别地方效应的因果影响。</p>
-<p><strong>作者的问题意识</strong><br>
-当前地点对老年人死亡率的因果效应有多大？不同地区之间预期寿命差异中，有多少比例来自"地方本身"（医疗质量、气候、社会环境），有多少来自居民自身带来的"健康资本"？如何在人口迁移数据中可信地分离这两类效应？</p>
-<p><strong>研究意义</strong><br>
-该研究为以下政策问题提供了量化基础：</p>
-<ul>
-<li>改善低质量地区的医疗资源配置能带来多大的生存收益？</li>
-<li>“移居计划”（如Moving to Opportunity）的健康效果有多大？</li>
-<li>地理健康不平等在多大程度上可以通过改变环境而非改变居民行为来解决？</li>
-</ul>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言</strong>：提出问题、概述方法和主要发现。</li>
-<li><strong>方法框架</strong>：（a）基准方法——用老年Medicare迁移者比较不同目的地的死亡率结果；（b）不可观测变量修正策略——利用起源地残差死亡率来校正目的地选择的潜在选择性偏差。</li>
-<li><strong>数据</strong>：Medicare 1999-2014年全体受益人，约6900万人，其中约200万迁移者，地理单元为通勤区（CZ）。</li>
-<li><strong>主要结果</strong>：地方效应规模估计、与健康资本效应的分解。</li>
-<li><strong>异质性分析</strong>：按医疗保险补贴资格（Medicaid）、种族分层分析。</li>
-<li><strong>稳健性检验</strong>：替代模型规格（Logistic模型）等。</li>
-<li><strong>地方效应的可观测相关因素</strong>：揭示医疗质量、气候、犯罪、SES等与地方效应的相关性。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>美国各地预期寿命差异显著（跨通勤区标准差约0.84年）。现有研究主要描述截面相关性，难以回答"换一个地方住，你会活得更久吗"这样的因果问题。</p>
-<h3 id="挑战">挑战</h3>
-<p><strong>选择性偏误（selection bias）</strong>：迁移者的目的地选择与其健康状况内生相关——身体好的人可能更愿意搬到气候温和、生活便利的地方；而身体差的人可能搬到有更好医疗设施的地方。单纯比较搬到不同地点的人的死亡率，会混淆地方效应和个体健康资本差异。</p>
-<p><strong>方法难点</strong>：如何控制不可观测的健康资本（unobserved health capital）？即使控制了大量可观测健康指标，仍可能存在遗漏变量偏差。</p>
-<h3 id="方法">方法</h3>
-<p><strong>第一步：基准比较</strong><br>
-比较从同一起源地（如波士顿）搬到不同目的地（如明尼阿波利斯 vs. 休斯顿）的老年人死亡率，同时控制：</p>
-<ul>
-<li>起源地固定效应</li>
-<li>丰富的搬家前健康指标（来自Medicare理赔数据的慢性病诊断、医疗利用率等）</li>
-</ul>
-<p>直觉：若两个人从同一起点出发，搬家前健康状况相同，搬家后死亡率差异就反映了目的地的因果效应。</p>
-<p><strong>第二步：不可观测变量修正（核心创新）</strong><br>
-基本思路来自Altonji et al.（2005）和Oster（2016）：用可观测变量的重要性来推断不可观测变量的重要性。</p>
-<p>关键假设：<strong>可观测变量与不可观测变量相对于起源地的重要性之比，等于它们相对于目的地的重要性之比</strong>。换言之，选择起源地和选择目的地的选择过程具有对称性。</p>
-<p>操作上：如果控制了起源地固定效应后，迁移者的残差死亡率仍与起源地相关，说明起源地还捕捉到了部分未被控制的健康资本。利用这一"起源地残差相关性"的大小来校正目的地选择可能带来的偏差。</p>
-<p>这一策略的优势在于：不需要研究者事先指定不可观测变量的总重要性（即不需要指定"假想完整回归"的R²上界），只需一个对称性假设，并用数据自身提供信息。</p>
-<p><strong>数据</strong>：</p>
-<ul>
-<li>Medicare受益人（65岁及以上），1999-2014年</li>
-<li>约6900万受益人：4300万非迁移者（取10%随机抽样），约200万迁移者</li>
-<li>地理单元：通勤区（Commuting Zone, CZ），全美共563个</li>
-<li>关键变量：居住地邮编、死亡日期、人口特征、医疗利用率、慢性病诊断</li>
-<li>主要结果指标：65岁预期寿命（用Gompertz死亡率模型估计）</li>
-</ul>
-<h3 id="结果">结果</h3>
-<p><strong>主要结果：地方效应显著且重要</strong></p>
-<ul>
-<li>从第10百分位的通勤区迁移到第90百分位的通勤区，65岁预期寿命增加约<strong>1.1年</strong>，约为截面差异的一半。</li>
-<li>若将全国地方效应均等化，截面预期寿命差异将降低约<strong>15%</strong>。</li>
-<li>相比之下，若将健康资本均等化，截面差异将降低约<strong>75%</strong>——说明健康资本仍是地区差异的主导因素，但地方效应也不可忽视。</li>
-<li>地方效应与健康资本效应的相关性适中（并不完全正相关）：一些地区（如圣菲、丹佛、埃尔帕索）截面死亡率较低但地方因果效应为负；另一些地区（如西弗吉尼亚查尔斯顿）截面死亡率高但地方效应为正。</li>
-</ul>
-<p><strong>异质性结果</strong></p>
-<ul>
-<li>Medicaid受益人（低收入群体）和非白人群体的预期寿命差异更大，地方效应的标准差也更大——地理健康不平等在弱势群体中更为突出。</li>
-</ul>
-<p><strong>地方效应的可观测相关因素</strong><br>
-地方效应较好（使人活得更长）的地区往往具有：</p>
-<ol>
-<li><strong>医疗质量和数量</strong>：更多人均初级保健医生和专科医生、更高质量的医院、更高的医疗利用率（注意：这与Dartmouth Atlas文献中医疗利用率与截面健康结果无关的结论形成对比——这里用的是因果地方效应而非截面结果）</li>
-<li><strong>气候环境</strong>：气候较温和、污染较少</li>
-<li><strong>安全</strong>：凶杀案和交通事故死亡率更低</li>
-<li><strong>社会经济状况</strong>：更高的收入和教育水平</li>
-</ol>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<p><strong>核心发现</strong>：当前居住地对老年人死亡率具有实质性因果效应。从第10到第90百分位的地区迁移可使预期寿命增加1.1年，均等化地方效应可降低截面差异的15%。地方效应主要通过医疗质量、气候、社会安全和SES等渠道发挥作用。</p>
-<p><strong>对领域的贡献</strong>：</p>
-<ol>
-<li>首次在全国规模上可信地分离老年人死亡率的地方因果效应与健康资本效应；</li>
-<li>提出了一种不需要指定不可观测变量总重要性的新选择修正策略；</li>
-<li>揭示了"医疗利用率与健康结果截面相关性弱"和"医疗质量与死亡率因果效应强"之间的矛盾——暗示截面数据中的Dartmouth Atlas悖论可能是选择性偏差造成的。</li>
-</ol>
-<p><strong>政策含义</strong>：</p>
-<ul>
-<li>改善弱势地区的医疗资源配置（数量和质量）有望产生显著且即时的生存效益；</li>
-<li>针对老年人的迁移计划（移居到更有利环境）有实质意义；</li>
-<li>但地方效应只解释了15%的截面差异，健康资本（行为习惯、历史经历）仍是主要因素，不可忽视。</li>
-</ul>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文中明确提及的方向</strong>：</p>
-<ol>
-<li>深入研究地方效应的具体渠道（医疗质量的哪个维度最重要？气候影响的机制是什么？）；</li>
-<li>研究地方效应对更年轻人群的影响——本文聚焦老年人，年轻人可能面临不同的渠道；</li>
-<li>拓展到死亡率以外的健康结果（住院率、功能状态等）。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li>利用"Moving to Opportunity"等随机分配迁移实验验证本文的识别假设；</li>
-<li>研究地方效应随时间的动态演变——当地医疗政策改革是否改变了地方效应；</li>
-<li>将地方效应分解为可干预的政策变量（医院质量、环境监管等），直接评估政策效果；</li>
-<li>研究地方效应在工作年龄人群（20-64岁）的大小和渠道，以便将健康政策与劳动力市场政策联系起来。</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>识别假设的可信度</strong>：核心假设是"选择起源地和目的地的不可观测选择过程具有对称性"。但若健康较差的人为了获得特定医疗而搬迁（如搬到医疗中心附近），而健康较好的人因为退休才搬迁，两类迁移的选择机制可能非常不同，对称性假设可能存在问题。</p>
-</li>
-<li>
-<p><strong>Dartmouth Atlas悖论的解释</strong>：本文发现医疗利用率与地方效应正相关，但Dartmouth Atlas发现截面上医疗利用率与健康结果不相关。本文将此归因于截面数据的选择性偏差，但能否用工具变量或其他方法直接检验这一解释？</p>
-</li>
-<li>
-<p><strong>地方效应的即时性</strong>：作者假设老年人的健康资本是固定的，地方效应立即出现。但医疗质量的影响（如定期体检发现疾病）可能有时滞，如何区分"习惯带来的即时效应"和"医疗诊断的滞后效应"？</p>
-</li>
-<li>
-<p><strong>样本选择性</strong>：Medicare迁移者约占所有受益人的0.5%/年，是高度选择性的群体（经济条件较好、身体较好）。这是否限制了结论对无法迁移的老年人（如贫困老人）的适用性？</p>
-</li>
-<li>
-<p><strong>政策内生性</strong>：若政府根据本文研究结果改善落后地区的医疗资源，是否会改变人口选择性迁移的均衡，从而影响未来的地方效应估计？</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>不可观测变量修正策略（利用起源地残差）的具体操作步骤是什么？如何用数据估计"起源地残差相关性"？</li>
-<li>为什么选择通勤区（CZ）作为地理单元？城市内部（如街区级别）的地方效应是否会更大？</li>
-<li>研究发现医疗利用率与因果效应正相关，但Dartmouth Atlas发现截面相关性弱——这两个结论是否真的矛盾？能用这篇论文的框架来检验吗？</li>
-<li>本文聚焦65岁以上老年人，对于工作年龄人群（如35-64岁）是否有类似的地方效应估计，其渠道机制是否不同？</li>
-<li>哪些具体的通勤区被识别为有显著正向地方效应？作者如何解释圣菲、丹佛等地截面寿命较高但地方因果效应为负的"反常"现象？</li>
-<li>本文方法能否应用于研究地方效应对非老年医疗保障（Medicaid、ACA）人群的影响？</li>
-<li>"Moving to Opportunity"项目的随机实验结果（Chetty et al. 2016a）与本文的观察性估计是否一致？如何相互印证？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -11172,6 +11172,320 @@ Model）</strong>：Diamond-DMortensen-Pissarides框架，标准的大规模失�
       </tags>
   </entry>
   <entry>
+    <title>Surviving Childhood — 深度阅读笔记 — Helénsdotter</title>
+    <url>/posts/helensdotter2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Surviving Childhood: Effects of Removing a
+Child From Home</li>
+<li><strong>作者</strong>: Ronja Helénsdotter (MIT and University of
+Gothenburg)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies
+(RES)</li>
+<li><strong>DOI</strong>: 10.1093/restud/rdae053</li>
+<li><strong>难度评估</strong>: 高 -
+需要计量经济学（IV）、儿童保护制度背景知识 <span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>工具变量设计（Instrumental Variable, IV
+Design）</strong>：利用外生的准随机变量（法官分配）来识别因果效应。在本文中，法官对是否移除儿童的决定存在个体差异，这种差异与儿童本身特征无关，可以作为"移除决定"的工具变量。</p>
+<p><strong>法庭命令的安置（Court-Ordered
+Removal）</strong>：指父母或儿童不同意移除时，法院强制命令将儿童从家中带走的程序。在瑞典，约30%的寄养儿童属于此类非自愿安置，这是本文的研究对象。</p>
+<p><strong>外化问题（Externalizing
+Problems）</strong>：指儿童向外部环境表现出的问题行为，如犯罪、物质滥用、自残等，与内化问题（如焦虑、抑郁）相对。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>脆弱群体的严峻现实</strong>：在许多西方国家，自杀和药物使用障碍是青少年死亡的三大原因之一。数据显示，2-6%的儿童在18岁前会被安置在外home
+care，而这些儿童的青少年期和早期成年期死亡率是同龄人的3-5倍。</p></li>
+<li><p><strong>数据稀缺的困境</strong>：由于需要大规模、纵向、个体层面的丰富数据集，关于儿童移除对健康影响的因果证据极为匮乏。</p></li>
+<li><p><strong>政策相关性强</strong>：儿童保护系统涉及政府权力与个人家庭权利之间的冲突。</p></li>
+<li><p><strong>现有研究的空白</strong>：多数研究仅关注教育、犯罪和劳动力市场结果，仅5篇论文研究健康相关结果，且几乎所有可信研究都来自北美。</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：法庭命令的儿童从家中移除，对健康、犯罪和教育会产生什么影响？</p>
+<p><strong>研究方法</strong>：利用法官分配的准随机变化和法官间移除倾向的差异，构建工具变量（IV）设计来隔离因果效应。</p>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：制度背景（瑞典儿童保护系统流程、安置条件）</li>
+<li>第三节：数据（法院文件、登记数据、法官移除倾向）</li>
+<li>第四节：识别策略（法官IV设计）</li>
+<li>第五节：基准结果（死亡率、医疗利用、犯罪）</li>
+<li>第六节：机制探索（照料条件、同伴效应、父母渠道）</li>
+<li>第七节：稳健性检验</li>
+<li>第八节：结论</li>
+</ul>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="识别策略">识别策略</h3>
+<p><strong>法官工具变量的构建</strong>： <span class="math display">\[Z_j(c) = \frac{\sum_{i \neq c} R_j(i) - \sum_{i
+\in c} R_j(i)}{n_j - n_j(c)}\]</span></p>
+<p><strong>瑞典制度背景的关键特征</strong>： -
+法官仅在听证期间与家庭接触（通常1小时） -
+法官只做一个二元决定：是否移除儿童 -
+所有其他决定由社会福利委员会（SWC）做出</p>
+<h3 id="主要结果">主要结果</h3>
+<p><strong>死亡率的基准IV估计</strong>： -
+移除使19岁前死亡风险增加6.8个百分点（相对控制组均值1.8%） -
+效应主要由自杀驱动，主要发生在安置期间 -
+对10岁以上儿童，9个月后自杀风险显著增加</p>
+<p><strong>机制探索</strong>： - 照料条件缺陷导致超过一半的死亡 -
+有害同伴暴露显著增加自残和物质滥用风险 -
+移除显著增加非麻醉药犯罪风险</p>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>法庭命令的儿童移除对死亡率有重大的负面影响</strong>——移除使边际儿童的19岁前死亡风险增加6.8个百分点（相对增幅约378%）</p></li>
+<li><p><strong>同伴效应和照料条件是重要渠道</strong></p></li>
+<li><p><strong>对出生父母影响有限</strong></p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li>首次利用法官IV研究儿童保护</li>
+<li>填补健康结果研究的空白</li>
+<li>打破北美研究垄断，为欧洲研究提供框架</li>
+</ol>
+<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
+<h3 id="文献提及的方向">文献提及的方向</h3>
+<ol type="1">
+<li>短期vs长期效应</li>
+<li>其他欧洲国家复制</li>
+<li>干预设计</li>
+</ol>
+<h3 id="未来研究思考">未来研究思考</h3>
+<ol type="1">
+<li>效应异质性（不同年龄、安置类型、基础原因）</li>
+<li>动态效应（安置结束后的长期效应）</li>
+<li>照料质量的因果效应</li>
+</ol>
+<h2 id="学术思考">6. 学术思考</h2>
+<h3 id="核心理论洞察">核心理论洞察</h3>
+<ol type="1">
+<li><p><strong>"工具变量作为准实验的黄金标准"</strong>：法官的准随机分配和个体间移除倾向的差异提供了一个"自然实验"。瑞典法官只做一个二元决定、且几乎不与家庭接触，这使得排除限制更容易满足。</p></li>
+<li><p><strong>"机制识别的艰难性"</strong>：虽然本文努力探索影响机制，但照料条件、同伴暴露、中断效应可能相互关联，难以区分独立贡献。</p></li>
+</ol>
+<h3 id="深层学术问题">深层学术问题</h3>
+<ol type="1">
+<li>效应边界：本文识别的是"边际儿童"的效应，对其他儿童是否相同？</li>
+<li>外部有效性：瑞典的制度环境与北美不同，结论能否推广？</li>
+</ol>
+<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li>法官IV vs CPS工作者IV的区别是什么？</li>
+<li>如何理解"边际儿童"的概念？</li>
+<li>照料条件缺陷导致超过一半的死亡——这是系统性问题吗？</li>
+<li>从政策角度，应该如何权衡移除的风险和收益？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>政府政策的统一福利分析 — 深度阅读笔记 — Hendren &amp; Sprung-Keyser</title>
+    <url>/posts/hendren2020/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: A Unified Welfare Analysis of Government Policies<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/YTDNY3KC/Hendren和Sprung-Keyser - 2020 - A Unified Welfare Analysis of Government Policies.pdf<br>
+Zotero Item Key:: BZPCLS8S</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+政府每年在社会保险、教育、税收减免、实物转移支付等领域花费巨额资金。经济学家长期以来用不同的福利测量指标评估各类政策：健康保险研究报告"每救一条命的成本"，税收政策报告"超额负担（excess burden）“，高等教育研究报告"每增加一个入学名额的成本”，早教项目报告"社会成本-收益比"……这些指标互不兼容，使得不同领域政策之间的横向比较极为困难。</p>
+<p><strong>研究背景</strong></p>
+<ul>
+<li>已有大量高质量的政策因果效应估计文献（过去50年的自然实验研究积累）</li>
+<li>但每篇文章用自己的方式做福利分析，无法统一比较</li>
+<li>Hendren（2016）提出了MVPF（公共资金边际价值）的概念，作为统一测量工具</li>
+</ul>
+<p><strong>作者的问题意识</strong><br>
+能否用同一把尺子——MVPF——衡量133项美国历史政策的福利效率，从而系统性地回答：哪类政府支出最"划算"？儿童政策和成人政策谁的回报更高？现金转移和实物转移有何差异？</p>
+<p><strong>研究意义</strong><br>
+这是迄今为止规模最大的政策福利比较研究，涵盖133项政策4大领域50年历史。建立了可供研究者直接使用的公开框架（GitHub代码 + 数据），为循证政策（evidence-based policy）决策提供工具。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：问题动机 + MVPF概念介绍 + 主要结论预览。</li>
+<li><strong>MVPF框架</strong>：理论推导；与传统指标（MCF、成本-收益比）的关系。</li>
+<li><strong>6个示例政策</strong>：详细展示MVPF的构建方法。</li>
+<li><strong>社会保险</strong>：健康、失业、残障保险。</li>
+<li><strong>教育</strong>：早教、K-12、大学、职业培训。</li>
+<li><strong>税收与现金转移</strong>：边际税率、EITC、福利项目。</li>
+<li><strong>实物转移</strong>：住房、食品券。</li>
+<li><strong>跨领域比较与政策含义</strong>。</li>
+<li><strong>结论</strong>。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景与挑战">背景与挑战</h3>
+<p><strong>核心挑战</strong>：如何跨政策领域进行福利比较？</p>
+<p>传统方法的问题是：不同文献采用不同的福利指标，彼此不可比；而且各指标通常只反映直接效应，忽略了长期的财政外部性（如儿童受教育后成年纳税、减少转移支付）。</p>
+<h3 id="MVPF框架（方法）">MVPF框架（方法）</h3>
+<p>$$\text{MVPF} = \frac{\text{受益者的支付意愿（WTP）}}{\text{政府净成本}}$$</p>
+<p><strong>分子：支付意愿（WTP）</strong></p>
+<ul>
+<li>受益者为获得某政策愿意支付的最大金额</li>
+<li>利用包络定理（envelope theorem）：WTP ≈ 政策的机械性直接成本（behavioral responses are not valued dollar-for-dollar）</li>
+<li>如果政策提供保险，WTP &gt; 资源成本（消费平滑溢价）</li>
+<li>如果政策诱发福利套取行为，WTP &lt; 资源成本</li>
+</ul>
+<p><strong>分母：政府净成本</strong><br>
+= 初始支出 + 财政外部性（fiscal externality）</p>
+<ul>
+<li>财政外部性 = 因政策改变受益者行为而引起的税收/转移支付的长期变化</li>
+<li>例：儿童健康保险 → 儿童更健康、教育程度提高 → 成年后收入更高 → 政府税收增加 → 净成本下降，甚至为负（政策"自我偿还"）</li>
+<li>政策"自我偿还"（MVPF = ∞）= Pareto改进</li>
+</ul>
+<p><strong>MVPF的解读</strong>：</p>
+<ul>
+<li>MVPF = 1：标准的无扭曲转移（$1政府成本带来$1受益者WTP）</li>
+<li>MVPF &gt; 1：每花$1，受益者获得&gt;$1的福利（高效政策）</li>
+<li>MVPF &lt; 1：受益者实际获得的福利&lt;政府花费（低效政策）</li>
+<li>MVPF = ∞：“自我偿还”，Pareto改进</li>
+</ul>
+<p><strong>与其他指标的关系</strong>：MVPF是Okun"漏桶"比喻的形式化——MVPFA=2, MVPFB=1，则从B转移资金到A当且仅当社会偏好给A受益者$2多于给B受益者$1。</p>
+<h3 id="数据来源">数据来源</h3>
+<p><strong>非原始数据</strong>：本文不做新的因果推断，而是系统汇总现有因果研究的估计结果。</p>
+<ul>
+<li>利用现有文献中已估计的政策效应（就业、收入、教育、健康）作为输入</li>
+<li>用标准假设（贴现率、税率等）将这些效应转化为WTP和财政外部性</li>
+<li>覆盖4个领域133项美国政策（1950s-2010s）</li>
+<li>提供GitHub代码，允许研究者修改关键假设进行敏感性分析</li>
+</ul>
+<h3 id="主要结果">主要结果</h3>
+<p><strong>发现一：儿童政策MVPF远高于成人政策</strong></p>
+<table>
+<thead>
+<tr>
+<th>政策类型</th>
+<th>典型MVPF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>儿童健康保险扩展（如Medicaid儿童）</td>
+<td>平均&gt;5，许多"自我偿还"</td>
+</tr>
+<tr>
+<td>早期教育（Perry Preschool）</td>
+<td>~44</td>
+</tr>
+<tr>
+<td>Abecedarian项目</td>
+<td>~12</td>
+</tr>
+<tr>
+<td>K-12教育经费均等化</td>
+<td>高</td>
+</tr>
+<tr>
+<td>大学教育扩展</td>
+<td>高（部分）</td>
+</tr>
+<tr>
+<td>成人健康保险扩展</td>
+<td>0.40–1.63</td>
+</tr>
+<tr>
+<td>实物转移（住房券、食品券）</td>
+<td>0.65–1.04</td>
+</tr>
+<tr>
+<td>税收减免/现金福利（成人）</td>
+<td>负值–1.20</td>
+</tr>
+</tbody>
+</table>
+<p><strong>发现二：儿童政策的高MVPF跨越各年龄段</strong></p>
+<p>与Heckman（2006）"早期投资边际回报递减"的主张相反，本文发现：</p>
+<ul>
+<li>早期儿童教育（0-5岁）确实有高MVPF</li>
+<li><strong>但K-12、大学教育投资也有高MVPF</strong>——儿童期的高回报并不在某个年龄后迅速下降</li>
+<li>"一刀切"式的"越早越好"观点需要修正</li>
+</ul>
+<p><strong>发现三：许多儿童政策"自我偿还"</strong></p>
+<p>儿童健康保险扩展的长期财政外部性为正：平均每$1投入，政府长期回收$1.78（其中3/4项目完全回收成本）。<br>
+原因：受益儿童成年后收入更高→缴纳更多税→减少转移支付需求。</p>
+<p><strong>发现四：成人政策的例外——对儿童产生大溢出效应</strong></p>
+<p>成人政策通常MVPF较低（0.5–2），但若成人政策对其子女产生大的正外部性（spillover to children），MVPF可以超出此范围。说明代际传递渠道在评估成人政策时不可忽略。</p>
+<p><strong>发现五：同类政策内部变异巨大</strong></p>
+<p>即使在高回报类别（如儿童政策）中，也存在低MVPF的政策（如职业培训项目、未增加升学率的大学补贴）。这说明"类别"本身不能代替具体政策的评估——机制很重要。</p>
+<h3 id="政策含义">政策含义</h3>
+<ol>
+<li><strong>儿童健康和教育是最具性价比的公共投资</strong>，且不仅限于早期教育</li>
+<li><strong>成人政策不应简单否定</strong>——若有代际溢出效应，其福利效率可大幅提升</li>
+<li><strong>“研究的边际价值”（value of information）是可以量化的</strong>：在MVPF高度不确定的政策领域，政策制定者应愿意为更好的因果证据支付大量预算</li>
+<li><strong>循证政策设计</strong>：同类政策内部的变异提示我们，了解"为什么有效"（机制）比知道"平均有效"更重要</li>
+</ol>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<ol>
+<li>对低收入儿童健康和教育的直接投资，历史上有最高的MVPF，平均超过5，很多自我偿还（Pareto改进）；</li>
+<li>儿童期高回报政策跨越各年龄段，不仅限于早期教育；</li>
+<li>成人政策MVPF通常在0.5–2之间；若对儿童有大溢出效应则可超越此范围；</li>
+<li>同类政策内MVPF差异显著，了解成功政策的机制比看平均MVPF更重要；</li>
+<li>MVPF框架可应用于犯罪、环境、基础设施等尚未覆盖的领域，未来研究空间巨大。</li>
+</ol>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文明确提及的方向</strong>：</p>
+<ol>
+<li>将MVPF框架扩展至犯罪政策、环境政策、宏观经济稳定政策、基础设施政策；</li>
+<li>量化信息价值——为MVPF不确定的政策领域设计新数据收集方案；</li>
+<li>利用行政数据扩大政策效应的因果估计（更多政策纳入比较）。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li><strong>中国政策的MVPF估计</strong>：中国有大量准实验政策（农村义务教育经费改革、新农合、城镇医保扩展、EITC类转移支付）。能否用中国行政数据和已有因果估计构建中国版的MVPF比较数据集？</li>
+<li><strong>发展中国家的跨代际效应测量</strong>：本文核心发现（儿童政策的财政外部性）依赖于长期追踪数据。在数据基础薄弱的发展中国家，如何合理估计儿童政策的代际收益？</li>
+<li><strong>政策组合的相互作用</strong>：本文对各政策独立评估，忽略了政策之间的互补/替代关系。如果儿童健康保险和早教同时实施，联合MVPF是否大于两个独立MVPF之和？</li>
+<li><strong>MVPF与分配偏好的结合</strong>：本文MVPF只测量效率（“漏桶的泄漏量”），不包含社会对不同群体的分配权重。如何将MVPF与不同的社会福利函数（平等主义、功利主义）结合，形成"分配调整后的MVPF"？</li>
+<li><strong>数字化公共服务的MVPF</strong>：政府数字化转型（如电子政务、在线医疗）的受益者WTP和财政外部性如何测量？这类政策是否也能达到高MVPF？</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>财政外部性的时间折现问题</strong>：本文MVPF的高低在很大程度上取决于如何折现儿童长期收益。贴现率从3%变为5%，那些"自我偿还"的儿童政策的MVPF会大幅下降。作者做了敏感性分析，但核心结论（儿童政策MVPF &gt;&gt; 成人政策）究竟有多依赖于折现率假设？这是本文结论的最重要不确定来源之一。</p>
+</li>
+<li>
+<p><strong>发表偏差与外部有效性</strong>：本文使用的"因果估计"来自学术文献，而学术文献存在著名的发表偏差（positive results are more likely to be published）。作者使用Andrews &amp; Kasy（2019）方法校正发表偏差，但校正方法本身也有假设。若底层因果估计系统性高估政策效果，MVPF也会系统高估，"自我偿还"政策数量会被高估。</p>
+</li>
+<li>
+<p><strong>"政策"的内生性</strong>：Hendren &amp; Sprung-Keyser分析的是<strong>历史上实施的</strong>133项政策。这些政策并非随机选择——政治上可行的政策往往是有基础的、预期效果良好的。这意味着样本可能存在正向选择偏误（high-MVPF policies are more likely to be tried）。对于那些从未被实施的政策，MVPF可能与已实施政策大相径庭。</p>
+</li>
+<li>
+<p><strong>MVPF与分配正义的分离</strong>：本文明确指出MVPF只衡量效率，不包含对不同群体的分配偏好。但政策评估不可能完全回避分配问题——一个MVPF=3的政策若全部受益于富人，是否优于MVPF=1.5的政策让穷人受益？作者的建议是先用MVPF确定效率边界，再叠加分配偏好——但在实践中这两步的分离往往很难维持。</p>
+</li>
+<li>
+<p><strong>从美国到其他国家的可移植性</strong>：本文基于美国过去50年的政策经验。中国、印度等发展中国家在儿童健康保险上的回报率是否也高？发展中国家劳动力市场的特征（非正规就业、低税率）可能使得"财政外部性"（通过税收回收）的机制大打折扣。有限的税收征管能力可能意味着儿童教育投资无法通过增税来"自我偿还"，MVPF结论的普遍性有待检验。</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>MVPF与传统的"成本-收益比（cost-benefit ratio）"或"边际公共资金成本（MCF）"有什么本质区别？</li>
+<li>Perry Preschool的MVPF为什么高达44？核心机制是什么？这是否意味着早期教育项目都有如此高的回报？</li>
+<li>文中提到一些政策"MVPF为负"，这是什么意思？哪些政策出现了负MVPF？</li>
+<li>本文的GitHub代码和数据集（<a href="http://policyanalysis.org/welfare_analysis%EF%BC%89%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E7%94%A8%E6%9D%A5%E4%BC%B0%E8%AE%A1%E4%B8%AD%E5%9B%BD%E6%94%BF%E7%AD%96%E7%9A%84MVPF%EF%BC%9F%E5%93%AA%E4%BA%9B%E6%AD%A5%E9%AA%A4%E9%9C%80%E8%A6%81%E4%BF%AE%E6%94%B9%E4%BB%A5%E9%80%82%E5%BA%94%E4%B8%AD%E5%9B%BD%E6%83%85%E5%A2%83%EF%BC%9F">policyanalysis.org/welfare_analysis）是否可以用来估计中国政策的MVPF？哪些步骤需要修改以适应中国情境？</a></li>
+<li>MVPF框架如何处理"一般均衡效应"（如政策规模扩大后对工资、价格的影响）？目前的估计是局部均衡，扩大政策规模后MVPF是否会下降？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Bartik Instruments: What, When, Why, and How — 深度阅读笔记 — AER</title>
     <url>/posts/goldsmith2020/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -11605,320 +11919,6 @@ Bartik 估计量解释?</strong></p></li>
 ]]></content>
       <categories>
         <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Surviving Childhood — 深度阅读笔记 — Helénsdotter</title>
-    <url>/posts/helensdotter2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Surviving Childhood: Effects of Removing a
-Child From Home</li>
-<li><strong>作者</strong>: Ronja Helénsdotter (MIT and University of
-Gothenburg)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies
-(RES)</li>
-<li><strong>DOI</strong>: 10.1093/restud/rdae053</li>
-<li><strong>难度评估</strong>: 高 -
-需要计量经济学（IV）、儿童保护制度背景知识 <span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>工具变量设计（Instrumental Variable, IV
-Design）</strong>：利用外生的准随机变量（法官分配）来识别因果效应。在本文中，法官对是否移除儿童的决定存在个体差异，这种差异与儿童本身特征无关，可以作为"移除决定"的工具变量。</p>
-<p><strong>法庭命令的安置（Court-Ordered
-Removal）</strong>：指父母或儿童不同意移除时，法院强制命令将儿童从家中带走的程序。在瑞典，约30%的寄养儿童属于此类非自愿安置，这是本文的研究对象。</p>
-<p><strong>外化问题（Externalizing
-Problems）</strong>：指儿童向外部环境表现出的问题行为，如犯罪、物质滥用、自残等，与内化问题（如焦虑、抑郁）相对。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>脆弱群体的严峻现实</strong>：在许多西方国家，自杀和药物使用障碍是青少年死亡的三大原因之一。数据显示，2-6%的儿童在18岁前会被安置在外home
-care，而这些儿童的青少年期和早期成年期死亡率是同龄人的3-5倍。</p></li>
-<li><p><strong>数据稀缺的困境</strong>：由于需要大规模、纵向、个体层面的丰富数据集，关于儿童移除对健康影响的因果证据极为匮乏。</p></li>
-<li><p><strong>政策相关性强</strong>：儿童保护系统涉及政府权力与个人家庭权利之间的冲突。</p></li>
-<li><p><strong>现有研究的空白</strong>：多数研究仅关注教育、犯罪和劳动力市场结果，仅5篇论文研究健康相关结果，且几乎所有可信研究都来自北美。</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：法庭命令的儿童从家中移除，对健康、犯罪和教育会产生什么影响？</p>
-<p><strong>研究方法</strong>：利用法官分配的准随机变化和法官间移除倾向的差异，构建工具变量（IV）设计来隔离因果效应。</p>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：制度背景（瑞典儿童保护系统流程、安置条件）</li>
-<li>第三节：数据（法院文件、登记数据、法官移除倾向）</li>
-<li>第四节：识别策略（法官IV设计）</li>
-<li>第五节：基准结果（死亡率、医疗利用、犯罪）</li>
-<li>第六节：机制探索（照料条件、同伴效应、父母渠道）</li>
-<li>第七节：稳健性检验</li>
-<li>第八节：结论</li>
-</ul>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="识别策略">识别策略</h3>
-<p><strong>法官工具变量的构建</strong>： <span class="math display">\[Z_j(c) = \frac{\sum_{i \neq c} R_j(i) - \sum_{i
-\in c} R_j(i)}{n_j - n_j(c)}\]</span></p>
-<p><strong>瑞典制度背景的关键特征</strong>： -
-法官仅在听证期间与家庭接触（通常1小时） -
-法官只做一个二元决定：是否移除儿童 -
-所有其他决定由社会福利委员会（SWC）做出</p>
-<h3 id="主要结果">主要结果</h3>
-<p><strong>死亡率的基准IV估计</strong>： -
-移除使19岁前死亡风险增加6.8个百分点（相对控制组均值1.8%） -
-效应主要由自杀驱动，主要发生在安置期间 -
-对10岁以上儿童，9个月后自杀风险显著增加</p>
-<p><strong>机制探索</strong>： - 照料条件缺陷导致超过一半的死亡 -
-有害同伴暴露显著增加自残和物质滥用风险 -
-移除显著增加非麻醉药犯罪风险</p>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>法庭命令的儿童移除对死亡率有重大的负面影响</strong>——移除使边际儿童的19岁前死亡风险增加6.8个百分点（相对增幅约378%）</p></li>
-<li><p><strong>同伴效应和照料条件是重要渠道</strong></p></li>
-<li><p><strong>对出生父母影响有限</strong></p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li>首次利用法官IV研究儿童保护</li>
-<li>填补健康结果研究的空白</li>
-<li>打破北美研究垄断，为欧洲研究提供框架</li>
-</ol>
-<h2 id="未来研究方向future-work">5. 未来研究方向（Future work）</h2>
-<h3 id="文献提及的方向">文献提及的方向</h3>
-<ol type="1">
-<li>短期vs长期效应</li>
-<li>其他欧洲国家复制</li>
-<li>干预设计</li>
-</ol>
-<h3 id="未来研究思考">未来研究思考</h3>
-<ol type="1">
-<li>效应异质性（不同年龄、安置类型、基础原因）</li>
-<li>动态效应（安置结束后的长期效应）</li>
-<li>照料质量的因果效应</li>
-</ol>
-<h2 id="学术思考">6. 学术思考</h2>
-<h3 id="核心理论洞察">核心理论洞察</h3>
-<ol type="1">
-<li><p><strong>"工具变量作为准实验的黄金标准"</strong>：法官的准随机分配和个体间移除倾向的差异提供了一个"自然实验"。瑞典法官只做一个二元决定、且几乎不与家庭接触，这使得排除限制更容易满足。</p></li>
-<li><p><strong>"机制识别的艰难性"</strong>：虽然本文努力探索影响机制，但照料条件、同伴暴露、中断效应可能相互关联，难以区分独立贡献。</p></li>
-</ol>
-<h3 id="深层学术问题">深层学术问题</h3>
-<ol type="1">
-<li>效应边界：本文识别的是"边际儿童"的效应，对其他儿童是否相同？</li>
-<li>外部有效性：瑞典的制度环境与北美不同，结论能否推广？</li>
-</ol>
-<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li>法官IV vs CPS工作者IV的区别是什么？</li>
-<li>如何理解"边际儿童"的概念？</li>
-<li>照料条件缺陷导致超过一半的死亡——这是系统性问题吗？</li>
-<li>从政策角度，应该如何权衡移除的风险和收益？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>政府政策的统一福利分析 — 深度阅读笔记 — Hendren &amp; Sprung-Keyser</title>
-    <url>/posts/hendren2020/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: A Unified Welfare Analysis of Government Policies<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/YTDNY3KC/Hendren和Sprung-Keyser - 2020 - A Unified Welfare Analysis of Government Policies.pdf<br>
-Zotero Item Key:: BZPCLS8S</p>
-<hr>
-<span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-政府每年在社会保险、教育、税收减免、实物转移支付等领域花费巨额资金。经济学家长期以来用不同的福利测量指标评估各类政策：健康保险研究报告"每救一条命的成本"，税收政策报告"超额负担（excess burden）“，高等教育研究报告"每增加一个入学名额的成本”，早教项目报告"社会成本-收益比"……这些指标互不兼容，使得不同领域政策之间的横向比较极为困难。</p>
-<p><strong>研究背景</strong></p>
-<ul>
-<li>已有大量高质量的政策因果效应估计文献（过去50年的自然实验研究积累）</li>
-<li>但每篇文章用自己的方式做福利分析，无法统一比较</li>
-<li>Hendren（2016）提出了MVPF（公共资金边际价值）的概念，作为统一测量工具</li>
-</ul>
-<p><strong>作者的问题意识</strong><br>
-能否用同一把尺子——MVPF——衡量133项美国历史政策的福利效率，从而系统性地回答：哪类政府支出最"划算"？儿童政策和成人政策谁的回报更高？现金转移和实物转移有何差异？</p>
-<p><strong>研究意义</strong><br>
-这是迄今为止规模最大的政策福利比较研究，涵盖133项政策4大领域50年历史。建立了可供研究者直接使用的公开框架（GitHub代码 + 数据），为循证政策（evidence-based policy）决策提供工具。</p>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言</strong>：问题动机 + MVPF概念介绍 + 主要结论预览。</li>
-<li><strong>MVPF框架</strong>：理论推导；与传统指标（MCF、成本-收益比）的关系。</li>
-<li><strong>6个示例政策</strong>：详细展示MVPF的构建方法。</li>
-<li><strong>社会保险</strong>：健康、失业、残障保险。</li>
-<li><strong>教育</strong>：早教、K-12、大学、职业培训。</li>
-<li><strong>税收与现金转移</strong>：边际税率、EITC、福利项目。</li>
-<li><strong>实物转移</strong>：住房、食品券。</li>
-<li><strong>跨领域比较与政策含义</strong>。</li>
-<li><strong>结论</strong>。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景与挑战">背景与挑战</h3>
-<p><strong>核心挑战</strong>：如何跨政策领域进行福利比较？</p>
-<p>传统方法的问题是：不同文献采用不同的福利指标，彼此不可比；而且各指标通常只反映直接效应，忽略了长期的财政外部性（如儿童受教育后成年纳税、减少转移支付）。</p>
-<h3 id="MVPF框架（方法）">MVPF框架（方法）</h3>
-<p>$$\text{MVPF} = \frac{\text{受益者的支付意愿（WTP）}}{\text{政府净成本}}$$</p>
-<p><strong>分子：支付意愿（WTP）</strong></p>
-<ul>
-<li>受益者为获得某政策愿意支付的最大金额</li>
-<li>利用包络定理（envelope theorem）：WTP ≈ 政策的机械性直接成本（behavioral responses are not valued dollar-for-dollar）</li>
-<li>如果政策提供保险，WTP &gt; 资源成本（消费平滑溢价）</li>
-<li>如果政策诱发福利套取行为，WTP &lt; 资源成本</li>
-</ul>
-<p><strong>分母：政府净成本</strong><br>
-= 初始支出 + 财政外部性（fiscal externality）</p>
-<ul>
-<li>财政外部性 = 因政策改变受益者行为而引起的税收/转移支付的长期变化</li>
-<li>例：儿童健康保险 → 儿童更健康、教育程度提高 → 成年后收入更高 → 政府税收增加 → 净成本下降，甚至为负（政策"自我偿还"）</li>
-<li>政策"自我偿还"（MVPF = ∞）= Pareto改进</li>
-</ul>
-<p><strong>MVPF的解读</strong>：</p>
-<ul>
-<li>MVPF = 1：标准的无扭曲转移（$1政府成本带来$1受益者WTP）</li>
-<li>MVPF &gt; 1：每花$1，受益者获得&gt;$1的福利（高效政策）</li>
-<li>MVPF &lt; 1：受益者实际获得的福利&lt;政府花费（低效政策）</li>
-<li>MVPF = ∞：“自我偿还”，Pareto改进</li>
-</ul>
-<p><strong>与其他指标的关系</strong>：MVPF是Okun"漏桶"比喻的形式化——MVPFA=2, MVPFB=1，则从B转移资金到A当且仅当社会偏好给A受益者$2多于给B受益者$1。</p>
-<h3 id="数据来源">数据来源</h3>
-<p><strong>非原始数据</strong>：本文不做新的因果推断，而是系统汇总现有因果研究的估计结果。</p>
-<ul>
-<li>利用现有文献中已估计的政策效应（就业、收入、教育、健康）作为输入</li>
-<li>用标准假设（贴现率、税率等）将这些效应转化为WTP和财政外部性</li>
-<li>覆盖4个领域133项美国政策（1950s-2010s）</li>
-<li>提供GitHub代码，允许研究者修改关键假设进行敏感性分析</li>
-</ul>
-<h3 id="主要结果">主要结果</h3>
-<p><strong>发现一：儿童政策MVPF远高于成人政策</strong></p>
-<table>
-<thead>
-<tr>
-<th>政策类型</th>
-<th>典型MVPF</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>儿童健康保险扩展（如Medicaid儿童）</td>
-<td>平均&gt;5，许多"自我偿还"</td>
-</tr>
-<tr>
-<td>早期教育（Perry Preschool）</td>
-<td>~44</td>
-</tr>
-<tr>
-<td>Abecedarian项目</td>
-<td>~12</td>
-</tr>
-<tr>
-<td>K-12教育经费均等化</td>
-<td>高</td>
-</tr>
-<tr>
-<td>大学教育扩展</td>
-<td>高（部分）</td>
-</tr>
-<tr>
-<td>成人健康保险扩展</td>
-<td>0.40–1.63</td>
-</tr>
-<tr>
-<td>实物转移（住房券、食品券）</td>
-<td>0.65–1.04</td>
-</tr>
-<tr>
-<td>税收减免/现金福利（成人）</td>
-<td>负值–1.20</td>
-</tr>
-</tbody>
-</table>
-<p><strong>发现二：儿童政策的高MVPF跨越各年龄段</strong></p>
-<p>与Heckman（2006）"早期投资边际回报递减"的主张相反，本文发现：</p>
-<ul>
-<li>早期儿童教育（0-5岁）确实有高MVPF</li>
-<li><strong>但K-12、大学教育投资也有高MVPF</strong>——儿童期的高回报并不在某个年龄后迅速下降</li>
-<li>"一刀切"式的"越早越好"观点需要修正</li>
-</ul>
-<p><strong>发现三：许多儿童政策"自我偿还"</strong></p>
-<p>儿童健康保险扩展的长期财政外部性为正：平均每$1投入，政府长期回收$1.78（其中3/4项目完全回收成本）。<br>
-原因：受益儿童成年后收入更高→缴纳更多税→减少转移支付需求。</p>
-<p><strong>发现四：成人政策的例外——对儿童产生大溢出效应</strong></p>
-<p>成人政策通常MVPF较低（0.5–2），但若成人政策对其子女产生大的正外部性（spillover to children），MVPF可以超出此范围。说明代际传递渠道在评估成人政策时不可忽略。</p>
-<p><strong>发现五：同类政策内部变异巨大</strong></p>
-<p>即使在高回报类别（如儿童政策）中，也存在低MVPF的政策（如职业培训项目、未增加升学率的大学补贴）。这说明"类别"本身不能代替具体政策的评估——机制很重要。</p>
-<h3 id="政策含义">政策含义</h3>
-<ol>
-<li><strong>儿童健康和教育是最具性价比的公共投资</strong>，且不仅限于早期教育</li>
-<li><strong>成人政策不应简单否定</strong>——若有代际溢出效应，其福利效率可大幅提升</li>
-<li><strong>“研究的边际价值”（value of information）是可以量化的</strong>：在MVPF高度不确定的政策领域，政策制定者应愿意为更好的因果证据支付大量预算</li>
-<li><strong>循证政策设计</strong>：同类政策内部的变异提示我们，了解"为什么有效"（机制）比知道"平均有效"更重要</li>
-</ol>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<ol>
-<li>对低收入儿童健康和教育的直接投资，历史上有最高的MVPF，平均超过5，很多自我偿还（Pareto改进）；</li>
-<li>儿童期高回报政策跨越各年龄段，不仅限于早期教育；</li>
-<li>成人政策MVPF通常在0.5–2之间；若对儿童有大溢出效应则可超越此范围；</li>
-<li>同类政策内MVPF差异显著，了解成功政策的机制比看平均MVPF更重要；</li>
-<li>MVPF框架可应用于犯罪、环境、基础设施等尚未覆盖的领域，未来研究空间巨大。</li>
-</ol>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文明确提及的方向</strong>：</p>
-<ol>
-<li>将MVPF框架扩展至犯罪政策、环境政策、宏观经济稳定政策、基础设施政策；</li>
-<li>量化信息价值——为MVPF不确定的政策领域设计新数据收集方案；</li>
-<li>利用行政数据扩大政策效应的因果估计（更多政策纳入比较）。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li><strong>中国政策的MVPF估计</strong>：中国有大量准实验政策（农村义务教育经费改革、新农合、城镇医保扩展、EITC类转移支付）。能否用中国行政数据和已有因果估计构建中国版的MVPF比较数据集？</li>
-<li><strong>发展中国家的跨代际效应测量</strong>：本文核心发现（儿童政策的财政外部性）依赖于长期追踪数据。在数据基础薄弱的发展中国家，如何合理估计儿童政策的代际收益？</li>
-<li><strong>政策组合的相互作用</strong>：本文对各政策独立评估，忽略了政策之间的互补/替代关系。如果儿童健康保险和早教同时实施，联合MVPF是否大于两个独立MVPF之和？</li>
-<li><strong>MVPF与分配偏好的结合</strong>：本文MVPF只测量效率（“漏桶的泄漏量”），不包含社会对不同群体的分配权重。如何将MVPF与不同的社会福利函数（平等主义、功利主义）结合，形成"分配调整后的MVPF"？</li>
-<li><strong>数字化公共服务的MVPF</strong>：政府数字化转型（如电子政务、在线医疗）的受益者WTP和财政外部性如何测量？这类政策是否也能达到高MVPF？</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>财政外部性的时间折现问题</strong>：本文MVPF的高低在很大程度上取决于如何折现儿童长期收益。贴现率从3%变为5%，那些"自我偿还"的儿童政策的MVPF会大幅下降。作者做了敏感性分析，但核心结论（儿童政策MVPF &gt;&gt; 成人政策）究竟有多依赖于折现率假设？这是本文结论的最重要不确定来源之一。</p>
-</li>
-<li>
-<p><strong>发表偏差与外部有效性</strong>：本文使用的"因果估计"来自学术文献，而学术文献存在著名的发表偏差（positive results are more likely to be published）。作者使用Andrews &amp; Kasy（2019）方法校正发表偏差，但校正方法本身也有假设。若底层因果估计系统性高估政策效果，MVPF也会系统高估，"自我偿还"政策数量会被高估。</p>
-</li>
-<li>
-<p><strong>"政策"的内生性</strong>：Hendren &amp; Sprung-Keyser分析的是<strong>历史上实施的</strong>133项政策。这些政策并非随机选择——政治上可行的政策往往是有基础的、预期效果良好的。这意味着样本可能存在正向选择偏误（high-MVPF policies are more likely to be tried）。对于那些从未被实施的政策，MVPF可能与已实施政策大相径庭。</p>
-</li>
-<li>
-<p><strong>MVPF与分配正义的分离</strong>：本文明确指出MVPF只衡量效率，不包含对不同群体的分配偏好。但政策评估不可能完全回避分配问题——一个MVPF=3的政策若全部受益于富人，是否优于MVPF=1.5的政策让穷人受益？作者的建议是先用MVPF确定效率边界，再叠加分配偏好——但在实践中这两步的分离往往很难维持。</p>
-</li>
-<li>
-<p><strong>从美国到其他国家的可移植性</strong>：本文基于美国过去50年的政策经验。中国、印度等发展中国家在儿童健康保险上的回报率是否也高？发展中国家劳动力市场的特征（非正规就业、低税率）可能使得"财政外部性"（通过税收回收）的机制大打折扣。有限的税收征管能力可能意味着儿童教育投资无法通过增税来"自我偿还"，MVPF结论的普遍性有待检验。</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>MVPF与传统的"成本-收益比（cost-benefit ratio）"或"边际公共资金成本（MCF）"有什么本质区别？</li>
-<li>Perry Preschool的MVPF为什么高达44？核心机制是什么？这是否意味着早期教育项目都有如此高的回报？</li>
-<li>文中提到一些政策"MVPF为负"，这是什么意思？哪些政策出现了负MVPF？</li>
-<li>本文的GitHub代码和数据集（<a href="http://policyanalysis.org/welfare_analysis%EF%BC%89%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E7%94%A8%E6%9D%A5%E4%BC%B0%E8%AE%A1%E4%B8%AD%E5%9B%BD%E6%94%BF%E7%AD%96%E7%9A%84MVPF%EF%BC%9F%E5%93%AA%E4%BA%9B%E6%AD%A5%E9%AA%A4%E9%9C%80%E8%A6%81%E4%BF%AE%E6%94%B9%E4%BB%A5%E9%80%82%E5%BA%94%E4%B8%AD%E5%9B%BD%E6%83%85%E5%A2%83%EF%BC%9F">policyanalysis.org/welfare_analysis）是否可以用来估计中国政策的MVPF？哪些步骤需要修改以适应中国情境？</a></li>
-<li>MVPF框架如何处理"一般均衡效应"（如政策规模扩大后对工资、价格的影响）？目前的估计是局部均衡，扩大政策规模后MVPF是否会下降？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -16057,6 +16057,46 @@ rollout数据、设施调查、服务提供调查、患者调查、家庭调查<
       </tags>
   </entry>
   <entry>
+    <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
+    <url>/posts/32262/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
+<h2 id="研究问题"><strong>1. 研究问题</strong></h2>
+<p>本文以江苏省12个地级市"河长制"政策转移案例(2006 —
+2016)为研究对象,在识别政策转移案例中"复制"和"再生产"两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对"河长制"转移程度的影响.研究发现"河长制"政策转移中的"政策再生产"的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局.通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产.</p>
+<p>&nbsp;</p>
+<span id="more"></span>
+<h2 id="问题的提出"><strong>2. 问题的提出</strong></h2>
+<p><strong>2.1 政策转移的必要性</strong></p>
+<p>现实状况:政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有"后发优势"的意味、地区间的合作与竞争</p>
+<p>转移情形:政策转移并不意味着全盘复制,可分为"复制"和"再生产"两种形式</p>
+<p>核心问题:什么因素能够促成政策"再生产",政策"再生产"又体现出那些维度特征</p>
+<p><strong>2.2 河长制的背景介绍</strong></p>
+<p>河湖治理是跨界特性最典型的领域之一,涉及上下游、左右岸、不同行政区域和行业,呈现出高度的复杂性.河长制最早发轫于太湖蓝藻危机,2016年之前是一项地方政策,经政策扩散至多地.</p>
+<p>现实调查显示河长制在江苏省内的扩散过程中呈现出"复制"和"再生产"的典型差异.</p>
+<p>&nbsp;</p>
+<h2 id="研究思路和方法"><strong>3. 研究思路和方法</strong></h2>
+<p><strong>3.1 QCA</strong></p>
+<p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles
+Ragin)于<code>1987</code>年提出,适用于案例数量大于10小于60的研究.</p>
+<p>其使用布尔代数和集合论的思想来进行中小数量的跨案例比较,从而处理多个原因和一个结果之间的因果关系.</p>
+<p><strong>3.2 转移程度的刻画</strong></p>
+<p>道洛维茨和马什最早借鉴rose(1993)的连续统来划分政策转移程度:复制、模仿、混合、启发.</p>
+<p>本文简单划分为:"复制"和"再生产"</p>
+<p><strong>3.3 解释变量的选择</strong></p>
+<p>行政压力、资源禀赋、政策需求、外部力量</p>
+<p>&nbsp;</p>
+<h2 id="结论"><strong>4. 结论</strong></h2>
+<p>政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素.</p>
+]]></content>
+      <categories>
+        <category>公共管理</category>
+        <category>政策转移</category>
+      </categories>
+      <tags>
+        <tag>文献阅读</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>文献阅读# the Effect of Microinsurance on Economic Activities: Evidence From a Randomized Field Experiment</title>
     <url>/posts/51245/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
@@ -16115,46 +16155,6 @@ rollout数据、设施调查、服务提供调查、患者调查、家庭调查<
       <categories>
         <category>实验经济学</category>
         <category>保险</category>
-      </categories>
-      <tags>
-        <tag>文献阅读</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
-    <url>/posts/32262/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
-<h2 id="研究问题"><strong>1. 研究问题</strong></h2>
-<p>本文以江苏省12个地级市"河长制"政策转移案例(2006 —
-2016)为研究对象,在识别政策转移案例中"复制"和"再生产"两种程度差异的基础上,应用定性比较分析(<code>QCA</code>)方法探索了资源禀赋、行政压力、政策需求、外部力量四大类因素对"河长制"转移程度的影响.研究发现"河长制"政策转移中的"政策再生产"的形成是多种因素组合作用的结果,而影响变量的组合并非一元,呈现多元化格局.通过<code>QCA</code>软件的数据梳理排序得出覆盖率最高的四种组合,在此基础上概化出政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产.</p>
-<p>&nbsp;</p>
-<span id="more"></span>
-<h2 id="问题的提出"><strong>2. 问题的提出</strong></h2>
-<p><strong>2.1 政策转移的必要性</strong></p>
-<p>现实状况:政策供给不均衡、地方政策供给能力局限性、政策再生产本身具有"后发优势"的意味、地区间的合作与竞争</p>
-<p>转移情形:政策转移并不意味着全盘复制,可分为"复制"和"再生产"两种形式</p>
-<p>核心问题:什么因素能够促成政策"再生产",政策"再生产"又体现出那些维度特征</p>
-<p><strong>2.2 河长制的背景介绍</strong></p>
-<p>河湖治理是跨界特性最典型的领域之一,涉及上下游、左右岸、不同行政区域和行业,呈现出高度的复杂性.河长制最早发轫于太湖蓝藻危机,2016年之前是一项地方政策,经政策扩散至多地.</p>
-<p>现实调查显示河长制在江苏省内的扩散过程中呈现出"复制"和"再生产"的典型差异.</p>
-<p>&nbsp;</p>
-<h2 id="研究思路和方法"><strong>3. 研究思路和方法</strong></h2>
-<p><strong>3.1 QCA</strong></p>
-<p>定性比较分析既是一种研究方法,也是一类分析技术的统称,由查尔斯·拉金(Charles
-Ragin)于<code>1987</code>年提出,适用于案例数量大于10小于60的研究.</p>
-<p>其使用布尔代数和集合论的思想来进行中小数量的跨案例比较,从而处理多个原因和一个结果之间的因果关系.</p>
-<p><strong>3.2 转移程度的刻画</strong></p>
-<p>道洛维茨和马什最早借鉴rose(1993)的连续统来划分政策转移程度:复制、模仿、混合、启发.</p>
-<p>本文简单划分为:"复制"和"再生产"</p>
-<p><strong>3.3 解释变量的选择</strong></p>
-<p>行政压力、资源禀赋、政策需求、外部力量</p>
-<p>&nbsp;</p>
-<h2 id="结论"><strong>4. 结论</strong></h2>
-<p>政策转移中政策"再生产"的三种模式:资源主导型政策再生产,行政压力、资源、社会力量复合驱动型政策再生产,政府和智库合作型政策再生产,三种模式命名体现出其主要影响因素.</p>
-]]></content>
-      <categories>
-        <category>公共管理</category>
-        <category>政策转移</category>
       </categories>
       <tags>
         <tag>文献阅读</tag>
@@ -16965,156 +16965,6 @@ Tabellini (Harvard &amp; CEPR &amp; NBER)</li>
       </tags>
   </entry>
   <entry>
-    <title>邻里效应：伦敦战时破坏的证据 — 深度阅读笔记 — Redding &amp; Sturm</title>
-    <url>/posts/redding2024/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Neighborhood Effects: Evidence from Wartime Destruction in London<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/394PKQGT/Redding和Sturm - 2024 - Neighborhood Effects Evidence from Wartime Destruction in London.pdf<br>
-Zotero Item Key:: Y7PUT4SC</p>
-<hr>
-<span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-城市经济学的一个核心问题是：为什么同一城市内不同地段的房价和社会经济水平差异如此之大？理论上存在两类竞争性解释：（1）<strong>自然禀赋差异</strong>（fundamentals）——绿地、景观等自然优势；（2）<strong>邻里效应</strong>（neighborhood effects）——个体行为受周边邻里特征影响（如邻里构成影响居民选择），形成正反馈循环。这两类机制对政策有截然不同的含义：如果是自然禀赋主导，地方干预需要改变禀赋本身；如果是邻里效应主导，即使小规模干预也可能通过改变邻里构成引发持久的社会变迁。</p>
-<p><strong>研究背景</strong><br>
-已有研究（Chetty et al. 2016 "移动到机会"项目等）尝试估计邻里效应，但面临根本性的内生性问题：居民在哪里住是自我选择的结果，富裕社区可能本来就具有更好的禀赋，而不是因为"邻里"本身的影响。外生识别邻里效应非常困难，需要大规模、外生的冲击来打破居民与环境之间的共同决定关系。</p>
-<p><strong>作者的问题意识</strong><br>
-能否利用大规模的历史外生冲击——二战期间德国对伦敦的轰炸——来识别邻里效应？轰炸的（条件）随机性使其成为一个天然实验，可以比较被炸和未被炸地区在二战后长期的社会经济演变差异，以及相邻地区之间的溢出效应。</p>
-<p><strong>研究意义</strong><br>
-首次利用战争轰炸作为外生冲击估计邻里效应的强度；构建了细至单栋建筑的历史-现代链接数据集；将量化城市模型（quantitative urban model）与邻里效应相结合，实现了"自然禀赋 vs 邻里效应"的反事实分解。对理解城市内空间不平等的成因，以及评估以地方为基础的政策干预（place-based interventions）的效果，具有重要启示。</p>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言</strong>：问题提出、自然实验设计、主要发现。</li>
-<li><strong>历史背景</strong>：二战伦敦轰炸及战后重建（以公屋建设为主）。</li>
-<li><strong>数据</strong>：构建个体建筑层面的战时破坏×战前-战后社会经济数据集。</li>
-<li><strong>简化型证据（Section 4）</strong>：战时破坏对战后房价和社会经济构成的直接效应与溢出效应。</li>
-<li><strong>理论模型（Section 5）</strong>：含邻里效应的空间分选量化城市模型。</li>
-<li><strong>模型参数估计（Section 6）</strong>。</li>
-<li><strong>反事实分析（Section 7）</strong>：邻里效应对轰炸冲击的放大作用及其对整体空间差异的贡献。</li>
-<li><strong>结论</strong>。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>伦敦城市内部社会经济分化显著，理解其成因对于"社会住房政策""邻里更新"等地方干预的效果评估至关重要。然而，传统研究面临根本性的内生性挑战：社会经济好的地区很可能本来就有更好的自然禀赋。</p>
-<h3 id="挑战">挑战</h3>
-<p>如何在不随机分配居民的情况下，识别出"邻里效应"相对于"自然禀赋"的独立贡献？作者的答案：二战期间德军的伦敦轰炸为这一问题提供了一个罕见的外生冲击。</p>
-<h3 id="识别策略（自然实验）">识别策略（自然实验）</h3>
-<p><strong>外生性验证</strong>：</p>
-<ul>
-<li>从整个伦敦来看，轰炸与战前贫困有相关性（德军最初以东伦敦码头区为目标，而东伦敦历史上更贫困）；</li>
-<li>但<strong>在1km六边形网格（hexagonal grid）内控制地理位置后</strong>，轰炸与战前房价和社会经济构成<strong>不相关</strong>；</li>
-<li>这与当时落后的炸弹瞄准技术（且多为夜间轰炸、战时灯火管制）相符——无法精准打击特定街道或建筑。</li>
-</ul>
-<h3 id="数据构建">数据构建</h3>
-<p><strong>历史-现代链接，建筑层面数据</strong>：</p>
-<ul>
-<li><strong>战时破坏</strong>：数字化并地理编码伦敦郡议会（LCC）绘制的轰炸损毁地图（bomb damage maps）</li>
-<li><strong>战前房产价值</strong>：各栋建筑的商业和住宅地产评估值</li>
-<li><strong>战前社会经济构成</strong>：《伦敦生活与劳动新调查》（NSOL）按街段记录的各社会阶层比例</li>
-<li><strong>战后房产价值</strong>：1995–2020年个人房产交易数据</li>
-<li><strong>战后社会经济构成</strong>：2001年（及2011年）人口普查，9,041个Output Area层级</li>
-</ul>
-<h3 id="减少型证据（Reduced-Form-Results）">减少型证据（Reduced-Form Results）</h3>
-<p><strong>直接效应（对被炸地区）</strong>：</p>
-<ul>
-<li>完全被毁地区 vs 未损毁地区（控制1km网格固定效应）：
-<ul>
-<li>战后房价下降 <strong>11–18%</strong></li>
-<li>高收入居民比例下降 <strong>4个百分点</strong></li>
-<li>低收入居民比例上升 <strong>6个百分点</strong></li>
-<li>综合社会经济指数下降 <strong>5%</strong></li>
-</ul>
-</li>
-<li><strong>机制</strong>：战后重建主要通过建设公房（council housing/social housing）完成——轰炸导致了"设施降级"（downgrading），而非升级</li>
-</ul>
-<p><strong>溢出效应（对相邻未被炸地区）</strong>：</p>
-<ul>
-<li>相邻100米内邻居被完全摧毁：本地房价下降 <strong>7–8%</strong>，社会经济指数下降 <strong>3个百分点</strong></li>
-<li>溢出效应随距离急剧衰减：<strong>超过300米后不再显著</strong></li>
-<li>这说明邻里效应高度局部化（localized）</li>
-</ul>
-<h3 id="量化城市模型">量化城市模型</h3>
-<p><strong>结构</strong>：</p>
-<ul>
-<li>三类社会经济群体（低/中/高收入）在伦敦各地点之间选择居住地和工作地</li>
-<li>工资、居住便利性（amenities）、生活成本、通勤成本共同影响选址</li>
-<li>三类群体是生产中的不完全替代，工资不同；对住房支出占比也不同（高收入群体住房支出占比低，因此更愿意为高便利性支付溢价）</li>
-<li><strong>邻里效应</strong>：每个地点的便利性依赖于周边地点的社会经济构成</li>
-</ul>
-<p><strong>模型逻辑</strong>：</p>
-<ul>
-<li>轰炸→公房建设→降低被炸地区对高收入居民的相对吸引力</li>
-<li>高收入居民离开被炸地点→被炸地点便利性进一步下降（邻里效应）→向相邻地区溢出</li>
-<li>通过模型结构参数估计，将上述机制转化为可量化的一般均衡效应</li>
-</ul>
-<p><strong>反事实分解</strong>：</p>
-<ol>
-<li><strong>邻里效应放大倍数</strong>：剔除邻里效应后，轰炸直接效应远小——邻里效应大幅放大了轰炸的直接冲击</li>
-<li><strong>对整体空间差异的贡献</strong>：即使在没有战时轰炸的反事实情景中，邻里效应（基于对周边社会经济构成的偏好）也能解释相当大比例的当前空间社会经济差异</li>
-</ol>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<p>利用二战伦敦轰炸的外生冲击，结合建筑层面的历史-现代链接数据和含邻里效应的量化城市模型，本文发现：</p>
-<ol>
-<li>轰炸（经公房重建）对被炸地区的房价和社会经济构成产生了<strong>持久的直接负面效应</strong>；</li>
-<li>轰炸对<strong>相邻未被炸地区</strong>产生了<strong>强烈但高度局部化</strong>（300米内衰减至零）的溢出效应；</li>
-<li>邻里效应在量级上<strong>大幅放大</strong>了轰炸冲击的直接影响；</li>
-<li>邻里效应对于解释城市内部空间社会经济分化具有<strong>实质性的独立贡献</strong>（相对于自然禀赋）。</li>
-</ol>
-<p><strong>政策含义</strong>：即便是小规模的地方干预，也可能通过邻里效应的链式反应引发较大的社会经济变迁——地方干预的效果不应仅用其直接冲击来衡量，而应将邻里效应放大机制纳入评估框架。</p>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文明确提及的限制</strong>：</p>
-<ol>
-<li>邻里效应的具体机制（是社会互动、犯罪安全、学校质量，还是纯粹的偏好-构成效应）未被明确区分；</li>
-<li>研究未探讨哪类政策干预能够最有效地利用邻里效应的放大机制。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li><strong>机制分解</strong>：300米内的溢出效应驱动因素是什么？可以探讨犯罪率、学校质量、社会网络各机制的相对贡献；</li>
-<li><strong>最优公房区位</strong>：如果公房建设放大了邻里效应，应将公房分散在高收入地区还是集中建设？本文提供了参数，可进一步做最优区位设计分析；</li>
-<li><strong>历史持久性</strong>：战后70余年，"公房区"的社会标签是否仍然存在？有没有通过绅士化（gentrification）逆转的地区，其机制是什么？</li>
-<li><strong>发展中国家的自然实验</strong>：非洲或亚洲城市是否有类似的外生破坏冲击（内战、洪灾）可以复制这一设计，检验邻里效应在不同城市化水平下的强度？</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>识别假设的微妙之处</strong>：虽然轰炸在1km网格内"条件随机"，但1km网格本身的划分是任意的。如果将网格缩小（如500m），结论是否仍然成立？如果轰炸恰好与网格边界附近的某些微环境特征相关，结论可能被影响。这是空间自然实验的通用挑战。</p>
-</li>
-<li>
-<p><strong>公房重建是关键机制</strong>：论文的核心机制是"轰炸→公房建设→设施降级→高收入居民外迁"。这意味着，如果战后重建采用了高档私人开发而非公房，邻里效应的放大作用可能反向（吸引高收入居民）。因此，本文的发现对轰炸本身的普遍性较弱，更是一个"公房政策+轰炸"的联合效应估计。</p>
-</li>
-<li>
-<p><strong>溢出效应的高度局部性（300米）</strong>：这个范围非常小，大约相当于三四个街区的步行距离。这隐含着邻里效应高度地方化，可能反映了视觉暴露（看到公房）或面对面的社会互动机制，而非学区（通常覆盖更大范围）。如何设计干预来突破这一局限是重要的政策问题。</p>
-</li>
-<li>
-<p><strong>量化模型中"邻里效应"的识别</strong>：论文将邻里效应参数化为"对周边社会经济构成的偏好"。但这一参数的识别依赖于轰炸带来的冲击——结构参数估计和简化型证据在本质上使用了相同的识别变异，可能导致标准误被低估。独立地检验这些参数是否稳健是一个潜在的技术挑战。</p>
-</li>
-<li>
-<p><strong>反事实分析的外推性</strong>：论文通过模型做了"无轰炸"反事实，发现邻里效应仍然解释了相当部分的空间分化。然而，这一反事实依赖于均衡的唯一性和全局稳定性——量化城市模型通常在均衡附近做局部估计，对大幅度反事实的外推可靠性值得关注。</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>Chetty et al. (2016) 的"移动到机会"（Moving to Opportunity, MTO）实验与本文的研究发现是否一致？两种识别策略的结论有何异同？</li>
-<li>英国战后公房政策在伦敦各区是如何分布的？是否存在系统性选址偏差，可能影响本文的识别？</li>
-<li>本文发现邻里效应在300米内显著，这一距离在不同城市（如发展中国家特大城市）中是否相同？是否存在文化差异？</li>
-<li>在中国的城市化背景下，城中村改造、棚户区更新等政策是否有类似的邻里效应机制？能否用中国历史冲击做类似研究？</li>
-<li>量化城市模型中如何将"公房"与"高档私宅"的差异参数化？如果战后是高档私人开发，模型预测的长期社会经济分布会有多大不同？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>R数据科学_ggplot2笔记(1)</title>
     <url>/posts/29862/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="一个说明">一个说明</h2>
@@ -17349,6 +17199,156 @@ transformation),即统计变换.你可能想要覆盖默认的统计变换.在�
       </tags>
   </entry>
   <entry>
+    <title>邻里效应：伦敦战时破坏的证据 — 深度阅读笔记 — Redding &amp; Sturm</title>
+    <url>/posts/redding2024/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Neighborhood Effects: Evidence from Wartime Destruction in London<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/394PKQGT/Redding和Sturm - 2024 - Neighborhood Effects Evidence from Wartime Destruction in London.pdf<br>
+Zotero Item Key:: Y7PUT4SC</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+城市经济学的一个核心问题是：为什么同一城市内不同地段的房价和社会经济水平差异如此之大？理论上存在两类竞争性解释：（1）<strong>自然禀赋差异</strong>（fundamentals）——绿地、景观等自然优势；（2）<strong>邻里效应</strong>（neighborhood effects）——个体行为受周边邻里特征影响（如邻里构成影响居民选择），形成正反馈循环。这两类机制对政策有截然不同的含义：如果是自然禀赋主导，地方干预需要改变禀赋本身；如果是邻里效应主导，即使小规模干预也可能通过改变邻里构成引发持久的社会变迁。</p>
+<p><strong>研究背景</strong><br>
+已有研究（Chetty et al. 2016 "移动到机会"项目等）尝试估计邻里效应，但面临根本性的内生性问题：居民在哪里住是自我选择的结果，富裕社区可能本来就具有更好的禀赋，而不是因为"邻里"本身的影响。外生识别邻里效应非常困难，需要大规模、外生的冲击来打破居民与环境之间的共同决定关系。</p>
+<p><strong>作者的问题意识</strong><br>
+能否利用大规模的历史外生冲击——二战期间德国对伦敦的轰炸——来识别邻里效应？轰炸的（条件）随机性使其成为一个天然实验，可以比较被炸和未被炸地区在二战后长期的社会经济演变差异，以及相邻地区之间的溢出效应。</p>
+<p><strong>研究意义</strong><br>
+首次利用战争轰炸作为外生冲击估计邻里效应的强度；构建了细至单栋建筑的历史-现代链接数据集；将量化城市模型（quantitative urban model）与邻里效应相结合，实现了"自然禀赋 vs 邻里效应"的反事实分解。对理解城市内空间不平等的成因，以及评估以地方为基础的政策干预（place-based interventions）的效果，具有重要启示。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：问题提出、自然实验设计、主要发现。</li>
+<li><strong>历史背景</strong>：二战伦敦轰炸及战后重建（以公屋建设为主）。</li>
+<li><strong>数据</strong>：构建个体建筑层面的战时破坏×战前-战后社会经济数据集。</li>
+<li><strong>简化型证据（Section 4）</strong>：战时破坏对战后房价和社会经济构成的直接效应与溢出效应。</li>
+<li><strong>理论模型（Section 5）</strong>：含邻里效应的空间分选量化城市模型。</li>
+<li><strong>模型参数估计（Section 6）</strong>。</li>
+<li><strong>反事实分析（Section 7）</strong>：邻里效应对轰炸冲击的放大作用及其对整体空间差异的贡献。</li>
+<li><strong>结论</strong>。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>伦敦城市内部社会经济分化显著，理解其成因对于"社会住房政策""邻里更新"等地方干预的效果评估至关重要。然而，传统研究面临根本性的内生性挑战：社会经济好的地区很可能本来就有更好的自然禀赋。</p>
+<h3 id="挑战">挑战</h3>
+<p>如何在不随机分配居民的情况下，识别出"邻里效应"相对于"自然禀赋"的独立贡献？作者的答案：二战期间德军的伦敦轰炸为这一问题提供了一个罕见的外生冲击。</p>
+<h3 id="识别策略（自然实验）">识别策略（自然实验）</h3>
+<p><strong>外生性验证</strong>：</p>
+<ul>
+<li>从整个伦敦来看，轰炸与战前贫困有相关性（德军最初以东伦敦码头区为目标，而东伦敦历史上更贫困）；</li>
+<li>但<strong>在1km六边形网格（hexagonal grid）内控制地理位置后</strong>，轰炸与战前房价和社会经济构成<strong>不相关</strong>；</li>
+<li>这与当时落后的炸弹瞄准技术（且多为夜间轰炸、战时灯火管制）相符——无法精准打击特定街道或建筑。</li>
+</ul>
+<h3 id="数据构建">数据构建</h3>
+<p><strong>历史-现代链接，建筑层面数据</strong>：</p>
+<ul>
+<li><strong>战时破坏</strong>：数字化并地理编码伦敦郡议会（LCC）绘制的轰炸损毁地图（bomb damage maps）</li>
+<li><strong>战前房产价值</strong>：各栋建筑的商业和住宅地产评估值</li>
+<li><strong>战前社会经济构成</strong>：《伦敦生活与劳动新调查》（NSOL）按街段记录的各社会阶层比例</li>
+<li><strong>战后房产价值</strong>：1995–2020年个人房产交易数据</li>
+<li><strong>战后社会经济构成</strong>：2001年（及2011年）人口普查，9,041个Output Area层级</li>
+</ul>
+<h3 id="减少型证据（Reduced-Form-Results）">减少型证据（Reduced-Form Results）</h3>
+<p><strong>直接效应（对被炸地区）</strong>：</p>
+<ul>
+<li>完全被毁地区 vs 未损毁地区（控制1km网格固定效应）：
+<ul>
+<li>战后房价下降 <strong>11–18%</strong></li>
+<li>高收入居民比例下降 <strong>4个百分点</strong></li>
+<li>低收入居民比例上升 <strong>6个百分点</strong></li>
+<li>综合社会经济指数下降 <strong>5%</strong></li>
+</ul>
+</li>
+<li><strong>机制</strong>：战后重建主要通过建设公房（council housing/social housing）完成——轰炸导致了"设施降级"（downgrading），而非升级</li>
+</ul>
+<p><strong>溢出效应（对相邻未被炸地区）</strong>：</p>
+<ul>
+<li>相邻100米内邻居被完全摧毁：本地房价下降 <strong>7–8%</strong>，社会经济指数下降 <strong>3个百分点</strong></li>
+<li>溢出效应随距离急剧衰减：<strong>超过300米后不再显著</strong></li>
+<li>这说明邻里效应高度局部化（localized）</li>
+</ul>
+<h3 id="量化城市模型">量化城市模型</h3>
+<p><strong>结构</strong>：</p>
+<ul>
+<li>三类社会经济群体（低/中/高收入）在伦敦各地点之间选择居住地和工作地</li>
+<li>工资、居住便利性（amenities）、生活成本、通勤成本共同影响选址</li>
+<li>三类群体是生产中的不完全替代，工资不同；对住房支出占比也不同（高收入群体住房支出占比低，因此更愿意为高便利性支付溢价）</li>
+<li><strong>邻里效应</strong>：每个地点的便利性依赖于周边地点的社会经济构成</li>
+</ul>
+<p><strong>模型逻辑</strong>：</p>
+<ul>
+<li>轰炸→公房建设→降低被炸地区对高收入居民的相对吸引力</li>
+<li>高收入居民离开被炸地点→被炸地点便利性进一步下降（邻里效应）→向相邻地区溢出</li>
+<li>通过模型结构参数估计，将上述机制转化为可量化的一般均衡效应</li>
+</ul>
+<p><strong>反事实分解</strong>：</p>
+<ol>
+<li><strong>邻里效应放大倍数</strong>：剔除邻里效应后，轰炸直接效应远小——邻里效应大幅放大了轰炸的直接冲击</li>
+<li><strong>对整体空间差异的贡献</strong>：即使在没有战时轰炸的反事实情景中，邻里效应（基于对周边社会经济构成的偏好）也能解释相当大比例的当前空间社会经济差异</li>
+</ol>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<p>利用二战伦敦轰炸的外生冲击，结合建筑层面的历史-现代链接数据和含邻里效应的量化城市模型，本文发现：</p>
+<ol>
+<li>轰炸（经公房重建）对被炸地区的房价和社会经济构成产生了<strong>持久的直接负面效应</strong>；</li>
+<li>轰炸对<strong>相邻未被炸地区</strong>产生了<strong>强烈但高度局部化</strong>（300米内衰减至零）的溢出效应；</li>
+<li>邻里效应在量级上<strong>大幅放大</strong>了轰炸冲击的直接影响；</li>
+<li>邻里效应对于解释城市内部空间社会经济分化具有<strong>实质性的独立贡献</strong>（相对于自然禀赋）。</li>
+</ol>
+<p><strong>政策含义</strong>：即便是小规模的地方干预，也可能通过邻里效应的链式反应引发较大的社会经济变迁——地方干预的效果不应仅用其直接冲击来衡量，而应将邻里效应放大机制纳入评估框架。</p>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文明确提及的限制</strong>：</p>
+<ol>
+<li>邻里效应的具体机制（是社会互动、犯罪安全、学校质量，还是纯粹的偏好-构成效应）未被明确区分；</li>
+<li>研究未探讨哪类政策干预能够最有效地利用邻里效应的放大机制。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li><strong>机制分解</strong>：300米内的溢出效应驱动因素是什么？可以探讨犯罪率、学校质量、社会网络各机制的相对贡献；</li>
+<li><strong>最优公房区位</strong>：如果公房建设放大了邻里效应，应将公房分散在高收入地区还是集中建设？本文提供了参数，可进一步做最优区位设计分析；</li>
+<li><strong>历史持久性</strong>：战后70余年，"公房区"的社会标签是否仍然存在？有没有通过绅士化（gentrification）逆转的地区，其机制是什么？</li>
+<li><strong>发展中国家的自然实验</strong>：非洲或亚洲城市是否有类似的外生破坏冲击（内战、洪灾）可以复制这一设计，检验邻里效应在不同城市化水平下的强度？</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>识别假设的微妙之处</strong>：虽然轰炸在1km网格内"条件随机"，但1km网格本身的划分是任意的。如果将网格缩小（如500m），结论是否仍然成立？如果轰炸恰好与网格边界附近的某些微环境特征相关，结论可能被影响。这是空间自然实验的通用挑战。</p>
+</li>
+<li>
+<p><strong>公房重建是关键机制</strong>：论文的核心机制是"轰炸→公房建设→设施降级→高收入居民外迁"。这意味着，如果战后重建采用了高档私人开发而非公房，邻里效应的放大作用可能反向（吸引高收入居民）。因此，本文的发现对轰炸本身的普遍性较弱，更是一个"公房政策+轰炸"的联合效应估计。</p>
+</li>
+<li>
+<p><strong>溢出效应的高度局部性（300米）</strong>：这个范围非常小，大约相当于三四个街区的步行距离。这隐含着邻里效应高度地方化，可能反映了视觉暴露（看到公房）或面对面的社会互动机制，而非学区（通常覆盖更大范围）。如何设计干预来突破这一局限是重要的政策问题。</p>
+</li>
+<li>
+<p><strong>量化模型中"邻里效应"的识别</strong>：论文将邻里效应参数化为"对周边社会经济构成的偏好"。但这一参数的识别依赖于轰炸带来的冲击——结构参数估计和简化型证据在本质上使用了相同的识别变异，可能导致标准误被低估。独立地检验这些参数是否稳健是一个潜在的技术挑战。</p>
+</li>
+<li>
+<p><strong>反事实分析的外推性</strong>：论文通过模型做了"无轰炸"反事实，发现邻里效应仍然解释了相当部分的空间分化。然而，这一反事实依赖于均衡的唯一性和全局稳定性——量化城市模型通常在均衡附近做局部估计，对大幅度反事实的外推可靠性值得关注。</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>Chetty et al. (2016) 的"移动到机会"（Moving to Opportunity, MTO）实验与本文的研究发现是否一致？两种识别策略的结论有何异同？</li>
+<li>英国战后公房政策在伦敦各区是如何分布的？是否存在系统性选址偏差，可能影响本文的识别？</li>
+<li>本文发现邻里效应在300米内显著，这一距离在不同城市（如发展中国家特大城市）中是否相同？是否存在文化差异？</li>
+<li>在中国的城市化背景下，城中村改造、棚户区更新等政策是否有类似的邻里效应机制？能否用中国历史冲击做类似研究？</li>
+<li>量化城市模型中如何将"公房"与"高档私宅"的差异参数化？如果战后是高档私人开发，模型预测的长期社会经济分布会有多大不同？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>腐败作为地方优势：尼日利亚石油本土化的证据 — 深度阅读笔记 — Rexer</title>
     <url>/posts/rexer2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Corruption as a Local Advantage: Evidence from the Indigenization of Nigerian Oil<br>
@@ -17510,6 +17510,30 @@ Zotero Item Key:: Y7FT49B5</p>
       </tags>
   </entry>
   <entry>
+    <title>Shell脚本笔记(1)</title>
+    <url>/posts/2510/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<h1 id="引言">引言</h1>
+<p>shell是用C语言编写的程序,但它自身同时也是一种程序设计语言.你可能经常听说"shell脚本",但实际上shell编程并非等同于"shell脚本"编程,前者指shell程序本身的开发,后者则是利用shell程序进行开发.都说java和javascript的区别是周杰和周杰伦的区别,shell和shell
+script或许也有那么点意思.</p>
+<h1 id="shell脚本">shell脚本</h1>
+<p>似乎任何程序学习都是从"Hello
+World!"开始的,对于<strong>shell</strong>而言:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Hello World !"</span></span><br></pre></td></tr></tbody></table></figure>
+<p><strong>#!</strong>是个标记,告知这段命令将用bash执行.echo则是一个向窗口展示文本的命令.
+你可以将以上代码框的内容存为一个以.sh为后缀的文件,比如<strong>hw.sh</strong>,并赋予文件执行权限:</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">chmod +x ./hw.sh         #赋予执行权限</span><br><span class="line">bash hw.sh               #执行脚本</span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<p>未完待续</p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Complexity and Satisficing — 深度阅读笔记 — Salant &amp; Spenkuch</title>
     <url>/posts/salant2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -17561,30 +17585,6 @@ Evidence from Chess</li>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Shell脚本笔记(1)</title>
-    <url>/posts/2510/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<h1 id="引言">引言</h1>
-<p>shell是用C语言编写的程序,但它自身同时也是一种程序设计语言.你可能经常听说"shell脚本",但实际上shell编程并非等同于"shell脚本"编程,前者指shell程序本身的开发,后者则是利用shell程序进行开发.都说java和javascript的区别是周杰和周杰伦的区别,shell和shell
-script或许也有那么点意思.</p>
-<h1 id="shell脚本">shell脚本</h1>
-<p>似乎任何程序学习都是从"Hello
-World!"开始的,对于<strong>shell</strong>而言:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Hello World !"</span></span><br></pre></td></tr></tbody></table></figure>
-<p><strong>#!</strong>是个标记,告知这段命令将用bash执行.echo则是一个向窗口展示文本的命令.
-你可以将以上代码框的内容存为一个以.sh为后缀的文件,比如<strong>hw.sh</strong>,并赋予文件执行权限:</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">chmod +x ./hw.sh         #赋予执行权限</span><br><span class="line">bash hw.sh               #执行脚本</span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<p>未完待续</p>
-]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>shell</tag>
       </tags>
   </entry>
   <entry>
@@ -18510,99 +18510,6 @@ Economy</em>, 133(7), 2180-2228. https://doi.org/10.1086/734873</p>
       </tags>
   </entry>
   <entry>
-    <title>市场力量与资本约束 — 深度阅读笔记 — Wittwer &amp; Allen</title>
-    <url>/posts/wittwer2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Market Power and Capital Constraints</li>
-<li><strong>作者</strong>: Milena Wittwer (Columbia University, NBER),
-Jason Allen (Bank of Canada, University of Wisconsin)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: NBER Working Paper No. 34645</li>
-<li><strong>DOI</strong>: -</li>
-<li><strong>难度评估</strong>: 高 -
-需要金融经济学、拍卖理论、监管经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>市场力量（Market Power）</strong>
-指交易者在市场中影响价格的能力。现实中，交易者在多个市场享有市场力量，包括国债、repo、外汇、抵押贷款支持证券等。</p>
-<p><strong>资本约束（Capital Constraints）</strong> 指Basel
-III标准下，银行必须保持权益资本相对于风险敞口的最低比率。</p>
-<p><strong>价格影响（Price Impact）</strong>
-指交易量变化导致价格变化的程度，是衡量市场流动性的关键指标。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>理论背景</strong>：中介资产定价文献假设完美竞争，但现实中交易者享有市场力量</p></li>
-<li><p><strong>现实背景</strong>：实证研究表明交易者在多个市场有市场力量</p></li>
-<li><p><strong>监管背景</strong>：Basel
-III资本要求对银行中介交易产生负面影响</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：在允许市场力量存在的框架下，交易者的权益资本如何影响资产价格？</p>
-<p><strong>关键洞察</strong>：放松资本约束不仅提高资产价格，还提高价格影响（降低流动性）——这是反直觉的预测。</p>
-<hr>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ol type="1">
-<li><strong>引言</strong>: 问题陈述、研究背景、主要贡献</li>
-<li><strong>模型</strong>:
-包含资本约束和市场力量的基准模型，统一价格拍卖</li>
-<li><strong>模型扩展</strong>: 存货头寸、双边交易、歧视价格拍卖</li>
-<li><strong>实证分析</strong>:
-加拿大国债拍卖数据、COVID-19临时政策豁免</li>
-<li><strong>价格和价格影响近似</strong>: 反事实计算</li>
-<li><strong>结论</strong>: 主要发现和政策含义</li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="模型设定">模型设定</h3>
-<p><strong>交易者</strong>： - N个风险厌恶交易者，拥有私人信号εi -
-线性二次效用函数：V(a, εi) = (μ + εi)a − ρσ²a²/2</p>
-<p><strong>资本约束</strong>： - E[θi − κP^c a_i] ≥ 0 -
-资本约束的影子成本λκ类似于从价税</p>
-<p><strong>关键机制</strong>：交易者的出价意愿被影子成本折减为(1+λκ)P^c</p>
-<h3 id="关键预测">关键预测</h3>
-<p><strong>推论1</strong>：当资本约束放松时，价格和价格影响都提高。</p>
-<p>这与传统观点（约束放松→流动性提高）相反。</p>
-<h3 id="实证策略">实证策略</h3>
-<p><strong>利用COVID-19期间加拿大政府的临时政策变化</strong>： -
-2020年4月9日起，政府债券和HQLA暂时豁免于LR约束 -
-2021年12月31日豁免结束</p>
-<p><strong>识别方法</strong>： -
-在豁免期间（λκ=0），从出价意愿曲线的平均斜率识别风险厌恶 -
-在约束生效期间，从斜率的变化识别影子成本</p>
-<h3 id="主要结果">主要结果</h3>
-<p><strong>风险厌恶</strong>：中位数约为0.005，相对较低</p>
-<p><strong>影子成本</strong>： - 在典型拍卖中约束不绑定（中位数=0） -
-但分布有明显尾部，平均影子成本约为53%</p>
-<p><strong>反事实计算</strong>： - 影子成本降低1% →
-价格和价格影响增加约0.19% - 完全消除约束 →
-平均增加19%（因为尾部事件）</p>
-<hr>
-<h2 id="结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>反直觉预测</strong>：放松资本约束提高价格和价格影响（降低流动性），与完美竞争下的传统观点相反</p></li>
-<li><p><strong>机制</strong>：影子成本作为折减因子影响出价意愿曲线的斜率</p></li>
-<li><p><strong>实证验证</strong>：加拿大国债拍卖数据证实了理论预测</p></li>
-<li><p><strong>定量意义</strong>：在流动性市场中影响较小，但尾部效应严重</p></li>
-</ol>
-<h3 id="政策含义">政策含义</h3>
-<ul>
-<li>为Basel III资本要求的调整提供定量依据</li>
-<li>政策制定者需要考虑整个分布，而非仅关注平均值</li>
-</ul>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>石油的族群地理分布与族群冲突升级 — 深度阅读笔记 — 熊易寒 &amp; 唐世平</title>
     <url>/posts/xiong2015/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: 石油的族群地理分布与族群冲突升级<br>
@@ -18727,6 +18634,99 @@ Zotero Item Key:: PPNBQ8SY</p>
 ]]></content>
       <categories>
         <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>市场力量与资本约束 — 深度阅读笔记 — Wittwer &amp; Allen</title>
+    <url>/posts/wittwer2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Market Power and Capital Constraints</li>
+<li><strong>作者</strong>: Milena Wittwer (Columbia University, NBER),
+Jason Allen (Bank of Canada, University of Wisconsin)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: NBER Working Paper No. 34645</li>
+<li><strong>DOI</strong>: -</li>
+<li><strong>难度评估</strong>: 高 -
+需要金融经济学、拍卖理论、监管经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>市场力量（Market Power）</strong>
+指交易者在市场中影响价格的能力。现实中，交易者在多个市场享有市场力量，包括国债、repo、外汇、抵押贷款支持证券等。</p>
+<p><strong>资本约束（Capital Constraints）</strong> 指Basel
+III标准下，银行必须保持权益资本相对于风险敞口的最低比率。</p>
+<p><strong>价格影响（Price Impact）</strong>
+指交易量变化导致价格变化的程度，是衡量市场流动性的关键指标。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>理论背景</strong>：中介资产定价文献假设完美竞争，但现实中交易者享有市场力量</p></li>
+<li><p><strong>现实背景</strong>：实证研究表明交易者在多个市场有市场力量</p></li>
+<li><p><strong>监管背景</strong>：Basel
+III资本要求对银行中介交易产生负面影响</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：在允许市场力量存在的框架下，交易者的权益资本如何影响资产价格？</p>
+<p><strong>关键洞察</strong>：放松资本约束不仅提高资产价格，还提高价格影响（降低流动性）——这是反直觉的预测。</p>
+<hr>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ol type="1">
+<li><strong>引言</strong>: 问题陈述、研究背景、主要贡献</li>
+<li><strong>模型</strong>:
+包含资本约束和市场力量的基准模型，统一价格拍卖</li>
+<li><strong>模型扩展</strong>: 存货头寸、双边交易、歧视价格拍卖</li>
+<li><strong>实证分析</strong>:
+加拿大国债拍卖数据、COVID-19临时政策豁免</li>
+<li><strong>价格和价格影响近似</strong>: 反事实计算</li>
+<li><strong>结论</strong>: 主要发现和政策含义</li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="模型设定">模型设定</h3>
+<p><strong>交易者</strong>： - N个风险厌恶交易者，拥有私人信号εi -
+线性二次效用函数：V(a, εi) = (μ + εi)a − ρσ²a²/2</p>
+<p><strong>资本约束</strong>： - E[θi − κP^c a_i] ≥ 0 -
+资本约束的影子成本λκ类似于从价税</p>
+<p><strong>关键机制</strong>：交易者的出价意愿被影子成本折减为(1+λκ)P^c</p>
+<h3 id="关键预测">关键预测</h3>
+<p><strong>推论1</strong>：当资本约束放松时，价格和价格影响都提高。</p>
+<p>这与传统观点（约束放松→流动性提高）相反。</p>
+<h3 id="实证策略">实证策略</h3>
+<p><strong>利用COVID-19期间加拿大政府的临时政策变化</strong>： -
+2020年4月9日起，政府债券和HQLA暂时豁免于LR约束 -
+2021年12月31日豁免结束</p>
+<p><strong>识别方法</strong>： -
+在豁免期间（λκ=0），从出价意愿曲线的平均斜率识别风险厌恶 -
+在约束生效期间，从斜率的变化识别影子成本</p>
+<h3 id="主要结果">主要结果</h3>
+<p><strong>风险厌恶</strong>：中位数约为0.005，相对较低</p>
+<p><strong>影子成本</strong>： - 在典型拍卖中约束不绑定（中位数=0） -
+但分布有明显尾部，平均影子成本约为53%</p>
+<p><strong>反事实计算</strong>： - 影子成本降低1% →
+价格和价格影响增加约0.19% - 完全消除约束 →
+平均增加19%（因为尾部事件）</p>
+<hr>
+<h2 id="结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>反直觉预测</strong>：放松资本约束提高价格和价格影响（降低流动性），与完美竞争下的传统观点相反</p></li>
+<li><p><strong>机制</strong>：影子成本作为折减因子影响出价意愿曲线的斜率</p></li>
+<li><p><strong>实证验证</strong>：加拿大国债拍卖数据证实了理论预测</p></li>
+<li><p><strong>定量意义</strong>：在流动性市场中影响较小，但尾部效应严重</p></li>
+</ol>
+<h3 id="政策含义">政策含义</h3>
+<ul>
+<li>为Basel III资本要求的调整提供定量依据</li>
+<li>政策制定者需要考虑整个分布，而非仅关注平均值</li>
+</ul>
+]]></content>
+      <categories>
+        <category>AER</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
