@@ -1,72 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>学术讲座# 中国人民大学经济学院江艇:渐进DID的最新进展</title>
-    <url>/posts/836/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="关于did因果识别"><strong>关于DID因果识别</strong></h2>
-<ul>
-<li>Imbens:
-任何的因果识别归根结底都是做<strong>插值</strong>与<strong>差值</strong></li>
-<li>传统<span class="math inline">\(DID\)</span>最大的两类威胁是:①平行趋势不成立;②存在混淆政策</li>
-<li><span class="math inline">\(DID\)</span>的重要前提是平行趋势,但这种前提实际并不能完全验证:事前平行并不意味着事后平行趋势,但事前不平行一定能验证平行趋势不成立</li>
-<li>最经典的例子就是经济特区,深圳在改革开放前可能和中原地区的一个小村庄没有什么不同,但是即使深圳没有被划为经济特区,改革开放后其经济增长趋势也有可能因为地缘优势而呈现较快的增长趋势</li>
-<li>两期的数据做<span class="math inline">\(DID\)</span>会退化为<span class="math inline">\(FD\)</span>,此时的截距项代表时间变化趋势</li>
-<li>Good control: 既影响<span class="math inline">\(y\)</span>,又影响<span class="math inline">\(D\cdot T\)</span></li>
-<li>Bad control: 既影响y,又被<span class="math inline">\(D\cdot
-T\)</span>影响</li>
-<li>无法判断影响样本进入处理组的因素是否还影响其变化趋势</li>
-<li>潜在结果:使用上标表示,想象中的结果</li>
-<li><span class="math inline">\(ATT\)</span>:处理组接受处理后的平均处理效应</li>
-<li><span class="math inline">\(D\)</span>实际可以理解为处理组的固定效应</li>
-</ul>
-<span id="more"></span>
-<h2 id="交错型didstaggered-did"><strong>1. 交错型DID(staggered
-DID)</strong></h2>
-<ul>
-<li>没有办法构造<span class="math inline">\(D\cdot
-T\)</span>,可以直接定义<span class="math inline">\(D\cdot
-T\)</span>,表示接受处理的虚拟变量</li>
-<li>干预事件的发生时间不一致,极可能意味着,事后趋势不一致.为此,应尽量控制影响<span class="math inline">\(X_i\)</span>,避免控制既影响<span class="math inline">\(y\)</span>,又被<span class="math inline">\(D⋅T\)</span>影响的<span class="math inline">\(X_{it}\)</span></li>
-<li>Goodman-Bacon定理:任何一个交错<span class="math inline">\(DID\)</span>的双向固定效应模型都可以分解为<span class="math inline">\(K^2\)</span>个传统双重差分估计结果的加权平均</li>
-<li>导致偏误的原因在于:以晚处理组为处理组,以早处理组为对照组,此时双重差分估计中包含了一项<span class="math inline">\(\Delta
-ATT\)</span>,即早处理组的政策效应存在明显的动态变化</li>
-<li>交错<span class="math inline">\(DID\)</span>估计出的<span class="math inline">\(\beta\)</span>究竟意味着什么?由三部分构成:①方差加权的<span class="math inline">\(ATT\)</span>;②方差加权的趋势差异;③<span class="math inline">\(\Delta ATT\)</span></li>
-</ul>
-<h2 id="改进策略_基于事件研究法"><strong>2.
-改进策略_基于事件研究法</strong></h2>
-<ul>
-<li><strong>2.1</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解,观察以早处理组为控制组的系数和权重,判断其是否影响了最终系数的估计</li>
-<li><strong>2.2</strong> 进行协变量的平衡性检验.在交错<span class="math inline">\(DID\)</span>的情形下,平行趋势检验没办法做.干预时间的不一致,平衡性检验可作为一种替代手段.此做法的目的在于判断事前变量与干预处理进度之间的关系.进行匹配时,都可以以政策执行前某一期为准</li>
-<li><strong>2.3</strong>
-进一步,可以按照各组作为控制组的贡献作为权重,对事前变量与干预处理进度进行加权<span class="math inline">\(OLS\)</span></li>
-<li><strong>2.4</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解,必须是平衡面板数据,所以要删除一些样本</li>
-<li><strong>2.5</strong>
-事件研究法:变日历时间为相对时间.按照相对时间进行校准,如果存在非常明显的趋势,则<span class="math inline">\(\Delta
-ATT\)</span>一定会比较大,基准模型会存在低估偏误</li>
-<li><strong>2.6</strong>
-可以根据事件研究法的结果,将核心解释变量乘以一个<span class="math inline">\((t-T^*)\)</span></li>
-</ul>
-<h2 id="改进策略_堆叠didstacked-did"><strong>3.改进策略_堆叠<span class="math inline">\(DID\)</span>(Stacked <span class="math inline">\(DID\)</span>)</strong></h2>
-<ul>
-<li><strong>3.1</strong>
-假定存在K个处理时点,构造K个数据集.每个数据集中只保留可以为处理组服务的控制组,比如晚处理组和一直未处理的组.标准误需要聚类到数据集上面</li>
-<li><strong>3.2</strong> 从构造上保证了早处理组不能作为控制组</li>
-</ul>
-<h2 id="改进策略_对事件研究法的反思寻找干净的控制组"><strong>4.改进策略_对事件研究法的反思,寻找干净的控制组</strong></h2>
-<ul>
-<li><strong>4.1</strong>
-仅不同时间队列样本的动态处理效应变化方式是一样的,事件研究法的估计才是有效的</li>
-</ul>
-]]></content>
-      <categories>
-        <category>计量</category>
-        <category>DID</category>
-      </categories>
-      <tags>
-        <tag>学术讲座</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>When Should You Adjust Standard Errors for Clustering — 深度分析 — Abadie Et Al.</title>
     <url>/posts/abadie2023/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -346,6 +280,72 @@ Bootstrap是否是更好的选择?它与本文的TSCB有何关系?</p></li>
       </categories>
       <tags>
         <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学术讲座# 中国人民大学经济学院江艇:渐进DID的最新进展</title>
+    <url>/posts/836/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="关于did因果识别"><strong>关于DID因果识别</strong></h2>
+<ul>
+<li>Imbens:
+任何的因果识别归根结底都是做<strong>插值</strong>与<strong>差值</strong></li>
+<li>传统<span class="math inline">\(DID\)</span>最大的两类威胁是:①平行趋势不成立;②存在混淆政策</li>
+<li><span class="math inline">\(DID\)</span>的重要前提是平行趋势,但这种前提实际并不能完全验证:事前平行并不意味着事后平行趋势,但事前不平行一定能验证平行趋势不成立</li>
+<li>最经典的例子就是经济特区,深圳在改革开放前可能和中原地区的一个小村庄没有什么不同,但是即使深圳没有被划为经济特区,改革开放后其经济增长趋势也有可能因为地缘优势而呈现较快的增长趋势</li>
+<li>两期的数据做<span class="math inline">\(DID\)</span>会退化为<span class="math inline">\(FD\)</span>,此时的截距项代表时间变化趋势</li>
+<li>Good control: 既影响<span class="math inline">\(y\)</span>,又影响<span class="math inline">\(D\cdot T\)</span></li>
+<li>Bad control: 既影响y,又被<span class="math inline">\(D\cdot
+T\)</span>影响</li>
+<li>无法判断影响样本进入处理组的因素是否还影响其变化趋势</li>
+<li>潜在结果:使用上标表示,想象中的结果</li>
+<li><span class="math inline">\(ATT\)</span>:处理组接受处理后的平均处理效应</li>
+<li><span class="math inline">\(D\)</span>实际可以理解为处理组的固定效应</li>
+</ul>
+<span id="more"></span>
+<h2 id="交错型didstaggered-did"><strong>1. 交错型DID(staggered
+DID)</strong></h2>
+<ul>
+<li>没有办法构造<span class="math inline">\(D\cdot
+T\)</span>,可以直接定义<span class="math inline">\(D\cdot
+T\)</span>,表示接受处理的虚拟变量</li>
+<li>干预事件的发生时间不一致,极可能意味着,事后趋势不一致.为此,应尽量控制影响<span class="math inline">\(X_i\)</span>,避免控制既影响<span class="math inline">\(y\)</span>,又被<span class="math inline">\(D⋅T\)</span>影响的<span class="math inline">\(X_{it}\)</span></li>
+<li>Goodman-Bacon定理:任何一个交错<span class="math inline">\(DID\)</span>的双向固定效应模型都可以分解为<span class="math inline">\(K^2\)</span>个传统双重差分估计结果的加权平均</li>
+<li>导致偏误的原因在于:以晚处理组为处理组,以早处理组为对照组,此时双重差分估计中包含了一项<span class="math inline">\(\Delta
+ATT\)</span>,即早处理组的政策效应存在明显的动态变化</li>
+<li>交错<span class="math inline">\(DID\)</span>估计出的<span class="math inline">\(\beta\)</span>究竟意味着什么?由三部分构成:①方差加权的<span class="math inline">\(ATT\)</span>;②方差加权的趋势差异;③<span class="math inline">\(\Delta ATT\)</span></li>
+</ul>
+<h2 id="改进策略_基于事件研究法"><strong>2.
+改进策略_基于事件研究法</strong></h2>
+<ul>
+<li><strong>2.1</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解,观察以早处理组为控制组的系数和权重,判断其是否影响了最终系数的估计</li>
+<li><strong>2.2</strong> 进行协变量的平衡性检验.在交错<span class="math inline">\(DID\)</span>的情形下,平行趋势检验没办法做.干预时间的不一致,平衡性检验可作为一种替代手段.此做法的目的在于判断事前变量与干预处理进度之间的关系.进行匹配时,都可以以政策执行前某一期为准</li>
+<li><strong>2.3</strong>
+进一步,可以按照各组作为控制组的贡献作为权重,对事前变量与干预处理进度进行加权<span class="math inline">\(OLS\)</span></li>
+<li><strong>2.4</strong> 进行<span class="math inline">\(bacondecommp\)</span>分解,必须是平衡面板数据,所以要删除一些样本</li>
+<li><strong>2.5</strong>
+事件研究法:变日历时间为相对时间.按照相对时间进行校准,如果存在非常明显的趋势,则<span class="math inline">\(\Delta
+ATT\)</span>一定会比较大,基准模型会存在低估偏误</li>
+<li><strong>2.6</strong>
+可以根据事件研究法的结果,将核心解释变量乘以一个<span class="math inline">\((t-T^*)\)</span></li>
+</ul>
+<h2 id="改进策略_堆叠didstacked-did"><strong>3.改进策略_堆叠<span class="math inline">\(DID\)</span>(Stacked <span class="math inline">\(DID\)</span>)</strong></h2>
+<ul>
+<li><strong>3.1</strong>
+假定存在K个处理时点,构造K个数据集.每个数据集中只保留可以为处理组服务的控制组,比如晚处理组和一直未处理的组.标准误需要聚类到数据集上面</li>
+<li><strong>3.2</strong> 从构造上保证了早处理组不能作为控制组</li>
+</ul>
+<h2 id="改进策略_对事件研究法的反思寻找干净的控制组"><strong>4.改进策略_对事件研究法的反思,寻找干净的控制组</strong></h2>
+<ul>
+<li><strong>4.1</strong>
+仅不同时间队列样本的动态处理效应变化方式是一样的,事件研究法的估计才是有效的</li>
+</ul>
+]]></content>
+      <categories>
+        <category>计量</category>
+        <category>DID</category>
+      </categories>
+      <tags>
+        <tag>学术讲座</tag>
       </tags>
   </entry>
   <entry>
@@ -789,68 +789,6 @@ prediction-oriented AI）是否在机制上已经不同。</li>
       </tags>
   </entry>
   <entry>
-    <title>Search Direction — 深度阅读笔记 — Anderson &amp; Renault</title>
-    <url>/posts/anderson2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Search Direction: Position Externalities and
-Position Auction Bias</li>
-<li><strong>作者</strong>: Simon P. Anderson (University of Virginia),
-Regis Renault (CY Cergy Paris Université)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies
-(RES)</li>
-<li><strong>DOI</strong>: 10.1093/restud/rdaf051</li>
-<li><strong>难度评估</strong>: 高 - 需要拍卖理论、搜索理论、博弈论基础
-<span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>定向搜索（Directed
-Search）</strong>：消费者被引导按特定顺序搜索卖家，而非随机搜索。</p>
-<p><strong>位置外部性（Position
-Externalities）</strong>：企业位置变动对其他企业利润的影响，包括商业窃取和搜索吸引力效应。</p>
-<p><strong>广义第二价格拍卖（GSP）</strong>：分配广告位的拍卖机制，出价高者获位置但支付第二高价格。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li>互联网搜索由广告位置引导，位置通过竞标分配</li>
-<li>有序搜索和位置拍卖两个文献缺乏整合</li>
-<li>缺乏异质性企业下的统一分析框架</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p>如何在存在位置外部性的情况下，将有序搜索与企业竞价统一在可处理的模型中？</p>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：市场均衡（有序搜索下的竞争模型）</li>
-<li>第三节：最优排名</li>
-<li>第四节：位置拍卖（GSP均衡分析）</li>
-<li>第五节：结论</li>
-</ul>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="核心概念位置外部性">核心概念：位置外部性</h3>
-<p><strong>商业窃取效应</strong>：前位企业抢走后续企业客户</p>
-<p><strong>搜索吸引力效应</strong>：后续企业减少使在位企业竞争减弱</p>
-<h3 id="最优排名">最优排名</h3>
-<p><strong>总利润最大化（TIP）</strong>：优先高质量、高搜索吸引力、低市场潜力的产品</p>
-<p><strong>消费者剩余最大化（CS）</strong>：偏好早期低价、晚期低购买概率</p>
-<h2 id="结论">4. 结论</h2>
-<p>位置外部性是影响企业竞标和定价的关键机制。GSP拍卖在产品质量异质性主导时有效，市场潜力异质性大时失效。</p>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<p>不完全信息扩展、动态竞价模型、实验验证。</p>
-<h2 id="学术思考">6. 学术思考</h2>
-<p>位置外部性的双向性（商业窃取vs搜索吸引力）是理解均衡的关键。消费者跟随与定价形成循环依赖需要精巧分析。</p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>国家能力建设中的溢出效应 — 深度阅读笔记 — Aman-Rana &amp; Minaudier</title>
     <url>/posts/aman-rana2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -936,6 +874,68 @@ Reform）</strong>：在发展中国家被视为加强国家能力的有效手�
 ]]></content>
       <categories>
         <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Search Direction — 深度阅读笔记 — Anderson &amp; Renault</title>
+    <url>/posts/anderson2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Search Direction: Position Externalities and
+Position Auction Bias</li>
+<li><strong>作者</strong>: Simon P. Anderson (University of Virginia),
+Regis Renault (CY Cergy Paris Université)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies
+(RES)</li>
+<li><strong>DOI</strong>: 10.1093/restud/rdaf051</li>
+<li><strong>难度评估</strong>: 高 - 需要拍卖理论、搜索理论、博弈论基础
+<span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>定向搜索（Directed
+Search）</strong>：消费者被引导按特定顺序搜索卖家，而非随机搜索。</p>
+<p><strong>位置外部性（Position
+Externalities）</strong>：企业位置变动对其他企业利润的影响，包括商业窃取和搜索吸引力效应。</p>
+<p><strong>广义第二价格拍卖（GSP）</strong>：分配广告位的拍卖机制，出价高者获位置但支付第二高价格。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li>互联网搜索由广告位置引导，位置通过竞标分配</li>
+<li>有序搜索和位置拍卖两个文献缺乏整合</li>
+<li>缺乏异质性企业下的统一分析框架</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p>如何在存在位置外部性的情况下，将有序搜索与企业竞价统一在可处理的模型中？</p>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：市场均衡（有序搜索下的竞争模型）</li>
+<li>第三节：最优排名</li>
+<li>第四节：位置拍卖（GSP均衡分析）</li>
+<li>第五节：结论</li>
+</ul>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="核心概念位置外部性">核心概念：位置外部性</h3>
+<p><strong>商业窃取效应</strong>：前位企业抢走后续企业客户</p>
+<p><strong>搜索吸引力效应</strong>：后续企业减少使在位企业竞争减弱</p>
+<h3 id="最优排名">最优排名</h3>
+<p><strong>总利润最大化（TIP）</strong>：优先高质量、高搜索吸引力、低市场潜力的产品</p>
+<p><strong>消费者剩余最大化（CS）</strong>：偏好早期低价、晚期低购买概率</p>
+<h2 id="结论">4. 结论</h2>
+<p>位置外部性是影响企业竞标和定价的关键机制。GSP拍卖在产品质量异质性主导时有效，市场潜力异质性大时失效。</p>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<p>不完全信息扩展、动态竞价模型、实验验证。</p>
+<h2 id="学术思考">6. 学术思考</h2>
+<p>位置外部性的双向性（商业窃取vs搜索吸引力）是理解均衡的关键。消费者跟随与定价形成循环依赖需要精巧分析。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -2142,148 +2142,6 @@ Moi改革后)，这是否影响校准的可靠性？</p>
       </tags>
   </entry>
   <entry>
-    <title>压低成本：干中学与全球电动汽车电池产业政府政策 — 深度阅读笔记 — Barwick Et Al.</title>
-    <url>/posts/barwick2025/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Drive Down the Cost: Learning by Doing and
-Government Policies in the Global EV Battery Industry</li>
-<li><strong>作者</strong>: Panle Jia Barwick (Wisconsin), Hyuk-Soo Kwon
-(Singapore), Shanjun Li (Cornell), Nahim Zahur (Queens)</li>
-<li><strong>年份</strong>: 2025</li>
-<li><strong>来源</strong>: NBER Working Paper No. 33378</li>
-<li><strong>DOI</strong>: 10.3386/w33378</li>
-</ul>
-<span id="more"></span>
-<hr>
-<hr>
-<h2 id="引言背景和意义">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong> "干中学"（Learning by Doing,
-LBD）是产业经济学和增长理论的经典概念：企业在生产过程中积累经验，进而降低单位生产成本。"Wright's
-Law"（1936年由航空工程师Theodore
-Wright提出）将这一规律量化为"累计产量每翻倍，单位成本下降固定比例"。LBD在半导体、太阳能电池等绿色技术行业均有大量记录。在政策设计上，LBD带来正外部性——当前生产提高了整个行业未来的效率，因此存在补贴当前生产的理由（以纠正动态外部性）。</p>
-<p><strong>研究背景</strong>
-电动汽车（EV）电池成本在2010-2020年间下降了近90%，是过去十年绿色能源技术中最引人注目的成本下降之一。这一变化对全球气候政策目标至关重要——电池成本是EV相对于内燃机车价格劣势的主要来源。全球各国政府为促进EV普及投入了大量补贴（2022年全球EV消费补贴达430亿美元），并通过产业政策（如中国白名单政策、美国IRA本地含量要求）扶持本土电池产业。然而，LBD在多大程度上驱动了成本下降？政府政策通过哪些渠道影响LBD进程？这些问题此前缺乏可信的量化研究。</p>
-<p><strong>作者的问题意识</strong>
-（1）LBD在多大程度上解释了EV电池成本的下降（相对于技术进步、规模经济、原材料成本等其他因素）？（2）LBD如何改变消费者EV补贴的政策效果？（3）中国的"白名单"本地含量要求政策通过LBD对全球EV市场产生了怎样的影响？（4）LBD在全球供应链中产生怎样的跨国溢出效应？</p>
-<p><strong>研究意义</strong>
-本文为绿色技术政策设计提供了直接量化依据：若忽视LBD，政策评估将大幅低估补贴的长期效益；同时揭示了消费端补贴与产业政策的相互作用，对评估美国IRA、中国产业政策的全球影响具有直接参考价值。</p>
-<hr>
-<h2 id="内容及结构论文结构">内容及结构（论文结构）</h2>
-<ol type="1">
-<li><strong>引言</strong>：提出问题，概述主要发现（LBD学习率7.5%，与补贴互补放大效果，跨国溢出效应）。</li>
-<li><strong>数据</strong>：全球13国EV销售数据（2013-2020），电池供应商信息，各国补贴政策。</li>
-<li><strong>需求模型</strong>：异质消费者离散选择模型（BLP类型），估计消费者对EV特性（价格、续航、充电速度等）的偏好。</li>
-<li><strong>供给模型与电池成本恢复</strong>：通过Nash议价模型（上游电池供应商与下游EV生产商之间）推断上下游加成，从而恢复电池成本。</li>
-<li><strong>LBD估计</strong>：用工具变量方法识别LBD学习率，控制内生性（高效企业多生产更多、积累更多经验）。</li>
-<li><strong>反事实政策分析</strong>：（a）评估消费者EV补贴在有无LBD情况下的效果；（b）评估中国白名单政策及其时间安排的影响。</li>
-<li><strong>结论</strong>：总结核心发现及政策含义。</li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>EV电池成本是EV普及的关键障碍，而其90%的成本降幅是过去十年绿色技术领域最显著的成就之一。产业界将这一降幅归因于LBD，但缺乏可信的因果估计：LBD究竟贡献了多少？还是技术进步、规模经济、原材料价格下降等因素更重要？政府大规模补贴政策是否加速了这一进程？</p>
-<h3 id="挑战">挑战</h3>
-<p><strong>挑战一：电池成本不可观测</strong><br>
-电池供应协议是商业机密，无法直接观测到每款EV型号的电池成本。解决方法：通过构建EV生产商与电池供应商之间Nash议价模型，结合观测到的车辆价格和估计的需求弹性，反推上下游加成，进而推断电池成本。</p>
-<p><strong>挑战二：LBD识别的内生性</strong><br>
-企业的累计产量（生产经验，experience）与不可观测的成本冲击相关——成本优势大的企业往往产量更大、经验积累更快。若直接用经验变量回归成本，估计结果会有偏差。<br>
-<strong>工具变量策略</strong>：利用各电池供应商对下游不同国家EV补贴的差异暴露（variation）来构造工具变量。若甲国对某款车型提供慷慨补贴，供应该车型电池的供应商将更快积累经验。这一"补贴暴露"外生地推动了部分供应商的经验积累，从而识别LBD的因果效应。此外，还利用了中国白名单政策（2016-2019年）对电池供应商经验的外生冲击。</p>
-<h3 id="方法">方法</h3>
-<p><strong>需求端</strong>：BLP类型的随机系数离散选择模型，用于估计异质消费者对EV特性（价格、续航、充电功率、品牌等）的偏好，从而估计需求弹性。</p>
-<p><strong>供给端</strong>：Nash议价框架（EV生产商与电池供应商之间的纳什讨价还价），考察同步定价（Simultaneous）、顺序定价（Sequential）和线性定价（Linear
-Pricing）多种供给侧模型，并比较其对成本恢复的稳健性。</p>
-<p><strong>LBD估计方程</strong>（核心）： -
-以电池成本（对数）对累计生产经验（对数）做回归，控制行业整体技术进步、EV整车装配经验、原材料投入成本、规模经济等，并用工具变量处理经验的内生性。
-- 学习率（learning rate）定义为经验每翻倍时成本下降的百分比。</p>
-<p><strong>数据</strong>： -
-全球13国（覆盖&gt;95%全球EV销售）2013-2020年逐车型逐年销量数据（含BEV和PHEV）
-- 电池供应商数据库（植物地点、供应的EV车型列表） -
-各国EV购置补贴数据（金额、起止时间） -
-社会经济变量（收入分布等，用于校准消费者异质性）</p>
-<h3 id="结果">结果</h3>
-<p><strong>核心结果一：LBD学习率为7.5%</strong><br>
-控制行业技术进步、整车装配经验、原材料成本和规模经济后，LBD学习率估计为<strong>7.5%</strong>——即电池生产经验每翻倍，单位成本下降7.5%。该学习率处于文献估计的较低端，但仍具有重要经济意义。在2013-2020年电池总成本降幅中，LBD贡献了<strong>35.5%</strong>，行业技术进步贡献了<strong>39.9%</strong>，其余由整车装配经验、电池化学材料变化、原材料价格和规模经济共同解释。</p>
-<p><strong>核心结果二：LBD大幅放大EV补贴效果</strong><br>
--
-无LBD时，各国补贴估计使2013-2020年全球累计EV销量增加<strong>29.9%</strong>。
--
-同时考虑补贴和LBD时，全球EV销量相比无补贴无LBD基准增加<strong>170%</strong>。
--
-二者的联合效果比各自独立效果之和高出<strong>60%</strong>——说明补贴与LBD具有强互补性。</p>
-<p><strong>核心结果三：消费端补贴产生跨国溢出效应</strong><br>
-EV电池供应链是全球化的（主要集中在中、日、韩三国），一国补贴可通过LBD降低全球电池成本，产生跨国外溢：
--
-美国约131亿美元EV补贴产生了约165亿美元全球福利净增益；美国和加拿大获得其中49%，日韩电池供应商获得28%，中国仅获得3%（因为样本期内中国EV和电池与国际市场贸易有限）。
--
-欧盟约164亿美元补贴产生约116亿美元全球福利增益，欧盟仅获得其中26%（因为欧洲大量进口EV，且采用统一补贴而非有针对性补贴）。</p>
-<p><strong>核心结果四：上游电池供应商仅获得LBD收益的一小部分</strong><br>
-LBD产生的成本降低主要通过价格竞争传递给了EV生产商和最终消费者，而非被电池供应商内部保留——与完全竞争的产业组织逻辑一致。</p>
-<p><strong>政策结果五：中国白名单政策的影响</strong><br>
-中国白名单政策（2016-2019年）将EV补贴限于使用"白名单"国内电池供应商的车辆，为CATL等中国电池企业提供了保护性市场，帮助其积累经验、形成竞争优势。但这一政策具有两面性：
--
-实际实施时间（2016-2019年）对中国电池产业有正面效果（通过加速中国供应商的LBD积累）。
--
-若将该政策延迟5年实施（2021-2024年），由于中国电池企业已通过出口积累足够经验，白名单的保护效果将大幅减弱，且因阻碍全球供应链效率，中国国内福利净效果将转为负值。</p>
-<hr>
-<h2 id="结论conclusion">结论（Conclusion）</h2>
-<p><strong>核心发现</strong>：LBD在EV电池成本下降中发挥了实质性作用（贡献35.5%），但并非唯一因素，行业技术进步同样重要。LBD与消费者补贴之间的强互补性意味着：忽视LBD将大幅低估补贴的长期效益。消费端补贴产生显著的跨国溢出效应，其全球效益往往远超国内效益，这对单国政策评估具有重要启示。中国的产业政策（白名单）在特定历史时机下对国内产业发展有正效果，但若时机不当则可能适得其反。</p>
-<p><strong>对领域的贡献</strong>： 1.
-提出了在无法直接观测上游成本时通过结构性供给模型恢复电池成本的方法论框架；
-2. 构建了全球EV行业的结构性模型，联合识别LBD、需求偏好和政策互动效应；
-3. 量化了EV补贴的动态长期效益，纠正了现有静态评估文献的系统性低估； 4.
-揭示了全球化供应链下单国产业政策的跨境外溢机制。</p>
-<p><strong>政策含义</strong>： -
-EV补贴的动态效益远大于静态效益，政策评估应纳入LBD渠道； -
-美国IRA的本地含量要求在短期内可能阻碍全球LBD进程，长期效果取决于本土供应链的学习速度；
--
-政策时机（timing）至关重要：早期的保护性产业政策（如中国白名单）可能在企业尚未具备竞争力时发挥关键作用，但过晚则适得其反。</p>
-<hr>
-<h2 id="未来研究方向future-work">未来研究方向（Future work）</h2>
-<p><strong>论文中明确提及的方向</strong>： 1.
-评估美国IRA本地含量要求对全球LBD和EV普及的长期影响； 2.
-研究上游供应商如何将LBD收益分配给劳动者和股东（分配效应）； 3.
-将分析拓展到EV以外的绿色技术（如太阳能、储能电池等）。</p>
-<p><strong>从论文引申的研究方向</strong>： 1.
-内外部LBD的分解：企业内部的知识积累vs.跨企业的知识溢出各贡献多少？这对政策选择（补贴全行业
-vs. 扶持龙头企业）有重大影响； 2.
-动态寡头垄断框架下的战略性LBD——企业是否会为了积累经验而战略性定低价（forward-looking
-pricing）； 3.
-将模型扩展至2020年后：IRA颁布后（2022年），本地含量要求如何重塑全球电池供应链的LBD路径；
-4.
-LBD与研发投入的互动：研发投入（技术进步）与生产经验（LBD）是否互补，影响政策组合的最优设计。</p>
-<h2 id="学术思考">学术思考</h2>
-<ol type="1">
-<li><p><strong>电池成本恢复的模型依赖性</strong>：电池成本无法直接观测，需通过结构模型推断。不同供给侧假设（同步
-vs.
-顺序议价）是否会产生实质性不同的学习率估计？作者如何验证这些替代模型的可信度？</p></li>
-<li><p><strong>工具变量的有效性</strong>：利用"供应商对下游不同国家补贴的差异暴露"构造IV，这一策略要求EV补贴变动对电池成本没有直接效应（排他性限制）。若补贴政策同时改变了原材料需求（如锂、镍），可能违反这一假设——如何检验？</p></li>
-<li><p><strong>LBD的溢出结构</strong>：论文将LBD建模为企业层面的内部学习。但实际上，工程师流动、专利公开等机制可能使LBD在企业间溢出。内外部LBD的混淆对学习率估计和政策评估会产生怎样的影响？</p></li>
-<li><p><strong>本地含量要求的动态合理性</strong>：中国白名单实际上是保护主义政策，但本文发现在特定时机下它对国内产业有正面作用。这是否意味着"战略性贸易政策"在绿色技术的早期发展阶段具有动态合理性？如何区分"促进LBD积累"的合理保护与一般意义上的低效保护主义？</p></li>
-<li><p><strong>样本期外推的风险</strong>：研究覆盖2013-2020年，但EV市场在2020年后经历了爆炸式增长（中国BEV渗透率超过30%）。LBD在高渗透率阶段是否会放缓？本文的政策结论对IRA（2022年后）是否仍然适用？</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol type="1">
-<li>"学习率7.5%"是怎么估计出来的？工具变量策略的具体构造方法是什么？</li>
-<li>为什么上游电池供应商只获得了LBD收益的"一小部分"？这是市场结构（竞争激烈）的结果，还是谈判权力（bargaining
-power）不对等的结果？</li>
-<li>美国IRA的本地含量要求是否会减慢全球LBD进程、推高全球EV价格？本文的框架如何用于评估IRA？</li>
-<li>中国白名单政策在实际实施时间下对全球（非中国）消费者的福利影响是正面还是负面？</li>
-<li>如果未来电池技术路线（如固态电池）发生重大转变，现有的LBD积累是否会"归零"？政策设计如何应对这种技术不确定性？</li>
-<li>论文的供给侧模型（Nash议价）对最终结论的敏感性如何？若改用更简单的加成定价模型，学习率估计会有多大变化？</li>
-<li>为什么中国在美国补贴的全球福利中只获得3%？这是否意味着美国的补贴实际上是在补贴日韩企业而非中国竞争对手？</li>
-</ol>
-<hr>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>深陷险境？基础设施投资与沿海城市的持久性 — 深度阅读笔记 — Balboni</title>
     <url>/posts/balboni2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -2632,6 +2490,148 @@ power）不对等的结果？</li>
 <p>本文假设国内迁移是自由的，但实际的户口制度、护照限制等是否影响迁移对气候风险的调整速度？如何将政策约束纳入模型？</p>
 <hr>
 <p><em>本分析报告严格遵循精读文献skill规定的八部分结构完成，旨在为初学者提供全面、易懂的论文逻辑梳理与学术要点解读。</em></p>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>压低成本：干中学与全球电动汽车电池产业政府政策 — 深度阅读笔记 — Barwick Et Al.</title>
+    <url>/posts/barwick2025/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Drive Down the Cost: Learning by Doing and
+Government Policies in the Global EV Battery Industry</li>
+<li><strong>作者</strong>: Panle Jia Barwick (Wisconsin), Hyuk-Soo Kwon
+(Singapore), Shanjun Li (Cornell), Nahim Zahur (Queens)</li>
+<li><strong>年份</strong>: 2025</li>
+<li><strong>来源</strong>: NBER Working Paper No. 33378</li>
+<li><strong>DOI</strong>: 10.3386/w33378</li>
+</ul>
+<span id="more"></span>
+<hr>
+<hr>
+<h2 id="引言背景和意义">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong> "干中学"（Learning by Doing,
+LBD）是产业经济学和增长理论的经典概念：企业在生产过程中积累经验，进而降低单位生产成本。"Wright's
+Law"（1936年由航空工程师Theodore
+Wright提出）将这一规律量化为"累计产量每翻倍，单位成本下降固定比例"。LBD在半导体、太阳能电池等绿色技术行业均有大量记录。在政策设计上，LBD带来正外部性——当前生产提高了整个行业未来的效率，因此存在补贴当前生产的理由（以纠正动态外部性）。</p>
+<p><strong>研究背景</strong>
+电动汽车（EV）电池成本在2010-2020年间下降了近90%，是过去十年绿色能源技术中最引人注目的成本下降之一。这一变化对全球气候政策目标至关重要——电池成本是EV相对于内燃机车价格劣势的主要来源。全球各国政府为促进EV普及投入了大量补贴（2022年全球EV消费补贴达430亿美元），并通过产业政策（如中国白名单政策、美国IRA本地含量要求）扶持本土电池产业。然而，LBD在多大程度上驱动了成本下降？政府政策通过哪些渠道影响LBD进程？这些问题此前缺乏可信的量化研究。</p>
+<p><strong>作者的问题意识</strong>
+（1）LBD在多大程度上解释了EV电池成本的下降（相对于技术进步、规模经济、原材料成本等其他因素）？（2）LBD如何改变消费者EV补贴的政策效果？（3）中国的"白名单"本地含量要求政策通过LBD对全球EV市场产生了怎样的影响？（4）LBD在全球供应链中产生怎样的跨国溢出效应？</p>
+<p><strong>研究意义</strong>
+本文为绿色技术政策设计提供了直接量化依据：若忽视LBD，政策评估将大幅低估补贴的长期效益；同时揭示了消费端补贴与产业政策的相互作用，对评估美国IRA、中国产业政策的全球影响具有直接参考价值。</p>
+<hr>
+<h2 id="内容及结构论文结构">内容及结构（论文结构）</h2>
+<ol type="1">
+<li><strong>引言</strong>：提出问题，概述主要发现（LBD学习率7.5%，与补贴互补放大效果，跨国溢出效应）。</li>
+<li><strong>数据</strong>：全球13国EV销售数据（2013-2020），电池供应商信息，各国补贴政策。</li>
+<li><strong>需求模型</strong>：异质消费者离散选择模型（BLP类型），估计消费者对EV特性（价格、续航、充电速度等）的偏好。</li>
+<li><strong>供给模型与电池成本恢复</strong>：通过Nash议价模型（上游电池供应商与下游EV生产商之间）推断上下游加成，从而恢复电池成本。</li>
+<li><strong>LBD估计</strong>：用工具变量方法识别LBD学习率，控制内生性（高效企业多生产更多、积累更多经验）。</li>
+<li><strong>反事实政策分析</strong>：（a）评估消费者EV补贴在有无LBD情况下的效果；（b）评估中国白名单政策及其时间安排的影响。</li>
+<li><strong>结论</strong>：总结核心发现及政策含义。</li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>EV电池成本是EV普及的关键障碍，而其90%的成本降幅是过去十年绿色技术领域最显著的成就之一。产业界将这一降幅归因于LBD，但缺乏可信的因果估计：LBD究竟贡献了多少？还是技术进步、规模经济、原材料价格下降等因素更重要？政府大规模补贴政策是否加速了这一进程？</p>
+<h3 id="挑战">挑战</h3>
+<p><strong>挑战一：电池成本不可观测</strong><br>
+电池供应协议是商业机密，无法直接观测到每款EV型号的电池成本。解决方法：通过构建EV生产商与电池供应商之间Nash议价模型，结合观测到的车辆价格和估计的需求弹性，反推上下游加成，进而推断电池成本。</p>
+<p><strong>挑战二：LBD识别的内生性</strong><br>
+企业的累计产量（生产经验，experience）与不可观测的成本冲击相关——成本优势大的企业往往产量更大、经验积累更快。若直接用经验变量回归成本，估计结果会有偏差。<br>
+<strong>工具变量策略</strong>：利用各电池供应商对下游不同国家EV补贴的差异暴露（variation）来构造工具变量。若甲国对某款车型提供慷慨补贴，供应该车型电池的供应商将更快积累经验。这一"补贴暴露"外生地推动了部分供应商的经验积累，从而识别LBD的因果效应。此外，还利用了中国白名单政策（2016-2019年）对电池供应商经验的外生冲击。</p>
+<h3 id="方法">方法</h3>
+<p><strong>需求端</strong>：BLP类型的随机系数离散选择模型，用于估计异质消费者对EV特性（价格、续航、充电功率、品牌等）的偏好，从而估计需求弹性。</p>
+<p><strong>供给端</strong>：Nash议价框架（EV生产商与电池供应商之间的纳什讨价还价），考察同步定价（Simultaneous）、顺序定价（Sequential）和线性定价（Linear
+Pricing）多种供给侧模型，并比较其对成本恢复的稳健性。</p>
+<p><strong>LBD估计方程</strong>（核心）： -
+以电池成本（对数）对累计生产经验（对数）做回归，控制行业整体技术进步、EV整车装配经验、原材料投入成本、规模经济等，并用工具变量处理经验的内生性。
+- 学习率（learning rate）定义为经验每翻倍时成本下降的百分比。</p>
+<p><strong>数据</strong>： -
+全球13国（覆盖&gt;95%全球EV销售）2013-2020年逐车型逐年销量数据（含BEV和PHEV）
+- 电池供应商数据库（植物地点、供应的EV车型列表） -
+各国EV购置补贴数据（金额、起止时间） -
+社会经济变量（收入分布等，用于校准消费者异质性）</p>
+<h3 id="结果">结果</h3>
+<p><strong>核心结果一：LBD学习率为7.5%</strong><br>
+控制行业技术进步、整车装配经验、原材料成本和规模经济后，LBD学习率估计为<strong>7.5%</strong>——即电池生产经验每翻倍，单位成本下降7.5%。该学习率处于文献估计的较低端，但仍具有重要经济意义。在2013-2020年电池总成本降幅中，LBD贡献了<strong>35.5%</strong>，行业技术进步贡献了<strong>39.9%</strong>，其余由整车装配经验、电池化学材料变化、原材料价格和规模经济共同解释。</p>
+<p><strong>核心结果二：LBD大幅放大EV补贴效果</strong><br>
+-
+无LBD时，各国补贴估计使2013-2020年全球累计EV销量增加<strong>29.9%</strong>。
+-
+同时考虑补贴和LBD时，全球EV销量相比无补贴无LBD基准增加<strong>170%</strong>。
+-
+二者的联合效果比各自独立效果之和高出<strong>60%</strong>——说明补贴与LBD具有强互补性。</p>
+<p><strong>核心结果三：消费端补贴产生跨国溢出效应</strong><br>
+EV电池供应链是全球化的（主要集中在中、日、韩三国），一国补贴可通过LBD降低全球电池成本，产生跨国外溢：
+-
+美国约131亿美元EV补贴产生了约165亿美元全球福利净增益；美国和加拿大获得其中49%，日韩电池供应商获得28%，中国仅获得3%（因为样本期内中国EV和电池与国际市场贸易有限）。
+-
+欧盟约164亿美元补贴产生约116亿美元全球福利增益，欧盟仅获得其中26%（因为欧洲大量进口EV，且采用统一补贴而非有针对性补贴）。</p>
+<p><strong>核心结果四：上游电池供应商仅获得LBD收益的一小部分</strong><br>
+LBD产生的成本降低主要通过价格竞争传递给了EV生产商和最终消费者，而非被电池供应商内部保留——与完全竞争的产业组织逻辑一致。</p>
+<p><strong>政策结果五：中国白名单政策的影响</strong><br>
+中国白名单政策（2016-2019年）将EV补贴限于使用"白名单"国内电池供应商的车辆，为CATL等中国电池企业提供了保护性市场，帮助其积累经验、形成竞争优势。但这一政策具有两面性：
+-
+实际实施时间（2016-2019年）对中国电池产业有正面效果（通过加速中国供应商的LBD积累）。
+-
+若将该政策延迟5年实施（2021-2024年），由于中国电池企业已通过出口积累足够经验，白名单的保护效果将大幅减弱，且因阻碍全球供应链效率，中国国内福利净效果将转为负值。</p>
+<hr>
+<h2 id="结论conclusion">结论（Conclusion）</h2>
+<p><strong>核心发现</strong>：LBD在EV电池成本下降中发挥了实质性作用（贡献35.5%），但并非唯一因素，行业技术进步同样重要。LBD与消费者补贴之间的强互补性意味着：忽视LBD将大幅低估补贴的长期效益。消费端补贴产生显著的跨国溢出效应，其全球效益往往远超国内效益，这对单国政策评估具有重要启示。中国的产业政策（白名单）在特定历史时机下对国内产业发展有正效果，但若时机不当则可能适得其反。</p>
+<p><strong>对领域的贡献</strong>： 1.
+提出了在无法直接观测上游成本时通过结构性供给模型恢复电池成本的方法论框架；
+2. 构建了全球EV行业的结构性模型，联合识别LBD、需求偏好和政策互动效应；
+3. 量化了EV补贴的动态长期效益，纠正了现有静态评估文献的系统性低估； 4.
+揭示了全球化供应链下单国产业政策的跨境外溢机制。</p>
+<p><strong>政策含义</strong>： -
+EV补贴的动态效益远大于静态效益，政策评估应纳入LBD渠道； -
+美国IRA的本地含量要求在短期内可能阻碍全球LBD进程，长期效果取决于本土供应链的学习速度；
+-
+政策时机（timing）至关重要：早期的保护性产业政策（如中国白名单）可能在企业尚未具备竞争力时发挥关键作用，但过晚则适得其反。</p>
+<hr>
+<h2 id="未来研究方向future-work">未来研究方向（Future work）</h2>
+<p><strong>论文中明确提及的方向</strong>： 1.
+评估美国IRA本地含量要求对全球LBD和EV普及的长期影响； 2.
+研究上游供应商如何将LBD收益分配给劳动者和股东（分配效应）； 3.
+将分析拓展到EV以外的绿色技术（如太阳能、储能电池等）。</p>
+<p><strong>从论文引申的研究方向</strong>： 1.
+内外部LBD的分解：企业内部的知识积累vs.跨企业的知识溢出各贡献多少？这对政策选择（补贴全行业
+vs. 扶持龙头企业）有重大影响； 2.
+动态寡头垄断框架下的战略性LBD——企业是否会为了积累经验而战略性定低价（forward-looking
+pricing）； 3.
+将模型扩展至2020年后：IRA颁布后（2022年），本地含量要求如何重塑全球电池供应链的LBD路径；
+4.
+LBD与研发投入的互动：研发投入（技术进步）与生产经验（LBD）是否互补，影响政策组合的最优设计。</p>
+<h2 id="学术思考">学术思考</h2>
+<ol type="1">
+<li><p><strong>电池成本恢复的模型依赖性</strong>：电池成本无法直接观测，需通过结构模型推断。不同供给侧假设（同步
+vs.
+顺序议价）是否会产生实质性不同的学习率估计？作者如何验证这些替代模型的可信度？</p></li>
+<li><p><strong>工具变量的有效性</strong>：利用"供应商对下游不同国家补贴的差异暴露"构造IV，这一策略要求EV补贴变动对电池成本没有直接效应（排他性限制）。若补贴政策同时改变了原材料需求（如锂、镍），可能违反这一假设——如何检验？</p></li>
+<li><p><strong>LBD的溢出结构</strong>：论文将LBD建模为企业层面的内部学习。但实际上，工程师流动、专利公开等机制可能使LBD在企业间溢出。内外部LBD的混淆对学习率估计和政策评估会产生怎样的影响？</p></li>
+<li><p><strong>本地含量要求的动态合理性</strong>：中国白名单实际上是保护主义政策，但本文发现在特定时机下它对国内产业有正面作用。这是否意味着"战略性贸易政策"在绿色技术的早期发展阶段具有动态合理性？如何区分"促进LBD积累"的合理保护与一般意义上的低效保护主义？</p></li>
+<li><p><strong>样本期外推的风险</strong>：研究覆盖2013-2020年，但EV市场在2020年后经历了爆炸式增长（中国BEV渗透率超过30%）。LBD在高渗透率阶段是否会放缓？本文的政策结论对IRA（2022年后）是否仍然适用？</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol type="1">
+<li>"学习率7.5%"是怎么估计出来的？工具变量策略的具体构造方法是什么？</li>
+<li>为什么上游电池供应商只获得了LBD收益的"一小部分"？这是市场结构（竞争激烈）的结果，还是谈判权力（bargaining
+power）不对等的结果？</li>
+<li>美国IRA的本地含量要求是否会减慢全球LBD进程、推高全球EV价格？本文的框架如何用于评估IRA？</li>
+<li>中国白名单政策在实际实施时间下对全球（非中国）消费者的福利影响是正面还是负面？</li>
+<li>如果未来电池技术路线（如固态电池）发生重大转变，现有的LBD积累是否会"归零"？政策设计如何应对这种技术不确定性？</li>
+<li>论文的供给侧模型（Nash议价）对最终结论的敏感性如何？若改用更简单的加成定价模型，学习率估计会有多大变化？</li>
+<li>为什么中国在美国补贴的全球福利中只获得3%？这是否意味着美国的补贴实际上是在补贴日韩企业而非中国竞争对手？</li>
+</ol>
+<hr>
 ]]></content>
       <categories>
         <category>有趣的文章</category>
@@ -10654,6 +10654,152 @@ Zotero Item Key:: XDGPRRM8</p>
       </tags>
   </entry>
   <entry>
+    <title>死亡率的地方效应：来自人口迁移的证据 — 深度阅读笔记 — Finkelstein, Gentzkow &amp; Williams</title>
+    <url>/posts/finkelstein2021/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Place-Based Drivers of Mortality: Evidence
+from Migration</li>
+<li><strong>作者</strong>: Amy Finkelstein (MIT), Matthew Gentzkow
+(Stanford), Heidi Williams (Dartmouth)</li>
+<li><strong>年份</strong>: 2021</li>
+<li><strong>来源</strong>: American Economic Review, 111(8):
+2697-2735</li>
+<li><strong>DOI</strong>: 10.1257/aer.20190825</li>
+</ul>
+<span id="more"></span>
+<hr>
+<hr>
+<h2 id="引言背景和意义">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong>
+死亡率的地理差异是健康经济学的核心研究议题。传统文献将死亡率的决定因素分为两大类：（1）居民的健康资本（health
+capital），包括基因禀赋、历史健康行为（吸烟、饮食、运动）、过往医疗经历等；（2）当前居住地的环境因素（place
+effects），包括医疗质量与可及性、气候、污染、犯罪等。但如何识别"地方"的因果效应，一直是方法论上的难题，因为人们对居住地的选择本身是内生的——健康状况好的人可能倾向于搬到生活质量更高的地方。</p>
+<p><strong>研究背景</strong>
+美国各地区之间的预期寿命差异非常显著。Chetty et
+al.（2016）发现，美国100个最大通勤区的40岁预期寿命从圣何塞的85岁到拉斯维加斯的81岁不等。现有研究（如Dartmouth
+Atlas）强调医疗支出与健康结果之间的弱相关性，而Chetty et
+al.（2016）发现截面数据中死亡率的主要相关因素是吸烟、肥胖等健康资本变量，地方因素（如医疗支出）的相关性反而很弱。但这些研究均未识别地方效应的因果影响。</p>
+<p><strong>作者的问题意识</strong>
+当前地点对老年人死亡率的因果效应有多大？不同地区之间预期寿命差异中，有多少比例来自"地方本身"（医疗质量、气候、社会环境），有多少来自居民自身带来的"健康资本"？如何在人口迁移数据中可信地分离这两类效应？</p>
+<p><strong>研究意义</strong> 该研究为以下政策问题提供了量化基础： -
+改善低质量地区的医疗资源配置能带来多大的生存收益？ -
+"移居计划"（如Moving to Opportunity）的健康效果有多大？ -
+地理健康不平等在多大程度上可以通过改变环境而非改变居民行为来解决？</p>
+<hr>
+<h2 id="内容及结构论文结构">内容及结构（论文结构）</h2>
+<ol type="1">
+<li><strong>引言</strong>：提出问题、概述方法和主要发现。</li>
+<li><strong>方法框架</strong>：（a）基准方法——用老年Medicare迁移者比较不同目的地的死亡率结果；（b）不可观测变量修正策略——利用起源地残差死亡率来校正目的地选择的潜在选择性偏差。</li>
+<li><strong>数据</strong>：Medicare
+1999-2014年全体受益人，约6900万人，其中约200万迁移者，地理单元为通勤区（CZ）。</li>
+<li><strong>主要结果</strong>：地方效应规模估计、与健康资本效应的分解。</li>
+<li><strong>异质性分析</strong>：按医疗保险补贴资格（Medicaid）、种族分层分析。</li>
+<li><strong>稳健性检验</strong>：替代模型规格（Logistic模型）等。</li>
+<li><strong>地方效应的可观测相关因素</strong>：揭示医疗质量、气候、犯罪、SES等与地方效应的相关性。</li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>美国各地预期寿命差异显著（跨通勤区标准差约0.84年）。现有研究主要描述截面相关性，难以回答"换一个地方住，你会活得更久吗"这样的因果问题。</p>
+<h3 id="挑战">挑战</h3>
+<p><strong>选择性偏误（selection
+bias）</strong>：迁移者的目的地选择与其健康状况内生相关——身体好的人可能更愿意搬到气候温和、生活便利的地方；而身体差的人可能搬到有更好医疗设施的地方。单纯比较搬到不同地点的人的死亡率，会混淆地方效应和个体健康资本差异。</p>
+<p><strong>方法难点</strong>：如何控制不可观测的健康资本（unobserved
+health
+capital）？即使控制了大量可观测健康指标，仍可能存在遗漏变量偏差。</p>
+<h3 id="方法">方法</h3>
+<p><strong>第一步：基准比较</strong>
+比较从同一起源地（如波士顿）搬到不同目的地（如明尼阿波利斯 vs.
+休斯顿）的老年人死亡率，同时控制： - 起源地固定效应 -
+丰富的搬家前健康指标（来自Medicare理赔数据的慢性病诊断、医疗利用率等）</p>
+<p>直觉：若两个人从同一起点出发，搬家前健康状况相同，搬家后死亡率差异就反映了目的地的因果效应。</p>
+<p><strong>第二步：不可观测变量修正（核心创新）</strong>
+基本思路来自Altonji et
+al.（2005）和Oster（2016）：用可观测变量的重要性来推断不可观测变量的重要性。</p>
+<p>关键假设：<strong>可观测变量与不可观测变量相对于起源地的重要性之比，等于它们相对于目的地的重要性之比</strong>。换言之，选择起源地和选择目的地的选择过程具有对称性。</p>
+<p>操作上：如果控制了起源地固定效应后，迁移者的残差死亡率仍与起源地相关，说明起源地还捕捉到了部分未被控制的健康资本。利用这一"起源地残差相关性"的大小来校正目的地选择可能带来的偏差。</p>
+<p>这一策略的优势在于：不需要研究者事先指定不可观测变量的总重要性（即不需要指定"假想完整回归"的R²上界），只需一个对称性假设，并用数据自身提供信息。</p>
+<p><strong>数据</strong>： - Medicare受益人（65岁及以上），1999-2014年 -
+约6900万受益人：4300万非迁移者（取10%随机抽样），约200万迁移者 -
+地理单元：通勤区（Commuting Zone, CZ），全美共563个 -
+关键变量：居住地邮编、死亡日期、人口特征、医疗利用率、慢性病诊断 -
+主要结果指标：65岁预期寿命（用Gompertz死亡率模型估计）</p>
+<h3 id="结果">结果</h3>
+<p><strong>主要结果：地方效应显著且重要</strong> -
+从第10百分位的通勤区迁移到第90百分位的通勤区，65岁预期寿命增加约<strong>1.1年</strong>，约为截面差异的一半。
+- 若将全国地方效应均等化，截面预期寿命差异将降低约<strong>15%</strong>。
+-
+相比之下，若将健康资本均等化，截面差异将降低约<strong>75%</strong>——说明健康资本仍是地区差异的主导因素，但地方效应也不可忽视。
+-
+地方效应与健康资本效应的相关性适中（并不完全正相关）：一些地区（如圣菲、丹佛、埃尔帕索）截面死亡率较低但地方因果效应为负；另一些地区（如西弗吉尼亚查尔斯顿）截面死亡率高但地方效应为正。</p>
+<p><strong>异质性结果</strong> -
+Medicaid受益人（低收入群体）和非白人群体的预期寿命差异更大，地方效应的标准差也更大——地理健康不平等在弱势群体中更为突出。</p>
+<p><strong>地方效应的可观测相关因素</strong>
+地方效应较好（使人活得更长）的地区往往具有： 1.
+<strong>医疗质量和数量</strong>：更多人均初级保健医生和专科医生、更高质量的医院、更高的医疗利用率（注意：这与Dartmouth
+Atlas文献中医疗利用率与截面健康结果无关的结论形成对比——这里用的是因果地方效应而非截面结果）
+2. <strong>气候环境</strong>：气候较温和、污染较少 3.
+<strong>安全</strong>：凶杀案和交通事故死亡率更低 4.
+<strong>社会经济状况</strong>：更高的收入和教育水平</p>
+<hr>
+<h2 id="结论conclusion">结论（Conclusion）</h2>
+<p><strong>核心发现</strong>：当前居住地对老年人死亡率具有实质性因果效应。从第10到第90百分位的地区迁移可使预期寿命增加1.1年，均等化地方效应可降低截面差异的15%。地方效应主要通过医疗质量、气候、社会安全和SES等渠道发挥作用。</p>
+<p><strong>对领域的贡献</strong>： 1.
+首次在全国规模上可信地分离老年人死亡率的地方因果效应与健康资本效应； 2.
+提出了一种不需要指定不可观测变量总重要性的新选择修正策略； 3.
+揭示了"医疗利用率与健康结果截面相关性弱"和"医疗质量与死亡率因果效应强"之间的矛盾——暗示截面数据中的Dartmouth
+Atlas悖论可能是选择性偏差造成的。</p>
+<p><strong>政策含义</strong>： -
+改善弱势地区的医疗资源配置（数量和质量）有望产生显著且即时的生存效益； -
+针对老年人的迁移计划（移居到更有利环境）有实质意义； -
+但地方效应只解释了15%的截面差异，健康资本（行为习惯、历史经历）仍是主要因素，不可忽视。</p>
+<hr>
+<h2 id="未来研究方向future-work">未来研究方向（Future work）</h2>
+<p><strong>论文中明确提及的方向</strong>： 1.
+深入研究地方效应的具体渠道（医疗质量的哪个维度最重要？气候影响的机制是什么？）；
+2.
+研究地方效应对更年轻人群的影响——本文聚焦老年人，年轻人可能面临不同的渠道；
+3. 拓展到死亡率以外的健康结果（住院率、功能状态等）。</p>
+<p><strong>从论文引申的研究方向</strong>： 1. 利用"Moving to
+Opportunity"等随机分配迁移实验验证本文的识别假设； 2.
+研究地方效应随时间的动态演变——当地医疗政策改革是否改变了地方效应； 3.
+将地方效应分解为可干预的政策变量（医院质量、环境监管等），直接评估政策效果；
+4.
+研究地方效应在工作年龄人群（20-64岁）的大小和渠道，以便将健康政策与劳动力市场政策联系起来。</p>
+<h2 id="学术思考">学术思考</h2>
+<ol type="1">
+<li><p><strong>识别假设的可信度</strong>：核心假设是"选择起源地和目的地的不可观测选择过程具有对称性"。但若健康较差的人为了获得特定医疗而搬迁（如搬到医疗中心附近），而健康较好的人因为退休才搬迁，两类迁移的选择机制可能非常不同，对称性假设可能存在问题。</p></li>
+<li><p><strong>Dartmouth
+Atlas悖论的解释</strong>：本文发现医疗利用率与地方效应正相关，但Dartmouth
+Atlas发现截面上医疗利用率与健康结果不相关。本文将此归因于截面数据的选择性偏差，但能否用工具变量或其他方法直接检验这一解释？</p></li>
+<li><p><strong>地方效应的即时性</strong>：作者假设老年人的健康资本是固定的，地方效应立即出现。但医疗质量的影响（如定期体检发现疾病）可能有时滞，如何区分"习惯带来的即时效应"和"医疗诊断的滞后效应"？</p></li>
+<li><p><strong>样本选择性</strong>：Medicare迁移者约占所有受益人的0.5%/年，是高度选择性的群体（经济条件较好、身体较好）。这是否限制了结论对无法迁移的老年人（如贫困老人）的适用性？</p></li>
+<li><p><strong>政策内生性</strong>：若政府根据本文研究结果改善落后地区的医疗资源，是否会改变人口选择性迁移的均衡，从而影响未来的地方效应估计？</p></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol type="1">
+<li>不可观测变量修正策略（利用起源地残差）的具体操作步骤是什么？如何用数据估计"起源地残差相关性"？</li>
+<li>为什么选择通勤区（CZ）作为地理单元？城市内部（如街区级别）的地方效应是否会更大？</li>
+<li>研究发现医疗利用率与因果效应正相关，但Dartmouth
+Atlas发现截面相关性弱——这两个结论是否真的矛盾？能用这篇论文的框架来检验吗？</li>
+<li>本文聚焦65岁以上老年人，对于工作年龄人群（如35-64岁）是否有类似的地方效应估计，其渠道机制是否不同？</li>
+<li>哪些具体的通勤区被识别为有显著正向地方效应？作者如何解释圣菲、丹佛等地截面寿命较高但地方因果效应为负的"反常"现象？</li>
+<li>本文方法能否应用于研究地方效应对非老年医疗保障（Medicaid、ACA）人群的影响？</li>
+<li>"Moving to Opportunity"项目的随机实验结果（Chetty et al.
+2016a）与本文的观察性估计是否一致？如何相互印证？</li>
+</ol>
+<hr>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>A Long and a Short Leg Make for a Wobbly Equilibrium — 深度阅读笔记 — Gârleanu, Panageas &amp; Zheng</title>
     <url>/posts/garleanu2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -10862,152 +11008,6 @@ calls）如何与模型中的反馈机制互动？</li>
         <tag>AER</tag>
         <tag>资产定价</tag>
         <tag>卖空市场</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>死亡率的地方效应：来自人口迁移的证据 — 深度阅读笔记 — Finkelstein, Gentzkow &amp; Williams</title>
-    <url>/posts/finkelstein2021/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Place-Based Drivers of Mortality: Evidence
-from Migration</li>
-<li><strong>作者</strong>: Amy Finkelstein (MIT), Matthew Gentzkow
-(Stanford), Heidi Williams (Dartmouth)</li>
-<li><strong>年份</strong>: 2021</li>
-<li><strong>来源</strong>: American Economic Review, 111(8):
-2697-2735</li>
-<li><strong>DOI</strong>: 10.1257/aer.20190825</li>
-</ul>
-<span id="more"></span>
-<hr>
-<hr>
-<h2 id="引言背景和意义">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong>
-死亡率的地理差异是健康经济学的核心研究议题。传统文献将死亡率的决定因素分为两大类：（1）居民的健康资本（health
-capital），包括基因禀赋、历史健康行为（吸烟、饮食、运动）、过往医疗经历等；（2）当前居住地的环境因素（place
-effects），包括医疗质量与可及性、气候、污染、犯罪等。但如何识别"地方"的因果效应，一直是方法论上的难题，因为人们对居住地的选择本身是内生的——健康状况好的人可能倾向于搬到生活质量更高的地方。</p>
-<p><strong>研究背景</strong>
-美国各地区之间的预期寿命差异非常显著。Chetty et
-al.（2016）发现，美国100个最大通勤区的40岁预期寿命从圣何塞的85岁到拉斯维加斯的81岁不等。现有研究（如Dartmouth
-Atlas）强调医疗支出与健康结果之间的弱相关性，而Chetty et
-al.（2016）发现截面数据中死亡率的主要相关因素是吸烟、肥胖等健康资本变量，地方因素（如医疗支出）的相关性反而很弱。但这些研究均未识别地方效应的因果影响。</p>
-<p><strong>作者的问题意识</strong>
-当前地点对老年人死亡率的因果效应有多大？不同地区之间预期寿命差异中，有多少比例来自"地方本身"（医疗质量、气候、社会环境），有多少来自居民自身带来的"健康资本"？如何在人口迁移数据中可信地分离这两类效应？</p>
-<p><strong>研究意义</strong> 该研究为以下政策问题提供了量化基础： -
-改善低质量地区的医疗资源配置能带来多大的生存收益？ -
-"移居计划"（如Moving to Opportunity）的健康效果有多大？ -
-地理健康不平等在多大程度上可以通过改变环境而非改变居民行为来解决？</p>
-<hr>
-<h2 id="内容及结构论文结构">内容及结构（论文结构）</h2>
-<ol type="1">
-<li><strong>引言</strong>：提出问题、概述方法和主要发现。</li>
-<li><strong>方法框架</strong>：（a）基准方法——用老年Medicare迁移者比较不同目的地的死亡率结果；（b）不可观测变量修正策略——利用起源地残差死亡率来校正目的地选择的潜在选择性偏差。</li>
-<li><strong>数据</strong>：Medicare
-1999-2014年全体受益人，约6900万人，其中约200万迁移者，地理单元为通勤区（CZ）。</li>
-<li><strong>主要结果</strong>：地方效应规模估计、与健康资本效应的分解。</li>
-<li><strong>异质性分析</strong>：按医疗保险补贴资格（Medicaid）、种族分层分析。</li>
-<li><strong>稳健性检验</strong>：替代模型规格（Logistic模型）等。</li>
-<li><strong>地方效应的可观测相关因素</strong>：揭示医疗质量、气候、犯罪、SES等与地方效应的相关性。</li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>美国各地预期寿命差异显著（跨通勤区标准差约0.84年）。现有研究主要描述截面相关性，难以回答"换一个地方住，你会活得更久吗"这样的因果问题。</p>
-<h3 id="挑战">挑战</h3>
-<p><strong>选择性偏误（selection
-bias）</strong>：迁移者的目的地选择与其健康状况内生相关——身体好的人可能更愿意搬到气候温和、生活便利的地方；而身体差的人可能搬到有更好医疗设施的地方。单纯比较搬到不同地点的人的死亡率，会混淆地方效应和个体健康资本差异。</p>
-<p><strong>方法难点</strong>：如何控制不可观测的健康资本（unobserved
-health
-capital）？即使控制了大量可观测健康指标，仍可能存在遗漏变量偏差。</p>
-<h3 id="方法">方法</h3>
-<p><strong>第一步：基准比较</strong>
-比较从同一起源地（如波士顿）搬到不同目的地（如明尼阿波利斯 vs.
-休斯顿）的老年人死亡率，同时控制： - 起源地固定效应 -
-丰富的搬家前健康指标（来自Medicare理赔数据的慢性病诊断、医疗利用率等）</p>
-<p>直觉：若两个人从同一起点出发，搬家前健康状况相同，搬家后死亡率差异就反映了目的地的因果效应。</p>
-<p><strong>第二步：不可观测变量修正（核心创新）</strong>
-基本思路来自Altonji et
-al.（2005）和Oster（2016）：用可观测变量的重要性来推断不可观测变量的重要性。</p>
-<p>关键假设：<strong>可观测变量与不可观测变量相对于起源地的重要性之比，等于它们相对于目的地的重要性之比</strong>。换言之，选择起源地和选择目的地的选择过程具有对称性。</p>
-<p>操作上：如果控制了起源地固定效应后，迁移者的残差死亡率仍与起源地相关，说明起源地还捕捉到了部分未被控制的健康资本。利用这一"起源地残差相关性"的大小来校正目的地选择可能带来的偏差。</p>
-<p>这一策略的优势在于：不需要研究者事先指定不可观测变量的总重要性（即不需要指定"假想完整回归"的R²上界），只需一个对称性假设，并用数据自身提供信息。</p>
-<p><strong>数据</strong>： - Medicare受益人（65岁及以上），1999-2014年 -
-约6900万受益人：4300万非迁移者（取10%随机抽样），约200万迁移者 -
-地理单元：通勤区（Commuting Zone, CZ），全美共563个 -
-关键变量：居住地邮编、死亡日期、人口特征、医疗利用率、慢性病诊断 -
-主要结果指标：65岁预期寿命（用Gompertz死亡率模型估计）</p>
-<h3 id="结果">结果</h3>
-<p><strong>主要结果：地方效应显著且重要</strong> -
-从第10百分位的通勤区迁移到第90百分位的通勤区，65岁预期寿命增加约<strong>1.1年</strong>，约为截面差异的一半。
-- 若将全国地方效应均等化，截面预期寿命差异将降低约<strong>15%</strong>。
--
-相比之下，若将健康资本均等化，截面差异将降低约<strong>75%</strong>——说明健康资本仍是地区差异的主导因素，但地方效应也不可忽视。
--
-地方效应与健康资本效应的相关性适中（并不完全正相关）：一些地区（如圣菲、丹佛、埃尔帕索）截面死亡率较低但地方因果效应为负；另一些地区（如西弗吉尼亚查尔斯顿）截面死亡率高但地方效应为正。</p>
-<p><strong>异质性结果</strong> -
-Medicaid受益人（低收入群体）和非白人群体的预期寿命差异更大，地方效应的标准差也更大——地理健康不平等在弱势群体中更为突出。</p>
-<p><strong>地方效应的可观测相关因素</strong>
-地方效应较好（使人活得更长）的地区往往具有： 1.
-<strong>医疗质量和数量</strong>：更多人均初级保健医生和专科医生、更高质量的医院、更高的医疗利用率（注意：这与Dartmouth
-Atlas文献中医疗利用率与截面健康结果无关的结论形成对比——这里用的是因果地方效应而非截面结果）
-2. <strong>气候环境</strong>：气候较温和、污染较少 3.
-<strong>安全</strong>：凶杀案和交通事故死亡率更低 4.
-<strong>社会经济状况</strong>：更高的收入和教育水平</p>
-<hr>
-<h2 id="结论conclusion">结论（Conclusion）</h2>
-<p><strong>核心发现</strong>：当前居住地对老年人死亡率具有实质性因果效应。从第10到第90百分位的地区迁移可使预期寿命增加1.1年，均等化地方效应可降低截面差异的15%。地方效应主要通过医疗质量、气候、社会安全和SES等渠道发挥作用。</p>
-<p><strong>对领域的贡献</strong>： 1.
-首次在全国规模上可信地分离老年人死亡率的地方因果效应与健康资本效应； 2.
-提出了一种不需要指定不可观测变量总重要性的新选择修正策略； 3.
-揭示了"医疗利用率与健康结果截面相关性弱"和"医疗质量与死亡率因果效应强"之间的矛盾——暗示截面数据中的Dartmouth
-Atlas悖论可能是选择性偏差造成的。</p>
-<p><strong>政策含义</strong>： -
-改善弱势地区的医疗资源配置（数量和质量）有望产生显著且即时的生存效益； -
-针对老年人的迁移计划（移居到更有利环境）有实质意义； -
-但地方效应只解释了15%的截面差异，健康资本（行为习惯、历史经历）仍是主要因素，不可忽视。</p>
-<hr>
-<h2 id="未来研究方向future-work">未来研究方向（Future work）</h2>
-<p><strong>论文中明确提及的方向</strong>： 1.
-深入研究地方效应的具体渠道（医疗质量的哪个维度最重要？气候影响的机制是什么？）；
-2.
-研究地方效应对更年轻人群的影响——本文聚焦老年人，年轻人可能面临不同的渠道；
-3. 拓展到死亡率以外的健康结果（住院率、功能状态等）。</p>
-<p><strong>从论文引申的研究方向</strong>： 1. 利用"Moving to
-Opportunity"等随机分配迁移实验验证本文的识别假设； 2.
-研究地方效应随时间的动态演变——当地医疗政策改革是否改变了地方效应； 3.
-将地方效应分解为可干预的政策变量（医院质量、环境监管等），直接评估政策效果；
-4.
-研究地方效应在工作年龄人群（20-64岁）的大小和渠道，以便将健康政策与劳动力市场政策联系起来。</p>
-<h2 id="学术思考">学术思考</h2>
-<ol type="1">
-<li><p><strong>识别假设的可信度</strong>：核心假设是"选择起源地和目的地的不可观测选择过程具有对称性"。但若健康较差的人为了获得特定医疗而搬迁（如搬到医疗中心附近），而健康较好的人因为退休才搬迁，两类迁移的选择机制可能非常不同，对称性假设可能存在问题。</p></li>
-<li><p><strong>Dartmouth
-Atlas悖论的解释</strong>：本文发现医疗利用率与地方效应正相关，但Dartmouth
-Atlas发现截面上医疗利用率与健康结果不相关。本文将此归因于截面数据的选择性偏差，但能否用工具变量或其他方法直接检验这一解释？</p></li>
-<li><p><strong>地方效应的即时性</strong>：作者假设老年人的健康资本是固定的，地方效应立即出现。但医疗质量的影响（如定期体检发现疾病）可能有时滞，如何区分"习惯带来的即时效应"和"医疗诊断的滞后效应"？</p></li>
-<li><p><strong>样本选择性</strong>：Medicare迁移者约占所有受益人的0.5%/年，是高度选择性的群体（经济条件较好、身体较好）。这是否限制了结论对无法迁移的老年人（如贫困老人）的适用性？</p></li>
-<li><p><strong>政策内生性</strong>：若政府根据本文研究结果改善落后地区的医疗资源，是否会改变人口选择性迁移的均衡，从而影响未来的地方效应估计？</p></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol type="1">
-<li>不可观测变量修正策略（利用起源地残差）的具体操作步骤是什么？如何用数据估计"起源地残差相关性"？</li>
-<li>为什么选择通勤区（CZ）作为地理单元？城市内部（如街区级别）的地方效应是否会更大？</li>
-<li>研究发现医疗利用率与因果效应正相关，但Dartmouth
-Atlas发现截面相关性弱——这两个结论是否真的矛盾？能用这篇论文的框架来检验吗？</li>
-<li>本文聚焦65岁以上老年人，对于工作年龄人群（如35-64岁）是否有类似的地方效应估计，其渠道机制是否不同？</li>
-<li>哪些具体的通勤区被识别为有显著正向地方效应？作者如何解释圣菲、丹佛等地截面寿命较高但地方因果效应为负的"反常"现象？</li>
-<li>本文方法能否应用于研究地方效应对非老年医疗保障（Medicaid、ACA）人群的影响？</li>
-<li>"Moving to Opportunity"项目的随机实验结果（Chetty et al.
-2016a）与本文的观察性估计是否一致？如何相互印证？</li>
-</ol>
-<hr>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -15041,6 +15041,65 @@ Zotero Item Key:: 2XKAAMHY</p>
       </tags>
   </entry>
   <entry>
+    <title>Hiring as Exploration — 深度阅读笔记 — Li, Raymond &amp; Bergman</title>
+    <url>/posts/li2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Hiring as Exploration</li>
+<li><strong>作者</strong>: Danielle Li (MIT &amp; NBER), Lindsey Raymond
+(MIT), Peter Bergman (UT Austin &amp; NBER)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies
+(RES)</li>
+<li><strong>DOI</strong>: 10.1093/restud/rdaf040</li>
+<li><strong>难度评估</strong>: 高 -
+需要机器学习、计量经济学、招聘经济学基础 <span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言">1. 引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>情境强盗问题、探索与利用的权衡、监督学习算法、UCB（上置信界）算法。</p>
+<h3 id="研究背景">研究背景</h3>
+<p>算法招聘日益普及；传统监督学习算法可能复制历史偏见；人类面试官预测能力有限。</p>
+<h3 id="核心问题">核心问题</h3>
+<p>将招聘视为情境强盗问题——如何平衡"利用"（选择已知最佳）与"探索"（学习新候选人质量）。探索式算法能否在提高招聘质量的同时增加人口多样性？</p>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：招聘偏见</li>
+<li>第三节：数据环境</li>
+<li>第四节：实证策略</li>
+<li>第五节：算法设计（SL vs UCB）</li>
+<li>第六节：主要结果</li>
+<li>第七节：扩展</li>
+<li>第八节：结论</li>
+</ul>
+<h2 id="正文">3. 正文</h2>
+<h3 id="核心机制">核心机制</h3>
+<ul>
+<li><strong>SL模型</strong>：仅利用——选择预期质量最高的候选人</li>
+<li><strong>UCB模型</strong>：利用+探索——对特征偏离训练数据均值的候选人给予探索溢价</li>
+</ul>
+<h3 id="关键发现">关键发现</h3>
+<ol type="1">
+<li><strong>多样性</strong>：UCB使黑人/西班牙裔代表从9.4%增至24.3%；SL降至5%以下</li>
+<li><strong>质量</strong>：SL录用率32%，UCB 27%，人类仅10%</li>
+<li><strong>帕累托改进</strong>：可能同时提升质量与多样性</li>
+</ol>
+<h2 id="结论">4. 结论</h2>
+<p>探索式算法可实现帕累托改进，挑战了效率-公平权衡的传统观点。</p>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<p>跨行业推广、长期动态效应、法律伦理风险、因果机制检验。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>预算到期会导致年底浪费性支出吗?_ Liebman &amp; Mahoney (2017) 笔记</title>
     <url>/posts/liebman2017/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -15219,65 +15278,6 @@ DOJ的IT支出没有出现支出高峰,最后一周的IT支出仅占3.3%,而非I
         <tag>论文笔记</tag>
         <tag>公共经济学</tag>
         <tag>预算制度</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hiring as Exploration — 深度阅读笔记 — Li, Raymond &amp; Bergman</title>
-    <url>/posts/li2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Hiring as Exploration</li>
-<li><strong>作者</strong>: Danielle Li (MIT &amp; NBER), Lindsey Raymond
-(MIT), Peter Bergman (UT Austin &amp; NBER)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies
-(RES)</li>
-<li><strong>DOI</strong>: 10.1093/restud/rdaf040</li>
-<li><strong>难度评估</strong>: 高 -
-需要机器学习、计量经济学、招聘经济学基础 <span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言">1. 引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>情境强盗问题、探索与利用的权衡、监督学习算法、UCB（上置信界）算法。</p>
-<h3 id="研究背景">研究背景</h3>
-<p>算法招聘日益普及；传统监督学习算法可能复制历史偏见；人类面试官预测能力有限。</p>
-<h3 id="核心问题">核心问题</h3>
-<p>将招聘视为情境强盗问题——如何平衡"利用"（选择已知最佳）与"探索"（学习新候选人质量）。探索式算法能否在提高招聘质量的同时增加人口多样性？</p>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：招聘偏见</li>
-<li>第三节：数据环境</li>
-<li>第四节：实证策略</li>
-<li>第五节：算法设计（SL vs UCB）</li>
-<li>第六节：主要结果</li>
-<li>第七节：扩展</li>
-<li>第八节：结论</li>
-</ul>
-<h2 id="正文">3. 正文</h2>
-<h3 id="核心机制">核心机制</h3>
-<ul>
-<li><strong>SL模型</strong>：仅利用——选择预期质量最高的候选人</li>
-<li><strong>UCB模型</strong>：利用+探索——对特征偏离训练数据均值的候选人给予探索溢价</li>
-</ul>
-<h3 id="关键发现">关键发现</h3>
-<ol type="1">
-<li><strong>多样性</strong>：UCB使黑人/西班牙裔代表从9.4%增至24.3%；SL降至5%以下</li>
-<li><strong>质量</strong>：SL录用率32%，UCB 27%，人类仅10%</li>
-<li><strong>帕累托改进</strong>：可能同时提升质量与多样性</li>
-</ol>
-<h2 id="结论">4. 结论</h2>
-<p>探索式算法可实现帕累托改进，挑战了效率-公平权衡的传统观点。</p>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<p>跨行业推广、长期动态效应、法律伦理风险、因果机制检验。</p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -15702,6 +15702,100 @@ study of procurement contracts》深度分析撰写。</em></p>
       </tags>
   </entry>
   <entry>
+    <title>用稻草做砖 — 深度阅读笔记 — Okeke</title>
+    <url>/posts/okeke2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Making Bricks from Straw: Resources and
+Productivity in Health Care</li>
+<li><strong>作者</strong>: Edward N. Okeke (RAND Corporation)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(4):
+1499-1539</li>
+<li><strong>DOI</strong>: 10.1257/aer.20241459</li>
+<li><strong>难度评估</strong>: 高 -
+需要卫生经济学、发展经济学、实验经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>公共卫生设施生产率（Health Care Productivity）</strong>
+指卫生设施将投入（资金、人员、设备）转化为卫生服务产出的效率。在发展中国家，公共卫生设施普遍表现不佳，存在典型的"低质量-低数量"均衡陷阱。</p>
+<p><strong>财政约束（Financial Constraints）</strong>
+指行为主体无法获得足够资金来执行生产性投资的限制。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>发展中国家的卫生设施表现糟糕</strong>：访客常发现设施在中午后只有少数患者和工作人员</p></li>
+<li><p><strong>财政约束的争论</strong>：卫生工作者认为资金不足，但证据参差不齐</p></li>
+<li><p><strong>研究缺口</strong>：缺乏对"卫生设施内部到底发生了什么"的系统研究</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：为什么发展中国家的卫生设施表现如此糟糕？财政约束的作用是什么？</p>
+<p><strong>主要发现</strong>：额外财政资源带来了巨大的生产率提高，效果持续约两年</p>
+<hr>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ol type="1">
+<li><strong>引言</strong>: 问题陈述和研究背景</li>
+<li><strong>机构背景</strong>: 尼日利亚医疗体系、实验设计</li>
+<li><strong>数据</strong>:
+rollout数据、设施调查、服务提供调查、患者调查、家庭调查</li>
+<li><strong>分析与结果</strong>:
+支出效应、资金使用、产出效应、质量效应、健康效应</li>
+<li><strong>机制讨论</strong>: 行动计划、"无形"效应、打破均衡陷阱</li>
+<li><strong>长期效应</strong>: 四年后效果持续</li>
+<li><strong>结论</strong>: 政策含义</li>
+</ol>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p><strong>尼日利亚公共卫生设施的困境</strong>： - 28%没有电力供应 -
+26%没有自来水 - 11%没有正常工作的厕所 - 14%重复使用注射器</p>
+<p><strong>"Catch-22"困境</strong>：要吸引患者必须改善质量和价格，但没有资源无法实现。</p>
+<h3 id="方法">方法</h3>
+<p><strong>实验设计</strong>：288个公共卫生中心，来自四个州</p>
+<p><strong>随机分配</strong>（三组）： 1.
+<strong>Grant组</strong>（96个）：获得60万奈拉（约1,600美元）赠款 2.
+<strong>Encouragement组</strong>（96个）：仅获得会议干预 3.
+<strong>Control组</strong>（96个）：维持现状</p>
+<p><strong>关键设计特点</strong>： - "意外"宣布：在会议结束时才宣布赠款
+- 资金管理完全由卫生工作者自行决定 - 条件宽松（只需提供银行账户）</p>
+<h3 id="结果">结果</h3>
+<p><strong>资金使用</strong>： - 47%用于改善质量（设备、翻新、员工激励）
+- 35%用于降低患者价格 - 约82%可追踪</p>
+<p><strong>产出效应</strong>： - 产前访问：+17-41% - 分娩：+17-41% -
+住院：+66%</p>
+<p><strong>质量效应</strong>：总体质量指数提高0.4标准差</p>
+<p><strong>健康效应</strong>：儿童死亡率降低24%</p>
+<p><strong>"无形"效应</strong>： - Grant诊所更早制定书面行动计划 -
+计划更详细，更可能寻求社区投入</p>
+<p><strong>长期效应</strong>（四年后）： - 产前访问：+15 log points -
+儿童免疫：+17 log points</p>
+<hr>
+<h2 id="结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>财政约束是真正的约束</strong>：向卫生设施提供额外资金带来了巨大的生产率提高</p></li>
+<li><p><strong>资金被有效使用</strong>：约47%用于改善质量，35%用于降低价格，没有明显的资金挪用</p></li>
+<li><p><strong>打破了"低质量-低数量"均衡</strong>：帮助卫生设施同时解决质量和价格两个约束</p></li>
+<li><p><strong>自主权产生了更好的效果</strong>：无条件赠款优于绩效挂钩拨款</p></li>
+<li><p><strong>效果持久</strong>：即使资金停止，改进仍持续约两年</p></li>
+</ol>
+<h3 id="政策含义">政策含义</h3>
+<ol type="1">
+<li><p><strong>资本注入可以打破均衡</strong>：财务"大推动"可能帮助突破困境</p></li>
+<li><p><strong>自主权和灵活性很重要</strong>：让卫生工作者自行决定如何花钱比严格规定用途更有效</p></li>
+<li><p><strong>"培训"不一定是前提</strong>：卫生工作者能够管理赠款资金，即使没有额外培训</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>&lt;马铃薯与人口&gt;深度阅读笔记 — Nunn &amp; Qian</title>
     <url>/posts/nunn2011/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -15963,100 +16057,6 @@ Vol. 126, pp. 593-650</li>
       </tags>
   </entry>
   <entry>
-    <title>用稻草做砖 — 深度阅读笔记 — Okeke</title>
-    <url>/posts/okeke2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Making Bricks from Straw: Resources and
-Productivity in Health Care</li>
-<li><strong>作者</strong>: Edward N. Okeke (RAND Corporation)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(4):
-1499-1539</li>
-<li><strong>DOI</strong>: 10.1257/aer.20241459</li>
-<li><strong>难度评估</strong>: 高 -
-需要卫生经济学、发展经济学、实验经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>公共卫生设施生产率（Health Care Productivity）</strong>
-指卫生设施将投入（资金、人员、设备）转化为卫生服务产出的效率。在发展中国家，公共卫生设施普遍表现不佳，存在典型的"低质量-低数量"均衡陷阱。</p>
-<p><strong>财政约束（Financial Constraints）</strong>
-指行为主体无法获得足够资金来执行生产性投资的限制。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>发展中国家的卫生设施表现糟糕</strong>：访客常发现设施在中午后只有少数患者和工作人员</p></li>
-<li><p><strong>财政约束的争论</strong>：卫生工作者认为资金不足，但证据参差不齐</p></li>
-<li><p><strong>研究缺口</strong>：缺乏对"卫生设施内部到底发生了什么"的系统研究</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：为什么发展中国家的卫生设施表现如此糟糕？财政约束的作用是什么？</p>
-<p><strong>主要发现</strong>：额外财政资源带来了巨大的生产率提高，效果持续约两年</p>
-<hr>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ol type="1">
-<li><strong>引言</strong>: 问题陈述和研究背景</li>
-<li><strong>机构背景</strong>: 尼日利亚医疗体系、实验设计</li>
-<li><strong>数据</strong>:
-rollout数据、设施调查、服务提供调查、患者调查、家庭调查</li>
-<li><strong>分析与结果</strong>:
-支出效应、资金使用、产出效应、质量效应、健康效应</li>
-<li><strong>机制讨论</strong>: 行动计划、"无形"效应、打破均衡陷阱</li>
-<li><strong>长期效应</strong>: 四年后效果持续</li>
-<li><strong>结论</strong>: 政策含义</li>
-</ol>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p><strong>尼日利亚公共卫生设施的困境</strong>： - 28%没有电力供应 -
-26%没有自来水 - 11%没有正常工作的厕所 - 14%重复使用注射器</p>
-<p><strong>"Catch-22"困境</strong>：要吸引患者必须改善质量和价格，但没有资源无法实现。</p>
-<h3 id="方法">方法</h3>
-<p><strong>实验设计</strong>：288个公共卫生中心，来自四个州</p>
-<p><strong>随机分配</strong>（三组）： 1.
-<strong>Grant组</strong>（96个）：获得60万奈拉（约1,600美元）赠款 2.
-<strong>Encouragement组</strong>（96个）：仅获得会议干预 3.
-<strong>Control组</strong>（96个）：维持现状</p>
-<p><strong>关键设计特点</strong>： - "意外"宣布：在会议结束时才宣布赠款
-- 资金管理完全由卫生工作者自行决定 - 条件宽松（只需提供银行账户）</p>
-<h3 id="结果">结果</h3>
-<p><strong>资金使用</strong>： - 47%用于改善质量（设备、翻新、员工激励）
-- 35%用于降低患者价格 - 约82%可追踪</p>
-<p><strong>产出效应</strong>： - 产前访问：+17-41% - 分娩：+17-41% -
-住院：+66%</p>
-<p><strong>质量效应</strong>：总体质量指数提高0.4标准差</p>
-<p><strong>健康效应</strong>：儿童死亡率降低24%</p>
-<p><strong>"无形"效应</strong>： - Grant诊所更早制定书面行动计划 -
-计划更详细，更可能寻求社区投入</p>
-<p><strong>长期效应</strong>（四年后）： - 产前访问：+15 log points -
-儿童免疫：+17 log points</p>
-<hr>
-<h2 id="结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>财政约束是真正的约束</strong>：向卫生设施提供额外资金带来了巨大的生产率提高</p></li>
-<li><p><strong>资金被有效使用</strong>：约47%用于改善质量，35%用于降低价格，没有明显的资金挪用</p></li>
-<li><p><strong>打破了"低质量-低数量"均衡</strong>：帮助卫生设施同时解决质量和价格两个约束</p></li>
-<li><p><strong>自主权产生了更好的效果</strong>：无条件赠款优于绩效挂钩拨款</p></li>
-<li><p><strong>效果持久</strong>：即使资金停止，改进仍持续约两年</p></li>
-</ol>
-<h3 id="政策含义">政策含义</h3>
-<ol type="1">
-<li><p><strong>资本注入可以打破均衡</strong>：财务"大推动"可能帮助突破困境</p></li>
-<li><p><strong>自主权和灵活性很重要</strong>：让卫生工作者自行决定如何花钱比严格规定用途更有效</p></li>
-<li><p><strong>"培训"不一定是前提</strong>：卫生工作者能够管理赠款资金，即使没有额外培训</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>文献阅读# 政策转移中的政策再生产:影响因素与模式概化</title>
     <url>/posts/32262/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&nbsp; &nbsp; &nbsp;</p>
@@ -16217,144 +16217,6 @@ Records</li>
 ]]></content>
       <categories>
         <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>空间处理的因果推断 — 深度阅读笔记 — Pollmann</title>
-    <url>/posts/pollmann2023/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Causal Inference for Spatial Treatments<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/CDU36XVN/Pollmann - 2023 - Causal Inference for Spatial Treatments.pdf<br>
-Zotero Item Key:: 5VM9WE7W</p>
-<hr>
-<span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-很多政策或事件发生在特定的地理位置，研究者想估计其对附近居民或企业的因果影响，这类问题被称为"空间处理"（spatial treatment）。常见例子包括：新超市对周边商业的影响、学校/医院/污染源对附近居民健康的影响、犯罪事件对周边房价的影响。现有实证研究中最常用的策略是"内外环比较"（inner vs. outer ring）：以距处理地点距离 $d$ 以内的个体为处理组，以距离 $D \gg d$ 的个体（仍围绕同一处理地点）为对照组。</p>
-<p><strong>研究背景</strong><br>
-随着精确地理位置数据（GPS轨迹、地理编码数据库）的普及，研究者越来越多地能够以细粒度分析空间处理效应随距离的变化。但现有方法论存在严重缺陷：内外环比较策略在非常窄的特殊条件外是无效的，且标准误的计算通常不能正确反映研究者利用的识别变异。</p>
-<p><strong>作者的问题意识</strong><br>
-研究空间处理效应时的理想实验是什么？这个理想实验如何指导实证分析中的控制组选择？如何在该设计框架下推导有效的标准误？在观测数据中，如何通过机器学习方法实现对理想实验的近似？</p>
-<p><strong>研究意义</strong><br>
-本文系统化地建立了空间处理的设计基础因果推断框架，指出了广泛使用的内外环比较策略的识别问题，提出了基于卷积神经网络（CNN）的反事实位置识别方法，并给出了实用的计算程序。对凡是研究"空间处理对附近个体影响"的实证研究都有直接的方法论指导意义。</p>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言</strong>：问题提出，三大贡献预告。</li>
-<li><strong>内外环策略的局限（Section 2）</strong>：证明内外环比较不能用准随机位置变异来正当化。</li>
-<li><strong>框架与记号（Section 3）</strong>：空间处理设定的正式化，理想实验定义。</li>
-<li><strong>估计与推断（Section 4）</strong>：逆概率加权估计量；设计基础方差推导。</li>
-<li><strong>空间无混淆假设与CNN（Section 5）</strong>：观测数据下的反事实位置识别。</li>
-<li><strong>扩展（Section 6）</strong>：推广到非空间处理设定。</li>
-<li><strong>应用（Section 7）</strong>：COVID-19期间杂货店对周边餐厅客流的影响。</li>
-<li><strong>结论</strong>。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>空间处理普遍存在于经济学实证研究中。精确地理数据使研究者能以距离为维度细分处理效应。然而，方法论跟不上数据进步——最常用的内外环比较策略存在根本性缺陷。</p>
-<h3 id="挑战：内外环比较策略为何无效？">挑战：内外环比较策略为何无效？</h3>
-<p><strong>内外环策略</strong>：用距处理地点"内圈"（距离 $d$）的个体作为处理组，“外圈”（距离 $D \gg d$）的个体作为对照组。</p>
-<p><strong>问题所在</strong>：这一比较隐含假设"同一处理地点"的内圈和外圈具有相同的潜在结果（如果处理不存在）。但这一假设在几乎任何现实设定中都不成立——即使处理地点是准随机分配的，同一地点的"不同距离个体"所处的空间经济环境本身就不同（如与市中心的距离、周边商业密度等）。内外环策略要求"距离处理地点距离 $D$ 和距离 $d$ 的个体潜在结果相同"，这是一个非常强且通常不成立的假设。</p>
-<h3 id="识别框架：理想实验">识别框架：理想实验</h3>
-<p><strong>理想实验</strong>：在所有"可能的候选处理位置"中随机决定实际处理放在哪里。例如：随机决定在候选地点A还是B建一家新超市。</p>
-<p><strong>正确的对照组</strong>：</p>
-<ul>
-<li><strong>处理组</strong>：实际处理位置（超市A）附近（距离 $d$ 以内）的个体</li>
-<li><strong>对照组</strong>：反事实处理位置（超市B，实际上没有超市）附近（同样距离 $d$ 以内）的个体</li>
-</ul>
-<p><strong>关键直觉</strong>：这一比较将"有超市的地点附近"和"同样可能有超市但实际上没有的地点附近"进行对比，从而将"地点本身的特征"控制掉——因为两类地点在地理和经济环境上是可比的（在准随机化的意义上）。</p>
-<h3 id="设计基础推断">设计基础推断</h3>
-<p><strong>逆概率加权（IPW）估计量</strong>：基于理想实验的概率（每个候选地点被选中的概率），对处理组和对照组的个体结果分别加权平均，差值即为处理效应估计。</p>
-<p><strong>设计基础方差</strong>：</p>
-<ul>
-<li>反映的是研究者在主张"因果效应"时实际利用的随机性来源（候选位置的随机选择）</li>
-<li>不需要假设超总体（super-population）和抽样方案</li>
-<li><strong>不需要估计或建模结果在空间上的相关结构</strong>（如Conley 1999空间HAC标准误所需的），大大降低了计算复杂度</li>
-<li>适用于个体同时暴露于多个处理的情形（传统"聚类"标准误在此失效）</li>
-</ul>
-<h3 id="观测数据下的方法：空间无混淆假设-CNN">观测数据下的方法：空间无混淆假设 + CNN</h3>
-<p>当处理地点不是真正随机分配时，引入<strong>空间无混淆假设</strong>：如果两个地点在所有可观测的前处理空间协变量上相同，则这两个地点被选为处理位置是随机的（相对于潜在结果而言）。</p>
-<p><strong>挑战</strong>：空间协变量是高维的（周边建筑分布、各类设施密度等），传统汇总统计（如圆形内均值）会损失重要信息。</p>
-<p><strong>方法</strong>：利用<strong>卷积神经网络（CNN）</strong>：</p>
-<ul>
-<li>CNN能够自动学习空间协变量分布的局部模式（而非依赖手工构造的汇总统计）</li>
-<li>自然满足空间的平移等变性（shift equivariance）</li>
-<li>通过数据增强可引入镜像、旋转不变性</li>
-<li>输出：每个候选位置的"被选为处理地点的倾向得分"（propensity score），用于匹配反事实地点</li>
-</ul>
-<h3 id="应用：COVID-19期间杂货店对餐厅客流的影响">应用：COVID-19期间杂货店对餐厅客流的影响</h3>
-<p><strong>设定</strong>：</p>
-<ul>
-<li>美国旧金山湾区，2020年4月，COVID-19就地避险令（shelter-in-place）期间</li>
-<li>避险令期间，居民只能进行必要出行（如购物），餐厅禁止堂食</li>
-<li><strong>假说</strong>：餐厅如果距杂货店很近，可能受益于杂货店带来的客流（顾客排队时顺便买咖啡/外卖）</li>
-</ul>
-<p><strong>数据</strong>：SafeGraph匿名手机位置数据（GPS轨迹），测量各商家客流量</p>
-<p><strong>反事实地点识别</strong>：用CNN在旧金山湾区内识别出与真实杂货店在周边商业构成和位置格局上高度相似（但实际上没有杂货店）的地点，作为对照组</p>
-<p><strong>结果</strong>：</p>
-<ul>
-<li>距真实杂货店步行约2分钟以内的餐厅客流量<strong>约为</strong>对照地点同等距离餐厅的<strong>两倍</strong></li>
-<li>距离较远时（超过此范围），两类地点的餐厅客流量无显著差异</li>
-<li><strong>设计基础标准误</strong>：正确反映了多个杂货店之间的复杂相关结构，结果显著</li>
-</ul>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<p>本文建立了一套基于设计思想的空间处理因果推断框架：</p>
-<ol>
-<li>理想实验是在候选位置间随机化处理，正确的对照组是反事实位置附近个体（不是同一处理地点外圈的个体）；</li>
-<li>设计基础方差直观、可行、且不依赖空间相关结构的建模；</li>
-<li>卷积神经网络在观测数据下可以数据驱动地找到反事实位置；</li>
-<li>应用结果显示：避险令期间杂货店在极短距离内（步行可达）对周边餐厅客流有实质性正向外部效应。</li>
-</ol>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文明确提及的方向</strong>：</p>
-<ol>
-<li>扩展框架到非空间处理设定（如网络中的处理溢出）；</li>
-<li>参数化处理效应随距离的函数形式（Online Appendix 8）。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li><strong>动态空间效应</strong>：随时间变化的空间处理效应（如新地铁站开通后房价的动态调整）如何在此框架内估计？</li>
-<li><strong>CNN黑箱问题</strong>：如何解释CNN识别的反事实位置的经济含义？能否可视化CNN学到的"相似度"标准，与研究者的经济直觉对应？</li>
-<li><strong>多重处理的联合推断</strong>：个体同时暴露于多个空间处理时（如同时受到学校和超市的影响），如何定义和估计各自的边际效应？</li>
-<li><strong>应用推广</strong>：可以将本文方法应用于中国城市语境中的问题，如：地铁站开通对周边商业/房价的影响（利用站点位置而非线路走向作为识别变量）。</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>反事实位置识别的可信性</strong>：CNN识别出的"反事实位置"是否真的与真实杂货店位置的邻域在经济意义上无法区分？如果真实杂货店系统地选址于某些特殊位置（如交通枢纽），CNN能否仅通过周边商业组成完全控制这一特征？这是"空间无混淆"假设能否成立的核心。</p>
-</li>
-<li>
-<p><strong>设计基础方差 vs Conley标准误</strong>：本文的方差公式反映的是"候选位置随机选择"的不确定性，而Conley (1999) HAC反映的是"空间随机误差项的相关性"。当研究者主张识别是基于位置的准随机变异时，设计基础方差在概念上更为精确。但实际中，很多研究者并不能明确描述候选位置集合，这限制了设计基础推断的可操作性。</p>
-</li>
-<li>
-<p><strong>内外环策略何时有效</strong>：作者指出，内外环比较在"knife-edge scenarios"（极端特殊情形）下有效。这些情形是什么？能否通过检验某些可检验的必要条件（如处理前协变量在内外环间的平衡性）来为内外环策略的可信性提供证据？</p>
-</li>
-<li>
-<p><strong>CNN的空间等变性假设</strong>：论文假设经济结果对空间协变量的函数满足平移等变性——即如果整个地图平移，预测结果也简单平移。这对某些场景（如距市中心距离）不成立。论文通过"数据增强"部分解决了旋转问题，但平移等变性本身是否是一个过强的假设值得关注。</p>
-</li>
-<li>
-<p><strong>方法的可推广性</strong>：论文声称这些方法可推广到"非空间设定中处理与结果属于不同单位的情形"（如网络中的溢出效应）。这一推广在技术上令人信服，但在实证研究中，如何指定"候选处理位置集合"（对应于网络中的"候选处理节点"）仍然是核心挑战，需要大量领域知识。</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>本文的方法如何与"堆叠DiD"（stacked DiD）或"空间断点回归"（spatial RDD）的方法论进行比较？它们各自适用的场景有何不同？</li>
-<li>在中国的实证研究中，如地铁线路开通、工业园区落地等空间处理，如何确定"候选处理位置集合"？有没有基于中国数据的应用案例？</li>
-<li>论文代码在GitHub开放（spatialTreat-example），其中CNN的输入格式是什么？对经济数据集（如OpenStreetMap商业位置数据）的预处理需要哪些步骤？</li>
-<li>内外环策略在哪些实证文献中被使用？其中哪些结论可能因为采用了正确的方法论而发生改变？</li>
-<li>本文提出的"设计基础方差"与bootstrap方法相比有何优势？在小样本情形下（如只有少数处理地点）表现如何？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -16905,6 +16767,144 @@ University Press.</li>
         <tag>书籍</tag>
         <tag>农业史</tag>
         <tag>中国历史</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>空间处理的因果推断 — 深度阅读笔记 — Pollmann</title>
+    <url>/posts/pollmann2023/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Causal Inference for Spatial Treatments<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/CDU36XVN/Pollmann - 2023 - Causal Inference for Spatial Treatments.pdf<br>
+Zotero Item Key:: 5VM9WE7W</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+很多政策或事件发生在特定的地理位置，研究者想估计其对附近居民或企业的因果影响，这类问题被称为"空间处理"（spatial treatment）。常见例子包括：新超市对周边商业的影响、学校/医院/污染源对附近居民健康的影响、犯罪事件对周边房价的影响。现有实证研究中最常用的策略是"内外环比较"（inner vs. outer ring）：以距处理地点距离 $d$ 以内的个体为处理组，以距离 $D \gg d$ 的个体（仍围绕同一处理地点）为对照组。</p>
+<p><strong>研究背景</strong><br>
+随着精确地理位置数据（GPS轨迹、地理编码数据库）的普及，研究者越来越多地能够以细粒度分析空间处理效应随距离的变化。但现有方法论存在严重缺陷：内外环比较策略在非常窄的特殊条件外是无效的，且标准误的计算通常不能正确反映研究者利用的识别变异。</p>
+<p><strong>作者的问题意识</strong><br>
+研究空间处理效应时的理想实验是什么？这个理想实验如何指导实证分析中的控制组选择？如何在该设计框架下推导有效的标准误？在观测数据中，如何通过机器学习方法实现对理想实验的近似？</p>
+<p><strong>研究意义</strong><br>
+本文系统化地建立了空间处理的设计基础因果推断框架，指出了广泛使用的内外环比较策略的识别问题，提出了基于卷积神经网络（CNN）的反事实位置识别方法，并给出了实用的计算程序。对凡是研究"空间处理对附近个体影响"的实证研究都有直接的方法论指导意义。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：问题提出，三大贡献预告。</li>
+<li><strong>内外环策略的局限（Section 2）</strong>：证明内外环比较不能用准随机位置变异来正当化。</li>
+<li><strong>框架与记号（Section 3）</strong>：空间处理设定的正式化，理想实验定义。</li>
+<li><strong>估计与推断（Section 4）</strong>：逆概率加权估计量；设计基础方差推导。</li>
+<li><strong>空间无混淆假设与CNN（Section 5）</strong>：观测数据下的反事实位置识别。</li>
+<li><strong>扩展（Section 6）</strong>：推广到非空间处理设定。</li>
+<li><strong>应用（Section 7）</strong>：COVID-19期间杂货店对周边餐厅客流的影响。</li>
+<li><strong>结论</strong>。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>空间处理普遍存在于经济学实证研究中。精确地理数据使研究者能以距离为维度细分处理效应。然而，方法论跟不上数据进步——最常用的内外环比较策略存在根本性缺陷。</p>
+<h3 id="挑战：内外环比较策略为何无效？">挑战：内外环比较策略为何无效？</h3>
+<p><strong>内外环策略</strong>：用距处理地点"内圈"（距离 $d$）的个体作为处理组，“外圈”（距离 $D \gg d$）的个体作为对照组。</p>
+<p><strong>问题所在</strong>：这一比较隐含假设"同一处理地点"的内圈和外圈具有相同的潜在结果（如果处理不存在）。但这一假设在几乎任何现实设定中都不成立——即使处理地点是准随机分配的，同一地点的"不同距离个体"所处的空间经济环境本身就不同（如与市中心的距离、周边商业密度等）。内外环策略要求"距离处理地点距离 $D$ 和距离 $d$ 的个体潜在结果相同"，这是一个非常强且通常不成立的假设。</p>
+<h3 id="识别框架：理想实验">识别框架：理想实验</h3>
+<p><strong>理想实验</strong>：在所有"可能的候选处理位置"中随机决定实际处理放在哪里。例如：随机决定在候选地点A还是B建一家新超市。</p>
+<p><strong>正确的对照组</strong>：</p>
+<ul>
+<li><strong>处理组</strong>：实际处理位置（超市A）附近（距离 $d$ 以内）的个体</li>
+<li><strong>对照组</strong>：反事实处理位置（超市B，实际上没有超市）附近（同样距离 $d$ 以内）的个体</li>
+</ul>
+<p><strong>关键直觉</strong>：这一比较将"有超市的地点附近"和"同样可能有超市但实际上没有的地点附近"进行对比，从而将"地点本身的特征"控制掉——因为两类地点在地理和经济环境上是可比的（在准随机化的意义上）。</p>
+<h3 id="设计基础推断">设计基础推断</h3>
+<p><strong>逆概率加权（IPW）估计量</strong>：基于理想实验的概率（每个候选地点被选中的概率），对处理组和对照组的个体结果分别加权平均，差值即为处理效应估计。</p>
+<p><strong>设计基础方差</strong>：</p>
+<ul>
+<li>反映的是研究者在主张"因果效应"时实际利用的随机性来源（候选位置的随机选择）</li>
+<li>不需要假设超总体（super-population）和抽样方案</li>
+<li><strong>不需要估计或建模结果在空间上的相关结构</strong>（如Conley 1999空间HAC标准误所需的），大大降低了计算复杂度</li>
+<li>适用于个体同时暴露于多个处理的情形（传统"聚类"标准误在此失效）</li>
+</ul>
+<h3 id="观测数据下的方法：空间无混淆假设-CNN">观测数据下的方法：空间无混淆假设 + CNN</h3>
+<p>当处理地点不是真正随机分配时，引入<strong>空间无混淆假设</strong>：如果两个地点在所有可观测的前处理空间协变量上相同，则这两个地点被选为处理位置是随机的（相对于潜在结果而言）。</p>
+<p><strong>挑战</strong>：空间协变量是高维的（周边建筑分布、各类设施密度等），传统汇总统计（如圆形内均值）会损失重要信息。</p>
+<p><strong>方法</strong>：利用<strong>卷积神经网络（CNN）</strong>：</p>
+<ul>
+<li>CNN能够自动学习空间协变量分布的局部模式（而非依赖手工构造的汇总统计）</li>
+<li>自然满足空间的平移等变性（shift equivariance）</li>
+<li>通过数据增强可引入镜像、旋转不变性</li>
+<li>输出：每个候选位置的"被选为处理地点的倾向得分"（propensity score），用于匹配反事实地点</li>
+</ul>
+<h3 id="应用：COVID-19期间杂货店对餐厅客流的影响">应用：COVID-19期间杂货店对餐厅客流的影响</h3>
+<p><strong>设定</strong>：</p>
+<ul>
+<li>美国旧金山湾区，2020年4月，COVID-19就地避险令（shelter-in-place）期间</li>
+<li>避险令期间，居民只能进行必要出行（如购物），餐厅禁止堂食</li>
+<li><strong>假说</strong>：餐厅如果距杂货店很近，可能受益于杂货店带来的客流（顾客排队时顺便买咖啡/外卖）</li>
+</ul>
+<p><strong>数据</strong>：SafeGraph匿名手机位置数据（GPS轨迹），测量各商家客流量</p>
+<p><strong>反事实地点识别</strong>：用CNN在旧金山湾区内识别出与真实杂货店在周边商业构成和位置格局上高度相似（但实际上没有杂货店）的地点，作为对照组</p>
+<p><strong>结果</strong>：</p>
+<ul>
+<li>距真实杂货店步行约2分钟以内的餐厅客流量<strong>约为</strong>对照地点同等距离餐厅的<strong>两倍</strong></li>
+<li>距离较远时（超过此范围），两类地点的餐厅客流量无显著差异</li>
+<li><strong>设计基础标准误</strong>：正确反映了多个杂货店之间的复杂相关结构，结果显著</li>
+</ul>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<p>本文建立了一套基于设计思想的空间处理因果推断框架：</p>
+<ol>
+<li>理想实验是在候选位置间随机化处理，正确的对照组是反事实位置附近个体（不是同一处理地点外圈的个体）；</li>
+<li>设计基础方差直观、可行、且不依赖空间相关结构的建模；</li>
+<li>卷积神经网络在观测数据下可以数据驱动地找到反事实位置；</li>
+<li>应用结果显示：避险令期间杂货店在极短距离内（步行可达）对周边餐厅客流有实质性正向外部效应。</li>
+</ol>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文明确提及的方向</strong>：</p>
+<ol>
+<li>扩展框架到非空间处理设定（如网络中的处理溢出）；</li>
+<li>参数化处理效应随距离的函数形式（Online Appendix 8）。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li><strong>动态空间效应</strong>：随时间变化的空间处理效应（如新地铁站开通后房价的动态调整）如何在此框架内估计？</li>
+<li><strong>CNN黑箱问题</strong>：如何解释CNN识别的反事实位置的经济含义？能否可视化CNN学到的"相似度"标准，与研究者的经济直觉对应？</li>
+<li><strong>多重处理的联合推断</strong>：个体同时暴露于多个空间处理时（如同时受到学校和超市的影响），如何定义和估计各自的边际效应？</li>
+<li><strong>应用推广</strong>：可以将本文方法应用于中国城市语境中的问题，如：地铁站开通对周边商业/房价的影响（利用站点位置而非线路走向作为识别变量）。</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>反事实位置识别的可信性</strong>：CNN识别出的"反事实位置"是否真的与真实杂货店位置的邻域在经济意义上无法区分？如果真实杂货店系统地选址于某些特殊位置（如交通枢纽），CNN能否仅通过周边商业组成完全控制这一特征？这是"空间无混淆"假设能否成立的核心。</p>
+</li>
+<li>
+<p><strong>设计基础方差 vs Conley标准误</strong>：本文的方差公式反映的是"候选位置随机选择"的不确定性，而Conley (1999) HAC反映的是"空间随机误差项的相关性"。当研究者主张识别是基于位置的准随机变异时，设计基础方差在概念上更为精确。但实际中，很多研究者并不能明确描述候选位置集合，这限制了设计基础推断的可操作性。</p>
+</li>
+<li>
+<p><strong>内外环策略何时有效</strong>：作者指出，内外环比较在"knife-edge scenarios"（极端特殊情形）下有效。这些情形是什么？能否通过检验某些可检验的必要条件（如处理前协变量在内外环间的平衡性）来为内外环策略的可信性提供证据？</p>
+</li>
+<li>
+<p><strong>CNN的空间等变性假设</strong>：论文假设经济结果对空间协变量的函数满足平移等变性——即如果整个地图平移，预测结果也简单平移。这对某些场景（如距市中心距离）不成立。论文通过"数据增强"部分解决了旋转问题，但平移等变性本身是否是一个过强的假设值得关注。</p>
+</li>
+<li>
+<p><strong>方法的可推广性</strong>：论文声称这些方法可推广到"非空间设定中处理与结果属于不同单位的情形"（如网络中的溢出效应）。这一推广在技术上令人信服，但在实证研究中，如何指定"候选处理位置集合"（对应于网络中的"候选处理节点"）仍然是核心挑战，需要大量领域知识。</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>本文的方法如何与"堆叠DiD"（stacked DiD）或"空间断点回归"（spatial RDD）的方法论进行比较？它们各自适用的场景有何不同？</li>
+<li>在中国的实证研究中，如地铁线路开通、工业园区落地等空间处理，如何确定"候选处理位置集合"？有没有基于中国数据的应用案例？</li>
+<li>论文代码在GitHub开放（spatialTreat-example），其中CNN的输入格式是什么？对经济数据集（如OpenStreetMap商业位置数据）的预处理需要哪些步骤？</li>
+<li>内外环策略在哪些实证文献中被使用？其中哪些结论可能因为采用了正确的方法论而发生改变？</li>
+<li>本文提出的"设计基础方差"与bootstrap方法相比有何优势？在小样本情形下（如只有少数处理地点）表现如何？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -17588,71 +17588,6 @@ World!"开始的,对于<strong>shell</strong>而言:</p>
       </tags>
   </entry>
   <entry>
-    <title>Behavioural Causal Inference — 深度阅读笔记 — Spiegler</title>
-    <url>/posts/spiegler2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Behavioural Causal Inference</li>
-<li><strong>作者</strong>: Ran Spiegler (Tel Aviv University and
-UCL)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies
-(RES)</li>
-<li><strong>DOI</strong>: 10.1093/restud/rdaf050</li>
-<li><strong>难度评估</strong>: 高 - 需要因果推断、博弈论基础
-<span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>因果推断（Causal
-Inference）</strong>：从观察数据推断变量间的因果关系。</p>
-<p><strong>控制变量（Control
-Variables）</strong>：控制潜在混杂因素的方法。不当控制导致错误因果推断。</p>
-<p><strong>行为因果推断</strong>：非专业决策者使用直觉性方法进行因果推断。</p>
-<h3 id="研究背景">研究背景</h3>
-<ol type="1">
-<li>专业研究者vs非专业决策者的差异</li>
-<li>非专业决策者与经济系统互动——行为影响数据本身</li>
-<li>不当控制的两种形式：控制不足、控制过度</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p>当数据生成过程与均衡行为一致时，因果推断错误的福利损失界限是多少？</p>
-<h2 id="内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：模型</li>
-<li>第三节：同质偏好分析</li>
-<li>第四节：异质偏好分析</li>
-<li>第五节：非零因果效应扩展</li>
-<li>第六节：与早期框架的联系</li>
-</ul>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="核心洞察">核心洞察</h3>
-<p>均衡条件可以限制因果推断错误——当决策者根据错误推断行动时，他们改变了产生这些错误的数据。</p>
-<h3 id="关键二元关系p">关键二元关系P</h3>
-<p>iPj当Di ⊇ Cj——类型i控制/调整的变量集是类型j条件化变量集的超集。</p>
-<h3 id="主要结果">主要结果</h3>
-<ul>
-<li>当类型有序时：均衡消除福利损失</li>
-<li>当类型无序时：上界为1（与无均衡限制相同）</li>
-</ul>
-<h2 id="结论">4. 结论</h2>
-<p>数据类型结构决定均衡对因果推断错误的保护程度。</p>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<p>非零因果效应扩展、信息设计视角、实验验证。</p>
-<h2 id="学术思考">6. 学术思考</h2>
-<p>均衡作为自我纠正机制；控制变量选择作为类型特征。</p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>竞标企业：美国补贴竞争 — 深度阅读笔记 — Slattery</title>
     <url>/posts/slattery2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -17789,6 +17724,71 @@ Selection数据存在哪些已知的测量误差或选择性偏差？</li>
       </tags>
   </entry>
   <entry>
+    <title>Behavioural Causal Inference — 深度阅读笔记 — Spiegler</title>
+    <url>/posts/spiegler2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Behavioural Causal Inference</li>
+<li><strong>作者</strong>: Ran Spiegler (Tel Aviv University and
+UCL)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies
+(RES)</li>
+<li><strong>DOI</strong>: 10.1093/restud/rdaf050</li>
+<li><strong>难度评估</strong>: 高 - 需要因果推断、博弈论基础
+<span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>因果推断（Causal
+Inference）</strong>：从观察数据推断变量间的因果关系。</p>
+<p><strong>控制变量（Control
+Variables）</strong>：控制潜在混杂因素的方法。不当控制导致错误因果推断。</p>
+<p><strong>行为因果推断</strong>：非专业决策者使用直觉性方法进行因果推断。</p>
+<h3 id="研究背景">研究背景</h3>
+<ol type="1">
+<li>专业研究者vs非专业决策者的差异</li>
+<li>非专业决策者与经济系统互动——行为影响数据本身</li>
+<li>不当控制的两种形式：控制不足、控制过度</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p>当数据生成过程与均衡行为一致时，因果推断错误的福利损失界限是多少？</p>
+<h2 id="内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：模型</li>
+<li>第三节：同质偏好分析</li>
+<li>第四节：异质偏好分析</li>
+<li>第五节：非零因果效应扩展</li>
+<li>第六节：与早期框架的联系</li>
+</ul>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="核心洞察">核心洞察</h3>
+<p>均衡条件可以限制因果推断错误——当决策者根据错误推断行动时，他们改变了产生这些错误的数据。</p>
+<h3 id="关键二元关系p">关键二元关系P</h3>
+<p>iPj当Di ⊇ Cj——类型i控制/调整的变量集是类型j条件化变量集的超集。</p>
+<h3 id="主要结果">主要结果</h3>
+<ul>
+<li>当类型有序时：均衡消除福利损失</li>
+<li>当类型无序时：上界为1（与无均衡限制相同）</li>
+</ul>
+<h2 id="结论">4. 结论</h2>
+<p>数据类型结构决定均衡对因果推断错误的保护程度。</p>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<p>非零因果效应扩展、信息设计视角、实验验证。</p>
+<h2 id="学术思考">6. 学术思考</h2>
+<p>均衡作为自我纠正机制；控制变量选择作为类型特征。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2014到2021年:淘宝村分布散点图😲</title>
     <url>/posts/18898/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示"><strong>效果展示</strong></h2>
@@ -17869,45 +17869,6 @@ an Endogenous Production Network</li>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>字体和公式的Display</title>
-    <url>/posts/15167/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<font face="Times New Roman">
-</font><p style="text-align:justify"><font face="Times New Roman">
-<b>"Evaluating the employment impact of a mandatory job search
-program"</b></font> <br> <br> <font face="Times New Roman">
-</font></p><p style="text-align:justify"><font face="Times New Roman">
-</font></p><p><font face="Times New Roman"><b>What treatment do the authors evaluate?</b></font> <br></p>
-<span id="more"></span>
-<font face="Tex Gyre Pagella">
-<p style="text-align:justify">
-</p><p><b>Answer: </b> In the parametric methods, the common trend
-assumption is:</p>
-<p><span class="math display">\[\begin{array}{l}
-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
-t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
-t=0\right)\right] \\
-=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
-t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
-t=0\right)\right]
-\end{array}\]</span> In the non-parametric methods, the common trend
-assumption is:</p>
-<p><span class="math display">\[\begin{array}{l}
-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i
-t}^{0} | P_{E X}, P_{t X}, N D=1, t=0\right) \\
-=E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=1\right)-E\left(Y_{i
-t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)
-\end{array}\]</span></p>
-</font><p><font face="Tex Gyre Pagella"></font></p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>blog_test</tag>
       </tags>
   </entry>
   <entry>
@@ -18007,6 +17968,45 @@ capita提高约5%</p></li>
       </categories>
       <tags>
         <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>字体和公式的Display</title>
+    <url>/posts/15167/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<font face="Times New Roman">
+</font><p style="text-align:justify"><font face="Times New Roman">
+<b>"Evaluating the employment impact of a mandatory job search
+program"</b></font> <br> <br> <font face="Times New Roman">
+</font></p><p style="text-align:justify"><font face="Times New Roman">
+</font></p><p><font face="Times New Roman"><b>What treatment do the authors evaluate?</b></font> <br></p>
+<span id="more"></span>
+<font face="Tex Gyre Pagella">
+<p style="text-align:justify">
+</p><p><b>Answer: </b> In the parametric methods, the common trend
+assumption is:</p>
+<p><span class="math display">\[\begin{array}{l}
+f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
+t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1,
+t=0\right)\right] \\
+=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
+t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0,
+t=0\right)\right]
+\end{array}\]</span> In the non-parametric methods, the common trend
+assumption is:</p>
+<p><span class="math display">\[\begin{array}{l}
+E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i
+t}^{0} | P_{E X}, P_{t X}, N D=1, t=0\right) \\
+=E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=1\right)-E\left(Y_{i
+t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)
+\end{array}\]</span></p>
+</font><p><font face="Tex Gyre Pagella"></font></p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>blog_test</tag>
       </tags>
   </entry>
   <entry>
