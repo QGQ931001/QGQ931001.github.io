@@ -921,119 +921,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Macroeconomic Effects of Debt Relief 深度阅读笔记 — Auclert, Dobbie &amp; Goldsmith-Pinkham</title>
-    <url>/posts/auclert2019/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息"><a href="#文献信息" class="headerlink" title="文献信息"></a>文献信息</h2><ul>
-<li><strong>标题</strong>: Macroeconomic Effects of Debt Relief: Consumer Bankruptcy Protections in the Great Recession</li>
-<li><strong>作者</strong>: Adrien Auclert, Will S. Dobbie, Paul Goldsmith-Pinkham</li>
-<li><strong>类型</strong>: 论文笔记 / 宏观经济学 / 金融危机</li>
-<li><strong>出版年份</strong>: 2019</li>
-<li><strong>出版机构/期刊</strong>: NBER Working Paper No. 25685</li>
-<li><strong>难度评估</strong>: 高 - 需要宏观经济学、计量经济学基础<span id="more"></span>
-</li>
-</ul>
-<hr>
-<h2 id="引言-背景和意义"><a href="#引言-背景和意义" class="headerlink" title="引言(背景和意义)"></a>引言(背景和意义)</h2><h3 id="领域基础知识"><a href="#领域基础知识" class="headerlink" title="领域基础知识"></a>领域基础知识</h3><p>2007-2009年大衰退(Great Recession)是自大萧条以来美国最严重的经济危机之一.这场危机的核心特征是家庭资产负债表的急剧恶化_房价暴跌同时信贷供应收缩,导致家庭消费大幅下降,需求侧冲击通过”金融加速器”机制放大,最终引发就业崩溃.</p>
-<p>理解这场衰退的传导机制对于宏观经济学具有重要意义,因为它涉及到几个关键的理论问题:</p>
-<p><strong>第一,家庭杠杆与经济周期.</strong> 现代宏观经济学的核心议题之一是金融摩擦如何放大经济波动.明斯基时刻(Minsky Moment)描述了私人部门债务累积导致系统性风险的累积过程.当家庭部门过度杠杆化后,资产价格下跌会引发”债务通缩”(Debt Deflation)效应_借款人被迫去杠杆,减少消费,导致总需求收缩,进而引发更多违约和资产抛售.</p>
-<p><strong>第二,自动稳定器的微观基础.</strong> 传统的自动稳定器(如失业保险)主要通过转移支付稳定收入.但消费者破产制度提供了一种独特的”事后”稳定机制_通过债务减免而非转移支付来实现风险分担.这种机制的宏观效应取决于债权人和债务人的边际消费倾向差异.</p>
-<p><strong>第三,名义刚性与实际摩擦的交互.</strong> 在新凯恩斯主义框架下,价格粘性是货币政策传导的关键.当经济处于零利率下限(Zero Lower Bound, ZLB)时,常规货币政策失效,财政政策和结构性政策的作用凸显.债务减免作为一种财富转移政策,在ZLB下的效应尤为特殊.</p>
-<p><strong>第四,局部均衡与一般均衡的鸿沟.</strong> 利用州际差异识别政策效应时,标准双重差分法得到的是”相对效应”_处理组相对于对照组的效应.但在开放经济或货币联盟中,一个地区的政策变动会通过贸易、劳动力流动和货币政策传导到其他地区.如何将相对效应转换为aggregate效应,是一个重要的方法论问题.</p>
-<h3 id="研究的主要背景"><a href="#研究的主要背景" class="headerlink" title="研究的主要背景"></a>研究的主要背景</h3><p><strong>大衰退的”家庭资产负债表”解释.</strong> 关于大衰退的成因,学界存在多种解释.其中”家庭资产负债表”解释(Household Balance Sheet Hypothesis)认为,房市泡沫破裂和信贷紧缩导致家庭被迫去杠杆,消费急剧下降,最终引发总需求崩溃和就业大幅下滑.Eggertsson和Krugman(2012)、Mian和Sufi(2014b)是这一解释的代表.</p>
-<p>这一解释的政策含义是:既然衰退源于家庭部门过度负债,那么”事后”债务减免(Ex-Post Debt Forgiveness)理论上可以阻止衰退_通过减轻债务负担增加居民消费,抵消需求下降.然而,关于债务减免的宏观经济效应,一直缺乏可信的实证证据.</p>
-<p><strong>破产制度作为最大的债务减免项目.</strong> 美国消费者破产制度(Consumer Bankruptcy System)是美国最大的债务减免项目.在破产程序下,符合条件的家庭可以申请Chapter 7或Chapter 13破产保护.Chapter 7允许债务人在放弃超过州 exemption limit的资产后免除大部分无担保债务.Exemption各州差异显著_例如,纽约州允许保护高达10万美元的房屋净值,而伊利诺伊州仅允许3万美元.</p>
-<p>破产exemptions还提供了非正式债务减免的谈判筹码.即使不正式申请破产,债务人也可以以破产威胁为筹码与债权人谈判减免债务.因此,破产制度在衰退期提供的总债务减免规模相当可观.</p>
-<h3 id="作者的问题意识"><a href="#作者的问题意识" class="headerlink" title="作者的问题意识"></a>作者的问题意识</h3><p>本文作者的问题意识体现在以下几个层面:</p>
-<p><strong>第一层:填补实证空白.</strong> 尽管”债务减免可以抗衰退”在理论上听起来合理,但缺乏系统的实证证据.现有研究多为时间序列比较,受困于内生性问题_债务减免多的地区可能恰好是受灾更重的地区.</p>
-<p><strong>第二层:开发新的识别策略.</strong> 作者利用各州破产exemptions的差异构建准自然实验.这种差异源于19世纪后期各州建立破产制度时的历史选择,与当前经济特征基本无关.这为识别因果效应提供了外生变异来源.</p>
-<p><strong>第三层:解决aggregation问题.</strong> 标准DID估计得到的是”相对效应”,但政策制定者关心的是”aggregate效应”.二者的差异取决于地区间溢出效应的大小.作者在理论框架中正式证明了这一点,并开发了相应的结构模型进行转换.</p>
-<p><strong>第四层:服务于政策辩论.</strong> 债务减免政策一直是政策辩论的焦点.本文为评估大规模债务减免(如学生贷款减免、抵押贷款减免)的宏观经济效应提供了重要参考.</p>
-<h3 id="研究意义"><a href="#研究意义" class="headerlink" title="研究意义"></a>研究意义</h3><p><strong>学术贡献.</strong> 本文对宏观经济学和破产经济学领域做出了多方面贡献:</p>
-<p>首先,首次系统估计了消费者破产制度的宏观经济效应.通过结合准实验设计和动态一般均衡模型,本文克服了以往研究的内生性困难,提供了可信的因果效应估计.</p>
-<p>其次,开发了处理地区间溢出效应的理论框架.作者证明了相对乘数与aggregate乘数之间的关系_aggregate乘数等于本地乘数加上溢出乘数.这一框架对其他利用州际变异研究政策效应的文献具有方法论参考价值.</p>
-<p>第三,将名义刚性与债务减免的宏观效应联系起来.模型校准显示,只有引入相当程度的名义刚性,才能解释观察到的相对乘数差异.这为理解大衰退期间价格调整的缓慢提供了微观证据.</p>
-<p><strong>政策启示.</strong> 本文的发现对政策制定具有重要含义:</p>
-<p>第一,破产制度作为自动稳定器的作用得到证实.在大衰退期间,exemptions更慷慨的州就业下降更少,证明破产制度确实发挥了稳定器作用.</p>
-<p>第二,债务减免的aggregate效应相当可观.模型估计,如果没有破产制度提供的事后债务减免,2009年下半年平均就业将下降近2%.</p>
-<p>第三,在ZLB时期,跨地区需求溢出放大了债务减免的效应.这与标准新凯恩斯主义模型的预测一致_当货币政策受限时,财政like政策的乘数效应更大.</p>
-<hr>
-<h2 id="内容及结构-论文结构"><a href="#内容及结构-论文结构" class="headerlink" title="内容及结构(论文结构)"></a>内容及结构(论文结构)</h2><p><strong>第一节:引言(Introduction)</strong></p>
-<p>引言部分阐述了研究问题、背景和主要贡献.作者首先介绍”家庭资产负债表”假说和大衰退的背景,然后指出债务减免宏观经济效应的研究空白,接着概述本文的识别策略和主要发现,最后讨论与相关文献的关系.</p>
-<p><strong>第二节:背景、数据与实证设计(Background, Data, and Empirical Design)</strong></p>
-<p>这部分介绍了美国消费者破产制度的运作机制、数据来源和实证策略.背景部分解释了Chapter 7和Chapter 13的区别、exemptions的计算方式,以及各州exemptions差异的历史来源.数据部分描述了县级就业数据(QCEW)、信用局数据(Equifax/New York Fed CCP)等.实证设计部分阐述了双重差分策略和识别假设.</p>
-<p><strong>第三节:从Reduced-Form估计恢复Aggregate效应(Recovering Aggregate Effects from Reduced-Form Estimates)</strong></p>
-<p>这部分建立了相对乘数与aggregate乘数之间的理论联系.作者定义了地区乘数、本地乘数和溢出乘数的概念,证明了DID系数识别的实际是”相对乘数”.</p>
-<p><strong>第四节:模型(Model)</strong></p>
-<p>这部分开发了一个新凯恩斯主义两国两商品货币联盟模型(TANK3).模型包括异质性家庭(借款人和储蓄者)、名义刚性、贸易联系和共同货币政策.</p>
-<p><strong>第五节:结论(Conclusion)</strong></p>
-<p>总结研究发现,讨论政策含义和未来研究方向.</p>
-<hr>
-<h2 id="正文-逻辑梳理"><a href="#正文-逻辑梳理" class="headerlink" title="正文(逻辑梳理)"></a>正文(逻辑梳理)</h2><h3 id="一、理论背景-债务减免为什么可能有效"><a href="#一、理论背景-债务减免为什么可能有效" class="headerlink" title="一、理论背景:债务减免为什么可能有效?"></a>一、理论背景:债务减免为什么可能有效?</h3><p><strong>债务减免的财富效应.</strong> 直观上,债务减免相当于给债务人一笔”意外之财”(Windfall).根据生命周期-永久收入假说,消费取决于永久收入而非当期收入.然而,流动性约束意味着部分家庭无法平滑消费_这些家庭具有高边际消费倾向(MPC).当债务被免除时,这些高MPC家庭的消费会大幅增加.</p>
-<p><strong>借款人vs储蓄者的MPC差异.</strong> 关键在于,债务人(通常流动性更差)和债权人(通常流动性更好)的MPC存在显著差异.如果债务减免的资金来自储蓄者的资产损失(他们MPC较低),而受益人是高MPC的债务人,那么aggregate消费可能增加.</p>
-<p><strong>乘数效应的地区维度.</strong> 在一个地区内部,债务减免首先增加本地需求,带动本地就业.但如果价格存在名义刚性,需求增加会导致本地价格相对上升,吸引外地进口,减少出口.这会产生跨地区的”支出转移”效应.</p>
-<p><strong>零利率下限的放大作用.</strong> 当经济处于ZLB时,名义利率无法下调来应对负面冲击,货币政策失去逆周期调控能力.此时,债务减免等财政like政策成为少数可用的刺激手段.</p>
-<h3 id="二、实证策略-利用州际破产exemptions差异"><a href="#二、实证策略-利用州际破产exemptions差异" class="headerlink" title="二、实证策略:利用州际破产exemptions差异"></a>二、实证策略:利用州际破产exemptions差异</h3><p><strong>核心识别策略.</strong> 本文利用各州破产exemptions的差异构建准自然实验.Exemptions衡量的是在破产保护下可以保留的资产价值上限_exemptions越高,意味着可以免除的债务越多.</p>
-<p><strong>惊人的州际差异.</strong> 各州破产保护差异巨大.以房屋净值exemption为例:7个州允许保护无限额房屋净值;堪萨斯州平均成本最低(约15.4万美元);弗吉尼亚州平均成本最高(约33.7万美元);第10-90百分位差距达16.3万美元.</p>
-<h3 id="三、核心实证发现"><a href="#三、核心实证发现" class="headerlink" title="三、核心实证发现"></a>三、核心实证发现</h3><p><strong>非tradable就业的正向效应.</strong> 主要结果令人瞩目:exemptions更慷慨的州在2008-2010年间非tradable就业下降幅度显著更小.Exemptions增加一个标准差(约6万美元)使非tradable就业增加0.399个百分点,相当于非tradable就业总体降幅的7.7%.</p>
-<p><strong>Tradable就业的微弱效应.</strong> 有趣的是,exemptions对tradable就业几乎没有影响.在首选规格下,exemptions增加一个标准差仅使tradable就业增加0.086个百分点,统计上不显著.</p>
-<p><strong>就业效应的持久性.</strong> 令人惊讶的是,就业效应在衰退后长期持续.2011-2013年间,处理组和对照组之间的非tradable就业差距仍维持在0.85个百分点左右.</p>
-<h3 id="四、模型与aggregate效应"><a href="#四、模型与aggregate效应" class="headerlink" title="四、模型与aggregate效应"></a>四、模型与aggregate效应</h3><p><strong>模型设定.</strong> 作者开发了一个新凯恩斯主义两国两商品货币联盟模型(TANK3).模型特点包括异质性家庭(借款人和储蓄者)、Calvo定价名义刚性、两国模型和共同货币政策.</p>
-<p><strong>Aggregate效应估计.</strong> 利用校准模型和实际观察到的债务核销规模,作者估计了没有破产制度时就业会受到的影响:</p>
-<blockquote>
-<p>如果没有消费者破产制度提供的事后债务减免,2009年下半年平均就业在non-tradable和tradable部门都将下降近2%.</p>
-</blockquote>
-<hr>
-<h2 id="结论-Conclusion"><a href="#结论-Conclusion" class="headerlink" title="结论(Conclusion)"></a>结论(Conclusion)</h2><h3 id="核心结论总结"><a href="#核心结论总结" class="headerlink" title="核心结论总结"></a>核心结论总结</h3><p>本文通过结合准实验识别和一般均衡模型,系统估计了消费者破产制度提供的事后债务减免对宏观经济的影响:</p>
-<p><strong>第一,破产制度有效稳定了就业.</strong> 相对于exemptions更吝啬的州,exemptions更慷慨的州在大衰退期间非tradable就业下降幅度显著更小.</p>
-<p><strong>第二,Tradable和non-tradable就业的响应存在差异.</strong> Non-tradable就业对exemptions响应显著,tradable就业则几乎没有响应.</p>
-<p><strong>第三,债务减免的aggregate效应相当可观.</strong> 模型估计,如果没有破产制度提供的事后债务减免,2009年中期就业将下降约2%.</p>
-<h3 id="对领域的贡献"><a href="#对领域的贡献" class="headerlink" title="对领域的贡献"></a>对领域的贡献</h3><p><strong>宏观经济学方面</strong>,本文为理解金融摩擦与经济周期交互提供了新证据.<strong>方法论方面</strong>,本文建立的相对乘数与aggregate乘数关系的理论框架对利用州际变异研究政策效应的文献具有普遍参考价值.<strong>政策层面</strong>,本文为债务减免政策的讨论提供了实证依据.</p>
-<hr>
-<h2 id="未来研究方向"><a href="#未来研究方向" class="headerlink" title="未来研究方向"></a>未来研究方向</h2><h3 id="文献中提及的未来研究方向"><a href="#文献中提及的未来研究方向" class="headerlink" title="文献中提及的未来研究方向"></a>文献中提及的未来研究方向</h3><p><strong>异质性债务类型.</strong> 不同类型债务(信用卡、学生贷款、抵押贷款)的减免效应可能存在差异.</p>
-<p><strong>动态效应.</strong> 本文发现的持久就业效应是一个有趣的谜.</p>
-<h3 id="基于本文思考的下一步研究工作"><a href="#基于本文思考的下一步研究工作" class="headerlink" title="基于本文思考的下一步研究工作"></a>基于本文思考的下一步研究工作</h3><p><strong>学生贷款债务减免的宏观效应.</strong> 美国学生贷款债务已超过1.7万亿美元.本文的方法论可直接应用于估计大规模学生贷款减免的就业效应.</p>
-<p><strong>中国破产制度改革的宏观含义.</strong> 中国正逐步完善个人破产制度.本文揭示了破产制度作为自动稳定器的潜在作用.</p>
-<hr>
-<h2 id="学术思考"><a href="#学术思考" class="headerlink" title="学术思考"></a>学术思考</h2><p><strong>关于债务减免的道德风险问题:</strong></p>
-<p>本文假设债务减免不影响ex-ante行为(因为建模为一次性转移).但实际上,破产制度的慷慨程度可能影响借款决策_如果知道未来可以减免债务,人们可能倾向借更多.</p>
-<p><strong>关于自动稳定器的设计:</strong></p>
-<p>本文证实了破产制度的自动稳定器作用.但这是一个”事后”机制_只有在违约发生后才启动.相比之下,失业保险等”事前”机制可能更有效.</p>
-<hr>
-<h2 id="下一步用户可能提的问题"><a href="#下一步用户可能提的问题" class="headerlink" title="下一步用户可能提的问题"></a>下一步用户可能提的问题</h2><ol>
-<li><p><strong>消费者破产制度具体如何运作?</strong> Chapter 7和Chapter 13有什么区别?</p>
-</li>
-<li><p><strong>为什么tradable和non-tradable就业的响应不同?</strong> 这反映了什么经济学机制?</p>
-</li>
-<li><p><strong>模型如何校准?</strong> 关键参数是如何设定的?</p>
-</li>
-<li><p><strong>中国有没有类似机制?</strong> 个人破产制度对宏观经济有何潜在影响?</p>
-</li>
-<li><p><strong>债务减免与货币政策如何交互?</strong></p>
-</li>
-</ol>
-<hr>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
-<li>Auclert, A., Dobbie, W.S., &amp; Goldsmith-Pinkham, P. (2019). Macroeconomic Effects of Debt Relief. NBER Working Paper No. 25685.</li>
-<li>Eggertsson, G.B., &amp; Krugman, P. (2012). Debt, Deleveraging, and the Liquidity Trap. Econometrica.</li>
-<li>Mian, A., &amp; Sufi, A. (2014b). House of Debt. University of Chicago Press.</li>
-<li>Nakamura, E., &amp; Steinsson, J. (2014). Fiscal Stimulus in a Monetary Union. American Economic Review.</li>
-<li>Mahoney, N. (2015). Bankruptcy as Implicit Insurance. American Economic Review.</li>
-</ul>
-<hr>
-<p><em>本笔记由 AI 生成,深度分析了<macroeconomic effects="" of="" debt="" relief="">一文的核心内容、理论框架、实证发现和学术贡献.生成时间:2026年4月10日.</macroeconomic></em></p>
-]]></content>
-      <categories>
-        <category>宏观经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>宏观经济学</tag>
-        <tag>债务减免</tag>
-        <tag>大衰退</tag>
-        <tag>破产制度</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>走出非洲假说、人类遗传多样性与比较经济发展 _ Ashraf &amp; Galor (2013) 笔记</title>
     <url>/posts/ashraf2013/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>本文是 Ashraf &amp; Galor 2013 年的论文笔记,探讨了一个很有意思的问题:为什么全球各地的经济发展水平差异这么大?作者们从人类迁徙的历史出发,提出了一个相当有冲击力的观点_遗传多样性可能才是那个”深层根源”.</p>
@@ -1179,6 +1066,119 @@
         <tag>论文笔记</tag>
         <tag>发展经济学</tag>
         <tag>经济史</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Macroeconomic Effects of Debt Relief 深度阅读笔记 — Auclert, Dobbie &amp; Goldsmith-Pinkham</title>
+    <url>/posts/auclert2019/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息"><a href="#文献信息" class="headerlink" title="文献信息"></a>文献信息</h2><ul>
+<li><strong>标题</strong>: Macroeconomic Effects of Debt Relief: Consumer Bankruptcy Protections in the Great Recession</li>
+<li><strong>作者</strong>: Adrien Auclert, Will S. Dobbie, Paul Goldsmith-Pinkham</li>
+<li><strong>类型</strong>: 论文笔记 / 宏观经济学 / 金融危机</li>
+<li><strong>出版年份</strong>: 2019</li>
+<li><strong>出版机构/期刊</strong>: NBER Working Paper No. 25685</li>
+<li><strong>难度评估</strong>: 高 - 需要宏观经济学、计量经济学基础<span id="more"></span>
+</li>
+</ul>
+<hr>
+<h2 id="引言-背景和意义"><a href="#引言-背景和意义" class="headerlink" title="引言(背景和意义)"></a>引言(背景和意义)</h2><h3 id="领域基础知识"><a href="#领域基础知识" class="headerlink" title="领域基础知识"></a>领域基础知识</h3><p>2007-2009年大衰退(Great Recession)是自大萧条以来美国最严重的经济危机之一.这场危机的核心特征是家庭资产负债表的急剧恶化_房价暴跌同时信贷供应收缩,导致家庭消费大幅下降,需求侧冲击通过”金融加速器”机制放大,最终引发就业崩溃.</p>
+<p>理解这场衰退的传导机制对于宏观经济学具有重要意义,因为它涉及到几个关键的理论问题:</p>
+<p><strong>第一,家庭杠杆与经济周期.</strong> 现代宏观经济学的核心议题之一是金融摩擦如何放大经济波动.明斯基时刻(Minsky Moment)描述了私人部门债务累积导致系统性风险的累积过程.当家庭部门过度杠杆化后,资产价格下跌会引发”债务通缩”(Debt Deflation)效应_借款人被迫去杠杆,减少消费,导致总需求收缩,进而引发更多违约和资产抛售.</p>
+<p><strong>第二,自动稳定器的微观基础.</strong> 传统的自动稳定器(如失业保险)主要通过转移支付稳定收入.但消费者破产制度提供了一种独特的”事后”稳定机制_通过债务减免而非转移支付来实现风险分担.这种机制的宏观效应取决于债权人和债务人的边际消费倾向差异.</p>
+<p><strong>第三,名义刚性与实际摩擦的交互.</strong> 在新凯恩斯主义框架下,价格粘性是货币政策传导的关键.当经济处于零利率下限(Zero Lower Bound, ZLB)时,常规货币政策失效,财政政策和结构性政策的作用凸显.债务减免作为一种财富转移政策,在ZLB下的效应尤为特殊.</p>
+<p><strong>第四,局部均衡与一般均衡的鸿沟.</strong> 利用州际差异识别政策效应时,标准双重差分法得到的是”相对效应”_处理组相对于对照组的效应.但在开放经济或货币联盟中,一个地区的政策变动会通过贸易、劳动力流动和货币政策传导到其他地区.如何将相对效应转换为aggregate效应,是一个重要的方法论问题.</p>
+<h3 id="研究的主要背景"><a href="#研究的主要背景" class="headerlink" title="研究的主要背景"></a>研究的主要背景</h3><p><strong>大衰退的”家庭资产负债表”解释.</strong> 关于大衰退的成因,学界存在多种解释.其中”家庭资产负债表”解释(Household Balance Sheet Hypothesis)认为,房市泡沫破裂和信贷紧缩导致家庭被迫去杠杆,消费急剧下降,最终引发总需求崩溃和就业大幅下滑.Eggertsson和Krugman(2012)、Mian和Sufi(2014b)是这一解释的代表.</p>
+<p>这一解释的政策含义是:既然衰退源于家庭部门过度负债,那么”事后”债务减免(Ex-Post Debt Forgiveness)理论上可以阻止衰退_通过减轻债务负担增加居民消费,抵消需求下降.然而,关于债务减免的宏观经济效应,一直缺乏可信的实证证据.</p>
+<p><strong>破产制度作为最大的债务减免项目.</strong> 美国消费者破产制度(Consumer Bankruptcy System)是美国最大的债务减免项目.在破产程序下,符合条件的家庭可以申请Chapter 7或Chapter 13破产保护.Chapter 7允许债务人在放弃超过州 exemption limit的资产后免除大部分无担保债务.Exemption各州差异显著_例如,纽约州允许保护高达10万美元的房屋净值,而伊利诺伊州仅允许3万美元.</p>
+<p>破产exemptions还提供了非正式债务减免的谈判筹码.即使不正式申请破产,债务人也可以以破产威胁为筹码与债权人谈判减免债务.因此,破产制度在衰退期提供的总债务减免规模相当可观.</p>
+<h3 id="作者的问题意识"><a href="#作者的问题意识" class="headerlink" title="作者的问题意识"></a>作者的问题意识</h3><p>本文作者的问题意识体现在以下几个层面:</p>
+<p><strong>第一层:填补实证空白.</strong> 尽管”债务减免可以抗衰退”在理论上听起来合理,但缺乏系统的实证证据.现有研究多为时间序列比较,受困于内生性问题_债务减免多的地区可能恰好是受灾更重的地区.</p>
+<p><strong>第二层:开发新的识别策略.</strong> 作者利用各州破产exemptions的差异构建准自然实验.这种差异源于19世纪后期各州建立破产制度时的历史选择,与当前经济特征基本无关.这为识别因果效应提供了外生变异来源.</p>
+<p><strong>第三层:解决aggregation问题.</strong> 标准DID估计得到的是”相对效应”,但政策制定者关心的是”aggregate效应”.二者的差异取决于地区间溢出效应的大小.作者在理论框架中正式证明了这一点,并开发了相应的结构模型进行转换.</p>
+<p><strong>第四层:服务于政策辩论.</strong> 债务减免政策一直是政策辩论的焦点.本文为评估大规模债务减免(如学生贷款减免、抵押贷款减免)的宏观经济效应提供了重要参考.</p>
+<h3 id="研究意义"><a href="#研究意义" class="headerlink" title="研究意义"></a>研究意义</h3><p><strong>学术贡献.</strong> 本文对宏观经济学和破产经济学领域做出了多方面贡献:</p>
+<p>首先,首次系统估计了消费者破产制度的宏观经济效应.通过结合准实验设计和动态一般均衡模型,本文克服了以往研究的内生性困难,提供了可信的因果效应估计.</p>
+<p>其次,开发了处理地区间溢出效应的理论框架.作者证明了相对乘数与aggregate乘数之间的关系_aggregate乘数等于本地乘数加上溢出乘数.这一框架对其他利用州际变异研究政策效应的文献具有方法论参考价值.</p>
+<p>第三,将名义刚性与债务减免的宏观效应联系起来.模型校准显示,只有引入相当程度的名义刚性,才能解释观察到的相对乘数差异.这为理解大衰退期间价格调整的缓慢提供了微观证据.</p>
+<p><strong>政策启示.</strong> 本文的发现对政策制定具有重要含义:</p>
+<p>第一,破产制度作为自动稳定器的作用得到证实.在大衰退期间,exemptions更慷慨的州就业下降更少,证明破产制度确实发挥了稳定器作用.</p>
+<p>第二,债务减免的aggregate效应相当可观.模型估计,如果没有破产制度提供的事后债务减免,2009年下半年平均就业将下降近2%.</p>
+<p>第三,在ZLB时期,跨地区需求溢出放大了债务减免的效应.这与标准新凯恩斯主义模型的预测一致_当货币政策受限时,财政like政策的乘数效应更大.</p>
+<hr>
+<h2 id="内容及结构-论文结构"><a href="#内容及结构-论文结构" class="headerlink" title="内容及结构(论文结构)"></a>内容及结构(论文结构)</h2><p><strong>第一节:引言(Introduction)</strong></p>
+<p>引言部分阐述了研究问题、背景和主要贡献.作者首先介绍”家庭资产负债表”假说和大衰退的背景,然后指出债务减免宏观经济效应的研究空白,接着概述本文的识别策略和主要发现,最后讨论与相关文献的关系.</p>
+<p><strong>第二节:背景、数据与实证设计(Background, Data, and Empirical Design)</strong></p>
+<p>这部分介绍了美国消费者破产制度的运作机制、数据来源和实证策略.背景部分解释了Chapter 7和Chapter 13的区别、exemptions的计算方式,以及各州exemptions差异的历史来源.数据部分描述了县级就业数据(QCEW)、信用局数据(Equifax/New York Fed CCP)等.实证设计部分阐述了双重差分策略和识别假设.</p>
+<p><strong>第三节:从Reduced-Form估计恢复Aggregate效应(Recovering Aggregate Effects from Reduced-Form Estimates)</strong></p>
+<p>这部分建立了相对乘数与aggregate乘数之间的理论联系.作者定义了地区乘数、本地乘数和溢出乘数的概念,证明了DID系数识别的实际是”相对乘数”.</p>
+<p><strong>第四节:模型(Model)</strong></p>
+<p>这部分开发了一个新凯恩斯主义两国两商品货币联盟模型(TANK3).模型包括异质性家庭(借款人和储蓄者)、名义刚性、贸易联系和共同货币政策.</p>
+<p><strong>第五节:结论(Conclusion)</strong></p>
+<p>总结研究发现,讨论政策含义和未来研究方向.</p>
+<hr>
+<h2 id="正文-逻辑梳理"><a href="#正文-逻辑梳理" class="headerlink" title="正文(逻辑梳理)"></a>正文(逻辑梳理)</h2><h3 id="一、理论背景-债务减免为什么可能有效"><a href="#一、理论背景-债务减免为什么可能有效" class="headerlink" title="一、理论背景:债务减免为什么可能有效?"></a>一、理论背景:债务减免为什么可能有效?</h3><p><strong>债务减免的财富效应.</strong> 直观上,债务减免相当于给债务人一笔”意外之财”(Windfall).根据生命周期-永久收入假说,消费取决于永久收入而非当期收入.然而,流动性约束意味着部分家庭无法平滑消费_这些家庭具有高边际消费倾向(MPC).当债务被免除时,这些高MPC家庭的消费会大幅增加.</p>
+<p><strong>借款人vs储蓄者的MPC差异.</strong> 关键在于,债务人(通常流动性更差)和债权人(通常流动性更好)的MPC存在显著差异.如果债务减免的资金来自储蓄者的资产损失(他们MPC较低),而受益人是高MPC的债务人,那么aggregate消费可能增加.</p>
+<p><strong>乘数效应的地区维度.</strong> 在一个地区内部,债务减免首先增加本地需求,带动本地就业.但如果价格存在名义刚性,需求增加会导致本地价格相对上升,吸引外地进口,减少出口.这会产生跨地区的”支出转移”效应.</p>
+<p><strong>零利率下限的放大作用.</strong> 当经济处于ZLB时,名义利率无法下调来应对负面冲击,货币政策失去逆周期调控能力.此时,债务减免等财政like政策成为少数可用的刺激手段.</p>
+<h3 id="二、实证策略-利用州际破产exemptions差异"><a href="#二、实证策略-利用州际破产exemptions差异" class="headerlink" title="二、实证策略:利用州际破产exemptions差异"></a>二、实证策略:利用州际破产exemptions差异</h3><p><strong>核心识别策略.</strong> 本文利用各州破产exemptions的差异构建准自然实验.Exemptions衡量的是在破产保护下可以保留的资产价值上限_exemptions越高,意味着可以免除的债务越多.</p>
+<p><strong>惊人的州际差异.</strong> 各州破产保护差异巨大.以房屋净值exemption为例:7个州允许保护无限额房屋净值;堪萨斯州平均成本最低(约15.4万美元);弗吉尼亚州平均成本最高(约33.7万美元);第10-90百分位差距达16.3万美元.</p>
+<h3 id="三、核心实证发现"><a href="#三、核心实证发现" class="headerlink" title="三、核心实证发现"></a>三、核心实证发现</h3><p><strong>非tradable就业的正向效应.</strong> 主要结果令人瞩目:exemptions更慷慨的州在2008-2010年间非tradable就业下降幅度显著更小.Exemptions增加一个标准差(约6万美元)使非tradable就业增加0.399个百分点,相当于非tradable就业总体降幅的7.7%.</p>
+<p><strong>Tradable就业的微弱效应.</strong> 有趣的是,exemptions对tradable就业几乎没有影响.在首选规格下,exemptions增加一个标准差仅使tradable就业增加0.086个百分点,统计上不显著.</p>
+<p><strong>就业效应的持久性.</strong> 令人惊讶的是,就业效应在衰退后长期持续.2011-2013年间,处理组和对照组之间的非tradable就业差距仍维持在0.85个百分点左右.</p>
+<h3 id="四、模型与aggregate效应"><a href="#四、模型与aggregate效应" class="headerlink" title="四、模型与aggregate效应"></a>四、模型与aggregate效应</h3><p><strong>模型设定.</strong> 作者开发了一个新凯恩斯主义两国两商品货币联盟模型(TANK3).模型特点包括异质性家庭(借款人和储蓄者)、Calvo定价名义刚性、两国模型和共同货币政策.</p>
+<p><strong>Aggregate效应估计.</strong> 利用校准模型和实际观察到的债务核销规模,作者估计了没有破产制度时就业会受到的影响:</p>
+<blockquote>
+<p>如果没有消费者破产制度提供的事后债务减免,2009年下半年平均就业在non-tradable和tradable部门都将下降近2%.</p>
+</blockquote>
+<hr>
+<h2 id="结论-Conclusion"><a href="#结论-Conclusion" class="headerlink" title="结论(Conclusion)"></a>结论(Conclusion)</h2><h3 id="核心结论总结"><a href="#核心结论总结" class="headerlink" title="核心结论总结"></a>核心结论总结</h3><p>本文通过结合准实验识别和一般均衡模型,系统估计了消费者破产制度提供的事后债务减免对宏观经济的影响:</p>
+<p><strong>第一,破产制度有效稳定了就业.</strong> 相对于exemptions更吝啬的州,exemptions更慷慨的州在大衰退期间非tradable就业下降幅度显著更小.</p>
+<p><strong>第二,Tradable和non-tradable就业的响应存在差异.</strong> Non-tradable就业对exemptions响应显著,tradable就业则几乎没有响应.</p>
+<p><strong>第三,债务减免的aggregate效应相当可观.</strong> 模型估计,如果没有破产制度提供的事后债务减免,2009年中期就业将下降约2%.</p>
+<h3 id="对领域的贡献"><a href="#对领域的贡献" class="headerlink" title="对领域的贡献"></a>对领域的贡献</h3><p><strong>宏观经济学方面</strong>,本文为理解金融摩擦与经济周期交互提供了新证据.<strong>方法论方面</strong>,本文建立的相对乘数与aggregate乘数关系的理论框架对利用州际变异研究政策效应的文献具有普遍参考价值.<strong>政策层面</strong>,本文为债务减免政策的讨论提供了实证依据.</p>
+<hr>
+<h2 id="未来研究方向"><a href="#未来研究方向" class="headerlink" title="未来研究方向"></a>未来研究方向</h2><h3 id="文献中提及的未来研究方向"><a href="#文献中提及的未来研究方向" class="headerlink" title="文献中提及的未来研究方向"></a>文献中提及的未来研究方向</h3><p><strong>异质性债务类型.</strong> 不同类型债务(信用卡、学生贷款、抵押贷款)的减免效应可能存在差异.</p>
+<p><strong>动态效应.</strong> 本文发现的持久就业效应是一个有趣的谜.</p>
+<h3 id="基于本文思考的下一步研究工作"><a href="#基于本文思考的下一步研究工作" class="headerlink" title="基于本文思考的下一步研究工作"></a>基于本文思考的下一步研究工作</h3><p><strong>学生贷款债务减免的宏观效应.</strong> 美国学生贷款债务已超过1.7万亿美元.本文的方法论可直接应用于估计大规模学生贷款减免的就业效应.</p>
+<p><strong>中国破产制度改革的宏观含义.</strong> 中国正逐步完善个人破产制度.本文揭示了破产制度作为自动稳定器的潜在作用.</p>
+<hr>
+<h2 id="学术思考"><a href="#学术思考" class="headerlink" title="学术思考"></a>学术思考</h2><p><strong>关于债务减免的道德风险问题:</strong></p>
+<p>本文假设债务减免不影响ex-ante行为(因为建模为一次性转移).但实际上,破产制度的慷慨程度可能影响借款决策_如果知道未来可以减免债务,人们可能倾向借更多.</p>
+<p><strong>关于自动稳定器的设计:</strong></p>
+<p>本文证实了破产制度的自动稳定器作用.但这是一个”事后”机制_只有在违约发生后才启动.相比之下,失业保险等”事前”机制可能更有效.</p>
+<hr>
+<h2 id="下一步用户可能提的问题"><a href="#下一步用户可能提的问题" class="headerlink" title="下一步用户可能提的问题"></a>下一步用户可能提的问题</h2><ol>
+<li><p><strong>消费者破产制度具体如何运作?</strong> Chapter 7和Chapter 13有什么区别?</p>
+</li>
+<li><p><strong>为什么tradable和non-tradable就业的响应不同?</strong> 这反映了什么经济学机制?</p>
+</li>
+<li><p><strong>模型如何校准?</strong> 关键参数是如何设定的?</p>
+</li>
+<li><p><strong>中国有没有类似机制?</strong> 个人破产制度对宏观经济有何潜在影响?</p>
+</li>
+<li><p><strong>债务减免与货币政策如何交互?</strong></p>
+</li>
+</ol>
+<hr>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<li>Auclert, A., Dobbie, W.S., &amp; Goldsmith-Pinkham, P. (2019). Macroeconomic Effects of Debt Relief. NBER Working Paper No. 25685.</li>
+<li>Eggertsson, G.B., &amp; Krugman, P. (2012). Debt, Deleveraging, and the Liquidity Trap. Econometrica.</li>
+<li>Mian, A., &amp; Sufi, A. (2014b). House of Debt. University of Chicago Press.</li>
+<li>Nakamura, E., &amp; Steinsson, J. (2014). Fiscal Stimulus in a Monetary Union. American Economic Review.</li>
+<li>Mahoney, N. (2015). Bankruptcy as Implicit Insurance. American Economic Review.</li>
+</ul>
+<hr>
+<p><em>本笔记由 AI 生成,深度分析了<macroeconomic effects="" of="" debt="" relief="">一文的核心内容、理论框架、实证发现和学术贡献.生成时间:2026年4月10日.</macroeconomic></em></p>
+]]></content>
+      <categories>
+        <category>宏观经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>宏观经济学</tag>
+        <tag>债务减免</tag>
+        <tag>大衰退</tag>
+        <tag>破产制度</tag>
       </tags>
   </entry>
   <entry>
@@ -1836,129 +1836,6 @@
       </tags>
   </entry>
   <entry>
-    <title>压低成本：干中学与全球电动汽车电池产业政府政策 — 深度阅读笔记 — Barwick Et Al.</title>
-    <url>/posts/barwick2025/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息"><a href="#文献信息" class="headerlink" title="文献信息"></a>文献信息</h2><ul>
-<li><strong>标题</strong>: Drive Down the Cost: Learning by Doing and Government Policies in the Global EV Battery Industry</li>
-<li><strong>作者</strong>: Panle Jia Barwick (Wisconsin), Hyuk-Soo Kwon (Singapore), Shanjun Li (Cornell), Nahim Zahur (Queens)</li>
-<li><strong>年份</strong>: 2025</li>
-<li><strong>来源</strong>: NBER Working Paper No. 33378</li>
-<li><strong>DOI</strong>: 10.3386/w33378</li>
-</ul>
-<span id="more"></span>
-<hr>
-<hr>
-<h2 id="引言（背景和意义）"><a href="#引言（背景和意义）" class="headerlink" title="引言（背景和意义）"></a>引言（背景和意义）</h2><p><strong>领域基础知识</strong><br>“干中学”（Learning by Doing, LBD）是产业经济学和增长理论的经典概念：企业在生产过程中积累经验，进而降低单位生产成本。”Wright’s Law”（1936年由航空工程师Theodore Wright提出）将这一规律量化为”累计产量每翻倍，单位成本下降固定比例”。LBD在半导体、太阳能电池等绿色技术行业均有大量记录。在政策设计上，LBD带来正外部性——当前生产提高了整个行业未来的效率，因此存在补贴当前生产的理由（以纠正动态外部性）。</p>
-<p><strong>研究背景</strong><br>电动汽车（EV）电池成本在2010-2020年间下降了近90%，是过去十年绿色能源技术中最引人注目的成本下降之一。这一变化对全球气候政策目标至关重要——电池成本是EV相对于内燃机车价格劣势的主要来源。全球各国政府为促进EV普及投入了大量补贴（2022年全球EV消费补贴达430亿美元），并通过产业政策（如中国白名单政策、美国IRA本地含量要求）扶持本土电池产业。然而，LBD在多大程度上驱动了成本下降？政府政策通过哪些渠道影响LBD进程？这些问题此前缺乏可信的量化研究。</p>
-<p><strong>作者的问题意识</strong><br>（1）LBD在多大程度上解释了EV电池成本的下降（相对于技术进步、规模经济、原材料成本等其他因素）？（2）LBD如何改变消费者EV补贴的政策效果？（3）中国的”白名单”本地含量要求政策通过LBD对全球EV市场产生了怎样的影响？（4）LBD在全球供应链中产生怎样的跨国溢出效应？</p>
-<p><strong>研究意义</strong><br>本文为绿色技术政策设计提供了直接量化依据：若忽视LBD，政策评估将大幅低估补贴的长期效益；同时揭示了消费端补贴与产业政策的相互作用，对评估美国IRA、中国产业政策的全球影响具有直接参考价值。</p>
-<hr>
-<h2 id="内容及结构（论文结构）"><a href="#内容及结构（论文结构）" class="headerlink" title="内容及结构（论文结构）"></a>内容及结构（论文结构）</h2><ol>
-<li><strong>引言</strong>：提出问题，概述主要发现（LBD学习率7.5%，与补贴互补放大效果，跨国溢出效应）。</li>
-<li><strong>数据</strong>：全球13国EV销售数据（2013-2020），电池供应商信息，各国补贴政策。</li>
-<li><strong>需求模型</strong>：异质消费者离散选择模型（BLP类型），估计消费者对EV特性（价格、续航、充电速度等）的偏好。</li>
-<li><strong>供给模型与电池成本恢复</strong>：通过Nash议价模型（上游电池供应商与下游EV生产商之间）推断上下游加成，从而恢复电池成本。</li>
-<li><strong>LBD估计</strong>：用工具变量方法识别LBD学习率，控制内生性（高效企业多生产更多、积累更多经验）。</li>
-<li><strong>反事实政策分析</strong>：（a）评估消费者EV补贴在有无LBD情况下的效果；（b）评估中国白名单政策及其时间安排的影响。</li>
-<li><strong>结论</strong>：总结核心发现及政策含义。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）"><a href="#正文（逻辑梳理）" class="headerlink" title="正文（逻辑梳理）"></a>正文（逻辑梳理）</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>EV电池成本是EV普及的关键障碍，而其90%的成本降幅是过去十年绿色技术领域最显著的成就之一。产业界将这一降幅归因于LBD，但缺乏可信的因果估计：LBD究竟贡献了多少？还是技术进步、规模经济、原材料价格下降等因素更重要？政府大规模补贴政策是否加速了这一进程？</p>
-<h3 id="挑战"><a href="#挑战" class="headerlink" title="挑战"></a>挑战</h3><p><strong>挑战一：电池成本不可观测</strong><br>电池供应协议是商业机密，无法直接观测到每款EV型号的电池成本。解决方法：通过构建EV生产商与电池供应商之间Nash议价模型，结合观测到的车辆价格和估计的需求弹性，反推上下游加成，进而推断电池成本。</p>
-<p><strong>挑战二：LBD识别的内生性</strong><br>企业的累计产量（生产经验，experience）与不可观测的成本冲击相关——成本优势大的企业往往产量更大、经验积累更快。若直接用经验变量回归成本，估计结果会有偏差。<br><strong>工具变量策略</strong>：利用各电池供应商对下游不同国家EV补贴的差异暴露（variation）来构造工具变量。若甲国对某款车型提供慷慨补贴，供应该车型电池的供应商将更快积累经验。这一”补贴暴露”外生地推动了部分供应商的经验积累，从而识别LBD的因果效应。此外，还利用了中国白名单政策（2016-2019年）对电池供应商经验的外生冲击。</p>
-<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p><strong>需求端</strong>：BLP类型的随机系数离散选择模型，用于估计异质消费者对EV特性（价格、续航、充电功率、品牌等）的偏好，从而估计需求弹性。</p>
-<p><strong>供给端</strong>：Nash议价框架（EV生产商与电池供应商之间的纳什讨价还价），考察同步定价（Simultaneous）、顺序定价（Sequential）和线性定价（Linear Pricing）多种供给侧模型，并比较其对成本恢复的稳健性。</p>
-<p><strong>LBD估计方程</strong>（核心）：</p>
-<ul>
-<li>以电池成本（对数）对累计生产经验（对数）做回归，控制行业整体技术进步、EV整车装配经验、原材料投入成本、规模经济等，并用工具变量处理经验的内生性。</li>
-<li>学习率（learning rate）定义为经验每翻倍时成本下降的百分比。</li>
-</ul>
-<p><strong>数据</strong>：</p>
-<ul>
-<li>全球13国（覆盖&gt;95%全球EV销售）2013-2020年逐车型逐年销量数据（含BEV和PHEV）</li>
-<li>电池供应商数据库（植物地点、供应的EV车型列表）</li>
-<li>各国EV购置补贴数据（金额、起止时间）</li>
-<li>社会经济变量（收入分布等，用于校准消费者异质性）</li>
-</ul>
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><strong>核心结果一：LBD学习率为7.5%</strong><br>控制行业技术进步、整车装配经验、原材料成本和规模经济后，LBD学习率估计为<strong>7.5%</strong>——即电池生产经验每翻倍，单位成本下降7.5%。该学习率处于文献估计的较低端，但仍具有重要经济意义。在2013-2020年电池总成本降幅中，LBD贡献了<strong>35.5%</strong>，行业技术进步贡献了<strong>39.9%</strong>，其余由整车装配经验、电池化学材料变化、原材料价格和规模经济共同解释。</p>
-<p><strong>核心结果二：LBD大幅放大EV补贴效果</strong>  </p>
-<ul>
-<li>无LBD时，各国补贴估计使2013-2020年全球累计EV销量增加<strong>29.9%</strong>。</li>
-<li>同时考虑补贴和LBD时，全球EV销量相比无补贴无LBD基准增加<strong>170%</strong>。</li>
-<li>二者的联合效果比各自独立效果之和高出<strong>60%</strong>——说明补贴与LBD具有强互补性。</li>
-</ul>
-<p><strong>核心结果三：消费端补贴产生跨国溢出效应</strong><br>EV电池供应链是全球化的（主要集中在中、日、韩三国），一国补贴可通过LBD降低全球电池成本，产生跨国外溢：</p>
-<ul>
-<li>美国约131亿美元EV补贴产生了约165亿美元全球福利净增益；美国和加拿大获得其中49%，日韩电池供应商获得28%，中国仅获得3%（因为样本期内中国EV和电池与国际市场贸易有限）。</li>
-<li>欧盟约164亿美元补贴产生约116亿美元全球福利增益，欧盟仅获得其中26%（因为欧洲大量进口EV，且采用统一补贴而非有针对性补贴）。</li>
-</ul>
-<p><strong>核心结果四：上游电池供应商仅获得LBD收益的一小部分</strong><br>LBD产生的成本降低主要通过价格竞争传递给了EV生产商和最终消费者，而非被电池供应商内部保留——与完全竞争的产业组织逻辑一致。</p>
-<p><strong>政策结果五：中国白名单政策的影响</strong><br>中国白名单政策（2016-2019年）将EV补贴限于使用”白名单”国内电池供应商的车辆，为CATL等中国电池企业提供了保护性市场，帮助其积累经验、形成竞争优势。但这一政策具有两面性：</p>
-<ul>
-<li>实际实施时间（2016-2019年）对中国电池产业有正面效果（通过加速中国供应商的LBD积累）。</li>
-<li>若将该政策延迟5年实施（2021-2024年），由于中国电池企业已通过出口积累足够经验，白名单的保护效果将大幅减弱，且因阻碍全球供应链效率，中国国内福利净效果将转为负值。</li>
-</ul>
-<hr>
-<h2 id="结论（Conclusion）"><a href="#结论（Conclusion）" class="headerlink" title="结论（Conclusion）"></a>结论（Conclusion）</h2><p><strong>核心发现</strong>：LBD在EV电池成本下降中发挥了实质性作用（贡献35.5%），但并非唯一因素，行业技术进步同样重要。LBD与消费者补贴之间的强互补性意味着：忽视LBD将大幅低估补贴的长期效益。消费端补贴产生显著的跨国溢出效应，其全球效益往往远超国内效益，这对单国政策评估具有重要启示。中国的产业政策（白名单）在特定历史时机下对国内产业发展有正效果，但若时机不当则可能适得其反。</p>
-<p><strong>对领域的贡献</strong>：</p>
-<ol>
-<li>提出了在无法直接观测上游成本时通过结构性供给模型恢复电池成本的方法论框架；</li>
-<li>构建了全球EV行业的结构性模型，联合识别LBD、需求偏好和政策互动效应；</li>
-<li>量化了EV补贴的动态长期效益，纠正了现有静态评估文献的系统性低估；</li>
-<li>揭示了全球化供应链下单国产业政策的跨境外溢机制。</li>
-</ol>
-<p><strong>政策含义</strong>：</p>
-<ul>
-<li>EV补贴的动态效益远大于静态效益，政策评估应纳入LBD渠道；</li>
-<li>美国IRA的本地含量要求在短期内可能阻碍全球LBD进程，长期效果取决于本土供应链的学习速度；</li>
-<li>政策时机（timing）至关重要：早期的保护性产业政策（如中国白名单）可能在企业尚未具备竞争力时发挥关键作用，但过晚则适得其反。</li>
-</ul>
-<hr>
-<h2 id="未来研究方向（Future-work）"><a href="#未来研究方向（Future-work）" class="headerlink" title="未来研究方向（Future work）"></a>未来研究方向（Future work）</h2><p><strong>论文中明确提及的方向</strong>：</p>
-<ol>
-<li>评估美国IRA本地含量要求对全球LBD和EV普及的长期影响；</li>
-<li>研究上游供应商如何将LBD收益分配给劳动者和股东（分配效应）；</li>
-<li>将分析拓展到EV以外的绿色技术（如太阳能、储能电池等）。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li>内外部LBD的分解：企业内部的知识积累vs.跨企业的知识溢出各贡献多少？这对政策选择（补贴全行业 vs. 扶持龙头企业）有重大影响；</li>
-<li>动态寡头垄断框架下的战略性LBD——企业是否会为了积累经验而战略性定低价（forward-looking pricing）；</li>
-<li>将模型扩展至2020年后：IRA颁布后（2022年），本地含量要求如何重塑全球电池供应链的LBD路径；</li>
-<li>LBD与研发投入的互动：研发投入（技术进步）与生产经验（LBD）是否互补，影响政策组合的最优设计。</li>
-</ol>
-<h2 id="学术思考"><a href="#学术思考" class="headerlink" title="学术思考"></a>学术思考</h2><ol>
-<li><p><strong>电池成本恢复的模型依赖性</strong>：电池成本无法直接观测，需通过结构模型推断。不同供给侧假设（同步 vs. 顺序议价）是否会产生实质性不同的学习率估计？作者如何验证这些替代模型的可信度？</p>
-</li>
-<li><p><strong>工具变量的有效性</strong>：利用”供应商对下游不同国家补贴的差异暴露”构造IV，这一策略要求EV补贴变动对电池成本没有直接效应（排他性限制）。若补贴政策同时改变了原材料需求（如锂、镍），可能违反这一假设——如何检验？</p>
-</li>
-<li><p><strong>LBD的溢出结构</strong>：论文将LBD建模为企业层面的内部学习。但实际上，工程师流动、专利公开等机制可能使LBD在企业间溢出。内外部LBD的混淆对学习率估计和政策评估会产生怎样的影响？</p>
-</li>
-<li><p><strong>本地含量要求的动态合理性</strong>：中国白名单实际上是保护主义政策，但本文发现在特定时机下它对国内产业有正面作用。这是否意味着”战略性贸易政策”在绿色技术的早期发展阶段具有动态合理性？如何区分”促进LBD积累”的合理保护与一般意义上的低效保护主义？</p>
-</li>
-<li><p><strong>样本期外推的风险</strong>：研究覆盖2013-2020年，但EV市场在2020年后经历了爆炸式增长（中国BEV渗透率超过30%）。LBD在高渗透率阶段是否会放缓？本文的政策结论对IRA（2022年后）是否仍然适用？</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题"><a href="#下一步用户可能提的问题" class="headerlink" title="下一步用户可能提的问题"></a>下一步用户可能提的问题</h2><ol>
-<li>“学习率7.5%”是怎么估计出来的？工具变量策略的具体构造方法是什么？</li>
-<li>为什么上游电池供应商只获得了LBD收益的”一小部分”？这是市场结构（竞争激烈）的结果，还是谈判权力（bargaining power）不对等的结果？</li>
-<li>美国IRA的本地含量要求是否会减慢全球LBD进程、推高全球EV价格？本文的框架如何用于评估IRA？</li>
-<li>中国白名单政策在实际实施时间下对全球（非中国）消费者的福利影响是正面还是负面？</li>
-<li>如果未来电池技术路线（如固态电池）发生重大转变，现有的LBD积累是否会”归零”？政策设计如何应对这种技术不确定性？</li>
-<li>论文的供给侧模型（Nash议价）对最终结论的敏感性如何？若改用更简单的加成定价模型，学习率估计会有多大变化？</li>
-<li>为什么中国在美国补贴的全球福利中只获得3%？这是否意味着美国的补贴实际上是在补贴日韩企业而非中国竞争对手？</li>
-</ol>
-<hr>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>深陷险境？基础设施投资与沿海城市的持久性 — 深度阅读笔记 — Balboni</title>
     <url>/posts/balboni2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息"><a href="#文献信息" class="headerlink" title="文献信息"></a>文献信息</h2><ul>
@@ -2289,6 +2166,129 @@
       </tags>
   </entry>
   <entry>
+    <title>压低成本：干中学与全球电动汽车电池产业政府政策 — 深度阅读笔记 — Barwick Et Al.</title>
+    <url>/posts/barwick2025/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息"><a href="#文献信息" class="headerlink" title="文献信息"></a>文献信息</h2><ul>
+<li><strong>标题</strong>: Drive Down the Cost: Learning by Doing and Government Policies in the Global EV Battery Industry</li>
+<li><strong>作者</strong>: Panle Jia Barwick (Wisconsin), Hyuk-Soo Kwon (Singapore), Shanjun Li (Cornell), Nahim Zahur (Queens)</li>
+<li><strong>年份</strong>: 2025</li>
+<li><strong>来源</strong>: NBER Working Paper No. 33378</li>
+<li><strong>DOI</strong>: 10.3386/w33378</li>
+</ul>
+<span id="more"></span>
+<hr>
+<hr>
+<h2 id="引言（背景和意义）"><a href="#引言（背景和意义）" class="headerlink" title="引言（背景和意义）"></a>引言（背景和意义）</h2><p><strong>领域基础知识</strong><br>“干中学”（Learning by Doing, LBD）是产业经济学和增长理论的经典概念：企业在生产过程中积累经验，进而降低单位生产成本。”Wright’s Law”（1936年由航空工程师Theodore Wright提出）将这一规律量化为”累计产量每翻倍，单位成本下降固定比例”。LBD在半导体、太阳能电池等绿色技术行业均有大量记录。在政策设计上，LBD带来正外部性——当前生产提高了整个行业未来的效率，因此存在补贴当前生产的理由（以纠正动态外部性）。</p>
+<p><strong>研究背景</strong><br>电动汽车（EV）电池成本在2010-2020年间下降了近90%，是过去十年绿色能源技术中最引人注目的成本下降之一。这一变化对全球气候政策目标至关重要——电池成本是EV相对于内燃机车价格劣势的主要来源。全球各国政府为促进EV普及投入了大量补贴（2022年全球EV消费补贴达430亿美元），并通过产业政策（如中国白名单政策、美国IRA本地含量要求）扶持本土电池产业。然而，LBD在多大程度上驱动了成本下降？政府政策通过哪些渠道影响LBD进程？这些问题此前缺乏可信的量化研究。</p>
+<p><strong>作者的问题意识</strong><br>（1）LBD在多大程度上解释了EV电池成本的下降（相对于技术进步、规模经济、原材料成本等其他因素）？（2）LBD如何改变消费者EV补贴的政策效果？（3）中国的”白名单”本地含量要求政策通过LBD对全球EV市场产生了怎样的影响？（4）LBD在全球供应链中产生怎样的跨国溢出效应？</p>
+<p><strong>研究意义</strong><br>本文为绿色技术政策设计提供了直接量化依据：若忽视LBD，政策评估将大幅低估补贴的长期效益；同时揭示了消费端补贴与产业政策的相互作用，对评估美国IRA、中国产业政策的全球影响具有直接参考价值。</p>
+<hr>
+<h2 id="内容及结构（论文结构）"><a href="#内容及结构（论文结构）" class="headerlink" title="内容及结构（论文结构）"></a>内容及结构（论文结构）</h2><ol>
+<li><strong>引言</strong>：提出问题，概述主要发现（LBD学习率7.5%，与补贴互补放大效果，跨国溢出效应）。</li>
+<li><strong>数据</strong>：全球13国EV销售数据（2013-2020），电池供应商信息，各国补贴政策。</li>
+<li><strong>需求模型</strong>：异质消费者离散选择模型（BLP类型），估计消费者对EV特性（价格、续航、充电速度等）的偏好。</li>
+<li><strong>供给模型与电池成本恢复</strong>：通过Nash议价模型（上游电池供应商与下游EV生产商之间）推断上下游加成，从而恢复电池成本。</li>
+<li><strong>LBD估计</strong>：用工具变量方法识别LBD学习率，控制内生性（高效企业多生产更多、积累更多经验）。</li>
+<li><strong>反事实政策分析</strong>：（a）评估消费者EV补贴在有无LBD情况下的效果；（b）评估中国白名单政策及其时间安排的影响。</li>
+<li><strong>结论</strong>：总结核心发现及政策含义。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）"><a href="#正文（逻辑梳理）" class="headerlink" title="正文（逻辑梳理）"></a>正文（逻辑梳理）</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>EV电池成本是EV普及的关键障碍，而其90%的成本降幅是过去十年绿色技术领域最显著的成就之一。产业界将这一降幅归因于LBD，但缺乏可信的因果估计：LBD究竟贡献了多少？还是技术进步、规模经济、原材料价格下降等因素更重要？政府大规模补贴政策是否加速了这一进程？</p>
+<h3 id="挑战"><a href="#挑战" class="headerlink" title="挑战"></a>挑战</h3><p><strong>挑战一：电池成本不可观测</strong><br>电池供应协议是商业机密，无法直接观测到每款EV型号的电池成本。解决方法：通过构建EV生产商与电池供应商之间Nash议价模型，结合观测到的车辆价格和估计的需求弹性，反推上下游加成，进而推断电池成本。</p>
+<p><strong>挑战二：LBD识别的内生性</strong><br>企业的累计产量（生产经验，experience）与不可观测的成本冲击相关——成本优势大的企业往往产量更大、经验积累更快。若直接用经验变量回归成本，估计结果会有偏差。<br><strong>工具变量策略</strong>：利用各电池供应商对下游不同国家EV补贴的差异暴露（variation）来构造工具变量。若甲国对某款车型提供慷慨补贴，供应该车型电池的供应商将更快积累经验。这一”补贴暴露”外生地推动了部分供应商的经验积累，从而识别LBD的因果效应。此外，还利用了中国白名单政策（2016-2019年）对电池供应商经验的外生冲击。</p>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p><strong>需求端</strong>：BLP类型的随机系数离散选择模型，用于估计异质消费者对EV特性（价格、续航、充电功率、品牌等）的偏好，从而估计需求弹性。</p>
+<p><strong>供给端</strong>：Nash议价框架（EV生产商与电池供应商之间的纳什讨价还价），考察同步定价（Simultaneous）、顺序定价（Sequential）和线性定价（Linear Pricing）多种供给侧模型，并比较其对成本恢复的稳健性。</p>
+<p><strong>LBD估计方程</strong>（核心）：</p>
+<ul>
+<li>以电池成本（对数）对累计生产经验（对数）做回归，控制行业整体技术进步、EV整车装配经验、原材料投入成本、规模经济等，并用工具变量处理经验的内生性。</li>
+<li>学习率（learning rate）定义为经验每翻倍时成本下降的百分比。</li>
+</ul>
+<p><strong>数据</strong>：</p>
+<ul>
+<li>全球13国（覆盖&gt;95%全球EV销售）2013-2020年逐车型逐年销量数据（含BEV和PHEV）</li>
+<li>电池供应商数据库（植物地点、供应的EV车型列表）</li>
+<li>各国EV购置补贴数据（金额、起止时间）</li>
+<li>社会经济变量（收入分布等，用于校准消费者异质性）</li>
+</ul>
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><strong>核心结果一：LBD学习率为7.5%</strong><br>控制行业技术进步、整车装配经验、原材料成本和规模经济后，LBD学习率估计为<strong>7.5%</strong>——即电池生产经验每翻倍，单位成本下降7.5%。该学习率处于文献估计的较低端，但仍具有重要经济意义。在2013-2020年电池总成本降幅中，LBD贡献了<strong>35.5%</strong>，行业技术进步贡献了<strong>39.9%</strong>，其余由整车装配经验、电池化学材料变化、原材料价格和规模经济共同解释。</p>
+<p><strong>核心结果二：LBD大幅放大EV补贴效果</strong>  </p>
+<ul>
+<li>无LBD时，各国补贴估计使2013-2020年全球累计EV销量增加<strong>29.9%</strong>。</li>
+<li>同时考虑补贴和LBD时，全球EV销量相比无补贴无LBD基准增加<strong>170%</strong>。</li>
+<li>二者的联合效果比各自独立效果之和高出<strong>60%</strong>——说明补贴与LBD具有强互补性。</li>
+</ul>
+<p><strong>核心结果三：消费端补贴产生跨国溢出效应</strong><br>EV电池供应链是全球化的（主要集中在中、日、韩三国），一国补贴可通过LBD降低全球电池成本，产生跨国外溢：</p>
+<ul>
+<li>美国约131亿美元EV补贴产生了约165亿美元全球福利净增益；美国和加拿大获得其中49%，日韩电池供应商获得28%，中国仅获得3%（因为样本期内中国EV和电池与国际市场贸易有限）。</li>
+<li>欧盟约164亿美元补贴产生约116亿美元全球福利增益，欧盟仅获得其中26%（因为欧洲大量进口EV，且采用统一补贴而非有针对性补贴）。</li>
+</ul>
+<p><strong>核心结果四：上游电池供应商仅获得LBD收益的一小部分</strong><br>LBD产生的成本降低主要通过价格竞争传递给了EV生产商和最终消费者，而非被电池供应商内部保留——与完全竞争的产业组织逻辑一致。</p>
+<p><strong>政策结果五：中国白名单政策的影响</strong><br>中国白名单政策（2016-2019年）将EV补贴限于使用”白名单”国内电池供应商的车辆，为CATL等中国电池企业提供了保护性市场，帮助其积累经验、形成竞争优势。但这一政策具有两面性：</p>
+<ul>
+<li>实际实施时间（2016-2019年）对中国电池产业有正面效果（通过加速中国供应商的LBD积累）。</li>
+<li>若将该政策延迟5年实施（2021-2024年），由于中国电池企业已通过出口积累足够经验，白名单的保护效果将大幅减弱，且因阻碍全球供应链效率，中国国内福利净效果将转为负值。</li>
+</ul>
+<hr>
+<h2 id="结论（Conclusion）"><a href="#结论（Conclusion）" class="headerlink" title="结论（Conclusion）"></a>结论（Conclusion）</h2><p><strong>核心发现</strong>：LBD在EV电池成本下降中发挥了实质性作用（贡献35.5%），但并非唯一因素，行业技术进步同样重要。LBD与消费者补贴之间的强互补性意味着：忽视LBD将大幅低估补贴的长期效益。消费端补贴产生显著的跨国溢出效应，其全球效益往往远超国内效益，这对单国政策评估具有重要启示。中国的产业政策（白名单）在特定历史时机下对国内产业发展有正效果，但若时机不当则可能适得其反。</p>
+<p><strong>对领域的贡献</strong>：</p>
+<ol>
+<li>提出了在无法直接观测上游成本时通过结构性供给模型恢复电池成本的方法论框架；</li>
+<li>构建了全球EV行业的结构性模型，联合识别LBD、需求偏好和政策互动效应；</li>
+<li>量化了EV补贴的动态长期效益，纠正了现有静态评估文献的系统性低估；</li>
+<li>揭示了全球化供应链下单国产业政策的跨境外溢机制。</li>
+</ol>
+<p><strong>政策含义</strong>：</p>
+<ul>
+<li>EV补贴的动态效益远大于静态效益，政策评估应纳入LBD渠道；</li>
+<li>美国IRA的本地含量要求在短期内可能阻碍全球LBD进程，长期效果取决于本土供应链的学习速度；</li>
+<li>政策时机（timing）至关重要：早期的保护性产业政策（如中国白名单）可能在企业尚未具备竞争力时发挥关键作用，但过晚则适得其反。</li>
+</ul>
+<hr>
+<h2 id="未来研究方向（Future-work）"><a href="#未来研究方向（Future-work）" class="headerlink" title="未来研究方向（Future work）"></a>未来研究方向（Future work）</h2><p><strong>论文中明确提及的方向</strong>：</p>
+<ol>
+<li>评估美国IRA本地含量要求对全球LBD和EV普及的长期影响；</li>
+<li>研究上游供应商如何将LBD收益分配给劳动者和股东（分配效应）；</li>
+<li>将分析拓展到EV以外的绿色技术（如太阳能、储能电池等）。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li>内外部LBD的分解：企业内部的知识积累vs.跨企业的知识溢出各贡献多少？这对政策选择（补贴全行业 vs. 扶持龙头企业）有重大影响；</li>
+<li>动态寡头垄断框架下的战略性LBD——企业是否会为了积累经验而战略性定低价（forward-looking pricing）；</li>
+<li>将模型扩展至2020年后：IRA颁布后（2022年），本地含量要求如何重塑全球电池供应链的LBD路径；</li>
+<li>LBD与研发投入的互动：研发投入（技术进步）与生产经验（LBD）是否互补，影响政策组合的最优设计。</li>
+</ol>
+<h2 id="学术思考"><a href="#学术思考" class="headerlink" title="学术思考"></a>学术思考</h2><ol>
+<li><p><strong>电池成本恢复的模型依赖性</strong>：电池成本无法直接观测，需通过结构模型推断。不同供给侧假设（同步 vs. 顺序议价）是否会产生实质性不同的学习率估计？作者如何验证这些替代模型的可信度？</p>
+</li>
+<li><p><strong>工具变量的有效性</strong>：利用”供应商对下游不同国家补贴的差异暴露”构造IV，这一策略要求EV补贴变动对电池成本没有直接效应（排他性限制）。若补贴政策同时改变了原材料需求（如锂、镍），可能违反这一假设——如何检验？</p>
+</li>
+<li><p><strong>LBD的溢出结构</strong>：论文将LBD建模为企业层面的内部学习。但实际上，工程师流动、专利公开等机制可能使LBD在企业间溢出。内外部LBD的混淆对学习率估计和政策评估会产生怎样的影响？</p>
+</li>
+<li><p><strong>本地含量要求的动态合理性</strong>：中国白名单实际上是保护主义政策，但本文发现在特定时机下它对国内产业有正面作用。这是否意味着”战略性贸易政策”在绿色技术的早期发展阶段具有动态合理性？如何区分”促进LBD积累”的合理保护与一般意义上的低效保护主义？</p>
+</li>
+<li><p><strong>样本期外推的风险</strong>：研究覆盖2013-2020年，但EV市场在2020年后经历了爆炸式增长（中国BEV渗透率超过30%）。LBD在高渗透率阶段是否会放缓？本文的政策结论对IRA（2022年后）是否仍然适用？</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题"><a href="#下一步用户可能提的问题" class="headerlink" title="下一步用户可能提的问题"></a>下一步用户可能提的问题</h2><ol>
+<li>“学习率7.5%”是怎么估计出来的？工具变量策略的具体构造方法是什么？</li>
+<li>为什么上游电池供应商只获得了LBD收益的”一小部分”？这是市场结构（竞争激烈）的结果，还是谈判权力（bargaining power）不对等的结果？</li>
+<li>美国IRA的本地含量要求是否会减慢全球LBD进程、推高全球EV价格？本文的框架如何用于评估IRA？</li>
+<li>中国白名单政策在实际实施时间下对全球（非中国）消费者的福利影响是正面还是负面？</li>
+<li>如果未来电池技术路线（如固态电池）发生重大转变，现有的LBD积累是否会”归零”？政策设计如何应对这种技术不确定性？</li>
+<li>论文的供给侧模型（Nash议价）对最终结论的敏感性如何？若改用更简单的加成定价模型，学习率估计会有多大变化？</li>
+<li>为什么中国在美国补贴的全球福利中只获得3%？这是否意味着美国的补贴实际上是在补贴日韩企业而非中国竞争对手？</li>
+</ol>
+<hr>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>降低成本：电动车电池产业的干中学与政府政策 — 深度阅读笔记 — Barwick Et Al.</title>
     <url>/posts/barwick2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Drive Down the Cost: Learning by Doing and Government Policies in the Global EV Battery Industry<br>Zotero Collection:: 有趣的文章<br>PDF Path:: /Users/double/Zotero/storage/2D6PP6VF/Barwick 等 - 2025 - Drive Down the Cost Learning by Doing and Government Policies in the Global EV Battery Industry.pdf<br>Zotero Item Key:: T9V46SIC</p>
@@ -2582,27 +2582,6 @@
       </tags>
   </entry>
   <entry>
-    <title>致Berry</title>
-    <url>/posts/51392/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<center> **Love You.** </center>
-<center> **Berry!** </center>
-
-
-
-
-<center>
-<img data-src="/image/berry.jpg" width="66%" height="66%" title="妳" alt="妳">
-</center>
-]]></content>
-      <categories>
-        <category>领导</category>
-      </categories>
-      <tags>
-        <tag>妳</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Do Governments Crowd Out Governments? — 深度阅读笔记 — Baumann &amp; Klymak</title>
     <url>/posts/baumann2024/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息"><a href="#文献信息" class="headerlink" title="文献信息"></a>文献信息</h2><ul>
@@ -2707,6 +2686,27 @@
         <tag>政府支出</tag>
         <tag>挤出效应</tag>
         <tag>自然实验</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>致Berry</title>
+    <url>/posts/51392/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<center> **Love You.** </center>
+<center> **Berry!** </center>
+
+
+
+
+<center>
+<img data-src="/image/berry.jpg" width="66%" height="66%" title="妳" alt="妳">
+</center>
+]]></content>
+      <categories>
+        <category>领导</category>
+      </categories>
+      <tags>
+        <tag>妳</tag>
       </tags>
   </entry>
   <entry>
@@ -4705,6 +4705,310 @@
       </tags>
   </entry>
   <entry>
+    <title>The Effect of Minimum Wages on Low-Wage Jobs — 深度分析 — Cengiz Et Al.</title>
+    <url>/posts/cengiz2019/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息"><a href="#文献信息" class="headerlink" title="文献信息"></a>文献信息</h2><ul>
+<li><strong>标题</strong>: The Effect of Minimum Wages on Low-Wage Jobs</li>
+<li><strong>作者</strong>: Doruk Cengiz(University of Massachusetts Amherst), Arindrajit Dube(UMass Amherst, NBER), Attila Lindner(UCL, CEP, IFS), Ben Zipperer(Economic Policy Institute)</li>
+<li><strong>类型</strong>: 论文笔记 / 劳动经济学</li>
+<li><strong>出版年份</strong>: 2019</li>
+<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics, Volume 134, Issue 3, Pages 1405-1454</li>
+<li><strong>难度评估</strong>: 中 - 需要劳动经济学和计量经济学基础<span id="more"></span>
+</li>
+</ul>
+<hr>
+<h2 id="1-引言-背景和意义"><a href="#1-引言-背景和意义" class="headerlink" title="1. 引言(背景和意义)"></a>1. 引言(背景和意义)</h2><h3 id="领域基础知识"><a href="#领域基础知识" class="headerlink" title="领域基础知识"></a>领域基础知识</h3><p><strong>最低工资政策(Minimum Wage Policy)</strong>:政府规定的劳动力小时工资下限,是劳动经济学中最具争议的政策之一.支持者认为它能提高低收入工人的生活水平,反对者担心它会导致就业下降(“unemployment”).</p>
+<p><strong>“新最低工资研究”的起源</strong>:Card and Krueger (1995)&lt;神话与计量经济学:对最低工资的新研究&gt;对传统观点提出挑战,使用准实验方法发现最低工资提高并未导致就业下降.</p>
+<p><strong>bunching estimator(堆集估计量)</strong>:一种利用政策变化导致的结果分布聚集现象来识别因果效应的方法.</p>
+<h3 id="研究的主要背景"><a href="#研究的主要背景" class="headerlink" title="研究的主要背景"></a>研究的主要背景</h3><ol>
+<li><p><strong>政策热潮</strong>:加州、伊利诺伊州、麻省、新泽西州、纽约州已通过将最低工资提高至$15/小时的立法;数十个城市也实施了城市级最低工资政策.</p>
+</li>
+<li><p><strong>研究缺漏</strong>:尽管新最低工资研究已逾30年,但关于政策对总体就业影响的研究仍然很少.2014年国会预算办公室(CBO)报告承认相关研究匮乏,被迫使用青少年的弹性来推断对低工资工人的总体影响.</p>
+</li>
+<li><p><strong>方法论挑战</strong>:传统方法使用双向固定效应回归,但存在一些问题,如对工资分布上尾部的影响可能干扰对底部效应的估计.</p>
+</li>
+</ol>
+<h3 id="作者的问题意识"><a href="#作者的问题意识" class="headerlink" title="作者的问题意识"></a>作者的问题意识</h3><p><strong>核心问题</strong>:最低工资对低工资工作的总体效应是什么?</p>
+<p><strong>具体子问题</strong>:</p>
+<ul>
+<li>最低工资对就业的影响是正还是负?</li>
+<li>影响有多大?</li>
+<li>最低工资带来的工资上涨是否被就业损失所抵消?</li>
+<li>效应的异质性如何?</li>
+</ul>
+<h3 id="研究意义"><a href="#研究意义" class="headerlink" title="研究意义"></a>研究意义</h3><ol>
+<li><strong>方法创新</strong>:提出”事件堆集”(EB-bunching)方法,将总体就业效应分解到各工资区间</li>
+<li><strong>对既有文献的贡献</strong>:澄清了最低工资文献中关于1980年代和1990年代早期样本选择的争议</li>
+<li><strong>政策意义</strong>:为当前$15最低工资运动提供实证依据</li>
+</ol>
+<hr>
+<h2 id="2-内容及结构-论文结构"><a href="#2-内容及结构-论文结构" class="headerlink" title="2. 内容及结构(论文结构)"></a>2. 内容及结构(论文结构)</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>章节</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I. Introduction</td>
+<td>研究背景、问题意识、文献贡献</td>
+</tr>
+<tr>
+<td>II. Methodology and Data</td>
+<td>概念框架、实证策略、数据</td>
+</tr>
+<tr>
+<td>III. Main Empirical Findings</td>
+<td>总体就业效应、工资溢出、异质性分析</td>
+</tr>
+<tr>
+<td>IV. Robustness and Threats to Identification</td>
+<td>对双向固定效应方法问题的解释</td>
+</tr>
+<tr>
+<td>V. Conclusion</td>
+<td>结论</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="3-正文-逻辑梳理"><a href="#3-正文-逻辑梳理" class="headerlink" title="3. 正文(逻辑梳理)"></a>3. 正文(逻辑梳理)</h2><h3 id="背景-最低工资的理论预测"><a href="#背景-最低工资的理论预测" class="headerlink" title="背景:最低工资的理论预测"></a>背景:最低工资的理论预测</h3><p><strong>竞争性劳动力市场模型预测</strong>:</p>
+<ul>
+<li>最低工资提高会导致低工资就业下降</li>
+<li>下降幅度取决于劳动力需求弹性</li>
+</ul>
+<p><strong>monopsony模型预测</strong>:</p>
+<ul>
+<li>最低工资提高可能增加就业</li>
+<li>因为雇主的市場力量被削弱</li>
+</ul>
+<p><strong>实际预测的复杂性</strong>:</p>
+<ul>
+<li>工资溢出效应(spillovers):最低工资可能推动高于最低工资的工人工资上涨</li>
+<li>劳动力替代:低技能工人可能被高技能工人替代</li>
+<li>就业损失可能分布在不同工资区间</li>
+</ul>
+<h3 id="挑战"><a href="#挑战" class="headerlink" title="挑战"></a>挑战</h3><ol>
+<li><p><strong>识别问题</strong>:如何分离最低工资的因果效应?</p>
+</li>
+<li><p><strong>聚类分配问题</strong>:传统双向固定效应方法可能因早期时期的混杂因素而产生偏误</p>
+</li>
+<li><p><strong>效应的空间异质性</strong>:不同行业的最低工资效应可能不同</p>
+</li>
+<li><p><strong>数据局限性</strong>:CPS调查数据可能存在测量误差</p>
+</li>
+</ol>
+<h3 id="方法-数据集要突出"><a href="#方法-数据集要突出" class="headerlink" title="方法(数据集要突出)"></a>方法(数据集要突出)</h3><p><strong>数据来源</strong>:</p>
+<ul>
+<li>1979-2016年CPS(当前人口调查)NBER合并出口轮次小组数据</li>
+<li>137,000+观测值</li>
+<li>138个州级最低工资事件(1979-2016年间)</li>
+<li><strong>事件定义</strong>:州最低工资增加至少$0.25,且至少2%工人直接影响</li>
+</ul>
+<p><strong>核心概念</strong>:</p>
+<ul>
+<li><strong>缺失工作(Missing Jobs)</strong>:最低工资提高后,低于新最低工资的工作数量减少</li>
+<li><strong>超额工作(Excess Jobs)</strong>:因最低工资提高而出现在最低工资水平或略高处的工作增加</li>
+</ul>
+<p><strong>实证策略_事件研究设计</strong>:</p>
+<script type="math/tex; mode=display">{E_{sjt} \over N_{st}} = \sum_{\tau=-3}^{4} \sum_{k=-4}^{17} \alpha_{\tau k} I_{\tau k}^{sjt} + \mu_{sj} + \rho_{jt} + \Omega_{sjt} + u_{sjt}}</script><p>其中:</p>
+<ul>
+<li>$E_{sjt}$:j工资区间在s州的就业</li>
+<li>$N_{st}$:s州当时的劳动力</li>
+<li>$I_{\tau k}^{sjt}$:处理指示变量</li>
+<li>$\mu_{sj}$:州×工资区间固定效应</li>
+<li>$\rho_{jt}$:时间×工资区间固定效应</li>
+<li>标准误按州级聚类</li>
+</ul>
+<p><strong>关键创新</strong>:</p>
+<ul>
+<li>将就业变化按$0.25工资区间分解</li>
+<li>使用事件窗口前后对比</li>
+<li>提供对上尾效应的检验</li>
+</ul>
+<h3 id="结果-Results"><a href="#结果-Results" class="headerlink" title="结果(Results)"></a>结果(Results)</h3><p><strong>核心发现1:总体就业效应接近零</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>估计值</th>
+<th>标准误</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>受影响工人就业变化</td>
+<td>+2.8%</td>
+<td>(2.9%)</td>
+</tr>
+<tr>
+<td>就业弹性(相对于自身工资)</td>
+<td>0.41</td>
+<td>(0.43)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>→ 在95%置信水平下,排除低于-0.45的弹性</p>
+<p><strong>核心发现2:工资溢出效应显著</strong></p>
+<ul>
+<li>溢出效应向上延伸至最低工资以上约$3</li>
+<li>总体工资增长中约40%来自溢出效应</li>
+<li><strong>不对称性</strong>:留任工人获得显著工资溢出,但新进入者没有</li>
+</ul>
+<p><strong>核心发现3:行业异质性</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>行业</th>
+<th>就业弹性</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>可贸易部门(制造业)</td>
+<td>-1.4</td>
+<td>显著负效应</td>
+</tr>
+<tr>
+<td>不可贸易部门(餐饮、零售)</td>
+<td>≈0</td>
+<td>几乎无效应</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>→ 行业组成是决定最低工资就业效应的关键因素</p>
+<p><strong>核心发现4:人口群体异质性</strong></p>
+<ul>
+<li>按教育和年龄分组,未发现低技能工人被高技能工人替代的证据</li>
+<li>不同人口群体的就业效应大多接近零且不显著</li>
+<li>表明最低工资政策的好处理广泛共享</li>
+</ul>
+<p><strong>核心发现5:对Meer and West (2016)发现的解释</strong></p>
+<ul>
+<li>该研究使用双向固定效应发现大的负就业估计</li>
+<li>分解分析显示这一负效应由工资分布上尾的不大幅度下降驱动</li>
+<li>问题来源:1980年代和1990年代早期样本中包含的时期混杂因素</li>
+<li>1992年后,各种标准规范几乎没有就业减少的证据</li>
+</ul>
+<hr>
+<h2 id="4-结论-Conclusion"><a href="#4-结论-Conclusion" class="headerlink" title="4. 结论(Conclusion)"></a>4. 结论(Conclusion)</h2><h3 id="核心结论"><a href="#核心结论" class="headerlink" title="核心结论"></a>核心结论</h3><ol>
+<li><p><strong>最低工资对低工资工作数量的总体影响基本为零</strong>:五年观察期内,低工资工作数量基本保持不变</p>
+</li>
+<li><p><strong>最低工资的直接工资效应被适度工资溢出放大</strong>:溢出效应约占总体工资增长的40%</p>
+</li>
+<li><p><strong>就业效应不能用劳动力替代解释</strong>:不同教育和年龄群体的替代效应证据不成立</p>
+</li>
+<li><p><strong>在更高最低工资水平下也未发现就业减少证据</strong>:但确实发现可贸易部门(制造业)减少的迹象</p>
+</li>
+<li><p><strong>方法论贡献</strong>:EB-bunching方法提供了透明且稳健的估计最低工资就业效应的方法</p>
+</li>
+</ol>
+<h3 id="对领域的贡献"><a href="#对领域的贡献" class="headerlink" title="对领域的贡献"></a>对领域的贡献</h3><ol>
+<li><strong>澄清方法论争议</strong>:解释了为什么双向固定效应和事件研究方法产生不同结果</li>
+<li><strong>提供新的实证证据</strong>:使用更全面的数据和更细粒度的分解</li>
+<li><strong>扩展工资溢出分析</strong>:提供了关于溢出机制(相对工资关系 vs 外部选择价值)的证据</li>
+<li><strong>政策意义</strong>:为$15最低工资运动提供实证支持</li>
+</ol>
+<hr>
+<h2 id="5-未来研究方向-Future-work"><a href="#5-未来研究方向-Future-work" class="headerlink" title="5. 未来研究方向(Future work)"></a>5. 未来研究方向(Future work)</h2><h3 id="论文提及的拓展方向"><a href="#论文提及的拓展方向" class="headerlink" title="论文提及的拓展方向"></a>论文提及的拓展方向</h3><ol>
+<li><p><strong>更高最低工资水平的研究</strong>:当Kaitz指数超过59%时会发生什么?需要更高最低工资的州的 variation</p>
+</li>
+<li><p><strong>长期效应</strong>:本研究关注5年窗口,更长期效应仍需研究</p>
+</li>
+<li><p><strong>其他国家的证据</strong>:美国结果的国际可比性</p>
+</li>
+</ol>
+<h3 id="思考的下一步研究"><a href="#思考的下一步研究" class="headerlink" title="思考的下一步研究"></a>思考的下一步研究</h3><ol>
+<li><p><strong>动态一般均衡效应</strong>:行业层面的一般均衡调整如何影响就业?</p>
+</li>
+<li><p><strong>非正规就业</strong>:最低工资对非正规经济(零工经济)的影响</p>
+</li>
+<li><p><strong>非工资效应</strong>:最低工资对工作条件、培训机会等非工资方面的影响</p>
+</li>
+<li><p><strong>家庭效应</strong>:最低工资对家庭收入分配和儿童贫困的影响</p>
+</li>
+<li><p><strong>政治经济学</strong>:最低工资设定的决定因素及其政治经济学含义</p>
+</li>
+</ol>
+<hr>
+<h2 id="6-学术思考"><a href="#6-学术思考" class="headerlink" title="6. 学术思考"></a>6. 学术思考</h2><h3 id="核心学术问题"><a href="#核心学术问题" class="headerlink" title="核心学术问题"></a>核心学术问题</h3><ol>
+<li><p><strong>竞争性 vs monopsony劳动力市场的边界</strong></p>
+<ul>
+<li>本研究发现总体就业效应接近零</li>
+<li>这是否意味着低工资劳动力市场更接近monopsony?</li>
+<li>还是正负效应相互抵消?</li>
+</ul>
+</li>
+<li><p><strong>工资溢出的机制</strong></p>
+<ul>
+<li>研究发现溢出效应在最低工资以上约$3处消失</li>
+<li>且对留任工人和新进入者影响不对称</li>
+<li>这更支持”相对工资关系假设”而非”外部选择价值假设”</li>
+<li>但这是否意味着企业内部存在显著的工资刚性?</li>
+</ul>
+</li>
+<li><p><strong>可贸易 vs 不可贸易部门的差异</strong></p>
+<ul>
+<li>制造业显著负效应 vs 零售餐饮零效应</li>
+<li>这是否意味着全球化压力降低了美国低技能工人的谈价能力?</li>
+<li>还是反映了不同的劳动力市场结构?</li>
+</ul>
+</li>
+<li><p><strong>EB-bunching方法的普适性</strong></p>
+<ul>
+<li>将总体效应分解到各工资区间</li>
+<li>提供了”透明”的估计方式</li>
+<li>是否可以推广到其他政策评估?</li>
+</ul>
+</li>
+<li><p><strong>对CBO政策分析的启示</strong></p>
+<ul>
+<li>CBO使用青少年弹性来推断总体影响</li>
+<li>本研究表明青少年可能是受最低工资影响最深的群体</li>
+<li>这是否意味着CBO的方法实际上低估了不确定性?</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="7-下一步用户可能提的问题"><a href="#7-下一步用户可能提的问题" class="headerlink" title="7. 下一步用户可能提的问题"></a>7. 下一步用户可能提的问题</h2><ol>
+<li><p><strong>识别策略的有效性</strong>:如何检验平行趋势假设?事件前趋势检验的结果如何?</p>
+</li>
+<li><p><strong>测量误差的影响</strong>:CPS数据中的测量误差如何影响估计?特别是对工资分布尾部的测量?</p>
+</li>
+<li><p><strong>Kaitz指数的具体含义</strong>:Kaitz指数达到59%时会发生什么理论预测?</p>
+</li>
+<li><p><strong>对理论模型的启示</strong>:这些发现如何区分竞争性模型和monopsony模型?</p>
+</li>
+<li><p><strong>政策外部有效性</strong>:基于1979-2016年数据的发现在2020年代是否仍然适用?劳动力市场结构是否发生了根本性变化?</p>
+</li>
+<li><p><strong>对工人流动的动态效应</strong>:最低工资是否影响了低工资工人的职业发展轨迹?</p>
+</li>
+<li><p><strong>雇主反应的非工资渠道</strong>:雇主除了调整就业和工资外,是否在工时、工作条件、培训等方面做出了调整?</p>
+</li>
+<li><p><strong>与Dube et al. (2010) NJ快餐业研究的关系</strong>:为什么NJ快餐业研究发现了正效应,而本研究对所有行业的汇总发现零效应?</p>
+</li>
+<li><p><strong>对州际差异的控制</strong>:如何排除州级经济基本面对结果的混杂影响?各州经济多样性的作用是什么?</p>
+</li>
+<li><p><strong>最低工资的收入分配效应</strong>:最低工资如何与税法、其他转移支付计划相互作用以影响收入不平等?</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>劳动经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Poverty and Economic Decision-Making — 深度阅读笔记 — Carvalho, Meier &amp; Wang</title>
     <url>/posts/carvalho2016/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息"><a href="#文献信息" class="headerlink" title="文献信息"></a>文献信息</h2><ul>
@@ -5042,310 +5346,6 @@
         <tag>贫困研究</tag>
         <tag>行为经济学</tag>
         <tag>认知科学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>The Effect of Minimum Wages on Low-Wage Jobs — 深度分析 — Cengiz Et Al.</title>
-    <url>/posts/cengiz2019/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息"><a href="#文献信息" class="headerlink" title="文献信息"></a>文献信息</h2><ul>
-<li><strong>标题</strong>: The Effect of Minimum Wages on Low-Wage Jobs</li>
-<li><strong>作者</strong>: Doruk Cengiz(University of Massachusetts Amherst), Arindrajit Dube(UMass Amherst, NBER), Attila Lindner(UCL, CEP, IFS), Ben Zipperer(Economic Policy Institute)</li>
-<li><strong>类型</strong>: 论文笔记 / 劳动经济学</li>
-<li><strong>出版年份</strong>: 2019</li>
-<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics, Volume 134, Issue 3, Pages 1405-1454</li>
-<li><strong>难度评估</strong>: 中 - 需要劳动经济学和计量经济学基础<span id="more"></span>
-</li>
-</ul>
-<hr>
-<h2 id="1-引言-背景和意义"><a href="#1-引言-背景和意义" class="headerlink" title="1. 引言(背景和意义)"></a>1. 引言(背景和意义)</h2><h3 id="领域基础知识"><a href="#领域基础知识" class="headerlink" title="领域基础知识"></a>领域基础知识</h3><p><strong>最低工资政策(Minimum Wage Policy)</strong>:政府规定的劳动力小时工资下限,是劳动经济学中最具争议的政策之一.支持者认为它能提高低收入工人的生活水平,反对者担心它会导致就业下降(“unemployment”).</p>
-<p><strong>“新最低工资研究”的起源</strong>:Card and Krueger (1995)&lt;神话与计量经济学:对最低工资的新研究&gt;对传统观点提出挑战,使用准实验方法发现最低工资提高并未导致就业下降.</p>
-<p><strong>bunching estimator(堆集估计量)</strong>:一种利用政策变化导致的结果分布聚集现象来识别因果效应的方法.</p>
-<h3 id="研究的主要背景"><a href="#研究的主要背景" class="headerlink" title="研究的主要背景"></a>研究的主要背景</h3><ol>
-<li><p><strong>政策热潮</strong>:加州、伊利诺伊州、麻省、新泽西州、纽约州已通过将最低工资提高至$15/小时的立法;数十个城市也实施了城市级最低工资政策.</p>
-</li>
-<li><p><strong>研究缺漏</strong>:尽管新最低工资研究已逾30年,但关于政策对总体就业影响的研究仍然很少.2014年国会预算办公室(CBO)报告承认相关研究匮乏,被迫使用青少年的弹性来推断对低工资工人的总体影响.</p>
-</li>
-<li><p><strong>方法论挑战</strong>:传统方法使用双向固定效应回归,但存在一些问题,如对工资分布上尾部的影响可能干扰对底部效应的估计.</p>
-</li>
-</ol>
-<h3 id="作者的问题意识"><a href="#作者的问题意识" class="headerlink" title="作者的问题意识"></a>作者的问题意识</h3><p><strong>核心问题</strong>:最低工资对低工资工作的总体效应是什么?</p>
-<p><strong>具体子问题</strong>:</p>
-<ul>
-<li>最低工资对就业的影响是正还是负?</li>
-<li>影响有多大?</li>
-<li>最低工资带来的工资上涨是否被就业损失所抵消?</li>
-<li>效应的异质性如何?</li>
-</ul>
-<h3 id="研究意义"><a href="#研究意义" class="headerlink" title="研究意义"></a>研究意义</h3><ol>
-<li><strong>方法创新</strong>:提出”事件堆集”(EB-bunching)方法,将总体就业效应分解到各工资区间</li>
-<li><strong>对既有文献的贡献</strong>:澄清了最低工资文献中关于1980年代和1990年代早期样本选择的争议</li>
-<li><strong>政策意义</strong>:为当前$15最低工资运动提供实证依据</li>
-</ol>
-<hr>
-<h2 id="2-内容及结构-论文结构"><a href="#2-内容及结构-论文结构" class="headerlink" title="2. 内容及结构(论文结构)"></a>2. 内容及结构(论文结构)</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>章节</th>
-<th>内容</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I. Introduction</td>
-<td>研究背景、问题意识、文献贡献</td>
-</tr>
-<tr>
-<td>II. Methodology and Data</td>
-<td>概念框架、实证策略、数据</td>
-</tr>
-<tr>
-<td>III. Main Empirical Findings</td>
-<td>总体就业效应、工资溢出、异质性分析</td>
-</tr>
-<tr>
-<td>IV. Robustness and Threats to Identification</td>
-<td>对双向固定效应方法问题的解释</td>
-</tr>
-<tr>
-<td>V. Conclusion</td>
-<td>结论</td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr>
-<h2 id="3-正文-逻辑梳理"><a href="#3-正文-逻辑梳理" class="headerlink" title="3. 正文(逻辑梳理)"></a>3. 正文(逻辑梳理)</h2><h3 id="背景-最低工资的理论预测"><a href="#背景-最低工资的理论预测" class="headerlink" title="背景:最低工资的理论预测"></a>背景:最低工资的理论预测</h3><p><strong>竞争性劳动力市场模型预测</strong>:</p>
-<ul>
-<li>最低工资提高会导致低工资就业下降</li>
-<li>下降幅度取决于劳动力需求弹性</li>
-</ul>
-<p><strong>monopsony模型预测</strong>:</p>
-<ul>
-<li>最低工资提高可能增加就业</li>
-<li>因为雇主的市場力量被削弱</li>
-</ul>
-<p><strong>实际预测的复杂性</strong>:</p>
-<ul>
-<li>工资溢出效应(spillovers):最低工资可能推动高于最低工资的工人工资上涨</li>
-<li>劳动力替代:低技能工人可能被高技能工人替代</li>
-<li>就业损失可能分布在不同工资区间</li>
-</ul>
-<h3 id="挑战"><a href="#挑战" class="headerlink" title="挑战"></a>挑战</h3><ol>
-<li><p><strong>识别问题</strong>:如何分离最低工资的因果效应?</p>
-</li>
-<li><p><strong>聚类分配问题</strong>:传统双向固定效应方法可能因早期时期的混杂因素而产生偏误</p>
-</li>
-<li><p><strong>效应的空间异质性</strong>:不同行业的最低工资效应可能不同</p>
-</li>
-<li><p><strong>数据局限性</strong>:CPS调查数据可能存在测量误差</p>
-</li>
-</ol>
-<h3 id="方法-数据集要突出"><a href="#方法-数据集要突出" class="headerlink" title="方法(数据集要突出)"></a>方法(数据集要突出)</h3><p><strong>数据来源</strong>:</p>
-<ul>
-<li>1979-2016年CPS(当前人口调查)NBER合并出口轮次小组数据</li>
-<li>137,000+观测值</li>
-<li>138个州级最低工资事件(1979-2016年间)</li>
-<li><strong>事件定义</strong>:州最低工资增加至少$0.25,且至少2%工人直接影响</li>
-</ul>
-<p><strong>核心概念</strong>:</p>
-<ul>
-<li><strong>缺失工作(Missing Jobs)</strong>:最低工资提高后,低于新最低工资的工作数量减少</li>
-<li><strong>超额工作(Excess Jobs)</strong>:因最低工资提高而出现在最低工资水平或略高处的工作增加</li>
-</ul>
-<p><strong>实证策略_事件研究设计</strong>:</p>
-<script type="math/tex; mode=display">{E_{sjt} \over N_{st}} = \sum_{\tau=-3}^{4} \sum_{k=-4}^{17} \alpha_{\tau k} I_{\tau k}^{sjt} + \mu_{sj} + \rho_{jt} + \Omega_{sjt} + u_{sjt}}</script><p>其中:</p>
-<ul>
-<li>$E_{sjt}$:j工资区间在s州的就业</li>
-<li>$N_{st}$:s州当时的劳动力</li>
-<li>$I_{\tau k}^{sjt}$:处理指示变量</li>
-<li>$\mu_{sj}$:州×工资区间固定效应</li>
-<li>$\rho_{jt}$:时间×工资区间固定效应</li>
-<li>标准误按州级聚类</li>
-</ul>
-<p><strong>关键创新</strong>:</p>
-<ul>
-<li>将就业变化按$0.25工资区间分解</li>
-<li>使用事件窗口前后对比</li>
-<li>提供对上尾效应的检验</li>
-</ul>
-<h3 id="结果-Results"><a href="#结果-Results" class="headerlink" title="结果(Results)"></a>结果(Results)</h3><p><strong>核心发现1:总体就业效应接近零</strong></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>指标</th>
-<th>估计值</th>
-<th>标准误</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>受影响工人就业变化</td>
-<td>+2.8%</td>
-<td>(2.9%)</td>
-</tr>
-<tr>
-<td>就业弹性(相对于自身工资)</td>
-<td>0.41</td>
-<td>(0.43)</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>→ 在95%置信水平下,排除低于-0.45的弹性</p>
-<p><strong>核心发现2:工资溢出效应显著</strong></p>
-<ul>
-<li>溢出效应向上延伸至最低工资以上约$3</li>
-<li>总体工资增长中约40%来自溢出效应</li>
-<li><strong>不对称性</strong>:留任工人获得显著工资溢出,但新进入者没有</li>
-</ul>
-<p><strong>核心发现3:行业异质性</strong></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>行业</th>
-<th>就业弹性</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>可贸易部门(制造业)</td>
-<td>-1.4</td>
-<td>显著负效应</td>
-</tr>
-<tr>
-<td>不可贸易部门(餐饮、零售)</td>
-<td>≈0</td>
-<td>几乎无效应</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>→ 行业组成是决定最低工资就业效应的关键因素</p>
-<p><strong>核心发现4:人口群体异质性</strong></p>
-<ul>
-<li>按教育和年龄分组,未发现低技能工人被高技能工人替代的证据</li>
-<li>不同人口群体的就业效应大多接近零且不显著</li>
-<li>表明最低工资政策的好处理广泛共享</li>
-</ul>
-<p><strong>核心发现5:对Meer and West (2016)发现的解释</strong></p>
-<ul>
-<li>该研究使用双向固定效应发现大的负就业估计</li>
-<li>分解分析显示这一负效应由工资分布上尾的不大幅度下降驱动</li>
-<li>问题来源:1980年代和1990年代早期样本中包含的时期混杂因素</li>
-<li>1992年后,各种标准规范几乎没有就业减少的证据</li>
-</ul>
-<hr>
-<h2 id="4-结论-Conclusion"><a href="#4-结论-Conclusion" class="headerlink" title="4. 结论(Conclusion)"></a>4. 结论(Conclusion)</h2><h3 id="核心结论"><a href="#核心结论" class="headerlink" title="核心结论"></a>核心结论</h3><ol>
-<li><p><strong>最低工资对低工资工作数量的总体影响基本为零</strong>:五年观察期内,低工资工作数量基本保持不变</p>
-</li>
-<li><p><strong>最低工资的直接工资效应被适度工资溢出放大</strong>:溢出效应约占总体工资增长的40%</p>
-</li>
-<li><p><strong>就业效应不能用劳动力替代解释</strong>:不同教育和年龄群体的替代效应证据不成立</p>
-</li>
-<li><p><strong>在更高最低工资水平下也未发现就业减少证据</strong>:但确实发现可贸易部门(制造业)减少的迹象</p>
-</li>
-<li><p><strong>方法论贡献</strong>:EB-bunching方法提供了透明且稳健的估计最低工资就业效应的方法</p>
-</li>
-</ol>
-<h3 id="对领域的贡献"><a href="#对领域的贡献" class="headerlink" title="对领域的贡献"></a>对领域的贡献</h3><ol>
-<li><strong>澄清方法论争议</strong>:解释了为什么双向固定效应和事件研究方法产生不同结果</li>
-<li><strong>提供新的实证证据</strong>:使用更全面的数据和更细粒度的分解</li>
-<li><strong>扩展工资溢出分析</strong>:提供了关于溢出机制(相对工资关系 vs 外部选择价值)的证据</li>
-<li><strong>政策意义</strong>:为$15最低工资运动提供实证支持</li>
-</ol>
-<hr>
-<h2 id="5-未来研究方向-Future-work"><a href="#5-未来研究方向-Future-work" class="headerlink" title="5. 未来研究方向(Future work)"></a>5. 未来研究方向(Future work)</h2><h3 id="论文提及的拓展方向"><a href="#论文提及的拓展方向" class="headerlink" title="论文提及的拓展方向"></a>论文提及的拓展方向</h3><ol>
-<li><p><strong>更高最低工资水平的研究</strong>:当Kaitz指数超过59%时会发生什么?需要更高最低工资的州的 variation</p>
-</li>
-<li><p><strong>长期效应</strong>:本研究关注5年窗口,更长期效应仍需研究</p>
-</li>
-<li><p><strong>其他国家的证据</strong>:美国结果的国际可比性</p>
-</li>
-</ol>
-<h3 id="思考的下一步研究"><a href="#思考的下一步研究" class="headerlink" title="思考的下一步研究"></a>思考的下一步研究</h3><ol>
-<li><p><strong>动态一般均衡效应</strong>:行业层面的一般均衡调整如何影响就业?</p>
-</li>
-<li><p><strong>非正规就业</strong>:最低工资对非正规经济(零工经济)的影响</p>
-</li>
-<li><p><strong>非工资效应</strong>:最低工资对工作条件、培训机会等非工资方面的影响</p>
-</li>
-<li><p><strong>家庭效应</strong>:最低工资对家庭收入分配和儿童贫困的影响</p>
-</li>
-<li><p><strong>政治经济学</strong>:最低工资设定的决定因素及其政治经济学含义</p>
-</li>
-</ol>
-<hr>
-<h2 id="6-学术思考"><a href="#6-学术思考" class="headerlink" title="6. 学术思考"></a>6. 学术思考</h2><h3 id="核心学术问题"><a href="#核心学术问题" class="headerlink" title="核心学术问题"></a>核心学术问题</h3><ol>
-<li><p><strong>竞争性 vs monopsony劳动力市场的边界</strong></p>
-<ul>
-<li>本研究发现总体就业效应接近零</li>
-<li>这是否意味着低工资劳动力市场更接近monopsony?</li>
-<li>还是正负效应相互抵消?</li>
-</ul>
-</li>
-<li><p><strong>工资溢出的机制</strong></p>
-<ul>
-<li>研究发现溢出效应在最低工资以上约$3处消失</li>
-<li>且对留任工人和新进入者影响不对称</li>
-<li>这更支持”相对工资关系假设”而非”外部选择价值假设”</li>
-<li>但这是否意味着企业内部存在显著的工资刚性?</li>
-</ul>
-</li>
-<li><p><strong>可贸易 vs 不可贸易部门的差异</strong></p>
-<ul>
-<li>制造业显著负效应 vs 零售餐饮零效应</li>
-<li>这是否意味着全球化压力降低了美国低技能工人的谈价能力?</li>
-<li>还是反映了不同的劳动力市场结构?</li>
-</ul>
-</li>
-<li><p><strong>EB-bunching方法的普适性</strong></p>
-<ul>
-<li>将总体效应分解到各工资区间</li>
-<li>提供了”透明”的估计方式</li>
-<li>是否可以推广到其他政策评估?</li>
-</ul>
-</li>
-<li><p><strong>对CBO政策分析的启示</strong></p>
-<ul>
-<li>CBO使用青少年弹性来推断总体影响</li>
-<li>本研究表明青少年可能是受最低工资影响最深的群体</li>
-<li>这是否意味着CBO的方法实际上低估了不确定性?</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2 id="7-下一步用户可能提的问题"><a href="#7-下一步用户可能提的问题" class="headerlink" title="7. 下一步用户可能提的问题"></a>7. 下一步用户可能提的问题</h2><ol>
-<li><p><strong>识别策略的有效性</strong>:如何检验平行趋势假设?事件前趋势检验的结果如何?</p>
-</li>
-<li><p><strong>测量误差的影响</strong>:CPS数据中的测量误差如何影响估计?特别是对工资分布尾部的测量?</p>
-</li>
-<li><p><strong>Kaitz指数的具体含义</strong>:Kaitz指数达到59%时会发生什么理论预测?</p>
-</li>
-<li><p><strong>对理论模型的启示</strong>:这些发现如何区分竞争性模型和monopsony模型?</p>
-</li>
-<li><p><strong>政策外部有效性</strong>:基于1979-2016年数据的发现在2020年代是否仍然适用?劳动力市场结构是否发生了根本性变化?</p>
-</li>
-<li><p><strong>对工人流动的动态效应</strong>:最低工资是否影响了低工资工人的职业发展轨迹?</p>
-</li>
-<li><p><strong>雇主反应的非工资渠道</strong>:雇主除了调整就业和工资外,是否在工时、工作条件、培训等方面做出了调整?</p>
-</li>
-<li><p><strong>与Dube et al. (2010) NJ快餐业研究的关系</strong>:为什么NJ快餐业研究发现了正效应,而本研究对所有行业的汇总发现零效应?</p>
-</li>
-<li><p><strong>对州际差异的控制</strong>:如何排除州级经济基本面对结果的混杂影响?各州经济多样性的作用是什么?</p>
-</li>
-<li><p><strong>最低工资的收入分配效应</strong>:最低工资如何与税法、其他转移支付计划相互作用以影响收入不平等?</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>劳动经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -5737,218 +5737,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Regulating Conglomerates: Evidence From an Energy Conservation Program in China — 深度阅读笔记 — AER</title>
-    <url>/posts/chen2021/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息"><a href="#文献信息" class="headerlink" title="文献信息"></a>文献信息</h2><ul>
-<li><strong>标题</strong>: Regulating Conglomerates: Evidence from an Energy Conservation Program in China</li>
-<li><strong>作者</strong>: Qiaoyi Chen (复旦大学), Zhao Chen (复旦大学), Zhikuo Liu (复旦大学), Juan Carlos Suárez Serrato (Duke大学 &amp; NBER), Daniel Yi Xu (Duke大学 &amp; NBER)</li>
-<li><strong>年份</strong>: 2021</li>
-<li><strong>来源</strong>: American Economic Review (AER)</li>
-<li><strong>DOI</strong>: 未提供<span id="more"></span>
-</li>
-</ul>
-<hr>
-<h2 id="引言-背景和意义"><a href="#引言-背景和意义" class="headerlink" title="引言(背景和意义)"></a>引言(背景和意义)</h2><h3 id="领域基础知识"><a href="#领域基础知识" class="headerlink" title="领域基础知识"></a>领域基础知识</h3><p>能源 regulation和经济活动的关系是环境经济学研究的核心议题之一.在发展中国家,特别是中国这样的新兴经济体,政府面临着平衡经济增长与工业化负面效应(如碳排放和污染)的艰巨挑战.中国的工业能源消耗在全球占据主导地位,其工业能源使用不仅在国内经济中举足轻重,更对全球气候变化产生深远影响.</p>
-<p>能源效率 regulation 的设计面临多重复杂性:首先,大型工业企业往往嵌入更广泛的商业网络(企业集团/ conglomerate),这使得监管政策的评估必须考虑集团内部的资源配置和 spillover 效应;其次,监管政策的有效性取决于企业响应的边际成本_是通过提高能源效率、降低产出,还是将生产转移到未受监管的关联企业来实现减排;第三,市场竞争和产业组织结构会放大或缩小政策的实际效果,产生所谓的”泄漏”(leakage)效应.</p>
-<p>本文研究的”千家企业”(Top-1,000)项目是中国”十一五”规划(2006-2011)期间最重要的能源节约政策之一.该项目针对能源密集型行业中的最大能耗企业,目标是到2011年实现工业能源强度(单位GDP能耗)降低20%的宏伟目标.</p>
-<h3 id="研究的主要背景"><a href="#研究的主要背景" class="headerlink" title="研究的主要背景"></a>研究的主要背景</h3><p><strong>中国能源消耗的严峻形势</strong>:进入21世纪初期,中国的工业能源消耗已经远远超过其他主要经济体.以图1为参考,能源 regulation 对国家和全球都具有重要意义.这一背景下,理解大型能源监管政策的效果对于制定更有效的环境政策至关重要.</p>
-<p><strong>千家企业项目的设计逻辑</strong>:该项目设计参照了发达国家自愿协议项目的经验,相信企业能够通过提高能源效率显著减少能源使用.项目名称”千家企业”指的是9个能源密集型行业中能源消耗超过18万吨标准煤的1008家工业企业.这些企业的总能源消耗在2004年达到6.7亿吨标准煤,占中国工业能源消费的47%和全国能源消费的33%.</p>
-<p><strong>政策执行的制度背景</strong>:项目采用自上而下的目标分解机制:中央政府向每个省级政府分配能源使用减排目标,省级官员再向每个千家企业分配个人能源使用配额.千家企业须接受第三方年度能源审计,并可能面临工业和信息化部以及国家能源管理局的额外审计.</p>
-<h3 id="作者的问题意识"><a href="#作者的问题意识" class="headerlink" title="作者的问题意识"></a>作者的问题意识</h3><p>现有政策评估存在关键缺陷:官方评估主要依赖千家企业自身的能源使用变化,得出项目高度有效的结论.然而,这一评估方法存在两个重要问题:</p>
-<p>第一,它忽视了企业集团内部的生产再分配效应.受监管企业可能不是通过提高能源效率,而是通过将生产转移到同一企业集团内不受监管的关联企业来满足监管要求.这种行为会导致监管政策出现”集团泄漏”(conglomerate leakage).</p>
-<p>第二,它忽视了市场竞争效应.受监管企业因减产而让出的市场份额可能被同行业不受监管的竞争对手获取,导致总体能源节约效果低于预期,即”市场泄漏”(market leakage).</p>
-<p>本文核心研究问题:千家企业项目对能源消耗的实际影响如何?企业集团内部的 production shifting 在多大程度上削弱了政策效果?考虑到这些 spillover 效应,政策的福利含义是什么?</p>
-<h3 id="研究意义"><a href="#研究意义" class="headerlink" title="研究意义"></a>研究意义</h3><p><strong>理论贡献</strong>:本文将 reduced-form 计量经济学方法与产业 equilibrium 模型相结合,提供了一个分析能源 regulation 的一般框架.这一框架能够同时刻画企业集团内部和市场竞争层面的 spillover 效应,为准确评估能源政策的真实效果提供了方法论支撑.</p>
-<p><strong>政策含义</strong>:研究发现对设计更有效的能源 regulation 具有直接启示.如果能够利用公开可得的企业集团所有权信息,针对整个企业集团而不仅是单个企业制定监管规则,可以显著提高政策的能源节约效果.</p>
-<p><strong>发展经济学价值</strong>:在印度、中国和拉丁美洲,企业集团的重要性日益上升(Ramachandran, Manikandan and Pant, 2013).本文的发现对于理解企业集团如何响应政府监管具有普遍的参考价值.</p>
-<h2 id="内容及结构-论文结构"><a href="#内容及结构-论文结构" class="headerlink" title="内容及结构(论文结构)"></a>内容及结构(论文结构)</h2><p>本文采用层层递进的研究设计,共分为7个主要部分:</p>
-<p><strong>第一部分:政策背景与数据</strong>(Policy Background and Data).详细描述千家企业能源节约项目,介绍用于测量经济活动和能源使用的数据集,以及构建中国企业集团所有权网络的研究策略.</p>
-<p><strong>第二部分:政策对受监管企业的影响</strong>(Effects of the Policy on Regulated Firms).使用双重差分法(difference-in-differences)识别政策效果,证明受监管企业通过降低产出而非提高能源效率来满足监管要求.</p>
-<p><strong>第三部分:企业集团内部的溢出效应</strong>(Within-Conglomerate Spillovers).利用详细的商业注册数据,发现受监管企业集团将生产转移到未受监管的关联企业,揭示了40%的产出下降被集团内部吸收.</p>
-<p><strong>第四部分:产业 equilibrium 模型</strong>(Industry Equilibrium Model).构建包含企业集团生产和市场 spillover 的产业 equilibrium 模型,为第五部分的模型估计和第六部分的福利分析奠定基础.</p>
-<p><strong>第五部分:模型估计</strong>(Model Estimation).通过匹配企业规模分布和集团内部生产分配的 pre-regulation 特征来估计模型参数.</p>
-<p><strong>第六部分:福利分析</strong>(Welfare Analysis).量化政策的 aggregate 和 welfare 效果,比较不同政策工具(扩展监管范围、依赖性能源税、基于公开信息的集团层面 regulation)的效果.</p>
-<p><strong>第七部分:稳健性检验</strong>(Robustness).检验模型结果对替代模型设定和参数值的敏感性,包括考虑能源效率改善可能性和 pre-existing 能源效率差异的模型扩展.</p>
-<h2 id="正文-逻辑梳理"><a href="#正文-逻辑梳理" class="headerlink" title="正文(逻辑梳理)"></a>正文(逻辑梳理)</h2><h3 id="背景与挑战"><a href="#背景与挑战" class="headerlink" title="背景与挑战"></a>背景与挑战</h3><h4 id="中国的能源困境与政策应对"><a href="#中国的能源困境与政策应对" class="headerlink" title="中国的能源困境与政策应对"></a>中国的能源困境与政策应对</h4><p>中国作为世界最大的能源消费国,其工业能源消耗占全国总能耗的70%.在快速工业化和城市化的背景下,如何在保持经济增长的同时控制能源消耗和碳排放,是中国政府面临的核心政策挑战.2006年启动的”十一五”规划将能源强度降低20%作为约束性目标,这一目标通过多个政策和行业计划来实现,其中千家企业项目是最重要的举措之一.</p>
-<p>千家企业项目的设计体现了发展中国家的政策创新.与发达国家主要依赖自愿协议和市场激励不同,中国的项目采用了强有力的行政执行机制.项目针对9个能源密集型行业的1008家超大型企业,这些企业的能源消耗占工业总能耗的47%.由于政策于2006年宣布,但根据企业2004年的 retrospectively 能源消耗数据选择参与者,企业无法操纵项目参与名单,这为准 quasi-experimental 识别策略提供了外生性来源.</p>
-<h4 id="企业集团的重要性"><a href="#企业集团的重要性" class="headerlink" title="企业集团的重要性"></a>企业集团的重要性</h4><p>理解千家企业项目效果的关键在于认识到这些受监管企业并非孤立运营,而是嵌入在复杂的企业集团网络中.通过中国工商行政管理总局的行政注册数据库(CARD),作者能够追踪这些企业的所有权关系.</p>
-<p>研究发现,千家企业企业平均拥有2.45个同行业内的关联企业.由于千家企业通常是各行业的最大企业,其关联企业的规模明显较小,平均产出仅为受监管企业的19.3%.这一事实意味着企业集团可能有显著的 scope 通过关联企业之间的生产替代来响应监管.</p>
-<p>然而,完全替代的可能性受到两个因素制约:首先,关联企业规模较小,无法完全吸收受监管企业的产出下降;其次,同一4-digit行业内同集团企业之间的 production shifting 受到技术和物流约束.</p>
-<h4 id="识别策略的核心挑战"><a href="#识别策略的核心挑战" class="headerlink" title="识别策略的核心挑战"></a>识别策略的核心挑战</h4><p>准确评估千家企业项目效果面临三个层面的识别挑战:</p>
-<p><strong>第一层:受监管企业 vs. 对照企业</strong>.理想的反事实是:如果没有千家企业项目,受监管企业的能源使用和产出会有怎样的变化?作者使用”万家”(Top-10,000)企业作为对照组_这些企业在2011年后才被纳入监管,因此2011年之前的时期提供了 quasi-experimental variation.</p>
-<p><strong>第二层:集团内部的 production shifting</strong>.即使能够识别受监管企业相对于对照企业的效果,这仍然无法捕捉企业集团内部的再分配效应.受监管企业可能将生产转移到同一集团内的关联企业,从而降低政策的整体能源节约效果.</p>
-<p><strong>第三层:市场竞争效应</strong>.受监管企业的减产可能导致竞争对手获得更多市场份额,这种市场层面的泄漏也会影响政策的 aggregate 效果.</p>
-<h3 id="方法论-Reduced-Form-分析"><a href="#方法论-Reduced-Form-分析" class="headerlink" title="方法论:Reduced-Form 分析"></a>方法论:Reduced-Form 分析</h3><h4 id="双重差分设计"><a href="#双重差分设计" class="headerlink" title="双重差分设计"></a>双重差分设计</h4><p>作者采用多层双重差分策略来识别政策的直接效应和溢出效应.</p>
-<p><strong>第一个双重差分</strong>:比较受监管的千家企业与同行业但不受监管的万家企业的差异.这是标准的 treatment vs. control 比较,假设在政策实施前,两组企业的能源使用和产出趋势相似.</p>
-<p><strong>事件研究规范</strong>(Event-Study Specification)用于检验平行趋势假设:</p>
-<script type="math/tex; mode=display">Y_{ijklt} = \sum_{\tau \neq 2006} \beta_\tau \times Treat_i \times Year_\tau + \alpha_i + \eta_{jt} + \delta_{kt} + \varepsilon_{ijklt}</script><p>其中 $Y<em>{ijklt}$ 是企业 $i$ 在行业 $j$、省份 $k$、年份 $t$ 的 outcome 变量,$Treat_i$ 是处理组指示变量,$\alpha_i$ 是企业固定效应,$\eta</em>{jt}$ 是行业×年份固定效应,$\delta_{kt}$ 是省份×年份固定效应.</p>
-<p>图4展示了 event-study 结果:处理组和对照组企业在政策实施前的趋势高度一致,支持平行趋势假设.政策实施后,千家企业的能源使用相对下降约16%.</p>
-<p><strong>第二个双重差分</strong>:比较同一企业集团内的关联企业与其他不受监管企业的差异.这一设计利用了企业集团所有权网络信息,识别集团内部的溢出效应.</p>
-<h4 id="主要-Reduced-Form-发现"><a href="#主要-Reduced-Form-发现" class="headerlink" title="主要 Reduced-Form 发现"></a>主要 Reduced-Form 发现</h4><p><strong>发现一:能源使用下降源于产出降低,而非效率提升</strong></p>
-<p>表3报告了政策对能源使用和产出的影响.结果显示:</p>
-<ul>
-<li>能源使用下降12%-16%,在不同的固定效应规范下保持稳健</li>
-<li>产出(以收入衡量)下降10%-23%</li>
-<li><strong>能源效率(产出/能源使用)没有显著变化</strong></li>
-</ul>
-<p>这一发现具有重要的政策含义:企业选择通过降低产出来满足监管要求,而非投资于能源效率提升.作者认为这可能是因为能源效率投资需要 long-lived capital 的更新,面临技术不确定性和中国政府政策承诺不确定性的制约.</p>
-<p><strong>发现二:集团内部生产转移</strong></p>
-<p>利用 CARD 数据,作者识别了46,178家与千家企业有关联关系的企业.将这些关联企业与万家数据库匹配后,得到2,466家在同行业的关联企业.</p>
-<p>双重差分分析显示:</p>
-<ul>
-<li>关联企业的产出增加约12%</li>
-<li>关联企业的能源使用增加,但没有能源效率变化</li>
-<li>只有当关联企业的4-digit行业与受监管企业相同时,才出现显著的生产增加</li>
-<li>在其他行业的关联企业作为 placebo test,未发现产出增加</li>
-</ul>
-<p>基于规模差异(关联企业平均规模仅为受监管企业的19.3%),作者计算出企业集团能够将受监管企业40%的产出下降转移到关联企业.</p>
-<p><strong>发现三:市场层面的竞争效应</strong></p>
-<p>作者提供了市场泄漏的证据:同行业但不受监管的企业在政策实施后产出增加.这与千家企业减产让出市场份额的预期一致.</p>
-<h3 id="结构模型-产业-Equilibrium-模型"><a href="#结构模型-产业-Equilibrium-模型" class="headerlink" title="结构模型:产业 Equilibrium 模型"></a>结构模型:产业 Equilibrium 模型</h3><h4 id="模型设定"><a href="#模型设定" class="headerlink" title="模型设定"></a>模型设定</h4><p>为了量化政策的 aggregate 和 welfare 效果,作者构建了一个包含以下特征的产业 equilibrium 模型:</p>
-<p><strong>需求侧</strong>:使用常替代弹性(CES)聚合器描述消费者对不同企业产品的偏好:</p>
-<script type="math/tex; mode=display">U = \left( \int_\Omega Q(\omega)^{\frac{\sigma-1}{\sigma}} d\omega \right)^{\frac{\sigma}{\sigma-1}}</script><p>其中 $\sigma &gt; 1$ 是替代弹性,$\omega$ 表示企业产品.</p>
-<p><strong>供给侧</strong>:每个企业生产单一产品面临常数边际成本 $c$ 和冰山成本 $\tau$.企业可以选择在受监管状态(承担能源监管成本)或非监管状态下运营.</p>
-<p><strong>企业集团结构</strong>:模型明确允许企业在同一企业集团内共享投入和转移生产.设 $\lambda<em>s$ 表示企业集团 $s$ 内的企业数量,$\omega</em>{s,k}$ 表示企业 $k$ 在集团 $s$ 中的相对规模.</p>
-<p><strong>关键参数</strong>:模型需要估计替代弹性 $\sigma$、集团内部替代弹性 $\gamma$、能源监管成本 $\kappa$ 等参数.</p>
-<h4 id="模型估计"><a href="#模型估计" class="headerlink" title="模型估计"></a>模型估计</h4><p>作者通过匹配以下矩条件来估计模型:</p>
-<ol>
-<li><strong>企业规模分布</strong>:模型能够再现企业规模的集中度</li>
-<li><strong>集团内部生产分配</strong>:模型匹配观测到的集团内部相对规模分布</li>
-<li><strong>Reduced-form 估计</strong>:模型 out-of-sample 验证双重差分估计结果</li>
-</ol>
-<p>模型与双重差分估计的一致性验证了模型正确捕捉了企业集团内部和市场层面的 spillover 效应的定量重要性.</p>
-<h3 id="福利分析"><a href="#福利分析" class="headerlink" title="福利分析"></a>福利分析</h3><h4 id="政策效果的量化"><a href="#政策效果的量化" class="headerlink" title="政策效果的量化"></a>政策效果的量化</h4><p>基于估计的模型,作者量化了千家家企业项目的 aggregate 效果:</p>
-<ul>
-<li><strong>能源节约</strong>:政策使总能源使用降低4%,相当于每年减少约4800万吨标准煤</li>
-<li><strong>社会成本</strong>:影子成本约160美元/吨碳(当量)</li>
-</ul>
-<p>关键机制:企业集团通过内部 production shifting 降低了千家企业的影子监管成本约30%.这是因为集团能够将部分产出转移到关联企业,从而部分抵消了对受监管企业的直接影响.</p>
-<h4 id="替代政策的模拟"><a href="#替代政策的模拟" class="headerlink" title="替代政策的模拟"></a>替代政策的模拟</h4><p>作者使用模型比较了三种替代政策:</p>
-<p><strong>政策A:扩展千家家企业项目</strong>.将更多企业纳入监管范围,但保持针对单个企业的监管结构.结果显示这只能带来边际的能源节约增加.</p>
-<p><strong>政策B:规模依赖性能源税</strong>.对所有属于有千家企业存在的企业集团的企业征收能源税.结果接近 universal energy tax 的效果.</p>
-<p><strong>政策C:基于公开信息的集团层面 regulation</strong>.利用公开可获得的企业所有权信息,针对整个企业集团制定监管规则.结果显示可以在相同 welfare 成本下将能源节约提高10%.</p>
-<p><strong>核心洞察</strong>:由于企业集团内部的 production shifting 是一种重要的泄漏渠道,针对 conglomerate 层面的监管能够更有效地实现能源节约目标.</p>
-<h3 id="稳健性检验"><a href="#稳健性检验" class="headerlink" title="稳健性检验"></a>稳健性检验</h3><p>作者进行了广泛的稳健性检验:</p>
-<ol>
-<li><p><strong>能源效率改善的长期可能性</strong>:扩展模型允许企业响应监管投资于能源效率,发现即使在长期视角下,能源效率改善仍然成本高昂</p>
-</li>
-<li><p><strong>Pre-existing 能源效率差异</strong>:假设千家企业比所有其他企业能源效率低20%,重新计算社会成本约133美元/吨碳</p>
-</li>
-<li><p><strong>参数敏感性</strong>:不同的 $\sigma$、$\gamma$ 和 $\kappa$ 参数值下的稳健性</p>
-</li>
-<li><p><strong>数据构建的敏感性</strong>:使用行政税务数据填补缺失值、限制样本至样本期内持续存在的企业等</p>
-</li>
-</ol>
-<h2 id="结论-Conclusion"><a href="#结论-Conclusion" class="headerlink" title="结论(Conclusion)"></a>结论(Conclusion)</h2><h3 id="核心研究结论"><a href="#核心研究结论" class="headerlink" title="核心研究结论"></a>核心研究结论</h3><p>本文通过对千家企业能源节约项目的深入研究,得出以下核心结论:</p>
-<p><strong>第一,监管企业通过减产而非提高能源效率来响应政策</strong>.这一发现揭示了能源监管的边际成本结构,表明能源效率投资的成本远高于简单地接受产出损失.</p>
-<p><strong>第二,企业集团内部的 production shifting 是政策效果的重要泄漏渠道</strong>.受监管企业集团将40%的产出下降转移到未受监管的关联企业,这一发现对仅关注受监管企业效果的政策评估提出了挑战.</p>
-<p><strong>第三,市场竞争效应进一步削弱了政策的能源节约效果</strong>.受监管企业减产让出的市场份额被竞争对手获取,降低了政策的 aggregate 效果.</p>
-<p><strong>第四,政策的 welfare 合理性取决于社会碳成本</strong>.当社会碳成本超过160美元/吨碳时,千家企业项目才能改善 welfare,这一结果对当前碳定价政策具有直接启示.</p>
-<p><strong>第五,集团层面的监管设计能够显著提高政策效果</strong>.利用公开可获得的企业所有权信息,针对整个企业集团制定监管规则,可以在相同 welfare 成本下将能源节约提高10%.</p>
-<h3 id="对领域的贡献"><a href="#对领域的贡献" class="headerlink" title="对领域的贡献"></a>对领域的贡献</h3><p><strong>对能源经济学 literature 的贡献</strong>:本文提供了迄今为止最全面的中国能源监管政策评估,揭示了企业集团作为重要但此前被忽视的响应渠道的作用.</p>
-<p><strong>对环境 regulation literature 的贡献</strong>:本文将 reduced-form 和 structural 方法相结合,为分析环境 regulation 的 spillover 效应提供了可推广的框架.</p>
-<p><strong>对产业组织 literature 的贡献</strong>:本文揭示了企业集团作为一种特殊的产业组织形式如何影响政府监管的有效性.</p>
-<h3 id="政策建议"><a href="#政策建议" class="headerlink" title="政策建议"></a>政策建议</h3><p><strong>短期建议</strong>:完善千家家企业项目的监管设计,考虑集团层面的信息披露要求和监管规则.</p>
-<p><strong>中期建议</strong>:扩展能源监管范围时,应优先考虑基于集团层面的 targeting,而非简单地增加受监管企业数量.</p>
-<p><strong>长期建议</strong>:建立企业所有权信息的公开数据库,为更有效的监管设计提供信息基础.</p>
-<h2 id="未来研究方向提及"><a href="#未来研究方向提及" class="headerlink" title="未来研究方向提及"></a>未来研究方向提及</h2><p>作者在论文中提出了若干值得进一步研究的方向:</p>
-<p><strong>Long-run 能源效率改善</strong>:模型扩展表明长期来看企业可能投资于能源效率,但时间和成本不确定性仍然很高.未来的研究可以深入分析能源效率投资决策的动态过程.</p>
-<p><strong>空间 spillover</strong>:本文主要关注集团内部和国家层面的效应,省份间的 production substitution 和污染转移也是重要议题.</p>
-<p><strong>行政执行约束</strong>:政府对监管范围和监管强度的行政约束是政策设计的重要摩擦来源,值得进一步研究.</p>
-<h2 id="未来研究方向思考"><a href="#未来研究方向思考" class="headerlink" title="未来研究方向思考"></a>未来研究方向思考</h2><p>基于对本文的深入理解,以下是值得进一步探索的研究方向:</p>
-<p><strong>第一,集团所有权网络的动态演化</strong>.本文使用2018年的 CARD 数据构建所有权网络,无法捕捉政策实施后的网络调整.未来的研究可以分析监管如何驱动企业集团的重组和整合.</p>
-<p><strong>第二,跨国比较研究</strong>.不同国家的企业集团结构和监管执行机制存在显著差异.将中国的发现与印度、巴西等其他大型新兴经济体进行比较,可以揭示企业集团响应政府监管的一般性模式.</p>
-<p><strong>第三,供应链溢出效应</strong>.本文主要关注同一企业集团内部的横向溢出,但受监管企业的上游供应商和下游客户也可能受到影响.考虑供应链关系的溢出效应可以提供更完整的政策效果图景.</p>
-<p><strong>第四,碳定价与能源监管的相互作用</strong>.当存在碳定价机制时,能源监管政策的 marginal cost 会相应改变.未来的研究可以分析这两种政策工具的交互作用和最优组合.</p>
-<p><strong>第五,企业异质性的深入分析</strong>.本文假设企业是同质的,但不同类型的企业(国有企业 vs. 民营企业、外资企业 vs. 内资企业)可能有不同的响应模式.分析这些异质性可以提供更精细的政策建议.</p>
-<h2 id="学术思考"><a href="#学术思考" class="headerlink" title="学术思考"></a>学术思考</h2><p>本文引发了几个值得深入思考的学术问题:</p>
-<p><strong>关于识别策略的思考</strong>:双重差分方法的核心假设是处理组和对照组在政策实施前具有相同的趋势.然而,在中国特有的政治经济环境下,处理组企业可能因为”树大招风”而受到更多关注,或者反过来因为政策透明度而获得更好的监管信息.这些微观机制是否会影响平行趋势假设?</p>
-<p><strong>关于企业行为假设的思考</strong>:本文假设企业是理性的,能够最优地配置集团内部的资源.然而,在现实中,企业集团内部的资源配置还受到代理问题、政治联系和内部权力斗争等因素的影响.如何在模型中更好地刻画这些制度因素?</p>
-<p><strong>关于福利评估的思考</strong>:本文采用社会碳成本(SCC)作为 welfare 评估的核心参数,但 SCC 本身存在很大的不确定性.不同的 SCC 假设会导致不同的政策评价,这是否意味着 welfare 分析过于依赖参数设定?</p>
-<p><strong>关于政策可复制性的思考</strong>:千家企业项目的成功在很大程度上依赖于中国的特殊制度环境_强大的行政执行能力、将环境绩效与官员晋升挂钩的考核机制.将其经验复制到其他发展中国家时,需要考虑制度能力差异.</p>
-<h2 id="下一步用户可能提的问题"><a href="#下一步用户可能提的问题" class="headerlink" title="下一步用户可能提的问题"></a>下一步用户可能提的问题</h2><p>基于论文内容和上述分析,以下是用户接下来可能问的问题:</p>
-<ol>
-<li><p><strong>千家企业项目中,哪些行业的企业能源效率响应最为显著?是否存在行业异质性?</strong></p>
-</li>
-<li><p><strong>企业集团将生产转移到关联企业时,是否考虑了关联企业所在地区的环境成本(污染转移)?</strong></p>
-</li>
-<li><p><strong>作者提到的160美元/吨碳的社会碳成本,如何与当前国际碳市场价格(如欧洲碳市场的50-100欧元/吨)进行比较?</strong></p>
-</li>
-<li><p><strong>在模型中假设的 CES 需求替代弹性 σ 如何估计?不同假设对 welfare 结果的敏感性如何?</strong></p>
-</li>
-<li><p><strong>万家(Top-10,000)企业在2011年后被纳入监管,这是否意味着万家可以作为”第二阶段”的处理组?研究设计是否支持这种连续处理效应的分析?</strong></p>
-</li>
-<li><p><strong>作者提到国有企业更可能被纳入千家企业项目,这是否与国企的政治联系有关?政治联系如何影响企业的能源效率投资决策?</strong></p>
-</li>
-<li><p><strong>对于民营企业占主导的行业(如纺织业),能源监管的效果是否有所不同?所有制结构如何调节政策效果?</strong></p>
-</li>
-<li><p><strong>模型中考虑能源效率改善的扩展模型,是否区分了短期和长期效应?长期效应的时间 horizon 是多久?</strong></p>
-</li>
-<li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD 数据的质量和覆盖范围如何保证?</strong></p>
-</li>
-<li><p><strong>在中国”双碳”目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p>
-</li>
-</ol>
-<h2 id="学术思考-1"><a href="#学术思考-1" class="headerlink" title="学术思考"></a>学术思考</h2><p>本文引发了几个值得深入思考的学术问题:</p>
-<p><strong>关于识别策略的思考</strong>:双重差分方法的核心假设是处理组和对照组在政策实施前具有相同的趋势.然而,在中国特有的政治经济环境下,处理组企业可能因为”树大招风”而受到更多关注,或者反过来因为政策透明度而获得更好的监管信息.这些微观机制是否会影响平行趋势假设?</p>
-<p><strong>关于企业行为假设的思考</strong>:本文假设企业是理性的,能够最优地配置集团内部的资源.然而,在现实中,企业集团内部的资源配置还受到代理问题、政治联系和内部权力斗争等因素的影响.如何在模型中更好地刻画这些制度因素?</p>
-<p><strong>关于福利评估的思考</strong>:本文采用社会碳成本(SCC)作为 welfare 评估的核心参数,但 SCC 本身存在很大的不确定性.不同的 SCC 假设会导致不同的政策评价,这是否意味着 welfare 分析过于依赖参数设定?</p>
-<p><strong>关于政策可复制性的思考</strong>:千家企业项目的成功在很大程度上依赖于中国的特殊制度环境_强大的行政执行能力、将环境绩效与官员晋升挂钩的考核机制.将其经验复制到其他发展中国家时,需要考虑制度能力差异.</p>
-<h2 id="下一步用户可能提的问题-1"><a href="#下一步用户可能提的问题-1" class="headerlink" title="下一步用户可能提的问题"></a>下一步用户可能提的问题</h2><p>基于论文内容和上述分析,以下是用户接下来可能问的问题:</p>
-<ol>
-<li><p><strong>千家企业项目中,哪些行业的企业能源效率响应最为显著?是否存在行业异质性?</strong></p>
-</li>
-<li><p><strong>企业集团将生产转移到关联企业时,是否考虑了关联企业所在地区的环境成本(污染转移)?</strong></p>
-</li>
-<li><p><strong>作者提到的160美元/吨碳的社会碳成本,如何与当前国际碳市场价格(如欧洲碳市场的50-100欧元/吨)进行比较?</strong></p>
-</li>
-<li><p><strong>在模型中假设的 CES 需求替代弹性 σ 如何估计?不同假设对 welfare 结果的敏感性如何?</strong></p>
-</li>
-<li><p><strong>万家(Top-10,000)企业在2011年后被纳入监管,这是否意味着万家可以作为”第二阶段”的处理组?研究设计是否支持这种连续处理效应的分析?</strong></p>
-</li>
-<li><p><strong>作者提到国有企业更可能被纳入千家企业项目,这是否与国企的政治联系有关?政治联系如何影响企业的能源效率投资决策?</strong></p>
-</li>
-<li><p><strong>对于民营企业占主导的行业(如纺织业),能源监管的效果是否有所不同?所有制结构如何调节政策效果?</strong></p>
-</li>
-<li><p><strong>模型中考虑能源效率改善的扩展模型,是否区分了短期和长期效应?长期效应的时间 horizon 是多久?</strong></p>
-</li>
-<li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD 数据的质量和覆盖范围如何保证?</strong></p>
-</li>
-<li><p><strong>在中国”双碳”目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p>
-</li>
-</ol>
-<h2 id="下一步用户可能提的问题-2"><a href="#下一步用户可能提的问题-2" class="headerlink" title="下一步用户可能提的问题"></a>下一步用户可能提的问题</h2><p>基于论文内容和上述分析,以下是用户接下来可能问的问题:</p>
-<ol>
-<li><p><strong>千家企业项目中,哪些行业的企业能源效率响应最为显著?是否存在行业异质性?</strong></p>
-</li>
-<li><p><strong>企业集团将生产转移到关联企业时,是否考虑了关联企业所在地区的环境成本(污染转移)?</strong></p>
-</li>
-<li><p><strong>作者提到的160美元/吨碳的社会碳成本,如何与当前国际碳市场价格(如欧洲碳市场的50-100欧元/吨)进行比较?</strong></p>
-</li>
-<li><p><strong>在模型中假设的 CES 需求替代弹性 σ 如何估计?不同假设对 welfare 结果的敏感性如何?</strong></p>
-</li>
-<li><p><strong>万家(Top-10,000)企业在2011年后被纳入监管,这是否意味着万家可以作为”第二阶段”的处理组?研究设计是否支持这种连续处理效应的分析?</strong></p>
-</li>
-<li><p><strong>作者提到国有企业更可能被纳入千家企业项目,这是否与国企的政治联系有关?政治联系如何影响企业的能源效率投资决策?</strong></p>
-</li>
-<li><p><strong>对于民营企业占主导的行业(如纺织业),能源监管的效果是否有所不同?所有制结构如何调节政策效果?</strong></p>
-</li>
-<li><p><strong>模型中考虑能源效率改善的扩展模型,是否区分了短期和长期效应?长期效应的时间 horizon 是多久?</strong></p>
-</li>
-<li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD 数据的质量和覆盖范围如何保证?</strong></p>
-</li>
-<li><p><strong>在中国”双碳”目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>零和思维与美国政治分歧的根源 — 深度阅读笔记 — Chinoy, Nunn, Sequeira &amp; Stantcheva</title>
     <url>/posts/chinoy2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息"><a href="#文献信息" class="headerlink" title="文献信息"></a>文献信息</h2><ul>
@@ -6167,66 +5955,207 @@
       </tags>
   </entry>
   <entry>
-    <title>序列诅咒均衡 — 深度阅读笔记 — Cohen &amp; Li</title>
-    <url>/posts/cohen2026/</url>
+    <title>Regulating Conglomerates: Evidence From an Energy Conservation Program in China — 深度阅读笔记 — AER</title>
+    <url>/posts/chen2021/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息"><a href="#文献信息" class="headerlink" title="文献信息"></a>文献信息</h2><ul>
-<li><strong>标题</strong>: Sequential Cursed Equilibrium</li>
-<li><strong>作者</strong>: Shani Cohen (Harvard), Shengwu Li (Harvard)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3): 934-976</li>
-<li><strong>DOI</strong>: 10.1257/aer.20230309</li>
-<li><strong>难度评估</strong>: 高 - 需要博弈论、行为经济学基础</li>
+<li><strong>标题</strong>: Regulating Conglomerates: Evidence from an Energy Conservation Program in China</li>
+<li><strong>作者</strong>: Qiaoyi Chen (复旦大学), Zhao Chen (复旦大学), Zhikuo Liu (复旦大学), Juan Carlos Suárez Serrato (Duke大学 &amp; NBER), Daniel Yi Xu (Duke大学 &amp; NBER)</li>
+<li><strong>年份</strong>: 2021</li>
+<li><strong>来源</strong>: American Economic Review (AER)</li>
+<li><strong>DOI</strong>: 未提供<span id="more"></span>
+</li>
 </ul>
-<span id="more"></span>
 <hr>
-<h2 id="1-引言（背景和意义）"><a href="#1-引言（背景和意义）" class="headerlink" title="1. 引言（背景和意义）"></a>1. 引言（背景和意义）</h2><h3 id="领域基础知识"><a href="#领域基础知识" class="headerlink" title="领域基础知识"></a>领域基础知识</h3><p><strong>诅咒均衡（Cursed Equilibrium, CE）</strong>：Eyster和Rabin（2005）提出的解概念，玩家忽略其他玩家行为与其类型之间的相关性。</p>
-<p><strong>扩展式博弈（Extensive-Form Games）</strong>：具有时序结构的博弈，玩家依次行动。</p>
-<h3 id="研究的主要背景"><a href="#研究的主要背景" class="headerlink" title="研究的主要背景"></a>研究的主要背景</h3><ol>
-<li><p><strong>标准博弈论假设”三思而后行”</strong>：玩家在决策时会考虑假设性事件的信息</p>
+<h2 id="引言-背景和意义"><a href="#引言-背景和意义" class="headerlink" title="引言(背景和意义)"></a>引言(背景和意义)</h2><h3 id="领域基础知识"><a href="#领域基础知识" class="headerlink" title="领域基础知识"></a>领域基础知识</h3><p>能源 regulation和经济活动的关系是环境经济学研究的核心议题之一.在发展中国家,特别是中国这样的新兴经济体,政府面临着平衡经济增长与工业化负面效应(如碳排放和污染)的艰巨挑战.中国的工业能源消耗在全球占据主导地位,其工业能源使用不仅在国内经济中举足轻重,更对全球气候变化产生深远影响.</p>
+<p>能源效率 regulation 的设计面临多重复杂性:首先,大型工业企业往往嵌入更广泛的商业网络(企业集团/ conglomerate),这使得监管政策的评估必须考虑集团内部的资源配置和 spillover 效应;其次,监管政策的有效性取决于企业响应的边际成本_是通过提高能源效率、降低产出,还是将生产转移到未受监管的关联企业来实现减排;第三,市场竞争和产业组织结构会放大或缩小政策的实际效果,产生所谓的”泄漏”(leakage)效应.</p>
+<p>本文研究的”千家企业”(Top-1,000)项目是中国”十一五”规划(2006-2011)期间最重要的能源节约政策之一.该项目针对能源密集型行业中的最大能耗企业,目标是到2011年实现工业能源强度(单位GDP能耗)降低20%的宏伟目标.</p>
+<h3 id="研究的主要背景"><a href="#研究的主要背景" class="headerlink" title="研究的主要背景"></a>研究的主要背景</h3><p><strong>中国能源消耗的严峻形势</strong>:进入21世纪初期,中国的工业能源消耗已经远远超过其他主要经济体.以图1为参考,能源 regulation 对国家和全球都具有重要意义.这一背景下,理解大型能源监管政策的效果对于制定更有效的环境政策至关重要.</p>
+<p><strong>千家企业项目的设计逻辑</strong>:该项目设计参照了发达国家自愿协议项目的经验,相信企业能够通过提高能源效率显著减少能源使用.项目名称”千家企业”指的是9个能源密集型行业中能源消耗超过18万吨标准煤的1008家工业企业.这些企业的总能源消耗在2004年达到6.7亿吨标准煤,占中国工业能源消费的47%和全国能源消费的33%.</p>
+<p><strong>政策执行的制度背景</strong>:项目采用自上而下的目标分解机制:中央政府向每个省级政府分配能源使用减排目标,省级官员再向每个千家企业分配个人能源使用配额.千家企业须接受第三方年度能源审计,并可能面临工业和信息化部以及国家能源管理局的额外审计.</p>
+<h3 id="作者的问题意识"><a href="#作者的问题意识" class="headerlink" title="作者的问题意识"></a>作者的问题意识</h3><p>现有政策评估存在关键缺陷:官方评估主要依赖千家企业自身的能源使用变化,得出项目高度有效的结论.然而,这一评估方法存在两个重要问题:</p>
+<p>第一,它忽视了企业集团内部的生产再分配效应.受监管企业可能不是通过提高能源效率,而是通过将生产转移到同一企业集团内不受监管的关联企业来满足监管要求.这种行为会导致监管政策出现”集团泄漏”(conglomerate leakage).</p>
+<p>第二,它忽视了市场竞争效应.受监管企业因减产而让出的市场份额可能被同行业不受监管的竞争对手获取,导致总体能源节约效果低于预期,即”市场泄漏”(market leakage).</p>
+<p>本文核心研究问题:千家企业项目对能源消耗的实际影响如何?企业集团内部的 production shifting 在多大程度上削弱了政策效果?考虑到这些 spillover 效应,政策的福利含义是什么?</p>
+<h3 id="研究意义"><a href="#研究意义" class="headerlink" title="研究意义"></a>研究意义</h3><p><strong>理论贡献</strong>:本文将 reduced-form 计量经济学方法与产业 equilibrium 模型相结合,提供了一个分析能源 regulation 的一般框架.这一框架能够同时刻画企业集团内部和市场竞争层面的 spillover 效应,为准确评估能源政策的真实效果提供了方法论支撑.</p>
+<p><strong>政策含义</strong>:研究发现对设计更有效的能源 regulation 具有直接启示.如果能够利用公开可得的企业集团所有权信息,针对整个企业集团而不仅是单个企业制定监管规则,可以显著提高政策的能源节约效果.</p>
+<p><strong>发展经济学价值</strong>:在印度、中国和拉丁美洲,企业集团的重要性日益上升(Ramachandran, Manikandan and Pant, 2013).本文的发现对于理解企业集团如何响应政府监管具有普遍的参考价值.</p>
+<h2 id="内容及结构-论文结构"><a href="#内容及结构-论文结构" class="headerlink" title="内容及结构(论文结构)"></a>内容及结构(论文结构)</h2><p>本文采用层层递进的研究设计,共分为7个主要部分:</p>
+<p><strong>第一部分:政策背景与数据</strong>(Policy Background and Data).详细描述千家企业能源节约项目,介绍用于测量经济活动和能源使用的数据集,以及构建中国企业集团所有权网络的研究策略.</p>
+<p><strong>第二部分:政策对受监管企业的影响</strong>(Effects of the Policy on Regulated Firms).使用双重差分法(difference-in-differences)识别政策效果,证明受监管企业通过降低产出而非提高能源效率来满足监管要求.</p>
+<p><strong>第三部分:企业集团内部的溢出效应</strong>(Within-Conglomerate Spillovers).利用详细的商业注册数据,发现受监管企业集团将生产转移到未受监管的关联企业,揭示了40%的产出下降被集团内部吸收.</p>
+<p><strong>第四部分:产业 equilibrium 模型</strong>(Industry Equilibrium Model).构建包含企业集团生产和市场 spillover 的产业 equilibrium 模型,为第五部分的模型估计和第六部分的福利分析奠定基础.</p>
+<p><strong>第五部分:模型估计</strong>(Model Estimation).通过匹配企业规模分布和集团内部生产分配的 pre-regulation 特征来估计模型参数.</p>
+<p><strong>第六部分:福利分析</strong>(Welfare Analysis).量化政策的 aggregate 和 welfare 效果,比较不同政策工具(扩展监管范围、依赖性能源税、基于公开信息的集团层面 regulation)的效果.</p>
+<p><strong>第七部分:稳健性检验</strong>(Robustness).检验模型结果对替代模型设定和参数值的敏感性,包括考虑能源效率改善可能性和 pre-existing 能源效率差异的模型扩展.</p>
+<h2 id="正文-逻辑梳理"><a href="#正文-逻辑梳理" class="headerlink" title="正文(逻辑梳理)"></a>正文(逻辑梳理)</h2><h3 id="背景与挑战"><a href="#背景与挑战" class="headerlink" title="背景与挑战"></a>背景与挑战</h3><h4 id="中国的能源困境与政策应对"><a href="#中国的能源困境与政策应对" class="headerlink" title="中国的能源困境与政策应对"></a>中国的能源困境与政策应对</h4><p>中国作为世界最大的能源消费国,其工业能源消耗占全国总能耗的70%.在快速工业化和城市化的背景下,如何在保持经济增长的同时控制能源消耗和碳排放,是中国政府面临的核心政策挑战.2006年启动的”十一五”规划将能源强度降低20%作为约束性目标,这一目标通过多个政策和行业计划来实现,其中千家企业项目是最重要的举措之一.</p>
+<p>千家企业项目的设计体现了发展中国家的政策创新.与发达国家主要依赖自愿协议和市场激励不同,中国的项目采用了强有力的行政执行机制.项目针对9个能源密集型行业的1008家超大型企业,这些企业的能源消耗占工业总能耗的47%.由于政策于2006年宣布,但根据企业2004年的 retrospectively 能源消耗数据选择参与者,企业无法操纵项目参与名单,这为准 quasi-experimental 识别策略提供了外生性来源.</p>
+<h4 id="企业集团的重要性"><a href="#企业集团的重要性" class="headerlink" title="企业集团的重要性"></a>企业集团的重要性</h4><p>理解千家企业项目效果的关键在于认识到这些受监管企业并非孤立运营,而是嵌入在复杂的企业集团网络中.通过中国工商行政管理总局的行政注册数据库(CARD),作者能够追踪这些企业的所有权关系.</p>
+<p>研究发现,千家企业企业平均拥有2.45个同行业内的关联企业.由于千家企业通常是各行业的最大企业,其关联企业的规模明显较小,平均产出仅为受监管企业的19.3%.这一事实意味着企业集团可能有显著的 scope 通过关联企业之间的生产替代来响应监管.</p>
+<p>然而,完全替代的可能性受到两个因素制约:首先,关联企业规模较小,无法完全吸收受监管企业的产出下降;其次,同一4-digit行业内同集团企业之间的 production shifting 受到技术和物流约束.</p>
+<h4 id="识别策略的核心挑战"><a href="#识别策略的核心挑战" class="headerlink" title="识别策略的核心挑战"></a>识别策略的核心挑战</h4><p>准确评估千家企业项目效果面临三个层面的识别挑战:</p>
+<p><strong>第一层:受监管企业 vs. 对照企业</strong>.理想的反事实是:如果没有千家企业项目,受监管企业的能源使用和产出会有怎样的变化?作者使用”万家”(Top-10,000)企业作为对照组_这些企业在2011年后才被纳入监管,因此2011年之前的时期提供了 quasi-experimental variation.</p>
+<p><strong>第二层:集团内部的 production shifting</strong>.即使能够识别受监管企业相对于对照企业的效果,这仍然无法捕捉企业集团内部的再分配效应.受监管企业可能将生产转移到同一集团内的关联企业,从而降低政策的整体能源节约效果.</p>
+<p><strong>第三层:市场竞争效应</strong>.受监管企业的减产可能导致竞争对手获得更多市场份额,这种市场层面的泄漏也会影响政策的 aggregate 效果.</p>
+<h3 id="方法论-Reduced-Form-分析"><a href="#方法论-Reduced-Form-分析" class="headerlink" title="方法论:Reduced-Form 分析"></a>方法论:Reduced-Form 分析</h3><h4 id="双重差分设计"><a href="#双重差分设计" class="headerlink" title="双重差分设计"></a>双重差分设计</h4><p>作者采用多层双重差分策略来识别政策的直接效应和溢出效应.</p>
+<p><strong>第一个双重差分</strong>:比较受监管的千家企业与同行业但不受监管的万家企业的差异.这是标准的 treatment vs. control 比较,假设在政策实施前,两组企业的能源使用和产出趋势相似.</p>
+<p><strong>事件研究规范</strong>(Event-Study Specification)用于检验平行趋势假设:</p>
+<script type="math/tex; mode=display">Y_{ijklt} = \sum_{\tau \neq 2006} \beta_\tau \times Treat_i \times Year_\tau + \alpha_i + \eta_{jt} + \delta_{kt} + \varepsilon_{ijklt}</script><p>其中 $Y<em>{ijklt}$ 是企业 $i$ 在行业 $j$、省份 $k$、年份 $t$ 的 outcome 变量,$Treat_i$ 是处理组指示变量,$\alpha_i$ 是企业固定效应,$\eta</em>{jt}$ 是行业×年份固定效应,$\delta_{kt}$ 是省份×年份固定效应.</p>
+<p>图4展示了 event-study 结果:处理组和对照组企业在政策实施前的趋势高度一致,支持平行趋势假设.政策实施后,千家企业的能源使用相对下降约16%.</p>
+<p><strong>第二个双重差分</strong>:比较同一企业集团内的关联企业与其他不受监管企业的差异.这一设计利用了企业集团所有权网络信息,识别集团内部的溢出效应.</p>
+<h4 id="主要-Reduced-Form-发现"><a href="#主要-Reduced-Form-发现" class="headerlink" title="主要 Reduced-Form 发现"></a>主要 Reduced-Form 发现</h4><p><strong>发现一:能源使用下降源于产出降低,而非效率提升</strong></p>
+<p>表3报告了政策对能源使用和产出的影响.结果显示:</p>
+<ul>
+<li>能源使用下降12%-16%,在不同的固定效应规范下保持稳健</li>
+<li>产出(以收入衡量)下降10%-23%</li>
+<li><strong>能源效率(产出/能源使用)没有显著变化</strong></li>
+</ul>
+<p>这一发现具有重要的政策含义:企业选择通过降低产出来满足监管要求,而非投资于能源效率提升.作者认为这可能是因为能源效率投资需要 long-lived capital 的更新,面临技术不确定性和中国政府政策承诺不确定性的制约.</p>
+<p><strong>发现二:集团内部生产转移</strong></p>
+<p>利用 CARD 数据,作者识别了46,178家与千家企业有关联关系的企业.将这些关联企业与万家数据库匹配后,得到2,466家在同行业的关联企业.</p>
+<p>双重差分分析显示:</p>
+<ul>
+<li>关联企业的产出增加约12%</li>
+<li>关联企业的能源使用增加,但没有能源效率变化</li>
+<li>只有当关联企业的4-digit行业与受监管企业相同时,才出现显著的生产增加</li>
+<li>在其他行业的关联企业作为 placebo test,未发现产出增加</li>
+</ul>
+<p>基于规模差异(关联企业平均规模仅为受监管企业的19.3%),作者计算出企业集团能够将受监管企业40%的产出下降转移到关联企业.</p>
+<p><strong>发现三:市场层面的竞争效应</strong></p>
+<p>作者提供了市场泄漏的证据:同行业但不受监管的企业在政策实施后产出增加.这与千家企业减产让出市场份额的预期一致.</p>
+<h3 id="结构模型-产业-Equilibrium-模型"><a href="#结构模型-产业-Equilibrium-模型" class="headerlink" title="结构模型:产业 Equilibrium 模型"></a>结构模型:产业 Equilibrium 模型</h3><h4 id="模型设定"><a href="#模型设定" class="headerlink" title="模型设定"></a>模型设定</h4><p>为了量化政策的 aggregate 和 welfare 效果,作者构建了一个包含以下特征的产业 equilibrium 模型:</p>
+<p><strong>需求侧</strong>:使用常替代弹性(CES)聚合器描述消费者对不同企业产品的偏好:</p>
+<script type="math/tex; mode=display">U = \left( \int_\Omega Q(\omega)^{\frac{\sigma-1}{\sigma}} d\omega \right)^{\frac{\sigma}{\sigma-1}}</script><p>其中 $\sigma &gt; 1$ 是替代弹性,$\omega$ 表示企业产品.</p>
+<p><strong>供给侧</strong>:每个企业生产单一产品面临常数边际成本 $c$ 和冰山成本 $\tau$.企业可以选择在受监管状态(承担能源监管成本)或非监管状态下运营.</p>
+<p><strong>企业集团结构</strong>:模型明确允许企业在同一企业集团内共享投入和转移生产.设 $\lambda<em>s$ 表示企业集团 $s$ 内的企业数量,$\omega</em>{s,k}$ 表示企业 $k$ 在集团 $s$ 中的相对规模.</p>
+<p><strong>关键参数</strong>:模型需要估计替代弹性 $\sigma$、集团内部替代弹性 $\gamma$、能源监管成本 $\kappa$ 等参数.</p>
+<h4 id="模型估计"><a href="#模型估计" class="headerlink" title="模型估计"></a>模型估计</h4><p>作者通过匹配以下矩条件来估计模型:</p>
+<ol>
+<li><strong>企业规模分布</strong>:模型能够再现企业规模的集中度</li>
+<li><strong>集团内部生产分配</strong>:模型匹配观测到的集团内部相对规模分布</li>
+<li><strong>Reduced-form 估计</strong>:模型 out-of-sample 验证双重差分估计结果</li>
+</ol>
+<p>模型与双重差分估计的一致性验证了模型正确捕捉了企业集团内部和市场层面的 spillover 效应的定量重要性.</p>
+<h3 id="福利分析"><a href="#福利分析" class="headerlink" title="福利分析"></a>福利分析</h3><h4 id="政策效果的量化"><a href="#政策效果的量化" class="headerlink" title="政策效果的量化"></a>政策效果的量化</h4><p>基于估计的模型,作者量化了千家家企业项目的 aggregate 效果:</p>
+<ul>
+<li><strong>能源节约</strong>:政策使总能源使用降低4%,相当于每年减少约4800万吨标准煤</li>
+<li><strong>社会成本</strong>:影子成本约160美元/吨碳(当量)</li>
+</ul>
+<p>关键机制:企业集团通过内部 production shifting 降低了千家企业的影子监管成本约30%.这是因为集团能够将部分产出转移到关联企业,从而部分抵消了对受监管企业的直接影响.</p>
+<h4 id="替代政策的模拟"><a href="#替代政策的模拟" class="headerlink" title="替代政策的模拟"></a>替代政策的模拟</h4><p>作者使用模型比较了三种替代政策:</p>
+<p><strong>政策A:扩展千家家企业项目</strong>.将更多企业纳入监管范围,但保持针对单个企业的监管结构.结果显示这只能带来边际的能源节约增加.</p>
+<p><strong>政策B:规模依赖性能源税</strong>.对所有属于有千家企业存在的企业集团的企业征收能源税.结果接近 universal energy tax 的效果.</p>
+<p><strong>政策C:基于公开信息的集团层面 regulation</strong>.利用公开可获得的企业所有权信息,针对整个企业集团制定监管规则.结果显示可以在相同 welfare 成本下将能源节约提高10%.</p>
+<p><strong>核心洞察</strong>:由于企业集团内部的 production shifting 是一种重要的泄漏渠道,针对 conglomerate 层面的监管能够更有效地实现能源节约目标.</p>
+<h3 id="稳健性检验"><a href="#稳健性检验" class="headerlink" title="稳健性检验"></a>稳健性检验</h3><p>作者进行了广泛的稳健性检验:</p>
+<ol>
+<li><p><strong>能源效率改善的长期可能性</strong>:扩展模型允许企业响应监管投资于能源效率,发现即使在长期视角下,能源效率改善仍然成本高昂</p>
 </li>
-<li><p><strong>实际行为偏离</strong>：人们经常忽略假设性事件的含义，但从观察事件中进行推断</p>
+<li><p><strong>Pre-existing 能源效率差异</strong>:假设千家企业比所有其他企业能源效率低20%,重新计算社会成本约133美元/吨碳</p>
 </li>
-<li><p><strong>诅咒均衡的局限性</strong>：不适用于序列博弈；对内生信息也存在curse</p>
+<li><p><strong>参数敏感性</strong>:不同的 $\sigma$、$\gamma$ 和 $\kappa$ 参数值下的稳健性</p>
+</li>
+<li><p><strong>数据构建的敏感性</strong>:使用行政税务数据填补缺失值、限制样本至样本期内持续存在的企业等</p>
 </li>
 </ol>
-<h3 id="作者的问题意识"><a href="#作者的问题意识" class="headerlink" title="作者的问题意识"></a>作者的问题意识</h3><p><strong>核心问题</strong>：如何修改诅咒均衡以适应扩展式博弈，使玩家能够从观察事件中学习但忽略假设事件的信息？</p>
-<hr>
-<h2 id="2-内容及结构"><a href="#2-内容及结构" class="headerlink" title="2. 内容及结构"></a>2. 内容及结构</h2><h3 id="第一节：引言"><a href="#第一节：引言" class="headerlink" title="第一节：引言"></a>第一节：引言</h3><h3 id="第二节：定义和一般结果"><a href="#第二节：定义和一般结果" class="headerlink" title="第二节：定义和一般结果"></a>第二节：定义和一般结果</h3><ul>
-<li>SCE的定义和存在性</li>
-<li>同时博弈中的SCE</li>
-<li>部分诅咒</li>
-</ul>
-<h3 id="第三节：实验应用"><a href="#第三节：实验应用" class="headerlink" title="第三节：实验应用"></a>第三节：实验应用</h3><ul>
-<li>交易博弈实验</li>
-<li>成本信号博弈</li>
-<li>信息获取博弈</li>
-</ul>
-<h3 id="第四节：动态拍卖"><a href="#第四节：动态拍卖" class="headerlink" title="第四节：动态拍卖"></a>第四节：动态拍卖</h3><h3 id="第五节：讨论和结论"><a href="#第五节：讨论和结论" class="headerlink" title="第五节：讨论和结论"></a>第五节：讨论和结论</h3><hr>
-<h2 id="3-正文（逻辑梳理）"><a href="#3-正文（逻辑梳理）" class="headerlink" title="3. 正文（逻辑梳理）"></a>3. 正文（逻辑梳理）</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><h4 id="标准博弈论的问题"><a href="#标准博弈论的问题" class="headerlink" title="标准博弈论的问题"></a>标准博弈论的问题</h4><p><strong>“三思而后行”原则（Savage 1972）</strong>：</p>
-<ul>
-<li>标准理论要求玩家在决策时考虑假设性事件的信息</li>
-<li>但实际上人们经常忽略这种信息</li>
-</ul>
-<p><strong>诅咒均衡（CE）的核心思想</strong>：</p>
-<ul>
-<li>玩家理解对手行为的边缘分布</li>
-<li>但忽略这些分布之间的相关性</li>
-</ul>
-<h4 id="诅咒均衡的两个局限性"><a href="#诅咒均衡的两个局限性" class="headerlink" title="诅咒均衡的两个局限性"></a>诅咒均衡的两个局限性</h4><p><strong>局限性1：不适应序列博弈</strong></p>
-<ul>
-<li>序列博弈与同时博弈有相同的贝叶斯正态形式</li>
-<li>因此CE预测相同，但这不符合直觉</li>
-</ul>
-<p><strong>局限性2：对内生信息的诅咒</strong></p>
-<h3 id="序列诅咒均衡（SCE）"><a href="#序列诅咒均衡（SCE）" class="headerlink" title="序列诅咒均衡（SCE）"></a>序列诅咒均衡（SCE）</h3><p><strong>核心创新</strong>：允许玩家对内生信息受到诅咒</p>
-<p><strong>关键洞察</strong>：玩家从观察事件中学习，但忽略假设事件的信息</p>
-<hr>
-<h2 id="4-结论"><a href="#4-结论" class="headerlink" title="4. 结论"></a>4. 结论</h2><h3 id="核心结论"><a href="#核心结论" class="headerlink" title="核心结论"></a>核心结论</h3><ol>
-<li><p><strong>SCE扩展了CE到扩展式博弈</strong></p>
+<h2 id="结论-Conclusion"><a href="#结论-Conclusion" class="headerlink" title="结论(Conclusion)"></a>结论(Conclusion)</h2><h3 id="核心研究结论"><a href="#核心研究结论" class="headerlink" title="核心研究结论"></a>核心研究结论</h3><p>本文通过对千家企业能源节约项目的深入研究,得出以下核心结论:</p>
+<p><strong>第一,监管企业通过减产而非提高能源效率来响应政策</strong>.这一发现揭示了能源监管的边际成本结构,表明能源效率投资的成本远高于简单地接受产出损失.</p>
+<p><strong>第二,企业集团内部的 production shifting 是政策效果的重要泄漏渠道</strong>.受监管企业集团将40%的产出下降转移到未受监管的关联企业,这一发现对仅关注受监管企业效果的政策评估提出了挑战.</p>
+<p><strong>第三,市场竞争效应进一步削弱了政策的能源节约效果</strong>.受监管企业减产让出的市场份额被竞争对手获取,降低了政策的 aggregate 效果.</p>
+<p><strong>第四,政策的 welfare 合理性取决于社会碳成本</strong>.当社会碳成本超过160美元/吨碳时,千家企业项目才能改善 welfare,这一结果对当前碳定价政策具有直接启示.</p>
+<p><strong>第五,集团层面的监管设计能够显著提高政策效果</strong>.利用公开可获得的企业所有权信息,针对整个企业集团制定监管规则,可以在相同 welfare 成本下将能源节约提高10%.</p>
+<h3 id="对领域的贡献"><a href="#对领域的贡献" class="headerlink" title="对领域的贡献"></a>对领域的贡献</h3><p><strong>对能源经济学 literature 的贡献</strong>:本文提供了迄今为止最全面的中国能源监管政策评估,揭示了企业集团作为重要但此前被忽视的响应渠道的作用.</p>
+<p><strong>对环境 regulation literature 的贡献</strong>:本文将 reduced-form 和 structural 方法相结合,为分析环境 regulation 的 spillover 效应提供了可推广的框架.</p>
+<p><strong>对产业组织 literature 的贡献</strong>:本文揭示了企业集团作为一种特殊的产业组织形式如何影响政府监管的有效性.</p>
+<h3 id="政策建议"><a href="#政策建议" class="headerlink" title="政策建议"></a>政策建议</h3><p><strong>短期建议</strong>:完善千家家企业项目的监管设计,考虑集团层面的信息披露要求和监管规则.</p>
+<p><strong>中期建议</strong>:扩展能源监管范围时,应优先考虑基于集团层面的 targeting,而非简单地增加受监管企业数量.</p>
+<p><strong>长期建议</strong>:建立企业所有权信息的公开数据库,为更有效的监管设计提供信息基础.</p>
+<h2 id="未来研究方向提及"><a href="#未来研究方向提及" class="headerlink" title="未来研究方向提及"></a>未来研究方向提及</h2><p>作者在论文中提出了若干值得进一步研究的方向:</p>
+<p><strong>Long-run 能源效率改善</strong>:模型扩展表明长期来看企业可能投资于能源效率,但时间和成本不确定性仍然很高.未来的研究可以深入分析能源效率投资决策的动态过程.</p>
+<p><strong>空间 spillover</strong>:本文主要关注集团内部和国家层面的效应,省份间的 production substitution 和污染转移也是重要议题.</p>
+<p><strong>行政执行约束</strong>:政府对监管范围和监管强度的行政约束是政策设计的重要摩擦来源,值得进一步研究.</p>
+<h2 id="未来研究方向思考"><a href="#未来研究方向思考" class="headerlink" title="未来研究方向思考"></a>未来研究方向思考</h2><p>基于对本文的深入理解,以下是值得进一步探索的研究方向:</p>
+<p><strong>第一,集团所有权网络的动态演化</strong>.本文使用2018年的 CARD 数据构建所有权网络,无法捕捉政策实施后的网络调整.未来的研究可以分析监管如何驱动企业集团的重组和整合.</p>
+<p><strong>第二,跨国比较研究</strong>.不同国家的企业集团结构和监管执行机制存在显著差异.将中国的发现与印度、巴西等其他大型新兴经济体进行比较,可以揭示企业集团响应政府监管的一般性模式.</p>
+<p><strong>第三,供应链溢出效应</strong>.本文主要关注同一企业集团内部的横向溢出,但受监管企业的上游供应商和下游客户也可能受到影响.考虑供应链关系的溢出效应可以提供更完整的政策效果图景.</p>
+<p><strong>第四,碳定价与能源监管的相互作用</strong>.当存在碳定价机制时,能源监管政策的 marginal cost 会相应改变.未来的研究可以分析这两种政策工具的交互作用和最优组合.</p>
+<p><strong>第五,企业异质性的深入分析</strong>.本文假设企业是同质的,但不同类型的企业(国有企业 vs. 民营企业、外资企业 vs. 内资企业)可能有不同的响应模式.分析这些异质性可以提供更精细的政策建议.</p>
+<h2 id="学术思考"><a href="#学术思考" class="headerlink" title="学术思考"></a>学术思考</h2><p>本文引发了几个值得深入思考的学术问题:</p>
+<p><strong>关于识别策略的思考</strong>:双重差分方法的核心假设是处理组和对照组在政策实施前具有相同的趋势.然而,在中国特有的政治经济环境下,处理组企业可能因为”树大招风”而受到更多关注,或者反过来因为政策透明度而获得更好的监管信息.这些微观机制是否会影响平行趋势假设?</p>
+<p><strong>关于企业行为假设的思考</strong>:本文假设企业是理性的,能够最优地配置集团内部的资源.然而,在现实中,企业集团内部的资源配置还受到代理问题、政治联系和内部权力斗争等因素的影响.如何在模型中更好地刻画这些制度因素?</p>
+<p><strong>关于福利评估的思考</strong>:本文采用社会碳成本(SCC)作为 welfare 评估的核心参数,但 SCC 本身存在很大的不确定性.不同的 SCC 假设会导致不同的政策评价,这是否意味着 welfare 分析过于依赖参数设定?</p>
+<p><strong>关于政策可复制性的思考</strong>:千家企业项目的成功在很大程度上依赖于中国的特殊制度环境_强大的行政执行能力、将环境绩效与官员晋升挂钩的考核机制.将其经验复制到其他发展中国家时,需要考虑制度能力差异.</p>
+<h2 id="下一步用户可能提的问题"><a href="#下一步用户可能提的问题" class="headerlink" title="下一步用户可能提的问题"></a>下一步用户可能提的问题</h2><p>基于论文内容和上述分析,以下是用户接下来可能问的问题:</p>
+<ol>
+<li><p><strong>千家企业项目中,哪些行业的企业能源效率响应最为显著?是否存在行业异质性?</strong></p>
 </li>
-<li><p><strong>解释实验证据</strong>：为关于假设性思维的实验提供理论解释</p>
+<li><p><strong>企业集团将生产转移到关联企业时,是否考虑了关联企业所在地区的环境成本(污染转移)?</strong></p>
 </li>
-<li><p><strong>应用广泛</strong>：交易博弈、成本信号博弈、信息获取博弈、动态拍卖</p>
+<li><p><strong>作者提到的160美元/吨碳的社会碳成本,如何与当前国际碳市场价格(如欧洲碳市场的50-100欧元/吨)进行比较?</strong></p>
+</li>
+<li><p><strong>在模型中假设的 CES 需求替代弹性 σ 如何估计?不同假设对 welfare 结果的敏感性如何?</strong></p>
+</li>
+<li><p><strong>万家(Top-10,000)企业在2011年后被纳入监管,这是否意味着万家可以作为”第二阶段”的处理组?研究设计是否支持这种连续处理效应的分析?</strong></p>
+</li>
+<li><p><strong>作者提到国有企业更可能被纳入千家企业项目,这是否与国企的政治联系有关?政治联系如何影响企业的能源效率投资决策?</strong></p>
+</li>
+<li><p><strong>对于民营企业占主导的行业(如纺织业),能源监管的效果是否有所不同?所有制结构如何调节政策效果?</strong></p>
+</li>
+<li><p><strong>模型中考虑能源效率改善的扩展模型,是否区分了短期和长期效应?长期效应的时间 horizon 是多久?</strong></p>
+</li>
+<li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD 数据的质量和覆盖范围如何保证?</strong></p>
+</li>
+<li><p><strong>在中国”双碳”目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p>
+</li>
+</ol>
+<h2 id="学术思考-1"><a href="#学术思考-1" class="headerlink" title="学术思考"></a>学术思考</h2><p>本文引发了几个值得深入思考的学术问题:</p>
+<p><strong>关于识别策略的思考</strong>:双重差分方法的核心假设是处理组和对照组在政策实施前具有相同的趋势.然而,在中国特有的政治经济环境下,处理组企业可能因为”树大招风”而受到更多关注,或者反过来因为政策透明度而获得更好的监管信息.这些微观机制是否会影响平行趋势假设?</p>
+<p><strong>关于企业行为假设的思考</strong>:本文假设企业是理性的,能够最优地配置集团内部的资源.然而,在现实中,企业集团内部的资源配置还受到代理问题、政治联系和内部权力斗争等因素的影响.如何在模型中更好地刻画这些制度因素?</p>
+<p><strong>关于福利评估的思考</strong>:本文采用社会碳成本(SCC)作为 welfare 评估的核心参数,但 SCC 本身存在很大的不确定性.不同的 SCC 假设会导致不同的政策评价,这是否意味着 welfare 分析过于依赖参数设定?</p>
+<p><strong>关于政策可复制性的思考</strong>:千家企业项目的成功在很大程度上依赖于中国的特殊制度环境_强大的行政执行能力、将环境绩效与官员晋升挂钩的考核机制.将其经验复制到其他发展中国家时,需要考虑制度能力差异.</p>
+<h2 id="下一步用户可能提的问题-1"><a href="#下一步用户可能提的问题-1" class="headerlink" title="下一步用户可能提的问题"></a>下一步用户可能提的问题</h2><p>基于论文内容和上述分析,以下是用户接下来可能问的问题:</p>
+<ol>
+<li><p><strong>千家企业项目中,哪些行业的企业能源效率响应最为显著?是否存在行业异质性?</strong></p>
+</li>
+<li><p><strong>企业集团将生产转移到关联企业时,是否考虑了关联企业所在地区的环境成本(污染转移)?</strong></p>
+</li>
+<li><p><strong>作者提到的160美元/吨碳的社会碳成本,如何与当前国际碳市场价格(如欧洲碳市场的50-100欧元/吨)进行比较?</strong></p>
+</li>
+<li><p><strong>在模型中假设的 CES 需求替代弹性 σ 如何估计?不同假设对 welfare 结果的敏感性如何?</strong></p>
+</li>
+<li><p><strong>万家(Top-10,000)企业在2011年后被纳入监管,这是否意味着万家可以作为”第二阶段”的处理组?研究设计是否支持这种连续处理效应的分析?</strong></p>
+</li>
+<li><p><strong>作者提到国有企业更可能被纳入千家企业项目,这是否与国企的政治联系有关?政治联系如何影响企业的能源效率投资决策?</strong></p>
+</li>
+<li><p><strong>对于民营企业占主导的行业(如纺织业),能源监管的效果是否有所不同?所有制结构如何调节政策效果?</strong></p>
+</li>
+<li><p><strong>模型中考虑能源效率改善的扩展模型,是否区分了短期和长期效应?长期效应的时间 horizon 是多久?</strong></p>
+</li>
+<li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD 数据的质量和覆盖范围如何保证?</strong></p>
+</li>
+<li><p><strong>在中国”双碳”目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p>
+</li>
+</ol>
+<h2 id="下一步用户可能提的问题-2"><a href="#下一步用户可能提的问题-2" class="headerlink" title="下一步用户可能提的问题"></a>下一步用户可能提的问题</h2><p>基于论文内容和上述分析,以下是用户接下来可能问的问题:</p>
+<ol>
+<li><p><strong>千家企业项目中,哪些行业的企业能源效率响应最为显著?是否存在行业异质性?</strong></p>
+</li>
+<li><p><strong>企业集团将生产转移到关联企业时,是否考虑了关联企业所在地区的环境成本(污染转移)?</strong></p>
+</li>
+<li><p><strong>作者提到的160美元/吨碳的社会碳成本,如何与当前国际碳市场价格(如欧洲碳市场的50-100欧元/吨)进行比较?</strong></p>
+</li>
+<li><p><strong>在模型中假设的 CES 需求替代弹性 σ 如何估计?不同假设对 welfare 结果的敏感性如何?</strong></p>
+</li>
+<li><p><strong>万家(Top-10,000)企业在2011年后被纳入监管,这是否意味着万家可以作为”第二阶段”的处理组?研究设计是否支持这种连续处理效应的分析?</strong></p>
+</li>
+<li><p><strong>作者提到国有企业更可能被纳入千家企业项目,这是否与国企的政治联系有关?政治联系如何影响企业的能源效率投资决策?</strong></p>
+</li>
+<li><p><strong>对于民营企业占主导的行业(如纺织业),能源监管的效果是否有所不同?所有制结构如何调节政策效果?</strong></p>
+</li>
+<li><p><strong>模型中考虑能源效率改善的扩展模型,是否区分了短期和长期效应?长期效应的时间 horizon 是多久?</strong></p>
+</li>
+<li><p><strong>作者提出利用公开的企业所有权信息设计集团层面监管,但 CARD 数据的质量和覆盖范围如何保证?</strong></p>
+</li>
+<li><p><strong>在中国”双碳”目标(2030碳达峰、2060碳中和)背景下,千家企业项目的经验如何应用到更宏大的气候目标实现路径中?</strong></p>
 </li>
 </ol>
 ]]></content>
@@ -6315,6 +6244,77 @@
 <li><p><strong>报复威胁真实存在</strong>：证实了报复威胁假设</p>
 </li>
 <li><p><strong>政策启示</strong>：保护工人的外部选择对增加举报率至关重要</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>序列诅咒均衡 — 深度阅读笔记 — Cohen &amp; Li</title>
+    <url>/posts/cohen2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息"><a href="#文献信息" class="headerlink" title="文献信息"></a>文献信息</h2><ul>
+<li><strong>标题</strong>: Sequential Cursed Equilibrium</li>
+<li><strong>作者</strong>: Shani Cohen (Harvard), Shengwu Li (Harvard)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(3): 934-976</li>
+<li><strong>DOI</strong>: 10.1257/aer.20230309</li>
+<li><strong>难度评估</strong>: 高 - 需要博弈论、行为经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言（背景和意义）"><a href="#1-引言（背景和意义）" class="headerlink" title="1. 引言（背景和意义）"></a>1. 引言（背景和意义）</h2><h3 id="领域基础知识"><a href="#领域基础知识" class="headerlink" title="领域基础知识"></a>领域基础知识</h3><p><strong>诅咒均衡（Cursed Equilibrium, CE）</strong>：Eyster和Rabin（2005）提出的解概念，玩家忽略其他玩家行为与其类型之间的相关性。</p>
+<p><strong>扩展式博弈（Extensive-Form Games）</strong>：具有时序结构的博弈，玩家依次行动。</p>
+<h3 id="研究的主要背景"><a href="#研究的主要背景" class="headerlink" title="研究的主要背景"></a>研究的主要背景</h3><ol>
+<li><p><strong>标准博弈论假设”三思而后行”</strong>：玩家在决策时会考虑假设性事件的信息</p>
+</li>
+<li><p><strong>实际行为偏离</strong>：人们经常忽略假设性事件的含义，但从观察事件中进行推断</p>
+</li>
+<li><p><strong>诅咒均衡的局限性</strong>：不适用于序列博弈；对内生信息也存在curse</p>
+</li>
+</ol>
+<h3 id="作者的问题意识"><a href="#作者的问题意识" class="headerlink" title="作者的问题意识"></a>作者的问题意识</h3><p><strong>核心问题</strong>：如何修改诅咒均衡以适应扩展式博弈，使玩家能够从观察事件中学习但忽略假设事件的信息？</p>
+<hr>
+<h2 id="2-内容及结构"><a href="#2-内容及结构" class="headerlink" title="2. 内容及结构"></a>2. 内容及结构</h2><h3 id="第一节：引言"><a href="#第一节：引言" class="headerlink" title="第一节：引言"></a>第一节：引言</h3><h3 id="第二节：定义和一般结果"><a href="#第二节：定义和一般结果" class="headerlink" title="第二节：定义和一般结果"></a>第二节：定义和一般结果</h3><ul>
+<li>SCE的定义和存在性</li>
+<li>同时博弈中的SCE</li>
+<li>部分诅咒</li>
+</ul>
+<h3 id="第三节：实验应用"><a href="#第三节：实验应用" class="headerlink" title="第三节：实验应用"></a>第三节：实验应用</h3><ul>
+<li>交易博弈实验</li>
+<li>成本信号博弈</li>
+<li>信息获取博弈</li>
+</ul>
+<h3 id="第四节：动态拍卖"><a href="#第四节：动态拍卖" class="headerlink" title="第四节：动态拍卖"></a>第四节：动态拍卖</h3><h3 id="第五节：讨论和结论"><a href="#第五节：讨论和结论" class="headerlink" title="第五节：讨论和结论"></a>第五节：讨论和结论</h3><hr>
+<h2 id="3-正文（逻辑梳理）"><a href="#3-正文（逻辑梳理）" class="headerlink" title="3. 正文（逻辑梳理）"></a>3. 正文（逻辑梳理）</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><h4 id="标准博弈论的问题"><a href="#标准博弈论的问题" class="headerlink" title="标准博弈论的问题"></a>标准博弈论的问题</h4><p><strong>“三思而后行”原则（Savage 1972）</strong>：</p>
+<ul>
+<li>标准理论要求玩家在决策时考虑假设性事件的信息</li>
+<li>但实际上人们经常忽略这种信息</li>
+</ul>
+<p><strong>诅咒均衡（CE）的核心思想</strong>：</p>
+<ul>
+<li>玩家理解对手行为的边缘分布</li>
+<li>但忽略这些分布之间的相关性</li>
+</ul>
+<h4 id="诅咒均衡的两个局限性"><a href="#诅咒均衡的两个局限性" class="headerlink" title="诅咒均衡的两个局限性"></a>诅咒均衡的两个局限性</h4><p><strong>局限性1：不适应序列博弈</strong></p>
+<ul>
+<li>序列博弈与同时博弈有相同的贝叶斯正态形式</li>
+<li>因此CE预测相同，但这不符合直觉</li>
+</ul>
+<p><strong>局限性2：对内生信息的诅咒</strong></p>
+<h3 id="序列诅咒均衡（SCE）"><a href="#序列诅咒均衡（SCE）" class="headerlink" title="序列诅咒均衡（SCE）"></a>序列诅咒均衡（SCE）</h3><p><strong>核心创新</strong>：允许玩家对内生信息受到诅咒</p>
+<p><strong>关键洞察</strong>：玩家从观察事件中学习，但忽略假设事件的信息</p>
+<hr>
+<h2 id="4-结论"><a href="#4-结论" class="headerlink" title="4. 结论"></a>4. 结论</h2><h3 id="核心结论"><a href="#核心结论" class="headerlink" title="核心结论"></a>核心结论</h3><ol>
+<li><p><strong>SCE扩展了CE到扩展式博弈</strong></p>
+</li>
+<li><p><strong>解释实验证据</strong>：为关于假设性思维的实验提供理论解释</p>
+</li>
+<li><p><strong>应用广泛</strong>：交易博弈、成本信号博弈、信息获取博弈、动态拍卖</p>
 </li>
 </ol>
 ]]></content>
@@ -12845,6 +12845,125 @@
       </tags>
   </entry>
   <entry>
+    <title>自下而上的制度变迁与中国经济增长 — 深度阅读笔记 — Li Et Al.</title>
+    <url>/posts/li2024bottomup/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Bottom-Up Institutional Change and Growth in China<br>Zotero Collection:: 有趣的文章<br>PDF Path:: /Users/double/Zotero/storage/GWVNMPJA/Li 等 - 2024 - Bottom-Up Institutional Change and Growth in China .pdf<br>Zotero Item Key:: 2XKAAMHY</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）"><a href="#引言（背景和意义）" class="headerlink" title="引言（背景和意义）"></a>引言（背景和意义）</h2><p><strong>领域基础知识</strong><br>已有研究在解释中国1978-2007年TFP增长时，发现要素再配置、贸易自由化等因素只能解释其中较小部分，大量”残差”仍未解释。与此同时，关于中国改革模式，主流叙事聚焦于”中央主导的政策试验”（先试点后推广），即中央政府在晋升激励下激励地方政府实施试验性政策。制度经济学理论（Acemoglu et al. 2001; Rodrik et al. 2004）也强调制度变迁对经济发展的重要性，但系统研究实际制度变迁过程及其增长效应的实证研究仍然缺乏。</p>
+<p><strong>研究背景</strong><br>1978-2005年中国改革期间，大量重要的经济和社会制度改革（如农村土地联产承包责任制、国有企业私有化）实际上是由基层地方政府在未获中央明确授权、甚至在被明确禁止的情况下自发推行的。中央政府在这一时期对地方自发创新保持了相对的容忍（胡耀邦1980年曾明确表达此立场）。这种”自下而上”的制度变迁与”自上而下的中央主导试验”并存，但其相对重要性及增长效应从未得到系统实证研究。</p>
+<p><strong>作者的问题意识</strong><br>改革时期，不同改革政策中”自下而上”力量与”自上而下”指令的相对重要性如何？哪类地区更有可能成为自下而上的改革先行者？改革政策如何在空间上扩散，自下而上与自上而下的扩散模式有何不同？最重要的是，两类改革对经济增长和TFP的贡献有何差异？</p>
+<p><strong>研究意义</strong><br>首次系统实证研究自下而上制度变迁对中国增长的独立贡献；提供了一套基于地方志文本分析的”自下而上指数”测量框架；揭示了两类改革在增长来源（TFP vs 资本投资）上的根本差异；对理解当前中国增长减速的制度原因具有重要政策含义。</p>
+<hr>
+<h2 id="内容及结构（论文结构）"><a href="#内容及结构（论文结构）" class="headerlink" title="内容及结构（论文结构）"></a>内容及结构（论文结构）</h2><ol>
+<li><strong>引言</strong>：问题提出、数据概述、主要发现。</li>
+<li><strong>数据</strong>：1.8百万条县级重大事件，4,800余册地方志，25项关键经济改革，1976-2005年。</li>
+<li><strong>改革分类方法</strong>：文本分析识别县级政策创新；构建自下而上指数。</li>
+<li><strong>改革先行者特征（Section 3）</strong>：谁成为改革创新者，两类改革先行者有何系统差异。</li>
+<li><strong>空间扩散模式（Section 4）</strong>：学习与适宜性渠道的作用，两类改革扩散机制差异。</li>
+<li><strong>增长效应（Section 5）</strong>：自下而上改革 vs 中央主导改革对GDP和TFP的影响差异。</li>
+<li><strong>结论</strong>：含对当前中国增长减速的政策含义讨论。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）"><a href="#正文（逻辑梳理）" class="headerlink" title="正文（逻辑梳理）"></a>正文（逻辑梳理）</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>中国1978-2005年经历了深刻的市场化制度转型，TFP是增长的核心驱动力，但其机制来源仍不明确。作者提出”自下而上的制度变迁”是一个被忽视的重要来源。</p>
+<h3 id="挑战"><a href="#挑战" class="headerlink" title="挑战"></a>挑战</h3><p>如何系统识别哪些改革是”自下而上”、哪些是”自上而下”？如何测量其对增长的独立因果效应？</p>
+<h3 id="数据构建"><a href="#数据构建" class="headerlink" title="数据构建"></a>数据构建</h3><p><strong>县级重大事件数据库</strong>：</p>
+<ul>
+<li>来源：4,800余册地方志（local gazetteers），这是中国各县的官方历史年鉴</li>
+<li>规模：超过<strong>180万条</strong>县级重大事件，覆盖1976-2005年，25项关键经济改革</li>
+<li>文本分析：利用机器学习方法识别与各项改革相关的事件，捕捉改革的实际发生时间（de facto policy innovation）而非正式法规颁布时间</li>
+</ul>
+<p><strong>两类改革的识别特征</strong>：</p>
+<ol>
+<li><strong>自下而上型</strong>：县域先于中央批准自发启动改革；扩散曲线平滑连续（各县自发跟进）</li>
+<li><strong>中央主导型</strong>：中央指令发布后出现采纳跳跃（abrupt jumps）；各地同步跟进</li>
+</ol>
+<p><strong>自下而上指数</strong>：基于两类改革的识别特征，为25项改革中每一项构建一个连续的”自下而上程度”指数，实现了两种改革类型在同一框架内的比较。</p>
+<h3 id="发现一：改革先行者特征"><a href="#发现一：改革先行者特征" class="headerlink" title="发现一：改革先行者特征"></a>发现一：改革先行者特征</h3><p><strong>共同特征</strong>（两类改革创新者都具备）：</p>
+<ul>
+<li>人口规模更大、教育水平更高的县域</li>
+<li>农业和工业人均产出更高</li>
+</ul>
+<p><strong>自下而上特有特征</strong>：</p>
+<ul>
+<li>与铁路网络的<strong>距离更远</strong>（更偏远）→ 政治影响力弱但政治风险反而更低（”地处偏远，天高皇帝远”）</li>
+<li><strong>财政能力弱</strong>：地方政府财政资源少的县域反而更多发起自下而上改革</li>
+<li>改革发生前<strong>政治局常委（PSC）视察次数更少</strong>——意味着中央关注度低，自下而上创新者面临更少的政治监督</li>
+</ul>
+<p><strong>中央主导特有特征</strong>：</p>
+<ul>
+<li>PSC成员在改革前后访问频次显著更高（中央积极背书）</li>
+</ul>
+<p><strong>关键解读</strong>：自下而上改革是由那些有能力但政治上更为边缘（更远离中央、更少被观察）的县发起的——符合”政治庇护所”（political shelter）逻辑。</p>
+<h3 id="发现二：空间扩散模式"><a href="#发现二：空间扩散模式" class="headerlink" title="发现二：空间扩散模式"></a>发现二：空间扩散模式</h3><p><strong>学习渠道</strong>：与早期采纳者在地理上更近、经济联系更强的县域，更容易了解改革效益和政治风险，从而更早跟进。</p>
+<p><strong>适宜性渠道</strong>：一项改革对一个县是否”适合”，取决于该县在人口构成、行业结构、人力资本方面与早期采纳者的相似程度。</p>
+<p><strong>关键差异</strong>：适宜性对自下而上改革的扩散影响<strong>更强</strong>——中央主导改革由上而下强制推广，地方无权选择；自下而上改革扩散时地方有更大裁量权，倾向于向条件相似的地区扩散。</p>
+<h3 id="发现三：增长效应"><a href="#发现三：增长效应" class="headerlink" title="发现三：增长效应"></a>发现三：增长效应</h3><p><strong>GDP增长</strong>（省级面板，DiD策略）：</p>
+<ul>
+<li>改革政策创新和扩散均与GDP增长显著正相关</li>
+<li>效应随扩散深度递减（初始创新者效应大于后继跟进者）</li>
+</ul>
+<p><strong>关键结论——两类改革的增长来源不同</strong>：</p>
+<ul>
+<li><strong>自下而上改革 → TFP增长</strong>：1省内10%人口暴露于改革 × 自下而上指数提高1个标准差 → 3年GDP per worker增长+1.1个百分点，TFP增长+0.74个百分点</li>
+<li><strong>中央主导型改革 → 固定资本投资增加</strong>：这类改革主要拉动资本投入，而非效率提升</li>
+</ul>
+<p><strong>替代结果指标（稳健性）</strong>：</p>
+<ul>
+<li>自下而上改革与农业→非农业的结构转型加速相关</li>
+<li>自下而上改革与私营企业进入数量增加相关</li>
+<li>以上效应在自下而上程度更高的改革中均更显著</li>
+</ul>
+<hr>
+<h2 id="结论（Conclusion）"><a href="#结论（Conclusion）" class="headerlink" title="结论（Conclusion）"></a>结论（Conclusion）</h2><p>1978-2005年中国改革中，自下而上的制度变迁（地方政治企业家在未获中央授权时自发推行改革）扮演了一个比既有文献所承认的更为重要的角色。这类改革具有独特特征：由偏远、财政弱但人力资本充裕的县域发起，扩散时遵循适宜性原则，生长周期更长。关键在于：自下而上改革是TFP增长（而非资本积累）的来源，这与中国经济增长的”效率”叙事高度匹配。</p>
+<p>作者指出了两个悬而未决的重要问题：</p>
+<ol>
+<li>如果当时中央政府拒绝了自下而上的创新，中国会损失多少经济增长？</li>
+<li>2010年代以来，权力日益向中央集中、自上而下产业政策盛行、地方政府发起制度创新的激励减弱，这种”自下而上供给的下降”是否是近年增长减速的制度原因？</li>
+</ol>
+<hr>
+<h2 id="未来研究方向（Future-work）"><a href="#未来研究方向（Future-work）" class="headerlink" title="未来研究方向（Future work）"></a>未来研究方向（Future work）</h2><p><strong>论文明确提及的方向</strong>：</p>
+<ol>
+<li>反事实估算：如果没有自下而上创新，改革时期会有多少增长损失？</li>
+<li>权力再集中化的代价：2010年代以来自下而上改革减少与中国经济减速的定量关联。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li><strong>政策含义</strong>：如何在保持政治集权的同时，重新激活地方政治企业家的改革创新激励？设计什么样的制度环境可以同时实现中央控制和地方创新？</li>
+<li><strong>技术进步与制度变迁的比较</strong>：本文将改革政策类比为技术创新/扩散，下一步可以实证比较”政策创新”和”技术创新”在扩散模式和增长效应上的异同；</li>
+<li><strong>其他发展中国家的适用性</strong>：自下而上制度变迁的驱动逻辑（偏远+有能力+政治庇护）是否在越南、印度等多级政府体制国家中也能找到对应？</li>
+<li><strong>地方志数据的潜力</strong>：本文证明地方志是中国历史微观数据的宝贵来源，对其他研究（如政策执行、社会运动、地方官员行为）也有启示。</li>
+</ol>
+<hr>
+<h2 id="学术思考"><a href="#学术思考" class="headerlink" title="学术思考"></a>学术思考</h2><ol>
+<li><p><strong>因果识别的挑战</strong>：论文发现”自下而上改革与TFP增长正相关”，但识别仍面临挑战：哪些省份率先出现自下而上改革，可能本来就是那些有更好潜在TFP增长条件的省份。文中使用的工具变量或自然实验策略的强度和可信度值得仔细审视。</p>
+</li>
+<li><p><strong>自下而上指数的测量效度</strong>：指数基于”地方政府先于中央发起改革”的程度，但地方志记录的准确性和完整性可能存在系统偏差——受到中央重视的改革可能有更完整的地方志记录，而真正”冒险”的底层创新反而记录不全，这会导致”自下而上指数”被低估，测量误差可能带来衰减偏误。</p>
+</li>
+<li><p><strong>与Wang &amp; Yang (2024) 的张力</strong>：Wang &amp; Yang发现中央主导政策试验存在三重偏误（样本偏误、官员额外努力、非成熟解读）。本文则发现自下而上改革带来更强TFP增长。二者并不矛盾——Wang &amp; Yang研究的是中央主导试验的”内在失真”，本文研究的是”自下而上”的增量贡献。但这两篇论文合在一起，表明中国改革中信息和激励扭曲无处不在，需要对”中国政策学习”保持更深的审慎。</p>
+</li>
+<li><p><strong>自下而上创新的供给为何减少</strong>：论文指出近年来自下而上改革减少，但未深入分析机制。是因为”低垂的果子”（容易改的已经改完）还是”制度结构变化”（习近平时代的权力集中）？这两种解释的政策含义截然不同：前者意味着增长减速是结构性的，后者意味着可以通过制度改革缓解。</p>
+</li>
+<li><p><strong>地方志的历史偏见</strong>：地方志由地方政府官员编撰，倾向于记录”成功的”改革创新而淡化失败案例。这意味着本文的样本可能系统性地只包含了”最终成功的改革”，而那些被记录为失败或被扼杀的自下而上创新无从观察，造成幸存者偏误（survivorship bias）。</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题"><a href="#下一步用户可能提的问题" class="headerlink" title="下一步用户可能提的问题"></a>下一步用户可能提的问题</h2><ol>
+<li>本文关注的”自下而上改革”样例包括哪些？家庭联产承包责任制、国企私有化——这些改革在地方志中是如何被记录的？</li>
+<li>本文的增长回归如何解决省份层面的时序内生性？用了哪些工具变量或识别策略？</li>
+<li>2010年后习近平执政以来，权力再集中化是否确实导致了”自下而上改革供给”的显著下降？有没有定量证据支持这一判断？</li>
+<li>“自下而上改革 → TFP增长 vs 中央主导改革 → 资本投入”这一发现的直觉是什么？为什么中央主导改革倾向于拉动投资而非效率？</li>
+<li>本文的地方志数据库（1.8百万条事件）是否开放共享？其他学者如何可以利用这一数据？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>One Quarter of Humanity 深度阅读笔记 — James Z. Lee &amp; Wang Feng</title>
     <url>/posts/lee2001/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="书籍信息"><a href="#书籍信息" class="headerlink" title="书籍信息"></a>书籍信息</h2><ul>
@@ -13207,125 +13326,6 @@
         <tag>读书笔记</tag>
         <tag>人口史</tag>
         <tag>比较历史学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>自下而上的制度变迁与中国经济增长 — 深度阅读笔记 — Li Et Al.</title>
-    <url>/posts/li2024bottomup/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Bottom-Up Institutional Change and Growth in China<br>Zotero Collection:: 有趣的文章<br>PDF Path:: /Users/double/Zotero/storage/GWVNMPJA/Li 等 - 2024 - Bottom-Up Institutional Change and Growth in China .pdf<br>Zotero Item Key:: 2XKAAMHY</p>
-<hr>
-<span id="more"></span>
-<h2 id="引言（背景和意义）"><a href="#引言（背景和意义）" class="headerlink" title="引言（背景和意义）"></a>引言（背景和意义）</h2><p><strong>领域基础知识</strong><br>已有研究在解释中国1978-2007年TFP增长时，发现要素再配置、贸易自由化等因素只能解释其中较小部分，大量”残差”仍未解释。与此同时，关于中国改革模式，主流叙事聚焦于”中央主导的政策试验”（先试点后推广），即中央政府在晋升激励下激励地方政府实施试验性政策。制度经济学理论（Acemoglu et al. 2001; Rodrik et al. 2004）也强调制度变迁对经济发展的重要性，但系统研究实际制度变迁过程及其增长效应的实证研究仍然缺乏。</p>
-<p><strong>研究背景</strong><br>1978-2005年中国改革期间，大量重要的经济和社会制度改革（如农村土地联产承包责任制、国有企业私有化）实际上是由基层地方政府在未获中央明确授权、甚至在被明确禁止的情况下自发推行的。中央政府在这一时期对地方自发创新保持了相对的容忍（胡耀邦1980年曾明确表达此立场）。这种”自下而上”的制度变迁与”自上而下的中央主导试验”并存，但其相对重要性及增长效应从未得到系统实证研究。</p>
-<p><strong>作者的问题意识</strong><br>改革时期，不同改革政策中”自下而上”力量与”自上而下”指令的相对重要性如何？哪类地区更有可能成为自下而上的改革先行者？改革政策如何在空间上扩散，自下而上与自上而下的扩散模式有何不同？最重要的是，两类改革对经济增长和TFP的贡献有何差异？</p>
-<p><strong>研究意义</strong><br>首次系统实证研究自下而上制度变迁对中国增长的独立贡献；提供了一套基于地方志文本分析的”自下而上指数”测量框架；揭示了两类改革在增长来源（TFP vs 资本投资）上的根本差异；对理解当前中国增长减速的制度原因具有重要政策含义。</p>
-<hr>
-<h2 id="内容及结构（论文结构）"><a href="#内容及结构（论文结构）" class="headerlink" title="内容及结构（论文结构）"></a>内容及结构（论文结构）</h2><ol>
-<li><strong>引言</strong>：问题提出、数据概述、主要发现。</li>
-<li><strong>数据</strong>：1.8百万条县级重大事件，4,800余册地方志，25项关键经济改革，1976-2005年。</li>
-<li><strong>改革分类方法</strong>：文本分析识别县级政策创新；构建自下而上指数。</li>
-<li><strong>改革先行者特征（Section 3）</strong>：谁成为改革创新者，两类改革先行者有何系统差异。</li>
-<li><strong>空间扩散模式（Section 4）</strong>：学习与适宜性渠道的作用，两类改革扩散机制差异。</li>
-<li><strong>增长效应（Section 5）</strong>：自下而上改革 vs 中央主导改革对GDP和TFP的影响差异。</li>
-<li><strong>结论</strong>：含对当前中国增长减速的政策含义讨论。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）"><a href="#正文（逻辑梳理）" class="headerlink" title="正文（逻辑梳理）"></a>正文（逻辑梳理）</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>中国1978-2005年经历了深刻的市场化制度转型，TFP是增长的核心驱动力，但其机制来源仍不明确。作者提出”自下而上的制度变迁”是一个被忽视的重要来源。</p>
-<h3 id="挑战"><a href="#挑战" class="headerlink" title="挑战"></a>挑战</h3><p>如何系统识别哪些改革是”自下而上”、哪些是”自上而下”？如何测量其对增长的独立因果效应？</p>
-<h3 id="数据构建"><a href="#数据构建" class="headerlink" title="数据构建"></a>数据构建</h3><p><strong>县级重大事件数据库</strong>：</p>
-<ul>
-<li>来源：4,800余册地方志（local gazetteers），这是中国各县的官方历史年鉴</li>
-<li>规模：超过<strong>180万条</strong>县级重大事件，覆盖1976-2005年，25项关键经济改革</li>
-<li>文本分析：利用机器学习方法识别与各项改革相关的事件，捕捉改革的实际发生时间（de facto policy innovation）而非正式法规颁布时间</li>
-</ul>
-<p><strong>两类改革的识别特征</strong>：</p>
-<ol>
-<li><strong>自下而上型</strong>：县域先于中央批准自发启动改革；扩散曲线平滑连续（各县自发跟进）</li>
-<li><strong>中央主导型</strong>：中央指令发布后出现采纳跳跃（abrupt jumps）；各地同步跟进</li>
-</ol>
-<p><strong>自下而上指数</strong>：基于两类改革的识别特征，为25项改革中每一项构建一个连续的”自下而上程度”指数，实现了两种改革类型在同一框架内的比较。</p>
-<h3 id="发现一：改革先行者特征"><a href="#发现一：改革先行者特征" class="headerlink" title="发现一：改革先行者特征"></a>发现一：改革先行者特征</h3><p><strong>共同特征</strong>（两类改革创新者都具备）：</p>
-<ul>
-<li>人口规模更大、教育水平更高的县域</li>
-<li>农业和工业人均产出更高</li>
-</ul>
-<p><strong>自下而上特有特征</strong>：</p>
-<ul>
-<li>与铁路网络的<strong>距离更远</strong>（更偏远）→ 政治影响力弱但政治风险反而更低（”地处偏远，天高皇帝远”）</li>
-<li><strong>财政能力弱</strong>：地方政府财政资源少的县域反而更多发起自下而上改革</li>
-<li>改革发生前<strong>政治局常委（PSC）视察次数更少</strong>——意味着中央关注度低，自下而上创新者面临更少的政治监督</li>
-</ul>
-<p><strong>中央主导特有特征</strong>：</p>
-<ul>
-<li>PSC成员在改革前后访问频次显著更高（中央积极背书）</li>
-</ul>
-<p><strong>关键解读</strong>：自下而上改革是由那些有能力但政治上更为边缘（更远离中央、更少被观察）的县发起的——符合”政治庇护所”（political shelter）逻辑。</p>
-<h3 id="发现二：空间扩散模式"><a href="#发现二：空间扩散模式" class="headerlink" title="发现二：空间扩散模式"></a>发现二：空间扩散模式</h3><p><strong>学习渠道</strong>：与早期采纳者在地理上更近、经济联系更强的县域，更容易了解改革效益和政治风险，从而更早跟进。</p>
-<p><strong>适宜性渠道</strong>：一项改革对一个县是否”适合”，取决于该县在人口构成、行业结构、人力资本方面与早期采纳者的相似程度。</p>
-<p><strong>关键差异</strong>：适宜性对自下而上改革的扩散影响<strong>更强</strong>——中央主导改革由上而下强制推广，地方无权选择；自下而上改革扩散时地方有更大裁量权，倾向于向条件相似的地区扩散。</p>
-<h3 id="发现三：增长效应"><a href="#发现三：增长效应" class="headerlink" title="发现三：增长效应"></a>发现三：增长效应</h3><p><strong>GDP增长</strong>（省级面板，DiD策略）：</p>
-<ul>
-<li>改革政策创新和扩散均与GDP增长显著正相关</li>
-<li>效应随扩散深度递减（初始创新者效应大于后继跟进者）</li>
-</ul>
-<p><strong>关键结论——两类改革的增长来源不同</strong>：</p>
-<ul>
-<li><strong>自下而上改革 → TFP增长</strong>：1省内10%人口暴露于改革 × 自下而上指数提高1个标准差 → 3年GDP per worker增长+1.1个百分点，TFP增长+0.74个百分点</li>
-<li><strong>中央主导型改革 → 固定资本投资增加</strong>：这类改革主要拉动资本投入，而非效率提升</li>
-</ul>
-<p><strong>替代结果指标（稳健性）</strong>：</p>
-<ul>
-<li>自下而上改革与农业→非农业的结构转型加速相关</li>
-<li>自下而上改革与私营企业进入数量增加相关</li>
-<li>以上效应在自下而上程度更高的改革中均更显著</li>
-</ul>
-<hr>
-<h2 id="结论（Conclusion）"><a href="#结论（Conclusion）" class="headerlink" title="结论（Conclusion）"></a>结论（Conclusion）</h2><p>1978-2005年中国改革中，自下而上的制度变迁（地方政治企业家在未获中央授权时自发推行改革）扮演了一个比既有文献所承认的更为重要的角色。这类改革具有独特特征：由偏远、财政弱但人力资本充裕的县域发起，扩散时遵循适宜性原则，生长周期更长。关键在于：自下而上改革是TFP增长（而非资本积累）的来源，这与中国经济增长的”效率”叙事高度匹配。</p>
-<p>作者指出了两个悬而未决的重要问题：</p>
-<ol>
-<li>如果当时中央政府拒绝了自下而上的创新，中国会损失多少经济增长？</li>
-<li>2010年代以来，权力日益向中央集中、自上而下产业政策盛行、地方政府发起制度创新的激励减弱，这种”自下而上供给的下降”是否是近年增长减速的制度原因？</li>
-</ol>
-<hr>
-<h2 id="未来研究方向（Future-work）"><a href="#未来研究方向（Future-work）" class="headerlink" title="未来研究方向（Future work）"></a>未来研究方向（Future work）</h2><p><strong>论文明确提及的方向</strong>：</p>
-<ol>
-<li>反事实估算：如果没有自下而上创新，改革时期会有多少增长损失？</li>
-<li>权力再集中化的代价：2010年代以来自下而上改革减少与中国经济减速的定量关联。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li><strong>政策含义</strong>：如何在保持政治集权的同时，重新激活地方政治企业家的改革创新激励？设计什么样的制度环境可以同时实现中央控制和地方创新？</li>
-<li><strong>技术进步与制度变迁的比较</strong>：本文将改革政策类比为技术创新/扩散，下一步可以实证比较”政策创新”和”技术创新”在扩散模式和增长效应上的异同；</li>
-<li><strong>其他发展中国家的适用性</strong>：自下而上制度变迁的驱动逻辑（偏远+有能力+政治庇护）是否在越南、印度等多级政府体制国家中也能找到对应？</li>
-<li><strong>地方志数据的潜力</strong>：本文证明地方志是中国历史微观数据的宝贵来源，对其他研究（如政策执行、社会运动、地方官员行为）也有启示。</li>
-</ol>
-<hr>
-<h2 id="学术思考"><a href="#学术思考" class="headerlink" title="学术思考"></a>学术思考</h2><ol>
-<li><p><strong>因果识别的挑战</strong>：论文发现”自下而上改革与TFP增长正相关”，但识别仍面临挑战：哪些省份率先出现自下而上改革，可能本来就是那些有更好潜在TFP增长条件的省份。文中使用的工具变量或自然实验策略的强度和可信度值得仔细审视。</p>
-</li>
-<li><p><strong>自下而上指数的测量效度</strong>：指数基于”地方政府先于中央发起改革”的程度，但地方志记录的准确性和完整性可能存在系统偏差——受到中央重视的改革可能有更完整的地方志记录，而真正”冒险”的底层创新反而记录不全，这会导致”自下而上指数”被低估，测量误差可能带来衰减偏误。</p>
-</li>
-<li><p><strong>与Wang &amp; Yang (2024) 的张力</strong>：Wang &amp; Yang发现中央主导政策试验存在三重偏误（样本偏误、官员额外努力、非成熟解读）。本文则发现自下而上改革带来更强TFP增长。二者并不矛盾——Wang &amp; Yang研究的是中央主导试验的”内在失真”，本文研究的是”自下而上”的增量贡献。但这两篇论文合在一起，表明中国改革中信息和激励扭曲无处不在，需要对”中国政策学习”保持更深的审慎。</p>
-</li>
-<li><p><strong>自下而上创新的供给为何减少</strong>：论文指出近年来自下而上改革减少，但未深入分析机制。是因为”低垂的果子”（容易改的已经改完）还是”制度结构变化”（习近平时代的权力集中）？这两种解释的政策含义截然不同：前者意味着增长减速是结构性的，后者意味着可以通过制度改革缓解。</p>
-</li>
-<li><p><strong>地方志的历史偏见</strong>：地方志由地方政府官员编撰，倾向于记录”成功的”改革创新而淡化失败案例。这意味着本文的样本可能系统性地只包含了”最终成功的改革”，而那些被记录为失败或被扼杀的自下而上创新无从观察，造成幸存者偏误（survivorship bias）。</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题"><a href="#下一步用户可能提的问题" class="headerlink" title="下一步用户可能提的问题"></a>下一步用户可能提的问题</h2><ol>
-<li>本文关注的”自下而上改革”样例包括哪些？家庭联产承包责任制、国企私有化——这些改革在地方志中是如何被记录的？</li>
-<li>本文的增长回归如何解决省份层面的时序内生性？用了哪些工具变量或识别策略？</li>
-<li>2010年后习近平执政以来，权力再集中化是否确实导致了”自下而上改革供给”的显著下降？有没有定量证据支持这一判断？</li>
-<li>“自下而上改革 → TFP增长 vs 中央主导改革 → 资本投入”这一发现的直觉是什么？为什么中央主导改革倾向于拉动投资而非效率？</li>
-<li>本文的地方志数据库（1.8百万条事件）是否开放共享？其他学者如何可以利用这一数据？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -14238,119 +14238,6 @@ f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=1\right)\right]-f^{-1}\left[E\left(
       </tags>
   </entry>
   <entry>
-    <title>空间处理的因果推断 — 深度阅读笔记 — Pollmann</title>
-    <url>/posts/pollmann2023/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Causal Inference for Spatial Treatments<br>Zotero Collection:: 有趣的文章<br>PDF Path:: /Users/double/Zotero/storage/CDU36XVN/Pollmann - 2023 - Causal Inference for Spatial Treatments.pdf<br>Zotero Item Key:: 5VM9WE7W</p>
-<hr>
-<span id="more"></span>
-<h2 id="引言（背景和意义）"><a href="#引言（背景和意义）" class="headerlink" title="引言（背景和意义）"></a>引言（背景和意义）</h2><p><strong>领域基础知识</strong><br>很多政策或事件发生在特定的地理位置，研究者想估计其对附近居民或企业的因果影响，这类问题被称为”空间处理”（spatial treatment）。常见例子包括：新超市对周边商业的影响、学校/医院/污染源对附近居民健康的影响、犯罪事件对周边房价的影响。现有实证研究中最常用的策略是”内外环比较”（inner vs. outer ring）：以距处理地点距离 $d$ 以内的个体为处理组，以距离 $D \gg d$ 的个体（仍围绕同一处理地点）为对照组。</p>
-<p><strong>研究背景</strong><br>随着精确地理位置数据（GPS轨迹、地理编码数据库）的普及，研究者越来越多地能够以细粒度分析空间处理效应随距离的变化。但现有方法论存在严重缺陷：内外环比较策略在非常窄的特殊条件外是无效的，且标准误的计算通常不能正确反映研究者利用的识别变异。</p>
-<p><strong>作者的问题意识</strong><br>研究空间处理效应时的理想实验是什么？这个理想实验如何指导实证分析中的控制组选择？如何在该设计框架下推导有效的标准误？在观测数据中，如何通过机器学习方法实现对理想实验的近似？</p>
-<p><strong>研究意义</strong><br>本文系统化地建立了空间处理的设计基础因果推断框架，指出了广泛使用的内外环比较策略的识别问题，提出了基于卷积神经网络（CNN）的反事实位置识别方法，并给出了实用的计算程序。对凡是研究”空间处理对附近个体影响”的实证研究都有直接的方法论指导意义。</p>
-<hr>
-<h2 id="内容及结构（论文结构）"><a href="#内容及结构（论文结构）" class="headerlink" title="内容及结构（论文结构）"></a>内容及结构（论文结构）</h2><ol>
-<li><strong>引言</strong>：问题提出，三大贡献预告。</li>
-<li><strong>内外环策略的局限（Section 2）</strong>：证明内外环比较不能用准随机位置变异来正当化。</li>
-<li><strong>框架与记号（Section 3）</strong>：空间处理设定的正式化，理想实验定义。</li>
-<li><strong>估计与推断（Section 4）</strong>：逆概率加权估计量；设计基础方差推导。</li>
-<li><strong>空间无混淆假设与CNN（Section 5）</strong>：观测数据下的反事实位置识别。</li>
-<li><strong>扩展（Section 6）</strong>：推广到非空间处理设定。</li>
-<li><strong>应用（Section 7）</strong>：COVID-19期间杂货店对周边餐厅客流的影响。</li>
-<li><strong>结论</strong>。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）"><a href="#正文（逻辑梳理）" class="headerlink" title="正文（逻辑梳理）"></a>正文（逻辑梳理）</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>空间处理普遍存在于经济学实证研究中。精确地理数据使研究者能以距离为维度细分处理效应。然而，方法论跟不上数据进步——最常用的内外环比较策略存在根本性缺陷。</p>
-<h3 id="挑战：内外环比较策略为何无效？"><a href="#挑战：内外环比较策略为何无效？" class="headerlink" title="挑战：内外环比较策略为何无效？"></a>挑战：内外环比较策略为何无效？</h3><p><strong>内外环策略</strong>：用距处理地点”内圈”（距离 $d$）的个体作为处理组，”外圈”（距离 $D \gg d$）的个体作为对照组。</p>
-<p><strong>问题所在</strong>：这一比较隐含假设”同一处理地点”的内圈和外圈具有相同的潜在结果（如果处理不存在）。但这一假设在几乎任何现实设定中都不成立——即使处理地点是准随机分配的，同一地点的”不同距离个体”所处的空间经济环境本身就不同（如与市中心的距离、周边商业密度等）。内外环策略要求”距离处理地点距离 $D$ 和距离 $d$ 的个体潜在结果相同”，这是一个非常强且通常不成立的假设。</p>
-<h3 id="识别框架：理想实验"><a href="#识别框架：理想实验" class="headerlink" title="识别框架：理想实验"></a>识别框架：理想实验</h3><p><strong>理想实验</strong>：在所有”可能的候选处理位置”中随机决定实际处理放在哪里。例如：随机决定在候选地点A还是B建一家新超市。</p>
-<p><strong>正确的对照组</strong>：</p>
-<ul>
-<li><strong>处理组</strong>：实际处理位置（超市A）附近（距离 $d$ 以内）的个体</li>
-<li><strong>对照组</strong>：反事实处理位置（超市B，实际上没有超市）附近（同样距离 $d$ 以内）的个体</li>
-</ul>
-<p><strong>关键直觉</strong>：这一比较将”有超市的地点附近”和”同样可能有超市但实际上没有的地点附近”进行对比，从而将”地点本身的特征”控制掉——因为两类地点在地理和经济环境上是可比的（在准随机化的意义上）。</p>
-<h3 id="设计基础推断"><a href="#设计基础推断" class="headerlink" title="设计基础推断"></a>设计基础推断</h3><p><strong>逆概率加权（IPW）估计量</strong>：基于理想实验的概率（每个候选地点被选中的概率），对处理组和对照组的个体结果分别加权平均，差值即为处理效应估计。</p>
-<p><strong>设计基础方差</strong>：</p>
-<ul>
-<li>反映的是研究者在主张”因果效应”时实际利用的随机性来源（候选位置的随机选择）</li>
-<li>不需要假设超总体（super-population）和抽样方案</li>
-<li><strong>不需要估计或建模结果在空间上的相关结构</strong>（如Conley 1999空间HAC标准误所需的），大大降低了计算复杂度</li>
-<li>适用于个体同时暴露于多个处理的情形（传统”聚类”标准误在此失效）</li>
-</ul>
-<h3 id="观测数据下的方法：空间无混淆假设-CNN"><a href="#观测数据下的方法：空间无混淆假设-CNN" class="headerlink" title="观测数据下的方法：空间无混淆假设 + CNN"></a>观测数据下的方法：空间无混淆假设 + CNN</h3><p>当处理地点不是真正随机分配时，引入<strong>空间无混淆假设</strong>：如果两个地点在所有可观测的前处理空间协变量上相同，则这两个地点被选为处理位置是随机的（相对于潜在结果而言）。</p>
-<p><strong>挑战</strong>：空间协变量是高维的（周边建筑分布、各类设施密度等），传统汇总统计（如圆形内均值）会损失重要信息。</p>
-<p><strong>方法</strong>：利用<strong>卷积神经网络（CNN）</strong>：</p>
-<ul>
-<li>CNN能够自动学习空间协变量分布的局部模式（而非依赖手工构造的汇总统计）</li>
-<li>自然满足空间的平移等变性（shift equivariance）</li>
-<li>通过数据增强可引入镜像、旋转不变性</li>
-<li>输出：每个候选位置的”被选为处理地点的倾向得分”（propensity score），用于匹配反事实地点</li>
-</ul>
-<h3 id="应用：COVID-19期间杂货店对餐厅客流的影响"><a href="#应用：COVID-19期间杂货店对餐厅客流的影响" class="headerlink" title="应用：COVID-19期间杂货店对餐厅客流的影响"></a>应用：COVID-19期间杂货店对餐厅客流的影响</h3><p><strong>设定</strong>：</p>
-<ul>
-<li>美国旧金山湾区，2020年4月，COVID-19就地避险令（shelter-in-place）期间</li>
-<li>避险令期间，居民只能进行必要出行（如购物），餐厅禁止堂食</li>
-<li><strong>假说</strong>：餐厅如果距杂货店很近，可能受益于杂货店带来的客流（顾客排队时顺便买咖啡/外卖）</li>
-</ul>
-<p><strong>数据</strong>：SafeGraph匿名手机位置数据（GPS轨迹），测量各商家客流量</p>
-<p><strong>反事实地点识别</strong>：用CNN在旧金山湾区内识别出与真实杂货店在周边商业构成和位置格局上高度相似（但实际上没有杂货店）的地点，作为对照组</p>
-<p><strong>结果</strong>：</p>
-<ul>
-<li>距真实杂货店步行约2分钟以内的餐厅客流量<strong>约为</strong>对照地点同等距离餐厅的<strong>两倍</strong></li>
-<li>距离较远时（超过此范围），两类地点的餐厅客流量无显著差异</li>
-<li><strong>设计基础标准误</strong>：正确反映了多个杂货店之间的复杂相关结构，结果显著</li>
-</ul>
-<hr>
-<h2 id="结论（Conclusion）"><a href="#结论（Conclusion）" class="headerlink" title="结论（Conclusion）"></a>结论（Conclusion）</h2><p>本文建立了一套基于设计思想的空间处理因果推断框架：</p>
-<ol>
-<li>理想实验是在候选位置间随机化处理，正确的对照组是反事实位置附近个体（不是同一处理地点外圈的个体）；</li>
-<li>设计基础方差直观、可行、且不依赖空间相关结构的建模；</li>
-<li>卷积神经网络在观测数据下可以数据驱动地找到反事实位置；</li>
-<li>应用结果显示：避险令期间杂货店在极短距离内（步行可达）对周边餐厅客流有实质性正向外部效应。</li>
-</ol>
-<hr>
-<h2 id="未来研究方向（Future-work）"><a href="#未来研究方向（Future-work）" class="headerlink" title="未来研究方向（Future work）"></a>未来研究方向（Future work）</h2><p><strong>论文明确提及的方向</strong>：</p>
-<ol>
-<li>扩展框架到非空间处理设定（如网络中的处理溢出）；</li>
-<li>参数化处理效应随距离的函数形式（Online Appendix 8）。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li><strong>动态空间效应</strong>：随时间变化的空间处理效应（如新地铁站开通后房价的动态调整）如何在此框架内估计？</li>
-<li><strong>CNN黑箱问题</strong>：如何解释CNN识别的反事实位置的经济含义？能否可视化CNN学到的”相似度”标准，与研究者的经济直觉对应？</li>
-<li><strong>多重处理的联合推断</strong>：个体同时暴露于多个空间处理时（如同时受到学校和超市的影响），如何定义和估计各自的边际效应？</li>
-<li><strong>应用推广</strong>：可以将本文方法应用于中国城市语境中的问题，如：地铁站开通对周边商业/房价的影响（利用站点位置而非线路走向作为识别变量）。</li>
-</ol>
-<hr>
-<h2 id="学术思考"><a href="#学术思考" class="headerlink" title="学术思考"></a>学术思考</h2><ol>
-<li><p><strong>反事实位置识别的可信性</strong>：CNN识别出的”反事实位置”是否真的与真实杂货店位置的邻域在经济意义上无法区分？如果真实杂货店系统地选址于某些特殊位置（如交通枢纽），CNN能否仅通过周边商业组成完全控制这一特征？这是”空间无混淆”假设能否成立的核心。</p>
-</li>
-<li><p><strong>设计基础方差 vs Conley标准误</strong>：本文的方差公式反映的是”候选位置随机选择”的不确定性，而Conley (1999) HAC反映的是”空间随机误差项的相关性”。当研究者主张识别是基于位置的准随机变异时，设计基础方差在概念上更为精确。但实际中，很多研究者并不能明确描述候选位置集合，这限制了设计基础推断的可操作性。</p>
-</li>
-<li><p><strong>内外环策略何时有效</strong>：作者指出，内外环比较在”knife-edge scenarios”（极端特殊情形）下有效。这些情形是什么？能否通过检验某些可检验的必要条件（如处理前协变量在内外环间的平衡性）来为内外环策略的可信性提供证据？</p>
-</li>
-<li><p><strong>CNN的空间等变性假设</strong>：论文假设经济结果对空间协变量的函数满足平移等变性——即如果整个地图平移，预测结果也简单平移。这对某些场景（如距市中心距离）不成立。论文通过”数据增强”部分解决了旋转问题，但平移等变性本身是否是一个过强的假设值得关注。</p>
-</li>
-<li><p><strong>方法的可推广性</strong>：论文声称这些方法可推广到”非空间设定中处理与结果属于不同单位的情形”（如网络中的溢出效应）。这一推广在技术上令人信服，但在实证研究中，如何指定”候选处理位置集合”（对应于网络中的”候选处理节点”）仍然是核心挑战，需要大量领域知识。</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题"><a href="#下一步用户可能提的问题" class="headerlink" title="下一步用户可能提的问题"></a>下一步用户可能提的问题</h2><ol>
-<li>本文的方法如何与”堆叠DiD”（stacked DiD）或”空间断点回归”（spatial RDD）的方法论进行比较？它们各自适用的场景有何不同？</li>
-<li>在中国的实证研究中，如地铁线路开通、工业园区落地等空间处理，如何确定”候选处理位置集合”？有没有基于中国数据的应用案例？</li>
-<li>论文代码在GitHub开放（spatialTreat-example），其中CNN的输入格式是什么？对经济数据集（如OpenStreetMap商业位置数据）的预处理需要哪些步骤？</li>
-<li>内外环策略在哪些实证文献中被使用？其中哪些结论可能因为采用了正确的方法论而发生改变？</li>
-<li>本文提出的”设计基础方差”与bootstrap方法相比有何优势？在小样本情形下（如只有少数处理地点）表现如何？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>中国农业发展之路 — 深度阅读笔记 — Perkins</title>
     <url>/posts/perkins1969/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="书籍信息"><a href="#书籍信息" class="headerlink" title="书籍信息"></a>书籍信息</h2><ul>
@@ -14852,6 +14739,119 @@ f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=1\right)\right]-f^{-1}\left[E\left(
       </tags>
   </entry>
   <entry>
+    <title>空间处理的因果推断 — 深度阅读笔记 — Pollmann</title>
+    <url>/posts/pollmann2023/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Causal Inference for Spatial Treatments<br>Zotero Collection:: 有趣的文章<br>PDF Path:: /Users/double/Zotero/storage/CDU36XVN/Pollmann - 2023 - Causal Inference for Spatial Treatments.pdf<br>Zotero Item Key:: 5VM9WE7W</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）"><a href="#引言（背景和意义）" class="headerlink" title="引言（背景和意义）"></a>引言（背景和意义）</h2><p><strong>领域基础知识</strong><br>很多政策或事件发生在特定的地理位置，研究者想估计其对附近居民或企业的因果影响，这类问题被称为”空间处理”（spatial treatment）。常见例子包括：新超市对周边商业的影响、学校/医院/污染源对附近居民健康的影响、犯罪事件对周边房价的影响。现有实证研究中最常用的策略是”内外环比较”（inner vs. outer ring）：以距处理地点距离 $d$ 以内的个体为处理组，以距离 $D \gg d$ 的个体（仍围绕同一处理地点）为对照组。</p>
+<p><strong>研究背景</strong><br>随着精确地理位置数据（GPS轨迹、地理编码数据库）的普及，研究者越来越多地能够以细粒度分析空间处理效应随距离的变化。但现有方法论存在严重缺陷：内外环比较策略在非常窄的特殊条件外是无效的，且标准误的计算通常不能正确反映研究者利用的识别变异。</p>
+<p><strong>作者的问题意识</strong><br>研究空间处理效应时的理想实验是什么？这个理想实验如何指导实证分析中的控制组选择？如何在该设计框架下推导有效的标准误？在观测数据中，如何通过机器学习方法实现对理想实验的近似？</p>
+<p><strong>研究意义</strong><br>本文系统化地建立了空间处理的设计基础因果推断框架，指出了广泛使用的内外环比较策略的识别问题，提出了基于卷积神经网络（CNN）的反事实位置识别方法，并给出了实用的计算程序。对凡是研究”空间处理对附近个体影响”的实证研究都有直接的方法论指导意义。</p>
+<hr>
+<h2 id="内容及结构（论文结构）"><a href="#内容及结构（论文结构）" class="headerlink" title="内容及结构（论文结构）"></a>内容及结构（论文结构）</h2><ol>
+<li><strong>引言</strong>：问题提出，三大贡献预告。</li>
+<li><strong>内外环策略的局限（Section 2）</strong>：证明内外环比较不能用准随机位置变异来正当化。</li>
+<li><strong>框架与记号（Section 3）</strong>：空间处理设定的正式化，理想实验定义。</li>
+<li><strong>估计与推断（Section 4）</strong>：逆概率加权估计量；设计基础方差推导。</li>
+<li><strong>空间无混淆假设与CNN（Section 5）</strong>：观测数据下的反事实位置识别。</li>
+<li><strong>扩展（Section 6）</strong>：推广到非空间处理设定。</li>
+<li><strong>应用（Section 7）</strong>：COVID-19期间杂货店对周边餐厅客流的影响。</li>
+<li><strong>结论</strong>。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）"><a href="#正文（逻辑梳理）" class="headerlink" title="正文（逻辑梳理）"></a>正文（逻辑梳理）</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>空间处理普遍存在于经济学实证研究中。精确地理数据使研究者能以距离为维度细分处理效应。然而，方法论跟不上数据进步——最常用的内外环比较策略存在根本性缺陷。</p>
+<h3 id="挑战：内外环比较策略为何无效？"><a href="#挑战：内外环比较策略为何无效？" class="headerlink" title="挑战：内外环比较策略为何无效？"></a>挑战：内外环比较策略为何无效？</h3><p><strong>内外环策略</strong>：用距处理地点”内圈”（距离 $d$）的个体作为处理组，”外圈”（距离 $D \gg d$）的个体作为对照组。</p>
+<p><strong>问题所在</strong>：这一比较隐含假设”同一处理地点”的内圈和外圈具有相同的潜在结果（如果处理不存在）。但这一假设在几乎任何现实设定中都不成立——即使处理地点是准随机分配的，同一地点的”不同距离个体”所处的空间经济环境本身就不同（如与市中心的距离、周边商业密度等）。内外环策略要求”距离处理地点距离 $D$ 和距离 $d$ 的个体潜在结果相同”，这是一个非常强且通常不成立的假设。</p>
+<h3 id="识别框架：理想实验"><a href="#识别框架：理想实验" class="headerlink" title="识别框架：理想实验"></a>识别框架：理想实验</h3><p><strong>理想实验</strong>：在所有”可能的候选处理位置”中随机决定实际处理放在哪里。例如：随机决定在候选地点A还是B建一家新超市。</p>
+<p><strong>正确的对照组</strong>：</p>
+<ul>
+<li><strong>处理组</strong>：实际处理位置（超市A）附近（距离 $d$ 以内）的个体</li>
+<li><strong>对照组</strong>：反事实处理位置（超市B，实际上没有超市）附近（同样距离 $d$ 以内）的个体</li>
+</ul>
+<p><strong>关键直觉</strong>：这一比较将”有超市的地点附近”和”同样可能有超市但实际上没有的地点附近”进行对比，从而将”地点本身的特征”控制掉——因为两类地点在地理和经济环境上是可比的（在准随机化的意义上）。</p>
+<h3 id="设计基础推断"><a href="#设计基础推断" class="headerlink" title="设计基础推断"></a>设计基础推断</h3><p><strong>逆概率加权（IPW）估计量</strong>：基于理想实验的概率（每个候选地点被选中的概率），对处理组和对照组的个体结果分别加权平均，差值即为处理效应估计。</p>
+<p><strong>设计基础方差</strong>：</p>
+<ul>
+<li>反映的是研究者在主张”因果效应”时实际利用的随机性来源（候选位置的随机选择）</li>
+<li>不需要假设超总体（super-population）和抽样方案</li>
+<li><strong>不需要估计或建模结果在空间上的相关结构</strong>（如Conley 1999空间HAC标准误所需的），大大降低了计算复杂度</li>
+<li>适用于个体同时暴露于多个处理的情形（传统”聚类”标准误在此失效）</li>
+</ul>
+<h3 id="观测数据下的方法：空间无混淆假设-CNN"><a href="#观测数据下的方法：空间无混淆假设-CNN" class="headerlink" title="观测数据下的方法：空间无混淆假设 + CNN"></a>观测数据下的方法：空间无混淆假设 + CNN</h3><p>当处理地点不是真正随机分配时，引入<strong>空间无混淆假设</strong>：如果两个地点在所有可观测的前处理空间协变量上相同，则这两个地点被选为处理位置是随机的（相对于潜在结果而言）。</p>
+<p><strong>挑战</strong>：空间协变量是高维的（周边建筑分布、各类设施密度等），传统汇总统计（如圆形内均值）会损失重要信息。</p>
+<p><strong>方法</strong>：利用<strong>卷积神经网络（CNN）</strong>：</p>
+<ul>
+<li>CNN能够自动学习空间协变量分布的局部模式（而非依赖手工构造的汇总统计）</li>
+<li>自然满足空间的平移等变性（shift equivariance）</li>
+<li>通过数据增强可引入镜像、旋转不变性</li>
+<li>输出：每个候选位置的”被选为处理地点的倾向得分”（propensity score），用于匹配反事实地点</li>
+</ul>
+<h3 id="应用：COVID-19期间杂货店对餐厅客流的影响"><a href="#应用：COVID-19期间杂货店对餐厅客流的影响" class="headerlink" title="应用：COVID-19期间杂货店对餐厅客流的影响"></a>应用：COVID-19期间杂货店对餐厅客流的影响</h3><p><strong>设定</strong>：</p>
+<ul>
+<li>美国旧金山湾区，2020年4月，COVID-19就地避险令（shelter-in-place）期间</li>
+<li>避险令期间，居民只能进行必要出行（如购物），餐厅禁止堂食</li>
+<li><strong>假说</strong>：餐厅如果距杂货店很近，可能受益于杂货店带来的客流（顾客排队时顺便买咖啡/外卖）</li>
+</ul>
+<p><strong>数据</strong>：SafeGraph匿名手机位置数据（GPS轨迹），测量各商家客流量</p>
+<p><strong>反事实地点识别</strong>：用CNN在旧金山湾区内识别出与真实杂货店在周边商业构成和位置格局上高度相似（但实际上没有杂货店）的地点，作为对照组</p>
+<p><strong>结果</strong>：</p>
+<ul>
+<li>距真实杂货店步行约2分钟以内的餐厅客流量<strong>约为</strong>对照地点同等距离餐厅的<strong>两倍</strong></li>
+<li>距离较远时（超过此范围），两类地点的餐厅客流量无显著差异</li>
+<li><strong>设计基础标准误</strong>：正确反映了多个杂货店之间的复杂相关结构，结果显著</li>
+</ul>
+<hr>
+<h2 id="结论（Conclusion）"><a href="#结论（Conclusion）" class="headerlink" title="结论（Conclusion）"></a>结论（Conclusion）</h2><p>本文建立了一套基于设计思想的空间处理因果推断框架：</p>
+<ol>
+<li>理想实验是在候选位置间随机化处理，正确的对照组是反事实位置附近个体（不是同一处理地点外圈的个体）；</li>
+<li>设计基础方差直观、可行、且不依赖空间相关结构的建模；</li>
+<li>卷积神经网络在观测数据下可以数据驱动地找到反事实位置；</li>
+<li>应用结果显示：避险令期间杂货店在极短距离内（步行可达）对周边餐厅客流有实质性正向外部效应。</li>
+</ol>
+<hr>
+<h2 id="未来研究方向（Future-work）"><a href="#未来研究方向（Future-work）" class="headerlink" title="未来研究方向（Future work）"></a>未来研究方向（Future work）</h2><p><strong>论文明确提及的方向</strong>：</p>
+<ol>
+<li>扩展框架到非空间处理设定（如网络中的处理溢出）；</li>
+<li>参数化处理效应随距离的函数形式（Online Appendix 8）。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li><strong>动态空间效应</strong>：随时间变化的空间处理效应（如新地铁站开通后房价的动态调整）如何在此框架内估计？</li>
+<li><strong>CNN黑箱问题</strong>：如何解释CNN识别的反事实位置的经济含义？能否可视化CNN学到的”相似度”标准，与研究者的经济直觉对应？</li>
+<li><strong>多重处理的联合推断</strong>：个体同时暴露于多个空间处理时（如同时受到学校和超市的影响），如何定义和估计各自的边际效应？</li>
+<li><strong>应用推广</strong>：可以将本文方法应用于中国城市语境中的问题，如：地铁站开通对周边商业/房价的影响（利用站点位置而非线路走向作为识别变量）。</li>
+</ol>
+<hr>
+<h2 id="学术思考"><a href="#学术思考" class="headerlink" title="学术思考"></a>学术思考</h2><ol>
+<li><p><strong>反事实位置识别的可信性</strong>：CNN识别出的”反事实位置”是否真的与真实杂货店位置的邻域在经济意义上无法区分？如果真实杂货店系统地选址于某些特殊位置（如交通枢纽），CNN能否仅通过周边商业组成完全控制这一特征？这是”空间无混淆”假设能否成立的核心。</p>
+</li>
+<li><p><strong>设计基础方差 vs Conley标准误</strong>：本文的方差公式反映的是”候选位置随机选择”的不确定性，而Conley (1999) HAC反映的是”空间随机误差项的相关性”。当研究者主张识别是基于位置的准随机变异时，设计基础方差在概念上更为精确。但实际中，很多研究者并不能明确描述候选位置集合，这限制了设计基础推断的可操作性。</p>
+</li>
+<li><p><strong>内外环策略何时有效</strong>：作者指出，内外环比较在”knife-edge scenarios”（极端特殊情形）下有效。这些情形是什么？能否通过检验某些可检验的必要条件（如处理前协变量在内外环间的平衡性）来为内外环策略的可信性提供证据？</p>
+</li>
+<li><p><strong>CNN的空间等变性假设</strong>：论文假设经济结果对空间协变量的函数满足平移等变性——即如果整个地图平移，预测结果也简单平移。这对某些场景（如距市中心距离）不成立。论文通过”数据增强”部分解决了旋转问题，但平移等变性本身是否是一个过强的假设值得关注。</p>
+</li>
+<li><p><strong>方法的可推广性</strong>：论文声称这些方法可推广到”非空间设定中处理与结果属于不同单位的情形”（如网络中的溢出效应）。这一推广在技术上令人信服，但在实证研究中，如何指定”候选处理位置集合”（对应于网络中的”候选处理节点”）仍然是核心挑战，需要大量领域知识。</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题"><a href="#下一步用户可能提的问题" class="headerlink" title="下一步用户可能提的问题"></a>下一步用户可能提的问题</h2><ol>
+<li>本文的方法如何与”堆叠DiD”（stacked DiD）或”空间断点回归”（spatial RDD）的方法论进行比较？它们各自适用的场景有何不同？</li>
+<li>在中国的实证研究中，如地铁线路开通、工业园区落地等空间处理，如何确定”候选处理位置集合”？有没有基于中国数据的应用案例？</li>
+<li>论文代码在GitHub开放（spatialTreat-example），其中CNN的输入格式是什么？对经济数据集（如OpenStreetMap商业位置数据）的预处理需要哪些步骤？</li>
+<li>内外环策略在哪些实证文献中被使用？其中哪些结论可能因为采用了正确的方法论而发生改变？</li>
+<li>本文提出的”设计基础方差”与bootstrap方法相比有何优势？在小样本情形下（如只有少数处理地点）表现如何？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Racial Discrimination and the Social Contract — 深度阅读笔记 — Qian &amp; Tabellini</title>
     <url>/posts/qian2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息"><a href="#文献信息" class="headerlink" title="文献信息"></a>文献信息</h2><ul>
@@ -14889,6 +14889,130 @@ f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=1\right)\right]-f^{-1}\left[E\left(
 ]]></content>
       <categories>
         <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>邻里效应：伦敦战时破坏的证据 — 深度阅读笔记 — Redding &amp; Sturm</title>
+    <url>/posts/redding2024/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Neighborhood Effects: Evidence from Wartime Destruction in London<br>Zotero Collection:: 有趣的文章<br>PDF Path:: /Users/double/Zotero/storage/394PKQGT/Redding和Sturm - 2024 - Neighborhood Effects Evidence from Wartime Destruction in London.pdf<br>Zotero Item Key:: Y7PUT4SC</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）"><a href="#引言（背景和意义）" class="headerlink" title="引言（背景和意义）"></a>引言（背景和意义）</h2><p><strong>领域基础知识</strong><br>城市经济学的一个核心问题是：为什么同一城市内不同地段的房价和社会经济水平差异如此之大？理论上存在两类竞争性解释：（1）<strong>自然禀赋差异</strong>（fundamentals）——绿地、景观等自然优势；（2）<strong>邻里效应</strong>（neighborhood effects）——个体行为受周边邻里特征影响（如邻里构成影响居民选择），形成正反馈循环。这两类机制对政策有截然不同的含义：如果是自然禀赋主导，地方干预需要改变禀赋本身；如果是邻里效应主导，即使小规模干预也可能通过改变邻里构成引发持久的社会变迁。</p>
+<p><strong>研究背景</strong><br>已有研究（Chetty et al. 2016 “移动到机会”项目等）尝试估计邻里效应，但面临根本性的内生性问题：居民在哪里住是自我选择的结果，富裕社区可能本来就具有更好的禀赋，而不是因为”邻里”本身的影响。外生识别邻里效应非常困难，需要大规模、外生的冲击来打破居民与环境之间的共同决定关系。</p>
+<p><strong>作者的问题意识</strong><br>能否利用大规模的历史外生冲击——二战期间德国对伦敦的轰炸——来识别邻里效应？轰炸的（条件）随机性使其成为一个天然实验，可以比较被炸和未被炸地区在二战后长期的社会经济演变差异，以及相邻地区之间的溢出效应。</p>
+<p><strong>研究意义</strong><br>首次利用战争轰炸作为外生冲击估计邻里效应的强度；构建了细至单栋建筑的历史-现代链接数据集；将量化城市模型（quantitative urban model）与邻里效应相结合，实现了”自然禀赋 vs 邻里效应”的反事实分解。对理解城市内空间不平等的成因，以及评估以地方为基础的政策干预（place-based interventions）的效果，具有重要启示。</p>
+<hr>
+<h2 id="内容及结构（论文结构）"><a href="#内容及结构（论文结构）" class="headerlink" title="内容及结构（论文结构）"></a>内容及结构（论文结构）</h2><ol>
+<li><strong>引言</strong>：问题提出、自然实验设计、主要发现。</li>
+<li><strong>历史背景</strong>：二战伦敦轰炸及战后重建（以公屋建设为主）。</li>
+<li><strong>数据</strong>：构建个体建筑层面的战时破坏×战前-战后社会经济数据集。</li>
+<li><strong>简化型证据（Section 4）</strong>：战时破坏对战后房价和社会经济构成的直接效应与溢出效应。</li>
+<li><strong>理论模型（Section 5）</strong>：含邻里效应的空间分选量化城市模型。</li>
+<li><strong>模型参数估计（Section 6）</strong>。</li>
+<li><strong>反事实分析（Section 7）</strong>：邻里效应对轰炸冲击的放大作用及其对整体空间差异的贡献。</li>
+<li><strong>结论</strong>。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）"><a href="#正文（逻辑梳理）" class="headerlink" title="正文（逻辑梳理）"></a>正文（逻辑梳理）</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>伦敦城市内部社会经济分化显著，理解其成因对于”社会住房政策””邻里更新”等地方干预的效果评估至关重要。然而，传统研究面临根本性的内生性挑战：社会经济好的地区很可能本来就有更好的自然禀赋。</p>
+<h3 id="挑战"><a href="#挑战" class="headerlink" title="挑战"></a>挑战</h3><p>如何在不随机分配居民的情况下，识别出”邻里效应”相对于”自然禀赋”的独立贡献？作者的答案：二战期间德军的伦敦轰炸为这一问题提供了一个罕见的外生冲击。</p>
+<h3 id="识别策略（自然实验）"><a href="#识别策略（自然实验）" class="headerlink" title="识别策略（自然实验）"></a>识别策略（自然实验）</h3><p><strong>外生性验证</strong>：</p>
+<ul>
+<li>从整个伦敦来看，轰炸与战前贫困有相关性（德军最初以东伦敦码头区为目标，而东伦敦历史上更贫困）；</li>
+<li>但<strong>在1km六边形网格（hexagonal grid）内控制地理位置后</strong>，轰炸与战前房价和社会经济构成<strong>不相关</strong>；</li>
+<li>这与当时落后的炸弹瞄准技术（且多为夜间轰炸、战时灯火管制）相符——无法精准打击特定街道或建筑。</li>
+</ul>
+<h3 id="数据构建"><a href="#数据构建" class="headerlink" title="数据构建"></a>数据构建</h3><p><strong>历史-现代链接，建筑层面数据</strong>：</p>
+<ul>
+<li><strong>战时破坏</strong>：数字化并地理编码伦敦郡议会（LCC）绘制的轰炸损毁地图（bomb damage maps）</li>
+<li><strong>战前房产价值</strong>：各栋建筑的商业和住宅地产评估值</li>
+<li><strong>战前社会经济构成</strong>：《伦敦生活与劳动新调查》（NSOL）按街段记录的各社会阶层比例</li>
+<li><strong>战后房产价值</strong>：1995–2020年个人房产交易数据</li>
+<li><strong>战后社会经济构成</strong>：2001年（及2011年）人口普查，9,041个Output Area层级</li>
+</ul>
+<h3 id="减少型证据（Reduced-Form-Results）"><a href="#减少型证据（Reduced-Form-Results）" class="headerlink" title="减少型证据（Reduced-Form Results）"></a>减少型证据（Reduced-Form Results）</h3><p><strong>直接效应（对被炸地区）</strong>：</p>
+<ul>
+<li>完全被毁地区 vs 未损毁地区（控制1km网格固定效应）：<ul>
+<li>战后房价下降 <strong>11–18%</strong></li>
+<li>高收入居民比例下降 <strong>4个百分点</strong></li>
+<li>低收入居民比例上升 <strong>6个百分点</strong></li>
+<li>综合社会经济指数下降 <strong>5%</strong></li>
+</ul>
+</li>
+<li><strong>机制</strong>：战后重建主要通过建设公房（council housing/social housing）完成——轰炸导致了”设施降级”（downgrading），而非升级</li>
+</ul>
+<p><strong>溢出效应（对相邻未被炸地区）</strong>：</p>
+<ul>
+<li>相邻100米内邻居被完全摧毁：本地房价下降 <strong>7–8%</strong>，社会经济指数下降 <strong>3个百分点</strong></li>
+<li>溢出效应随距离急剧衰减：<strong>超过300米后不再显著</strong></li>
+<li>这说明邻里效应高度局部化（localized）</li>
+</ul>
+<h3 id="量化城市模型"><a href="#量化城市模型" class="headerlink" title="量化城市模型"></a>量化城市模型</h3><p><strong>结构</strong>：</p>
+<ul>
+<li>三类社会经济群体（低/中/高收入）在伦敦各地点之间选择居住地和工作地</li>
+<li>工资、居住便利性（amenities）、生活成本、通勤成本共同影响选址</li>
+<li>三类群体是生产中的不完全替代，工资不同；对住房支出占比也不同（高收入群体住房支出占比低，因此更愿意为高便利性支付溢价）</li>
+<li><strong>邻里效应</strong>：每个地点的便利性依赖于周边地点的社会经济构成</li>
+</ul>
+<p><strong>模型逻辑</strong>：</p>
+<ul>
+<li>轰炸→公房建设→降低被炸地区对高收入居民的相对吸引力</li>
+<li>高收入居民离开被炸地点→被炸地点便利性进一步下降（邻里效应）→向相邻地区溢出</li>
+<li>通过模型结构参数估计，将上述机制转化为可量化的一般均衡效应</li>
+</ul>
+<p><strong>反事实分解</strong>：</p>
+<ol>
+<li><strong>邻里效应放大倍数</strong>：剔除邻里效应后，轰炸直接效应远小——邻里效应大幅放大了轰炸的直接冲击</li>
+<li><strong>对整体空间差异的贡献</strong>：即使在没有战时轰炸的反事实情景中，邻里效应（基于对周边社会经济构成的偏好）也能解释相当大比例的当前空间社会经济差异</li>
+</ol>
+<hr>
+<h2 id="结论（Conclusion）"><a href="#结论（Conclusion）" class="headerlink" title="结论（Conclusion）"></a>结论（Conclusion）</h2><p>利用二战伦敦轰炸的外生冲击，结合建筑层面的历史-现代链接数据和含邻里效应的量化城市模型，本文发现：</p>
+<ol>
+<li>轰炸（经公房重建）对被炸地区的房价和社会经济构成产生了<strong>持久的直接负面效应</strong>；</li>
+<li>轰炸对<strong>相邻未被炸地区</strong>产生了<strong>强烈但高度局部化</strong>（300米内衰减至零）的溢出效应；</li>
+<li>邻里效应在量级上<strong>大幅放大</strong>了轰炸冲击的直接影响；</li>
+<li>邻里效应对于解释城市内部空间社会经济分化具有<strong>实质性的独立贡献</strong>（相对于自然禀赋）。</li>
+</ol>
+<p><strong>政策含义</strong>：即便是小规模的地方干预，也可能通过邻里效应的链式反应引发较大的社会经济变迁——地方干预的效果不应仅用其直接冲击来衡量，而应将邻里效应放大机制纳入评估框架。</p>
+<hr>
+<h2 id="未来研究方向（Future-work）"><a href="#未来研究方向（Future-work）" class="headerlink" title="未来研究方向（Future work）"></a>未来研究方向（Future work）</h2><p><strong>论文明确提及的限制</strong>：</p>
+<ol>
+<li>邻里效应的具体机制（是社会互动、犯罪安全、学校质量，还是纯粹的偏好-构成效应）未被明确区分；</li>
+<li>研究未探讨哪类政策干预能够最有效地利用邻里效应的放大机制。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li><strong>机制分解</strong>：300米内的溢出效应驱动因素是什么？可以探讨犯罪率、学校质量、社会网络各机制的相对贡献；</li>
+<li><strong>最优公房区位</strong>：如果公房建设放大了邻里效应，应将公房分散在高收入地区还是集中建设？本文提供了参数，可进一步做最优区位设计分析；</li>
+<li><strong>历史持久性</strong>：战后70余年，”公房区”的社会标签是否仍然存在？有没有通过绅士化（gentrification）逆转的地区，其机制是什么？</li>
+<li><strong>发展中国家的自然实验</strong>：非洲或亚洲城市是否有类似的外生破坏冲击（内战、洪灾）可以复制这一设计，检验邻里效应在不同城市化水平下的强度？</li>
+</ol>
+<hr>
+<h2 id="学术思考"><a href="#学术思考" class="headerlink" title="学术思考"></a>学术思考</h2><ol>
+<li><p><strong>识别假设的微妙之处</strong>：虽然轰炸在1km网格内”条件随机”，但1km网格本身的划分是任意的。如果将网格缩小（如500m），结论是否仍然成立？如果轰炸恰好与网格边界附近的某些微环境特征相关，结论可能被影响。这是空间自然实验的通用挑战。</p>
+</li>
+<li><p><strong>公房重建是关键机制</strong>：论文的核心机制是”轰炸→公房建设→设施降级→高收入居民外迁”。这意味着，如果战后重建采用了高档私人开发而非公房，邻里效应的放大作用可能反向（吸引高收入居民）。因此，本文的发现对轰炸本身的普遍性较弱，更是一个”公房政策+轰炸”的联合效应估计。</p>
+</li>
+<li><p><strong>溢出效应的高度局部性（300米）</strong>：这个范围非常小，大约相当于三四个街区的步行距离。这隐含着邻里效应高度地方化，可能反映了视觉暴露（看到公房）或面对面的社会互动机制，而非学区（通常覆盖更大范围）。如何设计干预来突破这一局限是重要的政策问题。</p>
+</li>
+<li><p><strong>量化模型中”邻里效应”的识别</strong>：论文将邻里效应参数化为”对周边社会经济构成的偏好”。但这一参数的识别依赖于轰炸带来的冲击——结构参数估计和简化型证据在本质上使用了相同的识别变异，可能导致标准误被低估。独立地检验这些参数是否稳健是一个潜在的技术挑战。</p>
+</li>
+<li><p><strong>反事实分析的外推性</strong>：论文通过模型做了”无轰炸”反事实，发现邻里效应仍然解释了相当部分的空间分化。然而，这一反事实依赖于均衡的唯一性和全局稳定性——量化城市模型通常在均衡附近做局部估计，对大幅度反事实的外推可靠性值得关注。</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题"><a href="#下一步用户可能提的问题" class="headerlink" title="下一步用户可能提的问题"></a>下一步用户可能提的问题</h2><ol>
+<li>Chetty et al. (2016) 的”移动到机会”（Moving to Opportunity, MTO）实验与本文的研究发现是否一致？两种识别策略的结论有何异同？</li>
+<li>英国战后公房政策在伦敦各区是如何分布的？是否存在系统性选址偏差，可能影响本文的识别？</li>
+<li>本文发现邻里效应在300米内显著，这一距离在不同城市（如发展中国家特大城市）中是否相同？是否存在文化差异？</li>
+<li>在中国的城市化背景下，城中村改造、棚户区更新等政策是否有类似的邻里效应机制？能否用中国历史冲击做类似研究？</li>
+<li>量化城市模型中如何将”公房”与”高档私宅”的差异参数化？如果战后是高档私人开发，模型预测的长期社会经济分布会有多大不同？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -15108,130 +15232,6 @@ f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=1\right)\right]-f^{-1}\left[E\left(
       </tags>
   </entry>
   <entry>
-    <title>邻里效应：伦敦战时破坏的证据 — 深度阅读笔记 — Redding &amp; Sturm</title>
-    <url>/posts/redding2024/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Neighborhood Effects: Evidence from Wartime Destruction in London<br>Zotero Collection:: 有趣的文章<br>PDF Path:: /Users/double/Zotero/storage/394PKQGT/Redding和Sturm - 2024 - Neighborhood Effects Evidence from Wartime Destruction in London.pdf<br>Zotero Item Key:: Y7PUT4SC</p>
-<hr>
-<span id="more"></span>
-<h2 id="引言（背景和意义）"><a href="#引言（背景和意义）" class="headerlink" title="引言（背景和意义）"></a>引言（背景和意义）</h2><p><strong>领域基础知识</strong><br>城市经济学的一个核心问题是：为什么同一城市内不同地段的房价和社会经济水平差异如此之大？理论上存在两类竞争性解释：（1）<strong>自然禀赋差异</strong>（fundamentals）——绿地、景观等自然优势；（2）<strong>邻里效应</strong>（neighborhood effects）——个体行为受周边邻里特征影响（如邻里构成影响居民选择），形成正反馈循环。这两类机制对政策有截然不同的含义：如果是自然禀赋主导，地方干预需要改变禀赋本身；如果是邻里效应主导，即使小规模干预也可能通过改变邻里构成引发持久的社会变迁。</p>
-<p><strong>研究背景</strong><br>已有研究（Chetty et al. 2016 “移动到机会”项目等）尝试估计邻里效应，但面临根本性的内生性问题：居民在哪里住是自我选择的结果，富裕社区可能本来就具有更好的禀赋，而不是因为”邻里”本身的影响。外生识别邻里效应非常困难，需要大规模、外生的冲击来打破居民与环境之间的共同决定关系。</p>
-<p><strong>作者的问题意识</strong><br>能否利用大规模的历史外生冲击——二战期间德国对伦敦的轰炸——来识别邻里效应？轰炸的（条件）随机性使其成为一个天然实验，可以比较被炸和未被炸地区在二战后长期的社会经济演变差异，以及相邻地区之间的溢出效应。</p>
-<p><strong>研究意义</strong><br>首次利用战争轰炸作为外生冲击估计邻里效应的强度；构建了细至单栋建筑的历史-现代链接数据集；将量化城市模型（quantitative urban model）与邻里效应相结合，实现了”自然禀赋 vs 邻里效应”的反事实分解。对理解城市内空间不平等的成因，以及评估以地方为基础的政策干预（place-based interventions）的效果，具有重要启示。</p>
-<hr>
-<h2 id="内容及结构（论文结构）"><a href="#内容及结构（论文结构）" class="headerlink" title="内容及结构（论文结构）"></a>内容及结构（论文结构）</h2><ol>
-<li><strong>引言</strong>：问题提出、自然实验设计、主要发现。</li>
-<li><strong>历史背景</strong>：二战伦敦轰炸及战后重建（以公屋建设为主）。</li>
-<li><strong>数据</strong>：构建个体建筑层面的战时破坏×战前-战后社会经济数据集。</li>
-<li><strong>简化型证据（Section 4）</strong>：战时破坏对战后房价和社会经济构成的直接效应与溢出效应。</li>
-<li><strong>理论模型（Section 5）</strong>：含邻里效应的空间分选量化城市模型。</li>
-<li><strong>模型参数估计（Section 6）</strong>。</li>
-<li><strong>反事实分析（Section 7）</strong>：邻里效应对轰炸冲击的放大作用及其对整体空间差异的贡献。</li>
-<li><strong>结论</strong>。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）"><a href="#正文（逻辑梳理）" class="headerlink" title="正文（逻辑梳理）"></a>正文（逻辑梳理）</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>伦敦城市内部社会经济分化显著，理解其成因对于”社会住房政策””邻里更新”等地方干预的效果评估至关重要。然而，传统研究面临根本性的内生性挑战：社会经济好的地区很可能本来就有更好的自然禀赋。</p>
-<h3 id="挑战"><a href="#挑战" class="headerlink" title="挑战"></a>挑战</h3><p>如何在不随机分配居民的情况下，识别出”邻里效应”相对于”自然禀赋”的独立贡献？作者的答案：二战期间德军的伦敦轰炸为这一问题提供了一个罕见的外生冲击。</p>
-<h3 id="识别策略（自然实验）"><a href="#识别策略（自然实验）" class="headerlink" title="识别策略（自然实验）"></a>识别策略（自然实验）</h3><p><strong>外生性验证</strong>：</p>
-<ul>
-<li>从整个伦敦来看，轰炸与战前贫困有相关性（德军最初以东伦敦码头区为目标，而东伦敦历史上更贫困）；</li>
-<li>但<strong>在1km六边形网格（hexagonal grid）内控制地理位置后</strong>，轰炸与战前房价和社会经济构成<strong>不相关</strong>；</li>
-<li>这与当时落后的炸弹瞄准技术（且多为夜间轰炸、战时灯火管制）相符——无法精准打击特定街道或建筑。</li>
-</ul>
-<h3 id="数据构建"><a href="#数据构建" class="headerlink" title="数据构建"></a>数据构建</h3><p><strong>历史-现代链接，建筑层面数据</strong>：</p>
-<ul>
-<li><strong>战时破坏</strong>：数字化并地理编码伦敦郡议会（LCC）绘制的轰炸损毁地图（bomb damage maps）</li>
-<li><strong>战前房产价值</strong>：各栋建筑的商业和住宅地产评估值</li>
-<li><strong>战前社会经济构成</strong>：《伦敦生活与劳动新调查》（NSOL）按街段记录的各社会阶层比例</li>
-<li><strong>战后房产价值</strong>：1995–2020年个人房产交易数据</li>
-<li><strong>战后社会经济构成</strong>：2001年（及2011年）人口普查，9,041个Output Area层级</li>
-</ul>
-<h3 id="减少型证据（Reduced-Form-Results）"><a href="#减少型证据（Reduced-Form-Results）" class="headerlink" title="减少型证据（Reduced-Form Results）"></a>减少型证据（Reduced-Form Results）</h3><p><strong>直接效应（对被炸地区）</strong>：</p>
-<ul>
-<li>完全被毁地区 vs 未损毁地区（控制1km网格固定效应）：<ul>
-<li>战后房价下降 <strong>11–18%</strong></li>
-<li>高收入居民比例下降 <strong>4个百分点</strong></li>
-<li>低收入居民比例上升 <strong>6个百分点</strong></li>
-<li>综合社会经济指数下降 <strong>5%</strong></li>
-</ul>
-</li>
-<li><strong>机制</strong>：战后重建主要通过建设公房（council housing/social housing）完成——轰炸导致了”设施降级”（downgrading），而非升级</li>
-</ul>
-<p><strong>溢出效应（对相邻未被炸地区）</strong>：</p>
-<ul>
-<li>相邻100米内邻居被完全摧毁：本地房价下降 <strong>7–8%</strong>，社会经济指数下降 <strong>3个百分点</strong></li>
-<li>溢出效应随距离急剧衰减：<strong>超过300米后不再显著</strong></li>
-<li>这说明邻里效应高度局部化（localized）</li>
-</ul>
-<h3 id="量化城市模型"><a href="#量化城市模型" class="headerlink" title="量化城市模型"></a>量化城市模型</h3><p><strong>结构</strong>：</p>
-<ul>
-<li>三类社会经济群体（低/中/高收入）在伦敦各地点之间选择居住地和工作地</li>
-<li>工资、居住便利性（amenities）、生活成本、通勤成本共同影响选址</li>
-<li>三类群体是生产中的不完全替代，工资不同；对住房支出占比也不同（高收入群体住房支出占比低，因此更愿意为高便利性支付溢价）</li>
-<li><strong>邻里效应</strong>：每个地点的便利性依赖于周边地点的社会经济构成</li>
-</ul>
-<p><strong>模型逻辑</strong>：</p>
-<ul>
-<li>轰炸→公房建设→降低被炸地区对高收入居民的相对吸引力</li>
-<li>高收入居民离开被炸地点→被炸地点便利性进一步下降（邻里效应）→向相邻地区溢出</li>
-<li>通过模型结构参数估计，将上述机制转化为可量化的一般均衡效应</li>
-</ul>
-<p><strong>反事实分解</strong>：</p>
-<ol>
-<li><strong>邻里效应放大倍数</strong>：剔除邻里效应后，轰炸直接效应远小——邻里效应大幅放大了轰炸的直接冲击</li>
-<li><strong>对整体空间差异的贡献</strong>：即使在没有战时轰炸的反事实情景中，邻里效应（基于对周边社会经济构成的偏好）也能解释相当大比例的当前空间社会经济差异</li>
-</ol>
-<hr>
-<h2 id="结论（Conclusion）"><a href="#结论（Conclusion）" class="headerlink" title="结论（Conclusion）"></a>结论（Conclusion）</h2><p>利用二战伦敦轰炸的外生冲击，结合建筑层面的历史-现代链接数据和含邻里效应的量化城市模型，本文发现：</p>
-<ol>
-<li>轰炸（经公房重建）对被炸地区的房价和社会经济构成产生了<strong>持久的直接负面效应</strong>；</li>
-<li>轰炸对<strong>相邻未被炸地区</strong>产生了<strong>强烈但高度局部化</strong>（300米内衰减至零）的溢出效应；</li>
-<li>邻里效应在量级上<strong>大幅放大</strong>了轰炸冲击的直接影响；</li>
-<li>邻里效应对于解释城市内部空间社会经济分化具有<strong>实质性的独立贡献</strong>（相对于自然禀赋）。</li>
-</ol>
-<p><strong>政策含义</strong>：即便是小规模的地方干预，也可能通过邻里效应的链式反应引发较大的社会经济变迁——地方干预的效果不应仅用其直接冲击来衡量，而应将邻里效应放大机制纳入评估框架。</p>
-<hr>
-<h2 id="未来研究方向（Future-work）"><a href="#未来研究方向（Future-work）" class="headerlink" title="未来研究方向（Future work）"></a>未来研究方向（Future work）</h2><p><strong>论文明确提及的限制</strong>：</p>
-<ol>
-<li>邻里效应的具体机制（是社会互动、犯罪安全、学校质量，还是纯粹的偏好-构成效应）未被明确区分；</li>
-<li>研究未探讨哪类政策干预能够最有效地利用邻里效应的放大机制。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li><strong>机制分解</strong>：300米内的溢出效应驱动因素是什么？可以探讨犯罪率、学校质量、社会网络各机制的相对贡献；</li>
-<li><strong>最优公房区位</strong>：如果公房建设放大了邻里效应，应将公房分散在高收入地区还是集中建设？本文提供了参数，可进一步做最优区位设计分析；</li>
-<li><strong>历史持久性</strong>：战后70余年，”公房区”的社会标签是否仍然存在？有没有通过绅士化（gentrification）逆转的地区，其机制是什么？</li>
-<li><strong>发展中国家的自然实验</strong>：非洲或亚洲城市是否有类似的外生破坏冲击（内战、洪灾）可以复制这一设计，检验邻里效应在不同城市化水平下的强度？</li>
-</ol>
-<hr>
-<h2 id="学术思考"><a href="#学术思考" class="headerlink" title="学术思考"></a>学术思考</h2><ol>
-<li><p><strong>识别假设的微妙之处</strong>：虽然轰炸在1km网格内”条件随机”，但1km网格本身的划分是任意的。如果将网格缩小（如500m），结论是否仍然成立？如果轰炸恰好与网格边界附近的某些微环境特征相关，结论可能被影响。这是空间自然实验的通用挑战。</p>
-</li>
-<li><p><strong>公房重建是关键机制</strong>：论文的核心机制是”轰炸→公房建设→设施降级→高收入居民外迁”。这意味着，如果战后重建采用了高档私人开发而非公房，邻里效应的放大作用可能反向（吸引高收入居民）。因此，本文的发现对轰炸本身的普遍性较弱，更是一个”公房政策+轰炸”的联合效应估计。</p>
-</li>
-<li><p><strong>溢出效应的高度局部性（300米）</strong>：这个范围非常小，大约相当于三四个街区的步行距离。这隐含着邻里效应高度地方化，可能反映了视觉暴露（看到公房）或面对面的社会互动机制，而非学区（通常覆盖更大范围）。如何设计干预来突破这一局限是重要的政策问题。</p>
-</li>
-<li><p><strong>量化模型中”邻里效应”的识别</strong>：论文将邻里效应参数化为”对周边社会经济构成的偏好”。但这一参数的识别依赖于轰炸带来的冲击——结构参数估计和简化型证据在本质上使用了相同的识别变异，可能导致标准误被低估。独立地检验这些参数是否稳健是一个潜在的技术挑战。</p>
-</li>
-<li><p><strong>反事实分析的外推性</strong>：论文通过模型做了”无轰炸”反事实，发现邻里效应仍然解释了相当部分的空间分化。然而，这一反事实依赖于均衡的唯一性和全局稳定性——量化城市模型通常在均衡附近做局部估计，对大幅度反事实的外推可靠性值得关注。</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题"><a href="#下一步用户可能提的问题" class="headerlink" title="下一步用户可能提的问题"></a>下一步用户可能提的问题</h2><ol>
-<li>Chetty et al. (2016) 的”移动到机会”（Moving to Opportunity, MTO）实验与本文的研究发现是否一致？两种识别策略的结论有何异同？</li>
-<li>英国战后公房政策在伦敦各区是如何分布的？是否存在系统性选址偏差，可能影响本文的识别？</li>
-<li>本文发现邻里效应在300米内显著，这一距离在不同城市（如发展中国家特大城市）中是否相同？是否存在文化差异？</li>
-<li>在中国的城市化背景下，城中村改造、棚户区更新等政策是否有类似的邻里效应机制？能否用中国历史冲击做类似研究？</li>
-<li>量化城市模型中如何将”公房”与”高档私宅”的差异参数化？如果战后是高档私人开发，模型预测的长期社会经济分布会有多大不同？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>腐败作为地方优势：尼日利亚石油本土化的证据 — 深度阅读笔记 — Rexer</title>
     <url>/posts/rexer2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Corruption as a Local Advantage: Evidence from the Indigenization of Nigerian Oil<br>Zotero Collection:: 有趣的文章<br>PDF Path:: /Users/double/Zotero/storage/AA7QHMMD/Rexer - 2025 - Corruption as a Local Advantage Evidence from the Indigenization of Nigerian Oil.pdf<br>Zotero Item Key:: Y7FT49B5</p>
@@ -15408,25 +15408,6 @@ f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=1\right)\right]-f^{-1}\left[E\left(
       </tags>
   </entry>
   <entry>
-    <title>Shell脚本笔记(1)</title>
-    <url>/posts/2510/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>shell是用C语言编写的程序,但它自身同时也是一种程序设计语言.你可能经常听说”shell脚本”,但实际上shell编程并非等同于”shell脚本”编程,前者指shell程序本身的开发,后者则是利用shell程序进行开发.都说java和javascript的区别是周杰和周杰伦的区别,shell和shell script或许也有那么点意思.</p>
-<h1 id="shell脚本"><a href="#shell脚本" class="headerlink" title="shell脚本"></a>shell脚本</h1><p>似乎任何程序学习都是从”Hello World!”开始的,对于<strong>shell</strong>而言:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Hello World !"</span></span><br></pre></td></tr></tbody></table></figure>
-<p><strong>#!</strong>是个标记,告知这段命令将用bash执行.echo则是一个向窗口展示文本的命令.<br>你可以将以上代码框的内容存为一个以.sh为后缀的文件,比如<strong>hw.sh</strong>,并赋予文件执行权限:</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">chmod +x ./hw.sh         #赋予执行权限</span><br><span class="line">bash hw.sh               #执行脚本</span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<p>未完待续</p>
-]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>shell</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>竞标企业：美国补贴竞争 — 深度阅读笔记 — Slattery</title>
     <url>/posts/slattery2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息"><a href="#文献信息" class="headerlink" title="文献信息"></a>文献信息</h2><ul>
@@ -15550,6 +15531,25 @@ f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=1\right)\right]-f^{-1}\left[E\left(
       </categories>
       <tags>
         <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Shell脚本笔记(1)</title>
+    <url>/posts/2510/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>shell是用C语言编写的程序,但它自身同时也是一种程序设计语言.你可能经常听说”shell脚本”,但实际上shell编程并非等同于”shell脚本”编程,前者指shell程序本身的开发,后者则是利用shell程序进行开发.都说java和javascript的区别是周杰和周杰伦的区别,shell和shell script或许也有那么点意思.</p>
+<h1 id="shell脚本"><a href="#shell脚本" class="headerlink" title="shell脚本"></a>shell脚本</h1><p>似乎任何程序学习都是从”Hello World!”开始的,对于<strong>shell</strong>而言:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Hello World !"</span></span><br></pre></td></tr></tbody></table></figure>
+<p><strong>#!</strong>是个标记,告知这段命令将用bash执行.echo则是一个向窗口展示文本的命令.<br>你可以将以上代码框的内容存为一个以.sh为后缀的文件,比如<strong>hw.sh</strong>,并赋予文件执行权限:</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">chmod +x ./hw.sh         #赋予执行权限</span><br><span class="line">bash hw.sh               #执行脚本</span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<p>未完待续</p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
       </tags>
   </entry>
   <entry>
@@ -15926,6 +15926,113 @@ E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i t}^{0} | P_
       </tags>
   </entry>
   <entry>
+    <title>中国的政策试验：政策学习的政治经济学 — 深度阅读笔记 — Wang &amp; Yang</title>
+    <url>/posts/wang2022policy/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Policy Experimentation in China: The Political Economy of Policy Learning<br>Zotero Collection:: 有趣的文章<br>PDF Path:: /Users/double/Zotero/storage/4V9L54XQ/Wang和Yang - 2022 - Policy Experimentation in China The Political Economy of Policy Learning.pdf<br>Zotero Item Key:: CIWNLWK2</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）"><a href="#引言（背景和意义）" class="headerlink" title="引言（背景和意义）"></a>引言（背景和意义）</h2><p><strong>领域基础知识</strong><br>政策学习（policy learning）是政府决策的核心难题：政策效果受多重因素影响（政策本身性质、实施方式、地方条件、官员激励），信息环境极为复杂。许多国家的政府采取政策试验（policy experimentation）——在局部地区先行试点，观察效果后再决定是否全面推行——作为解决政策不确定性的手段。理论文献（Roland 2000; Mukand &amp; Rodrik 2005; Callander 2011 等）探讨了在不同政治结构下，政策实验如何促进信息获取与政策学习。</p>
+<p><strong>研究背景</strong><br>1980年代以来，中国政府形成了高度系统化的政策试验制度（”先试点、后推广”）：由中央各部委发起，指定若干地方试点，积累经验后决定是否转变为全国性政策。这一制度覆盖财税、环保、土地、社会保障等几乎所有政策领域，规模之大、持续时间之长，在近现代各国政府中罕见。不少学者认为，这一机制是中国改革开放成功的关键制度基础之一。然而，关于这一制度的具体特征、运作机制，以及它是否能实现有效政策学习，系统性实证证据极为缺乏。</p>
+<p><strong>作者的问题意识</strong><br>中国政策试验的基本特征是什么？试验的样本是否有代表性？试验过程中的制度环境（特别是官员晋升激励）是否系统性地扭曲了试验本身？中央政府在解读试验结果时是否”足够理性”？这些因素综合起来，对政策学习和全国政策效果意味着什么？</p>
+<p><strong>研究意义</strong><br>本文是首次基于中国四十年政策试验综合数据库开展的系统实证研究。揭示了政策试验中”样本偏误”和”情境偏误”的结构性来源，对既有”中国经验”的解读提出重要修正：政策试验的制度条件既是中国改革的发动机，也是其政策学习的制约因素。对理解政治集权与政策有效性的关系、”政府学习”的边界，以及如何设计更好的政策试验机制，具有重要理论和现实意义。</p>
+<hr>
+<h2 id="内容及结构（论文结构）"><a href="#内容及结构（论文结构）" class="headerlink" title="内容及结构（论文结构）"></a>内容及结构（论文结构）</h2><ol>
+<li><strong>引言</strong>：提出问题，预告三大发现及其含义。</li>
+<li><strong>制度背景</strong>：中国政策试验的运作机制——中央发起、地方试点、全国推广。</li>
+<li><strong>数据</strong>：652项政策试验数据库（19,812份政府文件，1980–2020年）。</li>
+<li><strong>分析框架</strong>：政策学习可能出现偏误的三条路径。</li>
+<li><strong>事实一（第5节）</strong>：试验地点的正向选择（positive site selection）。</li>
+<li><strong>事实二（第6节）</strong>：试验期间官员的策略性努力（strategic effort）。</li>
+<li><strong>事实三（第7节）</strong>：中央政府对试验结果的非成熟解读（non-sophisticated interpretation）。</li>
+<li><strong>综合分析（第8节）</strong>：三大事实对政策学习和国家政策效果的含义。</li>
+<li><strong>结论</strong>。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）"><a href="#正文（逻辑梳理）" class="headerlink" title="正文（逻辑梳理）"></a>正文（逻辑梳理）</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>中国通过”先试点后推广”制度化地实践政策学习。中央各部委发起652项政策试验（1980-2020年），覆盖地方政府文件达19,812份，其中42%的试点政策最终推向全国。问题是：这一大规模的政策试验是否真的有助于中央有效学习？</p>
+<h3 id="挑战（三大偏误）"><a href="#挑战（三大偏误）" class="headerlink" title="挑战（三大偏误）"></a>挑战（三大偏误）</h3><p><strong>事实一：试验地点的正向选择（Sample Selection Bias）</strong></p>
+<ul>
+<li>在652项政策试验中，<strong>87.7%的试验地点在经济发展水平上存在正向选择</strong>——被选为试点的地方平均财政收入比未被选中的地方高出<strong>44.2%</strong>。</li>
+<li>这一规律在不同政策领域、不同控制变量设定下均稳健。</li>
+<li>富裕地区被选中更可能是因为”政策更容易成功”，而非代表全国平均情况。</li>
+</ul>
+<p><strong>事实二：试验期间的策略性努力（Non-Representative Experimental Situation）</strong></p>
+<ul>
+<li>晋升激励机制下，参与成功试验（即最终推向全国的试验）的地方官员明显有<strong>更高的晋升概率</strong>。</li>
+<li>利用三重差分策略（triple-differences）：在试验期间（而非试验前），试点地区对该试点政策相关领域的财政拨款<strong>增加约1.3%</strong>；</li>
+<li>当政策全面推广至全国时，这种额外的财政支持消失——意味着试验期间官员创造的努力<strong>无法在全国推广时复制</strong>。</li>
+<li>晋升压力越大的官员，额外努力越明显。</li>
+</ul>
+<p><strong>事实三：中央政府的非成熟解读（Non-Sophisticated Interpretation）</strong></p>
+<ul>
+<li>理想情境下，只有与政策内在有效性相关的信息应影响全国推广决策。</li>
+<li>实证发现：（1）试验期间土地出让金意外增加（<strong>外生财政冲击</strong>，与政策本身无关）→ 中央更可能推广该政策；（2）试验期间官员的<strong>常规政治人事更迭</strong>（改变激励但与政策质量无关）→ 也影响全国推广决策。</li>
+<li>这说明中央政府无法完全将”政策本身效果”与”外生噪音”分离——也就是说，政府并未”完全理性”地处理试验信息。</li>
+</ul>
+<h3 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h3><ul>
+<li><strong>政策试验数据库</strong>：19,812份政府文件 → 652项政策试验，来自92个中央部委和委员会，1980–2020年；记录了每项试验的地点、时间、推广情况。</li>
+<li><strong>官员晋升数据</strong>：追踪参与试验的地方官员的职业轨迹。</li>
+<li><strong>地方财政数据</strong>：年度财政分项拨款，用于测量官员的策略性努力。</li>
+<li><strong>土地出让金数据</strong>：作为外生财政冲击工具变量。</li>
+</ul>
+<h3 id="结果：政策学习的含义"><a href="#结果：政策学习的含义" class="headerlink" title="结果：政策学习的含义"></a>结果：政策学习的含义</h3><p><strong>71.1%的全面推广政策出现效果”收缩”（shrinkage）</strong>——即政策在全国推广后，效果相比试点期间下降。</p>
+<p><strong>机制分解</strong>：</p>
+<ul>
+<li>与试验地点经济条件相似的地区，从推广政策中获益更多；</li>
+<li>与试验官员有类似晋升激励的地方，从推广政策中获益更多；</li>
+<li>这意味着”谁更像试点地”决定了”谁更受益”，产生了区域间的系统性分配不平等。</li>
+</ul>
+<p><strong>致命逻辑</strong>：</p>
+<ul>
+<li>中央政府依赖的是”简单事前-事后比较”（pre-post comparison at experimentation sites）作为推广决策依据——这种方法强烈预测了全国推广；</li>
+<li>但用<strong>合成控制（synthetic control）等更精细的估计方法</strong>，则不能预测推广决策——说明中央实际上没有使用更精确的信息来判断政策效果。</li>
+</ul>
+<hr>
+<h2 id="结论（Conclusion）"><a href="#结论（Conclusion）" class="headerlink" title="结论（Conclusion）"></a>结论（Conclusion）</h2><p>中国四十年政策试验存在三重系统性偏误：（1）试点地点非代表性（较富裕）；（2）试点期间官员投入的额外努力不可复制；（3）中央政府在解读试验结果时被外生噪音干扰。这三点共同导致：来自试验的政策学习可能是有偏的，全面推广后政策效果系统性收缩，且不平等地惠及与试点条件相近的（通常是更富裕的）地区。</p>
+<p>作者指出：造成以上问题的，恰恰是使中国政策试验规模如此之大的同一制度条件——政治集权与晋升锦标赛。这一制度作为克服”地方不合作”的引擎，同时也内嵌了系统性信息扭曲。这是政治集权在”不完全契约”下的经典代价。</p>
+<hr>
+<h2 id="未来研究方向（Future-work）"><a href="#未来研究方向（Future-work）" class="headerlink" title="未来研究方向（Future work）"></a>未来研究方向（Future work）</h2><p><strong>论文明确提及的方向</strong>：</p>
+<ol>
+<li>如何设计动态政策试验（dynamic experimentation）以纠偏；</li>
+<li>研究哪些政策最初被纳入试验、哪些重大政策失败被试验所避免——完整评估试验制度的整体收益/成本；</li>
+<li>评价完整政策制定周期（包括”不试验”的反事实）。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li><strong>纠偏机制设计</strong>：如何在保留晋升激励的同时，通过改变试点选择规则（如随机分配试点、跨地区比较）来减少选择偏误？</li>
+<li><strong>比较制度研究</strong>：美国各州的政策扩散（policy diffusion）研究发现正向选择偏误相对有限（DellaVigna &amp; Kim 2022），与中国形成对比——什么制度特征导致了这一差异？</li>
+<li><strong>信息处理能力</strong>：中央政府的”非成熟解读”是否随时间改善？与行政技术能力（如数据分析部门的建立）有什么关系？</li>
+<li><strong>政策内容的调适</strong>：政策在推广时是否经过了修改（truncation/adaptation）？这是否部分解释了效果收缩？</li>
+</ol>
+<hr>
+<h2 id="学术思考"><a href="#学术思考" class="headerlink" title="学术思考"></a>学术思考</h2><ol>
+<li><p><strong>晋升激励的双刃剑</strong>：本文核心发现是，晋升激励使官员在试点期间额外努力，但这种努力不可复制。然而，这种额外努力在试点期间是否确实提高了试点政策的效果？如果是，那么对于那些只在特定条件下有效的政策，试验依然能够发现它们在理想条件下的潜力——这对政策学习也有价值，只是需要更谨慎地外推。</p>
+</li>
+<li><p><strong>代表性选择 vs. 有效试验的悖论</strong>：如果随机选择试点（代表性更高），但落后地区官员可能缺乏执行能力，导致试验本身失败——无法区分”政策本身不好”和”执行能力不足”。因此，选择”有能力执行”的较好地区可能是中央政府在有限执行能力下的理性选择，而非单纯的偏误。</p>
+</li>
+<li><p><strong>外部有效性的条件性</strong>：作者发现推广效果与试点条件的相似程度正相关，这说明中国政策效果的外推性（external validity）高度依赖于地方条件匹配。这提示政策推广不应该是简单的”全国统一实施”，而是应该根据地方条件分类推广——但这又与中国”中央统一部署”的政治逻辑相悖。</p>
+</li>
+<li><p><strong>中央政府是否真的”非成熟”</strong>：论文证明外生财政冲击影响推广决策，这被解读为”非成熟”。但也存在另一种解读：中央政府可能有意识地将”试验期间地方经济活跃”作为”政策可以激励地方动力”的代理指标，从而有意使用这一信号。辨别”主动误判”与”被动愚弄”需要更精细的机制识别。</p>
+</li>
+<li><p><strong>中央-地方信息不对称的长期趋势</strong>：随着大数据和数字政府建设（”数字威权主义”研究，如 Beraja et al. 2023），中央政府处理试验信息的能力是否在增强？本文基于1980-2020年的数据，但2015年后政府数字化治理能力的提升是否改变了”非成熟解读”的程度？</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题"><a href="#下一步用户可能提的问题" class="headerlink" title="下一步用户可能提的问题"></a>下一步用户可能提的问题</h2><ol>
+<li>中国政策试验的”三步走”制度（试点→评估→全国推广）与国际通行的随机对照试验（RCT）相比，有哪些根本性的制度差异？</li>
+<li>是否有证据表明某些政策领域（如财税改革 vs. 社会保障）的试验效果收缩程度更大？领域差异背后的机制是什么？</li>
+<li>晋升激励是中国政策试验偏误的核心——在近年来习近平时代对地方官员晋升标准的调整（减少GDP权重、增加质量指标）下，本文的结论是否仍然成立？</li>
+<li>合成控制法（synthetic control）和普通事前-事后比较在预测政策推广结果上表现差异极大，这是否意味着中央政府事实上依赖信息较差的评估方法——如何从行政信息处理的角度解释这一现象？</li>
+<li>有没有政策试验制度设计上的”最佳实践”——哪些国家或地区的政策实验在控制上述三类偏误方面做得更好，可以为中国提供借鉴？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Policy Experimentation in China: The Political Economy of Policy Learning — 深度阅读笔记 — Wang &amp; Yang</title>
     <url>/posts/wang2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息"><a href="#文献信息" class="headerlink" title="文献信息"></a>文献信息</h2><ul>
@@ -16164,113 +16271,6 @@ E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i t}^{0} | P_
       </tags>
   </entry>
   <entry>
-    <title>中国的政策试验：政策学习的政治经济学 — 深度阅读笔记 — Wang &amp; Yang</title>
-    <url>/posts/wang2022policy/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Policy Experimentation in China: The Political Economy of Policy Learning<br>Zotero Collection:: 有趣的文章<br>PDF Path:: /Users/double/Zotero/storage/4V9L54XQ/Wang和Yang - 2022 - Policy Experimentation in China The Political Economy of Policy Learning.pdf<br>Zotero Item Key:: CIWNLWK2</p>
-<hr>
-<span id="more"></span>
-<h2 id="引言（背景和意义）"><a href="#引言（背景和意义）" class="headerlink" title="引言（背景和意义）"></a>引言（背景和意义）</h2><p><strong>领域基础知识</strong><br>政策学习（policy learning）是政府决策的核心难题：政策效果受多重因素影响（政策本身性质、实施方式、地方条件、官员激励），信息环境极为复杂。许多国家的政府采取政策试验（policy experimentation）——在局部地区先行试点，观察效果后再决定是否全面推行——作为解决政策不确定性的手段。理论文献（Roland 2000; Mukand &amp; Rodrik 2005; Callander 2011 等）探讨了在不同政治结构下，政策实验如何促进信息获取与政策学习。</p>
-<p><strong>研究背景</strong><br>1980年代以来，中国政府形成了高度系统化的政策试验制度（”先试点、后推广”）：由中央各部委发起，指定若干地方试点，积累经验后决定是否转变为全国性政策。这一制度覆盖财税、环保、土地、社会保障等几乎所有政策领域，规模之大、持续时间之长，在近现代各国政府中罕见。不少学者认为，这一机制是中国改革开放成功的关键制度基础之一。然而，关于这一制度的具体特征、运作机制，以及它是否能实现有效政策学习，系统性实证证据极为缺乏。</p>
-<p><strong>作者的问题意识</strong><br>中国政策试验的基本特征是什么？试验的样本是否有代表性？试验过程中的制度环境（特别是官员晋升激励）是否系统性地扭曲了试验本身？中央政府在解读试验结果时是否”足够理性”？这些因素综合起来，对政策学习和全国政策效果意味着什么？</p>
-<p><strong>研究意义</strong><br>本文是首次基于中国四十年政策试验综合数据库开展的系统实证研究。揭示了政策试验中”样本偏误”和”情境偏误”的结构性来源，对既有”中国经验”的解读提出重要修正：政策试验的制度条件既是中国改革的发动机，也是其政策学习的制约因素。对理解政治集权与政策有效性的关系、”政府学习”的边界，以及如何设计更好的政策试验机制，具有重要理论和现实意义。</p>
-<hr>
-<h2 id="内容及结构（论文结构）"><a href="#内容及结构（论文结构）" class="headerlink" title="内容及结构（论文结构）"></a>内容及结构（论文结构）</h2><ol>
-<li><strong>引言</strong>：提出问题，预告三大发现及其含义。</li>
-<li><strong>制度背景</strong>：中国政策试验的运作机制——中央发起、地方试点、全国推广。</li>
-<li><strong>数据</strong>：652项政策试验数据库（19,812份政府文件，1980–2020年）。</li>
-<li><strong>分析框架</strong>：政策学习可能出现偏误的三条路径。</li>
-<li><strong>事实一（第5节）</strong>：试验地点的正向选择（positive site selection）。</li>
-<li><strong>事实二（第6节）</strong>：试验期间官员的策略性努力（strategic effort）。</li>
-<li><strong>事实三（第7节）</strong>：中央政府对试验结果的非成熟解读（non-sophisticated interpretation）。</li>
-<li><strong>综合分析（第8节）</strong>：三大事实对政策学习和国家政策效果的含义。</li>
-<li><strong>结论</strong>。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）"><a href="#正文（逻辑梳理）" class="headerlink" title="正文（逻辑梳理）"></a>正文（逻辑梳理）</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>中国通过”先试点后推广”制度化地实践政策学习。中央各部委发起652项政策试验（1980-2020年），覆盖地方政府文件达19,812份，其中42%的试点政策最终推向全国。问题是：这一大规模的政策试验是否真的有助于中央有效学习？</p>
-<h3 id="挑战（三大偏误）"><a href="#挑战（三大偏误）" class="headerlink" title="挑战（三大偏误）"></a>挑战（三大偏误）</h3><p><strong>事实一：试验地点的正向选择（Sample Selection Bias）</strong></p>
-<ul>
-<li>在652项政策试验中，<strong>87.7%的试验地点在经济发展水平上存在正向选择</strong>——被选为试点的地方平均财政收入比未被选中的地方高出<strong>44.2%</strong>。</li>
-<li>这一规律在不同政策领域、不同控制变量设定下均稳健。</li>
-<li>富裕地区被选中更可能是因为”政策更容易成功”，而非代表全国平均情况。</li>
-</ul>
-<p><strong>事实二：试验期间的策略性努力（Non-Representative Experimental Situation）</strong></p>
-<ul>
-<li>晋升激励机制下，参与成功试验（即最终推向全国的试验）的地方官员明显有<strong>更高的晋升概率</strong>。</li>
-<li>利用三重差分策略（triple-differences）：在试验期间（而非试验前），试点地区对该试点政策相关领域的财政拨款<strong>增加约1.3%</strong>；</li>
-<li>当政策全面推广至全国时，这种额外的财政支持消失——意味着试验期间官员创造的努力<strong>无法在全国推广时复制</strong>。</li>
-<li>晋升压力越大的官员，额外努力越明显。</li>
-</ul>
-<p><strong>事实三：中央政府的非成熟解读（Non-Sophisticated Interpretation）</strong></p>
-<ul>
-<li>理想情境下，只有与政策内在有效性相关的信息应影响全国推广决策。</li>
-<li>实证发现：（1）试验期间土地出让金意外增加（<strong>外生财政冲击</strong>，与政策本身无关）→ 中央更可能推广该政策；（2）试验期间官员的<strong>常规政治人事更迭</strong>（改变激励但与政策质量无关）→ 也影响全国推广决策。</li>
-<li>这说明中央政府无法完全将”政策本身效果”与”外生噪音”分离——也就是说，政府并未”完全理性”地处理试验信息。</li>
-</ul>
-<h3 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h3><ul>
-<li><strong>政策试验数据库</strong>：19,812份政府文件 → 652项政策试验，来自92个中央部委和委员会，1980–2020年；记录了每项试验的地点、时间、推广情况。</li>
-<li><strong>官员晋升数据</strong>：追踪参与试验的地方官员的职业轨迹。</li>
-<li><strong>地方财政数据</strong>：年度财政分项拨款，用于测量官员的策略性努力。</li>
-<li><strong>土地出让金数据</strong>：作为外生财政冲击工具变量。</li>
-</ul>
-<h3 id="结果：政策学习的含义"><a href="#结果：政策学习的含义" class="headerlink" title="结果：政策学习的含义"></a>结果：政策学习的含义</h3><p><strong>71.1%的全面推广政策出现效果”收缩”（shrinkage）</strong>——即政策在全国推广后，效果相比试点期间下降。</p>
-<p><strong>机制分解</strong>：</p>
-<ul>
-<li>与试验地点经济条件相似的地区，从推广政策中获益更多；</li>
-<li>与试验官员有类似晋升激励的地方，从推广政策中获益更多；</li>
-<li>这意味着”谁更像试点地”决定了”谁更受益”，产生了区域间的系统性分配不平等。</li>
-</ul>
-<p><strong>致命逻辑</strong>：</p>
-<ul>
-<li>中央政府依赖的是”简单事前-事后比较”（pre-post comparison at experimentation sites）作为推广决策依据——这种方法强烈预测了全国推广；</li>
-<li>但用<strong>合成控制（synthetic control）等更精细的估计方法</strong>，则不能预测推广决策——说明中央实际上没有使用更精确的信息来判断政策效果。</li>
-</ul>
-<hr>
-<h2 id="结论（Conclusion）"><a href="#结论（Conclusion）" class="headerlink" title="结论（Conclusion）"></a>结论（Conclusion）</h2><p>中国四十年政策试验存在三重系统性偏误：（1）试点地点非代表性（较富裕）；（2）试点期间官员投入的额外努力不可复制；（3）中央政府在解读试验结果时被外生噪音干扰。这三点共同导致：来自试验的政策学习可能是有偏的，全面推广后政策效果系统性收缩，且不平等地惠及与试点条件相近的（通常是更富裕的）地区。</p>
-<p>作者指出：造成以上问题的，恰恰是使中国政策试验规模如此之大的同一制度条件——政治集权与晋升锦标赛。这一制度作为克服”地方不合作”的引擎，同时也内嵌了系统性信息扭曲。这是政治集权在”不完全契约”下的经典代价。</p>
-<hr>
-<h2 id="未来研究方向（Future-work）"><a href="#未来研究方向（Future-work）" class="headerlink" title="未来研究方向（Future work）"></a>未来研究方向（Future work）</h2><p><strong>论文明确提及的方向</strong>：</p>
-<ol>
-<li>如何设计动态政策试验（dynamic experimentation）以纠偏；</li>
-<li>研究哪些政策最初被纳入试验、哪些重大政策失败被试验所避免——完整评估试验制度的整体收益/成本；</li>
-<li>评价完整政策制定周期（包括”不试验”的反事实）。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li><strong>纠偏机制设计</strong>：如何在保留晋升激励的同时，通过改变试点选择规则（如随机分配试点、跨地区比较）来减少选择偏误？</li>
-<li><strong>比较制度研究</strong>：美国各州的政策扩散（policy diffusion）研究发现正向选择偏误相对有限（DellaVigna &amp; Kim 2022），与中国形成对比——什么制度特征导致了这一差异？</li>
-<li><strong>信息处理能力</strong>：中央政府的”非成熟解读”是否随时间改善？与行政技术能力（如数据分析部门的建立）有什么关系？</li>
-<li><strong>政策内容的调适</strong>：政策在推广时是否经过了修改（truncation/adaptation）？这是否部分解释了效果收缩？</li>
-</ol>
-<hr>
-<h2 id="学术思考"><a href="#学术思考" class="headerlink" title="学术思考"></a>学术思考</h2><ol>
-<li><p><strong>晋升激励的双刃剑</strong>：本文核心发现是，晋升激励使官员在试点期间额外努力，但这种努力不可复制。然而，这种额外努力在试点期间是否确实提高了试点政策的效果？如果是，那么对于那些只在特定条件下有效的政策，试验依然能够发现它们在理想条件下的潜力——这对政策学习也有价值，只是需要更谨慎地外推。</p>
-</li>
-<li><p><strong>代表性选择 vs. 有效试验的悖论</strong>：如果随机选择试点（代表性更高），但落后地区官员可能缺乏执行能力，导致试验本身失败——无法区分”政策本身不好”和”执行能力不足”。因此，选择”有能力执行”的较好地区可能是中央政府在有限执行能力下的理性选择，而非单纯的偏误。</p>
-</li>
-<li><p><strong>外部有效性的条件性</strong>：作者发现推广效果与试点条件的相似程度正相关，这说明中国政策效果的外推性（external validity）高度依赖于地方条件匹配。这提示政策推广不应该是简单的”全国统一实施”，而是应该根据地方条件分类推广——但这又与中国”中央统一部署”的政治逻辑相悖。</p>
-</li>
-<li><p><strong>中央政府是否真的”非成熟”</strong>：论文证明外生财政冲击影响推广决策，这被解读为”非成熟”。但也存在另一种解读：中央政府可能有意识地将”试验期间地方经济活跃”作为”政策可以激励地方动力”的代理指标，从而有意使用这一信号。辨别”主动误判”与”被动愚弄”需要更精细的机制识别。</p>
-</li>
-<li><p><strong>中央-地方信息不对称的长期趋势</strong>：随着大数据和数字政府建设（”数字威权主义”研究，如 Beraja et al. 2023），中央政府处理试验信息的能力是否在增强？本文基于1980-2020年的数据，但2015年后政府数字化治理能力的提升是否改变了”非成熟解读”的程度？</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题"><a href="#下一步用户可能提的问题" class="headerlink" title="下一步用户可能提的问题"></a>下一步用户可能提的问题</h2><ol>
-<li>中国政策试验的”三步走”制度（试点→评估→全国推广）与国际通行的随机对照试验（RCT）相比，有哪些根本性的制度差异？</li>
-<li>是否有证据表明某些政策领域（如财税改革 vs. 社会保障）的试验效果收缩程度更大？领域差异背后的机制是什么？</li>
-<li>晋升激励是中国政策试验偏误的核心——在近年来习近平时代对地方官员晋升标准的调整（减少GDP权重、增加质量指标）下，本文的结论是否仍然成立？</li>
-<li>合成控制法（synthetic control）和普通事前-事后比较在预测政策推广结果上表现差异极大，这是否意味着中央政府事实上依赖信息较差的评估方法——如何从行政信息处理的角度解释这一现象？</li>
-<li>有没有政策试验制度设计上的”最佳实践”——哪些国家或地区的政策实验在控制上述三类偏误方面做得更好，可以为中国提供借鉴？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>市场力量与资本约束 — 深度阅读笔记 — Wittwer &amp; Allen</title>
     <url>/posts/wittwer2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息"><a href="#文献信息" class="headerlink" title="文献信息"></a>文献信息</h2><ul>
@@ -16464,6 +16464,38 @@ E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i t}^{0} | P_
       </tags>
   </entry>
   <entry>
+    <title>画一幅我农所在地的道路图</title>
+    <url>/posts/42027/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h2><p><img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;"></p>
+<center>上图即为最终效果</center>
+
+<h2 id="一些必备的工具"><a href="#一些必备的工具" class="headerlink" title="一些必备的工具"></a>一些必备的工具</h2><p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="绘制路网地图"><a href="#绘制路网地图" class="headerlink" title="绘制路网地图"></a>绘制路网地图</h2><p>导入以下R 包:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>读入杨陵区的数据:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>获取杨陵区的经纬度范围:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
+<p>提取杨陵区的街道路线:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>把数据保存为<strong>rds</strong>:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>然后绘图:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>绘图</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>多层网络上的博弈 — 深度阅读笔记 — Zenou &amp; Zhou</title>
     <url>/posts/zenou2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息"><a href="#文献信息" class="headerlink" title="文献信息"></a>文献信息</h2><ul>
@@ -16562,38 +16594,6 @@ E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i t}^{0} | P_
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>画一幅我农所在地的道路图</title>
-    <url>/posts/42027/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h2><p><img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;"></p>
-<center>上图即为最终效果</center>
-
-<h2 id="一些必备的工具"><a href="#一些必备的工具" class="headerlink" title="一些必备的工具"></a>一些必备的工具</h2><p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="绘制路网地图"><a href="#绘制路网地图" class="headerlink" title="绘制路网地图"></a>绘制路网地图</h2><p>导入以下R 包:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>读入杨陵区的数据:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>获取杨陵区的经纬度范围:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
-<p>提取杨陵区的街道路线:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>把数据保存为<strong>rds</strong>:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>然后绘图:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>绘图</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
       </tags>
   </entry>
 </search>
