@@ -1594,259 +1594,6 @@ Zotero Item Key:: KEQ65SD3</p>
       </tags>
   </entry>
   <entry>
-    <title>长期住房收益率动态 — 深度阅读笔记 — Bäcker-Peral, Hazell &amp; Mian</title>
-    <url>/posts/backer-peral2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Dynamics of the Long-Term Housing Yield: Evidence from Natural Experiments</li>
-<li><strong>作者</strong>: Verónica Bäcker-Peral (普林斯顿), Jonathon Hazell (LSE), Atif Mian (普林斯顿 &amp; NBER)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3): 1014-1051</li>
-<li><strong>DOI</strong>: 10.1257/aer.20240513</li>
-<li><strong>难度评估</strong>: 高 - 需要房地产金融、计量经济学、自然实验方法基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>长期住房收益率（Long-Term Housing Yield）</strong>：预期长期均衡时的租金价格比率，反映市场对长期住房回报率的预期。</p>
-<p><strong>租约延长（Lease Extension）</strong>：英国房产的租约可以被延长90年或更长时间，形成自然实验。</p>
-<p><strong>自然实验方法（Natural Experiment Approach）</strong>：利用租约延长前后同一房产的价格变化来识别长期收益率。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol>
-<li>
-<p><strong>长期收益率的重要性</strong>：揭示市场对长期均衡的预期，帮助理解中期冲击消散后的经济状态</p>
-</li>
-<li>
-<p><strong>测量困难</strong>：长期收益率难以测量，需要能区分长期和中期价格行为的数据</p>
-</li>
-<li>
-<p><strong>英国独特制度</strong>：大多数公寓以长期租约（leasehold）形式买卖，可定期延长</p>
-</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：如何利用英国租约延长的自然实验来估计预期的长期住房收益率y*？</p>
-<p><strong>主要发现</strong>：</p>
-<ul>
-<li>y*从2000-2006年的约5.2%下降到2024年的2.7%</li>
-<li>非弹性市场下降更陡峭</li>
-<li>气候风险暴露较高的地区y*仍然较高</li>
-</ul>
-<hr>
-<h2 id="2-内容及结构（论文结构）">2. 内容及结构（论文结构）</h2>
-<h3 id="第一节：引言（Introduction）">第一节：引言（Introduction）</h3>
-<ul>
-<li>问题陈述和研究动机</li>
-<li>数据和方法概述</li>
-<li>主要发现预览</li>
-</ul>
-<h3 id="第二节：预期长期住房收益率的定义">第二节：预期长期住房收益率的定义</h3>
-<ul>
-<li>收益率的定义</li>
-<li>y*的分解</li>
-</ul>
-<h3 id="第三节：数据和租约延长详情">第三节：数据和租约延长详情</h3>
-<ul>
-<li><strong>3.1 数据构建</strong></li>
-<li><strong>3.2 租约延长制度详情</strong></li>
-<li><strong>3.3 交易滞后</strong></li>
-</ul>
-<h3 id="第四节：实证方法">第四节：实证方法</h3>
-<ul>
-<li>双重差分估计</li>
-<li>非线性最小二乘估计y*</li>
-</ul>
-<h3 id="第五节：主要结果">第五节：主要结果</h3>
-<ul>
-<li>y*的时间序列动态</li>
-<li>横截面异质性</li>
-</ul>
-<h3 id="第六节：宏观经济含义">第六节：宏观经济含义</h3>
-<ul>
-<li>与其他市场的比较</li>
-<li>当前价格的持久性指标</li>
-<li>供给弹性和气候风险的影响</li>
-</ul>
-<h3 id="第七节：结论">第七节：结论</h3>
-<hr>
-<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="英国房产制度">英国房产制度</h4>
-<p><strong>两种产权形式</strong>：</p>
-<ul>
-<li>Freehold（永久产权）：对房产的永久所有权</li>
-<li>Leasehold（租约）：长期租约，可买卖，通常在起源时长达100年以上</li>
-</ul>
-<p><strong>租约延长机制</strong>：</p>
-<ul>
-<li>1993年《租约改革法》授予公寓租约持有人权利：
-<ul>
-<li>获得比原始租约长90年的新租约</li>
-<li>需向永久产权持有人支付一次性协商费用</li>
-</ul>
-</li>
-</ul>
-<p><strong>关键事实</strong>：</p>
-<ul>
-<li>英国有5百万租约房产</li>
-<li>70%的租约是剩余期限≤250年的"短租约"</li>
-<li>30%是剩余期限≥700年的"长租约"</li>
-<li>几乎不存在250-700年之间的租约</li>
-</ul>
-<h3 id="实证方法">实证方法</h3>
-<h4 id="自然实验">自然实验</h4>
-<p><strong>核心洞察</strong>：</p>
-<ul>
-<li>同一房产在延长前后的价格差异反映了长期收益率</li>
-<li>延长前价格反映短期价值</li>
-<li>延长后价格反映短期和长期价值</li>
-<li>价格差异几乎完全取决于长期收益率</li>
-</ul>
-<p><strong>识别策略</strong>：</p>
-<ul>
-<li>处理组：在t-u时刻延长租约的房产</li>
-<li>对照组：类似的未延长租约的房产</li>
-<li>比较两组在延长前后的价格增长</li>
-</ul>
-<h4 id="估计方程">估计方程</h4>
-<p><strong>双重差分</strong>：<br>
-$$\Delta \log P_{it} = \alpha + \beta \cdot Extension_{i} + \gamma_t + \delta X_i + \varepsilon_{it}$$</p>
-<p><strong>非线最小二乘</strong>：<br>
-使用贴现现金流定价方程：<br>
-$$P_{extended} = P_{short} \cdot e<sup>{y</sup>* \cdot \Delta T}$$</p>
-<p>其中ΔT是延长的年数</p>
-<h3 id="主要结果">主要结果</h3>
-<h4 id="时间序列动态">时间序列动态</h4>
-<p><strong>核心发现</strong>：</p>
-<ul>
-<li>2000-2006年：y*稳定在约5.2%</li>
-<li>2008年大衰退开始：y*开始下降</li>
-<li>2024年：达到2.7%的低点</li>
-<li>大衰退导致的下降幅度大，相当于长期价格-租金比近翻倍</li>
-</ul>
-<p><strong>关键特征</strong>：</p>
-<ul>
-<li>y*在疫情期间及之后保持相对稳定</li>
-<li>2024年的月度估计显示更精确</li>
-</ul>
-<h4 id="横截面异质性">横截面异质性</h4>
-<p><strong>供给弹性效应</strong>：</p>
-<ul>
-<li>非弹性市场（供给受限地区）y*下降更陡峭</li>
-<li>因为需求增加导致估值上升</li>
-</ul>
-<p><strong>气候风险效应</strong>：</p>
-<ul>
-<li>长期气候风险较高的地区（洪水、沉降暴露）</li>
-<li>y*水平较高</li>
-<li>说明y*包含住房风险溢价</li>
-</ul>
-<h3 id="宏观经济含义">宏观经济含义</h3>
-<h4 id="与其他市场的比较">与其他市场的比较</h4>
-<p><strong>长期债券收益率</strong>：</p>
-<ul>
-<li>长期债券收益率与y*密切追踪</li>
-<li>表明下降是广泛而非住房特有的</li>
-</ul>
-<p><strong>全球住房和其他资产</strong>：</p>
-<ul>
-<li>全球住房和其他资产的长期收益率趋势类似</li>
-<li>表明下降可能与预期长期安全资产收益率r*的下降有关</li>
-</ul>
-<h4 id="当前vs长期收益率">当前vs长期收益率</h4>
-<p><strong>实时指标</strong>：</p>
-<ul>
-<li>当前租金价格比与y*的比较</li>
-<li>表明市场对未来住房估值的预期持久性</li>
-</ul>
-<hr>
-<h2 id="4-结论（Conclusion）">4. 结论（Conclusion）</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol>
-<li>
-<p><strong>长期住房收益率y*显著下降</strong>：从约5%下降到2.7%，与大衰退相关</p>
-</li>
-<li>
-<p><strong>方法论创新</strong>：利用租约延长的自然实验，"差掉"收益率曲线的短端</p>
-</li>
-<li>
-<p><strong>横截面异质性</strong>：供给弹性和气候风险影响y*的水平和动态</p>
-</li>
-<li>
-<p><strong>实时估计可用</strong>：数据和代码公开，实时更新</p>
-</li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol>
-<li>
-<p><strong>方法论</strong>：首个利用租约延长自然实验估计长期住房收益率</p>
-</li>
-<li>
-<p><strong>数据</strong>：构建并公开租约延长行政数据集</p>
-</li>
-<li>
-<p><strong>宏观经济</strong>：提供关于r*等重要宏观经济参数的见解</p>
-</li>
-</ol>
-<hr>
-<h2 id="5-未来研究方向（Future-work）">5. 未来研究方向（Future work）</h2>
-<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
-<ol>
-<li>
-<p>利用新方法研究其他资产类别的长期收益率</p>
-</li>
-<li>
-<p>扩展到其他国家的住房市场</p>
-</li>
-</ol>
-<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
-<ol>
-<li>
-<p><strong>与结构模型的比较</strong>：自然实验方法与结构模型方法的优劣比较</p>
-</li>
-<li>
-<p><strong>政策应用</strong>：y*的实时估计如何用于货币政策和宏观审慎政策</p>
-</li>
-</ol>
-<hr>
-<h2 id="7-学术思考">7. 学术思考</h2>
-<h3 id="核心学术洞察">核心学术洞察</h3>
-<ol>
-<li>
-<p><strong>"差掉短端"的识别策略</strong>：自然实验方法的核心洞察是，租约延长前的价格测量短期价值，延长后的价格测量短期和长期价值。因此，价格差异"差掉"了收益率曲线的短端，只反映长期收益率。</p>
-</li>
-<li>
-<p><strong>长期vs中期信息的权衡</strong>：金融资产的典型远期收益率最多提供10-30年的信息，而租约延长提供接近一个世纪的信息。</p>
-</li>
-<li>
-<p><strong>实时估计的优势</strong>：大多数宏观金融方法依赖于结构性假设，自然实验方法不依赖这些假设，因此可以提供更稳健的实时估计。</p>
-</li>
-</ol>
-<hr>
-<h2 id="8-下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol>
-<li>
-<p><strong>为什么长期住房收益率y*下降这么多？</strong> 与预期长期安全资产收益率r*的下降有何关系？</p>
-</li>
-<li>
-<p><strong>自然实验方法的识别假设是什么？</strong> 平行趋势假设是否可靠？</p>
-</li>
-<li>
-<p><strong>租约延长数据如何构建？</strong> 匹配关闭租约和开放租约的技术细节是什么？</p>
-</li>
-<li>
-<p><strong>y*与长期债券收益率的追踪关系有何含义？</strong> 这表明什么共同驱动因素？</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>In Harm&#39;s Way? Infrastructure Investments and the Persistence of Coastal Cities — 深度阅读笔记 — Balboni</title>
     <url>/posts/balboni2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -2183,6 +1930,410 @@ $$P_{extended} = P_{short} \cdot e<sup>{y</sup>* \cdot \Delta T}$$</p>
         <tag>基础设施经济学</tag>
         <tag>空间经济学</tag>
         <tag>气候经济学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>长期住房收益率动态 — 深度阅读笔记 — Bäcker-Peral, Hazell &amp; Mian</title>
+    <url>/posts/backer-peral2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Dynamics of the Long-Term Housing Yield: Evidence from Natural Experiments</li>
+<li><strong>作者</strong>: Verónica Bäcker-Peral (普林斯顿), Jonathon Hazell (LSE), Atif Mian (普林斯顿 &amp; NBER)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(3): 1014-1051</li>
+<li><strong>DOI</strong>: 10.1257/aer.20240513</li>
+<li><strong>难度评估</strong>: 高 - 需要房地产金融、计量经济学、自然实验方法基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>长期住房收益率（Long-Term Housing Yield）</strong>：预期长期均衡时的租金价格比率，反映市场对长期住房回报率的预期。</p>
+<p><strong>租约延长（Lease Extension）</strong>：英国房产的租约可以被延长90年或更长时间，形成自然实验。</p>
+<p><strong>自然实验方法（Natural Experiment Approach）</strong>：利用租约延长前后同一房产的价格变化来识别长期收益率。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol>
+<li>
+<p><strong>长期收益率的重要性</strong>：揭示市场对长期均衡的预期，帮助理解中期冲击消散后的经济状态</p>
+</li>
+<li>
+<p><strong>测量困难</strong>：长期收益率难以测量，需要能区分长期和中期价格行为的数据</p>
+</li>
+<li>
+<p><strong>英国独特制度</strong>：大多数公寓以长期租约（leasehold）形式买卖，可定期延长</p>
+</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：如何利用英国租约延长的自然实验来估计预期的长期住房收益率y*？</p>
+<p><strong>主要发现</strong>：</p>
+<ul>
+<li>y*从2000-2006年的约5.2%下降到2024年的2.7%</li>
+<li>非弹性市场下降更陡峭</li>
+<li>气候风险暴露较高的地区y*仍然较高</li>
+</ul>
+<hr>
+<h2 id="2-内容及结构（论文结构）">2. 内容及结构（论文结构）</h2>
+<h3 id="第一节：引言（Introduction）">第一节：引言（Introduction）</h3>
+<ul>
+<li>问题陈述和研究动机</li>
+<li>数据和方法概述</li>
+<li>主要发现预览</li>
+</ul>
+<h3 id="第二节：预期长期住房收益率的定义">第二节：预期长期住房收益率的定义</h3>
+<ul>
+<li>收益率的定义</li>
+<li>y*的分解</li>
+</ul>
+<h3 id="第三节：数据和租约延长详情">第三节：数据和租约延长详情</h3>
+<ul>
+<li><strong>3.1 数据构建</strong></li>
+<li><strong>3.2 租约延长制度详情</strong></li>
+<li><strong>3.3 交易滞后</strong></li>
+</ul>
+<h3 id="第四节：实证方法">第四节：实证方法</h3>
+<ul>
+<li>双重差分估计</li>
+<li>非线性最小二乘估计y*</li>
+</ul>
+<h3 id="第五节：主要结果">第五节：主要结果</h3>
+<ul>
+<li>y*的时间序列动态</li>
+<li>横截面异质性</li>
+</ul>
+<h3 id="第六节：宏观经济含义">第六节：宏观经济含义</h3>
+<ul>
+<li>与其他市场的比较</li>
+<li>当前价格的持久性指标</li>
+<li>供给弹性和气候风险的影响</li>
+</ul>
+<h3 id="第七节：结论">第七节：结论</h3>
+<hr>
+<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="英国房产制度">英国房产制度</h4>
+<p><strong>两种产权形式</strong>：</p>
+<ul>
+<li>Freehold（永久产权）：对房产的永久所有权</li>
+<li>Leasehold（租约）：长期租约，可买卖，通常在起源时长达100年以上</li>
+</ul>
+<p><strong>租约延长机制</strong>：</p>
+<ul>
+<li>1993年《租约改革法》授予公寓租约持有人权利：
+<ul>
+<li>获得比原始租约长90年的新租约</li>
+<li>需向永久产权持有人支付一次性协商费用</li>
+</ul>
+</li>
+</ul>
+<p><strong>关键事实</strong>：</p>
+<ul>
+<li>英国有5百万租约房产</li>
+<li>70%的租约是剩余期限≤250年的"短租约"</li>
+<li>30%是剩余期限≥700年的"长租约"</li>
+<li>几乎不存在250-700年之间的租约</li>
+</ul>
+<h3 id="实证方法">实证方法</h3>
+<h4 id="自然实验">自然实验</h4>
+<p><strong>核心洞察</strong>：</p>
+<ul>
+<li>同一房产在延长前后的价格差异反映了长期收益率</li>
+<li>延长前价格反映短期价值</li>
+<li>延长后价格反映短期和长期价值</li>
+<li>价格差异几乎完全取决于长期收益率</li>
+</ul>
+<p><strong>识别策略</strong>：</p>
+<ul>
+<li>处理组：在t-u时刻延长租约的房产</li>
+<li>对照组：类似的未延长租约的房产</li>
+<li>比较两组在延长前后的价格增长</li>
+</ul>
+<h4 id="估计方程">估计方程</h4>
+<p><strong>双重差分</strong>：<br>
+$$\Delta \log P_{it} = \alpha + \beta \cdot Extension_{i} + \gamma_t + \delta X_i + \varepsilon_{it}$$</p>
+<p><strong>非线最小二乘</strong>：<br>
+使用贴现现金流定价方程：<br>
+$$P_{extended} = P_{short} \cdot e<sup>{y</sup>* \cdot \Delta T}$$</p>
+<p>其中ΔT是延长的年数</p>
+<h3 id="主要结果">主要结果</h3>
+<h4 id="时间序列动态">时间序列动态</h4>
+<p><strong>核心发现</strong>：</p>
+<ul>
+<li>2000-2006年：y*稳定在约5.2%</li>
+<li>2008年大衰退开始：y*开始下降</li>
+<li>2024年：达到2.7%的低点</li>
+<li>大衰退导致的下降幅度大，相当于长期价格-租金比近翻倍</li>
+</ul>
+<p><strong>关键特征</strong>：</p>
+<ul>
+<li>y*在疫情期间及之后保持相对稳定</li>
+<li>2024年的月度估计显示更精确</li>
+</ul>
+<h4 id="横截面异质性">横截面异质性</h4>
+<p><strong>供给弹性效应</strong>：</p>
+<ul>
+<li>非弹性市场（供给受限地区）y*下降更陡峭</li>
+<li>因为需求增加导致估值上升</li>
+</ul>
+<p><strong>气候风险效应</strong>：</p>
+<ul>
+<li>长期气候风险较高的地区（洪水、沉降暴露）</li>
+<li>y*水平较高</li>
+<li>说明y*包含住房风险溢价</li>
+</ul>
+<h3 id="宏观经济含义">宏观经济含义</h3>
+<h4 id="与其他市场的比较">与其他市场的比较</h4>
+<p><strong>长期债券收益率</strong>：</p>
+<ul>
+<li>长期债券收益率与y*密切追踪</li>
+<li>表明下降是广泛而非住房特有的</li>
+</ul>
+<p><strong>全球住房和其他资产</strong>：</p>
+<ul>
+<li>全球住房和其他资产的长期收益率趋势类似</li>
+<li>表明下降可能与预期长期安全资产收益率r*的下降有关</li>
+</ul>
+<h4 id="当前vs长期收益率">当前vs长期收益率</h4>
+<p><strong>实时指标</strong>：</p>
+<ul>
+<li>当前租金价格比与y*的比较</li>
+<li>表明市场对未来住房估值的预期持久性</li>
+</ul>
+<hr>
+<h2 id="4-结论（Conclusion）">4. 结论（Conclusion）</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol>
+<li>
+<p><strong>长期住房收益率y*显著下降</strong>：从约5%下降到2.7%，与大衰退相关</p>
+</li>
+<li>
+<p><strong>方法论创新</strong>：利用租约延长的自然实验，"差掉"收益率曲线的短端</p>
+</li>
+<li>
+<p><strong>横截面异质性</strong>：供给弹性和气候风险影响y*的水平和动态</p>
+</li>
+<li>
+<p><strong>实时估计可用</strong>：数据和代码公开，实时更新</p>
+</li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol>
+<li>
+<p><strong>方法论</strong>：首个利用租约延长自然实验估计长期住房收益率</p>
+</li>
+<li>
+<p><strong>数据</strong>：构建并公开租约延长行政数据集</p>
+</li>
+<li>
+<p><strong>宏观经济</strong>：提供关于r*等重要宏观经济参数的见解</p>
+</li>
+</ol>
+<hr>
+<h2 id="5-未来研究方向（Future-work）">5. 未来研究方向（Future work）</h2>
+<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
+<ol>
+<li>
+<p>利用新方法研究其他资产类别的长期收益率</p>
+</li>
+<li>
+<p>扩展到其他国家的住房市场</p>
+</li>
+</ol>
+<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
+<ol>
+<li>
+<p><strong>与结构模型的比较</strong>：自然实验方法与结构模型方法的优劣比较</p>
+</li>
+<li>
+<p><strong>政策应用</strong>：y*的实时估计如何用于货币政策和宏观审慎政策</p>
+</li>
+</ol>
+<hr>
+<h2 id="7-学术思考">7. 学术思考</h2>
+<h3 id="核心学术洞察">核心学术洞察</h3>
+<ol>
+<li>
+<p><strong>"差掉短端"的识别策略</strong>：自然实验方法的核心洞察是，租约延长前的价格测量短期价值，延长后的价格测量短期和长期价值。因此，价格差异"差掉"了收益率曲线的短端，只反映长期收益率。</p>
+</li>
+<li>
+<p><strong>长期vs中期信息的权衡</strong>：金融资产的典型远期收益率最多提供10-30年的信息，而租约延长提供接近一个世纪的信息。</p>
+</li>
+<li>
+<p><strong>实时估计的优势</strong>：大多数宏观金融方法依赖于结构性假设，自然实验方法不依赖这些假设，因此可以提供更稳健的实时估计。</p>
+</li>
+</ol>
+<hr>
+<h2 id="8-下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol>
+<li>
+<p><strong>为什么长期住房收益率y*下降这么多？</strong> 与预期长期安全资产收益率r*的下降有何关系？</p>
+</li>
+<li>
+<p><strong>自然实验方法的识别假设是什么？</strong> 平行趋势假设是否可靠？</p>
+</li>
+<li>
+<p><strong>租约延长数据如何构建？</strong> 匹配关闭租约和开放租约的技术细节是什么？</p>
+</li>
+<li>
+<p><strong>y*与长期债券收益率的追踪关系有何含义？</strong> 这表明什么共同驱动因素？</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>压低成本：干中学与全球电动汽车电池产业政府政策 — 深度阅读笔记 — Barwick Et Al.</title>
+    <url>/posts/barwick2025/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Drive Down the Cost: Learning by Doing and Government Policies in the Global EV Battery Industry</li>
+<li><strong>作者</strong>: Panle Jia Barwick (Wisconsin), Hyuk-Soo Kwon (Singapore), Shanjun Li (Cornell), Nahim Zahur (Queens)</li>
+<li><strong>年份</strong>: 2025</li>
+<li><strong>来源</strong>: NBER Working Paper No. 33378</li>
+<li><strong>DOI</strong>: 10.3386/w33378</li>
+</ul>
+<span id="more"></span>
+<hr>
+<hr>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+“干中学”（Learning by Doing, LBD）是产业经济学和增长理论的经典概念：企业在生产过程中积累经验，进而降低单位生产成本。“Wright’s Law”（1936年由航空工程师Theodore Wright提出）将这一规律量化为"累计产量每翻倍，单位成本下降固定比例"。LBD在半导体、太阳能电池等绿色技术行业均有大量记录。在政策设计上，LBD带来正外部性——当前生产提高了整个行业未来的效率，因此存在补贴当前生产的理由（以纠正动态外部性）。</p>
+<p><strong>研究背景</strong><br>
+电动汽车（EV）电池成本在2010-2020年间下降了近90%，是过去十年绿色能源技术中最引人注目的成本下降之一。这一变化对全球气候政策目标至关重要——电池成本是EV相对于内燃机车价格劣势的主要来源。全球各国政府为促进EV普及投入了大量补贴（2022年全球EV消费补贴达430亿美元），并通过产业政策（如中国白名单政策、美国IRA本地含量要求）扶持本土电池产业。然而，LBD在多大程度上驱动了成本下降？政府政策通过哪些渠道影响LBD进程？这些问题此前缺乏可信的量化研究。</p>
+<p><strong>作者的问题意识</strong><br>
+（1）LBD在多大程度上解释了EV电池成本的下降（相对于技术进步、规模经济、原材料成本等其他因素）？（2）LBD如何改变消费者EV补贴的政策效果？（3）中国的"白名单"本地含量要求政策通过LBD对全球EV市场产生了怎样的影响？（4）LBD在全球供应链中产生怎样的跨国溢出效应？</p>
+<p><strong>研究意义</strong><br>
+本文为绿色技术政策设计提供了直接量化依据：若忽视LBD，政策评估将大幅低估补贴的长期效益；同时揭示了消费端补贴与产业政策的相互作用，对评估美国IRA、中国产业政策的全球影响具有直接参考价值。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：提出问题，概述主要发现（LBD学习率7.5%，与补贴互补放大效果，跨国溢出效应）。</li>
+<li><strong>数据</strong>：全球13国EV销售数据（2013-2020），电池供应商信息，各国补贴政策。</li>
+<li><strong>需求模型</strong>：异质消费者离散选择模型（BLP类型），估计消费者对EV特性（价格、续航、充电速度等）的偏好。</li>
+<li><strong>供给模型与电池成本恢复</strong>：通过Nash议价模型（上游电池供应商与下游EV生产商之间）推断上下游加成，从而恢复电池成本。</li>
+<li><strong>LBD估计</strong>：用工具变量方法识别LBD学习率，控制内生性（高效企业多生产更多、积累更多经验）。</li>
+<li><strong>反事实政策分析</strong>：（a）评估消费者EV补贴在有无LBD情况下的效果；（b）评估中国白名单政策及其时间安排的影响。</li>
+<li><strong>结论</strong>：总结核心发现及政策含义。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>EV电池成本是EV普及的关键障碍，而其90%的成本降幅是过去十年绿色技术领域最显著的成就之一。产业界将这一降幅归因于LBD，但缺乏可信的因果估计：LBD究竟贡献了多少？还是技术进步、规模经济、原材料价格下降等因素更重要？政府大规模补贴政策是否加速了这一进程？</p>
+<h3 id="挑战">挑战</h3>
+<p><strong>挑战一：电池成本不可观测</strong><br>
+电池供应协议是商业机密，无法直接观测到每款EV型号的电池成本。解决方法：通过构建EV生产商与电池供应商之间Nash议价模型，结合观测到的车辆价格和估计的需求弹性，反推上下游加成，进而推断电池成本。</p>
+<p><strong>挑战二：LBD识别的内生性</strong><br>
+企业的累计产量（生产经验，experience）与不可观测的成本冲击相关——成本优势大的企业往往产量更大、经验积累更快。若直接用经验变量回归成本，估计结果会有偏差。<br>
+<strong>工具变量策略</strong>：利用各电池供应商对下游不同国家EV补贴的差异暴露（variation）来构造工具变量。若甲国对某款车型提供慷慨补贴，供应该车型电池的供应商将更快积累经验。这一"补贴暴露"外生地推动了部分供应商的经验积累，从而识别LBD的因果效应。此外，还利用了中国白名单政策（2016-2019年）对电池供应商经验的外生冲击。</p>
+<h3 id="方法">方法</h3>
+<p><strong>需求端</strong>：BLP类型的随机系数离散选择模型，用于估计异质消费者对EV特性（价格、续航、充电功率、品牌等）的偏好，从而估计需求弹性。</p>
+<p><strong>供给端</strong>：Nash议价框架（EV生产商与电池供应商之间的纳什讨价还价），考察同步定价（Simultaneous）、顺序定价（Sequential）和线性定价（Linear Pricing）多种供给侧模型，并比较其对成本恢复的稳健性。</p>
+<p><strong>LBD估计方程</strong>（核心）：</p>
+<ul>
+<li>以电池成本（对数）对累计生产经验（对数）做回归，控制行业整体技术进步、EV整车装配经验、原材料投入成本、规模经济等，并用工具变量处理经验的内生性。</li>
+<li>学习率（learning rate）定义为经验每翻倍时成本下降的百分比。</li>
+</ul>
+<p><strong>数据</strong>：</p>
+<ul>
+<li>全球13国（覆盖&gt;95%全球EV销售）2013-2020年逐车型逐年销量数据（含BEV和PHEV）</li>
+<li>电池供应商数据库（植物地点、供应的EV车型列表）</li>
+<li>各国EV购置补贴数据（金额、起止时间）</li>
+<li>社会经济变量（收入分布等，用于校准消费者异质性）</li>
+</ul>
+<h3 id="结果">结果</h3>
+<p><strong>核心结果一：LBD学习率为7.5%</strong><br>
+控制行业技术进步、整车装配经验、原材料成本和规模经济后，LBD学习率估计为<strong>7.5%</strong>——即电池生产经验每翻倍，单位成本下降7.5%。该学习率处于文献估计的较低端，但仍具有重要经济意义。在2013-2020年电池总成本降幅中，LBD贡献了<strong>35.5%</strong>，行业技术进步贡献了<strong>39.9%</strong>，其余由整车装配经验、电池化学材料变化、原材料价格和规模经济共同解释。</p>
+<p><strong>核心结果二：LBD大幅放大EV补贴效果</strong></p>
+<ul>
+<li>无LBD时，各国补贴估计使2013-2020年全球累计EV销量增加<strong>29.9%</strong>。</li>
+<li>同时考虑补贴和LBD时，全球EV销量相比无补贴无LBD基准增加<strong>170%</strong>。</li>
+<li>二者的联合效果比各自独立效果之和高出<strong>60%</strong>——说明补贴与LBD具有强互补性。</li>
+</ul>
+<p><strong>核心结果三：消费端补贴产生跨国溢出效应</strong><br>
+EV电池供应链是全球化的（主要集中在中、日、韩三国），一国补贴可通过LBD降低全球电池成本，产生跨国外溢：</p>
+<ul>
+<li>美国约131亿美元EV补贴产生了约165亿美元全球福利净增益；美国和加拿大获得其中49%，日韩电池供应商获得28%，中国仅获得3%（因为样本期内中国EV和电池与国际市场贸易有限）。</li>
+<li>欧盟约164亿美元补贴产生约116亿美元全球福利增益，欧盟仅获得其中26%（因为欧洲大量进口EV，且采用统一补贴而非有针对性补贴）。</li>
+</ul>
+<p><strong>核心结果四：上游电池供应商仅获得LBD收益的一小部分</strong><br>
+LBD产生的成本降低主要通过价格竞争传递给了EV生产商和最终消费者，而非被电池供应商内部保留——与完全竞争的产业组织逻辑一致。</p>
+<p><strong>政策结果五：中国白名单政策的影响</strong><br>
+中国白名单政策（2016-2019年）将EV补贴限于使用"白名单"国内电池供应商的车辆，为CATL等中国电池企业提供了保护性市场，帮助其积累经验、形成竞争优势。但这一政策具有两面性：</p>
+<ul>
+<li>实际实施时间（2016-2019年）对中国电池产业有正面效果（通过加速中国供应商的LBD积累）。</li>
+<li>若将该政策延迟5年实施（2021-2024年），由于中国电池企业已通过出口积累足够经验，白名单的保护效果将大幅减弱，且因阻碍全球供应链效率，中国国内福利净效果将转为负值。</li>
+</ul>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<p><strong>核心发现</strong>：LBD在EV电池成本下降中发挥了实质性作用（贡献35.5%），但并非唯一因素，行业技术进步同样重要。LBD与消费者补贴之间的强互补性意味着：忽视LBD将大幅低估补贴的长期效益。消费端补贴产生显著的跨国溢出效应，其全球效益往往远超国内效益，这对单国政策评估具有重要启示。中国的产业政策（白名单）在特定历史时机下对国内产业发展有正效果，但若时机不当则可能适得其反。</p>
+<p><strong>对领域的贡献</strong>：</p>
+<ol>
+<li>提出了在无法直接观测上游成本时通过结构性供给模型恢复电池成本的方法论框架；</li>
+<li>构建了全球EV行业的结构性模型，联合识别LBD、需求偏好和政策互动效应；</li>
+<li>量化了EV补贴的动态长期效益，纠正了现有静态评估文献的系统性低估；</li>
+<li>揭示了全球化供应链下单国产业政策的跨境外溢机制。</li>
+</ol>
+<p><strong>政策含义</strong>：</p>
+<ul>
+<li>EV补贴的动态效益远大于静态效益，政策评估应纳入LBD渠道；</li>
+<li>美国IRA的本地含量要求在短期内可能阻碍全球LBD进程，长期效果取决于本土供应链的学习速度；</li>
+<li>政策时机（timing）至关重要：早期的保护性产业政策（如中国白名单）可能在企业尚未具备竞争力时发挥关键作用，但过晚则适得其反。</li>
+</ul>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文中明确提及的方向</strong>：</p>
+<ol>
+<li>评估美国IRA本地含量要求对全球LBD和EV普及的长期影响；</li>
+<li>研究上游供应商如何将LBD收益分配给劳动者和股东（分配效应）；</li>
+<li>将分析拓展到EV以外的绿色技术（如太阳能、储能电池等）。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li>内外部LBD的分解：企业内部的知识积累vs.跨企业的知识溢出各贡献多少？这对政策选择（补贴全行业 vs. 扶持龙头企业）有重大影响；</li>
+<li>动态寡头垄断框架下的战略性LBD——企业是否会为了积累经验而战略性定低价（forward-looking pricing）；</li>
+<li>将模型扩展至2020年后：IRA颁布后（2022年），本地含量要求如何重塑全球电池供应链的LBD路径；</li>
+<li>LBD与研发投入的互动：研发投入（技术进步）与生产经验（LBD）是否互补，影响政策组合的最优设计。</li>
+</ol>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>电池成本恢复的模型依赖性</strong>：电池成本无法直接观测，需通过结构模型推断。不同供给侧假设（同步 vs. 顺序议价）是否会产生实质性不同的学习率估计？作者如何验证这些替代模型的可信度？</p>
+</li>
+<li>
+<p><strong>工具变量的有效性</strong>：利用"供应商对下游不同国家补贴的差异暴露"构造IV，这一策略要求EV补贴变动对电池成本没有直接效应（排他性限制）。若补贴政策同时改变了原材料需求（如锂、镍），可能违反这一假设——如何检验？</p>
+</li>
+<li>
+<p><strong>LBD的溢出结构</strong>：论文将LBD建模为企业层面的内部学习。但实际上，工程师流动、专利公开等机制可能使LBD在企业间溢出。内外部LBD的混淆对学习率估计和政策评估会产生怎样的影响？</p>
+</li>
+<li>
+<p><strong>本地含量要求的动态合理性</strong>：中国白名单实际上是保护主义政策，但本文发现在特定时机下它对国内产业有正面作用。这是否意味着"战略性贸易政策"在绿色技术的早期发展阶段具有动态合理性？如何区分"促进LBD积累"的合理保护与一般意义上的低效保护主义？</p>
+</li>
+<li>
+<p><strong>样本期外推的风险</strong>：研究覆盖2013-2020年，但EV市场在2020年后经历了爆炸式增长（中国BEV渗透率超过30%）。LBD在高渗透率阶段是否会放缓？本文的政策结论对IRA（2022年后）是否仍然适用？</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>"学习率7.5%"是怎么估计出来的？工具变量策略的具体构造方法是什么？</li>
+<li>为什么上游电池供应商只获得了LBD收益的"一小部分"？这是市场结构（竞争激烈）的结果，还是谈判权力（bargaining power）不对等的结果？</li>
+<li>美国IRA的本地含量要求是否会减慢全球LBD进程、推高全球EV价格？本文的框架如何用于评估IRA？</li>
+<li>中国白名单政策在实际实施时间下对全球（非中国）消费者的福利影响是正面还是负面？</li>
+<li>如果未来电池技术路线（如固态电池）发生重大转变，现有的LBD积累是否会"归零"？政策设计如何应对这种技术不确定性？</li>
+<li>论文的供给侧模型（Nash议价）对最终结论的敏感性如何？若改用更简单的加成定价模型，学习率估计会有多大变化？</li>
+<li>为什么中国在美国补贴的全球福利中只获得3%？这是否意味着美国的补贴实际上是在补贴日韩企业而非中国竞争对手？</li>
+</ol>
+<hr>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -2543,157 +2694,6 @@ $$P_{extended} = P_{short} \cdot e<sup>{y</sup>* \cdot \Delta T}$$</p>
       </tags>
   </entry>
   <entry>
-    <title>压低成本：干中学与全球电动汽车电池产业政府政策 — 深度阅读笔记 — Barwick Et Al.</title>
-    <url>/posts/barwick2025/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Drive Down the Cost: Learning by Doing and Government Policies in the Global EV Battery Industry</li>
-<li><strong>作者</strong>: Panle Jia Barwick (Wisconsin), Hyuk-Soo Kwon (Singapore), Shanjun Li (Cornell), Nahim Zahur (Queens)</li>
-<li><strong>年份</strong>: 2025</li>
-<li><strong>来源</strong>: NBER Working Paper No. 33378</li>
-<li><strong>DOI</strong>: 10.3386/w33378</li>
-</ul>
-<span id="more"></span>
-<hr>
-<hr>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-“干中学”（Learning by Doing, LBD）是产业经济学和增长理论的经典概念：企业在生产过程中积累经验，进而降低单位生产成本。“Wright’s Law”（1936年由航空工程师Theodore Wright提出）将这一规律量化为"累计产量每翻倍，单位成本下降固定比例"。LBD在半导体、太阳能电池等绿色技术行业均有大量记录。在政策设计上，LBD带来正外部性——当前生产提高了整个行业未来的效率，因此存在补贴当前生产的理由（以纠正动态外部性）。</p>
-<p><strong>研究背景</strong><br>
-电动汽车（EV）电池成本在2010-2020年间下降了近90%，是过去十年绿色能源技术中最引人注目的成本下降之一。这一变化对全球气候政策目标至关重要——电池成本是EV相对于内燃机车价格劣势的主要来源。全球各国政府为促进EV普及投入了大量补贴（2022年全球EV消费补贴达430亿美元），并通过产业政策（如中国白名单政策、美国IRA本地含量要求）扶持本土电池产业。然而，LBD在多大程度上驱动了成本下降？政府政策通过哪些渠道影响LBD进程？这些问题此前缺乏可信的量化研究。</p>
-<p><strong>作者的问题意识</strong><br>
-（1）LBD在多大程度上解释了EV电池成本的下降（相对于技术进步、规模经济、原材料成本等其他因素）？（2）LBD如何改变消费者EV补贴的政策效果？（3）中国的"白名单"本地含量要求政策通过LBD对全球EV市场产生了怎样的影响？（4）LBD在全球供应链中产生怎样的跨国溢出效应？</p>
-<p><strong>研究意义</strong><br>
-本文为绿色技术政策设计提供了直接量化依据：若忽视LBD，政策评估将大幅低估补贴的长期效益；同时揭示了消费端补贴与产业政策的相互作用，对评估美国IRA、中国产业政策的全球影响具有直接参考价值。</p>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言</strong>：提出问题，概述主要发现（LBD学习率7.5%，与补贴互补放大效果，跨国溢出效应）。</li>
-<li><strong>数据</strong>：全球13国EV销售数据（2013-2020），电池供应商信息，各国补贴政策。</li>
-<li><strong>需求模型</strong>：异质消费者离散选择模型（BLP类型），估计消费者对EV特性（价格、续航、充电速度等）的偏好。</li>
-<li><strong>供给模型与电池成本恢复</strong>：通过Nash议价模型（上游电池供应商与下游EV生产商之间）推断上下游加成，从而恢复电池成本。</li>
-<li><strong>LBD估计</strong>：用工具变量方法识别LBD学习率，控制内生性（高效企业多生产更多、积累更多经验）。</li>
-<li><strong>反事实政策分析</strong>：（a）评估消费者EV补贴在有无LBD情况下的效果；（b）评估中国白名单政策及其时间安排的影响。</li>
-<li><strong>结论</strong>：总结核心发现及政策含义。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>EV电池成本是EV普及的关键障碍，而其90%的成本降幅是过去十年绿色技术领域最显著的成就之一。产业界将这一降幅归因于LBD，但缺乏可信的因果估计：LBD究竟贡献了多少？还是技术进步、规模经济、原材料价格下降等因素更重要？政府大规模补贴政策是否加速了这一进程？</p>
-<h3 id="挑战">挑战</h3>
-<p><strong>挑战一：电池成本不可观测</strong><br>
-电池供应协议是商业机密，无法直接观测到每款EV型号的电池成本。解决方法：通过构建EV生产商与电池供应商之间Nash议价模型，结合观测到的车辆价格和估计的需求弹性，反推上下游加成，进而推断电池成本。</p>
-<p><strong>挑战二：LBD识别的内生性</strong><br>
-企业的累计产量（生产经验，experience）与不可观测的成本冲击相关——成本优势大的企业往往产量更大、经验积累更快。若直接用经验变量回归成本，估计结果会有偏差。<br>
-<strong>工具变量策略</strong>：利用各电池供应商对下游不同国家EV补贴的差异暴露（variation）来构造工具变量。若甲国对某款车型提供慷慨补贴，供应该车型电池的供应商将更快积累经验。这一"补贴暴露"外生地推动了部分供应商的经验积累，从而识别LBD的因果效应。此外，还利用了中国白名单政策（2016-2019年）对电池供应商经验的外生冲击。</p>
-<h3 id="方法">方法</h3>
-<p><strong>需求端</strong>：BLP类型的随机系数离散选择模型，用于估计异质消费者对EV特性（价格、续航、充电功率、品牌等）的偏好，从而估计需求弹性。</p>
-<p><strong>供给端</strong>：Nash议价框架（EV生产商与电池供应商之间的纳什讨价还价），考察同步定价（Simultaneous）、顺序定价（Sequential）和线性定价（Linear Pricing）多种供给侧模型，并比较其对成本恢复的稳健性。</p>
-<p><strong>LBD估计方程</strong>（核心）：</p>
-<ul>
-<li>以电池成本（对数）对累计生产经验（对数）做回归，控制行业整体技术进步、EV整车装配经验、原材料投入成本、规模经济等，并用工具变量处理经验的内生性。</li>
-<li>学习率（learning rate）定义为经验每翻倍时成本下降的百分比。</li>
-</ul>
-<p><strong>数据</strong>：</p>
-<ul>
-<li>全球13国（覆盖&gt;95%全球EV销售）2013-2020年逐车型逐年销量数据（含BEV和PHEV）</li>
-<li>电池供应商数据库（植物地点、供应的EV车型列表）</li>
-<li>各国EV购置补贴数据（金额、起止时间）</li>
-<li>社会经济变量（收入分布等，用于校准消费者异质性）</li>
-</ul>
-<h3 id="结果">结果</h3>
-<p><strong>核心结果一：LBD学习率为7.5%</strong><br>
-控制行业技术进步、整车装配经验、原材料成本和规模经济后，LBD学习率估计为<strong>7.5%</strong>——即电池生产经验每翻倍，单位成本下降7.5%。该学习率处于文献估计的较低端，但仍具有重要经济意义。在2013-2020年电池总成本降幅中，LBD贡献了<strong>35.5%</strong>，行业技术进步贡献了<strong>39.9%</strong>，其余由整车装配经验、电池化学材料变化、原材料价格和规模经济共同解释。</p>
-<p><strong>核心结果二：LBD大幅放大EV补贴效果</strong></p>
-<ul>
-<li>无LBD时，各国补贴估计使2013-2020年全球累计EV销量增加<strong>29.9%</strong>。</li>
-<li>同时考虑补贴和LBD时，全球EV销量相比无补贴无LBD基准增加<strong>170%</strong>。</li>
-<li>二者的联合效果比各自独立效果之和高出<strong>60%</strong>——说明补贴与LBD具有强互补性。</li>
-</ul>
-<p><strong>核心结果三：消费端补贴产生跨国溢出效应</strong><br>
-EV电池供应链是全球化的（主要集中在中、日、韩三国），一国补贴可通过LBD降低全球电池成本，产生跨国外溢：</p>
-<ul>
-<li>美国约131亿美元EV补贴产生了约165亿美元全球福利净增益；美国和加拿大获得其中49%，日韩电池供应商获得28%，中国仅获得3%（因为样本期内中国EV和电池与国际市场贸易有限）。</li>
-<li>欧盟约164亿美元补贴产生约116亿美元全球福利增益，欧盟仅获得其中26%（因为欧洲大量进口EV，且采用统一补贴而非有针对性补贴）。</li>
-</ul>
-<p><strong>核心结果四：上游电池供应商仅获得LBD收益的一小部分</strong><br>
-LBD产生的成本降低主要通过价格竞争传递给了EV生产商和最终消费者，而非被电池供应商内部保留——与完全竞争的产业组织逻辑一致。</p>
-<p><strong>政策结果五：中国白名单政策的影响</strong><br>
-中国白名单政策（2016-2019年）将EV补贴限于使用"白名单"国内电池供应商的车辆，为CATL等中国电池企业提供了保护性市场，帮助其积累经验、形成竞争优势。但这一政策具有两面性：</p>
-<ul>
-<li>实际实施时间（2016-2019年）对中国电池产业有正面效果（通过加速中国供应商的LBD积累）。</li>
-<li>若将该政策延迟5年实施（2021-2024年），由于中国电池企业已通过出口积累足够经验，白名单的保护效果将大幅减弱，且因阻碍全球供应链效率，中国国内福利净效果将转为负值。</li>
-</ul>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<p><strong>核心发现</strong>：LBD在EV电池成本下降中发挥了实质性作用（贡献35.5%），但并非唯一因素，行业技术进步同样重要。LBD与消费者补贴之间的强互补性意味着：忽视LBD将大幅低估补贴的长期效益。消费端补贴产生显著的跨国溢出效应，其全球效益往往远超国内效益，这对单国政策评估具有重要启示。中国的产业政策（白名单）在特定历史时机下对国内产业发展有正效果，但若时机不当则可能适得其反。</p>
-<p><strong>对领域的贡献</strong>：</p>
-<ol>
-<li>提出了在无法直接观测上游成本时通过结构性供给模型恢复电池成本的方法论框架；</li>
-<li>构建了全球EV行业的结构性模型，联合识别LBD、需求偏好和政策互动效应；</li>
-<li>量化了EV补贴的动态长期效益，纠正了现有静态评估文献的系统性低估；</li>
-<li>揭示了全球化供应链下单国产业政策的跨境外溢机制。</li>
-</ol>
-<p><strong>政策含义</strong>：</p>
-<ul>
-<li>EV补贴的动态效益远大于静态效益，政策评估应纳入LBD渠道；</li>
-<li>美国IRA的本地含量要求在短期内可能阻碍全球LBD进程，长期效果取决于本土供应链的学习速度；</li>
-<li>政策时机（timing）至关重要：早期的保护性产业政策（如中国白名单）可能在企业尚未具备竞争力时发挥关键作用，但过晚则适得其反。</li>
-</ul>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文中明确提及的方向</strong>：</p>
-<ol>
-<li>评估美国IRA本地含量要求对全球LBD和EV普及的长期影响；</li>
-<li>研究上游供应商如何将LBD收益分配给劳动者和股东（分配效应）；</li>
-<li>将分析拓展到EV以外的绿色技术（如太阳能、储能电池等）。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li>内外部LBD的分解：企业内部的知识积累vs.跨企业的知识溢出各贡献多少？这对政策选择（补贴全行业 vs. 扶持龙头企业）有重大影响；</li>
-<li>动态寡头垄断框架下的战略性LBD——企业是否会为了积累经验而战略性定低价（forward-looking pricing）；</li>
-<li>将模型扩展至2020年后：IRA颁布后（2022年），本地含量要求如何重塑全球电池供应链的LBD路径；</li>
-<li>LBD与研发投入的互动：研发投入（技术进步）与生产经验（LBD）是否互补，影响政策组合的最优设计。</li>
-</ol>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>电池成本恢复的模型依赖性</strong>：电池成本无法直接观测，需通过结构模型推断。不同供给侧假设（同步 vs. 顺序议价）是否会产生实质性不同的学习率估计？作者如何验证这些替代模型的可信度？</p>
-</li>
-<li>
-<p><strong>工具变量的有效性</strong>：利用"供应商对下游不同国家补贴的差异暴露"构造IV，这一策略要求EV补贴变动对电池成本没有直接效应（排他性限制）。若补贴政策同时改变了原材料需求（如锂、镍），可能违反这一假设——如何检验？</p>
-</li>
-<li>
-<p><strong>LBD的溢出结构</strong>：论文将LBD建模为企业层面的内部学习。但实际上，工程师流动、专利公开等机制可能使LBD在企业间溢出。内外部LBD的混淆对学习率估计和政策评估会产生怎样的影响？</p>
-</li>
-<li>
-<p><strong>本地含量要求的动态合理性</strong>：中国白名单实际上是保护主义政策，但本文发现在特定时机下它对国内产业有正面作用。这是否意味着"战略性贸易政策"在绿色技术的早期发展阶段具有动态合理性？如何区分"促进LBD积累"的合理保护与一般意义上的低效保护主义？</p>
-</li>
-<li>
-<p><strong>样本期外推的风险</strong>：研究覆盖2013-2020年，但EV市场在2020年后经历了爆炸式增长（中国BEV渗透率超过30%）。LBD在高渗透率阶段是否会放缓？本文的政策结论对IRA（2022年后）是否仍然适用？</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>"学习率7.5%"是怎么估计出来的？工具变量策略的具体构造方法是什么？</li>
-<li>为什么上游电池供应商只获得了LBD收益的"一小部分"？这是市场结构（竞争激烈）的结果，还是谈判权力（bargaining power）不对等的结果？</li>
-<li>美国IRA的本地含量要求是否会减慢全球LBD进程、推高全球EV价格？本文的框架如何用于评估IRA？</li>
-<li>中国白名单政策在实际实施时间下对全球（非中国）消费者的福利影响是正面还是负面？</li>
-<li>如果未来电池技术路线（如固态电池）发生重大转变，现有的LBD积累是否会"归零"？政策设计如何应对这种技术不确定性？</li>
-<li>论文的供给侧模型（Nash议价）对最终结论的敏感性如何？若改用更简单的加成定价模型，学习率估计会有多大变化？</li>
-<li>为什么中国在美国补贴的全球福利中只获得3%？这是否意味着美国的补贴实际上是在补贴日韩企业而非中国竞争对手？</li>
-</ol>
-<hr>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>降低成本：电动车电池产业的干中学与政府政策 — 深度阅读笔记 — Barwick Et Al.</title>
     <url>/posts/barwick2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Drive Down the Cost: Learning by Doing and Government Policies in the Global EV Battery Industry<br>
@@ -2837,137 +2837,6 @@ LBD产生的成本降低主要通过价格竞争传递给了EV生产商和最终
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Do Governments Crowd Out Governments? — 深度阅读笔记 — Baumann &amp; Klymak</title>
-    <url>/posts/baumann2024/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Do governments crowd out governments? Evidence from a natural experiment</li>
-<li><strong>作者</strong>: Stuart Baumann, Margaryta Klymak</li>
-<li><strong>类型</strong>: 论文笔记 / 财政学 / 政府经济学</li>
-<li><strong>出版年份</strong>: 2024</li>
-<li><strong>出版机构/期刊</strong>: European Economic Review, Vol. 168, 104803</li>
-<li><strong>难度评估</strong>: 中 - 需要计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言-背景和意义">引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>年终支出高峰(Year-End Spending Spike)是全球各国政府普遍存在的现象_政府部门在财政年度结束时集中大量支出.这种支出模式具有几个关键特征:</p>
-<p><strong>规模与普遍性.</strong> 英国资本支出在财年最后一个月是月平均支出的约两倍;美国政府在财年最后一周的支出是平均周的4.9倍.这一现象在OECD 27个国家均有观察到.</p>
-<p><strong>潜在浪费问题.</strong> 年终仓促采购可能导致质量问题.Liebman和Mahoney(2017)发现,美国政府采购的IT项目在财年末执行的,其获得"低质量"评分的可能性是其他时间执行的2.2至5.6倍.</p>
-<p><strong>现有解释的局限.</strong> 文献将年终支出归因于政府部门自身的预算周期(内部因素):如预防性储蓄基金、拖延行为、或规划不足.但这些解释均未考虑外部因素_其他政府部门和企业的支出行为.</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<p><strong>拥堵效应与竞争机制.</strong> 当多个政府部门同时高强度支出时,可能在供应商方面产生拥堵效应.具体机制包括:</p>
-<ul>
-<li><strong>价格上涨</strong>:供应商在高需求时期提高价格</li>
-<li><strong>采购替代</strong>:供应商不可用时被迫更换采购物品或供应商</li>
-<li><strong>销售策略</strong>:供应商增加销售人员、调整商品供应以利用高支出意愿</li>
-<li><strong>支出转移</strong>:部门可能将部分支出转移至其他时间以避免价格上涨</li>
-</ul>
-<p><strong>识别挑战.</strong> 同一国家的政府机构通常遵循相同的财年规则,使得分离"部门自身财年影响"和"其他政府机构财年影响"成为重大识别挑战.</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:政府部门在财年末集中支出时,是否存在"政府挤出政府"的效应?</p>
-<p><strong>创新解决方案</strong>:利用英国驻海外办事处这一独特自然实验_这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
-<h3 id="研究意义">研究意义</h3>
-<ul>
-<li><strong>学术贡献</strong>:首次分离年终支出的"内部"与"外部"驱动因素</li>
-<li><strong>政策含义</strong>:错开不同部门的财年可能减少年终支出</li>
-</ul>
-<hr>
-<h2 id="内容及结构-论文结构">内容及结构(论文结构)</h2>
-<p><strong>第一节:引言(Introduction)</strong></p>
-<p>阐述年终支出高峰现象、潜在拥堵机制,研究挑战与创新.</p>
-<p><strong>第二节:方法论(Methodology)</strong></p>
-<p>数据:英国外交和联邦事务部(FCO)海外办事处2008-2019财年月度支出数据.实证策略:利用海外办事处沿用本国财年但所在国财年各异的自然实验.</p>
-<p><strong>第三节:结果(Results)</strong></p>
-<p>三个主要发现:本国财年末效应、当地政府挤出效应、当地企业财年效应.</p>
-<hr>
-<h2 id="正文-逻辑梳理">正文(逻辑梳理)</h2>
-<h3 id="一、自然实验的设计优势">一、自然实验的设计优势</h3>
-<p><strong>英国海外办事处的独特性.</strong> 英国在180多个国家设有399个海外办事处,这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
-<p>这种设置的优势:办事处的预算框架、管理和监督制度相同,执行相似的外交任务,可比较不同东道国办事处的支出模式差异.</p>
-<h3 id="二、核心实证发现">二、核心实证发现</h3>
-<p><strong>发现1:本国财年末效应显著.</strong></p>
-<p>海外办事处在英国财年最后一个月(3月)的支出显著更高:</p>
-<ul>
-<li>资源预算:3月支出比月平均高1.359个标准差</li>
-<li>资本预算:3月支出比月平均高0.867个标准差</li>
-</ul>
-<p><strong>发现2:当地政府挤出效应显著.</strong></p>
-<p>$LFY End \times Home FY End$系数在资源支出模型中显著为正:在与英国财年重叠的国家,年终支出峰值更大.这表明东道国政府的年终支出确实产生了"挤出"效应.</p>
-<p><strong>发现3:当地企业财年效应显著.</strong></p>
-<p>在资本支出案例中,当地企业财年末越近,办事处支出越多.这与企业销售人员为最大化佣金的策略性行为一致.</p>
-<h3 id="三、理论模型与预测">三、理论模型与预测</h3>
-<p>作者扩展了Liebman and Mahoney(2017)和Baumann(2019)的模型,加入"价格"和"拥堵效应"参数.</p>
-<p><strong>有趣发现</strong>:理论预测拥堵效应应减少年终支出峰值(理性部门会转移支出),但实证结果相反_拥堵效应加剧年终支出.这暗示政府部门的"行为惯性"可能比模型假设的更强.</p>
-<hr>
-<h2 id="结论-Conclusion">结论(Conclusion)</h2>
-<h3 id="核心结论总结">核心结论总结</h3>
-<p><strong>第一,本国财年是支出模式最重要的影响因素.</strong></p>
-<p><strong>第二,拥堵效应加剧年终支出.</strong> 在与本国财年重叠的国家,年终支出规模更大.</p>
-<p><strong>第三,当地企业财年末后期,政府支出更高.</strong> 企业销售人员的激励结构和行为也能影响政府部门的支出模式.</p>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ul>
-<li><strong>年终支出文献</strong>:首次分离内部与外部因素</li>
-<li><strong>财政溢出文献</strong>:发现"年终支出溢出"新概念</li>
-<li><strong>政策制定</strong>:错开财年可间接减少年终支出</li>
-</ul>
-<hr>
-<h2 id="未来研究方向">未来研究方向</h2>
-<h3 id="文献中提及的未来研究方向">文献中提及的未来研究方向</h3>
-<ul>
-<li>利用更细致的微观采购合同数据直接量化挤出效应的成本</li>
-<li>分析政府部门对拥堵效应的动态适应过程</li>
-</ul>
-<h3 id="基于本文思考的下一步研究工作">基于本文思考的下一步研究工作</h3>
-<p><strong>拥堵效应的成本量化.</strong> 英国海外办事处在面临挤出效应时是否支付了更高价格?</p>
-<p><strong>政策错开财年的可行性分析.</strong> 实施"错开财年"政策的实际可行性、潜在成本和过渡挑战.</p>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<p><strong>关于"个体理性"与"集体低效":</strong></p>
-<p>本文揭示了一个有趣的悖论:所有部门都在同一时间"理性"地加大支出以避免资金过期,这种个体理性可能导致整个经济体的集体低效_价格上涨、供应短缺、次优采购.</p>
-<p><strong>关于政府部门的价格敏感性:</strong></p>
-<p>理论模型预测理性部门会转移支出以避免拥堵,但实证结果相反.这暗示政府部门的"行为惯性"可能比新古典模型假设的更强.</p>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>
-<p><strong>拥堵效应具体如何测量?</strong> 交互项系数的经济含义是什么?</p>
-</li>
-<li>
-<p><strong>资源预算和资本预算的响应为何不同?</strong></p>
-</li>
-<li>
-<p><strong>这对中国的政府采购改革有何启示?</strong></p>
-</li>
-<li>
-<p><strong>错开财年政策的实际可行性如何?</strong></p>
-</li>
-</ol>
-<hr>
-<h2 id="参考文献">参考文献</h2>
-<ul>
-<li>Baumann, S. (2019). Procrastination and the Design of Government.</li>
-<li>Eichenauer, V. (2020). Budget Constraints and the Temporal Dynamics of Public Spending.</li>
-<li>Klymak, M., &amp; Baumann, S. (2022). Fiscal Year-End Procurement and Price Gouging.</li>
-<li>Liebman, J.B., &amp; Mahoney, N. (2017). Expiring Budgets and the Temporal Dynamics of Federal Spending.</li>
-<li>Oyer, P. (1998). Fiscal Year Ends and Intertemporal Labor Management.</li>
-</ul>
-<hr>
-<p><em>本笔记由 AI 生成,深度分析了&lt;Do governments crowd out governments?&gt;一文的核心内容、理论框架、实证发现和学术贡献.生成时间:2026年4月11日.</em></p>
-]]></content>
-      <categories>
-        <category>财政学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>财政学</tag>
-        <tag>政府支出</tag>
-        <tag>挤出效应</tag>
-        <tag>自然实验</tag>
       </tags>
   </entry>
   <entry>
@@ -3182,6 +3051,137 @@ LBD产生的成本降低主要通过价格竞争传递给了EV生产商和最终
         <tag>AER</tag>
         <tag>博弈论</tag>
         <tag>信息经济学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Do Governments Crowd Out Governments? — 深度阅读笔记 — Baumann &amp; Klymak</title>
+    <url>/posts/baumann2024/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Do governments crowd out governments? Evidence from a natural experiment</li>
+<li><strong>作者</strong>: Stuart Baumann, Margaryta Klymak</li>
+<li><strong>类型</strong>: 论文笔记 / 财政学 / 政府经济学</li>
+<li><strong>出版年份</strong>: 2024</li>
+<li><strong>出版机构/期刊</strong>: European Economic Review, Vol. 168, 104803</li>
+<li><strong>难度评估</strong>: 中 - 需要计量经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言-背景和意义">引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>年终支出高峰(Year-End Spending Spike)是全球各国政府普遍存在的现象_政府部门在财政年度结束时集中大量支出.这种支出模式具有几个关键特征:</p>
+<p><strong>规模与普遍性.</strong> 英国资本支出在财年最后一个月是月平均支出的约两倍;美国政府在财年最后一周的支出是平均周的4.9倍.这一现象在OECD 27个国家均有观察到.</p>
+<p><strong>潜在浪费问题.</strong> 年终仓促采购可能导致质量问题.Liebman和Mahoney(2017)发现,美国政府采购的IT项目在财年末执行的,其获得"低质量"评分的可能性是其他时间执行的2.2至5.6倍.</p>
+<p><strong>现有解释的局限.</strong> 文献将年终支出归因于政府部门自身的预算周期(内部因素):如预防性储蓄基金、拖延行为、或规划不足.但这些解释均未考虑外部因素_其他政府部门和企业的支出行为.</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<p><strong>拥堵效应与竞争机制.</strong> 当多个政府部门同时高强度支出时,可能在供应商方面产生拥堵效应.具体机制包括:</p>
+<ul>
+<li><strong>价格上涨</strong>:供应商在高需求时期提高价格</li>
+<li><strong>采购替代</strong>:供应商不可用时被迫更换采购物品或供应商</li>
+<li><strong>销售策略</strong>:供应商增加销售人员、调整商品供应以利用高支出意愿</li>
+<li><strong>支出转移</strong>:部门可能将部分支出转移至其他时间以避免价格上涨</li>
+</ul>
+<p><strong>识别挑战.</strong> 同一国家的政府机构通常遵循相同的财年规则,使得分离"部门自身财年影响"和"其他政府机构财年影响"成为重大识别挑战.</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>:政府部门在财年末集中支出时,是否存在"政府挤出政府"的效应?</p>
+<p><strong>创新解决方案</strong>:利用英国驻海外办事处这一独特自然实验_这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
+<h3 id="研究意义">研究意义</h3>
+<ul>
+<li><strong>学术贡献</strong>:首次分离年终支出的"内部"与"外部"驱动因素</li>
+<li><strong>政策含义</strong>:错开不同部门的财年可能减少年终支出</li>
+</ul>
+<hr>
+<h2 id="内容及结构-论文结构">内容及结构(论文结构)</h2>
+<p><strong>第一节:引言(Introduction)</strong></p>
+<p>阐述年终支出高峰现象、潜在拥堵机制,研究挑战与创新.</p>
+<p><strong>第二节:方法论(Methodology)</strong></p>
+<p>数据:英国外交和联邦事务部(FCO)海外办事处2008-2019财年月度支出数据.实证策略:利用海外办事处沿用本国财年但所在国财年各异的自然实验.</p>
+<p><strong>第三节:结果(Results)</strong></p>
+<p>三个主要发现:本国财年末效应、当地政府挤出效应、当地企业财年效应.</p>
+<hr>
+<h2 id="正文-逻辑梳理">正文(逻辑梳理)</h2>
+<h3 id="一、自然实验的设计优势">一、自然实验的设计优势</h3>
+<p><strong>英国海外办事处的独特性.</strong> 英国在180多个国家设有399个海外办事处,这些办事处预算遵循英国财年(3月结束),但位于财年各不相同的东道国.</p>
+<p>这种设置的优势:办事处的预算框架、管理和监督制度相同,执行相似的外交任务,可比较不同东道国办事处的支出模式差异.</p>
+<h3 id="二、核心实证发现">二、核心实证发现</h3>
+<p><strong>发现1:本国财年末效应显著.</strong></p>
+<p>海外办事处在英国财年最后一个月(3月)的支出显著更高:</p>
+<ul>
+<li>资源预算:3月支出比月平均高1.359个标准差</li>
+<li>资本预算:3月支出比月平均高0.867个标准差</li>
+</ul>
+<p><strong>发现2:当地政府挤出效应显著.</strong></p>
+<p>$LFY End \times Home FY End$系数在资源支出模型中显著为正:在与英国财年重叠的国家,年终支出峰值更大.这表明东道国政府的年终支出确实产生了"挤出"效应.</p>
+<p><strong>发现3:当地企业财年效应显著.</strong></p>
+<p>在资本支出案例中,当地企业财年末越近,办事处支出越多.这与企业销售人员为最大化佣金的策略性行为一致.</p>
+<h3 id="三、理论模型与预测">三、理论模型与预测</h3>
+<p>作者扩展了Liebman and Mahoney(2017)和Baumann(2019)的模型,加入"价格"和"拥堵效应"参数.</p>
+<p><strong>有趣发现</strong>:理论预测拥堵效应应减少年终支出峰值(理性部门会转移支出),但实证结果相反_拥堵效应加剧年终支出.这暗示政府部门的"行为惯性"可能比模型假设的更强.</p>
+<hr>
+<h2 id="结论-Conclusion">结论(Conclusion)</h2>
+<h3 id="核心结论总结">核心结论总结</h3>
+<p><strong>第一,本国财年是支出模式最重要的影响因素.</strong></p>
+<p><strong>第二,拥堵效应加剧年终支出.</strong> 在与本国财年重叠的国家,年终支出规模更大.</p>
+<p><strong>第三,当地企业财年末后期,政府支出更高.</strong> 企业销售人员的激励结构和行为也能影响政府部门的支出模式.</p>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ul>
+<li><strong>年终支出文献</strong>:首次分离内部与外部因素</li>
+<li><strong>财政溢出文献</strong>:发现"年终支出溢出"新概念</li>
+<li><strong>政策制定</strong>:错开财年可间接减少年终支出</li>
+</ul>
+<hr>
+<h2 id="未来研究方向">未来研究方向</h2>
+<h3 id="文献中提及的未来研究方向">文献中提及的未来研究方向</h3>
+<ul>
+<li>利用更细致的微观采购合同数据直接量化挤出效应的成本</li>
+<li>分析政府部门对拥堵效应的动态适应过程</li>
+</ul>
+<h3 id="基于本文思考的下一步研究工作">基于本文思考的下一步研究工作</h3>
+<p><strong>拥堵效应的成本量化.</strong> 英国海外办事处在面临挤出效应时是否支付了更高价格?</p>
+<p><strong>政策错开财年的可行性分析.</strong> 实施"错开财年"政策的实际可行性、潜在成本和过渡挑战.</p>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<p><strong>关于"个体理性"与"集体低效":</strong></p>
+<p>本文揭示了一个有趣的悖论:所有部门都在同一时间"理性"地加大支出以避免资金过期,这种个体理性可能导致整个经济体的集体低效_价格上涨、供应短缺、次优采购.</p>
+<p><strong>关于政府部门的价格敏感性:</strong></p>
+<p>理论模型预测理性部门会转移支出以避免拥堵,但实证结果相反.这暗示政府部门的"行为惯性"可能比新古典模型假设的更强.</p>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>
+<p><strong>拥堵效应具体如何测量?</strong> 交互项系数的经济含义是什么?</p>
+</li>
+<li>
+<p><strong>资源预算和资本预算的响应为何不同?</strong></p>
+</li>
+<li>
+<p><strong>这对中国的政府采购改革有何启示?</strong></p>
+</li>
+<li>
+<p><strong>错开财年政策的实际可行性如何?</strong></p>
+</li>
+</ol>
+<hr>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>Baumann, S. (2019). Procrastination and the Design of Government.</li>
+<li>Eichenauer, V. (2020). Budget Constraints and the Temporal Dynamics of Public Spending.</li>
+<li>Klymak, M., &amp; Baumann, S. (2022). Fiscal Year-End Procurement and Price Gouging.</li>
+<li>Liebman, J.B., &amp; Mahoney, N. (2017). Expiring Budgets and the Temporal Dynamics of Federal Spending.</li>
+<li>Oyer, P. (1998). Fiscal Year Ends and Intertemporal Labor Management.</li>
+</ul>
+<hr>
+<p><em>本笔记由 AI 生成,深度分析了&lt;Do governments crowd out governments?&gt;一文的核心内容、理论框架、实证发现和学术贡献.生成时间:2026年4月11日.</em></p>
+]]></content>
+      <categories>
+        <category>财政学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>财政学</tag>
+        <tag>政府支出</tag>
+        <tag>挤出效应</tag>
+        <tag>自然实验</tag>
       </tags>
   </entry>
   <entry>
@@ -3988,54 +3988,6 @@ TWFE 的问题究竟是什么？是否可以在一个统一框架下同时解决
       </tags>
   </entry>
   <entry>
-    <title>大城市人口增长速度🦚</title>
-    <url>/posts/15523/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
-<center>上图即为最终效果</center>
-<h2 id="下载数据">下载数据</h2>
-<p>将代码中的**<code>~/文档/</code>**更换为要保存的目录.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="加载R包">加载R包</h2>
-<p>需要的R包如下所示.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
-<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<ol>
-<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
-<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon, Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
-<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
-<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
-</ol>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
-<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.<br>
-使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="绘图">绘图</h2>
-<p>代码如下,图见上文.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>绘图</category>
-        <category>map&amp;sf</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Generative AI at Work — 深度分析 — Brynjolfsson Et Al.</title>
     <url>/posts/bryn2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -4418,6 +4370,54 @@ $${y_{it} = \delta_t + \alpha_i + \beta AI_{it} + \gamma X_{it} + \epsilon_{it}}
       </categories>
       <tags>
         <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大城市人口增长速度🦚</title>
+    <url>/posts/15523/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
+<center>上图即为最终效果</center>
+<h2 id="下载数据">下载数据</h2>
+<p>将代码中的**<code>~/文档/</code>**更换为要保存的目录.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="加载R包">加载R包</h2>
+<p>需要的R包如下所示.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
+<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<ol>
+<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
+<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon, Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
+<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
+<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
+</ol>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
+<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.<br>
+使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="绘图">绘图</h2>
+<p>代码如下,图见上文.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>绘图</category>
+        <category>map&amp;sf</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
       </tags>
   </entry>
   <entry>
@@ -9765,6 +9765,496 @@ Zotero Item Key:: RB7YBMK5</p>
       </tags>
   </entry>
   <entry>
+    <title>The Price of War — 深度阅读笔记 — Federle Et Al.</title>
+    <url>/posts/federle2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: The Price of War</li>
+<li><strong>作者</strong>: Jonathan Federle, André Meier, Gernot J. Müller, Willi Mutschler, Moritz Schularick</li>
+<li><strong>类型</strong>: 论文笔记 / 战争经济学 / 宏观经济学 / 经济史学</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: American Economic Review, 116(3): 791-827</li>
+<li><strong>DOI</strong>: 10.1257/aer.20241355</li>
+<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量史学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>本文属于<strong>经济学研究领域</strong>，具体涉及发展经济学、国际经济学、经济史学、冲突经济学（Conflict Economics）以及宏观经济学等多个子领域的交叉地带。论文所研究的<strong>战争经济学</strong>（Economics of War）是一个重要但相对被忽视的研究方向，主要探讨战争如何影响参与各方的经济表现。</p>
+<p>论文使用了多个经典宏观经济指标来测度战争的经济影响：</p>
+<ul>
+<li><strong>实际GDP（Real GDP）</strong>：衡量一个国家商品和服务产出的最核心指标</li>
+<li><strong>消费者价格指数（CPI）</strong>：衡量通货膨胀和物价水平变化</li>
+<li><strong>资本存量（Capital Stock）</strong>：衡量经济体中可用于生产的固定资产总量</li>
+<li><strong>全要素生产率（TFP, Total Factor Productivity）</strong>：衡量技术进步和效率提升的关键指标</li>
+<li><strong>股权回报率（Equity Returns）</strong>：反映股票市场的整体表现</li>
+<li><strong>长期利率（Long-term Interest Rates）</strong>：反映资金成本和政府借贷成本</li>
+</ul>
+<h3 id="研究的主要背景（分点说明）">研究的主要背景（分点说明）</h3>
+<p><strong>第一，战争与全球经济风险上升的背景。</strong> 近年来，全球政治经济格局正在经历深刻变化。经济碎片化加剧（Fernández-Villaverde, Mineyama, and Song 2024; Gopinath et al. 2025），地缘政治紧张局势和冲突风险显著上升。在这一背景下，理解战争对经济的影响变得尤为重要。</p>
+<p><strong>第二，现有文献的局限性。</strong> 虽然有大量研究关注特定战争（如两次世界大战、冷战时期冲突）的财政和货币影响，以及战争对交战国经济增长的影响，但这些研究存在以下不足：</p>
+<ul>
+<li>多为单一战争案例研究，缺乏系统性比较</li>
+<li>很少考虑战争的<strong>跨境溢出效应</strong>（Spillover Effects）</li>
+<li>对战争如何通过贸易网络影响第三方国家的机制理解不足</li>
+</ul>
+<p><strong>第三，数据可得性的突破。</strong> 本文作者整合了"战争相关因素项目"（Correlates of War, COW）的战争数据与"Jordà-Schularick-Taylor宏观史数据库"（MacroHistory Database），构建了一个跨越150年、涵盖60个国家的新数据集，这使得系统性地研究战争的经济影响成为可能。</p>
+<p><strong>第四，战争频率与地理分布的重要事实。</strong> 本文揭示了一个重要却常被忽视的事实：尽管一个国家在特定年份成为战场的概率只有6%，但与其接壤并可能受到战争影响的国家比例高达20%——这一比例是全球金融危机频率的约5倍。这意味着虽然直接经历战争的国家相对较少，但通过贸易和地理渠道受到战争间接影响的国家却非常普遍。</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心研究问题：战争对经济的影响是什么？这种影响如何溢出到非参战国？</strong></p>
+<p>具体而言，作者试图回答以下问题：</p>
+<ol>
+<li>战争在战地国家造成的直接经济损失有多大？</li>
+<li>参战国（非战地）的经济表现与战地国家有何不同？</li>
+<li>第三方国家如何受到战争的经济影响？贸易联系和地理邻近如何调节这一影响？</li>
+<li>战争的宏观经济影响在不同类型的战争中是否存在系统性差异？</li>
+</ol>
+<p>作者明确指出，他们的研究目的是建立<strong>新的Stylized Facts（典型化事实）</strong>，即战争后经济发展的典型模式，而不试图进行因果解释。这是因为战争爆发与经济发展之间可能存在双向因果关系——经济状况可能既是战争爆发的原因，也是战争的结果。</p>
+<h3 id="研究意义">研究意义</h3>
+<p><strong>理论意义：</strong> 本文首次系统性地分析了三类国家（战地国家、参战国、第三方国家）在战争前后的经济动态演化，并区分了不同传导渠道（贸易渠道、地理渠道）的作用。这为战争经济学领域提供了重要的实证基础。</p>
+<p><strong>政策意义：</strong> 在当前地缘政治紧张局势加剧、全球化退潮的背景下，理解战争的经济代价及其传播途径对于政策制定者具有重要的参考价值。尤其是认识到与战地的贸易联系会放大对他国经济的冲击，有助于各国更好地评估和应对地缘政治风险。</p>
+<p><strong>方法论贡献：</strong> 作者采用的局部投影法（Local Projections Method）和多维度的暴露度（Exposure）分析框架为后续研究提供了方法论借鉴。</p>
+<hr>
+<h2 id="2-内容及结构（论文结构）">2. 内容及结构（论文结构）</h2>
+<h3 id="论文整体框架">论文整体框架</h3>
+<p>本文共分为五个主要部分，外加附录和补充材料：</p>
+<p><strong>第一部分：引言（Introduction）</strong></p>
+<ul>
+<li>阐述研究背景、问题意识和研究贡献</li>
+<li>回顾相关文献，定位本文在现有研究中的位置</li>
+</ul>
+<p><strong>第二部分：数据与基本事实（Data and Basic Facts）</strong></p>
+<ul>
+<li>详细说明战争地点（War Sites）的识别方法</li>
+<li>介绍数据集的构建过程</li>
+<li>提供描述性统计</li>
+</ul>
+<p><strong>第三部分：战争爆发后的经济动态（Economic Dynamics after the Outbreak of War）</strong></p>
+<ul>
+<li>介绍实证分析框架（局部投影法）</li>
+<li>报告基准回归结果</li>
+<li>分析第三方国家的异质性</li>
+<li>考察制度质量等更广泛的社会变化</li>
+</ul>
+<p><strong>第四部分：因果推断（Causality）</strong></p>
+<ul>
+<li>利用国别战争的差异性检验因果关系</li>
+<li>通过叙事性识别（Narrative Identification）排除内生性干扰</li>
+</ul>
+<p><strong>第五部分：结论（Conclusion）</strong></p>
+<ul>
+<li>总结主要发现</li>
+<li>讨论政策含义和研究局限</li>
+</ul>
+<hr>
+<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p><strong>全球政治经济格局的深刻变化</strong></p>
+<p>近年来，国际政治经济环境发生了显著变化。地缘政治紧张局势加剧，冲突风险上升。战争不仅造成生命和财产的直接损失，还会扰乱贸易、破坏公共财政。正如Barro (2006)所指出的，上个世纪许多重大经济灾难都与本土战争有关。</p>
+<p><strong>被忽视的战争跨境影响</strong></p>
+<p>尽管战争的经济影响重大，但现有研究存在明显空白：战争的经济影响不仅限于交战国，其他国家和第三方国家也会受到冲击。这一"战争的代价"（Price of War）问题在学术和政策讨论中都未得到足够重视。</p>
+<p><strong>Trotsky的警示</strong></p>
+<p>作者引用了Trotsky的名言"你可能对战争不感兴趣，但战争对你感兴趣"（You may not be interested in war, but war is interested in you），用以强调在全球化时代，战争的经济影响具有广泛的传播性，即使是未直接参战的国家也难以独善其身。</p>
+<h3 id="挑战">挑战</h3>
+<p><strong>数据缺乏的系统性</strong></p>
+<p>系统研究战争经济影响面临的首要挑战是<strong>数据缺乏</strong>。需要整合多来源的历史数据：</p>
+<ul>
+<li>战争事件数据（COW项目）</li>
+<li>宏观经济时间序列数据（Jordà-Schularick-Taylor数据库）</li>
+<li>贸易数据（Fouquin and Hugot 2016）</li>
+<li>地理边界和人口数据</li>
+</ul>
+<p><strong>战地识别的复杂性</strong></p>
+<p>COW项目提供的是参战国信息，但并未明确指出战争在哪些国家的领土上进行。为此，作者需要：</p>
+<ul>
+<li>收集Battle-level的详细信息</li>
+<li>手动编码1,737场战役的地理位置</li>
+<li>将战役层面的伤亡汇总到国家层面</li>
+</ul>
+<p><strong>战争类型差异的处理</strong></p>
+<p>战争分为不同类型：</p>
+<ul>
+<li><strong>国家间战争（Interstate Wars）</strong>：两国或多国间武装冲突，如一战、二战</li>
+<li><strong>其他战争（Other Wars）</strong>：内战、殖民战争、独立战争等</li>
+</ul>
+<p>这两类战争在频率、强度、持续时间和经济动机方面都存在系统性差异，需要在分析中加以区分。</p>
+<p><strong>内生性问题的处理</strong></p>
+<p>战争爆发与经济状况之间可能存在双向因果关系——经济困难可能既是战争爆发的原因（内生性），也是战争的结果（需要识别因果方向）。如何剥离这种内生性是因果推断的核心挑战。</p>
+<h3 id="方法（数据集要突出）">方法（数据集要突出）</h3>
+<h4 id="数据集构建">数据集构建</h4>
+<p><strong>样本范围</strong></p>
+<ul>
+<li>时间跨度：1870-2023年（150年）</li>
+<li>国家数量：60个国家（占1960年全球GDP的95%）</li>
+<li>战争样本：694场战争（国家-年观察值），其中约1/3为国家间战争</li>
+</ul>
+<p><strong>战争数据的分类与编码</strong></p>
+<p>作者遵循COW项目的定义，将战争分为：</p>
+<ol>
+<li><strong>Interstate Wars（国家间战争）</strong>：至少两个国家间、12个月内战斗死亡人数不少于1000人的武装冲突</li>
+<li><strong>Other Wars（其他战争）</strong>：内战、殖民战争、解放战争等</li>
+</ol>
+<p><strong>战争强度测量</strong></p>
+<p>使用<strong>Casualties/Local Population Ratio</strong>作为战争强度指标：</p>
+<p>$${Site_{j,t} = \frac{Casualties_{j,t}}{Population_{j, pre-war}}}$$</p>
+<p>其中伤亡包括死亡、失踪、受伤和战俘。</p>
+<p><strong>关键统计事实</strong></p>
+<ul>
+<li>国家间战争平均强度：3.5%（以伤亡/战前人口衡量）</li>
+<li>其他战争平均强度：0.74%</li>
+<li>战争持续时间中位数：2年</li>
+<li>总样本包括225个国家间战争和469场其他战争</li>
+</ul>
+<p><strong>Battle-Level地理编码</strong></p>
+<p>为识别战地，作者收集了1,737场战役的详细信息：</p>
+<ul>
+<li>来源：Clodfelter (2017)战争百科全书及多种历史资料</li>
+<li>每场战役记录：地理位置、伤亡人数、参战方</li>
+<li>最大战役：Brusilov Offensive（一战），超过100万伤亡</li>
+</ul>
+<p><strong>宏观经济指标</strong></p>
+<p>使用Jordà-Schularick-Taylor宏观史数据库，核心变量包括：</p>
+<ul>
+<li>实际GDP（Real GDP）</li>
+<li>消费者价格指数（CPI）</li>
+<li>资本存量（Capital Stock）</li>
+<li>全要素生产率（TFP）</li>
+<li>10年期政府债券收益率</li>
+<li>股权回报指数</li>
+<li>军事支出（占GDP比重）</li>
+<li>军事人员（占人口比重）</li>
+</ul>
+<p><strong>贸易数据</strong></p>
+<p>使用Fouquin and Hugot (2016)的双边贸易数据，并使用引力模型填补缺失值（伪${R^2=0.95}$）。</p>
+<p><strong>GPT-4验证</strong></p>
+<p>作者还使用GPT-4 API辅助验证战地编码的准确性，发现GPT-4识别结果与手工编码的Pearson相关系数为0.73（${p&lt;0.001}$）。</p>
+<h4 id="实证方法：局部投影法">实证方法：局部投影法</h4>
+<p><strong>Local Projections Method（局部投影法）</strong></p>
+<p>遵循Jordà (2005)的方法，估计以下规范：</p>
+<p>$${y_{i,t+h} - y_{i,t-1} = \zeta_h’ X_{i,t} + \sum_{c \in {S,B,T}} \phi_{c,h}(\gamma_{i,c,t}’ \cdot Sites_t) + \sum_{c \in {B,T}} \psi_{c,h}(\epsilon_{i,c,t-1}’ \cdot Sites_t) + u_{i,t+h}}$$</p>
+<p>其中：</p>
+<ul>
+<li>${y_{i,t}}$：结果变量（如实际GDP）</li>
+<li>${h}$：战争开始后的年数（${h=0,1,…,8}$）</li>
+<li>${X_{i,t}}$：控制变量（包含4阶滞后项、国家固定效应、是否接壤战地国家）</li>
+<li>${\phi_{c,h}}$：捕捉c类国家（战地S、参战B、第三方T）在战争后的动态</li>
+<li>${\psi_{c,h}}$：允许暴露度（贸易联系、地理邻近）对溢出效应进行调节</li>
+</ul>
+<p><strong>暴露度向量（Exposure Vector）</strong></p>
+<p>$${\epsilon_{i,c,t-1} = \frac{Import_{i \leftarrow j, t-1}}{GDP_{i, t-1}}}$$</p>
+<p>衡量第三方国家i与战地国家j之间的贸易暴露度。</p>
+<p><strong>固定效应设定</strong></p>
+<p>不包含时间固定效应，以捕捉特定国家组的完整经济动态，而非仅捕捉相对于平均值的动态变化。</p>
+<h3 id="结果（Results）">结果（Results）</h3>
+<h4 id="基准结果：三类国家的经济动态">基准结果：三类国家的经济动态</h4>
+<p><strong>产出（Output）</strong></p>
+<ul>
+<li><strong>战地国家</strong>：GDP下降约10%（相对于战前趋势），在战争开始后约4年达到谷底，此后恢复缓慢，8年后仍低约5%，完全恢复需要约12年</li>
+<li><strong>参战国</strong>：平均GDP未显示明显偏离趋势</li>
+<li><strong>第三方国家</strong>：平均GDP仅适度下降</li>
+</ul>
+<p><strong>消费者价格指数（CPI）</strong></p>
+<ul>
+<li><strong>战地国家</strong>：物价水平持续上涨，战争开始6年后达到峰值，比趋势高约20%</li>
+<li><strong>参战国和第三方国家</strong>：物价水平也有一定上涨，但幅度较小</li>
+</ul>
+<p><strong>资本存量（Capital Stock）</strong></p>
+<ul>
+<li><strong>战地国家</strong>：8年内下降超过4%</li>
+<li><strong>参战国和第三方国家</strong>：也有显著下降，但幅度小得多</li>
+<li>注意：资本存量下降可能反映物理破坏，也可能反映投资减少</li>
+</ul>
+<p><strong>全要素生产率（TFP）</strong></p>
+<ul>
+<li><strong>战地国家</strong>：TFP立即大幅下降，与战争严重破坏经济运作一致</li>
+<li><strong>参战国</strong>：TFP轻微（但不显著）上升</li>
+<li><strong>第三方国家</strong>：TFP基本不变</li>
+</ul>
+<p><strong>长期利率</strong></p>
+<ul>
+<li><strong>战地国家</strong>：10年期政府债券收益率上升约0.3个百分点，并持续 elevated 约12年</li>
+<li><strong>参战国和第三方国家</strong>：也有适度上升，但不显著</li>
+</ul>
+<p><strong>股权回报率</strong></p>
+<ul>
+<li><strong>战地国家</strong>：股市指数持续下跌，相对趋势的累计跑输幅度在6年后达到20%</li>
+<li>初始反应微弱，表明市场未完全预期战争的不利发展</li>
+<li><strong>第三方国家</strong>：股市跌幅约为战地国家的一半</li>
+<li><strong>参战国</strong>：表现出最强的韧性</li>
+</ul>
+<p><strong>军事支出和人员</strong></p>
+<ul>
+<li><strong>战地和参战国</strong>：军事支出显著增加，初期约增加1个百分点GDP，4年后达到峰值2.5个百分点GDP</li>
+<li><strong>第三方国家</strong>：军事支出和人员基本不变</li>
+</ul>
+<h4 id="关键发现：第三国异质性">关键发现：第三国异质性</h4>
+<p><strong>贸易暴露度的关键作用</strong></p>
+<p>当按贸易暴露度区分第三方国家时，发现显著差异：</p>
+<ul>
+<li><strong>高贸易暴露国家</strong>（从战地进口占GDP的3%）：产出下降2%，价格大幅上涨，资本存量下降，利率上升，股权回报下降</li>
+<li><strong>零贸易暴露国家</strong>：基本不受影响</li>
+</ul>
+<p>这一发现具有重要的政策含义：与战地的贸易联系是战争经济影响传导的关键渠道。</p>
+<p><strong>地理邻近的额外风险</strong></p>
+<p>接壤战地的国家面临额外的负面效应：</p>
+<ul>
+<li>长期利率略有下降（可能反映资本外逃）</li>
+<li>股权回报为负（符合灾难风险溢价上升）</li>
+<li>军事支出和人员略有增加（反映军事溢出风险）</li>
+</ul>
+<p><strong>贸易渠道的机制</strong></p>
+<p>贸易收缩是战争溢出效应的关键传导机制：</p>
+<ul>
+<li>战地出口下降：战地生产能力被破坏</li>
+<li>战地进口下降：供应链中断</li>
+<li>高暴露第三方国家：进出口均收缩</li>
+</ul>
+<h4 id="因果推断结果">因果推断结果</h4>
+<p><strong>国家间战争 vs. 其他战争</strong></p>
+<ul>
+<li><strong>国家间战争</strong>：爆发前，产出和通胀没有系统性变化</li>
+<li><strong>其他战争</strong>：爆发前通胀上升、产出增长放缓——这些战争可能是经济波动的原因和结果</li>
+</ul>
+<p><strong>叙事性识别（Narrative Identification）</strong></p>
+<p>作者识别了每场国家间战争的主要战争动机（casus belli）：</p>
+<ul>
+<li>大多数战争与民族主义、意识形态或历史原因相关（可能外生于商业周期）</li>
+<li>经济动机仅在少数6场战争中显得重要</li>
+<li>排除这6场战争后，样本中国际战争的经济影响估计与全样本非常相似</li>
+</ul>
+<p><strong>Granger因果检验</strong></p>
+<ul>
+<li>国家间战争：不被产出增长和通胀的滞后项Granger引起</li>
+<li>其他战争：存在反向因果关系</li>
+</ul>
+<p>这支持了因果解释：战争导致了所记录的经济动态。</p>
+<hr>
+<h2 id="4-结论（Conclusion）">4. 结论（Conclusion）</h2>
+<h3 id="核心发现总结">核心发现总结</h3>
+<p><strong>发现一：战地国家的巨大经济代价</strong></p>
+<p>一场中等强度（2%伤亡/人口）的战争与战地国家产出下降约10%相关。消费者价格上涨约20%。资本存量、全要素生产率和股权回报均急剧下降。经济恢复是缓慢的——完全恢复需要约12年，尽管战争本身平均只持续2-3年。</p>
+<p><strong>发现二：参战国的相对韧性</strong></p>
+<p>尽管面临战争，参战国（非战地）的平均经济表现明显好于战地国家。这可能与军事支出增加带来的财政刺激效应有关——如Braun和McGrattan (1993)以及Ilzetzki (2024)研究所示，两次世界大战期间美国和英国的经济扩张与军费急剧增加有关。</p>
+<p><strong>发现三：第三方国家的显著溢出效应</strong></p>
+<p>战争的经济影响并不局限于战地。通过贸易渠道，第三方国家也受到显著影响：</p>
+<ul>
+<li>与战地有密切贸易联系的国家（进口占GDP 3%）：产出下降约2%</li>
+<li>接壤战地的国家：面临额外的负面金融效应</li>
+</ul>
+<p><strong>发现四：传播渠道</strong></p>
+<p>贸易联系和地理邻近是战争经济影响跨境传播的两个关键渠道。这与全球供应链的相互依存性以及地理邻近带来的直接风险暴露有关。</p>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol>
+<li><strong>首次系统性分析</strong>：首次全面分析150年间60个国家战争的经济影响，提供了战争经济学的典型化事实</li>
+<li><strong>跨境溢出效应</strong>：揭示了战争通过贸易和地理渠道对第三方国家的显著溢出效应</li>
+<li><strong>异质性分析</strong>：详细区分了不同类型国家（战地、参战、第三方）和不同暴露度下的经济动态差异</li>
+<li><strong>因果识别</strong>：通过叙事性方法识别战争的经济影响，为因果推断提供了合理依据</li>
+<li><strong>方法论贡献</strong>：提供了局部投影法在战争经济学应用的范例</li>
+</ol>
+<h3 id="更广泛的社会影响">更广泛的社会影响</h3>
+<p>除经济指标外，作者还记录了战争对更广泛社会制度的影响：</p>
+<ul>
+<li>媒体自由度下降</li>
+<li>司法独立性下降</li>
+<li>选举公平性下降</li>
+<li>制度质量下降</li>
+</ul>
+<p>这些变化主要局限于战地，但媒体自由度的下降也波及参战国。</p>
+<hr>
+<h2 id="5-未来研究方向（Future-work）">5. 未来研究方向（Future work）</h2>
+<h3 id="论文中提及的未来研究方向">论文中提及的未来研究方向</h3>
+<ol>
+<li>
+<p><strong>福利损失的全面测度</strong></p>
+<ul>
+<li>现有指标无法完全捕捉战争的经济代价及其对人类福利的影响</li>
+<li>产出与福利可能在战时分歧：例如劳动力动员可能导致产出增加，即使整体福利下降</li>
+<li>需要更好的方法来衡量私人消费等人福利指标</li>
+</ul>
+</li>
+<li>
+<p><strong>战争性质的演变</strong></p>
+<ul>
+<li>战争性质随时间不断变化</li>
+<li>伤亡与其他候选统计指标之间的关系也可能变化</li>
+<li>需要动态更新的战争强度测量方法</li>
+</ul>
+</li>
+<li>
+<p><strong>局部战争的经济影响</strong></p>
+<ul>
+<li>未来可以专门研究有限地理范围的局部战争的经济影响</li>
+<li>分析核威慑下的有限战争与全面战争的差异</li>
+</ul>
+</li>
+</ol>
+<h3 id="根据论文内容思考的下一步研究工作">根据论文内容思考的下一步研究工作</h3>
+<ol>
+<li>
+<p><strong>供应链渠道的深入研究</strong></p>
+<ul>
+<li>本文发现贸易是主要传导渠道，但未深入分析供应链网络的结构性特征</li>
+<li>可研究全球价值链（GVC）参与度如何调节战争溢出效应</li>
+<li>可使用投入产出表分析产业关联的具体路径</li>
+</ul>
+</li>
+<li>
+<p><strong>金融渠道的作用</strong></p>
+<ul>
+<li>本文发现股权回报在战地和第三方国家都大幅下降</li>
+<li>可深入研究战争如何通过金融市场（资本流动、汇率、信贷市场）传导</li>
+</ul>
+</li>
+<li>
+<p><strong>人力资本渠道</strong></p>
+<ul>
+<li>战争造成的人员伤亡和劳动力动员直接影响人力资本</li>
+<li>可研究战争对教育、健康和创新的人力资本长期影响</li>
+</ul>
+</li>
+<li>
+<p><strong>政策应对效果评估</strong></p>
+<ul>
+<li>什么样的政策可以缓冲战争的经济影响？</li>
+<li>贸易多元化、战略储备、区域经济一体化等政策工具的效果</li>
+</ul>
+</li>
+<li>
+<p><strong>不同战争类型的细分研究</strong></p>
+<ul>
+<li>国家间战争vs内战的经济影响机制可能不同</li>
+<li>代理战争（Proxy Wars）与直接战争的经济影响差异</li>
+</ul>
+</li>
+<li>
+<p><strong>数字化战争的新特征</strong></p>
+<ul>
+<li>网络战、信息战、制裁战等新型冲突形式的经济影响</li>
+<li>传统分析框架的适用性和局限性</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="6-学术思考">6. 学术思考</h2>
+<p>基于对本文的深入分析，以下学术问题值得关注和进一步探讨：</p>
+<h3 id="关于因果推断的思考">关于因果推断的思考</h3>
+<p><strong>问题一：内生性的残余挑战</strong></p>
+<p>尽管作者通过排除经济动机明确的战争来缓解内生性，但战争选择本身可能仍存在与经济因素相关的其他混淆。例如，一个国家在经济增长放缓时可能更倾向于卷入战争（通过军事转移国内矛盾）。这是否意味着即使在"外生"战争中，战前经济状况的某些特征也在发挥作用？如何在计量经济学框架下更彻底地解决这一问题？</p>
+<h3 id="关于传导机制的思考">关于传导机制的思考</h3>
+<p><strong>问题二：贸易渠道vs. 金融渠道的相对重要性</strong></p>
+<p>本文发现贸易是战争溢出效应的关键渠道，但金融渠道（如资本流动、汇率波动、信贷紧缩）的作用可能被低估。在当今全球金融一体化的背景下，金融渠道是否比贸易渠道更重要？尤其是在短期危机（如2022年乌克兰战争）中，金融市场的反应速度可能远快于贸易调整。</p>
+<p><strong>问题三：全球价值链的结构性作用</strong></p>
+<p>本文使用的贸易暴露度指标较为粗略，未能捕捉全球价值链（GVC）的复杂结构。一个深度嵌入GVC的国家可能同时面临供给中断（作为供应商）和需求萎缩（作为消费者）的双重冲击。如何构建更精细的GVC暴露度指标？</p>
+<h3 id="关于政策含义的思考">关于政策含义的思考</h3>
+<p><strong>问题四：经济一体化与战争脆弱性的权衡</strong></p>
+<p>本文发现贸易联系会放大战争的溢出效应。这意味着经济一体化在带来增长红利的同时，也使各国更容易受到地缘政治冲击。这是否意味着各国应该在追求经济效率和保持战略自主之间进行权衡？区域经济集团化（如EU）是否提供了在开放与安全之间的平衡？</p>
+<p><strong>问题五：战略储备和供应链多样化的价值</strong></p>
+<p>既然与战地的贸易联系会放大对他国的经济影响，那么战略储备和供应链多元化是否应该成为国家安全的必要组成部分？这对于小国和高度依赖进口的国家尤为重要。</p>
+<h3 id="关于研究方法的思考">关于研究方法的思考</h3>
+<p><strong>问题六：局部投影法的适用性</strong></p>
+<p>局部投影法在本文中被用来估计战争的经济动态，但这一方法假设了线性关系和固定效应结构。战争的非线性效应（如阈值效应、叠加效应）是否被遗漏？特别是当多个战争同时发生时，单独估计每场战争效应的高维问题如何处理？</p>
+<h3 id="关于历史演变的思考">关于历史演变的思考</h3>
+<p><strong>问题七：战争性质的范式转变</strong></p>
+<p>从1870年代到2020年代，战争的技术性质、参与主体、地理范围都发生了巨大变化。从大规模的国家间战争到小规模的代理人战争，再到可能包含网络战和贸易战的新型混合冲突。不同类型的冲突是否遵循相同的宏观经济动态规律？本文的150年样本是否掩盖了这些结构性变化？</p>
+<hr>
+<h2 id="7-下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
+<p>根据论文内容和上述分析，以下是用户接下来可能问的问题：</p>
+<h3 id="关于研究内容的深层问题">关于研究内容的深层问题</h3>
+<ol>
+<li>
+<p><strong>战争的长期经济后果是什么？</strong></p>
+<ul>
+<li>本文关注战后8年的动态，但恢复需要约12年</li>
+<li>长期（20-50年）经济轨迹如何？</li>
+<li>战争是否会造成"疤痕效应"（Scarring Effects），永久降低增长路径？</li>
+</ul>
+</li>
+<li>
+<p><strong>不同类型战争的经济影响有何差异？</strong></p>
+<ul>
+<li>国家间战争vs. 内战的传导机制是否不同？</li>
+<li>高强度vs. 低强度战争是否存在非线性阈值效应？</li>
+<li>代理战争与直接战争的经济影响差异？</li>
+</ul>
+</li>
+<li>
+<p><strong>疫情和战争叠加的影响是否不同？</strong></p>
+<ul>
+<li>COVID-19疫情可视为非战争的"经济灾难"</li>
+<li>两种灾难的经济影响机制和恢复模式是否可比？</li>
+</ul>
+</li>
+</ol>
+<h3 id="关于方法论的问题">关于方法论的问题</h3>
+<ol start="4">
+<li>
+<p><strong>如何进一步改进因果识别的可信度？</strong></p>
+<ul>
+<li>自然实验方法（如板块运动会）是否可用？</li>
+<li>工具变量方法是否可行？</li>
+<li>Difference-in-Differences设计是否适合此研究？</li>
+</ul>
+</li>
+<li>
+<p><strong>模型基础的解释是什么？</strong></p>
+<ul>
+<li>本文使用局部投影法进行简约式（Reduced-form）估计</li>
+<li>是否存在结构模型（如DSGE）能更好地解释这些动态？</li>
+<li>论文的工作论文版本（Federle et al. 2024）的模型结果如何？</li>
+</ul>
+</li>
+</ol>
+<h3 id="关于政策应用的问题">关于政策应用的问题</h3>
+<ol start="6">
+<li>
+<p><strong>如何将研究发现应用于当前的地缘政治风险评估？</strong></p>
+<ul>
+<li>对于台湾问题、中美博弈等当前热点，本文框架有何启示？</li>
+<li>如何量化"与中国发生贸易战"的潜在经济代价？</li>
+</ul>
+</li>
+<li>
+<p><strong>何种政策可以缓冲战争的经济冲击？</strong></p>
+<ul>
+<li>战略储备的效果如何？</li>
+<li>区域经济一体化的保护效应？</li>
+<li>金融稳定工具（如外汇储备、货币互换）的作用？</li>
+</ul>
+</li>
+</ol>
+<h3 id="关于后续研究的问题">关于后续研究的问题</h3>
+<ol start="8">
+<li>
+<p><strong>本文的主要贡献者（5位作者）后续还有哪些相关研究？</strong></p>
+<ul>
+<li>是否有关于特定战争案例的深度研究？</li>
+<li>是否有使用更细粒度数据（如月度、行业层面）的研究？</li>
+</ul>
+</li>
+<li>
+<p><strong>是否存在与本文发现相矛盾的文献？</strong></p>
+<ul>
+<li>质疑或修正本文结论的研究有哪些？</li>
+<li>这些矛盾是否可以通过样本选择、方法论差异或数据版本来解释？</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p><em>本分析报告为深度阅读笔记，梳理了论文的核心逻辑、主要发现和学术价值。</em></p>
+]]></content>
+      <categories>
+        <category>经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>宏观经济学</tag>
+        <tag>战争经济学</tag>
+        <tag>经济史学</tag>
+        <tag>地缘政治</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>战争的代价 — 深度阅读笔记 — Federle Et Al.</title>
     <url>/posts/federle2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -10279,496 +10769,6 @@ $$Site_{j,t} = \frac{Casualties_{j,t}}{Population_{j, pre-war}}$$</p>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>The Price of War — 深度阅读笔记 — Federle Et Al.</title>
-    <url>/posts/federle2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: The Price of War</li>
-<li><strong>作者</strong>: Jonathan Federle, André Meier, Gernot J. Müller, Willi Mutschler, Moritz Schularick</li>
-<li><strong>类型</strong>: 论文笔记 / 战争经济学 / 宏观经济学 / 经济史学</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: American Economic Review, 116(3): 791-827</li>
-<li><strong>DOI</strong>: 10.1257/aer.20241355</li>
-<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量史学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>本文属于<strong>经济学研究领域</strong>，具体涉及发展经济学、国际经济学、经济史学、冲突经济学（Conflict Economics）以及宏观经济学等多个子领域的交叉地带。论文所研究的<strong>战争经济学</strong>（Economics of War）是一个重要但相对被忽视的研究方向，主要探讨战争如何影响参与各方的经济表现。</p>
-<p>论文使用了多个经典宏观经济指标来测度战争的经济影响：</p>
-<ul>
-<li><strong>实际GDP（Real GDP）</strong>：衡量一个国家商品和服务产出的最核心指标</li>
-<li><strong>消费者价格指数（CPI）</strong>：衡量通货膨胀和物价水平变化</li>
-<li><strong>资本存量（Capital Stock）</strong>：衡量经济体中可用于生产的固定资产总量</li>
-<li><strong>全要素生产率（TFP, Total Factor Productivity）</strong>：衡量技术进步和效率提升的关键指标</li>
-<li><strong>股权回报率（Equity Returns）</strong>：反映股票市场的整体表现</li>
-<li><strong>长期利率（Long-term Interest Rates）</strong>：反映资金成本和政府借贷成本</li>
-</ul>
-<h3 id="研究的主要背景（分点说明）">研究的主要背景（分点说明）</h3>
-<p><strong>第一，战争与全球经济风险上升的背景。</strong> 近年来，全球政治经济格局正在经历深刻变化。经济碎片化加剧（Fernández-Villaverde, Mineyama, and Song 2024; Gopinath et al. 2025），地缘政治紧张局势和冲突风险显著上升。在这一背景下，理解战争对经济的影响变得尤为重要。</p>
-<p><strong>第二，现有文献的局限性。</strong> 虽然有大量研究关注特定战争（如两次世界大战、冷战时期冲突）的财政和货币影响，以及战争对交战国经济增长的影响，但这些研究存在以下不足：</p>
-<ul>
-<li>多为单一战争案例研究，缺乏系统性比较</li>
-<li>很少考虑战争的<strong>跨境溢出效应</strong>（Spillover Effects）</li>
-<li>对战争如何通过贸易网络影响第三方国家的机制理解不足</li>
-</ul>
-<p><strong>第三，数据可得性的突破。</strong> 本文作者整合了"战争相关因素项目"（Correlates of War, COW）的战争数据与"Jordà-Schularick-Taylor宏观史数据库"（MacroHistory Database），构建了一个跨越150年、涵盖60个国家的新数据集，这使得系统性地研究战争的经济影响成为可能。</p>
-<p><strong>第四，战争频率与地理分布的重要事实。</strong> 本文揭示了一个重要却常被忽视的事实：尽管一个国家在特定年份成为战场的概率只有6%，但与其接壤并可能受到战争影响的国家比例高达20%——这一比例是全球金融危机频率的约5倍。这意味着虽然直接经历战争的国家相对较少，但通过贸易和地理渠道受到战争间接影响的国家却非常普遍。</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心研究问题：战争对经济的影响是什么？这种影响如何溢出到非参战国？</strong></p>
-<p>具体而言，作者试图回答以下问题：</p>
-<ol>
-<li>战争在战地国家造成的直接经济损失有多大？</li>
-<li>参战国（非战地）的经济表现与战地国家有何不同？</li>
-<li>第三方国家如何受到战争的经济影响？贸易联系和地理邻近如何调节这一影响？</li>
-<li>战争的宏观经济影响在不同类型的战争中是否存在系统性差异？</li>
-</ol>
-<p>作者明确指出，他们的研究目的是建立<strong>新的Stylized Facts（典型化事实）</strong>，即战争后经济发展的典型模式，而不试图进行因果解释。这是因为战争爆发与经济发展之间可能存在双向因果关系——经济状况可能既是战争爆发的原因，也是战争的结果。</p>
-<h3 id="研究意义">研究意义</h3>
-<p><strong>理论意义：</strong> 本文首次系统性地分析了三类国家（战地国家、参战国、第三方国家）在战争前后的经济动态演化，并区分了不同传导渠道（贸易渠道、地理渠道）的作用。这为战争经济学领域提供了重要的实证基础。</p>
-<p><strong>政策意义：</strong> 在当前地缘政治紧张局势加剧、全球化退潮的背景下，理解战争的经济代价及其传播途径对于政策制定者具有重要的参考价值。尤其是认识到与战地的贸易联系会放大对他国经济的冲击，有助于各国更好地评估和应对地缘政治风险。</p>
-<p><strong>方法论贡献：</strong> 作者采用的局部投影法（Local Projections Method）和多维度的暴露度（Exposure）分析框架为后续研究提供了方法论借鉴。</p>
-<hr>
-<h2 id="2-内容及结构（论文结构）">2. 内容及结构（论文结构）</h2>
-<h3 id="论文整体框架">论文整体框架</h3>
-<p>本文共分为五个主要部分，外加附录和补充材料：</p>
-<p><strong>第一部分：引言（Introduction）</strong></p>
-<ul>
-<li>阐述研究背景、问题意识和研究贡献</li>
-<li>回顾相关文献，定位本文在现有研究中的位置</li>
-</ul>
-<p><strong>第二部分：数据与基本事实（Data and Basic Facts）</strong></p>
-<ul>
-<li>详细说明战争地点（War Sites）的识别方法</li>
-<li>介绍数据集的构建过程</li>
-<li>提供描述性统计</li>
-</ul>
-<p><strong>第三部分：战争爆发后的经济动态（Economic Dynamics after the Outbreak of War）</strong></p>
-<ul>
-<li>介绍实证分析框架（局部投影法）</li>
-<li>报告基准回归结果</li>
-<li>分析第三方国家的异质性</li>
-<li>考察制度质量等更广泛的社会变化</li>
-</ul>
-<p><strong>第四部分：因果推断（Causality）</strong></p>
-<ul>
-<li>利用国别战争的差异性检验因果关系</li>
-<li>通过叙事性识别（Narrative Identification）排除内生性干扰</li>
-</ul>
-<p><strong>第五部分：结论（Conclusion）</strong></p>
-<ul>
-<li>总结主要发现</li>
-<li>讨论政策含义和研究局限</li>
-</ul>
-<hr>
-<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p><strong>全球政治经济格局的深刻变化</strong></p>
-<p>近年来，国际政治经济环境发生了显著变化。地缘政治紧张局势加剧，冲突风险上升。战争不仅造成生命和财产的直接损失，还会扰乱贸易、破坏公共财政。正如Barro (2006)所指出的，上个世纪许多重大经济灾难都与本土战争有关。</p>
-<p><strong>被忽视的战争跨境影响</strong></p>
-<p>尽管战争的经济影响重大，但现有研究存在明显空白：战争的经济影响不仅限于交战国，其他国家和第三方国家也会受到冲击。这一"战争的代价"（Price of War）问题在学术和政策讨论中都未得到足够重视。</p>
-<p><strong>Trotsky的警示</strong></p>
-<p>作者引用了Trotsky的名言"你可能对战争不感兴趣，但战争对你感兴趣"（You may not be interested in war, but war is interested in you），用以强调在全球化时代，战争的经济影响具有广泛的传播性，即使是未直接参战的国家也难以独善其身。</p>
-<h3 id="挑战">挑战</h3>
-<p><strong>数据缺乏的系统性</strong></p>
-<p>系统研究战争经济影响面临的首要挑战是<strong>数据缺乏</strong>。需要整合多来源的历史数据：</p>
-<ul>
-<li>战争事件数据（COW项目）</li>
-<li>宏观经济时间序列数据（Jordà-Schularick-Taylor数据库）</li>
-<li>贸易数据（Fouquin and Hugot 2016）</li>
-<li>地理边界和人口数据</li>
-</ul>
-<p><strong>战地识别的复杂性</strong></p>
-<p>COW项目提供的是参战国信息，但并未明确指出战争在哪些国家的领土上进行。为此，作者需要：</p>
-<ul>
-<li>收集Battle-level的详细信息</li>
-<li>手动编码1,737场战役的地理位置</li>
-<li>将战役层面的伤亡汇总到国家层面</li>
-</ul>
-<p><strong>战争类型差异的处理</strong></p>
-<p>战争分为不同类型：</p>
-<ul>
-<li><strong>国家间战争（Interstate Wars）</strong>：两国或多国间武装冲突，如一战、二战</li>
-<li><strong>其他战争（Other Wars）</strong>：内战、殖民战争、独立战争等</li>
-</ul>
-<p>这两类战争在频率、强度、持续时间和经济动机方面都存在系统性差异，需要在分析中加以区分。</p>
-<p><strong>内生性问题的处理</strong></p>
-<p>战争爆发与经济状况之间可能存在双向因果关系——经济困难可能既是战争爆发的原因（内生性），也是战争的结果（需要识别因果方向）。如何剥离这种内生性是因果推断的核心挑战。</p>
-<h3 id="方法（数据集要突出）">方法（数据集要突出）</h3>
-<h4 id="数据集构建">数据集构建</h4>
-<p><strong>样本范围</strong></p>
-<ul>
-<li>时间跨度：1870-2023年（150年）</li>
-<li>国家数量：60个国家（占1960年全球GDP的95%）</li>
-<li>战争样本：694场战争（国家-年观察值），其中约1/3为国家间战争</li>
-</ul>
-<p><strong>战争数据的分类与编码</strong></p>
-<p>作者遵循COW项目的定义，将战争分为：</p>
-<ol>
-<li><strong>Interstate Wars（国家间战争）</strong>：至少两个国家间、12个月内战斗死亡人数不少于1000人的武装冲突</li>
-<li><strong>Other Wars（其他战争）</strong>：内战、殖民战争、解放战争等</li>
-</ol>
-<p><strong>战争强度测量</strong></p>
-<p>使用<strong>Casualties/Local Population Ratio</strong>作为战争强度指标：</p>
-<p>$${Site_{j,t} = \frac{Casualties_{j,t}}{Population_{j, pre-war}}}$$</p>
-<p>其中伤亡包括死亡、失踪、受伤和战俘。</p>
-<p><strong>关键统计事实</strong></p>
-<ul>
-<li>国家间战争平均强度：3.5%（以伤亡/战前人口衡量）</li>
-<li>其他战争平均强度：0.74%</li>
-<li>战争持续时间中位数：2年</li>
-<li>总样本包括225个国家间战争和469场其他战争</li>
-</ul>
-<p><strong>Battle-Level地理编码</strong></p>
-<p>为识别战地，作者收集了1,737场战役的详细信息：</p>
-<ul>
-<li>来源：Clodfelter (2017)战争百科全书及多种历史资料</li>
-<li>每场战役记录：地理位置、伤亡人数、参战方</li>
-<li>最大战役：Brusilov Offensive（一战），超过100万伤亡</li>
-</ul>
-<p><strong>宏观经济指标</strong></p>
-<p>使用Jordà-Schularick-Taylor宏观史数据库，核心变量包括：</p>
-<ul>
-<li>实际GDP（Real GDP）</li>
-<li>消费者价格指数（CPI）</li>
-<li>资本存量（Capital Stock）</li>
-<li>全要素生产率（TFP）</li>
-<li>10年期政府债券收益率</li>
-<li>股权回报指数</li>
-<li>军事支出（占GDP比重）</li>
-<li>军事人员（占人口比重）</li>
-</ul>
-<p><strong>贸易数据</strong></p>
-<p>使用Fouquin and Hugot (2016)的双边贸易数据，并使用引力模型填补缺失值（伪${R^2=0.95}$）。</p>
-<p><strong>GPT-4验证</strong></p>
-<p>作者还使用GPT-4 API辅助验证战地编码的准确性，发现GPT-4识别结果与手工编码的Pearson相关系数为0.73（${p&lt;0.001}$）。</p>
-<h4 id="实证方法：局部投影法">实证方法：局部投影法</h4>
-<p><strong>Local Projections Method（局部投影法）</strong></p>
-<p>遵循Jordà (2005)的方法，估计以下规范：</p>
-<p>$${y_{i,t+h} - y_{i,t-1} = \zeta_h’ X_{i,t} + \sum_{c \in {S,B,T}} \phi_{c,h}(\gamma_{i,c,t}’ \cdot Sites_t) + \sum_{c \in {B,T}} \psi_{c,h}(\epsilon_{i,c,t-1}’ \cdot Sites_t) + u_{i,t+h}}$$</p>
-<p>其中：</p>
-<ul>
-<li>${y_{i,t}}$：结果变量（如实际GDP）</li>
-<li>${h}$：战争开始后的年数（${h=0,1,…,8}$）</li>
-<li>${X_{i,t}}$：控制变量（包含4阶滞后项、国家固定效应、是否接壤战地国家）</li>
-<li>${\phi_{c,h}}$：捕捉c类国家（战地S、参战B、第三方T）在战争后的动态</li>
-<li>${\psi_{c,h}}$：允许暴露度（贸易联系、地理邻近）对溢出效应进行调节</li>
-</ul>
-<p><strong>暴露度向量（Exposure Vector）</strong></p>
-<p>$${\epsilon_{i,c,t-1} = \frac{Import_{i \leftarrow j, t-1}}{GDP_{i, t-1}}}$$</p>
-<p>衡量第三方国家i与战地国家j之间的贸易暴露度。</p>
-<p><strong>固定效应设定</strong></p>
-<p>不包含时间固定效应，以捕捉特定国家组的完整经济动态，而非仅捕捉相对于平均值的动态变化。</p>
-<h3 id="结果（Results）">结果（Results）</h3>
-<h4 id="基准结果：三类国家的经济动态">基准结果：三类国家的经济动态</h4>
-<p><strong>产出（Output）</strong></p>
-<ul>
-<li><strong>战地国家</strong>：GDP下降约10%（相对于战前趋势），在战争开始后约4年达到谷底，此后恢复缓慢，8年后仍低约5%，完全恢复需要约12年</li>
-<li><strong>参战国</strong>：平均GDP未显示明显偏离趋势</li>
-<li><strong>第三方国家</strong>：平均GDP仅适度下降</li>
-</ul>
-<p><strong>消费者价格指数（CPI）</strong></p>
-<ul>
-<li><strong>战地国家</strong>：物价水平持续上涨，战争开始6年后达到峰值，比趋势高约20%</li>
-<li><strong>参战国和第三方国家</strong>：物价水平也有一定上涨，但幅度较小</li>
-</ul>
-<p><strong>资本存量（Capital Stock）</strong></p>
-<ul>
-<li><strong>战地国家</strong>：8年内下降超过4%</li>
-<li><strong>参战国和第三方国家</strong>：也有显著下降，但幅度小得多</li>
-<li>注意：资本存量下降可能反映物理破坏，也可能反映投资减少</li>
-</ul>
-<p><strong>全要素生产率（TFP）</strong></p>
-<ul>
-<li><strong>战地国家</strong>：TFP立即大幅下降，与战争严重破坏经济运作一致</li>
-<li><strong>参战国</strong>：TFP轻微（但不显著）上升</li>
-<li><strong>第三方国家</strong>：TFP基本不变</li>
-</ul>
-<p><strong>长期利率</strong></p>
-<ul>
-<li><strong>战地国家</strong>：10年期政府债券收益率上升约0.3个百分点，并持续 elevated 约12年</li>
-<li><strong>参战国和第三方国家</strong>：也有适度上升，但不显著</li>
-</ul>
-<p><strong>股权回报率</strong></p>
-<ul>
-<li><strong>战地国家</strong>：股市指数持续下跌，相对趋势的累计跑输幅度在6年后达到20%</li>
-<li>初始反应微弱，表明市场未完全预期战争的不利发展</li>
-<li><strong>第三方国家</strong>：股市跌幅约为战地国家的一半</li>
-<li><strong>参战国</strong>：表现出最强的韧性</li>
-</ul>
-<p><strong>军事支出和人员</strong></p>
-<ul>
-<li><strong>战地和参战国</strong>：军事支出显著增加，初期约增加1个百分点GDP，4年后达到峰值2.5个百分点GDP</li>
-<li><strong>第三方国家</strong>：军事支出和人员基本不变</li>
-</ul>
-<h4 id="关键发现：第三国异质性">关键发现：第三国异质性</h4>
-<p><strong>贸易暴露度的关键作用</strong></p>
-<p>当按贸易暴露度区分第三方国家时，发现显著差异：</p>
-<ul>
-<li><strong>高贸易暴露国家</strong>（从战地进口占GDP的3%）：产出下降2%，价格大幅上涨，资本存量下降，利率上升，股权回报下降</li>
-<li><strong>零贸易暴露国家</strong>：基本不受影响</li>
-</ul>
-<p>这一发现具有重要的政策含义：与战地的贸易联系是战争经济影响传导的关键渠道。</p>
-<p><strong>地理邻近的额外风险</strong></p>
-<p>接壤战地的国家面临额外的负面效应：</p>
-<ul>
-<li>长期利率略有下降（可能反映资本外逃）</li>
-<li>股权回报为负（符合灾难风险溢价上升）</li>
-<li>军事支出和人员略有增加（反映军事溢出风险）</li>
-</ul>
-<p><strong>贸易渠道的机制</strong></p>
-<p>贸易收缩是战争溢出效应的关键传导机制：</p>
-<ul>
-<li>战地出口下降：战地生产能力被破坏</li>
-<li>战地进口下降：供应链中断</li>
-<li>高暴露第三方国家：进出口均收缩</li>
-</ul>
-<h4 id="因果推断结果">因果推断结果</h4>
-<p><strong>国家间战争 vs. 其他战争</strong></p>
-<ul>
-<li><strong>国家间战争</strong>：爆发前，产出和通胀没有系统性变化</li>
-<li><strong>其他战争</strong>：爆发前通胀上升、产出增长放缓——这些战争可能是经济波动的原因和结果</li>
-</ul>
-<p><strong>叙事性识别（Narrative Identification）</strong></p>
-<p>作者识别了每场国家间战争的主要战争动机（casus belli）：</p>
-<ul>
-<li>大多数战争与民族主义、意识形态或历史原因相关（可能外生于商业周期）</li>
-<li>经济动机仅在少数6场战争中显得重要</li>
-<li>排除这6场战争后，样本中国际战争的经济影响估计与全样本非常相似</li>
-</ul>
-<p><strong>Granger因果检验</strong></p>
-<ul>
-<li>国家间战争：不被产出增长和通胀的滞后项Granger引起</li>
-<li>其他战争：存在反向因果关系</li>
-</ul>
-<p>这支持了因果解释：战争导致了所记录的经济动态。</p>
-<hr>
-<h2 id="4-结论（Conclusion）">4. 结论（Conclusion）</h2>
-<h3 id="核心发现总结">核心发现总结</h3>
-<p><strong>发现一：战地国家的巨大经济代价</strong></p>
-<p>一场中等强度（2%伤亡/人口）的战争与战地国家产出下降约10%相关。消费者价格上涨约20%。资本存量、全要素生产率和股权回报均急剧下降。经济恢复是缓慢的——完全恢复需要约12年，尽管战争本身平均只持续2-3年。</p>
-<p><strong>发现二：参战国的相对韧性</strong></p>
-<p>尽管面临战争，参战国（非战地）的平均经济表现明显好于战地国家。这可能与军事支出增加带来的财政刺激效应有关——如Braun和McGrattan (1993)以及Ilzetzki (2024)研究所示，两次世界大战期间美国和英国的经济扩张与军费急剧增加有关。</p>
-<p><strong>发现三：第三方国家的显著溢出效应</strong></p>
-<p>战争的经济影响并不局限于战地。通过贸易渠道，第三方国家也受到显著影响：</p>
-<ul>
-<li>与战地有密切贸易联系的国家（进口占GDP 3%）：产出下降约2%</li>
-<li>接壤战地的国家：面临额外的负面金融效应</li>
-</ul>
-<p><strong>发现四：传播渠道</strong></p>
-<p>贸易联系和地理邻近是战争经济影响跨境传播的两个关键渠道。这与全球供应链的相互依存性以及地理邻近带来的直接风险暴露有关。</p>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol>
-<li><strong>首次系统性分析</strong>：首次全面分析150年间60个国家战争的经济影响，提供了战争经济学的典型化事实</li>
-<li><strong>跨境溢出效应</strong>：揭示了战争通过贸易和地理渠道对第三方国家的显著溢出效应</li>
-<li><strong>异质性分析</strong>：详细区分了不同类型国家（战地、参战、第三方）和不同暴露度下的经济动态差异</li>
-<li><strong>因果识别</strong>：通过叙事性方法识别战争的经济影响，为因果推断提供了合理依据</li>
-<li><strong>方法论贡献</strong>：提供了局部投影法在战争经济学应用的范例</li>
-</ol>
-<h3 id="更广泛的社会影响">更广泛的社会影响</h3>
-<p>除经济指标外，作者还记录了战争对更广泛社会制度的影响：</p>
-<ul>
-<li>媒体自由度下降</li>
-<li>司法独立性下降</li>
-<li>选举公平性下降</li>
-<li>制度质量下降</li>
-</ul>
-<p>这些变化主要局限于战地，但媒体自由度的下降也波及参战国。</p>
-<hr>
-<h2 id="5-未来研究方向（Future-work）">5. 未来研究方向（Future work）</h2>
-<h3 id="论文中提及的未来研究方向">论文中提及的未来研究方向</h3>
-<ol>
-<li>
-<p><strong>福利损失的全面测度</strong></p>
-<ul>
-<li>现有指标无法完全捕捉战争的经济代价及其对人类福利的影响</li>
-<li>产出与福利可能在战时分歧：例如劳动力动员可能导致产出增加，即使整体福利下降</li>
-<li>需要更好的方法来衡量私人消费等人福利指标</li>
-</ul>
-</li>
-<li>
-<p><strong>战争性质的演变</strong></p>
-<ul>
-<li>战争性质随时间不断变化</li>
-<li>伤亡与其他候选统计指标之间的关系也可能变化</li>
-<li>需要动态更新的战争强度测量方法</li>
-</ul>
-</li>
-<li>
-<p><strong>局部战争的经济影响</strong></p>
-<ul>
-<li>未来可以专门研究有限地理范围的局部战争的经济影响</li>
-<li>分析核威慑下的有限战争与全面战争的差异</li>
-</ul>
-</li>
-</ol>
-<h3 id="根据论文内容思考的下一步研究工作">根据论文内容思考的下一步研究工作</h3>
-<ol>
-<li>
-<p><strong>供应链渠道的深入研究</strong></p>
-<ul>
-<li>本文发现贸易是主要传导渠道，但未深入分析供应链网络的结构性特征</li>
-<li>可研究全球价值链（GVC）参与度如何调节战争溢出效应</li>
-<li>可使用投入产出表分析产业关联的具体路径</li>
-</ul>
-</li>
-<li>
-<p><strong>金融渠道的作用</strong></p>
-<ul>
-<li>本文发现股权回报在战地和第三方国家都大幅下降</li>
-<li>可深入研究战争如何通过金融市场（资本流动、汇率、信贷市场）传导</li>
-</ul>
-</li>
-<li>
-<p><strong>人力资本渠道</strong></p>
-<ul>
-<li>战争造成的人员伤亡和劳动力动员直接影响人力资本</li>
-<li>可研究战争对教育、健康和创新的人力资本长期影响</li>
-</ul>
-</li>
-<li>
-<p><strong>政策应对效果评估</strong></p>
-<ul>
-<li>什么样的政策可以缓冲战争的经济影响？</li>
-<li>贸易多元化、战略储备、区域经济一体化等政策工具的效果</li>
-</ul>
-</li>
-<li>
-<p><strong>不同战争类型的细分研究</strong></p>
-<ul>
-<li>国家间战争vs内战的经济影响机制可能不同</li>
-<li>代理战争（Proxy Wars）与直接战争的经济影响差异</li>
-</ul>
-</li>
-<li>
-<p><strong>数字化战争的新特征</strong></p>
-<ul>
-<li>网络战、信息战、制裁战等新型冲突形式的经济影响</li>
-<li>传统分析框架的适用性和局限性</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2 id="6-学术思考">6. 学术思考</h2>
-<p>基于对本文的深入分析，以下学术问题值得关注和进一步探讨：</p>
-<h3 id="关于因果推断的思考">关于因果推断的思考</h3>
-<p><strong>问题一：内生性的残余挑战</strong></p>
-<p>尽管作者通过排除经济动机明确的战争来缓解内生性，但战争选择本身可能仍存在与经济因素相关的其他混淆。例如，一个国家在经济增长放缓时可能更倾向于卷入战争（通过军事转移国内矛盾）。这是否意味着即使在"外生"战争中，战前经济状况的某些特征也在发挥作用？如何在计量经济学框架下更彻底地解决这一问题？</p>
-<h3 id="关于传导机制的思考">关于传导机制的思考</h3>
-<p><strong>问题二：贸易渠道vs. 金融渠道的相对重要性</strong></p>
-<p>本文发现贸易是战争溢出效应的关键渠道，但金融渠道（如资本流动、汇率波动、信贷紧缩）的作用可能被低估。在当今全球金融一体化的背景下，金融渠道是否比贸易渠道更重要？尤其是在短期危机（如2022年乌克兰战争）中，金融市场的反应速度可能远快于贸易调整。</p>
-<p><strong>问题三：全球价值链的结构性作用</strong></p>
-<p>本文使用的贸易暴露度指标较为粗略，未能捕捉全球价值链（GVC）的复杂结构。一个深度嵌入GVC的国家可能同时面临供给中断（作为供应商）和需求萎缩（作为消费者）的双重冲击。如何构建更精细的GVC暴露度指标？</p>
-<h3 id="关于政策含义的思考">关于政策含义的思考</h3>
-<p><strong>问题四：经济一体化与战争脆弱性的权衡</strong></p>
-<p>本文发现贸易联系会放大战争的溢出效应。这意味着经济一体化在带来增长红利的同时，也使各国更容易受到地缘政治冲击。这是否意味着各国应该在追求经济效率和保持战略自主之间进行权衡？区域经济集团化（如EU）是否提供了在开放与安全之间的平衡？</p>
-<p><strong>问题五：战略储备和供应链多样化的价值</strong></p>
-<p>既然与战地的贸易联系会放大对他国的经济影响，那么战略储备和供应链多元化是否应该成为国家安全的必要组成部分？这对于小国和高度依赖进口的国家尤为重要。</p>
-<h3 id="关于研究方法的思考">关于研究方法的思考</h3>
-<p><strong>问题六：局部投影法的适用性</strong></p>
-<p>局部投影法在本文中被用来估计战争的经济动态，但这一方法假设了线性关系和固定效应结构。战争的非线性效应（如阈值效应、叠加效应）是否被遗漏？特别是当多个战争同时发生时，单独估计每场战争效应的高维问题如何处理？</p>
-<h3 id="关于历史演变的思考">关于历史演变的思考</h3>
-<p><strong>问题七：战争性质的范式转变</strong></p>
-<p>从1870年代到2020年代，战争的技术性质、参与主体、地理范围都发生了巨大变化。从大规模的国家间战争到小规模的代理人战争，再到可能包含网络战和贸易战的新型混合冲突。不同类型的冲突是否遵循相同的宏观经济动态规律？本文的150年样本是否掩盖了这些结构性变化？</p>
-<hr>
-<h2 id="7-下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
-<p>根据论文内容和上述分析，以下是用户接下来可能问的问题：</p>
-<h3 id="关于研究内容的深层问题">关于研究内容的深层问题</h3>
-<ol>
-<li>
-<p><strong>战争的长期经济后果是什么？</strong></p>
-<ul>
-<li>本文关注战后8年的动态，但恢复需要约12年</li>
-<li>长期（20-50年）经济轨迹如何？</li>
-<li>战争是否会造成"疤痕效应"（Scarring Effects），永久降低增长路径？</li>
-</ul>
-</li>
-<li>
-<p><strong>不同类型战争的经济影响有何差异？</strong></p>
-<ul>
-<li>国家间战争vs. 内战的传导机制是否不同？</li>
-<li>高强度vs. 低强度战争是否存在非线性阈值效应？</li>
-<li>代理战争与直接战争的经济影响差异？</li>
-</ul>
-</li>
-<li>
-<p><strong>疫情和战争叠加的影响是否不同？</strong></p>
-<ul>
-<li>COVID-19疫情可视为非战争的"经济灾难"</li>
-<li>两种灾难的经济影响机制和恢复模式是否可比？</li>
-</ul>
-</li>
-</ol>
-<h3 id="关于方法论的问题">关于方法论的问题</h3>
-<ol start="4">
-<li>
-<p><strong>如何进一步改进因果识别的可信度？</strong></p>
-<ul>
-<li>自然实验方法（如板块运动会）是否可用？</li>
-<li>工具变量方法是否可行？</li>
-<li>Difference-in-Differences设计是否适合此研究？</li>
-</ul>
-</li>
-<li>
-<p><strong>模型基础的解释是什么？</strong></p>
-<ul>
-<li>本文使用局部投影法进行简约式（Reduced-form）估计</li>
-<li>是否存在结构模型（如DSGE）能更好地解释这些动态？</li>
-<li>论文的工作论文版本（Federle et al. 2024）的模型结果如何？</li>
-</ul>
-</li>
-</ol>
-<h3 id="关于政策应用的问题">关于政策应用的问题</h3>
-<ol start="6">
-<li>
-<p><strong>如何将研究发现应用于当前的地缘政治风险评估？</strong></p>
-<ul>
-<li>对于台湾问题、中美博弈等当前热点，本文框架有何启示？</li>
-<li>如何量化"与中国发生贸易战"的潜在经济代价？</li>
-</ul>
-</li>
-<li>
-<p><strong>何种政策可以缓冲战争的经济冲击？</strong></p>
-<ul>
-<li>战略储备的效果如何？</li>
-<li>区域经济一体化的保护效应？</li>
-<li>金融稳定工具（如外汇储备、货币互换）的作用？</li>
-</ul>
-</li>
-</ol>
-<h3 id="关于后续研究的问题">关于后续研究的问题</h3>
-<ol start="8">
-<li>
-<p><strong>本文的主要贡献者（5位作者）后续还有哪些相关研究？</strong></p>
-<ul>
-<li>是否有关于特定战争案例的深度研究？</li>
-<li>是否有使用更细粒度数据（如月度、行业层面）的研究？</li>
-</ul>
-</li>
-<li>
-<p><strong>是否存在与本文发现相矛盾的文献？</strong></p>
-<ul>
-<li>质疑或修正本文结论的研究有哪些？</li>
-<li>这些矛盾是否可以通过样本选择、方法论差异或数据版本来解释？</li>
-</ul>
-</li>
-</ol>
-<hr>
-<p><em>本分析报告为深度阅读笔记，梳理了论文的核心逻辑、主要发现和学术价值。</em></p>
-]]></content>
-      <categories>
-        <category>经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>宏观经济学</tag>
-        <tag>战争经济学</tag>
-        <tag>经济史学</tag>
-        <tag>地缘政治</tag>
       </tags>
   </entry>
   <entry>
@@ -12249,204 +12249,6 @@ $$Z_j© = \frac{\sum_{i \neq c} R_j(i) - \sum_{i \in c} R_j(i)}{n_j - n_j©}$$</
       </tags>
   </entry>
   <entry>
-    <title>政府政策的统一福利分析 — 深度阅读笔记 — Hendren &amp; Sprung-Keyser</title>
-    <url>/posts/hendren2020/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: A Unified Welfare Analysis of Government Policies<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/YTDNY3KC/Hendren和Sprung-Keyser - 2020 - A Unified Welfare Analysis of Government Policies.pdf<br>
-Zotero Item Key:: BZPCLS8S</p>
-<hr>
-<span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-政府每年在社会保险、教育、税收减免、实物转移支付等领域花费巨额资金。经济学家长期以来用不同的福利测量指标评估各类政策：健康保险研究报告"每救一条命的成本"，税收政策报告"超额负担（excess burden）“，高等教育研究报告"每增加一个入学名额的成本”，早教项目报告"社会成本-收益比"……这些指标互不兼容，使得不同领域政策之间的横向比较极为困难。</p>
-<p><strong>研究背景</strong></p>
-<ul>
-<li>已有大量高质量的政策因果效应估计文献（过去50年的自然实验研究积累）</li>
-<li>但每篇文章用自己的方式做福利分析，无法统一比较</li>
-<li>Hendren（2016）提出了MVPF（公共资金边际价值）的概念，作为统一测量工具</li>
-</ul>
-<p><strong>作者的问题意识</strong><br>
-能否用同一把尺子——MVPF——衡量133项美国历史政策的福利效率，从而系统性地回答：哪类政府支出最"划算"？儿童政策和成人政策谁的回报更高？现金转移和实物转移有何差异？</p>
-<p><strong>研究意义</strong><br>
-这是迄今为止规模最大的政策福利比较研究，涵盖133项政策4大领域50年历史。建立了可供研究者直接使用的公开框架（GitHub代码 + 数据），为循证政策（evidence-based policy）决策提供工具。</p>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言</strong>：问题动机 + MVPF概念介绍 + 主要结论预览。</li>
-<li><strong>MVPF框架</strong>：理论推导；与传统指标（MCF、成本-收益比）的关系。</li>
-<li><strong>6个示例政策</strong>：详细展示MVPF的构建方法。</li>
-<li><strong>社会保险</strong>：健康、失业、残障保险。</li>
-<li><strong>教育</strong>：早教、K-12、大学、职业培训。</li>
-<li><strong>税收与现金转移</strong>：边际税率、EITC、福利项目。</li>
-<li><strong>实物转移</strong>：住房、食品券。</li>
-<li><strong>跨领域比较与政策含义</strong>。</li>
-<li><strong>结论</strong>。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景与挑战">背景与挑战</h3>
-<p><strong>核心挑战</strong>：如何跨政策领域进行福利比较？</p>
-<p>传统方法的问题是：不同文献采用不同的福利指标，彼此不可比；而且各指标通常只反映直接效应，忽略了长期的财政外部性（如儿童受教育后成年纳税、减少转移支付）。</p>
-<h3 id="MVPF框架（方法）">MVPF框架（方法）</h3>
-<p>$$\text{MVPF} = \frac{\text{受益者的支付意愿（WTP）}}{\text{政府净成本}}$$</p>
-<p><strong>分子：支付意愿（WTP）</strong></p>
-<ul>
-<li>受益者为获得某政策愿意支付的最大金额</li>
-<li>利用包络定理（envelope theorem）：WTP ≈ 政策的机械性直接成本（behavioral responses are not valued dollar-for-dollar）</li>
-<li>如果政策提供保险，WTP &gt; 资源成本（消费平滑溢价）</li>
-<li>如果政策诱发福利套取行为，WTP &lt; 资源成本</li>
-</ul>
-<p><strong>分母：政府净成本</strong><br>
-= 初始支出 + 财政外部性（fiscal externality）</p>
-<ul>
-<li>财政外部性 = 因政策改变受益者行为而引起的税收/转移支付的长期变化</li>
-<li>例：儿童健康保险 → 儿童更健康、教育程度提高 → 成年后收入更高 → 政府税收增加 → 净成本下降，甚至为负（政策"自我偿还"）</li>
-<li>政策"自我偿还"（MVPF = ∞）= Pareto改进</li>
-</ul>
-<p><strong>MVPF的解读</strong>：</p>
-<ul>
-<li>MVPF = 1：标准的无扭曲转移（$1政府成本带来$1受益者WTP）</li>
-<li>MVPF &gt; 1：每花$1，受益者获得&gt;$1的福利（高效政策）</li>
-<li>MVPF &lt; 1：受益者实际获得的福利&lt;政府花费（低效政策）</li>
-<li>MVPF = ∞：“自我偿还”，Pareto改进</li>
-</ul>
-<p><strong>与其他指标的关系</strong>：MVPF是Okun"漏桶"比喻的形式化——MVPFA=2, MVPFB=1，则从B转移资金到A当且仅当社会偏好给A受益者$2多于给B受益者$1。</p>
-<h3 id="数据来源">数据来源</h3>
-<p><strong>非原始数据</strong>：本文不做新的因果推断，而是系统汇总现有因果研究的估计结果。</p>
-<ul>
-<li>利用现有文献中已估计的政策效应（就业、收入、教育、健康）作为输入</li>
-<li>用标准假设（贴现率、税率等）将这些效应转化为WTP和财政外部性</li>
-<li>覆盖4个领域133项美国政策（1950s-2010s）</li>
-<li>提供GitHub代码，允许研究者修改关键假设进行敏感性分析</li>
-</ul>
-<h3 id="主要结果">主要结果</h3>
-<p><strong>发现一：儿童政策MVPF远高于成人政策</strong></p>
-<table>
-<thead>
-<tr>
-<th>政策类型</th>
-<th>典型MVPF</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>儿童健康保险扩展（如Medicaid儿童）</td>
-<td>平均&gt;5，许多"自我偿还"</td>
-</tr>
-<tr>
-<td>早期教育（Perry Preschool）</td>
-<td>~44</td>
-</tr>
-<tr>
-<td>Abecedarian项目</td>
-<td>~12</td>
-</tr>
-<tr>
-<td>K-12教育经费均等化</td>
-<td>高</td>
-</tr>
-<tr>
-<td>大学教育扩展</td>
-<td>高（部分）</td>
-</tr>
-<tr>
-<td>成人健康保险扩展</td>
-<td>0.40–1.63</td>
-</tr>
-<tr>
-<td>实物转移（住房券、食品券）</td>
-<td>0.65–1.04</td>
-</tr>
-<tr>
-<td>税收减免/现金福利（成人）</td>
-<td>负值–1.20</td>
-</tr>
-</tbody>
-</table>
-<p><strong>发现二：儿童政策的高MVPF跨越各年龄段</strong></p>
-<p>与Heckman（2006）"早期投资边际回报递减"的主张相反，本文发现：</p>
-<ul>
-<li>早期儿童教育（0-5岁）确实有高MVPF</li>
-<li><strong>但K-12、大学教育投资也有高MVPF</strong>——儿童期的高回报并不在某个年龄后迅速下降</li>
-<li>"一刀切"式的"越早越好"观点需要修正</li>
-</ul>
-<p><strong>发现三：许多儿童政策"自我偿还"</strong></p>
-<p>儿童健康保险扩展的长期财政外部性为正：平均每$1投入，政府长期回收$1.78（其中3/4项目完全回收成本）。<br>
-原因：受益儿童成年后收入更高→缴纳更多税→减少转移支付需求。</p>
-<p><strong>发现四：成人政策的例外——对儿童产生大溢出效应</strong></p>
-<p>成人政策通常MVPF较低（0.5–2），但若成人政策对其子女产生大的正外部性（spillover to children），MVPF可以超出此范围。说明代际传递渠道在评估成人政策时不可忽略。</p>
-<p><strong>发现五：同类政策内部变异巨大</strong></p>
-<p>即使在高回报类别（如儿童政策）中，也存在低MVPF的政策（如职业培训项目、未增加升学率的大学补贴）。这说明"类别"本身不能代替具体政策的评估——机制很重要。</p>
-<h3 id="政策含义">政策含义</h3>
-<ol>
-<li><strong>儿童健康和教育是最具性价比的公共投资</strong>，且不仅限于早期教育</li>
-<li><strong>成人政策不应简单否定</strong>——若有代际溢出效应，其福利效率可大幅提升</li>
-<li><strong>“研究的边际价值”（value of information）是可以量化的</strong>：在MVPF高度不确定的政策领域，政策制定者应愿意为更好的因果证据支付大量预算</li>
-<li><strong>循证政策设计</strong>：同类政策内部的变异提示我们，了解"为什么有效"（机制）比知道"平均有效"更重要</li>
-</ol>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<ol>
-<li>对低收入儿童健康和教育的直接投资，历史上有最高的MVPF，平均超过5，很多自我偿还（Pareto改进）；</li>
-<li>儿童期高回报政策跨越各年龄段，不仅限于早期教育；</li>
-<li>成人政策MVPF通常在0.5–2之间；若对儿童有大溢出效应则可超越此范围；</li>
-<li>同类政策内MVPF差异显著，了解成功政策的机制比看平均MVPF更重要；</li>
-<li>MVPF框架可应用于犯罪、环境、基础设施等尚未覆盖的领域，未来研究空间巨大。</li>
-</ol>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文明确提及的方向</strong>：</p>
-<ol>
-<li>将MVPF框架扩展至犯罪政策、环境政策、宏观经济稳定政策、基础设施政策；</li>
-<li>量化信息价值——为MVPF不确定的政策领域设计新数据收集方案；</li>
-<li>利用行政数据扩大政策效应的因果估计（更多政策纳入比较）。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li><strong>中国政策的MVPF估计</strong>：中国有大量准实验政策（农村义务教育经费改革、新农合、城镇医保扩展、EITC类转移支付）。能否用中国行政数据和已有因果估计构建中国版的MVPF比较数据集？</li>
-<li><strong>发展中国家的跨代际效应测量</strong>：本文核心发现（儿童政策的财政外部性）依赖于长期追踪数据。在数据基础薄弱的发展中国家，如何合理估计儿童政策的代际收益？</li>
-<li><strong>政策组合的相互作用</strong>：本文对各政策独立评估，忽略了政策之间的互补/替代关系。如果儿童健康保险和早教同时实施，联合MVPF是否大于两个独立MVPF之和？</li>
-<li><strong>MVPF与分配偏好的结合</strong>：本文MVPF只测量效率（“漏桶的泄漏量”），不包含社会对不同群体的分配权重。如何将MVPF与不同的社会福利函数（平等主义、功利主义）结合，形成"分配调整后的MVPF"？</li>
-<li><strong>数字化公共服务的MVPF</strong>：政府数字化转型（如电子政务、在线医疗）的受益者WTP和财政外部性如何测量？这类政策是否也能达到高MVPF？</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>财政外部性的时间折现问题</strong>：本文MVPF的高低在很大程度上取决于如何折现儿童长期收益。贴现率从3%变为5%，那些"自我偿还"的儿童政策的MVPF会大幅下降。作者做了敏感性分析，但核心结论（儿童政策MVPF &gt;&gt; 成人政策）究竟有多依赖于折现率假设？这是本文结论的最重要不确定来源之一。</p>
-</li>
-<li>
-<p><strong>发表偏差与外部有效性</strong>：本文使用的"因果估计"来自学术文献，而学术文献存在著名的发表偏差（positive results are more likely to be published）。作者使用Andrews &amp; Kasy（2019）方法校正发表偏差，但校正方法本身也有假设。若底层因果估计系统性高估政策效果，MVPF也会系统高估，"自我偿还"政策数量会被高估。</p>
-</li>
-<li>
-<p><strong>"政策"的内生性</strong>：Hendren &amp; Sprung-Keyser分析的是<strong>历史上实施的</strong>133项政策。这些政策并非随机选择——政治上可行的政策往往是有基础的、预期效果良好的。这意味着样本可能存在正向选择偏误（high-MVPF policies are more likely to be tried）。对于那些从未被实施的政策，MVPF可能与已实施政策大相径庭。</p>
-</li>
-<li>
-<p><strong>MVPF与分配正义的分离</strong>：本文明确指出MVPF只衡量效率，不包含对不同群体的分配偏好。但政策评估不可能完全回避分配问题——一个MVPF=3的政策若全部受益于富人，是否优于MVPF=1.5的政策让穷人受益？作者的建议是先用MVPF确定效率边界，再叠加分配偏好——但在实践中这两步的分离往往很难维持。</p>
-</li>
-<li>
-<p><strong>从美国到其他国家的可移植性</strong>：本文基于美国过去50年的政策经验。中国、印度等发展中国家在儿童健康保险上的回报率是否也高？发展中国家劳动力市场的特征（非正规就业、低税率）可能使得"财政外部性"（通过税收回收）的机制大打折扣。有限的税收征管能力可能意味着儿童教育投资无法通过增税来"自我偿还"，MVPF结论的普遍性有待检验。</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>MVPF与传统的"成本-收益比（cost-benefit ratio）"或"边际公共资金成本（MCF）"有什么本质区别？</li>
-<li>Perry Preschool的MVPF为什么高达44？核心机制是什么？这是否意味着早期教育项目都有如此高的回报？</li>
-<li>文中提到一些政策"MVPF为负"，这是什么意思？哪些政策出现了负MVPF？</li>
-<li>本文的GitHub代码和数据集（<a href="http://policyanalysis.org/welfare_analysis%EF%BC%89%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E7%94%A8%E6%9D%A5%E4%BC%B0%E8%AE%A1%E4%B8%AD%E5%9B%BD%E6%94%BF%E7%AD%96%E7%9A%84MVPF%EF%BC%9F%E5%93%AA%E4%BA%9B%E6%AD%A5%E9%AA%A4%E9%9C%80%E8%A6%81%E4%BF%AE%E6%94%B9%E4%BB%A5%E9%80%82%E5%BA%94%E4%B8%AD%E5%9B%BD%E6%83%85%E5%A2%83%EF%BC%9F">policyanalysis.org/welfare_analysis）是否可以用来估计中国政策的MVPF？哪些步骤需要修改以适应中国情境？</a></li>
-<li>MVPF框架如何处理"一般均衡效应"（如政策规模扩大后对工资、价格的影响）？目前的估计是局部均衡，扩大政策规模后MVPF是否会下降？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>&lt;中国人口研究 1368-1953&gt;深度阅读笔记 — 何炳棣 Ping-Ti Ho</title>
     <url>/posts/ho1959/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="书籍信息">书籍信息</h2>
@@ -13344,6 +13146,204 @@ _谢肇淛&lt;五杂俎&gt;(约1610年)</p>
       </tags>
   </entry>
   <entry>
+    <title>政府政策的统一福利分析 — 深度阅读笔记 — Hendren &amp; Sprung-Keyser</title>
+    <url>/posts/hendren2020/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: A Unified Welfare Analysis of Government Policies<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/YTDNY3KC/Hendren和Sprung-Keyser - 2020 - A Unified Welfare Analysis of Government Policies.pdf<br>
+Zotero Item Key:: BZPCLS8S</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+政府每年在社会保险、教育、税收减免、实物转移支付等领域花费巨额资金。经济学家长期以来用不同的福利测量指标评估各类政策：健康保险研究报告"每救一条命的成本"，税收政策报告"超额负担（excess burden）“，高等教育研究报告"每增加一个入学名额的成本”，早教项目报告"社会成本-收益比"……这些指标互不兼容，使得不同领域政策之间的横向比较极为困难。</p>
+<p><strong>研究背景</strong></p>
+<ul>
+<li>已有大量高质量的政策因果效应估计文献（过去50年的自然实验研究积累）</li>
+<li>但每篇文章用自己的方式做福利分析，无法统一比较</li>
+<li>Hendren（2016）提出了MVPF（公共资金边际价值）的概念，作为统一测量工具</li>
+</ul>
+<p><strong>作者的问题意识</strong><br>
+能否用同一把尺子——MVPF——衡量133项美国历史政策的福利效率，从而系统性地回答：哪类政府支出最"划算"？儿童政策和成人政策谁的回报更高？现金转移和实物转移有何差异？</p>
+<p><strong>研究意义</strong><br>
+这是迄今为止规模最大的政策福利比较研究，涵盖133项政策4大领域50年历史。建立了可供研究者直接使用的公开框架（GitHub代码 + 数据），为循证政策（evidence-based policy）决策提供工具。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：问题动机 + MVPF概念介绍 + 主要结论预览。</li>
+<li><strong>MVPF框架</strong>：理论推导；与传统指标（MCF、成本-收益比）的关系。</li>
+<li><strong>6个示例政策</strong>：详细展示MVPF的构建方法。</li>
+<li><strong>社会保险</strong>：健康、失业、残障保险。</li>
+<li><strong>教育</strong>：早教、K-12、大学、职业培训。</li>
+<li><strong>税收与现金转移</strong>：边际税率、EITC、福利项目。</li>
+<li><strong>实物转移</strong>：住房、食品券。</li>
+<li><strong>跨领域比较与政策含义</strong>。</li>
+<li><strong>结论</strong>。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景与挑战">背景与挑战</h3>
+<p><strong>核心挑战</strong>：如何跨政策领域进行福利比较？</p>
+<p>传统方法的问题是：不同文献采用不同的福利指标，彼此不可比；而且各指标通常只反映直接效应，忽略了长期的财政外部性（如儿童受教育后成年纳税、减少转移支付）。</p>
+<h3 id="MVPF框架（方法）">MVPF框架（方法）</h3>
+<p>$$\text{MVPF} = \frac{\text{受益者的支付意愿（WTP）}}{\text{政府净成本}}$$</p>
+<p><strong>分子：支付意愿（WTP）</strong></p>
+<ul>
+<li>受益者为获得某政策愿意支付的最大金额</li>
+<li>利用包络定理（envelope theorem）：WTP ≈ 政策的机械性直接成本（behavioral responses are not valued dollar-for-dollar）</li>
+<li>如果政策提供保险，WTP &gt; 资源成本（消费平滑溢价）</li>
+<li>如果政策诱发福利套取行为，WTP &lt; 资源成本</li>
+</ul>
+<p><strong>分母：政府净成本</strong><br>
+= 初始支出 + 财政外部性（fiscal externality）</p>
+<ul>
+<li>财政外部性 = 因政策改变受益者行为而引起的税收/转移支付的长期变化</li>
+<li>例：儿童健康保险 → 儿童更健康、教育程度提高 → 成年后收入更高 → 政府税收增加 → 净成本下降，甚至为负（政策"自我偿还"）</li>
+<li>政策"自我偿还"（MVPF = ∞）= Pareto改进</li>
+</ul>
+<p><strong>MVPF的解读</strong>：</p>
+<ul>
+<li>MVPF = 1：标准的无扭曲转移（$1政府成本带来$1受益者WTP）</li>
+<li>MVPF &gt; 1：每花$1，受益者获得&gt;$1的福利（高效政策）</li>
+<li>MVPF &lt; 1：受益者实际获得的福利&lt;政府花费（低效政策）</li>
+<li>MVPF = ∞：“自我偿还”，Pareto改进</li>
+</ul>
+<p><strong>与其他指标的关系</strong>：MVPF是Okun"漏桶"比喻的形式化——MVPFA=2, MVPFB=1，则从B转移资金到A当且仅当社会偏好给A受益者$2多于给B受益者$1。</p>
+<h3 id="数据来源">数据来源</h3>
+<p><strong>非原始数据</strong>：本文不做新的因果推断，而是系统汇总现有因果研究的估计结果。</p>
+<ul>
+<li>利用现有文献中已估计的政策效应（就业、收入、教育、健康）作为输入</li>
+<li>用标准假设（贴现率、税率等）将这些效应转化为WTP和财政外部性</li>
+<li>覆盖4个领域133项美国政策（1950s-2010s）</li>
+<li>提供GitHub代码，允许研究者修改关键假设进行敏感性分析</li>
+</ul>
+<h3 id="主要结果">主要结果</h3>
+<p><strong>发现一：儿童政策MVPF远高于成人政策</strong></p>
+<table>
+<thead>
+<tr>
+<th>政策类型</th>
+<th>典型MVPF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>儿童健康保险扩展（如Medicaid儿童）</td>
+<td>平均&gt;5，许多"自我偿还"</td>
+</tr>
+<tr>
+<td>早期教育（Perry Preschool）</td>
+<td>~44</td>
+</tr>
+<tr>
+<td>Abecedarian项目</td>
+<td>~12</td>
+</tr>
+<tr>
+<td>K-12教育经费均等化</td>
+<td>高</td>
+</tr>
+<tr>
+<td>大学教育扩展</td>
+<td>高（部分）</td>
+</tr>
+<tr>
+<td>成人健康保险扩展</td>
+<td>0.40–1.63</td>
+</tr>
+<tr>
+<td>实物转移（住房券、食品券）</td>
+<td>0.65–1.04</td>
+</tr>
+<tr>
+<td>税收减免/现金福利（成人）</td>
+<td>负值–1.20</td>
+</tr>
+</tbody>
+</table>
+<p><strong>发现二：儿童政策的高MVPF跨越各年龄段</strong></p>
+<p>与Heckman（2006）"早期投资边际回报递减"的主张相反，本文发现：</p>
+<ul>
+<li>早期儿童教育（0-5岁）确实有高MVPF</li>
+<li><strong>但K-12、大学教育投资也有高MVPF</strong>——儿童期的高回报并不在某个年龄后迅速下降</li>
+<li>"一刀切"式的"越早越好"观点需要修正</li>
+</ul>
+<p><strong>发现三：许多儿童政策"自我偿还"</strong></p>
+<p>儿童健康保险扩展的长期财政外部性为正：平均每$1投入，政府长期回收$1.78（其中3/4项目完全回收成本）。<br>
+原因：受益儿童成年后收入更高→缴纳更多税→减少转移支付需求。</p>
+<p><strong>发现四：成人政策的例外——对儿童产生大溢出效应</strong></p>
+<p>成人政策通常MVPF较低（0.5–2），但若成人政策对其子女产生大的正外部性（spillover to children），MVPF可以超出此范围。说明代际传递渠道在评估成人政策时不可忽略。</p>
+<p><strong>发现五：同类政策内部变异巨大</strong></p>
+<p>即使在高回报类别（如儿童政策）中，也存在低MVPF的政策（如职业培训项目、未增加升学率的大学补贴）。这说明"类别"本身不能代替具体政策的评估——机制很重要。</p>
+<h3 id="政策含义">政策含义</h3>
+<ol>
+<li><strong>儿童健康和教育是最具性价比的公共投资</strong>，且不仅限于早期教育</li>
+<li><strong>成人政策不应简单否定</strong>——若有代际溢出效应，其福利效率可大幅提升</li>
+<li><strong>“研究的边际价值”（value of information）是可以量化的</strong>：在MVPF高度不确定的政策领域，政策制定者应愿意为更好的因果证据支付大量预算</li>
+<li><strong>循证政策设计</strong>：同类政策内部的变异提示我们，了解"为什么有效"（机制）比知道"平均有效"更重要</li>
+</ol>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<ol>
+<li>对低收入儿童健康和教育的直接投资，历史上有最高的MVPF，平均超过5，很多自我偿还（Pareto改进）；</li>
+<li>儿童期高回报政策跨越各年龄段，不仅限于早期教育；</li>
+<li>成人政策MVPF通常在0.5–2之间；若对儿童有大溢出效应则可超越此范围；</li>
+<li>同类政策内MVPF差异显著，了解成功政策的机制比看平均MVPF更重要；</li>
+<li>MVPF框架可应用于犯罪、环境、基础设施等尚未覆盖的领域，未来研究空间巨大。</li>
+</ol>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文明确提及的方向</strong>：</p>
+<ol>
+<li>将MVPF框架扩展至犯罪政策、环境政策、宏观经济稳定政策、基础设施政策；</li>
+<li>量化信息价值——为MVPF不确定的政策领域设计新数据收集方案；</li>
+<li>利用行政数据扩大政策效应的因果估计（更多政策纳入比较）。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li><strong>中国政策的MVPF估计</strong>：中国有大量准实验政策（农村义务教育经费改革、新农合、城镇医保扩展、EITC类转移支付）。能否用中国行政数据和已有因果估计构建中国版的MVPF比较数据集？</li>
+<li><strong>发展中国家的跨代际效应测量</strong>：本文核心发现（儿童政策的财政外部性）依赖于长期追踪数据。在数据基础薄弱的发展中国家，如何合理估计儿童政策的代际收益？</li>
+<li><strong>政策组合的相互作用</strong>：本文对各政策独立评估，忽略了政策之间的互补/替代关系。如果儿童健康保险和早教同时实施，联合MVPF是否大于两个独立MVPF之和？</li>
+<li><strong>MVPF与分配偏好的结合</strong>：本文MVPF只测量效率（“漏桶的泄漏量”），不包含社会对不同群体的分配权重。如何将MVPF与不同的社会福利函数（平等主义、功利主义）结合，形成"分配调整后的MVPF"？</li>
+<li><strong>数字化公共服务的MVPF</strong>：政府数字化转型（如电子政务、在线医疗）的受益者WTP和财政外部性如何测量？这类政策是否也能达到高MVPF？</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>财政外部性的时间折现问题</strong>：本文MVPF的高低在很大程度上取决于如何折现儿童长期收益。贴现率从3%变为5%，那些"自我偿还"的儿童政策的MVPF会大幅下降。作者做了敏感性分析，但核心结论（儿童政策MVPF &gt;&gt; 成人政策）究竟有多依赖于折现率假设？这是本文结论的最重要不确定来源之一。</p>
+</li>
+<li>
+<p><strong>发表偏差与外部有效性</strong>：本文使用的"因果估计"来自学术文献，而学术文献存在著名的发表偏差（positive results are more likely to be published）。作者使用Andrews &amp; Kasy（2019）方法校正发表偏差，但校正方法本身也有假设。若底层因果估计系统性高估政策效果，MVPF也会系统高估，"自我偿还"政策数量会被高估。</p>
+</li>
+<li>
+<p><strong>"政策"的内生性</strong>：Hendren &amp; Sprung-Keyser分析的是<strong>历史上实施的</strong>133项政策。这些政策并非随机选择——政治上可行的政策往往是有基础的、预期效果良好的。这意味着样本可能存在正向选择偏误（high-MVPF policies are more likely to be tried）。对于那些从未被实施的政策，MVPF可能与已实施政策大相径庭。</p>
+</li>
+<li>
+<p><strong>MVPF与分配正义的分离</strong>：本文明确指出MVPF只衡量效率，不包含对不同群体的分配偏好。但政策评估不可能完全回避分配问题——一个MVPF=3的政策若全部受益于富人，是否优于MVPF=1.5的政策让穷人受益？作者的建议是先用MVPF确定效率边界，再叠加分配偏好——但在实践中这两步的分离往往很难维持。</p>
+</li>
+<li>
+<p><strong>从美国到其他国家的可移植性</strong>：本文基于美国过去50年的政策经验。中国、印度等发展中国家在儿童健康保险上的回报率是否也高？发展中国家劳动力市场的特征（非正规就业、低税率）可能使得"财政外部性"（通过税收回收）的机制大打折扣。有限的税收征管能力可能意味着儿童教育投资无法通过增税来"自我偿还"，MVPF结论的普遍性有待检验。</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>MVPF与传统的"成本-收益比（cost-benefit ratio）"或"边际公共资金成本（MCF）"有什么本质区别？</li>
+<li>Perry Preschool的MVPF为什么高达44？核心机制是什么？这是否意味着早期教育项目都有如此高的回报？</li>
+<li>文中提到一些政策"MVPF为负"，这是什么意思？哪些政策出现了负MVPF？</li>
+<li>本文的GitHub代码和数据集（<a href="http://policyanalysis.org/welfare_analysis%EF%BC%89%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E7%94%A8%E6%9D%A5%E4%BC%B0%E8%AE%A1%E4%B8%AD%E5%9B%BD%E6%94%BF%E7%AD%96%E7%9A%84MVPF%EF%BC%9F%E5%93%AA%E4%BA%9B%E6%AD%A5%E9%AA%A4%E9%9C%80%E8%A6%81%E4%BF%AE%E6%94%B9%E4%BB%A5%E9%80%82%E5%BA%94%E4%B8%AD%E5%9B%BD%E6%83%85%E5%A2%83%EF%BC%9F">policyanalysis.org/welfare_analysis）是否可以用来估计中国政策的MVPF？哪些步骤需要修改以适应中国情境？</a></li>
+<li>MVPF框架如何处理"一般均衡效应"（如政策规模扩大后对工资、价格的影响）？目前的估计是局部均衡，扩大政策规模后MVPF是否会下降？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>你所不知道的可能对你有益 — 深度阅读笔记 — Höner &amp; Samuelson</title>
     <url>/posts/honner2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -13938,6 +13938,55 @@ Zotero Item Key:: FQ76EBZJ</p>
       </tags>
   </entry>
   <entry>
+    <title>Endogenous Clustering and Analogy-Based Expectation Equilibrium — 深度阅读笔记 — Jehiel &amp; Weber</title>
+    <url>/posts/jehiel2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Endogenous Clustering and Analogy-Based Expectation Equilibrium</li>
+<li><strong>作者</strong>: Philippe Jehiel (PSE &amp; UCL), Giacomo Weber (PSE &amp; Bologna)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies (RES)</li>
+<li><strong>难度评估</strong>: 高 - 需要博弈论、行为经济学、机器学习基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言">1. 引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>ABEE类比预期均衡、K-means聚类、原型理论。</p>
+<h3 id="研究背景">研究背景</h3>
+<p>理性预期假设要求过高；外生类比分割的局限性。</p>
+<h3 id="核心问题">核心问题</h3>
+<p>类比分割如何内生决定？玩家如何在记忆约束下最优分类情况？</p>
+<h2 id="2-内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：理论框架</li>
+<li>第三节：应用</li>
+<li>第四节：结论</li>
+</ul>
+<h2 id="3-正文">3. 正文</h2>
+<h3 id="核心机制">核心机制</h3>
+<p>将类比分割内生化为聚类问题的解</p>
+<h3 id="关键发现">关键发现</h3>
+<ol>
+<li>区分自排斥（需混合分区）vs自吸引（多重均衡）环境</li>
+<li>有限环境总存在聚类分布ABEE</li>
+<li>应用：美人竞赛（自吸引）、监控游戏（自排斥）</li>
+</ol>
+<h2 id="4-结论">4. 结论</h2>
+<p>内生类比分割框架提供了均衡多重性的新渠道。</p>
+<h2 id="5-未来研究方向">5. 未来研究方向</h2>
+<p>实证检验、福利含义、规范分析。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>&lt;住房与不平等&gt;深度阅读笔记 — Ioannides &amp; Ngai</title>
     <url>/posts/ioannides2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -14053,100 +14102,6 @@ Zotero Item Key:: FQ76EBZJ</p>
       <tags>
         <tag>论文笔记</tag>
         <tag>城市经济学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Endogenous Clustering and Analogy-Based Expectation Equilibrium — 深度阅读笔记 — Jehiel &amp; Weber</title>
-    <url>/posts/jehiel2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Endogenous Clustering and Analogy-Based Expectation Equilibrium</li>
-<li><strong>作者</strong>: Philippe Jehiel (PSE &amp; UCL), Giacomo Weber (PSE &amp; Bologna)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies (RES)</li>
-<li><strong>难度评估</strong>: 高 - 需要博弈论、行为经济学、机器学习基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言">1. 引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>ABEE类比预期均衡、K-means聚类、原型理论。</p>
-<h3 id="研究背景">研究背景</h3>
-<p>理性预期假设要求过高；外生类比分割的局限性。</p>
-<h3 id="核心问题">核心问题</h3>
-<p>类比分割如何内生决定？玩家如何在记忆约束下最优分类情况？</p>
-<h2 id="2-内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：理论框架</li>
-<li>第三节：应用</li>
-<li>第四节：结论</li>
-</ul>
-<h2 id="3-正文">3. 正文</h2>
-<h3 id="核心机制">核心机制</h3>
-<p>将类比分割内生化为聚类问题的解</p>
-<h3 id="关键发现">关键发现</h3>
-<ol>
-<li>区分自排斥（需混合分区）vs自吸引（多重均衡）环境</li>
-<li>有限环境总存在聚类分布ABEE</li>
-<li>应用：美人竞赛（自吸引）、监控游戏（自排斥）</li>
-</ol>
-<h2 id="4-结论">4. 结论</h2>
-<p>内生类比分割框架提供了均衡多重性的新渠道。</p>
-<h2 id="5-未来研究方向">5. 未来研究方向</h2>
-<p>实证检验、福利含义、规范分析。</p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
-    <url>/posts/48526/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
-<ul>
-<li>因果识别+统计推断</li>
-<li>因果识别(<em><strong>causal identification</strong></em>):如果拥有总体,能否确定总体因果关系</li>
-<li>统计推断(<em><strong>statistical inference</strong></em>):如何从样本数据获取总体因果关系信息,实际是一种相关性事实</li>
-<li>识别假设,实际就是对 $D$ 和 $\varepsilon$ 的关系作出表述,但这种过程是无法从理论上验证的</li>
-</ul>
-<span id="more"></span>
-<h2 id="1"><strong>1</strong></h2>
-<ul>
-<li><strong>1.1</strong> 因果效应的定义:干预与否、处理与否时,潜在结果之间的差值.潜在结果一定是同一个时间点上的结果</li>
-<li><strong>1.2</strong> 潜在结果永远无法完全观测,除非存在平行宇宙</li>
-<li><strong>1.3</strong> 通过识别假设可以进行"插值",可以化"相关关系"识别场景为"因果关系"识别场景</li>
-<li><strong>1.4</strong> 鲁宾因果模型(潜在因果框架),一套描述因果关系的新语言</li>
-</ul>
-<h2 id="2"><strong>2</strong></h2>
-<ul>
-<li><strong>2.1</strong> 第一类识别假设:潜在结果均值独立于处理状态</li>
-<li><strong>2.2</strong> 从干扰项中剥离出控制变量;或者寻找一个与干扰项不相关的工具变量</li>
-<li><strong>2.3</strong> 第二类识别假设:潜在结果条件均值独立于处理状态</li>
-<li><strong>2.4</strong> 好的控制变量:既影响$Y$,又影响$D$.其本身和干扰项是否相关是不重要的,不是研究者关注的中心</li>
-<li><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</li>
-<li><strong>2.6</strong> 无需过渡阐释控制变量的系数</li>
-</ul>
-<h2 id="3"><strong>3</strong></h2>
-<ul>
-<li><strong>3.1</strong> 鲁宾因果模型并未规定具体的函数形式</li>
-<li><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</li>
-</ul>
-<h2 id="4"><strong>4</strong></h2>
-<ul>
-<li><strong>4.1</strong> 选择性又称之为分配机制,每个个体如何接受处理,可以用倾向得分来表示</li>
-<li><strong>4.2</strong> 建议现实使用IV、DID、RDD等识别方法时,称之为准实验</li>
-</ul>
-]]></content>
-      <categories>
-        <category>计量</category>
-      </categories>
-      <tags>
-        <tag>学术讲座</tag>
       </tags>
   </entry>
   <entry>
@@ -14312,150 +14267,48 @@ Zotero Item Key:: HH5K2TY4</p>
       </tags>
   </entry>
   <entry>
-    <title>村庄网络中的传播与保险 — 深度阅读笔记 — Kinnan Et Al.</title>
-    <url>/posts/kinnan2024/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Propagation and Insurance in Village Networks<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/U82LFZSS/Kinnan 等 - 2024 - Propagation and Insurance in Village Networks.pdf<br>
-Zotero Item Key:: MJSN77J6</p>
-<hr>
+    <title>学术讲座# 中国人民大学经济学院江艇:因果推断Ⅰ</title>
+    <url>/posts/48526/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="因果推断"><strong>因果推断</strong></h2>
+<ul>
+<li>因果识别+统计推断</li>
+<li>因果识别(<em><strong>causal identification</strong></em>):如果拥有总体,能否确定总体因果关系</li>
+<li>统计推断(<em><strong>statistical inference</strong></em>):如何从样本数据获取总体因果关系信息,实际是一种相关性事实</li>
+<li>识别假设,实际就是对 $D$ 和 $\varepsilon$ 的关系作出表述,但这种过程是无法从理论上验证的</li>
+</ul>
 <span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-发展中国家的小企业通常由家庭直接经营，生产和消费难以分离（“家庭生产单元”）。当家庭面临冲击（如疾病、意外），他们往往通过削减生产支出来平滑消费。这种调整会通过供应链和劳动力雇佣关系传导到其他家庭（企业），形成局部经济网络中的冲击传播（propagation）。发展经济学中有大量研究网络与风险分担的文献，但鲜有研究细粒度追踪冲击如何通过<strong>供应链网络</strong>和<strong>劳动力雇佣网络</strong>这两类不同渠道传播，以及保险如何阻断这种传播。</p>
-<p><strong>研究背景</strong><br>
-发达国家关于供应链传播（如Carvalho et al. 2021）的文献聚焦于大型企业和全球供应链。但低中收入国家（LMICs）的小型家庭企业面临完全不同的情形：（a）生产-消费高度混合；（b）面临健康冲击等个体性风险；（c）同时参与供应链网络和劳动力雇佣网络。<strong>Townsend Thai Dataset</strong>（泰国农村/近郊月度面板）提供了罕见的细粒度村内网络数据，使得追踪冲击传播成为可能。</p>
-<p><strong>作者的问题意识</strong><br>
-当一个家庭受到健康冲击后削减生产，这会如何影响网络中的其他家庭？供应链传播和劳动力网络传播哪个更重要？网络结构（密度、中心性）和保险（正式/非正式）如何影响传播程度？</p>
-<p><strong>研究意义</strong><br>
-本文首次<strong>微观追踪</strong>冲击从被冲击家庭向网络中其他家庭传播的全过程（包括生产侧和消费侧），并估算了乘数效应（multiplier≈1.2）。政策含义：安全网（健康保险、现金转移支付）的社会收益大于私人收益，因为它不仅帮助了受冲击家庭，还通过阻断冲击传播间接惠及网络中的其他家庭。</p>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言与三大发现</strong>。</li>
-<li><strong>背景与数据</strong>：泰国Townsend月度调查；网络构建（供应链网络 + 劳动力雇佣网络）。</li>
-<li><strong>直接效应</strong>：被冲击家庭的生产和消费调整。</li>
-<li><strong>间接效应（传播）</strong>：网络中其他家庭的生产和消费变化。</li>
-<li><strong>异质性分析</strong>：网络结构、保险、劳动力市场摩擦的调节作用。</li>
-<li><strong>结论与政策含义</strong>。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>在LMICs，家庭同时扮演消费者和企业主的角色，经营的小企业通过商品购销（供应链）和劳动力雇佣（雇佣-被雇佣关系）与其他家庭连接。当一个家庭面临健康冲击（如家庭成员重病），他们需要支付大量医疗费用，可能通过减少企业投入/减少雇工来平滑消费。这种调整会波及到：</p>
+<h2 id="1"><strong>1</strong></h2>
 <ul>
-<li><strong>上游供应商</strong>：少购买原材料和服务</li>
-<li><strong>下游劳动者</strong>：减少雇工需求</li>
+<li><strong>1.1</strong> 因果效应的定义:干预与否、处理与否时,潜在结果之间的差值.潜在结果一定是同一个时间点上的结果</li>
+<li><strong>1.2</strong> 潜在结果永远无法完全观测,除非存在平行宇宙</li>
+<li><strong>1.3</strong> 通过识别假设可以进行"插值",可以化"相关关系"识别场景为"因果关系"识别场景</li>
+<li><strong>1.4</strong> 鲁宾因果模型(潜在因果框架),一套描述因果关系的新语言</li>
 </ul>
-<h3 id="挑战与识别">挑战与识别</h3>
-<p><strong>关键挑战</strong>：如何识别冲击传播的<strong>因果</strong>效应，而非网络中共同冲击的相关效应（如村庄整体受影响）？</p>
-<p><strong>识别策略</strong>：借鉴Fadlon &amp; Nielsen (2019)的"未来被冲击对照组"设计：</p>
+<h2 id="2"><strong>2</strong></h2>
 <ul>
-<li><strong>处理组</strong>：当期发生健康冲击的家庭及其网络邻居</li>
-<li><strong>对照组</strong>：将在未来发生类似冲击的家庭（用其未来冲击前的轨迹作为当期被冲击家庭的反事实）</li>
-<li><strong>间接效应识别</strong>：比较网络中距被冲击家庭更近（高暴露）vs 更远（低暴露）的家庭，在冲击前后的变化差异</li>
+<li><strong>2.1</strong> 第一类识别假设:潜在结果均值独立于处理状态</li>
+<li><strong>2.2</strong> 从干扰项中剥离出控制变量;或者寻找一个与干扰项不相关的工具变量</li>
+<li><strong>2.3</strong> 第二类识别假设:潜在结果条件均值独立于处理状态</li>
+<li><strong>2.4</strong> 好的控制变量:既影响$Y$,又影响$D$.其本身和干扰项是否相关是不重要的,不是研究者关注的中心</li>
+<li><strong>2.5</strong> 一个好的因果推断研究往往只关注一个影响因素</li>
+<li><strong>2.6</strong> 无需过渡阐释控制变量的系数</li>
 </ul>
-<h3 id="数据">数据</h3>
-<p><strong>Townsend泰国月度调查（Townsend Thai Dataset）</strong>：</p>
+<h2 id="3"><strong>3</strong></h2>
 <ul>
-<li>16个村庄（8个农村、8个近郊），1997—2011年14年月度面板</li>
-<li>每月追踪家庭企业的所有购销交易、雇佣/受雇关系、消费支出、健康状况</li>
-<li>构建两类网络：<strong>供应链网络</strong>（货物购销）和<strong>劳动力雇佣网络</strong>（雇主-雇员）</li>
-<li>冲击：使用健康状况的大幅下降（严重疾病）作为外生冲击</li>
+<li><strong>3.1</strong> 鲁宾因果模型并未规定具体的函数形式</li>
+<li><strong>3.2</strong> 但我们通常不用鲁宾因果模型语言设定假设</li>
 </ul>
-<h3 id="主要结果">主要结果</h3>
-<p><strong>直接效应（被冲击家庭）</strong>：</p>
+<h2 id="4"><strong>4</strong></h2>
 <ul>
-<li>被冲击家庭<strong>消费平滑成功</strong>：非医疗性家庭支出未显著减少</li>
-<li>但平滑代价巨大：企业支出减少<strong>23%</strong>，雇佣外部劳动力几乎完全停止（减少<strong>82%</strong>）</li>
-<li>说明：消费-生产不分离（consumption-production non-separation）在此设定中确实成立</li>
+<li><strong>4.1</strong> 选择性又称之为分配机制,每个个体如何接受处理,可以用倾向得分来表示</li>
+<li><strong>4.2</strong> 建议现实使用IV、DID、RDD等识别方法时,称之为准实验</li>
 </ul>
-<p><strong>间接效应（传播）</strong>——三大发现：</p>
-<p><strong>发现一：冲击传播至网络中的其他家庭</strong></p>
-<ul>
-<li>距被冲击家庭网络距离越近的家庭，受到的间接冲击越大</li>
-<li>总交易量下降19%（每单位"接近度"）；收入下降7%；消费下降3%</li>
-<li>间接效应从直接相连的一级邻居延伸到二级、三级邻居</li>
-<li><strong>消费侧效应</strong>：不只是生产侧影响，还传导到其他家庭的消费——这是文献中<strong>首次记录</strong></li>
-</ul>
-<p><strong>发现二：劳动力网络传播 &gt; 供应链网络传播</strong></p>
-<ul>
-<li>通过劳动力网络的传播比通过供应链的传播更强</li>
-<li>原因：货物可以跨村采购，但劳动力市场具有强烈的<strong>本地性</strong>（临时外出务工成本高）——一旦雇主减少用工，工人很难在短期内找到替代雇主</li>
-<li>这与Baqaee &amp; Farhi (2020)的理论一致：当投入品替代性低时，传播更严重</li>
-</ul>
-<p><strong>网络弹性缺乏</strong>：被冲击后，不受冲击的家庭并不会在两年内替换"断裂"的网络连接——供应商难以找到新客户，工人难以找到新雇主。这说明村内网络的刚性（rigidity）很高。</p>
-<p><strong>乘数效应</strong>：初步估算消费乘数约为<strong>1.2</strong>（即每1元的直接冲击最终产生1.2元的消费损失）</p>
-<p><strong>发现三：网络结构和保险决定传播程度</strong></p>
-<ul>
-<li><strong>密度效应</strong>：网络越密集的村庄，单一冲击的间接效应越大（更多传播渠道，但替换"断裂"连接也更难）</li>
-<li><strong>中心性效应</strong>：冲击越核心（中心度高）的家庭，传播越广</li>
-<li><strong>保险的缓解作用</strong>：拥有正式保险（如政府健康保险）或非正式保险（网络内互助）的家庭在受冲击后，对外部劳动力需求削减更少，因此传播更小——保险通过"斩断消费-生产联系"来阻止传播</li>
-</ul>
-<h3 id="政策含义">政策含义</h3>
-<ol>
-<li><strong>预防性医疗投资</strong>的社会收益高于私人收益（受益不只是被帮助的家庭，也包括其网络中的其他家庭）</li>
-<li><strong>安全网的社会乘数</strong>：健康保险、现金转移支付、公共就业项目（如印度NREGS）的社会收益高于传统评估——需考虑阻断传播带来的网络溢出收益</li>
-<li><strong>政策靶向性</strong>：应优先保障网络中更"中心"的家庭和网络密度更高的村庄</li>
-<li><strong>劳动力市场改善</strong>：加强劳动力合同执行、拓展超出本村的产品和要素市场，减少网络刚性</li>
-</ol>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<ol>
-<li>个体健康冲击通过当地供应链和劳动力网络传播，同时影响其他家庭的<strong>生产</strong>和<strong>消费</strong>；</li>
-<li>劳动力网络传播效果强于供应链网络传播（劳动力市场本地性 + 替换成本高）；</li>
-<li>网络越密集、被冲击方越中心、保险越少 → 传播越大；</li>
-<li>保险通过切断"消费压力→生产削减→传播"这一因果链来抑制传播；</li>
-<li>政策含义：扩大安全网的社会收益（网络外部效应）高于私人收益，应靶向中心节点和高密度网络。</li>
-</ol>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文明确提及的方向</strong>：</p>
-<ol>
-<li>改善劳动力合同执行和扩展产品/要素市场以减少网络刚性；</li>
-<li>利用电子支付平台识别网络关键节点以改善保险定向投放。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li><strong>COVID-19冲击</strong>：疫情本身也是对部分家庭/企业的健康+生产冲击，且通过网络传播。文中方法可以直接应用于COVID-19对发展中国家村级经济的冲击研究。</li>
-<li><strong>中国乡村经济</strong>：中国农村"买卖关系"网络（village production networks）的数据能否构建？健康冲击（如劳动年龄人口疾病）如何在中国农村传播？</li>
-<li><strong>工业集群</strong>：类似的网络传播机制是否也存在于城市工业集群中（如温州小商品生产链）？若一家关键供应商倒闭，产业集群内其他企业的反应？</li>
-<li><strong>保险设计</strong>：基于网络结构的最优保险机制设计——是否应该对中心节点实施更高的保险保障（“关键节点保险”）？</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>消费-生产不分离假设的普遍性</strong>：本文的核心机制依赖于"家庭为平滑消费而削减生产投入"。但这一机制在不同类型的家庭中可能差异很大——有储蓄/借贷能力的家庭可能不需要削减生产。本文的结果是否在保险和储蓄可及性更好的样本中同样成立？如果不成立，那么发展金融基础设施（银行普惠）可能也是减少传播的有效途径。</p>
-</li>
-<li>
-<p><strong>网络密度的双重效应</strong>：论文发现密度更高的网络中传播更大。但传统文献发现密度更高的网络中的风险分担能力也更强（Feigenberg et al. 2013）。这种矛盾意味着密度有"保险能力↑"和"传播风险↑"的双重效应。在政策上，是否存在一个"最优网络密度"？或者说，正确的政策干预是改变网络密度本身，还是在既有密度下改善保险机制？</p>
-</li>
-<li>
-<p><strong>识别策略的关键假设</strong>：本文用"未来将受到冲击的家庭"作为反事实对照组，隐含假设这些家庭在未受冲击前与已受冲击家庭的趋势是相同的。但如果健康冲击的发生本身是内生的（如相对贫困、不健康的家庭更早受到冲击），对照组的趋势可能与处理组不同。作者提供了一些安慰剂检验，但这一基本假设的可信度值得关注。</p>
-</li>
-<li>
-<p><strong>乘数的政策诠释</strong>：消费乘数1.2意味着村庄内个体冲击的总消费效应是直接效应的1.2倍。但这仅是村内网络的乘数，没有考虑村间贸易和劳动力流动的调节（跨村市场可以稀释部分冲击）。因此文中乘数可能高估了整个经济中的传播，政策响应时需要考虑这一点。</p>
-</li>
-<li>
-<p><strong>保险阻断传播的机制细节</strong>：论文显示保险减少了传播，解释是"保险让被冲击家庭不需要削减雇工"。但保险的来源有两种（正式保险 vs. 非正式网络互助）。非正式保险（网络内转账）是否同时改变了网络中其他家庭的财务状况，从而直接影响他们的消费，而非单纯通过"减少传播"来改善？区分这两条路径在设计干预上很重要。</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>泰国农村劳动力市场和供应链的双重网络结构（同一家庭既是供应商又是雇主）在中国农村是否普遍存在？中国"能人经济"和产业集群中是否有类似机制？</li>
-<li>本文发现扩大安全网的社会收益高于私人收益，这对中国正在推进的基本养老保险、医疗保险农村覆盖具有什么政策含义？覆盖率提升对农村生产网络的稳定性有多大改善？</li>
-<li>网络中心性（centrality）在这篇文章中是如何测量的？本文用的是哪种中心性指标（度中心性、接近中心性、中介中心性）？是否对结果稳健？</li>
-<li>供应链传播 vs 劳动力网络传播的差异如何与中国农村的情形对应？中国农村劳动力市场的本地性程度（vs 城市化、外出务工）是否比泰国农村更低？</li>
-<li>Townsend Thai Dataset是公开数据吗？如何获取？是否有类似质量的中国农村家庭月度面板数据？</li>
-</ol>
 ]]></content>
       <categories>
-        <category>有趣的文章</category>
+        <category>计量</category>
       </categories>
       <tags>
-        <tag>论文笔记</tag>
+        <tag>学术讲座</tag>
       </tags>
   </entry>
   <entry>
@@ -14779,6 +14632,153 @@ Zotero Item Key:: MJSN77J6</p>
 ]]></content>
       <categories>
         <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>村庄网络中的传播与保险 — 深度阅读笔记 — Kinnan Et Al.</title>
+    <url>/posts/kinnan2024/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Propagation and Insurance in Village Networks<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/U82LFZSS/Kinnan 等 - 2024 - Propagation and Insurance in Village Networks.pdf<br>
+Zotero Item Key:: MJSN77J6</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+发展中国家的小企业通常由家庭直接经营，生产和消费难以分离（“家庭生产单元”）。当家庭面临冲击（如疾病、意外），他们往往通过削减生产支出来平滑消费。这种调整会通过供应链和劳动力雇佣关系传导到其他家庭（企业），形成局部经济网络中的冲击传播（propagation）。发展经济学中有大量研究网络与风险分担的文献，但鲜有研究细粒度追踪冲击如何通过<strong>供应链网络</strong>和<strong>劳动力雇佣网络</strong>这两类不同渠道传播，以及保险如何阻断这种传播。</p>
+<p><strong>研究背景</strong><br>
+发达国家关于供应链传播（如Carvalho et al. 2021）的文献聚焦于大型企业和全球供应链。但低中收入国家（LMICs）的小型家庭企业面临完全不同的情形：（a）生产-消费高度混合；（b）面临健康冲击等个体性风险；（c）同时参与供应链网络和劳动力雇佣网络。<strong>Townsend Thai Dataset</strong>（泰国农村/近郊月度面板）提供了罕见的细粒度村内网络数据，使得追踪冲击传播成为可能。</p>
+<p><strong>作者的问题意识</strong><br>
+当一个家庭受到健康冲击后削减生产，这会如何影响网络中的其他家庭？供应链传播和劳动力网络传播哪个更重要？网络结构（密度、中心性）和保险（正式/非正式）如何影响传播程度？</p>
+<p><strong>研究意义</strong><br>
+本文首次<strong>微观追踪</strong>冲击从被冲击家庭向网络中其他家庭传播的全过程（包括生产侧和消费侧），并估算了乘数效应（multiplier≈1.2）。政策含义：安全网（健康保险、现金转移支付）的社会收益大于私人收益，因为它不仅帮助了受冲击家庭，还通过阻断冲击传播间接惠及网络中的其他家庭。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言与三大发现</strong>。</li>
+<li><strong>背景与数据</strong>：泰国Townsend月度调查；网络构建（供应链网络 + 劳动力雇佣网络）。</li>
+<li><strong>直接效应</strong>：被冲击家庭的生产和消费调整。</li>
+<li><strong>间接效应（传播）</strong>：网络中其他家庭的生产和消费变化。</li>
+<li><strong>异质性分析</strong>：网络结构、保险、劳动力市场摩擦的调节作用。</li>
+<li><strong>结论与政策含义</strong>。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>在LMICs，家庭同时扮演消费者和企业主的角色，经营的小企业通过商品购销（供应链）和劳动力雇佣（雇佣-被雇佣关系）与其他家庭连接。当一个家庭面临健康冲击（如家庭成员重病），他们需要支付大量医疗费用，可能通过减少企业投入/减少雇工来平滑消费。这种调整会波及到：</p>
+<ul>
+<li><strong>上游供应商</strong>：少购买原材料和服务</li>
+<li><strong>下游劳动者</strong>：减少雇工需求</li>
+</ul>
+<h3 id="挑战与识别">挑战与识别</h3>
+<p><strong>关键挑战</strong>：如何识别冲击传播的<strong>因果</strong>效应，而非网络中共同冲击的相关效应（如村庄整体受影响）？</p>
+<p><strong>识别策略</strong>：借鉴Fadlon &amp; Nielsen (2019)的"未来被冲击对照组"设计：</p>
+<ul>
+<li><strong>处理组</strong>：当期发生健康冲击的家庭及其网络邻居</li>
+<li><strong>对照组</strong>：将在未来发生类似冲击的家庭（用其未来冲击前的轨迹作为当期被冲击家庭的反事实）</li>
+<li><strong>间接效应识别</strong>：比较网络中距被冲击家庭更近（高暴露）vs 更远（低暴露）的家庭，在冲击前后的变化差异</li>
+</ul>
+<h3 id="数据">数据</h3>
+<p><strong>Townsend泰国月度调查（Townsend Thai Dataset）</strong>：</p>
+<ul>
+<li>16个村庄（8个农村、8个近郊），1997—2011年14年月度面板</li>
+<li>每月追踪家庭企业的所有购销交易、雇佣/受雇关系、消费支出、健康状况</li>
+<li>构建两类网络：<strong>供应链网络</strong>（货物购销）和<strong>劳动力雇佣网络</strong>（雇主-雇员）</li>
+<li>冲击：使用健康状况的大幅下降（严重疾病）作为外生冲击</li>
+</ul>
+<h3 id="主要结果">主要结果</h3>
+<p><strong>直接效应（被冲击家庭）</strong>：</p>
+<ul>
+<li>被冲击家庭<strong>消费平滑成功</strong>：非医疗性家庭支出未显著减少</li>
+<li>但平滑代价巨大：企业支出减少<strong>23%</strong>，雇佣外部劳动力几乎完全停止（减少<strong>82%</strong>）</li>
+<li>说明：消费-生产不分离（consumption-production non-separation）在此设定中确实成立</li>
+</ul>
+<p><strong>间接效应（传播）</strong>——三大发现：</p>
+<p><strong>发现一：冲击传播至网络中的其他家庭</strong></p>
+<ul>
+<li>距被冲击家庭网络距离越近的家庭，受到的间接冲击越大</li>
+<li>总交易量下降19%（每单位"接近度"）；收入下降7%；消费下降3%</li>
+<li>间接效应从直接相连的一级邻居延伸到二级、三级邻居</li>
+<li><strong>消费侧效应</strong>：不只是生产侧影响，还传导到其他家庭的消费——这是文献中<strong>首次记录</strong></li>
+</ul>
+<p><strong>发现二：劳动力网络传播 &gt; 供应链网络传播</strong></p>
+<ul>
+<li>通过劳动力网络的传播比通过供应链的传播更强</li>
+<li>原因：货物可以跨村采购，但劳动力市场具有强烈的<strong>本地性</strong>（临时外出务工成本高）——一旦雇主减少用工，工人很难在短期内找到替代雇主</li>
+<li>这与Baqaee &amp; Farhi (2020)的理论一致：当投入品替代性低时，传播更严重</li>
+</ul>
+<p><strong>网络弹性缺乏</strong>：被冲击后，不受冲击的家庭并不会在两年内替换"断裂"的网络连接——供应商难以找到新客户，工人难以找到新雇主。这说明村内网络的刚性（rigidity）很高。</p>
+<p><strong>乘数效应</strong>：初步估算消费乘数约为<strong>1.2</strong>（即每1元的直接冲击最终产生1.2元的消费损失）</p>
+<p><strong>发现三：网络结构和保险决定传播程度</strong></p>
+<ul>
+<li><strong>密度效应</strong>：网络越密集的村庄，单一冲击的间接效应越大（更多传播渠道，但替换"断裂"连接也更难）</li>
+<li><strong>中心性效应</strong>：冲击越核心（中心度高）的家庭，传播越广</li>
+<li><strong>保险的缓解作用</strong>：拥有正式保险（如政府健康保险）或非正式保险（网络内互助）的家庭在受冲击后，对外部劳动力需求削减更少，因此传播更小——保险通过"斩断消费-生产联系"来阻止传播</li>
+</ul>
+<h3 id="政策含义">政策含义</h3>
+<ol>
+<li><strong>预防性医疗投资</strong>的社会收益高于私人收益（受益不只是被帮助的家庭，也包括其网络中的其他家庭）</li>
+<li><strong>安全网的社会乘数</strong>：健康保险、现金转移支付、公共就业项目（如印度NREGS）的社会收益高于传统评估——需考虑阻断传播带来的网络溢出收益</li>
+<li><strong>政策靶向性</strong>：应优先保障网络中更"中心"的家庭和网络密度更高的村庄</li>
+<li><strong>劳动力市场改善</strong>：加强劳动力合同执行、拓展超出本村的产品和要素市场，减少网络刚性</li>
+</ol>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<ol>
+<li>个体健康冲击通过当地供应链和劳动力网络传播，同时影响其他家庭的<strong>生产</strong>和<strong>消费</strong>；</li>
+<li>劳动力网络传播效果强于供应链网络传播（劳动力市场本地性 + 替换成本高）；</li>
+<li>网络越密集、被冲击方越中心、保险越少 → 传播越大；</li>
+<li>保险通过切断"消费压力→生产削减→传播"这一因果链来抑制传播；</li>
+<li>政策含义：扩大安全网的社会收益（网络外部效应）高于私人收益，应靶向中心节点和高密度网络。</li>
+</ol>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文明确提及的方向</strong>：</p>
+<ol>
+<li>改善劳动力合同执行和扩展产品/要素市场以减少网络刚性；</li>
+<li>利用电子支付平台识别网络关键节点以改善保险定向投放。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li><strong>COVID-19冲击</strong>：疫情本身也是对部分家庭/企业的健康+生产冲击，且通过网络传播。文中方法可以直接应用于COVID-19对发展中国家村级经济的冲击研究。</li>
+<li><strong>中国乡村经济</strong>：中国农村"买卖关系"网络（village production networks）的数据能否构建？健康冲击（如劳动年龄人口疾病）如何在中国农村传播？</li>
+<li><strong>工业集群</strong>：类似的网络传播机制是否也存在于城市工业集群中（如温州小商品生产链）？若一家关键供应商倒闭，产业集群内其他企业的反应？</li>
+<li><strong>保险设计</strong>：基于网络结构的最优保险机制设计——是否应该对中心节点实施更高的保险保障（“关键节点保险”）？</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>消费-生产不分离假设的普遍性</strong>：本文的核心机制依赖于"家庭为平滑消费而削减生产投入"。但这一机制在不同类型的家庭中可能差异很大——有储蓄/借贷能力的家庭可能不需要削减生产。本文的结果是否在保险和储蓄可及性更好的样本中同样成立？如果不成立，那么发展金融基础设施（银行普惠）可能也是减少传播的有效途径。</p>
+</li>
+<li>
+<p><strong>网络密度的双重效应</strong>：论文发现密度更高的网络中传播更大。但传统文献发现密度更高的网络中的风险分担能力也更强（Feigenberg et al. 2013）。这种矛盾意味着密度有"保险能力↑"和"传播风险↑"的双重效应。在政策上，是否存在一个"最优网络密度"？或者说，正确的政策干预是改变网络密度本身，还是在既有密度下改善保险机制？</p>
+</li>
+<li>
+<p><strong>识别策略的关键假设</strong>：本文用"未来将受到冲击的家庭"作为反事实对照组，隐含假设这些家庭在未受冲击前与已受冲击家庭的趋势是相同的。但如果健康冲击的发生本身是内生的（如相对贫困、不健康的家庭更早受到冲击），对照组的趋势可能与处理组不同。作者提供了一些安慰剂检验，但这一基本假设的可信度值得关注。</p>
+</li>
+<li>
+<p><strong>乘数的政策诠释</strong>：消费乘数1.2意味着村庄内个体冲击的总消费效应是直接效应的1.2倍。但这仅是村内网络的乘数，没有考虑村间贸易和劳动力流动的调节（跨村市场可以稀释部分冲击）。因此文中乘数可能高估了整个经济中的传播，政策响应时需要考虑这一点。</p>
+</li>
+<li>
+<p><strong>保险阻断传播的机制细节</strong>：论文显示保险减少了传播，解释是"保险让被冲击家庭不需要削减雇工"。但保险的来源有两种（正式保险 vs. 非正式网络互助）。非正式保险（网络内转账）是否同时改变了网络中其他家庭的财务状况，从而直接影响他们的消费，而非单纯通过"减少传播"来改善？区分这两条路径在设计干预上很重要。</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>泰国农村劳动力市场和供应链的双重网络结构（同一家庭既是供应商又是雇主）在中国农村是否普遍存在？中国"能人经济"和产业集群中是否有类似机制？</li>
+<li>本文发现扩大安全网的社会收益高于私人收益，这对中国正在推进的基本养老保险、医疗保险农村覆盖具有什么政策含义？覆盖率提升对农村生产网络的稳定性有多大改善？</li>
+<li>网络中心性（centrality）在这篇文章中是如何测量的？本文用的是哪种中心性指标（度中心性、接近中心性、中介中心性）？是否对结果稳健？</li>
+<li>供应链传播 vs 劳动力网络传播的差异如何与中国农村的情形对应？中国农村劳动力市场的本地性程度（vs 城市化、外出务工）是否比泰国农村更低？</li>
+<li>Townsend Thai Dataset是公开数据吗？如何获取？是否有类似质量的中国农村家庭月度面板数据？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -18775,6 +18775,35 @@ Zotero Item Key:: Y7FT49B5</p>
       </tags>
   </entry>
   <entry>
+    <title>字体和公式的Display</title>
+    <url>/posts/15167/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<p><font face="Times New Roman"></font></p><p style="text-align:justify"><font face="Times New Roman"><b>“Evaluating the employment impact of a mandatory job search program”</b></font><br>
+<br><br>
+<br><br>
+<font face="Times New Roman"></font></p><p style="text-align:justify"><font face="Times New Roman"><b>What treatment do the authors evaluate?</b></font><br>
+<br></p>
+<span id="more"></span>
+<p><font face="Tex Gyre Pagella"></font></p><p style="text-align:justify"><font face="Tex Gyre Pagella"><b>Answer: </b> In the parametric methods, the common trend assumption is:</font></p><font face="Tex Gyre Pagella">
+<p>$$\begin{array}{l}<br>
+f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=0\right)\right] \<br>
+=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=0\right)\right]<br>
+\end{array}$$<br>
+In the non-parametric methods, the common trend assumption is:</p>
+<p>$$\begin{array}{l}<br>
+E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=0\right) \<br>
+=E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=1\right)-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)<br>
+\end{array}$$</p>
+</font>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>blog_test</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>多重原因的祝福：去混淆 — 深度阅读笔记 — Wang &amp; Blei</title>
     <url>/posts/wang2019blessings/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: The Blessings of Multiple Causes<br>
@@ -18912,35 +18941,6 @@ Zotero Item Key:: GQKZ35CQ</p>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>字体和公式的Display</title>
-    <url>/posts/15167/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<p><font face="Times New Roman"></font></p><p style="text-align:justify"><font face="Times New Roman"><b>“Evaluating the employment impact of a mandatory job search program”</b></font><br>
-<br><br>
-<br><br>
-<font face="Times New Roman"></font></p><p style="text-align:justify"><font face="Times New Roman"><b>What treatment do the authors evaluate?</b></font><br>
-<br></p>
-<span id="more"></span>
-<p><font face="Tex Gyre Pagella"></font></p><p style="text-align:justify"><font face="Tex Gyre Pagella"><b>Answer: </b> In the parametric methods, the common trend assumption is:</font></p><font face="Tex Gyre Pagella">
-<p>$$\begin{array}{l}<br>
-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=0\right)\right] \<br>
-=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=0\right)\right]<br>
-\end{array}$$<br>
-In the non-parametric methods, the common trend assumption is:</p>
-<p>$$\begin{array}{l}<br>
-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=0\right) \<br>
-=E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=1\right)-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)<br>
-\end{array}$$</p>
-</font>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>blog_test</tag>
       </tags>
   </entry>
   <entry>
