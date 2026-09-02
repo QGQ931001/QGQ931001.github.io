@@ -3185,6 +3185,23 @@ LBD产生的成本降低主要通过价格竞争传递给了EV生产商和最终
       </tags>
   </entry>
   <entry>
+    <title>致Berry</title>
+    <url>/posts/51392/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<center> **Love You.** </center>
+<center> **Berry!** </center>
+<center>
+<img data-src="/image/berry.jpg" width="66%" height="66%" title="妳" alt="妳">
+</center>
+]]></content>
+      <categories>
+        <category>领导</category>
+      </categories>
+      <tags>
+        <tag>妳</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>如何在双变量Probit中使用工具变量法IV估计</title>
     <url>/posts/60676/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
@@ -3203,20 +3220,133 @@ LBD产生的成本降低主要通过价格竞争传递给了EV生产商和最终
       </tags>
   </entry>
   <entry>
-    <title>致Berry</title>
-    <url>/posts/51392/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<center> **Love You.** </center>
-<center> **Berry!** </center>
-<center>
-<img data-src="/image/berry.jpg" width="66%" height="66%" title="妳" alt="妳">
-</center>
+    <title>重审事件研究设计：稳健高效的估计 — 深度阅读笔记 — Borusyak Et Al.</title>
+    <url>/posts/borusyak2024/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Revisiting Event-Study Designs: Robust and Efficient Estimation<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/8T8HR2YF/Borusyak 等 - 2024 - Revisiting Event-Study Designs Robust and Efficient Estimation.pdf<br>
+Zotero Item Key:: XQJW2NJV</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+事件研究（Event Study）是应用经济学中最常用的因果推断设计之一。其核心思路是双重差分（Difference-in-Differences, DiD）：利用面板数据比较处理组（受到"事件"冲击的个体）和对照组（未受冲击的个体）在事件前后的结果变化。当处理在不同时期对不同单位逐步展开时（staggered treatment adoption），通常用双向固定效应（Two-Way Fixed Effects, TWFE）OLS 来估计。标准规格为：</p>
+<p>$$Y_{it} = \alpha_i + \beta_t + \tau D_{it} + \varepsilon_{it}$$</p>
+<p>其中 $\alpha_i$ 是个体固定效应，$\beta_t$ 是时间固定效应，$D_{it}$ 是处理指示变量。</p>
+<p>“动态"规格进一步加入处理发生前后不同期数的"领先”（leads）和"滞后"（lags）指示变量，以描绘处理效应随时间的演变，并检验平行趋势假设。</p>
+<p><strong>研究背景</strong><br>
+2020年前后，计量经济学界（Sant’Anna &amp; Zhao、Callaway &amp; Sant’Anna、Sun &amp; Abraham、de Chaisemartin &amp; D’Haultfœuille 等）相继指出：当处理效应存在异质性时，传统 TWFE 估计量会产生系统性偏误，甚至可能给一些真实正效应赋予"负权重"。已有文献提出了多种修正方法，但各方法的统一比较框架和最优效率证明尚不完整。</p>
+<p><strong>作者的问题意识</strong><br>
+TWFE 的问题究竟是什么？是否可以在一个统一框架下同时解决稳健性（robustness）和估计效率（efficiency）两个问题？能否给研究者一个既直观又理论最优的估计程序？</p>
+<p><strong>研究意义</strong><br>
+本文从根本上澄清了事件研究设计的识别假设、估计目标、和估计方法之间的逻辑关系，推导出在未限制处理效应异质性时的最优"归因估计量"（imputation estimator），并伴随一套推断工具与检验方法。Stata 命令 <code>did_imputation</code> 和 <code>event_plot</code> 已发布至 SSC，广泛影响应用经济学实证研究规范。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：提出问题，预告贡献。</li>
+<li><strong>框架</strong>（第2节）：明确识别目标（estimand）、识别假设（平行趋势+无预期效应）、异质性处理效应模型，三者明确分离。</li>
+<li><strong>TWFE 问题诊断</strong>（第3节）：系统分析 TWFE 偏误的三大来源。</li>
+<li><strong>稳健高效估计量</strong>（第4节）：推导归因估计量，提供推断方法与检验工具。</li>
+<li><strong>应用</strong>（第5节）：再估计美国退税消费响应（Broda-Parker 2014），纠正已有偏误。</li>
+<li><strong>结论</strong>（第6节）：统一框架总结，政策含义。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>事件研究中，不同个体在不同时期开始接受处理（交错处理，staggered adoption），加上处理效应可能随个体、时期、处理时长不同而变化（异质性），导致传统 TWFE 估计量面临严重挑战。</p>
+<h3 id="挑战：TWFE-的三大偏误来源">挑战：TWFE 的三大偏误来源</h3>
+<p><strong>问题一：欠识别（under-identification）</strong><br>
+在"完全动态"规格（包含所有领先和滞后期）中，如果样本中没有从未接受处理的单位，预期效应（anticipation effects）和处理效应的动态路径无法被点识别。这意味着前期"平行趋势检验"的结果可能混入了真实的处理效应，失去检验的独立性。</p>
+<p><strong>问题二：负权重（negative weights）与"禁止比较"（forbidden comparisons）</strong><br>
+交错处理下，TWFE 估计量隐含地使用已受处理的早期处理组单位作为晚期处理组单位的"对照组"。如果处理效应随时间演变（如效应递减），这类"禁止比较"会赋予某些处理效应以<strong>负权重</strong>，使汇总估计量被系统性地扭曲，甚至在所有真实效应为正时汇总估计量为负。</p>
+<p><strong>问题三：隐式外推（spurious identification of long-run effects）</strong><br>
+动态规格通过强加处理效应的同质性假设（隐含地），会对没有有效 DiD 比较的远期处理效应进行非法外推，导致对长期效应的虚假估计。</p>
+<p><strong>共同根源</strong>：这些问题都源于研究者没有显式区分估计目标、识别假设、和对处理效应异质性的限制，三者被隐含地混杂在同一回归规格中。</p>
+<h3 id="方法：归因估计量（Imputation-Estimator）">方法：归因估计量（Imputation Estimator）</h3>
+<p>在不对处理效应异质性加任何限制的前提下，文章推导出最有效（efficient）的无偏线性估计量，其形式直观清晰，分三步：</p>
+<ol>
+<li><strong>估计固定效应</strong>：仅使用<strong>未受处理的观测值</strong>拟合个体固定效应 $\hat{\alpha}_i$ 和时间固定效应 $\hat{\beta}_t$；</li>
+<li><strong>归因反事实结果</strong>：对每个已受处理的观测值，利用上述固定效应<strong>归因</strong>其未受处理时的潜在结果：$\hat{Y}_{it}(0) = \hat{\alpha}_i + \hat{\beta}_t$；</li>
+<li><strong>计算处理效应</strong>：$\hat{\tau}<em>{it} = Y</em>{it} - \hat{Y}_{it}(0)$，然后按目标 estimand（如 ATT）加权汇总。</li>
+</ol>
+<p><strong>核心直觉</strong>：利用"干净的"（clean）未受处理观测估计全局趋势，避免已处理单位的固定效应被处理效应所污染，从而彻底避免"禁止比较"。</p>
+<p><strong>推断</strong>：文章推导了该估计量的渐近正态性条件，并提出保守的（asymptotically conservative）标准误方法——将估计处理效应的部分变异归因于误差项，以处理异质效应无法与误差项分离的困难。</p>
+<p><strong>假设检验</strong>：通过仅在未受处理观测上估计"平行趋势检验"，将检验与估计明确分离，避免预测试偏差（pre-testing bias）。</p>
+<h3 id="数据与应用">数据与应用</h3>
+<p><strong>应用设置</strong>：Broda &amp; Parker（2014）用 Nielsen 消费者数据研究2008年美国退税刺激计划（Economic Stimulus Act）对支出的影响。</p>
+<p><strong>原始估计的问题</strong>：</p>
+<ul>
+<li>Broda &amp; Parker 使用了"分箱"（binned）规格，将同一月份内多周的处理效应约束为相同，但这隐含对处理效应的均一性限制；</li>
+<li>该规格对退税后第一周的效应赋予了大量权重，同时对一些长期效应赋予了<strong>负权重</strong>；</li>
+<li>由于消费响应在退税后迅速衰减，这导致 MPC 估计<strong>向上偏误</strong>。</li>
+</ul>
+<p><strong>归因估计量的修正结果</strong>：</p>
+<ul>
+<li>第一季度名义边际消费倾向（notional MPC）为 <strong>8–11%</strong>，约为 Broda-Parker 基准估计的<strong>一半</strong>；</li>
+<li>消费响应主要集中在退税后<strong>第一个月</strong>，此后迅速衰减；</li>
+<li>与其他稳健估计量（Callaway-Sant’Anna、Sun-Abraham、de Chaisemartin-D’Haultfœuille）相比，归因估计量的<strong>置信区间最短</strong>，效率最高。</li>
+</ul>
+<p><strong>政策含义</strong>：财政刺激中的税收返退政策对消费的拉动效应远弱于宏观模型的传统校准值，意味着财政乘数可能被过高估计。</p>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<p>本文提供了一个统一框架，将估计目标、识别假设（平行趋势、无预期效应）和处理效应异质性限制三者明确分离。在此框架下：</p>
+<ol>
+<li>传统 TWFE 存在系统性偏误，根源是隐式混杂三类选择；</li>
+<li>当处理效应异质性不受限制时，归因估计量是最有效的线性无偏估计量；</li>
+<li>将假设检验与估计分离，提升效率并避免预测试偏差；</li>
+<li>实证应用中纠正了美国退税刺激消费响应的向上偏误，MPC 修正为基准值的一半。</li>
+</ol>
+<p><strong>Stata 命令</strong>：<code>did_imputation</code>（估计处理效应）、<code>event_plot</code>（绘制动态事件研究图），均已发布至 SSC。</p>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文明确提及的局限与未来方向</strong>：</p>
+<ol>
+<li>本文不讨论平行趋势假设本身何时成立（这是 Roth &amp; Sant’Anna 2023 的方向）；</li>
+<li>本文不考虑对平行趋势假设违反的稳健推断（这是 Rambachan &amp; Roth 2023 的方向）；</li>
+<li>非二元处理（continuous or multi-valued treatments）的推广是未来方向之一；</li>
+<li>本文保守标准误在某些情形下可能过于保守，改进在某些设定下可实现渐近精确。</li>
+</ol>
+<p><strong>从论文引申的方向</strong>：</p>
+<ol>
+<li><strong>机器学习与 DiD 结合</strong>：如何将归因框架与双重稳健（doubly robust）方法结合，在协变量高维情景下仍保持稳健性？</li>
+<li><strong>空间溢出效应</strong>：交错 DiD 的"禁止比较"问题在存在空间依赖（spillovers）时会更复杂，如何扩展归因框架？</li>
+<li><strong>微观基础与 ATT 的选择</strong>：归因估计量对 estimand 权重的选择有很大弹性，如何从经济理论出发选择最有意义的加权方案？</li>
+<li><strong>连续处理量</strong>：政策评估中大量政策（补贴金额、污染浓度）是连续的，如何将本文框架扩展至连续处理的剂量反应函数估计？</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>"最有效率"的范围</strong>：文章在球形误差（同方差、无序列相关）假设下推导出最优估计量，而实际上处理效应估计普遍存在序列相关。论文虽提供了聚类标准误，但"在串行相关下该估计量是否仍是最优"这一问题值得进一步探究。</p>
+</li>
+<li>
+<p><strong>估计目标（estimand）的主观性</strong>：归因估计量可以灵活地估计任意预设的加权平均处理效应，但如何选择权重需要研究者自行判断。不同权重选择可能导致截然不同的政策结论，这给"最优估计量"的解读带来了条件性：最优是对于给定 estimand 而言的，而 estimand 本身的选择仍是主观判断。</p>
+</li>
+<li>
+<p><strong>负权重问题的根本性</strong>：文章聚焦于在 TWFE 规格中识别出负权重，但作者也指出只要研究者在不满足同质性时使用了限制异质性的规格，就会出现这一问题。这意味着很多使用 TWFE 的已发表论文可能存在系统偏误，本文实质上是对整个事件研究文献的"大规模纠偏"。</p>
+</li>
+<li>
+<p><strong>归因估计量的普适性</strong>：本文证明任何无偏线性估计量都可以表示为某种"归因"结构，这是一个强有力的统一定理。但"仅用未处理观测估计固定效应"依赖于未处理观测数量足够多的前提——如果样本中绝大多数单位很快受到处理，归因估计量的精度可能大幅下降。</p>
+</li>
+<li>
+<p><strong>平行趋势与异质性的权衡</strong>：本文接受平行趋势假设，并在此基础上推导最优估计量。但 Rambachan-Roth (2023) 指出平行趋势假设本身可能存在系统违反，两篇论文提供了互补但难以同时满足的视角——研究者在实践中如何权衡这两类问题？</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>归因估计量（imputation estimator）和 Callaway-Sant’Anna (2021) 的"组-时间 ATT"估计量在实践中有何区别，二者结果是否接近？</li>
+<li>Stata 命令 <code>did_imputation</code> 的具体语法是什么？如何在实践中选择检验的"前期窗口"长度？</li>
+<li>文章说可以扩展到"三重差分"（triple-difference）设计，具体如何操作？</li>
+<li>如果样本中几乎没有"从未被处理的单位"（never-treated），归因估计量能否有效运作？有哪些替代方法？</li>
+<li>边际消费倾向（MPC）的修正（从约20%降至8-11%）对宏观经济学的乘数模型有什么具体影响？这是否已被宏观模型界广泛接受？</li>
+</ol>
 ]]></content>
       <categories>
-        <category>领导</category>
+        <category>有趣的文章</category>
       </categories>
       <tags>
-        <tag>妳</tag>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -3398,133 +3528,51 @@ LBD产生的成本降低主要通过价格竞争传递给了EV生产商和最终
       </tags>
   </entry>
   <entry>
-    <title>重审事件研究设计：稳健高效的估计 — 深度阅读笔记 — Borusyak Et Al.</title>
-    <url>/posts/borusyak2024/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Revisiting Event-Study Designs: Robust and Efficient Estimation<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/8T8HR2YF/Borusyak 等 - 2024 - Revisiting Event-Study Designs Robust and Efficient Estimation.pdf<br>
-Zotero Item Key:: XQJW2NJV</p>
-<hr>
+    <title>大城市人口增长速度🦚</title>
+    <url>/posts/15523/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
+<center>上图即为最终效果</center>
+<h2 id="下载数据">下载数据</h2>
+<p>将代码中的**<code>~/文档/</code>**更换为要保存的目录.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="加载R包">加载R包</h2>
+<p>需要的R包如下所示.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
 <span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-事件研究（Event Study）是应用经济学中最常用的因果推断设计之一。其核心思路是双重差分（Difference-in-Differences, DiD）：利用面板数据比较处理组（受到"事件"冲击的个体）和对照组（未受冲击的个体）在事件前后的结果变化。当处理在不同时期对不同单位逐步展开时（staggered treatment adoption），通常用双向固定效应（Two-Way Fixed Effects, TWFE）OLS 来估计。标准规格为：</p>
-<p>$$Y_{it} = \alpha_i + \beta_t + \tau D_{it} + \varepsilon_{it}$$</p>
-<p>其中 $\alpha_i$ 是个体固定效应，$\beta_t$ 是时间固定效应，$D_{it}$ 是处理指示变量。</p>
-<p>“动态"规格进一步加入处理发生前后不同期数的"领先”（leads）和"滞后"（lags）指示变量，以描绘处理效应随时间的演变，并检验平行趋势假设。</p>
-<p><strong>研究背景</strong><br>
-2020年前后，计量经济学界（Sant’Anna &amp; Zhao、Callaway &amp; Sant’Anna、Sun &amp; Abraham、de Chaisemartin &amp; D’Haultfœuille 等）相继指出：当处理效应存在异质性时，传统 TWFE 估计量会产生系统性偏误，甚至可能给一些真实正效应赋予"负权重"。已有文献提出了多种修正方法，但各方法的统一比较框架和最优效率证明尚不完整。</p>
-<p><strong>作者的问题意识</strong><br>
-TWFE 的问题究竟是什么？是否可以在一个统一框架下同时解决稳健性（robustness）和估计效率（efficiency）两个问题？能否给研究者一个既直观又理论最优的估计程序？</p>
-<p><strong>研究意义</strong><br>
-本文从根本上澄清了事件研究设计的识别假设、估计目标、和估计方法之间的逻辑关系，推导出在未限制处理效应异质性时的最优"归因估计量"（imputation estimator），并伴随一套推断工具与检验方法。Stata 命令 <code>did_imputation</code> 和 <code>event_plot</code> 已发布至 SSC，广泛影响应用经济学实证研究规范。</p>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
+<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
 <ol>
-<li><strong>引言</strong>：提出问题，预告贡献。</li>
-<li><strong>框架</strong>（第2节）：明确识别目标（estimand）、识别假设（平行趋势+无预期效应）、异质性处理效应模型，三者明确分离。</li>
-<li><strong>TWFE 问题诊断</strong>（第3节）：系统分析 TWFE 偏误的三大来源。</li>
-<li><strong>稳健高效估计量</strong>（第4节）：推导归因估计量，提供推断方法与检验工具。</li>
-<li><strong>应用</strong>（第5节）：再估计美国退税消费响应（Broda-Parker 2014），纠正已有偏误。</li>
-<li><strong>结论</strong>（第6节）：统一框架总结，政策含义。</li>
+<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
+<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon, Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
+<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
+<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
 </ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>事件研究中，不同个体在不同时期开始接受处理（交错处理，staggered adoption），加上处理效应可能随个体、时期、处理时长不同而变化（异质性），导致传统 TWFE 估计量面临严重挑战。</p>
-<h3 id="挑战：TWFE-的三大偏误来源">挑战：TWFE 的三大偏误来源</h3>
-<p><strong>问题一：欠识别（under-identification）</strong><br>
-在"完全动态"规格（包含所有领先和滞后期）中，如果样本中没有从未接受处理的单位，预期效应（anticipation effects）和处理效应的动态路径无法被点识别。这意味着前期"平行趋势检验"的结果可能混入了真实的处理效应，失去检验的独立性。</p>
-<p><strong>问题二：负权重（negative weights）与"禁止比较"（forbidden comparisons）</strong><br>
-交错处理下，TWFE 估计量隐含地使用已受处理的早期处理组单位作为晚期处理组单位的"对照组"。如果处理效应随时间演变（如效应递减），这类"禁止比较"会赋予某些处理效应以<strong>负权重</strong>，使汇总估计量被系统性地扭曲，甚至在所有真实效应为正时汇总估计量为负。</p>
-<p><strong>问题三：隐式外推（spurious identification of long-run effects）</strong><br>
-动态规格通过强加处理效应的同质性假设（隐含地），会对没有有效 DiD 比较的远期处理效应进行非法外推，导致对长期效应的虚假估计。</p>
-<p><strong>共同根源</strong>：这些问题都源于研究者没有显式区分估计目标、识别假设、和对处理效应异质性的限制，三者被隐含地混杂在同一回归规格中。</p>
-<h3 id="方法：归因估计量（Imputation-Estimator）">方法：归因估计量（Imputation Estimator）</h3>
-<p>在不对处理效应异质性加任何限制的前提下，文章推导出最有效（efficient）的无偏线性估计量，其形式直观清晰，分三步：</p>
-<ol>
-<li><strong>估计固定效应</strong>：仅使用<strong>未受处理的观测值</strong>拟合个体固定效应 $\hat{\alpha}_i$ 和时间固定效应 $\hat{\beta}_t$；</li>
-<li><strong>归因反事实结果</strong>：对每个已受处理的观测值，利用上述固定效应<strong>归因</strong>其未受处理时的潜在结果：$\hat{Y}_{it}(0) = \hat{\alpha}_i + \hat{\beta}_t$；</li>
-<li><strong>计算处理效应</strong>：$\hat{\tau}<em>{it} = Y</em>{it} - \hat{Y}_{it}(0)$，然后按目标 estimand（如 ATT）加权汇总。</li>
-</ol>
-<p><strong>核心直觉</strong>：利用"干净的"（clean）未受处理观测估计全局趋势，避免已处理单位的固定效应被处理效应所污染，从而彻底避免"禁止比较"。</p>
-<p><strong>推断</strong>：文章推导了该估计量的渐近正态性条件，并提出保守的（asymptotically conservative）标准误方法——将估计处理效应的部分变异归因于误差项，以处理异质效应无法与误差项分离的困难。</p>
-<p><strong>假设检验</strong>：通过仅在未受处理观测上估计"平行趋势检验"，将检验与估计明确分离，避免预测试偏差（pre-testing bias）。</p>
-<h3 id="数据与应用">数据与应用</h3>
-<p><strong>应用设置</strong>：Broda &amp; Parker（2014）用 Nielsen 消费者数据研究2008年美国退税刺激计划（Economic Stimulus Act）对支出的影响。</p>
-<p><strong>原始估计的问题</strong>：</p>
-<ul>
-<li>Broda &amp; Parker 使用了"分箱"（binned）规格，将同一月份内多周的处理效应约束为相同，但这隐含对处理效应的均一性限制；</li>
-<li>该规格对退税后第一周的效应赋予了大量权重，同时对一些长期效应赋予了<strong>负权重</strong>；</li>
-<li>由于消费响应在退税后迅速衰减，这导致 MPC 估计<strong>向上偏误</strong>。</li>
-</ul>
-<p><strong>归因估计量的修正结果</strong>：</p>
-<ul>
-<li>第一季度名义边际消费倾向（notional MPC）为 <strong>8–11%</strong>，约为 Broda-Parker 基准估计的<strong>一半</strong>；</li>
-<li>消费响应主要集中在退税后<strong>第一个月</strong>，此后迅速衰减；</li>
-<li>与其他稳健估计量（Callaway-Sant’Anna、Sun-Abraham、de Chaisemartin-D’Haultfœuille）相比，归因估计量的<strong>置信区间最短</strong>，效率最高。</li>
-</ul>
-<p><strong>政策含义</strong>：财政刺激中的税收返退政策对消费的拉动效应远弱于宏观模型的传统校准值，意味着财政乘数可能被过高估计。</p>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<p>本文提供了一个统一框架，将估计目标、识别假设（平行趋势、无预期效应）和处理效应异质性限制三者明确分离。在此框架下：</p>
-<ol>
-<li>传统 TWFE 存在系统性偏误，根源是隐式混杂三类选择；</li>
-<li>当处理效应异质性不受限制时，归因估计量是最有效的线性无偏估计量；</li>
-<li>将假设检验与估计分离，提升效率并避免预测试偏差；</li>
-<li>实证应用中纠正了美国退税刺激消费响应的向上偏误，MPC 修正为基准值的一半。</li>
-</ol>
-<p><strong>Stata 命令</strong>：<code>did_imputation</code>（估计处理效应）、<code>event_plot</code>（绘制动态事件研究图），均已发布至 SSC。</p>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文明确提及的局限与未来方向</strong>：</p>
-<ol>
-<li>本文不讨论平行趋势假设本身何时成立（这是 Roth &amp; Sant’Anna 2023 的方向）；</li>
-<li>本文不考虑对平行趋势假设违反的稳健推断（这是 Rambachan &amp; Roth 2023 的方向）；</li>
-<li>非二元处理（continuous or multi-valued treatments）的推广是未来方向之一；</li>
-<li>本文保守标准误在某些情形下可能过于保守，改进在某些设定下可实现渐近精确。</li>
-</ol>
-<p><strong>从论文引申的方向</strong>：</p>
-<ol>
-<li><strong>机器学习与 DiD 结合</strong>：如何将归因框架与双重稳健（doubly robust）方法结合，在协变量高维情景下仍保持稳健性？</li>
-<li><strong>空间溢出效应</strong>：交错 DiD 的"禁止比较"问题在存在空间依赖（spillovers）时会更复杂，如何扩展归因框架？</li>
-<li><strong>微观基础与 ATT 的选择</strong>：归因估计量对 estimand 权重的选择有很大弹性，如何从经济理论出发选择最有意义的加权方案？</li>
-<li><strong>连续处理量</strong>：政策评估中大量政策（补贴金额、污染浓度）是连续的，如何将本文框架扩展至连续处理的剂量反应函数估计？</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>"最有效率"的范围</strong>：文章在球形误差（同方差、无序列相关）假设下推导出最优估计量，而实际上处理效应估计普遍存在序列相关。论文虽提供了聚类标准误，但"在串行相关下该估计量是否仍是最优"这一问题值得进一步探究。</p>
-</li>
-<li>
-<p><strong>估计目标（estimand）的主观性</strong>：归因估计量可以灵活地估计任意预设的加权平均处理效应，但如何选择权重需要研究者自行判断。不同权重选择可能导致截然不同的政策结论，这给"最优估计量"的解读带来了条件性：最优是对于给定 estimand 而言的，而 estimand 本身的选择仍是主观判断。</p>
-</li>
-<li>
-<p><strong>负权重问题的根本性</strong>：文章聚焦于在 TWFE 规格中识别出负权重，但作者也指出只要研究者在不满足同质性时使用了限制异质性的规格，就会出现这一问题。这意味着很多使用 TWFE 的已发表论文可能存在系统偏误，本文实质上是对整个事件研究文献的"大规模纠偏"。</p>
-</li>
-<li>
-<p><strong>归因估计量的普适性</strong>：本文证明任何无偏线性估计量都可以表示为某种"归因"结构，这是一个强有力的统一定理。但"仅用未处理观测估计固定效应"依赖于未处理观测数量足够多的前提——如果样本中绝大多数单位很快受到处理，归因估计量的精度可能大幅下降。</p>
-</li>
-<li>
-<p><strong>平行趋势与异质性的权衡</strong>：本文接受平行趋势假设，并在此基础上推导最优估计量。但 Rambachan-Roth (2023) 指出平行趋势假设本身可能存在系统违反，两篇论文提供了互补但难以同时满足的视角——研究者在实践中如何权衡这两类问题？</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
+<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.<br>
+使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="绘图">绘图</h2>
+<p>代码如下,图见上文.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>归因估计量（imputation estimator）和 Callaway-Sant’Anna (2021) 的"组-时间 ATT"估计量在实践中有何区别，二者结果是否接近？</li>
-<li>Stata 命令 <code>did_imputation</code> 的具体语法是什么？如何在实践中选择检验的"前期窗口"长度？</li>
-<li>文章说可以扩展到"三重差分"（triple-difference）设计，具体如何操作？</li>
-<li>如果样本中几乎没有"从未被处理的单位"（never-treated），归因估计量能否有效运作？有哪些替代方法？</li>
-<li>边际消费倾向（MPC）的修正（从约20%降至8-11%）对宏观经济学的乘数模型有什么具体影响？这是否已被宏观模型界广泛接受？</li>
-</ol>
+</section>
 ]]></content>
       <categories>
-        <category>有趣的文章</category>
+        <category>绘图</category>
+        <category>map&amp;sf</category>
       </categories>
       <tags>
-        <tag>论文笔记</tag>
+        <tag>R</tag>
       </tags>
   </entry>
   <entry>
@@ -4370,54 +4418,6 @@ $${y_{it} = \delta_t + \alpha_i + \beta AI_{it} + \gamma X_{it} + \epsilon_{it}}
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大城市人口增长速度🦚</title>
-    <url>/posts/15523/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
-<center>上图即为最终效果</center>
-<h2 id="下载数据">下载数据</h2>
-<p>将代码中的**<code>~/文档/</code>**更换为要保存的目录.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="加载R包">加载R包</h2>
-<p>需要的R包如下所示.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
-<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<ol>
-<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
-<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon, Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
-<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
-<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
-</ol>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
-<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.<br>
-使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="绘图">绘图</h2>
-<p>代码如下,图见上文.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>绘图</category>
-        <category>map&amp;sf</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
       </tags>
   </entry>
   <entry>
@@ -6356,6 +6356,188 @@ $${E_{sjt} \over N_{st}} = \sum_{\tau=-3}^{4} \sum_{k=-4}^{17} \alpha_{\tau k} I
       </tags>
   </entry>
   <entry>
+    <title>地方政府竞争压力、行业同质性与商会的政策参与空间 — 深度阅读笔记 — 陈超 Et Al.</title>
+    <url>/posts/chen2021chamber/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: 地方政府竞争压力、行业同质性与商会的政策参与空间——基于昆山与厦门的比较分析<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/5V3F3QCY/陈超 等 - 2021 - 地方政府竞争压力、行业同质性与商会的政策参与空间——基于昆山与厦门的比较分析.pdf<br>
+Zotero Item Key:: P56CV7CK</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+政商关系是政治经济学的核心议题。在中国政治体制下，商会（业界协会）作为政府与市场之间的中间组织，既是企业利益的代表，也是国家管理社会的工具。已有研究从三个视角分析商会政策参与：（1）国家主义视角——国家的制度结构与政策目标决定参与空间；（2）组织视角——商会内部的规模差异、专业化程度影响集体行动能力；（3）文化视角——官商之间的"关系"网络影响参与渠道。商会影响政策的渠道分两类：制度化渠道（如政协、政府咨询委员会）和非制度化渠道（如商会沙龙、茶话会、政策宣讲会）。</p>
+<p><strong>研究背景</strong><br>
+改革开放以来，台资、港资等外资商会（特别是台资企业协会）是中国地方外资引进的重要组织载体。然而，同样是台资商会，在不同地方（如昆山 vs. 厦门）的政策参与情况差异显著；而同一地方的商会在不同时期（如昆山台协1990年代 vs. 2000年代中后期）也存在明显的历时性变化。这种差异既不能完全用国家结构，也不能仅用商会组织特性来解释。</p>
+<p><strong>作者的问题意识</strong><br>
+为什么不同地方相同类型的外资商会政策参与会有重大差异？为什么外资商会在相同地方不同时期的政策参与也存在显著区别？作者认为"地方政府竞争压力"与"商会内中小企业行业同质性"是两个被既有文献忽视的关键解释变量。</p>
+<p><strong>研究意义</strong><br>
+提供了一个整合地域特征（政府行为）与行业特征（商会能力）的分析框架；填补了外资商会政治参与研究的空白；展示了控制性比较+案例内历时比较相结合的研究设计价值；对理解中国地方政商关系的形成机制和营商环境建设具有重要启示。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：提出研究问题，概述论文框架。</li>
+<li><strong>文献回顾</strong>：国家主义、组织、文化三视角的既有研究及其局限。</li>
+<li><strong>理论框架</strong>：提出"政策参与空间"概念，构建二维分析框架（竞争压力×行业同质性），推导四种参与空间类型。</li>
+<li><strong>研究方法</strong>：变量测量、案例选取与控制性比较设计。</li>
+<li><strong>昆山台协会</strong>：从开放型（台协I）到商会主导有限开放型（台协II）的历时性变化。</li>
+<li><strong>厦门台协会</strong>：从封闭型（台协I）到政府主导有限开放型（台协II）的历时性变化。</li>
+<li><strong>结论</strong>：比较研究发现的综合与政策启示。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>1990年代以来，昆山和厦门都是台资聚集的重要城市，但两地台协会的政策参与空间截然不同，且各自内部都经历了历时性变化。对这一现象的解释，需要一个能够同时处理"跨地区差异"和"同一地区历时差异"的分析框架。</p>
+<h3 id="挑战">挑战</h3>
+<p>既有三大视角的共同局限：国家主义擅长解释共时性差异，但无法解释历时性变化；组织视角和文化视角可解释共时差异，但同样对历时变化解释乏力。此外，现有研究极少以外资商会（而非民营商会）为研究对象。</p>
+<h3 id="理论框架">理论框架</h3>
+<p><strong>核心概念：政策参与空间</strong><br>
+商会政策参与渠道分两类：</p>
+<ul>
+<li><strong>制度化渠道</strong>：政府主动开放（如政府工作会议、台商座谈会、政协参与）</li>
+<li><strong>非制度化渠道</strong>：商会自行拓展（如商会沙龙、联谊活动、慈善会结网）</li>
+</ul>
+<p>四种政策参与空间类型（依据两个自变量的高低组合）：</p>
+<table>
+<thead>
+<tr>
+<th>地方竞争压力</th>
+<th>行业同质性</th>
+<th>政策参与空间</th>
+<th>代表案例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>大</td>
+<td>高</td>
+<td><strong>开放型</strong></td>
+<td>昆山台协I</td>
+</tr>
+<tr>
+<td>小</td>
+<td>高</td>
+<td><strong>商会主导有限开放型</strong></td>
+<td>昆山台协II</td>
+</tr>
+<tr>
+<td>大</td>
+<td>低</td>
+<td><strong>政府主导有限开放型</strong></td>
+<td>厦门台协II</td>
+</tr>
+<tr>
+<td>小</td>
+<td>低</td>
+<td><strong>封闭型</strong></td>
+<td>厦门台协I</td>
+</tr>
+</tbody>
+</table>
+<p><strong>机制一：地方竞争压力 → 制度化参与渠道</strong><br>
+当地方政府面临招商引资竞争压力时（晋升锦标赛逻辑下的激励），为解决政府与企业间的信息不对称、留住外资，政府有意愿主动开放制度化的参与渠道（政策咨询、听证、定期座谈）。竞争压力越大，渠道越多。</p>
+<p><strong>机制二：中小企业行业同质性 → 非制度化参与渠道</strong><br>
+商会中小企业是主体，行业分布越同质（同一行业集中），利益协调越容易，集体行动能力越强，商会越能够自主创造非制度化渠道（活动策划、关系网络建设）。行业异质性越高，集体行动困境越难克服，非制度化渠道越稀缺。</p>
+<p><strong>变量测量</strong>：</p>
+<ul>
+<li>地方政府竞争压力：三个指标——GDP增速相对位置、实际利用外资相对位置、招商引资相对优势（各赋值0/0.5/1）</li>
+<li>行业同质性：基于1998/2008/2013年中国工业企业数据库计算各地区台资企业行业集中度</li>
+</ul>
+<h3 id="案例分析">案例分析</h3>
+<p><strong>昆山台协I（1990年代至2000年代初）：开放型</strong></p>
+<ul>
+<li>背景：1980年代昆山经济落后，被称为苏州"小八子"/“小六子”，发展压力极大</li>
+<li>地方政府采取"以软补硬"战略：向台协开放政府工作会议、政协讨论会、外商听证会；建立服务受理中心，邀请台协代表担任行风监督员</li>
+<li>昆山台资企业以轻工业（44%）+装备制造业（25%）为主，行业集中度高</li>
+<li>台协自主创造大量非制度化渠道（圣诞/中秋联谊、慈善游园、妇幼慈善会活动），结成政府部门关系网络</li>
+</ul>
+<p><strong>昆山台协II（2000年代中至2017年）：商会主导有限开放型</strong></p>
+<ul>
+<li>背景：2004年后昆山长期占据全国百强县第一，招商引资遥遥领先，竞争压力大幅下降</li>
+<li>政府角色从"服务配合型"转向"发展引领型"——关闭了多数制度化渠道，与台协直接接触的官员从书记/市长降格为台办人员</li>
+<li>台资企业产业结构调整（电子+装备制造业，合计&gt;60%），行业同质性仍高</li>
+<li>台协主动拓展新非制度化渠道：与本地商会建立组织联结（昆台工商协青会）、吸纳退休党政干部加入协会</li>
+</ul>
+<p><strong>厦门台协I（1990年代至2000年代初）：封闭型</strong></p>
+<ul>
+<li>背景：厦门坐享经济特区政策优势，GDP增速和外资利用长期领先泉州/漳州，政府无竞争压力</li>
+<li>政府不主动开放制度化渠道，与台商互动停留在礼仪性层面</li>
+<li>厦门台资企业行业分布高度异质（涵盖电子、化工、纺织、食品等多行业），集体行动能力弱</li>
+<li>结果：两类渠道均稀缺，政策参与空间封闭</li>
+</ul>
+<p><strong>厦门台协II（2000年代中至2017年）：政府主导有限开放型</strong></p>
+<ul>
+<li>背景：2007年后漳州/泉州GDP增速超过厦门；2009年厦门实际利用外资甚至被泉州反超，当地官员产生危机感（“以往说’厦漳泉’，现在是不是要改成’漳泉厦’了”）</li>
+<li>竞争压力上升，政府开始主动开放制度化参与渠道（各类台商座谈会）</li>
+<li>厦门台资企业行业同质性仍低（多行业分布格局未根本改变），商会集体行动能力依然弱</li>
+<li>结果：制度化渠道增多，但非制度化渠道仍稀缺→政府主导的有限开放型</li>
+</ul>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<p><strong>核心发现</strong>：地方政府竞争压力与商会内中小企业行业同质性是塑造外资商会政策参与空间的两个关键变量。二者的不同取值组合产生了四种政策参与空间类型，并能够同时解释跨地区共时差异和同一地区历时差异。四个案例（昆山/厦门×两个时期）的比较分析均与理论预期一致。</p>
+<p><strong>对领域的贡献</strong>：</p>
+<ol>
+<li>提供了一个整合地域特征与行业特征的新分析视角，弥补了既有国家主义、组织、文化三视角的解释不足；</li>
+<li>以外资商会（台资企业协会）为研究对象，拓展了商会政治参与研究的边界；</li>
+<li>将跨案例比较与案例内历时比较相结合的研究设计，为研究同类问题提供了方法论参考。</li>
+</ol>
+<p><strong>政策含义</strong>：</p>
+<ul>
+<li>营商环境改善的关键在于培育地方政府的竞争意识——地方政府只有在竞争压力下才会主动开放政策参与渠道；</li>
+<li>对中国来说，减少行政垄断、打破地方保护，对于维持地方之间的良性竞争至关重要；</li>
+<li>外资商会应注重培育行业内部的同质性集体行动能力，而非单纯依赖个别大企业的政治关联。</li>
+</ul>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文中提及的方向</strong>：</p>
+<ol>
+<li>本文聚焦外资商会，未来可扩展至民营商会，检验理论框架的适用性；</li>
+<li>需要更多案例或大样本数据验证理论框架的普遍性。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li>竞争压力的"动态"问题：当一个地区从竞争劣势转为优势（如昆山），政府对商会的态度从开放转向封闭是否存在路径依赖？已建立的制度化渠道是否更难关闭（沉没成本）？</li>
+<li>行业同质性的内生性：行业结构是否本身受到地方政府政策的影响？如果竞争压力高的地方吸引了更多同质行业的企业（比如昆山专注电子制造），那么行业同质性可能部分是地方竞争压力的结果，而非独立自变量；</li>
+<li>国家层面的制度变化：本文暗示了地方政府竞争是商会政策参与的关键动力，但随着2013年以来"放管服"改革深化，国家层面主动推进政务公开，制度化参与渠道的形成是否越来越受中央政策驱动，而非地方竞争？</li>
+<li>比较政治学视野：中国外资商会参与政策制定的模式与东南亚、中东欧等转型经济体有何异同？竞争压力和行业同质性的逻辑是否在这些地区也成立？</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>两个自变量的交互效应</strong>：理论框架处理的是两个自变量的组合效应，但文中隐含的是线性的"各自独立作用"逻辑。竞争压力高的地方，是否也会因为吸引了更多同质企业而产生更高的行业同质性？如果两个自变量之间存在正相关（内生性），四种类型的组合在现实中可能不均等分布，也会影响理论的可推广性。</p>
+</li>
+<li>
+<p><strong>因果方向的识别</strong>：文章主要用过程追踪进行机制验证。但"昆山的高竞争→开放渠道"究竟是政府主动"开放"还是台商的"推动"引发的？如果台商本来就具有很强的集体行动能力（来自行业同质性），那他们是否也在主动"推"政府开放渠道？机制的方向可能是双向的。</p>
+</li>
+<li>
+<p><strong>地方政府的策略性</strong>：文章假设地方官员在竞争压力下会"合理地"选择开放政策渠道以吸引外资。但官员也有保持政策主导权、维护寻租空间的激励——对某些腐败官员而言，制度不透明、渠道封闭可能是有利的。为什么竞争压力总能胜过这种"封闭激励"？</p>
+</li>
+<li>
+<p><strong>外资商会的特殊性</strong>：本文聚焦台资企业协会，这一群体具有特殊性——台商与大陆政府之间有地缘政治背景下的特殊关系，台办这一专门机构的存在也使台资商会与普通民营商会有根本不同。理论框架推广到一般民营商会时，需要验证国家是否会对普通民营企业开放同样的制度化渠道。</p>
+</li>
+<li>
+<p><strong>测量问题</strong>：竞争压力的测量用GDP增速相对位置和外资利用绝对量的相对位置，这些指标容易获取但较为粗糙。如何控制经济周期（金融危机）对增速的影响，以及绝对量vs.相对量的混淆，是值得关注的测量效度问题。</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>晋升锦标赛理论（周黎安）有哪些最新的实证挑战（如近年文献质疑了GDP绩效与晋升的相关性）？这是否削弱了本文的理论基础？</li>
+<li>商会的制度化参与渠道和非制度化参与渠道各自在实践中如何运作？哪种渠道对政策结果的影响更大？</li>
+<li>如果将同样的分析框架用于民营商会（如浙商总会、广东工商联），两个自变量的效应是否稳健？</li>
+<li>本文使用的中国工业企业数据库（1998/2008/2013年）来测量行业同质性，这一数据的代表性和覆盖范围有什么局限？</li>
+<li>文章提到厦门坐享政策优势却出现封闭型参与空间，这是否意味着"过度"的政策优惠反而抑制了地方政府提升营商环境的动力——这一"惰化效应"在中国政策实践中有多普遍？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>&lt;玉米与人口&gt;深度阅读笔记 — Chen &amp; Kung</title>
     <url>/posts/chen2016/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -6629,188 +6811,6 @@ $${E_{sjt} \over N_{st}} = \sum_{\tau=-3}^{4} \sum_{k=-4}^{17} \alpha_{\tau k} I
       <tags>
         <tag>论文笔记</tag>
         <tag>经济史</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>地方政府竞争压力、行业同质性与商会的政策参与空间 — 深度阅读笔记 — 陈超 Et Al.</title>
-    <url>/posts/chen2021chamber/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: 地方政府竞争压力、行业同质性与商会的政策参与空间——基于昆山与厦门的比较分析<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/5V3F3QCY/陈超 等 - 2021 - 地方政府竞争压力、行业同质性与商会的政策参与空间——基于昆山与厦门的比较分析.pdf<br>
-Zotero Item Key:: P56CV7CK</p>
-<hr>
-<span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-政商关系是政治经济学的核心议题。在中国政治体制下，商会（业界协会）作为政府与市场之间的中间组织，既是企业利益的代表，也是国家管理社会的工具。已有研究从三个视角分析商会政策参与：（1）国家主义视角——国家的制度结构与政策目标决定参与空间；（2）组织视角——商会内部的规模差异、专业化程度影响集体行动能力；（3）文化视角——官商之间的"关系"网络影响参与渠道。商会影响政策的渠道分两类：制度化渠道（如政协、政府咨询委员会）和非制度化渠道（如商会沙龙、茶话会、政策宣讲会）。</p>
-<p><strong>研究背景</strong><br>
-改革开放以来，台资、港资等外资商会（特别是台资企业协会）是中国地方外资引进的重要组织载体。然而，同样是台资商会，在不同地方（如昆山 vs. 厦门）的政策参与情况差异显著；而同一地方的商会在不同时期（如昆山台协1990年代 vs. 2000年代中后期）也存在明显的历时性变化。这种差异既不能完全用国家结构，也不能仅用商会组织特性来解释。</p>
-<p><strong>作者的问题意识</strong><br>
-为什么不同地方相同类型的外资商会政策参与会有重大差异？为什么外资商会在相同地方不同时期的政策参与也存在显著区别？作者认为"地方政府竞争压力"与"商会内中小企业行业同质性"是两个被既有文献忽视的关键解释变量。</p>
-<p><strong>研究意义</strong><br>
-提供了一个整合地域特征（政府行为）与行业特征（商会能力）的分析框架；填补了外资商会政治参与研究的空白；展示了控制性比较+案例内历时比较相结合的研究设计价值；对理解中国地方政商关系的形成机制和营商环境建设具有重要启示。</p>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言</strong>：提出研究问题，概述论文框架。</li>
-<li><strong>文献回顾</strong>：国家主义、组织、文化三视角的既有研究及其局限。</li>
-<li><strong>理论框架</strong>：提出"政策参与空间"概念，构建二维分析框架（竞争压力×行业同质性），推导四种参与空间类型。</li>
-<li><strong>研究方法</strong>：变量测量、案例选取与控制性比较设计。</li>
-<li><strong>昆山台协会</strong>：从开放型（台协I）到商会主导有限开放型（台协II）的历时性变化。</li>
-<li><strong>厦门台协会</strong>：从封闭型（台协I）到政府主导有限开放型（台协II）的历时性变化。</li>
-<li><strong>结论</strong>：比较研究发现的综合与政策启示。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>1990年代以来，昆山和厦门都是台资聚集的重要城市，但两地台协会的政策参与空间截然不同，且各自内部都经历了历时性变化。对这一现象的解释，需要一个能够同时处理"跨地区差异"和"同一地区历时差异"的分析框架。</p>
-<h3 id="挑战">挑战</h3>
-<p>既有三大视角的共同局限：国家主义擅长解释共时性差异，但无法解释历时性变化；组织视角和文化视角可解释共时差异，但同样对历时变化解释乏力。此外，现有研究极少以外资商会（而非民营商会）为研究对象。</p>
-<h3 id="理论框架">理论框架</h3>
-<p><strong>核心概念：政策参与空间</strong><br>
-商会政策参与渠道分两类：</p>
-<ul>
-<li><strong>制度化渠道</strong>：政府主动开放（如政府工作会议、台商座谈会、政协参与）</li>
-<li><strong>非制度化渠道</strong>：商会自行拓展（如商会沙龙、联谊活动、慈善会结网）</li>
-</ul>
-<p>四种政策参与空间类型（依据两个自变量的高低组合）：</p>
-<table>
-<thead>
-<tr>
-<th>地方竞争压力</th>
-<th>行业同质性</th>
-<th>政策参与空间</th>
-<th>代表案例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>大</td>
-<td>高</td>
-<td><strong>开放型</strong></td>
-<td>昆山台协I</td>
-</tr>
-<tr>
-<td>小</td>
-<td>高</td>
-<td><strong>商会主导有限开放型</strong></td>
-<td>昆山台协II</td>
-</tr>
-<tr>
-<td>大</td>
-<td>低</td>
-<td><strong>政府主导有限开放型</strong></td>
-<td>厦门台协II</td>
-</tr>
-<tr>
-<td>小</td>
-<td>低</td>
-<td><strong>封闭型</strong></td>
-<td>厦门台协I</td>
-</tr>
-</tbody>
-</table>
-<p><strong>机制一：地方竞争压力 → 制度化参与渠道</strong><br>
-当地方政府面临招商引资竞争压力时（晋升锦标赛逻辑下的激励），为解决政府与企业间的信息不对称、留住外资，政府有意愿主动开放制度化的参与渠道（政策咨询、听证、定期座谈）。竞争压力越大，渠道越多。</p>
-<p><strong>机制二：中小企业行业同质性 → 非制度化参与渠道</strong><br>
-商会中小企业是主体，行业分布越同质（同一行业集中），利益协调越容易，集体行动能力越强，商会越能够自主创造非制度化渠道（活动策划、关系网络建设）。行业异质性越高，集体行动困境越难克服，非制度化渠道越稀缺。</p>
-<p><strong>变量测量</strong>：</p>
-<ul>
-<li>地方政府竞争压力：三个指标——GDP增速相对位置、实际利用外资相对位置、招商引资相对优势（各赋值0/0.5/1）</li>
-<li>行业同质性：基于1998/2008/2013年中国工业企业数据库计算各地区台资企业行业集中度</li>
-</ul>
-<h3 id="案例分析">案例分析</h3>
-<p><strong>昆山台协I（1990年代至2000年代初）：开放型</strong></p>
-<ul>
-<li>背景：1980年代昆山经济落后，被称为苏州"小八子"/“小六子”，发展压力极大</li>
-<li>地方政府采取"以软补硬"战略：向台协开放政府工作会议、政协讨论会、外商听证会；建立服务受理中心，邀请台协代表担任行风监督员</li>
-<li>昆山台资企业以轻工业（44%）+装备制造业（25%）为主，行业集中度高</li>
-<li>台协自主创造大量非制度化渠道（圣诞/中秋联谊、慈善游园、妇幼慈善会活动），结成政府部门关系网络</li>
-</ul>
-<p><strong>昆山台协II（2000年代中至2017年）：商会主导有限开放型</strong></p>
-<ul>
-<li>背景：2004年后昆山长期占据全国百强县第一，招商引资遥遥领先，竞争压力大幅下降</li>
-<li>政府角色从"服务配合型"转向"发展引领型"——关闭了多数制度化渠道，与台协直接接触的官员从书记/市长降格为台办人员</li>
-<li>台资企业产业结构调整（电子+装备制造业，合计&gt;60%），行业同质性仍高</li>
-<li>台协主动拓展新非制度化渠道：与本地商会建立组织联结（昆台工商协青会）、吸纳退休党政干部加入协会</li>
-</ul>
-<p><strong>厦门台协I（1990年代至2000年代初）：封闭型</strong></p>
-<ul>
-<li>背景：厦门坐享经济特区政策优势，GDP增速和外资利用长期领先泉州/漳州，政府无竞争压力</li>
-<li>政府不主动开放制度化渠道，与台商互动停留在礼仪性层面</li>
-<li>厦门台资企业行业分布高度异质（涵盖电子、化工、纺织、食品等多行业），集体行动能力弱</li>
-<li>结果：两类渠道均稀缺，政策参与空间封闭</li>
-</ul>
-<p><strong>厦门台协II（2000年代中至2017年）：政府主导有限开放型</strong></p>
-<ul>
-<li>背景：2007年后漳州/泉州GDP增速超过厦门；2009年厦门实际利用外资甚至被泉州反超，当地官员产生危机感（“以往说’厦漳泉’，现在是不是要改成’漳泉厦’了”）</li>
-<li>竞争压力上升，政府开始主动开放制度化参与渠道（各类台商座谈会）</li>
-<li>厦门台资企业行业同质性仍低（多行业分布格局未根本改变），商会集体行动能力依然弱</li>
-<li>结果：制度化渠道增多，但非制度化渠道仍稀缺→政府主导的有限开放型</li>
-</ul>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<p><strong>核心发现</strong>：地方政府竞争压力与商会内中小企业行业同质性是塑造外资商会政策参与空间的两个关键变量。二者的不同取值组合产生了四种政策参与空间类型，并能够同时解释跨地区共时差异和同一地区历时差异。四个案例（昆山/厦门×两个时期）的比较分析均与理论预期一致。</p>
-<p><strong>对领域的贡献</strong>：</p>
-<ol>
-<li>提供了一个整合地域特征与行业特征的新分析视角，弥补了既有国家主义、组织、文化三视角的解释不足；</li>
-<li>以外资商会（台资企业协会）为研究对象，拓展了商会政治参与研究的边界；</li>
-<li>将跨案例比较与案例内历时比较相结合的研究设计，为研究同类问题提供了方法论参考。</li>
-</ol>
-<p><strong>政策含义</strong>：</p>
-<ul>
-<li>营商环境改善的关键在于培育地方政府的竞争意识——地方政府只有在竞争压力下才会主动开放政策参与渠道；</li>
-<li>对中国来说，减少行政垄断、打破地方保护，对于维持地方之间的良性竞争至关重要；</li>
-<li>外资商会应注重培育行业内部的同质性集体行动能力，而非单纯依赖个别大企业的政治关联。</li>
-</ul>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文中提及的方向</strong>：</p>
-<ol>
-<li>本文聚焦外资商会，未来可扩展至民营商会，检验理论框架的适用性；</li>
-<li>需要更多案例或大样本数据验证理论框架的普遍性。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li>竞争压力的"动态"问题：当一个地区从竞争劣势转为优势（如昆山），政府对商会的态度从开放转向封闭是否存在路径依赖？已建立的制度化渠道是否更难关闭（沉没成本）？</li>
-<li>行业同质性的内生性：行业结构是否本身受到地方政府政策的影响？如果竞争压力高的地方吸引了更多同质行业的企业（比如昆山专注电子制造），那么行业同质性可能部分是地方竞争压力的结果，而非独立自变量；</li>
-<li>国家层面的制度变化：本文暗示了地方政府竞争是商会政策参与的关键动力，但随着2013年以来"放管服"改革深化，国家层面主动推进政务公开，制度化参与渠道的形成是否越来越受中央政策驱动，而非地方竞争？</li>
-<li>比较政治学视野：中国外资商会参与政策制定的模式与东南亚、中东欧等转型经济体有何异同？竞争压力和行业同质性的逻辑是否在这些地区也成立？</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>两个自变量的交互效应</strong>：理论框架处理的是两个自变量的组合效应，但文中隐含的是线性的"各自独立作用"逻辑。竞争压力高的地方，是否也会因为吸引了更多同质企业而产生更高的行业同质性？如果两个自变量之间存在正相关（内生性），四种类型的组合在现实中可能不均等分布，也会影响理论的可推广性。</p>
-</li>
-<li>
-<p><strong>因果方向的识别</strong>：文章主要用过程追踪进行机制验证。但"昆山的高竞争→开放渠道"究竟是政府主动"开放"还是台商的"推动"引发的？如果台商本来就具有很强的集体行动能力（来自行业同质性），那他们是否也在主动"推"政府开放渠道？机制的方向可能是双向的。</p>
-</li>
-<li>
-<p><strong>地方政府的策略性</strong>：文章假设地方官员在竞争压力下会"合理地"选择开放政策渠道以吸引外资。但官员也有保持政策主导权、维护寻租空间的激励——对某些腐败官员而言，制度不透明、渠道封闭可能是有利的。为什么竞争压力总能胜过这种"封闭激励"？</p>
-</li>
-<li>
-<p><strong>外资商会的特殊性</strong>：本文聚焦台资企业协会，这一群体具有特殊性——台商与大陆政府之间有地缘政治背景下的特殊关系，台办这一专门机构的存在也使台资商会与普通民营商会有根本不同。理论框架推广到一般民营商会时，需要验证国家是否会对普通民营企业开放同样的制度化渠道。</p>
-</li>
-<li>
-<p><strong>测量问题</strong>：竞争压力的测量用GDP增速相对位置和外资利用绝对量的相对位置，这些指标容易获取但较为粗糙。如何控制经济周期（金融危机）对增速的影响，以及绝对量vs.相对量的混淆，是值得关注的测量效度问题。</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>晋升锦标赛理论（周黎安）有哪些最新的实证挑战（如近年文献质疑了GDP绩效与晋升的相关性）？这是否削弱了本文的理论基础？</li>
-<li>商会的制度化参与渠道和非制度化参与渠道各自在实践中如何运作？哪种渠道对政策结果的影响更大？</li>
-<li>如果将同样的分析框架用于民营商会（如浙商总会、广东工商联），两个自变量的效应是否稳健？</li>
-<li>本文使用的中国工业企业数据库（1998/2008/2013年）来测量行业同质性，这一数据的代表性和覆盖范围有什么局限？</li>
-<li>文章提到厦门坐享政策优势却出现封闭型参与空间，这是否意味着"过度"的政策优惠反而抑制了地方政府提升营商环境的动力——这一"惰化效应"在中国政策实践中有多普遍？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -9444,157 +9444,6 @@ _(p. 319)</p>
       </tags>
   </entry>
   <entry>
-    <title>被相信的性别社会偏好差异 — 深度阅读笔记 — Exley, Hauser, Moore &amp; Pezzuto</title>
-    <url>/posts/exley2025/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Believed Gender Differences in Social Preferences</li>
-<li><strong>作者</strong>: Christine L. Exley (Harvard), Oliver P. Hauser (Exeter), Molly Moore (Harvard), John-Henry Pezzuto (Harvard)</li>
-<li><strong>年份</strong>: 2025</li>
-<li><strong>来源</strong>: The Quarterly Journal of Economics, 140(1): 403-458</li>
-<li><strong>DOI</strong>: 10.1093/qje/qjae030</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<ul>
-<li><strong>领域基础知识</strong>：这篇论文属于行为经济学、实验经济学和性别经济学的交叉领域。这里的核心概念是“社会偏好”（social preferences），大致指一个人做决定时，不只关心自己的收益，也关心他人的收益、平等、公平、合作等。传统文献常问“男女在社会偏好上是否真的不同”，而这篇论文把问题往前推进一步：<strong>即便真实差异不大，人们是否相信男女有差异？</strong></li>
-<li><strong>研究背景</strong>：现实中，女性在工资、晋升、领导职位上仍然存在系统性劣势。已有大量研究讨论真实的性别行为差异，比如谈判、竞争、合作、分配，但关于“人们相信女性和男性在社会偏好上有何不同”的研究相对少得多。</li>
-<li><strong>作者的问题意识</strong>：作者关心的不是“女性是否真的更慷慨、更平等主义”，而是“人们是否认为女性更慷慨、更平等主义”，以及这种信念从哪里来、会带来什么后果。这个问题很重要，因为很多现实决策——招聘、分工、投票、选择合作者——受信念影响，不一定受真实行为本身影响。</li>
-<li><strong>研究意义</strong>：如果社会普遍相信女性“更有社会性导向”，那么这种信念可能一方面让女性在某些合作型场景中受欢迎，另一方面也可能让女性在竞争性、绩效导向的场景中吃亏。换言之，<strong>错误或夸大的性别信念本身，就可能塑造劳动市场和社会评价结果</strong>。</li>
-</ul>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<p>这篇论文大致分成五部分。</p>
-<p>第一部分是引言，提出核心问题：关于社会偏好的真实性别差异，文献结论并不一致；但关于“被相信的性别差异”几乎没被系统研究。</p>
-<p>第二部分用一系列经济学实验游戏，系统记录人们是否相信女性比男性更慷慨、更平等、更合作。这一部分是全文的经验基础。</p>
-<p>第三部分研究这种信念可能从哪里来。作者重点借用“联想记忆/associative memory”的思路，考察<strong>相似性</strong>和<strong>干扰</strong>两种机制。</p>
-<p>第四部分把这种信念放到更接近现实的场景里，讨论它如何延伸到家庭、工作场所和政策态度，并通过 worker-employer 实验看这种信念如何影响对男女雇主的选择。</p>
-<p>第五部分总结全文，并讨论未来研究方向，尤其是如何纠正这种信念、它如何影响劳动力市场结果、以及不同场景下这种信念是否会增强或反转。</p>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<p><strong>背景 -&gt; 挑战 -&gt; 方法 -&gt; 数据 -&gt; 结果</strong></p>
-<h3 id="背景">背景</h3>
-<p>已有文献长期在问：女性和男性在慷慨、平等、公平、合作等“社会偏好”上是否不同。但这个问题本身并不足够。现实中的很多决策，先发生的是“别人怎么看你”，而不是“你真实如何”。如果雇主、同事、选民、家庭成员普遍认为女性更在意平等、更愿意照顾别人，那么这种看法本身就会影响资源配置与角色分工。</p>
-<h3 id="挑战">挑战</h3>
-<p>这类研究有三个难点。</p>
-<p>第一，社会偏好不是单一概念，里面混合了慷慨、平等、合作、信任等多个维度。如果只看一种游戏，很容易把结论局限在某个特殊场景。</p>
-<p>第二，要区分“真实行为差异”和“被相信的差异”。如果研究者只观察到信念差异，而不观察真实决策，就不知道这种信念到底是准确判断还是刻板印象。</p>
-<p>第三，若发现人们确实相信女性更有社会性导向，还要解释这种信念是怎么形成的。作者认为，标准的“理性更新”框架不够，记忆提取过程本身可能会塑造信念。</p>
-<h3 id="方法">方法</h3>
-<p>作者的方法可以分成三层。</p>
-<p>第一层是<strong>记录信念</strong>。作者设计了一系列经济学实验游戏，让受试者分别判断：有多少比例的女性会选择更“社会性导向”的选项？有多少比例的男性会这样做？这里的“社会性导向”大致对应更慷慨、更平等或更合作的选项。</p>
-<p>第二层是<strong>对照真实行为</strong>。同一套研究中，作者也观察男女在这些场景里的真实选择，从而判断“被相信的性别差异”是否准确。</p>
-<p>第三层是<strong>识别信念形成机制</strong>。作者借用 associative memory 模型，提出两条假说：</p>
-<ol>
-<li><strong>相似性（similarity）</strong>：人们会调用与当前判断情境相似的既有经验。如果一个人生活中更容易想起“更慷慨的女性”，那么他更可能相信女性在实验情境中也更慷慨。</li>
-<li><strong>干扰（interference）</strong>：记忆提取不是完美的。一个额外经历即使按完全理性的贝叶斯更新不该改变信念，也可能因为干扰了旧记忆的回忆顺序，改变人们的判断。</li>
-</ol>
-<p>这里的识别直觉很重要：作者不是简单说“经历影响信念”，而是进一步说<strong>记忆怎样被提取出来</strong>会影响信念，因此信念未必符合“完美记忆的理性人”模型。</p>
-<h3 id="数据">数据</h3>
-<p>论文总共使用 <strong>15 个研究、8,979 名受试者</strong>。</p>
-<p>最核心的是主实验中的经济学游戏研究，共 <strong>3,382 名参与者</strong>。作者在两类主样本中实施：</p>
-<ul>
-<li>382 名本科生</li>
-<li>400 名线上参与者</li>
-</ul>
-<p>在这些主研究里，作者设计了 <strong>14 个场景</strong>，覆盖：</p>
-<ul>
-<li>独裁者博弈（dictator game）</li>
-<li>带效率权衡的独裁者博弈</li>
-<li>带应得权利（entitlement）权衡的独裁者博弈</li>
-<li>最后通牒博弈（ultimatum game）</li>
-<li>信任博弈（trust game）</li>
-<li>囚徒困境（prisoner’s dilemma）</li>
-<li>公共品博弈（public goods game）</li>
-</ul>
-<p>这些场景又区分为：</p>
-<ul>
-<li><strong>第一方场景</strong>：选择会影响自己收益，因此“自利动机”存在。</li>
-<li><strong>第三方场景</strong>：选择只影响别人收益，因此更能看出人们是否把“社会性导向”理解为平等/合作，而不只是“少为自己争”。</li>
-</ul>
-<p>此外，作者还做了：</p>
-<ul>
-<li>相似性相关研究：799 人</li>
-<li>干扰实验：3,198 人</li>
-<li>应用与后果研究：1,600 人</li>
-<li>以及专业人士样本、代表性样本、不同 stakes、不同问法等稳健性研究</li>
-</ul>
-<h3 id="结果">结果</h3>
-<h4 id="1-主结果：人们稳定地相信女性比男性更有社会性导向">1. 主结果：人们稳定地相信女性比男性更有社会性导向</h4>
-<p>这是全文最核心的发现。</p>
-<p>在主实验的 28 个情境中，受试者都显著认为女性比男性更可能选择“社会性导向”的选项。这个被相信的性别差距大约在 <strong>8 到 13 个百分点</strong>之间，而且在很多不同情境下都存在：</p>
-<ul>
-<li>有无自利动机时都存在</li>
-<li>有无战略考虑时都存在</li>
-<li>公平概念不同的场景里都存在</li>
-<li>第一方与第三方场景里都存在</li>
-</ul>
-<p>换句话说，这不是某一种博弈的偶然结果，而是一个<strong>跨情境、跨样本、跨问法都很稳的信念模式</strong>。</p>
-<h4 id="2-与真实行为对比：这种信念大体上是不准确的">2. 与真实行为对比：这种信念大体上是不准确的</h4>
-<p>论文最有意思的地方在这里：作者不是只发现“人们有这种想法”，而是进一步发现这种想法<strong>多数时候夸大了真实差异</strong>。</p>
-<p>在真实决策数据里，作者发现：在 28 个情境中的 24 个里，无法拒绝“男女无差异”。也就是说，真实行为上并没有稳定、普遍的性别差异。</p>
-<p>但在信念数据里，受试者几乎系统性地低估男性会做出社会性导向选择的比例，于是导致“女性更有社会性导向”的信念差距被显著放大。作者指出，在 28 个情境中的 <strong>26 个</strong>，这种被相信的性别差距被显著高估。</p>
-<p>所以这篇论文的核心不是“女性确实更慷慨”，而是：<strong>社会普遍相信女性更慷慨、更平等主义，但这种信念大多并不准确。</strong></p>
-<h4 id="3-机制结果：记忆中的“相似经验”与这种信念相关">3. 机制结果：记忆中的“相似经验”与这种信念相关</h4>
-<p>作者发现，若参与者在回忆“慷慨的人”时更容易想到女性，那么他们更可能相信女性在实验中的社会性导向更强。</p>
-<p>另外，如果参与者报告自己童年更多由女性照料，或者人生经历中接触到更多“慷慨、平等主义的女性”，那么他们所持有的 believed gender gap 也更大。</p>
-<p>这部分是<strong>相关性证据</strong>。它支持作者的解释：人们不是在一个真空里形成信念，而是把现实生活中容易被提取出来的相似经验，投射到新的判断场景里。</p>
-<h4 id="4-机制结果：干扰经验可以因果性地改变信念">4. 机制结果：干扰经验可以因果性地改变信念</h4>
-<p>作者进一步做了更强的识别：设计“干扰性经历”来影响记忆提取。</p>
-<p>结果显示，在两项总计 <strong>3,198 人</strong>的研究中，这种干扰经验会显著改变人们对男女社会偏好差异的判断。更关键的是，即使研究者已经提供了关于男女在相似情境中行为分布的信息，并要求受试者准确复述，这种干扰效应仍然存在。</p>
-<p>这说明什么？说明问题不只是“信息有没有给到”，而是<strong>人们在形成判断时，哪些信息和记忆被真正调出来了</strong>。这正是作者想强调的 associative memory 机制，也是在挑战“完美记忆贝叶斯人”的基准模型。</p>
-<h4 id="5-应用结果：这种信念延伸到家庭、职场与政策态度">5. 应用结果：这种信念延伸到家庭、职场与政策态度</h4>
-<p>作者发现，这种 believed gender gap 不只存在于抽象实验游戏里，也进入更现实的判断：</p>
-<ul>
-<li>在家庭中，人们更相信女性会更重视家庭分工、家庭贡献与子女养育中的平等。</li>
-<li>在职场中，人们更相信女性偏好 equal pay，而男性更能接受 performance pay。</li>
-<li>在政策态度上，人们更相信女性支持再分配，以及教育、医疗、住房的平等可及。</li>
-</ul>
-<h4 id="6-劳动市场含义：这种信念会影响人们如何选择雇主">6. 劳动市场含义：这种信念会影响人们如何选择雇主</h4>
-<p>在 worker-employer 实验中，作者发现：当工人是低绩效者、因而会从 equal pay 中受益时，他们更偏好女性雇主；当工人是高绩效者、因而更能从 performance pay 中受益时，他们对女性雇主的偏好下降。</p>
-<p>这说明 believed gender gap 并不只是“想法”，而可能进入真实匹配行为：人们会根据自己利益，利用这些关于男女的信念来做选择。</p>
-<h4 id="7-异质性与稳健性">7. 异质性与稳健性</h4>
-<p>论文的稳健性做得很强。作者表明这一信念模式对以下变化都相当稳健：</p>
-<ul>
-<li>样本换成本科生、线上样本、专业管理/招聘人士、代表性样本</li>
-<li>belief questions 的数量、措辞、顺序变化</li>
-<li>是否只看先做决策还是先做信念题</li>
-<li>是否控制人口学变量</li>
-<li>是否看 full distribution 而非均值</li>
-<li>是否改变给与情境中的 stakes 和乘数</li>
-<li>是否把研究包装成不那么显眼的“性别研究”</li>
-</ul>
-<p>作者还指出，这个 believed gender gap 的大小，甚至大于某些年龄组差异和收入组差异在人们心中的印象差距。</p>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<ul>
-<li><strong>核心发现</strong>：这篇论文最重要的发现是，社会普遍相信女性比男性更慷慨、更平等、更合作，但这种“被相信的性别差异”在很大程度上并不对应稳定的真实行为差异。</li>
-<li><strong>对领域的贡献</strong>：论文把研究重心从“真实性别差异”推进到了“被相信的性别差异”，并把性别经济学、社会偏好实验和记忆驱动的信念形成文献连接起来。</li>
-<li><strong>实践含义</strong>：这类信念可能在合作型环境中对女性有利，在竞争型环境中对女性不利；它也可能影响雇佣、晋升、薪酬制度偏好、家庭分工以及政策判断。</li>
-</ul>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<h3 id="1-论文明确提到的未来方向">1. 论文明确提到的未来方向</h3>
-<ol>
-<li>研究如何提供准确而有效的信息来纠正这种 believed gender gap，以及干扰性经历为何会削弱信息纠偏。</li>
-<li>进一步研究这种信念如何影响劳动市场结果，例如男女雇主、不同岗位和行业中的成功概率。</li>
-<li>研究在不同 domain 中，这种 believed gender gap 是否更强、变弱，甚至反转。</li>
-<li>研究女性是否会因为“没有达到别人期待的社会性导向”而受到更强惩罚，或者在表现出社会性导向时获得更少额外回报。</li>
-</ol>
-<h3 id="2-从论文可推导出的进一步研究方向">2. 从论文可推导出的进一步研究方向</h3>
-<ol>
-<li>把这种信念放进真实组织环境中，研究它如何影响招聘、晋升、任务分配和绩效评价。</li>
-<li>比较不同文化、制度与性别规范背景下，这种信念是否同样稳定。</li>
-<li>研究这种信念与“女性适合照顾型角色、男性适合竞争型角色”的职业刻板印象如何交互。</li>
-<li>研究长期信息干预、教育训练、组织制度设计能否系统性降低这种误判。</li>
-<li>研究更包容的性别测量，而不只停留在二元性别框架。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>QJE</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>对社会偏好中性别差异的信念 — 深度阅读笔记 — Exley Et Al.</title>
     <url>/posts/exley2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Believed Gender Differences in Social Preferences<br>
@@ -9759,6 +9608,157 @@ Zotero Item Key:: RB7YBMK5</p>
 ]]></content>
       <categories>
         <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>被相信的性别社会偏好差异 — 深度阅读笔记 — Exley, Hauser, Moore &amp; Pezzuto</title>
+    <url>/posts/exley2025/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Believed Gender Differences in Social Preferences</li>
+<li><strong>作者</strong>: Christine L. Exley (Harvard), Oliver P. Hauser (Exeter), Molly Moore (Harvard), John-Henry Pezzuto (Harvard)</li>
+<li><strong>年份</strong>: 2025</li>
+<li><strong>来源</strong>: The Quarterly Journal of Economics, 140(1): 403-458</li>
+<li><strong>DOI</strong>: 10.1093/qje/qjae030</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<ul>
+<li><strong>领域基础知识</strong>：这篇论文属于行为经济学、实验经济学和性别经济学的交叉领域。这里的核心概念是“社会偏好”（social preferences），大致指一个人做决定时，不只关心自己的收益，也关心他人的收益、平等、公平、合作等。传统文献常问“男女在社会偏好上是否真的不同”，而这篇论文把问题往前推进一步：<strong>即便真实差异不大，人们是否相信男女有差异？</strong></li>
+<li><strong>研究背景</strong>：现实中，女性在工资、晋升、领导职位上仍然存在系统性劣势。已有大量研究讨论真实的性别行为差异，比如谈判、竞争、合作、分配，但关于“人们相信女性和男性在社会偏好上有何不同”的研究相对少得多。</li>
+<li><strong>作者的问题意识</strong>：作者关心的不是“女性是否真的更慷慨、更平等主义”，而是“人们是否认为女性更慷慨、更平等主义”，以及这种信念从哪里来、会带来什么后果。这个问题很重要，因为很多现实决策——招聘、分工、投票、选择合作者——受信念影响，不一定受真实行为本身影响。</li>
+<li><strong>研究意义</strong>：如果社会普遍相信女性“更有社会性导向”，那么这种信念可能一方面让女性在某些合作型场景中受欢迎，另一方面也可能让女性在竞争性、绩效导向的场景中吃亏。换言之，<strong>错误或夸大的性别信念本身，就可能塑造劳动市场和社会评价结果</strong>。</li>
+</ul>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<p>这篇论文大致分成五部分。</p>
+<p>第一部分是引言，提出核心问题：关于社会偏好的真实性别差异，文献结论并不一致；但关于“被相信的性别差异”几乎没被系统研究。</p>
+<p>第二部分用一系列经济学实验游戏，系统记录人们是否相信女性比男性更慷慨、更平等、更合作。这一部分是全文的经验基础。</p>
+<p>第三部分研究这种信念可能从哪里来。作者重点借用“联想记忆/associative memory”的思路，考察<strong>相似性</strong>和<strong>干扰</strong>两种机制。</p>
+<p>第四部分把这种信念放到更接近现实的场景里，讨论它如何延伸到家庭、工作场所和政策态度，并通过 worker-employer 实验看这种信念如何影响对男女雇主的选择。</p>
+<p>第五部分总结全文，并讨论未来研究方向，尤其是如何纠正这种信念、它如何影响劳动力市场结果、以及不同场景下这种信念是否会增强或反转。</p>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<p><strong>背景 -&gt; 挑战 -&gt; 方法 -&gt; 数据 -&gt; 结果</strong></p>
+<h3 id="背景">背景</h3>
+<p>已有文献长期在问：女性和男性在慷慨、平等、公平、合作等“社会偏好”上是否不同。但这个问题本身并不足够。现实中的很多决策，先发生的是“别人怎么看你”，而不是“你真实如何”。如果雇主、同事、选民、家庭成员普遍认为女性更在意平等、更愿意照顾别人，那么这种看法本身就会影响资源配置与角色分工。</p>
+<h3 id="挑战">挑战</h3>
+<p>这类研究有三个难点。</p>
+<p>第一，社会偏好不是单一概念，里面混合了慷慨、平等、合作、信任等多个维度。如果只看一种游戏，很容易把结论局限在某个特殊场景。</p>
+<p>第二，要区分“真实行为差异”和“被相信的差异”。如果研究者只观察到信念差异，而不观察真实决策，就不知道这种信念到底是准确判断还是刻板印象。</p>
+<p>第三，若发现人们确实相信女性更有社会性导向，还要解释这种信念是怎么形成的。作者认为，标准的“理性更新”框架不够，记忆提取过程本身可能会塑造信念。</p>
+<h3 id="方法">方法</h3>
+<p>作者的方法可以分成三层。</p>
+<p>第一层是<strong>记录信念</strong>。作者设计了一系列经济学实验游戏，让受试者分别判断：有多少比例的女性会选择更“社会性导向”的选项？有多少比例的男性会这样做？这里的“社会性导向”大致对应更慷慨、更平等或更合作的选项。</p>
+<p>第二层是<strong>对照真实行为</strong>。同一套研究中，作者也观察男女在这些场景里的真实选择，从而判断“被相信的性别差异”是否准确。</p>
+<p>第三层是<strong>识别信念形成机制</strong>。作者借用 associative memory 模型，提出两条假说：</p>
+<ol>
+<li><strong>相似性（similarity）</strong>：人们会调用与当前判断情境相似的既有经验。如果一个人生活中更容易想起“更慷慨的女性”，那么他更可能相信女性在实验情境中也更慷慨。</li>
+<li><strong>干扰（interference）</strong>：记忆提取不是完美的。一个额外经历即使按完全理性的贝叶斯更新不该改变信念，也可能因为干扰了旧记忆的回忆顺序，改变人们的判断。</li>
+</ol>
+<p>这里的识别直觉很重要：作者不是简单说“经历影响信念”，而是进一步说<strong>记忆怎样被提取出来</strong>会影响信念，因此信念未必符合“完美记忆的理性人”模型。</p>
+<h3 id="数据">数据</h3>
+<p>论文总共使用 <strong>15 个研究、8,979 名受试者</strong>。</p>
+<p>最核心的是主实验中的经济学游戏研究，共 <strong>3,382 名参与者</strong>。作者在两类主样本中实施：</p>
+<ul>
+<li>382 名本科生</li>
+<li>400 名线上参与者</li>
+</ul>
+<p>在这些主研究里，作者设计了 <strong>14 个场景</strong>，覆盖：</p>
+<ul>
+<li>独裁者博弈（dictator game）</li>
+<li>带效率权衡的独裁者博弈</li>
+<li>带应得权利（entitlement）权衡的独裁者博弈</li>
+<li>最后通牒博弈（ultimatum game）</li>
+<li>信任博弈（trust game）</li>
+<li>囚徒困境（prisoner’s dilemma）</li>
+<li>公共品博弈（public goods game）</li>
+</ul>
+<p>这些场景又区分为：</p>
+<ul>
+<li><strong>第一方场景</strong>：选择会影响自己收益，因此“自利动机”存在。</li>
+<li><strong>第三方场景</strong>：选择只影响别人收益，因此更能看出人们是否把“社会性导向”理解为平等/合作，而不只是“少为自己争”。</li>
+</ul>
+<p>此外，作者还做了：</p>
+<ul>
+<li>相似性相关研究：799 人</li>
+<li>干扰实验：3,198 人</li>
+<li>应用与后果研究：1,600 人</li>
+<li>以及专业人士样本、代表性样本、不同 stakes、不同问法等稳健性研究</li>
+</ul>
+<h3 id="结果">结果</h3>
+<h4 id="1-主结果：人们稳定地相信女性比男性更有社会性导向">1. 主结果：人们稳定地相信女性比男性更有社会性导向</h4>
+<p>这是全文最核心的发现。</p>
+<p>在主实验的 28 个情境中，受试者都显著认为女性比男性更可能选择“社会性导向”的选项。这个被相信的性别差距大约在 <strong>8 到 13 个百分点</strong>之间，而且在很多不同情境下都存在：</p>
+<ul>
+<li>有无自利动机时都存在</li>
+<li>有无战略考虑时都存在</li>
+<li>公平概念不同的场景里都存在</li>
+<li>第一方与第三方场景里都存在</li>
+</ul>
+<p>换句话说，这不是某一种博弈的偶然结果，而是一个<strong>跨情境、跨样本、跨问法都很稳的信念模式</strong>。</p>
+<h4 id="2-与真实行为对比：这种信念大体上是不准确的">2. 与真实行为对比：这种信念大体上是不准确的</h4>
+<p>论文最有意思的地方在这里：作者不是只发现“人们有这种想法”，而是进一步发现这种想法<strong>多数时候夸大了真实差异</strong>。</p>
+<p>在真实决策数据里，作者发现：在 28 个情境中的 24 个里，无法拒绝“男女无差异”。也就是说，真实行为上并没有稳定、普遍的性别差异。</p>
+<p>但在信念数据里，受试者几乎系统性地低估男性会做出社会性导向选择的比例，于是导致“女性更有社会性导向”的信念差距被显著放大。作者指出，在 28 个情境中的 <strong>26 个</strong>，这种被相信的性别差距被显著高估。</p>
+<p>所以这篇论文的核心不是“女性确实更慷慨”，而是：<strong>社会普遍相信女性更慷慨、更平等主义，但这种信念大多并不准确。</strong></p>
+<h4 id="3-机制结果：记忆中的“相似经验”与这种信念相关">3. 机制结果：记忆中的“相似经验”与这种信念相关</h4>
+<p>作者发现，若参与者在回忆“慷慨的人”时更容易想到女性，那么他们更可能相信女性在实验中的社会性导向更强。</p>
+<p>另外，如果参与者报告自己童年更多由女性照料，或者人生经历中接触到更多“慷慨、平等主义的女性”，那么他们所持有的 believed gender gap 也更大。</p>
+<p>这部分是<strong>相关性证据</strong>。它支持作者的解释：人们不是在一个真空里形成信念，而是把现实生活中容易被提取出来的相似经验，投射到新的判断场景里。</p>
+<h4 id="4-机制结果：干扰经验可以因果性地改变信念">4. 机制结果：干扰经验可以因果性地改变信念</h4>
+<p>作者进一步做了更强的识别：设计“干扰性经历”来影响记忆提取。</p>
+<p>结果显示，在两项总计 <strong>3,198 人</strong>的研究中，这种干扰经验会显著改变人们对男女社会偏好差异的判断。更关键的是，即使研究者已经提供了关于男女在相似情境中行为分布的信息，并要求受试者准确复述，这种干扰效应仍然存在。</p>
+<p>这说明什么？说明问题不只是“信息有没有给到”，而是<strong>人们在形成判断时，哪些信息和记忆被真正调出来了</strong>。这正是作者想强调的 associative memory 机制，也是在挑战“完美记忆贝叶斯人”的基准模型。</p>
+<h4 id="5-应用结果：这种信念延伸到家庭、职场与政策态度">5. 应用结果：这种信念延伸到家庭、职场与政策态度</h4>
+<p>作者发现，这种 believed gender gap 不只存在于抽象实验游戏里，也进入更现实的判断：</p>
+<ul>
+<li>在家庭中，人们更相信女性会更重视家庭分工、家庭贡献与子女养育中的平等。</li>
+<li>在职场中，人们更相信女性偏好 equal pay，而男性更能接受 performance pay。</li>
+<li>在政策态度上，人们更相信女性支持再分配，以及教育、医疗、住房的平等可及。</li>
+</ul>
+<h4 id="6-劳动市场含义：这种信念会影响人们如何选择雇主">6. 劳动市场含义：这种信念会影响人们如何选择雇主</h4>
+<p>在 worker-employer 实验中，作者发现：当工人是低绩效者、因而会从 equal pay 中受益时，他们更偏好女性雇主；当工人是高绩效者、因而更能从 performance pay 中受益时，他们对女性雇主的偏好下降。</p>
+<p>这说明 believed gender gap 并不只是“想法”，而可能进入真实匹配行为：人们会根据自己利益，利用这些关于男女的信念来做选择。</p>
+<h4 id="7-异质性与稳健性">7. 异质性与稳健性</h4>
+<p>论文的稳健性做得很强。作者表明这一信念模式对以下变化都相当稳健：</p>
+<ul>
+<li>样本换成本科生、线上样本、专业管理/招聘人士、代表性样本</li>
+<li>belief questions 的数量、措辞、顺序变化</li>
+<li>是否只看先做决策还是先做信念题</li>
+<li>是否控制人口学变量</li>
+<li>是否看 full distribution 而非均值</li>
+<li>是否改变给与情境中的 stakes 和乘数</li>
+<li>是否把研究包装成不那么显眼的“性别研究”</li>
+</ul>
+<p>作者还指出，这个 believed gender gap 的大小，甚至大于某些年龄组差异和收入组差异在人们心中的印象差距。</p>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<ul>
+<li><strong>核心发现</strong>：这篇论文最重要的发现是，社会普遍相信女性比男性更慷慨、更平等、更合作，但这种“被相信的性别差异”在很大程度上并不对应稳定的真实行为差异。</li>
+<li><strong>对领域的贡献</strong>：论文把研究重心从“真实性别差异”推进到了“被相信的性别差异”，并把性别经济学、社会偏好实验和记忆驱动的信念形成文献连接起来。</li>
+<li><strong>实践含义</strong>：这类信念可能在合作型环境中对女性有利，在竞争型环境中对女性不利；它也可能影响雇佣、晋升、薪酬制度偏好、家庭分工以及政策判断。</li>
+</ul>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<h3 id="1-论文明确提到的未来方向">1. 论文明确提到的未来方向</h3>
+<ol>
+<li>研究如何提供准确而有效的信息来纠正这种 believed gender gap，以及干扰性经历为何会削弱信息纠偏。</li>
+<li>进一步研究这种信念如何影响劳动市场结果，例如男女雇主、不同岗位和行业中的成功概率。</li>
+<li>研究在不同 domain 中，这种 believed gender gap 是否更强、变弱，甚至反转。</li>
+<li>研究女性是否会因为“没有达到别人期待的社会性导向”而受到更强惩罚，或者在表现出社会性导向时获得更少额外回报。</li>
+</ol>
+<h3 id="2-从论文可推导出的进一步研究方向">2. 从论文可推导出的进一步研究方向</h3>
+<ol>
+<li>把这种信念放进真实组织环境中，研究它如何影响招聘、晋升、任务分配和绩效评价。</li>
+<li>比较不同文化、制度与性别规范背景下，这种信念是否同样稳定。</li>
+<li>研究这种信念与“女性适合照顾型角色、男性适合竞争型角色”的职业刻板印象如何交互。</li>
+<li>研究长期信息干预、教育训练、组织制度设计能否系统性降低这种误判。</li>
+<li>研究更包容的性别测量，而不只停留在二元性别框架。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>QJE</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -11402,6 +11402,81 @@ Zotero Item Key:: XDGPRRM8</p>
       </tags>
   </entry>
   <entry>
+    <title>相似工作的同酬 — 深度阅读笔记 — Gentile Passaro, Kojima &amp; Pakzad-Hurson</title>
+    <url>/posts/gentile-passaro2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Equal Pay for Similar Work</li>
+<li><strong>作者</strong>: Diego Gentile Passaro (Amazon Science), Fuhito Kojima (东京大学), Bobak Pakzad-Hurson (布朗大学)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(3): 977-1013</li>
+<li><strong>DOI</strong>: 10.1257/aer.20230832</li>
+<li><strong>难度评估</strong>: 高 - 需要劳动经济学、搜索理论、计量经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>同工同酬法（EPSW）</strong>：要求对"相似"工作支付同等报酬，比"相同工作"更宽泛。</p>
+<p><strong>性别工资差距（Gender Wage Gap）</strong>：男性和女性工人之间的平均工资差异。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol>
+<li><strong>EPSW政策日益普遍</strong>：美国45.9%的劳动力受EPSW管辖</li>
+<li><strong>执行困难</strong>："相同工作"难以定义</li>
+<li><strong>意外的均衡效应</strong>：EPSW可能产生违背政策初衷的均衡效应</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：EPSW对劳动力市场结果的均衡效应是什么？是否会反而加剧性别工资差距？</p>
+<p><strong>关键发现</strong>：EPSW导致企业按性别隔离劳动力，在男性占多数的劳动力市场中会增加性别工资差距</p>
+<hr>
+<h2 id="2-内容及结构">2. 内容及结构</h2>
+<ol>
+<li><strong>引言</strong>: EPSW政策背景、研究问题、主要发现</li>
+<li><strong>静态模型</strong>: 设定、无EPSW均衡、EPSW均衡、工资差距效应</li>
+<li><strong>动态搜索模型</strong>: 搜索摩擦和再配置摩擦、动态均衡</li>
+<li><strong>实证分析</strong>: 智利2009年EPSW政策、因果识别</li>
+<li><strong>结论</strong></li>
+</ol>
+<hr>
+<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="EPSW-vs-EPEW">EPSW vs EPEW</h4>
+<p><strong>EPEW</strong>：要求"相同工作"获得相同报酬<br>
+<strong>EPSW</strong>：更宽泛，要求对"相似工作"支付同等报酬</p>
+<h3 id="理论模型">理论模型</h3>
+<h4 id="静态模型">静态模型</h4>
+<p><strong>核心机制</strong>：</p>
+<ul>
+<li>EPSW要求雇主对相似工作的所有工人支付相同工资</li>
+<li>企业会调整劳动力组合来降低成本</li>
+<li>导致按性别隔离劳动力</li>
+</ul>
+<p><strong>均衡效应</strong>：</p>
+<ul>
+<li>男性占多数的市场：女性被分配到低工资任务</li>
+<li>女性占多数的市场：结果相反</li>
+<li>总体可能加剧工资差距</li>
+</ul>
+<h4 id="动态搜索模型">动态搜索模型</h4>
+<p><strong>搜索摩擦</strong>：工人寻找工作需要时间和成本<br>
+<strong>再配置摩擦</strong>：企业调整劳动力组合需要成本</p>
+<hr>
+<h2 id="4-结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol>
+<li><strong>EPSW可能反效果</strong>：导致劳动力性别隔离</li>
+<li><strong>男性占多数市场中加剧差距</strong>：实证证实</li>
+<li><strong>政策启示</strong>：同酬法设计需考虑均衡效应</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>A Long and a Short Leg Make for a Wobbly Equilibrium — 深度阅读笔记 — Gârleanu, Panageas &amp; Zheng</title>
     <url>/posts/garleanu2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -11588,191 +11663,6 @@ $$\kappa_t = \sigma_D - (1-\omega_t)\eta - \sigma\phi_D(\omega_t + \tau y_t(1-\o
         <tag>AER</tag>
         <tag>资产定价</tag>
         <tag>卖空市场</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>相似工作的同酬 — 深度阅读笔记 — Gentile Passaro, Kojima &amp; Pakzad-Hurson</title>
-    <url>/posts/gentile-passaro2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Equal Pay for Similar Work</li>
-<li><strong>作者</strong>: Diego Gentile Passaro (Amazon Science), Fuhito Kojima (东京大学), Bobak Pakzad-Hurson (布朗大学)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3): 977-1013</li>
-<li><strong>DOI</strong>: 10.1257/aer.20230832</li>
-<li><strong>难度评估</strong>: 高 - 需要劳动经济学、搜索理论、计量经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>同工同酬法（EPSW）</strong>：要求对"相似"工作支付同等报酬，比"相同工作"更宽泛。</p>
-<p><strong>性别工资差距（Gender Wage Gap）</strong>：男性和女性工人之间的平均工资差异。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol>
-<li><strong>EPSW政策日益普遍</strong>：美国45.9%的劳动力受EPSW管辖</li>
-<li><strong>执行困难</strong>："相同工作"难以定义</li>
-<li><strong>意外的均衡效应</strong>：EPSW可能产生违背政策初衷的均衡效应</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：EPSW对劳动力市场结果的均衡效应是什么？是否会反而加剧性别工资差距？</p>
-<p><strong>关键发现</strong>：EPSW导致企业按性别隔离劳动力，在男性占多数的劳动力市场中会增加性别工资差距</p>
-<hr>
-<h2 id="2-内容及结构">2. 内容及结构</h2>
-<ol>
-<li><strong>引言</strong>: EPSW政策背景、研究问题、主要发现</li>
-<li><strong>静态模型</strong>: 设定、无EPSW均衡、EPSW均衡、工资差距效应</li>
-<li><strong>动态搜索模型</strong>: 搜索摩擦和再配置摩擦、动态均衡</li>
-<li><strong>实证分析</strong>: 智利2009年EPSW政策、因果识别</li>
-<li><strong>结论</strong></li>
-</ol>
-<hr>
-<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="EPSW-vs-EPEW">EPSW vs EPEW</h4>
-<p><strong>EPEW</strong>：要求"相同工作"获得相同报酬<br>
-<strong>EPSW</strong>：更宽泛，要求对"相似工作"支付同等报酬</p>
-<h3 id="理论模型">理论模型</h3>
-<h4 id="静态模型">静态模型</h4>
-<p><strong>核心机制</strong>：</p>
-<ul>
-<li>EPSW要求雇主对相似工作的所有工人支付相同工资</li>
-<li>企业会调整劳动力组合来降低成本</li>
-<li>导致按性别隔离劳动力</li>
-</ul>
-<p><strong>均衡效应</strong>：</p>
-<ul>
-<li>男性占多数的市场：女性被分配到低工资任务</li>
-<li>女性占多数的市场：结果相反</li>
-<li>总体可能加剧工资差距</li>
-</ul>
-<h4 id="动态搜索模型">动态搜索模型</h4>
-<p><strong>搜索摩擦</strong>：工人寻找工作需要时间和成本<br>
-<strong>再配置摩擦</strong>：企业调整劳动力组合需要成本</p>
-<hr>
-<h2 id="4-结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol>
-<li><strong>EPSW可能反效果</strong>：导致劳动力性别隔离</li>
-<li><strong>男性占多数市场中加剧差距</strong>：实证证实</li>
-<li><strong>政策启示</strong>：同酬法设计需考虑均衡效应</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>临时性裁员与周期性失业动态 — 深度阅读笔记 — Gertler, Huckfeldt &amp; Trigari</title>
-    <url>/posts/gertler2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Temporary Layoffs, Loss-of-Recall, and Cyclical Unemployment Dynamics</li>
-<li><strong>作者</strong>: Mark Gertler (NYU &amp; NBER), Christopher Huckfeldt (Federal Reserve Board), Antonella Trigari (Bocconi University)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3): 862-896</li>
-<li><strong>DOI</strong>: 10.1257/aer.20220749</li>
-<li><strong>难度评估</strong>: 高 - 需要劳动经济学、搜索理论、宏观经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>临时性裁员（Temporary Layoffs）</strong>：工人预期暂时离开但最终被召回的裁员形式，在美国劳动力市场中占所有失业分离的约三分之一。</p>
-<p><strong>工作搜寻模型（Search and Matching Model）</strong>：Diamond-DMortensen-Pissarides框架，标准的大规模失业搜索模型基础。</p>
-<p><strong>召回损失（Loss-of-Recall）</strong>：临时裁员工人可能失去与原雇主的联系，永久转入无工作失业。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol>
-<li>
-<p><strong>新冠疫情中的临时裁员激增</strong>：2020年3-4月，约13.2%的就业工人被临时裁员</p>
-</li>
-<li>
-<p><strong>传统观点</strong>：临时裁员有稳定效应，因为召回雇佣率高</p>
-</li>
-<li>
-<p><strong>新发现的反稳定效应</strong>：召回损失增加失业的周期性波动</p>
-</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：临时裁员在商业周期中的真实作用是什么？"召回损失"如何影响失业动态？</p>
-<hr>
-<h2 id="2-内容及结构">2. 内容及结构</h2>
-<h3 id="第一节：引言">第一节：引言</h3>
-<h3 id="第二节：实证分析">第二节：实证分析</h3>
-<ul>
-<li>临时裁员和无工作失业的定义和描述性统计</li>
-<li>流动转移概率</li>
-<li>召回损失的定义和验证</li>
-<li>SIPP数据直接验证召回</li>
-<li>流动的周期性</li>
-</ul>
-<h3 id="第三节：模型">第三节：模型</h3>
-<ul>
-<li>劳动力市场状态和流动</li>
-<li>企业问题</li>
-<li>工人价值函数</li>
-<li>工资谈判</li>
-</ul>
-<h3 id="第四节：模型评估与COVID-19分析">第四节：模型评估与COVID-19分析</h3>
-<h3 id="第五节：结论">第五节：结论</h3>
-<hr>
-<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
-<h3 id="实证分析">实证分析</h3>
-<h4 id="临时裁员和无工作失业">临时裁员和无工作失业</h4>
-<p><strong>关键区别</strong>：</p>
-<ul>
-<li>临时裁员失业（TL）：预期被召回</li>
-<li>无工作失业（NL）：不预期被召回</li>
-</ul>
-<p><strong>2008-2009年大衰退</strong>：</p>
-<ul>
-<li>TL比例下降</li>
-<li>NL比例上升</li>
-<li>反映召回损失增加</li>
-</ul>
-<h4 id="召回损失">召回损失</h4>
-<p><strong>定义</strong>：临时裁员工人失去与原雇主联系，永久转为NL</p>
-<p><strong>验证</strong>：</p>
-<ul>
-<li>使用SIPP数据直接追踪工人流动</li>
-<li>发现显著召回损失</li>
-</ul>
-<h3 id="模型">模型</h3>
-<p><strong>三种劳动力市场状态</strong>：</p>
-<ul>
-<li>就业（E）</li>
-<li>临时裁员失业（TL）</li>
-<li>无工作失业（NL）</li>
-</ul>
-<p><strong>关键机制</strong>：</p>
-<ul>
-<li>企业面临召回成本</li>
-<li>高失业津贴降低召回激励</li>
-<li>召回损失影响周期性动态</li>
-</ul>
-<hr>
-<h2 id="4-结论">4. 结论</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol>
-<li>
-<p><strong>召回损失重要</strong>：临时裁员工人可能永久失去与原雇主联系</p>
-</li>
-<li>
-<p><strong>反稳定效应</strong>：召回损失增加失业的周期性波动</p>
-</li>
-<li>
-<p><strong>政策启示</strong>：PPP通过减少召回损失产生可观的就业增长</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -12115,6 +12005,116 @@ $$\kappa_t = \sigma_D - (1-\omega_t)\eta - \sigma\phi_D(\omega_t + \tau y_t(1-\o
       </tags>
   </entry>
   <entry>
+    <title>临时性裁员与周期性失业动态 — 深度阅读笔记 — Gertler, Huckfeldt &amp; Trigari</title>
+    <url>/posts/gertler2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Temporary Layoffs, Loss-of-Recall, and Cyclical Unemployment Dynamics</li>
+<li><strong>作者</strong>: Mark Gertler (NYU &amp; NBER), Christopher Huckfeldt (Federal Reserve Board), Antonella Trigari (Bocconi University)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(3): 862-896</li>
+<li><strong>DOI</strong>: 10.1257/aer.20220749</li>
+<li><strong>难度评估</strong>: 高 - 需要劳动经济学、搜索理论、宏观经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>临时性裁员（Temporary Layoffs）</strong>：工人预期暂时离开但最终被召回的裁员形式，在美国劳动力市场中占所有失业分离的约三分之一。</p>
+<p><strong>工作搜寻模型（Search and Matching Model）</strong>：Diamond-DMortensen-Pissarides框架，标准的大规模失业搜索模型基础。</p>
+<p><strong>召回损失（Loss-of-Recall）</strong>：临时裁员工人可能失去与原雇主的联系，永久转入无工作失业。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol>
+<li>
+<p><strong>新冠疫情中的临时裁员激增</strong>：2020年3-4月，约13.2%的就业工人被临时裁员</p>
+</li>
+<li>
+<p><strong>传统观点</strong>：临时裁员有稳定效应，因为召回雇佣率高</p>
+</li>
+<li>
+<p><strong>新发现的反稳定效应</strong>：召回损失增加失业的周期性波动</p>
+</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：临时裁员在商业周期中的真实作用是什么？"召回损失"如何影响失业动态？</p>
+<hr>
+<h2 id="2-内容及结构">2. 内容及结构</h2>
+<h3 id="第一节：引言">第一节：引言</h3>
+<h3 id="第二节：实证分析">第二节：实证分析</h3>
+<ul>
+<li>临时裁员和无工作失业的定义和描述性统计</li>
+<li>流动转移概率</li>
+<li>召回损失的定义和验证</li>
+<li>SIPP数据直接验证召回</li>
+<li>流动的周期性</li>
+</ul>
+<h3 id="第三节：模型">第三节：模型</h3>
+<ul>
+<li>劳动力市场状态和流动</li>
+<li>企业问题</li>
+<li>工人价值函数</li>
+<li>工资谈判</li>
+</ul>
+<h3 id="第四节：模型评估与COVID-19分析">第四节：模型评估与COVID-19分析</h3>
+<h3 id="第五节：结论">第五节：结论</h3>
+<hr>
+<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
+<h3 id="实证分析">实证分析</h3>
+<h4 id="临时裁员和无工作失业">临时裁员和无工作失业</h4>
+<p><strong>关键区别</strong>：</p>
+<ul>
+<li>临时裁员失业（TL）：预期被召回</li>
+<li>无工作失业（NL）：不预期被召回</li>
+</ul>
+<p><strong>2008-2009年大衰退</strong>：</p>
+<ul>
+<li>TL比例下降</li>
+<li>NL比例上升</li>
+<li>反映召回损失增加</li>
+</ul>
+<h4 id="召回损失">召回损失</h4>
+<p><strong>定义</strong>：临时裁员工人失去与原雇主联系，永久转为NL</p>
+<p><strong>验证</strong>：</p>
+<ul>
+<li>使用SIPP数据直接追踪工人流动</li>
+<li>发现显著召回损失</li>
+</ul>
+<h3 id="模型">模型</h3>
+<p><strong>三种劳动力市场状态</strong>：</p>
+<ul>
+<li>就业（E）</li>
+<li>临时裁员失业（TL）</li>
+<li>无工作失业（NL）</li>
+</ul>
+<p><strong>关键机制</strong>：</p>
+<ul>
+<li>企业面临召回成本</li>
+<li>高失业津贴降低召回激励</li>
+<li>召回损失影响周期性动态</li>
+</ul>
+<hr>
+<h2 id="4-结论">4. 结论</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol>
+<li>
+<p><strong>召回损失重要</strong>：临时裁员工人可能永久失去与原雇主联系</p>
+</li>
+<li>
+<p><strong>反稳定效应</strong>：召回损失增加失业的周期性波动</p>
+</li>
+<li>
+<p><strong>政策启示</strong>：PPP通过减少召回损失产生可观的就业增长</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Surviving Childhood — 深度阅读笔记 — Helénsdotter</title>
     <url>/posts/helensdotter2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -12441,6 +12441,249 @@ Zotero Item Key:: BZPCLS8S</p>
 ]]></content>
       <categories>
         <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>你所不知道的可能对你有益 — 深度阅读笔记 — Höner &amp; Samuelson</title>
+    <url>/posts/honner2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: What You Don’t Know May Be Good for You</li>
+<li><strong>作者</strong>: Johannes Höner (Yale), Larry Samuelson (University of Nevada, Reno)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: American Economic Review, 116(3): 1097-1147</li>
+<li><strong>DOI</strong>: 10.1257/aer.20250053</li>
+<li><strong>难度评估</strong>: 高 - 需要博弈论、声誉理论、机制设计基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>专家-客户模型（Expert-Client Model）</strong>：长期存在的专家与短期客户匹配的经济学模型。专家拥有私人信息，选择客户类型，客户根据观察到的信息形成对专家的信念。</p>
+<p><strong>声誉理论（Reputation Theory）</strong>：研究代理人如何通过行为建立声誉的理论。经典工作包括Kreps &amp; Wilson（1982）的序列均衡声誉模型。</p>
+<p><strong>好斯特定律（Goodhart’s Law）</strong>：当一个指标成为目标时，它就不再是一个好的指标。意味着度量本身会改变被度量行为的激励结构。</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol>
+<li>
+<p><strong>医疗报告卡（Medical Report Cards）</strong>：纽约州1980年代末引入心脏手术报告系统，要求报告手术结果。医生评估称"所谓最好的外科医生只做最简单的病例"。</p>
+</li>
+<li>
+<p><strong>信息与激励的冲突</strong>：信息揭示帮助客户识别更好的专家，但同时也可能扭曲专家的激励，使其拒绝高风险客户以维护声誉。</p>
+</li>
+<li>
+<p><strong>声誉操纵问题</strong>：当信息由被评价者构建时，评价系统可能被操纵。</p>
+</li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：当声誉的构建者能够操纵相关信息时，声誉如何建立？信息揭示（如报告卡）是否总是有益的？</p>
+<h3 id="研究意义">研究意义</h3>
+<ol>
+<li>
+<p><strong>理论贡献</strong>：构建了长期专家与短期客户匹配的一般模型，揭示了信息揭示的非直观后果。</p>
+</li>
+<li>
+<p><strong>政策含义</strong>：对医疗报告卡等政策设计有直接启示——信息揭示可能适得其反。</p>
+</li>
+<li>
+<p><strong>应用广泛</strong>：模型框架可应用于医疗、教育、金融等多个领域的声誉机制设计。</p>
+</li>
+</ol>
+<hr>
+<h2 id="2-内容及结构（论文结构）">2. 内容及结构（论文结构）</h2>
+<h3 id="第一节：引言（Introduction）">第一节：引言（Introduction）</h3>
+<ul>
+<li>医疗报告卡案例</li>
+<li>Goodhart定律</li>
+<li>研究问题介绍</li>
+</ul>
+<h3 id="第二节：模型（The-Model）">第二节：模型（The Model）</h3>
+<ul>
+<li><strong>II.1 Stage Game</strong>：单期博弈中的专家-客户交互</li>
+<li><strong>II.2 Stage-Game均衡与有效配置</strong></li>
+<li><strong>II.3 重复博弈（无报告卡）均衡</strong></li>
+<li><strong>II.4 完全监控的重复博弈，有效配置</strong></li>
+<li><strong>II.5 完全监控的重复博弈，均衡</strong></li>
+</ul>
+<h3 id="第三节：带报告卡的重复博弈">第三节：带报告卡的重复博弈</h3>
+<ul>
+<li><strong>III.1 结构</strong>：连续时间，无限期界，专家连续统，客户连续统</li>
+<li><strong>III.2 策略</strong>：确定性策略、极值策略、停时策略、截断策略</li>
+<li><strong>III.3 信念</strong>：专家信念与市场信念的区分</li>
+<li><strong>III.4 均衡定义</strong></li>
+<li><strong>III.5 有效配置</strong>：截断策略</li>
+<li><strong>III.6 均衡是无效率的</strong></li>
+<li><strong>III.7 等待的诱惑</strong></li>
+<li><strong>III.8 专家必须混合，但不确定能否做到</strong></li>
+<li><strong>III.9 均衡存在、唯一、是停时上的混合</strong></li>
+<li><strong>III.10 福利分析</strong></li>
+</ul>
+<h3 id="第四节：扩展（Extensions）">第四节：扩展（Extensions）</h3>
+<ul>
+<li><strong>IV.1 茶歇均衡</strong>：非马尔科夫均衡</li>
+<li><strong>IV.2 随机揭示柠檬</strong>：失败以一定概率被随机揭示</li>
+<li><strong>IV.3 随机隐藏柠檬</strong>：失败以一定概率被隐藏</li>
+<li><strong>IV.4 价格控制</strong>：固定价格可实现有效均衡</li>
+<li><strong>IV.5 好消息</strong>：突破性成果的特殊情况</li>
+<li><strong>IV.6 未知客户类型</strong>：客户不知自身类型</li>
+<li><strong>IV.7 干中学</strong>：专家类型可变</li>
+</ul>
+<h3 id="第五节：讨论（Discussion）">第五节：讨论（Discussion）</h3>
+<hr>
+<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<h4 id="医疗报告卡案例">医疗报告卡案例</h4>
+<p>纽约州1980年代末引入心脏手术报告系统，强制报告手术结果。这一政策的初衷是帮助患者识别更好的外科医生，但医生们反映"所谓最好的外科医生只做最简单的病例"。</p>
+<h4 id="Goodhart定律的核心洞见">Goodhart定律的核心洞见</h4>
+<p>当一个度量成为目标时，它就不再是一个好的度量。度量的变化会改变被度量者的激励，可能导致行为扭曲。</p>
+<h3 id="模型设定">模型设定</h3>
+<h4 id="参与人">参与人</h4>
+<ol>
+<li><strong>专家（Expert）</strong>：长期存在，有类型G（好）或B（坏），先验概率q</li>
+<li><strong>客户（Client）</strong>：短期存在，有类型H（高风险）或L（低风险）</li>
+<li><strong>市场</strong>：观察价格和报告卡，形成对专家类型的信念</li>
+</ol>
+<h4 id="阶段博弈（Stage-Game）">阶段博弈（Stage Game）</h4>
+<p><strong>成功概率</strong>：</p>
+<ul>
+<li>好专家（G）+ 高风险客户（H）：${1-z}$</li>
+<li>好专家（G）+ 低风险客户（L）：1</li>
+<li>坏专家（B）+ 任何客户：1（无失败）</li>
+</ul>
+<h3 id="关键结果">关键结果</h3>
+<h4 id="有效配置">有效配置</h4>
+<p>有效政策是<strong>截断策略</strong>：<br>
+$$k_t = 1 \text{ 当且仅当 } q_t \geq \bar{q}$$</p>
+<p>其中$\bar{q} \in (0, \theta)$是截断点。</p>
+<h4 id="核心命题：有效政策不是均衡">核心命题：有效政策不是均衡</h4>
+<p><strong>证明逻辑</strong>：</p>
+<ol>
+<li>
+<p>假设$\bar{q} &lt; \theta$，考虑$q_0 \in (\bar{q}, \theta)$：</p>
+<ul>
+<li>$q_0 - \theta &lt; 0$：选择L客户比H客户获得更高奖励</li>
+<li>选择L客户保证不发生失败</li>
+<li>因此对于$q_0 &lt; \theta$，专家在均衡中必须选择L客户</li>
+</ul>
+</li>
+<li>
+<p>因此$\bar{q}$必须等于$\theta$，但第一种情况的论证确保$q_0$刚超过$\theta$的专家会选择L而非H客户</p>
+</li>
+</ol>
+<p><strong>结论</strong>：有效截断策略不是均衡！</p>
+<h4 id="均衡性质">均衡性质</h4>
+<p><strong>命题1</strong>：均衡存在且唯一，是停时上的混合。</p>
+<ul>
+<li>如果$q_0 \leq \theta$：专家总是选择低风险客户</li>
+<li>如果$q_0 \geq \bar{q}$：专家总是选择高风险客户</li>
+<li>如果$q_0 \in (\theta, \bar{q})$：存在$T &gt; 0$，专家在随机时间$s \leq T$按无原子分布选择</li>
+</ul>
+<h4 id="无效率的来源">无效率的来源</h4>
+<p><strong>等待的诱惑</strong>：</p>
+<ul>
+<li>如果专家被预期只选择L客户，他会偏好选择H客户（更有利可图）</li>
+<li>如果专家被预期只选择H客户，价格"快速"上涨，延迟H客户是有利可图的</li>
+</ul>
+<p><strong>问题</strong>：客户学习太快，价格上涨太快。专家难以使用混合策略——选择$k \in (0, 1)$不会起作用。</p>
+<hr>
+<h2 id="4-结论（Conclusion）">4. 结论（Conclusion）</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol>
+<li>
+<p><strong>信息揭示的双刃剑效应</strong>：报告卡帮助客户识别更好的专家，但同时扭曲了专家的激励——专家会拒绝高风险客户以建立声誉，导致无效率匹配。</p>
+</li>
+<li>
+<p><strong>Goodhart定律的正式模型</strong>：论文提供了Goodhart定律的形式化模型，展示了当度量成为目标时会发生什么。</p>
+</li>
+<li>
+<p><strong>声誉操纵的危害</strong>：长期专家有激励操纵市场对其类型的认知，通过选择性地接受低风险客户来建立"干净"的记录。</p>
+</li>
+<li>
+<p><strong>均衡必须是混合的</strong>：有效截断策略不是均衡，专家必须使用随机化策略，但这种随机化本身就导致无效率。</p>
+</li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol>
+<li>
+<p><strong>一般化模型</strong>：将声誉理论、信号博弈和机制设计统一在单一框架下。</p>
+</li>
+<li>
+<p><strong>新洞见</strong>：揭示了信息揭示可能降低福利的条件和机制。</p>
+</li>
+<li>
+<p><strong>政策启示</strong>：对医疗报告卡、教育评级等政策设计有直接指导意义。</p>
+</li>
+</ol>
+<hr>
+<h2 id="5-未来研究方向（Future-work）">5. 未来研究方向（Future work）</h2>
+<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
+<ol>
+<li>
+<p><strong>多维类型</strong>：专家和客户有多个维度的私人信息</p>
+</li>
+<li>
+<p><strong>动态客户学习</strong>：客户随时间积累经验</p>
+</li>
+<li>
+<p><strong>竞争性市场</strong>：多位专家竞争客户</p>
+</li>
+</ol>
+<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
+<ol>
+<li>
+<p><strong>实证检验</strong>：如何在现实数据中识别这种声誉操纵效应？</p>
+</li>
+<li>
+<p><strong>最优机制设计</strong>：给定这些无效率，什么是最优的信息揭示政策？</p>
+</li>
+<li>
+<p><strong>替代激励机制</strong>：除了报告卡，什么机制可以激励专家说实话同时避免声誉操纵？</p>
+</li>
+</ol>
+<hr>
+<h2 id="7-学术思考">7. 学术思考</h2>
+<h3 id="核心学术洞察">核心学术洞察</h3>
+<ol>
+<li>
+<p><strong>信息揭示的悖论</strong>：直觉上信息越多越好，但本文揭示了信息揭示可能"教会"专家如何操纵市场信念。</p>
+</li>
+<li>
+<p><strong>声誉资本的动态积累</strong>：专家的声誉是一种资本，其积累速度受市场学习速度的影响。</p>
+</li>
+<li>
+<p><strong>有效均衡的不可能性</strong>：在标准委托代理模型中，有效结果通常可以通过适当激励机制实现。但本文表明，当代理人有多个维度私人信息且可以操纵信号时，有效结果可能根本无法实现。</p>
+</li>
+</ol>
+<h3 id="深层学术问题">深层学术问题</h3>
+<ol>
+<li>
+<p><strong>为什么专家不能承诺？</strong> 如果专家可以承诺不操纵声誉，许多无效率就可以避免。是什么阻止了这种承诺？</p>
+</li>
+<li>
+<p><strong>客户如何应对？</strong> 客户是否了解专家的激励结构？如果客户知道专家会拒绝他们，这会如何影响行为？</p>
+</li>
+</ol>
+<hr>
+<h2 id="8-下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol>
+<li>
+<p><strong>如何识别现实中的声誉操纵？</strong> 有什么可检验的预测？</p>
+</li>
+<li>
+<p><strong>报告卡制度如何设计可以减少无效率？</strong> 有什么替代方案？</p>
+</li>
+<li>
+<p><strong>与标准声誉模型的区别是什么？</strong> 本文如何推进Kreps-Wilson类型的声誉理论？</p>
+</li>
+<li>
+<p><strong>在什么条件下信息揭示是有效的？</strong> "好消息"扩展表明存在有效情况，条件是什么？</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AER</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -13344,249 +13587,6 @@ _谢肇淛&lt;五杂俎&gt;(约1610年)</p>
       </tags>
   </entry>
   <entry>
-    <title>你所不知道的可能对你有益 — 深度阅读笔记 — Höner &amp; Samuelson</title>
-    <url>/posts/honner2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: What You Don’t Know May Be Good for You</li>
-<li><strong>作者</strong>: Johannes Höner (Yale), Larry Samuelson (University of Nevada, Reno)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: American Economic Review, 116(3): 1097-1147</li>
-<li><strong>DOI</strong>: 10.1257/aer.20250053</li>
-<li><strong>难度评估</strong>: 高 - 需要博弈论、声誉理论、机制设计基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言（背景和意义）">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>专家-客户模型（Expert-Client Model）</strong>：长期存在的专家与短期客户匹配的经济学模型。专家拥有私人信息，选择客户类型，客户根据观察到的信息形成对专家的信念。</p>
-<p><strong>声誉理论（Reputation Theory）</strong>：研究代理人如何通过行为建立声誉的理论。经典工作包括Kreps &amp; Wilson（1982）的序列均衡声誉模型。</p>
-<p><strong>好斯特定律（Goodhart’s Law）</strong>：当一个指标成为目标时，它就不再是一个好的指标。意味着度量本身会改变被度量行为的激励结构。</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol>
-<li>
-<p><strong>医疗报告卡（Medical Report Cards）</strong>：纽约州1980年代末引入心脏手术报告系统，要求报告手术结果。医生评估称"所谓最好的外科医生只做最简单的病例"。</p>
-</li>
-<li>
-<p><strong>信息与激励的冲突</strong>：信息揭示帮助客户识别更好的专家，但同时也可能扭曲专家的激励，使其拒绝高风险客户以维护声誉。</p>
-</li>
-<li>
-<p><strong>声誉操纵问题</strong>：当信息由被评价者构建时，评价系统可能被操纵。</p>
-</li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：当声誉的构建者能够操纵相关信息时，声誉如何建立？信息揭示（如报告卡）是否总是有益的？</p>
-<h3 id="研究意义">研究意义</h3>
-<ol>
-<li>
-<p><strong>理论贡献</strong>：构建了长期专家与短期客户匹配的一般模型，揭示了信息揭示的非直观后果。</p>
-</li>
-<li>
-<p><strong>政策含义</strong>：对医疗报告卡等政策设计有直接启示——信息揭示可能适得其反。</p>
-</li>
-<li>
-<p><strong>应用广泛</strong>：模型框架可应用于医疗、教育、金融等多个领域的声誉机制设计。</p>
-</li>
-</ol>
-<hr>
-<h2 id="2-内容及结构（论文结构）">2. 内容及结构（论文结构）</h2>
-<h3 id="第一节：引言（Introduction）">第一节：引言（Introduction）</h3>
-<ul>
-<li>医疗报告卡案例</li>
-<li>Goodhart定律</li>
-<li>研究问题介绍</li>
-</ul>
-<h3 id="第二节：模型（The-Model）">第二节：模型（The Model）</h3>
-<ul>
-<li><strong>II.1 Stage Game</strong>：单期博弈中的专家-客户交互</li>
-<li><strong>II.2 Stage-Game均衡与有效配置</strong></li>
-<li><strong>II.3 重复博弈（无报告卡）均衡</strong></li>
-<li><strong>II.4 完全监控的重复博弈，有效配置</strong></li>
-<li><strong>II.5 完全监控的重复博弈，均衡</strong></li>
-</ul>
-<h3 id="第三节：带报告卡的重复博弈">第三节：带报告卡的重复博弈</h3>
-<ul>
-<li><strong>III.1 结构</strong>：连续时间，无限期界，专家连续统，客户连续统</li>
-<li><strong>III.2 策略</strong>：确定性策略、极值策略、停时策略、截断策略</li>
-<li><strong>III.3 信念</strong>：专家信念与市场信念的区分</li>
-<li><strong>III.4 均衡定义</strong></li>
-<li><strong>III.5 有效配置</strong>：截断策略</li>
-<li><strong>III.6 均衡是无效率的</strong></li>
-<li><strong>III.7 等待的诱惑</strong></li>
-<li><strong>III.8 专家必须混合，但不确定能否做到</strong></li>
-<li><strong>III.9 均衡存在、唯一、是停时上的混合</strong></li>
-<li><strong>III.10 福利分析</strong></li>
-</ul>
-<h3 id="第四节：扩展（Extensions）">第四节：扩展（Extensions）</h3>
-<ul>
-<li><strong>IV.1 茶歇均衡</strong>：非马尔科夫均衡</li>
-<li><strong>IV.2 随机揭示柠檬</strong>：失败以一定概率被随机揭示</li>
-<li><strong>IV.3 随机隐藏柠檬</strong>：失败以一定概率被隐藏</li>
-<li><strong>IV.4 价格控制</strong>：固定价格可实现有效均衡</li>
-<li><strong>IV.5 好消息</strong>：突破性成果的特殊情况</li>
-<li><strong>IV.6 未知客户类型</strong>：客户不知自身类型</li>
-<li><strong>IV.7 干中学</strong>：专家类型可变</li>
-</ul>
-<h3 id="第五节：讨论（Discussion）">第五节：讨论（Discussion）</h3>
-<hr>
-<h2 id="3-正文（逻辑梳理）">3. 正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<h4 id="医疗报告卡案例">医疗报告卡案例</h4>
-<p>纽约州1980年代末引入心脏手术报告系统，强制报告手术结果。这一政策的初衷是帮助患者识别更好的外科医生，但医生们反映"所谓最好的外科医生只做最简单的病例"。</p>
-<h4 id="Goodhart定律的核心洞见">Goodhart定律的核心洞见</h4>
-<p>当一个度量成为目标时，它就不再是一个好的度量。度量的变化会改变被度量者的激励，可能导致行为扭曲。</p>
-<h3 id="模型设定">模型设定</h3>
-<h4 id="参与人">参与人</h4>
-<ol>
-<li><strong>专家（Expert）</strong>：长期存在，有类型G（好）或B（坏），先验概率q</li>
-<li><strong>客户（Client）</strong>：短期存在，有类型H（高风险）或L（低风险）</li>
-<li><strong>市场</strong>：观察价格和报告卡，形成对专家类型的信念</li>
-</ol>
-<h4 id="阶段博弈（Stage-Game）">阶段博弈（Stage Game）</h4>
-<p><strong>成功概率</strong>：</p>
-<ul>
-<li>好专家（G）+ 高风险客户（H）：${1-z}$</li>
-<li>好专家（G）+ 低风险客户（L）：1</li>
-<li>坏专家（B）+ 任何客户：1（无失败）</li>
-</ul>
-<h3 id="关键结果">关键结果</h3>
-<h4 id="有效配置">有效配置</h4>
-<p>有效政策是<strong>截断策略</strong>：<br>
-$$k_t = 1 \text{ 当且仅当 } q_t \geq \bar{q}$$</p>
-<p>其中$\bar{q} \in (0, \theta)$是截断点。</p>
-<h4 id="核心命题：有效政策不是均衡">核心命题：有效政策不是均衡</h4>
-<p><strong>证明逻辑</strong>：</p>
-<ol>
-<li>
-<p>假设$\bar{q} &lt; \theta$，考虑$q_0 \in (\bar{q}, \theta)$：</p>
-<ul>
-<li>$q_0 - \theta &lt; 0$：选择L客户比H客户获得更高奖励</li>
-<li>选择L客户保证不发生失败</li>
-<li>因此对于$q_0 &lt; \theta$，专家在均衡中必须选择L客户</li>
-</ul>
-</li>
-<li>
-<p>因此$\bar{q}$必须等于$\theta$，但第一种情况的论证确保$q_0$刚超过$\theta$的专家会选择L而非H客户</p>
-</li>
-</ol>
-<p><strong>结论</strong>：有效截断策略不是均衡！</p>
-<h4 id="均衡性质">均衡性质</h4>
-<p><strong>命题1</strong>：均衡存在且唯一，是停时上的混合。</p>
-<ul>
-<li>如果$q_0 \leq \theta$：专家总是选择低风险客户</li>
-<li>如果$q_0 \geq \bar{q}$：专家总是选择高风险客户</li>
-<li>如果$q_0 \in (\theta, \bar{q})$：存在$T &gt; 0$，专家在随机时间$s \leq T$按无原子分布选择</li>
-</ul>
-<h4 id="无效率的来源">无效率的来源</h4>
-<p><strong>等待的诱惑</strong>：</p>
-<ul>
-<li>如果专家被预期只选择L客户，他会偏好选择H客户（更有利可图）</li>
-<li>如果专家被预期只选择H客户，价格"快速"上涨，延迟H客户是有利可图的</li>
-</ul>
-<p><strong>问题</strong>：客户学习太快，价格上涨太快。专家难以使用混合策略——选择$k \in (0, 1)$不会起作用。</p>
-<hr>
-<h2 id="4-结论（Conclusion）">4. 结论（Conclusion）</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol>
-<li>
-<p><strong>信息揭示的双刃剑效应</strong>：报告卡帮助客户识别更好的专家，但同时扭曲了专家的激励——专家会拒绝高风险客户以建立声誉，导致无效率匹配。</p>
-</li>
-<li>
-<p><strong>Goodhart定律的正式模型</strong>：论文提供了Goodhart定律的形式化模型，展示了当度量成为目标时会发生什么。</p>
-</li>
-<li>
-<p><strong>声誉操纵的危害</strong>：长期专家有激励操纵市场对其类型的认知，通过选择性地接受低风险客户来建立"干净"的记录。</p>
-</li>
-<li>
-<p><strong>均衡必须是混合的</strong>：有效截断策略不是均衡，专家必须使用随机化策略，但这种随机化本身就导致无效率。</p>
-</li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol>
-<li>
-<p><strong>一般化模型</strong>：将声誉理论、信号博弈和机制设计统一在单一框架下。</p>
-</li>
-<li>
-<p><strong>新洞见</strong>：揭示了信息揭示可能降低福利的条件和机制。</p>
-</li>
-<li>
-<p><strong>政策启示</strong>：对医疗报告卡、教育评级等政策设计有直接指导意义。</p>
-</li>
-</ol>
-<hr>
-<h2 id="5-未来研究方向（Future-work）">5. 未来研究方向（Future work）</h2>
-<h3 id="论文明确提到的方向">论文明确提到的方向</h3>
-<ol>
-<li>
-<p><strong>多维类型</strong>：专家和客户有多个维度的私人信息</p>
-</li>
-<li>
-<p><strong>动态客户学习</strong>：客户随时间积累经验</p>
-</li>
-<li>
-<p><strong>竞争性市场</strong>：多位专家竞争客户</p>
-</li>
-</ol>
-<h3 id="本文引发的思考方向">本文引发的思考方向</h3>
-<ol>
-<li>
-<p><strong>实证检验</strong>：如何在现实数据中识别这种声誉操纵效应？</p>
-</li>
-<li>
-<p><strong>最优机制设计</strong>：给定这些无效率，什么是最优的信息揭示政策？</p>
-</li>
-<li>
-<p><strong>替代激励机制</strong>：除了报告卡，什么机制可以激励专家说实话同时避免声誉操纵？</p>
-</li>
-</ol>
-<hr>
-<h2 id="7-学术思考">7. 学术思考</h2>
-<h3 id="核心学术洞察">核心学术洞察</h3>
-<ol>
-<li>
-<p><strong>信息揭示的悖论</strong>：直觉上信息越多越好，但本文揭示了信息揭示可能"教会"专家如何操纵市场信念。</p>
-</li>
-<li>
-<p><strong>声誉资本的动态积累</strong>：专家的声誉是一种资本，其积累速度受市场学习速度的影响。</p>
-</li>
-<li>
-<p><strong>有效均衡的不可能性</strong>：在标准委托代理模型中，有效结果通常可以通过适当激励机制实现。但本文表明，当代理人有多个维度私人信息且可以操纵信号时，有效结果可能根本无法实现。</p>
-</li>
-</ol>
-<h3 id="深层学术问题">深层学术问题</h3>
-<ol>
-<li>
-<p><strong>为什么专家不能承诺？</strong> 如果专家可以承诺不操纵声誉，许多无效率就可以避免。是什么阻止了这种承诺？</p>
-</li>
-<li>
-<p><strong>客户如何应对？</strong> 客户是否了解专家的激励结构？如果客户知道专家会拒绝他们，这会如何影响行为？</p>
-</li>
-</ol>
-<hr>
-<h2 id="8-下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol>
-<li>
-<p><strong>如何识别现实中的声誉操纵？</strong> 有什么可检验的预测？</p>
-</li>
-<li>
-<p><strong>报告卡制度如何设计可以减少无效率？</strong> 有什么替代方案？</p>
-</li>
-<li>
-<p><strong>与标准声誉模型的区别是什么？</strong> 本文如何推进Kreps-Wilson类型的声誉理论？</p>
-</li>
-<li>
-<p><strong>在什么条件下信息揭示是有效的？</strong> "好消息"扩展表明存在有效情况，条件是什么？</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AER</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Labor Mobility in Currency Union — 深度阅读笔记 — House, Proebsting &amp; Tesar</title>
     <url>/posts/house2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -13632,154 +13632,6 @@ $$k_t = 1 \text{ 当且仅当 } q_t \geq \bar{q}$$</p>
 ]]></content>
       <categories>
         <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>性别构成、社会情境与高考学业表现 — 深度阅读笔记 — Huang Et Al.</title>
-    <url>/posts/huang2025/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Gender Composition, Social Context, and Academic Performance in High-Stakes Examinations<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/JZXZD7BS/Huang 等 - 2025 - Gender Composition, Social Context, and Academic Performance in High-Stakes Examinations.pdf<br>
-Zotero Item Key:: QM7ZRJL9</p>
-<hr>
-<span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-同伴效应（peer effects）是教育经济学的核心议题——同伴的性别、能力、行为都可能影响个体表现。性别与竞争表现的关系已有丰富文献：女性在高风险竞争性环境中系统性地表现弱于同等能力的男性（Niederle &amp; Vesterlund 2011）。同伴性别构成效应的大量文献集中在长期持续暴露（如同班同学），而短暂暴露（如临时同考场）是否同样影响表现，研究相对匮乏。此外，社会规范（性别平等程度、儒家文化强度等）在调节同伴效应中的作用也尚未充分探索。</p>
-<p><strong>研究背景</strong><br>
-中国高考（Gaokao）是全球最重要的高风险标准化考试之一，每年约有1000万学生参加。高考成绩直接决定能否进入理想大学，因此具有深远的人生影响。现有研究（Cai et al., 2019）已记录到女生在高考中系统性弱于男生的现象。识别考场性别构成对成绩的影响，因果推断的挑战在于：学生通常会自我选择考场，传统研究无法排除选择偏差。本研究利用高考随机座位分配制度提供了外生性识别机会。</p>
-<p><strong>作者的问题意识</strong><br>
-（1）考场的性别构成是否影响学生表现？效应是否因性别而异？（2）视觉暴露（同伴是否在视野内）是否是传导机制的关键？（3）地方社会规范（性别平等程度、儒家文化影响）如何调节这种效应？</p>
-<p><strong>研究意义</strong><br>
-本文提供了高风险竞争环境中临时性同伴构成影响表现的因果证据，并首次在大样本跨地区数据中揭示了社会规范对同伴效应的调节作用，对减少教育性别差距的政策设计有直接启示。</p>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言</strong>：文献综述、研究问题与贡献。</li>
-<li><strong>数据与背景</strong>：高考考场制度、随机分座、数据来源（15个地市）。</li>
-<li><strong>主效应估计</strong>：性别构成对女生和男生成绩的影响。</li>
-<li><strong>视觉暴露机制</strong>：前排/后排、直接在前方的同伴的差异效应。</li>
-<li><strong>时序效应</strong>：考试日程靠后的科目效应是否更大。</li>
-<li><strong>异质性分析（社会规范）</strong>：性别平等程度、儒家文化、经济发展水平、环境因素的调节作用。</li>
-<li><strong>结论</strong>：政策含义与研究局限。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>高考考场由省级考试机构统一随机分配座位，学生凭准考证号对应固定考场和座位，学生、家长和学校均无法干预。每个考场约25名学生，按"蛇形"（zigzag）模式排列。平衡性检验证实：学生的预先特征（性别、年龄、所在高中）与考场女生比例之间没有显著相关——随机分座的假设成立。</p>
-<h3 id="挑战">挑战</h3>
-<p>过去的研究大多使用单一学校数据，无法研究社会规范的调节作用，因为缺乏地区间的差异。本文利用三个省（含新疆/青海等文化差异显著的地区）15个地市的数据，获得了地区间文化和经济条件的充足变异。</p>
-<h3 id="数据">数据</h3>
-<ul>
-<li><strong>样本</strong>：2000-2003年参加高考、来自15个地市的25万余名学生（主样本）；扩展样本纳入1999年河北、湖南学生</li>
-<li><strong>成绩结果</strong>：高考总分（标准化）；是否考入第一批（重点）大学</li>
-<li><strong>性别构成变量</strong>：考场女生比例</li>
-<li><strong>地区社会规范指标</strong>：同龄出生队列中女性比例（性别平等代理）、当地高考录取率的性别差距、距最近孔庙的距离（儒家文化影响代理）</li>
-<li><strong>经济和环境控制</strong>：人均GDP、PM2.5浓度、高考期间气温</li>
-</ul>
-<h3 id="识别策略">识别策略</h3>
-<p>利用考场层面随机座位分配产生的女生比例外生变化，OLS回归考场女生比例对个人标准化成绩的影响，控制学生个人特征和固定效应。</p>
-<h3 id="主要结果">主要结果</h3>
-<p><strong>结果一：女生受益于更多女性同伴，男生无显著反应</strong></p>
-<ul>
-<li>考场女生比例增加1个标准差 → 女生成绩增加1.56%标准差（显著）</li>
-<li>男生对考场性别构成无显著反应</li>
-<li>女生的大学录取机会同样提升：考入第一批大学的概率增加1.2%标准差</li>
-</ul>
-<p><strong>结果二：视觉暴露是关键机制</strong></p>
-<ul>
-<li>将考场学生分为四个区域（前左、前右、后左、后右）</li>
-<li>前排区域的女生比例对后排女生成绩有显著正效应；后排区域的女生比例对后排女生无显著影响</li>
-<li>每名学生"直接正前方"（immediate view）的同伴为女性，对成绩有显著正效应</li>
-<li>结论：眼睛能看到的女性同伴才会带来效应，而非整个考场的性别氛围</li>
-</ul>
-<p><strong>结果三：时序效应——越靠后的科目效应越强</strong></p>
-<ul>
-<li>高考分两至三天进行，首日首科效应最小，后续科目效应逐渐增大</li>
-<li>可能的解释：随着考试进行，学生对考场性别构成越来越了解，积累了更多"性别同伴意识"</li>
-</ul>
-<p><strong>结果四：科目差异——仅在文科出现效应</strong></p>
-<ul>
-<li>对理科生无显著效应</li>
-<li>对文科生效应显著（文科考场女生占比本身更高，更容易形成女性团结和支持文化）</li>
-</ul>
-<p><strong>结果五（异质性）：社会规范调节效应显著；经济发展和环境因素无作用</strong></p>
-<ul>
-<li>性别平等程度更高的县（女性出生比例更高、大学录取性别差距更小）中，女生的性别构成效应显著更大</li>
-<li>距孔庙更远的县（儒家文化影响较弱）中，女生性别构成效应更大</li>
-<li>人均GDP、PM2.5浓度、高考气温分位上下组无显著差异——说明经济发展和自然环境不是调节渠道</li>
-</ul>
-<h3 id="机制讨论">机制讨论</h3>
-<p>作者提出两种不互斥的机制：</p>
-<ol>
-<li><strong>女性团结效应（female solidarity）</strong>：更多女性同伴在场，增加了情感支持、心理认同感，降低了考试焦虑，促进表现。</li>
-<li><strong>女性依赖效应（female dependence）</strong>：性别平等地区女性受教育机会更广，考生总体能力偏低，更依赖外部同伴支持；而在这样的环境中，女性化同伴环境提供了更大的心理支撑。</li>
-</ol>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<p><strong>核心发现</strong>：利用高考随机座位分配，女生的成绩在女性同伴比例更高的考场中显著更好（+1.56% SD），男生无反应。视觉暴露是关键机制：直接在眼前的女性同伴效应最强。效应在文科生中存在、理科生中不显著。效应在性别平等程度高、儒家文化影响弱的地区更大；与经济发展水平和自然环境无关。</p>
-<p><strong>对领域的贡献</strong>：</p>
-<ol>
-<li>首次在高风险考试场景中提供大规模随机性证据证明临时性同伴性别构成影响表现；</li>
-<li>拓展了同伴效应文献——短暂暴露也能产生可测量的成绩影响；</li>
-<li>揭示社会规范作为同伴效应调节变量的角色，为理解文化情境下异质性同伴效应提供了新框架；</li>
-<li>视觉注意力理论（visual attention）与同伴效应的结合是方法论上的创新。</li>
-</ol>
-<p><strong>政策含义</strong>：</p>
-<ul>
-<li>考场实行性别同质化座位安排（女生集中考场）可能有助于提升女生成绩</li>
-<li>效应在性别平等地区更强，表明文化变革与考场政策相互补充</li>
-<li>发现有助于减小高考中的性别差距，改善女性高等教育入学机会</li>
-</ul>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文中提及的方向</strong>：</p>
-<ol>
-<li>用更近年的高考数据验证效应是否随时间演变（样本仅覆盖2000-2003年，加入WTO和快速市场化的特殊时期）；</li>
-<li>实验设计以更好地区分"女性团结效应"与"女性依赖效应"两种机制。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li>考场性别构成政策的成本效益分析：重新设计考场性别分配的实施成本 vs. 女生升学率提升带来的人力资本收益；</li>
-<li>效应的长期影响：高考中的性别构成效应是否影响大学专业选择、职业发展（尤其是女性进入STEM领域的决策）？</li>
-<li>类似效应在其他高风险情景（执业资格考试、公务员考试、国际标准化考试如GRE）的可复制性；</li>
-<li>男性为何不受影响？探究男性对同伴性别构成的反应机制（竞争压力、自我形象）是否与女性根本不同。</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>随机性的"质量"</strong>：研究依赖随机座位分配提供外生性。平衡性检验证实了随机性，但如果学生系统性地在同一社区被分配同一考场（可能源于准考证号生成机制），会不会仍有同伴选择问题？文章是否充分排除了这种可能？</p>
-</li>
-<li>
-<p><strong>视觉暴露机制的另一解读</strong>：前排区域女生比例的效应强于后排，作者解释为"视觉暴露"。但前排学生成绩本身是否系统性地更好？如果前排座位不完全随机（比如成绩优异者被安排在前排），效应可能混入了"高质量同伴"的影响，而非纯粹的视觉效应。</p>
-</li>
-<li>
-<p><strong>儒家文化指标的可靠性</strong>：用"距最近孔庙的距离"作为儒家文化影响的代理变量，这一变量的历史合理性可以接受，但"孔庙"的分布也受历史城市化、旅游开发等因素影响，现代孔庙分布与儒家文化强度的映射关系值得进一步评估。</p>
-</li>
-<li>
-<p><strong>为什么只在文科出现效应</strong>：文科生考场女生占比确实更高，这本身是否是一个内生问题？如果文科女生的绝对数量和质量都不同，"女性多数"的含义在理科和文科可能根本不同，直接比较两个群体可能不恰当。</p>
-</li>
-<li>
-<p><strong>政策实施的道德困境</strong>：如果"性别隔离考场"可以帮助女生考更高分，政策上是否应该推行？这一政策会不会反而强化了"女生在单性别环境中才能表现好"的刻板印象？与鼓励女生进入混合竞争环境的长期目标是否矛盾？</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>这篇文章和 Cai et al. (2019) 的关系是什么？为什么在高考中女生整体成绩低于男生，而女生实际接受高等教育的人数却已超过男生？</li>
-<li>该研究的样本时期（2000-2003年）是特殊历史时期，效应现在还适用吗？当今中国高考中女生表现是否已经超过男生？</li>
-<li>"直接视野内女性同伴"产生效应的心理机制是什么？是社会比较（social comparison）、情感支持，还是降低了威胁感（stereotype threat reduction）？</li>
-<li>为什么男生对考场性别构成没有反应？有无研究显示男生在女多男少的考场中会感到压力（或竞争刺激）而表现更好或更差？</li>
-<li>性别构成效应是否与其他同伴效应（能力同伴效应、高考状态焦虑）存在交互？如果考场高分学生比例和女生比例同时变化，效应会叠加还是相互抵消？</li>
-<li>本文的政策建议（性别同质化考场）在实践中是否可行？会有哪些政治阻力和操作挑战？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -13928,6 +13780,154 @@ Zotero Item Key:: FQ76EBZJ</p>
 <li>"同工同酬"诉求在中国语境下的实证研究：中国工人是否也对同事/同岗位内部薪酬差异更为敏感？</li>
 <li>本文发现的"centre bias"与"Dunning-Kruger效应"（高能力者低估自己、低能力者高估自己）有什么异同？是否可以用类似的统计框架来解释？</li>
 <li>如果给中国受访者实施类似的信息干预（告知真实收入排名），预期会有什么反应？鉴于中国社会对公开讨论收入的文化禁忌（“工资不能问别人”），这类研究在中国面临什么独特挑战？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>性别构成、社会情境与高考学业表现 — 深度阅读笔记 — Huang Et Al.</title>
+    <url>/posts/huang2025/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Gender Composition, Social Context, and Academic Performance in High-Stakes Examinations<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/JZXZD7BS/Huang 等 - 2025 - Gender Composition, Social Context, and Academic Performance in High-Stakes Examinations.pdf<br>
+Zotero Item Key:: QM7ZRJL9</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+同伴效应（peer effects）是教育经济学的核心议题——同伴的性别、能力、行为都可能影响个体表现。性别与竞争表现的关系已有丰富文献：女性在高风险竞争性环境中系统性地表现弱于同等能力的男性（Niederle &amp; Vesterlund 2011）。同伴性别构成效应的大量文献集中在长期持续暴露（如同班同学），而短暂暴露（如临时同考场）是否同样影响表现，研究相对匮乏。此外，社会规范（性别平等程度、儒家文化强度等）在调节同伴效应中的作用也尚未充分探索。</p>
+<p><strong>研究背景</strong><br>
+中国高考（Gaokao）是全球最重要的高风险标准化考试之一，每年约有1000万学生参加。高考成绩直接决定能否进入理想大学，因此具有深远的人生影响。现有研究（Cai et al., 2019）已记录到女生在高考中系统性弱于男生的现象。识别考场性别构成对成绩的影响，因果推断的挑战在于：学生通常会自我选择考场，传统研究无法排除选择偏差。本研究利用高考随机座位分配制度提供了外生性识别机会。</p>
+<p><strong>作者的问题意识</strong><br>
+（1）考场的性别构成是否影响学生表现？效应是否因性别而异？（2）视觉暴露（同伴是否在视野内）是否是传导机制的关键？（3）地方社会规范（性别平等程度、儒家文化影响）如何调节这种效应？</p>
+<p><strong>研究意义</strong><br>
+本文提供了高风险竞争环境中临时性同伴构成影响表现的因果证据，并首次在大样本跨地区数据中揭示了社会规范对同伴效应的调节作用，对减少教育性别差距的政策设计有直接启示。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：文献综述、研究问题与贡献。</li>
+<li><strong>数据与背景</strong>：高考考场制度、随机分座、数据来源（15个地市）。</li>
+<li><strong>主效应估计</strong>：性别构成对女生和男生成绩的影响。</li>
+<li><strong>视觉暴露机制</strong>：前排/后排、直接在前方的同伴的差异效应。</li>
+<li><strong>时序效应</strong>：考试日程靠后的科目效应是否更大。</li>
+<li><strong>异质性分析（社会规范）</strong>：性别平等程度、儒家文化、经济发展水平、环境因素的调节作用。</li>
+<li><strong>结论</strong>：政策含义与研究局限。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>高考考场由省级考试机构统一随机分配座位，学生凭准考证号对应固定考场和座位，学生、家长和学校均无法干预。每个考场约25名学生，按"蛇形"（zigzag）模式排列。平衡性检验证实：学生的预先特征（性别、年龄、所在高中）与考场女生比例之间没有显著相关——随机分座的假设成立。</p>
+<h3 id="挑战">挑战</h3>
+<p>过去的研究大多使用单一学校数据，无法研究社会规范的调节作用，因为缺乏地区间的差异。本文利用三个省（含新疆/青海等文化差异显著的地区）15个地市的数据，获得了地区间文化和经济条件的充足变异。</p>
+<h3 id="数据">数据</h3>
+<ul>
+<li><strong>样本</strong>：2000-2003年参加高考、来自15个地市的25万余名学生（主样本）；扩展样本纳入1999年河北、湖南学生</li>
+<li><strong>成绩结果</strong>：高考总分（标准化）；是否考入第一批（重点）大学</li>
+<li><strong>性别构成变量</strong>：考场女生比例</li>
+<li><strong>地区社会规范指标</strong>：同龄出生队列中女性比例（性别平等代理）、当地高考录取率的性别差距、距最近孔庙的距离（儒家文化影响代理）</li>
+<li><strong>经济和环境控制</strong>：人均GDP、PM2.5浓度、高考期间气温</li>
+</ul>
+<h3 id="识别策略">识别策略</h3>
+<p>利用考场层面随机座位分配产生的女生比例外生变化，OLS回归考场女生比例对个人标准化成绩的影响，控制学生个人特征和固定效应。</p>
+<h3 id="主要结果">主要结果</h3>
+<p><strong>结果一：女生受益于更多女性同伴，男生无显著反应</strong></p>
+<ul>
+<li>考场女生比例增加1个标准差 → 女生成绩增加1.56%标准差（显著）</li>
+<li>男生对考场性别构成无显著反应</li>
+<li>女生的大学录取机会同样提升：考入第一批大学的概率增加1.2%标准差</li>
+</ul>
+<p><strong>结果二：视觉暴露是关键机制</strong></p>
+<ul>
+<li>将考场学生分为四个区域（前左、前右、后左、后右）</li>
+<li>前排区域的女生比例对后排女生成绩有显著正效应；后排区域的女生比例对后排女生无显著影响</li>
+<li>每名学生"直接正前方"（immediate view）的同伴为女性，对成绩有显著正效应</li>
+<li>结论：眼睛能看到的女性同伴才会带来效应，而非整个考场的性别氛围</li>
+</ul>
+<p><strong>结果三：时序效应——越靠后的科目效应越强</strong></p>
+<ul>
+<li>高考分两至三天进行，首日首科效应最小，后续科目效应逐渐增大</li>
+<li>可能的解释：随着考试进行，学生对考场性别构成越来越了解，积累了更多"性别同伴意识"</li>
+</ul>
+<p><strong>结果四：科目差异——仅在文科出现效应</strong></p>
+<ul>
+<li>对理科生无显著效应</li>
+<li>对文科生效应显著（文科考场女生占比本身更高，更容易形成女性团结和支持文化）</li>
+</ul>
+<p><strong>结果五（异质性）：社会规范调节效应显著；经济发展和环境因素无作用</strong></p>
+<ul>
+<li>性别平等程度更高的县（女性出生比例更高、大学录取性别差距更小）中，女生的性别构成效应显著更大</li>
+<li>距孔庙更远的县（儒家文化影响较弱）中，女生性别构成效应更大</li>
+<li>人均GDP、PM2.5浓度、高考气温分位上下组无显著差异——说明经济发展和自然环境不是调节渠道</li>
+</ul>
+<h3 id="机制讨论">机制讨论</h3>
+<p>作者提出两种不互斥的机制：</p>
+<ol>
+<li><strong>女性团结效应（female solidarity）</strong>：更多女性同伴在场，增加了情感支持、心理认同感，降低了考试焦虑，促进表现。</li>
+<li><strong>女性依赖效应（female dependence）</strong>：性别平等地区女性受教育机会更广，考生总体能力偏低，更依赖外部同伴支持；而在这样的环境中，女性化同伴环境提供了更大的心理支撑。</li>
+</ol>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<p><strong>核心发现</strong>：利用高考随机座位分配，女生的成绩在女性同伴比例更高的考场中显著更好（+1.56% SD），男生无反应。视觉暴露是关键机制：直接在眼前的女性同伴效应最强。效应在文科生中存在、理科生中不显著。效应在性别平等程度高、儒家文化影响弱的地区更大；与经济发展水平和自然环境无关。</p>
+<p><strong>对领域的贡献</strong>：</p>
+<ol>
+<li>首次在高风险考试场景中提供大规模随机性证据证明临时性同伴性别构成影响表现；</li>
+<li>拓展了同伴效应文献——短暂暴露也能产生可测量的成绩影响；</li>
+<li>揭示社会规范作为同伴效应调节变量的角色，为理解文化情境下异质性同伴效应提供了新框架；</li>
+<li>视觉注意力理论（visual attention）与同伴效应的结合是方法论上的创新。</li>
+</ol>
+<p><strong>政策含义</strong>：</p>
+<ul>
+<li>考场实行性别同质化座位安排（女生集中考场）可能有助于提升女生成绩</li>
+<li>效应在性别平等地区更强，表明文化变革与考场政策相互补充</li>
+<li>发现有助于减小高考中的性别差距，改善女性高等教育入学机会</li>
+</ul>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文中提及的方向</strong>：</p>
+<ol>
+<li>用更近年的高考数据验证效应是否随时间演变（样本仅覆盖2000-2003年，加入WTO和快速市场化的特殊时期）；</li>
+<li>实验设计以更好地区分"女性团结效应"与"女性依赖效应"两种机制。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li>考场性别构成政策的成本效益分析：重新设计考场性别分配的实施成本 vs. 女生升学率提升带来的人力资本收益；</li>
+<li>效应的长期影响：高考中的性别构成效应是否影响大学专业选择、职业发展（尤其是女性进入STEM领域的决策）？</li>
+<li>类似效应在其他高风险情景（执业资格考试、公务员考试、国际标准化考试如GRE）的可复制性；</li>
+<li>男性为何不受影响？探究男性对同伴性别构成的反应机制（竞争压力、自我形象）是否与女性根本不同。</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>随机性的"质量"</strong>：研究依赖随机座位分配提供外生性。平衡性检验证实了随机性，但如果学生系统性地在同一社区被分配同一考场（可能源于准考证号生成机制），会不会仍有同伴选择问题？文章是否充分排除了这种可能？</p>
+</li>
+<li>
+<p><strong>视觉暴露机制的另一解读</strong>：前排区域女生比例的效应强于后排，作者解释为"视觉暴露"。但前排学生成绩本身是否系统性地更好？如果前排座位不完全随机（比如成绩优异者被安排在前排），效应可能混入了"高质量同伴"的影响，而非纯粹的视觉效应。</p>
+</li>
+<li>
+<p><strong>儒家文化指标的可靠性</strong>：用"距最近孔庙的距离"作为儒家文化影响的代理变量，这一变量的历史合理性可以接受，但"孔庙"的分布也受历史城市化、旅游开发等因素影响，现代孔庙分布与儒家文化强度的映射关系值得进一步评估。</p>
+</li>
+<li>
+<p><strong>为什么只在文科出现效应</strong>：文科生考场女生占比确实更高，这本身是否是一个内生问题？如果文科女生的绝对数量和质量都不同，"女性多数"的含义在理科和文科可能根本不同，直接比较两个群体可能不恰当。</p>
+</li>
+<li>
+<p><strong>政策实施的道德困境</strong>：如果"性别隔离考场"可以帮助女生考更高分，政策上是否应该推行？这一政策会不会反而强化了"女生在单性别环境中才能表现好"的刻板印象？与鼓励女生进入混合竞争环境的长期目标是否矛盾？</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>这篇文章和 Cai et al. (2019) 的关系是什么？为什么在高考中女生整体成绩低于男生，而女生实际接受高等教育的人数却已超过男生？</li>
+<li>该研究的样本时期（2000-2003年）是特殊历史时期，效应现在还适用吗？当今中国高考中女生表现是否已经超过男生？</li>
+<li>"直接视野内女性同伴"产生效应的心理机制是什么？是社会比较（social comparison）、情感支持，还是降低了威胁感（stereotype threat reduction）？</li>
+<li>为什么男生对考场性别构成没有反应？有无研究显示男生在女多男少的考场中会感到压力（或竞争刺激）而表现更好或更差？</li>
+<li>性别构成效应是否与其他同伴效应（能力同伴效应、高考状态焦虑）存在交互？如果考场高分学生比例和女生比例同时变化，效应会叠加还是相互抵消？</li>
+<li>本文的政策建议（性别同质化考场）在实践中是否可行？会有哪些政治阻力和操作挑战？</li>
 </ol>
 ]]></content>
       <categories>
@@ -14785,152 +14785,6 @@ Zotero Item Key:: MJSN77J6</p>
       </tags>
   </entry>
   <entry>
-    <title>动态研发网络中的内生技术周期 — 深度阅读笔记 — König &amp; Rogers</title>
-    <url>/posts/konig2023/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Endogenous technology cycles in dynamic R&amp;D networks<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/2VH5NS6L/König和Rogers - 2023 - Endogenous technology cycles in dynamic R&amp;D networks.pdf<br>
-Zotero Item Key:: BY7Y7TDL</p>
-<hr>
-<span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-创新是经济增长的驱动力，但创新很少单独发生——企业之间通过研发合作（R&amp;D collaborations）共享知识、获取互补技术。R&amp;D合作形成的网络结构本身会影响知识传播的效率和范围。已有文献分别研究了网络结构（静态）对创新的影响，以及创新对网络演化的影响，但二者的<strong>共同内生性</strong>（coevolution）迄今研究甚少。</p>
-<p><strong>研究背景</strong><br>
-已有R&amp;D网络模型将企业知识简化为抽象的标量（一维知识水平），且通常假设网络是外生给定的，或忽略技术组合变化对合作激励的反馈。本文发现现实中R&amp;D合作强度存在<strong>显著振荡（周期性）模式</strong>（来自Thomson SDC Alliance数据库的多十年R&amp;D联盟数据），但这一现象无法被现有模型解释。</p>
-<p><strong>作者的问题意识</strong><br>
-如何建立一个模型，能够内生地同时解释：（1）R&amp;D合作网络的形成；（2）技术组合的演化（创新+知识溢出+技术淘汰）；（3）观察到的R&amp;D合作强度周期性振荡？这种振荡对政策有什么含义？</p>
-<p><strong>研究意义</strong><br>
-首次将企业知识表示为<strong>多维技术组合（technology portfolio）</strong>，并将网络形成和知识创造建模为<strong>共同内生过程</strong>。发现了两个新结论：溢出效应存在<strong>临界阈值</strong>，以及R&amp;D网络存在<strong>内生周期性波动</strong>。为创新政策提供新的理论基础。</p>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言</strong>：研究动机、两大发现（阈值 + 周期性）。</li>
-<li><strong>模型设定</strong>：技术组合模型 + 网络形成规则 + 知识动态（创新/溢出/淘汰）。</li>
-<li><strong>静态分析</strong>：稳态特征；溢出阈值的推导。</li>
-<li><strong>动态分析</strong>：稳态的稳定性分析；振荡（阻尼振荡）的理论来源。</li>
-<li><strong>实证验证</strong>：R&amp;D联盟数据的周期性证据（Fourier回归；网络结构图）。</li>
-<li><strong>政策含义</strong>：阈值对研发政策的含义；竞争政策与网络稳定性的权衡。</li>
-<li><strong>结论</strong>。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景与模型动机">背景与模型动机</h3>
-<p>传统R&amp;D网络模型中，企业的"知识"是一个抽象标量（例如一个代表技术水平的单一数字）。但现实中，企业拥有的是<strong>多项技术的组合</strong>（如一家生物科技公司掌握基因编辑、蛋白质合成、化学合成等多项技术）。</p>
-<p>关键洞察（来自Jovanovic &amp; Rob, 1989）：</p>
-<blockquote>
-<p>“如果大家都知道同一件事，彼此就无法互相学习。”<br>
-知识的互补性才是R&amp;D合作的真正动机——企业只有在对方的技术组合与自己互补时，才有激励合作。</p>
-</blockquote>
-<p>因此本文的技术互补性驱动合作，而合作带来的知识溢出又改变了企业的技术组合，进而影响下一期的合作激励——<strong>网络形成与知识演化形成相互反馈的内生循环</strong>。</p>
-<h3 id="模型">模型</h3>
-<p><strong>企业</strong>：每家企业拥有一个多维技术组合向量（持有/不持有某项技术）。<br>
-<strong>合作规则</strong>：企业i与企业j在以下条件下形成合作（边）：</p>
-<ul>
-<li>j拥有i尚未持有的技术（互补性）</li>
-<li>合作成本低于预期学习收益（有利可图）</li>
-<li>网络中每条边有固定持续时间（合作有寿命）</li>
-</ul>
-<p><strong>知识动态</strong>：</p>
-<ul>
-<li><strong>创新（Innovation）</strong>：企业以一定概率发明新技术</li>
-<li><strong>溢出（Spillover）</strong>：通过合作，企业以概率β从合作伙伴那里学习新技术</li>
-<li><strong>淘汰（Obsolescence）</strong>：技术以一定速率过时消亡</li>
-</ul>
-<p>这三个过程共同决定了企业技术组合随时间的演化，进而影响合作激励和网络结构。</p>
-<h3 id="主要结果一：溢出阈值">主要结果一：溢出阈值</h3>
-<p><strong>核心发现</strong>：存在一个关键的溢出概率阈值β_c，使得：</p>
-<ul>
-<li>β &gt; β_c：技术扩散过程超过技术淘汰过程 → 经济中知识存量持续增长 → R&amp;D合作有实质意义</li>
-<li>β &lt; β_c：技术淘汰速度超过扩散速度 → 即使有R&amp;D合作，经济中知识存量无法积累</li>
-</ul>
-<p><strong>直觉</strong>：如果企业从合作伙伴处学到技术的概率太低（溢出太弱），合作就变成"摆样子"——网络连接存在，但没有真实的技术转移；知识不断被淘汰，无法积累。</p>
-<p><strong>β_c的影响因素</strong>：</p>
-<ul>
-<li>竞争<strong>降低</strong>阈值：更激烈的产品市场竞争使得更高效（技术更丰富）的企业主导市场，吸引更多合作，形成更集中的网络结构，有助于技术传播</li>
-<li>知识淘汰率升高 → β_c升高（需要更强的溢出才能赶上淘汰速度）</li>
-<li>合作成本升高 → β_c升高</li>
-<li>企业生产率升高 → β_c降低</li>
-<li>联盟持续时间延长 → β_c降低</li>
-</ul>
-<p><strong>政策含义</strong>：支持R&amp;D合作的政策（如补贴、减税）只有当溢出效应超过阈值才有效——“不够强的政策没有用”。这可以解释为什么硅谷成功（低合作成本让溢出超过阈值），而Boston Route 128失败（合作文化更封闭，溢出可能低于阈值）。</p>
-<h3 id="主要结果二：内生技术周期（振荡）">主要结果二：内生技术周期（振荡）</h3>
-<p><strong>核心发现</strong>：稳态的稳定性分析表明，R&amp;D合作强度（网络密度）会呈现<strong>阻尼振荡（damped oscillation）</strong>——即随时间周期性上升和下降，振幅逐渐减小。</p>
-<p><strong>周期机制（类Schumpeter创造性破坏）</strong>：</p>
-<ol>
-<li>当前技术组合广泛共享 → 互补性低 → 合作动机减弱 → 网络密度下降（d̄ ↓）</li>
-<li>知识淘汰 + 企业退出 → 平均知识存量下降（h̄ ↓）</li>
-<li>知识存量低 → 新企业进入寻找新技术 → 某企业创新出新技术</li>
-<li>新技术出现 → 互补性高 → 合作激励上升 → 网络密度上升（d̄ ↑）</li>
-<li>新技术扩散 → 知识趋于同质 → 回到第1步</li>
-</ol>
-<p>这个循环类似于熊彼特的"创造性破坏"：旧技术普及后互补性耗尽 → 网络衰退 → 新技术创新 → 新一轮合作繁荣。</p>
-<p><strong>实证支持</strong>：Thompson SDC Alliance数据库中的R&amp;D联盟数据显示，全样本的平均合作度数（average degree）在数十年内确实呈现出周期性振荡模式（Fourier回归）。这与互联网技术扩散周期（dot-com兴衰）以及技术生命周期理论一致。</p>
-<p><strong>政策含义</strong>：加强竞争（如市场开放、反垄断）虽然能降低溢出阈值（有利于创新），但也会<strong>加剧网络的振荡</strong>——让创新繁荣-衰退周期更剧烈，可能导致经济不稳定。这提示了创新政策中竞争促进（competition enhancement）和稳定性之间的<strong>权衡（trade-off）</strong>。</p>
-<h3 id="数据">数据</h3>
-<p><strong>Thomson SDC Alliance数据库</strong>：全球大规模R&amp;D联盟数据，覆盖多个十年，包含联盟的形成/解散日期、参与企业、技术领域等信息。因为是付费数据库，作者无法公开。分析中使用了Fourier回归来捕捉振荡模式，并通过行业分解和反事实检验证实周期性并非商业周期的反映。</p>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<ol>
-<li>企业技术组合多维化建模是解释R&amp;D合作格局（互补驱动）的关键；</li>
-<li>技术溢出存在<strong>临界阈值β_c</strong>：低于此阈值，R&amp;D合作无助于知识积累，促进合作的政策形同虚设；</li>
-<li>竞争可以<strong>降低</strong>阈值，因此竞争促进政策与R&amp;D支持政策组合比单一政策更有效；</li>
-<li>R&amp;D合作强度呈现<strong>内生周期性振荡</strong>（阻尼振荡），与R&amp;D联盟数据相符；</li>
-<li>竞争促进政策的副作用是加剧振荡幅度，可能不利于网络稳定性——政策需要权衡创新促进与稳定性。</li>
-</ol>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文明确提及的方向</strong>：</p>
-<ol>
-<li>将模型扩展到多产品竞争情形（已在附录中实现单产品vs多产品的对比）；</li>
-<li>利用非付费数据（如欧盟R&amp;D合作数据）复验振荡结论；</li>
-<li>将阈值理论用于预测特定创新集群成败的分析。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li><strong>中国R&amp;D网络的振荡模式</strong>：中国企业间、高校-企业间的研发合作网络（如国家科技支撑计划、产学研联盟）是否也呈现类似的周期性振荡？中国政府大规模的合作补贴能否突破溢出阈值？</li>
-<li><strong>政府参与的外生冲击</strong>：政府专项资金往往是对R&amp;D网络的外生冲击（非内生形成），如何修改模型以纳入国家主导R&amp;D？这对周期性动态有何影响？</li>
-<li><strong>技术生命周期的预测</strong>：本模型预测特定技术扩散完成后网络密度会下降。能否用实时R&amp;D联盟数据对AI、量子计算等技术的网络密度变化进行实时追踪，提前预警"技术周期顶部"？</li>
-<li><strong>知识淘汰率的估计</strong>：β_c对知识淘汰率敏感，但淘汰率本身很难实证测量。结合专利引用衰减、技术词汇老化（类似前文Kalyani et al.的方法）等数据，能否构建技术淘汰率的经验测量？</li>
-<li><strong>中小企业 vs 大企业的不对称</strong>：本文表明大企业可能愿意与拥有关键技术的小企业合作。这对中国政府推进"专精特新"小企业的政策是否提供了理论支撑？</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>多维技术组合假设的实证可操作性</strong>：本文将企业知识表示为多维技术组合向量，这在理论上更真实，但在实证中如何测量企业的"技术组合"？一种可能是用专利分类（IPC）来刻画企业的技术维度分布，但专利并不覆盖所有知识，且专利策略本身是内生的。如何构建一个外生且可信的技术组合度量？</p>
-</li>
-<li>
-<p><strong>阻尼振荡的稳健性</strong>：论文用Thompson SDC Alliance数据展示了振荡模式，并用Fourier回归拟合。但Fourier回归的灵活性很高，几乎可以拟合任意时间序列形状。如何更严格地检验振荡的存在性（而不仅仅是"可以被Fourier拟合"）？有没有自然实验可以识别振荡的来源？</p>
-</li>
-<li>
-<p><strong>竞争-稳定性权衡的政策含义</strong>：论文发现竞争促进政策（如降低市场准入壁垒）在降低溢出阈值的同时，也会加剧R&amp;D网络的振荡。这意味着"创新政策+竞争政策"的组合可能存在根本性矛盾。现实中，中国同时推进产业集中（强化大企业垄断地位）和R&amp;D合作补贴的政策，是否可以理解为一种有意识的"以稳定换创新"的选择？</p>
-</li>
-<li>
-<p><strong>溢出阈值在不同产业的异质性</strong>：β_c依赖于合作成本、淘汰率、企业生产率等参数，这些参数在不同行业差异巨大（生物技术 vs 汽车制造 vs 软件）。阈值是否也因行业而大相径庭？政府在制定行业R&amp;D支持政策时是否应该针对不同行业设定不同的"最低有效补贴剂量"？</p>
-</li>
-<li>
-<p><strong>"先驱位置优势"与本文的连接</strong>：本文发现竞争可以降低阈值，使得即便溢出较弱的集群也能维持创新；而前文（Kalyani et al.）发现先驱位置保持长期优势。两文的机制联系值得深思：是否先驱位置的合作文化（低成本）+规模化溢出让它们长期高于阈值，而后发地区即使获得技术也因为低于阈值而无法形成持续的R&amp;D合作生态？</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>文中的"技术溢出阈值"β_c具体是怎么推导的？主要的数学工具是什么（分岔分析、图谱方法等）？</li>
-<li>论文如何处理R&amp;D网络的幂律分布（部分企业拥有非常多的合作伙伴）？与现实中的明星企业/枢纽节点（hub）如何对应？</li>
-<li>知识淘汰（obsolescence）在模型中如何参数化？现实中，技术淘汰率如何估计？</li>
-<li>该模型是否可以应用于中国大学-企业产学研联盟网络的研究？有没有类似Thompson SDC的中国R&amp;D合作数据？</li>
-<li>本文与创新经济学中的"竞争 vs 合作"（competition vs. cooperation）讨论有何关系？Aghion等人关于"倒U形竞争-创新关系"的发现如何与本文的阈值和振荡结论相联系？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Extreme Categories and Overreaction to News — 深度阅读笔记 — Kwon &amp; Tang</title>
     <url>/posts/kwon2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -15160,6 +15014,152 @@ Zotero Item Key:: BY7Y7TDL</p>
 ]]></content>
       <categories>
         <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>动态研发网络中的内生技术周期 — 深度阅读笔记 — König &amp; Rogers</title>
+    <url>/posts/konig2023/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Endogenous technology cycles in dynamic R&amp;D networks<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/2VH5NS6L/König和Rogers - 2023 - Endogenous technology cycles in dynamic R&amp;D networks.pdf<br>
+Zotero Item Key:: BY7Y7TDL</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+创新是经济增长的驱动力，但创新很少单独发生——企业之间通过研发合作（R&amp;D collaborations）共享知识、获取互补技术。R&amp;D合作形成的网络结构本身会影响知识传播的效率和范围。已有文献分别研究了网络结构（静态）对创新的影响，以及创新对网络演化的影响，但二者的<strong>共同内生性</strong>（coevolution）迄今研究甚少。</p>
+<p><strong>研究背景</strong><br>
+已有R&amp;D网络模型将企业知识简化为抽象的标量（一维知识水平），且通常假设网络是外生给定的，或忽略技术组合变化对合作激励的反馈。本文发现现实中R&amp;D合作强度存在<strong>显著振荡（周期性）模式</strong>（来自Thomson SDC Alliance数据库的多十年R&amp;D联盟数据），但这一现象无法被现有模型解释。</p>
+<p><strong>作者的问题意识</strong><br>
+如何建立一个模型，能够内生地同时解释：（1）R&amp;D合作网络的形成；（2）技术组合的演化（创新+知识溢出+技术淘汰）；（3）观察到的R&amp;D合作强度周期性振荡？这种振荡对政策有什么含义？</p>
+<p><strong>研究意义</strong><br>
+首次将企业知识表示为<strong>多维技术组合（technology portfolio）</strong>，并将网络形成和知识创造建模为<strong>共同内生过程</strong>。发现了两个新结论：溢出效应存在<strong>临界阈值</strong>，以及R&amp;D网络存在<strong>内生周期性波动</strong>。为创新政策提供新的理论基础。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：研究动机、两大发现（阈值 + 周期性）。</li>
+<li><strong>模型设定</strong>：技术组合模型 + 网络形成规则 + 知识动态（创新/溢出/淘汰）。</li>
+<li><strong>静态分析</strong>：稳态特征；溢出阈值的推导。</li>
+<li><strong>动态分析</strong>：稳态的稳定性分析；振荡（阻尼振荡）的理论来源。</li>
+<li><strong>实证验证</strong>：R&amp;D联盟数据的周期性证据（Fourier回归；网络结构图）。</li>
+<li><strong>政策含义</strong>：阈值对研发政策的含义；竞争政策与网络稳定性的权衡。</li>
+<li><strong>结论</strong>。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景与模型动机">背景与模型动机</h3>
+<p>传统R&amp;D网络模型中，企业的"知识"是一个抽象标量（例如一个代表技术水平的单一数字）。但现实中，企业拥有的是<strong>多项技术的组合</strong>（如一家生物科技公司掌握基因编辑、蛋白质合成、化学合成等多项技术）。</p>
+<p>关键洞察（来自Jovanovic &amp; Rob, 1989）：</p>
+<blockquote>
+<p>“如果大家都知道同一件事，彼此就无法互相学习。”<br>
+知识的互补性才是R&amp;D合作的真正动机——企业只有在对方的技术组合与自己互补时，才有激励合作。</p>
+</blockquote>
+<p>因此本文的技术互补性驱动合作，而合作带来的知识溢出又改变了企业的技术组合，进而影响下一期的合作激励——<strong>网络形成与知识演化形成相互反馈的内生循环</strong>。</p>
+<h3 id="模型">模型</h3>
+<p><strong>企业</strong>：每家企业拥有一个多维技术组合向量（持有/不持有某项技术）。<br>
+<strong>合作规则</strong>：企业i与企业j在以下条件下形成合作（边）：</p>
+<ul>
+<li>j拥有i尚未持有的技术（互补性）</li>
+<li>合作成本低于预期学习收益（有利可图）</li>
+<li>网络中每条边有固定持续时间（合作有寿命）</li>
+</ul>
+<p><strong>知识动态</strong>：</p>
+<ul>
+<li><strong>创新（Innovation）</strong>：企业以一定概率发明新技术</li>
+<li><strong>溢出（Spillover）</strong>：通过合作，企业以概率β从合作伙伴那里学习新技术</li>
+<li><strong>淘汰（Obsolescence）</strong>：技术以一定速率过时消亡</li>
+</ul>
+<p>这三个过程共同决定了企业技术组合随时间的演化，进而影响合作激励和网络结构。</p>
+<h3 id="主要结果一：溢出阈值">主要结果一：溢出阈值</h3>
+<p><strong>核心发现</strong>：存在一个关键的溢出概率阈值β_c，使得：</p>
+<ul>
+<li>β &gt; β_c：技术扩散过程超过技术淘汰过程 → 经济中知识存量持续增长 → R&amp;D合作有实质意义</li>
+<li>β &lt; β_c：技术淘汰速度超过扩散速度 → 即使有R&amp;D合作，经济中知识存量无法积累</li>
+</ul>
+<p><strong>直觉</strong>：如果企业从合作伙伴处学到技术的概率太低（溢出太弱），合作就变成"摆样子"——网络连接存在，但没有真实的技术转移；知识不断被淘汰，无法积累。</p>
+<p><strong>β_c的影响因素</strong>：</p>
+<ul>
+<li>竞争<strong>降低</strong>阈值：更激烈的产品市场竞争使得更高效（技术更丰富）的企业主导市场，吸引更多合作，形成更集中的网络结构，有助于技术传播</li>
+<li>知识淘汰率升高 → β_c升高（需要更强的溢出才能赶上淘汰速度）</li>
+<li>合作成本升高 → β_c升高</li>
+<li>企业生产率升高 → β_c降低</li>
+<li>联盟持续时间延长 → β_c降低</li>
+</ul>
+<p><strong>政策含义</strong>：支持R&amp;D合作的政策（如补贴、减税）只有当溢出效应超过阈值才有效——“不够强的政策没有用”。这可以解释为什么硅谷成功（低合作成本让溢出超过阈值），而Boston Route 128失败（合作文化更封闭，溢出可能低于阈值）。</p>
+<h3 id="主要结果二：内生技术周期（振荡）">主要结果二：内生技术周期（振荡）</h3>
+<p><strong>核心发现</strong>：稳态的稳定性分析表明，R&amp;D合作强度（网络密度）会呈现<strong>阻尼振荡（damped oscillation）</strong>——即随时间周期性上升和下降，振幅逐渐减小。</p>
+<p><strong>周期机制（类Schumpeter创造性破坏）</strong>：</p>
+<ol>
+<li>当前技术组合广泛共享 → 互补性低 → 合作动机减弱 → 网络密度下降（d̄ ↓）</li>
+<li>知识淘汰 + 企业退出 → 平均知识存量下降（h̄ ↓）</li>
+<li>知识存量低 → 新企业进入寻找新技术 → 某企业创新出新技术</li>
+<li>新技术出现 → 互补性高 → 合作激励上升 → 网络密度上升（d̄ ↑）</li>
+<li>新技术扩散 → 知识趋于同质 → 回到第1步</li>
+</ol>
+<p>这个循环类似于熊彼特的"创造性破坏"：旧技术普及后互补性耗尽 → 网络衰退 → 新技术创新 → 新一轮合作繁荣。</p>
+<p><strong>实证支持</strong>：Thompson SDC Alliance数据库中的R&amp;D联盟数据显示，全样本的平均合作度数（average degree）在数十年内确实呈现出周期性振荡模式（Fourier回归）。这与互联网技术扩散周期（dot-com兴衰）以及技术生命周期理论一致。</p>
+<p><strong>政策含义</strong>：加强竞争（如市场开放、反垄断）虽然能降低溢出阈值（有利于创新），但也会<strong>加剧网络的振荡</strong>——让创新繁荣-衰退周期更剧烈，可能导致经济不稳定。这提示了创新政策中竞争促进（competition enhancement）和稳定性之间的<strong>权衡（trade-off）</strong>。</p>
+<h3 id="数据">数据</h3>
+<p><strong>Thomson SDC Alliance数据库</strong>：全球大规模R&amp;D联盟数据，覆盖多个十年，包含联盟的形成/解散日期、参与企业、技术领域等信息。因为是付费数据库，作者无法公开。分析中使用了Fourier回归来捕捉振荡模式，并通过行业分解和反事实检验证实周期性并非商业周期的反映。</p>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<ol>
+<li>企业技术组合多维化建模是解释R&amp;D合作格局（互补驱动）的关键；</li>
+<li>技术溢出存在<strong>临界阈值β_c</strong>：低于此阈值，R&amp;D合作无助于知识积累，促进合作的政策形同虚设；</li>
+<li>竞争可以<strong>降低</strong>阈值，因此竞争促进政策与R&amp;D支持政策组合比单一政策更有效；</li>
+<li>R&amp;D合作强度呈现<strong>内生周期性振荡</strong>（阻尼振荡），与R&amp;D联盟数据相符；</li>
+<li>竞争促进政策的副作用是加剧振荡幅度，可能不利于网络稳定性——政策需要权衡创新促进与稳定性。</li>
+</ol>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文明确提及的方向</strong>：</p>
+<ol>
+<li>将模型扩展到多产品竞争情形（已在附录中实现单产品vs多产品的对比）；</li>
+<li>利用非付费数据（如欧盟R&amp;D合作数据）复验振荡结论；</li>
+<li>将阈值理论用于预测特定创新集群成败的分析。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li><strong>中国R&amp;D网络的振荡模式</strong>：中国企业间、高校-企业间的研发合作网络（如国家科技支撑计划、产学研联盟）是否也呈现类似的周期性振荡？中国政府大规模的合作补贴能否突破溢出阈值？</li>
+<li><strong>政府参与的外生冲击</strong>：政府专项资金往往是对R&amp;D网络的外生冲击（非内生形成），如何修改模型以纳入国家主导R&amp;D？这对周期性动态有何影响？</li>
+<li><strong>技术生命周期的预测</strong>：本模型预测特定技术扩散完成后网络密度会下降。能否用实时R&amp;D联盟数据对AI、量子计算等技术的网络密度变化进行实时追踪，提前预警"技术周期顶部"？</li>
+<li><strong>知识淘汰率的估计</strong>：β_c对知识淘汰率敏感，但淘汰率本身很难实证测量。结合专利引用衰减、技术词汇老化（类似前文Kalyani et al.的方法）等数据，能否构建技术淘汰率的经验测量？</li>
+<li><strong>中小企业 vs 大企业的不对称</strong>：本文表明大企业可能愿意与拥有关键技术的小企业合作。这对中国政府推进"专精特新"小企业的政策是否提供了理论支撑？</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>多维技术组合假设的实证可操作性</strong>：本文将企业知识表示为多维技术组合向量，这在理论上更真实，但在实证中如何测量企业的"技术组合"？一种可能是用专利分类（IPC）来刻画企业的技术维度分布，但专利并不覆盖所有知识，且专利策略本身是内生的。如何构建一个外生且可信的技术组合度量？</p>
+</li>
+<li>
+<p><strong>阻尼振荡的稳健性</strong>：论文用Thompson SDC Alliance数据展示了振荡模式，并用Fourier回归拟合。但Fourier回归的灵活性很高，几乎可以拟合任意时间序列形状。如何更严格地检验振荡的存在性（而不仅仅是"可以被Fourier拟合"）？有没有自然实验可以识别振荡的来源？</p>
+</li>
+<li>
+<p><strong>竞争-稳定性权衡的政策含义</strong>：论文发现竞争促进政策（如降低市场准入壁垒）在降低溢出阈值的同时，也会加剧R&amp;D网络的振荡。这意味着"创新政策+竞争政策"的组合可能存在根本性矛盾。现实中，中国同时推进产业集中（强化大企业垄断地位）和R&amp;D合作补贴的政策，是否可以理解为一种有意识的"以稳定换创新"的选择？</p>
+</li>
+<li>
+<p><strong>溢出阈值在不同产业的异质性</strong>：β_c依赖于合作成本、淘汰率、企业生产率等参数，这些参数在不同行业差异巨大（生物技术 vs 汽车制造 vs 软件）。阈值是否也因行业而大相径庭？政府在制定行业R&amp;D支持政策时是否应该针对不同行业设定不同的"最低有效补贴剂量"？</p>
+</li>
+<li>
+<p><strong>"先驱位置优势"与本文的连接</strong>：本文发现竞争可以降低阈值，使得即便溢出较弱的集群也能维持创新；而前文（Kalyani et al.）发现先驱位置保持长期优势。两文的机制联系值得深思：是否先驱位置的合作文化（低成本）+规模化溢出让它们长期高于阈值，而后发地区即使获得技术也因为低于阈值而无法形成持续的R&amp;D合作生态？</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>文中的"技术溢出阈值"β_c具体是怎么推导的？主要的数学工具是什么（分岔分析、图谱方法等）？</li>
+<li>论文如何处理R&amp;D网络的幂律分布（部分企业拥有非常多的合作伙伴）？与现实中的明星企业/枢纽节点（hub）如何对应？</li>
+<li>知识淘汰（obsolescence）在模型中如何参数化？现实中，技术淘汰率如何估计？</li>
+<li>该模型是否可以应用于中国大学-企业产学研联盟网络的研究？有没有类似Thompson SDC的中国R&amp;D合作数据？</li>
+<li>本文与创新经济学中的"竞争 vs 合作"（competition vs. cooperation）讨论有何关系？Aghion等人关于"倒U形竞争-创新关系"的发现如何与本文的阈值和振荡结论相联系？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -15758,6 +15758,63 @@ Zotero Item Key:: BY7Y7TDL</p>
       </tags>
   </entry>
   <entry>
+    <title>Hiring as Exploration — 深度阅读笔记 — Li, Raymond &amp; Bergman</title>
+    <url>/posts/li2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Hiring as Exploration</li>
+<li><strong>作者</strong>: Danielle Li (MIT &amp; NBER), Lindsey Raymond (MIT), Peter Bergman (UT Austin &amp; NBER)</li>
+<li><strong>类型</strong>: 论文笔记</li>
+<li><strong>出版年份</strong>: 2026</li>
+<li><strong>出版机构/期刊</strong>: Review of Economic Studies (RES)</li>
+<li><strong>DOI</strong>: 10.1093/restud/rdaf040</li>
+<li><strong>难度评估</strong>: 高 - 需要机器学习、计量经济学、招聘经济学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="1-引言">1. 引言</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p>情境强盗问题、探索与利用的权衡、监督学习算法、UCB（上置信界）算法。</p>
+<h3 id="研究背景">研究背景</h3>
+<p>算法招聘日益普及；传统监督学习算法可能复制历史偏见；人类面试官预测能力有限。</p>
+<h3 id="核心问题">核心问题</h3>
+<p>将招聘视为情境强盗问题——如何平衡"利用"（选择已知最佳）与"探索"（学习新候选人质量）。探索式算法能否在提高招聘质量的同时增加人口多样性？</p>
+<h2 id="2-内容及结构">2. 内容及结构</h2>
+<ul>
+<li>第一节：引言</li>
+<li>第二节：招聘偏见</li>
+<li>第三节：数据环境</li>
+<li>第四节：实证策略</li>
+<li>第五节：算法设计（SL vs UCB）</li>
+<li>第六节：主要结果</li>
+<li>第七节：扩展</li>
+<li>第八节：结论</li>
+</ul>
+<h2 id="3-正文">3. 正文</h2>
+<h3 id="核心机制">核心机制</h3>
+<ul>
+<li><strong>SL模型</strong>：仅利用——选择预期质量最高的候选人</li>
+<li><strong>UCB模型</strong>：利用+探索——对特征偏离训练数据均值的候选人给予探索溢价</li>
+</ul>
+<h3 id="关键发现">关键发现</h3>
+<ol>
+<li><strong>多样性</strong>：UCB使黑人/西班牙裔代表从9.4%增至24.3%；SL降至5%以下</li>
+<li><strong>质量</strong>：SL录用率32%，UCB 27%，人类仅10%</li>
+<li><strong>帕累托改进</strong>：可能同时提升质量与多样性</li>
+</ol>
+<h2 id="4-结论">4. 结论</h2>
+<p>探索式算法可实现帕累托改进，挑战了效率-公平权衡的传统观点。</p>
+<h2 id="5-未来研究方向">5. 未来研究方向</h2>
+<p>跨行业推广、长期动态效应、法律伦理风险、因果机制检验。</p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>自下而上的制度变迁与中国经济增长 — 深度阅读笔记 — Li Et Al.</title>
     <url>/posts/li2024bottomup/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Bottom-Up Institutional Change and Growth in China<br>
@@ -15896,63 +15953,6 @@ Zotero Item Key:: 2XKAAMHY</p>
 ]]></content>
       <categories>
         <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hiring as Exploration — 深度阅读笔记 — Li, Raymond &amp; Bergman</title>
-    <url>/posts/li2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Hiring as Exploration</li>
-<li><strong>作者</strong>: Danielle Li (MIT &amp; NBER), Lindsey Raymond (MIT), Peter Bergman (UT Austin &amp; NBER)</li>
-<li><strong>类型</strong>: 论文笔记</li>
-<li><strong>出版年份</strong>: 2026</li>
-<li><strong>出版机构/期刊</strong>: Review of Economic Studies (RES)</li>
-<li><strong>DOI</strong>: 10.1093/restud/rdaf040</li>
-<li><strong>难度评估</strong>: 高 - 需要机器学习、计量经济学、招聘经济学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="1-引言">1. 引言</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p>情境强盗问题、探索与利用的权衡、监督学习算法、UCB（上置信界）算法。</p>
-<h3 id="研究背景">研究背景</h3>
-<p>算法招聘日益普及；传统监督学习算法可能复制历史偏见；人类面试官预测能力有限。</p>
-<h3 id="核心问题">核心问题</h3>
-<p>将招聘视为情境强盗问题——如何平衡"利用"（选择已知最佳）与"探索"（学习新候选人质量）。探索式算法能否在提高招聘质量的同时增加人口多样性？</p>
-<h2 id="2-内容及结构">2. 内容及结构</h2>
-<ul>
-<li>第一节：引言</li>
-<li>第二节：招聘偏见</li>
-<li>第三节：数据环境</li>
-<li>第四节：实证策略</li>
-<li>第五节：算法设计（SL vs UCB）</li>
-<li>第六节：主要结果</li>
-<li>第七节：扩展</li>
-<li>第八节：结论</li>
-</ul>
-<h2 id="3-正文">3. 正文</h2>
-<h3 id="核心机制">核心机制</h3>
-<ul>
-<li><strong>SL模型</strong>：仅利用——选择预期质量最高的候选人</li>
-<li><strong>UCB模型</strong>：利用+探索——对特征偏离训练数据均值的候选人给予探索溢价</li>
-</ul>
-<h3 id="关键发现">关键发现</h3>
-<ol>
-<li><strong>多样性</strong>：UCB使黑人/西班牙裔代表从9.4%增至24.3%；SL降至5%以下</li>
-<li><strong>质量</strong>：SL录用率32%，UCB 27%，人类仅10%</li>
-<li><strong>帕累托改进</strong>：可能同时提升质量与多样性</li>
-</ol>
-<h2 id="4-结论">4. 结论</h2>
-<p>探索式算法可实现帕累托改进，挑战了效率-公平权衡的传统观点。</p>
-<h2 id="5-未来研究方向">5. 未来研究方向</h2>
-<p>跨行业推广、长期动态效应、法律伦理风险、因果机制检验。</p>
-]]></content>
-      <categories>
-        <category>RES</category>
       </categories>
       <tags>
         <tag>论文笔记</tag>
@@ -16246,6 +16246,230 @@ Zotero Item Key:: LWFR6PLB</p>
       </tags>
   </entry>
   <entry>
+    <title>&lt;马铃薯与人口&gt;深度阅读笔记 — Nunn &amp; Qian</title>
+    <url>/posts/nunn2011/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: The Potato’s Contribution to Population and Urbanization: Evidence From A Historical Experiment</li>
+<li><strong>作者</strong>: Nathan Nunn(哈佛大学), Nancy Qian(耶鲁大学)</li>
+<li><strong>类型</strong>: 论文笔记 / 经济史 / 人口史 / 计量史学</li>
+<li><strong>出版年份</strong>: 2011</li>
+<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics</li>
+<li><strong>DOI</strong>: 10.1093/qje/qjr009</li>
+<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量史学基础</li>
+</ul>
+<span id="more"></span>
+<hr>
+<h2 id="引言-马铃薯-改变世界的作物">引言:马铃薯_改变世界的作物</h2>
+<p>This is a landmark paper by Nathan Nunn and Nancy Qian, published in the Quarterly Journal of Economics in 2011.</p>
+<h3 id="研究背景">研究背景</h3>
+<p>1000-1900年间,世界人口从不到3亿增长到16亿,城市人口比例从2%上升到超过9%,增长四倍多.尤其引人注目的是,这种增长并非匀速的,而是在后半段(特别是18和19世纪)急剧加速.</p>
+<p>许多学者注意到,马铃薯从美洲传入旧大陆后,凭借其卓越的营养价值和单位面积产量优势,可能在推动人口增长和经济发展方面发挥了关键作用.历史学家William Langer(1963)指出:“马铃薯种植的传播与人口的快速增长在各地都相互对应”.William McNeill(1999)甚至认为马铃薯是解释1750至1950年间欧洲少数国家主导全球的"一个必要_尽管绝非唯一的_因素".</p>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p>尽管大量定性的历史叙述支持马铃薯对旧大陆人口和经济发展具有重要影响的观点,但实证量化马铃薯总体影响的证据却非常匮乏.造成这一知识缺口的主要原因是估计中的内生性问题:</p>
+<ul>
+<li><strong>反向因果(Reverse Causality):</strong> 马铃薯的采纳可能导致了人口增长,但反过来,潜在的人口压力及其对食物的需求也可能驱动了马铃薯的采纳</li>
+<li><strong>联合决定(Joint Determination):</strong> 人口增长和新农业技术的采纳可能同时受到第三个不可观测因素的驱动</li>
+</ul>
+<h2 id="内容及结构">内容及结构</h2>
+<p>这篇论文共分为七个主要部分:</p>
+<ol>
+<li><strong>引言(Introduction):</strong> 概述研究问题、动机、识别策略和主要结论</li>
+<li><strong>背景(Background):</strong> 马铃薯的营养优势,从新大陆到旧大陆的传播,其他新大陆主粮作物</li>
+<li><strong>概念框架(Conceptual Framework):</strong> 构建简单的两部门一般均衡模型</li>
+<li><strong>数据(Data):</strong> 作物适宜度数据(FAO GAEZ数据库)和人口/城市化数据</li>
+<li><strong>实证策略与主要结果(Empirical Strategy and Main Results):</strong> 核心估计方程和基准估计结果</li>
+<li><strong>稳健性检验(Robustness):</strong> 控制额外变量、洲内变异分析、城市人口分析、法国士兵身高分析</li>
+<li><strong>结论(Conclusions):</strong> 总结主要发现和学术贡献</li>
+</ol>
+<h2 id="马铃薯的营养优势">马铃薯的营养优势</h2>
+<h3 id="营养完整性">营养完整性</h3>
+<p>马铃薯是所有主粮中营养最为全面的作物之一:</p>
+<ul>
+<li>一个中等大小的马铃薯(150克)连皮食用,可提供29.55毫克的维生素C(占每日建议摄入量的45%),以及丰富的钾,维生素B6等</li>
+<li>其他旧大陆的主粮_小麦、燕麦,大麦、稻米和玉米_都不含维生素C</li>
+</ul>
+<h3 id="单位面积热量优势">单位面积热量优势</h3>
+<table>
+<thead>
+<tr>
+<th>作物</th>
+<th>每英亩产量(公斤)</th>
+<th>每英亩能量值(兆焦)</th>
+<th>养活一家五口所需英亩数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>小麦</td>
+<td>650</td>
+<td>8,900</td>
+<td>1.70</td>
+</tr>
+<tr>
+<td>大麦</td>
+<td>820</td>
+<td>11,400</td>
+<td>1.40</td>
+</tr>
+<tr>
+<td>燕麦</td>
+<td>690</td>
+<td>9,300</td>
+<td>1.60</td>
+</tr>
+<tr>
+<td>马铃薯</td>
+<td>10,900</td>
+<td>31,900</td>
+<td>0.50</td>
+</tr>
+</tbody>
+</table>
+<p>一英亩种植马铃薯的土地加上一头奶牛的乳制品,就足以养活六到八口人的大家庭.</p>
+<h2 id="马铃薯的传播史">马铃薯的传播史</h2>
+<p><strong>起源与发现:</strong> 考古证据表明,马铃薯最早在七千到一万年前就已在安第斯山脉被驯化种植</p>
+<p><strong>传入欧洲:</strong> 马铃薯在欧洲消费的最早记录是1573年西班牙塞维利亚一家医院购买马铃薯的账目,此后依次传入意大利(1586年)、英国(1596年)和德国(1601年)</p>
+<p><strong>缓慢采纳的原因:</strong></p>
+<ul>
+<li><strong>毒性恐惧:</strong> 马铃薯属于有毒的茄科植物,最初被推测为有毒</li>
+<li><strong>麻风病联想:</strong> 马铃薯变色、凹凸不平的外观与麻风病患者的皮肤相似</li>
+<li><strong>种植方式的陌生:</strong> 马铃薯是欧洲第一种通过块茎而非种子种植的食用植物</li>
+</ul>
+<h2 id="实证策略与估计方程">实证策略与估计方程</h2>
+<h3 id="核心估计方程">核心估计方程</h3>
+<p>$$\begin{array}{l}<br>
+f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=0\right)\right] \<br>
+=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=0\right)\right]<br>
+\end{array}$$</p>
+<p>其中:</p>
+<ul>
+<li>$i$ 索引国家,$t$ 索引时间</li>
+<li>$y_{it}$ 是因变量:国家$i$在时期$t$的总人口自然对数或城市化率</li>
+<li>$\ln(\text{Potato Area}_i)$ 是国家$i$适合种植马铃薯的土地面积的自然对数</li>
+<li>$I^{\text{Post}}_t$ 是指示变量,在1750、1800、1850、1900年取值为1</li>
+</ul>
+<h3 id="主要结果">主要结果</h3>
+<p><strong>人口方面(Table IV):</strong></p>
+<ul>
+<li>基线规格(列3):β = 0.032(标准误 0.012)</li>
+<li>马铃薯解释了旧大陆1700-1900年间**约25-26%**的人口增长</li>
+</ul>
+<p><strong>城市化方面:</strong></p>
+<ul>
+<li>基线规格:β = 0.0036(标准误 0.0012)</li>
+<li>马铃薯解释了城市化增长的<strong>约27-34%</strong></li>
+</ul>
+<h3 id="城市化效应的滞后">城市化效应的滞后</h3>
+<p>马铃薯对城市化的影响相对于对人口的影响<strong>延迟了50-100年</strong>.这一模式与统一增长理论(Galor and Weil 2000)的预测一致:</p>
+<ul>
+<li><strong>马尔萨斯时期:</strong> 生产力提升主要转化为人口增长</li>
+<li><strong>后马尔萨斯时期(约19世纪):</strong> 才观察到明显的人均收入和城市化改善</li>
+</ul>
+<h2 id="稳健性检验">稳健性检验</h2>
+<p>作者进行了大量稳健性检验,结果均保持正、显著且量级稳定:</p>
+<table>
+<thead>
+<tr>
+<th>额外控制变量</th>
+<th>人口系数</th>
+<th>城市化系数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>赤道距离</td>
+<td>0.030</td>
+<td>0.0037</td>
+</tr>
+<tr>
+<td>疟疾指数</td>
+<td>0.025</td>
+<td>0.0034</td>
+</tr>
+<tr>
+<td>法律渊源</td>
+<td>0.029</td>
+<td>0.0035</td>
+</tr>
+<tr>
+<td>殖民者身份</td>
+<td>0.033</td>
+<td>0.0036</td>
+</tr>
+<tr>
+<td><strong>全部同时控制</strong></td>
+<td><strong>0.031</strong></td>
+<td><strong>0.0029</strong></td>
+</tr>
+</tbody>
+</table>
+<p>洲内变异分析、城市人口分析、成人身高分析等进一步支持了主要结论.</p>
+<h2 id="结论">结论</h2>
+<ol>
+<li>
+<p><strong>因果效应估计:</strong> 马铃薯在1700-1900年间解释了旧大陆人口增长的约25-26%,城市化增长的约27-34%</p>
+</li>
+<li>
+<p><strong>学术贡献:</strong> 首次在整个旧大陆范围内、跨越数百年时间尺度,利用双重差分策略来估计马铃薯引入的因果效应</p>
+</li>
+<li>
+<p><strong>理论意义:</strong> 为营养改善在历史人口增长中的关键作用提供因果证据,支持了Fogel的"营养假说"</p>
+</li>
+</ol>
+<h2 id="未来研究方向">未来研究方向</h2>
+<ol>
+<li><strong>不同人口学渠道的分解:</strong> 进一步分解马铃薯对人口的具体人口学效应</li>
+<li><strong>更精细的时间纵深:</strong> 利用更高频的地方档案数据,构建更精细的时间序列</li>
+<li><strong>马铃薯采纳的过程研究:</strong> 收集各国/地区的具体采纳数据</li>
+<li><strong>对其他新大陆作物的深化比较:</strong> 对这些作物的相对效应进行深入探讨</li>
+<li><strong>政治经济分析:</strong> 探讨不同地区的政治、宗教,社会结构等因素影响了马铃薯的采纳速度</li>
+</ol>
+<h2 id="学术思考-启发性问题">学术思考:启发性问题</h2>
+<h3 id="问题一-技术的-不可替代性-与历史路径依赖">问题一:技术的"不可替代性"与历史路径依赖</h3>
+<p>论文证实了马铃薯对人口增长的重大贡献(约占1/4-1/3),但这引发了一个深层的历史反事实问题:<strong>如果欧洲没有获得马铃薯,会有什么替代品来满足不断增长的粮食需求?</strong></p>
+<h3 id="问题二-制度与地理的互动-为什么是爱尔兰">问题二:制度与地理的互动:为什么是爱尔兰?</h3>
+<p>论文表明马铃薯首先在爱尔兰被广泛采纳(17世纪末),然后才是欧洲大陆和其他地区.爱尔兰采纳马铃薯较早,不仅因为其地理条件适合,还因为:</p>
+<ul>
+<li>爱尔兰的土地所有制结构使得小农更需要高产作物</li>
+<li>爱尔兰的传统作物产出长期以地租形式被外流</li>
+<li>英国殖民统治的政治经济结构</li>
+</ul>
+<h3 id="问题三-营养与认知-为什么采纳需要那么久">问题三:营养与认知:为什么采纳需要那么久?</h3>
+<p>如果马铃薯如此优越,为什么从1573年首次出现在塞维利亚到1700年前后才被广泛种植,中间相隔超过一个世纪?</p>
+<p>论文提到了文化恐惧(毒性恐惧,麻风病关联等),但更深层的问题涉及<strong>信息扩散,学习机制和认知障碍</strong>.</p>
+<h3 id="问题四-人口-资源悖论的永久破解">问题四:人口-资源悖论的永久破解?</h3>
+<p>Malthus担忧任何生产力改善最终都会被人口增长所抵消.但论文通过展示马铃薯促进了人口增长,同时也暗示了这一机制的逐步减弱(到19世纪末,人口增长不再完全抵消收入增长).</p>
+<h3 id="问题五-历史因果推断的-局限性与必要性">问题五:历史因果推断的"局限性与必要性"</h3>
+<p>论文采用的"地理×时间"交互识别策略非常精巧,但仍然依赖于一个关键假设:1700年前后没有与马铃薯适宜度相关的其他冲击.</p>
+<hr>
+<h2 id="总结性反思">总结性反思</h2>
+<h3 id="学术启示一-历史因果推断的价值">学术启示一:历史因果推断的价值</h3>
+<p>在当代计量经济学和因果推断日益强调RCT、IV,断点回归等"高精度"方法的背景下,本文通过相对"低端"的双重差分方法,成功回答了一个关系到几亿人生命轨迹的大问题.</p>
+<h3 id="学术启示二-定量与定性的融合">学术启示二:定量与定性的融合</h3>
+<p>虽然论文的标题和结论强调了定量分析,但论文的强度实际上来自于定量与定性证据的紧密融合.</p>
+<h3 id="学术启示三-对-大问题-的执着">学术启示三:对"大问题"的执着</h3>
+<p>这篇论文成功的根本原因,也许不在于其方法学的新颖性(双重差分已是标准方法),而在于作者选择坚持追问一个"大问题"_<strong>技术进步如何改变了人类的物质生活和社会结构?</strong></p>
+<h3 id="学术启示四-全球视野下的历史经济学">学术启示四:全球视野下的历史经济学</h3>
+<p>论文涵盖了130个旧大陆国家、跨越900年的时间尺度,这种宏大的全球视野相对于当代经济史研究中常见的"区域聚焦"而言,是罕见和珍贵的.</p>
+<hr>
+<p><strong>文献信息:</strong></p>
+<ul>
+<li><strong>标题:</strong> The Potato’s Contribution to Population and Urbanization: Evidence From A Historical Experiment</li>
+<li><strong>作者:</strong> Nathan Nunn(哈佛大学)、Nancy Qian(耶鲁大学)</li>
+<li><strong>期刊:</strong> The Quarterly Journal of Economics, 2011, Vol. 126, pp. 593-650</li>
+<li><strong>DOI:</strong> 10.1093/qje/qjr009</li>
+</ul>
+]]></content>
+      <categories>
+        <category>历史</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+        <tag>经济史</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>年末消费高峰 — 论文笔记 — McCue, Prier &amp; Lofaro</title>
     <url>/posts/mccue2021/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -16501,230 +16725,6 @@ Zotero Item Key:: LWFR6PLB</p>
         <tag>论文笔记</tag>
         <tag>公共财政</tag>
         <tag>政府采购</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>&lt;马铃薯与人口&gt;深度阅读笔记 — Nunn &amp; Qian</title>
-    <url>/posts/nunn2011/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: The Potato’s Contribution to Population and Urbanization: Evidence From A Historical Experiment</li>
-<li><strong>作者</strong>: Nathan Nunn(哈佛大学), Nancy Qian(耶鲁大学)</li>
-<li><strong>类型</strong>: 论文笔记 / 经济史 / 人口史 / 计量史学</li>
-<li><strong>出版年份</strong>: 2011</li>
-<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics</li>
-<li><strong>DOI</strong>: 10.1093/qje/qjr009</li>
-<li><strong>难度评估</strong>: 高 - 需要经济学、统计学、计量史学基础</li>
-</ul>
-<span id="more"></span>
-<hr>
-<h2 id="引言-马铃薯-改变世界的作物">引言:马铃薯_改变世界的作物</h2>
-<p>This is a landmark paper by Nathan Nunn and Nancy Qian, published in the Quarterly Journal of Economics in 2011.</p>
-<h3 id="研究背景">研究背景</h3>
-<p>1000-1900年间,世界人口从不到3亿增长到16亿,城市人口比例从2%上升到超过9%,增长四倍多.尤其引人注目的是,这种增长并非匀速的,而是在后半段(特别是18和19世纪)急剧加速.</p>
-<p>许多学者注意到,马铃薯从美洲传入旧大陆后,凭借其卓越的营养价值和单位面积产量优势,可能在推动人口增长和经济发展方面发挥了关键作用.历史学家William Langer(1963)指出:“马铃薯种植的传播与人口的快速增长在各地都相互对应”.William McNeill(1999)甚至认为马铃薯是解释1750至1950年间欧洲少数国家主导全球的"一个必要_尽管绝非唯一的_因素".</p>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p>尽管大量定性的历史叙述支持马铃薯对旧大陆人口和经济发展具有重要影响的观点,但实证量化马铃薯总体影响的证据却非常匮乏.造成这一知识缺口的主要原因是估计中的内生性问题:</p>
-<ul>
-<li><strong>反向因果(Reverse Causality):</strong> 马铃薯的采纳可能导致了人口增长,但反过来,潜在的人口压力及其对食物的需求也可能驱动了马铃薯的采纳</li>
-<li><strong>联合决定(Joint Determination):</strong> 人口增长和新农业技术的采纳可能同时受到第三个不可观测因素的驱动</li>
-</ul>
-<h2 id="内容及结构">内容及结构</h2>
-<p>这篇论文共分为七个主要部分:</p>
-<ol>
-<li><strong>引言(Introduction):</strong> 概述研究问题、动机、识别策略和主要结论</li>
-<li><strong>背景(Background):</strong> 马铃薯的营养优势,从新大陆到旧大陆的传播,其他新大陆主粮作物</li>
-<li><strong>概念框架(Conceptual Framework):</strong> 构建简单的两部门一般均衡模型</li>
-<li><strong>数据(Data):</strong> 作物适宜度数据(FAO GAEZ数据库)和人口/城市化数据</li>
-<li><strong>实证策略与主要结果(Empirical Strategy and Main Results):</strong> 核心估计方程和基准估计结果</li>
-<li><strong>稳健性检验(Robustness):</strong> 控制额外变量、洲内变异分析、城市人口分析、法国士兵身高分析</li>
-<li><strong>结论(Conclusions):</strong> 总结主要发现和学术贡献</li>
-</ol>
-<h2 id="马铃薯的营养优势">马铃薯的营养优势</h2>
-<h3 id="营养完整性">营养完整性</h3>
-<p>马铃薯是所有主粮中营养最为全面的作物之一:</p>
-<ul>
-<li>一个中等大小的马铃薯(150克)连皮食用,可提供29.55毫克的维生素C(占每日建议摄入量的45%),以及丰富的钾,维生素B6等</li>
-<li>其他旧大陆的主粮_小麦、燕麦,大麦、稻米和玉米_都不含维生素C</li>
-</ul>
-<h3 id="单位面积热量优势">单位面积热量优势</h3>
-<table>
-<thead>
-<tr>
-<th>作物</th>
-<th>每英亩产量(公斤)</th>
-<th>每英亩能量值(兆焦)</th>
-<th>养活一家五口所需英亩数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>小麦</td>
-<td>650</td>
-<td>8,900</td>
-<td>1.70</td>
-</tr>
-<tr>
-<td>大麦</td>
-<td>820</td>
-<td>11,400</td>
-<td>1.40</td>
-</tr>
-<tr>
-<td>燕麦</td>
-<td>690</td>
-<td>9,300</td>
-<td>1.60</td>
-</tr>
-<tr>
-<td>马铃薯</td>
-<td>10,900</td>
-<td>31,900</td>
-<td>0.50</td>
-</tr>
-</tbody>
-</table>
-<p>一英亩种植马铃薯的土地加上一头奶牛的乳制品,就足以养活六到八口人的大家庭.</p>
-<h2 id="马铃薯的传播史">马铃薯的传播史</h2>
-<p><strong>起源与发现:</strong> 考古证据表明,马铃薯最早在七千到一万年前就已在安第斯山脉被驯化种植</p>
-<p><strong>传入欧洲:</strong> 马铃薯在欧洲消费的最早记录是1573年西班牙塞维利亚一家医院购买马铃薯的账目,此后依次传入意大利(1586年)、英国(1596年)和德国(1601年)</p>
-<p><strong>缓慢采纳的原因:</strong></p>
-<ul>
-<li><strong>毒性恐惧:</strong> 马铃薯属于有毒的茄科植物,最初被推测为有毒</li>
-<li><strong>麻风病联想:</strong> 马铃薯变色、凹凸不平的外观与麻风病患者的皮肤相似</li>
-<li><strong>种植方式的陌生:</strong> 马铃薯是欧洲第一种通过块茎而非种子种植的食用植物</li>
-</ul>
-<h2 id="实证策略与估计方程">实证策略与估计方程</h2>
-<h3 id="核心估计方程">核心估计方程</h3>
-<p>$$\begin{array}{l}<br>
-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=0\right)\right] \<br>
-=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=0\right)\right]<br>
-\end{array}$$</p>
-<p>其中:</p>
-<ul>
-<li>$i$ 索引国家,$t$ 索引时间</li>
-<li>$y_{it}$ 是因变量:国家$i$在时期$t$的总人口自然对数或城市化率</li>
-<li>$\ln(\text{Potato Area}_i)$ 是国家$i$适合种植马铃薯的土地面积的自然对数</li>
-<li>$I^{\text{Post}}_t$ 是指示变量,在1750、1800、1850、1900年取值为1</li>
-</ul>
-<h3 id="主要结果">主要结果</h3>
-<p><strong>人口方面(Table IV):</strong></p>
-<ul>
-<li>基线规格(列3):β = 0.032(标准误 0.012)</li>
-<li>马铃薯解释了旧大陆1700-1900年间**约25-26%**的人口增长</li>
-</ul>
-<p><strong>城市化方面:</strong></p>
-<ul>
-<li>基线规格:β = 0.0036(标准误 0.0012)</li>
-<li>马铃薯解释了城市化增长的<strong>约27-34%</strong></li>
-</ul>
-<h3 id="城市化效应的滞后">城市化效应的滞后</h3>
-<p>马铃薯对城市化的影响相对于对人口的影响<strong>延迟了50-100年</strong>.这一模式与统一增长理论(Galor and Weil 2000)的预测一致:</p>
-<ul>
-<li><strong>马尔萨斯时期:</strong> 生产力提升主要转化为人口增长</li>
-<li><strong>后马尔萨斯时期(约19世纪):</strong> 才观察到明显的人均收入和城市化改善</li>
-</ul>
-<h2 id="稳健性检验">稳健性检验</h2>
-<p>作者进行了大量稳健性检验,结果均保持正、显著且量级稳定:</p>
-<table>
-<thead>
-<tr>
-<th>额外控制变量</th>
-<th>人口系数</th>
-<th>城市化系数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>赤道距离</td>
-<td>0.030</td>
-<td>0.0037</td>
-</tr>
-<tr>
-<td>疟疾指数</td>
-<td>0.025</td>
-<td>0.0034</td>
-</tr>
-<tr>
-<td>法律渊源</td>
-<td>0.029</td>
-<td>0.0035</td>
-</tr>
-<tr>
-<td>殖民者身份</td>
-<td>0.033</td>
-<td>0.0036</td>
-</tr>
-<tr>
-<td><strong>全部同时控制</strong></td>
-<td><strong>0.031</strong></td>
-<td><strong>0.0029</strong></td>
-</tr>
-</tbody>
-</table>
-<p>洲内变异分析、城市人口分析、成人身高分析等进一步支持了主要结论.</p>
-<h2 id="结论">结论</h2>
-<ol>
-<li>
-<p><strong>因果效应估计:</strong> 马铃薯在1700-1900年间解释了旧大陆人口增长的约25-26%,城市化增长的约27-34%</p>
-</li>
-<li>
-<p><strong>学术贡献:</strong> 首次在整个旧大陆范围内、跨越数百年时间尺度,利用双重差分策略来估计马铃薯引入的因果效应</p>
-</li>
-<li>
-<p><strong>理论意义:</strong> 为营养改善在历史人口增长中的关键作用提供因果证据,支持了Fogel的"营养假说"</p>
-</li>
-</ol>
-<h2 id="未来研究方向">未来研究方向</h2>
-<ol>
-<li><strong>不同人口学渠道的分解:</strong> 进一步分解马铃薯对人口的具体人口学效应</li>
-<li><strong>更精细的时间纵深:</strong> 利用更高频的地方档案数据,构建更精细的时间序列</li>
-<li><strong>马铃薯采纳的过程研究:</strong> 收集各国/地区的具体采纳数据</li>
-<li><strong>对其他新大陆作物的深化比较:</strong> 对这些作物的相对效应进行深入探讨</li>
-<li><strong>政治经济分析:</strong> 探讨不同地区的政治、宗教,社会结构等因素影响了马铃薯的采纳速度</li>
-</ol>
-<h2 id="学术思考-启发性问题">学术思考:启发性问题</h2>
-<h3 id="问题一-技术的-不可替代性-与历史路径依赖">问题一:技术的"不可替代性"与历史路径依赖</h3>
-<p>论文证实了马铃薯对人口增长的重大贡献(约占1/4-1/3),但这引发了一个深层的历史反事实问题:<strong>如果欧洲没有获得马铃薯,会有什么替代品来满足不断增长的粮食需求?</strong></p>
-<h3 id="问题二-制度与地理的互动-为什么是爱尔兰">问题二:制度与地理的互动:为什么是爱尔兰?</h3>
-<p>论文表明马铃薯首先在爱尔兰被广泛采纳(17世纪末),然后才是欧洲大陆和其他地区.爱尔兰采纳马铃薯较早,不仅因为其地理条件适合,还因为:</p>
-<ul>
-<li>爱尔兰的土地所有制结构使得小农更需要高产作物</li>
-<li>爱尔兰的传统作物产出长期以地租形式被外流</li>
-<li>英国殖民统治的政治经济结构</li>
-</ul>
-<h3 id="问题三-营养与认知-为什么采纳需要那么久">问题三:营养与认知:为什么采纳需要那么久?</h3>
-<p>如果马铃薯如此优越,为什么从1573年首次出现在塞维利亚到1700年前后才被广泛种植,中间相隔超过一个世纪?</p>
-<p>论文提到了文化恐惧(毒性恐惧,麻风病关联等),但更深层的问题涉及<strong>信息扩散,学习机制和认知障碍</strong>.</p>
-<h3 id="问题四-人口-资源悖论的永久破解">问题四:人口-资源悖论的永久破解?</h3>
-<p>Malthus担忧任何生产力改善最终都会被人口增长所抵消.但论文通过展示马铃薯促进了人口增长,同时也暗示了这一机制的逐步减弱(到19世纪末,人口增长不再完全抵消收入增长).</p>
-<h3 id="问题五-历史因果推断的-局限性与必要性">问题五:历史因果推断的"局限性与必要性"</h3>
-<p>论文采用的"地理×时间"交互识别策略非常精巧,但仍然依赖于一个关键假设:1700年前后没有与马铃薯适宜度相关的其他冲击.</p>
-<hr>
-<h2 id="总结性反思">总结性反思</h2>
-<h3 id="学术启示一-历史因果推断的价值">学术启示一:历史因果推断的价值</h3>
-<p>在当代计量经济学和因果推断日益强调RCT、IV,断点回归等"高精度"方法的背景下,本文通过相对"低端"的双重差分方法,成功回答了一个关系到几亿人生命轨迹的大问题.</p>
-<h3 id="学术启示二-定量与定性的融合">学术启示二:定量与定性的融合</h3>
-<p>虽然论文的标题和结论强调了定量分析,但论文的强度实际上来自于定量与定性证据的紧密融合.</p>
-<h3 id="学术启示三-对-大问题-的执着">学术启示三:对"大问题"的执着</h3>
-<p>这篇论文成功的根本原因,也许不在于其方法学的新颖性(双重差分已是标准方法),而在于作者选择坚持追问一个"大问题"_<strong>技术进步如何改变了人类的物质生活和社会结构?</strong></p>
-<h3 id="学术启示四-全球视野下的历史经济学">学术启示四:全球视野下的历史经济学</h3>
-<p>论文涵盖了130个旧大陆国家、跨越900年的时间尺度,这种宏大的全球视野相对于当代经济史研究中常见的"区域聚焦"而言,是罕见和珍贵的.</p>
-<hr>
-<p><strong>文献信息:</strong></p>
-<ul>
-<li><strong>标题:</strong> The Potato’s Contribution to Population and Urbanization: Evidence From A Historical Experiment</li>
-<li><strong>作者:</strong> Nathan Nunn(哈佛大学)、Nancy Qian(耶鲁大学)</li>
-<li><strong>期刊:</strong> The Quarterly Journal of Economics, 2011, Vol. 126, pp. 593-650</li>
-<li><strong>DOI:</strong> 10.1093/qje/qjr009</li>
-</ul>
-]]></content>
-      <categories>
-        <category>历史</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-        <tag>经济史</tag>
       </tags>
   </entry>
   <entry>
@@ -18775,6 +18775,35 @@ Zotero Item Key:: Y7FT49B5</p>
       </tags>
   </entry>
   <entry>
+    <title>字体和公式的Display</title>
+    <url>/posts/15167/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<p><font face="Times New Roman"></font></p><p style="text-align:justify"><font face="Times New Roman"><b>“Evaluating the employment impact of a mandatory job search program”</b></font><br>
+<br><br>
+<br><br>
+<font face="Times New Roman"></font></p><p style="text-align:justify"><font face="Times New Roman"><b>What treatment do the authors evaluate?</b></font><br>
+<br></p>
+<span id="more"></span>
+<p><font face="Tex Gyre Pagella"></font></p><p style="text-align:justify"><font face="Tex Gyre Pagella"><b>Answer: </b> In the parametric methods, the common trend assumption is:</font></p><font face="Tex Gyre Pagella">
+<p>$$\begin{array}{l}<br>
+f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=0\right)\right] \<br>
+=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=0\right)\right]<br>
+\end{array}$$<br>
+In the non-parametric methods, the common trend assumption is:</p>
+<p>$$\begin{array}{l}<br>
+E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=0\right) \<br>
+=E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=1\right)-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)<br>
+\end{array}$$</p>
+</font>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>blog_test</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>多重原因的祝福：去混淆 — 深度阅读笔记 — Wang &amp; Blei</title>
     <url>/posts/wang2019blessings/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: The Blessings of Multiple Causes<br>
@@ -18912,35 +18941,6 @@ Zotero Item Key:: GQKZ35CQ</p>
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>字体和公式的Display</title>
-    <url>/posts/15167/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<p><font face="Times New Roman"></font></p><p style="text-align:justify"><font face="Times New Roman"><b>“Evaluating the employment impact of a mandatory job search program”</b></font><br>
-<br><br>
-<br><br>
-<font face="Times New Roman"></font></p><p style="text-align:justify"><font face="Times New Roman"><b>What treatment do the authors evaluate?</b></font><br>
-<br></p>
-<span id="more"></span>
-<p><font face="Tex Gyre Pagella"></font></p><p style="text-align:justify"><font face="Tex Gyre Pagella"><b>Answer: </b> In the parametric methods, the common trend assumption is:</font></p><font face="Tex Gyre Pagella">
-<p>$$\begin{array}{l}<br>
-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=1, t=0\right)\right] \<br>
-=f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=1\right)\right]-f^{-1}\left[E\left(Y_{i t}^{0} | X, N D=0, t=0\right)\right]<br>
-\end{array}$$<br>
-In the non-parametric methods, the common trend assumption is:</p>
-<p>$$\begin{array}{l}<br>
-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=1\right)-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=1, t=0\right) \<br>
-=E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=1\right)-E\left(Y_{i t}^{0} | P_{E X}, P_{t X}, N D=0, t=0\right)<br>
-\end{array}$$</p>
-</font>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>blog_test</tag>
       </tags>
   </entry>
   <entry>
