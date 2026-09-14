@@ -3374,136 +3374,6 @@ persistence）有何具体区别？</li>
       </tags>
   </entry>
   <entry>
-    <title>重审事件研究设计：稳健高效的估计 — 深度阅读笔记 — Borusyak Et Al.</title>
-    <url>/posts/borusyak2024/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Revisiting Event-Study Designs: Robust and Efficient Estimation<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/8T8HR2YF/Borusyak 等 - 2024 - Revisiting Event-Study Designs Robust and Efficient Estimation.pdf<br>
-Zotero Item Key:: XQJW2NJV</p>
-<hr>
-<span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-事件研究（Event Study）是应用经济学中最常用的因果推断设计之一。其核心思路是双重差分（Difference-in-Differences, DiD）：利用面板数据比较处理组（受到"事件"冲击的个体）和对照组（未受冲击的个体）在事件前后的结果变化。当处理在不同时期对不同单位逐步展开时（staggered treatment adoption），通常用双向固定效应（Two-Way Fixed Effects, TWFE）OLS 来估计。标准规格为：</p>
-<p>$$Y_{it} = \alpha_i + \beta_t + \tau D_{it} + \varepsilon_{it}$$</p>
-<p>其中 $\alpha_i$ 是个体固定效应，$\beta_t$ 是时间固定效应，$D_{it}$ 是处理指示变量。</p>
-<p>“动态"规格进一步加入处理发生前后不同期数的"领先”（leads）和"滞后"（lags）指示变量，以描绘处理效应随时间的演变，并检验平行趋势假设。</p>
-<p><strong>研究背景</strong><br>
-2020年前后，计量经济学界（Sant’Anna &amp; Zhao、Callaway &amp; Sant’Anna、Sun &amp; Abraham、de Chaisemartin &amp; D’Haultfœuille 等）相继指出：当处理效应存在异质性时，传统 TWFE 估计量会产生系统性偏误，甚至可能给一些真实正效应赋予"负权重"。已有文献提出了多种修正方法，但各方法的统一比较框架和最优效率证明尚不完整。</p>
-<p><strong>作者的问题意识</strong><br>
-TWFE 的问题究竟是什么？是否可以在一个统一框架下同时解决稳健性（robustness）和估计效率（efficiency）两个问题？能否给研究者一个既直观又理论最优的估计程序？</p>
-<p><strong>研究意义</strong><br>
-本文从根本上澄清了事件研究设计的识别假设、估计目标、和估计方法之间的逻辑关系，推导出在未限制处理效应异质性时的最优"归因估计量"（imputation estimator），并伴随一套推断工具与检验方法。Stata 命令 <code>did_imputation</code> 和 <code>event_plot</code> 已发布至 SSC，广泛影响应用经济学实证研究规范。</p>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言</strong>：提出问题，预告贡献。</li>
-<li><strong>框架</strong>（第2节）：明确识别目标（estimand）、识别假设（平行趋势+无预期效应）、异质性处理效应模型，三者明确分离。</li>
-<li><strong>TWFE 问题诊断</strong>（第3节）：系统分析 TWFE 偏误的三大来源。</li>
-<li><strong>稳健高效估计量</strong>（第4节）：推导归因估计量，提供推断方法与检验工具。</li>
-<li><strong>应用</strong>（第5节）：再估计美国退税消费响应（Broda-Parker 2014），纠正已有偏误。</li>
-<li><strong>结论</strong>（第6节）：统一框架总结，政策含义。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景">背景</h3>
-<p>事件研究中，不同个体在不同时期开始接受处理（交错处理，staggered adoption），加上处理效应可能随个体、时期、处理时长不同而变化（异质性），导致传统 TWFE 估计量面临严重挑战。</p>
-<h3 id="挑战：TWFE-的三大偏误来源">挑战：TWFE 的三大偏误来源</h3>
-<p><strong>问题一：欠识别（under-identification）</strong><br>
-在"完全动态"规格（包含所有领先和滞后期）中，如果样本中没有从未接受处理的单位，预期效应（anticipation effects）和处理效应的动态路径无法被点识别。这意味着前期"平行趋势检验"的结果可能混入了真实的处理效应，失去检验的独立性。</p>
-<p><strong>问题二：负权重（negative weights）与"禁止比较"（forbidden comparisons）</strong><br>
-交错处理下，TWFE 估计量隐含地使用已受处理的早期处理组单位作为晚期处理组单位的"对照组"。如果处理效应随时间演变（如效应递减），这类"禁止比较"会赋予某些处理效应以<strong>负权重</strong>，使汇总估计量被系统性地扭曲，甚至在所有真实效应为正时汇总估计量为负。</p>
-<p><strong>问题三：隐式外推（spurious identification of long-run effects）</strong><br>
-动态规格通过强加处理效应的同质性假设（隐含地），会对没有有效 DiD 比较的远期处理效应进行非法外推，导致对长期效应的虚假估计。</p>
-<p><strong>共同根源</strong>：这些问题都源于研究者没有显式区分估计目标、识别假设、和对处理效应异质性的限制，三者被隐含地混杂在同一回归规格中。</p>
-<h3 id="方法：归因估计量（Imputation-Estimator）">方法：归因估计量（Imputation Estimator）</h3>
-<p>在不对处理效应异质性加任何限制的前提下，文章推导出最有效（efficient）的无偏线性估计量，其形式直观清晰，分三步：</p>
-<ol>
-<li><strong>估计固定效应</strong>：仅使用<strong>未受处理的观测值</strong>拟合个体固定效应 $\hat{\alpha}_i$ 和时间固定效应 $\hat{\beta}_t$；</li>
-<li><strong>归因反事实结果</strong>：对每个已受处理的观测值，利用上述固定效应<strong>归因</strong>其未受处理时的潜在结果：$\hat{Y}_{it}(0) = \hat{\alpha}_i + \hat{\beta}_t$；</li>
-<li><strong>计算处理效应</strong>：$\hat{\tau}<em>{it} = Y</em>{it} - \hat{Y}_{it}(0)$，然后按目标 estimand（如 ATT）加权汇总。</li>
-</ol>
-<p><strong>核心直觉</strong>：利用"干净的"（clean）未受处理观测估计全局趋势，避免已处理单位的固定效应被处理效应所污染，从而彻底避免"禁止比较"。</p>
-<p><strong>推断</strong>：文章推导了该估计量的渐近正态性条件，并提出保守的（asymptotically conservative）标准误方法——将估计处理效应的部分变异归因于误差项，以处理异质效应无法与误差项分离的困难。</p>
-<p><strong>假设检验</strong>：通过仅在未受处理观测上估计"平行趋势检验"，将检验与估计明确分离，避免预测试偏差（pre-testing bias）。</p>
-<h3 id="数据与应用">数据与应用</h3>
-<p><strong>应用设置</strong>：Broda &amp; Parker（2014）用 Nielsen 消费者数据研究2008年美国退税刺激计划（Economic Stimulus Act）对支出的影响。</p>
-<p><strong>原始估计的问题</strong>：</p>
-<ul>
-<li>Broda &amp; Parker 使用了"分箱"（binned）规格，将同一月份内多周的处理效应约束为相同，但这隐含对处理效应的均一性限制；</li>
-<li>该规格对退税后第一周的效应赋予了大量权重，同时对一些长期效应赋予了<strong>负权重</strong>；</li>
-<li>由于消费响应在退税后迅速衰减，这导致 MPC 估计<strong>向上偏误</strong>。</li>
-</ul>
-<p><strong>归因估计量的修正结果</strong>：</p>
-<ul>
-<li>第一季度名义边际消费倾向（notional MPC）为 <strong>8–11%</strong>，约为 Broda-Parker 基准估计的<strong>一半</strong>；</li>
-<li>消费响应主要集中在退税后<strong>第一个月</strong>，此后迅速衰减；</li>
-<li>与其他稳健估计量（Callaway-Sant’Anna、Sun-Abraham、de Chaisemartin-D’Haultfœuille）相比，归因估计量的<strong>置信区间最短</strong>，效率最高。</li>
-</ul>
-<p><strong>政策含义</strong>：财政刺激中的税收返退政策对消费的拉动效应远弱于宏观模型的传统校准值，意味着财政乘数可能被过高估计。</p>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<p>本文提供了一个统一框架，将估计目标、识别假设（平行趋势、无预期效应）和处理效应异质性限制三者明确分离。在此框架下：</p>
-<ol>
-<li>传统 TWFE 存在系统性偏误，根源是隐式混杂三类选择；</li>
-<li>当处理效应异质性不受限制时，归因估计量是最有效的线性无偏估计量；</li>
-<li>将假设检验与估计分离，提升效率并避免预测试偏差；</li>
-<li>实证应用中纠正了美国退税刺激消费响应的向上偏误，MPC 修正为基准值的一半。</li>
-</ol>
-<p><strong>Stata 命令</strong>：<code>did_imputation</code>（估计处理效应）、<code>event_plot</code>（绘制动态事件研究图），均已发布至 SSC。</p>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文明确提及的局限与未来方向</strong>：</p>
-<ol>
-<li>本文不讨论平行趋势假设本身何时成立（这是 Roth &amp; Sant’Anna 2023 的方向）；</li>
-<li>本文不考虑对平行趋势假设违反的稳健推断（这是 Rambachan &amp; Roth 2023 的方向）；</li>
-<li>非二元处理（continuous or multi-valued treatments）的推广是未来方向之一；</li>
-<li>本文保守标准误在某些情形下可能过于保守，改进在某些设定下可实现渐近精确。</li>
-</ol>
-<p><strong>从论文引申的方向</strong>：</p>
-<ol>
-<li><strong>机器学习与 DiD 结合</strong>：如何将归因框架与双重稳健（doubly robust）方法结合，在协变量高维情景下仍保持稳健性？</li>
-<li><strong>空间溢出效应</strong>：交错 DiD 的"禁止比较"问题在存在空间依赖（spillovers）时会更复杂，如何扩展归因框架？</li>
-<li><strong>微观基础与 ATT 的选择</strong>：归因估计量对 estimand 权重的选择有很大弹性，如何从经济理论出发选择最有意义的加权方案？</li>
-<li><strong>连续处理量</strong>：政策评估中大量政策（补贴金额、污染浓度）是连续的，如何将本文框架扩展至连续处理的剂量反应函数估计？</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>"最有效率"的范围</strong>：文章在球形误差（同方差、无序列相关）假设下推导出最优估计量，而实际上处理效应估计普遍存在序列相关。论文虽提供了聚类标准误，但"在串行相关下该估计量是否仍是最优"这一问题值得进一步探究。</p>
-</li>
-<li>
-<p><strong>估计目标（estimand）的主观性</strong>：归因估计量可以灵活地估计任意预设的加权平均处理效应，但如何选择权重需要研究者自行判断。不同权重选择可能导致截然不同的政策结论，这给"最优估计量"的解读带来了条件性：最优是对于给定 estimand 而言的，而 estimand 本身的选择仍是主观判断。</p>
-</li>
-<li>
-<p><strong>负权重问题的根本性</strong>：文章聚焦于在 TWFE 规格中识别出负权重，但作者也指出只要研究者在不满足同质性时使用了限制异质性的规格，就会出现这一问题。这意味着很多使用 TWFE 的已发表论文可能存在系统偏误，本文实质上是对整个事件研究文献的"大规模纠偏"。</p>
-</li>
-<li>
-<p><strong>归因估计量的普适性</strong>：本文证明任何无偏线性估计量都可以表示为某种"归因"结构，这是一个强有力的统一定理。但"仅用未处理观测估计固定效应"依赖于未处理观测数量足够多的前提——如果样本中绝大多数单位很快受到处理，归因估计量的精度可能大幅下降。</p>
-</li>
-<li>
-<p><strong>平行趋势与异质性的权衡</strong>：本文接受平行趋势假设，并在此基础上推导最优估计量。但 Rambachan-Roth (2023) 指出平行趋势假设本身可能存在系统违反，两篇论文提供了互补但难以同时满足的视角——研究者在实践中如何权衡这两类问题？</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>归因估计量（imputation estimator）和 Callaway-Sant’Anna (2021) 的"组-时间 ATT"估计量在实践中有何区别，二者结果是否接近？</li>
-<li>Stata 命令 <code>did_imputation</code> 的具体语法是什么？如何在实践中选择检验的"前期窗口"长度？</li>
-<li>文章说可以扩展到"三重差分"（triple-difference）设计，具体如何操作？</li>
-<li>如果样本中几乎没有"从未被处理的单位"（never-treated），归因估计量能否有效运作？有哪些替代方法？</li>
-<li>边际消费倾向（MPC）的修正（从约20%降至8-11%）对宏观经济学的乘数模型有什么具体影响？这是否已被宏观模型界广泛接受？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>A Practical Guide to Shift-Share Instruments 论文笔记 — Borusyak, Hull &amp; Jaravel</title>
     <url>/posts/boru2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -3930,6 +3800,136 @@ Instruments论文的深度笔记,由Claude AI辅助生成.</em></p>
       </tags>
   </entry>
   <entry>
+    <title>重审事件研究设计：稳健高效的估计 — 深度阅读笔记 — Borusyak Et Al.</title>
+    <url>/posts/borusyak2024/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: Revisiting Event-Study Designs: Robust and Efficient Estimation<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/8T8HR2YF/Borusyak 等 - 2024 - Revisiting Event-Study Designs Robust and Efficient Estimation.pdf<br>
+Zotero Item Key:: XQJW2NJV</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+事件研究（Event Study）是应用经济学中最常用的因果推断设计之一。其核心思路是双重差分（Difference-in-Differences, DiD）：利用面板数据比较处理组（受到"事件"冲击的个体）和对照组（未受冲击的个体）在事件前后的结果变化。当处理在不同时期对不同单位逐步展开时（staggered treatment adoption），通常用双向固定效应（Two-Way Fixed Effects, TWFE）OLS 来估计。标准规格为：</p>
+<p>$$Y_{it} = \alpha_i + \beta_t + \tau D_{it} + \varepsilon_{it}$$</p>
+<p>其中 $\alpha_i$ 是个体固定效应，$\beta_t$ 是时间固定效应，$D_{it}$ 是处理指示变量。</p>
+<p>“动态"规格进一步加入处理发生前后不同期数的"领先”（leads）和"滞后"（lags）指示变量，以描绘处理效应随时间的演变，并检验平行趋势假设。</p>
+<p><strong>研究背景</strong><br>
+2020年前后，计量经济学界（Sant’Anna &amp; Zhao、Callaway &amp; Sant’Anna、Sun &amp; Abraham、de Chaisemartin &amp; D’Haultfœuille 等）相继指出：当处理效应存在异质性时，传统 TWFE 估计量会产生系统性偏误，甚至可能给一些真实正效应赋予"负权重"。已有文献提出了多种修正方法，但各方法的统一比较框架和最优效率证明尚不完整。</p>
+<p><strong>作者的问题意识</strong><br>
+TWFE 的问题究竟是什么？是否可以在一个统一框架下同时解决稳健性（robustness）和估计效率（efficiency）两个问题？能否给研究者一个既直观又理论最优的估计程序？</p>
+<p><strong>研究意义</strong><br>
+本文从根本上澄清了事件研究设计的识别假设、估计目标、和估计方法之间的逻辑关系，推导出在未限制处理效应异质性时的最优"归因估计量"（imputation estimator），并伴随一套推断工具与检验方法。Stata 命令 <code>did_imputation</code> 和 <code>event_plot</code> 已发布至 SSC，广泛影响应用经济学实证研究规范。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：提出问题，预告贡献。</li>
+<li><strong>框架</strong>（第2节）：明确识别目标（estimand）、识别假设（平行趋势+无预期效应）、异质性处理效应模型，三者明确分离。</li>
+<li><strong>TWFE 问题诊断</strong>（第3节）：系统分析 TWFE 偏误的三大来源。</li>
+<li><strong>稳健高效估计量</strong>（第4节）：推导归因估计量，提供推断方法与检验工具。</li>
+<li><strong>应用</strong>（第5节）：再估计美国退税消费响应（Broda-Parker 2014），纠正已有偏误。</li>
+<li><strong>结论</strong>（第6节）：统一框架总结，政策含义。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景">背景</h3>
+<p>事件研究中，不同个体在不同时期开始接受处理（交错处理，staggered adoption），加上处理效应可能随个体、时期、处理时长不同而变化（异质性），导致传统 TWFE 估计量面临严重挑战。</p>
+<h3 id="挑战：TWFE-的三大偏误来源">挑战：TWFE 的三大偏误来源</h3>
+<p><strong>问题一：欠识别（under-identification）</strong><br>
+在"完全动态"规格（包含所有领先和滞后期）中，如果样本中没有从未接受处理的单位，预期效应（anticipation effects）和处理效应的动态路径无法被点识别。这意味着前期"平行趋势检验"的结果可能混入了真实的处理效应，失去检验的独立性。</p>
+<p><strong>问题二：负权重（negative weights）与"禁止比较"（forbidden comparisons）</strong><br>
+交错处理下，TWFE 估计量隐含地使用已受处理的早期处理组单位作为晚期处理组单位的"对照组"。如果处理效应随时间演变（如效应递减），这类"禁止比较"会赋予某些处理效应以<strong>负权重</strong>，使汇总估计量被系统性地扭曲，甚至在所有真实效应为正时汇总估计量为负。</p>
+<p><strong>问题三：隐式外推（spurious identification of long-run effects）</strong><br>
+动态规格通过强加处理效应的同质性假设（隐含地），会对没有有效 DiD 比较的远期处理效应进行非法外推，导致对长期效应的虚假估计。</p>
+<p><strong>共同根源</strong>：这些问题都源于研究者没有显式区分估计目标、识别假设、和对处理效应异质性的限制，三者被隐含地混杂在同一回归规格中。</p>
+<h3 id="方法：归因估计量（Imputation-Estimator）">方法：归因估计量（Imputation Estimator）</h3>
+<p>在不对处理效应异质性加任何限制的前提下，文章推导出最有效（efficient）的无偏线性估计量，其形式直观清晰，分三步：</p>
+<ol>
+<li><strong>估计固定效应</strong>：仅使用<strong>未受处理的观测值</strong>拟合个体固定效应 $\hat{\alpha}_i$ 和时间固定效应 $\hat{\beta}_t$；</li>
+<li><strong>归因反事实结果</strong>：对每个已受处理的观测值，利用上述固定效应<strong>归因</strong>其未受处理时的潜在结果：$\hat{Y}_{it}(0) = \hat{\alpha}_i + \hat{\beta}_t$；</li>
+<li><strong>计算处理效应</strong>：$\hat{\tau}<em>{it} = Y</em>{it} - \hat{Y}_{it}(0)$，然后按目标 estimand（如 ATT）加权汇总。</li>
+</ol>
+<p><strong>核心直觉</strong>：利用"干净的"（clean）未受处理观测估计全局趋势，避免已处理单位的固定效应被处理效应所污染，从而彻底避免"禁止比较"。</p>
+<p><strong>推断</strong>：文章推导了该估计量的渐近正态性条件，并提出保守的（asymptotically conservative）标准误方法——将估计处理效应的部分变异归因于误差项，以处理异质效应无法与误差项分离的困难。</p>
+<p><strong>假设检验</strong>：通过仅在未受处理观测上估计"平行趋势检验"，将检验与估计明确分离，避免预测试偏差（pre-testing bias）。</p>
+<h3 id="数据与应用">数据与应用</h3>
+<p><strong>应用设置</strong>：Broda &amp; Parker（2014）用 Nielsen 消费者数据研究2008年美国退税刺激计划（Economic Stimulus Act）对支出的影响。</p>
+<p><strong>原始估计的问题</strong>：</p>
+<ul>
+<li>Broda &amp; Parker 使用了"分箱"（binned）规格，将同一月份内多周的处理效应约束为相同，但这隐含对处理效应的均一性限制；</li>
+<li>该规格对退税后第一周的效应赋予了大量权重，同时对一些长期效应赋予了<strong>负权重</strong>；</li>
+<li>由于消费响应在退税后迅速衰减，这导致 MPC 估计<strong>向上偏误</strong>。</li>
+</ul>
+<p><strong>归因估计量的修正结果</strong>：</p>
+<ul>
+<li>第一季度名义边际消费倾向（notional MPC）为 <strong>8–11%</strong>，约为 Broda-Parker 基准估计的<strong>一半</strong>；</li>
+<li>消费响应主要集中在退税后<strong>第一个月</strong>，此后迅速衰减；</li>
+<li>与其他稳健估计量（Callaway-Sant’Anna、Sun-Abraham、de Chaisemartin-D’Haultfœuille）相比，归因估计量的<strong>置信区间最短</strong>，效率最高。</li>
+</ul>
+<p><strong>政策含义</strong>：财政刺激中的税收返退政策对消费的拉动效应远弱于宏观模型的传统校准值，意味着财政乘数可能被过高估计。</p>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<p>本文提供了一个统一框架，将估计目标、识别假设（平行趋势、无预期效应）和处理效应异质性限制三者明确分离。在此框架下：</p>
+<ol>
+<li>传统 TWFE 存在系统性偏误，根源是隐式混杂三类选择；</li>
+<li>当处理效应异质性不受限制时，归因估计量是最有效的线性无偏估计量；</li>
+<li>将假设检验与估计分离，提升效率并避免预测试偏差；</li>
+<li>实证应用中纠正了美国退税刺激消费响应的向上偏误，MPC 修正为基准值的一半。</li>
+</ol>
+<p><strong>Stata 命令</strong>：<code>did_imputation</code>（估计处理效应）、<code>event_plot</code>（绘制动态事件研究图），均已发布至 SSC。</p>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文明确提及的局限与未来方向</strong>：</p>
+<ol>
+<li>本文不讨论平行趋势假设本身何时成立（这是 Roth &amp; Sant’Anna 2023 的方向）；</li>
+<li>本文不考虑对平行趋势假设违反的稳健推断（这是 Rambachan &amp; Roth 2023 的方向）；</li>
+<li>非二元处理（continuous or multi-valued treatments）的推广是未来方向之一；</li>
+<li>本文保守标准误在某些情形下可能过于保守，改进在某些设定下可实现渐近精确。</li>
+</ol>
+<p><strong>从论文引申的方向</strong>：</p>
+<ol>
+<li><strong>机器学习与 DiD 结合</strong>：如何将归因框架与双重稳健（doubly robust）方法结合，在协变量高维情景下仍保持稳健性？</li>
+<li><strong>空间溢出效应</strong>：交错 DiD 的"禁止比较"问题在存在空间依赖（spillovers）时会更复杂，如何扩展归因框架？</li>
+<li><strong>微观基础与 ATT 的选择</strong>：归因估计量对 estimand 权重的选择有很大弹性，如何从经济理论出发选择最有意义的加权方案？</li>
+<li><strong>连续处理量</strong>：政策评估中大量政策（补贴金额、污染浓度）是连续的，如何将本文框架扩展至连续处理的剂量反应函数估计？</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>"最有效率"的范围</strong>：文章在球形误差（同方差、无序列相关）假设下推导出最优估计量，而实际上处理效应估计普遍存在序列相关。论文虽提供了聚类标准误，但"在串行相关下该估计量是否仍是最优"这一问题值得进一步探究。</p>
+</li>
+<li>
+<p><strong>估计目标（estimand）的主观性</strong>：归因估计量可以灵活地估计任意预设的加权平均处理效应，但如何选择权重需要研究者自行判断。不同权重选择可能导致截然不同的政策结论，这给"最优估计量"的解读带来了条件性：最优是对于给定 estimand 而言的，而 estimand 本身的选择仍是主观判断。</p>
+</li>
+<li>
+<p><strong>负权重问题的根本性</strong>：文章聚焦于在 TWFE 规格中识别出负权重，但作者也指出只要研究者在不满足同质性时使用了限制异质性的规格，就会出现这一问题。这意味着很多使用 TWFE 的已发表论文可能存在系统偏误，本文实质上是对整个事件研究文献的"大规模纠偏"。</p>
+</li>
+<li>
+<p><strong>归因估计量的普适性</strong>：本文证明任何无偏线性估计量都可以表示为某种"归因"结构，这是一个强有力的统一定理。但"仅用未处理观测估计固定效应"依赖于未处理观测数量足够多的前提——如果样本中绝大多数单位很快受到处理，归因估计量的精度可能大幅下降。</p>
+</li>
+<li>
+<p><strong>平行趋势与异质性的权衡</strong>：本文接受平行趋势假设，并在此基础上推导最优估计量。但 Rambachan-Roth (2023) 指出平行趋势假设本身可能存在系统违反，两篇论文提供了互补但难以同时满足的视角——研究者在实践中如何权衡这两类问题？</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>归因估计量（imputation estimator）和 Callaway-Sant’Anna (2021) 的"组-时间 ATT"估计量在实践中有何区别，二者结果是否接近？</li>
+<li>Stata 命令 <code>did_imputation</code> 的具体语法是什么？如何在实践中选择检验的"前期窗口"长度？</li>
+<li>文章说可以扩展到"三重差分"（triple-difference）设计，具体如何操作？</li>
+<li>如果样本中几乎没有"从未被处理的单位"（never-treated），归因估计量能否有效运作？有哪些替代方法？</li>
+<li>边际消费倾向（MPC）的修正（从约20%降至8-11%）对宏观经济学的乘数模型有什么具体影响？这是否已被宏观模型界广泛接受？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Generative AI at Work — 深度分析 — Brynjolfsson Et Al.</title>
     <url>/posts/bryn2025/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -4201,6 +4201,56 @@ rot)的风险?</p></li>
       </categories>
       <tags>
         <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大城市人口增长速度🦚</title>
+    <url>/posts/15523/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
+<center>
+上图即为最终效果
+</center>
+<h2 id="下载数据">下载数据</h2>
+<p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录.
+</p><figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="加载r包">加载R包</h2>
+<p>需要的R包如下所示.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
+<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<ol type="1">
+<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
+<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon,
+Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
+<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
+<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
+</ol>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
+<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.
+使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="绘图">绘图</h2>
+<p>代码如下,图见上文.</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>绘图</category>
+        <category>map&amp;sf</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
       </tags>
   </entry>
   <entry>
@@ -4528,56 +4578,6 @@ Health能否在更大规模（县级、邦级、全国）复制？主要障碍�
       </categories>
       <tags>
         <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大城市人口增长速度🦚</title>
-    <url>/posts/15523/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/bubblemap.png" width="80%" height="80%" align="middle">
-<center>
-上图即为最终效果
-</center>
-<h2 id="下载数据">下载数据</h2>
-<p>将代码中的<strong><code>~/文档/</code></strong>更换为要保存的目录.
-</p><figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/data-bKvwd.csv"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/data-bKvwd.csv"</span> <span class="punctuation">)</span></span><br><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/bigcity/world.geo.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/world.geo.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<h2 id="加载r包">加载R包</h2>
-<p>需要的R包如下所示.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>readr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>hrbrthemes<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtext<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="读取各大城市人口数据并计算年平均人口增长率">读取各大城市人口数据并计算年平均人口增长率</h2>
-<p><code>worldmap</code>为<code>josn</code>格式的地图数据,<code>st_transform</code>为进行投影坐标变换的函数.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">worldmap <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">'/home/qgq/文档/world.geo.json'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_transform<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="number">4326</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<ol type="1">
-<li><code>data-bKvwd</code>包含了世界多个城市的经纬度信息以及多年份的人口数据.</li>
-<li><code>dplyr::select</code>函数主要用于筛选<code>data-bKvwd</code>中的<strong>4</strong>个关键变量,包含经纬度(Lon,
-Lat),以及<strong>2000</strong>年和<strong>2016</strong>年的人口数据.</li>
-<li><code>st_as_sf</code>是<code>sf</code>包中的函数,其将外来对象转换为<code>sf</code>对象,最终数据存储为<code>con_df</code>.</li>
-<li><code>con_df$growth.rate</code>表示在<code>con_df</code>数据框<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>中添加一个<code>growth.rate</code>变量,也可以进行对数增长率的计算.</li>
-</ol>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">read_csv<span class="punctuation">(</span><span class="string">'~/文档/data-bKvwd.csv'</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  dplyr<span class="operator">::</span>select<span class="punctuation">(</span>Lat<span class="punctuation">,</span> Lon<span class="punctuation">,</span> `<span class="number">2000</span>`,`2016`) %&gt;%</span><br><span class="line">  st_as_sf(coords = c("Lon", "Lat"), crs = 4326) -&gt; con_df</span><br><span class="line">con_df$growth.rate &lt;- (as.numeric(con_df$`2016`)-as.numeric(con_df$`2000`))/as.numeric(con_df$`2000`)/17</span><br><span class="line">con_df$log.growth.rate &lt;- log(as.numeric(con_df$`2016`)/as.numeric(con_df$`2000`))/17</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="对数据进行离散化处理">对数据进行离散化处理</h2>
-<p>连续的数据虽然包含更多信息,但是糅合一些离散化的策略,使用颜色或其它图形属性表征,能呈现出更直观的信息.
-使用<code>mutate</code>函数将<code>growth.rate</code>离散化为<code>interval</code>.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">con_df <span class="operator">&lt;-</span> con_df <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span></span><br><span class="line">    interval <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">      growth.rate <span class="operator">&lt;</span> <span class="number">0</span> <span class="operator">~</span> <span class="string">"负增长"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.025</span> <span class="operator">~</span> <span class="string">"0～2.5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.025</span> <span class="operator">&amp;</span> growth.rate <span class="operator">&lt;</span> <span class="number">0.05</span> <span class="operator">~</span> <span class="string">"2.5%～5%"</span><span class="punctuation">,</span></span><br><span class="line">      growth.rate <span class="operator">&gt;=</span> <span class="number">0.05</span>  <span class="operator">~</span> <span class="string">"5%以上"</span></span><br><span class="line">    <span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>与此同时,计算出<code>growth.rate</code>的最大值用于辅助分段.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">max.gr <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span></span><br><span class="line">  <span class="built_in">max</span><span class="punctuation">(</span>con_df<span class="operator">$</span>growth.rate<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span>  <span class="comment">#&gt;求growth.rate的最大值</span></span><br><span class="line">mybreaks <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">0.025</span><span class="punctuation">,</span> <span class="number">0.05</span><span class="punctuation">,</span>max.gr<span class="punctuation">)</span> <span class="comment">#&gt;进行分段</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="绘图">绘图</h2>
-<p>代码如下,图见上文.</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>worldmap<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>size <span class="operator">=</span> <span class="number">0.1</span><span class="punctuation">,</span> color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> fill <span class="operator">=</span> <span class="string">"grey"</span><span class="punctuation">,</span>alpha<span class="operator">=</span><span class="number">0.05</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> con_df<span class="punctuation">,</span>  aes<span class="punctuation">(</span>size <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                              color <span class="operator">=</span> interval<span class="punctuation">,</span></span><br><span class="line">                              alpha <span class="operator">=</span> <span class="built_in">abs</span><span class="punctuation">(</span>growth.rate<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_size_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                        <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2.41</span><span class="operator">*</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                        breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span>  <span class="operator">+</span></span><br><span class="line">  scale_alpha_continuous<span class="punctuation">(</span>name <span class="operator">=</span> <span class="string">"Average Growth Rate"</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">range</span> <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0.4</span><span class="punctuation">,</span><span class="number">0.7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         breaks <span class="operator">=</span> mybreaks<span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"#D9EF8B"</span><span class="punctuation">,</span> <span class="string">"#A6D96A"</span><span class="punctuation">,</span> <span class="string">"#66BD63"</span><span class="punctuation">,</span><span class="string">"#D73027"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  coord_sf<span class="punctuation">(</span>crs <span class="operator">=</span> <span class="string">"+proj=eck4"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_minimal<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Roboto"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span></span><br><span class="line">    axis.text <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    axis.title <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    legend.position <span class="operator">=</span> <span class="string">"none"</span><span class="punctuation">,</span></span><br><span class="line">    plot.caption <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span> face <span class="operator">=</span> <span class="string">"italic"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span>size <span class="operator">=</span> <span class="number">11</span><span class="punctuation">,</span>hjust <span class="operator">=</span> <span class="number">0.95</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">"#708090"</span><span class="punctuation">,</span>family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">19</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">"How fast do big cities grow?"</span><span class="punctuation">,</span></span><br><span class="line">       subtitle <span class="operator">=</span> <span class="string">"&lt;b style='color:#D73027'&gt;Negative Growth&lt;/b&gt; / &lt;b style='color:#D9EF8B'&gt;0~2.5%&lt;/b&gt; /</span></span><br><span class="line"><span class="string">       &lt;b style='color:#A6D96A'&gt;2.5%~5%&lt;/b&gt; / &lt;b style='color:#66BD63'&gt;5% Plus&lt;/b&gt;"</span><span class="punctuation">,</span></span><br><span class="line">       caption <span class="operator">=</span> <span class="string">"Data Source: How fast do big cities grow?"</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.subtitle <span class="operator">=</span> element_markdown<span class="punctuation">(</span>lineheight <span class="operator">=</span> <span class="number">1.1</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>可以通过<code>class(con_df)</code>查看<code>con_df</code>属于哪些类<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>绘图</category>
-        <category>map&amp;sf</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
       </tags>
   </entry>
   <entry>
@@ -5285,279 +5285,6 @@ Zotero Item Key:: LDPJ5VUP</p>
       </tags>
   </entry>
   <entry>
-    <title>The Effect of Minimum Wages on Low-Wage Jobs — 深度分析 — Cengiz Et Al.</title>
-    <url>/posts/cengiz2019/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: The Effect of Minimum Wages on Low-Wage
-Jobs</li>
-<li><strong>作者</strong>: Doruk Cengiz(University of Massachusetts
-Amherst), Arindrajit Dube(UMass Amherst, NBER), Attila Lindner(UCL, CEP,
-IFS), Ben Zipperer(Economic Policy Institute)</li>
-<li><strong>类型</strong>: 论文笔记 / 劳动经济学</li>
-<li><strong>出版年份</strong>: 2019</li>
-<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics,
-Volume 134, Issue 3, Pages 1405-1454</li>
-<li><strong>难度评估</strong>: 中 - 需要劳动经济学和计量经济学基础
-<span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言背景和意义">1. 引言(背景和意义)</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>最低工资政策(Minimum Wage
-Policy)</strong>:政府规定的劳动力小时工资下限,是劳动经济学中最具争议的政策之一.支持者认为它能提高低收入工人的生活水平,反对者担心它会导致就业下降("unemployment").</p>
-<p><strong>"新最低工资研究"的起源</strong>:Card and Krueger
-(1995)&lt;神话与计量经济学:对最低工资的新研究&gt;对传统观点提出挑战,使用准实验方法发现最低工资提高并未导致就业下降.</p>
-<p><strong>bunching
-estimator(堆集估计量)</strong>:一种利用政策变化导致的结果分布聚集现象来识别因果效应的方法.</p>
-<h3 id="研究的主要背景">研究的主要背景</h3>
-<ol type="1">
-<li><p><strong>政策热潮</strong>:加州、伊利诺伊州、麻省、新泽西州、纽约州已通过将最低工资提高至$15/小时的立法;数十个城市也实施了城市级最低工资政策.</p></li>
-<li><p><strong>研究缺漏</strong>:尽管新最低工资研究已逾30年,但关于政策对总体就业影响的研究仍然很少.2014年国会预算办公室(CBO)报告承认相关研究匮乏,被迫使用青少年的弹性来推断对低工资工人的总体影响.</p></li>
-<li><p><strong>方法论挑战</strong>:传统方法使用双向固定效应回归,但存在一些问题,如对工资分布上尾部的影响可能干扰对底部效应的估计.</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>:最低工资对低工资工作的总体效应是什么?</p>
-<p><strong>具体子问题</strong>: - 最低工资对就业的影响是正还是负? -
-影响有多大? - 最低工资带来的工资上涨是否被就业损失所抵消? -
-效应的异质性如何?</p>
-<h3 id="研究意义">研究意义</h3>
-<ol type="1">
-<li><strong>方法创新</strong>:提出"事件堆集"(EB-bunching)方法,将总体就业效应分解到各工资区间</li>
-<li><strong>对既有文献的贡献</strong>:澄清了最低工资文献中关于1980年代和1990年代早期样本选择的争议</li>
-<li><strong>政策意义</strong>:为当前$15最低工资运动提供实证依据</li>
-</ol>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构(论文结构)</h2>
-<table>
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr>
-<th>章节</th>
-<th>内容</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I. Introduction</td>
-<td>研究背景、问题意识、文献贡献</td>
-</tr>
-<tr>
-<td>II. Methodology and Data</td>
-<td>概念框架、实证策略、数据</td>
-</tr>
-<tr>
-<td>III. Main Empirical Findings</td>
-<td>总体就业效应、工资溢出、异质性分析</td>
-</tr>
-<tr>
-<td>IV. Robustness and Threats to Identification</td>
-<td>对双向固定效应方法问题的解释</td>
-</tr>
-<tr>
-<td>V. Conclusion</td>
-<td>结论</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文(逻辑梳理)</h2>
-<h3 id="背景最低工资的理论预测">背景:最低工资的理论预测</h3>
-<p><strong>竞争性劳动力市场模型预测</strong>: -
-最低工资提高会导致低工资就业下降 - 下降幅度取决于劳动力需求弹性</p>
-<p><strong>monopsony模型预测</strong>: - 最低工资提高可能增加就业 -
-因为雇主的市場力量被削弱</p>
-<p><strong>实际预测的复杂性</strong>: -
-工资溢出效应(spillovers):最低工资可能推动高于最低工资的工人工资上涨 -
-劳动力替代:低技能工人可能被高技能工人替代 -
-就业损失可能分布在不同工资区间</p>
-<h3 id="挑战">挑战</h3>
-<ol type="1">
-<li><p><strong>识别问题</strong>:如何分离最低工资的因果效应?</p></li>
-<li><p><strong>聚类分配问题</strong>:传统双向固定效应方法可能因早期时期的混杂因素而产生偏误</p></li>
-<li><p><strong>效应的空间异质性</strong>:不同行业的最低工资效应可能不同</p></li>
-<li><p><strong>数据局限性</strong>:CPS调查数据可能存在测量误差</p></li>
-</ol>
-<h3 id="方法数据集要突出">方法(数据集要突出)</h3>
-<p><strong>数据来源</strong>: -
-1979-2016年CPS(当前人口调查)NBER合并出口轮次小组数据 - 137,000+观测值 -
-138个州级最低工资事件(1979-2016年间) -
-<strong>事件定义</strong>:州最低工资增加至少$0.25,且至少2%工人直接影响</p>
-<p><strong>核心概念</strong>: - <strong>缺失工作(Missing
-Jobs)</strong>:最低工资提高后,低于新最低工资的工作数量减少 -
-<strong>超额工作(Excess
-Jobs)</strong>:因最低工资提高而出现在最低工资水平或略高处的工作增加</p>
-<p><strong>实证策略_事件研究设计</strong>: <span class="math display">\[{E_{sjt} \over N_{st}} = \sum_{\tau=-3}^{4}
-\sum_{k=-4}^{17} \alpha_{\tau k} I_{\tau k}^{sjt} + \mu_{sj} + \rho_{jt}
-+ \Omega_{sjt} + u_{sjt}}\]</span></p>
-<p>其中: - <span class="math inline">\(E_{sjt}\)</span>:j工资区间在s州的就业 - <span class="math inline">\(N_{st}\)</span>:s州当时的劳动力 - <span class="math inline">\(I_{\tau k}^{sjt}\)</span>:处理指示变量 - <span class="math inline">\(\mu_{sj}\)</span>:州×工资区间固定效应 - <span class="math inline">\(\rho_{jt}\)</span>:时间×工资区间固定效应 -
-标准误按州级聚类</p>
-<p><strong>关键创新</strong>: - 将就业变化按$0.25工资区间分解 -
-使用事件窗口前后对比 - 提供对上尾效应的检验</p>
-<h3 id="结果results">结果(Results)</h3>
-<p><strong>核心发现1:总体就业效应接近零</strong></p>
-<table>
-<thead>
-<tr>
-<th>指标</th>
-<th>估计值</th>
-<th>标准误</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>受影响工人就业变化</td>
-<td>+2.8%</td>
-<td>(2.9%)</td>
-</tr>
-<tr>
-<td>就业弹性(相对于自身工资)</td>
-<td>0.41</td>
-<td>(0.43)</td>
-</tr>
-</tbody>
-</table>
-<p>→ 在95%置信水平下,排除低于-0.45的弹性</p>
-<p><strong>核心发现2:工资溢出效应显著</strong></p>
-<ul>
-<li>溢出效应向上延伸至最低工资以上约$3</li>
-<li>总体工资增长中约40%来自溢出效应</li>
-<li><strong>不对称性</strong>:留任工人获得显著工资溢出,但新进入者没有</li>
-</ul>
-<p><strong>核心发现3:行业异质性</strong></p>
-<table>
-<thead>
-<tr>
-<th>行业</th>
-<th>就业弹性</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>可贸易部门(制造业)</td>
-<td>-1.4</td>
-<td>显著负效应</td>
-</tr>
-<tr>
-<td>不可贸易部门(餐饮、零售)</td>
-<td>≈0</td>
-<td>几乎无效应</td>
-</tr>
-</tbody>
-</table>
-<p>→ 行业组成是决定最低工资就业效应的关键因素</p>
-<p><strong>核心发现4:人口群体异质性</strong></p>
-<ul>
-<li>按教育和年龄分组,未发现低技能工人被高技能工人替代的证据</li>
-<li>不同人口群体的就业效应大多接近零且不显著</li>
-<li>表明最低工资政策的好处理广泛共享</li>
-</ul>
-<p><strong>核心发现5:对Meer and West (2016)发现的解释</strong></p>
-<ul>
-<li>该研究使用双向固定效应发现大的负就业估计</li>
-<li>分解分析显示这一负效应由工资分布上尾的不大幅度下降驱动</li>
-<li>问题来源:1980年代和1990年代早期样本中包含的时期混杂因素</li>
-<li>1992年后,各种标准规范几乎没有就业减少的证据</li>
-</ul>
-<hr>
-<h2 id="结论conclusion">4. 结论(Conclusion)</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>最低工资对低工资工作数量的总体影响基本为零</strong>:五年观察期内,低工资工作数量基本保持不变</p></li>
-<li><p><strong>最低工资的直接工资效应被适度工资溢出放大</strong>:溢出效应约占总体工资增长的40%</p></li>
-<li><p><strong>就业效应不能用劳动力替代解释</strong>:不同教育和年龄群体的替代效应证据不成立</p></li>
-<li><p><strong>在更高最低工资水平下也未发现就业减少证据</strong>:但确实发现可贸易部门(制造业)减少的迹象</p></li>
-<li><p><strong>方法论贡献</strong>:EB-bunching方法提供了透明且稳健的估计最低工资就业效应的方法</p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><strong>澄清方法论争议</strong>:解释了为什么双向固定效应和事件研究方法产生不同结果</li>
-<li><strong>提供新的实证证据</strong>:使用更全面的数据和更细粒度的分解</li>
-<li><strong>扩展工资溢出分析</strong>:提供了关于溢出机制(相对工资关系 vs
-外部选择价值)的证据</li>
-<li><strong>政策意义</strong>:为$15最低工资运动提供实证支持</li>
-</ol>
-<hr>
-<h2 id="未来研究方向future-work">5. 未来研究方向(Future work)</h2>
-<h3 id="论文提及的拓展方向">论文提及的拓展方向</h3>
-<ol type="1">
-<li><p><strong>更高最低工资水平的研究</strong>:当Kaitz指数超过59%时会发生什么?需要更高最低工资的州的
-variation</p></li>
-<li><p><strong>长期效应</strong>:本研究关注5年窗口,更长期效应仍需研究</p></li>
-<li><p><strong>其他国家的证据</strong>:美国结果的国际可比性</p></li>
-</ol>
-<h3 id="思考的下一步研究">思考的下一步研究</h3>
-<ol type="1">
-<li><p><strong>动态一般均衡效应</strong>:行业层面的一般均衡调整如何影响就业?</p></li>
-<li><p><strong>非正规就业</strong>:最低工资对非正规经济(零工经济)的影响</p></li>
-<li><p><strong>非工资效应</strong>:最低工资对工作条件、培训机会等非工资方面的影响</p></li>
-<li><p><strong>家庭效应</strong>:最低工资对家庭收入分配和儿童贫困的影响</p></li>
-<li><p><strong>政治经济学</strong>:最低工资设定的决定因素及其政治经济学含义</p></li>
-</ol>
-<hr>
-<h2 id="学术思考">6. 学术思考</h2>
-<h3 id="核心学术问题">核心学术问题</h3>
-<ol type="1">
-<li><strong>竞争性 vs monopsony劳动力市场的边界</strong>
-<ul>
-<li>本研究发现总体就业效应接近零</li>
-<li>这是否意味着低工资劳动力市场更接近monopsony?</li>
-<li>还是正负效应相互抵消?</li>
-</ul></li>
-<li><strong>工资溢出的机制</strong>
-<ul>
-<li>研究发现溢出效应在最低工资以上约$3处消失</li>
-<li>且对留任工人和新进入者影响不对称</li>
-<li>这更支持"相对工资关系假设"而非"外部选择价值假设"</li>
-<li>但这是否意味着企业内部存在显著的工资刚性?</li>
-</ul></li>
-<li><strong>可贸易 vs 不可贸易部门的差异</strong>
-<ul>
-<li>制造业显著负效应 vs 零售餐饮零效应</li>
-<li>这是否意味着全球化压力降低了美国低技能工人的谈价能力?</li>
-<li>还是反映了不同的劳动力市场结构?</li>
-</ul></li>
-<li><strong>EB-bunching方法的普适性</strong>
-<ul>
-<li>将总体效应分解到各工资区间</li>
-<li>提供了"透明"的估计方式</li>
-<li>是否可以推广到其他政策评估?</li>
-</ul></li>
-<li><strong>对CBO政策分析的启示</strong>
-<ul>
-<li>CBO使用青少年弹性来推断总体影响</li>
-<li>本研究表明青少年可能是受最低工资影响最深的群体</li>
-<li>这是否意味着CBO的方法实际上低估了不确定性?</li>
-</ul></li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li><p><strong>识别策略的有效性</strong>:如何检验平行趋势假设?事件前趋势检验的结果如何?</p></li>
-<li><p><strong>测量误差的影响</strong>:CPS数据中的测量误差如何影响估计?特别是对工资分布尾部的测量?</p></li>
-<li><p><strong>Kaitz指数的具体含义</strong>:Kaitz指数达到59%时会发生什么理论预测?</p></li>
-<li><p><strong>对理论模型的启示</strong>:这些发现如何区分竞争性模型和monopsony模型?</p></li>
-<li><p><strong>政策外部有效性</strong>:基于1979-2016年数据的发现在2020年代是否仍然适用?劳动力市场结构是否发生了根本性变化?</p></li>
-<li><p><strong>对工人流动的动态效应</strong>:最低工资是否影响了低工资工人的职业发展轨迹?</p></li>
-<li><p><strong>雇主反应的非工资渠道</strong>:雇主除了调整就业和工资外,是否在工时、工作条件、培训等方面做出了调整?</p></li>
-<li><p><strong>与Dube et al. (2010)
-NJ快餐业研究的关系</strong>:为什么NJ快餐业研究发现了正效应,而本研究对所有行业的汇总发现零效应?</p></li>
-<li><p><strong>对州际差异的控制</strong>:如何排除州级经济基本面对结果的混杂影响?各州经济多样性的作用是什么?</p></li>
-<li><p><strong>最低工资的收入分配效应</strong>:最低工资如何与税法、其他转移支付计划相互作用以影响收入不平等?</p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>劳动经济学</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Poverty and Economic Decision-Making — 深度阅读笔记 — Carvalho, Meier &amp; Wang</title>
     <url>/posts/carvalho2016/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -5936,6 +5663,279 @@ Mani et al. (2013)
         <tag>贫困研究</tag>
         <tag>行为经济学</tag>
         <tag>认知科学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>The Effect of Minimum Wages on Low-Wage Jobs — 深度分析 — Cengiz Et Al.</title>
+    <url>/posts/cengiz2019/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: The Effect of Minimum Wages on Low-Wage
+Jobs</li>
+<li><strong>作者</strong>: Doruk Cengiz(University of Massachusetts
+Amherst), Arindrajit Dube(UMass Amherst, NBER), Attila Lindner(UCL, CEP,
+IFS), Ben Zipperer(Economic Policy Institute)</li>
+<li><strong>类型</strong>: 论文笔记 / 劳动经济学</li>
+<li><strong>出版年份</strong>: 2019</li>
+<li><strong>出版机构/期刊</strong>: The Quarterly Journal of Economics,
+Volume 134, Issue 3, Pages 1405-1454</li>
+<li><strong>难度评估</strong>: 中 - 需要劳动经济学和计量经济学基础
+<span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言背景和意义">1. 引言(背景和意义)</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>最低工资政策(Minimum Wage
+Policy)</strong>:政府规定的劳动力小时工资下限,是劳动经济学中最具争议的政策之一.支持者认为它能提高低收入工人的生活水平,反对者担心它会导致就业下降("unemployment").</p>
+<p><strong>"新最低工资研究"的起源</strong>:Card and Krueger
+(1995)&lt;神话与计量经济学:对最低工资的新研究&gt;对传统观点提出挑战,使用准实验方法发现最低工资提高并未导致就业下降.</p>
+<p><strong>bunching
+estimator(堆集估计量)</strong>:一种利用政策变化导致的结果分布聚集现象来识别因果效应的方法.</p>
+<h3 id="研究的主要背景">研究的主要背景</h3>
+<ol type="1">
+<li><p><strong>政策热潮</strong>:加州、伊利诺伊州、麻省、新泽西州、纽约州已通过将最低工资提高至$15/小时的立法;数十个城市也实施了城市级最低工资政策.</p></li>
+<li><p><strong>研究缺漏</strong>:尽管新最低工资研究已逾30年,但关于政策对总体就业影响的研究仍然很少.2014年国会预算办公室(CBO)报告承认相关研究匮乏,被迫使用青少年的弹性来推断对低工资工人的总体影响.</p></li>
+<li><p><strong>方法论挑战</strong>:传统方法使用双向固定效应回归,但存在一些问题,如对工资分布上尾部的影响可能干扰对底部效应的估计.</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>:最低工资对低工资工作的总体效应是什么?</p>
+<p><strong>具体子问题</strong>: - 最低工资对就业的影响是正还是负? -
+影响有多大? - 最低工资带来的工资上涨是否被就业损失所抵消? -
+效应的异质性如何?</p>
+<h3 id="研究意义">研究意义</h3>
+<ol type="1">
+<li><strong>方法创新</strong>:提出"事件堆集"(EB-bunching)方法,将总体就业效应分解到各工资区间</li>
+<li><strong>对既有文献的贡献</strong>:澄清了最低工资文献中关于1980年代和1990年代早期样本选择的争议</li>
+<li><strong>政策意义</strong>:为当前$15最低工资运动提供实证依据</li>
+</ol>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构(论文结构)</h2>
+<table>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr>
+<th>章节</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I. Introduction</td>
+<td>研究背景、问题意识、文献贡献</td>
+</tr>
+<tr>
+<td>II. Methodology and Data</td>
+<td>概念框架、实证策略、数据</td>
+</tr>
+<tr>
+<td>III. Main Empirical Findings</td>
+<td>总体就业效应、工资溢出、异质性分析</td>
+</tr>
+<tr>
+<td>IV. Robustness and Threats to Identification</td>
+<td>对双向固定效应方法问题的解释</td>
+</tr>
+<tr>
+<td>V. Conclusion</td>
+<td>结论</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文(逻辑梳理)</h2>
+<h3 id="背景最低工资的理论预测">背景:最低工资的理论预测</h3>
+<p><strong>竞争性劳动力市场模型预测</strong>: -
+最低工资提高会导致低工资就业下降 - 下降幅度取决于劳动力需求弹性</p>
+<p><strong>monopsony模型预测</strong>: - 最低工资提高可能增加就业 -
+因为雇主的市場力量被削弱</p>
+<p><strong>实际预测的复杂性</strong>: -
+工资溢出效应(spillovers):最低工资可能推动高于最低工资的工人工资上涨 -
+劳动力替代:低技能工人可能被高技能工人替代 -
+就业损失可能分布在不同工资区间</p>
+<h3 id="挑战">挑战</h3>
+<ol type="1">
+<li><p><strong>识别问题</strong>:如何分离最低工资的因果效应?</p></li>
+<li><p><strong>聚类分配问题</strong>:传统双向固定效应方法可能因早期时期的混杂因素而产生偏误</p></li>
+<li><p><strong>效应的空间异质性</strong>:不同行业的最低工资效应可能不同</p></li>
+<li><p><strong>数据局限性</strong>:CPS调查数据可能存在测量误差</p></li>
+</ol>
+<h3 id="方法数据集要突出">方法(数据集要突出)</h3>
+<p><strong>数据来源</strong>: -
+1979-2016年CPS(当前人口调查)NBER合并出口轮次小组数据 - 137,000+观测值 -
+138个州级最低工资事件(1979-2016年间) -
+<strong>事件定义</strong>:州最低工资增加至少$0.25,且至少2%工人直接影响</p>
+<p><strong>核心概念</strong>: - <strong>缺失工作(Missing
+Jobs)</strong>:最低工资提高后,低于新最低工资的工作数量减少 -
+<strong>超额工作(Excess
+Jobs)</strong>:因最低工资提高而出现在最低工资水平或略高处的工作增加</p>
+<p><strong>实证策略_事件研究设计</strong>: <span class="math display">\[{E_{sjt} \over N_{st}} = \sum_{\tau=-3}^{4}
+\sum_{k=-4}^{17} \alpha_{\tau k} I_{\tau k}^{sjt} + \mu_{sj} + \rho_{jt}
++ \Omega_{sjt} + u_{sjt}}\]</span></p>
+<p>其中: - <span class="math inline">\(E_{sjt}\)</span>:j工资区间在s州的就业 - <span class="math inline">\(N_{st}\)</span>:s州当时的劳动力 - <span class="math inline">\(I_{\tau k}^{sjt}\)</span>:处理指示变量 - <span class="math inline">\(\mu_{sj}\)</span>:州×工资区间固定效应 - <span class="math inline">\(\rho_{jt}\)</span>:时间×工资区间固定效应 -
+标准误按州级聚类</p>
+<p><strong>关键创新</strong>: - 将就业变化按$0.25工资区间分解 -
+使用事件窗口前后对比 - 提供对上尾效应的检验</p>
+<h3 id="结果results">结果(Results)</h3>
+<p><strong>核心发现1:总体就业效应接近零</strong></p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>估计值</th>
+<th>标准误</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>受影响工人就业变化</td>
+<td>+2.8%</td>
+<td>(2.9%)</td>
+</tr>
+<tr>
+<td>就业弹性(相对于自身工资)</td>
+<td>0.41</td>
+<td>(0.43)</td>
+</tr>
+</tbody>
+</table>
+<p>→ 在95%置信水平下,排除低于-0.45的弹性</p>
+<p><strong>核心发现2:工资溢出效应显著</strong></p>
+<ul>
+<li>溢出效应向上延伸至最低工资以上约$3</li>
+<li>总体工资增长中约40%来自溢出效应</li>
+<li><strong>不对称性</strong>:留任工人获得显著工资溢出,但新进入者没有</li>
+</ul>
+<p><strong>核心发现3:行业异质性</strong></p>
+<table>
+<thead>
+<tr>
+<th>行业</th>
+<th>就业弹性</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>可贸易部门(制造业)</td>
+<td>-1.4</td>
+<td>显著负效应</td>
+</tr>
+<tr>
+<td>不可贸易部门(餐饮、零售)</td>
+<td>≈0</td>
+<td>几乎无效应</td>
+</tr>
+</tbody>
+</table>
+<p>→ 行业组成是决定最低工资就业效应的关键因素</p>
+<p><strong>核心发现4:人口群体异质性</strong></p>
+<ul>
+<li>按教育和年龄分组,未发现低技能工人被高技能工人替代的证据</li>
+<li>不同人口群体的就业效应大多接近零且不显著</li>
+<li>表明最低工资政策的好处理广泛共享</li>
+</ul>
+<p><strong>核心发现5:对Meer and West (2016)发现的解释</strong></p>
+<ul>
+<li>该研究使用双向固定效应发现大的负就业估计</li>
+<li>分解分析显示这一负效应由工资分布上尾的不大幅度下降驱动</li>
+<li>问题来源:1980年代和1990年代早期样本中包含的时期混杂因素</li>
+<li>1992年后,各种标准规范几乎没有就业减少的证据</li>
+</ul>
+<hr>
+<h2 id="结论conclusion">4. 结论(Conclusion)</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>最低工资对低工资工作数量的总体影响基本为零</strong>:五年观察期内,低工资工作数量基本保持不变</p></li>
+<li><p><strong>最低工资的直接工资效应被适度工资溢出放大</strong>:溢出效应约占总体工资增长的40%</p></li>
+<li><p><strong>就业效应不能用劳动力替代解释</strong>:不同教育和年龄群体的替代效应证据不成立</p></li>
+<li><p><strong>在更高最低工资水平下也未发现就业减少证据</strong>:但确实发现可贸易部门(制造业)减少的迹象</p></li>
+<li><p><strong>方法论贡献</strong>:EB-bunching方法提供了透明且稳健的估计最低工资就业效应的方法</p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><strong>澄清方法论争议</strong>:解释了为什么双向固定效应和事件研究方法产生不同结果</li>
+<li><strong>提供新的实证证据</strong>:使用更全面的数据和更细粒度的分解</li>
+<li><strong>扩展工资溢出分析</strong>:提供了关于溢出机制(相对工资关系 vs
+外部选择价值)的证据</li>
+<li><strong>政策意义</strong>:为$15最低工资运动提供实证支持</li>
+</ol>
+<hr>
+<h2 id="未来研究方向future-work">5. 未来研究方向(Future work)</h2>
+<h3 id="论文提及的拓展方向">论文提及的拓展方向</h3>
+<ol type="1">
+<li><p><strong>更高最低工资水平的研究</strong>:当Kaitz指数超过59%时会发生什么?需要更高最低工资的州的
+variation</p></li>
+<li><p><strong>长期效应</strong>:本研究关注5年窗口,更长期效应仍需研究</p></li>
+<li><p><strong>其他国家的证据</strong>:美国结果的国际可比性</p></li>
+</ol>
+<h3 id="思考的下一步研究">思考的下一步研究</h3>
+<ol type="1">
+<li><p><strong>动态一般均衡效应</strong>:行业层面的一般均衡调整如何影响就业?</p></li>
+<li><p><strong>非正规就业</strong>:最低工资对非正规经济(零工经济)的影响</p></li>
+<li><p><strong>非工资效应</strong>:最低工资对工作条件、培训机会等非工资方面的影响</p></li>
+<li><p><strong>家庭效应</strong>:最低工资对家庭收入分配和儿童贫困的影响</p></li>
+<li><p><strong>政治经济学</strong>:最低工资设定的决定因素及其政治经济学含义</p></li>
+</ol>
+<hr>
+<h2 id="学术思考">6. 学术思考</h2>
+<h3 id="核心学术问题">核心学术问题</h3>
+<ol type="1">
+<li><strong>竞争性 vs monopsony劳动力市场的边界</strong>
+<ul>
+<li>本研究发现总体就业效应接近零</li>
+<li>这是否意味着低工资劳动力市场更接近monopsony?</li>
+<li>还是正负效应相互抵消?</li>
+</ul></li>
+<li><strong>工资溢出的机制</strong>
+<ul>
+<li>研究发现溢出效应在最低工资以上约$3处消失</li>
+<li>且对留任工人和新进入者影响不对称</li>
+<li>这更支持"相对工资关系假设"而非"外部选择价值假设"</li>
+<li>但这是否意味着企业内部存在显著的工资刚性?</li>
+</ul></li>
+<li><strong>可贸易 vs 不可贸易部门的差异</strong>
+<ul>
+<li>制造业显著负效应 vs 零售餐饮零效应</li>
+<li>这是否意味着全球化压力降低了美国低技能工人的谈价能力?</li>
+<li>还是反映了不同的劳动力市场结构?</li>
+</ul></li>
+<li><strong>EB-bunching方法的普适性</strong>
+<ul>
+<li>将总体效应分解到各工资区间</li>
+<li>提供了"透明"的估计方式</li>
+<li>是否可以推广到其他政策评估?</li>
+</ul></li>
+<li><strong>对CBO政策分析的启示</strong>
+<ul>
+<li>CBO使用青少年弹性来推断总体影响</li>
+<li>本研究表明青少年可能是受最低工资影响最深的群体</li>
+<li>这是否意味着CBO的方法实际上低估了不确定性?</li>
+</ul></li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">7. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li><p><strong>识别策略的有效性</strong>:如何检验平行趋势假设?事件前趋势检验的结果如何?</p></li>
+<li><p><strong>测量误差的影响</strong>:CPS数据中的测量误差如何影响估计?特别是对工资分布尾部的测量?</p></li>
+<li><p><strong>Kaitz指数的具体含义</strong>:Kaitz指数达到59%时会发生什么理论预测?</p></li>
+<li><p><strong>对理论模型的启示</strong>:这些发现如何区分竞争性模型和monopsony模型?</p></li>
+<li><p><strong>政策外部有效性</strong>:基于1979-2016年数据的发现在2020年代是否仍然适用?劳动力市场结构是否发生了根本性变化?</p></li>
+<li><p><strong>对工人流动的动态效应</strong>:最低工资是否影响了低工资工人的职业发展轨迹?</p></li>
+<li><p><strong>雇主反应的非工资渠道</strong>:雇主除了调整就业和工资外,是否在工时、工作条件、培训等方面做出了调整?</p></li>
+<li><p><strong>与Dube et al. (2010)
+NJ快餐业研究的关系</strong>:为什么NJ快餐业研究发现了正效应,而本研究对所有行业的汇总发现零效应?</p></li>
+<li><p><strong>对州际差异的控制</strong>:如何排除州级经济基本面对结果的混杂影响?各州经济多样性的作用是什么?</p></li>
+<li><p><strong>最低工资的收入分配效应</strong>:最低工资如何与税法、其他转移支付计划相互作用以影响收入不平等?</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>劳动经济学</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -11727,204 +11727,6 @@ care，而这些儿童的青少年期和早期成年期死亡率是同龄人的3
       </tags>
   </entry>
   <entry>
-    <title>政府政策的统一福利分析 — 深度阅读笔记 — Hendren &amp; Sprung-Keyser</title>
-    <url>/posts/hendren2020/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: A Unified Welfare Analysis of Government Policies<br>
-Zotero Collection:: 有趣的文章<br>
-PDF Path:: /Users/double/Zotero/storage/YTDNY3KC/Hendren和Sprung-Keyser - 2020 - A Unified Welfare Analysis of Government Policies.pdf<br>
-Zotero Item Key:: BZPCLS8S</p>
-<hr>
-<span id="more"></span>
-<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
-<p><strong>领域基础知识</strong><br>
-政府每年在社会保险、教育、税收减免、实物转移支付等领域花费巨额资金。经济学家长期以来用不同的福利测量指标评估各类政策：健康保险研究报告"每救一条命的成本"，税收政策报告"超额负担（excess burden）“，高等教育研究报告"每增加一个入学名额的成本”，早教项目报告"社会成本-收益比"……这些指标互不兼容，使得不同领域政策之间的横向比较极为困难。</p>
-<p><strong>研究背景</strong></p>
-<ul>
-<li>已有大量高质量的政策因果效应估计文献（过去50年的自然实验研究积累）</li>
-<li>但每篇文章用自己的方式做福利分析，无法统一比较</li>
-<li>Hendren（2016）提出了MVPF（公共资金边际价值）的概念，作为统一测量工具</li>
-</ul>
-<p><strong>作者的问题意识</strong><br>
-能否用同一把尺子——MVPF——衡量133项美国历史政策的福利效率，从而系统性地回答：哪类政府支出最"划算"？儿童政策和成人政策谁的回报更高？现金转移和实物转移有何差异？</p>
-<p><strong>研究意义</strong><br>
-这是迄今为止规模最大的政策福利比较研究，涵盖133项政策4大领域50年历史。建立了可供研究者直接使用的公开框架（GitHub代码 + 数据），为循证政策（evidence-based policy）决策提供工具。</p>
-<hr>
-<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
-<ol>
-<li><strong>引言</strong>：问题动机 + MVPF概念介绍 + 主要结论预览。</li>
-<li><strong>MVPF框架</strong>：理论推导；与传统指标（MCF、成本-收益比）的关系。</li>
-<li><strong>6个示例政策</strong>：详细展示MVPF的构建方法。</li>
-<li><strong>社会保险</strong>：健康、失业、残障保险。</li>
-<li><strong>教育</strong>：早教、K-12、大学、职业培训。</li>
-<li><strong>税收与现金转移</strong>：边际税率、EITC、福利项目。</li>
-<li><strong>实物转移</strong>：住房、食品券。</li>
-<li><strong>跨领域比较与政策含义</strong>。</li>
-<li><strong>结论</strong>。</li>
-</ol>
-<hr>
-<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
-<h3 id="背景与挑战">背景与挑战</h3>
-<p><strong>核心挑战</strong>：如何跨政策领域进行福利比较？</p>
-<p>传统方法的问题是：不同文献采用不同的福利指标，彼此不可比；而且各指标通常只反映直接效应，忽略了长期的财政外部性（如儿童受教育后成年纳税、减少转移支付）。</p>
-<h3 id="MVPF框架（方法）">MVPF框架（方法）</h3>
-<p>$$\text{MVPF} = \frac{\text{受益者的支付意愿（WTP）}}{\text{政府净成本}}$$</p>
-<p><strong>分子：支付意愿（WTP）</strong></p>
-<ul>
-<li>受益者为获得某政策愿意支付的最大金额</li>
-<li>利用包络定理（envelope theorem）：WTP ≈ 政策的机械性直接成本（behavioral responses are not valued dollar-for-dollar）</li>
-<li>如果政策提供保险，WTP &gt; 资源成本（消费平滑溢价）</li>
-<li>如果政策诱发福利套取行为，WTP &lt; 资源成本</li>
-</ul>
-<p><strong>分母：政府净成本</strong><br>
-= 初始支出 + 财政外部性（fiscal externality）</p>
-<ul>
-<li>财政外部性 = 因政策改变受益者行为而引起的税收/转移支付的长期变化</li>
-<li>例：儿童健康保险 → 儿童更健康、教育程度提高 → 成年后收入更高 → 政府税收增加 → 净成本下降，甚至为负（政策"自我偿还"）</li>
-<li>政策"自我偿还"（MVPF = ∞）= Pareto改进</li>
-</ul>
-<p><strong>MVPF的解读</strong>：</p>
-<ul>
-<li>MVPF = 1：标准的无扭曲转移（$1政府成本带来$1受益者WTP）</li>
-<li>MVPF &gt; 1：每花$1，受益者获得&gt;$1的福利（高效政策）</li>
-<li>MVPF &lt; 1：受益者实际获得的福利&lt;政府花费（低效政策）</li>
-<li>MVPF = ∞：“自我偿还”，Pareto改进</li>
-</ul>
-<p><strong>与其他指标的关系</strong>：MVPF是Okun"漏桶"比喻的形式化——MVPFA=2, MVPFB=1，则从B转移资金到A当且仅当社会偏好给A受益者$2多于给B受益者$1。</p>
-<h3 id="数据来源">数据来源</h3>
-<p><strong>非原始数据</strong>：本文不做新的因果推断，而是系统汇总现有因果研究的估计结果。</p>
-<ul>
-<li>利用现有文献中已估计的政策效应（就业、收入、教育、健康）作为输入</li>
-<li>用标准假设（贴现率、税率等）将这些效应转化为WTP和财政外部性</li>
-<li>覆盖4个领域133项美国政策（1950s-2010s）</li>
-<li>提供GitHub代码，允许研究者修改关键假设进行敏感性分析</li>
-</ul>
-<h3 id="主要结果">主要结果</h3>
-<p><strong>发现一：儿童政策MVPF远高于成人政策</strong></p>
-<table>
-<thead>
-<tr>
-<th>政策类型</th>
-<th>典型MVPF</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>儿童健康保险扩展（如Medicaid儿童）</td>
-<td>平均&gt;5，许多"自我偿还"</td>
-</tr>
-<tr>
-<td>早期教育（Perry Preschool）</td>
-<td>~44</td>
-</tr>
-<tr>
-<td>Abecedarian项目</td>
-<td>~12</td>
-</tr>
-<tr>
-<td>K-12教育经费均等化</td>
-<td>高</td>
-</tr>
-<tr>
-<td>大学教育扩展</td>
-<td>高（部分）</td>
-</tr>
-<tr>
-<td>成人健康保险扩展</td>
-<td>0.40–1.63</td>
-</tr>
-<tr>
-<td>实物转移（住房券、食品券）</td>
-<td>0.65–1.04</td>
-</tr>
-<tr>
-<td>税收减免/现金福利（成人）</td>
-<td>负值–1.20</td>
-</tr>
-</tbody>
-</table>
-<p><strong>发现二：儿童政策的高MVPF跨越各年龄段</strong></p>
-<p>与Heckman（2006）"早期投资边际回报递减"的主张相反，本文发现：</p>
-<ul>
-<li>早期儿童教育（0-5岁）确实有高MVPF</li>
-<li><strong>但K-12、大学教育投资也有高MVPF</strong>——儿童期的高回报并不在某个年龄后迅速下降</li>
-<li>"一刀切"式的"越早越好"观点需要修正</li>
-</ul>
-<p><strong>发现三：许多儿童政策"自我偿还"</strong></p>
-<p>儿童健康保险扩展的长期财政外部性为正：平均每$1投入，政府长期回收$1.78（其中3/4项目完全回收成本）。<br>
-原因：受益儿童成年后收入更高→缴纳更多税→减少转移支付需求。</p>
-<p><strong>发现四：成人政策的例外——对儿童产生大溢出效应</strong></p>
-<p>成人政策通常MVPF较低（0.5–2），但若成人政策对其子女产生大的正外部性（spillover to children），MVPF可以超出此范围。说明代际传递渠道在评估成人政策时不可忽略。</p>
-<p><strong>发现五：同类政策内部变异巨大</strong></p>
-<p>即使在高回报类别（如儿童政策）中，也存在低MVPF的政策（如职业培训项目、未增加升学率的大学补贴）。这说明"类别"本身不能代替具体政策的评估——机制很重要。</p>
-<h3 id="政策含义">政策含义</h3>
-<ol>
-<li><strong>儿童健康和教育是最具性价比的公共投资</strong>，且不仅限于早期教育</li>
-<li><strong>成人政策不应简单否定</strong>——若有代际溢出效应，其福利效率可大幅提升</li>
-<li><strong>“研究的边际价值”（value of information）是可以量化的</strong>：在MVPF高度不确定的政策领域，政策制定者应愿意为更好的因果证据支付大量预算</li>
-<li><strong>循证政策设计</strong>：同类政策内部的变异提示我们，了解"为什么有效"（机制）比知道"平均有效"更重要</li>
-</ol>
-<hr>
-<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
-<ol>
-<li>对低收入儿童健康和教育的直接投资，历史上有最高的MVPF，平均超过5，很多自我偿还（Pareto改进）；</li>
-<li>儿童期高回报政策跨越各年龄段，不仅限于早期教育；</li>
-<li>成人政策MVPF通常在0.5–2之间；若对儿童有大溢出效应则可超越此范围；</li>
-<li>同类政策内MVPF差异显著，了解成功政策的机制比看平均MVPF更重要；</li>
-<li>MVPF框架可应用于犯罪、环境、基础设施等尚未覆盖的领域，未来研究空间巨大。</li>
-</ol>
-<hr>
-<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
-<p><strong>论文明确提及的方向</strong>：</p>
-<ol>
-<li>将MVPF框架扩展至犯罪政策、环境政策、宏观经济稳定政策、基础设施政策；</li>
-<li>量化信息价值——为MVPF不确定的政策领域设计新数据收集方案；</li>
-<li>利用行政数据扩大政策效应的因果估计（更多政策纳入比较）。</li>
-</ol>
-<p><strong>从论文引申的研究方向</strong>：</p>
-<ol>
-<li><strong>中国政策的MVPF估计</strong>：中国有大量准实验政策（农村义务教育经费改革、新农合、城镇医保扩展、EITC类转移支付）。能否用中国行政数据和已有因果估计构建中国版的MVPF比较数据集？</li>
-<li><strong>发展中国家的跨代际效应测量</strong>：本文核心发现（儿童政策的财政外部性）依赖于长期追踪数据。在数据基础薄弱的发展中国家，如何合理估计儿童政策的代际收益？</li>
-<li><strong>政策组合的相互作用</strong>：本文对各政策独立评估，忽略了政策之间的互补/替代关系。如果儿童健康保险和早教同时实施，联合MVPF是否大于两个独立MVPF之和？</li>
-<li><strong>MVPF与分配偏好的结合</strong>：本文MVPF只测量效率（“漏桶的泄漏量”），不包含社会对不同群体的分配权重。如何将MVPF与不同的社会福利函数（平等主义、功利主义）结合，形成"分配调整后的MVPF"？</li>
-<li><strong>数字化公共服务的MVPF</strong>：政府数字化转型（如电子政务、在线医疗）的受益者WTP和财政外部性如何测量？这类政策是否也能达到高MVPF？</li>
-</ol>
-<hr>
-<h2 id="学术思考">学术思考</h2>
-<ol>
-<li>
-<p><strong>财政外部性的时间折现问题</strong>：本文MVPF的高低在很大程度上取决于如何折现儿童长期收益。贴现率从3%变为5%，那些"自我偿还"的儿童政策的MVPF会大幅下降。作者做了敏感性分析，但核心结论（儿童政策MVPF &gt;&gt; 成人政策）究竟有多依赖于折现率假设？这是本文结论的最重要不确定来源之一。</p>
-</li>
-<li>
-<p><strong>发表偏差与外部有效性</strong>：本文使用的"因果估计"来自学术文献，而学术文献存在著名的发表偏差（positive results are more likely to be published）。作者使用Andrews &amp; Kasy（2019）方法校正发表偏差，但校正方法本身也有假设。若底层因果估计系统性高估政策效果，MVPF也会系统高估，"自我偿还"政策数量会被高估。</p>
-</li>
-<li>
-<p><strong>"政策"的内生性</strong>：Hendren &amp; Sprung-Keyser分析的是<strong>历史上实施的</strong>133项政策。这些政策并非随机选择——政治上可行的政策往往是有基础的、预期效果良好的。这意味着样本可能存在正向选择偏误（high-MVPF policies are more likely to be tried）。对于那些从未被实施的政策，MVPF可能与已实施政策大相径庭。</p>
-</li>
-<li>
-<p><strong>MVPF与分配正义的分离</strong>：本文明确指出MVPF只衡量效率，不包含对不同群体的分配偏好。但政策评估不可能完全回避分配问题——一个MVPF=3的政策若全部受益于富人，是否优于MVPF=1.5的政策让穷人受益？作者的建议是先用MVPF确定效率边界，再叠加分配偏好——但在实践中这两步的分离往往很难维持。</p>
-</li>
-<li>
-<p><strong>从美国到其他国家的可移植性</strong>：本文基于美国过去50年的政策经验。中国、印度等发展中国家在儿童健康保险上的回报率是否也高？发展中国家劳动力市场的特征（非正规就业、低税率）可能使得"财政外部性"（通过税收回收）的机制大打折扣。有限的税收征管能力可能意味着儿童教育投资无法通过增税来"自我偿还"，MVPF结论的普遍性有待检验。</p>
-</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
-<ol>
-<li>MVPF与传统的"成本-收益比（cost-benefit ratio）"或"边际公共资金成本（MCF）"有什么本质区别？</li>
-<li>Perry Preschool的MVPF为什么高达44？核心机制是什么？这是否意味着早期教育项目都有如此高的回报？</li>
-<li>文中提到一些政策"MVPF为负"，这是什么意思？哪些政策出现了负MVPF？</li>
-<li>本文的GitHub代码和数据集（<a href="http://policyanalysis.org/welfare_analysis%EF%BC%89%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E7%94%A8%E6%9D%A5%E4%BC%B0%E8%AE%A1%E4%B8%AD%E5%9B%BD%E6%94%BF%E7%AD%96%E7%9A%84MVPF%EF%BC%9F%E5%93%AA%E4%BA%9B%E6%AD%A5%E9%AA%A4%E9%9C%80%E8%A6%81%E4%BF%AE%E6%94%B9%E4%BB%A5%E9%80%82%E5%BA%94%E4%B8%AD%E5%9B%BD%E6%83%85%E5%A2%83%EF%BC%9F">policyanalysis.org/welfare_analysis）是否可以用来估计中国政策的MVPF？哪些步骤需要修改以适应中国情境？</a></li>
-<li>MVPF框架如何处理"一般均衡效应"（如政策规模扩大后对工资、价格的影响）？目前的估计是局部均衡，扩大政策规模后MVPF是否会下降？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>有趣的文章</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>&lt;中国人口研究 1368-1953&gt;深度阅读笔记 — 何炳棣 Ping-Ti Ho</title>
     <url>/posts/ho1959/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="书籍信息">书籍信息</h2>
@@ -12708,6 +12510,204 @@ _谢肇淛&lt;五杂俎&gt;(约1610年)</p>
         <tag>读书笔记</tag>
         <tag>中国研究</tag>
         <tag>人口史</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>政府政策的统一福利分析 — 深度阅读笔记 — Hendren &amp; Sprung-Keyser</title>
+    <url>/posts/hendren2020/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: A Unified Welfare Analysis of Government Policies<br>
+Zotero Collection:: 有趣的文章<br>
+PDF Path:: /Users/double/Zotero/storage/YTDNY3KC/Hendren和Sprung-Keyser - 2020 - A Unified Welfare Analysis of Government Policies.pdf<br>
+Zotero Item Key:: BZPCLS8S</p>
+<hr>
+<span id="more"></span>
+<h2 id="引言（背景和意义）">引言（背景和意义）</h2>
+<p><strong>领域基础知识</strong><br>
+政府每年在社会保险、教育、税收减免、实物转移支付等领域花费巨额资金。经济学家长期以来用不同的福利测量指标评估各类政策：健康保险研究报告"每救一条命的成本"，税收政策报告"超额负担（excess burden）“，高等教育研究报告"每增加一个入学名额的成本”，早教项目报告"社会成本-收益比"……这些指标互不兼容，使得不同领域政策之间的横向比较极为困难。</p>
+<p><strong>研究背景</strong></p>
+<ul>
+<li>已有大量高质量的政策因果效应估计文献（过去50年的自然实验研究积累）</li>
+<li>但每篇文章用自己的方式做福利分析，无法统一比较</li>
+<li>Hendren（2016）提出了MVPF（公共资金边际价值）的概念，作为统一测量工具</li>
+</ul>
+<p><strong>作者的问题意识</strong><br>
+能否用同一把尺子——MVPF——衡量133项美国历史政策的福利效率，从而系统性地回答：哪类政府支出最"划算"？儿童政策和成人政策谁的回报更高？现金转移和实物转移有何差异？</p>
+<p><strong>研究意义</strong><br>
+这是迄今为止规模最大的政策福利比较研究，涵盖133项政策4大领域50年历史。建立了可供研究者直接使用的公开框架（GitHub代码 + 数据），为循证政策（evidence-based policy）决策提供工具。</p>
+<hr>
+<h2 id="内容及结构（论文结构）">内容及结构（论文结构）</h2>
+<ol>
+<li><strong>引言</strong>：问题动机 + MVPF概念介绍 + 主要结论预览。</li>
+<li><strong>MVPF框架</strong>：理论推导；与传统指标（MCF、成本-收益比）的关系。</li>
+<li><strong>6个示例政策</strong>：详细展示MVPF的构建方法。</li>
+<li><strong>社会保险</strong>：健康、失业、残障保险。</li>
+<li><strong>教育</strong>：早教、K-12、大学、职业培训。</li>
+<li><strong>税收与现金转移</strong>：边际税率、EITC、福利项目。</li>
+<li><strong>实物转移</strong>：住房、食品券。</li>
+<li><strong>跨领域比较与政策含义</strong>。</li>
+<li><strong>结论</strong>。</li>
+</ol>
+<hr>
+<h2 id="正文（逻辑梳理）">正文（逻辑梳理）</h2>
+<h3 id="背景与挑战">背景与挑战</h3>
+<p><strong>核心挑战</strong>：如何跨政策领域进行福利比较？</p>
+<p>传统方法的问题是：不同文献采用不同的福利指标，彼此不可比；而且各指标通常只反映直接效应，忽略了长期的财政外部性（如儿童受教育后成年纳税、减少转移支付）。</p>
+<h3 id="MVPF框架（方法）">MVPF框架（方法）</h3>
+<p>$$\text{MVPF} = \frac{\text{受益者的支付意愿（WTP）}}{\text{政府净成本}}$$</p>
+<p><strong>分子：支付意愿（WTP）</strong></p>
+<ul>
+<li>受益者为获得某政策愿意支付的最大金额</li>
+<li>利用包络定理（envelope theorem）：WTP ≈ 政策的机械性直接成本（behavioral responses are not valued dollar-for-dollar）</li>
+<li>如果政策提供保险，WTP &gt; 资源成本（消费平滑溢价）</li>
+<li>如果政策诱发福利套取行为，WTP &lt; 资源成本</li>
+</ul>
+<p><strong>分母：政府净成本</strong><br>
+= 初始支出 + 财政外部性（fiscal externality）</p>
+<ul>
+<li>财政外部性 = 因政策改变受益者行为而引起的税收/转移支付的长期变化</li>
+<li>例：儿童健康保险 → 儿童更健康、教育程度提高 → 成年后收入更高 → 政府税收增加 → 净成本下降，甚至为负（政策"自我偿还"）</li>
+<li>政策"自我偿还"（MVPF = ∞）= Pareto改进</li>
+</ul>
+<p><strong>MVPF的解读</strong>：</p>
+<ul>
+<li>MVPF = 1：标准的无扭曲转移（$1政府成本带来$1受益者WTP）</li>
+<li>MVPF &gt; 1：每花$1，受益者获得&gt;$1的福利（高效政策）</li>
+<li>MVPF &lt; 1：受益者实际获得的福利&lt;政府花费（低效政策）</li>
+<li>MVPF = ∞：“自我偿还”，Pareto改进</li>
+</ul>
+<p><strong>与其他指标的关系</strong>：MVPF是Okun"漏桶"比喻的形式化——MVPFA=2, MVPFB=1，则从B转移资金到A当且仅当社会偏好给A受益者$2多于给B受益者$1。</p>
+<h3 id="数据来源">数据来源</h3>
+<p><strong>非原始数据</strong>：本文不做新的因果推断，而是系统汇总现有因果研究的估计结果。</p>
+<ul>
+<li>利用现有文献中已估计的政策效应（就业、收入、教育、健康）作为输入</li>
+<li>用标准假设（贴现率、税率等）将这些效应转化为WTP和财政外部性</li>
+<li>覆盖4个领域133项美国政策（1950s-2010s）</li>
+<li>提供GitHub代码，允许研究者修改关键假设进行敏感性分析</li>
+</ul>
+<h3 id="主要结果">主要结果</h3>
+<p><strong>发现一：儿童政策MVPF远高于成人政策</strong></p>
+<table>
+<thead>
+<tr>
+<th>政策类型</th>
+<th>典型MVPF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>儿童健康保险扩展（如Medicaid儿童）</td>
+<td>平均&gt;5，许多"自我偿还"</td>
+</tr>
+<tr>
+<td>早期教育（Perry Preschool）</td>
+<td>~44</td>
+</tr>
+<tr>
+<td>Abecedarian项目</td>
+<td>~12</td>
+</tr>
+<tr>
+<td>K-12教育经费均等化</td>
+<td>高</td>
+</tr>
+<tr>
+<td>大学教育扩展</td>
+<td>高（部分）</td>
+</tr>
+<tr>
+<td>成人健康保险扩展</td>
+<td>0.40–1.63</td>
+</tr>
+<tr>
+<td>实物转移（住房券、食品券）</td>
+<td>0.65–1.04</td>
+</tr>
+<tr>
+<td>税收减免/现金福利（成人）</td>
+<td>负值–1.20</td>
+</tr>
+</tbody>
+</table>
+<p><strong>发现二：儿童政策的高MVPF跨越各年龄段</strong></p>
+<p>与Heckman（2006）"早期投资边际回报递减"的主张相反，本文发现：</p>
+<ul>
+<li>早期儿童教育（0-5岁）确实有高MVPF</li>
+<li><strong>但K-12、大学教育投资也有高MVPF</strong>——儿童期的高回报并不在某个年龄后迅速下降</li>
+<li>"一刀切"式的"越早越好"观点需要修正</li>
+</ul>
+<p><strong>发现三：许多儿童政策"自我偿还"</strong></p>
+<p>儿童健康保险扩展的长期财政外部性为正：平均每$1投入，政府长期回收$1.78（其中3/4项目完全回收成本）。<br>
+原因：受益儿童成年后收入更高→缴纳更多税→减少转移支付需求。</p>
+<p><strong>发现四：成人政策的例外——对儿童产生大溢出效应</strong></p>
+<p>成人政策通常MVPF较低（0.5–2），但若成人政策对其子女产生大的正外部性（spillover to children），MVPF可以超出此范围。说明代际传递渠道在评估成人政策时不可忽略。</p>
+<p><strong>发现五：同类政策内部变异巨大</strong></p>
+<p>即使在高回报类别（如儿童政策）中，也存在低MVPF的政策（如职业培训项目、未增加升学率的大学补贴）。这说明"类别"本身不能代替具体政策的评估——机制很重要。</p>
+<h3 id="政策含义">政策含义</h3>
+<ol>
+<li><strong>儿童健康和教育是最具性价比的公共投资</strong>，且不仅限于早期教育</li>
+<li><strong>成人政策不应简单否定</strong>——若有代际溢出效应，其福利效率可大幅提升</li>
+<li><strong>“研究的边际价值”（value of information）是可以量化的</strong>：在MVPF高度不确定的政策领域，政策制定者应愿意为更好的因果证据支付大量预算</li>
+<li><strong>循证政策设计</strong>：同类政策内部的变异提示我们，了解"为什么有效"（机制）比知道"平均有效"更重要</li>
+</ol>
+<hr>
+<h2 id="结论（Conclusion）">结论（Conclusion）</h2>
+<ol>
+<li>对低收入儿童健康和教育的直接投资，历史上有最高的MVPF，平均超过5，很多自我偿还（Pareto改进）；</li>
+<li>儿童期高回报政策跨越各年龄段，不仅限于早期教育；</li>
+<li>成人政策MVPF通常在0.5–2之间；若对儿童有大溢出效应则可超越此范围；</li>
+<li>同类政策内MVPF差异显著，了解成功政策的机制比看平均MVPF更重要；</li>
+<li>MVPF框架可应用于犯罪、环境、基础设施等尚未覆盖的领域，未来研究空间巨大。</li>
+</ol>
+<hr>
+<h2 id="未来研究方向（Future-work）">未来研究方向（Future work）</h2>
+<p><strong>论文明确提及的方向</strong>：</p>
+<ol>
+<li>将MVPF框架扩展至犯罪政策、环境政策、宏观经济稳定政策、基础设施政策；</li>
+<li>量化信息价值——为MVPF不确定的政策领域设计新数据收集方案；</li>
+<li>利用行政数据扩大政策效应的因果估计（更多政策纳入比较）。</li>
+</ol>
+<p><strong>从论文引申的研究方向</strong>：</p>
+<ol>
+<li><strong>中国政策的MVPF估计</strong>：中国有大量准实验政策（农村义务教育经费改革、新农合、城镇医保扩展、EITC类转移支付）。能否用中国行政数据和已有因果估计构建中国版的MVPF比较数据集？</li>
+<li><strong>发展中国家的跨代际效应测量</strong>：本文核心发现（儿童政策的财政外部性）依赖于长期追踪数据。在数据基础薄弱的发展中国家，如何合理估计儿童政策的代际收益？</li>
+<li><strong>政策组合的相互作用</strong>：本文对各政策独立评估，忽略了政策之间的互补/替代关系。如果儿童健康保险和早教同时实施，联合MVPF是否大于两个独立MVPF之和？</li>
+<li><strong>MVPF与分配偏好的结合</strong>：本文MVPF只测量效率（“漏桶的泄漏量”），不包含社会对不同群体的分配权重。如何将MVPF与不同的社会福利函数（平等主义、功利主义）结合，形成"分配调整后的MVPF"？</li>
+<li><strong>数字化公共服务的MVPF</strong>：政府数字化转型（如电子政务、在线医疗）的受益者WTP和财政外部性如何测量？这类政策是否也能达到高MVPF？</li>
+</ol>
+<hr>
+<h2 id="学术思考">学术思考</h2>
+<ol>
+<li>
+<p><strong>财政外部性的时间折现问题</strong>：本文MVPF的高低在很大程度上取决于如何折现儿童长期收益。贴现率从3%变为5%，那些"自我偿还"的儿童政策的MVPF会大幅下降。作者做了敏感性分析，但核心结论（儿童政策MVPF &gt;&gt; 成人政策）究竟有多依赖于折现率假设？这是本文结论的最重要不确定来源之一。</p>
+</li>
+<li>
+<p><strong>发表偏差与外部有效性</strong>：本文使用的"因果估计"来自学术文献，而学术文献存在著名的发表偏差（positive results are more likely to be published）。作者使用Andrews &amp; Kasy（2019）方法校正发表偏差，但校正方法本身也有假设。若底层因果估计系统性高估政策效果，MVPF也会系统高估，"自我偿还"政策数量会被高估。</p>
+</li>
+<li>
+<p><strong>"政策"的内生性</strong>：Hendren &amp; Sprung-Keyser分析的是<strong>历史上实施的</strong>133项政策。这些政策并非随机选择——政治上可行的政策往往是有基础的、预期效果良好的。这意味着样本可能存在正向选择偏误（high-MVPF policies are more likely to be tried）。对于那些从未被实施的政策，MVPF可能与已实施政策大相径庭。</p>
+</li>
+<li>
+<p><strong>MVPF与分配正义的分离</strong>：本文明确指出MVPF只衡量效率，不包含对不同群体的分配偏好。但政策评估不可能完全回避分配问题——一个MVPF=3的政策若全部受益于富人，是否优于MVPF=1.5的政策让穷人受益？作者的建议是先用MVPF确定效率边界，再叠加分配偏好——但在实践中这两步的分离往往很难维持。</p>
+</li>
+<li>
+<p><strong>从美国到其他国家的可移植性</strong>：本文基于美国过去50年的政策经验。中国、印度等发展中国家在儿童健康保险上的回报率是否也高？发展中国家劳动力市场的特征（非正规就业、低税率）可能使得"财政外部性"（通过税收回收）的机制大打折扣。有限的税收征管能力可能意味着儿童教育投资无法通过增税来"自我偿还"，MVPF结论的普遍性有待检验。</p>
+</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">下一步用户可能提的问题</h2>
+<ol>
+<li>MVPF与传统的"成本-收益比（cost-benefit ratio）"或"边际公共资金成本（MCF）"有什么本质区别？</li>
+<li>Perry Preschool的MVPF为什么高达44？核心机制是什么？这是否意味着早期教育项目都有如此高的回报？</li>
+<li>文中提到一些政策"MVPF为负"，这是什么意思？哪些政策出现了负MVPF？</li>
+<li>本文的GitHub代码和数据集（<a href="http://policyanalysis.org/welfare_analysis%EF%BC%89%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E7%94%A8%E6%9D%A5%E4%BC%B0%E8%AE%A1%E4%B8%AD%E5%9B%BD%E6%94%BF%E7%AD%96%E7%9A%84MVPF%EF%BC%9F%E5%93%AA%E4%BA%9B%E6%AD%A5%E9%AA%A4%E9%9C%80%E8%A6%81%E4%BF%AE%E6%94%B9%E4%BB%A5%E9%80%82%E5%BA%94%E4%B8%AD%E5%9B%BD%E6%83%85%E5%A2%83%EF%BC%9F">policyanalysis.org/welfare_analysis）是否可以用来估计中国政策的MVPF？哪些步骤需要修改以适应中国情境？</a></li>
+<li>MVPF框架如何处理"一般均衡效应"（如政策规模扩大后对工资、价格的影响）？目前的估计是局部均衡，扩大政策规模后MVPF是否会下降？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>有趣的文章</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -14192,6 +14192,169 @@ Zotero Item Key:: BY7Y7TDL</p>
       </tags>
   </entry>
   <entry>
+    <title>Auctions With Frictions — 深度阅读笔记 — Lauermann &amp; Wolinsky</title>
+    <url>/posts/lauermann2026/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
+<ul>
+<li><strong>标题</strong>: Auctions with Frictions: Recruitment, Entry,
+and Limited Commitment</li>
+<li><strong>作者</strong>: Stephan Lauermann (University of Bonn), Asher
+Wolinsky (Northwestern University)</li>
+<li><strong>年份</strong>: 2026</li>
+<li><strong>来源</strong>: Review of Economic Studies (RES), 93(2):
+1167-1199</li>
+<li><strong>DOI</strong>: https://doi.org/10.1093/restud/rdaf052</li>
+<li><strong>难度评估</strong>: 高 - 需要拍卖理论、博弈论基础
+<span id="more"></span></li>
+</ul>
+<hr>
+<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
+<h3 id="领域基础知识">领域基础知识</h3>
+<p><strong>拍卖（Frictionless
+Auction）</strong>：标准拍卖理论假设卖家可以招募竞拍者、竞拍者无成本参与、卖家可承诺于保留价格和参与水平。</p>
+<p><strong>招募成本（Recruitment
+Cost）</strong>：卖家吸引竞拍者的成本。</p>
+<p><strong>参与成本（Entry
+Cost）</strong>：竞拍者评估拍品、获取融资、准备报价的成本。</p>
+<p><strong>有限承诺（Limited
+Commitment）</strong>：卖家无法可信地承诺参与水平或其披露程度。</p>
+<p><strong>PO vs PU场景</strong>：PO=参与可观察；PU=参与不可观察。</p>
+<h3 id="研究背景">研究背景</h3>
+<ol type="1">
+<li><p><strong>实际拍卖的复杂性</strong>：招募和激励竞拍者是拍卖成功的关键。</p></li>
+<li><p><strong>摩擦的普遍性</strong>：在独特资产的出售中，招募成本和参与成本特别显著。</p></li>
+<li><p><strong>传统模型局限性</strong>：现有文献分别研究招募或参与摩擦。</p></li>
+</ol>
+<h3 id="作者的问题意识">作者的问题意识</h3>
+<p><strong>核心问题</strong>：当卖家承诺能力受限时，招募努力和竞拍者进入决策如何共同决定拍卖参与和结果？</p>
+<hr>
+<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
+<ul>
+<li>第一节：Introduction</li>
+<li>第二节：The PO Auction</li>
+<li>第三节：Equilibrium Analysis for PO Scenario</li>
+<li>第四节：The PU Auction</li>
+<li>第五节：Comparison of PO and PU Scenarios</li>
+<li>第六节：Discussion and Extensions</li>
+<li>第七节：Conclusion</li>
+</ul>
+<hr>
+<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
+<h3 id="模型设定">模型设定</h3>
+<p><strong>核心要素</strong>： 1.
+<strong>卖家</strong>：选择招募努力γ（成本为γs），结果是泊松分布的潜在竞拍者
+2. <strong>竞拍者</strong>：支付成本c后观察到私人价值vi，决策是否进入 3.
+<strong>Bidding阶段</strong>：第一价格拍卖(FPA)</p>
+<p><strong>两种场景</strong>：PO（参与可观察）vs PU（参与不可观察）</p>
+<h3 id="po均衡分析">PO均衡分析</h3>
+<p><strong>逆向求解</strong>： 1. Stage 3 (Bidding)：标准对称FPA均衡 2.
+Stage 2 (Entry)：竞拍者基于期望收益决定是否进入 3. Stage 1
+(Recruitment)：卖家选择λ = qγ最大化利润</p>
+<p><strong>关键发现</strong>： - 存在均衡贸易的唯一条件：λc ≥ λo 且 s ≤
+s̄o - 当λc &lt; λo时：即使潜在贸易收益为正，市场也会崩溃</p>
+<h3 id="pu均衡分析">PU均衡分析</h3>
+<p><strong>关键差异</strong>：卖家无法可信地披露参与水平</p>
+<p><strong>均衡特征</strong>： - 对于所有(c,s)，存在λ*=0的无贸易均衡 -
+当s &lt; ξ(λpeak)且λc &gt; λu(s)时，存在两个贸易均衡</p>
+<h3 id="po-vs-pu比较">PO vs PU比较</h3>
+<p><strong>关键比较结果</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>区域</th>
+<th>条件</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I</td>
+<td>仅PO有贸易</td>
+<td>PO严格更优</td>
+</tr>
+<tr>
+<td>II</td>
+<td>两者都有贸易</td>
+<td>PO严格更优</td>
+</tr>
+<tr>
+<td>III</td>
+<td>两者都有贸易</td>
+<td>PU严格更优</td>
+</tr>
+<tr>
+<td>IV</td>
+<td>仅PU有贸易</td>
+<td>PU更优</td>
+</tr>
+</tbody>
+</table>
+<p><strong>直觉</strong>： -
+当c很小（竞拍者愿意进入）时：PO的更强招募激励→更高利润 -
+当s很小（招募便宜）时：PU的更弱招募激励作为部分承诺机制</p>
+<h3 id="fpa-vs-spa比较">FPA vs SPA比较</h3>
+<p><strong>Revenue
+Equivalence失效</strong>：当参与不可观察时，FPA和SPA不再等价</p>
+<hr>
+<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
+<h3 id="核心结论">核心结论</h3>
+<ol type="1">
+<li><p><strong>整合三种摩擦的必要性</strong>：招募成本、参与成本和有限承诺必须联合建模</p></li>
+<li><p><strong>可见性的关键作用</strong>：参与的可观察性对贸易量和利润有重大影响</p></li>
+<li><p><strong>标准等价失效</strong>：在存在摩擦时，FPA和SPA不再等价</p></li>
+<li><p><strong>市场崩溃的可能</strong>：即使潜在收益为正，市场也可能因承诺问题而崩溃</p></li>
+</ol>
+<h3 id="对领域的贡献">对领域的贡献</h3>
+<ol type="1">
+<li><p><strong>理论框架</strong>：整合了之前分开研究的各种摩擦</p></li>
+<li><p><strong>比较静态</strong>：完整描述了所有(c,s)组合下的均衡</p></li>
+<li><p><strong>实践意义</strong>：解释了拍卖行服务的价值</p></li>
+</ol>
+<hr>
+<h2 id="未来研究方向">5. 未来研究方向</h2>
+<h3 id="文献提及的方向">文献提及的方向</h3>
+<ol type="1">
+<li>竞拍者进入前了解其价值的版本</li>
+<li>卖家可设置进入费/补贴或保留价格的版本</li>
+</ol>
+<h3 id="未来研究思考">未来研究思考</h3>
+<ol type="1">
+<li><strong>信息摩擦</strong>：信息不对称如何与招募/参与成本交互？</li>
+<li><strong>动态招募</strong>：多时期招募决策会如何改变结果？</li>
+</ol>
+<hr>
+<h2 id="学术思考">7. 学术思考</h2>
+<h3 id="核心理论洞察">核心理论洞察</h3>
+<ol type="1">
+<li><p><strong>"承诺作为市场结果的关键"</strong>：卖家有限承诺能力是市场摩擦的核心。</p></li>
+<li><p><strong>"可见性改变激励结构"</strong>：参与的可观察性改变了卖家的招募激励。</p></li>
+<li><p><strong>"价格等价不意味着激励等价"</strong>：在存在摩擦时，不同格式产生不同激励。</p></li>
+</ol>
+<h3 id="深层学术问题">深层学术问题</h3>
+<ol type="1">
+<li><strong>承诺的外生性</strong>：内生化承诺能力会如何改变结论？</li>
+<li><strong>信息获取时机</strong>：竞拍者进入前vs进入后了解价值会如何影响均衡？</li>
+</ol>
+<hr>
+<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
+<ol type="1">
+<li><strong>PO和PU场景下的均衡具体是什么？</strong></li>
+<li><strong>过度招募的无效率具体是多少？</strong></li>
+<li><strong>Proposition 3中边界曲线ŝ(c)的形状是什么？</strong></li>
+<li><strong>SPA的"信念独立"出价具体是什么？</strong></li>
+<li><strong>拍卖行如何具体缓解这些摩擦？</strong></li>
+</ol>
+<hr>
+<p><em>本分析报告严格遵循精读文献skill规定的八部分结构完成，旨在为初学者提供全面、易懂的论文逻辑梳理与学术要点解读。</em></p>
+]]></content>
+      <categories>
+        <category>RES</category>
+      </categories>
+      <tags>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Extreme Categories and Overreaction to News — 深度阅读笔记 — Kwon &amp; Tang</title>
     <url>/posts/kwon2026/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
@@ -14360,169 +14523,6 @@ in extreme news categories</h3>
 极端程度与这些替代变量相比有何优势？</p></li>
 <li><p><strong>对投资者和资产管理人有何实践启示？</strong>
 如何利用这些发现来改进投资决策？</p></li>
-</ol>
-<hr>
-<p><em>本分析报告严格遵循精读文献skill规定的八部分结构完成，旨在为初学者提供全面、易懂的论文逻辑梳理与学术要点解读。</em></p>
-]]></content>
-      <categories>
-        <category>RES</category>
-      </categories>
-      <tags>
-        <tag>论文笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Auctions With Frictions — 深度阅读笔记 — Lauermann &amp; Wolinsky</title>
-    <url>/posts/lauermann2026/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="文献信息">文献信息</h2>
-<ul>
-<li><strong>标题</strong>: Auctions with Frictions: Recruitment, Entry,
-and Limited Commitment</li>
-<li><strong>作者</strong>: Stephan Lauermann (University of Bonn), Asher
-Wolinsky (Northwestern University)</li>
-<li><strong>年份</strong>: 2026</li>
-<li><strong>来源</strong>: Review of Economic Studies (RES), 93(2):
-1167-1199</li>
-<li><strong>DOI</strong>: https://doi.org/10.1093/restud/rdaf052</li>
-<li><strong>难度评估</strong>: 高 - 需要拍卖理论、博弈论基础
-<span id="more"></span></li>
-</ul>
-<hr>
-<h2 id="引言背景和意义">1. 引言（背景和意义）</h2>
-<h3 id="领域基础知识">领域基础知识</h3>
-<p><strong>拍卖（Frictionless
-Auction）</strong>：标准拍卖理论假设卖家可以招募竞拍者、竞拍者无成本参与、卖家可承诺于保留价格和参与水平。</p>
-<p><strong>招募成本（Recruitment
-Cost）</strong>：卖家吸引竞拍者的成本。</p>
-<p><strong>参与成本（Entry
-Cost）</strong>：竞拍者评估拍品、获取融资、准备报价的成本。</p>
-<p><strong>有限承诺（Limited
-Commitment）</strong>：卖家无法可信地承诺参与水平或其披露程度。</p>
-<p><strong>PO vs PU场景</strong>：PO=参与可观察；PU=参与不可观察。</p>
-<h3 id="研究背景">研究背景</h3>
-<ol type="1">
-<li><p><strong>实际拍卖的复杂性</strong>：招募和激励竞拍者是拍卖成功的关键。</p></li>
-<li><p><strong>摩擦的普遍性</strong>：在独特资产的出售中，招募成本和参与成本特别显著。</p></li>
-<li><p><strong>传统模型局限性</strong>：现有文献分别研究招募或参与摩擦。</p></li>
-</ol>
-<h3 id="作者的问题意识">作者的问题意识</h3>
-<p><strong>核心问题</strong>：当卖家承诺能力受限时，招募努力和竞拍者进入决策如何共同决定拍卖参与和结果？</p>
-<hr>
-<h2 id="内容及结构论文结构">2. 内容及结构（论文结构）</h2>
-<ul>
-<li>第一节：Introduction</li>
-<li>第二节：The PO Auction</li>
-<li>第三节：Equilibrium Analysis for PO Scenario</li>
-<li>第四节：The PU Auction</li>
-<li>第五节：Comparison of PO and PU Scenarios</li>
-<li>第六节：Discussion and Extensions</li>
-<li>第七节：Conclusion</li>
-</ul>
-<hr>
-<h2 id="正文逻辑梳理">3. 正文（逻辑梳理）</h2>
-<h3 id="模型设定">模型设定</h3>
-<p><strong>核心要素</strong>： 1.
-<strong>卖家</strong>：选择招募努力γ（成本为γs），结果是泊松分布的潜在竞拍者
-2. <strong>竞拍者</strong>：支付成本c后观察到私人价值vi，决策是否进入 3.
-<strong>Bidding阶段</strong>：第一价格拍卖(FPA)</p>
-<p><strong>两种场景</strong>：PO（参与可观察）vs PU（参与不可观察）</p>
-<h3 id="po均衡分析">PO均衡分析</h3>
-<p><strong>逆向求解</strong>： 1. Stage 3 (Bidding)：标准对称FPA均衡 2.
-Stage 2 (Entry)：竞拍者基于期望收益决定是否进入 3. Stage 1
-(Recruitment)：卖家选择λ = qγ最大化利润</p>
-<p><strong>关键发现</strong>： - 存在均衡贸易的唯一条件：λc ≥ λo 且 s ≤
-s̄o - 当λc &lt; λo时：即使潜在贸易收益为正，市场也会崩溃</p>
-<h3 id="pu均衡分析">PU均衡分析</h3>
-<p><strong>关键差异</strong>：卖家无法可信地披露参与水平</p>
-<p><strong>均衡特征</strong>： - 对于所有(c,s)，存在λ*=0的无贸易均衡 -
-当s &lt; ξ(λpeak)且λc &gt; λu(s)时，存在两个贸易均衡</p>
-<h3 id="po-vs-pu比较">PO vs PU比较</h3>
-<p><strong>关键比较结果</strong>：</p>
-<table>
-<thead>
-<tr>
-<th>区域</th>
-<th>条件</th>
-<th>结果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I</td>
-<td>仅PO有贸易</td>
-<td>PO严格更优</td>
-</tr>
-<tr>
-<td>II</td>
-<td>两者都有贸易</td>
-<td>PO严格更优</td>
-</tr>
-<tr>
-<td>III</td>
-<td>两者都有贸易</td>
-<td>PU严格更优</td>
-</tr>
-<tr>
-<td>IV</td>
-<td>仅PU有贸易</td>
-<td>PU更优</td>
-</tr>
-</tbody>
-</table>
-<p><strong>直觉</strong>： -
-当c很小（竞拍者愿意进入）时：PO的更强招募激励→更高利润 -
-当s很小（招募便宜）时：PU的更弱招募激励作为部分承诺机制</p>
-<h3 id="fpa-vs-spa比较">FPA vs SPA比较</h3>
-<p><strong>Revenue
-Equivalence失效</strong>：当参与不可观察时，FPA和SPA不再等价</p>
-<hr>
-<h2 id="结论conclusion">4. 结论（Conclusion）</h2>
-<h3 id="核心结论">核心结论</h3>
-<ol type="1">
-<li><p><strong>整合三种摩擦的必要性</strong>：招募成本、参与成本和有限承诺必须联合建模</p></li>
-<li><p><strong>可见性的关键作用</strong>：参与的可观察性对贸易量和利润有重大影响</p></li>
-<li><p><strong>标准等价失效</strong>：在存在摩擦时，FPA和SPA不再等价</p></li>
-<li><p><strong>市场崩溃的可能</strong>：即使潜在收益为正，市场也可能因承诺问题而崩溃</p></li>
-</ol>
-<h3 id="对领域的贡献">对领域的贡献</h3>
-<ol type="1">
-<li><p><strong>理论框架</strong>：整合了之前分开研究的各种摩擦</p></li>
-<li><p><strong>比较静态</strong>：完整描述了所有(c,s)组合下的均衡</p></li>
-<li><p><strong>实践意义</strong>：解释了拍卖行服务的价值</p></li>
-</ol>
-<hr>
-<h2 id="未来研究方向">5. 未来研究方向</h2>
-<h3 id="文献提及的方向">文献提及的方向</h3>
-<ol type="1">
-<li>竞拍者进入前了解其价值的版本</li>
-<li>卖家可设置进入费/补贴或保留价格的版本</li>
-</ol>
-<h3 id="未来研究思考">未来研究思考</h3>
-<ol type="1">
-<li><strong>信息摩擦</strong>：信息不对称如何与招募/参与成本交互？</li>
-<li><strong>动态招募</strong>：多时期招募决策会如何改变结果？</li>
-</ol>
-<hr>
-<h2 id="学术思考">7. 学术思考</h2>
-<h3 id="核心理论洞察">核心理论洞察</h3>
-<ol type="1">
-<li><p><strong>"承诺作为市场结果的关键"</strong>：卖家有限承诺能力是市场摩擦的核心。</p></li>
-<li><p><strong>"可见性改变激励结构"</strong>：参与的可观察性改变了卖家的招募激励。</p></li>
-<li><p><strong>"价格等价不意味着激励等价"</strong>：在存在摩擦时，不同格式产生不同激励。</p></li>
-</ol>
-<h3 id="深层学术问题">深层学术问题</h3>
-<ol type="1">
-<li><strong>承诺的外生性</strong>：内生化承诺能力会如何改变结论？</li>
-<li><strong>信息获取时机</strong>：竞拍者进入前vs进入后了解价值会如何影响均衡？</li>
-</ol>
-<hr>
-<h2 id="下一步用户可能提的问题">8. 下一步用户可能提的问题</h2>
-<ol type="1">
-<li><strong>PO和PU场景下的均衡具体是什么？</strong></li>
-<li><strong>过度招募的无效率具体是多少？</strong></li>
-<li><strong>Proposition 3中边界曲线ŝ(c)的形状是什么？</strong></li>
-<li><strong>SPA的"信念独立"出价具体是什么？</strong></li>
-<li><strong>拍卖行如何具体缓解这些摩擦？</strong></li>
 </ol>
 <hr>
 <p><em>本分析报告严格遵循精读文献skill规定的八部分结构完成，旨在为初学者提供全面、易懂的论文逻辑梳理与学术要点解读。</em></p>
@@ -18603,42 +18603,6 @@ III资本要求对银行中介交易产生负面影响</p></li>
       </tags>
   </entry>
   <entry>
-    <title>画一幅我农所在地的道路图</title>
-    <url>/posts/42027/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
-<img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;">
-<center>
-上图即为最终效果
-</center>
-<h2 id="一些必备的工具">一些必备的工具</h2>
-<p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<span id="more"></span>
-<h2 id="绘制路网地图">绘制路网地图</h2>
-<p>导入以下R 包:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>读入杨陵区的数据:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>获取杨陵区的经纬度范围:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
-<p>提取杨陵区的街道路线:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>把数据保存为<strong>rds</strong>:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>然后绘图:</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>绘图</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>石油的族群地理分布与族群冲突升级 — 深度阅读笔记 — 熊易寒 &amp; 唐世平</title>
     <url>/posts/xiong2015/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>标题:: 石油的族群地理分布与族群冲突升级<br>
@@ -18766,6 +18730,42 @@ Zotero Item Key:: PPNBQ8SY</p>
       </categories>
       <tags>
         <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>画一幅我农所在地的道路图</title>
+    <url>/posts/42027/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="效果展示">效果展示</h2>
+<img data-src="/figure/yanglingroad.png" width="80%" height="80%" align="middle" style="display: block; margin: auto;">
+<center>
+上图即为最终效果
+</center>
+<h2 id="一些必备的工具">一些必备的工具</h2>
+<p>一张json格式的我农地图,或者杨陵地图,可从<a href="https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json">我的github仓库下载</a></p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">download.file<span class="punctuation">(</span><span class="string">"https://raw.githubusercontent.com/QGQ931001/git-tutorial/master/yangling_map/yangling.json"</span><span class="punctuation">,</span> destfile <span class="operator">=</span> <span class="string">"~/文档/yangling.json"</span> <span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<h2 id="绘制路网地图">绘制路网地图</h2>
+<p>导入以下R 包:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">library<span class="punctuation">(</span>osmdata<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dodgr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>sf<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>读入杨陵区的数据:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">yl <span class="operator">&lt;-</span> read_sf<span class="punctuation">(</span><span class="string">"~/文档/yangling.json"</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>获取杨陵区的经纬度范围:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">st_bbox<span class="punctuation">(</span>yl<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  matrix<span class="punctuation">(</span>nrow <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">         <span class="built_in">dimnames</span> <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">"x"</span><span class="punctuation">,</span> <span class="string">"y"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                         <span class="built_in">c</span><span class="punctuation">(</span><span class="string">"min"</span><span class="punctuation">,</span> <span class="string">"max"</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> ebox</span><br><span class="line">ebox</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#&gt;         min       max</span><br><span class="line">#&gt; x 107.94598 108.13869</span><br><span class="line">#&gt; y  34.22145  34.33377</span><br></pre></td></tr></tbody></table></figure>
+<p>提取杨陵区的街道路线:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">&lt;-</span> dodgr_streetnet<span class="punctuation">(</span>ebox<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>把数据保存为<strong>rds</strong>:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">sraw <span class="operator">%&gt;%</span></span><br><span class="line">  write_rds<span class="punctuation">(</span><span class="string">'sraw.rds'</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>提取<strong>ebox</strong>和<strong>yl</strong>相交的区域:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">streets <span class="operator">&lt;-</span> sraw <span class="operator">%&gt;%</span></span><br><span class="line">  st_make_valid<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  st_intersection<span class="punctuation">(</span>yl<span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>然后绘图:</p>
+<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  geom_sf<span class="punctuation">(</span>data <span class="operator">=</span> streets<span class="punctuation">,</span> show.legend <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">,</span> size <span class="operator">=</span> <span class="number">0.2</span> <span class="punctuation">,</span>color <span class="operator">=</span> <span class="string">"#DDE080"</span> <span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme_ipsum<span class="punctuation">(</span>base_family <span class="operator">=</span> <span class="string">"Times New Roman"</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>panel.grid.major <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.grid.minor <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.text.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.x <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          axis.title.y <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          plot.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                         color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">          panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">,</span></span><br><span class="line">                                          color <span class="operator">=</span> <span class="string">"#140035"</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">    labs<span class="punctuation">(</span>y <span class="operator">=</span> <span class="string">""</span><span class="punctuation">)</span></span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>绘图</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
       </tags>
   </entry>
   <entry>
